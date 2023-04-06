@@ -1,0 +1,185 @@
+--- tmp/nvosscript-1.1.1.tar.gz
++++ tmp/nvosscript-1.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "nvosscript-1.1.1.tar", last modified: Thu Apr  6 09:30:38 2023, max compression
+│ +gzip compressed data, was "nvosscript-1.1.2.tar", last modified: Thu Apr  6 10:32:55 2023, max compression
+│   --- nvosscript-1.1.1.tar
+├── +++ nvosscript-1.1.2.tar
+│ ├── file list
+│ │ @@ -1,25 +1,25 @@
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262823 nvosscript-1.1.1/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1073 2023-03-22 09:01:10.000000 nvosscript-1.1.1/LICENSE
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 09:30:38.262699 nvosscript-1.1.1/PKG-INFO
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       78 2023-03-22 09:07:29.000000 nvosscript-1.1.1/README.md
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.261098 nvosscript-1.1.1/nvos/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-03-21 08:49:46.000000 nvosscript-1.1.1/nvos/__init__.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)    12412 2023-04-03 03:55:32.000000 nvosscript-1.1.1/nvos/file.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1662 2023-04-06 06:54:07.000000 nvosscript-1.1.1/nvos/login.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     5893 2023-04-06 09:28:19.000000 nvosscript-1.1.1/nvos/remote.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     3885 2023-04-06 08:59:52.000000 nvosscript-1.1.1/nvos/run.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      812 2023-03-30 03:32:22.000000 nvosscript-1.1.1/nvos/utils.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262017 nvosscript-1.1.1/nvosscript.egg-info/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      372 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        1 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       41 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       47 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/requires.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       21 2023-04-06 09:30:38.000000 nvosscript-1.1.1/nvosscript.egg-info/top_level.txt
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)       38 2023-04-06 09:30:38.262868 nvosscript-1.1.1/setup.cfg
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)      805 2023-04-06 09:29:34.000000 nvosscript-1.1.1/setup.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262232 nvosscript-1.1.1/start/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-04-04 03:24:28.000000 nvosscript-1.1.1/start/__init__.py
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     3504 2023-04-06 09:29:34.000000 nvosscript-1.1.1/start/main.py
+│ │ -drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 09:30:38.262441 nvosscript-1.1.1/win/
+│ │ --rw-r--r--   0 andre.zhao   (503) staff       (20)     1283 2023-04-06 07:02:53.000000 nvosscript-1.1.1/win/win_auto_script.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 10:32:55.389426 nvosscript-1.1.2/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1073 2023-03-22 09:01:10.000000 nvosscript-1.1.2/LICENSE
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 10:32:55.389273 nvosscript-1.1.2/PKG-INFO
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       78 2023-03-22 09:07:29.000000 nvosscript-1.1.2/README.md
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 10:32:55.387200 nvosscript-1.1.2/nvos/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-03-21 08:49:46.000000 nvosscript-1.1.2/nvos/__init__.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)    12412 2023-04-03 03:55:32.000000 nvosscript-1.1.2/nvos/file.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1662 2023-04-06 06:54:07.000000 nvosscript-1.1.2/nvos/login.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     6051 2023-04-06 10:28:38.000000 nvosscript-1.1.2/nvos/remote.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     3885 2023-04-06 08:59:52.000000 nvosscript-1.1.2/nvos/run.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      812 2023-03-30 03:32:22.000000 nvosscript-1.1.2/nvos/utils.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 10:32:55.388456 nvosscript-1.1.2/nvosscript.egg-info/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      333 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      372 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        1 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       41 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       47 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/requires.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       21 2023-04-06 10:32:55.000000 nvosscript-1.1.2/nvosscript.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)       38 2023-04-06 10:32:55.389473 nvosscript-1.1.2/setup.cfg
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)      805 2023-04-06 10:32:43.000000 nvosscript-1.1.2/setup.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 10:32:55.388777 nvosscript-1.1.2/start/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)        0 2023-04-04 03:24:28.000000 nvosscript-1.1.2/start/__init__.py
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     3504 2023-04-06 10:32:49.000000 nvosscript-1.1.2/start/main.py
+│ │ +drwxr-xr-x   0 andre.zhao   (503) staff       (20)        0 2023-04-06 10:32:55.388929 nvosscript-1.1.2/win/
+│ │ +-rw-r--r--   0 andre.zhao   (503) staff       (20)     1283 2023-04-06 07:02:53.000000 nvosscript-1.1.2/win/win_auto_script.py
+│ │   --- nvosscript-1.1.1/LICENSE
+│ ├── +++ nvosscript-1.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.1/nvos/file.py
+│ ├── +++ nvosscript-1.1.2/nvos/file.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.1/nvos/login.py
+│ ├── +++ nvosscript-1.1.2/nvos/login.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.1/nvos/remote.py
+│ ├── +++ nvosscript-1.1.2/nvos/remote.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -99,20 +99,22 @@
+│ │              bucket.download_file(ossURL, fileFullPath)
+│ │          except Exception:
+│ │              logger.info(f"this file sync fail  ossURL:{ossURL} fileFullPath:{fileFullPath}" )
+│ │          else:
+│ │              logger.info(f"this file sync success  ossURL:{ossURL} fileFullPath:{fileFullPath}")
+│ │  
+│ │  def save_workspace(workspace_path, project_list):
+│ │ +    get_current_env()
+│ │      url = "%s%s" % (daemon_network, "/workspace/add")
+│ │      post_param = {"userId": login.get_user_id(), "fileDirectory": workspace_path, "projectSpaceList": project_list}
+│ │      return post_data(url, post_param)
+│ │  
+│ │  
+│ │  def pull_workspace(workspace, project_list):
+│ │ +    get_current_env()
+│ │      url = "%s%s" % (daemon_network, "/workspace/getChangedFiles")
+│ │      post_param = {"userId": login.get_user_id(), "fileDirectory": workspace,"projectSpaceList": project_list}
+│ │      return post_data(url, post_param)
+│ │  
+│ │  
+│ │  def post_data(url, params):
+│ │      headers = {"content-type": "application/json"}
+│ │ @@ -129,29 +131,37 @@
+│ │      string = "%s%s" % (git_branch, project_space)
+│ │      hash_object = hashlib.md5(string.encode())
+│ │      md5_hash = hash_object.hexdigest()
+│ │      return md5_hash
+│ │  
+│ │  
+│ │  def filter_upload_dir():
+│ │ +
+│ │      return ["ecus", "platform"]
+│ │  
+│ │  def get_s3_secret():
+│ │ +    get_current_env()
+│ │      url = "%s%s" % (daemon_network, "/file/config")
+│ │      headers = {"content-type": "application/json"}
+│ │      logger.info(f'request url:{url}')
+│ │      response = requests.post(url, headers=headers, data=json.dumps({}))
+│ │      if response.status_code == 200:
+│ │          response_data = json.loads(response.text)["data"]
+│ │          return response_data
+│ │      return {}
+│ │  
+│ │ +
+│ │  def switch_env(env):
+│ │ -    global daemon_network
+│ │ -    global daemon_network_mapping
+│ │      val = daemon_network_mapping.get(env)
+│ │      if len(val) == 0:
+│ │ -        daemon_network = daemon_network_mapping.get('prod')
+│ │ -        print(f"don't hava that environment,default env is prod and cloud linked:{daemon_network}")
+│ │          return
+│ │ -    daemon_network = val
+│ │ -    print(f"this script current env:{env} and cloud linked:{daemon_network}")
+│ │ +    with open(os.path.expanduser(os.path.join('~','nvos_env')),'w') as f:
+│ │ +        f.writelines(val)
+│ │ +    print(f"this script current env:{env} and cloud linked:{val}")
+│ │ +
+│ │ +
+│ │ +def get_current_env():
+│ │ +    global daemon_network
+│ │ +    if os.path.exists(os.path.expanduser(os.path.join('~','nvos_env'))):
+│ │ +        with open(os.path.expanduser(os.path.join('~', 'nvos_env')), 'r')as f:
+│ │ +            daemon_network = f.readline()
+│ │ +
+│ │   --- nvosscript-1.1.1/nvos/run.py
+│ ├── +++ nvosscript-1.1.2/nvos/run.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.1/nvos/utils.py
+│ ├── +++ nvosscript-1.1.2/nvos/utils.py
+│ │┄ Files identical despite different names
+│ │   --- nvosscript-1.1.1/setup.py
+│ ├── +++ nvosscript-1.1.2/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_namespace_packages
+│ │  
+│ │  setup(
+│ │      name='nvosscript',
+│ │ -    version='1.1.1',
+│ │ +    version='1.1.2',
+│ │      description='nvos toolchain script',
+│ │      packages=find_namespace_packages(),
+│ │      author = 'andre.zhao',
+│ │      author_email = 'andre.zhao@nio.com',
+│ │      keywords='pack',
+│ │      readme = "README.md",
+│ │      install_requires=[
+│ │   --- nvosscript-1.1.1/start/main.py
+│ ├── +++ nvosscript-1.1.2/start/main.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -45,15 +45,15 @@
+│ │      elif args.subcommand == "async":
+│ │          run.command_async()
+│ │      elif args.subcommand == "pull":
+│ │          run.command_pull()
+│ │      elif args.subcommand == "push":
+│ │          run.command_push()
+│ │      elif args.subcommand == "version":
+│ │ -        print("1.1.1")
+│ │ +        print("1.1.2")
+│ │      elif args.subcommand == 'env':
+│ │          run.command_env(args.switch)
+│ │      elif args.subcommand == "path":
+│ │          current_file_path = os.path.abspath(__file__)
+│ │          current_file_dir = os.path.dirname(current_file_path)
+│ │          current_file_dir = os.path.dirname(current_file_dir)
+│ │          win_path = os.path.join(current_file_dir, 'win', 'win_auto_script.py')
+│ │   --- nvosscript-1.1.1/win/win_auto_script.py
+│ ├── +++ nvosscript-1.1.2/win/win_auto_script.py
+│ │┄ Files identical despite different names

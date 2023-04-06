@@ -1,0 +1,561 @@
+# Comparing `tmp/SOMcreator-1.1.6.tar.gz` & `tmp/SOMcreator-1.1.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "SOMcreator-1.1.6.tar", last modified: Tue Mar 28 14:05:48 2023, max compression
++gzip compressed data, was "SOMcreator-1.1.7.tar", last modified: Thu Apr  6 10:28:15 2023, max compression
+```
+
+## Comparing `SOMcreator-1.1.6.tar` & `SOMcreator-1.1.7.tar`
+
+### file list
+
+```diff
+@@ -1,42 +1,42 @@
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.454962 SOMcreator-1.1.6/
+--rw-rw-rw-   0        0        0     1095 2022-10-28 12:14:14.000000 SOMcreator-1.1.6/LICENSE
+--rw-rw-rw-   0        0        0       81 2022-11-01 07:22:32.000000 SOMcreator-1.1.6/MANIFEST.in
+--rw-rw-rw-   0        0        0     1554 2023-03-28 14:05:48.453930 SOMcreator-1.1.6/PKG-INFO
+--rw-rw-rw-   0        0        0        9 2022-10-28 11:24:11.000000 SOMcreator-1.1.6/README.md
+--rw-rw-rw-   0        0        0      876 2023-03-20 13:30:05.000000 SOMcreator-1.1.6/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2023-03-28 14:05:48.454962 SOMcreator-1.1.6/setup.cfg
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.168172 SOMcreator-1.1.6/src/
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.208231 SOMcreator-1.1.6/src/SOMcreator/
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.297681 SOMcreator-1.1.6/src/SOMcreator/Template/
+--rw-rw-rw-   0        0        0      375 2023-03-14 10:38:41.000000 SOMcreator-1.1.6/src/SOMcreator/Template/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.313856 SOMcreator-1.1.6/src/SOMcreator/Template/__pyinstaller/
+--rw-rw-rw-   0        0        0       71 2022-11-02 03:35:28.000000 SOMcreator-1.1.6/src/SOMcreator/Template/__pyinstaller/__init__.py
+--rw-rw-rw-   0        0        0      202 2022-11-02 03:56:29.000000 SOMcreator-1.1.6/src/SOMcreator/Template/__pyinstaller/hook-SOMcreator.py
+--rw-rw-rw-   0        0        0      331 2023-03-14 10:42:57.000000 SOMcreator-1.1.6/src/SOMcreator/Template/bookmark_template.txt
+--rw-rw-rw-   0        0        0    25168 2022-11-01 13:55:19.000000 SOMcreator-1.1.6/src/SOMcreator/Template/ifc.json
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.364814 SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/
+--rw-rw-rw-   0        0        0     1001 2023-01-17 17:04:49.000000 SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/end_ungetestet.js
+--rw-rw-rw-   0        0        0     7071 2023-03-13 14:55:58.000000 SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/start_check_start.js
+--rw-rw-rw-   0        0        0      598 2022-05-18 15:06:32.000000 SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/start_koordinaten.js
+--rw-rw-rw-   0        0        0     2938 2023-01-17 17:04:49.000000 SOMcreator-1.1.6/src/SOMcreator/Template/mapping_template.txt
+--rw-rw-rw-   0        0        0     3121 2023-03-09 10:50:23.000000 SOMcreator-1.1.6/src/SOMcreator/Template/template.txt
+--rw-rw-rw-   0        0        0      154 2023-03-28 14:05:28.000000 SOMcreator-1.1.6/src/SOMcreator/__init__.py
+--rw-rw-rw-   0        0        0    23245 2023-03-27 09:19:58.000000 SOMcreator-1.1.6/src/SOMcreator/classes.py
+--rw-rw-rw-   0        0        0     1832 2023-02-23 13:01:56.000000 SOMcreator-1.1.6/src/SOMcreator/constants.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.452457 SOMcreator-1.1.6/src/SOMcreator/external_software/
+--rw-rw-rw-   0        0        0        0 2023-01-17 17:04:49.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/__init__.py
+--rw-rw-rw-   0        0        0     4311 2023-01-17 17:04:49.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/allplan.py
+--rw-rw-rw-   0        0        0     1365 2023-02-01 08:26:32.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/card1.py
+--rw-rw-rw-   0        0        0    22337 2023-03-14 10:42:57.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/desite.py
+--rw-rw-rw-   0        0        0    22011 2023-03-27 13:06:32.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/excel.py
+--rw-rw-rw-   0        0        0     3332 2023-01-17 17:04:49.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/revit.py
+--rw-rw-rw-   0        0        0     3227 2023-02-01 08:26:32.000000 SOMcreator-1.1.6/src/SOMcreator/external_software/vestra.py
+--rw-rw-rw-   0        0        0    18490 2023-02-23 13:01:56.000000 SOMcreator-1.1.6/src/SOMcreator/filehandling.py
+--rw-rw-rw-   0        0        0      970 2023-02-21 12:05:09.000000 SOMcreator-1.1.6/src/SOMcreator/quality_check.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 14:05:48.252393 SOMcreator-1.1.6/src/SOMcreator.egg-info/
+--rw-rw-rw-   0        0        0     1554 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     1194 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       76 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       29 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       17 2023-03-28 14:05:48.000000 SOMcreator-1.1.6/src/SOMcreator.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.989741 SOMcreator-1.1.7/
++-rw-rw-rw-   0        0        0     1095 2022-10-28 12:14:14.000000 SOMcreator-1.1.7/LICENSE
++-rw-rw-rw-   0        0        0       81 2022-11-01 07:22:32.000000 SOMcreator-1.1.7/MANIFEST.in
++-rw-rw-rw-   0        0        0     1554 2023-04-06 10:28:15.989741 SOMcreator-1.1.7/PKG-INFO
++-rw-rw-rw-   0        0        0        9 2022-10-28 11:24:11.000000 SOMcreator-1.1.7/README.md
++-rw-rw-rw-   0        0        0      876 2023-03-20 13:30:05.000000 SOMcreator-1.1.7/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 10:28:15.989741 SOMcreator-1.1.7/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.782329 SOMcreator-1.1.7/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.813508 SOMcreator-1.1.7/src/SOMcreator/
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.879756 SOMcreator-1.1.7/src/SOMcreator/Template/
++-rw-rw-rw-   0        0        0      375 2023-03-14 10:38:41.000000 SOMcreator-1.1.7/src/SOMcreator/Template/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.890492 SOMcreator-1.1.7/src/SOMcreator/Template/__pyinstaller/
++-rw-rw-rw-   0        0        0       71 2022-11-02 03:35:28.000000 SOMcreator-1.1.7/src/SOMcreator/Template/__pyinstaller/__init__.py
++-rw-rw-rw-   0        0        0      202 2022-11-02 03:56:29.000000 SOMcreator-1.1.7/src/SOMcreator/Template/__pyinstaller/hook-SOMcreator.py
++-rw-rw-rw-   0        0        0      331 2023-03-14 10:42:57.000000 SOMcreator-1.1.7/src/SOMcreator/Template/bookmark_template.txt
++-rw-rw-rw-   0        0        0    25168 2022-11-01 13:55:19.000000 SOMcreator-1.1.7/src/SOMcreator/Template/ifc.json
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.932307 SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/
++-rw-rw-rw-   0        0        0     1001 2023-01-17 17:04:49.000000 SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/end_ungetestet.js
++-rw-rw-rw-   0        0        0     7071 2023-03-13 14:55:58.000000 SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/start_check_start.js
++-rw-rw-rw-   0        0        0      598 2022-05-18 15:06:32.000000 SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/start_koordinaten.js
++-rw-rw-rw-   0        0        0     2938 2023-01-17 17:04:49.000000 SOMcreator-1.1.7/src/SOMcreator/Template/mapping_template.txt
++-rw-rw-rw-   0        0        0     3121 2023-03-09 10:50:23.000000 SOMcreator-1.1.7/src/SOMcreator/Template/template.txt
++-rw-rw-rw-   0        0        0      154 2023-04-06 10:26:32.000000 SOMcreator-1.1.7/src/SOMcreator/__init__.py
++-rw-rw-rw-   0        0        0    24647 2023-04-06 10:27:32.000000 SOMcreator-1.1.7/src/SOMcreator/classes.py
++-rw-rw-rw-   0        0        0     1898 2023-03-31 12:00:15.000000 SOMcreator-1.1.7/src/SOMcreator/constants.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.988742 SOMcreator-1.1.7/src/SOMcreator/external_software/
++-rw-rw-rw-   0        0        0        0 2023-01-17 17:04:49.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/__init__.py
++-rw-rw-rw-   0        0        0     4311 2023-01-17 17:04:49.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/allplan.py
++-rw-rw-rw-   0        0        0     1365 2023-02-01 08:26:32.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/card1.py
++-rw-rw-rw-   0        0        0    22331 2023-03-31 12:44:34.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/desite.py
++-rw-rw-rw-   0        0        0    21983 2023-04-05 09:10:58.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/excel.py
++-rw-rw-rw-   0        0        0     3326 2023-03-31 12:44:34.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/revit.py
++-rw-rw-rw-   0        0        0     3227 2023-02-01 08:26:32.000000 SOMcreator-1.1.7/src/SOMcreator/external_software/vestra.py
++-rw-rw-rw-   0        0        0     9363 2023-04-06 08:47:51.000000 SOMcreator-1.1.7/src/SOMcreator/filehandling.py
++-rw-rw-rw-   0        0        0      970 2023-02-21 12:05:09.000000 SOMcreator-1.1.7/src/SOMcreator/quality_check.py
++drwxrwxrwx   0        0        0        0 2023-04-06 10:28:15.835077 SOMcreator-1.1.7/src/SOMcreator.egg-info/
++-rw-rw-rw-   0        0        0     1554 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     1194 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       76 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       29 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       17 2023-04-06 10:28:15.000000 SOMcreator-1.1.7/src/SOMcreator.egg-info/top_level.txt
+```
+
+### Comparing `SOMcreator-1.1.6/LICENSE` & `SOMcreator-1.1.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/PKG-INFO` & `SOMcreator-1.1.7/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SOMcreator
+-Version: 1.1.6
++Version: 1.1.7
+ Summary: create simple Datastructures for BIM Models
+ License: MIT License
+         
+         Copyright (c) 2022 Christoph Mellüh
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+```
+
+### Comparing `SOMcreator-1.1.6/pyproject.toml` & `SOMcreator-1.1.7/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/ifc.json` & `SOMcreator-1.1.7/src/SOMcreator/Template/ifc.json`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/end_ungetestet.js` & `SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/end_ungetestet.js`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/start_check_start.js` & `SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/start_check_start.js`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/js_templates/start_koordinaten.js` & `SOMcreator-1.1.7/src/SOMcreator/Template/js_templates/start_koordinaten.js`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/mapping_template.txt` & `SOMcreator-1.1.7/src/SOMcreator/Template/mapping_template.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/Template/template.txt` & `SOMcreator-1.1.7/src/SOMcreator/Template/template.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/classes.py` & `SOMcreator-1.1.7/src/SOMcreator/classes.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -29,14 +29,36 @@
+         self._author = author
+         self._version = "1.0.0"
+         self._changed = True
+         self.name = name
+         self.seperator_status = True
+         self.seperator = ","
+ 
++    def get_uuid_dict(self) -> dict[str,Object|PropertySet|Attribute|Aggregation]:
++        pset_dict = {pset.uuid: pset for pset in PropertySet}
++        object_dict = {obj.uuid: obj for obj in Object}
++        attribute_dict = {attribute.uuid: attribute for attribute in Attribute}
++        aggregation_dict = {aggreg.uuid: aggreg for aggreg in Aggregation}
++        full_dict = pset_dict | object_dict | attribute_dict | aggregation_dict
++        if None in full_dict:
++            full_dict.pop(None)
++        return full_dict
++
++    def get_element_by_uuid(self,uuid:str) -> Attribute|PropertySet|Object|Aggregation|None:
++        if uuid is None:
++            return None
++        return self.get_uuid_dict().get(uuid)
++
++    def open(self,path) -> dict:
++        json_dict = filehandling.import_json(self,path)
++        return json_dict
++
++    def save(self,path) -> dict:
++        json_dict = filehandling.export_json(self,path)
++        return json_dict
+     @property
+     def changed(self) -> bool:
+         def check_data():
+             for obj in Object:
+                 if obj.changed:
+                     return True
+             return False
+@@ -81,19 +103,14 @@
+         return self._version
+ 
+     @version.setter
+     def version(self, value: str):
+         self._version = value
+         self._changed = True
+ 
+-    def save(self, path: str):
+-        tree = filehandling.build_xml(self)
+-        with open(path, "wb") as f:
+-            tree.write(f, pretty_print=True, encoding="utf-8", xml_declaration=True)
+-
+     def clear(self):
+         for obj in Object:
+             obj.delete()
+         for pset in PropertySet:
+             pset.delete()
+ 
+         for attribute in Attribute:
+@@ -102,37 +119,40 @@
+         self.author = ""
+         self.version = "1.0.0"
+         self.changed = True
+         self.name = ""
+         self.seperator_status = True
+         self.seperator = ","
+ 
+-    def open(self, path: str) -> None:
+-        filehandling.read_xml(self, path)
+-
+     def import_excel(self, path: str, ws_name: str) -> None:
+         excel.open_file(path, ws_name)
+ 
+     @property
+     def objects(self) -> Iterator[Object]:
+         return iter(Object)
+ 
++    @property
++    def aggregations(self) -> Iterator[Aggregation]:
++        return iter(Aggregation)
++
+     def tree(self) -> AnyNode:
+         def create_childen(node: AnyNode):
+             obj: Object = node.obj
+             for child in obj.children:
+                 child_node = AnyNode(id=child.name, obj=child, parent=node)
+                 create_childen(child_node)
+ 
+         base = AnyNode(id=self.name, obj=self)
+         root_objects = [AnyNode(id=obj.name, obj=obj, parent=base) for obj in Object if obj.parent is None]
+         for n in root_objects:
+             create_childen(n)
+         return base
+ 
++    def get_predefined_psets(self) -> set[PropertySet]:
++        return set(pset for pset in PropertySet if pset.object == None)
+ 
+ class Hirarchy(object, metaclass=IterRegistry):
+ 
+     def __init__(self, name: str, description: str | None = None, optional: bool | None = None) -> None:
+ 
+         self._parent = None
+         self._children = set()
+@@ -235,23 +255,25 @@
+         if self in self._registry:
+             self._registry.remove(self)
+ 
+ 
+ class PropertySet(Hirarchy):
+     _registry: set[PropertySet] = set()
+ 
+-    def __init__(self, name: str, obj: Object = None, identifier: str = None, description: None | str = None,
++    def __init__(self, name: str, obj: Object = None, uuid: str = None, description: None | str = None,
+                  optional: None | bool = None) -> None:
+         super(PropertySet, self).__init__(name, description, optional)
+         self._attributes = set()
+-        self._object = obj
++        self._object  = None
++        if obj is not None:
++            obj.add_property_set(self)  #adds Pset to Object and sets pset.object = obj
+         self._registry.add(self)
+-        self.identifier = identifier
+-        if self.identifier is None:
+-            self.identifier = str(uuid4())
++        self.uuid = uuid
++        if self.uuid is None:
++            self.uuid = str(uuid4())
+         self.changed = True
+ 
+     def __lt__(self, other):
+         if isinstance(other, PropertySet):
+             return self.name < other.name
+         else:
+             return self.name < other
+@@ -370,31 +392,34 @@
+ 
+ 
+ class Attribute(Hirarchy):
+     _registry: set[Attribute] = set()
+ 
+     def __init__(self, property_set: PropertySet | None, name: str, value: list, value_type: int,
+                  data_type: str = "xs:string",
+-                 child_inherits_values: bool = False, identifier: str = None, description: None | str = None,
+-                 optional: None | bool = None):
++                 child_inherits_values: bool = False, uuid: str = None, description: None | str = None,
++                 optional: None | bool = None, revit_mapping: None|str = None):
+ 
+         super(Attribute, self).__init__(name, description, optional)
+         self._value = value
+         self._property_set = property_set
+         self._value_type = value_type
+         self._data_type = data_type
+         self._registry.add(self)
+-        self._revit_name = name
++        if revit_mapping is None:
++            self._revit_name = name
++        else:
++            self._revit_name  = revit_mapping
+ 
+         self.changed = True
+         self._child_inherits_values = child_inherits_values
+-        self.identifier = identifier
++        self.uuid = uuid
+ 
+-        if self.identifier is None:
+-            self.identifier = str(uuid4())
++        if self.uuid is None:
++            self.uuid = str(uuid4())
+         if property_set is not None:
+             property_set.add_attribute(self)
+ 
+     def __str__(self) -> str:
+         text = f"{self.property_set.name} : {self.name} = {self.value}"
+         return text
+ 
+@@ -538,45 +563,55 @@
+             self.parent.add_child(new_attrib)
+         return new_attrib
+ 
+ 
+ class Object(Hirarchy):
+     _registry: set[Object] = set()
+ 
+-    def __init__(self, name: str, ident_attrib: [Attribute, str], identifier: str = None,
++    def __init__(self, name: str, ident_attrib: [Attribute, str], uuid: str = None,
+                  ifc_mapping: set[str] | None = None, description: None | str = None,
+-                 optional: None | bool = None) -> None:
++                 optional: None | bool = None,abbreviation:None|str = None) -> None:
+         super(Object, self).__init__(name, description, optional)
+         self._registry.add(self)
+ 
+         self._scripts: list[Script] = list()
+         self._property_sets: list[PropertySet] = list()
+         self._ident_attrib = ident_attrib
+         self._aggregations: set[Aggregation] = set()
+         self.custom_attribues = {}
+ 
++        self._abbreviation = abbreviation
++        if abbreviation is None:
++            self._abbreviation = ""
++
++        self._ifc_mapping = ifc_mapping
+         if ifc_mapping is None:
+             self._ifc_mapping = {"IfcBuildingElementProxy"}
+-        else:
+-            self._ifc_mapping = ifc_mapping
+ 
+-        self.changed = True
++        self.uuid = uuid
++        if uuid is None:
++            self.uuid = str(uuid4())
+ 
+-        if identifier is None:
+-            self.identifier = str(uuid4())
+-        else:
+-            self.identifier = identifier
++        self.changed = True
+ 
+     def __str__(self):
+         return f"Object {self.name}"
+ 
+     def __lt__(self, other: Object):
+         return self.ident_value < other.ident_value
+ 
+     @property
++    def abbreviation(self)-> str:
++        return self._abbreviation
++
++    @abbreviation.setter
++    def abbreviation(self,value)-> None:
++        self._abbreviation = value
++
++    @property
+     def ifc_mapping(self) -> set[str]:
+         return self._ifc_mapping
+ 
+     @ifc_mapping.setter
+     def ifc_mapping(self, value: set[str]):
+         value_set = set()
+         for item in value:  # filter empty Inputs
+@@ -691,18 +726,18 @@
+     def get_property_set_by_name(self, property_set_name: str) -> PropertySet | None:
+         for property_set in self.property_sets:
+             if property_set.name == property_set_name:
+                 return property_set
+         return None
+ 
+     @property
+-    def ident_value(self):
+-        if not self.is_concept:
+-            return self.ident_attrib.value[0]
+-        return None
++    def ident_value(self) -> str:
++        if self.is_concept:
++            return str()
++        return ";".join(str(x) for x in self.ident_attrib.value)
+ 
+ 
+ class Aggregation(Hirarchy):
+     _registry: set[Aggregation] = set()
+ 
+     def __str__(self):
+         return self.name
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/constants.py` & `SOMcreator-1.1.7/src/SOMcreator/constants.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -37,20 +37,21 @@
+ INHERITED_TEXT = "Predefined Pset"
+ 
+ # xml export
+ PREDEFINED_PSETS = "PredefinedPropertySets"
+ PREDEFINED_PSET = "PredefinedPropertySet"
+ PROPERTY_SET = "PropertySet"
+ PROPERTY_SETS = "PropertySets"
+-
++IDENT_ATTRIBUTE = "ident_attribute"
+ ATTRIBUTE = "Attribute"
+ ATTRIBUTES = "Attributes"
+ OBJECT = "Object"
+ OBJECTS = "Objects"
+ AGGREGATE = "Aggregate"
++AGGREGATIONS = "Aggregations"
+ NAME = "name"
+ IDENTIFIER = "identifer"
+ PARENT = "parent"
+ NONE = "None"
+ DATA_TYPE = "data_type"
+ VALUE_TYPE = "value_type"
+ IS_IDENTIFIER = "is_identifier"
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/allplan.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/allplan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/card1.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/card1.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/desite.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/desite.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -380,15 +380,15 @@
+         xml_bookmarks = etree.Element("bookmarks")
+         xml_bookmarks.set("xmlnsxsi", "http://www.w3.org/2001/XMLSchema-instance")
+         xml_bookmark_list = etree.SubElement(xml_bookmarks, "cBookmarkList")
+ 
+         obj: classes.Object
+         for obj in sorted(proj.objects, key=lambda x: x.ident_attrib.value[0]):
+             xml_bookmark = etree.SubElement(xml_bookmark_list, "cBookmark")
+-            xml_bookmark.set("ID", str(obj.identifier))
++            xml_bookmark.set("ID", str(obj.uuid))
+ 
+             if isinstance(obj.ident_attrib, classes.Attribute):
+                 xml_bookmark.set("name", str(obj.ident_attrib.value[0]))
+ 
+             xml_bookmark.set("bkmType", "2")
+             xml_col = etree.SubElement(xml_bookmark, "col")
+             xml_col.set("v", "Type##xs:string")
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/excel.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/excel.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -240,15 +240,15 @@
+         if self.name.startswith("*"):
+             optional = True
+             obj_name= obj_name[1:]
+         obj = classes.Object(obj_name, ident_attrib,ifc_mapping=self.ifc_mapping(),optional=optional)
+         if attributes:
+             obj.add_property_set(self.pset)
+         obj.add_property_set(ident_pset)
+-        obj.custom_attribues[constants.ABBREVIATION] = self.abbreviation
++        obj.abbreviation = self.abbreviation
+ 
+         return obj
+ 
+     def ifc_mapping(self) -> set[str]:
+         if self.is_predefined_pset:
+             return set()
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/revit.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/revit.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -53,15 +53,15 @@
+         self.__class__.add_item(self)
+         self.property_set_name = property_set_name
+         self.attribute = attribute
+         self.pset_number = pset_number
+ 
+     def print(self, file: IO):
+         file.write(
+-            f"PARAM	{self.attribute.identifier}	{self.attribute.name}	{self.datatype()}		{self.pset_number}	1		1\n")
++            f"PARAM	{self.attribute.uuid}	{self.attribute.name}	{self.datatype()}		{self.pset_number}	1		1\n")
+ 
+     def datatype(self) -> str:
+         data_type = self.attribute.data_type
+         if data_type == constants.XS_INT:
+             return "INTEGER"
+         if data_type == constants.XS_STRING:
+             return "TEXT"
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/external_software/vestra.py` & `SOMcreator-1.1.7/src/SOMcreator/external_software/vestra.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator/quality_check.py` & `SOMcreator-1.1.7/src/SOMcreator/quality_check.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator.egg-info/PKG-INFO` & `SOMcreator-1.1.7/src/SOMcreator.egg-info/PKG-INFO`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SOMcreator
+-Version: 1.1.6
++Version: 1.1.7
+ Summary: create simple Datastructures for BIM Models
+ License: MIT License
+         
+         Copyright (c) 2022 Christoph Mellüh
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+```
+
+### Comparing `SOMcreator-1.1.6/src/SOMcreator.egg-info/SOURCES.txt` & `SOMcreator-1.1.7/src/SOMcreator.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

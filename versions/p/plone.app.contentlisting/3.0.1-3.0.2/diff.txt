@@ -1,0 +1,577 @@
+--- tmp/plone.app.contentlisting-3.0.1.tar.gz
++++ tmp/plone.app.contentlisting-3.0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "plone.app.contentlisting-3.0.1.tar", last modified: Mon Dec  5 09:07:54 2022, max compression
+│ +gzip compressed data, was "plone.app.contentlisting-3.0.2.tar", last modified: Thu Apr  6 10:28:49 2023, max compression
+│   --- plone.app.contentlisting-3.0.1.tar
+├── +++ plone.app.contentlisting-3.0.2.tar
+│ ├── file list
+│ │ @@ -1,40 +1,44 @@
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.607263 plone.app.contentlisting-3.0.1/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      270 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/.gitignore
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     6646 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/CHANGES.rst
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       70 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/CONTRIBUTING.rst
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      144 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/MANIFEST.in
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    17236 2022-12-05 09:07:54.607382 plone.app.contentlisting-3.0.1/PKG-INFO
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     9752 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/README.rst
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.601618 plone.app.contentlisting-3.0.1/docs/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    15220 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/docs/LICENSE.GPL
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      686 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/docs/LICENSE.txt
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.601831 plone.app.contentlisting-3.0.1/plone/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       56 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/__init__.py
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.604086 plone.app.contentlisting-3.0.1/plone/app/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       56 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/__init__.py
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.605781 plone.app.contentlisting-3.0.1/plone/app/contentlisting/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/__init__.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1456 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/browser.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     5990 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/catalog.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1683 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/configure.zcml
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     5955 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/contentlisting.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     2165 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/interfaces.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     3802 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/realobject.py
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.607031 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/__init__.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1809 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/base.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     8027 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/integration.rst
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      591 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/test_integration_doctest.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    16488 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/test_integration_unit.py
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-12-05 09:07:54.603873 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    17236 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1078 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        1 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       40 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       16 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/namespace_packages.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        1 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       71 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/requires.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        6 2022-12-05 09:07:54.000000 plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/top_level.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      397 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/pyproject.toml
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      172 2022-12-05 09:07:54.607793 plone.app.contentlisting-3.0.1/setup.cfg
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1586 2022-12-05 09:07:53.000000 plone.app.contentlisting-3.0.1/setup.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.048473 plone.app.contentlisting-3.0.2/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1019 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/.editorconfig
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      270 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/.gitignore
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      128 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/.meta.toml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      973 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     6755 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/CHANGES.rst
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       70 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/CONTRIBUTING.rst
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      144 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/MANIFEST.in
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    17345 2023-04-06 10:28:49.048618 plone.app.contentlisting-3.0.2/PKG-INFO
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     9752 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/README.rst
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.040634 plone.app.contentlisting-3.0.2/docs/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    15220 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/docs/LICENSE.GPL
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      686 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/docs/LICENSE.txt
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.040934 plone.app.contentlisting-3.0.2/plone/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       56 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/__init__.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.043839 plone.app.contentlisting-3.0.2/plone/app/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       56 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/__init__.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.046592 plone.app.contentlisting-3.0.2/plone/app/contentlisting/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/__init__.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1455 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/browser.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     5990 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/catalog.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1677 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/configure.zcml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     5954 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/contentlisting.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     2165 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/interfaces.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     3769 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/realobject.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.048130 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/__init__.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1726 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/base.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     8027 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/integration.rst
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      591 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/test_integration_doctest.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    16709 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/test_integration_unit.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:28:49.043536 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    17345 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1135 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       40 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       16 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/namespace_packages.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      224 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/requires.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        6 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1670 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/pyproject.toml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      217 2023-04-06 10:28:49.049152 plone.app.contentlisting-3.0.2/setup.cfg
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1846 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/setup.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1282 2023-04-06 10:28:48.000000 plone.app.contentlisting-3.0.2/tox.ini
+│ │   --- plone.app.contentlisting-3.0.1/CHANGES.rst
+│ ├── +++ plone.app.contentlisting-3.0.2/CHANGES.rst
+│ │┄ Files 1% similar despite different names
+│ │ @@ -4,14 +4,24 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.2 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (#47959565)
+│ │ +
+│ │ +
+│ │  3.0.1 (2022-12-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - In RealContentListingObject.__getattr__ check attribute existence without acquisition but return the attribute with acquisition in case it is a method that needs acquisition. [gbastien] (#47)
+│ │ @@ -191,15 +201,15 @@
+│ │  
+│ │  1.2.6 (2016-07-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  - Added missing implementation for getSize on RealContentListingObject.
+│ │ -  Interface was not fullfilled here.
+│ │ +  Interface was not fulfilled here.
+│ │    [jensens]
+│ │  
+│ │  
+│ │  1.2.5 (2016-05-12)
+│ │  ------------------
+│ │  
+│ │  Fixes:
+│ │   --- plone.app.contentlisting-3.0.1/PKG-INFO
+│ ├── +++ plone.app.contentlisting-3.0.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: plone.app.contentlisting
+│ │ -Version: 3.0.1
+│ │ +Version: 3.0.2
+│ │  Summary: Listing of content for the Plone CMS
+│ │  Home-page: https://pypi.org/project/plone.app.contentlisting
+│ │  Author: Plone Foundation
+│ │  Author-email: plone-developers@lists.sourceforge.net
+│ │  License: GPL version 2
+│ │  Keywords: content list Plone
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │ @@ -283,14 +283,24 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.2 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (#47959565)
+│ │ +
+│ │ +
+│ │  3.0.1 (2022-12-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - In RealContentListingObject.__getattr__ check attribute existence without acquisition but return the attribute with acquisition in case it is a method that needs acquisition. [gbastien] (#47)
+│ │ @@ -470,15 +480,15 @@
+│ │  
+│ │  1.2.6 (2016-07-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  - Added missing implementation for getSize on RealContentListingObject.
+│ │ -  Interface was not fullfilled here.
+│ │ +  Interface was not fulfilled here.
+│ │    [jensens]
+│ │  
+│ │  
+│ │  1.2.5 (2016-05-12)
+│ │  ------------------
+│ │  
+│ │  Fixes:
+│ │   --- plone.app.contentlisting-3.0.1/README.rst
+│ ├── +++ plone.app.contentlisting-3.0.2/README.rst
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/docs/LICENSE.GPL
+│ ├── +++ plone.app.contentlisting-3.0.2/docs/LICENSE.GPL
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/docs/LICENSE.txt
+│ ├── +++ plone.app.contentlisting-3.0.2/docs/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/browser.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/browser.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -26,15 +26,14 @@
+│ │          catalog = getToolByName(self.context, "portal_catalog")
+│ │          results = catalog(query)
+│ │          return IContentListing(results)
+│ │  
+│ │  
+│ │  class ContentListingCollection(BrowserView):
+│ │      def __call__(self, batch=False, b_size=20, b_start=0, **kw):
+│ │ -
+│ │          if "orphan" in kw:
+│ │              # At the moment, orphan keyword is not supported by
+│ │              # plone.app.contenttypes Collection behavior, nor by
+│ │              # plone.app.querystring's querybuilder.
+│ │              del kw["orphan"]
+│ │  
+│ │          res = self.context.results(
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/catalog.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/catalog.py
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/configure.zcml
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/configure.zcml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,12 @@
+│ │ -<configure xmlns="http://namespaces.zope.org/zope"
+│ │ -           xmlns:browser="http://namespaces.zope.org/browser"
+│ │ -           xmlns:zcml="http://namespaces.zope.org/zcml">
+│ │ +<configure
+│ │ +    xmlns="http://namespaces.zope.org/zope"
+│ │ +    xmlns:browser="http://namespaces.zope.org/browser"
+│ │ +    xmlns:zcml="http://namespaces.zope.org/zcml"
+│ │ +    >
+│ │  
+│ │    <adapter
+│ │        factory=".contentlisting.ContentListing"
+│ │        for="ZTUtils.Lazy.LazyMap"
+│ │        />
+│ │  
+│ │    <adapter
+│ │ @@ -35,34 +37,34 @@
+│ │    <adapter
+│ │        factory=".catalog.CatalogContentListingObject"
+│ │        for="Products.ZCatalog.interfaces.ICatalogBrain"
+│ │        />
+│ │  
+│ │    <adapter
+│ │        factory=".realobject.RealContentListingObject"
+│ │ -      for="Products.CMFCore.interfaces.IContentish "
+│ │ +      for="Products.CMFCore.interfaces.IContentish"
+│ │        />
+│ │  
+│ │    <browser:page
+│ │        name="contentlisting"
+│ │ +      for="Products.CMFCore.interfaces.IFolderish"
+│ │        class=".browser.FolderListing"
+│ │        permission="zope2.View"
+│ │ -      for="Products.CMFCore.interfaces.IFolderish"
+│ │        />
+│ │  
+│ │    <browser:page
+│ │        name="contentlisting"
+│ │ +      for="plone.app.contenttypes.behaviors.collection.ISyndicatableCollection"
+│ │        class=".browser.ContentListingCollection"
+│ │        permission="zope2.View"
+│ │ -      for="plone.app.contenttypes.behaviors.collection.ISyndicatableCollection"
+│ │        zcml:condition="installed plone.app.contenttypes"
+│ │        />
+│ │  
+│ │    <!-- BBB -->
+│ │    <browser:page
+│ │        name="folderListing"
+│ │ +      for="Products.CMFCore.interfaces.IFolderish"
+│ │        class=".browser.FolderListing"
+│ │        permission="zope2.View"
+│ │ -      for="Products.CMFCore.interfaces.IFolderish"
+│ │        />
+│ │  
+│ │  </configure>
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/contentlisting.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/contentlisting.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from Acquisition import aq_base
+│ │  from plone.app.contentlisting.interfaces import IContentListing
+│ │  from plone.app.contentlisting.interfaces import IContentListingObject
+│ │ -from plone.app.layout.navigation.root import getNavigationRootObject
+│ │  from plone.base.interfaces import INavigationSchema
+│ │ +from plone.base.navigationroot import get_navigation_root_object
+│ │  from plone.i18n.normalizer.interfaces import IIDNormalizer
+│ │  from plone.registry.interfaces import IRegistry
+│ │  from Products.CMFCore.utils import getToolByName
+│ │  from Products.MimetypesRegistry.MimeTypeItem import guess_icon_path
+│ │  from zope.component import getUtility
+│ │  from zope.component import queryUtility
+│ │  from zope.interface import implementer
+│ │ @@ -158,17 +158,17 @@
+│ │          if self.portal_type not in navigation_settings.displayed_types:
+│ │              return False
+│ │  
+│ │          return True
+│ │  
+│ │      def MimeTypeIcon(self):
+│ │          mimeicon = None
+│ │ -        portal_url_object = getToolByName(self._brain, 'portal_url')
+│ │ +        portal_url_object = getToolByName(self._brain, "portal_url")
+│ │          portal = portal_url_object.getPortalObject()
+│ │ -        navroot = getNavigationRootObject(self._brain, portal)
+│ │ +        navroot = get_navigation_root_object(self._brain, portal)
+│ │          contenttype = aq_base(
+│ │              getattr(self._brain, "mime_type", None),
+│ │          )
+│ │          if contenttype:
+│ │              mtt = getToolByName(
+│ │                  self._brain,
+│ │                  "mimetypes_registry",
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/interfaces.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/interfaces.py
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/realobject.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/realobject.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,8 +1,7 @@
+│ │ -from Acquisition import aq_base
+│ │  from Acquisition import aq_get
+│ │  from plone.app.contentlisting.contentlisting import BaseContentListingObject
+│ │  from plone.app.contentlisting.interfaces import IContentListingObject
+│ │  from plone.base.utils import base_hasattr
+│ │  from plone.base.utils import human_readable_size
+│ │  from plone.rfc822.interfaces import IPrimaryFieldInfo
+│ │  from plone.uuid.interfaces import IUUID
+│ │ @@ -72,15 +71,15 @@
+│ │          # return size of the primary field content.
+│ │          # this works the same way as the indexer works
+│ │          obj = self.getObject()
+│ │          try:
+│ │              primary_field_info = IPrimaryFieldInfo(obj, None)
+│ │          except TypeError:
+│ │              # no primary field available, dexterity raises a TypeError
+│ │ -            # with the slightly missleading message 'could not adapt'.
+│ │ +            # with the slightly misleading message 'could not adapt'.
+│ │              primary_field_info = None
+│ │          if primary_field_info is None or not primary_field_info.value:
+│ │              size = 0
+│ │          else:
+│ │              size = getattr(primary_field_info.value, "size", 0)
+│ │          return human_readable_size(size)
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/base.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/base.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -4,31 +4,26 @@
+│ │  from plone.app.testing import PloneSandboxLayer
+│ │  from plone.app.testing import setRoles
+│ │  from plone.app.testing import TEST_USER_ID
+│ │  from Products.CMFCore.utils import getToolByName
+│ │  
+│ │  
+│ │  class ContentListingLayer(PloneSandboxLayer):
+│ │ -
+│ │      defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
+│ │  
+│ │      def setUpZope(self, app, configurationContext):
+│ │ -        import plone.app.layout
+│ │ -
+│ │ -        self.loadZCML(package=plone.app.layout)
+│ │          import plone.app.contentlisting
+│ │  
+│ │          self.loadZCML(package=plone.app.contentlisting)
+│ │  
+│ │  
+│ │  CONTENTLISTING_FIXTURE = ContentListingLayer()
+│ │  
+│ │  
+│ │  class ContentListingIntegrationLayer(PloneSandboxLayer):
+│ │ -
+│ │      defaultBases = (CONTENTLISTING_FIXTURE,)
+│ │  
+│ │      def setUpPloneSite(self, portal):
+│ │          setRoles(portal, TEST_USER_ID, ["Manager"])
+│ │          wftool = getToolByName(portal, "portal_workflow")
+│ │          wftool.setDefaultChain("simple_publication_workflow")
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/integration.rst
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/integration.rst
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/test_integration_doctest.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/test_integration_doctest.py
+│ │┄ Files identical despite different names
+│ │   --- plone.app.contentlisting-3.0.1/plone/app/contentlisting/tests/test_integration_unit.py
+│ ├── +++ plone.app.contentlisting-3.0.2/plone/app/contentlisting/tests/test_integration_unit.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -205,19 +205,20 @@
+│ │          self.assertRaises(AttributeError, self.item.__getattr__, "foo")
+│ │  
+│ │      def test_item_getattr_acquisition(self):
+│ │          # absolute_url needs acquisition to work
+│ │          # on the object
+│ │          self.assertEqual(
+│ │              self.item._realobject.absolute_url(),
+│ │ -            "http://nohost/plone/test-folder/mypage")
+│ │ +            "http://nohost/plone/test-folder/mypage",
+│ │ +        )
+│ │          # on the contentlisting object
+│ │          self.assertEqual(
+│ │ -            self.item.absolute_url(),
+│ │ -            "http://nohost/plone/test-folder/mypage")
+│ │ +            self.item.absolute_url(), "http://nohost/plone/test-folder/mypage"
+│ │ +        )
+│ │  
+│ │      def test_item_Title(self):
+│ │          self.assertEqual(self.item.Title(), "My Page")
+│ │          self.assertEqual(self.item.Title(), self.realitem.Title())
+│ │  
+│ │      def test_item_Description(self):
+│ │          self.assertEqual(self.item.Description(), "blah")
+│ │ @@ -426,13 +427,21 @@
+│ │          self.assertEqual(contentlisting.has_next, False)
+│ │  
+│ │  
+│ │  def test_suite():
+│ │      import unittest
+│ │  
+│ │      suite = unittest.TestSuite()
+│ │ -    suite.addTest(unittest.makeSuite(TestSetup))
+│ │ -    suite.addTest(unittest.makeSuite(TestIndividualCatalogContentItems))
+│ │ -    suite.addTest(unittest.makeSuite(TestIndividualRealContentItems))
+│ │ -    suite.addTest(unittest.makeSuite(TestFolderContents))
+│ │ -    suite.addTest(unittest.makeSuite(TestCollectionResults))
+│ │ +    suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(TestSetup))
+│ │ +    suite.addTest(
+│ │ +        unittest.defaultTestLoader.loadTestsFromTestCase(
+│ │ +            TestIndividualCatalogContentItems
+│ │ +        )
+│ │ +    )
+│ │ +    suite.addTest(
+│ │ +        unittest.defaultTestLoader.loadTestsFromTestCase(TestIndividualRealContentItems)
+│ │ +    )
+│ │ +    suite.addTest(unittest.defaultTestLoader.loadTestsFromTestCase(TestFolderContents))
+│ │ +    suite.addTest(
+│ │ +        unittest.defaultTestLoader.loadTestsFromTestCase(TestCollectionResults)
+│ │ +    )
+│ │      return suite
+│ │   --- plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/PKG-INFO
+│ ├── +++ plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: plone.app.contentlisting
+│ │ -Version: 3.0.1
+│ │ +Version: 3.0.2
+│ │  Summary: Listing of content for the Plone CMS
+│ │  Home-page: https://pypi.org/project/plone.app.contentlisting
+│ │  Author: Plone Foundation
+│ │  Author-email: plone-developers@lists.sourceforge.net
+│ │  License: GPL version 2
+│ │  Keywords: content list Plone
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │ @@ -283,14 +283,24 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.2 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (#47959565)
+│ │ +
+│ │ +
+│ │  3.0.1 (2022-12-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - In RealContentListingObject.__getattr__ check attribute existence without acquisition but return the attribute with acquisition in case it is a method that needs acquisition. [gbastien] (#47)
+│ │ @@ -470,15 +480,15 @@
+│ │  
+│ │  1.2.6 (2016-07-05)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  - Added missing implementation for getSize on RealContentListingObject.
+│ │ -  Interface was not fullfilled here.
+│ │ +  Interface was not fulfilled here.
+│ │    [jensens]
+│ │  
+│ │  
+│ │  1.2.5 (2016-05-12)
+│ │  ------------------
+│ │  
+│ │  Fixes:
+│ │   --- plone.app.contentlisting-3.0.1/plone.app.contentlisting.egg-info/SOURCES.txt
+│ ├── +++ plone.app.contentlisting-3.0.2/plone.app.contentlisting.egg-info/SOURCES.txt
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,15 +1,19 @@
+│ │ +.editorconfig
+│ │  .gitignore
+│ │ +.meta.toml
+│ │ +.pre-commit-config.yaml
+│ │  CHANGES.rst
+│ │  CONTRIBUTING.rst
+│ │  MANIFEST.in
+│ │  README.rst
+│ │  pyproject.toml
+│ │  setup.cfg
+│ │  setup.py
+│ │ +tox.ini
+│ │  docs/LICENSE.GPL
+│ │  docs/LICENSE.txt
+│ │  plone/__init__.py
+│ │  plone.app.contentlisting.egg-info/PKG-INFO
+│ │  plone.app.contentlisting.egg-info/SOURCES.txt
+│ │  plone.app.contentlisting.egg-info/dependency_links.txt
+│ │  plone.app.contentlisting.egg-info/entry_points.txt
+│ │   --- plone.app.contentlisting-3.0.1/setup.py
+│ ├── +++ plone.app.contentlisting-3.0.2/setup.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  import os
+│ │  
+│ │  
+│ │  def read(*rnames):
+│ │      return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
+│ │  
+│ │  
+│ │ -version = "3.0.1"
+│ │ +version = "3.0.2"
+│ │  
+│ │  long_description = "{}\n\n{}".format(read("README.rst"), read("CHANGES.rst"))
+│ │  
+│ │  setup(
+│ │      name="plone.app.contentlisting",
+│ │      version=version,
+│ │      description="Listing of content for the Plone CMS",
+│ │ @@ -38,19 +38,28 @@
+│ │      namespace_packages=["plone", "plone.app"],
+│ │      include_package_data=True,
+│ │      zip_safe=False,
+│ │      python_requires=">=3.8",
+│ │      install_requires=[
+│ │          "setuptools",
+│ │          "plone.base",
+│ │ +        "Products.MimetypesRegistry",
+│ │ +        "Products.ZCatalog",
+│ │ +        "plone.app.contenttypes",
+│ │ +        "plone.i18n",
+│ │ +        "plone.registry",
+│ │ +        "plone.rfc822",
+│ │ +        "plone.uuid",
+│ │      ],
+│ │      extras_require={
+│ │          "test": [
+│ │ -            "plone.app.contenttypes",
+│ │ +            "plone.app.contenttypes[test]",
+│ │              "plone.app.testing",
+│ │ +            "plone.batching",
+│ │ +            "plone.testing",
+│ │          ],
+│ │      },
+│ │      entry_points="""
+│ │      [z3c.autoinclude.plugin]
+│ │      target = plone
+│ │      """,
+│ │  )

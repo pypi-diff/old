@@ -1,0 +1,61 @@
+# Comparing `tmp/paml2html-0.1.0.tar.gz` & `tmp/paml2html-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "paml2html-0.1.0.tar", max compression
++gzip compressed data, was "paml2html-0.1.1.tar", max compression
+```
+
+## Comparing `paml2html-0.1.0.tar` & `paml2html-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,6 +1,6 @@
+--rw-r--r--   0        0        0     1070 2023-03-18 00:10:09.209868 paml2html-0.1.0/LICENSE
+--rw-r--r--   0        0        0     1332 2023-03-26 17:25:03.288961 paml2html-0.1.0/README.md
+--rw-r--r--   0        0        0      368 2023-04-03 17:59:20.486358 paml2html-0.1.0/pyproject.toml
+--rw-r--r--   0        0        0        0 2023-03-19 22:10:52.421274 paml2html-0.1.0/src/paml2html/__init__.py
+--rw-r--r--   0        0        0    20893 2023-04-03 17:43:50.887998 paml2html-0.1.0/src/paml2html/paml2html.py
+--rw-r--r--   0        0        0     1889 1970-01-01 00:00:00.000000 paml2html-0.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1070 2023-03-18 00:10:09.209868 paml2html-0.1.1/LICENSE
++-rw-r--r--   0        0        0     1332 2023-03-26 17:25:03.288961 paml2html-0.1.1/README.md
++-rw-r--r--   0        0        0      428 2023-04-06 10:34:15.999417 paml2html-0.1.1/pyproject.toml
++-rw-r--r--   0        0        0      113 2023-04-06 10:34:45.591663 paml2html-0.1.1/src/paml2html/__init__.py
++-rw-r--r--   0        0        0    20893 2023-04-03 17:43:50.887998 paml2html-0.1.1/src/paml2html/paml2html.py
++-rw-r--r--   0        0        0     1889 1970-01-01 00:00:00.000000 paml2html-0.1.1/PKG-INFO
+```
+
+### Comparing `paml2html-0.1.0/LICENSE` & `paml2html-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `paml2html-0.1.0/README.md` & `paml2html-0.1.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `paml2html-0.1.0/src/paml2html/paml2html.py` & `paml2html-0.1.1/src/paml2html/paml2html.py`
+
+ * *Files identical despite different names*
+
+### Comparing `paml2html-0.1.0/PKG-INFO` & `paml2html-0.1.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: paml2html
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: [P]oker's M[a]de-up [M]arkup [L]anguage to HTML converter
+ License: MIT
+ Author: PokerFacowaty
+ Author-email: pokerfacowaty.bn@gmail.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+

@@ -1,0 +1,702 @@
+--- tmp/klarna-orders-1.0.0.tar.gz
++++ tmp/klarna-orders-1.0.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "klarna-orders-1.0.0.tar", last modified: Thu Apr  6 10:10:19 2023, max compression
+│ +gzip compressed data, was "klarna-orders-1.0.1.tar", last modified: Thu Apr  6 10:28:10 2023, max compression
+│   --- klarna-orders-1.0.0.tar
+├── +++ klarna-orders-1.0.1.tar
+│ ├── file list
+│ │ @@ -1,59 +1,59 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.869677 klarna-orders-1.0.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/LICENSE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1945 2023-04-06 10:10:19.869677 klarna-orders-1.0.0/PKG-INFO
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1668 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 10:10:19.869677 klarna-orders-1.0.0/setup.cfg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1113 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.861677 klarna-orders-1.0.0/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.865677 klarna-orders-1.0.0/src/klarna_orders.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1945 2023-04-06 10:10:19.000000 klarna-orders-1.0.0/src/klarna_orders.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1734 2023-04-06 10:10:19.000000 klarna-orders-1.0.0/src/klarna_orders.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:10:19.000000 klarna-orders-1.0.0/src/klarna_orders.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      321 2023-04-06 10:10:19.000000 klarna-orders-1.0.0/src/klarna_orders.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        4 2023-04-06 10:10:19.000000 klarna-orders-1.0.0/src/klarna_orders.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.865677 klarna-orders-1.0.0/src/sdk/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)       95 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1861 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/authorizations.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.865677 klarna-orders-1.0.0/src/sdk/models/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)       76 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.865677 klarna-orders-1.0.0/src/sdk/models/operations/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      576 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      659 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/cancelauthorization.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      643 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/createcreditsession.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1068 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/createorder.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1490 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/purchasetoken.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      845 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/readcreditsession.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      867 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/operations/updatecreditsession.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.869677 klarna-orders-1.0.0/src/sdk/models/shared/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1567 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4546 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/address.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      986 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/asset_urls.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      992 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/attachment.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1410 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/authorized_payment_method.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     5392 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/create_order_request.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     3820 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/customer.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     3164 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/customer_read.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      841 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/customer_read_create_token.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1937 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/customer_token_creation_request.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2072 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/customer_token_creation_response.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1730 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/errorv2.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1279 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/merchant_session.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1894 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/merchant_urls.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1827 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/options.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2072 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/order.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     4990 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/order_line.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1493 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/payment_method_category.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2255 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/product_identifiers.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      336 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/security.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     7594 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/session.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     7430 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/session_create.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     9506 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/session_read.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     1000 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/models/shared/subscription.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2837 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/orders.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     3575 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/sdk.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     5482 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/sessions.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     2861 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/tokens.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:10:19.869677 klarna-orders-1.0.0/src/sdk/utils/
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      120 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/utils/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     3705 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/utils/retries.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)    24799 2023-04-06 10:09:54.000000 klarna-orders-1.0.0/src/sdk/utils/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.140529 klarna-orders-1.0.1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/LICENSE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7738 2023-04-06 10:28:10.140529 klarna-orders-1.0.1/PKG-INFO
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7461 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 10:28:10.140529 klarna-orders-1.0.1/setup.cfg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1113 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.120528 klarna-orders-1.0.1/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.124528 klarna-orders-1.0.1/src/klarna/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)       95 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1864 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/authorizations.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.124528 klarna-orders-1.0.1/src/klarna/models/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)       76 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.128528 klarna-orders-1.0.1/src/klarna/models/operations/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      576 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      659 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/cancelauthorization.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      643 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/createcreditsession.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1068 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/createorder.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1490 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/purchasetoken.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      845 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/readcreditsession.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      867 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/operations/updatecreditsession.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.136528 klarna-orders-1.0.1/src/klarna/models/shared/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1567 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4549 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/address.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      989 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/asset_urls.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      995 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/attachment.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1413 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/authorized_payment_method.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     5395 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/create_order_request.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     3823 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/customer.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     3167 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/customer_read.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      844 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/customer_read_create_token.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1940 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/customer_token_creation_request.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2075 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/customer_token_creation_response.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1733 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/errorv2.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1282 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/merchant_session.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1897 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/merchant_urls.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1830 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/options.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2075 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/order.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     4993 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/order_line.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1496 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/payment_method_category.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2258 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/product_identifiers.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      336 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/security.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7597 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/session.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     7433 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/session_create.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     9509 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/session_read.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     1003 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/models/shared/subscription.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2840 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/orders.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     3581 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/sdk.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     5485 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/sessions.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     2864 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/tokens.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.136528 klarna-orders-1.0.1/src/klarna/utils/
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      120 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/utils/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     3705 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/utils/retries.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)    24799 2023-04-06 10:27:52.000000 klarna-orders-1.0.1/src/klarna/utils/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:28:10.140529 klarna-orders-1.0.1/src/klarna_orders.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7738 2023-04-06 10:28:09.000000 klarna-orders-1.0.1/src/klarna_orders.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1857 2023-04-06 10:28:10.000000 klarna-orders-1.0.1/src/klarna_orders.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:28:09.000000 klarna-orders-1.0.1/src/klarna_orders.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      321 2023-04-06 10:28:09.000000 klarna-orders-1.0.1/src/klarna_orders.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-06 10:28:09.000000 klarna-orders-1.0.1/src/klarna_orders.egg-info/top_level.txt
+│ │   --- klarna-orders-1.0.0/LICENSE.md
+│ ├── +++ klarna-orders-1.0.1/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/setup.py
+│ ├── +++ klarna-orders-1.0.1/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │      with open("README.md", "r") as fh:
+│ │          long_description = fh.read()
+│ │  except FileNotFoundError:
+│ │      long_description = ""
+│ │  
+│ │  setuptools.setup(
+│ │      name="klarna-orders",
+│ │ -    version="1.0.0",
+│ │ +    version="1.0.1",
+│ │      author="Speakeasy-Klarna",
+│ │      description="Python Client SDK Generated by Speakeasy",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      packages=setuptools.find_packages(where="src"),
+│ │      install_requires=[
+│ │          "certifi==2022.12.07",
+│ │   --- klarna-orders-1.0.0/src/sdk/authorizations.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/authorizations.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  import requests as requests_http
+│ │  from . import utils
+│ │ -from sdk.models import operations
+│ │ +from klarna.models import operations
+│ │  
+│ │  class Authorizations:
+│ │      r"""Operations related to authorizations"""
+│ │      _client: requests_http.Session
+│ │      _security_client: requests_http.Session
+│ │      _server_url: str
+│ │      _language: str
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/__init__.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/cancelauthorization.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/cancelauthorization.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/createcreditsession.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/createcreditsession.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/createorder.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/createorder.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/purchasetoken.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/purchasetoken.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/readcreditsession.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/readcreditsession.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/operations/updatecreditsession.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/operations/updatecreditsession.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/__init__.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/address.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/address.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class Address:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/asset_urls.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/asset_urls.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class AssetUrls:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/attachment.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/attachment.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class Attachment:
+│ │      
+│ │      body: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('body') }})
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/authorized_payment_method.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/authorized_payment_method.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class AuthorizedPaymentMethodTypeEnum(str, Enum):
+│ │      INVOICE = 'invoice'
+│ │      FIXED_AMOUNT = 'fixed_amount'
+│ │      BASE_ACCOUNT = 'base_account'
+│ │      DIRECT_DEBIT = 'direct_debit'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/create_order_request.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/create_order_request.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import address as shared_address
+│ │  from ..shared import customer as shared_customer
+│ │  from ..shared import merchant_urls as shared_merchant_urls
+│ │  from ..shared import order_line as shared_order_line
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class CreateOrderRequestInput:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/customer.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/customer.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class CustomerOrganizationEntityTypeEnum(str, Enum):
+│ │      r"""Organization entity type. Only applicable for B2B customers."""
+│ │      LIMITED_COMPANY = 'LIMITED_COMPANY'
+│ │      PUBLIC_LIMITED_COMPANY = 'PUBLIC_LIMITED_COMPANY'
+│ │      ENTREPRENEURIAL_COMPANY = 'ENTREPRENEURIAL_COMPANY'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/customer_read.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/customer_read.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class CustomerReadOrganizationEntityTypeEnum(str, Enum):
+│ │      r"""Organization entity type. Only applicable for B2B customers."""
+│ │      LIMITED_COMPANY = 'LIMITED_COMPANY'
+│ │      PUBLIC_LIMITED_COMPANY = 'PUBLIC_LIMITED_COMPANY'
+│ │      ENTREPRENEURIAL_COMPANY = 'ENTREPRENEURIAL_COMPANY'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/customer_read_create_token.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/customer_read_create_token.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class CustomerReadCreateToken:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/customer_token_creation_request.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/customer_token_creation_request.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import address as shared_address
+│ │  from ..shared import customer as shared_customer
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class CustomerTokenCreationRequestIntendedUseEnum(str, Enum):
+│ │      r"""Intended use for the token."""
+│ │      SUBSCRIPTION = 'SUBSCRIPTION'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/customer_token_creation_response.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/customer_token_creation_response.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import address as shared_address
+│ │  from ..shared import customer_read_create_token as shared_customer_read_create_token
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class CustomerTokenCreationResponse:
+│ │      r"""Token was successfully created."""
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/errorv2.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/errorv2.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import authorized_payment_method as shared_authorized_payment_method
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class ErrorV2:
+│ │      r"""We were unable to create a customer token with the provided data. Some field constraint was violated."""
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/merchant_session.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/merchant_session.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import payment_method_category as shared_payment_method_category
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class MerchantSession:
+│ │      r"""successful operation"""
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/merchant_urls.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/merchant_urls.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class MerchantUrls:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/options.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/options.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class Options:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/order.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/order.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import authorized_payment_method as shared_authorized_payment_method
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class Order:
+│ │      r"""Order was successfully created."""
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/order_line.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/order_line.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import product_identifiers as shared_product_identifiers
+│ │  from ..shared import subscription as shared_subscription
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class OrderLine:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/payment_method_category.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/payment_method_category.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from ..shared import asset_urls as shared_asset_urls
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class PaymentMethodCategory:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/product_identifiers.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/product_identifiers.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  
+│ │  @dataclass_json(undefined=Undefined.EXCLUDE)
+│ │  @dataclasses.dataclass
+│ │  class ProductIdentifiers:
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/session.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/session.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │  from ..shared import attachment as shared_attachment
+│ │  from ..shared import customer as shared_customer
+│ │  from ..shared import merchant_urls as shared_merchant_urls
+│ │  from ..shared import options as shared_options
+│ │  from ..shared import order_line as shared_order_line
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class SessionAcquiringChannelEnum(str, Enum):
+│ │      r"""The acquiring channel in which the session takes place. Ecommerce is default unless specified. Any other values should be defined in the agreement."""
+│ │      ECOMMERCE = 'ECOMMERCE'
+│ │      IN_STORE = 'IN_STORE'
+│ │      TELESALES = 'TELESALES'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/session_create.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/session_create.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │  from ..shared import attachment as shared_attachment
+│ │  from ..shared import customer as shared_customer
+│ │  from ..shared import merchant_urls as shared_merchant_urls
+│ │  from ..shared import options as shared_options
+│ │  from ..shared import order_line as shared_order_line
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  from typing import Optional
+│ │  
+│ │  class SessionCreateAcquiringChannelEnum(str, Enum):
+│ │      r"""The acquiring channel in which the session takes place. Ecommerce is default unless specified. Any other values should be defined in the agreement."""
+│ │      ECOMMERCE = 'ECOMMERCE'
+│ │      IN_STORE = 'IN_STORE'
+│ │      TELESALES = 'TELESALES'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/session_read.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/session_read.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -9,16 +9,16 @@
+│ │  from ..shared import merchant_urls as shared_merchant_urls
+│ │  from ..shared import options as shared_options
+│ │  from ..shared import order_line as shared_order_line
+│ │  from ..shared import payment_method_category as shared_payment_method_category
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from datetime import datetime
+│ │  from enum import Enum
+│ │ +from klarna import utils
+│ │  from marshmallow import fields
+│ │ -from sdk import utils
+│ │  from typing import Optional
+│ │  
+│ │  class SessionReadAcquiringChannelEnum(str, Enum):
+│ │      r"""The acquiring channel in which the session takes place. Ecommerce is default unless specified. Any other values should be defined in the agreement."""
+│ │      ECOMMERCE = 'ECOMMERCE'
+│ │      IN_STORE = 'IN_STORE'
+│ │      TELESALES = 'TELESALES'
+│ │   --- klarna-orders-1.0.0/src/sdk/models/shared/subscription.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/models/shared/subscription.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  from __future__ import annotations
+│ │  import dataclasses
+│ │  from dataclasses_json import Undefined, dataclass_json
+│ │  from enum import Enum
+│ │ -from sdk import utils
+│ │ +from klarna import utils
+│ │  
+│ │  class SubscriptionIntervalEnum(str, Enum):
+│ │      r"""The cadence unit for this."""
+│ │      DAY = 'DAY'
+│ │      WEEK = 'WEEK'
+│ │      MONTH = 'MONTH'
+│ │      YEAR = 'YEAR'
+│ │   --- klarna-orders-1.0.0/src/sdk/orders.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/orders.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  import requests as requests_http
+│ │  from . import utils
+│ │ -from sdk.models import operations, shared
+│ │ +from klarna.models import operations, shared
+│ │  from typing import Optional
+│ │  
+│ │  class Orders:
+│ │      r"""Operations related to orders"""
+│ │      _client: requests_http.Session
+│ │      _security_client: requests_http.Session
+│ │      _server_url: str
+│ │   --- klarna-orders-1.0.0/src/sdk/sdk.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/sdk.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,22 +2,22 @@
+│ │  
+│ │  import requests as requests_http
+│ │  from . import utils
+│ │  from .authorizations import Authorizations
+│ │  from .orders import Orders
+│ │  from .sessions import Sessions
+│ │  from .tokens import Tokens
+│ │ -from sdk.models import shared
+│ │ +from klarna.models import shared
+│ │  
+│ │  SERVERS = [
+│ │      "https://api.klarna.com",
+│ │  ]
+│ │  """Contains the list of servers available to the SDK"""
+│ │  
+│ │ -class SDK:
+│ │ +class Klarna:
+│ │      r"""The payments API is used to create a session to offer Klarna's payment methods as part of your checkout. As soon as the purchase is completed the order should be read and handled using the [`Order Management API`](https://docs.klarna.com/api/ordermanagement).
+│ │      
+│ │      Read more on [Klarna payments](https://docs.klarna.com/klarna-payments/).
+│ │      https://docs.klarna.com/api - Find out more about the Klarna REST APIs
+│ │      """
+│ │      authorizations: Authorizations
+│ │      r"""Operations related to authorizations"""
+│ │ @@ -28,15 +28,15 @@
+│ │      tokens: Tokens
+│ │      r"""Operations related to token"""
+│ │  
+│ │      _client: requests_http.Session
+│ │      _security_client: requests_http.Session
+│ │      _server_url: str = SERVERS[0]
+│ │      _language: str = "python"
+│ │ -    _sdk_version: str = "1.0.0"
+│ │ +    _sdk_version: str = "1.0.1"
+│ │      _gen_version: str = "2.17.8"
+│ │  
+│ │      def __init__(self,
+│ │                   security: shared.Security = None,
+│ │                   server_url: str = None,
+│ │                   url_params: dict[str, str] = None,
+│ │                   client: requests_http.Session = None
+│ │   --- klarna-orders-1.0.0/src/sdk/sessions.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/sessions.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  import requests as requests_http
+│ │  from . import utils
+│ │ -from sdk.models import operations, shared
+│ │ +from klarna.models import operations, shared
+│ │  from typing import Optional
+│ │  
+│ │  class Sessions:
+│ │      r"""Operations related to sessions"""
+│ │      _client: requests_http.Session
+│ │      _security_client: requests_http.Session
+│ │      _server_url: str
+│ │   --- klarna-orders-1.0.0/src/sdk/tokens.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/tokens.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  """Code generated by Speakeasy (https://speakeasyapi.dev). DO NOT EDIT."""
+│ │  
+│ │  import requests as requests_http
+│ │  from . import utils
+│ │ -from sdk.models import operations, shared
+│ │ +from klarna.models import operations, shared
+│ │  from typing import Optional
+│ │  
+│ │  class Tokens:
+│ │      r"""Operations related to token"""
+│ │      _client: requests_http.Session
+│ │      _security_client: requests_http.Session
+│ │      _server_url: str
+│ │   --- klarna-orders-1.0.0/src/sdk/utils/retries.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/utils/retries.py
+│ │┄ Files identical despite different names
+│ │   --- klarna-orders-1.0.0/src/sdk/utils/utils.py
+│ ├── +++ klarna-orders-1.0.1/src/klarna/utils/utils.py
+│ │┄ Files identical despite different names

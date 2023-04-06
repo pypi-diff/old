@@ -1,0 +1,200 @@
+# Comparing `tmp/rapid_innovation-1.8.6.tar.gz` & `tmp/rapid_innovation-1.8.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rapid_innovation-1.8.6.tar", last modified: Tue Apr  4 08:47:50 2023, max compression
++gzip compressed data, was "rapid_innovation-1.8.7.tar", last modified: Thu Apr  6 10:36:51 2023, max compression
+```
+
+## Comparing `rapid_innovation-1.8.6.tar` & `rapid_innovation-1.8.7.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-04 08:47:50.026780 rapid_innovation-1.8.6/
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)     1069 2023-04-03 08:08:45.000000 rapid_innovation-1.8.6/LICENSE
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)      433 2023-04-04 08:47:50.026513 rapid_innovation-1.8.6/PKG-INFO
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)       22 2023-04-03 08:08:45.000000 rapid_innovation-1.8.6/README.md
+-drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-04 08:47:50.024516 rapid_innovation-1.8.6/rapid/
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)        0 2023-04-03 08:10:44.000000 rapid_innovation-1.8.6/rapid/__init__.py
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)     4005 2023-04-03 08:34:53.000000 rapid_innovation-1.8.6/rapid/email.py
+-drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-04 08:47:50.026185 rapid_innovation-1.8.6/rapid_innovation.egg-info/
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)      433 2023-04-04 08:47:49.000000 rapid_innovation-1.8.6/rapid_innovation.egg-info/PKG-INFO
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)      219 2023-04-04 08:47:49.000000 rapid_innovation-1.8.6/rapid_innovation.egg-info/SOURCES.txt
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)        1 2023-04-04 08:47:49.000000 rapid_innovation-1.8.6/rapid_innovation.egg-info/dependency_links.txt
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)        6 2023-04-04 08:47:49.000000 rapid_innovation-1.8.6/rapid_innovation.egg-info/top_level.txt
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)       38 2023-04-04 08:47:50.026862 rapid_innovation-1.8.6/setup.cfg
+--rw-r--r--   0 abhisheknegi   (501) staff       (20)      630 2023-04-04 08:46:47.000000 rapid_innovation-1.8.6/setup.py
++drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-06 10:36:51.107250 rapid_innovation-1.8.7/
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)     1069 2023-04-03 08:08:45.000000 rapid_innovation-1.8.7/LICENSE
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)     1361 2023-04-06 10:36:51.107079 rapid_innovation-1.8.7/PKG-INFO
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)      886 2023-04-06 10:33:58.000000 rapid_innovation-1.8.7/README.md
++drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-06 10:36:51.106057 rapid_innovation-1.8.7/rapid/
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)        0 2023-04-03 08:10:44.000000 rapid_innovation-1.8.7/rapid/__init__.py
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)     4715 2023-04-06 10:26:52.000000 rapid_innovation-1.8.7/rapid/email.py
++drwxr-xr-x   0 abhisheknegi   (501) staff       (20)        0 2023-04-06 10:36:51.106863 rapid_innovation-1.8.7/rapid_innovation.egg-info/
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)     1361 2023-04-06 10:36:51.000000 rapid_innovation-1.8.7/rapid_innovation.egg-info/PKG-INFO
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)      219 2023-04-06 10:36:51.000000 rapid_innovation-1.8.7/rapid_innovation.egg-info/SOURCES.txt
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)        1 2023-04-06 10:36:51.000000 rapid_innovation-1.8.7/rapid_innovation.egg-info/dependency_links.txt
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)        6 2023-04-06 10:36:51.000000 rapid_innovation-1.8.7/rapid_innovation.egg-info/top_level.txt
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)       38 2023-04-06 10:36:51.107308 rapid_innovation-1.8.7/setup.cfg
++-rw-r--r--   0 abhisheknegi   (501) staff       (20)     1024 2023-04-06 10:34:46.000000 rapid_innovation-1.8.7/setup.py
+```
+
+### Comparing `rapid_innovation-1.8.6/LICENSE` & `rapid_innovation-1.8.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `rapid_innovation-1.8.6/rapid/email.py` & `rapid_innovation-1.8.7/rapid/email.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,35 +1,66 @@
+-import smtplib
+ import os
++import re
++import smtplib
++from email import encoders
++from email.mime.base import MIMEBase
+ from email.mime.multipart import MIMEMultipart
+ from email.mime.text import MIMEText
+-from email.mime.base import MIMEBase
+-from email import encoders
+-from .app.helpers.validator import email_validator
+-from .app.exceptions.email_expection import (
++
++from .app.exceptions.email_exception import (
+     InvalidEmailSubject,
+     InvalidEmailReceiverAddress,
+     InvalidEmailBody
+ )
+ 
++from .app.helpers.validator import is_valid_email
++
+ 
+ class RapidEmailNotificationSMTP:
++    """
++       A class for sending email notifications using SMTP.
++    """
+ 
+     def __init__(self, smtp_sender_email, smtp_password):
++        """
++            Initializes the RapidEmailNotificationSMTP object.
++
++            Parameters:
++            smtp_sender_email (str): the email address of the SMTP sender
++            smtp_password (str): the password for the SMTP sender's email account
++        """
+         self.smtp_sender_email = smtp_sender_email
+         self.smtp_password = smtp_password
+ 
+     def add_cc(self, cc):
++        """
++            Adds a list of email addresses to the CC field of the email.
++
++            Parameters:
++            cc (list): a list of email addresses
++
++            Returns:
++            str: a comma-separated string of valid email addresses
++        """
+         if type(cc) != list:
+             raise InvalidEmailReceiverAddress('Invalid cc"s receiver address.')
+ 
+-        cc = [i for i in cc if email_validator(i)]
++        cc = [i for i in cc if is_valid_email(i)]
+         return ', '.join(cc)
+ 
+     def add_attachement(self, attach):
++        """
++            Adds an attachment to the email.
++
++            Parameters:
++            attach (str): the path to the file to be attached
++
++            Returns:
++            MIMEBase: a MIMEBase object representing the attachment
++        """
+         if type(attach) != str:
+             print(f'Invalid attach file. {attach}')
+             return False
+ 
+         if not os.path.exists(attach):
+             print(f'Invalid attach file. {attach}')
+             return False
+@@ -50,54 +81,55 @@
+         mime_base_payload.add_header('Content-Disposition', "attachment; filename= %s" % file_name)
+ 
+         return mime_base_payload
+ 
+     def send_email(self, to, subject, content, cc=None, attach=None):
+ 
+         """
+-            This function takes some parameters as input and returns True or None.
++            Sends an email notification.
+ 
+             Parameters:
+-            to (list): Receiver's address Ex:- ['abc@gmail.com', 'xyz@gmail.com'] (mandatory)
+-            subject (str): Email Subject Ex: "Test Subject" (mandatory)
+-            content (Str): Email Body Ex: Hello Dear, This is the fake email body. (mandatory)
+-            cc (list): Receiver's address Ex: ['mno@gmail.com', 'tuv@gmail.com'] (optional)
+-            attach (str): path/file_name  (optional)
++            to (list): a list of email addresses to receive the email (mandatory)
++            subject (str): the email subject (mandatory)
++            content (str): the email body (mandatory)
++            cc (list): a list of email addresses to CC on the email (optional)
++            attach (str): the path to the file to be attached (optional)
+ 
+             Returns:
+-            str: 'True' if function run successfully.
++            bool: True if the email was sent successfully
+         """
+ 
+         try:
+ 
++            if not isinstance(to, list):
++                raise InvalidEmailReceiverAddress('Invalid to receiver address.')
++
++            # filter out invalid email addresses
++            to = [i for i in to if is_valid_email(i)]
++
+             mime_multipart_obj = MIMEMultipart('alternative')
+             mime_multipart_obj['From'] = self.smtp_sender_email
+-            if type(subject) != str:
++
++            if not isinstance(subject, str):
+                 raise InvalidEmailSubject('Invalid subject.')
+             mime_multipart_obj['Subject'] = subject
+ 
+-            if type(to) != list:
+-                raise InvalidEmailReceiverAddress('Invalid to" receiver address.')
+-
+-            to = [i for i in to if email_validator(i)]
+             mime_multipart_obj['To'] = ', '.join(to)
+             receiver_email_id = to
+ 
+             if cc:
+                 mime_multipart_obj['Cc'] = self.add_cc(cc)
+                 receiver_email_id += cc
+ 
+-            if type(content) != str:
++            if not isinstance(content, str):
+                 raise InvalidEmailBody('Invalid email body.')
+ 
+             mime_multipart_obj.attach(MIMEText(content, 'plain'))
+ 
+             if attach:
+-                print.info(f"{os.getcwd()} current path")
+-                print.info(f"{os.listdir()} list of directory.")
+                 response_attach_file = self.add_attachement(attach)
+                 if response_attach_file:
+                     mime_multipart_obj.attach(response_attach_file)
+ 
+             # Connect to the SMTP server
+             session = smtplib.SMTP('smtp.gmail.com', 587)
+```
+

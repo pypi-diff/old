@@ -1,0 +1,1375 @@
+--- tmp/plone.portlets-2.3.3.tar.gz
++++ tmp/plone.portlets-3.0.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "plone.portlets-2.3.3.tar", last modified: Tue Mar 14 22:34:57 2023, max compression
+│ +gzip compressed data, was "plone.portlets-3.0.0.tar", last modified: Thu Apr  6 10:36:26 2023, max compression
+│   --- plone.portlets-2.3.3.tar
+├── +++ plone.portlets-3.0.0.tar
+│ ├── file list
+│ │ @@ -1,41 +1,41 @@
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-03-14 22:34:57.600976 plone.portlets-2.3.3/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     4936 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/CHANGES.rst
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)       70 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/CONTRIBUTING.rst
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      121 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/MANIFEST.in
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     6658 2023-03-14 22:34:57.601251 plone.portlets-2.3.3/PKG-INFO
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      382 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/README.rst
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-03-14 22:34:57.590187 plone.portlets-2.3.3/docs/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    15220 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/docs/LICENSE.GPL
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      676 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/docs/LICENSE.txt
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-03-14 22:34:57.590506 plone.portlets-2.3.3/plone/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      245 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/__init__.py
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-03-14 22:34:57.600646 plone.portlets-2.3.3/plone/portlets/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      607 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/CREDITS.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    37787 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/README.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      442 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/TODO.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        2 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/__init__.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     3663 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/assignable.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      771 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/configure.zcml
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      464 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/constants.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     2204 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/events.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)    12943 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/interfaces.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     6447 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/manager.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      385 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/registration.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     7756 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/retriever.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1262 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/settings.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     3068 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/storage.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     5987 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/tests.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     4317 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/uisupport.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     2159 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/utils.py
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     1862 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/plone/portlets/utils.txt
+│ │ -drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-03-14 22:34:57.592978 plone.portlets-2.3.3/plone.portlets.egg-info/
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     6658 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      895 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        1 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        6 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/namespace_packages.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        1 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      221 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/requires.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)        6 2023-03-14 22:34:57.000000 plone.portlets-2.3.3/plone.portlets.egg-info/top_level.txt
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      397 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/pyproject.toml
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)      241 2023-03-14 22:34:57.601950 plone.portlets-2.3.3/setup.cfg
+│ │ --rw-r--r--   0 maurits    (501) staff       (20)     2143 2023-03-14 22:34:56.000000 plone.portlets-2.3.3/setup.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:36:26.121026 plone.portlets-3.0.0/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     5176 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/CHANGES.rst
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       70 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/CONTRIBUTING.rst
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      121 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/MANIFEST.in
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     6517 2023-04-06 10:36:26.121181 plone.portlets-3.0.0/PKG-INFO
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      382 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/README.rst
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:36:26.112585 plone.portlets-3.0.0/docs/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    15220 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/docs/LICENSE.GPL
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      676 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/docs/LICENSE.txt
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:36:26.112879 plone.portlets-3.0.0/plone/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)       56 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/__init__.py
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:36:26.120762 plone.portlets-3.0.0/plone/portlets/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      607 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/CREDITS.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    37788 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/README.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      442 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/TODO.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        2 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/__init__.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     3552 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/assignable.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      750 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/configure.zcml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      464 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/constants.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     2204 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/events.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)    12908 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/interfaces.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     6393 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/manager.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      382 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/registration.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     7748 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/retriever.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1240 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/settings.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     2776 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/storage.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     5970 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/tests.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     4237 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/uisupport.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     2144 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/utils.py
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1863 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone/portlets/utils.txt
+│ │ +drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:36:26.115041 plone.portlets-3.0.0/plone.portlets.egg-info/
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     6517 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      895 2023-04-06 10:36:26.000000 plone.portlets-3.0.0/plone.portlets.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        6 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/namespace_packages.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      252 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/requires.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)        6 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/plone.portlets.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1678 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/pyproject.toml
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)      217 2023-04-06 10:36:26.121715 plone.portlets-3.0.0/setup.cfg
+│ │ +-rw-r--r--   0 maurits    (501) staff       (20)     1824 2023-04-06 10:36:25.000000 plone.portlets-3.0.0/setup.py
+│ │   --- plone.portlets-2.3.3/CHANGES.rst
+│ ├── +++ plone.portlets-3.0.0/CHANGES.rst
+│ │┄ Files 6% similar despite different names
+│ │ @@ -4,14 +4,32 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.0 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Breaking changes:
+│ │ +
+│ │ +
+│ │ +- Drop support for Plone 5.2 and Python 2.
+│ │ +  Only Plone 6.0 on Python 3.8+ is supported.
+│ │ +  [plone devs] (#9)
+│ │ +
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (80cf330f)
+│ │ +
+│ │ +
+│ │  2.3.3 (2023-03-14)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - Use `ZODB` as dependency rather than the deprecated `ZODB3`.
+│ │   --- plone.portlets-2.3.3/PKG-INFO
+│ ├── +++ plone.portlets-3.0.0/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,38 +1,30 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: plone.portlets
+│ │ -Version: 2.3.3
+│ │ +Version: 3.0.0
+│ │  Summary: An extension of zope.viewlet to support dynamic portlets
+│ │  Home-page: https://github.com/plone/plone.portlets
+│ │  Author: Plone Foundation
+│ │  Author-email: plone-developers@lists.sourceforge.net
+│ │  License: GPL version 2
+│ │  Keywords: portlet viewlet
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Framework :: Plone
+│ │ -Classifier: Framework :: Plone :: 4.3
+│ │ -Classifier: Framework :: Plone :: 5.0
+│ │ -Classifier: Framework :: Plone :: 5.1
+│ │ -Classifier: Framework :: Plone :: 5.2
+│ │  Classifier: Framework :: Plone :: 6.0
+│ │  Classifier: Framework :: Plone :: Core
+│ │ -Classifier: Framework :: Zope2
+│ │ -Classifier: Framework :: Zope :: 4
+│ │ +Classifier: Framework :: Zope :: 5
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │ -Classifier: Programming Language :: Python :: 2.7
+│ │ -Classifier: Programming Language :: Python :: 3.6
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ -Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*
+│ │ +Requires-Python: >=3.8
+│ │  Provides-Extra: test
+│ │  
+│ │  Overview
+│ │  ========
+│ │  
+│ │  plone.portlets provides a generic infrastructure for managing portlets.
+│ │  
+│ │ @@ -47,14 +39,32 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.0 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Breaking changes:
+│ │ +
+│ │ +
+│ │ +- Drop support for Plone 5.2 and Python 2.
+│ │ +  Only Plone 6.0 on Python 3.8+ is supported.
+│ │ +  [plone devs] (#9)
+│ │ +
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (80cf330f)
+│ │ +
+│ │ +
+│ │  2.3.3 (2023-03-14)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - Use `ZODB` as dependency rather than the deprecated `ZODB3`.
+│ │   --- plone.portlets-2.3.3/docs/LICENSE.GPL
+│ ├── +++ plone.portlets-3.0.0/docs/LICENSE.GPL
+│ │┄ Files identical despite different names
+│ │   --- plone.portlets-2.3.3/docs/LICENSE.txt
+│ ├── +++ plone.portlets-3.0.0/docs/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- plone.portlets-2.3.3/plone/portlets/CREDITS.txt
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/CREDITS.txt
+│ │┄ Files identical despite different names
+│ │   --- plone.portlets-2.3.3/plone/portlets/README.txt
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/README.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -893,15 +893,15 @@
+│ │          </div>
+│ │        </body>
+│ │      </html>
+│ │  
+│ │  Using a different retrieval algorithm
+│ │  -------------------------------------
+│ │  
+│ │ -The examples above show the default portlet retrival algorithm, which finds
+│ │ +The examples above show the default portlet retrieval algorithm, which finds
+│ │  portlets for children before those for parents before those for users
+│ │  before those for groups. It is relatively easy to plug in different composition
+│ │  algorithm, however.
+│ │  
+│ │  Consider the case of a "dashboard" where a user can assign personal portlets.
+│ │  This may be a special page that is not context-dependent, considering only
+│ │  user and group portlets.
+│ │   --- plone.portlets-2.3.3/plone/portlets/assignable.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/assignable.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -35,15 +35,15 @@
+│ │          portlets = local[manager.__name__] = PortletAssignmentMapping(
+│ │              manager=manager.__name__, category=CONTEXT_CATEGORY
+│ │          )
+│ │      return portlets
+│ │  
+│ │  
+│ │  @implementer(ILocalPortletAssignmentManager)
+│ │ -class LocalPortletAssignmentManager(object):
+│ │ +class LocalPortletAssignmentManager:
+│ │      """Default implementation of ILocalPortletAssignmentManager which stores
+│ │      information in an annotation.
+│ │      """
+│ │  
+│ │      adapts(ILocalPortletAssignable, IPortletManager)
+│ │  
+│ │      def __init__(self, context, manager):
+│ │ @@ -64,17 +64,15 @@
+│ │          if IAnnotations.providedBy(self.context):
+│ │              annotations = self.context
+│ │          else:
+│ │              annotations = queryAdapter(self.context, IAnnotations)
+│ │          local = annotations.get(CONTEXT_BLACKLIST_STATUS_KEY, None)
+│ │          if local is None:
+│ │              if create:
+│ │ -                local = annotations[
+│ │ -                    CONTEXT_BLACKLIST_STATUS_KEY
+│ │ -                ] = PersistentDict()
+│ │ +                local = annotations[CONTEXT_BLACKLIST_STATUS_KEY] = PersistentDict()
+│ │              else:
+│ │                  return None
+│ │          blacklist = local.get(self.manager.__name__, None)
+│ │          if blacklist is None:
+│ │              if create:
+│ │                  blacklist = local[self.manager.__name__] = PersistentDict()
+│ │              else:
+│ │ @@ -86,13 +84,11 @@
+│ │      """Implementation of ILocalPortletAssignmentManager which by default blocks
+│ │      parent contextual portlets.
+│ │      """
+│ │  
+│ │      adapts(ILocalPortletAssignable, IBlockingPortletManager)
+│ │  
+│ │      def getBlacklistStatus(self, category):
+│ │ -        value = super(
+│ │ -            BlockingLocalPortletAssignmentManager, self
+│ │ -        ).getBlacklistStatus(category)
+│ │ +        value = super().getBlacklistStatus(category)
+│ │          if category is CONTEXT_CATEGORY and value is None:
+│ │              return True
+│ │          return value
+│ │   --- plone.portlets-2.3.3/plone/portlets/events.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/events.py
+│ │┄ Files identical despite different names
+│ │   --- plone.portlets-2.3.3/plone/portlets/interfaces.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/interfaces.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,17 +1,17 @@
+│ │  from zope import schema
+│ │  from zope.annotation.interfaces import IAttributeAnnotatable
+│ │  from zope.container.constraints import contains
+│ │  from zope.container.interfaces import IContainer
+│ │  from zope.container.interfaces import IContainerNamesContainer
+│ │  from zope.container.interfaces import IOrderedContainer
+│ │ -from zope.location.interfaces import IContained
+│ │  from zope.contentprovider.interfaces import IContentProvider
+│ │  from zope.interface import Attribute
+│ │  from zope.interface import Interface
+│ │ +from zope.location.interfaces import IContained
+│ │  
+│ │  
+│ │  # Context - the application layer must provide these
+│ │  
+│ │  
+│ │  class ILocalPortletAssignable(IAttributeAnnotatable):
+│ │      """Marker interface for content objects that want to have local portlet
+│ │ @@ -24,30 +24,30 @@
+│ │  
+│ │      No default implementation exists for this interface - it must be provided
+│ │      by the application in order to tell the portlets infrastructure how to
+│ │      render portlets.
+│ │      """
+│ │  
+│ │      uid = schema.TextLine(
+│ │ -        title=u"A unique id or path for this specific context", required=True
+│ │ +        title="A unique id or path for this specific context", required=True
+│ │      )
+│ │  
+│ │      def getParent():
+│ │          """Get the portlet parent of the current context.
+│ │  
+│ │          This is used to aggregate portlets by walking up the content hierarchy.
+│ │  
+│ │          This should be adaptable to IPortletContext. If there is no portlet
+│ │          parent (e.g. this is the site root), return None.
+│ │          """
+│ │  
+│ │      def globalPortletCategories(placeless=False):
+│ │          """Get global portlet key-value pairs, in order.
+│ │  
+│ │ -        When rendered, a portlet manger (column) will be filled first by
+│ │ +        When rendered, a portlet manager (column) will be filled first by
+│ │          contextual portlets (if the context and/or its parents provide
+│ │          ILocalPortletAssignable), and then by global portlets. Global portlet
+│ │          assignments may include portlets per user, per group, or per content
+│ │          type.
+│ │  
+│ │          This function should return a tuple of tuples where each inner tuple
+│ │          contains a category such as 'user' or 'group' and the key to use in
+│ │ @@ -79,27 +79,27 @@
+│ │  class IPortletType(Interface):
+│ │      """A registration for a portlet type.
+│ │  
+│ │      Each new type of portlet should register a utility with a unique name
+│ │      providing IPortletType, so that UI can find them.
+│ │      """
+│ │  
+│ │ -    title = schema.TextLine(title=u'Title', required=True)
+│ │ +    title = schema.TextLine(title="Title", required=True)
+│ │  
+│ │ -    description = schema.Text(title=u'Description', required=False)
+│ │ +    description = schema.Text(title="Description", required=False)
+│ │  
+│ │      addview = schema.TextLine(
+│ │ -        title=u'Add view',
+│ │ -        description=u'The name of the add view for assignments for this portlet type',
+│ │ +        title="Add view",
+│ │ +        description="The name of the add view for assignments for this portlet type",
+│ │          required=True,
+│ │      )
+│ │  
+│ │      for_ = Attribute(
+│ │ -        'An interface a portlet manager must have to allow this type of portlet. '
+│ │ -        'May be None if there are no restrictions.'
+│ │ +        "An interface a portlet manager must have to allow this type of portlet. "
+│ │ +        "May be None if there are no restrictions."
+│ │      )
+│ │  
+│ │  
+│ │  # Generic marker interface - a portlet may reference one of these
+│ │  
+│ │  
+│ │  class IPortletDataProvider(Interface):
+│ │ @@ -133,27 +133,27 @@
+│ │  
+│ │      Portlet assignments are contained in and will have their __name__ attribute
+│ │      managed by an IPortletContextMapping, which in turn are stored inside
+│ │      IPortletStorages.
+│ │      """
+│ │  
+│ │      title = schema.Bool(
+│ │ -        title=u'Title',
+│ │ -        description=u'The title of this assignment as displayed to the user',
+│ │ +        title="Title",
+│ │ +        description="The title of this assignment as displayed to the user",
+│ │          required=True,
+│ │      )
+│ │  
+│ │      available = schema.Bool(
+│ │ -        title=u'Available',
+│ │ -        description=u'Whether or not this portlet should be rendered',
+│ │ +        title="Available",
+│ │ +        description="Whether or not this portlet should be rendered",
+│ │          required=True,
+│ │          readonly=True,
+│ │      )
+│ │  
+│ │ -    data = Attribute(u'Portlet data object')
+│ │ +    data = Attribute("Portlet data object")
+│ │  
+│ │  
+│ │  # A content provider capable of rendering portlets - each type of portlet will
+│ │  # need one of these
+│ │  
+│ │  
+│ │  class IPortletRenderer(IContentProvider):
+│ │ @@ -163,25 +163,25 @@
+│ │      Any object providing IPortletDataProvider should be adaptable to
+│ │      IPortletRenderer in order to be renderable as a portlet. (In fact,
+│ │      the return value of IPortletAssignment.data needs to have such an
+│ │      adapter, regardless of whether it actually implements IPortletDataProvider)
+│ │      """
+│ │  
+│ │      __portlet_metadata__ = schema.Dict(
+│ │ -        title=u"Metadata",
+│ │ -        description=u"Information about the portlet set during portlet retrieval",
+│ │ +        title="Metadata",
+│ │ +        description="Information about the portlet set during portlet retrieval",
+│ │          required=True,
+│ │          readonly=True,
+│ │          key_type=schema.ASCIILine(),
+│ │          value_type=schema.TextLine(),
+│ │      )
+│ │  
+│ │      available = schema.Bool(
+│ │ -        title=u'Available',
+│ │ -        description=u'Whether or not this portlet shuld be rendered',
+│ │ +        title="Available",
+│ │ +        description="Whether or not this portlet should be rendered",
+│ │          required=True,
+│ │          readonly=True,
+│ │      )
+│ │  
+│ │  
+│ │  # Discovery of portlets
+│ │  
+│ │ @@ -199,61 +199,59 @@
+│ │          Returns a list of dicts with keys 'assignment', containing the actual
+│ │          assignment object; 'category', containing the category the
+│ │          assignment came from; 'key', being the key within this category; and
+│ │          'name' being the name of the assignment.
+│ │          """
+│ │  
+│ │  
+│ │ -# Portlet managment
+│ │ +# Portlet management
+│ │  
+│ │  
+│ │  class IPortletStorage(IContainer):
+│ │      """A component for storing global (site-wide) portlet assignments.
+│ │  
+│ │      This manages one IPortletCategoryMapping for each category of portlet,
+│ │      e.g. 'user' or 'group' (the exact keys are up to the application layer).
+│ │  
+│ │      Some common keys are found in plone.portlets.constants.
+│ │      """
+│ │  
+│ │ -    contains('plone.portlets.interfaces.IPortletCategoryMapping')
+│ │ +    contains("plone.portlets.interfaces.IPortletCategoryMapping")
+│ │  
+│ │  
+│ │  class IPortletCategoryMapping(IContainer, IContained):
+│ │      """A mapping of the portlets assigned to a particular categories under
+│ │      various keys.
+│ │  
+│ │      This manages one IPortletAssignmentMapping for each key. For example,
+│ │      if this is the 'user' category, the keys could be user ids, each of
+│ │      which would be given a particular IPortletAssignmentMapping.
+│ │      """
+│ │  
+│ │ -    contains('plone.portlets.interfaces.IPortletAssignmentMapping')
+│ │ +    contains("plone.portlets.interfaces.IPortletAssignmentMapping")
+│ │  
+│ │  
+│ │  class IPortletAssignmentMapping(
+│ │      IOrderedContainer, IContainerNamesContainer, IContained
+│ │  ):
+│ │      """A storage for portlet assignments.
+│ │  
+│ │      An IPortletCategoryMapping manages one of these for each category of
+│ │      context. It may also be stored in an annotation on an object to manage
+│ │      portlets assigned to that object. In this case, a multi-adapter from
+│ │      ILocalPortletAssignable and IPortletManager will be able to obtain the
+│ │      appropriate container.
+│ │      """
+│ │  
+│ │ -    contains('plone.portlets.interfaces.IPortletAssignment')
+│ │ +    contains("plone.portlets.interfaces.IPortletAssignment")
+│ │  
+│ │      __manager__ = schema.TextLine(
+│ │ -        title=u"Name of the portlet manager this mapping belongs to"
+│ │ -    )
+│ │ -    __category__ = schema.TextLine(
+│ │ -        title=u'Name of the category this mapping belongs to'
+│ │ +        title="Name of the portlet manager this mapping belongs to"
+│ │      )
+│ │ +    __category__ = schema.TextLine(title="Name of the category this mapping belongs to")
+│ │  
+│ │  
+│ │  class ILocalPortletAssignmentManager(Interface):
+│ │      """A component that can manage the display of locally assigned portlets.
+│ │  
+│ │      An ILocalPortletAssignable may be multi-adapted along with
+│ │      an IPortletManager to this interface, to manage how portlets will be
+│ │ @@ -325,31 +323,30 @@
+│ │      A placeless portlet manager is one which does not examine the context
+│ │      or the context's parent. This is achieved by way of a different adapter
+│ │      to IPortletRetriever.
+│ │      """
+│ │  
+│ │  
+│ │  class IPortletManagerRenderer(IContentProvider):
+│ │ -    """A content provider for rendering a portlet manager.
+│ │ -    """
+│ │ +    """A content provider for rendering a portlet manager."""
+│ │  
+│ │      template = Attribute(
+│ │          """A page template object to render the manager with.
+│ │  
+│ │          If given, this will be passed an option 'portlets' that is a list of
+│ │          the IPortletRenderer objects to render.
+│ │  
+│ │          If not set, the renderers will simply be called one by one, and their
+│ │          output will be concatenated, separated by newlines.
+│ │          """
+│ │      )
+│ │  
+│ │      visible = schema.Bool(
+│ │ -        title=u'Visible',
+│ │ -        description=u'Whether or not this portlet manager (column) will be rendered at all',
+│ │ +        title="Visible",
+│ │ +        description="Whether or not this portlet manager (column) will be rendered at all",
+│ │          required=True,
+│ │          default=True,
+│ │      )
+│ │  
+│ │      def filter(portlets):
+│ │          """Return a list of portlets to display that is a subset of
+│ │          the list of portlets passed in. The list contains dicts as returned
+│ │ @@ -368,13 +365,13 @@
+│ │          """Render a portlet in such a way that exceptions are not
+│ │          raised but rather logged and an error is shown in place of the
+│ │          portlet.
+│ │          """
+│ │  
+│ │  
+│ │  class IPortletAssignmentSettings(Interface):
+│ │ -    """ Adapts IPortletAssignment to return additional settings for a portlet assignment.
+│ │ +    """Adapts IPortletAssignment to return additional settings for a portlet assignment.
+│ │  
+│ │      Implementations of this interface will typically be stored in an annotation
+│ │      of the assignment.
+│ │  
+│ │      """
+│ │   --- plone.portlets-2.3.3/plone/portlets/manager.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/manager.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -15,20 +15,20 @@
+│ │  from zope.interface import Interface
+│ │  from zope.publisher.interfaces.browser import IBrowserRequest
+│ │  from zope.publisher.interfaces.browser import IBrowserView
+│ │  
+│ │  import logging
+│ │  
+│ │  
+│ │ -logger = logging.getLogger('portlets')
+│ │ +logger = logging.getLogger("portlets")
+│ │  
+│ │  
+│ │  @implementer(IPortletManagerRenderer)
+│ │  @adapter(Interface, IBrowserRequest, IBrowserView, IPortletManager)
+│ │ -class PortletManagerRenderer(object):
+│ │ +class PortletManagerRenderer:
+│ │  
+│ │      """Default renderer for portlet managers.
+│ │  
+│ │      When the zope.contentprovider handler for the provider: expression looks up
+│ │      a name, context, it will find an adapter factory that in turn finds an
+│ │      instance of this class, by doing an adapter lookup for (context, request,
+│ │      view, manager).
+│ │ @@ -49,89 +49,88 @@
+│ │          portlets = self.portletsToShow()
+│ │          return len(portlets) > 0
+│ │  
+│ │      def filter(self, portlets):
+│ │          filtered = []
+│ │          for p in portlets:
+│ │              try:
+│ │ -                if p['assignment'].available:
+│ │ +                if p["assignment"].available:
+│ │                      filtered.append(p)
+│ │              except ConflictError:
+│ │                  raise
+│ │              except Exception as e:
+│ │                  logger.exception(
+│ │                      "Error while determining assignment availability of "
+│ │                      "portlet (%r %r %r): %s"
+│ │ -                    % (p['category'], p['key'], p['name'], str(e))
+│ │ +                    % (p["category"], p["key"], p["name"], str(e))
+│ │                  )
+│ │          return filtered
+│ │  
+│ │      def portletsToShow(self):
+│ │ -        return [p for p in self.allPortlets() if p['available']]
+│ │ +        return [p for p in self.allPortlets() if p["available"]]
+│ │  
+│ │      def allPortlets(self):
+│ │          return self._lazyLoadPortlets(self.manager)
+│ │  
+│ │      def update(self):
+│ │          self.__updated = True
+│ │          for p in self.portletsToShow():
+│ │ -            p['renderer'].update()
+│ │ +            p["renderer"].update()
+│ │  
+│ │      def render(self):
+│ │          if not self.__updated:
+│ │              raise UpdateNotCalled
+│ │  
+│ │          portlets = self.portletsToShow()
+│ │          if self.template:
+│ │              return self.template(portlets=portlets)
+│ │          else:
+│ │ -            return u'\n'.join([p['renderer'].render() for p in portlets])
+│ │ +            return "\n".join([p["renderer"].render() for p in portlets])
+│ │  
+│ │      def safe_render(self, portlet_renderer):
+│ │          try:
+│ │              return portlet_renderer.render()
+│ │          except ConflictError:
+│ │              raise
+│ │          except Exception:
+│ │ -            logger.exception('Error while rendering %r' % (self,))
+│ │ +            logger.exception(f"Error while rendering {self!r}")
+│ │              return self.error_message()
+│ │  
+│ │      # Note: By passing in a parameter that's different for each portlet
+│ │      # manager, we avoid the view memoization (which is tied to the request)
+│ │      # caching the same portlets for all managers on the page. We cache the
+│ │      # portlets using a view memo because it they be looked up multiple times,
+│ │      # e.g. first to check if portlets should be displayed and later to
+│ │      # actually render
+│ │  
+│ │      @memoize
+│ │      def _lazyLoadPortlets(self, manager):
+│ │          retriever = getMultiAdapter((self.context, manager), IPortletRetriever)
+│ │          items = []
+│ │          for p in self.filter(retriever.getPortlets()):
+│ │ -            renderer = self._dataToPortlet(p['assignment'].data)
+│ │ +            renderer = self._dataToPortlet(p["assignment"].data)
+│ │              info = p.copy()
+│ │ -            info['manager'] = self.manager.__name__
+│ │ -            info['renderer'] = renderer
+│ │ +            info["manager"] = self.manager.__name__
+│ │ +            info["renderer"] = renderer
+│ │              hashPortletInfo(info)
+│ │              # Record metadata on the renderer
+│ │              renderer.__portlet_metadata__ = info.copy()
+│ │ -            del renderer.__portlet_metadata__['renderer']
+│ │ +            del renderer.__portlet_metadata__["renderer"]
+│ │              try:
+│ │                  isAvailable = renderer.available
+│ │              except ConflictError:
+│ │                  raise
+│ │              except Exception as e:
+│ │                  isAvailable = False
+│ │                  logger.exception(
+│ │                      "Error while determining renderer availability of portlet "
+│ │ -                    "(%r %r %r): %s"
+│ │ -                    % (p['category'], p['key'], p['name'], str(e))
+│ │ +                    "(%r %r %r): %s" % (p["category"], p["key"], p["name"], str(e))
+│ │                  )
+│ │  
+│ │ -            info['available'] = isAvailable
+│ │ +            info["available"] = isAvailable
+│ │              items.append(info)
+│ │  
+│ │          return items
+│ │  
+│ │      def _dataToPortlet(self, data):
+│ │          """Helper method to get the correct IPortletRenderer for the given
+│ │          data object.
+│ │ @@ -149,17 +148,15 @@
+│ │      Provides the functionality that allows the portlet manager to act as an
+│ │      adapter factory.
+│ │      """
+│ │  
+│ │      __name__ = __parent__ = None
+│ │  
+│ │      def __call__(self, context, request, view):
+│ │ -        return getMultiAdapter(
+│ │ -            (context, request, view, self), IPortletManagerRenderer
+│ │ -        )
+│ │ +        return getMultiAdapter((context, request, view, self), IPortletManagerRenderer)
+│ │  
+│ │      def getAddablePortletTypes(self):
+│ │          addable = []
+│ │          for p in getUtilitiesFor(IPortletType):
+│ │              # BBB - first condition, because starting with Plone 3.1
+│ │              # every p[1].for_ should be a list
+│ │              if not isinstance(p[1].for_, list):
+│ │   --- plone.portlets-2.3.3/plone/portlets/retriever.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/retriever.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -12,15 +12,15 @@
+│ │  from zope.component import getMultiAdapter
+│ │  from zope.component import queryAdapter
+│ │  from zope.interface import implementer
+│ │  from zope.interface import Interface
+│ │  
+│ │  
+│ │  @implementer(IPortletRetriever)
+│ │ -class PortletRetriever(object):
+│ │ +class PortletRetriever:
+│ │      """The default portlet retriever.
+│ │  
+│ │      This will examine the context and its parents for contextual portlets,
+│ │      provided they provide ILocalPortletAssignable.
+│ │      """
+│ │  
+│ │      adapts(Interface, IPortletManager)
+│ │ @@ -137,25 +137,25 @@
+│ │                      for a in mapping.get(key, {}).values():
+│ │                          categories.append((category, key, a))
+│ │  
+│ │          assignments = []
+│ │          for category, key, assignment in categories:
+│ │              try:
+│ │                  settings = IPortletAssignmentSettings(assignment)
+│ │ -                if not settings.get('visible', True):
+│ │ +                if not settings.get("visible", True):
+│ │                      continue
+│ │              except TypeError:
+│ │                  # Portlet does not exist any longer
+│ │                  continue
+│ │              assignments.append(
+│ │                  {
+│ │ -                    'category': category,
+│ │ -                    'key': key,
+│ │ -                    'name': str(assignment.__name__),
+│ │ -                    'assignment': assignment,
+│ │ +                    "category": category,
+│ │ +                    "key": key,
+│ │ +                    "name": str(assignment.__name__),
+│ │ +                    "assignment": assignment,
+│ │                  }
+│ │              )
+│ │          return assignments
+│ │  
+│ │  
+│ │  @implementer(IPortletRetriever)
+│ │  class PlacelessPortletRetriever(PortletRetriever):
+│ │ @@ -186,20 +186,20 @@
+│ │                  for assignment in mapping.get(key, {}).values():
+│ │                      try:
+│ │                          settings = IPortletAssignmentSettings(assignment)
+│ │                      except TypeError:
+│ │                          # Portlet does not exist any longer
+│ │                          continue
+│ │                      else:
+│ │ -                        if not settings.get('visible', True):
+│ │ +                        if not settings.get("visible", True):
+│ │                              continue
+│ │  
+│ │                      assignments.append(
+│ │                          {
+│ │ -                            'category': category,
+│ │ -                            'key': key,
+│ │ -                            'name': assignment.__name__,
+│ │ -                            'assignment': assignment,
+│ │ +                            "category": category,
+│ │ +                            "key": key,
+│ │ +                            "name": assignment.__name__,
+│ │ +                            "assignment": assignment,
+│ │                          }
+│ │                      )
+│ │  
+│ │          return assignments
+│ │   --- plone.portlets-2.3.3/plone/portlets/settings.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/settings.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -30,12 +30,10 @@
+│ │  @adapter(IPortletAssignment)
+│ │  @implementer(IPortletAssignmentSettings)
+│ │  def portletAssignmentSettingsFactory(context):
+│ │      annotations = queryAdapter(context, IAnnotations)
+│ │      settings = annotations.get(ASSIGNMENT_SETTINGS_KEY, None)
+│ │  
+│ │      if settings is None:
+│ │ -        settings = annotations[
+│ │ -            ASSIGNMENT_SETTINGS_KEY
+│ │ -        ] = PortletAssignmentSettings()
+│ │ +        settings = annotations[ASSIGNMENT_SETTINGS_KEY] = PortletAssignmentSettings()
+│ │  
+│ │      return settings
+│ │   --- plone.portlets-2.3.3/plone/portlets/storage.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/storage.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -4,91 +4,79 @@
+│ │  from plone.portlets.interfaces import IPortletStorage
+│ │  from zope.container.btree import BTreeContainer
+│ │  from zope.container.contained import Contained
+│ │  from zope.container.ordered import OrderedContainer
+│ │  from zope.interface import implementer
+│ │  
+│ │  import logging
+│ │ -import sys
+│ │  
+│ │  
+│ │ -# XXX: We coerce all mapping keys (things like user and group ids)
+│ │ -# to unicode, because the OOBTree that we store them in will fall over with
+│ │ -# mixed encoded-str and unicode keys. It may be better to store byte strings
+│ │ -# (and thus coerce the other way), especially to support things like Active
+│ │ -# Directory where user ids are binary GUIDs. However, that's a problem for
+│ │ -# another day, since it'll require more complex migration.
+│ │ -
+│ │ -LOG = logging.getLogger('portlets')
+│ │ -
+│ │ -if sys.version_info[0] > 2:
+│ │ -    text_type = str
+│ │ -    binary_type = bytes
+│ │ -else:
+│ │ -    text_type = unicode
+│ │ -    binary_type = str
+│ │ +LOG = logging.getLogger("portlets")
+│ │  
+│ │  
+│ │  def _coerce(key):
+│ │ -    if isinstance(key, binary_type):
+│ │ +    # XXX: We coerce all mapping keys (things like user and group ids)
+│ │ +    # to unicode, because the OOBTree that we store them in will fall over with
+│ │ +    # mixed encoded-str and unicode keys. It may be better to store byte strings
+│ │ +    # (and thus coerce the other way), especially to support things like Active
+│ │ +    # Directory where user ids are binary GUIDs. However, that's a problem for
+│ │ +    # another day, since it'll require more complex migration.
+│ │ +    if isinstance(key, bytes):
+│ │          try:
+│ │ -            key = text_type(key, encoding='utf-8')
+│ │ +            key = str(key, encoding="utf-8")
+│ │          except UnicodeDecodeError:
+│ │ -            LOG.warn('Unable to convert %r to unicode' % key)
+│ │ -            return text_type(key, 'utf-8', 'ignore')
+│ │ +            LOG.warn("Unable to convert %r to unicode" % key)
+│ │ +            return str(key, "utf-8", "ignore")
+│ │  
+│ │      return key
+│ │  
+│ │  
+│ │  @implementer(IPortletStorage)
+│ │  class PortletStorage(BTreeContainer):
+│ │ -    """The default portlet storage.
+│ │ -    """
+│ │ +    """The default portlet storage."""
+│ │  
+│ │  
+│ │  @implementer(IPortletCategoryMapping)
+│ │  class PortletCategoryMapping(BTreeContainer, Contained):
+│ │ -    """The default category/key mapping storage.
+│ │ -    """
+│ │ +    """The default category/key mapping storage."""
+│ │  
+│ │      # We need to hack some stuff to make sure keys are unicode.
+│ │      # The shole BTreeContainer/SampleContainer mess is a pain in the backside
+│ │  
+│ │      def __getitem__(self, key):
+│ │ -        return super(PortletCategoryMapping, self).__getitem__(_coerce(key))
+│ │ +        return super().__getitem__(_coerce(key))
+│ │  
+│ │      def get(self, key, default=None):
+│ │ -        '''See interface `IReadContainer`'''
+│ │ -        return super(PortletCategoryMapping, self).get(_coerce(key), default)
+│ │ +        """See interface `IReadContainer`"""
+│ │ +        return super().get(_coerce(key), default)
+│ │  
+│ │      def __contains__(self, key):
+│ │ -        '''See interface `IReadContainer`'''
+│ │ -        return super(PortletCategoryMapping, self).__contains__(_coerce(key))
+│ │ +        """See interface `IReadContainer`"""
+│ │ +        return super().__contains__(_coerce(key))
+│ │  
+│ │      has_key = __contains__
+│ │  
+│ │      def __setitem__(self, key, object):
+│ │ -        '''See interface `IWriteContainer`'''
+│ │ -        super(PortletCategoryMapping, self).__setitem__(_coerce(key), object)
+│ │ +        """See interface `IWriteContainer`"""
+│ │ +        super().__setitem__(_coerce(key), object)
+│ │  
+│ │      def __delitem__(self, key):
+│ │ -        '''See interface `IWriteContainer`'''
+│ │ -        super(PortletCategoryMapping, self).__delitem__(_coerce(key))
+│ │ +        """See interface `IWriteContainer`"""
+│ │ +        super().__delitem__(_coerce(key))
+│ │  
+│ │  
+│ │  @implementer(IPortletAssignmentMapping)
+│ │  class PortletAssignmentMapping(OrderedContainer):
+│ │ -    """The default assignment mapping storage.
+│ │ -    """
+│ │ +    """The default assignment mapping storage."""
+│ │  
+│ │ -    __manager__ = u''
+│ │ -    __category__ = u''
+│ │ -    __name__ = u''
+│ │ +    __manager__ = ""
+│ │ +    __category__ = ""
+│ │ +    __name__ = ""
+│ │  
+│ │ -    def __init__(self, manager=u'', category=u'', name=u''):
+│ │ +    def __init__(self, manager="", category="", name=""):
+│ │          # XXX: This depends on implementation detail in OrderedContainer,
+│ │          # but it uses a PersistentDict, which sucks :-/
+│ │          OrderedContainer.__init__(self)
+│ │          self._data = OOBTree()
+│ │  
+│ │          self.__manager__ = manager
+│ │          self.__category__ = category
+│ │   --- plone.portlets-2.3.3/plone/portlets/tests.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/tests.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -8,35 +8,35 @@
+│ │  
+│ │  optionflags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
+│ │  
+│ │  
+│ │  def configurationSetUp(test=None):
+│ │      setUp()
+│ │  
+│ │ +    import plone.memoize
+│ │ +    import plone.portlets
+│ │      import zope.annotation
+│ │      import zope.browserpage
+│ │      import zope.component
+│ │      import zope.container
+│ │      import zope.contentprovider
+│ │      import zope.security
+│ │ -    import plone.memoize
+│ │ -    import plone.portlets
+│ │  
+│ │ -    XMLConfig('meta.zcml', zope.security)()
+│ │ -    XMLConfig('meta.zcml', zope.component)()
+│ │ -    XMLConfig('meta.zcml', zope.browserpage)()
+│ │ -
+│ │ -    XMLConfig('configure.zcml', zope.annotation)()
+│ │ -    XMLConfig('configure.zcml', zope.component)()
+│ │ -    XMLConfig('configure.zcml', zope.security)()
+│ │ -    XMLConfig('configure.zcml', zope.container)()
+│ │ -    XMLConfig('configure.zcml', zope.contentprovider)()
+│ │ -    XMLConfig('configure.zcml', plone.memoize)()
+│ │ +    XMLConfig("meta.zcml", zope.security)()
+│ │ +    XMLConfig("meta.zcml", zope.component)()
+│ │ +    XMLConfig("meta.zcml", zope.browserpage)()
+│ │ +
+│ │ +    XMLConfig("configure.zcml", zope.annotation)()
+│ │ +    XMLConfig("configure.zcml", zope.component)()
+│ │ +    XMLConfig("configure.zcml", zope.security)()
+│ │ +    XMLConfig("configure.zcml", zope.container)()
+│ │ +    XMLConfig("configure.zcml", zope.contentprovider)()
+│ │ +    XMLConfig("configure.zcml", plone.memoize)()
+│ │  
+│ │ -    XMLConfig('configure.zcml', plone.portlets)()
+│ │ +    XMLConfig("configure.zcml", plone.portlets)()
+│ │  
+│ │  
+│ │  def configurationTearDown(test=None):
+│ │      tearDown()
+│ │  
+│ │  
+│ │  def test_safe_render():
+│ │ @@ -70,23 +70,21 @@
+│ │  
+│ │  
+│ │  def test_portlet_metadata_availability():
+│ │      # Check that the __portlet_metadata__ field is available when
+│ │      # the PortletManagerRenderer checks for the availability of
+│ │      # the PortletRenderers
+│ │  
+│ │ +    # Define a dummy PortletManager
+│ │ +    from plone.portlets.interfaces import IPortletManager
+│ │      from zope.component import adapter
+│ │      from zope.component import provideAdapter
+│ │      from zope.interface import implementer
+│ │      from zope.interface import Interface
+│ │  
+│ │ -    # Define a dummy PortletManager
+│ │ -
+│ │ -    from plone.portlets.interfaces import IPortletManager
+│ │ -
+│ │      class IDummyPortletManager(IPortletManager):
+│ │          "Dummy portlet manager"
+│ │  
+│ │      @implementer(IDummyPortletManager)
+│ │      class DummyPortletManager:
+│ │          __name__ = None
+│ │  
+│ │ @@ -95,52 +93,52 @@
+│ │  
+│ │      from plone.portlets.interfaces import IPortletRenderer
+│ │  
+│ │      @implementer(IPortletRenderer)
+│ │      class DummyPortletRenderer:
+│ │          @property
+│ │          def available(self):
+│ │ -            return getattr(self, '__portlet_metadata__', False)
+│ │ +            return getattr(self, "__portlet_metadata__", False)
+│ │  
+│ │          def render(self):
+│ │ -            return u'dummy portlet renderer'
+│ │ +            return "dummy portlet renderer"
+│ │  
+│ │          def update(self):
+│ │              pass
+│ │  
+│ │      # Define a dummy portlet retriever that adapts our dummy portlet manager
+│ │ -    # and returns in its getPortlets a mock dictinary with a dummy
+│ │ +    # and returns in its getPortlets a mock dictionary with a dummy
+│ │      # PortletRenderer as p['assignment'].data. For that, we need a class
+│ │      # where we can set an attribute 'data'
+│ │  
+│ │ -    class Obj(object):
+│ │ +    class Obj:
+│ │          pass
+│ │  
+│ │      from plone.portlets.constants import CONTEXT_CATEGORY
+│ │      from plone.portlets.interfaces import IPortletRetriever
+│ │      from plone.portlets.retriever import PortletRetriever
+│ │  
+│ │      @implementer(IPortletRetriever)
+│ │      @adapter(Interface, IDummyPortletManager)
+│ │      class DummyPortletRetriever(PortletRetriever):
+│ │          def getPortlets(self):
+│ │              p = dict()
+│ │ -            p['category'] = CONTEXT_CATEGORY
+│ │ -            p['key'] = p['name'] = u'dummy'
+│ │ -            p['assignment'] = obj = Obj()
+│ │ +            p["category"] = CONTEXT_CATEGORY
+│ │ +            p["key"] = p["name"] = "dummy"
+│ │ +            p["assignment"] = obj = Obj()
+│ │              obj.data = DummyPortletRenderer()
+│ │              obj.available = True
+│ │              return (p,)
+│ │  
+│ │      provideAdapter(DummyPortletRetriever)
+│ │  
+│ │      # We need a dummy context that implements Interface
+│ │  
+│ │      @implementer(Interface)
+│ │ -    class DummyContext(object):
+│ │ +    class DummyContext:
+│ │          pass
+│ │  
+│ │      # We now test the PortletManagerRenderer. We override the _dataToPortlet
+│ │      # method since our data is already our correct (dummy) IPortletRenderer
+│ │  
+│ │      from plone.portlets.manager import PortletManagerRenderer
+│ │  
+│ │ @@ -148,18 +146,20 @@
+│ │          return data
+│ │  
+│ │      PortletManagerRenderer._dataToPortlet = _dataToPortlet
+│ │  
+│ │      # prepare a memoizeable test request
+│ │  
+│ │      from zope.publisher.browser import TestRequest
+│ │ +
+│ │      request = TestRequest()
+│ │  
+│ │ -    from zope.interface import alsoProvides
+│ │      from zope.annotation.interfaces import IAttributeAnnotatable
+│ │ +    from zope.interface import alsoProvides
+│ │ +
+│ │      alsoProvides(request, IAttributeAnnotatable)
+│ │  
+│ │      # Check that a PortletManagerRenderer is capable of rendering our
+│ │      # dummy PortletRenderer
+│ │  
+│ │      renderer = PortletManagerRenderer(
+│ │          DummyContext(), request, None, DummyPortletManager()
+│ │ @@ -169,27 +169,27 @@
+│ │      assert renderer.render() == "dummy portlet renderer"
+│ │  
+│ │  
+│ │  def test_suite():
+│ │      return unittest.TestSuite(
+│ │          (
+│ │              doctest.DocFileSuite(
+│ │ -                'README.txt',
+│ │ +                "README.txt",
+│ │                  setUp=configurationSetUp,
+│ │                  tearDown=configurationTearDown,
+│ │                  optionflags=optionflags,
+│ │              ),
+│ │              doctest.DocFileSuite(
+│ │ -                'uisupport.txt',
+│ │ +                "uisupport.txt",
+│ │                  setUp=configurationSetUp,
+│ │                  tearDown=configurationTearDown,
+│ │                  optionflags=optionflags,
+│ │              ),
+│ │              doctest.DocFileSuite(
+│ │ -                'utils.txt',
+│ │ +                "utils.txt",
+│ │                  setUp=configurationSetUp,
+│ │                  tearDown=configurationTearDown,
+│ │                  optionflags=optionflags,
+│ │              ),
+│ │              doctest.DocTestSuite(),
+│ │              unittest.FunctionTestCase(
+│ │                  test_portlet_metadata_availability,
+│ │   --- plone.portlets-2.3.3/plone/portlets/uisupport.txt
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/uisupport.txt
+│ │┄ Files 3% similar despite different names
+│ │ @@ -12,17 +12,15 @@
+│ │  when adding it. It can also specify a particular interface that a portlet
+│ │  manager must have in order for the portlet to be addable to it.
+│ │  
+│ │    >>> from plone.portlets.interfaces import IPortletType
+│ │  
+│ │  First, we must create a local site manager at a fictional root folder.
+│ │  
+│ │ -  >>> from zope.interface import implements, Interface, directlyProvides
+│ │ -  >>> from zope.component import adapts, provideAdapter
+│ │ -
+│ │ +  >>> from zope.interface import directlyProvides
+│ │    >>> from zope.site.folder import rootFolder, Folder
+│ │    >>> rootFolder = rootFolder()
+│ │  
+│ │    >>> from zope.location.interfaces import ISite
+│ │    >>> from zope.component.persistentregistry import PersistentComponents
+│ │    >>> from zope.component.globalregistry import base as siteManagerBase
+│ │    >>> from zope.component import getSiteManager
+│ │   --- plone.portlets-2.3.3/plone/portlets/utils.py
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/utils.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -46,27 +46,25 @@
+│ │  
+│ │      info is the portlet info dictionary. Hash is put into info, and
+│ │      also returned.
+│ │      """
+│ │      # Make sure all info values are decoded
+│ │      newinfo = {}
+│ │      for k, v in info.items():
+│ │ -        if hasattr(v, 'decode'):
+│ │ -            v = v.decode('utf8')
+│ │ +        if hasattr(v, "decode"):
+│ │ +            v = v.decode("utf8")
+│ │          newinfo[k] = v
+│ │ -    concat_txt = u'%(manager)s\n%(category)s\n%(key)s\n%(name)s' % newinfo
+│ │ -    info['hash'] = binascii.b2a_hex(concat_txt.encode('utf8'))
+│ │ -    return info['hash']
+│ │ +    concat_txt = "%(manager)s\n%(category)s\n%(key)s\n%(name)s" % newinfo
+│ │ +    info["hash"] = binascii.b2a_hex(concat_txt.encode("utf8"))
+│ │ +    return info["hash"]
+│ │  
+│ │  
+│ │  def unhashPortletInfo(hash):
+│ │      """Creates the portlet info from the hash.
+│ │  
+│ │      Output is the info dictionary (containing only the
+│ │      hashed fields).
+│ │      """
+│ │      concat_txt = binascii.a2b_hex(hash).decode()
+│ │      manager, category, key, name = concat_txt.splitlines()
+│ │ -    info = dict(
+│ │ -        manager=manager, category=category, key=key, name=name, hash=hash
+│ │ -    )
+│ │ +    info = dict(manager=manager, category=category, key=key, name=name, hash=hash)
+│ │      return info
+│ │   --- plone.portlets-2.3.3/plone/portlets/utils.txt
+│ ├── +++ plone.portlets-3.0.0/plone/portlets/utils.txt
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  =============
+│ │  Portlet utils
+│ │  =============
+│ │  
+│ │  The portlets need a hash that can play as an id in the html
+│ │ -page. For this, a pair of symetric hash and unhash functions
+│ │ +page. For this, a pair of symmetric hash and unhash functions
+│ │  is provided.
+│ │  
+│ │    >>> from plone.portlets.utils import hashPortletInfo, unhashPortletInfo
+│ │  
+│ │  Usage
+│ │  -----
+│ │   --- plone.portlets-2.3.3/plone.portlets.egg-info/PKG-INFO
+│ ├── +++ plone.portlets-3.0.0/plone.portlets.egg-info/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,38 +1,30 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: plone.portlets
+│ │ -Version: 2.3.3
+│ │ +Version: 3.0.0
+│ │  Summary: An extension of zope.viewlet to support dynamic portlets
+│ │  Home-page: https://github.com/plone/plone.portlets
+│ │  Author: Plone Foundation
+│ │  Author-email: plone-developers@lists.sourceforge.net
+│ │  License: GPL version 2
+│ │  Keywords: portlet viewlet
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Framework :: Plone
+│ │ -Classifier: Framework :: Plone :: 4.3
+│ │ -Classifier: Framework :: Plone :: 5.0
+│ │ -Classifier: Framework :: Plone :: 5.1
+│ │ -Classifier: Framework :: Plone :: 5.2
+│ │  Classifier: Framework :: Plone :: 6.0
+│ │  Classifier: Framework :: Plone :: Core
+│ │ -Classifier: Framework :: Zope2
+│ │ -Classifier: Framework :: Zope :: 4
+│ │ +Classifier: Framework :: Zope :: 5
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │ -Classifier: Programming Language :: Python :: 2.7
+│ │ -Classifier: Programming Language :: Python :: 3.6
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ -Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*
+│ │ +Requires-Python: >=3.8
+│ │  Provides-Extra: test
+│ │  
+│ │  Overview
+│ │  ========
+│ │  
+│ │  plone.portlets provides a generic infrastructure for managing portlets.
+│ │  
+│ │ @@ -47,14 +39,32 @@
+│ │  .. You should *NOT* be adding new change log entries to this file.
+│ │     You should create a file in the news directory instead.
+│ │     For helpful instructions, please see:
+│ │     https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+│ │  
+│ │  .. towncrier release notes start
+│ │  
+│ │ +3.0.0 (2023-04-06)
+│ │ +------------------
+│ │ +
+│ │ +Breaking changes:
+│ │ +
+│ │ +
+│ │ +- Drop support for Plone 5.2 and Python 2.
+│ │ +  Only Plone 6.0 on Python 3.8+ is supported.
+│ │ +  [plone devs] (#9)
+│ │ +
+│ │ +
+│ │ +Internal:
+│ │ +
+│ │ +
+│ │ +- Update configuration files.
+│ │ +  [plone devs] (80cf330f)
+│ │ +
+│ │ +
+│ │  2.3.3 (2023-03-14)
+│ │  ------------------
+│ │  
+│ │  Bug fixes:
+│ │  
+│ │  
+│ │  - Use `ZODB` as dependency rather than the deprecated `ZODB3`.
+│ │   --- plone.portlets-2.3.3/plone.portlets.egg-info/SOURCES.txt
+│ ├── +++ plone.portlets-3.0.0/plone.portlets.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- plone.portlets-2.3.3/setup.py
+│ ├── +++ plone.portlets-3.0.0/setup.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,68 +1,61 @@
+│ │  from setuptools import find_packages
+│ │  from setuptools import setup
+│ │  
+│ │  
+│ │ -version = '2.3.3'
+│ │ +version = "3.0.0"
+│ │  
+│ │  setup(
+│ │ -    name='plone.portlets',
+│ │ +    name="plone.portlets",
+│ │      version=version,
+│ │      description="An extension of zope.viewlet to support dynamic portlets",
+│ │ -    long_description=(
+│ │ -        open("README.rst").read() + "\n" + open("CHANGES.rst").read()
+│ │ -    ),
+│ │ +    long_description=(open("README.rst").read() + "\n" + open("CHANGES.rst").read()),
+│ │      classifiers=[
+│ │          "Development Status :: 5 - Production/Stable",
+│ │          "Environment :: Web Environment",
+│ │          "Framework :: Plone",
+│ │ -        "Framework :: Plone :: 4.3",
+│ │ -        "Framework :: Plone :: 5.0",
+│ │ -        "Framework :: Plone :: 5.1",
+│ │ -        "Framework :: Plone :: 5.2",
+│ │          "Framework :: Plone :: 6.0",
+│ │          "Framework :: Plone :: Core",
+│ │ -        "Framework :: Zope2",
+│ │ -        "Framework :: Zope :: 4",
+│ │ +        "Framework :: Zope :: 5",
+│ │          "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+│ │          "Operating System :: OS Independent",
+│ │          "Programming Language :: Python",
+│ │ -        "Programming Language :: Python :: 2.7",
+│ │ -        "Programming Language :: Python :: 3.6",
+│ │ -        "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",
+│ │          "Programming Language :: Python :: 3.9",
+│ │          "Programming Language :: Python :: 3.10",
+│ │          "Programming Language :: Python :: 3.11",
+│ │      ],
+│ │ -    keywords='portlet viewlet',
+│ │ -    author='Plone Foundation',
+│ │ -    author_email='plone-developers@lists.sourceforge.net',
+│ │ -    url='https://github.com/plone/plone.portlets',
+│ │ -    license='GPL version 2',
+│ │ +    keywords="portlet viewlet",
+│ │ +    author="Plone Foundation",
+│ │ +    author_email="plone-developers@lists.sourceforge.net",
+│ │ +    url="https://github.com/plone/plone.portlets",
+│ │ +    license="GPL version 2",
+│ │      packages=find_packages(),
+│ │ -    namespace_packages=['plone'],
+│ │ +    namespace_packages=["plone"],
+│ │      include_package_data=True,
+│ │      zip_safe=False,
+│ │ -    python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*',
+│ │ +    python_requires=">=3.8",
+│ │      extras_require=dict(
+│ │          test=[
+│ │ -            'zope.browserpage',
+│ │ -            'zope.configuration',
+│ │ -            'zope.location',
+│ │ -            'zope.security',
+│ │ +            "zope.browserpage",
+│ │ +            "zope.configuration",
+│ │ +            "zope.location",
+│ │ +            "zope.security",
+│ │ +            "zope.testing",
+│ │          ]
+│ │      ),
+│ │      install_requires=[
+│ │ -        'setuptools',
+│ │ -        'ZODB',
+│ │ -        'plone.memoize',
+│ │ -        'zope.annotation',
+│ │ -        'zope.component',
+│ │ -        'zope.container',
+│ │ -        'zope.contentprovider',
+│ │ -        'zope.interface',
+│ │ -        'zope.publisher',
+│ │ -        'zope.schema',
+│ │ -        'zope.site',
+│ │ +        "BTrees",
+│ │ +        "setuptools",
+│ │ +        "ZODB",
+│ │ +        "plone.memoize",
+│ │ +        "persistent",
+│ │ +        "zope.annotation",
+│ │ +        "zope.component",
+│ │ +        "zope.container",
+│ │ +        "zope.contentprovider",
+│ │ +        "zope.interface",
+│ │ +        "zope.publisher",
+│ │ +        "zope.schema",
+│ │ +        "zope.site",
+│ │      ],
+│ │  )

@@ -1,0 +1,977 @@
+--- tmp/mmengine-0.7.1.tar.gz
++++ tmp/mmengine-0.7.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/mmengine-0.7.1.tar", last modified: Mon Apr  3 11:00:39 2023, max compression
+│ +gzip compressed data, was "dist/mmengine-0.7.2.tar", last modified: Thu Apr  6 10:33:28 2023, max compression
+│   --- mmengine-0.7.1.tar
+├── +++ mmengine-0.7.2.tar
+│ ├── file list
+│ │ @@ -1,183 +1,183 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      124 2023-04-03 10:59:16.000000 mmengine-0.7.1/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20324 2023-04-03 11:00:39.000000 mmengine-0.7.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16706 2023-04-03 10:59:16.000000 mmengine-0.7.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      222 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/analysis/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      473 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/analysis/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13594 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/analysis/complexity_analysis.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26249 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/analysis/jit_analysis.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10215 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/analysis/jit_handles.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    28833 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/analysis/print_helper.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/config/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      149 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/config/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    44065 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/config/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4709 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/config/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/dataset/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      595 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dataset/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33957 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dataset/base_dataset.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19815 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dataset/dataset_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5650 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dataset/sampler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6442 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dataset/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/device/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/device/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2381 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/device/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/dist/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1272 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dist/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    42761 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dist/dist.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19346 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/dist/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/evaluator/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      235 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/evaluator/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5122 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/evaluator/evaluator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6668 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/evaluator/metric.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1387 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/evaluator/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/fileio/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1517 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine/fileio/backends/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      551 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1015 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2408 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/http_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2484 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/lmdb_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18135 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/local_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1932 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/memcached_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27918 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/petrel_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4358 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/backends/registry_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16964 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/file_client.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/fileio/handlers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      385 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      993 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/json_handler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      753 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/pickle_handler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1250 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/registry_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      733 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/handlers/yaml_handler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31140 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5013 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/fileio/parse.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/hooks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      981 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26525 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/checkpoint_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6092 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/early_stopping_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9702 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/ema_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2429 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/empty_cache_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16661 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4072 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/iter_timer_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13594 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/logger_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3505 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/naive_visualization_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4904 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/param_scheduler_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13889 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/profiler_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6106 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/runtime_info_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1465 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/sampler_seed_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      732 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/sync_buffer_hook.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2033 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hooks/test_time_aug_hook.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/hub/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      126 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      227 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/deprecated.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3812 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/hub.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7802 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/mmcls.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5279 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/openmmlab.json
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4686 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/hub/torchvision_0.12.json
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/infer/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      112 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/infer/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27397 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/infer/infer.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/logging/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/logging/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8375 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/logging/history_buffer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15282 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/logging/logger.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18221 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/logging/message_hub.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/model/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2206 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10860 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/averaged_model.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/model/base_model/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      227 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/base_model/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13374 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/base_model/base_model.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12407 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/base_model/data_preprocessor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8916 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/base_module.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5523 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/test_time_aug.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10105 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26125 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/weight_init.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/model/wrappers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      619 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/wrappers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6847 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/wrappers/distributed.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10318 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/wrappers/fully_sharded_distributed.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6627 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/wrappers/seperate_distributed.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1024 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/model/wrappers/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/optim/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/optim/optimizer/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      703 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6453 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/amp_optimizer_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9006 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/apex_optimizer_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3785 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/builder.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14591 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/default_constructor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20056 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/optimizer_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7523 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/optimizer_wrapper_dict.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3537 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/optimizer/zero_optimizer.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/optim/scheduler/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1835 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/scheduler/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18104 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/scheduler/lr_scheduler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16538 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/scheduler/momentum_scheduler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    63458 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/optim/scheduler/param_scheduler.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/registry/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12997 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/build_functions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3412 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/default_scope.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25764 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/registry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2273 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/root.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4292 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/registry/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/runner/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1113 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5985 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/amp.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1149 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/base_loop.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29009 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/checkpoint.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23365 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/log_processor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17202 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/loops.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1657 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/priority.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    99454 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/runner.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3001 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/runner/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/structures/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/structures/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24233 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/structures/base_data_element.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13146 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/structures/instance_data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1502 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/structures/label_data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4967 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/structures/pixel_data.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/testing/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      591 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/testing/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/testing/_internal/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      130 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/testing/_internal/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13964 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/testing/_internal/distributed.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6140 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/testing/compare.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6684 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/testing/runner_test_case.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1803 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/utils/dl_utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      597 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5601 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/collect_env.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6110 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/hub.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3664 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/misc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4145 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/parrots_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2602 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/setup_env.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4410 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/time_counter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      979 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/torch_ops.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      828 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/trace.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1751 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/dl_utils/visualize.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5579 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14723 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/misc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2302 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/package_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3777 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/path.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7105 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/progressbar.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3046 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/timer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2726 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/utils/version_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      700 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:39.000000 mmengine-0.7.1/mmengine/visualization/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/visualization/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8040 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/visualization/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    22373 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/visualization/vis_backend.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    53052 2023-04-03 10:59:16.000000 mmengine-0.7.1/mmengine/visualization/visualizer.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20324 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4975 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      326 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-03 11:00:38.000000 mmengine-0.7.1/mmengine.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      423 2023-04-03 11:00:39.000000 mmengine-0.7.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5264 2023-04-03 10:59:16.000000 mmengine-0.7.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      124 2023-04-06 10:31:51.000000 mmengine-0.7.2/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20084 2023-04-06 10:33:28.000000 mmengine-0.7.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16506 2023-04-06 10:31:51.000000 mmengine-0.7.2/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      222 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/analysis/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      473 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/analysis/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13594 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/analysis/complexity_analysis.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26249 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/analysis/jit_analysis.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10215 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/analysis/jit_handles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    28833 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/analysis/print_helper.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/config/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      149 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/config/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    44065 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/config/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4709 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/config/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/dataset/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      595 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dataset/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33957 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dataset/base_dataset.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20024 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dataset/dataset_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5650 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dataset/sampler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6442 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dataset/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/device/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/device/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2381 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/device/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/dist/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1272 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dist/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    42761 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dist/dist.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19346 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/dist/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/evaluator/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      235 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/evaluator/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5122 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/evaluator/evaluator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6668 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/evaluator/metric.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1387 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/evaluator/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/fileio/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1517 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/fileio/backends/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      551 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1015 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2408 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/http_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2484 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/lmdb_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18135 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/local_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1932 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/memcached_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27918 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/petrel_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4358 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/backends/registry_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16964 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/file_client.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/fileio/handlers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      385 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      993 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1068 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/json_handler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      753 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/pickle_handler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1250 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/registry_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      733 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/handlers/yaml_handler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31140 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5013 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/fileio/parse.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/hooks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      981 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26650 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/checkpoint_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6092 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/early_stopping_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9702 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/ema_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2429 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/empty_cache_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16661 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4072 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/iter_timer_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13594 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/logger_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3505 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/naive_visualization_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4904 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/param_scheduler_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13889 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/profiler_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6106 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/runtime_info_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1465 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/sampler_seed_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      732 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/sync_buffer_hook.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2033 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hooks/test_time_aug_hook.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/hub/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      126 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      227 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/deprecated.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3812 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/hub.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7802 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/mmcls.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5279 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/openmmlab.json
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4686 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/hub/torchvision_0.12.json
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/infer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      112 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/infer/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27397 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/infer/infer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/logging/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/logging/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8375 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/logging/history_buffer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    15282 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/logging/logger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18221 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/logging/message_hub.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/model/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2206 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10860 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/averaged_model.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/model/base_model/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      227 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/base_model/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13374 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/base_model/base_model.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12407 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/base_model/data_preprocessor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9069 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/base_module.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5523 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/test_time_aug.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10105 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26125 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/weight_init.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/model/wrappers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      619 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/wrappers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6847 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/wrappers/distributed.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10318 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/wrappers/fully_sharded_distributed.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6627 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/wrappers/seperate_distributed.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1024 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/model/wrappers/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/optim/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2009 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/optim/optimizer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      703 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6453 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/amp_optimizer_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9006 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/apex_optimizer_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3785 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/builder.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14591 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/default_constructor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20056 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/optimizer_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7523 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/optimizer_wrapper_dict.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3537 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/optimizer/zero_optimizer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/optim/scheduler/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1835 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/scheduler/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18104 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/scheduler/lr_scheduler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16538 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/scheduler/momentum_scheduler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    63458 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/optim/scheduler/param_scheduler.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/registry/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1375 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12997 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/build_functions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3412 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/default_scope.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25764 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/registry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2273 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/root.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4292 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/registry/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/runner/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1113 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5985 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/amp.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1149 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/base_loop.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29009 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/checkpoint.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23389 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/log_processor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17202 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/loops.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1657 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/priority.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    99454 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/runner.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3001 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/runner/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/structures/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/structures/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24233 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/structures/base_data_element.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13146 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/structures/instance_data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1502 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/structures/label_data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4967 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/structures/pixel_data.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/testing/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      591 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/testing/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/testing/_internal/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      130 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/testing/_internal/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13964 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/testing/_internal/distributed.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6140 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/testing/compare.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6684 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/testing/runner_test_case.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1803 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/utils/dl_utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      597 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5601 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/collect_env.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6110 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/hub.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3664 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/misc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4145 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/parrots_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2602 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/setup_env.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4410 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/time_counter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      979 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/torch_ops.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      828 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/trace.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1751 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/dl_utils/visualize.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5579 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14723 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/misc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2302 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/package_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3777 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/path.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7105 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/progressbar.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3046 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/timer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2726 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/utils/version_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      700 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine/visualization/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      325 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/visualization/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8040 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/visualization/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    22373 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/visualization/vis_backend.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    53052 2023-04-06 10:31:51.000000 mmengine-0.7.2/mmengine/visualization/visualizer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20084 2023-04-06 10:33:27.000000 mmengine-0.7.2/mmengine.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4975 2023-04-06 10:33:28.000000 mmengine-0.7.2/mmengine.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:33:27.000000 mmengine-0.7.2/mmengine.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      326 2023-04-06 10:33:27.000000 mmengine-0.7.2/mmengine.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-06 10:33:27.000000 mmengine-0.7.2/mmengine.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      423 2023-04-06 10:33:28.000000 mmengine-0.7.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5264 2023-04-06 10:31:51.000000 mmengine-0.7.2/setup.py
+│ │   --- mmengine-0.7.1/PKG-INFO
+│ ├── +++ mmengine-0.7.2/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mmengine
+│ │ -Version: 0.7.1
+│ │ +Version: 0.7.2
+│ │  Summary: Engine of OpenMMLab projects
+│ │  Home-page: https://github.com/open-mmlab/mmengine
+│ │  Author: MMEngine Authors
+│ │  Author-email: openmmlab@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: <div align="center">
+│ │            <img src="https://user-images.githubusercontent.com/58739961/187154444-fce76639-ac8d-429b-9354-c6fac64b7ef8.jpg" width="600"/>
+│ │ @@ -84,22 +84,17 @@
+│ │          
+│ │             - Defines the training process just like playing with Legos.
+│ │             - Provides rich components and strategies.
+│ │             - Complete controls on the training process with different levels of APIs.
+│ │          
+│ │          ## What's New
+│ │          
+│ │ -        v0.7.1 was released on 2023-04-03.
+│ │ +        v0.7.2 was released on 2023-04-06.
+│ │          
+│ │ -        Highlights:
+│ │ -        
+│ │ -        - Support compiling the model and enabling mixed-precision training at the same time.
+│ │ -        - Fix the bug where the logs cannot be properly saved to the log file after calling `torch.compile`
+│ │ -        
+│ │ -        Read [Changelog](./docs/en/notes/changelog.md#v071-04032023) for more details.
+│ │ +        Read [Changelog](./docs/en/notes/changelog.md#v071-04062023) for more details.
+│ │          
+│ │          ## Installation
+│ │          
+│ │          Before installing MMEngine, please ensure that PyTorch has been successfully installed following the [official guide](https://pytorch.org/get-started/locally/).
+│ │          
+│ │          Install MMEngine
+│ │   --- mmengine-0.7.1/README.md
+│ ├── +++ mmengine-0.7.2/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -76,22 +76,17 @@
+│ │  
+│ │     - Defines the training process just like playing with Legos.
+│ │     - Provides rich components and strategies.
+│ │     - Complete controls on the training process with different levels of APIs.
+│ │  
+│ │  ## What's New
+│ │  
+│ │ -v0.7.1 was released on 2023-04-03.
+│ │ +v0.7.2 was released on 2023-04-06.
+│ │  
+│ │ -Highlights:
+│ │ -
+│ │ -- Support compiling the model and enabling mixed-precision training at the same time.
+│ │ -- Fix the bug where the logs cannot be properly saved to the log file after calling `torch.compile`
+│ │ -
+│ │ -Read [Changelog](./docs/en/notes/changelog.md#v071-04032023) for more details.
+│ │ +Read [Changelog](./docs/en/notes/changelog.md#v071-04062023) for more details.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  Before installing MMEngine, please ensure that PyTorch has been successfully installed following the [official guide](https://pytorch.org/get-started/locally/).
+│ │  
+│ │  Install MMEngine
+│ │   --- mmengine-0.7.1/mmengine/analysis/complexity_analysis.py
+│ ├── +++ mmengine-0.7.2/mmengine/analysis/complexity_analysis.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/analysis/jit_analysis.py
+│ ├── +++ mmengine-0.7.2/mmengine/analysis/jit_analysis.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/analysis/jit_handles.py
+│ ├── +++ mmengine-0.7.2/mmengine/analysis/jit_handles.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/analysis/print_helper.py
+│ ├── +++ mmengine-0.7.2/mmengine/analysis/print_helper.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/config/config.py
+│ ├── +++ mmengine-0.7.2/mmengine/config/config.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/config/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/config/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dataset/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/dataset/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dataset/base_dataset.py
+│ ├── +++ mmengine-0.7.2/mmengine/dataset/base_dataset.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dataset/dataset_wrapper.py
+│ ├── +++ mmengine-0.7.2/mmengine/dataset/dataset_wrapper.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -425,20 +425,24 @@
+│ │          }
+│ │  
+│ │          # 3. For each image I and its labels L(I), compute the image-level
+│ │          # repeat factor:
+│ │          #    r(I) = max_{c in L(I)} r(c)
+│ │          repeat_factors = []
+│ │          for idx in range(num_images):
+│ │ +            # the length of `repeat_factors` need equal to the length of
+│ │ +            # dataset. Hence, if the `cat_ids` is empty,
+│ │ +            # the repeat_factor should be 1.
+│ │ +            repeat_factor: float = 1.
+│ │              cat_ids = set(self.dataset.get_cat_ids(idx))
+│ │              if len(cat_ids) != 0:
+│ │                  repeat_factor = max(
+│ │                      {category_repeat[cat_id]
+│ │                       for cat_id in cat_ids})
+│ │ -                repeat_factors.append(repeat_factor)
+│ │ +            repeat_factors.append(repeat_factor)
+│ │  
+│ │          return repeat_factors
+│ │  
+│ │      @force_full_init
+│ │      def _get_ori_dataset_idx(self, idx: int) -> int:
+│ │          """Convert global index to local index.
+│ │   --- mmengine-0.7.1/mmengine/dataset/sampler.py
+│ ├── +++ mmengine-0.7.2/mmengine/dataset/sampler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dataset/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/dataset/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/device/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/device/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dist/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/dist/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dist/dist.py
+│ ├── +++ mmengine-0.7.2/mmengine/dist/dist.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/dist/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/dist/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/evaluator/evaluator.py
+│ ├── +++ mmengine-0.7.2/mmengine/evaluator/evaluator.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/evaluator/metric.py
+│ ├── +++ mmengine-0.7.2/mmengine/evaluator/metric.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/evaluator/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/evaluator/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/base.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/base.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/http_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/http_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/lmdb_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/lmdb_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/local_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/local_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/memcached_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/memcached_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/petrel_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/petrel_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/backends/registry_utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/backends/registry_utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/file_client.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/file_client.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/handlers/base.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/handlers/base.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/handlers/json_handler.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/handlers/json_handler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/handlers/pickle_handler.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/handlers/pickle_handler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/handlers/registry_utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/handlers/registry_utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/handlers/yaml_handler.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/handlers/yaml_handler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/io.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/io.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/fileio/parse.py
+│ ├── +++ mmengine-0.7.2/mmengine/fileio/parse.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/checkpoint_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/checkpoint_hook.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -482,14 +482,16 @@
+│ │                 is_main_process():
+│ │                  self.file_client.remove(best_ckpt_path)
+│ │                  runner.logger.info(
+│ │                      f'The previous best checkpoint {best_ckpt_path} '
+│ │                      'is removed')
+│ │  
+│ │              best_ckpt_name = f'best_{key_indicator}_{ckpt_filename}'
+│ │ +            # Replace illegal characters for filename with `_`
+│ │ +            best_ckpt_name = best_ckpt_name.replace('/', '_')
+│ │              if len(self.key_indicators) == 1:
+│ │                  self.best_ckpt_path = self.file_client.join_path(  # type: ignore # noqa: E501
+│ │                      self.out_dir, best_ckpt_name)
+│ │                  runner.message_hub.update_info(runtime_best_ckpt_key,
+│ │                                                 self.best_ckpt_path)
+│ │              else:
+│ │                  self.best_ckpt_path_dict[
+│ │   --- mmengine-0.7.1/mmengine/hooks/early_stopping_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/early_stopping_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/ema_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/ema_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/empty_cache_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/empty_cache_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/iter_timer_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/iter_timer_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/logger_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/logger_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/naive_visualization_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/naive_visualization_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/param_scheduler_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/param_scheduler_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/profiler_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/profiler_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/runtime_info_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/runtime_info_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/sampler_seed_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/sampler_seed_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/sync_buffer_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/sync_buffer_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hooks/test_time_aug_hook.py
+│ ├── +++ mmengine-0.7.2/mmengine/hooks/test_time_aug_hook.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hub/hub.py
+│ ├── +++ mmengine-0.7.2/mmengine/hub/hub.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hub/mmcls.json
+│ ├── +++ mmengine-0.7.2/mmengine/hub/mmcls.json
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hub/openmmlab.json
+│ ├── +++ mmengine-0.7.2/mmengine/hub/openmmlab.json
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/hub/torchvision_0.12.json
+│ ├── +++ mmengine-0.7.2/mmengine/hub/torchvision_0.12.json
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/infer/infer.py
+│ ├── +++ mmengine-0.7.2/mmengine/infer/infer.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/logging/history_buffer.py
+│ ├── +++ mmengine-0.7.2/mmengine/logging/history_buffer.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/logging/logger.py
+│ ├── +++ mmengine-0.7.2/mmengine/logging/logger.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/logging/message_hub.py
+│ ├── +++ mmengine-0.7.2/mmengine/logging/message_hub.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/averaged_model.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/averaged_model.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/base_model/base_model.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/base_model/base_model.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/base_model/data_preprocessor.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/base_model/data_preprocessor.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/base_module.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/base_module.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -7,14 +7,15 @@
+│ │  from typing import Iterable, List, Optional, Union
+│ │  
+│ │  import torch.nn as nn
+│ │  
+│ │  from mmengine.dist import master_only
+│ │  from mmengine.logging import MMLogger, print_log
+│ │  from .weight_init import initialize, update_init_info
+│ │ +from .wrappers.utils import is_model_wrapper
+│ │  
+│ │  
+│ │  class BaseModule(nn.Module, metaclass=ABCMeta):
+│ │      """Base module for all modules in openmmlab. ``BaseModule`` is a wrapper of
+│ │      ``torch.nn.Module`` with additional functionality of parameter
+│ │      initialization. Compared with ``torch.nn.Module``, ``BaseModule`` mainly
+│ │      adds three attributes.
+│ │ @@ -119,14 +120,16 @@
+│ │                          pretrained_cfg.append(init_cfg)
+│ │                      else:
+│ │                          other_cfgs.append(init_cfg)
+│ │  
+│ │                  initialize(self, other_cfgs)
+│ │  
+│ │              for m in self.children():
+│ │ +                if is_model_wrapper(m) and not hasattr(m, 'init_weights'):
+│ │ +                    m = m.module
+│ │                  if hasattr(m, 'init_weights'):
+│ │                      m.init_weights()
+│ │                      # users may overload the `init_weights`
+│ │                      update_init_info(
+│ │                          m,
+│ │                          init_info=f'Initialized by '
+│ │                          f'user-defined `init_weights`'
+│ │   --- mmengine-0.7.1/mmengine/model/test_time_aug.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/test_time_aug.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/weight_init.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/weight_init.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/wrappers/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/wrappers/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/wrappers/distributed.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/wrappers/distributed.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/wrappers/fully_sharded_distributed.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/wrappers/fully_sharded_distributed.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/wrappers/seperate_distributed.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/wrappers/seperate_distributed.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/model/wrappers/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/model/wrappers/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/amp_optimizer_wrapper.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/amp_optimizer_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/apex_optimizer_wrapper.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/apex_optimizer_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/builder.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/builder.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/default_constructor.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/default_constructor.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/optimizer_wrapper.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/optimizer_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/optimizer_wrapper_dict.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/optimizer_wrapper_dict.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/optimizer/zero_optimizer.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/optimizer/zero_optimizer.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/scheduler/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/scheduler/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/scheduler/lr_scheduler.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/scheduler/lr_scheduler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/scheduler/momentum_scheduler.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/scheduler/momentum_scheduler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/optim/scheduler/param_scheduler.py
+│ ├── +++ mmengine-0.7.2/mmengine/optim/scheduler/param_scheduler.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/build_functions.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/build_functions.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/default_scope.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/default_scope.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/registry.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/registry.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/root.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/root.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/registry/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/registry/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/amp.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/amp.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/base_loop.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/base_loop.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/checkpoint.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/checkpoint.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/log_processor.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/log_processor.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -303,14 +303,15 @@
+│ │              if key in (f'{mode}/time', f'{mode}/data_time', 'time',
+│ │                         'data_time'):
+│ │                  time_tag[key] = value
+│ │              else:
+│ │                  tag[key] = value
+│ │          # Log other messages.
+│ │          log_items = []
+│ │ +        log_str += '  '
+│ │          for name, val in chain(tag.items(), non_scalar_tag.items(),
+│ │                                 time_tag.items()):
+│ │              if isinstance(val, float):
+│ │                  val = f'{val:.{self.num_digits}f}'
+│ │              if isinstance(val, (torch.Tensor, np.ndarray)):
+│ │                  # newline to display tensor and array.
+│ │                  val = f'\n{val}\n'
+│ │   --- mmengine-0.7.1/mmengine/runner/loops.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/loops.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/priority.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/priority.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/runner.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/runner.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/runner/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/runner/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/structures/base_data_element.py
+│ ├── +++ mmengine-0.7.2/mmengine/structures/base_data_element.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/structures/instance_data.py
+│ ├── +++ mmengine-0.7.2/mmengine/structures/instance_data.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/structures/label_data.py
+│ ├── +++ mmengine-0.7.2/mmengine/structures/label_data.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/structures/pixel_data.py
+│ ├── +++ mmengine-0.7.2/mmengine/structures/pixel_data.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/testing/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/testing/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/testing/_internal/distributed.py
+│ ├── +++ mmengine-0.7.2/mmengine/testing/_internal/distributed.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/testing/compare.py
+│ ├── +++ mmengine-0.7.2/mmengine/testing/compare.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/testing/runner_test_case.py
+│ ├── +++ mmengine-0.7.2/mmengine/testing/runner_test_case.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/__init__.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/collect_env.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/collect_env.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/hub.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/hub.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/misc.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/misc.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/parrots_wrapper.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/parrots_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/setup_env.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/setup_env.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/time_counter.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/time_counter.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/torch_ops.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/torch_ops.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/trace.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/trace.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/dl_utils/visualize.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/dl_utils/visualize.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/manager.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/manager.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/misc.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/misc.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/package_utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/package_utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/path.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/path.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/progressbar.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/progressbar.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/timer.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/timer.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/utils/version_utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/utils/version_utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/version.py
+│ ├── +++ mmengine-0.7.2/mmengine/version.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  # Copyright (c) OpenMMLab. All rights reserved.
+│ │  
+│ │ -__version__ = '0.7.1'
+│ │ +__version__ = '0.7.2'
+│ │  
+│ │  
+│ │  def parse_version_info(version_str):
+│ │      """Parse the version information.
+│ │  
+│ │      Args:
+│ │          version_str (str): version string like '0.1.0'.
+│ │   --- mmengine-0.7.1/mmengine/visualization/utils.py
+│ ├── +++ mmengine-0.7.2/mmengine/visualization/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/visualization/vis_backend.py
+│ ├── +++ mmengine-0.7.2/mmengine/visualization/vis_backend.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine/visualization/visualizer.py
+│ ├── +++ mmengine-0.7.2/mmengine/visualization/visualizer.py
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/mmengine.egg-info/PKG-INFO
+│ ├── +++ mmengine-0.7.2/mmengine.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mmengine
+│ │ -Version: 0.7.1
+│ │ +Version: 0.7.2
+│ │  Summary: Engine of OpenMMLab projects
+│ │  Home-page: https://github.com/open-mmlab/mmengine
+│ │  Author: MMEngine Authors
+│ │  Author-email: openmmlab@gmail.com
+│ │  License: UNKNOWN
+│ │  Description: <div align="center">
+│ │            <img src="https://user-images.githubusercontent.com/58739961/187154444-fce76639-ac8d-429b-9354-c6fac64b7ef8.jpg" width="600"/>
+│ │ @@ -84,22 +84,17 @@
+│ │          
+│ │             - Defines the training process just like playing with Legos.
+│ │             - Provides rich components and strategies.
+│ │             - Complete controls on the training process with different levels of APIs.
+│ │          
+│ │          ## What's New
+│ │          
+│ │ -        v0.7.1 was released on 2023-04-03.
+│ │ +        v0.7.2 was released on 2023-04-06.
+│ │          
+│ │ -        Highlights:
+│ │ -        
+│ │ -        - Support compiling the model and enabling mixed-precision training at the same time.
+│ │ -        - Fix the bug where the logs cannot be properly saved to the log file after calling `torch.compile`
+│ │ -        
+│ │ -        Read [Changelog](./docs/en/notes/changelog.md#v071-04032023) for more details.
+│ │ +        Read [Changelog](./docs/en/notes/changelog.md#v071-04062023) for more details.
+│ │          
+│ │          ## Installation
+│ │          
+│ │          Before installing MMEngine, please ensure that PyTorch has been successfully installed following the [official guide](https://pytorch.org/get-started/locally/).
+│ │          
+│ │          Install MMEngine
+│ │   --- mmengine-0.7.1/mmengine.egg-info/SOURCES.txt
+│ ├── +++ mmengine-0.7.2/mmengine.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- mmengine-0.7.1/setup.py
+│ ├── +++ mmengine-0.7.2/setup.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,1518 @@
+# Comparing `tmp/plone.app.contentmenu-3.0.0b3.tar.gz` & `tmp/plone.app.contentmenu-3.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "plone.app.contentmenu-3.0.0b3.tar", last modified: Tue Oct 11 21:07:16 2022, max compression
++gzip compressed data, was "plone.app.contentmenu-3.0.1.tar", last modified: Thu Apr  6 10:29:50 2023, max compression
+```
+
+## Comparing `plone.app.contentmenu-3.0.0b3.tar` & `plone.app.contentmenu-3.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,37 +1,41 @@
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.230212 plone.app.contentmenu-3.0.0b3/
+--rw-r--r--   0 maurits    (501) staff       (20)      270 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/.gitignore
+--rw-r--r--   0 maurits    (501) staff       (20)    13190 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/CHANGES.rst
+--rw-r--r--   0 maurits    (501) staff       (20)       70 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/CONTRIBUTING.rst
+--rw-r--r--   0 maurits    (501) staff       (20)      144 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/MANIFEST.in
+--rw-r--r--   0 maurits    (501) staff       (20)    17910 2022-10-11 21:07:16.230348 plone.app.contentmenu-3.0.0b3/PKG-INFO
+--rw-r--r--   0 maurits    (501) staff       (20)     3833 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/README.rst
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.225196 plone.app.contentmenu-3.0.0b3/docs/
+--rw-r--r--   0 maurits    (501) staff       (20)    15220 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/docs/LICENSE.GPL
+--rw-r--r--   0 maurits    (501) staff       (20)      683 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/docs/LICENSE.txt
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.225427 plone.app.contentmenu-3.0.0b3/plone/
+--rw-r--r--   0 maurits    (501) staff       (20)       56 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/__init__.py
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.227452 plone.app.contentmenu-3.0.0b3/plone/app/
+--rw-r--r--   0 maurits    (501) staff       (20)       56 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/__init__.py
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.229526 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/
+--rw-r--r--   0 maurits    (501) staff       (20)       94 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/__init__.py
+--rw-r--r--   0 maurits    (501) staff       (20)     4064 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/configure.zcml
+--rw-r--r--   0 maurits    (501) staff       (20)     4228 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/contentmenu.pt
+--rw-r--r--   0 maurits    (501) staff       (20)      999 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/displayviewsmenu.py
+--rw-r--r--   0 maurits    (501) staff       (20)     3846 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/interfaces.py
+--rw-r--r--   0 maurits    (501) staff       (20)    38339 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/menu.py
+--rw-r--r--   0 maurits    (501) staff       (20)     1300 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/testing.py
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.229945 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/tests/
+--rw-r--r--   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/tests/__init__.py
+--rw-r--r--   0 maurits    (501) staff       (20)    35298 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/tests/test_menu.py
+--rw-r--r--   0 maurits    (501) staff       (20)     1137 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/view.py
+-drwxr-xr-x   0 maurits    (501) staff       (20)        0 2022-10-11 21:07:16.227221 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/
+--rw-r--r--   0 maurits    (501) staff       (20)    17910 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/PKG-INFO
+--rw-r--r--   0 maurits    (501) staff       (20)      852 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/SOURCES.txt
+--rw-r--r--   0 maurits    (501) staff       (20)        1 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/dependency_links.txt
+--rw-r--r--   0 maurits    (501) staff       (20)       16 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/namespace_packages.txt
+--rw-r--r--   0 maurits    (501) staff       (20)        1 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/not-zip-safe
+--rw-r--r--   0 maurits    (501) staff       (20)      147 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/requires.txt
+--rw-r--r--   0 maurits    (501) staff       (20)        6 2022-10-11 21:07:16.000000 plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/top_level.txt
+--rw-r--r--   0 maurits    (501) staff       (20)      397 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/pyproject.toml
+--rw-r--r--   0 maurits    (501) staff       (20)      274 2022-10-11 21:07:16.230806 plone.app.contentmenu-3.0.0b3/setup.cfg
+--rw-r--r--   0 maurits    (501) staff       (20)     1588 2022-10-11 21:07:15.000000 plone.app.contentmenu-3.0.0b3/setup.py
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.136319 plone.app.contentmenu-3.0.1/
++-rw-r--r--   0 maurits    (501) staff       (20)     1019 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/.editorconfig
++-rw-r--r--   0 maurits    (501) staff       (20)      270 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/.gitignore
++-rw-r--r--   0 maurits    (501) staff       (20)      128 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/.meta.toml
++-rw-r--r--   0 maurits    (501) staff       (20)      973 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/.pre-commit-config.yaml
++-rw-r--r--   0 maurits    (501) staff       (20)    13391 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/CHANGES.rst
++-rw-r--r--   0 maurits    (501) staff       (20)       70 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/CONTRIBUTING.rst
++-rw-r--r--   0 maurits    (501) staff       (20)      144 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/MANIFEST.in
++-rw-r--r--   0 maurits    (501) staff       (20)    18184 2023-04-06 10:29:50.136464 plone.app.contentmenu-3.0.1/PKG-INFO
++-rw-r--r--   0 maurits    (501) staff       (20)     3834 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/README.rst
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.129991 plone.app.contentmenu-3.0.1/docs/
++-rw-r--r--   0 maurits    (501) staff       (20)    15220 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/docs/LICENSE.GPL
++-rw-r--r--   0 maurits    (501) staff       (20)      683 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/docs/LICENSE.txt
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.130287 plone.app.contentmenu-3.0.1/plone/
++-rw-r--r--   0 maurits    (501) staff       (20)       56 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/__init__.py
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.132962 plone.app.contentmenu-3.0.1/plone/app/
++-rw-r--r--   0 maurits    (501) staff       (20)       56 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/__init__.py
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.135454 plone.app.contentmenu-3.0.1/plone/app/contentmenu/
++-rw-r--r--   0 maurits    (501) staff       (20)       94 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/__init__.py
++-rw-r--r--   0 maurits    (501) staff       (20)     4139 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/configure.zcml
++-rw-r--r--   0 maurits    (501) staff       (20)     4973 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/contentmenu.pt
++-rw-r--r--   0 maurits    (501) staff       (20)      947 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/displayviewsmenu.py
++-rw-r--r--   0 maurits    (501) staff       (20)     3846 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/interfaces.py
++-rw-r--r--   0 maurits    (501) staff       (20)    38182 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/menu.py
++-rw-r--r--   0 maurits    (501) staff       (20)     1299 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/testing.py
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.136012 plone.app.contentmenu-3.0.1/plone/app/contentmenu/tests/
++-rw-r--r--   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/tests/__init__.py
++-rw-r--r--   0 maurits    (501) staff       (20)    35089 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/tests/test_menu.py
++-rw-r--r--   0 maurits    (501) staff       (20)     1130 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/plone/app/contentmenu/view.py
++drwxr-xr-x   0 maurits    (501) staff       (20)        0 2023-04-06 10:29:50.132658 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/
++-rw-r--r--   0 maurits    (501) staff       (20)    18184 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/PKG-INFO
++-rw-r--r--   0 maurits    (501) staff       (20)      909 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/SOURCES.txt
++-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/dependency_links.txt
++-rw-r--r--   0 maurits    (501) staff       (20)       16 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/namespace_packages.txt
++-rw-r--r--   0 maurits    (501) staff       (20)        1 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/not-zip-safe
++-rw-r--r--   0 maurits    (501) staff       (20)      217 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/requires.txt
++-rw-r--r--   0 maurits    (501) staff       (20)        6 2023-04-06 10:29:50.000000 plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/top_level.txt
++-rw-r--r--   0 maurits    (501) staff       (20)     1694 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/pyproject.toml
++-rw-r--r--   0 maurits    (501) staff       (20)      217 2023-04-06 10:29:50.137006 plone.app.contentmenu-3.0.1/setup.cfg
++-rw-r--r--   0 maurits    (501) staff       (20)     1780 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/setup.py
++-rw-r--r--   0 maurits    (501) staff       (20)     1279 2023-04-06 10:29:49.000000 plone.app.contentmenu-3.0.1/tox.ini
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/CHANGES.rst` & `plone.app.contentmenu-3.0.1/CHANGES.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,14 +4,34 @@
+ .. You should *NOT* be adding new change log entries to this file.
+    You should create a file in the news directory instead.
+    For helpful instructions, please see:
+    https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+ 
+ .. towncrier release notes start
+ 
++3.0.1 (2023-04-06)
++------------------
++
++Internal:
++
++
++- Update configuration files.
++  [plone devs] (#47959565)
++
++
++3.0.0 (2022-11-30)
++------------------
++
++Bug fixes:
++
++
++- Final release.
++  [gforcada] (#600)
++
++
+ 3.0.0b3 (2022-10-11)
+ --------------------
+ 
+ Bug fixes:
+ 
+ 
+ - Fix Display menu in toolbar doesn't show the current selected item and it's selected template correctly
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/PKG-INFO` & `plone.app.contentmenu-3.0.1/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: plone.app.contentmenu
+-Version: 3.0.0b3
++Version: 3.0.1
+ Summary: Plone's content menu implementation
+ Home-page: https://pypi.org/project/plone.app.contentmenu
+ Author: Plone Foundation
+ Author-email: plone-developers@lists.sourceforge.net
+ License: GPL version 2
+ Keywords: plone contentmenu menu
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -15,14 +15,16 @@
+ Classifier: Framework :: Zope :: 5
+ Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Requires-Python: >=3.8
+ Provides-Extra: test
+ 
+ Introduction
+ ============
+ 
+ plone.app.contentmenu contains the logic that powers Plone's content menu which is part of the toolbar.
+ 
+@@ -114,15 +116,15 @@
+     @implementer(IMyMenu)
+     class MyMenu(BrowserMenu):
+ 
+         def getMenuItems(self, context, request):
+             """Return menu item entries in a TAL-friendly form."""
+             results = []
+ 
+-            # here a single item is added. do what needed to add several entrys
++            # here a single item is added. do what needed to add several entries
+             results.append({
+                 'title': 'My item 1',
+                 'description': 'An my item',
+                 'action': '/url/to/action',
+                 'selected': False,
+                 'icon': 'some_icon_class',
+                 'extra': {
+@@ -150,14 +152,34 @@
+ .. You should *NOT* be adding new change log entries to this file.
+    You should create a file in the news directory instead.
+    For helpful instructions, please see:
+    https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+ 
+ .. towncrier release notes start
+ 
++3.0.1 (2023-04-06)
++------------------
++
++Internal:
++
++
++- Update configuration files.
++  [plone devs] (#47959565)
++
++
++3.0.0 (2022-11-30)
++------------------
++
++Bug fixes:
++
++
++- Final release.
++  [gforcada] (#600)
++
++
+ 3.0.0b3 (2022-10-11)
+ --------------------
+ 
+ Bug fixes:
+ 
+ 
+ - Fix Display menu in toolbar doesn't show the current selected item and it's selected template correctly
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/README.rst` & `plone.app.contentmenu-3.0.1/README.rst`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -91,15 +91,15 @@
+     @implementer(IMyMenu)
+     class MyMenu(BrowserMenu):
+ 
+         def getMenuItems(self, context, request):
+             """Return menu item entries in a TAL-friendly form."""
+             results = []
+ 
+-            # here a single item is added. do what needed to add several entrys
++            # here a single item is added. do what needed to add several entries
+             results.append({
+                 'title': 'My item 1',
+                 'description': 'An my item',
+                 'action': '/url/to/action',
+                 'selected': False,
+                 'icon': 'some_icon_class',
+                 'extra': {
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/docs/LICENSE.GPL` & `plone.app.contentmenu-3.0.1/docs/LICENSE.GPL`
+
+ * *Files identical despite different names*
+
+### Comparing `plone.app.contentmenu-3.0.0b3/docs/LICENSE.txt` & `plone.app.contentmenu-3.0.1/docs/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/configure.zcml` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/configure.zcml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,50 +1,52 @@
+-<configure xmlns="http://namespaces.zope.org/zope"
+-           xmlns:browser="http://namespaces.zope.org/browser"
+-           xmlns:five="http://namespaces.zope.org/five"
+-           i18n_domain="plone">
++<configure
++    xmlns="http://namespaces.zope.org/zope"
++    xmlns:browser="http://namespaces.zope.org/browser"
++    xmlns:five="http://namespaces.zope.org/five"
++    i18n_domain="plone"
++    >
+ 
+   <!-- Top level menu -->
+   <browser:menu
+-    id="plone_contentmenu"
+-    title="Content menu - contains contextual actions related to the content"
+-    interface=".interfaces.IContentMenuItem"
+-    />
++      id="plone_contentmenu"
++      title="Content menu - contains contextual actions related to the content"
++      interface=".interfaces.IContentMenuItem"
++      />
+ 
+   <!-- Sub-menus -->
+ 
+   <browser:menu
+-    id="plone_contentmenu_actions"
+-    title="The 'actions' menu - allows the user to execute actions on an object"
+-    class=".menu.ActionsMenu"
+-    />
+-
+-  <browser:menu
+-    id="plone_contentmenu_display"
+-    title="The 'display' menu - allows the user to select the view of an object"
+-    class=".menu.DisplayMenu"
+-    />
+-
+-   <browser:menu
+-    id="plone_contentmenu_factory"
+-    title="The 'add' menu - allows the user to add new content items in the context"
+-    class=".menu.FactoriesMenu"
+-    />
+-
+-  <browser:menu
+-    id="plone_contentmenu_workflow"
+-    title="The 'workflow' menu - allows the user to execute workflow transitions"
+-    class=".menu.WorkflowMenu"
+-    />
+-
+-  <browser:menu
+-    id="plone_contentmenu_portletmanager"
+-    title="The 'portlet' menu - allows the user to manage portlets"
+-    class=".menu.PortletManagerMenu"
+-    />
++      id="plone_contentmenu_actions"
++      title="The 'actions' menu - allows the user to execute actions on an object"
++      class=".menu.ActionsMenu"
++      />
++
++  <browser:menu
++      id="plone_contentmenu_display"
++      title="The 'display' menu - allows the user to select the view of an object"
++      class=".menu.DisplayMenu"
++      />
++
++  <browser:menu
++      id="plone_contentmenu_factory"
++      title="The 'add' menu - allows the user to add new content items in the context"
++      class=".menu.FactoriesMenu"
++      />
++
++  <browser:menu
++      id="plone_contentmenu_workflow"
++      title="The 'workflow' menu - allows the user to execute workflow transitions"
++      class=".menu.WorkflowMenu"
++      />
++
++  <browser:menu
++      id="plone_contentmenu_portletmanager"
++      title="The 'portlet' menu - allows the user to manage portlets"
++      class=".menu.PortletManagerMenu"
++      />
+ 
+   <!--
+     The menu items in the contentMenu are all sub-menu items. Unfortunately,
+     Five (with Zope 2.9 at least) does not seem to support the subMenuItem
+     directive. More importantly, the menus require additional logic beyond what
+     Zope 3's BrowserMenuItem provides - principally dynamic titles and more
+     flexible available() methods.
+@@ -64,55 +66,68 @@
+       factories menu - order=10
+       workflows menu - order=20
+       actions menu   - order=30
+       display menu   - order=40
+       manage portlets menu - order=50
+   -->
+ 
+-  <adapter for="* *"
+-           name="plone.contentmenu.actions"
+-           factory=".menu.ActionsSubMenuItem"
+-           provides=".interfaces.IContentMenuItem" />
+-
+-  <adapter for="* *"
+-           name="plone.contentmenu.display"
+-           factory=".menu.DisplaySubMenuItem"
+-           provides=".interfaces.IContentMenuItem" />
+-
+-  <adapter for="* *"
+-           name="plone.contentmenu.factories"
+-           factory=".menu.FactoriesSubMenuItem"
+-           provides=".interfaces.IContentMenuItem" />
+-
+-  <adapter for="* *"
+-           name="plone.contentmenu.workflow"
+-           factory=".menu.WorkflowSubMenuItem"
+-           provides=".interfaces.IContentMenuItem" />
+-
+-  <adapter for="* *"
+-           name="plone.contentmenu.portletmanager"
+-           factory=".menu.PortletManagerSubMenuItem"
+-           provides=".interfaces.IContentMenuItem" />
++  <adapter
++      factory=".menu.ActionsSubMenuItem"
++      provides=".interfaces.IContentMenuItem"
++      for="*
++           *"
++      name="plone.contentmenu.actions"
++      />
++
++  <adapter
++      factory=".menu.DisplaySubMenuItem"
++      provides=".interfaces.IContentMenuItem"
++      for="*
++           *"
++      name="plone.contentmenu.display"
++      />
++
++  <adapter
++      factory=".menu.FactoriesSubMenuItem"
++      provides=".interfaces.IContentMenuItem"
++      for="*
++           *"
++      name="plone.contentmenu.factories"
++      />
++
++  <adapter
++      factory=".menu.WorkflowSubMenuItem"
++      provides=".interfaces.IContentMenuItem"
++      for="*
++           *"
++      name="plone.contentmenu.workflow"
++      />
++
++  <adapter
++      factory=".menu.PortletManagerSubMenuItem"
++      provides=".interfaces.IContentMenuItem"
++      for="*
++           *"
++      name="plone.contentmenu.portletmanager"
++      />
+ 
+   <!-- A content provider showing the menu -->
+ 
+   <adapter
++      factory=".view.ContentMenuProvider"
++      provides="zope.contentprovider.interfaces.IContentProvider"
+       for="*
+            zope.publisher.interfaces.browser.IDefaultBrowserLayer
+            *"
+-      factory=".view.ContentMenuProvider"
+       name="plone.contentmenu"
+-      provides="zope.contentprovider.interfaces.IContentProvider"
+       />
+ 
+   <!-- The displayviews menu used to register user-visible titles -->
+ 
+   <browser:menu
+       id="plone_displayviews"
+       title="Zope3 Views used as selectable content views"
+-      description="Menu listing Zope3 views registered for use as dynamic views
+-                   on CMF Content. Currently the only purpose of this menu is
+-                   the registration of user-visible titles for these views"
++      description="Menu listing Zope3 views registered for use as dynamic views                    on CMF Content. Currently the only purpose of this menu is                    the registration of user-visible titles for these views"
+       class=".displayviewsmenu.DisplayViewsMenu"
+       />
+ 
+ </configure>
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/contentmenu.pt` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/contentmenu.pt`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,265 +1,311 @@
+ 00000000: 3c74 616c 3a63 6f6e 7465 6e74 6163 7469  <tal:contentacti
+-00000010: 6f6e 6d65 6e75 730a 2020 2020 636f 6e64  onmenus.    cond
+-00000020: 6974 696f 6e3d 2276 6965 772f 6176 6169  ition="view/avai
+-00000030: 6c61 626c 6522 0a20 2020 2064 6566 696e  lable".    defin
+-00000040: 653d 226d 656e 7520 7669 6577 2f6d 656e  e="menu view/men
+-00000050: 753b 0a20 2020 2020 2020 2020 2020 2069  u;.            i
+-00000060: 636f 6e73 2070 7974 686f 6e3a 636f 6e74  cons python:cont
+-00000070: 6578 742e 7265 7374 7269 6374 6564 5472  ext.restrictedTr
+-00000080: 6176 6572 7365 2827 4040 6963 6f6e 7265  averse('@@iconre
+-00000090: 736f 6c76 6572 2729 3b0a 2020 2020 2020  solver');.      
+-000000a0: 2020 2020 2020 746f 6f6c 6261 725f 706f        toolbar_po
+-000000b0: 7320 7669 6577 2f74 6f6f 6c62 6172 5f70  s view/toolbar_p
+-000000c0: 6f73 6974 696f 6e22 0a20 2020 2069 3138  osition".    i18
+-000000d0: 6e3a 646f 6d61 696e 3d22 706c 6f6e 6522  n:domain="plone"
+-000000e0: 3e0a 2020 3c74 616c 3a6d 656e 7573 2072  >.  <tal:menus r
+-000000f0: 6570 6561 743d 226d 656e 7549 7465 6d20  epeat="menuItem 
+-00000100: 6d65 6e75 223e 0a20 2020 203c 7461 6c3a  menu">.    <tal:
+-00000110: 6465 6620 6465 6669 6e65 3d22 7375 626d  def define="subm
+-00000120: 656e 7520 6d65 6e75 4974 656d 2f73 7562  enu menuItem/sub
+-00000130: 6d65 6e75 3b0a 2020 2020 2020 2020 2020  menu;.          
+-00000140: 2020 2020 2020 2020 2020 2069 6465 6e74             ident
+-00000150: 6966 6965 7220 6d65 6e75 4974 656d 2f65  ifier menuItem/e
+-00000160: 7874 7261 2f69 6422 3e0a 2020 2020 3c6c  xtra/id">.    <l
+-00000170: 6920 6964 3d22 247b 6d65 6e75 4974 656d  i id="${menuItem
+-00000180: 2f65 7874 7261 2f69 647d 2220 636c 6173  /extra/id}" clas
+-00000190: 733d 2224 7b6d 656e 7549 7465 6d2f 6578  s="${menuItem/ex
+-000001a0: 7472 612f 6c69 5f63 6c61 7373 7c6e 6f74  tra/li_class|not
+-000001b0: 6869 6e67 7d20 247b 7079 7468 6f6e 3a27  hing} ${python:'
+-000001c0: 6472 6f70 656e 6427 2069 6620 2873 7562  dropend' if (sub
+-000001d0: 6d65 6e75 2061 6e64 2074 6f6f 6c62 6172  menu and toolbar
+-000001e0: 5f70 6f73 203d 3d20 2773 6964 6527 2920  _pos == 'side') 
+-000001f0: 656c 7365 2027 277d 223e 0a0a 2020 2020  else ''}">..    
+-00000200: 2020 3c61 2068 7265 663d 2223 220a 2020    <a href="#".  
+-00000210: 2020 2020 2020 2020 6931 386e 3a61 7474          i18n:att
+-00000220: 7269 6275 7465 733d 2274 6974 6c65 3b22  ributes="title;"
+-00000230: 0a20 2020 2020 2020 2020 2074 616c 3a61  .          tal:a
+-00000240: 7474 7269 6275 7465 733d 2268 7265 6620  ttributes="href 
+-00000250: 7079 7468 6f6e 3a6d 656e 7549 7465 6d5b  python:menuItem[
+-00000260: 2761 6374 696f 6e27 5d20 6f72 2027 6a61  'action'] or 'ja
+-00000270: 7661 7363 7269 7074 3a76 6f69 6428 3029  vascript:void(0)
+-00000280: 273b 0a20 2020 2020 2020 2020 2020 2020  ';.             
+-00000290: 2020 2020 2020 2020 2020 2020 2073 7479               sty
+-000002a0: 6c65 2070 7974 686f 6e3a 2763 7572 736f  le python:'curso
+-000002b0: 723a 2064 6566 6175 6c74 3b3b 2070 6f69  r: default;; poi
+-000002c0: 6e74 6572 2d65 7665 6e74 733a 206e 6f6e  nter-events: non
+-000002d0: 6527 2069 6620 6e6f 7420 6d65 6e75 4974  e' if not menuIt
+-000002e0: 656d 5b27 6163 7469 6f6e 275d 2065 6c73  em['action'] els
+-000002f0: 6520 4e6f 6e65 3b0a 2020 2020 2020 2020  e None;.        
+-00000300: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000310: 2020 7469 746c 6520 6d65 6e75 4974 656d    title menuItem
+-00000320: 2f64 6573 6372 6970 7469 6f6e 3b22 0a20  /description;". 
+-00000330: 2020 2020 2020 2020 2074 616c 3a64 6566           tal:def
+-00000340: 696e 653d 2273 7461 7465 5f63 6c61 7373  ine="state_class
+-00000350: 206d 656e 7549 7465 6d2f 6578 7472 612f   menuItem/extra/
+-00000360: 636c 6173 7320 7c20 6e6f 7468 696e 673b  class | nothing;
+-00000370: 0a20 2020 2020 2020 2020 2020 2020 2020  .               
+-00000380: 2020 2020 2020 2073 7461 7465 5f63 6c61         state_cla
+-00000390: 7373 2070 7974 686f 6e3a 276c 6162 656c  ss python:'label
+-000003a0: 2d25 7327 2025 2073 7461 7465 5f63 6c61  -%s' % state_cla
+-000003b0: 7373 2069 6620 7374 6174 655f 636c 6173  ss if state_clas
+-000003c0: 7320 656c 7365 2027 2722 0a20 2020 2020  s else ''".     
+-000003d0: 2020 2020 2063 6c61 7373 3d22 247b 7079       class="${py
+-000003e0: 7468 6f6e 3a27 6e61 762d 6c69 6e6b 2064  thon:'nav-link d
+-000003f0: 726f 7064 6f77 6e2d 746f 6767 6c65 2720  ropdown-toggle' 
+-00000400: 6966 2073 7562 6d65 6e75 2065 6c73 6520  if submenu else 
+-00000410: 276e 6176 2d6c 696e 6b27 7d22 0a20 2020  'nav-link'}".   
+-00000420: 2020 2020 2020 2064 6174 612d 6273 2d74         data-bs-t
+-00000430: 6f67 676c 653d 2264 726f 7064 6f77 6e22  oggle="dropdown"
+-00000440: 0a20 2020 2020 2020 2020 2064 6174 612d  .          data-
+-00000450: 6273 2d6f 6666 7365 743d 2230 2c30 220a  bs-offset="0,0".
+-00000460: 2020 2020 2020 2020 2020 6172 6961 2d65            aria-e
+-00000470: 7870 616e 6465 643d 2224 7b70 7974 686f  xpanded="${pytho
+-00000480: 6e3a 2766 616c 7365 2720 6966 2073 7562  n:'false' if sub
+-00000490: 6d65 6e75 2065 6c73 6520 2727 7d22 3e0a  menu else ''}">.
+-000004a0: 0a20 2020 2020 2020 203c 7461 6c3a 6963  .        <tal:ic
+-000004b0: 6f6e 2074 616c 3a72 6570 6c61 6365 3d22  on tal:replace="
+-000004c0: 7374 7275 6374 7572 6520 7079 7468 6f6e  structure python
+-000004d0: 3a69 636f 6e73 2e74 6167 286d 656e 7549  :icons.tag(menuI
+-000004e0: 7465 6d2e 6765 7428 2769 636f 6e27 2c27  tem.get('icon','
+-000004f0: 2729 2061 6e64 206d 656e 7549 7465 6d5b  ') and menuItem[
+-00000500: 2769 636f 6e27 5d20 6f72 2027 746f 6f6c  'icon'] or 'tool
+-00000510: 6261 722d 6163 7469 6f6e 272c 2074 6167  bar-action', tag
+-00000520: 5f63 6c61 7373 3d27 2729 2220 2f3e 0a0a  _class='')" />..
+-00000530: 2020 2020 2020 2020 3c73 7061 6e20 636c          <span cl
+-00000540: 6173 733d 2274 6f6f 6c62 6172 2d6c 6162  ass="toolbar-lab
+-00000550: 656c 223e 0a20 2020 2020 2020 2020 203c  el">.          <
+-00000560: 7370 616e 0a20 2020 2020 2020 2020 2020  span.           
+-00000570: 2020 2069 3138 6e3a 7472 616e 736c 6174     i18n:translat
+-00000580: 653d 2222 0a20 2020 2020 2020 2020 2020  e="".           
+-00000590: 2020 2074 616c 3a72 6570 6c61 6365 3d22     tal:replace="
+-000005a0: 6d65 6e75 4974 656d 2f74 6974 6c65 223e  menuItem/title">
+-000005b0: 0a20 2020 2020 2020 2020 2020 2020 204d  .              M
+-000005c0: 656e 7520 5469 746c 650a 2020 2020 2020  enu Title.      
+-000005d0: 2020 2020 3c2f 7370 616e 3e0a 2020 2020      </span>.    
+-000005e0: 2020 2020 2020 3c73 7061 6e0a 2020 2020        <span.    
+-000005f0: 2020 2020 2020 2020 2020 6931 386e 3a74            i18n:t
+-00000600: 7261 6e73 6c61 7465 3d22 220a 2020 2020  ranslate="".    
+-00000610: 2020 2020 2020 2020 2020 636c 6173 733d            class=
+-00000620: 2224 7b73 7461 7465 5f63 6c61 7373 7d22  "${state_class}"
+-00000630: 0a20 2020 2020 2020 2020 2020 2020 2074  .              t
+-00000640: 616c 3a63 6f6e 7465 6e74 3d22 6d65 6e75  al:content="menu
+-00000650: 4974 656d 2f65 7874 7261 2f73 7461 7465  Item/extra/state
+-00000660: 5469 746c 6520 7c20 6e6f 7468 696e 6722  Title | nothing"
+-00000670: 3e0a 2020 2020 2020 2020 2020 2020 2020  >.              
+-00000680: 2020 5374 6174 6520 7469 746c 650a 2020    State title.  
+-00000690: 2020 2020 2020 2020 3c2f 7370 616e 3e0a          </span>.
+-000006a0: 2020 2020 2020 2020 3c2f 7370 616e 3e0a          </span>.
+-000006b0: 0a20 2020 2020 203c 2f61 3e0a 0a20 2020  .      </a>..   
+-000006c0: 2020 203c 756c 2063 6c61 7373 3d22 6472     <ul class="dr
+-000006d0: 6f70 646f 776e 2d6d 656e 7522 2074 616c  opdown-menu" tal
+-000006e0: 3a63 6f6e 6469 7469 6f6e 3d22 7375 626d  :condition="subm
+-000006f0: 656e 7520 7c20 6e6f 7468 696e 6722 3e0a  enu | nothing">.
+-00000700: 2020 2020 2020 2020 3c6c 693e 0a20 2020          <li>.   
+-00000710: 2020 2020 2020 203c 6836 2063 6c61 7373         <h6 class
+-00000720: 3d22 6472 6f70 646f 776e 2d68 6561 6465  ="dropdown-heade
+-00000730: 7222 3e24 7b6d 656e 7549 7465 6d2f 7469  r">${menuItem/ti
+-00000740: 746c 657d 3c2f 6836 3e0a 2020 2020 2020  tle}</h6>.      
+-00000750: 2020 3c2f 6c69 3e0a 2020 2020 2020 2020    </li>.        
+-00000760: 3c6c 6920 7461 6c3a 7265 7065 6174 3d22  <li tal:repeat="
+-00000770: 7375 624d 656e 7549 7465 6d20 7375 626d  subMenuItem subm
+-00000780: 656e 7522 3e0a 2020 2020 2020 2020 2020  enu">.          
+-00000790: 3c74 616c 3a62 6c6f 636b 2064 6566 696e  <tal:block defin
+-000007a0: 653d 2265 7874 7261 5f63 6c61 7373 2073  e="extra_class s
+-000007b0: 7562 4d65 6e75 4974 656d 2f65 7874 7261  ubMenuItem/extra
+-000007c0: 2f63 6c61 7373 207c 2073 7472 696e 673a  /class | string:
+-000007d0: 223e 0a20 2020 2020 2020 2020 203c 7461  ">.          <ta
+-000007e0: 6c3a 6e6f 6163 7469 6f6e 2074 616c 3a63  l:noaction tal:c
+-000007f0: 6f6e 6469 7469 6f6e 3d22 6e6f 743a 7375  ondition="not:su
+-00000800: 624d 656e 7549 7465 6d2f 6163 7469 6f6e  bMenuItem/action
+-00000810: 2220 7461 6c3a 6465 6669 6e65 3d22 6973  " tal:define="is
+-00000820: 5f73 6570 6172 6174 6f72 2073 7562 4d65  _separator subMe
+-00000830: 6e75 4974 656d 2f65 7874 7261 2f73 6570  nuItem/extra/sep
+-00000840: 6172 6174 6f72 7c6e 6f74 6869 6e67 223e  arator|nothing">
+-00000850: 0a20 2020 2020 2020 2020 2020 203c 6836  .            <h6
+-00000860: 2063 6c61 7373 3d22 6472 6f70 646f 776e   class="dropdown
+-00000870: 2d68 6561 6465 7222 2074 616c 3a63 6f6e  -header" tal:con
+-00000880: 6469 7469 6f6e 3d22 6973 5f73 6570 6172  dition="is_separ
+-00000890: 6174 6f72 223e 0a20 2020 2020 2020 2020  ator">.         
+-000008a0: 2020 2020 203c 7461 6c3a 7469 746c 650a       <tal:title.
+-000008b0: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-000008c0: 2020 636f 6e74 656e 743d 2273 7472 7563    content="struc
+-000008d0: 7475 7265 2073 7562 4d65 6e75 4974 656d  ture subMenuItem
+-000008e0: 2f74 6974 6c65 220a 2020 2020 2020 2020  /title".        
+-000008f0: 2020 2020 2020 2020 2020 6931 386e 3a74            i18n:t
+-00000900: 7261 6e73 6c61 7465 3d22 223e 0a20 2020  ranslate="">.   
+-00000910: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000920: 2054 6974 6c65 0a20 2020 2020 2020 2020   Title.         
+-00000930: 2020 2020 203c 2f74 616c 3a74 6974 6c65       </tal:title
+-00000940: 3e0a 2020 2020 2020 2020 2020 2020 3c2f  >.            </
+-00000950: 6836 3e0a 2020 2020 2020 2020 2020 2020  h6>.            
+-00000960: 3c73 7061 6e20 636c 6173 733d 226e 6176  <span class="nav
+-00000970: 2d6c 696e 6b20 6472 6f70 646f 776e 2d69  -link dropdown-i
+-00000980: 7465 6d20 247b 6578 7472 615f 636c 6173  tem ${extra_clas
+-00000990: 737d 2220 7461 6c3a 636f 6e64 6974 696f  s}" tal:conditio
+-000009a0: 6e3d 226e 6f74 3a69 735f 7365 7061 7261  n="not:is_separa
+-000009b0: 746f 7222 3e0a 2020 2020 2020 2020 2020  tor">.          
+-000009c0: 2020 2020 3c74 616c 3a69 636f 6e20 7461      <tal:icon ta
+-000009d0: 6c3a 7265 706c 6163 653d 2273 7472 7563  l:replace="struc
+-000009e0: 7475 7265 2070 7974 686f 6e3a 6963 6f6e  ture python:icon
+-000009f0: 732e 7461 6728 2763 6865 636b 2720 6966  s.tag('check' if
+-00000a00: 2027 6163 7469 7665 2720 696e 2065 7874   'active' in ext
+-00000a10: 7261 5f63 6c61 7373 2065 6c73 6520 2873  ra_class else (s
+-00000a20: 7562 4d65 6e75 4974 656d 2e67 6574 2827  ubMenuItem.get('
+-00000a30: 6963 6f6e 2729 206f 7220 2764 6f74 2729  icon') or 'dot')
+-00000a40: 2922 202f 3e0a 2020 2020 2020 2020 2020  )" />.          
+-00000a50: 2020 2020 3c74 616c 3a74 6974 6c65 0a20      <tal:title. 
++00000010: 6f6e 6d65 6e75 7320 6465 6669 6e65 3d22  onmenus define="
++00000020: 0a20 2020 2020 2020 2020 2020 2020 2020  .               
++00000030: 2020 2020 2020 2020 2020 206d 656e 7520             menu 
++00000040: 7669 6577 2f6d 656e 753b 0a20 2020 2020  view/menu;.     
++00000050: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000060: 2020 2020 2069 636f 6e73 2070 7974 686f       icons pytho
++00000070: 6e3a 636f 6e74 6578 742e 7265 7374 7269  n:context.restri
++00000080: 6374 6564 5472 6176 6572 7365 2827 4040  ctedTraverse('@@
++00000090: 6963 6f6e 7265 736f 6c76 6572 2729 3b0a  iconresolver');.
++000000a0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++000000b0: 2020 2020 2020 2020 2020 746f 6f6c 6261            toolba
++000000c0: 725f 706f 7320 7669 6577 2f74 6f6f 6c62  r_pos view/toolb
++000000d0: 6172 5f70 6f73 6974 696f 6e3b 0a20 2020  ar_position;.   
++000000e0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++000000f0: 2020 2020 2022 0a20 2020 2020 2020 2020       ".         
++00000100: 2020 2020 2020 2020 2020 2020 2020 2063                 c
++00000110: 6f6e 6469 7469 6f6e 3d22 7669 6577 2f61  ondition="view/a
++00000120: 7661 696c 6162 6c65 220a 2020 2020 2020  vailable".      
++00000130: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000140: 2020 6931 386e 3a64 6f6d 6169 6e3d 2270    i18n:domain="p
++00000150: 6c6f 6e65 220a 3e0a 2020 3c74 616c 3a6d  lone".>.  <tal:m
++00000160: 656e 7573 2072 6570 6561 743d 226d 656e  enus repeat="men
++00000170: 7549 7465 6d20 6d65 6e75 223e 0a20 2020  uItem menu">.   
++00000180: 203c 7461 6c3a 6465 6620 6465 6669 6e65   <tal:def define
++00000190: 3d22 0a20 2020 2020 2020 2020 2020 2020  =".             
++000001a0: 2020 7375 626d 656e 7520 6d65 6e75 4974    submenu menuIt
++000001b0: 656d 2f73 7562 6d65 6e75 3b0a 2020 2020  em/submenu;.    
++000001c0: 2020 2020 2020 2020 2020 2069 6465 6e74             ident
++000001d0: 6966 6965 7220 6d65 6e75 4974 656d 2f65  ifier menuItem/e
++000001e0: 7874 7261 2f69 643b 0a20 2020 2020 2020  xtra/id;.       
++000001f0: 2020 2020 2020 223e 0a20 2020 2020 203c        ">.      <
++00000200: 6c69 2063 6c61 7373 3d22 247b 6d65 6e75  li class="${menu
++00000210: 4974 656d 2f65 7874 7261 2f6c 695f 636c  Item/extra/li_cl
++00000220: 6173 737c 6e6f 7468 696e 677d 2024 7b70  ass|nothing} ${p
++00000230: 7974 686f 6e3a 2764 726f 7065 6e64 2720  ython:'dropend' 
++00000240: 6966 2028 7375 626d 656e 7520 616e 6420  if (submenu and 
++00000250: 746f 6f6c 6261 725f 706f 7320 3d3d 2027  toolbar_pos == '
++00000260: 7369 6465 2729 2065 6c73 6520 2727 7d22  side') else ''}"
++00000270: 0a20 2020 2020 2020 2020 2069 643d 2224  .          id="$
++00000280: 7b6d 656e 7549 7465 6d2f 6578 7472 612f  {menuItem/extra/
++00000290: 6964 7d22 0a20 2020 2020 203e 0a0a 2020  id}".      >..  
++000002a0: 2020 2020 2020 3c61 2063 6c61 7373 3d22        <a class="
++000002b0: 247b 7079 7468 6f6e 3a27 6e61 762d 6c69  ${python:'nav-li
++000002c0: 6e6b 2064 726f 7064 6f77 6e2d 746f 6767  nk dropdown-togg
++000002d0: 6c65 2720 6966 2073 7562 6d65 6e75 2065  le' if submenu e
++000002e0: 6c73 6520 276e 6176 2d6c 696e 6b27 7d22  lse 'nav-link'}"
++000002f0: 0a20 2020 2020 2020 2020 2020 6172 6961  .           aria
++00000300: 2d65 7870 616e 6465 643d 2224 7b70 7974  -expanded="${pyt
++00000310: 686f 6e3a 2766 616c 7365 2720 6966 2073  hon:'false' if s
++00000320: 7562 6d65 6e75 2065 6c73 6520 2727 7d22  ubmenu else ''}"
++00000330: 0a20 2020 2020 2020 2020 2020 6872 6566  .           href
++00000340: 3d22 2322 0a20 2020 2020 2020 2020 2020  ="#".           
++00000350: 6461 7461 2d62 732d 6f66 6673 6574 3d22  data-bs-offset="
++00000360: 302c 3022 0a20 2020 2020 2020 2020 2020  0,0".           
++00000370: 6461 7461 2d62 732d 746f 6767 6c65 3d22  data-bs-toggle="
++00000380: 6472 6f70 646f 776e 220a 2020 2020 2020  dropdown".      
++00000390: 2020 2020 2074 616c 3a64 6566 696e 653d       tal:define=
++000003a0: 220a 2020 2020 2020 2020 2020 2020 2073  ".             s
++000003b0: 7461 7465 5f63 6c61 7373 206d 656e 7549  tate_class menuI
++000003c0: 7465 6d2f 6578 7472 612f 636c 6173 7320  tem/extra/class 
++000003d0: 7c20 6e6f 7468 696e 673b 0a20 2020 2020  | nothing;.     
++000003e0: 2020 2020 2020 2020 7374 6174 655f 636c          state_cl
++000003f0: 6173 7320 7079 7468 6f6e 3a27 6c61 6265  ass python:'labe
++00000400: 6c2d 2573 2720 2520 7374 6174 655f 636c  l-%s' % state_cl
++00000410: 6173 7320 6966 2073 7461 7465 5f63 6c61  ass if state_cla
++00000420: 7373 2065 6c73 6520 2727 3b0a 2020 2020  ss else '';.    
++00000430: 2020 2020 2020 2022 0a20 2020 2020 2020         ".       
++00000440: 2020 2020 7461 6c3a 6174 7472 6962 7574      tal:attribut
++00000450: 6573 3d22 0a20 2020 2020 2020 2020 2020  es=".           
++00000460: 2020 6872 6566 2070 7974 686f 6e3a 6d65    href python:me
++00000470: 6e75 4974 656d 5b27 6163 7469 6f6e 275d  nuItem['action']
++00000480: 206f 7220 276a 6176 6173 6372 6970 743a   or 'javascript:
++00000490: 766f 6964 2830 2927 3b0a 2020 2020 2020  void(0)';.      
++000004a0: 2020 2020 2020 2073 7479 6c65 2070 7974         style pyt
++000004b0: 686f 6e3a 2763 7572 736f 723a 2064 6566  hon:'cursor: def
++000004c0: 6175 6c74 3b3b 2070 6f69 6e74 6572 2d65  ault;; pointer-e
++000004d0: 7665 6e74 733a 206e 6f6e 6527 2069 6620  vents: none' if 
++000004e0: 6e6f 7420 6d65 6e75 4974 656d 5b27 6163  not menuItem['ac
++000004f0: 7469 6f6e 275d 2065 6c73 6520 4e6f 6e65  tion'] else None
++00000500: 3b0a 2020 2020 2020 2020 2020 2020 2074  ;.             t
++00000510: 6974 6c65 206d 656e 7549 7465 6d2f 6465  itle menuItem/de
++00000520: 7363 7269 7074 696f 6e3b 0a20 2020 2020  scription;.     
++00000530: 2020 2020 2020 220a 2020 2020 2020 2020        ".        
++00000540: 2020 2069 3138 6e3a 6174 7472 6962 7574     i18n:attribut
++00000550: 6573 3d22 7469 746c 653b 220a 2020 2020  es="title;".    
++00000560: 2020 2020 3e0a 0a20 2020 2020 2020 2020      >..         
++00000570: 203c 7461 6c3a 6963 6f6e 2074 616c 3a72   <tal:icon tal:r
++00000580: 6570 6c61 6365 3d22 7374 7275 6374 7572  eplace="structur
++00000590: 6520 7079 7468 6f6e 3a69 636f 6e73 2e74  e python:icons.t
++000005a0: 6167 286d 656e 7549 7465 6d2e 6765 7428  ag(menuItem.get(
++000005b0: 2769 636f 6e27 2c27 2729 2061 6e64 206d  'icon','') and m
++000005c0: 656e 7549 7465 6d5b 2769 636f 6e27 5d20  enuItem['icon'] 
++000005d0: 6f72 2027 746f 6f6c 6261 722d 6163 7469  or 'toolbar-acti
++000005e0: 6f6e 272c 2074 6167 5f63 6c61 7373 3d27  on', tag_class='
++000005f0: 2729 2220 2f3e 0a0a 2020 2020 2020 2020  ')" />..        
++00000600: 2020 3c73 7061 6e20 636c 6173 733d 2274    <span class="t
++00000610: 6f6f 6c62 6172 2d6c 6162 656c 223e 0a20  oolbar-label">. 
++00000620: 2020 2020 2020 2020 2020 203c 7370 616e             <span
++00000630: 2074 616c 3a72 6570 6c61 6365 3d22 6d65   tal:replace="me
++00000640: 6e75 4974 656d 2f74 6974 6c65 220a 2020  nuItem/title".  
++00000650: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000660: 6931 386e 3a74 7261 6e73 6c61 7465 3d22  i18n:translate="
++00000670: 220a 2020 2020 2020 2020 2020 2020 3e0a  ".            >.
++00000680: 2020 2020 2020 2020 2020 2020 2020 4d65                Me
++00000690: 6e75 2054 6974 6c65 0a20 2020 2020 2020  nu Title.       
++000006a0: 2020 2020 203c 2f73 7061 6e3e 0a20 2020       </span>.   
++000006b0: 2020 2020 2020 2020 203c 7370 616e 2063           <span c
++000006c0: 6c61 7373 3d22 247b 7374 6174 655f 636c  lass="${state_cl
++000006d0: 6173 737d 220a 2020 2020 2020 2020 2020  ass}".          
++000006e0: 2020 2020 2020 2020 7461 6c3a 636f 6e74          tal:cont
++000006f0: 656e 743d 226d 656e 7549 7465 6d2f 6578  ent="menuItem/ex
++00000700: 7472 612f 7374 6174 6554 6974 6c65 207c  tra/stateTitle |
++00000710: 206e 6f74 6869 6e67 220a 2020 2020 2020   nothing".      
++00000720: 2020 2020 2020 2020 2020 2020 6931 386e              i18n
++00000730: 3a74 7261 6e73 6c61 7465 3d22 220a 2020  :translate="".  
++00000740: 2020 2020 2020 2020 2020 3e0a 2020 2020            >.    
++00000750: 2020 2020 2020 2020 2020 2020 5374 6174              Stat
++00000760: 6520 7469 746c 650a 2020 2020 2020 2020  e title.        
++00000770: 2020 2020 3c2f 7370 616e 3e0a 2020 2020      </span>.    
++00000780: 2020 2020 2020 3c2f 7370 616e 3e0a 0a20        </span>.. 
++00000790: 2020 2020 2020 203c 2f61 3e0a 0a20 2020         </a>..   
++000007a0: 2020 2020 203c 756c 2063 6c61 7373 3d22       <ul class="
++000007b0: 6472 6f70 646f 776e 2d6d 656e 7522 0a20  dropdown-menu". 
++000007c0: 2020 2020 2020 2020 2020 2074 616c 3a63             tal:c
++000007d0: 6f6e 6469 7469 6f6e 3d22 7375 626d 656e  ondition="submen
++000007e0: 7520 7c20 6e6f 7468 696e 6722 0a20 2020  u | nothing".   
++000007f0: 2020 2020 203e 0a20 2020 2020 2020 2020       >.         
++00000800: 203c 6c69 3e0a 2020 2020 2020 2020 2020   <li>.          
++00000810: 2020 3c68 3620 636c 6173 733d 2264 726f    <h6 class="dro
++00000820: 7064 6f77 6e2d 6865 6164 6572 223e 247b  pdown-header">${
++00000830: 6d65 6e75 4974 656d 2f74 6974 6c65 7d3c  menuItem/title}<
++00000840: 2f68 363e 0a20 2020 2020 2020 2020 203c  /h6>.          <
++00000850: 2f6c 693e 0a20 2020 2020 2020 2020 203c  /li>.          <
++00000860: 6c69 2074 616c 3a72 6570 6561 743d 2273  li tal:repeat="s
++00000870: 7562 4d65 6e75 4974 656d 2073 7562 6d65  ubMenuItem subme
++00000880: 6e75 223e 0a20 2020 2020 2020 2020 2020  nu">.           
++00000890: 203c 7461 6c3a 626c 6f63 6b20 6465 6669   <tal:block defi
++000008a0: 6e65 3d22 0a20 2020 2020 2020 2020 2020  ne=".           
++000008b0: 2020 2020 2020 2020 2020 2020 2020 6578                ex
++000008c0: 7472 615f 636c 6173 7320 7375 624d 656e  tra_class subMen
++000008d0: 7549 7465 6d2f 6578 7472 612f 636c 6173  uItem/extra/clas
++000008e0: 7320 7c20 7374 7269 6e67 3a3b 0a20 2020  s | string:;.   
++000008f0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000900: 2020 2020 223e 0a20 2020 2020 2020 2020      ">.         
++00000910: 2020 2020 203c 7461 6c3a 6e6f 6163 7469       <tal:noacti
++00000920: 6f6e 2074 616c 3a64 6566 696e 653d 220a  on tal:define=".
++00000930: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000940: 2020 2020 2020 2020 2020 2020 2020 6973                is
++00000950: 5f73 6570 6172 6174 6f72 2073 7562 4d65  _separator subMe
++00000960: 6e75 4974 656d 2f65 7874 7261 2f73 6570  nuItem/extra/sep
++00000970: 6172 6174 6f72 7c6e 6f74 6869 6e67 3b0a  arator|nothing;.
++00000980: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000990: 2020 2020 2020 2020 2020 2020 220a 2020              ".  
++000009a0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++000009b0: 2020 2020 2020 2020 2020 7461 6c3a 636f            tal:co
++000009c0: 6e64 6974 696f 6e3d 226e 6f74 3a73 7562  ndition="not:sub
++000009d0: 4d65 6e75 4974 656d 2f61 6374 696f 6e22  MenuItem/action"
++000009e0: 0a20 2020 2020 2020 2020 2020 2020 203e  .              >
++000009f0: 0a20 2020 2020 2020 2020 2020 2020 2020  .               
++00000a00: 203c 6836 2063 6c61 7373 3d22 6472 6f70   <h6 class="drop
++00000a10: 646f 776e 2d68 6561 6465 7222 0a20 2020  down-header".   
++00000a20: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000a30: 2074 616c 3a63 6f6e 6469 7469 6f6e 3d22   tal:condition="
++00000a40: 6973 5f73 6570 6172 6174 6f72 220a 2020  is_separator".  
++00000a50: 2020 2020 2020 2020 2020 2020 2020 3e0a                >.
+ 00000a60: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000a70: 2063 6f6e 7465 6e74 3d22 7374 7275 6374   content="struct
+-00000a80: 7572 6520 7375 624d 656e 7549 7465 6d2f  ure subMenuItem/
+-00000a90: 7469 746c 6522 0a20 2020 2020 2020 2020  title".         
+-00000aa0: 2020 2020 2020 2020 2069 3138 6e3a 7472           i18n:tr
+-00000ab0: 616e 736c 6174 653d 2222 3e0a 2020 2020  anslate="">.    
+-00000ac0: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000ad0: 5469 746c 650a 2020 2020 2020 2020 2020  Title.          
+-00000ae0: 2020 2020 3c2f 7461 6c3a 7469 746c 653e      </tal:title>
+-00000af0: 0a20 2020 2020 2020 2020 2020 203c 2f73  .            </s
+-00000b00: 7061 6e3e 0a20 2020 2020 2020 2020 203c  pan>.          <
+-00000b10: 2f74 616c 3a6e 6f61 6374 696f 6e3e 0a20  /tal:noaction>. 
+-00000b20: 2020 2020 2020 2020 203c 6120 636c 6173           <a clas
+-00000b30: 733d 226e 6176 2d6c 696e 6b20 6472 6f70  s="nav-link drop
+-00000b40: 646f 776e 2d69 7465 6d20 247b 6578 7472  down-item ${extr
+-00000b50: 615f 636c 6173 737d 220a 2020 2020 2020  a_class}".      
+-00000b60: 2020 2020 2020 2020 6872 6566 3d22 2322          href="#"
+-00000b70: 0a20 2020 2020 2020 2020 2020 2020 2069  .              i
+-00000b80: 3138 6e3a 6174 7472 6962 7574 6573 3d22  18n:attributes="
+-00000b90: 7469 746c 6522 0a20 2020 2020 2020 2020  title".         
+-00000ba0: 2020 2020 2074 616c 3a61 7474 7269 6275       tal:attribu
+-00000bb0: 7465 733d 2268 7265 6620 7375 624d 656e  tes="href subMen
+-00000bc0: 7549 7465 6d2f 6163 7469 6f6e 3b0a 2020  uItem/action;.  
+-00000bd0: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000be0: 2020 2020 2020 2020 2020 2020 7469 746c              titl
+-00000bf0: 6520 7375 624d 656e 7549 7465 6d2f 6465  e subMenuItem/de
+-00000c00: 7363 7269 7074 696f 6e3b 0a20 2020 2020  scription;.     
+-00000c10: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000c20: 2020 2020 2020 2020 2069 6420 7375 624d           id subM
+-00000c30: 656e 7549 7465 6d2f 6578 7472 612f 6964  enuItem/extra/id
+-00000c40: 207c 206e 6f74 6869 6e67 3b0a 2020 2020   | nothing;.    
+-00000c50: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000c60: 2020 2020 2020 2020 2020 6461 7461 2d70            data-p
+-00000c70: 6174 2d70 6c6f 6e65 2d6d 6f64 616c 2073  at-plone-modal s
+-00000c80: 7562 4d65 6e75 4974 656d 2f65 7874 7261  ubMenuItem/extra
+-00000c90: 2f6d 6f64 616c 207c 206e 6f74 6869 6e67  /modal | nothing
+-00000ca0: 3b22 0a20 2020 2020 2020 2020 2020 2020  ;".             
+-00000cb0: 2074 616c 3a63 6f6e 6469 7469 6f6e 3d22   tal:condition="
+-00000cc0: 7375 624d 656e 7549 7465 6d2f 6163 7469  subMenuItem/acti
+-00000cd0: 6f6e 223e 0a0a 2020 2020 2020 2020 2020  on">..          
+-00000ce0: 2020 2020 3c74 616c 3a69 636f 6e20 7461      <tal:icon ta
+-00000cf0: 6c3a 7265 706c 6163 653d 2273 7472 7563  l:replace="struc
+-00000d00: 7475 7265 2070 7974 686f 6e3a 6963 6f6e  ture python:icon
+-00000d10: 732e 7461 6728 2763 6865 636b 2720 6966  s.tag('check' if
+-00000d20: 2027 6163 7469 7665 2720 696e 2065 7874   'active' in ext
+-00000d30: 7261 5f63 6c61 7373 2065 6c73 6520 2873  ra_class else (s
+-00000d40: 7562 4d65 6e75 4974 656d 2e67 6574 2827  ubMenuItem.get('
+-00000d50: 6963 6f6e 2729 206f 7220 2764 6f74 2729  icon') or 'dot')
+-00000d60: 2922 202f 3e0a 0a20 2020 2020 2020 2020  )" />..         
+-00000d70: 2020 203c 7461 6c3a 7469 746c 650a 2020     <tal:title.  
+-00000d80: 2020 2020 2020 2020 2020 2020 2020 636f                co
+-00000d90: 6e74 656e 743d 2273 7472 7563 7475 7265  ntent="structure
+-00000da0: 2073 7562 4d65 6e75 4974 656d 2f74 6974   subMenuItem/tit
+-00000db0: 6c65 220a 2020 2020 2020 2020 2020 2020  le".            
+-00000dc0: 2020 2020 6931 386e 3a74 7261 6e73 6c61      i18n:transla
+-00000dd0: 7465 3d22 223e 0a20 2020 2020 2020 2020  te="">.         
+-00000de0: 2020 2020 2020 2020 2054 6974 6c65 0a20           Title. 
+-00000df0: 2020 2020 2020 2020 2020 203c 2f74 616c             </tal
+-00000e00: 3a74 6974 6c65 3e0a 2020 2020 2020 2020  :title>.        
+-00000e10: 2020 2020 3c73 7061 6e20 636c 6173 733d      <span class=
+-00000e20: 2224 7b65 7874 7261 5f63 6c61 7373 7d22  "${extra_class}"
+-00000e30: 0a20 2020 2020 2020 2020 2020 2020 2020  .               
+-00000e40: 2074 616c 3a61 7474 7269 6275 7465 733d   tal:attributes=
+-00000e50: 2269 6420 7375 624d 656e 7549 7465 6d2f  "id subMenuItem/
+-00000e60: 6578 7472 612f 6964 207c 206e 6f74 6869  extra/id | nothi
+-00000e70: 6e67 220a 2020 2020 2020 2020 2020 2020  ng".            
+-00000e80: 2020 2020 7461 6c3a 636f 6e64 6974 696f      tal:conditio
+-00000e90: 6e3d 226e 6f74 3a73 7562 4d65 6e75 4974  n="not:subMenuIt
+-00000ea0: 656d 2f61 6374 696f 6e22 3e0a 2020 2020  em/action">.    
+-00000eb0: 2020 2020 2020 2020 2020 2020 3c74 616c              <tal
+-00000ec0: 3a69 636f 6e20 7461 6c3a 636f 6e64 6974  :icon tal:condit
+-00000ed0: 696f 6e3d 2270 7974 686f 6e3a 2761 6374  ion="python:'act
+-00000ee0: 6976 6527 2069 6e20 6578 7472 615f 636c  ive' in extra_cl
+-00000ef0: 6173 7322 0a20 2020 2020 2020 2020 2020  ass".           
+-00000f00: 2020 2020 2020 2020 2020 2020 2020 2074                 t
+-00000f10: 616c 3a72 6570 6c61 6365 3d22 7374 7275  al:replace="stru
+-00000f20: 6374 7572 6520 7079 7468 6f6e 3a69 636f  cture python:ico
+-00000f30: 6e73 2e74 6167 2827 6368 6563 6b27 2922  ns.tag('check')"
+-00000f40: 202f 3e0a 2020 2020 2020 2020 2020 2020   />.            
+-00000f50: 2020 2020 3c73 7061 6e0a 2020 2020 2020      <span.      
+-00000f60: 2020 2020 2020 2020 2020 2020 6931 386e              i18n
+-00000f70: 3a74 7261 6e73 6c61 7465 3d22 220a 2020  :translate="".  
+-00000f80: 2020 2020 2020 2020 2020 2020 2020 2020                  
+-00000f90: 7461 6c3a 7265 706c 6163 653d 2273 7472  tal:replace="str
+-00000fa0: 7563 7475 7265 2073 7562 4d65 6e75 4974  ucture subMenuIt
+-00000fb0: 656d 2f74 6974 6c65 223e 0a20 2020 2020  em/title">.     
+-00000fc0: 2020 2020 2020 2020 2020 2020 2020 2054                 T
+-00000fd0: 6974 6c65 0a20 2020 2020 2020 2020 2020  itle.           
+-00000fe0: 2020 2020 203c 2f73 7061 6e3e 0a20 2020       </span>.   
+-00000ff0: 2020 2020 2020 2020 203c 2f73 7061 6e3e           </span>
+-00001000: 0a20 2020 2020 2020 2020 203c 2f61 3e0a  .          </a>.
+-00001010: 2020 2020 2020 2020 2020 3c2f 7461 6c3a            </tal:
+-00001020: 626c 6f63 6b3e 0a20 2020 2020 2020 203c  block>.        <
+-00001030: 2f6c 693e 0a20 2020 2020 203c 2f75 6c3e  /li>.      </ul>
+-00001040: 0a0a 2020 2020 3c2f 6c69 3e0a 2020 2020  ..    </li>.    
+-00001050: 3c2f 7461 6c3a 6465 663e 0a20 203c 2f74  </tal:def>.  </t
+-00001060: 616c 3a6d 656e 7573 3e0a 3c2f 7461 6c3a  al:menus>.</tal:
+-00001070: 636f 6e74 656e 7461 6374 696f 6e6d 656e  contentactionmen
+-00001080: 7573 3e0a                                us>.
++00000a70: 2020 3c74 616c 3a74 6974 6c65 2063 6f6e    <tal:title con
++00000a80: 7465 6e74 3d22 7374 7275 6374 7572 6520  tent="structure 
++00000a90: 7375 624d 656e 7549 7465 6d2f 7469 746c  subMenuItem/titl
++00000aa0: 6522 0a20 2020 2020 2020 2020 2020 2020  e".             
++00000ab0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000ac0: 6931 386e 3a74 7261 6e73 6c61 7465 3d22  i18n:translate="
++00000ad0: 220a 2020 2020 2020 2020 2020 2020 2020  ".              
++00000ae0: 2020 2020 3e0a 2020 2020 2020 2020 2020      >.          
++00000af0: 2020 2020 2020 2020 2020 5469 746c 650a            Title.
++00000b00: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000b10: 2020 3c2f 7461 6c3a 7469 746c 653e 0a20    </tal:title>. 
++00000b20: 2020 2020 2020 2020 2020 2020 2020 203c                 <
++00000b30: 2f68 363e 0a20 2020 2020 2020 2020 2020  /h6>.           
++00000b40: 2020 2020 203c 7370 616e 2063 6c61 7373       <span class
++00000b50: 3d22 6e61 762d 6c69 6e6b 2064 726f 7064  ="nav-link dropd
++00000b60: 6f77 6e2d 6974 656d 2024 7b65 7874 7261  own-item ${extra
++00000b70: 5f63 6c61 7373 7d22 0a20 2020 2020 2020  _class}".       
++00000b80: 2020 2020 2020 2020 2020 2020 2020 2074                 t
++00000b90: 616c 3a63 6f6e 6469 7469 6f6e 3d22 6e6f  al:condition="no
++00000ba0: 743a 6973 5f73 6570 6172 6174 6f72 220a  t:is_separator".
++00000bb0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000bc0: 3e0a 2020 2020 2020 2020 2020 2020 2020  >.              
++00000bd0: 2020 2020 3c74 616c 3a69 636f 6e20 7461      <tal:icon ta
++00000be0: 6c3a 7265 706c 6163 653d 2273 7472 7563  l:replace="struc
++00000bf0: 7475 7265 2070 7974 686f 6e3a 6963 6f6e  ture python:icon
++00000c00: 732e 7461 6728 2763 6865 636b 2720 6966  s.tag('check' if
++00000c10: 2027 6163 7469 7665 2720 696e 2065 7874   'active' in ext
++00000c20: 7261 5f63 6c61 7373 2065 6c73 6520 2873  ra_class else (s
++00000c30: 7562 4d65 6e75 4974 656d 2e67 6574 2827  ubMenuItem.get('
++00000c40: 6963 6f6e 2729 206f 7220 2764 6f74 2729  icon') or 'dot')
++00000c50: 2922 202f 3e0a 2020 2020 2020 2020 2020  )" />.          
++00000c60: 2020 2020 2020 2020 3c74 616c 3a74 6974          <tal:tit
++00000c70: 6c65 2063 6f6e 7465 6e74 3d22 7374 7275  le content="stru
++00000c80: 6374 7572 6520 7375 624d 656e 7549 7465  cture subMenuIte
++00000c90: 6d2f 7469 746c 6522 0a20 2020 2020 2020  m/title".       
++00000ca0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000cb0: 2020 2020 2020 6931 386e 3a74 7261 6e73        i18n:trans
++00000cc0: 6c61 7465 3d22 220a 2020 2020 2020 2020  late="".        
++00000cd0: 2020 2020 2020 2020 2020 3e0a 2020 2020            >.    
++00000ce0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000cf0: 5469 746c 650a 2020 2020 2020 2020 2020  Title.          
++00000d00: 2020 2020 2020 2020 3c2f 7461 6c3a 7469          </tal:ti
++00000d10: 746c 653e 0a20 2020 2020 2020 2020 2020  tle>.           
++00000d20: 2020 2020 203c 2f73 7061 6e3e 0a20 2020       </span>.   
++00000d30: 2020 2020 2020 2020 2020 203c 2f74 616c             </tal
++00000d40: 3a6e 6f61 6374 696f 6e3e 0a20 2020 2020  :noaction>.     
++00000d50: 2020 2020 2020 2020 203c 6120 636c 6173           <a clas
++00000d60: 733d 226e 6176 2d6c 696e 6b20 6472 6f70  s="nav-link drop
++00000d70: 646f 776e 2d69 7465 6d20 247b 6578 7472  down-item ${extr
++00000d80: 615f 636c 6173 737d 220a 2020 2020 2020  a_class}".      
++00000d90: 2020 2020 2020 2020 2020 2068 7265 663d             href=
++00000da0: 2223 220a 2020 2020 2020 2020 2020 2020  "#".            
++00000db0: 2020 2020 2074 616c 3a63 6f6e 6469 7469       tal:conditi
++00000dc0: 6f6e 3d22 7375 624d 656e 7549 7465 6d2f  on="subMenuItem/
++00000dd0: 6163 7469 6f6e 220a 2020 2020 2020 2020  action".        
++00000de0: 2020 2020 2020 2020 2074 616c 3a61 7474           tal:att
++00000df0: 7269 6275 7465 733d 220a 2020 2020 2020  ributes=".      
++00000e00: 2020 2020 2020 2020 2020 2020 2068 7265               hre
++00000e10: 6620 7375 624d 656e 7549 7465 6d2f 6163  f subMenuItem/ac
++00000e20: 7469 6f6e 3b0a 2020 2020 2020 2020 2020  tion;.          
++00000e30: 2020 2020 2020 2020 2074 6974 6c65 2073           title s
++00000e40: 7562 4d65 6e75 4974 656d 2f64 6573 6372  ubMenuItem/descr
++00000e50: 6970 7469 6f6e 3b0a 2020 2020 2020 2020  iption;.        
++00000e60: 2020 2020 2020 2020 2020 2069 6420 7375             id su
++00000e70: 624d 656e 7549 7465 6d2f 6578 7472 612f  bMenuItem/extra/
++00000e80: 6964 207c 206e 6f74 6869 6e67 3b0a 2020  id | nothing;.  
++00000e90: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00000ea0: 2064 6174 612d 7061 742d 706c 6f6e 652d   data-pat-plone-
++00000eb0: 6d6f 6461 6c20 7375 624d 656e 7549 7465  modal subMenuIte
++00000ec0: 6d2f 6578 7472 612f 6d6f 6461 6c20 7c20  m/extra/modal | 
++00000ed0: 6e6f 7468 696e 673b 0a20 2020 2020 2020  nothing;.       
++00000ee0: 2020 2020 2020 2020 2020 220a 2020 2020            ".    
++00000ef0: 2020 2020 2020 2020 2020 2020 2069 3138               i18
++00000f00: 6e3a 6174 7472 6962 7574 6573 3d22 7469  n:attributes="ti
++00000f10: 746c 6522 0a20 2020 2020 2020 2020 2020  tle".           
++00000f20: 2020 203e 0a0a 2020 2020 2020 2020 2020     >..          
++00000f30: 2020 2020 2020 3c74 616c 3a69 636f 6e20        <tal:icon 
++00000f40: 7461 6c3a 7265 706c 6163 653d 2273 7472  tal:replace="str
++00000f50: 7563 7475 7265 2070 7974 686f 6e3a 6963  ucture python:ic
++00000f60: 6f6e 732e 7461 6728 2763 6865 636b 2720  ons.tag('check' 
++00000f70: 6966 2027 6163 7469 7665 2720 696e 2065  if 'active' in e
++00000f80: 7874 7261 5f63 6c61 7373 2065 6c73 6520  xtra_class else 
++00000f90: 2873 7562 4d65 6e75 4974 656d 2e67 6574  (subMenuItem.get
++00000fa0: 2827 6963 6f6e 2729 206f 7220 2764 6f74  ('icon') or 'dot
++00000fb0: 2729 2922 202f 3e0a 0a20 2020 2020 2020  '))" />..       
++00000fc0: 2020 2020 2020 2020 203c 7461 6c3a 7469           <tal:ti
++00000fd0: 746c 6520 636f 6e74 656e 743d 2273 7472  tle content="str
++00000fe0: 7563 7475 7265 2073 7562 4d65 6e75 4974  ucture subMenuIt
++00000ff0: 656d 2f74 6974 6c65 220a 2020 2020 2020  em/title".      
++00001000: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00001010: 2020 2020 2069 3138 6e3a 7472 616e 736c       i18n:transl
++00001020: 6174 653d 2222 0a20 2020 2020 2020 2020  ate="".         
++00001030: 2020 2020 2020 203e 0a20 2020 2020 2020         >.       
++00001040: 2020 2020 2020 2020 2020 2054 6974 6c65             Title
++00001050: 0a20 2020 2020 2020 2020 2020 2020 2020  .               
++00001060: 203c 2f74 616c 3a74 6974 6c65 3e0a 2020   </tal:title>.  
++00001070: 2020 2020 2020 2020 2020 2020 2020 3c73                <s
++00001080: 7061 6e20 636c 6173 733d 2224 7b65 7874  pan class="${ext
++00001090: 7261 5f63 6c61 7373 7d22 0a20 2020 2020  ra_class}".     
++000010a0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++000010b0: 2074 616c 3a63 6f6e 6469 7469 6f6e 3d22   tal:condition="
++000010c0: 6e6f 743a 7375 624d 656e 7549 7465 6d2f  not:subMenuItem/
++000010d0: 6163 7469 6f6e 220a 2020 2020 2020 2020  action".        
++000010e0: 2020 2020 2020 2020 2020 2020 2020 7461                ta
++000010f0: 6c3a 6174 7472 6962 7574 6573 3d22 0a20  l:attributes=". 
++00001100: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00001110: 2020 2020 2020 2069 6420 7375 624d 656e         id subMen
++00001120: 7549 7465 6d2f 6578 7472 612f 6964 207c  uItem/extra/id |
++00001130: 206e 6f74 6869 6e67 3b0a 2020 2020 2020   nothing;.      
++00001140: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00001150: 220a 2020 2020 2020 2020 2020 2020 2020  ".              
++00001160: 2020 3e0a 2020 2020 2020 2020 2020 2020    >.            
++00001170: 2020 2020 2020 3c74 616c 3a69 636f 6e20        <tal:icon 
++00001180: 7461 6c3a 636f 6e64 6974 696f 6e3d 2270  tal:condition="p
++00001190: 7974 686f 6e3a 2761 6374 6976 6527 2069  ython:'active' i
++000011a0: 6e20 6578 7472 615f 636c 6173 7322 0a20  n extra_class". 
++000011b0: 2020 2020 2020 2020 2020 2020 2020 2020                  
++000011c0: 2020 2020 2020 2020 2020 2074 616c 3a72             tal:r
++000011d0: 6570 6c61 6365 3d22 7374 7275 6374 7572  eplace="structur
++000011e0: 6520 7079 7468 6f6e 3a69 636f 6e73 2e74  e python:icons.t
++000011f0: 6167 2827 6368 6563 6b27 2922 0a20 2020  ag('check')".   
++00001200: 2020 2020 2020 2020 2020 2020 2020 202f                 /
++00001210: 3e0a 2020 2020 2020 2020 2020 2020 2020  >.              
++00001220: 2020 2020 3c73 7061 6e20 7461 6c3a 7265      <span tal:re
++00001230: 706c 6163 653d 2273 7472 7563 7475 7265  place="structure
++00001240: 2073 7562 4d65 6e75 4974 656d 2f74 6974   subMenuItem/tit
++00001250: 6c65 220a 2020 2020 2020 2020 2020 2020  le".            
++00001260: 2020 2020 2020 2020 2020 2020 6931 386e              i18n
++00001270: 3a74 7261 6e73 6c61 7465 3d22 220a 2020  :translate="".  
++00001280: 2020 2020 2020 2020 2020 2020 2020 2020                  
++00001290: 3e0a 2020 2020 2020 2020 2020 2020 2020  >.              
++000012a0: 2020 2020 2020 5469 746c 650a 2020 2020        Title.    
++000012b0: 2020 2020 2020 2020 2020 2020 2020 3c2f                </
++000012c0: 7370 616e 3e0a 2020 2020 2020 2020 2020  span>.          
++000012d0: 2020 2020 2020 3c2f 7370 616e 3e0a 2020        </span>.  
++000012e0: 2020 2020 2020 2020 2020 2020 3c2f 613e              </a>
++000012f0: 0a20 2020 2020 2020 2020 2020 203c 2f74  .            </t
++00001300: 616c 3a62 6c6f 636b 3e0a 2020 2020 2020  al:block>.      
++00001310: 2020 2020 3c2f 6c69 3e0a 2020 2020 2020      </li>.      
++00001320: 2020 3c2f 756c 3e0a 0a20 2020 2020 203c    </ul>..      <
++00001330: 2f6c 693e 0a20 2020 203c 2f74 616c 3a64  /li>.    </tal:d
++00001340: 6566 3e0a 2020 3c2f 7461 6c3a 6d65 6e75  ef>.  </tal:menu
++00001350: 733e 0a3c 2f74 616c 3a63 6f6e 7465 6e74  s>.</tal:content
++00001360: 6163 7469 6f6e 6d65 6e75 733e 0a         actionmenus>.
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/displayviewsmenu.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/displayviewsmenu.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -10,19 +10,15 @@
+     def getMenuItemByAction(self, context, request, action):
+         # Normalize actions; strip view prefix
+         if action.startswith("@@"):
+             action = action[2:]
+         if action.startswith("++view++"):
+             action = action[8:]
+ 
+-        for name, item in getAdapters(
+-            (context, request), self.getMenuItemType()
+-        ):
++        for name, item in getAdapters((context, request), self.getMenuItemType()):
+             item_action = item.action
+             # Normalize menu item action; never uses ++view++
+             if item_action.startswith("@@"):
+                 item_action = item_action[2:]
+ 
+-            if item_action == action and checkPermission(
+-                item.permission, context
+-            ):
++            if item_action == action and checkPermission(item.permission, context):
+                 return item
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/interfaces.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/menu.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/menu.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -32,30 +32,30 @@
+ from zope.browsermenu.menu import BrowserSubMenuItem
+ from zope.component import getMultiAdapter
+ from zope.component import getUtilitiesFor
+ from zope.component import getUtility
+ from zope.component import queryMultiAdapter
+ from zope.interface import implementer
+ 
+-import pkg_resources
+ import json
++import pkg_resources
++import plone.locking  # noqa: F401
+ 
+ 
+ PMF = _  # used for dynamic messages we don't want to extract
+ 
+ try:
+     pkg_resources.get_distribution("Products.CMFPlacefulWorkflow")
+     from Products.CMFPlacefulWorkflow.permissions import ManageWorkflowPolicies
+ except pkg_resources.DistributionNotFound:
+     from Products.CMFCore.permissions import ManagePortal as ManageWorkflowPolicies
+ 
+ 
+ @implementer(IActionsSubMenuItem)
+ class ActionsSubMenuItem(BrowserSubMenuItem):
+-
+     title = _("label_actions_menu", default="Actions")
+     description = _(
+         "title_actions_menu", default="Actions for the current content item"
+     )
+     submenuId = "plone_contentmenu_actions"
+     icon = "toolbar-action/actions"
+     order = 30
+@@ -127,15 +127,14 @@
+                 }
+             )
+         return results
+ 
+ 
+ @implementer(IDisplaySubMenuItem)
+ class DisplaySubMenuItem(BrowserSubMenuItem):
+-
+     title = _("label_choose_template", default="Display")
+     submenuId = "plone_contentmenu_display"
+     icon = "toolbar-action/display"
+     order = 40
+ 
+     def __init__(self, context, request):
+         super().__init__(context, request)
+@@ -465,19 +464,17 @@
+                                 ),
+                                 "selected": False,
+                                 "icon": None,
+                                 "extra": {
+                                     "id": "contextSetDefaultPage",
+                                     "separator": None,
+                                     "class": "pat-plone-modal",
+-                                    "modal": json.dumps({
+-                                        "actionOptions": {
+-                                            "redirectOnResponse": True,
+-                                        },
+-                                    }),
++                                    "modal": json.dumps(
++                                        {"actionOptions": {"redirectOnResponse": True}}
++                                    ),
+                                 },
+                                 "submenu": None,
+                             }
+                         )
+                 else:
+                     defaultPageObj = getattr(obj, defaultPage, None)
+                     defaultPageTitle = ""
+@@ -530,30 +527,27 @@
+                                 "action": f"{contextUrl}/select_default_page",
+                                 "selected": False,
+                                 "icon": None,
+                                 "extra": {
+                                     "id": "contextChangeDefaultPage",
+                                     "separator": None,
+                                     "class": "pat-plone-modal",
+-                                    "modal": json.dumps({
+-                                        "actionOptions": {
+-                                            "redirectOnResponse": True,
+-                                        },
+-                                    }),
++                                    "modal": json.dumps(
++                                        {"actionOptions": {"redirectOnResponse": True}}
++                                    ),
+                                 },
+                                 "submenu": None,
+                             }
+                         )
+ 
+         return results
+ 
+ 
+ @implementer(IFactoriesSubMenuItem)
+ class FactoriesSubMenuItem(BrowserSubMenuItem):
+-
+     title = _("label_add_new_item", default="Add new\u2026")
+     submenuId = "plone_contentmenu_factory"
+     icon = "toolbar-action/factories"
+     order = 10
+     description = _(
+         "title_add_new_items_inside_item", default="Add new items inside this item"
+     )
+@@ -732,15 +726,14 @@
+         if constrain is None:
+             return _allowedTypes(request, addContext)
+         return constrain.getLocallyAllowedTypes()
+ 
+ 
+ @implementer(IWorkflowSubMenuItem)
+ class WorkflowSubMenuItem(BrowserSubMenuItem):
+-
+     MANAGE_SETTINGS_PERMISSION = "Manage portal"
+ 
+     title = _("label_state", default="State:")
+     short_title = _("State")
+     icon = "toolbar-action/workflow"
+     submenuId = "plone_contentmenu_workflow"
+     order = 20
+@@ -806,15 +799,14 @@
+             for w in workflows:
+                 if state in w.states:
+                     return w.states[state].title or state
+ 
+ 
+ @implementer(IWorkflowMenu)
+ class WorkflowMenu(BrowserMenu):
+-
+     # BBB: These actions (url's) existed in old workflow definitions
+     # but were never used. The scripts they reference don't exist in
+     # a standard installation. We allow the menu to fail gracefully
+     # if these are encountered.
+ 
+     BOGUS_WORKFLOW_ACTIONS = (
+         "content_hide_form",
+@@ -923,15 +915,14 @@
+                 )
+ 
+         return results
+ 
+ 
+ @implementer(IPortletManagerSubMenuItem)
+ class PortletManagerSubMenuItem(BrowserSubMenuItem):
+-
+     MANAGE_SETTINGS_PERMISSION = "Portlets: Manage portlets"
+ 
+     title = _("manage_portlets_link", default="Manage portlets")
+     submenuId = "plone_contentmenu_portletmanager"
+     icon = "toolbar-action/portlets"
+     order = 50
+ 
+@@ -1021,15 +1012,15 @@
+                 continue
+             item = {
+                 "title": PMF(
+                     manager_name, default=" ".join(manager_name.split(".")).title()
+                 ),
+                 "description": manager_name,
+                 "action": addTokenToUrl(
+-                    "{}/@@topbar-manage-portlets/{}".format(current_url, manager_name),
++                    f"{current_url}/@@topbar-manage-portlets/{manager_name}",
+                     request,
+                 ),
+                 "selected": False,
+                 "icon": None,
+                 "extra": {
+                     "id": f"portlet-manager-{manager_name}",
+                     "separator": None,
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/testing.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/testing.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -3,15 +3,14 @@
+ from plone.app.testing import IntegrationTesting
+ from plone.app.testing import PLONE_FIXTURE
+ from plone.app.testing import PloneSandboxLayer
+ from zope.configuration import xmlconfig
+ 
+ 
+ class PloneAppContentmenu(PloneSandboxLayer):
+-
+     defaultBases = (PLONE_FIXTURE,)
+ 
+     def setUpZope(self, app, configurationContext):
+         # Load ZCML
+         import plone.app.contentmenu
+ 
+         xmlconfig.file(
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/tests/test_menu.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/tests/test_menu.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -2,31 +2,26 @@
+ from plone.app.contentmenu.interfaces import IActionsMenu
+ from plone.app.contentmenu.interfaces import IDisplayMenu
+ from plone.app.contentmenu.interfaces import IFactoriesMenu
+ from plone.app.contentmenu.interfaces import IPortletManagerMenu
+ from plone.app.contentmenu.interfaces import IWorkflowMenu
+ from plone.app.contentmenu.testing import PLONE_APP_CONTENTMENU_DX_INTEGRATION_TESTING
+ from plone.app.contenttypes.testing import set_browserlayer
+-from plone.app.testing import applyProfile
+-from plone.app.testing import login
+ from plone.app.testing import logout
+ from plone.app.testing import setRoles
+ from plone.app.testing import TEST_USER_ID
+ from plone.base.interfaces import INonStructuralFolder
+ from plone.base.interfaces import ISelectableConstrainTypes
+ from plone.base.utils import get_installer
+-from plone.base.utils import unrestricted_construct_instance
+-from plone.locking.interfaces import ILockable
+ from Products.CMFCore.Expression import Expression
+ from Products.CMFCore.utils import getToolByName
+ from zope.browsermenu.interfaces import IBrowserMenu
+ from zope.component import getUtility
+ from zope.interface import directlyProvides
+ 
+-import pkg_resources
+ import unittest
+ 
+ 
+ class DummyFolder(Folder):
+     """Dummy Folder
+     First-class Zope object. Can be _setObject'ed.
+     """
+@@ -39,15 +34,14 @@
+         if id is not None:
+             self.id = id
+         if title is not None:
+             self.title = title
+ 
+ 
+ class TestActionsMenu(unittest.TestCase):
+-
+     layer = PLONE_APP_CONTENTMENU_DX_INTEGRATION_TESTING
+ 
+     def setUp(self):
+         self.portal = self.layer["portal"]
+         setRoles(self.portal, TEST_USER_ID, ["Manager"])
+         self.portal.invokeFactory("Folder", "folder")
+         self.folder = self.portal["folder"]
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone/app/contentmenu/view.py` & `plone.app.contentmenu-3.0.1/plone/app/contentmenu/view.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ from plone.app.contentmenu.interfaces import IContentMenuView
++from plone.base.interfaces.controlpanel import ISiteSchema
+ from plone.registry.interfaces import IRegistry
+-from Products.CMFPlone.interfaces.controlpanel import ISiteSchema
+ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+ from zope.browsermenu.interfaces import IBrowserMenu
+ from zope.component import getUtility
+ from zope.contentprovider.provider import ContentProviderBase
+ from zope.interface import implementer
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/PKG-INFO` & `plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: plone.app.contentmenu
+-Version: 3.0.0b3
++Version: 3.0.1
+ Summary: Plone's content menu implementation
+ Home-page: https://pypi.org/project/plone.app.contentmenu
+ Author: Plone Foundation
+ Author-email: plone-developers@lists.sourceforge.net
+ License: GPL version 2
+ Keywords: plone contentmenu menu
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -15,14 +15,16 @@
+ Classifier: Framework :: Zope :: 5
+ Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+ Classifier: Operating System :: OS Independent
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Requires-Python: >=3.8
+ Provides-Extra: test
+ 
+ Introduction
+ ============
+ 
+ plone.app.contentmenu contains the logic that powers Plone's content menu which is part of the toolbar.
+ 
+@@ -114,15 +116,15 @@
+     @implementer(IMyMenu)
+     class MyMenu(BrowserMenu):
+ 
+         def getMenuItems(self, context, request):
+             """Return menu item entries in a TAL-friendly form."""
+             results = []
+ 
+-            # here a single item is added. do what needed to add several entrys
++            # here a single item is added. do what needed to add several entries
+             results.append({
+                 'title': 'My item 1',
+                 'description': 'An my item',
+                 'action': '/url/to/action',
+                 'selected': False,
+                 'icon': 'some_icon_class',
+                 'extra': {
+@@ -150,14 +152,34 @@
+ .. You should *NOT* be adding new change log entries to this file.
+    You should create a file in the news directory instead.
+    For helpful instructions, please see:
+    https://github.com/plone/plone.releaser/blob/master/ADD-A-NEWS-ITEM.rst
+ 
+ .. towncrier release notes start
+ 
++3.0.1 (2023-04-06)
++------------------
++
++Internal:
++
++
++- Update configuration files.
++  [plone devs] (#47959565)
++
++
++3.0.0 (2022-11-30)
++------------------
++
++Bug fixes:
++
++
++- Final release.
++  [gforcada] (#600)
++
++
+ 3.0.0b3 (2022-10-11)
+ --------------------
+ 
+ Bug fixes:
+ 
+ 
+ - Fix Display menu in toolbar doesn't show the current selected item and it's selected template correctly
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/plone.app.contentmenu.egg-info/SOURCES.txt` & `plone.app.contentmenu-3.0.1/plone.app.contentmenu.egg-info/SOURCES.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,15 +1,19 @@
++.editorconfig
+ .gitignore
++.meta.toml
++.pre-commit-config.yaml
+ CHANGES.rst
+ CONTRIBUTING.rst
+ MANIFEST.in
+ README.rst
+ pyproject.toml
+ setup.cfg
+ setup.py
++tox.ini
+ docs/LICENSE.GPL
+ docs/LICENSE.txt
+ plone/__init__.py
+ plone.app.contentmenu.egg-info/PKG-INFO
+ plone.app.contentmenu.egg-info/SOURCES.txt
+ plone.app.contentmenu.egg-info/dependency_links.txt
+ plone.app.contentmenu.egg-info/namespace_packages.txt
+```
+
+### Comparing `plone.app.contentmenu-3.0.0b3/setup.py` & `plone.app.contentmenu-3.0.1/setup.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import find_packages
+ from setuptools import setup
+ 
+ 
+-version = "3.0.0b3"
++version = "3.0.1"
+ long_description = open("README.rst").read() + "\n"
+ long_description += open("CHANGES.rst").read()
+ 
+ setup(
+     name="plone.app.contentmenu",
+     version=version,
+     description="Plone's content menu implementation",
+@@ -20,32 +20,38 @@
+         "Framework :: Zope :: 5",
+         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+         "Operating System :: OS Independent",
+         "Programming Language :: Python",
+         "Programming Language :: Python :: 3.8",
+         "Programming Language :: Python :: 3.9",
+         "Programming Language :: Python :: 3.10",
++        "Programming Language :: Python :: 3.11",
+     ],
+     keywords="plone contentmenu menu",
+     author="Plone Foundation",
+     author_email="plone-developers@lists.sourceforge.net",
+     url="https://pypi.org/project/plone.app.contentmenu",
+     license="GPL version 2",
+     packages=find_packages(),
+     namespace_packages=["plone", "plone.app"],
+     include_package_data=True,
+     zip_safe=False,
++    python_requires=">=3.8",
+     extras_require=dict(
+         test=[
+             "plone.app.testing",
+-            "plone.app.contenttypes",
++            "plone.app.contenttypes[test]",
+         ]
+     ),
+     install_requires=[
+         "setuptools",
+         "plone.base",
+         "plone.locking",
+         "plone.memoize",
+-        "plone.app.content >=2.0a3",
+-        "plone.protect >= 3.0.0a1",
++        "plone.app.content >= 2.0",
++        "plone.protect >= 3.0.0",
++        "plone.portlets",
++        "plone.registry",
++        "zope.browsermenu",
++        "zope.contentprovider",
+     ],
+ )
+```
+

@@ -1,0 +1,73 @@
+--- tmp/Slpapy-0.1.6.tar.gz
++++ tmp/Slpapy-0.1.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "Slpapy-0.1.6.tar", last modified: Thu Apr  6 10:25:33 2023, max compression
+│ +gzip compressed data, was "Slpapy-0.1.7.tar", last modified: Thu Apr  6 10:30:02 2023, max compression
+│   --- Slpapy-0.1.6.tar
+├── +++ Slpapy-0.1.7.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:25:33.278080 Slpapy-0.1.6/
+│ │ --rw-rw-rw-   0        0        0      159 2023-04-06 10:25:33.277080 Slpapy-0.1.6/PKG-INFO
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:25:33.266080 Slpapy-0.1.6/Slpapy/
+│ │ --rw-rw-rw-   0        0        0      876 2023-04-06 10:24:18.000000 Slpapy-0.1.6/Slpapy/MZ_ppm_match.py
+│ │ --rw-rw-rw-   0        0        0      453 2023-04-06 10:17:32.000000 Slpapy-0.1.6/Slpapy/__init__.py
+│ │ --rw-rw-rw-   0        0        0     7091 2023-04-06 02:32:25.000000 Slpapy-0.1.6/Slpapy/processing_analyze.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:25:33.276080 Slpapy-0.1.6/Slpapy.egg-info/
+│ │ --rw-rw-rw-   0        0        0      159 2023-04-06 10:25:32.000000 Slpapy-0.1.6/Slpapy.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      228 2023-04-06 10:25:33.000000 Slpapy-0.1.6/Slpapy.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 10:25:32.000000 Slpapy-0.1.6/Slpapy.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0      110 2023-04-06 10:25:32.000000 Slpapy-0.1.6/Slpapy.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-04-06 10:25:32.000000 Slpapy-0.1.6/Slpapy.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 10:25:33.278080 Slpapy-0.1.6/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      486 2023-04-06 10:24:48.000000 Slpapy-0.1.6/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:30:02.070856 Slpapy-0.1.7/
+│ │ +-rw-rw-rw-   0        0        0      159 2023-04-06 10:30:02.070856 Slpapy-0.1.7/PKG-INFO
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:30:02.060856 Slpapy-0.1.7/Slpapy/
+│ │ +-rw-rw-rw-   0        0        0      836 2023-04-06 10:29:52.000000 Slpapy-0.1.7/Slpapy/MZ_ppm_match.py
+│ │ +-rw-rw-rw-   0        0        0      453 2023-04-06 10:17:32.000000 Slpapy-0.1.7/Slpapy/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     6760 2023-04-06 10:29:25.000000 Slpapy-0.1.7/Slpapy/processing_analyze.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:30:02.068856 Slpapy-0.1.7/Slpapy.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      159 2023-04-06 10:30:01.000000 Slpapy-0.1.7/Slpapy.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      228 2023-04-06 10:30:01.000000 Slpapy-0.1.7/Slpapy.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:30:01.000000 Slpapy-0.1.7/Slpapy.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0      110 2023-04-06 10:30:01.000000 Slpapy-0.1.7/Slpapy.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-06 10:30:01.000000 Slpapy-0.1.7/Slpapy.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 10:30:02.070856 Slpapy-0.1.7/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      486 2023-04-06 10:29:34.000000 Slpapy-0.1.7/setup.py
+│ │   --- Slpapy-0.1.6/Slpapy/MZ_ppm_match.py
+│ ├── +++ Slpapy-0.1.7/Slpapy/MZ_ppm_match.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -14,9 +14,9 @@
+│ │              if list.loc[i, 'up'] > data[j] > list.loc[i, 'low']:
+│ │                  if [abs(list.loc[i, 'lib'] - list.loc[i, 'm/z']) > abs(list.loc[i, 'lib'] - data[j])] or list.loc[i, 'm/z'] == np.nan:
+│ │                      list.loc[i, 'number'] = j+3
+│ │                      list.loc[i, 'm/z'] = data[j]
+│ │                      list.loc[i, 'error_ppm'] = (abs(list.loc[i, 'lib'] - data[j])/list.loc[i, 'lib'])*1000000
+│ │      list.to_csv('Match_mz_value.csv')
+│ │      return list
+│ │ -list = Match_mz_value(lib, data, ppm)
+│ │ -#%%
+│ │ +
+│ │ +
+│ │   --- Slpapy-0.1.6/Slpapy/processing_analyze.py
+│ ├── +++ Slpapy-0.1.7/Slpapy/processing_analyze.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -161,15 +161,9 @@
+│ │          sc.pl.pca_variance_ratio(adata, log=True, save='_KXY.png')
+│ │          sc.pl.umap(adata, color=['KNNlableXY'], save='_KXY.png')
+│ │          Spatial_map(adata, 'KNNlableXY')
+│ │      adata.write('./analyze_done.h5ad')
+│ │      return adata
+│ │  
+│ │  
+│ │ -# %% 读取，
+│ │ -os.chdir("E:\pj\Yilong Zou\SCML.HJR01")
+│ │ -os.getcwd()
+│ │  
+│ │ -# adata = sc.read('./5um_MALDI.csv.h5ad')
+│ │ -TIC = 'F:/20230331.WNN.lipids/5um_MALDI/5um_MALDI-Root Mean Square.csv'
+│ │ -XY = 'F:/20230331.WNN.lipids/5um_MALDI/5um_MALDI.csv'
+│ │ -adata = Basic_processing_flow(Data_reconstruction(TIC, XY), use_spacial=True, orgknn=True)
+│ │ +
