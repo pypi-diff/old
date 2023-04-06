@@ -1,0 +1,1542 @@
+# Comparing `tmp/open-dread-rando-1.7.0.tar.gz` & `tmp/open-dread-rando-1.8.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "open-dread-rando-1.7.0.tar", last modified: Sat Apr  1 09:48:37 2023, max compression
++gzip compressed data, was "open-dread-rando-1.8.0.tar", last modified: Thu Apr  6 08:59:24 2023, max compression
+```
+
+## Comparing `open-dread-rando-1.7.0.tar` & `open-dread-rando-1.8.0.tar`
+
+### file list
+
+```diff
+@@ -1,172 +1,187 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/.github/
+--rw-r--r--   0 runner    (1001) docker     (123)      601 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/.github/dependabot.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)      683 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/.github/workflows/patch.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2782 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/.github/workflows/python.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     1856 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/.gitignore
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/.vscode/
+--rw-r--r--   0 runner    (1001) docker     (123)      266 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/.vscode/settings.json
+--rw-r--r--   0 runner    (1001) docker     (123)    35149 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1239 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/
+--rw-r--r--   0 runner    (1001) docker     (123)      260 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/__main__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/__pyinstaller/
+--rw-r--r--   0 runner    (1001) docker     (123)      415 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/__pyinstaller/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/__pyinstaller/hook-open_dread_rando.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1904 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/cli.py
+--rw-r--r--   0 runner    (1001) docker     (123)      246 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/common_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)      544 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/cosmetic_patches.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18435 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/door_patcher.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9673 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/dread_patcher.py
+--rw-r--r--   0 runner    (1001) docker     (123)      774 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/elevator.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2649 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/environmental_damage.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5807 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/environmental_damage_sources.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4751 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/exefs.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/files/
+--rw-r--r--   0 runner    (1001) docker     (123)    15230 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/custom_scenario.lua
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/
+--rw-r--r--   0 runner    (1001) docker     (123)      367 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)     1516 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/main.npdm
+--rw-r--r--   0 runner    (1001) docker     (123)   179102 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/subsdk9
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/files/exefs_patches/
+--rw-r--r--   0 runner    (1001) docker     (123)      750 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/exefs_patches/debug_input.s
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando/files/levels/
+--rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/readme.txt
+--rw-r--r--   0 runner    (1001) docker     (123)    67727 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s010_cave.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    38110 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s020_magma.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    23654 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s030_baselab.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    32324 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s040_aqua.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    25415 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s050_forest.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    10639 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s060_quarantine.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    30609 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s070_basesanc.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)    16577 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s080_shipyard.lc.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     7316 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/levels/s090_skybase.lc.lua
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/
+--rw-r--r--   0 runner    (1001) docker     (123)     8005 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/bit.lua
+--rw-r--r--   0 runner    (1001) docker     (123)      901 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/data_structures.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     3866 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/death_counter.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     8215 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/guilib.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     1659 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/input_handling.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     9764 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/randomizer_powerup.lua
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_camo.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_sonr.bsmat
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/
+--rw-r--r--   0 runner    (1001) docker     (123)   422936 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_camo.bcmdl
+--rw-r--r--   0 runner    (1001) docker     (123)   422936 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_sonr.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)      938 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/speedboost_mp_opaque_01.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)     9508 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/speed_booster.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)      716 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphhologram.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)      948 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphmaterial.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)    19348 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/powerup_morph.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)      602 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_magnet01.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)      727 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_white__01.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)    33012 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/powerup_magnet.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)      243 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mat0001.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)      742 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)    13404 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/powerup_powerbomb.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)     1008 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/powerup_ice__missile_mp_opaque_01.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)    28948 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/powerup_ice__missile.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.003059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/
+--rw-r--r--   0 runner    (1001) docker     (123)      384 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_autoilum.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)      498 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_bola.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)      705 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_cangrejo.bsmat
+--rw-r--r--   0 runner    (1001) docker     (123)    47996 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/powerup_wavebeam.bcmdl
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/
+--rw-r--r--   0 runner    (1001) docker     (123)    28804 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_at.bctex
+--rw-r--r--   0 runner    (1001) docker     (123)    19894 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_bc.bctex
+--rw-r--r--   0 runner    (1001) docker     (123)    42001 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_nm.bctex
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/
+--rw-r--r--   0 runner    (1001) docker     (123)    14467 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphat.bctex
+--rw-r--r--   0 runner    (1001) docker     (123)    17196 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphbc.bctex
+--rw-r--r--   0 runner    (1001) docker     (123)    34728 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphnm.bctex
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/
+--rw-r--r--   0 runner    (1001) docker     (123)    75887 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/powerup_spi_magnet_bc.bctex
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/
+--rw-r--r--   0 runner    (1001) docker     (123)    71298 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/powerup_ice__missile_bc.bctex
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.991059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/
+--rw-r--r--   0 runner    (1001) docker     (123)   155165 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/pup_wavebeam_bc.bctex
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/system/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.995059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/system/minimap/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/system/minimap/icons/
+--rw-r--r--   0 runner    (1001) docker     (123)   434453 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/system/minimap/icons/icons.bctex
+--rw-r--r--   0 runner    (1001) docker     (123)    24932 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/files/schema.json
+--rw-r--r--   0 runner    (1001) docker     (123)     2643 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/game_patches.py
+--rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/logger.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5453 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/lua_editor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/lua_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8254 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/map_icons.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17119 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/model_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3388 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/objective.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1587 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/output_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1889 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/patch_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6897 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/patcher_editor.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14127 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/pickup.py
+--rw-r--r--   0 runner    (1001) docker     (123)    13240 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/static_fixes.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/open_dread_rando/templates/
+--rw-r--r--   0 runner    (1001) docker     (123)      485 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/boss_powerup_template.lua
+--rw-r--r--   0 runner    (1001) docker     (123)      633 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/custom_core_x.lua
+--rw-r--r--   0 runner    (1001) docker     (123)      687 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/custom_core_x_superquetzoa.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     4240 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/custom_init.lua
+--rw-r--r--   0 runner    (1001) docker     (123)       99 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/progressive_model_template.lua
+--rw-r--r--   0 runner    (1001) docker     (123)      367 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/randomizer_progressive_template.lua
+--rw-r--r--   0 runner    (1001) docker     (123)     6246 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/templates/template_powerup_bmsad.json
+--rw-r--r--   0 runner    (1001) docker     (123)     3429 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/text_patches.py
+--rw-r--r--   0 runner    (1001) docker     (123)      823 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/tilegroup_patcher.py
+--rw-r--r--   0 runner    (1001) docker     (123)      689 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/open_dread_rando/validator_with_default.py
+--rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:36.999059 open-dread-rando-1.7.0/open_dread_rando.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     5986 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 09:48:28.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-01 09:48:36.000000 open-dread-rando-1.7.0/open_dread_rando.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      218 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      881 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/tests/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 09:48:37.007059 open-dread-rando-1.7.0/tests/test_files/
+--rw-r--r--   0 runner    (1001) docker     (123)   122329 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/tests/test_files/starter_preset_patcher.json
+--rw-r--r--   0 runner    (1001) docker     (123)      410 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/tests/test_lua_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)      332 2023-04-01 09:48:17.000000 open-dread-rando-1.7.0/tests/test_schema.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.471356 open-dread-rando-1.8.0/.github/
++-rw-r--r--   0 runner    (1001) docker     (123)      601 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/.github/dependabot.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.471356 open-dread-rando-1.8.0/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)      683 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/.github/workflows/patch.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3207 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/.github/workflows/python.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1856 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/.gitignore
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.471356 open-dread-rando-1.8.0/.vscode/
++-rw-r--r--   0 runner    (1001) docker     (123)      266 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/.vscode/settings.json
++-rw-r--r--   0 runner    (1001) docker     (123)    35149 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1239 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.475356 open-dread-rando-1.8.0/open_dread_rando/
++-rw-r--r--   0 runner    (1001) docker     (123)      317 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/__main__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.475356 open-dread-rando-1.8.0/open_dread_rando/__pyinstaller/
++-rw-r--r--   0 runner    (1001) docker     (123)      415 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/__pyinstaller/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      217 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/__pyinstaller/hook-open_dread_rando.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1904 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/cli.py
++-rw-r--r--   0 runner    (1001) docker     (123)      246 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/common_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)      544 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/cosmetic_patches.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2713 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/custom_door_types.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19860 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/door_patcher.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9733 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/dread_patcher.py
++-rw-r--r--   0 runner    (1001) docker     (123)      774 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/elevator.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2649 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/environmental_damage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5807 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/environmental_damage_sources.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4751 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/exefs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.479356 open-dread-rando-1.8.0/open_dread_rando/files/
++-rw-r--r--   0 runner    (1001) docker     (123)    15230 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/custom_scenario.lua
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.479356 open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/
++-rw-r--r--   0 runner    (1001) docker     (123)      367 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1516 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/main.npdm
++-rw-r--r--   0 runner    (1001) docker     (123)   179102 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/subsdk9
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.479356 open-dread-rando-1.8.0/open_dread_rando/files/exefs_patches/
++-rw-r--r--   0 runner    (1001) docker     (123)      750 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/exefs_patches/debug_input.s
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.479356 open-dread-rando-1.8.0/open_dread_rando/files/levels/
++-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/readme.txt
++-rw-r--r--   0 runner    (1001) docker     (123)    67727 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s010_cave.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    38110 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s020_magma.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    23654 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s030_baselab.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    32324 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s040_aqua.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    25415 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s050_forest.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    10639 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s060_quarantine.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    30609 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s070_basesanc.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)    16577 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s080_shipyard.lc.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     7316 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/levels/s090_skybase.lc.lua
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/
++-rw-r--r--   0 runner    (1001) docker     (123)     8005 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/bit.lua
++-rw-r--r--   0 runner    (1001) docker     (123)      901 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/data_structures.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     3866 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/death_counter.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     8215 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/guilib.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     1659 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/input_handling.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     9764 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/randomizer_powerup.lua
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.455356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.455356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_camo.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)     1081 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_sonr.bsmat
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.455356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/
++-rw-r--r--   0 runner    (1001) docker     (123)   422936 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_camo.bcmdl
++-rw-r--r--   0 runner    (1001) docker     (123)   422936 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_sonr.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.455356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      938 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/speedboost_mp_opaque_01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)     9508 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/speed_booster.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.455356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      716 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphhologram.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)      948 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphmaterial.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    19348 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/powerup_morph.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.483357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      602 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_magnet01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)      727 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_white__01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    33012 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/powerup_magnet.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      243 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mat0001.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)      742 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    13404 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/powerup_powerbomb.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)     1008 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/powerup_ice__missile_mp_opaque_01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    28948 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/powerup_ice__missile.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      384 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_autoilum.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)      498 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_bola.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)      705 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_cangrejo.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    47996 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/powerup_wavebeam.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.459356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)      799 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/models/imats/shield_diffusion_matfx.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)     1003 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/models/imats/shield_diffusion_mp_opaque_01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)   140588 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield___diffusion/models/shield_diffusion.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield_icemissile/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield_icemissile/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.487357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield_icemissile/models/imats/
++-rw-r--r--   0 runner    (1001) docker     (123)     1016 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield_icemissile/models/imats/shield_icemissile_mp_opaque_01.bsmat
++-rw-r--r--   0 runner    (1001) docker     (123)    22156 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/props/shield_icemissile/models/shield_icemissile.bcmdl
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/
++-rw-r--r--   0 runner    (1001) docker     (123)    28804 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_at.bctex
++-rw-r--r--   0 runner    (1001) docker     (123)    19894 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_bc.bctex
++-rw-r--r--   0 runner    (1001) docker     (123)    42001 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_nm.bctex
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/
++-rw-r--r--   0 runner    (1001) docker     (123)    14467 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphat.bctex
++-rw-r--r--   0 runner    (1001) docker     (123)    17196 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphbc.bctex
++-rw-r--r--   0 runner    (1001) docker     (123)    34728 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphnm.bctex
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/
++-rw-r--r--   0 runner    (1001) docker     (123)    75887 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/powerup_spi_magnet_bc.bctex
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.463356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/
++-rw-r--r--   0 runner    (1001) docker     (123)    71298 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/powerup_ice__missile_bc.bctex
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/
++-rw-r--r--   0 runner    (1001) docker     (123)   155165 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/pup_wavebeam_bc.bctex
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/system/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.467357 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/system/minimap/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.491356 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/system/minimap/icons/
++-rw-r--r--   0 runner    (1001) docker     (123)   414489 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/system/minimap/icons/icons.bctex
++-rw-r--r--   0 runner    (1001) docker     (123)    24889 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/files/schema.json
++-rw-r--r--   0 runner    (1001) docker     (123)     2643 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/game_patches.py
++-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/logger.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5487 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/lua_editor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/lua_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)    11193 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/map_icons.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18042 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/model_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3388 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/objective.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1587 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/output_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1889 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/patch_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7146 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/patcher_editor.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13909 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/pickup.py
++-rw-r--r--   0 runner    (1001) docker     (123)    13486 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/static_fixes.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/open_dread_rando/templates/
++-rw-r--r--   0 runner    (1001) docker     (123)      485 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/boss_powerup_template.lua
++-rw-r--r--   0 runner    (1001) docker     (123)      633 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/custom_core_x.lua
++-rw-r--r--   0 runner    (1001) docker     (123)      687 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/custom_core_x_superquetzoa.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     4240 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/custom_init.lua
++-rw-r--r--   0 runner    (1001) docker     (123)       99 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/progressive_model_template.lua
++-rw-r--r--   0 runner    (1001) docker     (123)      367 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/randomizer_progressive_template.lua
++-rw-r--r--   0 runner    (1001) docker     (123)     9345 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/template_doorshield_bmsad.json
++-rw-r--r--   0 runner    (1001) docker     (123)     6246 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/template_powerup_bmsad.json
++-rw-r--r--   0 runner    (1001) docker     (123)    10303 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/templates/template_shieldenergy_bmsad.json
++-rw-r--r--   0 runner    (1001) docker     (123)     3494 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/text_patches.py
++-rw-r--r--   0 runner    (1001) docker     (123)      827 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/tilegroup_patcher.py
++-rw-r--r--   0 runner    (1001) docker     (123)      689 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/open_dread_rando/validator_with_default.py
++-rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.475356 open-dread-rando-1.8.0/open_dread_rando.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1769 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     6647 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 08:59:15.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 08:59:24.000000 open-dread-rando-1.8.0/open_dread_rando.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      248 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      881 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/tests/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 08:59:24.495356 open-dread-rando-1.8.0/tests/test_files/
++-rw-r--r--   0 runner    (1001) docker     (123)   122329 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/tests/test_files/starter_preset_patcher.json
++-rw-r--r--   0 runner    (1001) docker     (123)      410 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/tests/test_lua_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)      332 2023-04-06 08:59:05.000000 open-dread-rando-1.8.0/tests/test_schema.py
+```
+
+### Comparing `open-dread-rando-1.7.0/.github/dependabot.yml` & `open-dread-rando-1.8.0/.github/dependabot.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/.github/workflows/patch.yml` & `open-dread-rando-1.8.0/.github/workflows/patch.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/.github/workflows/python.yml` & `open-dread-rando-1.8.0/.github/workflows/python.yml`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -48,14 +48,15 @@
+     name: Test Python ${{ matrix.python.version }}
+     strategy:
+       fail-fast: false
+       matrix:
+         python:
+           - {version: '3.9', wheel: 'cp39-cp39'}
+           - {version: '3.10', wheel: 'cp310-cp310'}
++          - {version: '3.11', wheel: 'cp311-cp311'}
+ 
+     steps:
+       - name: Checkout
+         uses: actions/checkout@v3
+ 
+       - name: Set up Python
+         uses: actions/setup-python@v4
+@@ -109,7 +110,27 @@
+           body: "New release"
+ 
+       - name: Publish 📦 to PyPI
+         if: ${{ startsWith(github.ref, 'refs/tags/') }}
+         uses: pypa/gh-action-pypi-publish@release/v1
+         with:
+           password: ${{ secrets.pypi_password }}
++
++  ruff:
++    runs-on: 'ubuntu-latest'
++
++    steps:
++    - name: Checkout
++      uses: actions/checkout@v3
++      with:
++        fetch-depth: 0
++
++    - name: Set up Python
++      uses: actions/setup-python@v4
++      with:
++        python-version: "3.9"
++
++    - name: Install Python packages
++      run: python -m pip install ruff==0.0.252
++
++    - name: Run ruff
++      run: ruff check .
+```
+
+### Comparing `open-dread-rando-1.7.0/.gitignore` & `open-dread-rando-1.8.0/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/LICENSE` & `open-dread-rando-1.8.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/PKG-INFO` & `open-dread-rando-1.8.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: open-dread-rando
+-Version: 1.7.0
++Version: 1.8.0
+ Summary: An open source randomizer patcher for Metroid Dread.
+ Home-page: https://github.com/randovania/open-dread-rando
+ Author: Henrique Gemignani
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3.9
+```
+
+### Comparing `open-dread-rando-1.7.0/README.md` & `open-dread-rando-1.8.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/cli.py` & `open-dread-rando-1.8.0/open_dread_rando/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/cosmetic_patches.py` & `open-dread-rando-1.8.0/open_dread_rando/cosmetic_patches.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/door_patcher.py` & `open-dread-rando-1.8.0/open_dread_rando/door_patcher.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,18 +1,20 @@
++import copy
+ from bisect import insort
+ from enum import Enum
+ from pathlib import Path
+ from typing import Sequence
+-import copy
+ 
+ from construct import Container, ListContainer
+ 
+ from open_dread_rando.common_data import ALL_SCENARIOS
+ from open_dread_rando.patcher_editor import PatcherEditor
+ 
++from mercury_engine_data_structures.formats import Bmscc
++
+ # copied from existing entity, so we don't have to make a whole shield
+ _EXAMPLE_SHIELD = {"scenario": "s010_cave", "layer": "default", "actor": "Door003_missileShield"}
+ 
+ 
+ class MinimapIconData(Enum):
+     """
+     Enum representing minimap data. Also contains functions that return mapDoor and mapBlockage Containers.
+@@ -28,16 +30,18 @@
+     DOOR_POWER = ("DoorPower", (-150, -50, 0, 300))
+     DOOR_CHARGE = ("DoorCharge", (-150, -50, 0, 300))
+     DOOR_GRAPPLE = ("DoorGrapple", (-150, -50, 0, 300))
+     DOOR_PRESENCE = ("DoorPresence", (-150, -50, 0, 300))
+     SHIELD_WIDE_BEAM = ("DoorWide", (-300, -150, 0, 300))
+     SHIELD_PLASMA_BEAM = ("BlockagePlasma", (-300, -150, 0, 300))
+     SHIELD_WAVE_BEAM = ("BlockageWave", (-300, -150, 0, 300))
++    SHIELD_DIFFUSION = ("BlockageDiffusion", (-300, -150, 0, 300))
+     SHIELD_MISSILE = ("BlockageMissile", (-300, -150, 0, 300))
+     SHIELD_SUPER_MISSILE = ("BlockageSuperMissile", (-300, -150, 0, 300))
++    SHIELD_ICE_MISSILE = ("BlockageIce", (-300, -150, 0, 300))
+ 
+     def __init__(self, icon_id: str, offsets: tuple[float, float, float, float]):
+         """
+         Initializes a new MinimapIconData with the given icon id and offsets for the left-facing direction
+         """
+         self.icon_id = icon_id
+         self.oBox_min = (offsets[0], offsets[2])
+@@ -69,15 +73,15 @@
+         # shield R needs to be moved oBoxMin[0] + oBoxMax[0] to the right.
+         delta = 0 if dir == "L" else -(self.oBox_min[0] + self.oBox_max[0])
+ 
+         cont["oBox"] = Container(
+             Min=ListContainer([pos[0] + self.oBox_min[0] + delta, pos[1] + self.oBox_min[1]]),
+             Max=ListContainer([pos[0] + self.oBox_max[0] + delta, pos[1] + self.oBox_max[1]]))
+         cont["sIconId"] = f"{self.icon_id}{dir}"
+-        cont["bFlipX"] = False
++        cont["bFlipX"] = False if dir == "L" else True
+         cont["bFlipY"] = False
+ 
+         return cont
+ 
+ 
+ class ActorData(Enum):
+     """
+@@ -90,16 +94,18 @@
+     DOOR_POWER = (["doorpowerpower", "doorpowerclosed", "doorclosedpower"], MinimapIconData.DOOR_POWER)
+     DOOR_CHARGE = (["doorchargecharge", "doorchargeclosed", "doorclosedcharge"], MinimapIconData.DOOR_CHARGE)
+     DOOR_GRAPPLE = (["doorgrapplegrapple", "doorgrappleclosed", "doorclosedgrapple"], MinimapIconData.DOOR_GRAPPLE)
+     DOOR_PRESENCE = (["doorpresencepresence", "doorframepresence", "doorpresenceframe"], MinimapIconData.DOOR_PRESENCE)
+     SHIELD_WIDE_BEAM = (["doorwidebeam"], MinimapIconData.SHIELD_WIDE_BEAM)
+     SHIELD_PLASMA_BEAM = (["door_shield_plasma"], MinimapIconData.SHIELD_PLASMA_BEAM)
+     SHIELD_WAVE_BEAM = (["doorwavebeam"], MinimapIconData.SHIELD_WAVE_BEAM)
++    SHIELD_DIFFUSION_BEAM = (["shield___diffusion"], MinimapIconData.SHIELD_DIFFUSION)
+     SHIELD_MISSILE = (["doorshieldmissile"], MinimapIconData.SHIELD_MISSILE)
+     SHIELD_SUPER_MISSILE = (["doorshieldsupermissile"], MinimapIconData.SHIELD_SUPER_MISSILE)
++    SHIELD_ICE_MISSILE = (["shield_icemissile"], MinimapIconData.SHIELD_ICE_MISSILE)
+ 
+     def __init__(self, actordef: list[str], minimap: MinimapIconData):
+         # generate actordefs
+         self.actordefs = [f"actors/props/{v}/charclasses/{v}.bmsad" for v in actordef]
+         self.minimapData = minimap
+ 
+ 
+@@ -111,24 +117,32 @@
+     door: the door's ActorData
+     need_shield: whether the actor needs a shield
+     shield: the shield's ActorData
+     """
+     FRAME = ("frame", ActorData.DOOR_FRAME)
+     POWER = ("power_beam", ActorData.DOOR_POWER)
+     CHARGE = ("charge_beam", ActorData.DOOR_CHARGE)
+-    WIDE_BEAM = ("wide_beam", ActorData.DOOR_POWER, True, ActorData.SHIELD_WIDE_BEAM, True, True, ["actors/props/doorshieldmissile"])
++    DIFFUSION = ("diffusion_beam", ActorData.DOOR_POWER, True, ActorData.SHIELD_DIFFUSION_BEAM, True, True, 
++                 ["actors/props/door_shield_plasma"])
++    WIDE_BEAM = ("wide_beam", ActorData.DOOR_POWER, True, ActorData.SHIELD_WIDE_BEAM, True, True, 
++                 ["actors/props/doorshieldmissile"])
+     PLASMA_BEAM = ("plasma_beam", ActorData.DOOR_POWER, True, ActorData.SHIELD_PLASMA_BEAM)
+     WAVE_BEAM = ("wave_beam", ActorData.DOOR_POWER, True, ActorData.SHIELD_WAVE_BEAM)
+     MISSILE = ("missile", ActorData.DOOR_POWER, True, ActorData.SHIELD_MISSILE)
+     SUPER_MISSILE = ("super_missile", ActorData.DOOR_POWER, True, ActorData.SHIELD_SUPER_MISSILE)
+-    GRAPPLE = ("grapple_beam", ActorData.DOOR_GRAPPLE, False, None, True, True, ["actors/props/door"])
+-    PRESENCE = ("phantom_cloak", ActorData.DOOR_PRESENCE, False, None, True, False, ["actors/props/door"])
++    ICE_MISSILE = ("ice_missile", ActorData.DOOR_POWER, True, ActorData.SHIELD_ICE_MISSILE, True, True, 
++                   ["actors/props/doorshieldmissile"])
++    GRAPPLE = ("grapple_beam", ActorData.DOOR_GRAPPLE, False, None, True, True, 
++               ["actors/props/door"])
++    PRESENCE = ("phantom_cloak", ActorData.DOOR_PRESENCE, False, None, True, False, 
++                ["actors/props/door"])
+ 
+     def __init__(self, rdv_door_type: str, door_data: ActorData, need_shield: bool = False,
+-                 shield_data: ActorData = None, can_be_removed: bool = True, can_be_added: bool = True, additional_asset_folders: list[str] = None):
++                 shield_data: ActorData = None, can_be_removed: bool = True, can_be_added: bool = True, 
++                 additional_asset_folders: list[str] = None):
+         self.type = rdv_door_type
+         self.need_shield = need_shield
+         self.door = door_data
+         self.shield = shield_data
+         self.can_be_removed = can_be_removed
+         self.can_be_added = can_be_added
+         self.required_asset_folders = [] if additional_asset_folders is None else additional_asset_folders
+@@ -138,15 +152,15 @@
+ 
+     @classmethod
+     def get_type(cls, type: str):
+         for e in cls:
+             if e.type == type:
+                 return e
+ 
+-        raise ValueError(f"{type} is not a patchable door! Please check DoorType enum for list of patchable doors.")
++        raise ValueError(f"{type} is not a patchable door!")
+ 
+ 
+ def is_door(actor: Container):
+     return "LIFE" in actor.pComponents and "CDoorLifeComponent" == actor.pComponents.LIFE["@type"]
+ 
+ 
+ class DoorPatcher:
+@@ -157,14 +171,15 @@
+         self.editor = editor
+         self.available_shield_ids = {
+             scenario: list(range(100))
+             for scenario in ALL_SCENARIOS
+         }
+         self.SHIELD = editor.resolve_actor_reference(_EXAMPLE_SHIELD)
+         self.rename_all_shields()
++        self.patch_doorpresence_collision()
+ 
+     def door_actor_to_type(self, door: Container, scenario: str) -> DoorType:
+         """
+         find's a door's DoorType
+         creates a list of all doortype enums, and filters them by various means until there is one remaining
+         raises an exception if door is not a patchable type
+         """
+@@ -222,15 +237,16 @@
+         if door_type.can_be_added is False:
+             raise ValueError(f"Door type {door_type} cannot be patched in!")
+ 
+         # get the type of door we are patching
+         door_in_scenario_type = self.door_actor_to_type(door_actor, scenario)
+         if door_in_scenario_type.can_be_removed is False:
+             raise ValueError(
+-                f"Base game door {door_in_scenario_type.type} cannot be patched!\nRequested door: {door_ref['actor']} in {scenario}")
++                f"Base game door {door_in_scenario_type.type} cannot be patched!" + \
++                    f"Requested door: {door_ref['actor']} in {scenario}")
+ 
+         self.door_to_basic(door_actor, door_in_scenario_type, scenario)
+         self.power_to_door_type(door_actor, door_type, scenario)
+ 
+     def door_to_basic(self, door: Container, door_type: DoorType, scenario: str):
+         """
+         Reverts a door to a basic (power) door based on its door_type
+@@ -276,18 +292,16 @@
+ 
+         # if needed, set shield and ensure shield assets are present
+         if door_type.need_shield:
+             life_comp = door.pComponents["LIFE"]
+ 
+             shield_l = self.create_shield(scenario, door, door_type.shield, "L")
+             shield_r = self.create_shield(scenario, door, door_type.shield, "R")
+-            life_comp[
+-                "wpLeftDoorShieldEntity"] = f"Root:pScenario:rEntitiesLayer:dctSublayers:default:dctActors:{shield_l.sName}"
+-            life_comp[
+-                "wpRightDoorShieldEntity"] = f"Root:pScenario:rEntitiesLayer:dctSublayers:default:dctActors:{shield_r.sName}"
++            life_comp["wpLeftDoorShieldEntity"] = self.editor.build_link(shield_l.sName)
++            life_comp["wpRightDoorShieldEntity"] = self.editor.build_link(shield_r.sName)
+         
+         # ensure assets are present
+         for folder in door_type.required_asset_folders:
+             for asset in self.editor.get_asset_names_in_folder(folder):
+                 self.editor.ensure_present_in_scenario(scenario, asset)
+ 
+     def set_door_type(self, door: Container, door_type: DoorType, scenario: str):
+@@ -322,75 +336,90 @@
+         patched_container = shield_type.minimapData.create_map_blockage(shield.vPos, dir)
+         map_blockages[shield.sName] = patched_container
+ 
+     def remove_all_shields(self):
+         for scenario in ALL_SCENARIOS:
+             bmmap = self.editor.get_scenario_map(scenario)
+             bmmap.raw.Root.mapBlockages = Container()
+-    
++
+     def rename_all_shields(self):
+         for scenario in ALL_SCENARIOS:
+             brfld = self.editor.get_scenario(scenario)
+             
+-            # we have to cache doors that have shields here and rename them outside the loop, as otherwise it will rename actors in the actor list and confuse the program. 
++            # we have to cache doors that have shields here and rename them outside the loop, 
++            # as otherwise it will rename actors in the actor list and confuse the program. 
+             shielded_doors = []
+             for layer_name, actor_name, actor in list(brfld.all_actors()):
+ 
+-                # this is the door added to the Artaria CU. For some reason is_door crashes on this so we add a check here. 
++                # this is the door added to the Artaria CU. 
++                # For some reason is_door crashes on this so we add a check here. 
+                 if actor_name == "DreadRando_CUDoor":
+                     continue
+ 
+                 if not is_door(actor):
+                     continue
+ 
+                 if actor.oActorDefLink[9:] not in ActorData.DOOR_POWER.actordefs:
+                     continue
+ 
+                 shielded_doors.append(actor)
+-            
++
+             for door in shielded_doors:
+                 self.rename_shields(door, scenario)
+-            
+ 
+     def rename_shields(self, door: Container, scenario: str):
+         life_comp = door.pComponents.LIFE
+         for link_name in ["wpLeftDoorShieldEntity", "wpRightDoorShieldEntity"]:
+             link = life_comp[link_name]
+             if link == "{EMPTY}":
+                 continue
+-            
++
+             # get shield actor and cache its sName
+             shieldActor = self.editor.resolve_actor_reference(self.editor.reference_for_link(link, scenario))
+             old_sName = shieldActor.sName
+ 
+-            # skip hdoors (doors where the environment covers one side of the door) as they have terrain attached to the ShieldEntity links
++            # skip hdoors (doors where the environment covers one side of the door) 
++            # as they have terrain attached to the ShieldEntity links
+             if "db_hdoor" in old_sName:
+                 continue
+ 
+             # reclaim old shield id if this is a RandoShield
+             self.reclaim_old_shield_id(shieldActor.sName, scenario)
+-            
++
+             # grab the lowest open id and rename it
+             new_id = self.get_shield_id(scenario)
+             shieldActor.sName = new_id
+-            life_comp[link_name] = f"Root:pScenario:rEntitiesLayer:dctSublayers:default:dctActors:{new_id}"
++            life_comp[link_name] = self.editor.build_link(new_id)
+ 
+             # make new actor, copy its groups, delete it
+             brfld = self.editor.get_scenario(scenario)
+             brfld.actors_for_layer('default')[new_id] = shieldActor
+             self.editor.copy_actor_groups(scenario, old_sName, new_id)
+             brfld.actors_for_layer('default').pop(old_sName)
+ 
+             # update the minimap entry as well
+             mapBlockages = self.editor.get_scenario_map(scenario).raw.Root.mapBlockages
+             mapBlockages[new_id] = copy.deepcopy(mapBlockages[old_sName])
++
++            # flip the icon on rightfacing shields in order to optimize the icons file, 
++            # allowing room for new assets in custom_door_types.py
++            if link_name.startswith("wpRight"):
++                mapBlockages[new_id]["bFlipX"] = True
+             mapBlockages.pop(old_sName)
+ 
+     def get_shield_id(self, scenario: str):
+         # since the available shield ids is auto sorted, just pop the first value
+         return f"RandoShield_{self.available_shield_ids[scenario].pop(0)}"
+-    
++
+     def reclaim_old_shield_id(self, sName: str, scenario: str):
+         # if it's a RandoShield, reclaim the old id after the underscore
+         shieldId = int(sName.split("_")[1]) if "RandoShield" in sName else None
+         if shieldId is not None:
+-            insort(self.available_shield_ids[scenario], shieldId)
++            insort(self.available_shield_ids[scenario], shieldId)
++    
++    def patch_doorpresence_collision(self):
++        # extends the door collider in doorpresence actor to 300x300 to maintain the size of normal doors
++        # this looks a bit bad, but it'll do until we figure out how to edit navmeshes
++        # (or whatever is storing the intended hitboxes for doors)
++        doorpresence = self.editor.get_file("actors/props/doorpresence/collisions/doorpresence.bmscd", Bmscc)
++        door_collider = doorpresence.raw.layers[0].entries[0]
++        door_collider.data.max = ListContainer([300.0,320.0])
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/dread_patcher.py` & `open-dread-rando-1.8.0/open_dread_rando/dread_patcher.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,20 +4,20 @@
+ from pathlib import Path
+ 
+ from construct import ListContainer
+ from mercury_engine_data_structures.file_tree_editor import OutputFormat
+ 
+ from open_dread_rando import elevator, lua_util, game_patches
+ from open_dread_rando.cosmetic_patches import apply_cosmetic_patches
++from open_dread_rando.custom_door_types import create_all_shield_assets
+ from open_dread_rando.door_patcher import DoorPatcher
+ from open_dread_rando.environmental_damage import apply_constant_damage
+ from open_dread_rando.exefs import include_depackager, patch_exefs
+ from open_dread_rando.logger import LOG
+ from open_dread_rando.lua_editor import LuaEditor
+-from open_dread_rando.map_icons import MapIconEditor
+ from open_dread_rando.objective import apply_objective_patches
+ from open_dread_rando.output_config import output_format_for_category, output_paths_for_compatibility
+ from open_dread_rando.patcher_editor import PatcherEditor
+ from open_dread_rando.pickup import pickup_object_for
+ from open_dread_rando.static_fixes import apply_static_fixes
+ from open_dread_rando.text_patches import apply_text_patches, patch_credits, patch_hints, patch_text
+ from open_dread_rando.tilegroup_patcher import patch_tilegroup
+@@ -60,17 +60,17 @@
+         "ITEM_METROID_COUNT": 0,
+         "ITEM_METROID_TOTAL_COUNT": 40,
+         "ITEM_WEAPON_MISSILE_MAX": 0,
+         "ITEM_WEAPON_POWER_BOMB_MAX": 0,
+     }
+     final_inventory.update(inventory)
+ 
+-    def chunks(l, n):
+-        for i in range(0, len(l), n):
+-            yield l[i:i + n]
++    def chunks(array, n):
++        for i in range(0, len(array), n):
++            yield array[i:i + n]
+ 
+     textboxes = 0
+     for group in starting_text:
+         boxes = chunks(group, 3)
+         for box in boxes:
+             textboxes += 1
+             box_text = "|".join(box)
+@@ -97,25 +97,27 @@
+ 
+     return lua_util.replace_lua_template("custom_init.lua", replacement)
+ 
+ 
+ def patch_pickups(editor: PatcherEditor, lua_scripts: LuaEditor, pickups_config: list[dict], configuration: dict):
+     # add to the TOC
+     editor.add_new_asset("actors/items/randomizer_powerup/scripts/randomizer_powerup.lc", b'', [])
+-    map_icon_editor = MapIconEditor(editor)
+ 
+     for i, pickup in enumerate(pickups_config):
+         LOG.debug("Writing pickup %d: %s", i, pickup["resources"][0]["item_id"])
+         try:
+-            pickup_object_for(lua_scripts, pickup, i, configuration, map_icon_editor).patch(editor)
++            pickup_object_for(lua_scripts, pickup, i, configuration).patch(editor)
+         except NotImplementedError as e:
+             LOG.warning(e)
+ 
+ 
+ def patch_doors(editor: PatcherEditor, doors_config: list[dict]):
++    editor.map_icon_editor.add_all_new_door_icons()
++    create_all_shield_assets(editor)
++
+     door_patcher = DoorPatcher(editor)
+     for door in doors_config:
+         door_patcher.patch_door(door["actor"], door["door_type"])
+ 
+ 
+ def patch_spawn_points(editor: PatcherEditor, spawn_config: list[dict]):
+     # create custom spawn point
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/elevator.py` & `open-dread-rando-1.8.0/open_dread_rando/elevator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/environmental_damage.py` & `open-dread-rando-1.8.0/open_dread_rando/environmental_damage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/environmental_damage_sources.py` & `open-dread-rando-1.8.0/open_dread_rando/environmental_damage_sources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/exefs.py` & `open-dread-rando-1.8.0/open_dread_rando/exefs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/custom_scenario.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/custom_scenario.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/main.npdm` & `open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/main.npdm`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/dread_depackager/subsdk9` & `open-dread-rando-1.8.0/open_dread_rando/files/dread_depackager/subsdk9`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/exefs_patches/debug_input.s` & `open-dread-rando-1.8.0/open_dread_rando/files/exefs_patches/debug_input.s`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s010_cave.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s010_cave.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s020_magma.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s020_magma.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s030_baselab.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s030_baselab.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s040_aqua.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s040_aqua.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s050_forest.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s050_forest.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s060_quarantine.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s060_quarantine.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s070_basesanc.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s070_basesanc.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s080_shipyard.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s080_shipyard.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/levels/s090_skybase.lc.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/levels/s090_skybase.lc.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/bit.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/bit.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/data_structures.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/data_structures.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/death_counter.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/death_counter.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/guilib.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/guilib.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/lua_libraries/input_handling.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/lua_libraries/input_handling.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/randomizer_powerup.lua` & `open-dread-rando-1.8.0/open_dread_rando/files/randomizer_powerup.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_camo.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_camo.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_sonr.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube/model/imats/itemcube_sonr.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_camo.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_camo.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_sonr.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/item_cube_broken/model/itemcube_sonr.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/speedboost_mp_opaque_01.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/imats/speedboost_mp_opaque_01.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/speed_booster.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/itemsphere/models/speed_booster.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphhologram.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphhologram.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphmaterial.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/imats/powerup_morphmaterial.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/powerup_morph.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_bomb/models/powerup_morph.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_magnet01.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_magnet01.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_white__01.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/imats/powerup_doublejump_mp_white__01.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/powerup_magnet.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_doublejump/models/powerup_magnet.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/powerup_powerbomb.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/powerup_powerbomb.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/powerup_ice__missile_mp_opaque_01.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/powerup_ice__missile_mp_opaque_01.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/powerup_ice__missile.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/powerup_ice__missile.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_cangrejo.bsmat` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_cangrejo.bsmat`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/powerup_wavebeam.bcmdl` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/powerup_wavebeam.bcmdl`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_at.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_at.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_bc.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_bc.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_nm.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_nm.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphat.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphat.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphbc.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphbc.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphnm.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphnm.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/powerup_spi_magnet_bc.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/powerup_spi_magnet_bc.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/powerup_ice__missile_bc.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_supermissile/models/textures/powerup_ice__missile_bc.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/pup_wavebeam_bc.bctex` & `open-dread-rando-1.8.0/open_dread_rando/files/romfs/textures/actors/items/powerup_widebeam/models/textures/pup_wavebeam_bc.bctex`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/files/schema.json` & `open-dread-rando-1.8.0/open_dread_rando/files/schema.json`
+
+ * *Files 4% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9999994410699978%*
+
+ * *Differences: {"'properties'": "{'door_patches': {'items': {'properties': {'door_type': {'enum': {insert: [(3, "*
+
+ * *                 "'diffusion_beam'), (9, 'ice_missile')], delete: [10, 9, 8]}}}}}}"}*
+
+```diff
+@@ -242,22 +242,21 @@
+                         "$ref": "#/$defs/actor_reference_with_layer"
+                     },
+                     "door_type": {
+                         "enum": [
+                             "frame",
+                             "power_beam",
+                             "charge_beam",
++                            "diffusion_beam",
+                             "wide_beam",
+                             "plasma_beam",
+                             "wave_beam",
+                             "missile",
+                             "super_missile",
+-                            "grapple_beam",
+-                            "phantom_cloak",
+-                            "phase_shift"
++                            "ice_missile"
+                         ],
+                         "type": "string"
+                     }
+                 },
+                 "required": [
+                     "actor",
+                     "door_type"
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/game_patches.py` & `open-dread-rando-1.8.0/open_dread_rando/game_patches.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/lua_editor.py` & `open-dread-rando-1.8.0/open_dread_rando/lua_editor.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -47,15 +47,18 @@
+         parent = self.get_parent_for(pickup_resources[0]["item_id"])
+         if not boss and len(pickup_resources) == 1:
+             return parent
+ 
+         if actordef_name and len(pickup["model"]) > 1:
+             self.add_progressive_models(pickup, actordef_name)
+ 
+-        hashable_progression = "_".join([f'{res["item_id"]}_{res["quantity"]}' for res in pickup_resources]).replace("-", "MINUS")
++        hashable_progression = "_".join([
++            f'{res["item_id"]}_{res["quantity"]}'
++            for res in pickup_resources
++        ]).replace("-", "MINUS")
+ 
+         if hashable_progression in self._progressive_classes.keys():
+             return self._progressive_classes[hashable_progression]
+ 
+         class_name = f"RandomizerProgressive{hashable_progression}"
+ 
+         resources = [
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/lua_util.py` & `open-dread-rando-1.8.0/open_dread_rando/lua_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/model_data.py` & `open-dread-rando-1.8.0/open_dread_rando/model_data.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -347,12 +347,31 @@
+             "actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat",
+         ),
+         transform=Transform(
+             scale=(-1.25, 1.25, 1.25),
+             position=(0.0, -30.0, 0.0),
+         ),
+     ),
++
++    "shield_icemissile": ModelData(
++        bcmdl_path="actors/props/shield_icemissile/models/shield_icemissile.bcmdl",
++        bmsas="actors/props/doorshieldmissile/charclasses/doorshieldmissile.bmsas",
++        dependencies=(
++            "actors/props/shield_icemissile/models/shield_icemissile.bcmdl",
++            "actors/props/shield_icemissile/models/imats/shield_icemissile_mp_opaque_01.bsmat"
++        )
++    ),
++
++    "shield_diffusion": ModelData(
++        bcmdl_path="actors/props/shield___diffusion/models/shield_diffusion.bcmdl",
++        bmsas="actors/props/door_shield_plasma/charclasses/door_shield_plasma.bmsas",
++        dependencies=(
++            "actors/props/shield___diffusion/models/shield_diffusion.bcmdl",
++            "actors/props/shield___diffusion/models/imats/shield_diffusion_matfx.bsmat",
++            "actors/props/shield___diffusion/models/imats/shield_diffusion_mp_opaque_01.bsmat"
++        )
++    )
+ }
+ 
+ 
+ def get_data(name: str) -> ModelData:
+     return ALL_MODEL_DATA.get(name, ALL_MODEL_DATA["itemsphere"])
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/objective.py` & `open-dread-rando-1.8.0/open_dread_rando/objective.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/output_config.py` & `open-dread-rando-1.8.0/open_dread_rando/output_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/patch_util.py` & `open-dread-rando-1.8.0/open_dread_rando/patch_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/patcher_editor.py` & `open-dread-rando-1.8.0/open_dread_rando/patcher_editor.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -3,33 +3,35 @@
+ import typing
+ from pathlib import Path
+ 
+ from construct import Container
+ from mercury_engine_data_structures.file_tree_editor import FileTreeEditor
+ from mercury_engine_data_structures.formats import BaseResource, Brfld, Brsa, ALL_FORMATS, Bmmap
+ from mercury_engine_data_structures.game_check import Game
+-from open_dread_rando.logger import LOG
++from open_dread_rando.map_icons import MapIconEditor
+ 
+ T = typing.TypeVar("T")
+ 
+ 
+ def path_for_level(level_name: str) -> str:
+     return f"maps/levels/c10_samus/{level_name}/{level_name}"
+ 
+ 
+ def extension_for_type(type_hint: typing.Type[T]) -> str:
+     return next(ext for ext, t in ALL_FORMATS.items() if t == type_hint).lower()
+ 
+ 
+ class PatcherEditor(FileTreeEditor):
+     memory_files: dict[str, BaseResource]
++    map_icon_editor: MapIconEditor
+ 
+     def __init__(self, root: Path):
+         super().__init__(root, target_game=Game.DREAD)
+         self.memory_files = {}
++        self.map_icon_editor = MapIconEditor(self)
+ 
+     def get_file(self, path: str, type_hint: typing.Type[T] = BaseResource) -> T:
+         if path not in self.memory_files:
+             self.memory_files[path] = self.get_parsed_asset(path, type_hint=type_hint)
+         return self.memory_files[path]
+ 
+     def get_scenario_file(self, name: str, type_hint: typing.Type[T]) -> T:
+@@ -157,9 +159,12 @@
+ 
+         return {
+             "scenario": scenario,
+             "layer": layer,
+             "actor": actor,
+         }
+ 
++    def build_link(self, sname: str, layer: str = "default"):
++        return f"Root:pScenario:rEntitiesLayer:dctSublayers:{layer}:dctActors:{sname}"
++
+     def get_asset_names_in_folder(self, folder: str) -> typing.Iterator[str]:
+         yield from (name for name in self._name_for_asset_id.values() if name.startswith(folder))
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/pickup.py` & `open-dread-rando-1.8.0/open_dread_rando/pickup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -6,15 +6,14 @@
+ from typing import Type
+ 
+ from construct import Container
+ from mercury_engine_data_structures.formats import Bmsad, Bmmap
+ 
+ from open_dread_rando import model_data
+ from open_dread_rando.lua_editor import LuaEditor
+-from open_dread_rando.map_icons import MapIconEditor
+ from open_dread_rando.patcher_editor import PatcherEditor
+ from open_dread_rando.text_patches import patch_text
+ 
+ EXPANSION_ITEM_IDS = {
+     "ITEM_ENERGY_TANKS",
+     "ITEM_LIFE_SHARDS",
+     "ITEM_WEAPON_MISSILE_MAX",
+@@ -37,21 +36,19 @@
+     EMMI = "emmi"
+     COREX = "corex"
+     CORPIUS = "corpius"
+     CUTSCENE = "cutscene"
+ 
+ 
+ class BasePickup:
+-    def __init__(self, lua_editor: LuaEditor, pickup: dict, pickup_id: int, configuration: dict,
+-                 map_icon_editor: MapIconEditor):
++    def __init__(self, lua_editor: LuaEditor, pickup: dict, pickup_id: int, configuration: dict):
+         self.lua_editor = lua_editor
+         self.pickup = pickup
+         self.pickup_id = pickup_id
+         self.configuration = configuration
+-        self.map_icon_editor = map_icon_editor
+ 
+     def patch(self, editor: PatcherEditor):
+         raise NotImplementedError()
+ 
+ 
+ class ActorPickup(BasePickup):
+     def patch_single_item_pickup(self, bmsad: dict) -> dict:
+@@ -195,15 +192,15 @@
+             map_actor = self.pickup["pickup_actor"]
+ 
+         map_def = editor.get_scenario_file(map_actor["scenario"], Bmmap)
+         if map_actor["actor"] in map_def.ability_labels:
+             map_def.ability_labels.pop(map_actor["actor"])
+         if map_actor["actor"] in map_def.items:
+             icon = map_def.items.pop(map_actor["actor"])
+-            icon.sIconId = self.map_icon_editor.get_data(self.pickup)
++            icon.sIconId = editor.map_icon_editor.get_data(self.pickup)
+             map_def.items[actor.sName] = icon
+ 
+     def patch(self, editor: PatcherEditor):
+         template_bmsad = _read_template_powerup()
+ 
+         pickup_actor = self.pickup["pickup_actor"]
+         pkgs_for_level = editor.get_level_pkgs(pickup_actor["scenario"])
+@@ -327,11 +324,10 @@
+     PickupType.EMMI: EmmiPickup,
+     PickupType.COREX: CoreXPickup,
+     PickupType.CORPIUS: CorpiusPickup,
+     PickupType.CUTSCENE: CutscenePickup,
+ }
+ 
+ 
+-def pickup_object_for(lua_scripts: LuaEditor, pickup: dict, pickup_id: int, configuration: dict,
+-                      map_icon_editor: MapIconEditor) -> "BasePickup":
++def pickup_object_for(lua_scripts: LuaEditor, pickup: dict, pickup_id: int, configuration: dict) -> "BasePickup":
+     pickup_type = PickupType(pickup["pickup_type"])
+-    return _PICKUP_TYPE_TO_CLASS[pickup_type](lua_scripts, pickup, pickup_id, configuration, map_icon_editor)
++    return _PICKUP_TYPE_TO_CLASS[pickup_type](lua_scripts, pickup, pickup_id, configuration)
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/static_fixes.py` & `open-dread-rando-1.8.0/open_dread_rando/static_fixes.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,14 +3,15 @@
+ 
+ import construct
+ from mercury_engine_data_structures.formats.gui_files import Bmscp
+ 
+ from open_dread_rando import door_patcher
+ from open_dread_rando.common_data import ALL_SCENARIOS
+ from open_dread_rando.logger import LOG
++from open_dread_rando.map_icons import MapIconEditor
+ from open_dread_rando.patcher_editor import PatcherEditor
+ 
+ 
+ def flip_icon_id(icon_id: str) -> str:
+     if icon_id.endswith("R"):
+         return icon_id[:-1] + "L"
+     elif icon_id.endswith("L"):
+@@ -337,25 +338,34 @@
+ 
+ 
+ def apply_main_menu_fixes(editor: PatcherEditor):
+     extras = editor.get_file("gui/scripts/extrasmenucomposition.bmscp", Bmscp)
+     listcomp = extras.get_child("Content.ListComposition").lstChildren
+     listcomp.pop(2)  # remove the credits button from the extras menu
+ 
++
+ def disable_hanubia_cutscene(editor: PatcherEditor):
+     # disable cutscene 12 (hanubia - tank room) because it teleports samus to the lower section (bad for door rando)
+-    cutscene_player = editor.resolve_actor_reference({"scenario": "s080_shipyard", "layer": "cutscenes", "actor": "cutsceneplayer_12"})
++    cutscene_player = editor.resolve_actor_reference({
++        "scenario": "s080_shipyard",
++        "layer": "cutscenes",
++        "actor": "cutsceneplayer_12",
++    })
+     cutscene_player.bEnabled = False
+ 
++def fix_map_icons(map_editor: MapIconEditor):
++    map_editor.mirror_bmmdef_icons()
++    map_editor.mirror_bmmap_icons()
+ 
+ def apply_static_fixes(editor: PatcherEditor):
+     remove_problematic_x_layers(editor)
+     activate_emmi_zones(editor)
+     apply_one_sided_door_fixes(editor)
+     apply_kraid_fixes(editor)
+     apply_corpius_fixes(editor)
+     fix_backdoor_white_cu(editor)
+     patch_corpius_checkpoints(editor)
+     apply_experiment_fixes(editor)
+     apply_drogyga_fixes(editor)
+     apply_main_menu_fixes(editor)
+     disable_hanubia_cutscene(editor)
++    fix_map_icons(editor.map_icon_editor)
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/templates/custom_core_x.lua` & `open-dread-rando-1.8.0/open_dread_rando/templates/custom_core_x.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/templates/custom_core_x_superquetzoa.lua` & `open-dread-rando-1.8.0/open_dread_rando/templates/custom_core_x_superquetzoa.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/templates/custom_init.lua` & `open-dread-rando-1.8.0/open_dread_rando/templates/custom_init.lua`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/templates/template_powerup_bmsad.json` & `open-dread-rando-1.8.0/open_dread_rando/templates/template_powerup_bmsad.json`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/text_patches.py` & `open-dread-rando-1.8.0/open_dread_rando/text_patches.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,15 @@
+-import pprint
++from __future__ import annotations
++
++import typing
+ 
+ from mercury_engine_data_structures.formats import Txt
+ 
+-from open_dread_rando.patcher_editor import PatcherEditor
++if typing.TYPE_CHECKING:
++    from open_dread_rando.patcher_editor import PatcherEditor
+ 
+ # may want to edit all the localization files?
+ ALL_TEXT_FILES = {
+     # "eu_dutch.txt",
+     # "eu_french.txt",
+     # "eu_german.txt",
+     # "eu_italian.txt",
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/tilegroup_patcher.py` & `open-dread-rando-1.8.0/open_dread_rando/tilegroup_patcher.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -6,15 +6,16 @@
+ 
+ 
+ def patch_tilegroup(editor: PatcherEditor, group: dict):
+     """
+     Patches a tilegroup from its original tile type into a new tile type
+     
+     :param editor: the PatcherEditor
+-    :param group: a dictionary containing the actor reference stored in 'actor' key and a tile type stored in 'tiletype' key
++    :param group: a dictionary containing the actor reference stored in 'actor' key and a tile type
++    stored in 'tiletype' key
+     """
+     actor = editor.resolve_actor_reference(group["actor"])
+ 
+     if not is_tilegroup(actor):
+         raise ValueError(f"Actor at {group['actor']} is not a breakable tile group.")
+ 
+     gridTiles = actor.pComponents.TILEGROUP.aGridTiles
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando/validator_with_default.py` & `open-dread-rando-1.8.0/open_dread_rando/validator_with_default.py`
+
+ * *Files identical despite different names*
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando.egg-info/PKG-INFO` & `open-dread-rando-1.8.0/open_dread_rando.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: open-dread-rando
+-Version: 1.7.0
++Version: 1.8.0
+ Summary: An open source randomizer patcher for Metroid Dread.
+ Home-page: https://github.com/randovania/open-dread-rando
+ Author: Henrique Gemignani
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python :: 3.9
+```
+
+### Comparing `open-dread-rando-1.7.0/open_dread_rando.egg-info/SOURCES.txt` & `open-dread-rando-1.8.0/open_dread_rando.egg-info/SOURCES.txt`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -9,14 +9,15 @@
+ .github/workflows/python.yml
+ .vscode/settings.json
+ open_dread_rando/__init__.py
+ open_dread_rando/__main__.py
+ open_dread_rando/cli.py
+ open_dread_rando/common_data.py
+ open_dread_rando/cosmetic_patches.py
++open_dread_rando/custom_door_types.py
+ open_dread_rando/door_patcher.py
+ open_dread_rando/dread_patcher.py
+ open_dread_rando/elevator.py
+ open_dread_rando/environmental_damage.py
+ open_dread_rando/environmental_damage_sources.py
+ open_dread_rando/exefs.py
+ open_dread_rando/game_patches.py
+@@ -83,14 +84,19 @@
+ open_dread_rando/files/romfs/actors/items/powerup_powerbomb/models/imats/powerup_powerbomb_mp_fxhologram_0001.bsmat
+ open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/powerup_ice__missile.bcmdl
+ open_dread_rando/files/romfs/actors/items/powerup_supermissile/models/imats/powerup_ice__missile_mp_opaque_01.bsmat
+ open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/powerup_wavebeam.bcmdl
+ open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_autoilum.bsmat
+ open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_bola.bsmat
+ open_dread_rando/files/romfs/actors/items/powerup_widebeam/models/imats/powerup_wavebeam_cangrejo.bsmat
++open_dread_rando/files/romfs/actors/props/shield___diffusion/models/shield_diffusion.bcmdl
++open_dread_rando/files/romfs/actors/props/shield___diffusion/models/imats/shield_diffusion_matfx.bsmat
++open_dread_rando/files/romfs/actors/props/shield___diffusion/models/imats/shield_diffusion_mp_opaque_01.bsmat
++open_dread_rando/files/romfs/actors/props/shield_icemissile/models/shield_icemissile.bcmdl
++open_dread_rando/files/romfs/actors/props/shield_icemissile/models/imats/shield_icemissile_mp_opaque_01.bsmat
+ open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_at.bctex
+ open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_bc.bctex
+ open_dread_rando/files/romfs/textures/actors/items/itemsphere/models/textures/speedboost_nm.bctex
+ open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphat.bctex
+ open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphbc.bctex
+ open_dread_rando/files/romfs/textures/actors/items/powerup_bomb/models/textures/powerup_morphnm.bctex
+ open_dread_rando/files/romfs/textures/actors/items/powerup_doublejump/models/textures/powerup_spi_magnet_bc.bctex
+@@ -99,11 +105,13 @@
+ open_dread_rando/files/romfs/textures/system/minimap/icons/icons.bctex
+ open_dread_rando/templates/boss_powerup_template.lua
+ open_dread_rando/templates/custom_core_x.lua
+ open_dread_rando/templates/custom_core_x_superquetzoa.lua
+ open_dread_rando/templates/custom_init.lua
+ open_dread_rando/templates/progressive_model_template.lua
+ open_dread_rando/templates/randomizer_progressive_template.lua
++open_dread_rando/templates/template_doorshield_bmsad.json
+ open_dread_rando/templates/template_powerup_bmsad.json
++open_dread_rando/templates/template_shieldenergy_bmsad.json
+ tests/test_lua_util.py
+ tests/test_schema.py
+ tests/test_files/starter_preset_patcher.json
+```
+
+### Comparing `open-dread-rando-1.7.0/setup.cfg` & `open-dread-rando-1.8.0/setup.cfg`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+ 	Development Status :: 3 - Alpha
+ 	Intended Audience :: Developers
+ 	Programming Language :: Python :: 3.9
+ 
+ [options]
+ packages = open_dread_rando
+ install_requires = 
+-	mercury-engine-data-structures>=0.19.0
++	mercury-engine-data-structures>=0.20.0
+ 	jsonschema>=4.0.0
+ 	ips.py>=0.1.2
+ 	keystone-engine>=0.9.2
+ include_package_data = True
+ zip_safe = False
+ python_requires = >=3.9
+```
+
+### Comparing `open-dread-rando-1.7.0/tests/test_files/starter_preset_patcher.json` & `open-dread-rando-1.8.0/tests/test_files/starter_preset_patcher.json`
+
+ * *Files identical despite different names*
+

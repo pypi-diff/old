@@ -1,0 +1,117 @@
+--- tmp/certbot-dns-e2econfig-0.4.4.tar.gz
++++ tmp/certbot-dns-e2econfig-0.4.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "certbot-dns-e2econfig-0.4.4.tar", last modified: Thu Apr  6 07:16:09 2023, max compression
+│ +gzip compressed data, was "certbot-dns-e2econfig-0.4.5.tar", last modified: Thu Apr  6 08:56:26 2023, max compression
+│   --- certbot-dns-e2econfig-0.4.4.tar
+├── +++ certbot-dns-e2econfig-0.4.5.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 07:16:09.830958 certbot-dns-e2econfig-0.4.4/
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)    10786 2023-04-03 06:46:44.000000 certbot-dns-e2econfig-0.4.4/LICENSE.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     7200 2023-04-06 07:16:09.831068 certbot-dns-e2econfig-0.4.4/PKG-INFO
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     4898 2023-04-03 06:46:44.000000 certbot-dns-e2econfig-0.4.4/README.rst
+│ │ -drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 07:16:09.830027 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig/
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     3271 2023-04-05 12:55:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig/__init__.py
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     8528 2023-04-06 07:15:24.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig/dns_e2econfig.py
+│ │ -drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 07:16:09.830861 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     7200 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)      386 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)        1 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)       85 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)       79 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/requires.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)       22 2023-04-06 07:16:09.000000 certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/top_level.txt
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)       67 2023-04-06 07:16:09.831288 certbot-dns-e2econfig-0.4.4/setup.cfg
+│ │ --rw-r--r--   0 abhaybhati   (501) staff       (20)     1994 2023-04-06 07:15:45.000000 certbot-dns-e2econfig-0.4.4/setup.py
+│ │ +drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 08:56:26.432116 certbot-dns-e2econfig-0.4.5/
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)    10786 2023-04-03 06:46:44.000000 certbot-dns-e2econfig-0.4.5/LICENSE.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     7200 2023-04-06 08:56:26.432208 certbot-dns-e2econfig-0.4.5/PKG-INFO
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     4898 2023-04-03 06:46:44.000000 certbot-dns-e2econfig-0.4.5/README.rst
+│ │ +drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 08:56:26.431255 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig/
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     3271 2023-04-05 12:55:09.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig/__init__.py
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     8536 2023-04-06 08:54:49.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig/dns_e2econfig.py
+│ │ +drwxr-xr-x   0 abhaybhati   (501) staff       (20)        0 2023-04-06 08:56:26.432024 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     7200 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)      386 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)        1 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)       85 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)       79 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/requires.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)       22 2023-04-06 08:56:26.000000 certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)       67 2023-04-06 08:56:26.432420 certbot-dns-e2econfig-0.4.5/setup.cfg
+│ │ +-rw-r--r--   0 abhaybhati   (501) staff       (20)     1994 2023-04-06 08:55:00.000000 certbot-dns-e2econfig-0.4.5/setup.py
+│ │   --- certbot-dns-e2econfig-0.4.4/LICENSE.txt
+│ ├── +++ certbot-dns-e2econfig-0.4.5/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- certbot-dns-e2econfig-0.4.4/PKG-INFO
+│ ├── +++ certbot-dns-e2econfig-0.4.5/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: certbot-dns-e2econfig
+│ │ -Version: 0.4.4
+│ │ +Version: 0.4.5
+│ │  Summary: E2E DNS Authenticator plugin for Certbot
+│ │  Home-page: UNKNOWN
+│ │  Author: Abhay Bhati
+│ │  Author-email: abhaybhati987@gmail.com
+│ │  License: Apache License 2.0
+│ │  Description: certbot-dns-ispconfig
+│ │          =====================
+│ │   --- certbot-dns-e2econfig-0.4.4/README.rst
+│ ├── +++ certbot-dns-e2econfig-0.4.5/README.rst
+│ │┄ Files identical despite different names
+│ │   --- certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig/__init__.py
+│ ├── +++ certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig/dns_e2econfig.py
+│ ├── +++ certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig/dns_e2econfig.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -99,15 +99,15 @@
+│ │              raise errors.PluginError('Error finding domain using the e2e_client API: {0}'
+│ │                                       .format(hint))
+│ │  
+│ │          try:
+│ │              Domain(domain_name=domain, zone_name=domain, record_name=record_name, record_ttl=record_ttl, record_type='TXT', content=record_content, api_key=self.api_key, api_token=self.api_token).check_domain_valid()
+│ │              self._find_managed_zone_id(domain_name=domain, zone_name=domain, record_name=record_name, record_ttl=record_ttl, record_type='TXT', content=record_content, api_key=self.api_key, api_token=self.api_token)
+│ │          except:
+│ │ -            hint = 'Did you provide a Domain Name?'  
+│ │ +            hint = 'Did you provide a correct Domain Name?'  
+│ │              
+│ │              logger.debug('Error finding domain using the e2e_client API')
+│ │              raise errors.PluginError('Error finding domain using the e2e_client API: {0}'
+│ │                                       .format(hint)) 
+│ │  
+│ │          try:
+│ │              result = Domain(domain_name=domain, zone_name=domain, record_name=record_name, record_ttl=record_ttl, record_type='TXT', content=f'{record_content}', api_key=self.api_key, api_token=self.api_token).add_record()
+│ │   --- certbot-dns-e2econfig-0.4.4/certbot_dns_e2econfig.egg-info/PKG-INFO
+│ ├── +++ certbot-dns-e2econfig-0.4.5/certbot_dns_e2econfig.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: certbot-dns-e2econfig
+│ │ -Version: 0.4.4
+│ │ +Version: 0.4.5
+│ │  Summary: E2E DNS Authenticator plugin for Certbot
+│ │  Home-page: UNKNOWN
+│ │  Author: Abhay Bhati
+│ │  Author-email: abhaybhati987@gmail.com
+│ │  License: Apache License 2.0
+│ │  Description: certbot-dns-ispconfig
+│ │          =====================
+│ │   --- certbot-dns-e2econfig-0.4.4/setup.py
+│ ├── +++ certbot-dns-e2econfig-0.4.5/setup.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  from setuptools import setup
+│ │  from setuptools import find_packages
+│ │  
+│ │ -version = "0.4.4"
+│ │ +version = "0.4.5"
+│ │  install_requires = [
+│ │      "acme>=0.29.0",
+│ │      "certbot>=0.34.0",
+│ │      "setuptools",
+│ │      "requests",
+│ │      "mock",
+│ │      "requests-mock",

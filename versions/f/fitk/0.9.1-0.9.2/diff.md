@@ -1,0 +1,699 @@
+# Comparing `tmp/fitk-0.9.1.tar.gz` & `tmp/fitk-0.9.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fitk-0.9.1.tar", max compression
++gzip compressed data, was "fitk-0.9.2.tar", max compression
+```
+
+## Comparing `fitk-0.9.1.tar` & `fitk-0.9.2.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,21 @@
+--rw-r--r--   0        0        0     1066 2023-03-31 14:01:09.410099 fitk-0.9.1/LICENSE
+--rw-r--r--   0        0        0     1694 2023-03-31 14:01:09.410099 fitk-0.9.1/README.md
+--rw-r--r--   0        0        0        6 2023-04-05 11:01:30.156268 fitk-0.9.1/fitk/VERSION.txt
+--rw-r--r--   0        0        0    14098 2023-04-05 11:01:05.779969 fitk-0.9.1/fitk/__init__.py
+--rw-r--r--   0        0        0    21306 2023-04-05 11:01:05.779969 fitk-0.9.1/fitk/derivatives.py
+--rw-r--r--   0        0        0    82161 2023-04-05 10:44:05.059165 fitk-0.9.1/fitk/graphics.py
+--rw-r--r--   0        0        0     2849 2023-04-05 11:01:05.779969 fitk-0.9.1/fitk/interfaces/__init__.py
+--rw-r--r--   0        0        0    17096 2023-04-05 11:01:05.783969 fitk-0.9.1/fitk/interfaces/coffe_interfaces.py
+--rw-r--r--   0        0        0    20295 2023-04-05 10:49:39.771457 fitk-0.9.1/fitk/interfaces/coffe_interfaces.py.orig
+--rw-r--r--   0        0        0     5159 2023-04-05 10:44:05.059165 fitk-0.9.1/fitk/interfaces/misc_interfaces.py
+--rw-r--r--   0        0        0     9254 2023-04-05 10:44:05.059165 fitk-0.9.1/fitk/operations.py
+--rw-r--r--   0        0        0    73698 2023-04-05 10:44:05.059165 fitk-0.9.1/fitk/tensors.py
+--rw-r--r--   0        0        0     9912 2023-04-05 10:44:05.059165 fitk-0.9.1/fitk/utilities.py
+--rw-r--r--   0        0        0      986 2023-04-05 11:01:30.856276 fitk-0.9.1/pyproject.toml
+--rw-r--r--   0        0        0     2643 1970-01-01 00:00:00.000000 fitk-0.9.1/setup.py
+--rw-r--r--   0        0        0     2593 1970-01-01 00:00:00.000000 fitk-0.9.1/PKG-INFO
++-rw-r--r--   0        0        0     1066 2023-03-10 08:59:21.296744 fitk-0.9.2/LICENSE
++-rw-r--r--   0        0        0     1694 2023-03-24 14:09:28.855309 fitk-0.9.2/README.md
++-rw-r--r--   0        0        0        6 2023-04-06 08:58:30.286223 fitk-0.9.2/fitk/VERSION.txt
++-rw-r--r--   0        0        0    15324 2023-04-06 08:52:04.275308 fitk-0.9.2/fitk/__init__.py
++-rw-r--r--   0        0        0    22326 2023-04-06 08:52:04.275308 fitk-0.9.2/fitk/derivatives.py
++-rw-r--r--   0        0        0   173975 2022-04-02 10:14:59.572788 fitk-0.9.2/fitk/fitk/fisher_matrix.html
++-rw-r--r--   0        0        0    54615 2022-04-02 10:14:59.600788 fitk-0.9.2/fitk/fitk/fisher_plotter.html
++-rw-r--r--   0        0        0    27182 2022-04-02 10:14:59.612788 fitk-0.9.2/fitk/fitk/fisher_utils.html
++-rw-r--r--   0        0        0     8650 2022-04-02 10:14:59.520788 fitk-0.9.2/fitk/fitk/index.html
++-rw-r--r--   0        0        0    82161 2023-04-06 08:52:04.275308 fitk-0.9.2/fitk/graphics.py
++-rw-r--r--   0        0        0     3511 2023-04-06 08:58:01.942301 fitk-0.9.2/fitk/interfaces/__init__.py
++-rw-r--r--   0        0        0     8587 2023-04-06 08:58:01.942301 fitk-0.9.2/fitk/interfaces/classy_interfaces.py
++-rw-r--r--   0        0        0     8646 2023-03-25 13:01:58.103976 fitk-0.9.2/fitk/interfaces/classy_interfaces.py.orig
++-rw-r--r--   0        0        0    20069 2023-04-06 08:52:04.279308 fitk-0.9.2/fitk/interfaces/coffe_interfaces.py
++-rw-r--r--   0        0        0     5159 2023-04-06 08:52:04.279308 fitk-0.9.2/fitk/interfaces/misc_interfaces.py
++-rw-r--r--   0        0        0     9254 2023-04-06 08:52:04.279308 fitk-0.9.2/fitk/operations.py
++-rw-r--r--   0        0        0    73698 2023-04-06 08:52:04.279308 fitk-0.9.2/fitk/tensors.py
++-rw-r--r--   0        0        0     9912 2023-04-06 08:52:04.279308 fitk-0.9.2/fitk/utilities.py
++-rw-r--r--   0        0        0     1166 2023-04-06 08:58:30.654222 fitk-0.9.2/pyproject.toml
++-rw-r--r--   0        0        0     2743 1970-01-01 00:00:00.000000 fitk-0.9.2/setup.py
++-rw-r--r--   0        0        0     2795 1970-01-01 00:00:00.000000 fitk-0.9.2/PKG-INFO
+```
+
+### Comparing `fitk-0.9.1/LICENSE` & `fitk-0.9.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/README.md` & `fitk-0.9.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/fitk/__init__.py` & `fitk-0.9.2/fitk/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -11,14 +11,53 @@
+ FITK is available on <a href="https://pypi.org/project/fitk/" target="_blank"
+ rel="noopener noreferrer">PyPI</a>, and can be installed via `pip`:
+ 
+ ```sh
+ pip install fitk
+ ```
+ 
++In case you want to also install the various third-party software for which
++there are interfaces for computing derivatives with FITK, you can instead do:
++
++```sh
++pip install fitk[[INTERFACE]]
++```
++
++where `[INTERFACE]` is one of the [supported third-party
++software](fitk/interfaces.html). In case you want to try to install all of the
++supported third-party software at once, you can run:
++
++```sh
++pip install fitk[interfaces]
++```
++
++# Quickstart
++
++Load the core modules:
++>>> from fitk import FisherMatrix, FisherFigure2D, D, P
++
++Load one of the [supported interfaces](fitk/interfaces.html):
++>>> from fitk.interfaces.coffe_interfaces import CoffeMultipolesDerivative
++
++Set up an instance of the interface:
++>>> config = CoffeMultipolesDerivative()
++
++Compute some Fisher matrices:
++>>> fm = config.fisher_matrix(
++... D(P(name='omega_m', fiducial=0.3), abs_step=1e-3),
++... D(P(name='omega_baryon', fiducial=0.04), abs_step=1e-3),
++... )
++
++Note that the matrix can easily be saved for later:
++>>> fm.to_file('fisher_matrix_example.json', metadata={'comment': 'Example Fisher matrix'})
++
++Plot some contours of the resulting matrix:
++>>> ff = FisherFigure2D(show_1d_curves=True, show_joint_dist=True)
++>>> ff.plot(fm, label='COFFE forecast example')
++
+ # Bug reports and feature requests
+ 
+ Development of FITK is currently done <a
+ href="https://github.com/JCGoran/fitk/" target="_blank" rel="noopener
+ noreferrer">on GitHub</a>, and if you encounter any bugs in the package, or
+ would like to ask for new features (or submit your own), please open an <a
+ href="https://github.com/JCGoran/fitk/issues/" target="_blank" rel="noopener
+```
+
+#### html2text {}
+
+```diff
+@@ -1,11 +1,27 @@
+ r""" ### FITK - Fisher Information ToolKit, version $VERSION # What is it? FITK
+ is a Python package for computing, manipulating, and plotting Fisher matrices.
+ # Installation FITK is available on PyPI, and can be installed via `pip`: ```sh
+-pip install fitk ``` # Bug reports and feature requests Development of FITK is
++pip install fitk ``` In case you want to also install the various third-party
++software for which there are interfaces for computing derivatives with FITK,
++you can instead do: ```sh pip install fitk[[INTERFACE]] ``` where `[INTERFACE]`
++is one of the [supported third-party software](fitk/interfaces.html). In case
++you want to try to install all of the supported third-party software at once,
++you can run: ```sh pip install fitk[interfaces] ``` # Quickstart Load the core
++modules: >>> from fitk import FisherMatrix, FisherFigure2D, D, P Load one of
++the [supported interfaces](fitk/interfaces.html): >>> from
++fitk.interfaces.coffe_interfaces import CoffeMultipolesDerivative Set up an
++instance of the interface: >>> config = CoffeMultipolesDerivative() Compute
++some Fisher matrices: >>> fm = config.fisher_matrix( ... D(P(name='omega_m',
++fiducial=0.3), abs_step=1e-3), ... D(P(name='omega_baryon', fiducial=0.04),
++abs_step=1e-3), ... ) Note that the matrix can easily be saved for later: >>>
++fm.to_file('fisher_matrix_example.json', metadata={'comment': 'Example Fisher
++matrix'}) Plot some contours of the resulting matrix: >>> ff = FisherFigure2D
++(show_1d_curves=True, show_joint_dist=True) >>> ff.plot(fm, label='COFFE
++forecast example') # Bug reports and feature requests Development of FITK is
+ currently done on_GitHub, and if you encounter any bugs in the package, or
+ would like to ask for new features (or submit your own), please open an issue
+ or a pull_request. # Notes Throughout the documentation, it is assumed that the
+ modules are imported in the following way: >>> import numpy as np >>> from fitk
+ import P, FisherMatrix, FisherFigure1D, FisherFigure2D, FisherBarFigure, D,
+ FisherDerivative The most important classes are: - `fitk.utilities.P`: for
+ specifying Fisher parameters - `fitk.tensors.FisherMatrix`: for manipulating
+```
+
+### Comparing `fitk-0.9.1/fitk/derivatives.py` & `fitk-0.9.2/fitk/derivatives.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ from __future__ import annotations
+ 
+ # standard library imports
+ import warnings
+ from collections.abc import Collection, Sequence
+ from dataclasses import dataclass
+ from itertools import product
+-from typing import Optional
++from typing import Optional, Union
+ 
+ # third party imports
+ import numpy as np
+ 
+ # first party imports
+ from fitk.tensors import FisherMatrix
+ from fitk.utilities import P, ValidationError, find_diff_weights, is_iterable
+@@ -287,14 +287,45 @@
+     -----
+     The user must implement the `signal` or the `covariance` method (or both)
+     to be able to use a subclass.
+     Furthermore, the `covariance` method, if implemented, needs to return an
+     array that is shape-compatible with the output of the `signal` method.
+     """
+ 
++    software_names: Optional[Union[str, dict[str, str]]] = None
++    """
++    The name of the software which we are interfacing. Can be either a
++    string, or a dictionary with the keys `signal` and `covariance` and the
++    names of each software as values
++    """
++    version: Optional[str] = None
++    """
++    The version of the interface (is *not* necessarily the same as the version
++    of the software itself)
++    """
++    authors: Optional[list[dict[str, str]]] = None
++    """
++    The list of authors of the interface (is *not* necessarily the same as the
++    authors of the software itself)
++    """
++    urls: Optional[dict[str, str]] = None
++    """
++    Any URL(s) to the original software(s)
++    """
++
++    def __str__(self):
++        return (
++            f"{self.__class__.__name__}(\n"
++            f"\tsoftware name(s): {self.software_names},\n"
++            f"\tinterface version: {self.version},\n"
++            f"\tauthors: {self.authors},\n"
++            f"\tURL(s): {self.urls}\n"
++            ")"
++        )
++
+     def __init__(self, *args, **kwargs):
+         """
+         Create an instance.
+ 
+         Notes
+         -----
+         The user should override this method if they wish to perform custom
+```
+
+### Comparing `fitk-0.9.1/fitk/graphics.py` & `fitk-0.9.2/fitk/graphics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/fitk/interfaces/__init__.py` & `fitk-0.9.2/fitk/interfaces/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,20 +1,35 @@
+ """
+ Interfaces for FITK.
+ 
+-This module defines interfaces to various third-party software with which
+-one can compute Fisher matrices using finite differences.
++This module defines interfaces to various third-party software with which one
++can compute Fisher matrices.
+ 
+ ### Important notice
+ Due to the complexities involved in distributing software that is not under
+ direct control of the developers/maintainers of `fitk` (version, installation,
+ license issues, etc.), any external, third-party software (such as cosmological
+ codes) is *not* bundled with `fitk` (i.e. installed automatically), and must be
+ installed separately by the user.
+ 
++### List of interfaces
++
++#### <a href="https://github.com/lesgourg/class_public" target="_blank" rel="noopener noreferrer">CLASS</a>
++
++- installable with `pip install fitk[classy]`
++- for documentation of available interfaces, see `fitk.interfaces.classy_interfaces`
++
++#### <a href="https://github.com/JCGoran/coffe" target="_blank" rel="noopener noreferrer">COFFE</a>
++
++- installable with `pip install fitk[coffe]` (only on Linux; for other
++  platforms, see <a
++  href="https://github.com/JCGoran/coffe#development-version-including-non-linux-machines"
++  target="_blank" rel="noopener noreferrer">here</a>)
++- for documentation of available interfaces, see `fitk.interfaces.coffe_interfaces`
++
+ ### Computation of custom derivatives
+ To define a new interface for computing derivatives, one should define a class
+ that inherits from `fitk.derivatives.FisherDerivative`, and implements
+ either the `signal` or the `covariance` methods (or both); below outlines the
+ steps to create an interface of your own using a minimal amount of code:
+ 
+ ```python
+```
+
+### Comparing `fitk-0.9.1/fitk/interfaces/coffe_interfaces.py` & `fitk-0.9.2/fitk/interfaces/coffe_interfaces.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -7,14 +7,15 @@
+ 
+ # for compatibility with Python 3.7
+ from __future__ import annotations
+ 
+ # standard library imports
+ import re
+ import warnings
++from abc import ABC
+ from dataclasses import dataclass
+ from typing import Optional, Sequence
+ 
+ # third party imports
+ import numpy as np
+ from scipy.linalg import block_diag
+ 
+@@ -38,14 +39,16 @@
+     # these can't be set using `setattr(<instance>, <name>, <value>)`,
+     # so we need to process them separately
+     special_kwargs = (
+         "galaxy_bias1",
+         "galaxy_bias2",
+         "magnification_bias1",
+         "magnification_bias2",
++        "evolution_bias1",
++        "evolution_bias2",
+     )
+ 
+     bias = {}
+     for key, value in kwargs.items():
+         if key in special_kwargs:
+             bias[key] = value
+ 
+@@ -58,44 +61,29 @@
+             # basically equivalent to:
+             # <instance>.set_<thing>_bias{1, 2}(x_array, y_array)
+             getattr(result, f"set_{key}")(value[0], value[1])
+ 
+     return result
+ 
+ 
+-class CoffeMultipolesDerivative(FisherDerivative):
+-    r"""
+-    Class for computing the derivatives of the multipoles of the 2PCF w.r.t. cosmological parameters.
+-
+-    Examples
+-    --------
+-    Import the necessary modules:
+-    >>> from fitk import D
+-
+-    Set some cosmology:
+-    >>> cosmo = CoffeMultipolesDerivative(
+-    ... config=dict(omega_m=0.32, sep=[10, 20, 30], l=[0], pixelsize=[5],
+-    ... number_density1=[1e-3], number_density2=[1e-3], fsky=[0.3]))
+-
+-    Compute the first derivative of the signal (multipoles of 2PCF), using a
+-    fourth-order central derivative scheme, w.r.t. $h$ with a fiducial value of
+-    $0.67$ and an absolute step size $10^{-3}$:
+-    >>> cosmo.derivative('signal', D(P('h', 0.67), 1e-3))
++class CoffeBaseDerivative(ABC, FisherDerivative):
++    r"""Base class for all COFFE interfaces."""
+ 
+-    Compute the Fisher matrix with $\Omega_\mathrm{m}$ and $n_s$ as the
+-    parameters:
+-    >>> fm = cosmo.fisher_matrix(
+-    ... D(P(name='omega_m', fiducial=0.32), abs_step=1e-3),
+-    ... D(P(name='n_s', fiducial=0.96), abs_step=1e-3))
+-    """
+-
+-    __software_name__ = "coffe"
+-    __url__ = "https://github.com/JCGoran/coffe"
+-    __version__ = "3.0.0"
+-    __maintainers__ = ["Goran Jelic-Cizmek <goran.jelic-cizmek@unige.ch>"]
++    software_names = "coffe"
++    urls = dict(
++        github="https://github.com/JCGoran/coffe",
++        pypi="https://pypi.org/project/coffe/",
++    )
++    version = "1.0.0"
++    authors = [
++        dict(
++            name="Goran Jelic-Cizmek",
++            email="goran.jelic-cizmek@unige.ch>",
++        )
++    ]
+     __imported__ = IMPORT_SUCCESS
+ 
+     def __init__(
+         self,
+         *args,
+         config: Optional[dict] = None,
+         **kwargs,
+@@ -107,27 +95,54 @@
+         ----------
+         config : dict, optional
+             the configuration for COFFE, as a dictionary (default: default
+             COFFE configuration)
+         """
+         if not self.__imported__:
+             raise ImportError(
+-                f"Unable to import the `{self.__software_name__}` module, "
++                f"Unable to import the `{self.software_names}` module, "
+                 "please make sure it is installed; "
+-                f"for additional help, please consult the following URL: {self.__url__}"
++                f"for additional help, please consult one of the following URL(s): {self.urls}"
+             )
+ 
+         self._config = config if config is not None else {}
+         super().__init__(*args, **kwargs)
+ 
+     @property
+     def config(self):
+         """Return the current COFFE configuration as a dictionary."""
+         return self._config
+ 
++
++class CoffeMultipolesDerivative(CoffeBaseDerivative):
++    r"""
++    Class for computing the derivatives of the multipoles of the 2PCF w.r.t. cosmological parameters.
++
++    Examples
++    --------
++    Import the necessary modules:
++    >>> from fitk import D
++
++    Set some cosmology:
++    >>> cosmo = CoffeMultipolesDerivative(
++    ... config=dict(omega_m=0.32, sep=[10, 20, 30], l=[0], pixelsize=[5],
++    ... number_density1=[1e-3], number_density2=[1e-3], fsky=[0.3]))
++
++    Compute the first derivative of the signal (multipoles of 2PCF), using a
++    fourth-order central derivative scheme, w.r.t. $h$ with a fiducial value of
++    $0.67$ and an absolute step size $10^{-3}$:
++    >>> cosmo.derivative('signal', D(P('h', 0.67), 1e-3))
++
++    Compute the Fisher matrix with $\Omega_\mathrm{m}$ and $n_s$ as the
++    parameters:
++    >>> fm = cosmo.fisher_matrix(
++    ... D(P(name='omega_m', fiducial=0.32), abs_step=1e-3),
++    ... D(P(name='n_s', fiducial=0.96), abs_step=1e-3))
++    """
++
+     def signal(
+         self,
+         *args: tuple[str, float],
+         **kwargs,
+     ):
+         r"""
+         Compute the multipoles of the 2PCF with some cosmology.
+@@ -208,23 +223,106 @@
+                     len(cosmo.sep) ** 2 * len(cosmo.l) ** 2,
+                 )
+             ]
+         )
+ 
+         return result
+ 
+-    @property
+-    def __credits__(self):
+-        return (
+-            f"Software: {self.__software_name__}\n"
+-            f"Version: {self.__version__}\n"
+-            f"URL: {self.__url__}\n"
+-            f"Interface maintainer(s): {self.__maintainers__}"
++
++class CoffeAverageMultipolesDerivative(CoffeBaseDerivative):
++    r"""Class for computing the derivatives of the redshift-averaged multipoles of the 2PCF w.r.t. cosmological parameters."""
++
++    def signal(
++        self,
++        *args: tuple[str, float],
++        **kwargs,
++    ):
++        r"""
++        Compute the redshift-averaged multipoles of the 2PCF for some cosmology.
++
++        Returns
++        -------
++        array_like : float
++            the signal as a numpy array
++
++        Notes
++        -----
++        The coordinates used are $(r, \ell, z_\mathrm{min}, z_\mathrm{max})$,
++        in that increasing order. The size of the output is $\text{size}(r)
++        \times \text{size}(\ell) \times \text{size}(z_\mathrm{min})$.
++
++        For more details on the exact theoetical modelling used, see <a
++        href="https://arxiv.org/abs/1806.11090" target="_blank" rel="noopener
++        noreferrer">arXiv:1806.11090</a>, section 2.
++        """
++        cosmo = _parse_and_set_args(**self.config)
++        for arg, value in args:
++            setattr(cosmo, arg, value)
++
++        return np.array(
++            [_.value for _ in cosmo.compute_average_multipoles_bulk()],
+         )
+ 
++    def covariance(
++        self,
++        *args: tuple[str, float],
++        **kwargs,
++    ):
++        r"""
++        Compute the covariance of the redshift-averaged multipoles of the 2PCF for some cosmology.
++
++        Returns
++        -------
++        array_like : float
++            the covariance matrix as a numpy array
++
++        Notes
++        -----
++        The covariance does not take into account cross-correlations between
++        the different redshifts, i.e. for $n$ redshift bins it has the form:
++        $$
++            \begin{pmatrix}
++            \mathsf{C}(\bar{z}_1) & 0 & \ldots & 0\\\
++            0 & \mathsf{C}(\bar{z}_2) & \ldots & 0\\\
++            \vdots & \vdots & \ddots & \vdots\\\
++            0 & 0 & \ldots & \mathsf{C}(\bar{z}_n)
++            \end{pmatrix}
++        $$
++
++        For more details on the exact theoetical modelling used, see <a
++        href="https://arxiv.org/abs/1806.11090" target="_blank" rel="noopener
++        noreferrer">arXiv:1806.11090</a>, section 2.
++        """
++        cosmo = _parse_and_set_args(**self.config)
++        for arg, value in args:
++            setattr(cosmo, arg, value)
++
++        covariance = cosmo.compute_average_covariance_bulk()
++
++        result = block_diag(
++            *[
++                np.reshape(
++                    [
++                        _.value
++                        for _ in covariance[
++                            i : i + len(cosmo.sep) ** 2 * len(cosmo.l) ** 2
++                        ]
++                    ],
++                    (len(cosmo.sep) * len(cosmo.l), len(cosmo.sep) * len(cosmo.l)),
++                )
++                for i in range(
++                    0,
++                    len(covariance),
++                    len(cosmo.sep) ** 2 * len(cosmo.l) ** 2,
++                )
++            ]
++        )
++
++        return result
++
+ 
+ class CoffeMultipolesTildeDerivative(CoffeMultipolesDerivative):
+     r"""
+     Class for computing the derivatives of the 2PCF w.r.t. $\tilde{f}$ and $\tilde{b}$ parameters.
+ 
+     The parameters are defined as:
+     $$
+@@ -375,16 +473,15 @@
+ 
+     If the biases are set for two populations, the second population is ignored.
+     """
+ 
+     _allowed_biases = [
+         _BiasParameter(longname="galaxy", shortname="b"),
+         _BiasParameter(longname="magnification", shortname="s"),
+-        # TODO implement evolution bias
+-        # _BiasParameter(longname="evolution", shortname="e"),
++        _BiasParameter(longname="evolution", shortname="e"),
+     ]
+ 
+     def validate_parameter(self, arg) -> bool:
+         valid_shortnames = "".join([_.shortname for _ in self._allowed_biases])
+         if re.search(rf"^[{valid_shortnames}][1-9][0-9]*$", arg.name) and int(
+             arg.name[1:]
+         ) in range(1, len(self.config["z_mean"]) + 1):
+```
+
+### Comparing `fitk-0.9.1/fitk/interfaces/misc_interfaces.py` & `fitk-0.9.2/fitk/interfaces/misc_interfaces.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/fitk/operations.py` & `fitk-0.9.2/fitk/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/fitk/tensors.py` & `fitk-0.9.2/fitk/tensors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/fitk/utilities.py` & `fitk-0.9.2/fitk/utilities.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fitk-0.9.1/pyproject.toml` & `fitk-0.9.2/pyproject.toml`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "fitk"
+-version = "0.9.1"
++version = "0.9.2"
+ description = "The Fisher Information ToolKit"
+ authors = ["JCGoran <goran.jelic-cizmek@unige.ch>"]
+ license = "MIT"
+ readme = "README.md"
+ 
+ [tool.poetry.dependencies]
+ python = ">=3.7,<4"
+@@ -17,14 +17,21 @@
+     {version = ">1.7.3", python = ">=3.8"}
+ ]
+ matplotlib = [
+     {version = "^3.5", python = "<3.11"},
+     {version = "^3.6", python = ">=3.11"}
+ ]
+ sympy = {version = "*"}
++coffe = { version = "*", optional = true }
++classy = { version = "*", optional = true }
++
++[tool.poetry.extras]
++coffe = ["coffe"]
++classy = ["classy"]
++interfaces = ["coffe", "classy"]
+ 
+ [tool.poetry.dev-dependencies]
+ black = "*"
+ pytest = "*"
+ pylint = "*"
+ mypy = "*"
+ jupyterlab = "*"
+```
+
+### Comparing `fitk-0.9.1/setup.py` & `fitk-0.9.2/setup.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,28 +1,31 @@
+ # -*- coding: utf-8 -*-
+ from setuptools import setup
+ 
+ packages = \
+ ['fitk', 'fitk.interfaces']
+ 
+ package_data = \
+-{'': ['*']}
++{'': ['*'], 'fitk': ['fitk/*']}
+ 
+ install_requires = \
+ ['sympy']
+ 
+ extras_require = \
+ {':python_version < "3.11"': ['matplotlib>=3.5,<4.0'],
+  ':python_version == "3.7"': ['numpy==1.21.6', 'scipy==1.7.3'],
+  ':python_version >= "3.11"': ['matplotlib>=3.6,<4.0'],
+- ':python_version >= "3.8"': ['numpy>1.22', 'scipy>1.7.3']}
++ ':python_version >= "3.8"': ['numpy>1.22', 'scipy>1.7.3'],
++ 'classy': ['classy'],
++ 'coffe': ['coffe'],
++ 'interfaces': ['coffe', 'classy']}
+ 
+ setup_kwargs = {
+     'name': 'fitk',
+-    'version': '0.9.1',
++    'version': '0.9.2',
+     'description': 'The Fisher Information ToolKit',
+     'long_description': "## FITK - the Fisher Information ToolKit\n[![codecov](https://codecov.io/gh/JCGoran/fitk/branch/master/graph/badge.svg?token=NX9WRX89SI)](https://codecov.io/gh/JCGoran/fitk)\n[![CircleCI](https://dl.circleci.com/status-badge/img/gh/JCGoran/fitk/tree/master.svg?style=shield&circle-token=5cc8653735b0092318b9790720101eaa4c568c10)](https://dl.circleci.com/status-badge/redirect/gh/JCGoran/fitk/tree/master)\n[![python - versions](https://img.shields.io/pypi/pyversions/fitk)](https://pypi.org/project/fitk/)\n[![CodeFactor](https://www.codefactor.io/repository/github/jcgoran/fitk/badge)](https://www.codefactor.io/repository/github/jcgoran/fitk)\n\nFitk is a Python package for computing, manipulating, and plotting of Fisher information matrices.\n\n### Installation\n\nThe best way to install the stable version is via `pip`:\n\n```plaintext\npip install fitk\n```\n\nNote that on some systems you may have to replace `pip` by `python3 -m pip` or similar for the installation.\nFurthermore, if you only wish to install the package for the current user (or don't have root privileges), you should supply the `--user` flag to the above command.\n\nAlternatively, if you want to install the latest development version:\n\n```plaintext\npip install git+https://github.com/JCGoran/fitk\n```\n\n### Usage\n\nFor various examples on how to use FITK, as well as the latest API, please refer to [the main docs](https://jcgoran.github.io/fitk/).\n\n### Issues\n\nIf you encounter any bugs running the code, or have a suggestion for new functionality, please open up a new issue [on GitHub](https://github.com/JCGoran/fitk/issues/).\n\n### Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n\n### License\n\nSee [LICENSE](LICENSE) file.\n",
+     'author': 'JCGoran',
+     'author_email': 'goran.jelic-cizmek@unige.ch',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `fitk-0.9.1/PKG-INFO` & `fitk-0.9.2/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,21 +1,26 @@
+ Metadata-Version: 2.1
+ Name: fitk
+-Version: 0.9.1
++Version: 0.9.2
+ Summary: The Fisher Information ToolKit
+ License: MIT
+ Author: JCGoran
+ Author-email: goran.jelic-cizmek@unige.ch
+ Requires-Python: >=3.7,<4
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Provides-Extra: classy
++Provides-Extra: coffe
++Provides-Extra: interfaces
++Requires-Dist: classy; extra == "classy" or extra == "interfaces"
++Requires-Dist: coffe; extra == "coffe" or extra == "interfaces"
+ Requires-Dist: matplotlib (>=3.5,<4.0); python_version < "3.11"
+ Requires-Dist: matplotlib (>=3.6,<4.0); python_version >= "3.11"
+ Requires-Dist: numpy (==1.21.6); python_version == "3.7"
+ Requires-Dist: numpy (>1.22); python_version >= "3.8"
+ Requires-Dist: scipy (==1.7.3); python_version == "3.7"
+ Requires-Dist: scipy (>1.7.3); python_version >= "3.8"
+ Requires-Dist: sympy
+```
+

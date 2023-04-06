@@ -1,0 +1,104 @@
+--- tmp/riseup_vpn_configurator-0.1.5.tar.gz
++++ tmp/riseup_vpn_configurator-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "riseup_vpn_configurator-0.1.5.tar", max compression
+│ +gzip compressed data, was "riseup_vpn_configurator-0.1.6.tar", max compression
+│   --- riseup_vpn_configurator-0.1.5.tar
+├── +++ riseup_vpn_configurator-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ --rw-r--r--   0        0        0    35149 2023-02-13 13:46:29.483007 riseup_vpn_configurator-0.1.5/LICENSE
+│ │ --rw-r--r--   0        0        0     5378 2023-02-27 16:31:36.044888 riseup_vpn_configurator-0.1.5/README.md
+│ │ --rw-r--r--   0        0        0     1137 2023-04-06 08:42:06.868082 riseup_vpn_configurator-0.1.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0    16334 2023-04-06 08:40:31.803742 riseup_vpn_configurator-0.1.5/riseup_vpn_configurator/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-27 16:23:10.812807 riseup_vpn_configurator-0.1.5/riseup_vpn_configurator/latency.py
+│ │ --rw-r--r--   0        0        0      305 2023-02-27 16:08:48.769650 riseup_vpn_configurator-0.1.5/riseup_vpn_configurator/riseup-vpn.yaml
+│ │ --rw-r--r--   0        0        0     6300 1970-01-01 00:00:00.000000 riseup_vpn_configurator-0.1.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    35149 2023-02-13 13:46:29.483007 riseup_vpn_configurator-0.1.6/LICENSE
+│ │ +-rw-r--r--   0        0        0     5378 2023-02-27 16:31:36.044888 riseup_vpn_configurator-0.1.6/README.md
+│ │ +-rw-r--r--   0        0        0     1137 2023-04-06 08:54:30.236880 riseup_vpn_configurator-0.1.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0    16336 2023-04-06 08:52:54.261541 riseup_vpn_configurator-0.1.6/riseup_vpn_configurator/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-02-27 16:23:10.812807 riseup_vpn_configurator-0.1.6/riseup_vpn_configurator/latency.py
+│ │ +-rw-r--r--   0        0        0      305 2023-02-27 16:08:48.769650 riseup_vpn_configurator-0.1.6/riseup_vpn_configurator/riseup-vpn.yaml
+│ │ +-rw-r--r--   0        0        0     6300 1970-01-01 00:00:00.000000 riseup_vpn_configurator-0.1.6/PKG-INFO
+│ │   --- riseup_vpn_configurator-0.1.5/LICENSE
+│ ├── +++ riseup_vpn_configurator-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- riseup_vpn_configurator-0.1.5/README.md
+│ ├── +++ riseup_vpn_configurator-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- riseup_vpn_configurator-0.1.5/pyproject.toml
+│ ├── +++ riseup_vpn_configurator-0.1.6/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "riseup-vpn-configurator"
+│ │ -version = "0.1.5"
+│ │ +version = "0.1.6"
+│ │  description = "a simple command line tool to get RiseupVPN up and running"
+│ │  authors = ["kmille <github@androidloves.me>"]
+│ │  readme = "README.md"
+│ │  packages = [{include = "riseup_vpn_configurator"}]
+│ │  license = "GPL-3.0-only"
+│ │  repository = "https://github.com/kmille/riseup-vpn-configurator"
+│ │  homepage = "https://github.com/kmille/riseup-vpn-configurator"
+│ │   --- riseup_vpn_configurator-0.1.5/riseup_vpn_configurator/__init__.py
+│ ├── +++ riseup_vpn_configurator-0.1.6/riseup_vpn_configurator/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -435,31 +435,33 @@
+│ │  
+│ │      if args.verbose:
+│ │          logging.getLogger().setLevel(logging.DEBUG)
+│ │      elif args.version:
+│ │          show_version()
+│ │      elif args.default_config:
+│ │          print_default_config(0)
+│ │ -    elif args.check_config:
+│ │ -        check_config_file()
+│ │ -    elif args.list_gateways:
+│ │ -        list_gateways(args.benchmark)
+│ │ -    elif args.status:
+│ │ -        check_config_file()
+│ │ -        show_status()
+│ │  
+│ │      check_root_permissions()
+│ │ +
+│ │      if args.uninstall:
+│ │          uninstall()
+│ │  
+│ │      check_working_directory()
+│ │ +
+│ │      if args.update:
+│ │          update_gateways()
+│ │          update_vpn_ca_certificate()
+│ │          update_vpn_client_credentials()
+│ │ +    elif args.check_config:
+│ │ +        check_config_file()
+│ │ +    elif args.list_gateways:
+│ │ +        list_gateways(args.benchmark)
+│ │      elif args.generate_config:
+│ │          check_config_file()
+│ │          generate_configuration()
+│ │ +    elif args.status:
+│ │ +        check_config_file()
+│ │ +        show_status()
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      main()
+│ │   --- riseup_vpn_configurator-0.1.5/PKG-INFO
+│ ├── +++ riseup_vpn_configurator-0.1.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: riseup-vpn-configurator
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: a simple command line tool to get RiseupVPN up and running
+│ │  Home-page: https://github.com/kmille/riseup-vpn-configurator
+│ │  License: GPL-3.0-only
+│ │  Author: kmille
+│ │  Author-email: github@androidloves.me
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
