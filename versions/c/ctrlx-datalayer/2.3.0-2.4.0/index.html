@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/ctrlx_datalayer-2.3.0-py3-none-any.whl.zip tmp/ctrlx_datalayer-2.4.0-py3-none-any.whl.zip --html versions/c/ctrlx-datalayer/2.3.0-2.4.0/index.html --text versions/c/ctrlx-datalayer/2.3.0-2.4.0/diff.txt --markdown versions/c/ctrlx-datalayer/2.3.0-2.4.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.86 KB</span></div>
+  <div><span class="source">tmp/ctrlx_datalayer-2.3.0-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/ctrlx_datalayer-2.4.0-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">5.15 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 31 lines modified</td><td colspan="2">Offset 1, 31 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>5133<del>4</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>29</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>5133<ins>7</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>29</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>422<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>0</del>1<span class="dp">·</span><del>0</del>8:<del>25</del><span class="dp">·</span>ctrlxdatalayer/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>422<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>2</ins>1<span class="dp">·</span><ins>1</ins>8:<ins>10</ins><span class="dp">·</span>ctrlxdatalayer/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Dec-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/_version.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-Dec-0<ins>2</ins><span class="dp">·</span>0<ins>6</ins>:<ins>16</ins><span class="dp">·</span>ctrlxdatalayer/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31027<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>0</del>1<span class="dp">·</span><del>0</del>8:<del>25</del><span class="dp">·</span>ctrlxdatalayer/bulk.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31027<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>2</ins>1<span class="dp">·</span><ins>1</ins>8:<ins>11</ins><span class="dp">·</span>ctrlxdatalayer/bulk.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6509<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/bulk_util.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6509<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/bulk_util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>532<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>532<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9016<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_bulk.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9016<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_bulk.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12645<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_client.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12645<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2504<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_converter.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2504<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_converter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>956<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_factory.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>956<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_factory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3601<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_provider.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3601<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_provider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3251<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>0</del>1<span class="dp">·</span><del>0</del>8:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_provider_node.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3251<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>2</ins>1<span class="dp">·</span><ins>1</ins>8:<ins>10</ins><span class="dp">·</span>ctrlxdatalayer/clib_provider_node.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1970<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_system.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1970<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_system.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16886<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/clib_variant.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16886<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/clib_variant.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22384<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/client.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22384<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4604<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/converter.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4604<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/converter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1362<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/factory.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1362<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/factory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12218<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>01</del><span class="dp">·</span><del>08</del>:<del>2</del>5<span class="dp">·</span>ctrlxdatalayer/metadata_utils.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12218<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>22</ins><span class="dp">·</span><ins>15</ins>:<ins>1</ins>5<span class="dp">·</span>ctrlxdatalayer/metadata_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5215<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/provider.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5215<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/provider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6286<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>0</del>1<span class="dp">·</span><del>0</del>8:<del>25</del><span class="dp">·</span>ctrlxdatalayer/provider_node.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6286<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>2</ins>1<span class="dp">·</span><ins>1</ins>8:<ins>10</ins><span class="dp">·</span>ctrlxdatalayer/provider_node.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4905<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/subscription.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4905<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/subscription.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10476<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/subscription_async.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10476<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/subscription_async.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6425<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/subscription_sync.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6425<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/subscription_sync.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2974<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-0<del>1</del><span class="dp">·</span><del>08</del>:<del>25</del><span class="dp">·</span>ctrlxdatalayer/system.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2974<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-0<ins>9</ins><span class="dp">·</span><ins>23</ins>:<ins>48</ins><span class="dp">·</span>ctrlxdatalayer/system.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<del>Dec</del>-<del>0</del>1<span class="dp">·</span><del>0</del>8:<del>25</del><span class="dp">·</span>ctrlxdatalayer/variant.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31102<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>22-<ins>Nov</ins>-<ins>2</ins>1<span class="dp">·</span><ins>1</ins>8:<ins>11</ins><span class="dp">·</span>ctrlxdatalayer/variant.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>183<del>2</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Dec</del>-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/METADATA</td><td class="diffline">26 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>183<ins>3</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Apr</ins>-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>46</ins><span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Dec</del>-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/WHEEL</td><td class="diffline">27 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Apr</ins>-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>46</ins><span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>45758<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Dec</del>-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/boschrexroth_tac_delivery.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>45758<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Apr</ins>-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>46</ins><span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/boschrexroth_tac_delivery.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r<del>-</del>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Dec</del>-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/top_level.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r<ins>w</ins>-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Apr</ins>-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>46</ins><span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2501<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<del>2</del>-<del>Dec</del>-0<del>1</del><span class="dp">·</span>0<del>8</del>:<del>25</del><span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/RECORD</td><td class="diffline">30 </td><td class="diffpresent">?rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2501<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>2<ins>3</ins>-<ins>Apr</ins>-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>46</ins><span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">29<span class="dp">·</span>files,<span class="dp">·</span>24751<del>5</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>4730<del>2</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>80.9%</td><td class="diffline">31 </td><td class="diffpresent">29<span class="dp">·</span>files,<span class="dp">·</span>24751<ins>6</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>4730<ins>5</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>80.9%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">788 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 66, 23 lines modified</td><td colspan="2">Offset 66, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlxdatalayer/system.py</td><td class="diffline">66 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlxdatalayer/system.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">67 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlxdatalayer/variant.py</td><td class="diffline">68 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlxdatalayer/variant.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">69 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/METADATA</td><td class="diffline">70 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">71 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">72 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/WHEEL</td><td class="diffline">72 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">73 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">74 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/boschrexroth_tac_delivery.txt</td><td class="diffline">74 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/boschrexroth_tac_delivery.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">75 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">76 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/top_level.txt</td><td class="diffline">76 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">77 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">78 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<del>3</del>.0.dist-info/RECORD</td><td class="diffline">78 </td><td class="diffpresent">Filename:<span class="dp">·</span>ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">79 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">80 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">142 B</span></div>
+    <div id="ctrlxdatalayer-_version.py"><span class="source">ctrlxdatalayer/_version.py</span>
+      <a class="anchor" href="#ctrlxdatalayer-_version.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 3 lines modified</td><td colspan="2">Offset 1, 3 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">&quot;&quot;&quot;version<span class="dp">·</span>info</td><td class="diffline">1 </td><td class="diffpresent">&quot;&quot;&quot;version<span class="dp">·</span>info</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">2 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>u&quot;2.<del>3</del>.0&quot;</td><td class="diffline">3 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>u&quot;2.<ins>4</ins>.0&quot;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.09 KB</span></div>
+    <div><span class="source">ctrlx_datalayer-2.3.0.dist-info/METADATA</span> vs.</div>
+    <div id="ctrlx_datalayer--.-.-.dist-info-METADATA"><span class="source">ctrlx_datalayer-2.4.0.dist-info/METADATA</span>
+      <a class="anchor" href="#ctrlx_datalayer--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 5% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ctrlx-datalayer</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ctrlx-datalayer</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.<del>3</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.<ins>4</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ctrlX<span class="dp">·</span>Data<span class="dp">·</span>Layer<span class="dp">·</span>API<span class="dp">·</span>for<span class="dp">·</span>Python</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>ctrlX<span class="dp">·</span>Data<span class="dp">·</span>Layer<span class="dp">·</span>API<span class="dp">·</span>for<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/boschrexroth/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/boschrexroth/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bosch<span class="dp">·</span>Rexroth<span class="dp">·</span>AG</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Bosch<span class="dp">·</span>Rexroth<span class="dp">·</span>AG</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>github@boschrexroth.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>github@boschrexroth.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>linux</td><td class="diffline">9 </td><td class="diffpresent">Platform:<span class="dp">·</span>linux</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 23, 16 lines modified</td><td colspan="2">Offset 23, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">##<span class="dp">·</span>Setup</td><td class="diffline">23 </td><td class="diffpresent">##<span class="dp">·</span>Setup</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>virtual<span class="dp">·</span>python<span class="dp">·</span>environment<span class="dp">·</span>and<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>packages<span class="dp">·</span>libzmq5<span class="dp">·</span>and<span class="dp">·</span>ctrlX<span class="dp">·</span>Data<span class="dp">·</span>Layer</td><td class="diffline">24 </td><td class="diffpresent">Set<span class="dp">·</span>up<span class="dp">·</span>a<span class="dp">·</span>virtual<span class="dp">·</span>python<span class="dp">·</span>environment<span class="dp">·</span>and<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>packages<span class="dp">·</span>libzmq5<span class="dp">·</span>and<span class="dp">·</span>ctrlX<span class="dp">·</span>Data<span class="dp">·</span>Layer</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">```bash</td><td class="diffline">25 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">sudo<span class="dp">·</span>apt-get<span class="dp">·</span>update<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>sudo<span class="dp">·</span>apt-get<span class="dp">·</span>-y<span class="dp">·</span>install<span class="dp">·</span>virtualenv<span class="dp">·</span>libzmq5</td><td class="diffline">26 </td><td class="diffpresent">sudo<span class="dp">·</span>apt-get<span class="dp">·</span>update<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>sudo<span class="dp">·</span>apt-get<span class="dp">·</span>-y<span class="dp">·</span>install<span class="dp">·</span>virtualenv<span class="dp">·</span>libzmq5</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">DATALAYER_DEB_VERSION=1.<del>9</del>.<del>1</del></td><td class="diffline">27 </td><td class="diffpresent">DATALAYER_DEB_VERSION=1.<ins>1</ins><ins>0</ins>.<ins>7</ins></td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">SDK_RELEASE_VERSION=1.<del>18</del>.0</td><td class="diffline">28 </td><td class="diffpresent">SDK_RELEASE_VERSION=1.<ins>20</ins>.0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">wget<span class="dp">·</span>--quiet<span class="dp">·</span>https://github.com/boschrexroth/ctrlx-automation-sdk/releases/download/${SDK_RELEASE_VERSION}/ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb<span class="dp">·</span>\</td><td class="diffline">29 </td><td class="diffpresent">wget<span class="dp">·</span>--quiet<span class="dp">·</span>https://github.com/boschrexroth/ctrlx-automation-sdk/releases/download/${SDK_RELEASE_VERSION}/ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&amp;&amp;<span class="dp">·</span>sudo<span class="dp">·</span>dpkg<span class="dp">·</span>--install<span class="dp">·</span>ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb<span class="dp">·</span>\</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&amp;&amp;<span class="dp">·</span>sudo<span class="dp">·</span>dpkg<span class="dp">·</span>--install<span class="dp">·</span>ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&amp;&amp;<span class="dp">·</span>rm<span class="dp">·</span>ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&amp;&amp;<span class="dp">·</span>rm<span class="dp">·</span>ctrlx-datalayer-${DATALAYER_DEB_VERSION}.deb</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">virtualenv<span class="dp">·</span>-p<span class="dp">·</span>python3<span class="dp">·</span>venv<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>source<span class="dp">·</span>venv/bin/activate</td><td class="diffline">32 </td><td class="diffpresent">virtualenv<span class="dp">·</span>-p<span class="dp">·</span>python3<span class="dp">·</span>venv<span class="dp">·</span>&amp;&amp;<span class="dp">·</span>source<span class="dp">·</span>venv/bin/activate</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">```</td><td class="diffline">33 </td><td class="diffpresent">```</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">161 B</span></div>
+    <div><span class="source">ctrlx_datalayer-2.3.0.dist-info/boschrexroth_tac_delivery.txt</span> vs.</div>
+    <div id="ctrlx_datalayer--.-.-.dist-info-boschrexroth_tac_delivery.txt"><span class="source">ctrlx_datalayer-2.4.0.dist-info/boschrexroth_tac_delivery.txt</span>
+      <a class="anchor" href="#ctrlx_datalayer--.-.-.dist-info-boschrexroth_tac_delivery.txt">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.46 KB</span></div>
+    <div><span class="source">ctrlx_datalayer-2.3.0.dist-info/RECORD</span> vs.</div>
+    <div id="ctrlx_datalayer--.-.-.dist-info-RECORD"><span class="source">ctrlx_datalayer-2.4.0.dist-info/RECORD</span>
+      <a class="anchor" href="#ctrlx_datalayer--.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 15% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">ctrlxdatalayer/__init__.py,sha256=4zCDeK5MPgNBN770brOoFQCM2bI6snJx3yhPXksuk20,422</td><td class="diffline">1 </td><td class="diffpresent">ctrlxdatalayer/__init__.py,sha256=4zCDeK5MPgNBN770brOoFQCM2bI6snJx3yhPXksuk20,422</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">ctrlxdatalayer/_version.py,sha256=<del>iun9aW_7vQz</del>1L<del>i</del><del>AQEXubEMh_x</del>m<del>S58BnuReUorkAeZIw</del>,47</td><td class="diffline">2 </td><td class="diffpresent">ctrlxdatalayer/_version.py,sha256=<ins>k</ins><ins>bY2Lik0J0Fb</ins>1L<ins>Svjzih7VFE0</ins>m<ins>gLSJqxw-A1Rq7G2lM</ins>,47</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">ctrlxdatalayer/bulk.py,sha256=9uI3xZmOQO7_rgvZf5GUKNP59xOqqaOMAfYvs4FUZQw,31027</td><td class="diffline">3 </td><td class="diffpresent">ctrlxdatalayer/bulk.py,sha256=9uI3xZmOQO7_rgvZf5GUKNP59xOqqaOMAfYvs4FUZQw,31027</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">ctrlxdatalayer/bulk_util.py,sha256=5SM26YSq4OTH-iCG6b268FPgTD3Wb9lEYfcd9VST5i4,6509</td><td class="diffline">4 </td><td class="diffpresent">ctrlxdatalayer/bulk_util.py,sha256=5SM26YSq4OTH-iCG6b268FPgTD3Wb9lEYfcd9VST5i4,6509</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">ctrlxdatalayer/clib.py,sha256=W1Tj-fKPfuzLT05VcUnbkf1QtRvup5Au9MnAHRmFHyM,532</td><td class="diffline">5 </td><td class="diffpresent">ctrlxdatalayer/clib.py,sha256=W1Tj-fKPfuzLT05VcUnbkf1QtRvup5Au9MnAHRmFHyM,532</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">ctrlxdatalayer/clib_bulk.py,sha256=99xCH7Wej7VpQxM0YutA8v846-2QpvkIFrUHIRxHnxM,9016</td><td class="diffline">6 </td><td class="diffpresent">ctrlxdatalayer/clib_bulk.py,sha256=99xCH7Wej7VpQxM0YutA8v846-2QpvkIFrUHIRxHnxM,9016</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">ctrlxdatalayer/clib_client.py,sha256=1RnF1SeMvVXfcm7N8XUv4AN_LJEemH5vlxcjUMa7i4c,12645</td><td class="diffline">7 </td><td class="diffpresent">ctrlxdatalayer/clib_client.py,sha256=1RnF1SeMvVXfcm7N8XUv4AN_LJEemH5vlxcjUMa7i4c,12645</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">ctrlxdatalayer/clib_converter.py,sha256=RGOezIRZAYBx_nu3P8jAflpFZYdEDCDLxIHM_qEiNUE,2504</td><td class="diffline">8 </td><td class="diffpresent">ctrlxdatalayer/clib_converter.py,sha256=RGOezIRZAYBx_nu3P8jAflpFZYdEDCDLxIHM_qEiNUE,2504</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">ctrlxdatalayer/clib_factory.py,sha256=AXK9VKFSfmI5_oWEoaTGYM09_iVbI3YeYr8uI2dUIcE,956</td><td class="diffline">9 </td><td class="diffpresent">ctrlxdatalayer/clib_factory.py,sha256=AXK9VKFSfmI5_oWEoaTGYM09_iVbI3YeYr8uI2dUIcE,956</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 18, 12 lines modified</td><td colspan="2">Offset 18, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">ctrlxdatalayer/provider.py,sha256=GR5FBS2D0o5hE6557EqI-jO_CaJeztynReHprbZxitI,5215</td><td class="diffline">18 </td><td class="diffpresent">ctrlxdatalayer/provider.py,sha256=GR5FBS2D0o5hE6557EqI-jO_CaJeztynReHprbZxitI,5215</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">ctrlxdatalayer/provider_node.py,sha256=b0CeARAdiJgEFvlzvWlG6A2IZbLhdUG3AeHrO0bm9uE,6286</td><td class="diffline">19 </td><td class="diffpresent">ctrlxdatalayer/provider_node.py,sha256=b0CeARAdiJgEFvlzvWlG6A2IZbLhdUG3AeHrO0bm9uE,6286</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">ctrlxdatalayer/subscription.py,sha256=hhl9N4YsBqgn-64l2Fxj_xLRV19kFd9gZE-DoKFf0Xk,4905</td><td class="diffline">20 </td><td class="diffpresent">ctrlxdatalayer/subscription.py,sha256=hhl9N4YsBqgn-64l2Fxj_xLRV19kFd9gZE-DoKFf0Xk,4905</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">ctrlxdatalayer/subscription_async.py,sha256=_unuHdt4OJFkp6nsQBo-FfvF3g0vuZgl5VHWsKVI3JM,10476</td><td class="diffline">21 </td><td class="diffpresent">ctrlxdatalayer/subscription_async.py,sha256=_unuHdt4OJFkp6nsQBo-FfvF3g0vuZgl5VHWsKVI3JM,10476</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">ctrlxdatalayer/subscription_sync.py,sha256=UWK8t9-qvEhs9c22YEAyJM-GH20kxCax31xzCbJ-grE,6425</td><td class="diffline">22 </td><td class="diffpresent">ctrlxdatalayer/subscription_sync.py,sha256=UWK8t9-qvEhs9c22YEAyJM-GH20kxCax31xzCbJ-grE,6425</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">ctrlxdatalayer/system.py,sha256=VqHf8eUxVksKSIkfjvDGDupZv3DgjgA5T3OBossurxU,2974</td><td class="diffline">23 </td><td class="diffpresent">ctrlxdatalayer/system.py,sha256=VqHf8eUxVksKSIkfjvDGDupZv3DgjgA5T3OBossurxU,2974</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">ctrlxdatalayer/variant.py,sha256=Q3b3yJJybIuM5VaKvujzhzY6O5VGkyW0_UYbzJYMoos,31102</td><td class="diffline">24 </td><td class="diffpresent">ctrlxdatalayer/variant.py,sha256=Q3b3yJJybIuM5VaKvujzhzY6O5VGkyW0_UYbzJYMoos,31102</td></tr>
+<tr class="diffdeleted"><td class="diffline">25 </td><td class="diffpresent">ctrlx_datalayer-2.3.0.dist-info/METADATA,sha256=laNU35hxf1bJRNy3ydsbGHvLM0sMg7qEcMLJaHDJ2So,1832</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">ctrlx_datalayer-2.<del>3</del>.0.dist-info/<del>WHEEL</del>,sha256=<del>g4nMs7d-Xl9-xC9XovU</del>r<del>sDHGXt-FT0E17Yqo9</del>2<del>DEfvY,92</del></td><td class="diffline">25 </td><td class="diffpresent">ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/<ins>MET</ins><ins>ADATA</ins>,sha256=<ins>X</ins><ins>cyVdZKlcUNZmH3-g5jV</ins>r<ins>Y</ins><ins>Ufvqw3d4V5U-vCmtw</ins>2<ins>XGw,1833</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">ctrlx_datalayer-2.4.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">ctrlx_datalayer-2.<del>3</del>.0.dist-info/boschrexroth_tac_delivery.txt,sha256=MR-5VNPCreFJLRXoDmeU_8_2coO2M5agTjvOUNV4PX8,45758</td><td class="diffline">27 </td><td class="diffpresent">ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/boschrexroth_tac_delivery.txt,sha256=MR-5VNPCreFJLRXoDmeU_8_2coO2M5agTjvOUNV4PX8,45758</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">ctrlx_datalayer-2.<del>3</del>.0.dist-info/top_level.txt,sha256=Q65Umx4t7jgrSO3dD4plf1Cg-NfUseVFXsyZ67BCfCc,15</td><td class="diffline">28 </td><td class="diffpresent">ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/top_level.txt,sha256=Q65Umx4t7jgrSO3dD4plf1Cg-NfUseVFXsyZ67BCfCc,15</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">ctrlx_datalayer-2.<del>3</del>.0.dist-info/RECORD,,</td><td class="diffline">29 </td><td class="diffpresent">ctrlx_datalayer-2.<ins>4</ins>.0.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

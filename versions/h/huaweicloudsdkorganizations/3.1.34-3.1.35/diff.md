@@ -1,0 +1,408 @@
+# Comparing `tmp/huaweicloudsdkorganizations-3.1.34-py2.py3-none-any.whl.zip` & `tmp/huaweicloudsdkorganizations-3.1.35-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,153 +1,153 @@
+-Zip file size: 212429 bytes, number of entries: 151
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/__init__.py
+--rw-------  2.0 unx    14138 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/__init__.py
+--rw-------  2.0 unx   120217 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/organizations_async_client.py
+--rw-------  2.0 unx   119799 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/organizations_client.py
+--rw-------  2.0 unx    13931 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/__init__.py
+--rw-------  2.0 unx     3332 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/accept_handshake_request.py
+--rw-------  2.0 unx     3352 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/accept_handshake_response.py
+--rw-------  2.0 unx     5892 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/account_dto.py
+--rw-------  2.0 unx     4021 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/attach_policy_request.py
+--rw-------  2.0 unx     2442 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/attach_policy_response.py
+--rw-------  2.0 unx     3332 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/cancel_handshake_request.py
+--rw-------  2.0 unx     3352 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/cancel_handshake_response.py
+--rw-------  2.0 unx     8811 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_account_status_dto.py
+--rw-------  2.0 unx     2345 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_organization_request.py
+--rw-------  2.0 unx     3457 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_organization_response.py
+--rw-------  2.0 unx     5104 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_organizational_unit_req_body.py
+--rw-------  2.0 unx     3297 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_organizational_unit_request.py
+--rw-------  2.0 unx     3690 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_organizational_unit_response.py
+--rw-------  2.0 unx     6407 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_policy_req_body.py
+--rw-------  2.0 unx     4205 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_policy_request.py
+--rw-------  2.0 unx     3247 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_policy_response.py
+--rw-------  2.0 unx     5368 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_tag_resource_request.py
+--rw-------  2.0 unx     2462 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/create_tag_resource_response.py
+--rw-------  2.0 unx     3339 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/decline_handshake_request.py
+--rw-------  2.0 unx     3360 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/decline_handshake_response.py
+--rw-------  2.0 unx     7943 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delegated_administrator_dto.py
+--rw-------  2.0 unx     4219 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delegated_administrator_req_body.py
+--rw-------  2.0 unx     4428 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delegated_service_dto.py
+--rw-------  2.0 unx     2345 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_organization_request.py
+--rw-------  2.0 unx     2466 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_organization_response.py
+--rw-------  2.0 unx     3555 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_organizational_unit_request.py
+--rw-------  2.0 unx     2490 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_organizational_unit_response.py
+--rw-------  2.0 unx     3203 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_policy_request.py
+--rw-------  2.0 unx     2442 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_policy_response.py
+--rw-------  2.0 unx     5368 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_tag_resource_request.py
+--rw-------  2.0 unx     2462 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/delete_tag_resource_response.py
+--rw-------  2.0 unx     3353 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/deregister_delegated_administrator_request.py
+--rw-------  2.0 unx     2522 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/deregister_delegated_administrator_response.py
+--rw-------  2.0 unx     4021 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/detach_policy_request.py
+--rw-------  2.0 unx     2442 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/detach_policy_response.py
+--rw-------  2.0 unx     3185 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/disable_policy_type_request.py
+--rw-------  2.0 unx     3233 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/disable_policy_type_response.py
+--rw-------  2.0 unx     3233 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/disable_trusted_service_request.py
+--rw-------  2.0 unx     2478 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/disable_trusted_service_response.py
+--rw-------  2.0 unx     3177 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/enable_policy_type_request.py
+--rw-------  2.0 unx     3225 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/enable_policy_type_response.py
+--rw-------  2.0 unx     3225 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/enable_trusted_service_request.py
+--rw-------  2.0 unx     2474 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/enable_trusted_service_response.py
+--rw-------  2.0 unx     4329 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/entity_dto.py
+--rw-------  2.0 unx    11306 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/handshake_dto.py
+--rw-------  2.0 unx     4821 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/invite_account_req_body.py
+--rw-------  2.0 unx     3165 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/invite_account_request.py
+--rw-------  2.0 unx     3336 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/invite_account_response.py
+--rw-------  2.0 unx     2342 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/leave_organization_request.py
+--rw-------  2.0 unx     2462 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/leave_organization_response.py
+--rw-------  2.0 unx     4725 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_accounts_request.py
+--rw-------  2.0 unx     4304 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_accounts_response.py
+--rw-------  2.0 unx     5058 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_create_account_statuses_request.py
+--rw-------  2.0 unx     4925 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_create_account_statuses_response.py
+--rw-------  2.0 unx     5020 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_delegated_administrators_request.py
+--rw-------  2.0 unx     4930 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_delegated_administrators_response.py
+--rw-------  2.0 unx     4763 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_delegated_services_request.py
+--rw-------  2.0 unx     4714 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_delegated_services_response.py
+--rw-------  2.0 unx     4804 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_entities_for_policy_request.py
+--rw-------  2.0 unx     4804 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_entities_for_policy_response.py
+--rw-------  2.0 unx     5634 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_entities_request.py
+--rw-------  2.0 unx     4372 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_entities_response.py
+--rw-------  2.0 unx     3815 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_handshakes_request.py
+--rw-------  2.0 unx     4643 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_handshakes_response.py
+--rw-------  2.0 unx     4890 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_organizational_units_request.py
+--rw-------  2.0 unx     4738 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_organizational_units_response.py
+--rw-------  2.0 unx     5966 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_policies_request.py
+--rw-------  2.0 unx     4328 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_policies_response.py
+--rw-------  2.0 unx     3903 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_received_handshakes_request.py
+--rw-------  2.0 unx     4739 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_received_handshakes_response.py
+--rw-------  2.0 unx     6007 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_resource_instances_request.py
+--rw-------  2.0 unx     4380 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_resource_instances_response.py
+--rw-------  2.0 unx     3547 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_resource_tags_request.py
+--rw-------  2.0 unx     3249 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_resource_tags_response.py
+--rw-------  2.0 unx     3760 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_roots_request.py
+--rw-------  2.0 unx     4205 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_roots_response.py
+--rw-------  2.0 unx     2327 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_services_request.py
+--rw-------  2.0 unx     3173 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_services_response.py
+--rw-------  2.0 unx     2354 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tag_policy_services_request.py
+--rw-------  2.0 unx     3429 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tag_policy_services_response.py
+--rw-------  2.0 unx     6008 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tag_resources_request.py
+--rw-------  2.0 unx     4208 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tag_resources_response.py
+--rw-------  2.0 unx     4845 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tags_for_resource_request.py
+--rw-------  2.0 unx     4244 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_tags_for_resource_response.py
+--rw-------  2.0 unx     3870 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_trusted_services_request.py
+--rw-------  2.0 unx     4654 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/list_trusted_services_response.py
+--rw-------  2.0 unx     3699 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/match.py
+--rw-------  2.0 unx     4540 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/move_account_req_body.py
+--rw-------  2.0 unx     3972 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/move_account_request.py
+--rw-------  2.0 unx     2438 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/move_account_response.py
+--rw-------  2.0 unx     6610 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/organization_dto.py
+--rw-------  2.0 unx     5263 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/organizational_unit_dto.py
+--rw-------  2.0 unx     4666 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/page_info_dto.py
+--rw-------  2.0 unx     3923 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/policy_dto.py
+--rw-------  2.0 unx     7072 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/policy_summary_dto.py
+--rw-------  2.0 unx     3189 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/policy_tach_req_body.py
+--rw-------  2.0 unx     4018 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/policy_type_req_body.py
+--rw-------  2.0 unx     4604 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/policy_type_summary_dto.py
+--rw-------  2.0 unx     3337 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/register_delegated_administrator_request.py
+--rw-------  2.0 unx     2514 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/register_delegated_administrator_response.py
+--rw-------  2.0 unx     3169 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/remove_account_request.py
+--rw-------  2.0 unx     2446 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/remove_account_response.py
+--rw-------  2.0 unx     4688 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/resource_dto.py
+--rw-------  2.0 unx     6340 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/resource_instance_req_body.py
+--rw-------  2.0 unx     6106 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/root_dto.py
+--rw-------  2.0 unx     3155 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_account_request.py
+--rw-------  2.0 unx     3266 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_account_response.py
+--rw-------  2.0 unx     3586 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_create_account_status_request.py
+--rw-------  2.0 unx     3732 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_create_account_status_response.py
+--rw-------  2.0 unx     4273 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_effective_policies_request.py
+--rw-------  2.0 unx     6436 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_effective_policies_response.py
+--rw-------  2.0 unx     3318 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_handshake_request.py
+--rw-------  2.0 unx     3336 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_handshake_response.py
+--rw-------  2.0 unx     2339 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_organization_request.py
+--rw-------  2.0 unx     3441 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_organization_response.py
+--rw-------  2.0 unx     3541 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_organizational_unit_request.py
+--rw-------  2.0 unx     3674 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_organizational_unit_response.py
+--rw-------  2.0 unx     4233 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_policy_request.py
+--rw-------  2.0 unx     3231 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_policy_response.py
+--rw-------  2.0 unx     4529 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_resource_instances_count_request.py
+--rw-------  2.0 unx     3395 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/show_resource_instances_count_response.py
+--rw-------  2.0 unx     3869 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tag_dto.py
+--rw-------  2.0 unx     4907 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tag_policy_service_dto.py
+--rw-------  2.0 unx     3200 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tag_resource_req_body.py
+--rw-------  2.0 unx     4084 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tag_resource_request.py
+--rw-------  2.0 unx     2438 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tag_resource_response.py
+--rw-------  2.0 unx     3779 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/tags_dto.py
+--rw-------  2.0 unx     4073 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/target_dto.py
+--rw-------  2.0 unx     4128 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/trusted_service_dto.py
+--rw-------  2.0 unx     3288 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/trusted_service_req_body.py
+--rw-------  2.0 unx     3024 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/untag_resource_req_body.py
+--rw-------  2.0 unx     4116 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/untag_resource_request.py
+--rw-------  2.0 unx     2446 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/untag_resource_response.py
+--rw-------  2.0 unx     3126 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_organizational_unit_req_body.py
+--rw-------  2.0 unx     4489 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_organizational_unit_request.py
+--rw-------  2.0 unx     3690 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_organizational_unit_response.py
+--rw-------  2.0 unx     4783 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_policy_req_body.py
+--rw-------  2.0 unx     5081 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_policy_request.py
+--rw-------  2.0 unx     3247 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/model/update_policy_response.py
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/region/__init__.py
+--rw-------  2.0 unx      921 b- defN 23-Mar-30 08:36 huaweicloudsdkorganizations/v1/region/organizations_region.py
+--rwxrwxrwx  2.0 unx      604 b- defN 23-Mar-30 08:39 huaweicloudsdkorganizations-3.1.34.dist-info/LICENSE
+--rw-------  2.0 unx     1166 b- defN 23-Mar-30 08:39 huaweicloudsdkorganizations-3.1.34.dist-info/METADATA
+--rw-------  2.0 unx      110 b- defN 23-Mar-30 08:39 huaweicloudsdkorganizations-3.1.34.dist-info/WHEEL
+--rw-------  2.0 unx       28 b- defN 23-Mar-30 08:39 huaweicloudsdkorganizations-3.1.34.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx    18276 b- defN 23-Mar-30 08:39 huaweicloudsdkorganizations-3.1.34.dist-info/RECORD
+-151 files, 848437 bytes uncompressed, 181477 bytes compressed:  78.6%
++Zip file size: 212428 bytes, number of entries: 151
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/__init__.py
++-rw-------  2.0 unx    14138 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/__init__.py
++-rw-------  2.0 unx   120217 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/organizations_async_client.py
++-rw-------  2.0 unx   119799 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/organizations_client.py
++-rw-------  2.0 unx    13931 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/__init__.py
++-rw-------  2.0 unx     3332 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/accept_handshake_request.py
++-rw-------  2.0 unx     3352 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/accept_handshake_response.py
++-rw-------  2.0 unx     5892 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/account_dto.py
++-rw-------  2.0 unx     4021 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/attach_policy_request.py
++-rw-------  2.0 unx     2442 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/attach_policy_response.py
++-rw-------  2.0 unx     3332 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/cancel_handshake_request.py
++-rw-------  2.0 unx     3352 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/cancel_handshake_response.py
++-rw-------  2.0 unx     8811 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_account_status_dto.py
++-rw-------  2.0 unx     2345 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_organization_request.py
++-rw-------  2.0 unx     3457 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_organization_response.py
++-rw-------  2.0 unx     5104 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_organizational_unit_req_body.py
++-rw-------  2.0 unx     3297 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_organizational_unit_request.py
++-rw-------  2.0 unx     3690 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_organizational_unit_response.py
++-rw-------  2.0 unx     6407 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_policy_req_body.py
++-rw-------  2.0 unx     4205 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_policy_request.py
++-rw-------  2.0 unx     3247 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_policy_response.py
++-rw-------  2.0 unx     5368 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_tag_resource_request.py
++-rw-------  2.0 unx     2462 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/create_tag_resource_response.py
++-rw-------  2.0 unx     3339 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/decline_handshake_request.py
++-rw-------  2.0 unx     3360 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/decline_handshake_response.py
++-rw-------  2.0 unx     7943 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delegated_administrator_dto.py
++-rw-------  2.0 unx     4219 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delegated_administrator_req_body.py
++-rw-------  2.0 unx     4428 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delegated_service_dto.py
++-rw-------  2.0 unx     2345 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_organization_request.py
++-rw-------  2.0 unx     2466 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_organization_response.py
++-rw-------  2.0 unx     3555 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_organizational_unit_request.py
++-rw-------  2.0 unx     2490 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_organizational_unit_response.py
++-rw-------  2.0 unx     3203 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_policy_request.py
++-rw-------  2.0 unx     2442 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_policy_response.py
++-rw-------  2.0 unx     5368 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_tag_resource_request.py
++-rw-------  2.0 unx     2462 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/delete_tag_resource_response.py
++-rw-------  2.0 unx     3353 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/deregister_delegated_administrator_request.py
++-rw-------  2.0 unx     2522 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/deregister_delegated_administrator_response.py
++-rw-------  2.0 unx     4021 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/detach_policy_request.py
++-rw-------  2.0 unx     2442 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/detach_policy_response.py
++-rw-------  2.0 unx     3185 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/disable_policy_type_request.py
++-rw-------  2.0 unx     3233 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/disable_policy_type_response.py
++-rw-------  2.0 unx     3233 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/disable_trusted_service_request.py
++-rw-------  2.0 unx     2478 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/disable_trusted_service_response.py
++-rw-------  2.0 unx     3177 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/enable_policy_type_request.py
++-rw-------  2.0 unx     3225 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/enable_policy_type_response.py
++-rw-------  2.0 unx     3225 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/enable_trusted_service_request.py
++-rw-------  2.0 unx     2474 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/enable_trusted_service_response.py
++-rw-------  2.0 unx     4329 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/entity_dto.py
++-rw-------  2.0 unx    11306 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/handshake_dto.py
++-rw-------  2.0 unx     4821 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/invite_account_req_body.py
++-rw-------  2.0 unx     3165 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/invite_account_request.py
++-rw-------  2.0 unx     3336 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/invite_account_response.py
++-rw-------  2.0 unx     2342 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/leave_organization_request.py
++-rw-------  2.0 unx     2462 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/leave_organization_response.py
++-rw-------  2.0 unx     4725 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_accounts_request.py
++-rw-------  2.0 unx     4304 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_accounts_response.py
++-rw-------  2.0 unx     5058 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_create_account_statuses_request.py
++-rw-------  2.0 unx     4925 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_create_account_statuses_response.py
++-rw-------  2.0 unx     5020 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_delegated_administrators_request.py
++-rw-------  2.0 unx     4930 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_delegated_administrators_response.py
++-rw-------  2.0 unx     4763 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_delegated_services_request.py
++-rw-------  2.0 unx     4714 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_delegated_services_response.py
++-rw-------  2.0 unx     4804 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_entities_for_policy_request.py
++-rw-------  2.0 unx     4804 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_entities_for_policy_response.py
++-rw-------  2.0 unx     5634 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_entities_request.py
++-rw-------  2.0 unx     4372 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_entities_response.py
++-rw-------  2.0 unx     3815 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_handshakes_request.py
++-rw-------  2.0 unx     4643 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_handshakes_response.py
++-rw-------  2.0 unx     4890 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_organizational_units_request.py
++-rw-------  2.0 unx     4738 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_organizational_units_response.py
++-rw-------  2.0 unx     5966 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_policies_request.py
++-rw-------  2.0 unx     4328 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_policies_response.py
++-rw-------  2.0 unx     3903 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_received_handshakes_request.py
++-rw-------  2.0 unx     4739 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_received_handshakes_response.py
++-rw-------  2.0 unx     6007 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_resource_instances_request.py
++-rw-------  2.0 unx     4380 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_resource_instances_response.py
++-rw-------  2.0 unx     3547 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_resource_tags_request.py
++-rw-------  2.0 unx     3249 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_resource_tags_response.py
++-rw-------  2.0 unx     3760 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_roots_request.py
++-rw-------  2.0 unx     4205 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_roots_response.py
++-rw-------  2.0 unx     2327 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_services_request.py
++-rw-------  2.0 unx     3173 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_services_response.py
++-rw-------  2.0 unx     2354 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tag_policy_services_request.py
++-rw-------  2.0 unx     3429 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tag_policy_services_response.py
++-rw-------  2.0 unx     6008 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tag_resources_request.py
++-rw-------  2.0 unx     4208 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tag_resources_response.py
++-rw-------  2.0 unx     4845 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tags_for_resource_request.py
++-rw-------  2.0 unx     4244 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_tags_for_resource_response.py
++-rw-------  2.0 unx     3870 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_trusted_services_request.py
++-rw-------  2.0 unx     4654 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/list_trusted_services_response.py
++-rw-------  2.0 unx     3699 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/match.py
++-rw-------  2.0 unx     4540 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/move_account_req_body.py
++-rw-------  2.0 unx     3972 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/move_account_request.py
++-rw-------  2.0 unx     2438 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/move_account_response.py
++-rw-------  2.0 unx     6610 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/organization_dto.py
++-rw-------  2.0 unx     5263 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/organizational_unit_dto.py
++-rw-------  2.0 unx     4666 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/page_info_dto.py
++-rw-------  2.0 unx     3923 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/policy_dto.py
++-rw-------  2.0 unx     7072 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/policy_summary_dto.py
++-rw-------  2.0 unx     3189 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/policy_tach_req_body.py
++-rw-------  2.0 unx     4018 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/policy_type_req_body.py
++-rw-------  2.0 unx     4604 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/policy_type_summary_dto.py
++-rw-------  2.0 unx     3337 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/register_delegated_administrator_request.py
++-rw-------  2.0 unx     2514 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/register_delegated_administrator_response.py
++-rw-------  2.0 unx     3169 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/remove_account_request.py
++-rw-------  2.0 unx     2446 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/remove_account_response.py
++-rw-------  2.0 unx     4688 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/resource_dto.py
++-rw-------  2.0 unx     6340 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/resource_instance_req_body.py
++-rw-------  2.0 unx     6106 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/root_dto.py
++-rw-------  2.0 unx     3155 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_account_request.py
++-rw-------  2.0 unx     3266 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_account_response.py
++-rw-------  2.0 unx     3586 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_create_account_status_request.py
++-rw-------  2.0 unx     3732 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_create_account_status_response.py
++-rw-------  2.0 unx     4273 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_effective_policies_request.py
++-rw-------  2.0 unx     6436 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_effective_policies_response.py
++-rw-------  2.0 unx     3318 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_handshake_request.py
++-rw-------  2.0 unx     3336 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_handshake_response.py
++-rw-------  2.0 unx     2339 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_organization_request.py
++-rw-------  2.0 unx     3441 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_organization_response.py
++-rw-------  2.0 unx     3541 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_organizational_unit_request.py
++-rw-------  2.0 unx     3674 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_organizational_unit_response.py
++-rw-------  2.0 unx     4233 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_policy_request.py
++-rw-------  2.0 unx     3231 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_policy_response.py
++-rw-------  2.0 unx     4529 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_resource_instances_count_request.py
++-rw-------  2.0 unx     3395 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/show_resource_instances_count_response.py
++-rw-------  2.0 unx     3869 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tag_dto.py
++-rw-------  2.0 unx     4907 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tag_policy_service_dto.py
++-rw-------  2.0 unx     3200 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tag_resource_req_body.py
++-rw-------  2.0 unx     4084 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tag_resource_request.py
++-rw-------  2.0 unx     2438 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tag_resource_response.py
++-rw-------  2.0 unx     3779 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/tags_dto.py
++-rw-------  2.0 unx     4073 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/target_dto.py
++-rw-------  2.0 unx     4128 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/trusted_service_dto.py
++-rw-------  2.0 unx     3288 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/trusted_service_req_body.py
++-rw-------  2.0 unx     3024 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/untag_resource_req_body.py
++-rw-------  2.0 unx     4116 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/untag_resource_request.py
++-rw-------  2.0 unx     2446 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/untag_resource_response.py
++-rw-------  2.0 unx     3126 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_organizational_unit_req_body.py
++-rw-------  2.0 unx     4489 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_organizational_unit_request.py
++-rw-------  2.0 unx     3690 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_organizational_unit_response.py
++-rw-------  2.0 unx     4783 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_policy_req_body.py
++-rw-------  2.0 unx     5081 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_policy_request.py
++-rw-------  2.0 unx     3247 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/model/update_policy_response.py
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/region/__init__.py
++-rw-------  2.0 unx      921 b- defN 23-Apr-06 08:29 huaweicloudsdkorganizations/v1/region/organizations_region.py
++-rwxrwxrwx  2.0 unx      604 b- defN 23-Apr-06 08:31 huaweicloudsdkorganizations-3.1.35.dist-info/LICENSE
++-rw-------  2.0 unx     1166 b- defN 23-Apr-06 08:31 huaweicloudsdkorganizations-3.1.35.dist-info/METADATA
++-rw-------  2.0 unx      110 b- defN 23-Apr-06 08:31 huaweicloudsdkorganizations-3.1.35.dist-info/WHEEL
++-rw-------  2.0 unx       28 b- defN 23-Apr-06 08:31 huaweicloudsdkorganizations-3.1.35.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx    18276 b- defN 23-Apr-06 08:31 huaweicloudsdkorganizations-3.1.35.dist-info/RECORD
++151 files, 848437 bytes uncompressed, 181476 bytes compressed:  78.6%
+```
+
+## zipnote {}
+
+```diff
+@@ -432,23 +432,23 @@
+ 
+ Filename: huaweicloudsdkorganizations/v1/region/__init__.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkorganizations/v1/region/organizations_region.py
+ Comment: 
+ 
+-Filename: huaweicloudsdkorganizations-3.1.34.dist-info/LICENSE
++Filename: huaweicloudsdkorganizations-3.1.35.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: huaweicloudsdkorganizations-3.1.34.dist-info/METADATA
++Filename: huaweicloudsdkorganizations-3.1.35.dist-info/METADATA
+ Comment: 
+ 
+-Filename: huaweicloudsdkorganizations-3.1.34.dist-info/WHEEL
++Filename: huaweicloudsdkorganizations-3.1.35.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: huaweicloudsdkorganizations-3.1.34.dist-info/top_level.txt
++Filename: huaweicloudsdkorganizations-3.1.35.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: huaweicloudsdkorganizations-3.1.34.dist-info/RECORD
++Filename: huaweicloudsdkorganizations-3.1.35.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `huaweicloudsdkorganizations-3.1.34.dist-info/LICENSE` & `huaweicloudsdkorganizations-3.1.35.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `huaweicloudsdkorganizations-3.1.34.dist-info/METADATA` & `huaweicloudsdkorganizations-3.1.35.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: huaweicloudsdkorganizations
+-Version: 3.1.34
++Version: 3.1.35
+ Summary: Organizations
+ Home-page: https://github.com/huaweicloud/huaweicloud-sdk-python-v3
+ Author: HuaweiCloud SDK
+ Author-email: hwcloudsdk@huawei.com
+ License: Apache LICENSE 2.0
+ Keywords: huaweicloud,sdk,Organizations
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -18,10 +18,10 @@
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Topic :: Software Development
+ Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+-Requires-Dist: huaweicloudsdkcore (>=3.1.34)
++Requires-Dist: huaweicloudsdkcore (>=3.1.35)
+ 
+ See detailed information in [huaweicloud-sdk-python-v3](https://github.com/huaweicloud/huaweicloud-sdk-python-v3).
+```
+
+## Comparing `huaweicloudsdkorganizations-3.1.34.dist-info/RECORD` & `huaweicloudsdkorganizations-3.1.35.dist-info/RECORD`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -140,12 +140,12 @@
+ huaweicloudsdkorganizations/v1/model/update_organizational_unit_request.py,sha256=kujKJmoPtxZL_sniV_mom2amWTU_RfIM8TWI30fPczQ,4489
+ huaweicloudsdkorganizations/v1/model/update_organizational_unit_response.py,sha256=3vos586sOzZrqIUgSsA4oDzHxdE3tcRmf4pKMnzAqVk,3690
+ huaweicloudsdkorganizations/v1/model/update_policy_req_body.py,sha256=9l40tpTKKe6T1P_fBQRRuhFfhmMLcZqP7VJADm82Pjo,4783
+ huaweicloudsdkorganizations/v1/model/update_policy_request.py,sha256=c0c9pGI96GHljO52AeLRzCU78ZMnZcGY-f2sOYQF3Oc,5081
+ huaweicloudsdkorganizations/v1/model/update_policy_response.py,sha256=NoWPouaBENhDeLc3SeYVxpT4FTNFffNPFjkfsFrV_YY,3247
+ huaweicloudsdkorganizations/v1/region/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ huaweicloudsdkorganizations/v1/region/organizations_region.py,sha256=gt6XRFKYBN_52PVv4xC7YHcYpUb_HPWYjdnaMljil7I,921
+-huaweicloudsdkorganizations-3.1.34.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
+-huaweicloudsdkorganizations-3.1.34.dist-info/METADATA,sha256=1bSaYMowk6FJX8n92FQ9cKYxbSrOIP4dEL6XDWaKC6A,1166
+-huaweicloudsdkorganizations-3.1.34.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-huaweicloudsdkorganizations-3.1.34.dist-info/top_level.txt,sha256=yQyMlGpva_ujvDliQfrVEvNBGtc8h4PyCfFMkhHcPlQ,28
+-huaweicloudsdkorganizations-3.1.34.dist-info/RECORD,,
++huaweicloudsdkorganizations-3.1.35.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
++huaweicloudsdkorganizations-3.1.35.dist-info/METADATA,sha256=sVpF2M1e02F_2h5GCTUe1l_RwSeQ7_-d5DrPwInif98,1166
++huaweicloudsdkorganizations-3.1.35.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
++huaweicloudsdkorganizations-3.1.35.dist-info/top_level.txt,sha256=yQyMlGpva_ujvDliQfrVEvNBGtc8h4PyCfFMkhHcPlQ,28
++huaweicloudsdkorganizations-3.1.35.dist-info/RECORD,,
+```
+

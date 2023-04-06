@@ -1,0 +1,2718 @@
+# Comparing `tmp/acconeer-exptool-6.0.1.tar.gz` & `tmp/acconeer-exptool-6.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "acconeer-exptool-6.0.1.tar", last modified: Tue Apr  4 09:52:25 2023, max compression
++gzip compressed data, was "acconeer-exptool-6.0.4.tar", last modified: Thu Apr  6 09:52:44 2023, max compression
+```
+
+## Comparing `acconeer-exptool-6.0.1.tar` & `acconeer-exptool-6.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,595 +1,595 @@
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       91 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/.gitattributes
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.792990 acconeer-exptool-6.0.1/.github/
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.796990 acconeer-exptool-6.0.1/.github/ISSUE_TEMPLATE/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      877 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/.github/ISSUE_TEMPLATE/bug_report.md
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      368 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/.gitignore
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      158 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/.readthedocs.yaml
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12929 2023-04-04 09:46:22.000000 acconeer-exptool-6.0.1/CHANGELOG.md
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13663 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/Jenkinsfile
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1881 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/LICENSE.md
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      217 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/MANIFEST.in
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8990 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/PKG-INFO
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7948 2023-04-04 08:06:36.000000 acconeer-exptool-6.0.1/README.md
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       73 2023-04-04 09:46:22.000000 acconeer-exptool-6.0.1/UNRELEASED_CHANGELOG.md
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/docker/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1865 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/docker/Dockerfile
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       82 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/docker/requirements-dev.txt
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1604 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/dodo.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.792990 acconeer-exptool-6.0.1/examples/
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a111/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3247 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/basic.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1819 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/basic_continuous.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2657 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/load_record.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1273 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/load_record_h5.m
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a111/plotting/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1999 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/plotting/plot_with_matplotlib.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2551 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/plotting/plot_with_pyqtgraph.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a111/record_data/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1156 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/record_data/barebones.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2541 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/record_data/long_duration_split_files.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1958 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/record_data/with_cli.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a111/services/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2251 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/services/envelope.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3013 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/services/iq.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2277 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/services/power_bins.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2861 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/services/sparse.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a111/utils/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      802 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/utils/ping.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      805 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a111/utils/test_throughput.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1222 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/basic.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/bilateration/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8174 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/bilateration/bilaterator.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/breathing/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6340 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/breathing/breathing.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/distance/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4522 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/distance/detector.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5053 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/distance/processor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      776 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/extended_config.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1518 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a121/load_record.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1405 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/examples/a121/load_record_h5.m
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/phase_tracking/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5806 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/phase_tracking/phase_tracking.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4538 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/plot.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/presence/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11241 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/presence/detector.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11026 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/presence/processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/record_data/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      921 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/record_data/barebones.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1092 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/record_data/with_cli.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1140 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/reuse_calibration.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/smart_presence/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10430 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/smart_presence/processor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     9497 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/smart_presence/ref_app.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4253 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/stress.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      946 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/subsweeps.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/surface_velocity/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8536 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/surface_velocity/example_app.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8910 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/surface_velocity/processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/touchless_button/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3927 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/touchless_button/processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/examples/a121/vibration/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4410 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/examples/a121/vibration/vibration.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/gui/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1254 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/gui/main.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7005 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/noxfile.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/portable/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       27 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/.gitignore
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1571 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/make.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/portable/package/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      108 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/package/cmd_with_path.bat
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      346 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/package/run_app.bat
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/portable/package/tools/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      989 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/package/tools/update.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      168 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/portable/package/update.bat
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2515 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/pyproject.toml
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2429 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/setup.cfg
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.796990 acconeer-exptool-6.0.1/src/
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.792990 acconeer-exptool-6.0.1/src/acconeer/
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/src/acconeer/exptool/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      295 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3212 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_bs_thread.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/src/acconeer/exptool/_pyusb/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      100 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_pyusb/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5890 2023-01-24 10:54:24.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_pyusb/pyusbcomm.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15542 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/configbase.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15673 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/qtpidgets.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.800990 acconeer-exptool-6.0.1/src/acconeer/exptool/_tests/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_tests/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4259 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_tests/test_rig.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)       22 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_version.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1071 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/LICENSE
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      190 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2847 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6837 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/usb_cdc.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2021 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusb.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3466 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbclasses.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      231 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusberror.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10029 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbpy.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12307 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbutils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      438 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/__init__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      119 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7940 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5916 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5513 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/client_factory.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      517 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/common.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/json/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/json/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18330 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/json/client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14209 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/links.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/mock/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/mock/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7621 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/mock/client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1496 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/multiwrap.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    25124 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/client.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/data/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/data/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8068 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/data/regmap.yaml
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6351 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/protocol.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9853 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/regmap.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7176 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_conf_to_rss_sdk.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    28007 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_configs.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      587 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_modes.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3710 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      242 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/__init__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_base/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2708 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_base/calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      860 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_base/module_info.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1695 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_standalone_main.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      538 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7469 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4554 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      618 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6054 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/constants.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5308 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      552 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11319 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/constants.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4931 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.804990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      948 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21416 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2204 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6126 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      862 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3943 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1517 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5280 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      565 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1985 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3928 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      939 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    27784 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9166 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      104 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/constants.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    16847 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      890 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9162 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8503 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      110 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      576 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2599 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4172 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       99 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      612 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      175 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1400 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      577 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15250 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13885 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      917 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14079 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10519 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      615 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10381 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4623 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      577 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2880 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5079 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.808990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      552 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1341 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4454 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      557 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5185 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5472 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      824 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12380 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      186 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/constants.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7812 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/ui.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      840 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10409 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1517 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3125 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/ui.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2560 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      545 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4662 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6099 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/ui.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9009 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a111/recording.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1136 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1790 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_cli.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      989 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/__init__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      671 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/__init__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      329 2023-02-08 08:37:09.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4195 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/config_enums.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22033 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/sensor_config.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10267 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/session_config.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11137 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/subsweep_config.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1035 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/validation_error.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      592 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8723 2023-04-04 08:04:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/client_info.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4798 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/metadata.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4585 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/record.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2192 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/result.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1351 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/sensor_calibration.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2906 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/server_info.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/server_log_message.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2189 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/stacked_results.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1675 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/utils.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      144 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/dtypes.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      130 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      931 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/link.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      822 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/recorder.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.812990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      401 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/__init__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      439 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6962 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/client.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4129 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/common_client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1324 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/communication_protocol.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    15712 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_client.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      403 2023-02-13 09:23:58.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1023 2023-02-13 09:23:58.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_factory.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6512 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_latest.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      985 2023-02-13 09:23:58.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_15_6_mhz.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1037 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_5_2_mhz.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      840 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_calibration_reuse.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      521 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      687 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/erroneus_message.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1150 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/log_message.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       96 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/parse_error.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4314 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/result_message.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1123 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/sensor_info_response.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      752 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/set_baudrate_response.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2836 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/setup_response.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1045 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/streaming_responses.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      791 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/system_info_response.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       97 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/server_error.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1998 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/links.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      643 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/message.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11468 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/mock_client.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3996 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      229 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7651 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/record.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2820 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/record_io.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11206 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/recorder.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      928 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/im_record/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       95 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/im_record/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3854 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/im_record/im_record.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18035 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core_ext/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      118 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core_ext/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4082 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core_ext/_replaying_client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      318 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_h5_utils.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4840 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_perf_calc.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2516 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_rate_calc.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      646 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4002 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_base.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      367 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7344 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_a121.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      434 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_detector.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      617 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_null_app_model.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3783 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_processor_main.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      446 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8243 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/backend_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1388 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/plot_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1276 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7079 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/view_plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7327 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      175 2023-02-06 10:47:51.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      395 2023-03-28 07:00:02.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/_configs.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    25658 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/_plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    17474 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/_processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.816990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      192 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/__main__,py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8723 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7401 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/_processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      507 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      855 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/__main__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5471 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_aggregator.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      307 2023-03-28 07:00:02.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_configs.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    57805 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_detector.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    24685 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_detector_plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    30450 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_processors.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    15812 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_serializers.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7575 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/_plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7141 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/_processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      213 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2175 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_configs.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    14290 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_detector.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    26195 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_detector_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18288 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_processors.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4717 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_serializers.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      182 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2223 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_configs.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6607 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_processor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7165 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_ref_app.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22272 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_ref_app_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6835 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_serializer.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      220 2023-02-06 16:11:20.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8167 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3116 2023-02-06 16:11:20.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7245 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_serializers.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      130 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10510 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_example_app.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22205 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_example_app_plugin.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    13898 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_processor.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      219 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1658 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_configs.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    26782 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7290 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_processor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6265 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_ref_app.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4229 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_serializer.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      306 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      486 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1100 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_blinkstick_updater.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1738 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_configs.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7687 2023-03-31 08:15:54.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13463 2023-04-04 09:46:22.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_processor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2896 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_serializers.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/__main__,py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8514 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7398 2023-02-03 13:02:34.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/_processor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/a121/py.typed
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.820990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      333 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/__main__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4475 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/launcher.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      971 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      116 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      994 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_argument_parser.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1718 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_enums.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      102 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_exceptions.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      983 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_version_checker.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2698 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      239 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    27938 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/app_model.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1404 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/app_model_listener.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      981 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/file_detective.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      428 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/plugin_protocols.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2074 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/port_updater.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      452 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2840 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_application_client.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5135 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1610 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend_logger.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1986 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend_plugin.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1559 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_message.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4896 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_model.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1515 2023-04-04 07:49:39.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/plugin_loader.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      241 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      973 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/plot_plugin_base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      431 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/plugin_preset_base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1404 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/plugin_spec_base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1024 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/ui_plugin_base.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2183 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/view_plugin_base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/py.typed
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      470 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/qt_subclasses.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      804 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/storage.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      524 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2141 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/app_model_viewer.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10472 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/connection_widget.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    32628 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/flash_widget.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3472 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/main_window.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10087 2022-12-22 06:14:08.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/misc.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      690 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6298 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/attrs_config_editor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1290 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/collapsible_widget.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6166 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/metadata_view.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1432 2023-03-27 09:23:59.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/misc_error_view.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3557 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/perf_calc_view.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      769 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/__init__.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      499 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/common.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3829 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/hooks.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2082 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidget_groups.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    25589 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidgets.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2004 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/range_help_view.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    13395 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/sensor_config_editor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5574 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/session_config_editor.py
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8590 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/subsweep_config_editor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1909 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/two_sensor_ids_editor.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      298 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/types.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      865 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/utils.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12123 2023-03-09 14:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_widget.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4629 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/recording_widget.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9485 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/status_bar.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1227 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.824990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      116 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    84288 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/app.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4735 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/data_processing.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8476 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/helper.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2346 2023-02-23 12:52:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/modules.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10741 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/qt_subclasses.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    90184 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/a111_gui.png
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    57036 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/a121_gui.png
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4162 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/icon-black.svg
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    35706 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/icon.png
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3208 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/loader.gif
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.796990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1245 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/LICENSE.txt
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/aarch64/
+--rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   513305 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/aarch64/libft4222.so.1.4.4.44
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/amd64/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   209008 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/amd64/LibFT4222.dll
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   314552 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/amd64/ftd2xx.dll
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv6/
+--rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   484176 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv6/libft4222.so.1.4.4.44
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv7/
+--rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   399731 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv7/libft4222.so.1.4.4.44
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/i386/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   160256 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/i386/LibFT4222.dll
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   271672 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/i386/ftd2xx.dll
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/x86_64/
+--rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   504389 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/x86_64/libft4222.so.1.4.4.44
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      338 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      115 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/__main__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5844 2023-04-03 11:06:12.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_bin_fetcher.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3625 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_dev_license.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4284 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_dev_license_tui.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      416 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_device_flasher_base.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12868 2023-04-04 08:00:22.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_flasher.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      828 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_products.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_stm32uart/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      150 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_stm32uart/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      274 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_stm32uart/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6665 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_stm32uart/_stm32flasher.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.828990 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      258 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9147 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/_bootloader_comm.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8950 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/_bootloader_tool.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      224 2023-01-27 07:25:26.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/_meta.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11051 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/libft4222.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3338 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/mpl_process.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3185 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/pg_process.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1191 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/__main__.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      244 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1431 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/platform_install.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      980 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/prompts.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      690 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/setup_group.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2880 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/setup_step.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      520 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/cli/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      106 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/cli/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      684 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/cli/argument_parser.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       91 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      329 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/how_to.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1867 2022-12-22 13:05:40.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/linux.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1191 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/ubuntu_20_04.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/setup/py.typed
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21469 2023-03-30 13:00:03.000000 acconeer-exptool-6.0.1/src/acconeer/exptool/utils.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8990 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/PKG-INFO
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)    24849 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/SOURCES.txt
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)        1 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/dependency_links.txt
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)        1 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/not-zip-safe
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)      471 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/requires.txt
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)        9 2023-04-04 09:52:25.000000 acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/top_level.txt
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/tools/
+--rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3347 2023-04-02 21:08:01.000000 acconeer-exptool-6.0.1/tools/check_changelog.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12005 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/tools/check_copyright.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1388 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/tools/check_line_length.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1495 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/tools/check_permissions.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4237 2023-04-04 07:09:09.000000 acconeer-exptool-6.0.1/tools/check_sdk_mentions.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1801 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/tools/check_whitespace.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2064 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/tools/update_regmap.py
+-drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-04 09:52:25.832990 acconeer-exptool-6.0.1/utils/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14756 2022-12-21 09:58:23.000000 acconeer-exptool-6.0.1/utils/convert_to_csv.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       91 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/.gitattributes
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.899983 acconeer-exptool-6.0.4/.github/
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/.github/ISSUE_TEMPLATE/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      877 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/.github/ISSUE_TEMPLATE/bug_report.md
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      368 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/.gitignore
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      158 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/.readthedocs.yaml
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13026 2023-04-06 09:47:13.000000 acconeer-exptool-6.0.4/CHANGELOG.md
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    13663 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/Jenkinsfile
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1881 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/LICENSE.md
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      217 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/MANIFEST.in
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8990 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/PKG-INFO
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7948 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/README.md
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       73 2023-04-06 09:34:49.000000 acconeer-exptool-6.0.4/UNRELEASED_CHANGELOG.md
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/docker/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1865 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/docker/Dockerfile
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       82 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/docker/requirements-dev.txt
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1604 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/dodo.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.903983 acconeer-exptool-6.0.4/examples/
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/examples/a111/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3247 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/basic.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1819 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/basic_continuous.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2657 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/load_record.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1273 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/load_record_h5.m
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/examples/a111/plotting/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1999 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/plotting/plot_with_matplotlib.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2551 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/plotting/plot_with_pyqtgraph.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/examples/a111/record_data/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1156 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/record_data/barebones.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2541 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/record_data/long_duration_split_files.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1958 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/record_data/with_cli.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/examples/a111/services/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2251 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/services/envelope.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3013 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/services/iq.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2277 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/services/power_bins.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2861 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/services/sparse.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/examples/a111/utils/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      802 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/utils/ping.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      805 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a111/utils/test_throughput.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1222 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/basic.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/bilateration/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8174 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/bilateration/bilaterator.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/breathing/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6340 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/breathing/breathing.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/distance/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4522 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/distance/detector.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5053 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/distance/processor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      776 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/extended_config.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1518 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a121/load_record.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1405 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/examples/a121/load_record_h5.m
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/phase_tracking/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5806 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/phase_tracking/phase_tracking.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4538 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/plot.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/presence/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11241 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/presence/detector.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11026 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/presence/processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/record_data/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      921 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/record_data/barebones.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1092 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/record_data/with_cli.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1140 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/reuse_calibration.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/smart_presence/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10430 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/smart_presence/processor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     9497 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/smart_presence/ref_app.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4253 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/stress.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      946 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/subsweeps.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/surface_velocity/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8536 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/surface_velocity/example_app.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8910 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/surface_velocity/processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/touchless_button/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3927 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/touchless_button/processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/examples/a121/vibration/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4410 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/examples/a121/vibration/vibration.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/gui/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1254 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/gui/main.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7005 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/noxfile.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/portable/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       27 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/.gitignore
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1571 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/make.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/portable/package/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      108 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/package/cmd_with_path.bat
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      346 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/package/run_app.bat
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/portable/package/tools/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      989 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/package/tools/update.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      168 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/portable/package/update.bat
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2515 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/pyproject.toml
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2434 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/setup.cfg
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/src/
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.903983 acconeer-exptool-6.0.4/src/acconeer/
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/src/acconeer/exptool/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      295 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3212 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_bs_thread.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/src/acconeer/exptool/_pyusb/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      100 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_pyusb/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5890 2023-01-24 10:54:24.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_pyusb/pyusbcomm.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15542 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/configbase.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15673 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/qtpidgets.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.911983 acconeer-exptool-6.0.4/src/acconeer/exptool/_tests/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_tests/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4259 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_tests/test_rig.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)       22 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_version.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1071 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/LICENSE
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      190 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2847 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6837 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/usb_cdc.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2021 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusb.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3466 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbclasses.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      231 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusberror.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10029 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbpy.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12307 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbutils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      438 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/__init__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      119 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7940 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/base.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5916 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5513 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/client_factory.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      517 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/common.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/json/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/json/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18330 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/json/client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14209 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/links.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/mock/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/mock/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7621 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/mock/client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1496 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/multiwrap.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    25124 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/client.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/data/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/data/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8068 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/data/regmap.yaml
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6351 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/protocol.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     9853 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/regmap.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7176 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_conf_to_rss_sdk.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    28007 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_configs.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      587 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_modes.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3710 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      242 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/__init__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_base/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2708 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_base/calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      860 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_base/module_info.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1695 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_standalone_main.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      538 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7469 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4554 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      618 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6054 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/constants.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5308 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.915984 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      552 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11319 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/constants.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4931 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      948 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21416 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2204 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6126 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      862 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3943 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1517 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5280 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      565 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1985 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3928 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      939 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    27784 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9166 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      104 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/constants.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    16847 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      890 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9162 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8503 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      110 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      576 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2599 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4172 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       99 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      612 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      175 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1400 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      577 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    15250 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13885 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      917 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14079 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10519 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.919983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      615 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10381 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4623 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      577 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2880 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5079 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      552 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1341 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4454 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      557 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5185 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5472 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      824 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12380 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      186 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/constants.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7812 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/ui.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      840 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10409 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1517 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3125 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/ui.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2560 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      153 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      545 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4662 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6099 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/ui.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9009 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a111/recording.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1136 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1790 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_cli.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      989 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/__init__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      671 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/__init__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.923983 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      329 2023-02-08 08:58:10.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4195 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/config_enums.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22033 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/sensor_config.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10267 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/session_config.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11137 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/subsweep_config.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1035 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/validation_error.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      592 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8723 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/client_info.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4798 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/metadata.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4585 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/record.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2192 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/result.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1351 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/sensor_calibration.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2906 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/server_info.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/server_log_message.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2189 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/stacked_results.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1675 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/utils.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      144 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/dtypes.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      130 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      931 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/link.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      822 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/recorder.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      401 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/__init__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      439 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6962 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/client.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4129 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/common_client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1324 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/communication_protocol.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    15712 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_client.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      403 2023-02-13 09:23:57.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1023 2023-02-13 09:23:57.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_factory.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6512 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_latest.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      985 2023-02-13 09:23:57.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_15_6_mhz.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1037 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_5_2_mhz.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      840 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_calibration_reuse.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      521 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      687 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/erroneus_message.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1150 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/log_message.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       96 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/parse_error.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4314 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/result_message.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1123 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/sensor_info_response.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      752 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/set_baudrate_response.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2836 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/setup_response.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1045 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/streaming_responses.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      791 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/system_info_response.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       97 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/server_error.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1998 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/links.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      643 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/message.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    11468 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/mock_client.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3996 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      229 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7651 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/record.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2820 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/record_io.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11206 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/recorder.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      928 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/im_record/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       95 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/im_record/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3854 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/im_record/im_record.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18035 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core_ext/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      118 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core_ext/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4082 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core_ext/_replaying_client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      318 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_h5_utils.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4840 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_perf_calc.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2516 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_rate_calc.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.927984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      646 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4002 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_base.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      367 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7344 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_a121.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      434 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_detector.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      617 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_null_app_model.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3783 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_processor_main.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      446 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8243 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/backend_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1388 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/plot_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1276 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7079 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/view_plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7327 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      175 2023-02-06 10:51:29.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      395 2023-03-28 07:00:16.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/_configs.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    25658 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/_plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    17474 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/_processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      192 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2023-04-06 09:38:16.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8723 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7401 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/_processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      507 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      855 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/__main__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5471 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_aggregator.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      307 2023-03-28 07:00:16.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_configs.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    57805 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_detector.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    24685 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_detector_plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    30450 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_processors.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    15812 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_serializers.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7575 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/_plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7141 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/_processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      213 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2175 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_configs.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    14290 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_detector.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    26195 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_detector_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    18288 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_processors.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4717 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_serializers.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      182 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2223 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_configs.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6607 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_processor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     7165 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_ref_app.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22272 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_ref_app_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6835 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_serializer.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      220 2023-02-06 16:11:19.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8167 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3116 2023-02-06 16:11:19.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7245 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_serializers.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.931984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      130 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    10510 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_example_app.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    22205 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_example_app_plugin.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    13898 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_processor.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      219 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1658 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_configs.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    26782 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7290 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_processor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6265 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_ref_app.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4229 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_serializer.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      306 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      486 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1100 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_blinkstick_updater.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1738 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_configs.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7687 2023-03-31 08:16:11.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14570 2023-04-06 09:38:16.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_processor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2896 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_serializers.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      187 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      376 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/__main__,py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8514 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7398 2023-02-03 12:56:48.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/_processor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/a121/py.typed
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      333 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/__main__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4475 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/launcher.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      971 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      116 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      994 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_argument_parser.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1718 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_enums.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      102 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_exceptions.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      983 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_version_checker.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2698 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      239 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    27938 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/app_model.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1404 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/app_model_listener.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      981 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/file_detective.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      428 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/plugin_protocols.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2074 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/port_updater.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      452 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2840 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_application_client.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     5135 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1610 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend_logger.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1986 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend_plugin.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1559 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_message.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4896 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_model.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     1515 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/plugin_loader.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.935984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      241 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      973 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/plot_plugin_base.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      431 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/plugin_preset_base.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1404 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/plugin_spec_base.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1024 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/ui_plugin_base.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2183 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/view_plugin_base.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/py.typed
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      470 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/qt_subclasses.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      804 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/storage.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      524 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2141 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/app_model_viewer.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10472 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/connection_widget.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    32628 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/flash_widget.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3472 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/main_window.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10087 2022-12-22 09:46:27.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/misc.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      690 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     6298 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/attrs_config_editor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1290 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/collapsible_widget.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6166 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/metadata_view.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1432 2023-03-27 09:23:51.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/misc_error_view.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3557 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/perf_calc_view.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      769 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/__init__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      499 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/common.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3829 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/hooks.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2082 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidget_groups.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    25589 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidgets.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     2004 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/range_help_view.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    13395 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/sensor_config_editor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5574 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/session_config_editor.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8590 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/subsweep_config_editor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1909 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/two_sensor_ids_editor.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      298 2023-03-30 13:00:17.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/types.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      865 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/utils.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12123 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_widget.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4629 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/recording_widget.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9485 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/status_bar.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1227 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       79 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      116 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/__main__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    84288 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/app.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4735 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/data_processing.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8476 2022-12-29 10:02:50.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/helper.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2346 2023-02-23 12:52:28.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/modules.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10741 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/qt_subclasses.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    90184 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/a111_gui.png
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    57036 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/a121_gui.png
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4162 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/icon-black.svg
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    35706 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/icon.png
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3208 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/loader.gif
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.907983 acconeer-exptool-6.0.4/src/acconeer/exptool/data/
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1245 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/LICENSE.txt
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.939984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/aarch64/
++-rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   513305 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/aarch64/libft4222.so.1.4.4.44
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/amd64/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   209008 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/amd64/LibFT4222.dll
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   314552 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/amd64/ftd2xx.dll
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv6/
++-rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   484176 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv6/libft4222.so.1.4.4.44
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv7/
++-rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   399731 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv7/libft4222.so.1.4.4.44
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/i386/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   160256 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/i386/LibFT4222.dll
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)   271672 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/i386/ftd2xx.dll
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/x86_64/
++-rwxrwxr-x   0 jenkins   (1000) jenkins   (1000)   504389 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/x86_64/libft4222.so.1.4.4.44
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      338 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      115 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/__main__.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     5844 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_bin_fetcher.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3625 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_dev_license.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4284 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_dev_license_tui.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      416 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_device_flasher_base.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    12868 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_flasher.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      828 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_products.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_stm32uart/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      150 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_stm32uart/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      274 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_stm32uart/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6665 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_stm32uart/_stm32flasher.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      258 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9147 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/_bootloader_comm.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8950 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/_bootloader_tool.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      224 2023-01-24 14:05:20.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/_meta.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    11051 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/libft4222.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3338 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/mpl_process.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3185 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/pg_process.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1191 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/__main__.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.943984 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      244 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1431 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/platform_install.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      980 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/prompts.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      690 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/setup_group.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2880 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/setup_step.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      520 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/cli/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      106 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/cli/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      684 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/cli/argument_parser.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       91 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      329 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/how_to.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1867 2022-12-22 15:03:13.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/linux.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1191 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/ubuntu_20_04.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        0 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/setup/py.typed
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21469 2023-04-03 13:53:22.000000 acconeer-exptool-6.0.4/src/acconeer/exptool/utils.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     8990 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/PKG-INFO
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)    24849 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/SOURCES.txt
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)        1 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/dependency_links.txt
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)        1 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/not-zip-safe
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)      476 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/requires.txt
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)        9 2023-04-06 09:52:44.000000 acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/top_level.txt
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/tools/
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     3347 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/tools/check_changelog.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12005 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/tools/check_copyright.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1388 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/tools/check_line_length.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1495 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/tools/check_permissions.py
++-rw-r--r--   0 jenkins   (1000) jenkins   (1000)     4237 2023-04-05 21:07:58.000000 acconeer-exptool-6.0.4/tools/check_sdk_mentions.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1801 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/tools/check_whitespace.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2064 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/tools/update_regmap.py
++drwxr-xr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 09:52:44.947984 acconeer-exptool-6.0.4/utils/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14756 2022-12-21 10:06:47.000000 acconeer-exptool-6.0.4/utils/convert_to_csv.py
+```
+
+### Comparing `acconeer-exptool-6.0.1/.github/ISSUE_TEMPLATE/bug_report.md` & `acconeer-exptool-6.0.4/.github/ISSUE_TEMPLATE/bug_report.md`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/CHANGELOG.md` & `acconeer-exptool-6.0.4/CHANGELOG.md`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,14 @@
+ # Changelog
+ 
++## v6.0.4
++
++### Changed
++- Pin PySide version, which evades some problems with its latest release
++
+ ## v6.0.1
+ 
+ ### Changed
+ - Bump SDK version for A111
+ 
+ ### Fixed
+ - XM125 bin fetching (part of flash).
+```
+
+### Comparing `acconeer-exptool-6.0.1/Jenkinsfile` & `acconeer-exptool-6.0.4/Jenkinsfile`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/LICENSE.md` & `acconeer-exptool-6.0.4/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/PKG-INFO` & `acconeer-exptool-6.0.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: acconeer-exptool
+-Version: 6.0.1
++Version: 6.0.4
+ Summary: Acconeer Exploration Tool
+ Home-page: https://github.com/acconeer/acconeer-python-exploration
+ Author: Acconeer AB
+ Author-email: tools@acconeer.com
+ License: BSD 3-Clause Clear License
+ Project-URL: Tracker, https://github.com/acconeer/acconeer-python-exploration/issues
+ Project-URL: Documentation, https://acconeer-python-exploration.readthedocs.io
+```
+
+### Comparing `acconeer-exptool-6.0.1/README.md` & `acconeer-exptool-6.0.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/docker/Dockerfile` & `acconeer-exptool-6.0.4/docker/Dockerfile`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/dodo.py` & `acconeer-exptool-6.0.4/dodo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/basic.py` & `acconeer-exptool-6.0.4/examples/a111/basic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/basic_continuous.py` & `acconeer-exptool-6.0.4/examples/a111/basic_continuous.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/load_record.py` & `acconeer-exptool-6.0.4/examples/a111/load_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/load_record_h5.m` & `acconeer-exptool-6.0.4/examples/a111/load_record_h5.m`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/plotting/plot_with_matplotlib.py` & `acconeer-exptool-6.0.4/examples/a111/plotting/plot_with_matplotlib.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/plotting/plot_with_pyqtgraph.py` & `acconeer-exptool-6.0.4/examples/a111/plotting/plot_with_pyqtgraph.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/record_data/barebones.py` & `acconeer-exptool-6.0.4/examples/a111/record_data/barebones.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/record_data/long_duration_split_files.py` & `acconeer-exptool-6.0.4/examples/a111/record_data/long_duration_split_files.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/record_data/with_cli.py` & `acconeer-exptool-6.0.4/examples/a111/record_data/with_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/services/envelope.py` & `acconeer-exptool-6.0.4/examples/a111/services/envelope.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/services/iq.py` & `acconeer-exptool-6.0.4/examples/a111/services/iq.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/services/power_bins.py` & `acconeer-exptool-6.0.4/examples/a111/services/power_bins.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/services/sparse.py` & `acconeer-exptool-6.0.4/examples/a111/services/sparse.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/utils/ping.py` & `acconeer-exptool-6.0.4/examples/a111/utils/ping.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a111/utils/test_throughput.py` & `acconeer-exptool-6.0.4/examples/a111/utils/test_throughput.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/basic.py` & `acconeer-exptool-6.0.4/examples/a121/basic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/bilateration/bilaterator.py` & `acconeer-exptool-6.0.4/examples/a121/bilateration/bilaterator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/breathing/breathing.py` & `acconeer-exptool-6.0.4/examples/a121/breathing/breathing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/distance/detector.py` & `acconeer-exptool-6.0.4/examples/a121/distance/detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/distance/processor.py` & `acconeer-exptool-6.0.4/examples/a121/distance/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/extended_config.py` & `acconeer-exptool-6.0.4/examples/a121/extended_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/load_record.py` & `acconeer-exptool-6.0.4/examples/a121/load_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/load_record_h5.m` & `acconeer-exptool-6.0.4/examples/a121/load_record_h5.m`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/phase_tracking/phase_tracking.py` & `acconeer-exptool-6.0.4/examples/a121/phase_tracking/phase_tracking.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/plot.py` & `acconeer-exptool-6.0.4/examples/a121/plot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/presence/detector.py` & `acconeer-exptool-6.0.4/examples/a121/presence/detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/presence/processor.py` & `acconeer-exptool-6.0.4/examples/a121/presence/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/record_data/barebones.py` & `acconeer-exptool-6.0.4/examples/a121/record_data/barebones.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/record_data/with_cli.py` & `acconeer-exptool-6.0.4/examples/a121/record_data/with_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/reuse_calibration.py` & `acconeer-exptool-6.0.4/examples/a121/reuse_calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/smart_presence/processor.py` & `acconeer-exptool-6.0.4/examples/a121/smart_presence/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/smart_presence/ref_app.py` & `acconeer-exptool-6.0.4/examples/a121/smart_presence/ref_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/stress.py` & `acconeer-exptool-6.0.4/examples/a121/stress.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/subsweeps.py` & `acconeer-exptool-6.0.4/examples/a121/subsweeps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/surface_velocity/example_app.py` & `acconeer-exptool-6.0.4/examples/a121/surface_velocity/example_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/surface_velocity/processor.py` & `acconeer-exptool-6.0.4/examples/a121/surface_velocity/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/touchless_button/processor.py` & `acconeer-exptool-6.0.4/examples/a121/touchless_button/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/examples/a121/vibration/vibration.py` & `acconeer-exptool-6.0.4/examples/a121/vibration/vibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/gui/main.py` & `acconeer-exptool-6.0.4/gui/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/noxfile.py` & `acconeer-exptool-6.0.4/noxfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/portable/make.py` & `acconeer-exptool-6.0.4/portable/make.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/portable/package/tools/update.py` & `acconeer-exptool-6.0.4/portable/package/tools/update.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/pyproject.toml` & `acconeer-exptool-6.0.4/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/setup.cfg` & `acconeer-exptool-6.0.4/setup.cfg`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -50,15 +50,15 @@
+ app = 
+ 	bs4
+ 	docutils>=0.17,!=0.18
+ 	matplotlib>=3.5.0
+ 	platformdirs
+ 	psutil
+ 	pyperclip
+-	pyside6!=6.3.0,!=6.3.2
++	pyside6!=6.3.0,!=6.3.2,<6.5
+ 	pyqtdarktheme
+ 	pyqtgraph>=0.12.4
+ 	qtawesome
+ 	qtpy>=2.3.0
+ 	scipy
+ docs = 
+ 	docutils>=0.17,!=0.18
+```
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_bs_thread.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_bs_thread.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_pyusb/pyusbcomm.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_pyusb/pyusbcomm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/configbase.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/configbase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_structs/qtpidgets.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_structs/qtpidgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_tests/test_rig.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_tests/test_rig.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/LICENSE` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/__main__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/usb_cdc.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/usb_cdc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusb.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbclasses.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbclasses.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbpy.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbpy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/_winusbcdc/winusbutils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/_winusbcdc/winusbutils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/client_factory.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/client_factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/common.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/json/client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/json/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/links.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/links.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/mock/client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/mock/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/multiwrap.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/multiwrap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/data/regmap.yaml` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/data/regmap.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/protocol.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/protocol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_clients/reg/regmap.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_clients/reg/regmap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_conf_to_rss_sdk.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_conf_to_rss_sdk.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_configs.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_configs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_modes.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_modes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/_utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_base/calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_base/calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_base/module_info.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_base/module_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/_standalone_main.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/_standalone_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/breathing/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/breathing/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/button_press_sparse/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/button_press_sparse/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/distance_detector/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/distance_detector/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/envelope/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/envelope/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/iq/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/iq/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/obstacle_detection/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/obstacle_detection/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/parking/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/parking/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/phase_tracking/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/phase_tracking/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/power_bins/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/power_bins/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detect_human_only/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detect_human_only/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/presence_detection_sparse/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/presence_detection_sparse/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sleep_breathing/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sleep_breathing/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_fft/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_fft/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/sparse_inter_fft/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/sparse_inter_fft/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/speed_sparse/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/speed_sparse/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/tank_level_short/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/tank_level_short/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/_meta.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/_meta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/algo/wave_to_exit/ui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/algo/wave_to_exit/ui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a111/recording.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a111/recording.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_cli.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/config_enums.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/config_enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/sensor_config.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/sensor_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/session_config.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/session_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/subsweep_config.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/subsweep_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/configs/validation_error.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/configs/validation_error.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/client_info.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/client_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/metadata.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/metadata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/record.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/result.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/sensor_calibration.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/sensor_calibration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/server_info.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/server_info.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/stacked_results.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/stacked_results.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/entities/containers/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/entities/containers/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/link.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/link.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/mediators/recorder.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/mediators/recorder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/common_client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/common_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/communication_protocol.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/communication_protocol.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_factory.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_latest.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_latest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_15_6_mhz.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_15_6_mhz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_5_2_mhz.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_5_2_mhz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_calibration_reuse.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/_no_calibration_reuse.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/erroneus_message.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/erroneus_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/log_message.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/log_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/result_message.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/result_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/sensor_info_response.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/sensor_info_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/set_baudrate_response.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/set_baudrate_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/setup_response.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/setup_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/streaming_responses.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/streaming_responses.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/system_info_response.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/exploration_protocol/messages/system_info_response.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/links.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/links.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/message.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/mock_client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/mock_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/communication/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/communication/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/record.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/record_io.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/record_io.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/recorder.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/recorder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/h5_record/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/h5_record/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/peripherals/im_record/im_record.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/peripherals/im_record/im_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_core_ext/_replaying_client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_core_ext/_replaying_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_perf_calc.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_perf_calc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/_rate_calc.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/_rate_calc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_a121.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_a121.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_null_app_model.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_null_app_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/_processor_main.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/_processor_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/backend_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/backend_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/plot_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/plot_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_plugins/processor/view_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_plugins/processor/view_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/_utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/bilateration/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/bilateration/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/breathing/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/breathing/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/__main__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_aggregator.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_aggregator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_detector.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_detector_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_detector_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_processors.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_processors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/distance/_serializers.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/distance/_serializers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/phase_tracking/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/phase_tracking/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_configs.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_configs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_detector.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_detector_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_detector_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_processors.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_processors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/presence/_serializers.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/presence/_serializers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_configs.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_configs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_ref_app.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_ref_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_ref_app_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_ref_app_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/smart_presence/_serializer.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/smart_presence/_serializer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/sparse_iq/_serializers.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/sparse_iq/_serializers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_example_app.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_example_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_example_app_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_example_app_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/surface_velocity/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/surface_velocity/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_configs.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_configs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_ref_app.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_ref_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/tank_level/_serializer.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/tank_level/_serializer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_blinkstick_updater.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_blinkstick_updater.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_configs.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_configs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_processor.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -80,14 +80,42 @@
+                 a121.ValidationError(
+                     config.sensor_config,
+                     "num_subsweeps",
+                     'Number of subsweeps must be 1 for ranges "Close" and "Far"',
+                 )
+             )
+ 
++        if config.sensor_config.sweep_rate is None:
++            validation_results.append(
++                a121.ValidationError(
++                    config.sensor_config,
++                    "sweep_rate",
++                    "Sweep rate must be set.",
++                )
++            )
++
++        else:
++            if config.sensor_config.sweeps_per_frame > (
++                self.calibration_duration_s * config.sensor_config.sweep_rate
++            ):
++                calibration_limit = np.around(
++                    config.sensor_config.sweeps_per_frame / config.sensor_config.sweep_rate, 2
++                )
++                validation_results.append(
++                    a121.ValidationError(
++                        self,
++                        "calibration_duration_s",
++                        (
++                            f"Calibration duration must be at least {calibration_limit} s. "
++                            "Following condition applies:\n"
++                            "sweeps per frame > (calibration duration * sweep rate)"
++                        ),
++                    )
++                )
++
+         return validation_results
+ 
+ 
+ @attrs.frozen(kw_only=True)
+ class ProcessorResult:
+     detection_close: Optional[bool] = attrs.field(default=None)
+     detection_far: Optional[bool] = attrs.field(default=None)
+```
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/touchless_button/_serializers.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/touchless_button/_serializers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/a121/algo/vibration/_processor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/a121/algo/vibration/_processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/launcher.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/launcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_argument_parser.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_argument_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_enums.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/_version_checker.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/_version_checker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/app_model.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/app_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/app_model_listener.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/app_model_listener.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/file_detective.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/file_detective.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/app_model/port_updater.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/app_model/port_updater.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_application_client.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_application_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend_logger.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend_logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_backend_plugin.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_backend_plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_message.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/backend/_model.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/backend/_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/plugin_loader.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/plugin_loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/plot_plugin_base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/plot_plugin_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/plugin_spec_base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/plugin_spec_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/ui_plugin_base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/ui_plugin_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/pluginbase/view_plugin_base.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/pluginbase/view_plugin_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/storage.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/app_model_viewer.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/app_model_viewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/connection_widget.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/connection_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/flash_widget.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/flash_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/main_window.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/main_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/misc.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/misc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/attrs_config_editor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/attrs_config_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/collapsible_widget.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/collapsible_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/metadata_view.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/metadata_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/misc_error_view.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/misc_error_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/perf_calc_view.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/perf_calc_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/__init__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/hooks.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/hooks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidget_groups.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidget_groups.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidgets.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/pidgets/pidgets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/range_help_view.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/range_help_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/sensor_config_editor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/sensor_config_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/session_config_editor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/session_config_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/subsweep_config_editor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/subsweep_config_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/two_sensor_ids_editor.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/two_sensor_ids_editor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_components/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_components/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/plugin_widget.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/plugin_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/recording_widget.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/recording_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/status_bar.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/status_bar.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/new/ui/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/new/ui/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/app.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/data_processing.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/data_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/helper.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/modules.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/modules.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/old/elements/qt_subclasses.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/old/elements/qt_subclasses.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/a111_gui.png` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/a111_gui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/a121_gui.png` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/a121_gui.png`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/icon-black.svg` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/icon-black.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/icon.png` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/icon.png`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/app/resources/loader.gif` & `acconeer-exptool-6.0.4/src/acconeer/exptool/app/resources/loader.gif`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/LICENSE.txt` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/aarch64/libft4222.so.1.4.4.44` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/aarch64/libft4222.so.1.4.4.44`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/amd64/LibFT4222.dll` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/amd64/LibFT4222.dll`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/amd64/ftd2xx.dll` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/amd64/ftd2xx.dll`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv6/libft4222.so.1.4.4.44` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv6/libft4222.so.1.4.4.44`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/armv7/libft4222.so.1.4.4.44` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/armv7/libft4222.so.1.4.4.44`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/i386/LibFT4222.dll` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/i386/LibFT4222.dll`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/i386/ftd2xx.dll` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/i386/ftd2xx.dll`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/data/libft4222/x86_64/libft4222.so.1.4.4.44` & `acconeer-exptool-6.0.4/src/acconeer/exptool/data/libft4222/x86_64/libft4222.so.1.4.4.44`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_bin_fetcher.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_bin_fetcher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_dev_license.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_dev_license.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_dev_license_tui.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_dev_license_tui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_flasher.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_flasher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_products.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_products.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_stm32uart/_stm32flasher.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_stm32uart/_stm32flasher.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/_bootloader_comm.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/_bootloader_comm.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/flash/_xc120/_bootloader_tool.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/flash/_xc120/_bootloader_tool.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/libft4222.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/libft4222.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/mpl_process.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/mpl_process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/pg_process.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/pg_process.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/__main__.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/platform_install.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/platform_install.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/prompts.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/prompts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/setup_group.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/setup_group.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/setup_step.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/setup_step.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/base/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/base/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/cli/argument_parser.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/cli/argument_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/linux.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/linux.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/setup/platforms/ubuntu_20_04.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/setup/platforms/ubuntu_20_04.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer/exptool/utils.py` & `acconeer-exptool-6.0.4/src/acconeer/exptool/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/PKG-INFO` & `acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: acconeer-exptool
+-Version: 6.0.1
++Version: 6.0.4
+ Summary: Acconeer Exploration Tool
+ Home-page: https://github.com/acconeer/acconeer-python-exploration
+ Author: Acconeer AB
+ Author-email: tools@acconeer.com
+ License: BSD 3-Clause Clear License
+ Project-URL: Tracker, https://github.com/acconeer/acconeer-python-exploration/issues
+ Project-URL: Documentation, https://acconeer-python-exploration.readthedocs.io
+```
+
+### Comparing `acconeer-exptool-6.0.1/src/acconeer_exptool.egg-info/SOURCES.txt` & `acconeer-exptool-6.0.4/src/acconeer_exptool.egg-info/SOURCES.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -292,15 +292,15 @@
+ src/acconeer/exptool/a121/algo/_plugins/processor/plugin.py
+ src/acconeer/exptool/a121/algo/_plugins/processor/view_plugin.py
+ src/acconeer/exptool/a121/algo/bilateration/__init__.py
+ src/acconeer/exptool/a121/algo/bilateration/_configs.py
+ src/acconeer/exptool/a121/algo/bilateration/_plugin.py
+ src/acconeer/exptool/a121/algo/bilateration/_processor.py
+ src/acconeer/exptool/a121/algo/breathing/__init__.py
+-src/acconeer/exptool/a121/algo/breathing/__main__,py
++src/acconeer/exptool/a121/algo/breathing/__main__.py
+ src/acconeer/exptool/a121/algo/breathing/_plugin.py
+ src/acconeer/exptool/a121/algo/breathing/_processor.py
+ src/acconeer/exptool/a121/algo/distance/__init__.py
+ src/acconeer/exptool/a121/algo/distance/__main__.py
+ src/acconeer/exptool/a121/algo/distance/_aggregator.py
+ src/acconeer/exptool/a121/algo/distance/_configs.py
+ src/acconeer/exptool/a121/algo/distance/_detector.py
+```
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_changelog.py` & `acconeer-exptool-6.0.4/tools/check_changelog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_copyright.py` & `acconeer-exptool-6.0.4/tools/check_copyright.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_line_length.py` & `acconeer-exptool-6.0.4/tools/check_line_length.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_permissions.py` & `acconeer-exptool-6.0.4/tools/check_permissions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_sdk_mentions.py` & `acconeer-exptool-6.0.4/tools/check_sdk_mentions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/check_whitespace.py` & `acconeer-exptool-6.0.4/tools/check_whitespace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/tools/update_regmap.py` & `acconeer-exptool-6.0.4/tools/update_regmap.py`
+
+ * *Files identical despite different names*
+
+### Comparing `acconeer-exptool-6.0.1/utils/convert_to_csv.py` & `acconeer-exptool-6.0.4/utils/convert_to_csv.py`
+
+ * *Files identical despite different names*
+

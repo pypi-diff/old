@@ -1,0 +1,293 @@
+# Comparing `tmp/planetmint_cryptoconditions-1.2.0.tar.gz` & `tmp/planetmint_cryptoconditions-1.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "planetmint_cryptoconditions-1.2.0.tar", max compression
++gzip compressed data, was "planetmint_cryptoconditions-1.2.1.tar", max compression
+```
+
+## Comparing `planetmint_cryptoconditions-1.2.0.tar` & `planetmint_cryptoconditions-1.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+--rw-r--r--   0        0        0    34523 2023-04-05 13:11:08.585593 planetmint_cryptoconditions-1.2.0/LICENSE
+--rw-r--r--   0        0        0      277 2023-04-05 13:11:08.585593 planetmint_cryptoconditions-1.2.0/LICENSE-docs
+--rw-r--r--   0        0        0     1686 2023-04-05 13:11:08.585593 planetmint_cryptoconditions-1.2.0/README.rst
+--rw-r--r--   0        0        0     1798 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/__init__.py
+--rw-r--r--   0        0        0    13917 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/condition.py
+--rw-r--r--   0        0        0     6057 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/crypto.py
+--rw-r--r--   0        0        0      764 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/exceptions.py
+--rw-r--r--   0        0        0     7321 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/fulfillment.py
+--rw-r--r--   0        0        0        0 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/__init__.py
+--rw-r--r--   0        0        0     3641 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/condition.py
+--rw-r--r--   0        0        0     2751 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/fingerprint.py
+--rw-r--r--   0        0        0     4595 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/fulfillment.py
+--rw-r--r--   0        0        0     3319 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/type_registry.py
+--rw-r--r--   0        0        0        8 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/__init__.py
+--rw-r--r--   0        0        0      499 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/base_sha256.py
+--rw-r--r--   0        0        0     6780 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/ed25519.py
+--rw-r--r--   0        0        0     9256 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/prefix.py
+--rw-r--r--   0        0        0     3691 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/preimage.py
+--rw-r--r--   0        0        0     6963 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/rsa.py
+--rw-r--r--   0        0        0    14816 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/threshold.py
+--rw-r--r--   0        0        0       48 2023-04-05 13:11:08.589593 planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/version.py
+--rw-r--r--   0        0        0     1547 2023-04-05 13:11:08.593593 planetmint_cryptoconditions-1.2.0/pyproject.toml
+--rw-r--r--   0        0        0     3115 1970-01-01 00:00:00.000000 planetmint_cryptoconditions-1.2.0/PKG-INFO
++-rw-r--r--   0        0        0    34523 2023-04-06 09:51:24.506960 planetmint_cryptoconditions-1.2.1/LICENSE
++-rw-r--r--   0        0        0      277 2023-04-06 09:51:24.506960 planetmint_cryptoconditions-1.2.1/LICENSE-docs
++-rw-r--r--   0        0        0     1686 2023-04-06 09:51:24.506960 planetmint_cryptoconditions-1.2.1/README.rst
++-rw-r--r--   0        0        0     1798 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/__init__.py
++-rw-r--r--   0        0        0    13917 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/condition.py
++-rw-r--r--   0        0        0     6057 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/crypto.py
++-rw-r--r--   0        0        0      764 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/exceptions.py
++-rw-r--r--   0        0        0     7321 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/fulfillment.py
++-rw-r--r--   0        0        0        0 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/__init__.py
++-rw-r--r--   0        0        0     3641 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/condition.py
++-rw-r--r--   0        0        0     2751 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/fingerprint.py
++-rw-r--r--   0        0        0     4595 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/fulfillment.py
++-rw-r--r--   0        0        0     3376 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/type_registry.py
++-rw-r--r--   0        0        0        8 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/__init__.py
++-rw-r--r--   0        0        0      499 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/base_sha256.py
++-rw-r--r--   0        0        0     6780 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/ed25519.py
++-rw-r--r--   0        0        0     9256 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/prefix.py
++-rw-r--r--   0        0        0     3691 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/preimage.py
++-rw-r--r--   0        0        0     6963 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/rsa.py
++-rw-r--r--   0        0        0    14814 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/threshold.py
++-rw-r--r--   0        0        0       48 2023-04-06 09:51:24.510960 planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/version.py
++-rw-r--r--   0        0        0     1547 2023-04-06 09:51:24.514960 planetmint_cryptoconditions-1.2.1/pyproject.toml
++-rw-r--r--   0        0        0     3115 1970-01-01 00:00:00.000000 planetmint_cryptoconditions-1.2.1/PKG-INFO
+```
+
+### Comparing `planetmint_cryptoconditions-1.2.0/LICENSE` & `planetmint_cryptoconditions-1.2.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/README.rst` & `planetmint_cryptoconditions-1.2.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/__init__.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/condition.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/condition.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -24,15 +24,15 @@
+ # This is a generic, future-proof version of the crypto-condition regular expression.
+ CONDITION_REGEX = r"^ni:\/\/\/sha-256;([a-zA-Z0-9_-]{0,86})\?(.+)$"
+ 
+ # This is a stricter version based on limitations of the current implementation.
+ # Specifically, we can't handle bitmasks greater than 32 bits.
+ CONDITION_REGEX_STRICT = CONDITION_REGEX
+ 
+-INTEGER_REGEX = r"^0|[1-9]\d*$"
++INTEGER_REGEX = r"^(0|[1-9]\d*)$"
+ 
+ 
+ @total_ordering
+ class Condition(metaclass=ABCMeta):
+     """
+     Crypto-condition.
+ 
+@@ -337,15 +337,15 @@
+ 
+     def to_asn1_dict(self):
+         condition_type = TypeRegistry.find_by_type_id(self.type_id)
+         condition_class = condition_type["class"]
+         payload = {"fingerprint": self.hash, "cost": self.cost}
+         if condition_class.TYPE_CATEGORY == "compound":
+             subtype_ids = [TypeRegistry.find_by_name(subtype)["type_id"] for subtype in self.subtypes]
+-            bits = ["0" for bit in range(5)]
++            bits = ["0" for _ in range(5)]
+             for subtype_id in subtype_ids:
+                 bits[subtype_id] = "1"
+             bitstring = "".join(bits).rstrip("0")
+             payload["subtypes"] = bitstring
+         return {condition_class.TYPE_ASN1: payload}
+ 
+     # TODO ILP Clarification NEEDED
+```
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/crypto.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/crypto.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/exceptions.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/fulfillment.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/fulfillment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/condition.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/condition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/fingerprint.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/fingerprint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/schemas/fulfillment.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/schemas/fulfillment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/type_registry.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/type_registry.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -2,14 +2,16 @@
+ 
+ 
+ # https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
+ # we don't use sys.maxint (= 2 ** 63 - 1) as this spec is in line with the ILP JavaScript reference implementation
+ # see https://interledger.org/
+ MAX_SAFE_INTEGER_JS = 2**53 - 1
+ 
++UNSUPPORTED_TYPE_ERROR_MSG = "Type {} is not supported"
++
+ 
+ class TypeRegistry:
+     """ """
+ 
+     registered_types = []
+ 
+     @staticmethod
+@@ -23,45 +25,45 @@
+             type_id (int): fulfillment type ID
+ 
+         Return:
+             Class implementing the given fulfillment type.
+         """
+         # Determine type of condition
+         if type_id > MAX_SAFE_INTEGER_JS:
+-            raise UnsupportedTypeError("Type {} is not supported".format(type_id))
++            raise UnsupportedTypeError(UNSUPPORTED_TYPE_ERROR_MSG.format(type_id))
+ 
+         for registered_type in TypeRegistry.registered_types:
+             if type_id == registered_type["type_id"]:
+                 return registered_type
+ 
+-        raise UnsupportedTypeError("Type {} is not supported".format(type_id))
++        raise UnsupportedTypeError(UNSUPPORTED_TYPE_ERROR_MSG.format(type_id))
+ 
+     @staticmethod
+     def find_by_name(name):
+         for registered_type in TypeRegistry.registered_types:
+             if name == registered_type["name"]:
+                 return registered_type
+ 
+-        raise UnsupportedTypeError("Type {} is not supported".format(name))
++        raise UnsupportedTypeError(UNSUPPORTED_TYPE_ERROR_MSG.format(name))
+ 
+     @staticmethod
+     def find_by_asn1_type(asn1_type):
+         for registered_type in TypeRegistry.registered_types:
+             if asn1_type == registered_type["asn1"]:
+                 return registered_type
+ 
+-        raise UnsupportedTypeError("Type {} is not supported".format(asn1_type))
++        raise UnsupportedTypeError(UNSUPPORTED_TYPE_ERROR_MSG.format(asn1_type))
+ 
+     @staticmethod
+     def find_by_asn1_condition_type(asn1_type):
+         for registered_type in TypeRegistry.registered_types:
+             if asn1_type == registered_type["asn1_condition"]:
+                 return registered_type
+ 
+-        raise UnsupportedTypeError("Type {} is not supported".format(asn1_type))
++        raise UnsupportedTypeError(UNSUPPORTED_TYPE_ERROR_MSG.format(asn1_type))
+ 
+     @staticmethod
+     def find_by_asn1_fulfillment_type(asn1_type):
+         for registered_type in TypeRegistry.registered_types:
+             if asn1_type == registered_type["asn1_fulfillment"]:
+                 return registered_type
+```
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/ed25519.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/ed25519.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/prefix.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/prefix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/preimage.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/preimage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/rsa.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/rsa.py`
+
+ * *Files identical despite different names*
+
+### Comparing `planetmint_cryptoconditions-1.2.0/planetmint_cryptoconditions/types/threshold.py` & `planetmint_cryptoconditions-1.2.1/planetmint_cryptoconditions/types/threshold.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -327,15 +327,15 @@
+         Returns:
+             Fulfillment
+         """
+         self.threshold = data["threshold"]
+         for subfulfillments in data.get("subfulfillments", ()):
+             self.add_subfulfillment(Fulfillment.from_dict(subfulfillments))
+         for subconditions in data.get("subconditions", ()):
+-            self.add_subcondition(Condition.from_dict(subfulfillments))
++            self.add_subcondition(Condition.from_dict(subconditions))
+ 
+     def parse_asn1_dict_payload(self, data):
+         self.threshold = len(data["subfulfillments"])
+         for subfulfillment in data["subfulfillments"]:
+             self.subconditions.append(
+                 {
+                     "type": FULFILLMENT,
+```
+
+### Comparing `planetmint_cryptoconditions-1.2.0/pyproject.toml` & `planetmint_cryptoconditions-1.2.1/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "planetmint-cryptoconditions"
+-version = "1.2.0"
++version = "1.2.1"
+ description = "Multi-algorithm, multi-level, multi-signature format for expressing conditions and fulfillments according to the Interledger Protocol (ILP)."
+ authors = ["Cryptoconditions contributors <contact@ipdb.global>"]
+ readme = "README.rst"
+ keywords = ["cryptoconditions", "interledger", "merkle tree", "ed25519", "threshold signatures", "hash lock"]
+ repository = "https://github.com/planetmint/cryptoconditions/"
+ license = "MIT"
+ classifiers=[
+```
+
+### Comparing `planetmint_cryptoconditions-1.2.0/PKG-INFO` & `planetmint_cryptoconditions-1.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: planetmint-cryptoconditions
+-Version: 1.2.0
++Version: 1.2.1
+ Summary: Multi-algorithm, multi-level, multi-signature format for expressing conditions and fulfillments according to the Interledger Protocol (ILP).
+ Home-page: https://github.com/planetmint/cryptoconditions/
+ License: MIT
+ Keywords: cryptoconditions,interledger,merkle tree,ed25519,threshold signatures,hash lock
+ Author: Cryptoconditions contributors
+ Author-email: contact@ipdb.global
+ Requires-Python: >=3.9,<4.0
+```
+

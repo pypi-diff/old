@@ -1,0 +1,1011 @@
+# Comparing `tmp/huaweicloudsdkram-3.1.34-py2.py3-none-any.whl.zip` & `tmp/huaweicloudsdkram-3.1.35-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,90 +1,101 @@
+-Zip file size: 122196 bytes, number of entries: 88
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkram/__init__.py
+--rw-------  2.0 unx     7870 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/__init__.py
+--rw-------  2.0 unx    53926 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/ram_async_client.py
+--rw-------  2.0 unx    53711 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/ram_client.py
+--rw-------  2.0 unx     7733 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/__init__.py
+--rw-------  2.0 unx     3650 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/accept_resource_share_invitation_request.py
+--rw-------  2.0 unx     3846 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/accept_resource_share_invitation_response.py
+--rw-------  2.0 unx     5493 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associate_permission_req_body.py
+--rw-------  2.0 unx     4353 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associate_resource_share_permission_request.py
+--rw-------  2.0 unx     2522 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associate_resource_share_permission_response.py
+--rw-------  2.0 unx     4253 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associate_resource_share_request.py
+--rw-------  2.0 unx     3864 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associate_resource_share_response.py
+--rw-------  2.0 unx     7643 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/associated_permission.py
+--rw-------  2.0 unx     4273 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/batch_create_resource_share_tags_request.py
+--rw-------  2.0 unx     2506 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/batch_create_resource_share_tags_response.py
+--rw-------  2.0 unx     4281 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/batch_delete_resource_share_tags_request.py
+--rw-------  2.0 unx     2506 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/batch_delete_resource_share_tags_response.py
+--rw-------  2.0 unx     8403 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/create_resource_share_req_body.py
+--rw-------  2.0 unx     3207 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/create_resource_share_request.py
+--rw-------  2.0 unx     3473 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/create_resource_share_response.py
+--rw-------  2.0 unx     3338 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/delete_resource_share_request.py
+--rw-------  2.0 unx     2470 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/delete_resource_share_response.py
+--rw-------  2.0 unx     2363 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disable_organization_share_request.py
+--rw-------  2.0 unx     2490 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disable_organization_share_response.py
+--rw-------  2.0 unx     3271 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disassociate_permission_req_body.py
+--rw-------  2.0 unx     4401 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disassociate_resource_share_permission_request.py
+--rw-------  2.0 unx     2534 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disassociate_resource_share_permission_response.py
+--rw-------  2.0 unx     4289 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disassociate_resource_share_request.py
+--rw-------  2.0 unx     3888 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/disassociate_resource_share_response.py
+--rw-------  2.0 unx     4075 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/distinct_shared_principal.py
+--rw-------  2.0 unx     5102 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/distinct_shared_resource.py
+--rw-------  2.0 unx     2360 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/enable_organization_share_request.py
+--rw-------  2.0 unx     2486 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/enable_organization_share_response.py
+--rw-------  2.0 unx     4739 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/list_permissions_request.py
+--rw-------  2.0 unx     4410 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/list_permissions_response.py
+--rw-------  2.0 unx     6024 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/list_resource_share_permissions_request.py
+--rw-------  2.0 unx     4885 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/list_resource_share_permissions_response.py
+--rw-------  2.0 unx     4883 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/page_info.py
+--rw-------  2.0 unx     7739 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/permission.py
+--rw-------  2.0 unx     7255 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/permission_summary.py
+--rw-------  2.0 unx     3650 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/reject_resource_share_invitation_request.py
+--rw-------  2.0 unx     3846 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/reject_resource_share_invitation_response.py
+--rw-------  2.0 unx     8605 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/resource_share.py
+--rw-------  2.0 unx     9049 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/resource_share_association.py
+--rw-------  2.0 unx     4582 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/resource_share_association_req_body.py
+--rw-------  2.0 unx    10479 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/resource_share_invitation.py
+--rw-------  2.0 unx     3291 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_principals_request.py
+--rw-------  2.0 unx     4851 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_principals_response.py
+--rw-------  2.0 unx     6984 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_shared_principals_req_body.py
+--rw-------  2.0 unx     9760 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_shared_resources_req_body.py
+--rw-------  2.0 unx     3327 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_shared_resources_request.py
+--rw-------  2.0 unx     4884 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_distinct_shared_resources_response.py
+--rw-------  2.0 unx    10262 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_associations_req_body.py
+--rw-------  2.0 unx     3351 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_associations_request.py
+--rw-------  2.0 unx     4962 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_associations_response.py
+--rw-------  2.0 unx     7980 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_invitation_req_body.py
+--rw-------  2.0 unx     3327 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_invitation_request.py
+--rw-------  2.0 unx     4801 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_share_invitation_response.py
+--rw-------  2.0 unx     9931 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_shares_req_body.py
+--rw-------  2.0 unx     3219 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_shares_request.py
+--rw-------  2.0 unx     4546 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_resource_shares_response.py
+--rw-------  2.0 unx     7913 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_principals_req_body.py
+--rw-------  2.0 unx     3243 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_principals_request.py
+--rw-------  2.0 unx     4615 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_principals_response.py
+--rw-------  2.0 unx    10777 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_resources_req_body.py
+--rw-------  2.0 unx     3231 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_resources_request.py
+--rw-------  2.0 unx     4549 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/search_shared_resources_response.py
+--rw-------  2.0 unx     5905 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/shared_principal.py
+--rw-------  2.0 unx     7666 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/shared_resource.py
+--rw-------  2.0 unx     2354 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/show_organization_share_request.py
+--rw-------  2.0 unx     3473 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/show_organization_share_response.py
+--rw-------  2.0 unx     3215 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/show_permission_request.py
+--rw-------  2.0 unx     3329 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/show_permission_response.py
+--rw-------  2.0 unx     3803 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/tag.py
+--rw-------  2.0 unx     3749 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/tag_filter.py
+--rw-------  2.0 unx     3455 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/tag_resource_req_body.py
+--rw-------  2.0 unx     3859 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/untag.py
+--rw-------  2.0 unx     3477 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/untag_resource_req_body.py
+--rw-------  2.0 unx     3974 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/update_resource_share_req_body.py
+--rw-------  2.0 unx     4197 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/update_resource_share_request.py
+--rw-------  2.0 unx     3473 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/model/update_resource_share_response.py
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/region/__init__.py
+--rw-------  2.0 unx      891 b- defN 23-Mar-30 08:36 huaweicloudsdkram/v1/region/ram_region.py
+--rwxrwxrwx  2.0 unx      604 b- defN 23-Mar-30 08:38 huaweicloudsdkram-3.1.34.dist-info/LICENSE
+--rw-------  2.0 unx     1136 b- defN 23-Mar-30 08:38 huaweicloudsdkram-3.1.34.dist-info/METADATA
+--rw-------  2.0 unx      110 b- defN 23-Mar-30 08:38 huaweicloudsdkram-3.1.34.dist-info/WHEEL
+--rw-------  2.0 unx       18 b- defN 23-Mar-30 08:38 huaweicloudsdkram-3.1.34.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx    10083 b- defN 23-Mar-30 08:38 huaweicloudsdkram-3.1.34.dist-info/RECORD
+-88 files, 499301 bytes uncompressed, 105232 bytes compressed:  78.9%
++Zip file size: 138864 bytes, number of entries: 99
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkram/__init__.py
++-rw-------  2.0 unx     8888 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/__init__.py
++-rw-------  2.0 unx    60327 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/ram_async_client.py
++-rw-------  2.0 unx    60091 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/ram_client.py
++-rw-------  2.0 unx     8751 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/__init__.py
++-rw-------  2.0 unx     3650 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/accept_resource_share_invitation_request.py
++-rw-------  2.0 unx     3846 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/accept_resource_share_invitation_response.py
++-rw-------  2.0 unx     5493 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associate_permission_req_body.py
++-rw-------  2.0 unx     4353 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associate_resource_share_permission_request.py
++-rw-------  2.0 unx     2522 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associate_resource_share_permission_response.py
++-rw-------  2.0 unx     4253 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associate_resource_share_request.py
++-rw-------  2.0 unx     3864 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associate_resource_share_response.py
++-rw-------  2.0 unx     7643 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/associated_permission.py
++-rw-------  2.0 unx     4273 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/batch_create_resource_share_tags_request.py
++-rw-------  2.0 unx     2506 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/batch_create_resource_share_tags_response.py
++-rw-------  2.0 unx     4281 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/batch_delete_resource_share_tags_request.py
++-rw-------  2.0 unx     2506 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/batch_delete_resource_share_tags_response.py
++-rw-------  2.0 unx     8403 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/create_resource_share_req_body.py
++-rw-------  2.0 unx     3207 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/create_resource_share_request.py
++-rw-------  2.0 unx     3473 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/create_resource_share_response.py
++-rw-------  2.0 unx     3338 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/delete_resource_share_request.py
++-rw-------  2.0 unx     2470 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/delete_resource_share_response.py
++-rw-------  2.0 unx     2363 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disable_organization_share_request.py
++-rw-------  2.0 unx     2490 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disable_organization_share_response.py
++-rw-------  2.0 unx     3271 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disassociate_permission_req_body.py
++-rw-------  2.0 unx     4401 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disassociate_resource_share_permission_request.py
++-rw-------  2.0 unx     2534 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disassociate_resource_share_permission_response.py
++-rw-------  2.0 unx     4289 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disassociate_resource_share_request.py
++-rw-------  2.0 unx     3888 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/disassociate_resource_share_response.py
++-rw-------  2.0 unx     4075 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/distinct_shared_principal.py
++-rw-------  2.0 unx     5102 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/distinct_shared_resource.py
++-rw-------  2.0 unx     2360 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/enable_organization_share_request.py
++-rw-------  2.0 unx     2486 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/enable_organization_share_response.py
++-rw-------  2.0 unx     4739 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_permissions_request.py
++-rw-------  2.0 unx     4410 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_permissions_response.py
++-rw-------  2.0 unx     6024 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_share_permissions_request.py
++-rw-------  2.0 unx     4885 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_share_permissions_response.py
++-rw-------  2.0 unx     3883 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_share_tags_request.py
++-rw-------  2.0 unx     4618 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_share_tags_response.py
++-rw-------  2.0 unx     4804 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_shares_by_tags_request.py
++-rw-------  2.0 unx     4386 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/list_resource_shares_by_tags_response.py
++-rw-------  2.0 unx     3699 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/match.py
++-rw-------  2.0 unx     4883 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/page_info.py
++-rw-------  2.0 unx     5048 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/page_info_marker_by_key.py
++-rw-------  2.0 unx     7739 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/permission.py
++-rw-------  2.0 unx     7255 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/permission_summary.py
++-rw-------  2.0 unx     3650 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/reject_resource_share_invitation_request.py
++-rw-------  2.0 unx     3846 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/reject_resource_share_invitation_response.py
++-rw-------  2.0 unx     5473 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_dto.py
++-rw-------  2.0 unx     8605 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_share.py
++-rw-------  2.0 unx     9049 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_share_association.py
++-rw-------  2.0 unx     4582 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_share_association_req_body.py
++-rw-------  2.0 unx    10479 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_share_invitation.py
++-rw-------  2.0 unx     6348 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/resource_shares_by_tags_req_body.py
++-rw-------  2.0 unx     3291 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_principals_request.py
++-rw-------  2.0 unx     4851 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_principals_response.py
++-rw-------  2.0 unx     6984 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_shared_principals_req_body.py
++-rw-------  2.0 unx     9760 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_shared_resources_req_body.py
++-rw-------  2.0 unx     3327 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_shared_resources_request.py
++-rw-------  2.0 unx     4884 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_distinct_shared_resources_response.py
++-rw-------  2.0 unx    10262 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_associations_req_body.py
++-rw-------  2.0 unx     3351 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_associations_request.py
++-rw-------  2.0 unx     4962 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_associations_response.py
++-rw-------  2.0 unx     3299 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_request.py
++-rw-------  2.0 unx     3427 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_response.py
++-rw-------  2.0 unx     7980 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_invitation_req_body.py
++-rw-------  2.0 unx     3327 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_invitation_request.py
++-rw-------  2.0 unx     4801 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_share_invitation_response.py
++-rw-------  2.0 unx     9931 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_shares_req_body.py
++-rw-------  2.0 unx     3219 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_shares_request.py
++-rw-------  2.0 unx     4546 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_resource_shares_response.py
++-rw-------  2.0 unx     7913 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_principals_req_body.py
++-rw-------  2.0 unx     3243 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_principals_request.py
++-rw-------  2.0 unx     4615 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_principals_response.py
++-rw-------  2.0 unx    10777 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_resources_req_body.py
++-rw-------  2.0 unx     3231 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_resources_request.py
++-rw-------  2.0 unx     4549 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/search_shared_resources_response.py
++-rw-------  2.0 unx     5905 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/shared_principal.py
++-rw-------  2.0 unx     7666 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/shared_resource.py
++-rw-------  2.0 unx     2354 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/show_organization_share_request.py
++-rw-------  2.0 unx     3473 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/show_organization_share_response.py
++-rw-------  2.0 unx     3215 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/show_permission_request.py
++-rw-------  2.0 unx     3329 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/show_permission_response.py
++-rw-------  2.0 unx     3803 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/tag.py
++-rw-------  2.0 unx     3931 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/tag_dto.py
++-rw-------  2.0 unx     3749 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/tag_filter.py
++-rw-------  2.0 unx     3455 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/tag_resource_req_body.py
++-rw-------  2.0 unx     3859 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/untag.py
++-rw-------  2.0 unx     3477 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/untag_resource_req_body.py
++-rw-------  2.0 unx     3974 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/update_resource_share_req_body.py
++-rw-------  2.0 unx     4197 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/update_resource_share_request.py
++-rw-------  2.0 unx     3473 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/model/update_resource_share_response.py
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/region/__init__.py
++-rw-------  2.0 unx      891 b- defN 23-Apr-06 08:29 huaweicloudsdkram/v1/region/ram_region.py
++-rwxrwxrwx  2.0 unx      604 b- defN 23-Apr-06 08:30 huaweicloudsdkram-3.1.35.dist-info/LICENSE
++-rw-------  2.0 unx     1136 b- defN 23-Apr-06 08:30 huaweicloudsdkram-3.1.35.dist-info/METADATA
++-rw-------  2.0 unx      110 b- defN 23-Apr-06 08:30 huaweicloudsdkram-3.1.35.dist-info/WHEEL
++-rw-------  2.0 unx       18 b- defN 23-Apr-06 08:30 huaweicloudsdkram-3.1.35.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx    11344 b- defN 23-Apr-06 08:30 huaweicloudsdkram-3.1.35.dist-info/RECORD
++99 files, 564295 bytes uncompressed, 119796 bytes compressed:  78.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -105,41 +105,65 @@
+ 
+ Filename: huaweicloudsdkram/v1/model/list_resource_share_permissions_request.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/list_resource_share_permissions_response.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/list_resource_share_tags_request.py
++Comment: 
++
++Filename: huaweicloudsdkram/v1/model/list_resource_share_tags_response.py
++Comment: 
++
++Filename: huaweicloudsdkram/v1/model/list_resource_shares_by_tags_request.py
++Comment: 
++
++Filename: huaweicloudsdkram/v1/model/list_resource_shares_by_tags_response.py
++Comment: 
++
++Filename: huaweicloudsdkram/v1/model/match.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/page_info.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/page_info_marker_by_key.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/permission.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/permission_summary.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/reject_resource_share_invitation_request.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/reject_resource_share_invitation_response.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/resource_dto.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/resource_share.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/resource_share_association.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/resource_share_association_req_body.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/resource_share_invitation.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/resource_shares_by_tags_req_body.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/search_distinct_principals_request.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/search_distinct_principals_response.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/search_distinct_shared_principals_req_body.py
+@@ -159,14 +183,20 @@
+ 
+ Filename: huaweicloudsdkram/v1/model/search_resource_share_associations_request.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/search_resource_share_associations_response.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_request.py
++Comment: 
++
++Filename: huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_response.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/search_resource_share_invitation_req_body.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/search_resource_share_invitation_request.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/search_resource_share_invitation_response.py
+@@ -216,14 +246,17 @@
+ 
+ Filename: huaweicloudsdkram/v1/model/show_permission_response.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/tag.py
+ Comment: 
+ 
++Filename: huaweicloudsdkram/v1/model/tag_dto.py
++Comment: 
++
+ Filename: huaweicloudsdkram/v1/model/tag_filter.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/tag_resource_req_body.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/model/untag.py
+@@ -243,23 +276,23 @@
+ 
+ Filename: huaweicloudsdkram/v1/region/__init__.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkram/v1/region/ram_region.py
+ Comment: 
+ 
+-Filename: huaweicloudsdkram-3.1.34.dist-info/LICENSE
++Filename: huaweicloudsdkram-3.1.35.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: huaweicloudsdkram-3.1.34.dist-info/METADATA
++Filename: huaweicloudsdkram-3.1.35.dist-info/METADATA
+ Comment: 
+ 
+-Filename: huaweicloudsdkram-3.1.34.dist-info/WHEEL
++Filename: huaweicloudsdkram-3.1.35.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: huaweicloudsdkram-3.1.34.dist-info/top_level.txt
++Filename: huaweicloudsdkram-3.1.35.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: huaweicloudsdkram-3.1.34.dist-info/RECORD
++Filename: huaweicloudsdkram-3.1.35.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## huaweicloudsdkram/v1/__init__.py
+
+```diff
+@@ -34,32 +34,42 @@
+ from huaweicloudsdkram.v1.model.distinct_shared_resource import DistinctSharedResource
+ from huaweicloudsdkram.v1.model.enable_organization_share_request import EnableOrganizationShareRequest
+ from huaweicloudsdkram.v1.model.enable_organization_share_response import EnableOrganizationShareResponse
+ from huaweicloudsdkram.v1.model.list_permissions_request import ListPermissionsRequest
+ from huaweicloudsdkram.v1.model.list_permissions_response import ListPermissionsResponse
+ from huaweicloudsdkram.v1.model.list_resource_share_permissions_request import ListResourceSharePermissionsRequest
+ from huaweicloudsdkram.v1.model.list_resource_share_permissions_response import ListResourceSharePermissionsResponse
++from huaweicloudsdkram.v1.model.list_resource_share_tags_request import ListResourceShareTagsRequest
++from huaweicloudsdkram.v1.model.list_resource_share_tags_response import ListResourceShareTagsResponse
++from huaweicloudsdkram.v1.model.list_resource_shares_by_tags_request import ListResourceSharesByTagsRequest
++from huaweicloudsdkram.v1.model.list_resource_shares_by_tags_response import ListResourceSharesByTagsResponse
++from huaweicloudsdkram.v1.model.match import Match
+ from huaweicloudsdkram.v1.model.page_info import PageInfo
++from huaweicloudsdkram.v1.model.page_info_marker_by_key import PageInfoMarkerByKey
+ from huaweicloudsdkram.v1.model.permission import Permission
+ from huaweicloudsdkram.v1.model.permission_summary import PermissionSummary
+ from huaweicloudsdkram.v1.model.reject_resource_share_invitation_request import RejectResourceShareInvitationRequest
+ from huaweicloudsdkram.v1.model.reject_resource_share_invitation_response import RejectResourceShareInvitationResponse
++from huaweicloudsdkram.v1.model.resource_dto import ResourceDTO
+ from huaweicloudsdkram.v1.model.resource_share import ResourceShare
+ from huaweicloudsdkram.v1.model.resource_share_association import ResourceShareAssociation
+ from huaweicloudsdkram.v1.model.resource_share_association_req_body import ResourceShareAssociationReqBody
+ from huaweicloudsdkram.v1.model.resource_share_invitation import ResourceShareInvitation
++from huaweicloudsdkram.v1.model.resource_shares_by_tags_req_body import ResourceSharesByTagsReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_principals_request import SearchDistinctPrincipalsRequest
+ from huaweicloudsdkram.v1.model.search_distinct_principals_response import SearchDistinctPrincipalsResponse
+ from huaweicloudsdkram.v1.model.search_distinct_shared_principals_req_body import SearchDistinctSharedPrincipalsReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_req_body import SearchDistinctSharedResourcesReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_request import SearchDistinctSharedResourcesRequest
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_response import SearchDistinctSharedResourcesResponse
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_req_body import SearchResourceShareAssociationsReqBody
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_request import SearchResourceShareAssociationsRequest
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_response import SearchResourceShareAssociationsResponse
++from huaweicloudsdkram.v1.model.search_resource_share_count_by_tags_request import SearchResourceShareCountByTagsRequest
++from huaweicloudsdkram.v1.model.search_resource_share_count_by_tags_response import SearchResourceShareCountByTagsResponse
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_req_body import SearchResourceShareInvitationReqBody
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_request import SearchResourceShareInvitationRequest
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_response import SearchResourceShareInvitationResponse
+ from huaweicloudsdkram.v1.model.search_resource_shares_req_body import SearchResourceSharesReqBody
+ from huaweicloudsdkram.v1.model.search_resource_shares_request import SearchResourceSharesRequest
+ from huaweicloudsdkram.v1.model.search_resource_shares_response import SearchResourceSharesResponse
+ from huaweicloudsdkram.v1.model.search_shared_principals_req_body import SearchSharedPrincipalsReqBody
+@@ -71,14 +81,15 @@
+ from huaweicloudsdkram.v1.model.shared_principal import SharedPrincipal
+ from huaweicloudsdkram.v1.model.shared_resource import SharedResource
+ from huaweicloudsdkram.v1.model.show_organization_share_request import ShowOrganizationShareRequest
+ from huaweicloudsdkram.v1.model.show_organization_share_response import ShowOrganizationShareResponse
+ from huaweicloudsdkram.v1.model.show_permission_request import ShowPermissionRequest
+ from huaweicloudsdkram.v1.model.show_permission_response import ShowPermissionResponse
+ from huaweicloudsdkram.v1.model.tag import Tag
++from huaweicloudsdkram.v1.model.tag_dto import TagDTO
+ from huaweicloudsdkram.v1.model.tag_filter import TagFilter
+ from huaweicloudsdkram.v1.model.tag_resource_req_body import TagResourceReqBody
+ from huaweicloudsdkram.v1.model.untag import Untag
+ from huaweicloudsdkram.v1.model.untag_resource_req_body import UntagResourceReqBody
+ from huaweicloudsdkram.v1.model.update_resource_share_req_body import UpdateResourceShareReqBody
+ from huaweicloudsdkram.v1.model.update_resource_share_request import UpdateResourceShareRequest
+ from huaweicloudsdkram.v1.model.update_resource_share_response import UpdateResourceShareResponse
+```
+
+## huaweicloudsdkram/v1/ram_async_client.py
+
+```diff
+@@ -1520,14 +1520,203 @@
+             cname=cname,
+             response_type='BatchDeleteResourceShareTagsResponse',
+             response_headers=response_headers,
+             auth_settings=auth_settings,
+             collection_formats=collection_formats,
+             request_type=request.__class__.__name__)
+ 
++    def list_resource_share_tags_async(self, request):
++        """查询已经使用的标签列表
++
++        查询的标签相信列表。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++
++        :param request: Request instance for ListResourceShareTags
++        :type request: :class:`huaweicloudsdkram.v1.ListResourceShareTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.ListResourceShareTagsResponse`
++        """
++        return self.list_resource_share_tags_with_http_info(request)
++
++    def list_resource_share_tags_with_http_info(self, request):
++        all_params = ['limit', 'marker']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++        if 'limit' in local_var_params:
++            query_params.append(('limit', local_var_params['limit']))
++        if 'marker' in local_var_params:
++            query_params.append(('marker', local_var_params['marker']))
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/tags',
++            method='GET',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='ListResourceShareTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
++    def list_resource_shares_by_tags_async(self, request):
++        """根据标签信息查询实例列表
++
++        根据标签信息查询实例列表。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++
++        :param request: Request instance for ListResourceSharesByTags
++        :type request: :class:`huaweicloudsdkram.v1.ListResourceSharesByTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.ListResourceSharesByTagsResponse`
++        """
++        return self.list_resource_shares_by_tags_with_http_info(request)
++
++    def list_resource_shares_by_tags_with_http_info(self, request):
++        all_params = ['resource_shares_by_tags_req_body', 'limit', 'offset']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++        if 'limit' in local_var_params:
++            query_params.append(('limit', local_var_params['limit']))
++        if 'offset' in local_var_params:
++            query_params.append(('offset', local_var_params['offset']))
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if 'body' in local_var_params:
++            body_params = local_var_params['body']
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/resource-instances/filter',
++            method='POST',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='ListResourceSharesByTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
++    def search_resource_share_count_by_tags_async(self, request):
++        """根据标签信息查询实例数量
++
++        根据标签信息查询实例数量。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++
++        :param request: Request instance for SearchResourceShareCountByTags
++        :type request: :class:`huaweicloudsdkram.v1.SearchResourceShareCountByTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.SearchResourceShareCountByTagsResponse`
++        """
++        return self.search_resource_share_count_by_tags_with_http_info(request)
++
++    def search_resource_share_count_by_tags_with_http_info(self, request):
++        all_params = ['resource_shares_by_tags_req_body']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if 'body' in local_var_params:
++            body_params = local_var_params['body']
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/resource-instances/count',
++            method='POST',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='SearchResourceShareCountByTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
+     def call_api(self, resource_path, method, path_params=None, query_params=None, header_params=None, body=None,
+                  post_params=None, cname=None, response_type=None, response_headers=None, auth_settings=None,
+                  collection_formats=None, request_type=None):
+         """Makes the HTTP request and returns deserialized data.
+ 
+         :param resource_path: Path to method endpoint.
+         :param method: Method to call.
+```
+
+## huaweicloudsdkram/v1/ram_client.py
+
+```diff
+@@ -1496,14 +1496,200 @@
+             cname=cname,
+             response_type='BatchDeleteResourceShareTagsResponse',
+             response_headers=response_headers,
+             auth_settings=auth_settings,
+             collection_formats=collection_formats,
+             request_type=request.__class__.__name__)
+ 
++    def list_resource_share_tags(self, request):
++        """查询已经使用的标签列表
++
++        查询的标签相信列表。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++        :param request: Request instance for ListResourceShareTags
++        :type request: :class:`huaweicloudsdkram.v1.ListResourceShareTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.ListResourceShareTagsResponse`
++        """
++        return self.list_resource_share_tags_with_http_info(request)
++
++    def list_resource_share_tags_with_http_info(self, request):
++        all_params = ['limit', 'marker']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++        if 'limit' in local_var_params:
++            query_params.append(('limit', local_var_params['limit']))
++        if 'marker' in local_var_params:
++            query_params.append(('marker', local_var_params['marker']))
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/tags',
++            method='GET',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='ListResourceShareTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
++    def list_resource_shares_by_tags(self, request):
++        """根据标签信息查询实例列表
++
++        根据标签信息查询实例列表。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++        :param request: Request instance for ListResourceSharesByTags
++        :type request: :class:`huaweicloudsdkram.v1.ListResourceSharesByTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.ListResourceSharesByTagsResponse`
++        """
++        return self.list_resource_shares_by_tags_with_http_info(request)
++
++    def list_resource_shares_by_tags_with_http_info(self, request):
++        all_params = ['resource_shares_by_tags_req_body', 'limit', 'offset']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++        if 'limit' in local_var_params:
++            query_params.append(('limit', local_var_params['limit']))
++        if 'offset' in local_var_params:
++            query_params.append(('offset', local_var_params['offset']))
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if 'body' in local_var_params:
++            body_params = local_var_params['body']
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/resource-instances/filter',
++            method='POST',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='ListResourceSharesByTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
++    def search_resource_share_count_by_tags(self, request):
++        """根据标签信息查询实例数量
++
++        根据标签信息查询实例数量。
++        
++        Please refer to HUAWEI cloud API Explorer for details.
++
++        :param request: Request instance for SearchResourceShareCountByTags
++        :type request: :class:`huaweicloudsdkram.v1.SearchResourceShareCountByTagsRequest`
++        :rtype: :class:`huaweicloudsdkram.v1.SearchResourceShareCountByTagsResponse`
++        """
++        return self.search_resource_share_count_by_tags_with_http_info(request)
++
++    def search_resource_share_count_by_tags_with_http_info(self, request):
++        all_params = ['resource_shares_by_tags_req_body']
++        local_var_params = {}
++        for attr in request.attribute_map:
++            if hasattr(request, attr):
++                local_var_params[attr] = getattr(request, attr)
++
++        cname = None
++
++        collection_formats = {}
++
++        path_params = {}
++
++        query_params = []
++
++        header_params = {}
++
++        form_params = {}
++
++        body_params = None
++        if 'body' in local_var_params:
++            body_params = local_var_params['body']
++        if isinstance(request, SdkStreamRequest):
++            body_params = request.get_file_stream()
++
++        response_headers = []
++
++        header_params['Content-Type'] = http_utils.select_header_content_type(
++            ['application/json'])
++
++        auth_settings = ['AccessKeyAuth']
++
++        return self.call_api(
++            resource_path='/v1/resource-shares/resource-instances/count',
++            method='POST',
++            path_params=path_params,
++            query_params=query_params,
++            header_params=header_params,
++            body=body_params,
++            post_params=form_params,
++            cname=cname,
++            response_type='SearchResourceShareCountByTagsResponse',
++            response_headers=response_headers,
++            auth_settings=auth_settings,
++            collection_formats=collection_formats,
++            request_type=request.__class__.__name__)
++
+     def call_api(self, resource_path, method, path_params=None, query_params=None, header_params=None, body=None,
+                  post_params=None, cname=None, response_type=None, response_headers=None, auth_settings=None,
+                  collection_formats=None, request_type=None):
+         """Makes the HTTP request and returns deserialized data.
+ 
+         :param resource_path: Path to method endpoint.
+         :param method: Method to call.
+```
+
+## huaweicloudsdkram/v1/model/__init__.py
+
+```diff
+@@ -31,32 +31,42 @@
+ from huaweicloudsdkram.v1.model.distinct_shared_resource import DistinctSharedResource
+ from huaweicloudsdkram.v1.model.enable_organization_share_request import EnableOrganizationShareRequest
+ from huaweicloudsdkram.v1.model.enable_organization_share_response import EnableOrganizationShareResponse
+ from huaweicloudsdkram.v1.model.list_permissions_request import ListPermissionsRequest
+ from huaweicloudsdkram.v1.model.list_permissions_response import ListPermissionsResponse
+ from huaweicloudsdkram.v1.model.list_resource_share_permissions_request import ListResourceSharePermissionsRequest
+ from huaweicloudsdkram.v1.model.list_resource_share_permissions_response import ListResourceSharePermissionsResponse
++from huaweicloudsdkram.v1.model.list_resource_share_tags_request import ListResourceShareTagsRequest
++from huaweicloudsdkram.v1.model.list_resource_share_tags_response import ListResourceShareTagsResponse
++from huaweicloudsdkram.v1.model.list_resource_shares_by_tags_request import ListResourceSharesByTagsRequest
++from huaweicloudsdkram.v1.model.list_resource_shares_by_tags_response import ListResourceSharesByTagsResponse
++from huaweicloudsdkram.v1.model.match import Match
+ from huaweicloudsdkram.v1.model.page_info import PageInfo
++from huaweicloudsdkram.v1.model.page_info_marker_by_key import PageInfoMarkerByKey
+ from huaweicloudsdkram.v1.model.permission import Permission
+ from huaweicloudsdkram.v1.model.permission_summary import PermissionSummary
+ from huaweicloudsdkram.v1.model.reject_resource_share_invitation_request import RejectResourceShareInvitationRequest
+ from huaweicloudsdkram.v1.model.reject_resource_share_invitation_response import RejectResourceShareInvitationResponse
++from huaweicloudsdkram.v1.model.resource_dto import ResourceDTO
+ from huaweicloudsdkram.v1.model.resource_share import ResourceShare
+ from huaweicloudsdkram.v1.model.resource_share_association import ResourceShareAssociation
+ from huaweicloudsdkram.v1.model.resource_share_association_req_body import ResourceShareAssociationReqBody
+ from huaweicloudsdkram.v1.model.resource_share_invitation import ResourceShareInvitation
++from huaweicloudsdkram.v1.model.resource_shares_by_tags_req_body import ResourceSharesByTagsReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_principals_request import SearchDistinctPrincipalsRequest
+ from huaweicloudsdkram.v1.model.search_distinct_principals_response import SearchDistinctPrincipalsResponse
+ from huaweicloudsdkram.v1.model.search_distinct_shared_principals_req_body import SearchDistinctSharedPrincipalsReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_req_body import SearchDistinctSharedResourcesReqBody
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_request import SearchDistinctSharedResourcesRequest
+ from huaweicloudsdkram.v1.model.search_distinct_shared_resources_response import SearchDistinctSharedResourcesResponse
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_req_body import SearchResourceShareAssociationsReqBody
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_request import SearchResourceShareAssociationsRequest
+ from huaweicloudsdkram.v1.model.search_resource_share_associations_response import SearchResourceShareAssociationsResponse
++from huaweicloudsdkram.v1.model.search_resource_share_count_by_tags_request import SearchResourceShareCountByTagsRequest
++from huaweicloudsdkram.v1.model.search_resource_share_count_by_tags_response import SearchResourceShareCountByTagsResponse
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_req_body import SearchResourceShareInvitationReqBody
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_request import SearchResourceShareInvitationRequest
+ from huaweicloudsdkram.v1.model.search_resource_share_invitation_response import SearchResourceShareInvitationResponse
+ from huaweicloudsdkram.v1.model.search_resource_shares_req_body import SearchResourceSharesReqBody
+ from huaweicloudsdkram.v1.model.search_resource_shares_request import SearchResourceSharesRequest
+ from huaweicloudsdkram.v1.model.search_resource_shares_response import SearchResourceSharesResponse
+ from huaweicloudsdkram.v1.model.search_shared_principals_req_body import SearchSharedPrincipalsReqBody
+@@ -68,14 +78,15 @@
+ from huaweicloudsdkram.v1.model.shared_principal import SharedPrincipal
+ from huaweicloudsdkram.v1.model.shared_resource import SharedResource
+ from huaweicloudsdkram.v1.model.show_organization_share_request import ShowOrganizationShareRequest
+ from huaweicloudsdkram.v1.model.show_organization_share_response import ShowOrganizationShareResponse
+ from huaweicloudsdkram.v1.model.show_permission_request import ShowPermissionRequest
+ from huaweicloudsdkram.v1.model.show_permission_response import ShowPermissionResponse
+ from huaweicloudsdkram.v1.model.tag import Tag
++from huaweicloudsdkram.v1.model.tag_dto import TagDTO
+ from huaweicloudsdkram.v1.model.tag_filter import TagFilter
+ from huaweicloudsdkram.v1.model.tag_resource_req_body import TagResourceReqBody
+ from huaweicloudsdkram.v1.model.untag import Untag
+ from huaweicloudsdkram.v1.model.untag_resource_req_body import UntagResourceReqBody
+ from huaweicloudsdkram.v1.model.update_resource_share_req_body import UpdateResourceShareReqBody
+ from huaweicloudsdkram.v1.model.update_resource_share_request import UpdateResourceShareRequest
+ from huaweicloudsdkram.v1.model.update_resource_share_response import UpdateResourceShareResponse
+```
+
+## Comparing `huaweicloudsdkram-3.1.34.dist-info/LICENSE` & `huaweicloudsdkram-3.1.35.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `huaweicloudsdkram-3.1.34.dist-info/METADATA` & `huaweicloudsdkram-3.1.35.dist-info/METADATA`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: huaweicloudsdkram
+-Version: 3.1.34
++Version: 3.1.35
+ Summary: RAM
+ Home-page: https://github.com/huaweicloud/huaweicloud-sdk-python-v3
+ Author: HuaweiCloud SDK
+ Author-email: hwcloudsdk@huawei.com
+ License: Apache LICENSE 2.0
+ Keywords: huaweicloud,sdk,RAM
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -18,10 +18,10 @@
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Topic :: Software Development
+ Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+-Requires-Dist: huaweicloudsdkcore (>=3.1.34)
++Requires-Dist: huaweicloudsdkcore (>=3.1.35)
+ 
+ See detailed information in [huaweicloud-sdk-python-v3](https://github.com/huaweicloud/huaweicloud-sdk-python-v3).
+```
+
+## Comparing `huaweicloudsdkram-3.1.34.dist-info/RECORD` & `huaweicloudsdkram-3.1.35.dist-info/RECORD`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ huaweicloudsdkram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-huaweicloudsdkram/v1/__init__.py,sha256=1jqGlXKBuM7U0pINhCXoc8XU9QDAPHwc8jEPCti6qrY,7870
+-huaweicloudsdkram/v1/ram_async_client.py,sha256=SpzZgvZd81oEteQFkz4MF_5L7QYAW8tgahdWaoMgKQs,53926
+-huaweicloudsdkram/v1/ram_client.py,sha256=YzlsCaWpNafnrFxRXW7CsdIBt5f-ufUaL0m4eNzrPwc,53711
+-huaweicloudsdkram/v1/model/__init__.py,sha256=gx1uRYisjjgfo2tAb0Xeb1sJJ4rxc5jdeTUvB2PmQ4Q,7733
++huaweicloudsdkram/v1/__init__.py,sha256=7QOrlhw5NNE4EL5cjaXkX8Iu42czQR-EpQCx3zL6UqE,8888
++huaweicloudsdkram/v1/ram_async_client.py,sha256=XZQDBCUK4coF9QHobn4wKd_IT56_BcUsSMIhEfmzyZU,60327
++huaweicloudsdkram/v1/ram_client.py,sha256=xEoLrrsChXlIY7axNF_Rei8RfXHdqA4kvZuBkrP8nJk,60091
++huaweicloudsdkram/v1/model/__init__.py,sha256=3Brxku98OIsOJUmqzAs2DvDL3bPXybc28T79rYI85aw,8751
+ huaweicloudsdkram/v1/model/accept_resource_share_invitation_request.py,sha256=iynmzVqxmdkxItsjs3HBKxQJsQuY05RksQlHnQIgin0,3650
+ huaweicloudsdkram/v1/model/accept_resource_share_invitation_response.py,sha256=7mpLbHP1Pnz-3faU_j-0y0nK6b3QTHB9ypnDY4y4fl8,3846
+ huaweicloudsdkram/v1/model/associate_permission_req_body.py,sha256=qcCNVeRs35phTXeHT06k0IUpdHOuLVI2N55ny8-pxO4,5493
+ huaweicloudsdkram/v1/model/associate_resource_share_permission_request.py,sha256=58GQLbmA1p6N8mD6bk0rty3FU39DF4ikLqgtpUtaJpU,4353
+ huaweicloudsdkram/v1/model/associate_resource_share_permission_response.py,sha256=0yccDdZfH0cKy5AsKcAFfyCRVvdo_atJ92yqWEAtIYY,2522
+ huaweicloudsdkram/v1/model/associate_resource_share_request.py,sha256=g6JvwKtyF57wXwxYmVwuxGgXfXz9B2gGmpKL1Rpw_Is,4253
+ huaweicloudsdkram/v1/model/associate_resource_share_response.py,sha256=3caynHHUirFhoqYbUnV8Z6kMMjTLbUaeIxL21We2OU8,3864
+@@ -31,32 +31,42 @@
+ huaweicloudsdkram/v1/model/distinct_shared_resource.py,sha256=4y-TIR-Cl-BaP2kr6xloNsiUzPGOM9aM1PTD6UVJpjw,5102
+ huaweicloudsdkram/v1/model/enable_organization_share_request.py,sha256=3SeYeuFmn4pnaasKAupZRmCF9my4J6MOGLqXBWPFI18,2360
+ huaweicloudsdkram/v1/model/enable_organization_share_response.py,sha256=N9YL1hQTD4LYa2Q1UKiFicpH_u71N0kP-Ej9x5Y88n4,2486
+ huaweicloudsdkram/v1/model/list_permissions_request.py,sha256=xWCcZbUkqx0tth8GukVL7A2Jb4Ere6506Ppo8PyZu0Y,4739
+ huaweicloudsdkram/v1/model/list_permissions_response.py,sha256=4N1Kmtrm2jCs_pA2b-oMCuv31tbHSyii_oYcRtTbcC8,4410
+ huaweicloudsdkram/v1/model/list_resource_share_permissions_request.py,sha256=1OmpfQugunJarH5MjRzpGngSNsnz8TcCT6qXNPHQaXQ,6024
+ huaweicloudsdkram/v1/model/list_resource_share_permissions_response.py,sha256=CwSBUN2NvAGhbwjW4Un-PKCwNzHoxwPzP-E-XgDr0uw,4885
++huaweicloudsdkram/v1/model/list_resource_share_tags_request.py,sha256=Y5qie4yBGB5aa95CdP5l0N6raQ-t7vTNtJAXmZVdvqU,3883
++huaweicloudsdkram/v1/model/list_resource_share_tags_response.py,sha256=cIjTzlbgAJFZ31WbThZcigUUTSkDWiJ71w7P_RILi4E,4618
++huaweicloudsdkram/v1/model/list_resource_shares_by_tags_request.py,sha256=vWsvzIudylIJwJVUYidkXrazoW9PM6UeMd0zhshdHd4,4804
++huaweicloudsdkram/v1/model/list_resource_shares_by_tags_response.py,sha256=hKRC3ARa5z80b6Yk9AiFYUCZRkumaIDEFmu1i_jwsWU,4386
++huaweicloudsdkram/v1/model/match.py,sha256=zN0wwX8kHNkGjcWV5rvXY382a6wr5Kb-TnLohf0bMNQ,3699
+ huaweicloudsdkram/v1/model/page_info.py,sha256=x5eiQBQIh5mD1Q-AdbdOL11-H1l0fv1NJOZM7Jnnkkc,4883
++huaweicloudsdkram/v1/model/page_info_marker_by_key.py,sha256=l_SjUVXrC8kZo6tnzVUQaQZEDuW7mfX7Iv-JEbuGu_4,5048
+ huaweicloudsdkram/v1/model/permission.py,sha256=fn6w8ug_06W-kWxjsp7viAOH-XApL0mmi6reolJ6Qac,7739
+ huaweicloudsdkram/v1/model/permission_summary.py,sha256=MMazEyEPt7WF8OHdIIAivoHTbCJzUUvwjTCeeG1XQC8,7255
+ huaweicloudsdkram/v1/model/reject_resource_share_invitation_request.py,sha256=SnsVWxcsV3Gv3n0d-bV1MpshQ0QPaKPaqyS1Rmdrv08,3650
+ huaweicloudsdkram/v1/model/reject_resource_share_invitation_response.py,sha256=FzSV2-6WSPYwAINO23eC3CTlbbK_2SvrLix-VpBNX_0,3846
++huaweicloudsdkram/v1/model/resource_dto.py,sha256=ibeuEo2RUpLpeAXRTiHC1RQqOe7HClegvA7nonmDSVY,5473
+ huaweicloudsdkram/v1/model/resource_share.py,sha256=hNwx_Zz6go5aq5nbKs98ybYce7p27BRCG5Orbodc3pk,8605
+ huaweicloudsdkram/v1/model/resource_share_association.py,sha256=mg7G6NDcdkebnt-SU72JOiHzP-FSGndwdjlwL0a29g8,9049
+ huaweicloudsdkram/v1/model/resource_share_association_req_body.py,sha256=wiUic1xI-f1ewyV1Py56BcRZG0gWvvt3BE7IAT8HL88,4582
+ huaweicloudsdkram/v1/model/resource_share_invitation.py,sha256=i0YEDC7Qh1IOaE5H7MxAgaCl-GNZXlt9MTmVJzubAys,10479
++huaweicloudsdkram/v1/model/resource_shares_by_tags_req_body.py,sha256=obz4X8IqpiFnazaErj7GswusC-OJD_FIX0wgnFJlo0U,6348
+ huaweicloudsdkram/v1/model/search_distinct_principals_request.py,sha256=aZEnGkH60SdKIzMo4ffPv1P55_8I1brEihu3nIa-cGU,3291
+ huaweicloudsdkram/v1/model/search_distinct_principals_response.py,sha256=6u7z0URfwNac2vP5Me8e-1GOWOjZrEWuz8sCikoooes,4851
+ huaweicloudsdkram/v1/model/search_distinct_shared_principals_req_body.py,sha256=GMIf2QxPp63tRUlI9QhF-mCR-lxZEaPqigfHt5xIfz0,6984
+ huaweicloudsdkram/v1/model/search_distinct_shared_resources_req_body.py,sha256=ugofXgzG02uxRuufpQAd4qkO-1HcSEz-jCYN-sc4GjM,9760
+ huaweicloudsdkram/v1/model/search_distinct_shared_resources_request.py,sha256=kq6TdOxbZMeLKzZwAPtIZV5iWHE_HMrCCjm-Nw2_cvQ,3327
+ huaweicloudsdkram/v1/model/search_distinct_shared_resources_response.py,sha256=1Db1ljSGU8wm6WEK_8zkC0IOAg90fSpPG0Ju6STvPBA,4884
+ huaweicloudsdkram/v1/model/search_resource_share_associations_req_body.py,sha256=mOV4MjZAQh3aEt2OgPcTtOw-5G6PRHXgP50bJ1uCiOo,10262
+ huaweicloudsdkram/v1/model/search_resource_share_associations_request.py,sha256=YxSAerh3p__aQP4EWxs9ig8BWwxZ6rRMtfi16UL7-1c,3351
+ huaweicloudsdkram/v1/model/search_resource_share_associations_response.py,sha256=6S-h0KTxSProNf3eN9893pu4AJ4xH78aHtuBZkPU3QA,4962
++huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_request.py,sha256=mMWsMbJwGNif1HQ1AXZ8foiczdAVwvA5Yxy1Ge3Q2BE,3299
++huaweicloudsdkram/v1/model/search_resource_share_count_by_tags_response.py,sha256=bh8XgLfyzl8E3tWYMxzAL0fAVHLVAH-jVuLbxHSRf_4,3427
+ huaweicloudsdkram/v1/model/search_resource_share_invitation_req_body.py,sha256=mQXYRqqcyrEiPjyFP6pPPJxXKdHDs0_J2aNqYOM8DhI,7980
+ huaweicloudsdkram/v1/model/search_resource_share_invitation_request.py,sha256=IqzhcWCZMzVRWxqrzvZmqUx3RbP9VI4ImDxEp-m4tr4,3327
+ huaweicloudsdkram/v1/model/search_resource_share_invitation_response.py,sha256=QsKp9gxKGGBsRfv7ddxzsX6BDQF0lg4JcMLdA7I1gTI,4801
+ huaweicloudsdkram/v1/model/search_resource_shares_req_body.py,sha256=P2LgOeYo6Wz0EZzZ0FUxW6O_ddObvQbXv40fJPv04Ik,9931
+ huaweicloudsdkram/v1/model/search_resource_shares_request.py,sha256=IvBmMk3EFmqwKiX0J-qXHGUjJ50WkrchYtQel7DiQ8k,3219
+ huaweicloudsdkram/v1/model/search_resource_shares_response.py,sha256=6HfdTn_ZkhBkFro-nXvhDuQhA3TlajoGRjhGNP-ViKs,4546
+ huaweicloudsdkram/v1/model/search_shared_principals_req_body.py,sha256=L_FPrGN1zh0267YC509yjEV-Oy_2eyEBcM98E0TvvoA,7913
+@@ -68,21 +78,22 @@
+ huaweicloudsdkram/v1/model/shared_principal.py,sha256=iMoIxbQVkXl4dacG0ZX_GYqLOYZ8iCGGVhm-D9ttRqI,5905
+ huaweicloudsdkram/v1/model/shared_resource.py,sha256=xuCyu8LOmjs9AJixtJ6P3W48lATqDqmS9NY8Jf1DHEk,7666
+ huaweicloudsdkram/v1/model/show_organization_share_request.py,sha256=aNjvc_Nt3PSPXyx5sQVZTWoaLy4o6ZethRxKNkISjL8,2354
+ huaweicloudsdkram/v1/model/show_organization_share_response.py,sha256=h4pHkYuCCB81OBdEp4Xd0M-ws-H-fDuGb-nhJwlqaOI,3473
+ huaweicloudsdkram/v1/model/show_permission_request.py,sha256=y5kUwltOsGABXhF61V2s-yEU6Mm8QLoJZwNyLYiaA1w,3215
+ huaweicloudsdkram/v1/model/show_permission_response.py,sha256=VohIGEdj4yXk4kGOtt9QgRbJKFVyjPdYlL2glwqLeas,3329
+ huaweicloudsdkram/v1/model/tag.py,sha256=-lp-ZU69KzHLUO5s6qjTKhsOOKbAoDPyUIcQpkEox5w,3803
++huaweicloudsdkram/v1/model/tag_dto.py,sha256=pnDJH_rjxEn-ZHEdUrDb5Xmw7wqG5bQCnMi_8XX7LpM,3931
+ huaweicloudsdkram/v1/model/tag_filter.py,sha256=huREjXCcA005k6-Y_0L4FQJupxL_JjEOafNJOQUaVHU,3749
+ huaweicloudsdkram/v1/model/tag_resource_req_body.py,sha256=odekoF-JN-KjDs9L1tNXy3ed8lJRJBnSWVSsY4zUmxs,3455
+ huaweicloudsdkram/v1/model/untag.py,sha256=blJ8e_tSpgI8utOJo_AL3sQi48VRZPw2mJObcPb5VOA,3859
+ huaweicloudsdkram/v1/model/untag_resource_req_body.py,sha256=J1Z8vYrpGSVwhYEZxHmeWd3c7gHO1VxW8KIcQa9U28g,3477
+ huaweicloudsdkram/v1/model/update_resource_share_req_body.py,sha256=u2fbcfINOXIFdHuISBeWZoyBsQPVuCORqdGlS1smbMQ,3974
+ huaweicloudsdkram/v1/model/update_resource_share_request.py,sha256=f4NVtzeuVpVRKE7XMiUwQgikJEwi6K03qOt3N2e6SRc,4197
+ huaweicloudsdkram/v1/model/update_resource_share_response.py,sha256=_o1R-9kI4qxvmAGwn1RFG8pmVHzo9sVv266T49bUAgw,3473
+ huaweicloudsdkram/v1/region/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ huaweicloudsdkram/v1/region/ram_region.py,sha256=wObKQRCuaB5o-opmIcXDRq0QeGsVXuYTIg4iJDEIRHM,891
+-huaweicloudsdkram-3.1.34.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
+-huaweicloudsdkram-3.1.34.dist-info/METADATA,sha256=4O1AkNIh8KL0rnJk5LiKpbaijZCfUfzL9RdTVZ_9tdc,1136
+-huaweicloudsdkram-3.1.34.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-huaweicloudsdkram-3.1.34.dist-info/top_level.txt,sha256=2c3QxK2-mN-BqBO1Vm8bciMkiHVK7M6eBaGHq1JaNIs,18
+-huaweicloudsdkram-3.1.34.dist-info/RECORD,,
++huaweicloudsdkram-3.1.35.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
++huaweicloudsdkram-3.1.35.dist-info/METADATA,sha256=8vvH-KTmPU7lGvy8vnLP0W5yWq7PO36BJm7Epa1-vBM,1136
++huaweicloudsdkram-3.1.35.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
++huaweicloudsdkram-3.1.35.dist-info/top_level.txt,sha256=2c3QxK2-mN-BqBO1Vm8bciMkiHVK7M6eBaGHq1JaNIs,18
++huaweicloudsdkram-3.1.35.dist-info/RECORD,,
+```
+

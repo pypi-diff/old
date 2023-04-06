@@ -1,0 +1,494 @@
+# Comparing `tmp/rpaframework_windows-7.3.0.tar.gz` & `tmp/rpaframework_windows-7.3.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rpaframework_windows-7.3.0.tar", max compression
++gzip compressed data, was "rpaframework_windows-7.3.1.tar", max compression
+```
+
+## Comparing `rpaframework_windows-7.3.0.tar` & `rpaframework_windows-7.3.1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+--rw-r--r--   0        0        0    11358 2022-05-25 11:29:26.199958 rpaframework_windows-7.3.0/LICENSE
+--rw-r--r--   0        0        0      282 2022-05-25 11:29:26.200075 rpaframework_windows-7.3.0/README.rst
+--rw-r--r--   0        0        0    72367 2023-04-05 08:21:17.090794 rpaframework_windows-7.3.0/RPA_Windows.libspec
+--rw-r--r--   0        0        0     2278 2023-04-05 08:19:46.253035 rpaframework_windows-7.3.0/pyproject.toml
+--rw-r--r--   0        0        0    21744 2023-04-05 08:19:46.253441 rpaframework_windows-7.3.0/src/RPA/Windows/__init__.py
+--rw-r--r--   0        0        0       74 2023-04-05 06:44:39.899366 rpaframework_windows-7.3.0/src/RPA/Windows/__main__.py
+--rw-r--r--   0        0        0      363 2023-04-05 08:19:46.253713 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/__init__.py
+--rw-r--r--   0        0        0    27766 2023-04-05 08:19:46.254084 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/action.py
+--rw-r--r--   0        0        0      303 2023-04-05 08:19:46.254349 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/context.py
+--rw-r--r--   0        0        0     6236 2023-04-05 08:19:46.254629 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/elements.py
+--rw-r--r--   0        0        0     8453 2023-04-05 08:19:46.254911 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/locators.py
+--rw-r--r--   0        0        0    13601 2023-04-05 08:19:46.255203 rpaframework_windows-7.3.0/src/RPA/Windows/keywords/window.py
+--rw-r--r--   0        0        0     3178 2023-04-05 08:19:46.255475 rpaframework_windows-7.3.0/src/RPA/Windows/main.py
+--rw-r--r--   0        0        0      737 2023-04-05 08:19:46.255740 rpaframework_windows-7.3.0/src/RPA/Windows/utils.py
+--rw-r--r--   0        0        0       74 2023-04-05 08:15:13.115404 rpaframework_windows-7.3.0/src/RPA/scripts/record.py
+--rw-r--r--   0        0        0     2298 1970-01-01 00:00:00.000000 rpaframework_windows-7.3.0/PKG-INFO
++-rw-r--r--   0        0        0    11358 2022-05-25 11:29:26.199958 rpaframework_windows-7.3.1/LICENSE
++-rw-r--r--   0        0        0      282 2022-05-25 11:29:26.200075 rpaframework_windows-7.3.1/README.rst
++-rw-r--r--   0        0        0    73891 2023-04-06 09:45:42.114895 rpaframework_windows-7.3.1/RPA_Windows.libspec
++-rw-r--r--   0        0        0     2278 2023-04-06 09:43:29.075179 rpaframework_windows-7.3.1/pyproject.toml
++-rw-r--r--   0        0        0    23346 2023-04-06 09:43:02.455059 rpaframework_windows-7.3.1/src/RPA/Windows/__init__.py
++-rw-r--r--   0        0        0       74 2023-04-05 06:44:39.899366 rpaframework_windows-7.3.1/src/RPA/Windows/__main__.py
++-rw-r--r--   0        0        0      363 2023-04-05 08:19:46.253713 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/__init__.py
++-rw-r--r--   0        0        0    27766 2023-04-05 08:19:46.254084 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/action.py
++-rw-r--r--   0        0        0      303 2023-04-05 08:19:46.254349 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/context.py
++-rw-r--r--   0        0        0     6236 2023-04-05 08:19:46.254629 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/elements.py
++-rw-r--r--   0        0        0     8453 2023-04-05 08:19:46.254911 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/locators.py
++-rw-r--r--   0        0        0    13601 2023-04-05 08:19:46.255203 rpaframework_windows-7.3.1/src/RPA/Windows/keywords/window.py
++-rw-r--r--   0        0        0     3178 2023-04-05 08:19:46.255475 rpaframework_windows-7.3.1/src/RPA/Windows/main.py
++-rw-r--r--   0        0        0      737 2023-04-05 08:19:46.255740 rpaframework_windows-7.3.1/src/RPA/Windows/utils.py
++-rw-r--r--   0        0        0       74 2023-04-05 08:15:13.115404 rpaframework_windows-7.3.1/src/RPA/scripts/record.py
++-rw-r--r--   0        0        0     2298 1970-01-01 00:00:00.000000 rpaframework_windows-7.3.1/PKG-INFO
+```
+
+### Comparing `rpaframework_windows-7.3.0/LICENSE` & `rpaframework_windows-7.3.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/RPA_Windows.libspec` & `rpaframework_windows-7.3.1/RPA_Windows.libspec`
+
+ * *Files 3% similar despite different names*
+
+#### Comparing `rpaframework_windows-7.3.0/RPA_Windows.libspec` & `rpaframework_windows-7.3.1/RPA_Windows.libspec`
+
+```diff
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<keywordspec name="RPA.Windows" type="LIBRARY" format="REST" scope="GLOBAL" generated="2023-04-05T08:21:17Z" specversion="4" source="./RPA/Windows/__init__.py" lineno="24">
++<keywordspec name="RPA.Windows" type="LIBRARY" format="REST" scope="GLOBAL" generated="2023-04-06T09:45:42Z" specversion="4" source="./RPA/Windows/__init__.py" lineno="24">
+   <version/>
+   <doc>The `Windows` is a library that can be used for Windows desktop automation.
+ 
+ Library is included in the **rpaframework** package by default, but as shown in the
+ below example library can be also installed separately without **rpaframework**.
+ 
+ .. code-block:: yaml
+@@ -364,112 +364,130 @@
+ 
+ Most common, and recommended by Microsoft, inspector tool for Windows is `Accessibility Insights`_ that
+ can be installed separately. Other options are tools `Inspect Object`_  and `UI Automation Verify`_, which
+ can be accessed by installing Windows SDK.
+ 
+ A more programmatic approach is to run ``Print Tree    log_as_warnings=${True}``
+ keyword and then observe in the logs the found elements structure starting from
+-Desktop as root. (refer to keyword's documentation for more details)
++Desktop (or the currently set anchor / active window) as root. (refer to keyword's
++`documentation &lt;https://robocorp.com/docs/libraries/rpa-framework/rpa-windows/keywords#print-tree&gt;`_
++for more details)
+ 
+ .. _Accessibility Insights: https://accessibilityinsights.io/
+ .. _Inspect Object: https://docs.microsoft.com/en-us/windows/win32/winauto/inspect-objects
+ .. _UI Automation Verify: https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-verify
+ 
+ **Recording**
+ 
+-The package provides some rudimentary inspecting and recording via script ``windows-record``, which can
+-be started in the command line (in a environment containing ``rpaframework-windows`` installation).
++The package provides some rudimentary inspecting and recording via the
++``windows-record`` script, which can be started through the command line (in an
++environment containing the ``rpaframework-windows`` installation).
+ 
+-Recording inspects elements on **mouse click** and can be stopped with keyboard **ESC**.
+-Expected console output.
++Recording inspects elements on **mouse click** and can be stopped by pressing the
++**ESC** key. Expected console output:
+ 
+-**Caveats**
+-
+-- Make sure your *display scaling* is set to *100%*, otherwise you might encounter
+-  issues when clicking or interacting with elements. (since offsets and coordinates
+-  get distorted)
++.. code-block:: winbatch
+ 
+-.. code-block:: bash
+-
+-    C:\Users\User\robots\&gt;windows-record  # or &gt;python -m RPA.Windows
+-    keyboard and mouse listeners started
++    C:\Users\User\robots\&gt; windows-record -v  # or &gt; python -m RPA.Windows -v
++    Mouse recording started. Use ESC to stop recording.
+ 
+     --------------------------------------------------------------------------------
+-    COPY &amp; PASTE BELOW CODE INTO *** Tasks *** or *** Keywords ***
++    Copy-paste the code below into your `*** Tasks ***` or `*** Keywords ***`
+     --------------------------------------------------------------------------------
+ 
+-    Control Window    Taskbar  # Handle: 131380
+-    Click   name:&quot;Type here to search&quot;
+-    Control Window    Calculator  # Handle: 3411840
+-    Click   name:Five
+-    Click   name:Eight
+-    Click   name:Five
++    Control Window    name:Calculator and type:WindowControl and class:ApplicationFrameWindow  # handle:9569486
++    Click    name:Calculator and id:TitleBar and type:WindowControl and class:ApplicationFrameTitleBarWindow and path:1
++    Click    name:&quot;Display is 0&quot; and id:CalculatorResults and type:TextControl and path:2|3|2|2
++    Click    name:Eight and id:num8Button and type:ButtonControl and class:Button and path:2|3|2|8|9
++    Click    name:Nine and id:num9Button and type:ButtonControl and class:Button and path:2|3|2|8|10
++    Click    name:Clear and id:clearButton and type:ButtonControl and class:Button and path:2|3|2|5|3
+ 
+     --------------------------------------------------------------------------------
+ 
++Check our Portal example in order to learn more abot the `path:` strategy in
++locators and how to record elements displaying their paths:
++https://robocorp.com/portal/robot/robocorp/example-windows-element-path
+ 
+-**Examples**
++Video recorded demo on how to run the recorder script from VSCode:
++https://www.loom.com/share/2807372359f34b9cbe1bc2df9194ec68
+ 
+-Both Robot Framework and Python examples follow.
++**Caveats**
++
++- Make sure your *display scaling* is set to *100%*, otherwise you might encounter
++  issues when clicking or interacting with elements. (since offsets and coordinates
++  get distorted)
++- Disturbing the automation (like interacting with your mouse/keyboard) or having
++  other apps obstructing the process interacting with your app of interest will
++  most probably affect the expected behaviour. In order to avoid this, try
++  controlling the app's main window right before sending clicks or keys. And keep
++  targeting elements through **string locators**, as interacting with Windows
++  element objects previously retrieved will not work as expected in a future
++  altered state of the app (changes under the element structure).
++
++**Example: Robot Framework**
+ 
+ The library must be imported first.
+ 
+ .. code-block:: robotframework
+ 
+     *** Settings ***
+     Library    RPA.Windows
+ 
+-
+-Windows Calculator task
++Windows Calculator automation task
+ 
+ .. code-block:: robotframework
+ 
+     *** Tasks ***
+     Do some calculations
+         [Setup]  Windows Run   calc.exe
++        
+         Control Window    name:Calculator
+         Click    id:clearButton
+         Send Keys   keys=96+4=
+-        ${result}=    Get Attribute    id:CalculatorResults    Name
++        ${result} =    Get Attribute    id:CalculatorResults    Name
+         Log To Console    ${result}
+-        ${buttons}=  Get Elements  type:Group and name:&quot;Number pad&quot; &gt; type:Button
++        
++        @{buttons} =  Get Elements  type:Group and name:&quot;Number pad&quot; &gt; type:Button
+         FOR  ${button}  IN  @{buttons}
+             Log To Console   ${button}
+         END
++        
+         [Teardown]   Close Current Window
+ 
+-Python example
++**Example: Python**
+ 
+-.. code-block:: robotframework
++.. code-block:: python
+ 
+     from RPA.Windows import Windows
+ 
+     library = Windows()
+ 
+     def test_do_some_calculations():
++        library.windows_run(&quot;calc.exe&quot;)
+         try:
+-            library.windows_run(&quot;calc.exe&quot;)
+             library.control_window(&quot;name:Calculator&quot;)
+             library.click(&quot;id:clearButton&quot;)
+             library.send_keys(keys=&quot;96+4=&quot;)
+             result = library.get_attribute(&quot;id:CalculatorResults&quot;, &quot;Name&quot;)
+             print(result)
+-            buttons = library.get_elements('type:Group and name:&quot;Number pad&quot; &gt; type:Button')
++            buttons = library.get_elements(
++                'type:Group and name:&quot;Number pad&quot; &gt; type:Button'
++            )
+             for button in buttons:
+                 print(button)
+         finally:
+             library.close_current_window()</doc>
+   <tags>
+     <tag>action</tag>
+     <tag>keyboard</tag>
+     <tag>mouse</tag>
+     <tag>window</tag>
+   </tags>
+   <inits>
+-    <init name="__init__" lineno="490">
++    <init name="__init__" lineno="508">
+       <arguments repr="locators_path: str | None = None">
+         <arg kind="POSITIONAL_OR_NAMED" required="false" repr="locators_path: str | None = None">
+           <name>locators_path</name>
+           <type typedoc="string">str</type>
+           <type typedoc="None">None</type>
+           <default>None</default>
+         </arg>
+@@ -1649,15 +1667,15 @@
+     print(f&quot;Previous mouse simulation: {previous} (now enabled)&quot;)</doc>
+       <shortdoc>Enable or disable mouse movement simulation during clicks and other actions.</shortdoc>
+       <tags>
+         <tag>action</tag>
+       </tags>
+     </kw>
+     <kw name="Set Value" source="./RPA/Windows/keywords/action.py" lineno="418">
+-      <arguments repr="locator: WindowsElement | str | None = None, value: str | None = None, append: bool = False, enter: bool = False, newline: bool = False, send_keys_fallback: bool = True, validator: Callable | None = &lt;function set_value_validator at 0x103e42ee0&gt;">
++      <arguments repr="locator: WindowsElement | str | None = None, value: str | None = None, append: bool = False, enter: bool = False, newline: bool = False, send_keys_fallback: bool = True, validator: Callable | None = &lt;function set_value_validator at 0x1046668b0&gt;">
+         <arg kind="POSITIONAL_OR_NAMED" required="false" repr="locator: WindowsElement | str | None = None">
+           <name>locator</name>
+           <type>WindowsElement</type>
+           <type typedoc="string">str</type>
+           <type typedoc="None">None</type>
+           <default>None</default>
+         </arg>
+@@ -1683,19 +1701,19 @@
+           <default>False</default>
+         </arg>
+         <arg kind="POSITIONAL_OR_NAMED" required="false" repr="send_keys_fallback: bool = True">
+           <name>send_keys_fallback</name>
+           <type typedoc="boolean">bool</type>
+           <default>True</default>
+         </arg>
+-        <arg kind="POSITIONAL_OR_NAMED" required="false" repr="validator: Callable | None = &lt;function set_value_validator at 0x103e42ee0&gt;">
++        <arg kind="POSITIONAL_OR_NAMED" required="false" repr="validator: Callable | None = &lt;function set_value_validator at 0x1046668b0&gt;">
+           <name>validator</name>
+           <type>Callable</type>
+           <type typedoc="None">None</type>
+-          <default>&lt;function set_value_validator at 0x103e42ee0&gt;</default>
++          <default>&lt;function set_value_validator at 0x1046668b0&gt;</default>
+         </arg>
+       </arguments>
+       <doc>Set value of the element defined by the locator.
+ 
+ *Note:* An anchor will work only on element structures where you can
+ rely on the stability of that root/child element tree, as remaining the same.
+ Usually these kind of structures are tables. (but not restricted to)
+```
+
+### Comparing `rpaframework_windows-7.3.0/pyproject.toml` & `rpaframework_windows-7.3.1/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "rpaframework-windows"
+-version = "7.3.0"
++version = "7.3.1"
+ description = "Windows library for RPA Framework"
+ authors = ["RPA Framework <rpafw@robocorp.com>"]
+ license = "Apache-2.0"
+ readme = "README.rst"
+ 
+ homepage = "https://rpaframework.org/"
+ documentation = "https://rpaframework.org/"
+```
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/__init__.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/__init__.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -386,100 +386,118 @@
+ 
+     Most common, and recommended by Microsoft, inspector tool for Windows is `Accessibility Insights`_ that
+     can be installed separately. Other options are tools `Inspect Object`_  and `UI Automation Verify`_, which
+     can be accessed by installing Windows SDK.
+ 
+     A more programmatic approach is to run ``Print Tree    log_as_warnings=${True}``
+     keyword and then observe in the logs the found elements structure starting from
+-    Desktop as root. (refer to keyword's documentation for more details)
++    Desktop (or the currently set anchor / active window) as root. (refer to keyword's
++    `documentation <https://robocorp.com/docs/libraries/rpa-framework/rpa-windows/keywords#print-tree>`_
++    for more details)
+ 
+     .. _Accessibility Insights: https://accessibilityinsights.io/
+     .. _Inspect Object: https://docs.microsoft.com/en-us/windows/win32/winauto/inspect-objects
+     .. _UI Automation Verify: https://docs.microsoft.com/en-us/windows/win32/winauto/ui-automation-verify
+ 
+     **Recording**
+ 
+-    The package provides some rudimentary inspecting and recording via script ``windows-record``, which can
+-    be started in the command line (in a environment containing ``rpaframework-windows`` installation).
++    The package provides some rudimentary inspecting and recording via the
++    ``windows-record`` script, which can be started through the command line (in an
++    environment containing the ``rpaframework-windows`` installation).
+ 
+-    Recording inspects elements on **mouse click** and can be stopped with keyboard **ESC**.
+-    Expected console output.
++    Recording inspects elements on **mouse click** and can be stopped by pressing the
++    **ESC** key. Expected console output:
+ 
+-    **Caveats**
++    .. code-block:: winbatch
+ 
+-    - Make sure your *display scaling* is set to *100%*, otherwise you might encounter
+-      issues when clicking or interacting with elements. (since offsets and coordinates
+-      get distorted)
+-
+-    .. code-block:: bash
+-
+-        C:\\Users\\User\\robots\\>windows-record  # or >python -m RPA.Windows
+-        keyboard and mouse listeners started
++        C:\\Users\\User\\robots\\> windows-record -v  # or > python -m RPA.Windows -v
++        Mouse recording started. Use ESC to stop recording.
+ 
+         --------------------------------------------------------------------------------
+-        COPY & PASTE BELOW CODE INTO *** Tasks *** or *** Keywords ***
++        Copy-paste the code below into your `*** Tasks ***` or `*** Keywords ***`
+         --------------------------------------------------------------------------------
+ 
+-        Control Window    Taskbar  # Handle: 131380
+-        Click   name:"Type here to search"
+-        Control Window    Calculator  # Handle: 3411840
+-        Click   name:Five
+-        Click   name:Eight
+-        Click   name:Five
++        Control Window    name:Calculator and type:WindowControl and class:ApplicationFrameWindow  # handle:9569486
++        Click    name:Calculator and id:TitleBar and type:WindowControl and class:ApplicationFrameTitleBarWindow and path:1
++        Click    name:"Display is 0" and id:CalculatorResults and type:TextControl and path:2|3|2|2
++        Click    name:Eight and id:num8Button and type:ButtonControl and class:Button and path:2|3|2|8|9
++        Click    name:Nine and id:num9Button and type:ButtonControl and class:Button and path:2|3|2|8|10
++        Click    name:Clear and id:clearButton and type:ButtonControl and class:Button and path:2|3|2|5|3
+ 
+         --------------------------------------------------------------------------------
+ 
++    Check our Portal example in order to learn more abot the `path:` strategy in
++    locators and how to record elements displaying their paths:
++    https://robocorp.com/portal/robot/robocorp/example-windows-element-path
++    
++    Video recorded demo on how to run the recorder script from VSCode:
++    https://www.loom.com/share/2807372359f34b9cbe1bc2df9194ec68
+ 
+-    **Examples**
++    **Caveats**
+ 
+-    Both Robot Framework and Python examples follow.
++    - Make sure your *display scaling* is set to *100%*, otherwise you might encounter
++      issues when clicking or interacting with elements. (since offsets and coordinates
++      get distorted)
++    - Disturbing the automation (like interacting with your mouse/keyboard) or having
++      other apps obstructing the process interacting with your app of interest will
++      most probably affect the expected behaviour. In order to avoid this, try
++      controlling the app's main window right before sending clicks or keys. And keep
++      targeting elements through **string locators**, as interacting with Windows
++      element objects previously retrieved will not work as expected in a future
++      altered state of the app (changes under the element structure).
++
++    **Example: Robot Framework**
+ 
+     The library must be imported first.
+ 
+     .. code-block:: robotframework
+ 
+         *** Settings ***
+         Library    RPA.Windows
+ 
+-
+-    Windows Calculator task
++    Windows Calculator automation task
+ 
+     .. code-block:: robotframework
+ 
+         *** Tasks ***
+         Do some calculations
+             [Setup]  Windows Run   calc.exe
++            
+             Control Window    name:Calculator
+             Click    id:clearButton
+             Send Keys   keys=96+4=
+-            ${result}=    Get Attribute    id:CalculatorResults    Name
++            ${result} =    Get Attribute    id:CalculatorResults    Name
+             Log To Console    ${result}
+-            ${buttons}=  Get Elements  type:Group and name:"Number pad" > type:Button
++            
++            @{buttons} =  Get Elements  type:Group and name:"Number pad" > type:Button
+             FOR  ${button}  IN  @{buttons}
+                 Log To Console   ${button}
+             END
++            
+             [Teardown]   Close Current Window
+ 
+-    Python example
++    **Example: Python**
+ 
+-    .. code-block:: robotframework
++    .. code-block:: python
+ 
+         from RPA.Windows import Windows
+ 
+         library = Windows()
+ 
+         def test_do_some_calculations():
++            library.windows_run("calc.exe")
+             try:
+-                library.windows_run("calc.exe")
+                 library.control_window("name:Calculator")
+                 library.click("id:clearButton")
+                 library.send_keys(keys="96+4=")
+                 result = library.get_attribute("id:CalculatorResults", "Name")
+                 print(result)
+-                buttons = library.get_elements('type:Group and name:"Number pad" > type:Button')
++                buttons = library.get_elements(
++                    'type:Group and name:"Number pad" > type:Button'
++                )
+                 for button in buttons:
+                     print(button)
+             finally:
+                 library.close_current_window()
+ 
+     """  # noqa: E501,W605
+```
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/keywords/action.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/keywords/action.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/keywords/elements.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/keywords/elements.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/keywords/locators.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/keywords/locators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/keywords/window.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/keywords/window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/main.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/src/RPA/Windows/utils.py` & `rpaframework_windows-7.3.1/src/RPA/Windows/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rpaframework_windows-7.3.0/PKG-INFO` & `rpaframework_windows-7.3.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rpaframework-windows
+-Version: 7.3.0
++Version: 7.3.1
+ Summary: Windows library for RPA Framework
+ Home-page: https://rpaframework.org/
+ License: Apache-2.0
+ Keywords: robotframework,rpa,automation,windows,uiautomation
+ Author: RPA Framework
+ Author-email: rpafw@robocorp.com
+ Requires-Python: >=3.7,<4.0
+```
+

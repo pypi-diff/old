@@ -1,0 +1,144 @@
+# Comparing `tmp/huaweicloudsdkmas-3.1.34-py2.py3-none-any.whl.zip` & `tmp/huaweicloudsdkmas-3.1.35-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,21 +1,21 @@
+-Zip file size: 19184 bytes, number of entries: 19
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/__init__.py
+--rw-------  2.0 unx      811 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/__init__.py
+--rw-------  2.0 unx     5559 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/mas_async_client.py
+--rw-------  2.0 unx     5505 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/mas_client.py
+--rw-------  2.0 unx      674 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/__init__.py
+--rw-------  2.0 unx     2339 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/base_multi_active_zone_spec.py
+--rw-------  2.0 unx     5994 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/data_sync_statistics.py
+--rw-------  2.0 unx     3744 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/datasource_statistics.py
+--rw-------  2.0 unx    11014 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/multi_active_zone_vo.py
+--rw-------  2.0 unx    13254 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/namespace_vo.py
+--rw-------  2.0 unx     7278 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/show_name_space_list_request.py
+--rw-------  2.0 unx     3243 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/model/show_name_space_list_response.py
+--rw-------  2.0 unx        0 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/region/__init__.py
+--rw-------  2.0 unx     2797 b- defN 23-Mar-30 08:36 huaweicloudsdkmas/v1/region/mas_region.py
+--rwxrwxrwx  2.0 unx      604 b- defN 23-Mar-30 08:36 huaweicloudsdkmas-3.1.34.dist-info/LICENSE
+--rw-------  2.0 unx     1136 b- defN 23-Mar-30 08:36 huaweicloudsdkmas-3.1.34.dist-info/METADATA
+--rw-------  2.0 unx      110 b- defN 23-Mar-30 08:36 huaweicloudsdkmas-3.1.34.dist-info/WHEEL
+--rw-------  2.0 unx       18 b- defN 23-Mar-30 08:36 huaweicloudsdkmas-3.1.34.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx     1853 b- defN 23-Mar-30 08:36 huaweicloudsdkmas-3.1.34.dist-info/RECORD
+-19 files, 65933 bytes uncompressed, 16050 bytes compressed:  75.7%
++Zip file size: 19182 bytes, number of entries: 19
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/__init__.py
++-rw-------  2.0 unx      811 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/__init__.py
++-rw-------  2.0 unx     5559 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/mas_async_client.py
++-rw-------  2.0 unx     5505 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/mas_client.py
++-rw-------  2.0 unx      674 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/__init__.py
++-rw-------  2.0 unx     2339 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/base_multi_active_zone_spec.py
++-rw-------  2.0 unx     5994 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/data_sync_statistics.py
++-rw-------  2.0 unx     3744 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/datasource_statistics.py
++-rw-------  2.0 unx    11014 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/multi_active_zone_vo.py
++-rw-------  2.0 unx    13254 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/namespace_vo.py
++-rw-------  2.0 unx     7278 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/show_name_space_list_request.py
++-rw-------  2.0 unx     3243 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/model/show_name_space_list_response.py
++-rw-------  2.0 unx        0 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/region/__init__.py
++-rw-------  2.0 unx     2797 b- defN 23-Apr-06 08:29 huaweicloudsdkmas/v1/region/mas_region.py
++-rwxrwxrwx  2.0 unx      604 b- defN 23-Apr-06 08:30 huaweicloudsdkmas-3.1.35.dist-info/LICENSE
++-rw-------  2.0 unx     1136 b- defN 23-Apr-06 08:30 huaweicloudsdkmas-3.1.35.dist-info/METADATA
++-rw-------  2.0 unx      110 b- defN 23-Apr-06 08:30 huaweicloudsdkmas-3.1.35.dist-info/WHEEL
++-rw-------  2.0 unx       18 b- defN 23-Apr-06 08:30 huaweicloudsdkmas-3.1.35.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx     1853 b- defN 23-Apr-06 08:30 huaweicloudsdkmas-3.1.35.dist-info/RECORD
++19 files, 65933 bytes uncompressed, 16048 bytes compressed:  75.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -36,23 +36,23 @@
+ 
+ Filename: huaweicloudsdkmas/v1/region/__init__.py
+ Comment: 
+ 
+ Filename: huaweicloudsdkmas/v1/region/mas_region.py
+ Comment: 
+ 
+-Filename: huaweicloudsdkmas-3.1.34.dist-info/LICENSE
++Filename: huaweicloudsdkmas-3.1.35.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: huaweicloudsdkmas-3.1.34.dist-info/METADATA
++Filename: huaweicloudsdkmas-3.1.35.dist-info/METADATA
+ Comment: 
+ 
+-Filename: huaweicloudsdkmas-3.1.34.dist-info/WHEEL
++Filename: huaweicloudsdkmas-3.1.35.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: huaweicloudsdkmas-3.1.34.dist-info/top_level.txt
++Filename: huaweicloudsdkmas-3.1.35.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: huaweicloudsdkmas-3.1.34.dist-info/RECORD
++Filename: huaweicloudsdkmas-3.1.35.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `huaweicloudsdkmas-3.1.34.dist-info/LICENSE` & `huaweicloudsdkmas-3.1.35.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `huaweicloudsdkmas-3.1.34.dist-info/METADATA` & `huaweicloudsdkmas-3.1.35.dist-info/METADATA`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: huaweicloudsdkmas
+-Version: 3.1.34
++Version: 3.1.35
+ Summary: MAS
+ Home-page: https://github.com/huaweicloud/huaweicloud-sdk-python-v3
+ Author: HuaweiCloud SDK
+ Author-email: hwcloudsdk@huawei.com
+ License: Apache LICENSE 2.0
+ Keywords: huaweicloud,sdk,MAS
+ Classifier: Development Status :: 5 - Production/Stable
+@@ -18,10 +18,10 @@
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Topic :: Software Development
+ Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+-Requires-Dist: huaweicloudsdkcore (>=3.1.34)
++Requires-Dist: huaweicloudsdkcore (>=3.1.35)
+ 
+ See detailed information in [huaweicloud-sdk-python-v3](https://github.com/huaweicloud/huaweicloud-sdk-python-v3).
+```
+
+## Comparing `huaweicloudsdkmas-3.1.34.dist-info/RECORD` & `huaweicloudsdkmas-3.1.35.dist-info/RECORD`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -8,12 +8,12 @@
+ huaweicloudsdkmas/v1/model/datasource_statistics.py,sha256=lSTDr12cyuiryuw0aaCw6HBIeOK1Sgd-UyQymIW2JAM,3744
+ huaweicloudsdkmas/v1/model/multi_active_zone_vo.py,sha256=gSlJuKDcodrMARVDUC76Pz61V_CEFN3QrTVukw7RkTU,11014
+ huaweicloudsdkmas/v1/model/namespace_vo.py,sha256=k6gXSJWII6tHdYb7zYJ-iqkbwq9oy1ezh1FtdRVuhns,13254
+ huaweicloudsdkmas/v1/model/show_name_space_list_request.py,sha256=G6fGxFv9vRDkWpkL5fzTCWtBWVVt8mbeVdlhfcweOuc,7278
+ huaweicloudsdkmas/v1/model/show_name_space_list_response.py,sha256=CacfWlLUD4pTfVlSnYwtlSsH_bsfJVkP5sGgMSbsqGw,3243
+ huaweicloudsdkmas/v1/region/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ huaweicloudsdkmas/v1/region/mas_region.py,sha256=T2sNy8j38QS0vl9kNI4Xm1stiY-Bwc47FUMLUtQWuTg,2797
+-huaweicloudsdkmas-3.1.34.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
+-huaweicloudsdkmas-3.1.34.dist-info/METADATA,sha256=DFVbLS_2lAZO1K9b8dRM9v48QF2UiFQKrx1PFXy-ccw,1136
+-huaweicloudsdkmas-3.1.34.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-huaweicloudsdkmas-3.1.34.dist-info/top_level.txt,sha256=0BvGi5paLWlsiPWIcuD_qwunpeziF7ZiAywZRDFaTiY,18
+-huaweicloudsdkmas-3.1.34.dist-info/RECORD,,
++huaweicloudsdkmas-3.1.35.dist-info/LICENSE,sha256=4_VSTLuxcsybRG9N4Isktlj1rAIBBsfl0Tjc0gBTijo,604
++huaweicloudsdkmas-3.1.35.dist-info/METADATA,sha256=o95GPcvEn_XwHMyidhbY85VKm6E52-rRM-QVCTEy674,1136
++huaweicloudsdkmas-3.1.35.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
++huaweicloudsdkmas-3.1.35.dist-info/top_level.txt,sha256=0BvGi5paLWlsiPWIcuD_qwunpeziF7ZiAywZRDFaTiY,18
++huaweicloudsdkmas-3.1.35.dist-info/RECORD,,
+```
+

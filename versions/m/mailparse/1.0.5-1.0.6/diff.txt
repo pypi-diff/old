@@ -1,0 +1,111 @@
+--- tmp/mailparse-1.0.5.tar.gz
++++ tmp/mailparse-1.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mailparse-1.0.5.tar", last modified: Thu Mar 16 11:19:56 2023, max compression
+│ +gzip compressed data, was "mailparse-1.0.6.tar", last modified: Thu Apr  6 09:52:24 2023, max compression
+│   --- mailparse-1.0.5.tar
+├── +++ mailparse-1.0.6.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-03-16 11:19:56.521886 mailparse-1.0.5/
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)     1090 2022-10-13 08:35:16.000000 mailparse-1.0.5/LICENSE
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)    17911 2023-03-16 11:19:56.521886 mailparse-1.0.5/PKG-INFO
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)    16362 2022-10-13 10:18:33.000000 mailparse-1.0.5/README.md
+│ │ -drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-03-16 11:19:56.520886 mailparse-1.0.5/mailparse/
+│ │ --rwxr-xr-x   0 cx42      (1000) cx42      (1000)      198 2022-10-25 12:35:32.000000 mailparse-1.0.5/mailparse/__init__.py
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)       21 2023-03-16 11:12:20.000000 mailparse-1.0.5/mailparse/__version__.py
+│ │ --rwxr-xr-x   0 cx42      (1000) cx42      (1000)    11239 2023-03-16 11:14:04.000000 mailparse-1.0.5/mailparse/decoder.py
+│ │ --rwxr-xr-x   0 cx42      (1000) cx42      (1000)     8550 2022-10-25 12:35:15.000000 mailparse-1.0.5/mailparse/encoder.py
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)      786 2022-10-24 14:23:49.000000 mailparse-1.0.5/mailparse/utils.py
+│ │ -drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-03-16 11:19:56.521886 mailparse-1.0.5/mailparse.egg-info/
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)    17911 2023-03-16 11:19:56.000000 mailparse-1.0.5/mailparse.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)      276 2023-03-16 11:19:56.000000 mailparse-1.0.5/mailparse.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)        1 2023-03-16 11:19:56.000000 mailparse-1.0.5/mailparse.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)       10 2023-03-16 11:19:56.000000 mailparse-1.0.5/mailparse.egg-info/top_level.txt
+│ │ --rw-r--r--   0 cx42      (1000) cx42      (1000)      102 2023-03-16 11:19:56.521886 mailparse-1.0.5/setup.cfg
+│ │ --rw-rw-r--   0 cx42      (1000) cx42      (1000)     2820 2022-10-24 14:26:02.000000 mailparse-1.0.5/setup.py
+│ │ +drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-04-06 09:52:24.085016 mailparse-1.0.6/
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)     1090 2022-10-13 08:35:16.000000 mailparse-1.0.6/LICENSE
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)    17911 2023-04-06 09:52:24.085016 mailparse-1.0.6/PKG-INFO
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)    16362 2022-10-13 10:18:33.000000 mailparse-1.0.6/README.md
+│ │ +drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-04-06 09:52:24.084016 mailparse-1.0.6/mailparse/
+│ │ +-rwxr-xr-x   0 cx42      (1000) cx42      (1000)      198 2022-10-25 12:35:32.000000 mailparse-1.0.6/mailparse/__init__.py
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)       21 2023-04-06 09:51:43.000000 mailparse-1.0.6/mailparse/__version__.py
+│ │ +-rwxr-xr-x   0 cx42      (1000) cx42      (1000)    11239 2023-03-16 11:14:04.000000 mailparse-1.0.6/mailparse/decoder.py
+│ │ +-rwxr-xr-x   0 cx42      (1000) cx42      (1000)     8392 2023-04-06 09:51:36.000000 mailparse-1.0.6/mailparse/encoder.py
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)      786 2022-10-24 14:23:49.000000 mailparse-1.0.6/mailparse/utils.py
+│ │ +drwxr-xr-x   0 cx42      (1000) cx42      (1000)        0 2023-04-06 09:52:24.085016 mailparse-1.0.6/mailparse.egg-info/
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)    17911 2023-04-06 09:52:24.000000 mailparse-1.0.6/mailparse.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)      276 2023-04-06 09:52:24.000000 mailparse-1.0.6/mailparse.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)        1 2023-04-06 09:52:24.000000 mailparse-1.0.6/mailparse.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)       10 2023-04-06 09:52:24.000000 mailparse-1.0.6/mailparse.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 cx42      (1000) cx42      (1000)      102 2023-04-06 09:52:24.086016 mailparse-1.0.6/setup.cfg
+│ │ +-rw-rw-r--   0 cx42      (1000) cx42      (1000)     2820 2022-10-24 14:26:02.000000 mailparse-1.0.6/setup.py
+│ │   --- mailparse-1.0.5/LICENSE
+│ ├── +++ mailparse-1.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mailparse-1.0.5/PKG-INFO
+│ ├── +++ mailparse-1.0.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mailparse
+│ │ -Version: 1.0.5
+│ │ +Version: 1.0.6
+│ │  Summary: Encode raw emails into Python dict objects and build raw emails from Python dict.
+│ │  Home-page: https://github.com/cnicodeme/mailparse
+│ │  Author: Cyril Nicodeme
+│ │  Author-email: contact@cnicodeme.com
+│ │  License: MIT
+│ │  Project-URL: Source, https://github.com/cnicodeme/mailparse
+│ │  Keywords: mail email parse parser encode decode encoder decoder eml
+│ │   --- mailparse-1.0.5/README.md
+│ ├── +++ mailparse-1.0.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- mailparse-1.0.5/mailparse/decoder.py
+│ ├── +++ mailparse-1.0.6/mailparse/decoder.py
+│ │┄ Files identical despite different names
+│ │   --- mailparse-1.0.5/mailparse/encoder.py
+│ ├── +++ mailparse-1.0.6/mailparse/encoder.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -146,18 +146,14 @@
+│ │                      if current.get('email') is None:
+│ │                          raise Exception('Invalid email provided. Field {0} is missing the email value!'.format(header.lower()))
+│ │  
+│ │                      parent[normalize_keys(header)] = formataddr((self._encode_header(current.get('name')), self._encode_header(current.get('email'))))
+│ │                  else:
+│ │                      parent[normalize_keys(header)] = self._encode_header(current)
+│ │  
+│ │ -        if 'message-id' not in parent:
+│ │ -            msg_id = make_msgid()
+│ │ -            parent['Message-ID'] = '{0}@improvmx.com>'.format(msg_id.split('@')[0])
+│ │ -
+│ │          if 'date' not in parent:
+│ │              parent['Date'] = formatdate()
+│ │  
+│ │          self.email = parent
+│ │  
+│ │      def _get_correct_mime(self, content_type, data, encoder=None):
+│ │          maintype, subtype = content_type.lower().split('/')
+│ │   --- mailparse-1.0.5/mailparse/utils.py
+│ ├── +++ mailparse-1.0.6/mailparse/utils.py
+│ │┄ Files identical despite different names
+│ │   --- mailparse-1.0.5/mailparse.egg-info/PKG-INFO
+│ ├── +++ mailparse-1.0.6/mailparse.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mailparse
+│ │ -Version: 1.0.5
+│ │ +Version: 1.0.6
+│ │  Summary: Encode raw emails into Python dict objects and build raw emails from Python dict.
+│ │  Home-page: https://github.com/cnicodeme/mailparse
+│ │  Author: Cyril Nicodeme
+│ │  Author-email: contact@cnicodeme.com
+│ │  License: MIT
+│ │  Project-URL: Source, https://github.com/cnicodeme/mailparse
+│ │  Keywords: mail email parse parser encode decode encoder decoder eml
+│ │   --- mailparse-1.0.5/setup.py
+│ ├── +++ mailparse-1.0.6/setup.py
+│ │┄ Files identical despite different names
