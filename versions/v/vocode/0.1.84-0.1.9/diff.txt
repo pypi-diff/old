@@ -1,0 +1,447 @@
+--- tmp/vocode-0.1.84.tar.gz
++++ tmp/vocode-0.1.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "vocode-0.1.84.tar", max compression
+│ +gzip compressed data, was "vocode-0.1.9.tar", max compression
+│   --- vocode-0.1.84.tar
+├── +++ vocode-0.1.9.tar
+│ ├── file list
+│ │ @@ -1,88 +1,21 @@
+│ │ --rw-r--r--   0        0        0     1065 2023-03-28 17:29:00.108721 vocode-0.1.84/LICENSE
+│ │ --rw-r--r--   0        0        0     8172 2023-03-30 16:58:17.625919 vocode-0.1.84/README.md
+│ │ --rw-r--r--   0        0        0     2059 2023-04-06 19:00:22.254944 vocode-0.1.84/pyproject.toml
+│ │ --rw-r--r--   0        0        0      308 2023-03-28 17:30:02.280446 vocode-0.1.84/vocode/__init__.py
+│ │ --rw-r--r--   0        0        0     2390 2023-03-28 07:12:57.812230 vocode-0.1.84/vocode/helpers.py
+│ │ --rw-r--r--   0        0        0     1466 2023-04-06 18:57:08.326536 vocode-0.1.84/vocode/streaming/agent/base_agent.py
+│ │ --rw-r--r--   0        0        0     2007 2023-03-29 06:28:34.480507 vocode-0.1.84/vocode/streaming/agent/bot_sentiment_analyser.py
+│ │ --rw-r--r--   0        0        0     6659 2023-04-06 18:57:30.680935 vocode-0.1.84/vocode/streaming/agent/chat_gpt_agent.py
+│ │ --rw-r--r--   0        0        0      591 2023-04-06 18:57:57.670504 vocode-0.1.84/vocode/streaming/agent/echo_agent.py
+│ │ --rw-r--r--   0        0        0     1481 2023-03-28 17:30:02.281854 vocode-0.1.84/vocode/streaming/agent/information_retrieval_agent.py
+│ │ --rw-r--r--   0        0        0     5724 2023-04-06 18:58:29.948116 vocode-0.1.84/vocode/streaming/agent/llm_agent.py
+│ │ --rw-r--r--   0        0        0     2135 2023-04-06 18:58:40.567877 vocode-0.1.84/vocode/streaming/agent/restful_user_implemented_agent.py
+│ │ --rw-r--r--   0        0        0      684 2023-03-28 17:30:02.282322 vocode-0.1.84/vocode/streaming/agent/utils.py
+│ │ --rw-r--r--   0        0        0     3259 2023-04-04 06:04:39.618650 vocode-0.1.84/vocode/streaming/client_backend/conversation.py
+│ │ --rw-r--r--   0        0        0       96 2023-03-28 17:30:02.282460 vocode-0.1.84/vocode/streaming/constants.py
+│ │ --rw-r--r--   0        0        0     3016 2023-04-06 18:56:35.241065 vocode-0.1.84/vocode/streaming/factory.py
+│ │ --rw-r--r--   0        0        0     3724 2023-03-28 17:30:02.282870 vocode-0.1.84/vocode/streaming/hosted_streaming_conversation.py
+│ │ --rw-r--r--   0        0        0      476 2023-03-28 07:12:57.812101 vocode-0.1.84/vocode/streaming/input_device/base_input_device.py
+│ │ --rw-r--r--   0        0        0     1648 2023-03-28 07:12:57.809750 vocode-0.1.84/vocode/streaming/input_device/microphone_input.py
+│ │ --rw-r--r--   0        0        0      334 2023-03-28 07:12:57.811970 vocode-0.1.84/vocode/streaming/input_device/telephone_input.py
+│ │ --rw-r--r--   0        0        0     5528 2023-04-04 22:39:06.297477 vocode-0.1.84/vocode/streaming/models/agent.py
+│ │ --rw-r--r--   0        0        0      102 2023-03-28 17:30:02.283498 vocode-0.1.84/vocode/streaming/models/audio_encoding.py
+│ │ --rw-r--r--   0        0        0      856 2023-04-03 01:45:30.651534 vocode-0.1.84/vocode/streaming/models/events.py
+│ │ --rw-r--r--   0        0        0      299 2023-03-28 07:12:57.772953 vocode-0.1.84/vocode/streaming/models/message.py
+│ │ --rw-r--r--   0        0        0     1455 2023-03-28 17:30:02.283821 vocode-0.1.84/vocode/streaming/models/model.py
+│ │ --rw-r--r--   0        0        0     3665 2023-04-04 22:38:16.028651 vocode-0.1.84/vocode/streaming/models/synthesizer.py
+│ │ --rw-r--r--   0        0        0     1806 2023-03-28 17:30:02.284366 vocode-0.1.84/vocode/streaming/models/telephony.py
+│ │ --rw-r--r--   0        0        0     2648 2023-04-06 18:48:24.032253 vocode-0.1.84/vocode/streaming/models/transcriber.py
+│ │ --rw-r--r--   0        0        0     1765 2023-04-04 06:04:39.619062 vocode-0.1.84/vocode/streaming/models/websocket.py
+│ │ --rw-r--r--   0        0        0      396 2023-03-28 17:30:02.285240 vocode-0.1.84/vocode/streaming/output_device/base_output_device.py
+│ │ --rw-r--r--   0        0        0     1015 2023-03-28 07:12:57.807120 vocode-0.1.84/vocode/streaming/output_device/speaker_output.py
+│ │ --rw-r--r--   0        0        0      262 2023-03-28 07:12:57.809162 vocode-0.1.84/vocode/streaming/output_device/telephone_output.py
+│ │ --rw-r--r--   0        0        0     1148 2023-04-04 06:04:39.619476 vocode-0.1.84/vocode/streaming/output_device/twilio_output_device.py
+│ │ --rw-r--r--   0        0        0      800 2023-04-04 06:04:39.619698 vocode-0.1.84/vocode/streaming/output_device/websocket_output_device.py
+│ │ --rw-r--r--   0        0        0    20891 2023-04-06 18:52:56.609461 vocode-0.1.84/vocode/streaming/streaming_conversation.py
+│ │ --rw-r--r--   0        0        0    10570 2023-03-29 06:22:25.393485 vocode-0.1.84/vocode/streaming/synthesizer/azure_synthesizer.py
+│ │ --rw-r--r--   0        0        0     7686 2023-04-04 22:13:50.696352 vocode-0.1.84/vocode/streaming/synthesizer/base_synthesizer.py
+│ │ --rw-r--r--   0        0        0     2101 2023-04-04 22:02:52.705291 vocode-0.1.84/vocode/streaming/synthesizer/eleven_labs_synthesizer.py
+│ │ --rw-r--r--   0        0        0  6548060 2023-03-28 17:30:02.328281 vocode-0.1.84/vocode/streaming/synthesizer/filler_audio/typing-noise.wav
+│ │ --rw-r--r--   0        0        0     3309 2023-04-04 22:02:33.244550 vocode-0.1.84/vocode/streaming/synthesizer/google_synthesizer.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 17:30:02.329443 vocode-0.1.84/vocode/streaming/telephony/__init__.py
+│ │ --rw-r--r--   0        0        0      438 2023-03-28 17:30:02.330427 vocode-0.1.84/vocode/streaming/telephony/config_manager/base_config_manager.py
+│ │ --rw-r--r--   0        0        0      609 2023-03-28 23:14:27.148000 vocode-0.1.84/vocode/streaming/telephony/config_manager/in_memory_config_manager.py
+│ │ --rw-r--r--   0        0        0     1248 2023-03-28 17:30:02.331245 vocode-0.1.84/vocode/streaming/telephony/config_manager/redis_config_manager.py
+│ │ --rw-r--r--   0        0        0      170 2023-03-28 17:30:02.331397 vocode-0.1.84/vocode/streaming/telephony/constants.py
+│ │ --rw-r--r--   0        0        0     6209 2023-04-06 18:56:46.230217 vocode-0.1.84/vocode/streaming/telephony/conversation/call.py
+│ │ --rw-r--r--   0        0        0     4136 2023-04-04 23:00:55.329495 vocode-0.1.84/vocode/streaming/telephony/conversation/outbound_call.py
+│ │ --rw-r--r--   0        0        0     2802 2023-03-28 17:30:02.332164 vocode-0.1.84/vocode/streaming/telephony/conversation/zoom_dial_in.py
+│ │ --rw-r--r--   0        0        0      106 2023-04-03 01:45:30.652609 vocode-0.1.84/vocode/streaming/telephony/hosted/exceptions.py
+│ │ --rw-r--r--   0        0        0     2264 2023-03-28 17:30:02.332438 vocode-0.1.84/vocode/streaming/telephony/hosted/inbound_call_server.py
+│ │ --rw-r--r--   0        0        0     1697 2023-03-28 17:30:02.332777 vocode-0.1.84/vocode/streaming/telephony/hosted/inbound_call_user_agent_server.py
+│ │ --rw-r--r--   0        0        0     3032 2023-04-03 01:45:30.652914 vocode-0.1.84/vocode/streaming/telephony/hosted/outbound_call.py
+│ │ --rw-r--r--   0        0        0     2458 2023-04-03 01:45:30.653149 vocode-0.1.84/vocode/streaming/telephony/hosted/zoom_dial_in.py
+│ │ --rw-r--r--   0        0        0     5255 2023-03-28 17:52:04.982120 vocode-0.1.84/vocode/streaming/telephony/server/base.py
+│ │ --rw-r--r--   0        0        0     1626 2023-04-04 06:04:39.620438 vocode-0.1.84/vocode/streaming/telephony/server/router/calls.py
+│ │ --rw-r--r--   0        0        0      865 2023-04-04 06:04:39.620616 vocode-0.1.84/vocode/streaming/telephony/server/router/twiml.py
+│ │ --rw-r--r--   0        0        0      150 2023-03-28 17:30:02.333925 vocode-0.1.84/vocode/streaming/telephony/templates/connect_call.xml
+│ │ --rw-r--r--   0        0        0      653 2023-03-28 17:30:02.333757 vocode-0.1.84/vocode/streaming/telephony/templates.py
+│ │ --rw-r--r--   0        0        0      247 2023-03-28 17:30:02.334052 vocode-0.1.84/vocode/streaming/telephony/twilio.py
+│ │ --rw-r--r--   0        0        0     2220 2023-03-21 03:19:41.096039 vocode-0.1.84/vocode/streaming/telephony/zoom_dial_in.py
+│ │ --rw-r--r--   0        0        0     3719 2023-03-29 06:24:55.345062 vocode-0.1.84/vocode/streaming/transcriber/assembly_ai_transcriber.py
+│ │ --rw-r--r--   0        0        0     1489 2023-03-28 17:30:02.334897 vocode-0.1.84/vocode/streaming/transcriber/base_transcriber.py
+│ │ --rw-r--r--   0        0        0     9066 2023-04-03 01:45:30.653322 vocode-0.1.84/vocode/streaming/transcriber/deepgram_transcriber.py
+│ │ --rw-r--r--   0        0        0     5190 2023-03-29 08:47:15.634465 vocode-0.1.84/vocode/streaming/transcriber/google_transcriber.py
+│ │ --rw-r--r--   0        0        0      216 2023-03-28 07:12:57.762251 vocode-0.1.84/vocode/streaming/user_implemented_agent/base_agent.py
+│ │ --rw-r--r--   0        0        0      697 2023-03-28 07:12:57.762593 vocode-0.1.84/vocode/streaming/user_implemented_agent/restful_agent.py
+│ │ --rw-r--r--   0        0        0     2183 2023-03-28 07:12:57.762008 vocode-0.1.84/vocode/streaming/user_implemented_agent/websocket_agent.py
+│ │ --rw-r--r--   0        0        0     1768 2023-03-28 17:30:02.335417 vocode-0.1.84/vocode/streaming/utils/__init__.py
+│ │ --rw-r--r--   0        0        0      125 2023-04-04 06:04:39.620775 vocode-0.1.84/vocode/streaming/utils/base_router.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 17:30:02.335448 vocode-0.1.84/vocode/streaming/utils/goodbye_embeddings/.gitkeep
+│ │ --rw-r--r--   0        0        0     2237 2023-03-29 06:27:49.549508 vocode-0.1.84/vocode/streaming/utils/goodbye_model.py
+│ │ --rw-r--r--   0        0        0     7782 2023-03-28 17:30:02.335881 vocode-0.1.84/vocode/streaming/utils/sse_client.py
+│ │ --rw-r--r--   0        0        0     1085 2023-03-28 17:30:02.336058 vocode-0.1.84/vocode/streaming/utils/transcript.py
+│ │ --rw-r--r--   0        0        0      233 2023-03-28 07:12:57.813897 vocode-0.1.84/vocode/turn_based/agent/base_agent.py
+│ │ --rw-r--r--   0        0        0     1758 2023-03-31 16:21:06.688170 vocode-0.1.84/vocode/turn_based/agent/chat_gpt_agent.py
+│ │ --rw-r--r--   0        0        0      155 2023-03-28 07:12:57.813754 vocode-0.1.84/vocode/turn_based/agent/echo_agent.py
+│ │ --rw-r--r--   0        0        0      201 2023-03-28 07:12:57.817990 vocode-0.1.84/vocode/turn_based/input_device/base_input_device.py
+│ │ --rw-r--r--   0        0        0     2040 2023-04-04 06:04:39.620961 vocode-0.1.84/vocode/turn_based/input_device/microphone_input.py
+│ │ --rw-r--r--   0        0        0      185 2023-03-28 07:12:57.817099 vocode-0.1.84/vocode/turn_based/output_device/base_output_device.py
+│ │ --rw-r--r--   0        0        0     1244 2023-04-04 06:04:39.621216 vocode-0.1.84/vocode/turn_based/output_device/speaker_output.py
+│ │ --rw-r--r--   0        0        0     2413 2023-04-04 06:04:39.621552 vocode-0.1.84/vocode/turn_based/synthesizer/azure_synthesizer.py
+│ │ --rw-r--r--   0        0        0      138 2023-03-28 07:12:57.815598 vocode-0.1.84/vocode/turn_based/synthesizer/base_synthesizer.py
+│ │ --rw-r--r--   0        0        0     1733 2023-04-04 06:04:39.621772 vocode-0.1.84/vocode/turn_based/synthesizer/eleven_labs_synthesizer.py
+│ │ --rw-r--r--   0        0        0      409 2023-04-04 19:16:17.858440 vocode-0.1.84/vocode/turn_based/synthesizer/gtts_synthesizer.py
+│ │ --rw-r--r--   0        0        0      152 2023-03-28 07:12:57.812543 vocode-0.1.84/vocode/turn_based/transcriber/base_transcriber.py
+│ │ --rw-r--r--   0        0        0      770 2023-03-28 17:30:02.337446 vocode-0.1.84/vocode/turn_based/transcriber/whisper_transcriber.py
+│ │ --rw-r--r--   0        0        0     1638 2023-03-28 07:12:57.817247 vocode-0.1.84/vocode/turn_based/turn_based_conversation.py
+│ │ --rw-r--r--   0        0        0    11403 1970-01-01 00:00:00.000000 vocode-0.1.84/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1037 2023-03-02 21:15:36.594335 vocode-0.1.9/README.md
+│ │ +-rw-r--r--   0        0        0      416 2023-03-03 00:15:40.135268 vocode-0.1.9/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       94 2023-02-26 05:14:14.763240 vocode-0.1.9/vocode/__init__.py
+│ │ +-rw-r--r--   0        0        0     3198 2023-03-02 21:15:36.604376 vocode-0.1.9/vocode/conversation.py
+│ │ +-rw-r--r--   0        0        0     1644 2023-02-27 19:22:49.888374 vocode-0.1.9/vocode/helpers.py
+│ │ +-rw-r--r--   0        0        0      448 2023-02-19 07:33:59.411644 vocode-0.1.9/vocode/input_device/base_input_device.py
+│ │ +-rw-r--r--   0        0        0     1284 2023-02-27 19:30:50.394673 vocode-0.1.9/vocode/input_device/microphone_input.py
+│ │ +-rw-r--r--   0        0        0     2715 2023-03-03 00:06:16.198715 vocode-0.1.9/vocode/models/agent.py
+│ │ +-rw-r--r--   0        0        0      100 2023-02-17 08:34:02.846253 vocode-0.1.9/vocode/models/audio_encoding.py
+│ │ +-rw-r--r--   0        0        0     1468 2023-03-02 21:15:42.667485 vocode-0.1.9/vocode/models/model.py
+│ │ +-rw-r--r--   0        0        0      872 2023-02-22 21:57:26.044989 vocode-0.1.9/vocode/models/synthesizer.py
+│ │ +-rw-r--r--   0        0        0      372 2023-02-20 08:53:28.748885 vocode-0.1.9/vocode/models/telephony.py
+│ │ +-rw-r--r--   0        0        0     1181 2023-02-27 19:22:49.889614 vocode-0.1.9/vocode/models/transcriber.py
+│ │ +-rw-r--r--   0        0        0     1024 2023-02-19 08:38:54.611719 vocode-0.1.9/vocode/models/websocket.py
+│ │ +-rw-r--r--   0        0        0      376 2023-02-16 23:41:55.730892 vocode-0.1.9/vocode/output_device/base_output_device.py
+│ │ +-rw-r--r--   0        0        0      951 2023-02-27 19:22:49.890156 vocode-0.1.9/vocode/output_device/speaker_output.py
+│ │ +-rw-r--r--   0        0        0      316 2023-03-02 21:15:42.667630 vocode-0.1.9/vocode/user_implemented_agent/base_agent.py
+│ │ +-rw-r--r--   0        0        0      503 2023-03-02 21:15:42.667775 vocode-0.1.9/vocode/user_implemented_agent/restful_agent.py
+│ │ +-rw-r--r--   0        0        0     1109 2023-03-02 21:15:42.667914 vocode-0.1.9/vocode/user_implemented_agent/websocket_agent.py
+│ │ +-rw-r--r--   0        0        0     1860 1970-01-01 00:00:00.000000 vocode-0.1.9/setup.py
+│ │ +-rw-r--r--   0        0        0     1689 1970-01-01 00:00:00.000000 vocode-0.1.9/PKG-INFO
+│ │   --- vocode-0.1.84/vocode/streaming/hosted_streaming_conversation.py
+│ ├── +++ vocode-0.1.9/vocode/conversation.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,102 +1,90 @@
+│ │  import websockets
+│ │ -from websockets.exceptions import ConnectionClosedOK
+│ │ -from websockets.client import WebSocketClientProtocol
+│ │  import asyncio
+│ │ +from dotenv import load_dotenv
+│ │ +import os
+│ │  import logging
+│ │  import threading
+│ │  import queue
+│ │ -import vocode
+│ │ -from vocode.streaming.input_device.base_input_device import (
+│ │ -    BaseInputDevice,
+│ │ -)
+│ │ -from vocode.streaming.output_device.base_output_device import BaseOutputDevice
+│ │ -from vocode.streaming.models.transcriber import TranscriberConfig
+│ │ -from vocode.streaming.models.agent import AgentConfig
+│ │ -from vocode.streaming.models.synthesizer import SynthesizerConfig
+│ │ -from vocode.streaming.models.websocket import (
+│ │ -    ReadyMessage,
+│ │ -    AudioMessage,
+│ │ -    StartMessage,
+│ │ -    StopMessage,
+│ │ -)
+│ │  
+│ │ +load_dotenv()
+│ │ +
+│ │ +from .input_device.base_input_device import BaseInputDevice
+│ │ +from .output_device.base_output_device import BaseOutputDevice
+│ │ +from .models.transcriber import TranscriberConfig
+│ │ +from .models.agent import AgentConfig
+│ │ +from .models.synthesizer import SynthesizerConfig
+│ │ +from .models.websocket import ReadyMessage, AudioMessage, StartMessage, StopMessage
+│ │ +from . import api_key
+│ │ +
+│ │ +VOCODE_WEBSOCKET_URL = f'wss://api.vocode.dev/conversation'
+│ │ +
+│ │ +class Conversation:
+│ │  
+│ │ -class HostedStreamingConversation:
+│ │      def __init__(
+│ │          self,
+│ │ -        input_device: BaseInputDevice,
+│ │ -        output_device: BaseOutputDevice,
+│ │ -        transcriber_config: TranscriberConfig,
+│ │ +        input_device: BaseInputDevice, 
+│ │ +        output_device: BaseOutputDevice, 
+│ │ +        transcriber_config: TranscriberConfig, 
+│ │          agent_config: AgentConfig,
+│ │ -        synthesizer_config: SynthesizerConfig,
+│ │ -        id: str = None,
+│ │ +        synthesizer_config: SynthesizerConfig
+│ │      ):
+│ │ -        self.id = id
+│ │          self.input_device = input_device
+│ │          self.output_device = output_device
+│ │          self.transcriber_config = transcriber_config
+│ │          self.agent_config = agent_config
+│ │          self.synthesizer_config = synthesizer_config
+│ │          self.logger = logging.getLogger(__name__)
+│ │          self.receiver_ready = False
+│ │          self.active = True
+│ │          self.output_loop = asyncio.new_event_loop()
+│ │          self.output_audio_queue = queue.Queue()
+│ │ -        self.vocode_websocket_url = f"wss://{vocode.base_url}/conversation"
+│ │  
+│ │      async def wait_for_ready(self):
+│ │          while not self.receiver_ready:
+│ │              await asyncio.sleep(0.1)
+│ │          return True
+│ │ -
+│ │ +    
+│ │      def deactivate(self):
+│ │          self.active = False
+│ │  
+│ │      def play_audio(self):
+│ │          async def run():
+│ │              while self.active:
+│ │                  try:
+│ │                      audio = self.output_audio_queue.get(timeout=5)
+│ │                      await self.output_device.send_async(audio)
+│ │                  except queue.Empty:
+│ │                      continue
+│ │ -
+│ │          loop = asyncio.new_event_loop()
+│ │          loop.run_until_complete(run())
+│ │ -
+│ │ +    
+│ │      async def start(self):
+│ │ -        async with websockets.connect(
+│ │ -            f"{self.vocode_websocket_url}?key={vocode.api_key}"
+│ │ -        ) as ws:
+│ │ -
+│ │ -            async def sender(ws: WebSocketClientProtocol):
+│ │ +        async with websockets.connect(f"{VOCODE_WEBSOCKET_URL}?key={api_key}") as ws:
+│ │ +            async def sender(ws):
+│ │                  start_message = StartMessage(
+│ │ -                    transcriber_config=self.transcriber_config,
+│ │ -                    agent_config=self.agent_config,
+│ │ -                    synthesizer_config=self.synthesizer_config,
+│ │ -                    conversation_id=self.id,
+│ │ +                    transcriber_config=self.transcriber_config, 
+│ │ +                    agent_config=self.agent_config, 
+│ │ +                    synthesizer_config=self.synthesizer_config
+│ │                  )
+│ │                  await ws.send(start_message.json())
+│ │                  await self.wait_for_ready()
+│ │                  self.logger.info("Listening...press Ctrl+C to stop")
+│ │                  while self.active:
+│ │                      data = self.input_device.get_audio()
+│ │                      if data:
+│ │ -                        try:
+│ │ -                            await ws.send(AudioMessage.from_bytes(data).json())
+│ │ -                        except ConnectionClosedOK:
+│ │ -                            self.deactivate()
+│ │ -                            return
+│ │ +                        await ws.send(AudioMessage.from_bytes(data).json())
+│ │                          await asyncio.sleep(0)
+│ │                  await ws.send(StopMessage().json())
+│ │  
+│ │ -            async def receiver(ws: WebSocketClientProtocol):
+│ │ +            async def receiver(ws):
+│ │                  ReadyMessage.parse_raw(await ws.recv())
+│ │                  self.receiver_ready = True
+│ │                  async for msg in ws:
+│ │                      audio_message = AudioMessage.parse_raw(msg)
+│ │                      self.output_audio_queue.put_nowait(audio_message.get_bytes())
+│ │  
+│ │ +
+│ │              output_thread = threading.Thread(target=self.play_audio)
+│ │              output_thread.start()
+│ │              return await asyncio.gather(sender(ws), receiver(ws))
+│ │ +
+│ │   --- vocode-0.1.84/vocode/streaming/input_device/microphone_input.py
+│ ├── +++ vocode-0.1.9/vocode/input_device/microphone_input.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,51 +1,37 @@
+│ │ -import sounddevice as sd
+│ │ -import numpy as np
+│ │ +import pyaudio
+│ │  from typing import Optional
+│ │  import queue
+│ │ -import wave
+│ │ -
+│ │ -from vocode.streaming.input_device.base_input_device import BaseInputDevice
+│ │ -from vocode.streaming.models.audio_encoding import AudioEncoding
+│ │  
+│ │ +from .base_input_device import BaseInputDevice
+│ │ +from ..models.audio_encoding import AudioEncoding
+│ │  
+│ │  class MicrophoneInput(BaseInputDevice):
+│ │ +
+│ │      DEFAULT_SAMPLING_RATE = 44100
+│ │      DEFAULT_CHUNK_SIZE = 2048
+│ │  
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        device_info: dict,
+│ │ -        sampling_rate: int = None,
+│ │ -        chunk_size: int = DEFAULT_CHUNK_SIZE,
+│ │ -        microphone_gain: int = 1,
+│ │ -    ):
+│ │ +    def __init__(self, pa: pyaudio.PyAudio, device_info: dict, sampling_rate: int = None, chunk_size: int = DEFAULT_CHUNK_SIZE):
+│ │          self.device_info = device_info
+│ │ -        sampling_rate = sampling_rate or (
+│ │ -            self.device_info.get("default_samplerate", self.DEFAULT_SAMPLING_RATE)
+│ │ -        )
+│ │ +        sampling_rate = sampling_rate or (self.device_info.get('defaultSampleRate', self.DEFAULT_SAMPLING_RATE))
+│ │          super().__init__(int(sampling_rate), AudioEncoding.LINEAR16, chunk_size)
+│ │ -        self.stream = sd.InputStream(
+│ │ -            dtype=np.int16,
+│ │ +        self.pa = pa
+│ │ +        self.stream = pa.open(
+│ │ +            format=pyaudio.paInt16,
+│ │              channels=1,
+│ │ -            samplerate=self.sampling_rate,
+│ │ -            blocksize=self.chunk_size,
+│ │ -            device=int(self.device_info["index"]),
+│ │ -            callback=self._stream_callback,
+│ │ +            rate=self.sampling_rate,
+│ │ +            input=True,
+│ │ +            frames_per_buffer=self.chunk_size,
+│ │ +            input_device_index=int(self.device_info['index']),
+│ │ +            stream_callback=self._stream_callback
+│ │          )
+│ │ -        self.stream.start()
+│ │          self.queue = queue.Queue()
+│ │ -        self.microphone_gain = microphone_gain
+│ │  
+│ │ -    def _stream_callback(self, in_data: np.ndarray[np.int16], *_args):
+│ │ -        if self.microphone_gain > 1:
+│ │ -            in_data = in_data * (2 ^ self.microphone_gain)
+│ │ -        else:
+│ │ -            in_data = in_data // (2 ^ self.microphone_gain)
+│ │ -        audio_bytes = in_data.tobytes()
+│ │ -        self.queue.put_nowait(audio_bytes)
+│ │ +    def _stream_callback(self, in_data, *_args):
+│ │ +        self.queue.put_nowait(in_data)
+│ │ +        return (None, pyaudio.paContinue)
+│ │  
+│ │      def get_audio(self) -> Optional[bytes]:
+│ │          try:
+│ │              return self.queue.get_nowait()
+│ │          except queue.Empty:
+│ │ -            return None
+│ │ +            return None
+│ │   --- vocode-0.1.84/vocode/streaming/models/model.py
+│ ├── +++ vocode-0.1.9/vocode/models/model.py
+│ │┄ Files 11% similar despite different names
+│ │ @@ -1,51 +1,52 @@
+│ │  import pydantic
+│ │  
+│ │ -
+│ │  class BaseModel(pydantic.BaseModel):
+│ │ +
+│ │      def __init__(self, **data):
+│ │          for key, value in data.items():
+│ │              if isinstance(value, dict):
+│ │ -                if "type" in value:
+│ │ +                if 'type' in value:
+│ │                      data[key] = TypedModel.parse_obj(value)
+│ │          super().__init__(**data)
+│ │  
+│ │ -
+│ │  # Adapted from https://github.com/pydantic/pydantic/discussions/3091
+│ │  class TypedModel(BaseModel):
+│ │ +
+│ │      _subtypes_ = []
+│ │  
+│ │      def __init_subclass__(cls, type=None):
+│ │          cls._subtypes_.append([type, cls])
+│ │  
+│ │      @classmethod
+│ │      def get_cls(_cls, type):
+│ │          for t, cls in _cls._subtypes_:
+│ │              if t == type:
+│ │                  return cls
+│ │ -        raise ValueError(f"Unknown type {type}")
+│ │ -
+│ │ +        raise ValueError(f'Unknown type {type}')
+│ │ +    
+│ │      @classmethod
+│ │      def get_type(_cls, cls_name):
+│ │          for t, cls in _cls._subtypes_:
+│ │              if cls.__name__ == cls_name:
+│ │                  return t
+│ │ -        raise ValueError(f"Unknown class {cls_name}")
+│ │ -
+│ │ +        raise ValueError(f'Unknown class {cls_name}')
+│ │ +    
+│ │      @classmethod
+│ │      def parse_obj(cls, obj):
+│ │ -        data_type = obj.get("type")
+│ │ +        data_type = obj.get('type')
+│ │          if data_type is None:
+│ │ -            raise ValueError(f"type is required for {cls.__name__}")
+│ │ -
+│ │ +            raise ValueError(f'type is required for {cls.__name__}')
+│ │ +    
+│ │          sub = cls.get_cls(data_type)
+│ │          if sub is None:
+│ │ -            raise ValueError(f"Unknown type {data_type}")
+│ │ +            raise ValueError(f'Unknown type {data_type}')
+│ │          return sub(**obj)
+│ │  
+│ │      def _iter(self, **kwargs):
+│ │ -        yield "type", self.get_type(self.__class__.__name__)
+│ │ +        yield 'type', self.get_type(self.__class__.__name__)
+│ │          yield from super()._iter(**kwargs)
+│ │  
+│ │      @property
+│ │      def type(self):
+│ │          return self.get_type(self.__class__.__name__)
+│ │ +
+│ │   --- vocode-0.1.84/vocode/streaming/output_device/speaker_output.py
+│ ├── +++ vocode-0.1.9/vocode/output_device/speaker_output.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,34 +1,28 @@
+│ │ -import sounddevice as sd
+│ │ -import numpy as np
+│ │ +import pyaudio
+│ │  
+│ │  from .base_output_device import BaseOutputDevice
+│ │ -from vocode.streaming.models.audio_encoding import AudioEncoding
+│ │ -
+│ │ +from ..models.audio_encoding import AudioEncoding
+│ │  
+│ │  class SpeakerOutput(BaseOutputDevice):
+│ │ +
+│ │      DEFAULT_SAMPLING_RATE = 44100
+│ │  
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        device_info: dict,
+│ │ -        sampling_rate: int = None,
+│ │ -        audio_encoding: AudioEncoding = AudioEncoding.LINEAR16,
+│ │ -    ):
+│ │ +    def __init__(self, pa: pyaudio.PyAudio, device_info: dict, sampling_rate: int = None, audio_encoding: AudioEncoding = AudioEncoding.LINEAR16):
+│ │          self.device_info = device_info
+│ │ -        sampling_rate = sampling_rate or int(
+│ │ -            self.device_info.get("default_samplerate", self.DEFAULT_SAMPLING_RATE)
+│ │ -        )
+│ │ +        sampling_rate = sampling_rate or int(self.device_info.get('defaultSampleRate', self.DEFAULT_SAMPLING_RATE))
+│ │          super().__init__(sampling_rate, audio_encoding)
+│ │ -        self.stream = sd.OutputStream(
+│ │ +        self.pa = pa
+│ │ +        self.stream = self.pa.open(
+│ │ +            output=True,
+│ │              channels=1,
+│ │ -            samplerate=self.sampling_rate,
+│ │ -            dtype=np.int16,
+│ │ -            device=int(self.device_info["index"]),
+│ │ +            rate=self.sampling_rate,
+│ │ +            format=pyaudio.paInt16,
+│ │ +            output_device_index=int(self.device_info['index'])
+│ │          )
+│ │ -        self.stream.start()
+│ │  
+│ │      async def send_async(self, chunk):
+│ │ -        self.stream.write(np.frombuffer(chunk, dtype=np.int16))
+│ │ +        self.stream.write(chunk)
+│ │  
+│ │      def terminate(self):
+│ │          self.stream.close()
+│ │ +        self.pa.close()

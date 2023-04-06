@@ -1,0 +1,1445 @@
+# Comparing `tmp/Ciw-2.3.6.tar.gz` & `tmp/Ciw-2.3.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/Users/geraintpalmer/Documents/Research/CiwPython/Ciw/dist/.tmp-5q2rqk_t/Ciw-2.3.6.tar", last modified: Thu Feb 16 22:54:31 2023, max compression
++gzip compressed data, was "/Users/geraintpalmer/Documents/Research/CiwPython/Ciw/dist/.tmp-oobsly9x/Ciw-2.3.7.tar", last modified: Thu Apr  6 18:58:27 2023, max compression
+```
+
+## Comparing `Ciw-2.3.6.tar` & `Ciw-2.3.7.tar`
+
+### file list
+
+```diff
+@@ -1,251 +1,251 @@
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       43 2019-10-02 14:24:32.000000 Ciw-2.3.6/.gitattributes
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/.github/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/.github/workflows/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1170 2022-10-07 13:44:17.000000 Ciw-2.3.6/.github/workflows/tests.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      119 2021-12-17 15:11:25.000000 Ciw-2.3.6/.gitignore
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      733 2022-03-02 14:59:51.000000 Ciw-2.3.6/.readthedocs.yaml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      933 2022-10-07 13:44:17.000000 Ciw-2.3.6/AUTHORS.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7638 2023-02-16 22:47:24.000000 Ciw-2.3.6/CHANGES.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      597 2019-10-02 14:24:32.000000 Ciw-2.3.6/CITATION.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1514 2022-03-02 14:59:51.000000 Ciw-2.3.6/CONTRIBUTING.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    12524 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/PKG-INFO
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     8150 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/SOURCES.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        1 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/dependency_links.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       53 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/requires.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        4 2023-02-16 22:54:31.000000 Ciw-2.3.6/Ciw.egg-info/top_level.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1080 2019-10-02 14:24:32.000000 Ciw-2.3.6/LICENSE.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       56 2019-10-02 14:24:32.000000 Ciw-2.3.6/MANIFEST.in
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    12524 2023-02-16 22:54:31.000000 Ciw-2.3.6/PKG-INFO
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3649 2022-10-07 13:44:17.000000 Ciw-2.3.6/README.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      525 2022-10-07 13:44:17.000000 Ciw-2.3.6/ciw/__init__.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     6374 2022-03-30 12:26:16.000000 Ciw-2.3.6/ciw/arrival_node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1580 2022-10-07 13:44:17.000000 Ciw-2.3.6/ciw/auxiliary.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      421 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/data_record.py
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/deadlock/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/deadlock/__init__.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4457 2021-01-19 16:11:36.000000 Ciw-2.3.6/ciw/deadlock/deadlock_detector.py
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/097e547b92b91adb
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/0af454191959d613
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/1189a64b3a63541c
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/12acac2df3df48b6
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/24d6e7fc3069832b
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/4da15fd7a09586c7
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/550f5aa3832b4fc3
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/628039b293dd5254
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/668938c233269c64
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/7db861381701d4e1
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/7fc1725f753ed55f
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/9c29b872c797bf63
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       49 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/9d0de032dbc8ead3
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/b20d02d8f503a893
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/d08fa35e321f216d
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/d3be39602ef9c5c4
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/d8cccc4895f8a7c0
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/1a542554bc6caead/de3c78fe5b956e64
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2823a3eaa9e3c5ba
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       28 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2a4930297c79ff33
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2cfb623d346ecd57
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2dbf20c932203d22
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/406bbe627cd1c44f
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/4119c7a3257670d6
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/44f025d4566fcf0c
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/48d7a891c63260e5
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5bde08a3480d1870
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5cbee9898702bbf5
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      197 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5d8a93fd16b829b5
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5e86df951ef52a16
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/601bbc65f8304262
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/7cd123fe7f4978f8
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/852cb323bed40f7d
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/b15db0ff5f98ebc2
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       37 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/ba81a7b179458d39
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c3263c7fd9b5885f
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c6327af1d657f71b
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c7d326df3641c9fe
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/d4a3e75cd97512cf
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       41 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/da68315e076fdb9e
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/df6ee214f7db1f01
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/dfd06dd224d1ba64
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/ef3bdf5c7f89578a
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/f4cb653a6cb0fe75
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/f7823ac27f9552ef
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/unicodedata/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/dists/.hypothesis/unicodedata/8.0.0/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    15457 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/.hypothesis/unicodedata/8.0.0/charmap.pickle.gz
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       29 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/dists/__init__.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    17925 2022-12-07 01:03:46.000000 Ciw-2.3.6/ciw/dists/distributions.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1700 2022-03-29 23:19:37.000000 Ciw-2.3.6/ciw/exactnode.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      937 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/exit_node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    18743 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/import_params.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1152 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/individual.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3692 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/network.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    35133 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4070 2022-01-27 09:53:34.000000 Ciw-2.3.6/ciw/processor_sharing.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      865 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/server.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    12951 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/simulation.py
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/tests/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        0 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/__init__.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    18468 2020-05-27 15:03:59.000000 Ciw-2.3.6/ciw/tests/test_arrival_node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3426 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/test_auxiliary.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4651 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/tests/test_data_record.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1584 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/test_exit_node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     5033 2020-10-06 15:50:28.000000 Ciw-2.3.6/ciw/tests/test_individual.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    45128 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/tests/test_network.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    72293 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/tests/test_node.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     9578 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/test_process_based.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    27245 2021-07-22 09:43:30.000000 Ciw-2.3.6/ciw/tests/test_processor_sharing.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    58728 2022-12-07 01:18:41.000000 Ciw-2.3.6/ciw/tests/test_sampling.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    22763 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/tests/test_scheduling.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3286 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/test_server.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    47594 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/tests/test_simulation.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    62843 2022-04-27 21:08:44.000000 Ciw-2.3.6/ciw/tests/test_state_tracker.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      193 2022-04-27 21:08:49.000000 Ciw-2.3.6/ciw/tests/test_version.py
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/tests/testing_parameters/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1416 2022-03-22 23:53:46.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      659 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_change_class.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1611 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_change_class_dynamic.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      676 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_custom_dist.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      368 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_deadlock.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      759 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_dists.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      196 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_infservers.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      192 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_mm1.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      541 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_priorities.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      567 2022-04-27 21:17:10.000000 Ciw-2.3.6/ciw/tests/testing_parameters/params_schedule.yml
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      133 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/tests/testing_parameters/sample_empirical_dist.csv
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/ciw/trackers/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       29 2019-10-02 14:24:32.000000 Ciw-2.3.6/ciw/trackers/__init__.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    13833 2022-04-27 12:23:40.000000 Ciw-2.3.6/ciw/trackers/state_tracker.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       22 2023-02-16 22:47:24.000000 Ciw-2.3.6/ciw/version.py
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/4731a5491949154f/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       22 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/4731a5491949154f/866b34878e0ef98c
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/4731a5491949154f/a5a2cb4f3870291d
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/5a21b7d4186c1df0/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        3 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/5a21b7d4186c1df0/cd6bd1dcfebeffe9
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/aadd7d530cef2c37/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       17 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/aadd7d530cef2c37/52ddc5e19fd5e756
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/b39fb8efb52354ed/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/b39fb8efb52354ed/a5a2cb4f3870291d
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/c0ef44f3293e6c2b/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       52 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/c0ef44f3293e6c2b/1ae093c2c13bbeea
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/c7807c1a8b90c2bd/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        6 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/c7807c1a8b90c2bd/050aeff993017985
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/.hypothesis/examples/eae24bc040b4c12d/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)        9 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/.hypothesis/examples/eae24bc040b4c12d/b27181534fec3925
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Background/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      482 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Background/codestructure.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      177 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Background/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2071 2021-09-29 14:12:04.000000 Ciw-2.3.6/docs/Background/kendall.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3039 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Background/mechanisms.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      846 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Background/other.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      658 2021-12-17 15:11:18.000000 Ciw-2.3.6/docs/Background/references.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3482 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Background/simulationpractice.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Guides/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3794 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/batching.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2509 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Guides/baulking.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Guides/behaviour/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3000 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/behaviour/custom_arrivals.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3342 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/behaviour/custom_number_servers.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3968 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/behaviour/custom_routing.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     8332 2021-12-19 12:17:41.000000 Ciw-2.3.6/docs/Guides/behaviour/hybrid.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1606 2021-12-17 15:11:25.000000 Ciw-2.3.6/docs/Guides/behaviour/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3376 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/behaviour/ps_routing.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4590 2022-03-02 09:41:04.000000 Ciw-2.3.6/docs/Guides/behaviour/server_dependent_dist.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2498 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Guides/change-class-after-service.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3949 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Guides/change-class-while-queueing.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2377 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/deadlock.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      525 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Guides/dynamic_customerclasses.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1707 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/exact.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2412 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/from_file.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      594 2022-10-07 13:44:10.000000 Ciw-2.3.6/docs/Guides/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2393 2022-10-07 13:44:10.000000 Ciw-2.3.6/docs/Guides/parallel_process.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2121 2022-03-02 14:59:51.000000 Ciw-2.3.6/docs/Guides/pause_restart.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7318 2021-12-19 13:21:31.000000 Ciw-2.3.6/docs/Guides/phasetype.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4804 2022-05-10 10:50:05.000000 Ciw-2.3.6/docs/Guides/preemption.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2794 2022-05-10 10:50:05.000000 Ciw-2.3.6/docs/Guides/priority.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4618 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/process_based.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7125 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/processor-sharing.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1144 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Guides/progressbar.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4262 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Guides/reneging.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1524 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/seed.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     5548 2022-01-27 10:03:56.000000 Ciw-2.3.6/docs/Guides/server_priority.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3085 2022-05-10 10:50:05.000000 Ciw-2.3.6/docs/Guides/server_schedule.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7864 2023-02-07 13:13:13.000000 Ciw-2.3.6/docs/Guides/set_distributions.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1877 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/sim_numcusts.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3080 2021-11-04 08:55:02.000000 Ciw-2.3.6/docs/Guides/state_trackers.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     9492 2022-10-07 15:03:37.000000 Ciw-2.3.6/docs/Guides/time_dependent.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7413 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Makefile
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Reference/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       69 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Reference/authors.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       78 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Reference/changelog.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1494 2021-07-05 12:30:28.000000 Ciw-2.3.6/docs/Reference/citation.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      109 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Reference/contributing.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     9108 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/Reference/distributions.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3561 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Reference/glossary.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      225 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Reference/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     6060 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Reference/parameters.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4905 2022-05-10 10:50:05.000000 Ciw-2.3.6/docs/Reference/results.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     5236 2021-11-03 23:39:43.000000 Ciw-2.3.6/docs/Reference/state_trackers.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Tutorial-I/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      237 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Tutorial-I/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3004 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Tutorial-I/tutorial_i.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2993 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Tutorial-I/tutorial_ii.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     3337 2022-04-27 12:23:40.000000 Ciw-2.3.6/docs/Tutorial-I/tutorial_iii.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4426 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Tutorial-I/tutorial_iv.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/Tutorial-II/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      320 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/Tutorial-II/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4722 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Tutorial-II/tutorial_v.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     5654 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/Tutorial-II/tutorial_vi.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     5722 2022-04-27 12:23:33.000000 Ciw-2.3.6/docs/Tutorial-II/tutorial_vii.rst
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/_static/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    17655 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/2nodes.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)   116215 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/2nodesindeadlock.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    14663 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/cafe.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    65346 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/codestructure.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4968 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/codestructure.tex
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    27837 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/_static/coxian.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    15838 2020-10-06 15:50:28.000000 Ciw-2.3.6/docs/_static/custom_number_servers_with.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    16887 2020-10-06 15:50:28.000000 Ciw-2.3.6/docs/_static/custom_number_servers_without.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    74719 2021-07-22 09:43:30.000000 Ciw-2.3.6/docs/_static/custom_routing_with.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    71055 2021-07-22 09:43:30.000000 Ciw-2.3.6/docs/_static/custom_routing_without.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    95903 2021-12-17 15:11:18.000000 Ciw-2.3.6/docs/_static/des+sd_hybrid.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     8422 2021-12-19 13:19:13.000000 Ciw-2.3.6/docs/_static/erlang.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     4286 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/favicon.ico
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)   207124 2021-12-17 15:11:18.000000 Ciw-2.3.6/docs/_static/hybrid.png
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    46236 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/_static/hypererlang.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    15698 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/_static/hyperexponential.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     2603 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/logo.pdf
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     8889 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/logo.png
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     1561 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/logo.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     7299 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/logo_small.png
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    20608 2021-11-04 08:55:03.000000 Ciw-2.3.6/docs/_static/phasetype.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    21468 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/progress_bar_customers.png
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    22909 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/progress_bar_time.png
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    32489 2021-07-22 09:43:30.000000 Ciw-2.3.6/docs/_static/ps_capacitated_verification.svg
+-drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-02-16 22:54:31.000000 Ciw-2.3.6/docs/_static/script_for_parallel_processing/
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      214 2022-10-07 13:44:10.000000 Ciw-2.3.6/docs/_static/script_for_parallel_processing/README.md
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      823 2022-10-07 13:44:10.000000 Ciw-2.3.6/docs/_static/script_for_parallel_processing/main.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    48896 2022-03-02 09:41:04.000000 Ciw-2.3.6/docs/_static/server_dependent_dist_with.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    37013 2022-03-02 09:41:04.000000 Ciw-2.3.6/docs/_static/server_dependent_dist_without.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      192 2021-09-29 14:21:10.000000 Ciw-2.3.6/docs/_static/style.css
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)    14539 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/_static/tutorial_iii_waitshist.svg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)     9843 2021-07-05 12:54:04.000000 Ciw-2.3.6/docs/conf.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      840 2022-10-07 13:44:17.000000 Ciw-2.3.6/docs/index.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      299 2019-10-02 14:24:32.000000 Ciw-2.3.6/docs/installation.rst
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-03-02 14:59:51.000000 Ciw-2.3.6/docs/requirements.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      428 2020-10-06 15:50:28.000000 Ciw-2.3.6/doctests.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      322 2022-10-07 14:27:40.000000 Ciw-2.3.6/new_release_checklist.md
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       52 2022-10-07 13:44:17.000000 Ciw-2.3.6/requirements.txt
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       38 2023-02-16 22:54:31.000000 Ciw-2.3.6/setup.cfg
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)      955 2019-10-02 14:24:32.000000 Ciw-2.3.6/setup.py
+--rw-r--r--   0 geraintpalmer   (502) staff       (20)       67 2022-07-25 14:08:16.000000 Ciw-2.3.6/test_requirements.txt
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       43 2019-10-02 14:24:32.000000 Ciw-2.3.7/.gitattributes
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/.github/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/.github/workflows/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1170 2022-10-07 13:44:17.000000 Ciw-2.3.7/.github/workflows/tests.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      119 2021-12-17 15:11:25.000000 Ciw-2.3.7/.gitignore
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      733 2022-03-02 14:59:51.000000 Ciw-2.3.7/.readthedocs.yaml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      933 2022-10-07 13:44:17.000000 Ciw-2.3.7/AUTHORS.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7736 2023-04-06 18:51:12.000000 Ciw-2.3.7/CHANGES.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      597 2019-10-02 14:24:32.000000 Ciw-2.3.7/CITATION.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1514 2022-03-02 14:59:51.000000 Ciw-2.3.7/CONTRIBUTING.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    12622 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/PKG-INFO
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     8150 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/SOURCES.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        1 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/dependency_links.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       53 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/requires.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        4 2023-04-06 18:58:27.000000 Ciw-2.3.7/Ciw.egg-info/top_level.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1080 2019-10-02 14:24:32.000000 Ciw-2.3.7/LICENSE.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       56 2019-10-02 14:24:32.000000 Ciw-2.3.7/MANIFEST.in
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    12622 2023-04-06 18:58:27.000000 Ciw-2.3.7/PKG-INFO
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3649 2022-10-07 13:44:17.000000 Ciw-2.3.7/README.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      525 2022-10-07 13:44:17.000000 Ciw-2.3.7/ciw/__init__.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     6374 2022-03-30 12:26:16.000000 Ciw-2.3.7/ciw/arrival_node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1580 2022-10-07 13:44:17.000000 Ciw-2.3.7/ciw/auxiliary.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      421 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/data_record.py
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/deadlock/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/deadlock/__init__.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4457 2021-01-19 16:11:36.000000 Ciw-2.3.7/ciw/deadlock/deadlock_detector.py
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/097e547b92b91adb
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/0af454191959d613
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/1189a64b3a63541c
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/12acac2df3df48b6
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/24d6e7fc3069832b
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/4da15fd7a09586c7
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/550f5aa3832b4fc3
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/628039b293dd5254
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/668938c233269c64
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/7db861381701d4e1
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/7fc1725f753ed55f
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/9c29b872c797bf63
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       49 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/9d0de032dbc8ead3
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/b20d02d8f503a893
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/d08fa35e321f216d
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/d3be39602ef9c5c4
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/d8cccc4895f8a7c0
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       33 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/1a542554bc6caead/de3c78fe5b956e64
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2823a3eaa9e3c5ba
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       28 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2a4930297c79ff33
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2cfb623d346ecd57
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/2dbf20c932203d22
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/406bbe627cd1c44f
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/4119c7a3257670d6
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/44f025d4566fcf0c
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/48d7a891c63260e5
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5bde08a3480d1870
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5cbee9898702bbf5
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      197 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5d8a93fd16b829b5
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/5e86df951ef52a16
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/601bbc65f8304262
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/7cd123fe7f4978f8
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/852cb323bed40f7d
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/b15db0ff5f98ebc2
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       37 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/ba81a7b179458d39
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c3263c7fd9b5885f
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c6327af1d657f71b
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/c7d326df3641c9fe
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/d4a3e75cd97512cf
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       41 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/da68315e076fdb9e
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/df6ee214f7db1f01
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/dfd06dd224d1ba64
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/ef3bdf5c7f89578a
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/f4cb653a6cb0fe75
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       26 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/examples/3144b0e1d2aac2fd/f7823ac27f9552ef
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/unicodedata/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/dists/.hypothesis/unicodedata/8.0.0/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    15457 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/.hypothesis/unicodedata/8.0.0/charmap.pickle.gz
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       29 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/dists/__init__.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    19820 2023-04-06 18:51:12.000000 Ciw-2.3.7/ciw/dists/distributions.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1700 2022-03-29 23:19:37.000000 Ciw-2.3.7/ciw/exactnode.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      937 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/exit_node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    18743 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/import_params.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1152 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/individual.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3692 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/network.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    35133 2023-02-16 22:47:24.000000 Ciw-2.3.7/ciw/node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4070 2022-01-27 09:53:34.000000 Ciw-2.3.7/ciw/processor_sharing.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      865 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/server.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    12951 2023-02-16 22:47:24.000000 Ciw-2.3.7/ciw/simulation.py
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/tests/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        0 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/__init__.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    18468 2020-05-27 15:03:59.000000 Ciw-2.3.7/ciw/tests/test_arrival_node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3426 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/test_auxiliary.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4651 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/tests/test_data_record.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1584 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/test_exit_node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     5033 2020-10-06 15:50:28.000000 Ciw-2.3.7/ciw/tests/test_individual.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    45128 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/tests/test_network.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    72293 2023-02-16 22:47:24.000000 Ciw-2.3.7/ciw/tests/test_node.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     9578 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/test_process_based.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    27245 2021-07-22 09:43:30.000000 Ciw-2.3.7/ciw/tests/test_processor_sharing.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    62167 2023-04-06 18:51:12.000000 Ciw-2.3.7/ciw/tests/test_sampling.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    22763 2023-02-16 22:47:24.000000 Ciw-2.3.7/ciw/tests/test_scheduling.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3286 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/test_server.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    47594 2023-02-16 22:47:24.000000 Ciw-2.3.7/ciw/tests/test_simulation.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    62843 2022-04-27 21:08:44.000000 Ciw-2.3.7/ciw/tests/test_state_tracker.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      193 2022-04-27 21:08:49.000000 Ciw-2.3.7/ciw/tests/test_version.py
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/tests/testing_parameters/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1416 2022-03-22 23:53:46.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      659 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_change_class.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1611 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_change_class_dynamic.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      676 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_custom_dist.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      368 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_deadlock.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      759 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_dists.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      196 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_infservers.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      192 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_mm1.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      541 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_priorities.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      567 2022-04-27 21:17:10.000000 Ciw-2.3.7/ciw/tests/testing_parameters/params_schedule.yml
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      133 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/tests/testing_parameters/sample_empirical_dist.csv
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/ciw/trackers/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       29 2019-10-02 14:24:32.000000 Ciw-2.3.7/ciw/trackers/__init__.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    13833 2022-04-27 12:23:40.000000 Ciw-2.3.7/ciw/trackers/state_tracker.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       22 2023-04-06 18:51:12.000000 Ciw-2.3.7/ciw/version.py
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/4731a5491949154f/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       22 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/4731a5491949154f/866b34878e0ef98c
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/4731a5491949154f/a5a2cb4f3870291d
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/5a21b7d4186c1df0/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        3 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/5a21b7d4186c1df0/cd6bd1dcfebeffe9
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/aadd7d530cef2c37/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       17 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/aadd7d530cef2c37/52ddc5e19fd5e756
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/b39fb8efb52354ed/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/b39fb8efb52354ed/a5a2cb4f3870291d
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/c0ef44f3293e6c2b/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       52 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/c0ef44f3293e6c2b/1ae093c2c13bbeea
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/c7807c1a8b90c2bd/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        6 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/c7807c1a8b90c2bd/050aeff993017985
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/.hypothesis/examples/eae24bc040b4c12d/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)        9 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/.hypothesis/examples/eae24bc040b4c12d/b27181534fec3925
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Background/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      482 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Background/codestructure.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      177 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Background/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2071 2021-09-29 14:12:04.000000 Ciw-2.3.7/docs/Background/kendall.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3039 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Background/mechanisms.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      846 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Background/other.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      658 2021-12-17 15:11:18.000000 Ciw-2.3.7/docs/Background/references.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3482 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Background/simulationpractice.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Guides/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3866 2023-04-06 18:51:12.000000 Ciw-2.3.7/docs/Guides/batching.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2509 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Guides/baulking.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Guides/behaviour/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3000 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/behaviour/custom_arrivals.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3342 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/behaviour/custom_number_servers.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3968 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/behaviour/custom_routing.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     8332 2021-12-19 12:17:41.000000 Ciw-2.3.7/docs/Guides/behaviour/hybrid.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1606 2021-12-17 15:11:25.000000 Ciw-2.3.7/docs/Guides/behaviour/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3376 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/behaviour/ps_routing.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4590 2022-03-02 09:41:04.000000 Ciw-2.3.7/docs/Guides/behaviour/server_dependent_dist.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2498 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Guides/change-class-after-service.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3949 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Guides/change-class-while-queueing.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2377 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/deadlock.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      525 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Guides/dynamic_customerclasses.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1707 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/exact.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2412 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/from_file.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      594 2022-10-07 13:44:10.000000 Ciw-2.3.7/docs/Guides/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2393 2022-10-07 13:44:10.000000 Ciw-2.3.7/docs/Guides/parallel_process.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2121 2022-03-02 14:59:51.000000 Ciw-2.3.7/docs/Guides/pause_restart.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7318 2021-12-19 13:21:31.000000 Ciw-2.3.7/docs/Guides/phasetype.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4804 2022-05-10 10:50:05.000000 Ciw-2.3.7/docs/Guides/preemption.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2794 2022-05-10 10:50:05.000000 Ciw-2.3.7/docs/Guides/priority.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4618 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/process_based.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7125 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/processor-sharing.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1144 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Guides/progressbar.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4262 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Guides/reneging.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1524 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/seed.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     5548 2022-01-27 10:03:56.000000 Ciw-2.3.7/docs/Guides/server_priority.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3085 2022-05-10 10:50:05.000000 Ciw-2.3.7/docs/Guides/server_schedule.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7864 2023-02-07 13:13:13.000000 Ciw-2.3.7/docs/Guides/set_distributions.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1877 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/sim_numcusts.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3080 2021-11-04 08:55:02.000000 Ciw-2.3.7/docs/Guides/state_trackers.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     9492 2022-10-07 15:03:37.000000 Ciw-2.3.7/docs/Guides/time_dependent.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7413 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Makefile
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Reference/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       69 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Reference/authors.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       78 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Reference/changelog.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1494 2021-07-05 12:30:28.000000 Ciw-2.3.7/docs/Reference/citation.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      109 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Reference/contributing.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    10455 2023-04-06 18:51:12.000000 Ciw-2.3.7/docs/Reference/distributions.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3561 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Reference/glossary.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      225 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Reference/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     6060 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Reference/parameters.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4905 2022-05-10 10:50:05.000000 Ciw-2.3.7/docs/Reference/results.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     5236 2021-11-03 23:39:43.000000 Ciw-2.3.7/docs/Reference/state_trackers.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Tutorial-I/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      237 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Tutorial-I/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3004 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Tutorial-I/tutorial_i.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2993 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Tutorial-I/tutorial_ii.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     3337 2022-04-27 12:23:40.000000 Ciw-2.3.7/docs/Tutorial-I/tutorial_iii.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4426 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Tutorial-I/tutorial_iv.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/Tutorial-II/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      320 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/Tutorial-II/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4722 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Tutorial-II/tutorial_v.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     5654 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/Tutorial-II/tutorial_vi.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     5722 2022-04-27 12:23:33.000000 Ciw-2.3.7/docs/Tutorial-II/tutorial_vii.rst
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/_static/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    17655 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/2nodes.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)   116215 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/2nodesindeadlock.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    14663 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/cafe.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    65346 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/codestructure.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4968 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/codestructure.tex
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    27837 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/_static/coxian.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    15838 2020-10-06 15:50:28.000000 Ciw-2.3.7/docs/_static/custom_number_servers_with.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    16887 2020-10-06 15:50:28.000000 Ciw-2.3.7/docs/_static/custom_number_servers_without.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    74719 2021-07-22 09:43:30.000000 Ciw-2.3.7/docs/_static/custom_routing_with.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    71055 2021-07-22 09:43:30.000000 Ciw-2.3.7/docs/_static/custom_routing_without.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    95903 2021-12-17 15:11:18.000000 Ciw-2.3.7/docs/_static/des+sd_hybrid.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     8422 2021-12-19 13:19:13.000000 Ciw-2.3.7/docs/_static/erlang.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     4286 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/favicon.ico
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)   207124 2021-12-17 15:11:18.000000 Ciw-2.3.7/docs/_static/hybrid.png
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    46236 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/_static/hypererlang.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    15698 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/_static/hyperexponential.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     2603 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/logo.pdf
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     8889 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/logo.png
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     1561 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/logo.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     7299 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/logo_small.png
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    20608 2021-11-04 08:55:03.000000 Ciw-2.3.7/docs/_static/phasetype.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    21468 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/progress_bar_customers.png
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    22909 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/progress_bar_time.png
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    32489 2021-07-22 09:43:30.000000 Ciw-2.3.7/docs/_static/ps_capacitated_verification.svg
++drwxr-xr-x   0 geraintpalmer   (502) staff       (20)        0 2023-04-06 18:58:27.000000 Ciw-2.3.7/docs/_static/script_for_parallel_processing/
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      214 2022-10-07 13:44:10.000000 Ciw-2.3.7/docs/_static/script_for_parallel_processing/README.md
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      823 2022-10-07 13:44:10.000000 Ciw-2.3.7/docs/_static/script_for_parallel_processing/main.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    48896 2022-03-02 09:41:04.000000 Ciw-2.3.7/docs/_static/server_dependent_dist_with.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    37013 2022-03-02 09:41:04.000000 Ciw-2.3.7/docs/_static/server_dependent_dist_without.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      192 2021-09-29 14:21:10.000000 Ciw-2.3.7/docs/_static/style.css
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)    14539 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/_static/tutorial_iii_waitshist.svg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)     9843 2023-04-06 18:51:12.000000 Ciw-2.3.7/docs/conf.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      840 2022-10-07 13:44:17.000000 Ciw-2.3.7/docs/index.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      299 2019-10-02 14:24:32.000000 Ciw-2.3.7/docs/installation.rst
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       20 2022-03-02 14:59:51.000000 Ciw-2.3.7/docs/requirements.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      428 2020-10-06 15:50:28.000000 Ciw-2.3.7/doctests.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      322 2022-10-07 14:27:40.000000 Ciw-2.3.7/new_release_checklist.md
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       52 2022-10-07 13:44:17.000000 Ciw-2.3.7/requirements.txt
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       38 2023-04-06 18:58:27.000000 Ciw-2.3.7/setup.cfg
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)      955 2019-10-02 14:24:32.000000 Ciw-2.3.7/setup.py
++-rw-r--r--   0 geraintpalmer   (502) staff       (20)       67 2022-07-25 14:08:16.000000 Ciw-2.3.7/test_requirements.txt
+```
+
+### Comparing `Ciw-2.3.6/.github/workflows/tests.yml` & `Ciw-2.3.7/.github/workflows/tests.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/.readthedocs.yaml` & `Ciw-2.3.7/.readthedocs.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/AUTHORS.rst` & `Ciw-2.3.7/AUTHORS.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/CHANGES.rst` & `Ciw-2.3.7/CHANGES.rst`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,14 @@
+ History
+ -------
+ 
+-+ **v.2.3.6 (2023-02-16)**
+++ **v2.3.7 (2023-04-06)**
++    + Adds Poisson, Geometric, and Binomial distributions fro batching.
++
+++ **v2.3.6 (2023-02-16)**
+     + Writes a data record for interrupted services caused by server schedules.
+     + Raises an error when an inconsistant number of custom node classes are used.
+ 
+ + **v2.3.5 (2023-02-07)**
+     + Fixes bug caused when implementing preemptive priority classes and server schedules that take all servers off duty.
+ 
+ + **v2.3.4 (2022-12-07)**
+```
+
+### Comparing `Ciw-2.3.6/CITATION.rst` & `Ciw-2.3.7/CITATION.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/CONTRIBUTING.rst` & `Ciw-2.3.7/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/Ciw.egg-info/PKG-INFO` & `Ciw-2.3.7/Ciw.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Ciw
+-Version: 2.3.6
++Version: 2.3.7
+ Summary: A discrete event simulation library for open queueing networks
+ Home-page: https://github.com/CiwPython/Ciw
+ Author: Geraint Palmer, Vincent Knight
+ Author-email: palmer.geraint@googlemail.com
+ License-File: LICENSE.txt
+ License-File: AUTHORS.rst
+ 
+@@ -102,15 +102,18 @@
+ + `Deadlock detection <https://ciw.readthedocs.io/en/latest/Guides/deadlock.html>`_
+ 
+ 
+ 
+ History
+ -------
+ 
+-+ **v.2.3.6 (2023-02-16)**
+++ **v2.3.7 (2023-04-06)**
++    + Adds Poisson, Geometric, and Binomial distributions fro batching.
++
+++ **v2.3.6 (2023-02-16)**
+     + Writes a data record for interrupted services caused by server schedules.
+     + Raises an error when an inconsistant number of custom node classes are used.
+ 
+ + **v2.3.5 (2023-02-07)**
+     + Fixes bug caused when implementing preemptive priority classes and server schedules that take all servers off duty.
+ 
+ + **v2.3.4 (2022-12-07)**
+```
+
+### Comparing `Ciw-2.3.6/Ciw.egg-info/SOURCES.txt` & `Ciw-2.3.7/Ciw.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/LICENSE.txt` & `Ciw-2.3.7/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/PKG-INFO` & `Ciw-2.3.7/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Ciw
+-Version: 2.3.6
++Version: 2.3.7
+ Summary: A discrete event simulation library for open queueing networks
+ Home-page: https://github.com/CiwPython/Ciw
+ Author: Geraint Palmer, Vincent Knight
+ Author-email: palmer.geraint@googlemail.com
+ License-File: LICENSE.txt
+ License-File: AUTHORS.rst
+ 
+@@ -102,15 +102,18 @@
+ + `Deadlock detection <https://ciw.readthedocs.io/en/latest/Guides/deadlock.html>`_
+ 
+ 
+ 
+ History
+ -------
+ 
+-+ **v.2.3.6 (2023-02-16)**
+++ **v2.3.7 (2023-04-06)**
++    + Adds Poisson, Geometric, and Binomial distributions fro batching.
++
+++ **v2.3.6 (2023-02-16)**
+     + Writes a data record for interrupted services caused by server schedules.
+     + Raises an error when an inconsistant number of custom node classes are used.
+ 
+ + **v2.3.5 (2023-02-07)**
+     + Fixes bug caused when implementing preemptive priority classes and server schedules that take all servers off duty.
+ 
+ + **v2.3.4 (2022-12-07)**
+```
+
+### Comparing `Ciw-2.3.6/README.rst` & `Ciw-2.3.7/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/__init__.py` & `Ciw-2.3.7/ciw/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/arrival_node.py` & `Ciw-2.3.7/ciw/arrival_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/auxiliary.py` & `Ciw-2.3.7/ciw/auxiliary.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/deadlock/deadlock_detector.py` & `Ciw-2.3.7/ciw/deadlock/deadlock_detector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/dists/.hypothesis/unicodedata/8.0.0/charmap.pickle.gz` & `Ciw-2.3.7/ciw/dists/.hypothesis/unicodedata/8.0.0/charmap.pickle.gz`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/dists/distributions.py` & `Ciw-2.3.7/ciw/dists/distributions.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -528,7 +528,71 @@
+     A placeholder distribution if there are no arrivals.
+     """
+     def __repr__(self):
+         return 'NoArrivals'
+ 
+     def sample(self, t=None, ind=None):
+         return float('Inf')
++
++
++class Poisson(Distribution):
++    """
++    The Poisson distribution.
++    Note that this is a discrete integer distribution, for use with Batching.
++
++    Takes:
++      - `rate` the rate parameter, lambda
++    """
++    def __init__(self, rate):
++        if rate <= 0.0:
++            raise ValueError('Poisson distribution must sample positive numbers only.')
++        self.rate = rate
++
++    def sample(self, t=None, ind=None):
++        return ciw.rng.poisson(lam=self.rate)
++
++    def __repr__(self):
++        return f'Poisson: {self.rate}'
++
++
++class Geometric(Distribution):
++    """
++    The Geometric distribution.
++    Note that this is a discrete integer distribution, for use with Batching.
++
++    Takes:
++      - `prob` the probability parameter
++    """
++    def __init__(self, prob):
++        if prob <= 0.0 or prob >= 1:
++            raise ValueError('Geometric distribution must have parameter between 0 and 1.')
++        self.prob = prob
++
++    def sample(self, t=None, ind=None):
++        return ciw.rng.geometric(p=self.prob)
++
++    def __repr__(self):
++        return f'Geometric: {self.prob}'
++
++
++class Binomial(Distribution):
++    """
++    The Binomial distribution.
++    Note that this is a discrete integer distribution, for use with Batching.
++
++    Takes:
++      - `n` the parameter representing the total number of experiments
++      - `prob` the probability parameter
++    """
++    def __init__(self, n, prob):
++        if prob <= 0.0 or prob >= 1:
++            raise ValueError('Binomial distribution have probability parameter between 0 and 1.')
++        if not isinstance(n, int) or n <= 0:
++            raise ValueError("The number of trials of the Binomial distirbution must be a positive integer.")
++        self.n = n
++        self.prob = prob
++
++    def sample(self, t=None, ind=None):
++        return ciw.rng.binomial(n=self.n, p=self.prob)
++
++    def __repr__(self):
++        return f'Binomial: {self.n}, {self.prob}'
+```
+
+### Comparing `Ciw-2.3.6/ciw/exactnode.py` & `Ciw-2.3.7/ciw/exactnode.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/exit_node.py` & `Ciw-2.3.7/ciw/exit_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/import_params.py` & `Ciw-2.3.7/ciw/import_params.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/individual.py` & `Ciw-2.3.7/ciw/individual.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/network.py` & `Ciw-2.3.7/ciw/network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/node.py` & `Ciw-2.3.7/ciw/node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/processor_sharing.py` & `Ciw-2.3.7/ciw/processor_sharing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/server.py` & `Ciw-2.3.7/ciw/server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/simulation.py` & `Ciw-2.3.7/ciw/simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_arrival_node.py` & `Ciw-2.3.7/ciw/tests/test_arrival_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_auxiliary.py` & `Ciw-2.3.7/ciw/tests/test_auxiliary.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_data_record.py` & `Ciw-2.3.7/ciw/tests/test_data_record.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_exit_node.py` & `Ciw-2.3.7/ciw/tests/test_exit_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_individual.py` & `Ciw-2.3.7/ciw/tests/test_individual.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_network.py` & `Ciw-2.3.7/ciw/tests/test_network.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_node.py` & `Ciw-2.3.7/ciw/tests/test_node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_process_based.py` & `Ciw-2.3.7/ciw/tests/test_process_based.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_processor_sharing.py` & `Ciw-2.3.7/ciw/tests/test_processor_sharing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_sampling.py` & `Ciw-2.3.7/ciw/tests/test_sampling.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -88,14 +88,17 @@
+         Na = ciw.dists.NoArrivals()
+         Ph = ciw.dists.PhaseType([1, 0, 0], [[-3, 2, 1], [1, -5, 4], [0, 0, 0]])
+         Er = ciw.dists.Erlang(4.5, 8)
+         Hx = ciw.dists.HyperExponential([4, 7, 2], [0.3, 0.1, 0.6])
+         He = ciw.dists.HyperErlang([4, 7, 2], [0.3, 0.1, 0.6], [2, 2, 7])
+         Cx = ciw.dists.Coxian([4, 7, 2], [0.3, 0.2, 1.0])
+         Pi = ciw.dists.PoissonIntervals(rates=[5, 1.5, 3], endpoints=[3.2, 7.9, 10], max_sample_date=15)
++        Po = ciw.dists.Poisson(rate=1.5)
++        Ge = ciw.dists.Geometric(prob=0.3)
++        Bi = ciw.dists.Binomial(n=20, prob=0.7)
+         self.assertEqual(str(Di), 'Distribution')
+         self.assertEqual(str(Un), 'Uniform: 3.4, 6.7')
+         self.assertEqual(str(Dt), 'Deterministic: 1.1')
+         self.assertEqual(str(Tr), 'Triangular: 1.1, 2.2, 3.3')
+         self.assertEqual(str(Ex), 'Exponential: 0.4')
+         self.assertEqual(str(Ga), 'Gamma: 2.1, 4.1')
+         self.assertEqual(str(No), 'Normal: 5.5, 0.6')
+@@ -107,14 +110,17 @@
+         self.assertEqual(str(Na), 'NoArrivals')
+         self.assertEqual(str(Ph), 'PhaseType')
+         self.assertEqual(str(Er), 'Erlang: 4.5, 8')
+         self.assertEqual(str(Hx), 'HyperExponential')
+         self.assertEqual(str(He), 'HyperErlang')
+         self.assertEqual(str(Cx), 'Coxian')
+         self.assertEqual(str(Pi), 'PoissonIntervals')
++        self.assertEqual(str(Po), 'Poisson: 1.5')
++        self.assertEqual(str(Ge), 'Geometric: 0.3')
++        self.assertEqual(str(Bi), 'Binomial: 20, 0.7')
+ 
+     def test_distribution_parent_is_useless(self):
+         D = ciw.dists.Distribution()
+         self.assertEqual(str(D), 'Distribution')
+         self.assertRaises(ValueError, D._sample)
+ 
+     def test_uniform_dist_object(self):
+@@ -1314,7 +1320,89 @@
+         expected = [0.0108, 0.0623, 0.1092, 0.026, 0.2578, 0.0648, 0.4333, 0.0275, 0.0187, 0.0707]
+         self.assertEqual(samples, expected)
+ 
+         samples = [round(Nt.simulation.inter_arrival_times[Nt.id_number][0]._sample(), 4) for _ in range(10)]
+         expected = [0.2694, 0.4268, 0.701, 0.011, 0.239, 0.0966, 0.1567, 0.0834, 0.291, 0.006]
+         self.assertEqual(samples, expected)
+ 
++
++    def test_poisson_dist_object(self):
++        Po = ciw.dists.Poisson(1.5)
++        ciw.seed(5)
++        samples = [Po._sample() for _ in range(10)]
++        expected = [3, 0, 1, 0, 0, 2, 4, 2, 1, 1]
++        self.assertEqual(samples, expected)
++
++        self.assertRaises(ValueError, ciw.dists.Poisson, -1.5)
++
++    def test_sampling_poisson_dist(self):
++        params = {
++            'arrival_distributions': [ciw.dists.Deterministic(1)],
++            'service_distributions': [ciw.dists.Deterministic(0)],
++            'batching_distributions': [ciw.dists.Poisson(1.5)],
++            'number_of_servers': [1]
++        }
++        ciw.seed(5)
++        Q = ciw.Simulation(ciw.create_network(**params))
++        Q.simulate_until_max_time(10.5)
++        recs = Q.get_all_records()
++
++        samples = [len([r for r in recs if r.arrival_date == t]) for t in range(1, 11)]
++        expected = [3, 0, 1, 0, 0, 2, 4, 2, 1, 1]
++        self.assertEqual(samples, expected)
++
++
++    def test_geometric_dist_object(self):
++        Ge = ciw.dists.Geometric(0.3)
++        ciw.seed(5)
++        samples = [Ge._sample() for _ in range(10)]
++        expected = [6, 3, 4, 2, 1, 2, 2, 1, 1, 3]
++        self.assertEqual(samples, expected)
++
++        self.assertRaises(ValueError, ciw.dists.Geometric, -0.5)
++        self.assertRaises(ValueError, ciw.dists.Geometric, 1.4)
++
++    def test_sampling_geometric_dist(self):
++        params = {
++            'arrival_distributions': [ciw.dists.Deterministic(1)],
++            'service_distributions': [ciw.dists.Deterministic(0)],
++            'batching_distributions': [ciw.dists.Geometric(0.3)],
++            'number_of_servers': [1]
++        }
++        ciw.seed(5)
++        Q = ciw.Simulation(ciw.create_network(**params))
++        Q.simulate_until_max_time(10.5)
++        recs = Q.get_all_records()
++
++        samples = [len([r for r in recs if r.arrival_date == t]) for t in range(1, 11)]
++        expected = [6, 3, 4, 2, 1, 2, 2, 1, 1, 3]
++        self.assertEqual(samples, expected)
++
++
++    def test_binomial_dist_object(self):
++        Bi = ciw.dists.Binomial(20, 0.4)
++        ciw.seed(5)
++        samples = [Bi._sample() for _ in range(10)]
++        expected = [10, 10, 8, 7, 5, 7, 7, 4, 4, 15]
++        self.assertEqual(samples, expected)
++
++        self.assertRaises(ValueError, ciw.dists.Binomial, 20, -0.5)
++        self.assertRaises(ValueError, ciw.dists.Binomial, 20, 1.4)
++        self.assertRaises(ValueError, ciw.dists.Binomial, -5, 0.2)
++        self.assertRaises(ValueError, ciw.dists.Binomial, 13.5, 0.2)
++
++    def test_sampling_binomial_dist(self):
++        params = {
++            'arrival_distributions': [ciw.dists.Deterministic(1)],
++            'service_distributions': [ciw.dists.Deterministic(0)],
++            'batching_distributions': [ciw.dists.Binomial(20, 0.4)],
++            'number_of_servers': [1]
++        }
++        ciw.seed(5)
++        Q = ciw.Simulation(ciw.create_network(**params))
++        Q.simulate_until_max_time(10.5)
++        recs = Q.get_all_records()
++
++        samples = [len([r for r in recs if r.arrival_date == t]) for t in range(1, 11)]
++        expected = [10, 10, 8, 7, 5, 7, 7, 4, 4, 15]
++        self.assertEqual(samples, expected)
++
+```
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_scheduling.py` & `Ciw-2.3.7/ciw/tests/test_scheduling.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_server.py` & `Ciw-2.3.7/ciw/tests/test_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_simulation.py` & `Ciw-2.3.7/ciw/tests/test_simulation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/test_state_tracker.py` & `Ciw-2.3.7/ciw/tests/test_state_tracker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_change_class.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_change_class.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_change_class_dynamic.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_change_class_dynamic.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_custom_dist.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_custom_dist.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_dists.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_dists.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_priorities.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_priorities.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/tests/testing_parameters/params_schedule.yml` & `Ciw-2.3.7/ciw/tests/testing_parameters/params_schedule.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/ciw/trackers/state_tracker.py` & `Ciw-2.3.7/ciw/trackers/state_tracker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Background/kendall.rst` & `Ciw-2.3.7/docs/Background/kendall.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Background/mechanisms.rst` & `Ciw-2.3.7/docs/Background/mechanisms.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Background/other.rst` & `Ciw-2.3.7/docs/Background/other.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Background/references.rst` & `Ciw-2.3.7/docs/Background/references.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Background/simulationpractice.rst` & `Ciw-2.3.7/docs/Background/simulationpractice.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/batching.rst` & `Ciw-2.3.7/docs/Guides/batching.rst`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -42,14 +42,17 @@
+ 
+ Note:
+   + *Only discrete distributions may be used,* currently implemented are:
+      + :code:`Deterministic`
+      + :code:`Empirical`
+      + :code:`Pmf`
+      + :code:`Sequential`
++     + :code:`Poisson`
++     + :code:`Geometric`
++     + :code:`Binomial`
+   + If the keyword :code:`batching_distributions` is omitted, then no batching is assumed. That is only one customer arrives at a time. Equivalent to :code:`ciw.dists.Deterministic(1)`.
+   + If some nodes/customer classes require no batching, but others do, please use :code:`ciw.dists.Deterministic(1)`.
+   + Batch arrivals may lead to :ref:`simultaneous events <simultaneous_events>`, please take care.
+ 
+ 
+ ---------------------------------
+ How to Set Time Dependent Batches
+```
+
+### Comparing `Ciw-2.3.6/docs/Guides/baulking.rst` & `Ciw-2.3.7/docs/Guides/baulking.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/custom_arrivals.rst` & `Ciw-2.3.7/docs/Guides/behaviour/custom_arrivals.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/custom_number_servers.rst` & `Ciw-2.3.7/docs/Guides/behaviour/custom_number_servers.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/custom_routing.rst` & `Ciw-2.3.7/docs/Guides/behaviour/custom_routing.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/hybrid.rst` & `Ciw-2.3.7/docs/Guides/behaviour/hybrid.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/index.rst` & `Ciw-2.3.7/docs/Guides/behaviour/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/ps_routing.rst` & `Ciw-2.3.7/docs/Guides/behaviour/ps_routing.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/behaviour/server_dependent_dist.rst` & `Ciw-2.3.7/docs/Guides/behaviour/server_dependent_dist.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/change-class-after-service.rst` & `Ciw-2.3.7/docs/Guides/change-class-after-service.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/change-class-while-queueing.rst` & `Ciw-2.3.7/docs/Guides/change-class-while-queueing.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/deadlock.rst` & `Ciw-2.3.7/docs/Guides/deadlock.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/dynamic_customerclasses.rst` & `Ciw-2.3.7/docs/Guides/dynamic_customerclasses.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/exact.rst` & `Ciw-2.3.7/docs/Guides/exact.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/from_file.rst` & `Ciw-2.3.7/docs/Guides/from_file.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/index.rst` & `Ciw-2.3.7/docs/Guides/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/parallel_process.rst` & `Ciw-2.3.7/docs/Guides/parallel_process.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/pause_restart.rst` & `Ciw-2.3.7/docs/Guides/pause_restart.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/phasetype.rst` & `Ciw-2.3.7/docs/Guides/phasetype.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/preemption.rst` & `Ciw-2.3.7/docs/Guides/preemption.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/priority.rst` & `Ciw-2.3.7/docs/Guides/priority.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/process_based.rst` & `Ciw-2.3.7/docs/Guides/process_based.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/processor-sharing.rst` & `Ciw-2.3.7/docs/Guides/processor-sharing.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/progressbar.rst` & `Ciw-2.3.7/docs/Guides/progressbar.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/reneging.rst` & `Ciw-2.3.7/docs/Guides/reneging.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/seed.rst` & `Ciw-2.3.7/docs/Guides/seed.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/server_priority.rst` & `Ciw-2.3.7/docs/Guides/server_priority.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/server_schedule.rst` & `Ciw-2.3.7/docs/Guides/server_schedule.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/set_distributions.rst` & `Ciw-2.3.7/docs/Guides/set_distributions.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/sim_numcusts.rst` & `Ciw-2.3.7/docs/Guides/sim_numcusts.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/state_trackers.rst` & `Ciw-2.3.7/docs/Guides/state_trackers.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Guides/time_dependent.rst` & `Ciw-2.3.7/docs/Guides/time_dependent.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Makefile` & `Ciw-2.3.7/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Reference/citation.rst` & `Ciw-2.3.7/docs/Reference/citation.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Reference/distributions.rst` & `Ciw-2.3.7/docs/Reference/distributions.rst`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -22,14 +22,17 @@
+ - :ref:`pmf_dist`
+ - :ref:`phasetype_dist`
+ - :ref:`erlang_dist`
+ - :ref:`hyperexponential_dist`
+ - :ref:`hypererlang_dist`
+ - :ref:`coxian_dist`
+ - :ref:`poissonintervals_dist`
++- :ref:`poisson_dist`
++- :ref:`geometric_dist`
++- :ref:`binomial_dist`
+ - :ref:`no_arrivals`
+ 
+ 
+ 
+ .. _uniform_dist:
+ 
+ ------------------------
+@@ -270,14 +273,50 @@
+ The Poisson Intervals Distribution is a time-dependent distribution, where different time intervals sample arrivals from Poisson distributions, or inter-arrival times from Exponential distributions. It is used to overcome the problem of skipping arrivals accross interval thresholds.
+ 
+ For Exponential arrivals with rate 3 in the time interval (0, 4.8), rate 5.5 in the time interval (4.8, 9.3), and rate 0.1 in the time interval (9.3, 12), and repeating in the same manner thereafter until the time 100::
+ 
+     ciw.dists.PoissonIntervals(rates=[3, 5.5, 0.1], endpoints=[4.8, 9.3, 12], max_sample_date=100)
+ 
+ 
++.. _poisson_dist:
++
++------------------------
++The Poisson Distribution
++------------------------
++
++The Poisson distribution samples a random integer from the Poisson distribution with mean :math:`\lambda`.
++Write an Poisson distribution with mean `1.7` as follows::
++
++    ciw.dists.Poisson(rate=1.7)
++
++
++.. _geometric_dist:
++
++--------------------------
++The Geometric Distribution
++--------------------------
++
++The Geometric distribution samples a random integer from the Geometric distribution with parameter :math:`p`. That is, the number of Bernoulli trials until a success, when each independent Bernoulli trial has probability :math:`p` of succes.
++Write an Geometric distribution with success probability of `0.3` as follows::
++
++    ciw.dists.Geometric(prob=0.3)
++
++
++.. _binomial_dist:
++
++-------------------------
++The Binomial Distribution
++-------------------------
++
++The Binomial distribution samples a random integer from the Binomial distribution with parameters :math:`n` and :math:`p`. That is, the number of successful Bernoulli trials out of a total of :math:`n` trials, when each independent Bernoulli trial has probability :math:`p` of succes.
++Write an Geometric distribution with success probability of `0.3` and `20` trials as follows::
++
++    ciw.dists.Binomial(n=20, prob=0.3)
++
++
+ .. _no_arrivals:
+ 
+ -----------
+ No Arrivals
+ -----------
+ 
+ If a node does not have any arrivals of a certain class, then the following may be input instead of a distribution::
+```
+
+### Comparing `Ciw-2.3.6/docs/Reference/glossary.rst` & `Ciw-2.3.7/docs/Reference/glossary.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Reference/parameters.rst` & `Ciw-2.3.7/docs/Reference/parameters.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Reference/results.rst` & `Ciw-2.3.7/docs/Reference/results.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Reference/state_trackers.rst` & `Ciw-2.3.7/docs/Reference/state_trackers.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-I/tutorial_i.rst` & `Ciw-2.3.7/docs/Tutorial-I/tutorial_i.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-I/tutorial_ii.rst` & `Ciw-2.3.7/docs/Tutorial-I/tutorial_ii.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-I/tutorial_iii.rst` & `Ciw-2.3.7/docs/Tutorial-I/tutorial_iii.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-I/tutorial_iv.rst` & `Ciw-2.3.7/docs/Tutorial-I/tutorial_iv.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-II/tutorial_v.rst` & `Ciw-2.3.7/docs/Tutorial-II/tutorial_v.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-II/tutorial_vi.rst` & `Ciw-2.3.7/docs/Tutorial-II/tutorial_vi.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/Tutorial-II/tutorial_vii.rst` & `Ciw-2.3.7/docs/Tutorial-II/tutorial_vii.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/2nodes.svg` & `Ciw-2.3.7/docs/_static/2nodes.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/2nodesindeadlock.svg` & `Ciw-2.3.7/docs/_static/2nodesindeadlock.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/cafe.svg` & `Ciw-2.3.7/docs/_static/cafe.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/codestructure.svg` & `Ciw-2.3.7/docs/_static/codestructure.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/codestructure.tex` & `Ciw-2.3.7/docs/_static/codestructure.tex`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/coxian.svg` & `Ciw-2.3.7/docs/_static/coxian.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/custom_number_servers_with.svg` & `Ciw-2.3.7/docs/_static/custom_number_servers_with.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/custom_number_servers_without.svg` & `Ciw-2.3.7/docs/_static/custom_number_servers_without.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/custom_routing_with.svg` & `Ciw-2.3.7/docs/_static/custom_routing_with.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/custom_routing_without.svg` & `Ciw-2.3.7/docs/_static/custom_routing_without.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/des+sd_hybrid.svg` & `Ciw-2.3.7/docs/_static/des+sd_hybrid.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/erlang.svg` & `Ciw-2.3.7/docs/_static/erlang.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/favicon.ico` & `Ciw-2.3.7/docs/_static/favicon.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/hybrid.png` & `Ciw-2.3.7/docs/_static/hybrid.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/hypererlang.svg` & `Ciw-2.3.7/docs/_static/hypererlang.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/hyperexponential.svg` & `Ciw-2.3.7/docs/_static/hyperexponential.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/logo.pdf` & `Ciw-2.3.7/docs/_static/logo.pdf`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/logo.png` & `Ciw-2.3.7/docs/_static/logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/logo.svg` & `Ciw-2.3.7/docs/_static/logo.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/logo_small.png` & `Ciw-2.3.7/docs/_static/logo_small.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/phasetype.svg` & `Ciw-2.3.7/docs/_static/phasetype.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/progress_bar_customers.png` & `Ciw-2.3.7/docs/_static/progress_bar_customers.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/progress_bar_time.png` & `Ciw-2.3.7/docs/_static/progress_bar_time.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/ps_capacitated_verification.svg` & `Ciw-2.3.7/docs/_static/ps_capacitated_verification.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/script_for_parallel_processing/main.py` & `Ciw-2.3.7/docs/_static/script_for_parallel_processing/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/server_dependent_dist_with.svg` & `Ciw-2.3.7/docs/_static/server_dependent_dist_with.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/server_dependent_dist_without.svg` & `Ciw-2.3.7/docs/_static/server_dependent_dist_without.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/_static/tutorial_iii_waitshist.svg` & `Ciw-2.3.7/docs/_static/tutorial_iii_waitshist.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/docs/conf.py` & `Ciw-2.3.7/docs/conf.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -66,15 +66,15 @@
+ release = version
+ 
+ # The language for content autogenerated by Sphinx. Refer to documentation
+ # for a list of supported languages.
+ #
+ # This is also used if you do content translation via gettext catalogs.
+ # Usually you set "language" from the command line for these cases.
+-language = None
++language = 'en'
+ 
+ # There are two options for replacing |today|: either, you set today to some
+ # non-false value, then it is used:
+ #today = ''
+ # Else, today_fmt is used as the format for a strftime call.
+ #today_fmt = '%B %d, %Y'
+```
+
+### Comparing `Ciw-2.3.6/docs/index.rst` & `Ciw-2.3.7/docs/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `Ciw-2.3.6/setup.py` & `Ciw-2.3.7/setup.py`
+
+ * *Files identical despite different names*
+

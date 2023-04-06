@@ -1,0 +1,562 @@
+--- tmp/functional-cat-0.3.0.tar.gz
++++ tmp/functional-cat-0.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "functional-cat-0.3.0.tar", last modified: Thu Apr  6 16:17:15 2023, max compression
+│ +gzip compressed data, was "functional-cat-0.4.0.tar", last modified: Thu Apr  6 18:52:35 2023, max compression
+│   --- functional-cat-0.3.0.tar
+├── +++ functional-cat-0.4.0.tar
+│ ├── file list
+│ │ @@ -1,96 +1,96 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1054 2023-04-06 16:17:06.000000 functional-cat-0.3.0/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1753 2023-04-06 16:17:15.193386 functional-cat-0.3.0/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 16:17:06.000000 functional-cat-0.3.0/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6862 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/data_types.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/dlib/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/dlib/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3744 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/dlib/detection.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/glip/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      320 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/glip/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2874 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/glip/glip.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/mmcv/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      345 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      394 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/default_runtime.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/ctw1500.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      392 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/icdar2015.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      391 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/icdar2017.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/synthtext.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.189386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      728 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r18_fpnc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      858 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r50dcnv2_fpnc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      978 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnetpp_r50dcnv2_fpnc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      708 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/drrg_r50_fpn_unet.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      999 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50_fpn.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1123 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50dcnv2_fpn.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4504 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4525 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem_poly.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1421 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r18_fpem_ffm.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      686 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r50_fpem_ffm.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1549 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/psenet_r50_fpnf.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      737 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/textsnake_r50_fpn_unet.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.189386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3227 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/dbnet_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2275 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/drrg_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4048 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/fcenet_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1927 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/maskrcnn_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5668 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/panet_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/psenet_pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2312 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/textsnake_pipeline.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.189386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      286 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adadelta_18e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adadelta_5e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      265 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_600e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_12e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_20e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      263 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_5e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      271 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_600e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      263 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_6e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      332 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_100k_iters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_1200e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_1500e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      381 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_160e.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      304 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_600e.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/psenet/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/psenet/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/psenet/psenet_r50_fpnf_600e_icdar2015.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2816 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/mmcv/mmocr.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/functional_cat/funcs/onnx/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      429 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/onnx/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4964 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/onnx/tiny_yolov3.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9798 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/onnx/yolov4.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/functional_cat/funcs/torchvision/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      557 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/torchvision/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6672 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/funcs/torchvision/detection.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2749 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/interfaces.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3552 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/io.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6517 2023-04-06 16:17:06.000000 functional-cat-0.3.0/functional_cat/registry.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.185386 functional-cat-0.3.0/functional_cat.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1753 2023-04-06 16:17:15.000000 functional-cat-0.3.0/functional_cat.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4191 2023-04-06 16:17:15.000000 functional-cat-0.3.0/functional_cat.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:17:15.000000 functional-cat-0.3.0/functional_cat.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-06 16:17:15.000000 functional-cat-0.3.0/functional_cat.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-06 16:17:15.000000 functional-cat-0.3.0/functional_cat.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      872 2023-04-06 16:17:06.000000 functional-cat-0.3.0/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 16:17:15.193386 functional-cat-0.3.0/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      145 2023-04-06 16:17:06.000000 functional-cat-0.3.0/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:17:15.193386 functional-cat-0.3.0/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      925 2023-04-06 16:17:06.000000 functional-cat-0.3.0/tests/test_dlib.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      619 2023-04-06 16:17:06.000000 functional-cat-0.3.0/tests/test_mmcv.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      916 2023-04-06 16:17:06.000000 functional-cat-0.3.0/tests/test_onnx.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      662 2023-04-06 16:17:06.000000 functional-cat-0.3.0/tests/test_torchvision.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.996507 functional-cat-0.4.0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1054 2023-04-06 18:52:23.000000 functional-cat-0.4.0/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1753 2023-04-06 18:52:34.996507 functional-cat-0.4.0/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 18:52:23.000000 functional-cat-0.4.0/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.984506 functional-cat-0.4.0/functional_cat/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6942 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/data_types.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.984506 functional-cat-0.4.0/functional_cat/funcs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/dlib/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/dlib/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3744 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/dlib/detection.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/glip/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      320 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/glip/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2874 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/glip/glip.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/mmcv/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      345 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      394 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/default_runtime.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/ctw1500.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      392 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/icdar2015.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      391 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/icdar2017.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_datasets/synthtext.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.988506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      728 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r18_fpnc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      858 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r50dcnv2_fpnc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      978 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnetpp_r50dcnv2_fpnc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      708 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/drrg_r50_fpn_unet.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      999 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50_fpn.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1123 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50dcnv2_fpn.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4504 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4525 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem_poly.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1421 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r18_fpem_ffm.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      686 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r50_fpem_ffm.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1549 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/psenet_r50_fpnf.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      737 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/textsnake_r50_fpn_unet.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.992506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3227 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/dbnet_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2275 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/drrg_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4048 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/fcenet_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1927 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/maskrcnn_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5668 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/panet_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/psenet_pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2312 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/textsnake_pipeline.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.992506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      286 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adadelta_18e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adadelta_5e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      265 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_600e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_12e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      368 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_20e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      263 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_5e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      271 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_600e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      263 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_adam_step_6e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      332 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_100k_iters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      329 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_1200e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_1500e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      381 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_160e.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      304 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/schedules/schedule_sgd_600e.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.992506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.992506 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/psenet/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/psenet/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1045 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/psenet/psenet_r50_fpnf_600e_icdar2015.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2816 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/mmcv/mmocr.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.996507 functional-cat-0.4.0/functional_cat/funcs/onnx/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      429 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/onnx/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4964 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/onnx/tiny_yolov3.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9798 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/onnx/yolov4.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.996507 functional-cat-0.4.0/functional_cat/funcs/torchvision/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      557 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/torchvision/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6672 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/funcs/torchvision/detection.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3898 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/interfaces.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3552 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6517 2023-04-06 18:52:23.000000 functional-cat-0.4.0/functional_cat/registry.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.984506 functional-cat-0.4.0/functional_cat.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1753 2023-04-06 18:52:34.000000 functional-cat-0.4.0/functional_cat.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4191 2023-04-06 18:52:34.000000 functional-cat-0.4.0/functional_cat.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:52:34.000000 functional-cat-0.4.0/functional_cat.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-06 18:52:34.000000 functional-cat-0.4.0/functional_cat.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-06 18:52:34.000000 functional-cat-0.4.0/functional_cat.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      872 2023-04-06 18:52:23.000000 functional-cat-0.4.0/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 18:52:34.996507 functional-cat-0.4.0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      145 2023-04-06 18:52:23.000000 functional-cat-0.4.0/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:52:34.996507 functional-cat-0.4.0/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      925 2023-04-06 18:52:23.000000 functional-cat-0.4.0/tests/test_dlib.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      619 2023-04-06 18:52:23.000000 functional-cat-0.4.0/tests/test_mmcv.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      916 2023-04-06 18:52:23.000000 functional-cat-0.4.0/tests/test_onnx.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      662 2023-04-06 18:52:23.000000 functional-cat-0.4.0/tests/test_torchvision.py
+│ │   --- functional-cat-0.3.0/LICENSE
+│ ├── +++ functional-cat-0.4.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/PKG-INFO
+│ ├── +++ functional-cat-0.4.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: functional-cat
+│ │ -Version: 0.3.0
+│ │ +Version: 0.4.0
+│ │  Summary: Catalog of functions
+│ │  License: Copyright 2022 Eric O. Korman
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining
+│ │          a copy of this software and associated documentation files (the
+│ │          "Software"), to deal in the Software without restriction, including
+│ │          without limitation the rights to use, copy, modify, merge, publish,
+│ │   --- functional-cat-0.3.0/functional_cat/data_types.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/data_types.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -36,16 +36,16 @@
+│ │  
+│ │      def draw_on_image(
+│ │          self,
+│ │          img: Image.Image,
+│ │          inplace: bool = False,
+│ │          text: str = None,
+│ │          font_size: int = 24,
+│ │ +        color: Tuple[int, int, int] = (255, 0, 0),
+│ │      ) -> Image.Image:
+│ │ -        color = (255, 0, 0)
+│ │          img = img if inplace else img.copy()
+│ │          img_draw = ImageDraw.Draw(img)
+│ │  
+│ │          img_draw.polygon(
+│ │              [(p.x, p.y) for p in self.points],
+│ │              outline=color,
+│ │          )
+│ │ @@ -113,18 +113,24 @@
+│ │      """Class representing a single object detection in an image."""
+│ │  
+│ │      boundary: BoundingPolygon
+│ │      class_label: str
+│ │      score: float
+│ │  
+│ │      def draw_on_image(
+│ │ -        self, img: Image.Image, inplace: bool = False
+│ │ +        self,
+│ │ +        img: Image.Image,
+│ │ +        inplace: bool = False,
+│ │ +        color: Tuple[int, int, int] = (255, 0, 0),
+│ │      ) -> Image.Image:
+│ │          img = self.boundary.draw_on_image(
+│ │ -            img, inplace=inplace, text=f"{self.class_label} {self.score:0.2f}"
+│ │ +            img,
+│ │ +            inplace=inplace,
+│ │ +            text=f"{self.class_label} {self.score:0.2f}",
+│ │ +            color=color,
+│ │          )
+│ │          return img
+│ │  
+│ │      def resize(
+│ │          self, og_img_h: int, og_img_w: int, new_img_h: int, new_img_w: int
+│ │      ) -> "Detection":
+│ │          return Detection(
+│ │ @@ -152,35 +158,31 @@
+│ │  
+│ │      def draw_on_image(
+│ │          self,
+│ │          img: Image.Image,
+│ │          draw_bbox: bool = True,
+│ │          draw_mask: bool = True,
+│ │          inplace: bool = False,
+│ │ +        color: Tuple[int, int, int] = (255, 0, 0),
+│ │      ) -> Image.Image:
+│ │          if draw_bbox:
+│ │ -            img = super().draw_on_image(img, inplace)
+│ │ +            img = super().draw_on_image(img, inplace, color=color)
+│ │          else:
+│ │              img = img if inplace else img.copy()
+│ │  
+│ │          if draw_mask:
+│ │ -            mask_arr = 255 * (np.array(self.mask) > 0.5).astype(np.uint8)
+│ │ +            bin_mask = np.array(self.mask) > 0.5
+│ │  
+│ │ -            mask_img = Image.fromarray(
+│ │ -                np.stack(
+│ │ -                    [
+│ │ -                        mask_arr,
+│ │ -                        np.zeros_like(mask_arr),
+│ │ -                        np.zeros_like(mask_arr),
+│ │ -                    ],
+│ │ -                    axis=2,
+│ │ -                )
+│ │ +            mask_arr = np.zeros(
+│ │ +                (bin_mask.shape[0], bin_mask.shape[1], 3), dtype=np.uint8
+│ │              )
+│ │ +            mask_arr[bin_mask] = color
+│ │ +            mask_img = Image.fromarray(mask_arr)
+│ │              blend = Image.blend(img, mask_img, alpha=0.4)
+│ │ -            img.paste(blend, (0, 0), mask=Image.fromarray(mask_arr > 0.5))
+│ │ +            img.paste(blend, (0, 0), mask=Image.fromarray(bin_mask))
+│ │  
+│ │          return img
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class Keypoint:
+│ │      class_label: str
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/dlib/detection.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/dlib/detection.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/glip/glip.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/glip/glip.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r18_fpnc.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r18_fpnc.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r50dcnv2_fpnc.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnet_r50dcnv2_fpnc.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnetpp_r50dcnv2_fpnc.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/dbnetpp_r50dcnv2_fpnc.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/drrg_r50_fpn_unet.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/drrg_r50_fpn_unet.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50_fpn.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50_fpn.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50dcnv2_fpn.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/fcenet_r50dcnv2_fpn.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem_poly.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/ocr_mask_rcnn_r50_fpn_ohem_poly.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r18_fpem_ffm.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r18_fpem_ffm.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r50_fpem_ffm.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/panet_r50_fpem_ffm.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/psenet_r50_fpnf.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/psenet_r50_fpnf.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_models/textsnake_r50_fpn_unet.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_models/textsnake_r50_fpn_unet.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/dbnet_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/dbnet_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/drrg_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/drrg_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/fcenet_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/fcenet_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/maskrcnn_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/maskrcnn_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/panet_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/panet_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/psenet_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/psenet_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/textsnake_pipeline.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/_base_/det_pipelines/textsnake_pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/configs/textdet/psenet/psenet_r50_fpnf_600e_icdar2015.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/configs/textdet/psenet/psenet_r50_fpnf_600e_icdar2015.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/mmcv/mmocr.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/mmcv/mmocr.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/onnx/tiny_yolov3.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/onnx/tiny_yolov3.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/onnx/yolov4.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/onnx/yolov4.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/torchvision/__init__.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/torchvision/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/funcs/torchvision/detection.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/funcs/torchvision/detection.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/interfaces.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/interfaces.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -9,15 +9,40 @@
+│ │      DetectionWithKeypoints,
+│ │      ImageInput,
+│ │      InstanceSegmentation,
+│ │  )
+│ │  
+│ │  __all__ = ["ObjectDetector", "InstanceSegmentationModel", "KeyPointDetector"]
+│ │  
+│ │ -colors = [
+│ │ +# https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
+│ │ +detection_colors = [
+│ │ +    (230, 25, 75),
+│ │ +    (60, 180, 75),
+│ │ +    (255, 225, 25),
+│ │ +    (0, 130, 200),
+│ │ +    (245, 130, 48),
+│ │ +    (145, 30, 180),
+│ │ +    (70, 240, 240),
+│ │ +    (240, 50, 230),
+│ │ +    (210, 245, 60),
+│ │ +    (250, 190, 190),
+│ │ +    (0, 128, 128),
+│ │ +    (230, 190, 255),
+│ │ +    (170, 110, 40),
+│ │ +    (255, 250, 200),
+│ │ +    (128, 0, 0),
+│ │ +    (170, 255, 195),
+│ │ +    (128, 128, 0),
+│ │ +    (255, 215, 180),
+│ │ +    (0, 0, 128),
+│ │ +    (128, 128, 128),
+│ │ +]
+│ │ +
+│ │ +# colors for keypoints
+│ │ +keypoint_colors = [
+│ │      "#e6194b",
+│ │      "#3cb44b",
+│ │      "#ffe119",
+│ │      "#4363d8",
+│ │      "#f58231",
+│ │      "#911eb4",
+│ │      "#46f0f0",
+│ │ @@ -63,37 +88,56 @@
+│ │      ) -> List[List[Detection]]:
+│ │          pass
+│ │  
+│ │      @staticmethod
+│ │      def draw_output_on_img(
+│ │          img: Image.Image, dets: List[Detection], **kwargs
+│ │      ) -> Image.Image:
+│ │ +        unique_classes = set([det.class_label for det in dets])
+│ │ +        color_map = {
+│ │ +            c: detection_colors[i] for i, c in enumerate(unique_classes)
+│ │ +        }
+│ │          for i, det in enumerate(dets):
+│ │ -            img = det.draw_on_image(img, inplace=i != 0, **kwargs)
+│ │ +            img = det.draw_on_image(
+│ │ +                img, inplace=i != 0, color=color_map[det.class_label], **kwargs
+│ │ +            )
+│ │          return img
+│ │  
+│ │  
+│ │  class InstanceSegmentationModel(ObjectDetector):
+│ │      task = Task.INSTANCE_SEGMENTATION
+│ │  
+│ │      @abstractmethod
+│ │      def __call__(self, imgs: ImageInput) -> List[List[InstanceSegmentation]]:
+│ │          pass
+│ │  
+│ │      @staticmethod
+│ │      def draw_output_on_img(
+│ │          img: Image.Image, dets: List[InstanceSegmentation]
+│ │      ) -> Image.Image:
+│ │ +        unique_classes = set([det.class_label for det in dets])
+│ │ +        color_map = {
+│ │ +            c: detection_colors[i] for i, c in enumerate(unique_classes)
+│ │ +        }
+│ │ +
+│ │          for i, det in enumerate(dets):
+│ │              img = det.draw_on_image(
+│ │ -                img, inplace=i != 0, draw_mask=True, draw_bbox=False
+│ │ +                img,
+│ │ +                inplace=i != 0,
+│ │ +                draw_mask=True,
+│ │ +                draw_bbox=False,
+│ │ +                color=color_map[det.class_label],
+│ │              )
+│ │          for i, det in enumerate(dets):
+│ │              img = det.draw_on_image(
+│ │ -                img, inplace=i != 0, draw_mask=False, draw_bbox=True
+│ │ +                img,
+│ │ +                inplace=i != 0,
+│ │ +                draw_mask=False,
+│ │ +                draw_bbox=True,
+│ │ +                color=color_map[det.class_label],
+│ │              )
+│ │  
+│ │          return img
+│ │  
+│ │  
+│ │  class KeyPointDetector(ObjectDetector):
+│ │      task = Task.KEYPOINT_DETECTION
+│ │ @@ -106,9 +150,11 @@
+│ │      @abstractmethod
+│ │      def key_point_labels(self) -> List[str]:
+│ │          pass
+│ │  
+│ │      def draw_output_on_img(
+│ │          self, img: Image.Image, dets: List[DetectionWithKeypoints]
+│ │      ) -> Image.Image:
+│ │ -        color_map = {k: colors[i] for i, k in enumerate(self.key_point_labels)}
+│ │ +        color_map = {
+│ │ +            k: keypoint_colors[i] for i, k in enumerate(self.key_point_labels)
+│ │ +        }
+│ │          return super().draw_output_on_img(img, dets, color_map=color_map)
+│ │   --- functional-cat-0.3.0/functional_cat/io.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/io.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat/registry.py
+│ ├── +++ functional-cat-0.4.0/functional_cat/registry.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/functional_cat.egg-info/PKG-INFO
+│ ├── +++ functional-cat-0.4.0/functional_cat.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: functional-cat
+│ │ -Version: 0.3.0
+│ │ +Version: 0.4.0
+│ │  Summary: Catalog of functions
+│ │  License: Copyright 2022 Eric O. Korman
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining
+│ │          a copy of this software and associated documentation files (the
+│ │          "Software"), to deal in the Software without restriction, including
+│ │          without limitation the rights to use, copy, modify, merge, publish,
+│ │   --- functional-cat-0.3.0/functional_cat.egg-info/SOURCES.txt
+│ ├── +++ functional-cat-0.4.0/functional_cat.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/pyproject.toml
+│ ├── +++ functional-cat-0.4.0/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "functional-cat"
+│ │ -version = "0.3.0"
+│ │ +version = "0.4.0"
+│ │  description = "Catalog of functions"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  license = {file = "LICENSE"}
+│ │  dependencies = ["requests", "Pillow >= 9.1.0", "tqdm", "numpy >= 1.23"]
+│ │  
+│ │  [build-system]
+│ │   --- functional-cat-0.3.0/tests/test_dlib.py
+│ ├── +++ functional-cat-0.4.0/tests/test_dlib.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/tests/test_mmcv.py
+│ ├── +++ functional-cat-0.4.0/tests/test_mmcv.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/tests/test_onnx.py
+│ ├── +++ functional-cat-0.4.0/tests/test_onnx.py
+│ │┄ Files identical despite different names
+│ │   --- functional-cat-0.3.0/tests/test_torchvision.py
+│ ├── +++ functional-cat-0.4.0/tests/test_torchvision.py
+│ │┄ Files identical despite different names

@@ -1,0 +1,520 @@
+# Comparing `tmp/syncqb-0.2.6.tar.gz` & `tmp/syncqb-1.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "syncqb-0.2.6.tar", last modified: Tue Jan 31 16:11:30 2023, max compression
++gzip compressed data, was "syncqb-1.0.0.tar", last modified: Thu Apr  6 18:49:10 2023, max compression
+```
+
+## Comparing `syncqb-0.2.6.tar` & `syncqb-1.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,22 @@
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-01-31 16:11:30.967823 syncqb-0.2.6/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1073 2022-09-12 17:13:14.000000 syncqb-0.2.6/LICENSE
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    10177 2023-01-31 16:11:30.967823 syncqb-0.2.6/PKG-INFO
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     8506 2023-01-10 19:22:29.000000 syncqb-0.2.6/README.md
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      643 2023-01-31 16:09:16.000000 syncqb-0.2.6/pyproject.toml
+--rw-r--r--   0 jacob     (1000) jacob     (1000)       38 2023-01-31 16:11:30.967823 syncqb-0.2.6/setup.cfg
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-01-31 16:11:30.957823 syncqb-0.2.6/src/
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-01-31 16:11:30.957823 syncqb-0.2.6/src/syncqb/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2022-09-12 14:58:01.000000 syncqb-0.2.6/src/syncqb/__init__.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    31523 2023-01-31 16:10:33.000000 syncqb-0.2.6/src/syncqb/json_quickbase.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     2239 2023-01-27 16:17:24.000000 syncqb-0.2.6/src/syncqb/qb_client.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      437 2023-01-31 16:10:02.000000 syncqb-0.2.6/src/syncqb/test.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    42351 2022-10-19 20:08:05.000000 syncqb-0.2.6/src/syncqb/xml_quickbase.py
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-01-31 16:11:30.967823 syncqb-0.2.6/src/syncqb.egg-info/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    10177 2023-01-31 16:11:30.000000 syncqb-0.2.6/src/syncqb.egg-info/PKG-INFO
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      328 2023-01-31 16:11:30.000000 syncqb-0.2.6/src/syncqb.egg-info/SOURCES.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        1 2023-01-31 16:11:30.000000 syncqb-0.2.6/src/syncqb.egg-info/dependency_links.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)       59 2023-01-31 16:11:30.000000 syncqb-0.2.6/src/syncqb.egg-info/entry_points.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        7 2023-01-31 16:11:30.000000 syncqb-0.2.6/src/syncqb.egg-info/top_level.txt
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 18:49:10.688285 syncqb-1.0.0/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1073 2022-09-12 17:13:14.000000 syncqb-1.0.0/LICENSE
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-06 18:49:10.688285 syncqb-1.0.0/PKG-INFO
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     8642 2023-04-05 20:53:17.000000 syncqb-1.0.0/README.md
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      643 2023-04-05 20:31:06.000000 syncqb-1.0.0/pyproject.toml
++-rw-r--r--   0 jacob     (1000) jacob     (1000)       38 2023-04-06 18:49:10.688285 syncqb-1.0.0/setup.cfg
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 18:49:10.688285 syncqb-1.0.0/src/
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 18:49:10.688285 syncqb-1.0.0/src/syncqb/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2022-09-12 14:58:01.000000 syncqb-1.0.0/src/syncqb/__init__.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    17570 2023-04-06 18:45:06.000000 syncqb-1.0.0/src/syncqb/json_quickbase.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1928 2023-04-06 18:38:17.000000 syncqb-1.0.0/src/syncqb/qb_client.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1310 2023-04-03 20:33:16.000000 syncqb-1.0.0/src/syncqb/qb_errors.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      618 2023-04-06 18:45:19.000000 syncqb-1.0.0/src/syncqb/quickbase.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    26602 2023-04-06 18:45:28.000000 syncqb-1.0.0/src/syncqb/xml_quickbase.py
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 18:49:10.688285 syncqb-1.0.0/src/syncqb.egg-info/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-06 18:49:10.000000 syncqb-1.0.0/src/syncqb.egg-info/PKG-INFO
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      371 2023-04-06 18:49:10.000000 syncqb-1.0.0/src/syncqb.egg-info/SOURCES.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        1 2023-04-06 18:49:10.000000 syncqb-1.0.0/src/syncqb.egg-info/dependency_links.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)       59 2023-04-06 18:49:10.000000 syncqb-1.0.0/src/syncqb.egg-info/entry_points.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        7 2023-04-06 18:49:10.000000 syncqb-1.0.0/src/syncqb.egg-info/top_level.txt
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 18:49:10.688285 syncqb-1.0.0/tests/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1443 2023-04-06 15:05:02.000000 syncqb-1.0.0/tests/test.py
+```
+
+### Comparing `syncqb-0.2.6/LICENSE` & `syncqb-1.0.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-0.2.6/PKG-INFO` & `syncqb-1.0.0/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: syncqb
+-Version: 0.2.6
++Version: 1.0.0
+ Summary: A Python SDK for quickbase
+ Author-email: Jacob Gearhardt <jacob@synctivate.com>
+ License: Copyright (c) 2018 The Python Packaging Authority
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+@@ -22,41 +22,41 @@
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+ Project-URL: Homepage, https://github.com/Synctivate/quickbase-json-sdk
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.7
++Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ Quickbase API SDK for Synctivate server development
+ 
+ # Setup
+ 
+ ## Installation
+ To install the SDK, run `pip install syncqb`.
+ 
+-## Initializing a `Client` object
+-
+-NOTE: `set_qb_info` and .env files are non-functional as of version 0.2.0
++## Initializing a `QuickbaseClient` object
+ 
+ You have two options for initializing your client object, utilizing `get_client()` or manual initialization.
+ 
+ To utilize `get_client`, you can first run `setqbinfo` in your terminal after installing to create default credentials, which will prompt you like this:
+ ```bash
+ ~$ setqbinfo
+ Quickbase URL (include https): https://yourrealm.quickbase.com
+ User Token: your_token
+ Username: your.username@mail.com
+ Password: 
+ ```
+ Or you can create a dictionary if you haven't run `setqbinfo` or wish to override the default credentials, and enter your credentials there.
+ 
++### Note: for better type hints and docstrings, use `get_json_client()` or `get_xml_client()` in place of `get_client()`
++
+ Then set up your code to something like this:
+ ```python
+ from syncqb.qb_client import get_client
+ 
+ # if you are setting up your credentials with a dictionary, you must have the keys shown
+ credentials = {
+     'QB_URL': 'https://yourrealm.quickbase.com',
+@@ -83,32 +83,32 @@
+ 
+ 
+ 
+ Or you can manually initialize your client object using code like the example below:
+ ```python
+ from syncqb import json_quickbase, xml_quickbase
+ 
+-# to initialize a json client object
+-json_client = json_quickbase.Client(
++# to initialize a json QuickbaseClient object
++json_client = json_quickbase.JsonQuickbaseClient(
+     realmhost='yourrealm.quickbase.com', base_url="https://yourrealm.quickbase.com", user_token="your_token")
+ 
+-# to initialize an xml client object
+-xml_client = xml_quickbase.Client(
++# to initialize an xml QuickbaseClient object
++xml_client = xml_quickbase.XmlQuickbaseClient(
+     base_url="https://yourrealm.quickbase.com", username='your.username@mail.com', password='password')
+ ```
+ 
+ ### Note: 
+ Using the JSON SDK is encouraged unless you are going to be sending requests with payloads larger than 10MB. Also note that the XML SDK functions a bit differently from the JSON SDK. Some features may not work or work differently.
+ 
+ # Usage
+-The quickbase `Client` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
++The quickbase `QuickbaseClient` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
+ 
+ ## Querying for Records
+ 
+-One of the primary uses of the quickbase `Client` is querying for records. Querying for records can be done using the `do_query()` method. 
++One of the primary uses of the quickbase `QuickbaseClient` is querying for records. Querying for records can be done using the `do_query()` method. 
+ Here is a basic example of querying for records:
+ ```python
+ 
+ data = qb_client.do_query(query="{6.EX.'example'}", columns=[3,6,7], database='dbid')
+ 
+ for record in data:
+     #do stuff
+@@ -132,15 +132,15 @@
+ `sort=[3,5]` will first sort by field ID 3, and then by field ID 5.
+ 
+ `skip` and `max` will only function when also using a `qid` parameter,
+ and `columns` will only function when also using a `query` parameter.
+ 
+ ## Adding records
+ 
+-The `Client` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
++The `QuickbaseClient` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
+ 
+ Heres an example of `add_record()`:
+ ```python
+ # set fields and their values
+ fields = {
+     '6':value,
+     '8':value,
+@@ -197,15 +197,15 @@
+ If both a `query` and a `rid` list is given, the list takes precedence. Example:
+ ```python
+ qb_client.purge_records(database='dbid', rids=[100,101,102])
+ ```
+ 
+ # Additional Usage
+ 
+-The `Client` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
++The `QuickbaseClient` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
+ 
+ ## File Uploading and Downloading
+ 
+ The `get_file()` method retrieves file data from a given record. It can either take the `url` parameter where `url` is the complete file url extension, or it can take the following arguments: `database` which is the table ID, `record` which is the record ID, `field` which is the field ID, and `version` which is the version number.
+ Example:
+ ```python
+ qb_client.get_file(database='dbid', record=100, field=8, version=1)
+@@ -225,10 +225,10 @@
+ uploads = [fid: {"value" : { "fileName": filename, "data": base64encoded_file_content }}]
+ ```
+ 
+ ## Other features
+ 
+ The `nest()` and `denest()` methods will convert data from `{fid:value}` to `{fid: {'value':value}}` and vice versa.
+ The `import_from_csv()` method will take a csv string and upload the records contained in the string.
+-The `round_int()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
++The `round_ints()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
+ 
+ For more information on these additional features and other features, you can look at their individual documentation in src/json_quickbase.py or src/xml_quickbase.py.
+```
+
+### Comparing `syncqb-0.2.6/README.md` & `syncqb-1.0.0/README.md`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,30 +1,30 @@
+ Quickbase API SDK for Synctivate server development
+ 
+ # Setup
+ 
+ ## Installation
+ To install the SDK, run `pip install syncqb`.
+ 
+-## Initializing a `Client` object
+-
+-NOTE: `set_qb_info` and .env files are non-functional as of version 0.2.0
++## Initializing a `QuickbaseClient` object
+ 
+ You have two options for initializing your client object, utilizing `get_client()` or manual initialization.
+ 
+ To utilize `get_client`, you can first run `setqbinfo` in your terminal after installing to create default credentials, which will prompt you like this:
+ ```bash
+ ~$ setqbinfo
+ Quickbase URL (include https): https://yourrealm.quickbase.com
+ User Token: your_token
+ Username: your.username@mail.com
+ Password: 
+ ```
+ Or you can create a dictionary if you haven't run `setqbinfo` or wish to override the default credentials, and enter your credentials there.
+ 
++### Note: for better type hints and docstrings, use `get_json_client()` or `get_xml_client()` in place of `get_client()`
++
+ Then set up your code to something like this:
+ ```python
+ from syncqb.qb_client import get_client
+ 
+ # if you are setting up your credentials with a dictionary, you must have the keys shown
+ credentials = {
+     'QB_URL': 'https://yourrealm.quickbase.com',
+@@ -51,32 +51,32 @@
+ 
+ 
+ 
+ Or you can manually initialize your client object using code like the example below:
+ ```python
+ from syncqb import json_quickbase, xml_quickbase
+ 
+-# to initialize a json client object
+-json_client = json_quickbase.Client(
++# to initialize a json QuickbaseClient object
++json_client = json_quickbase.JsonQuickbaseClient(
+     realmhost='yourrealm.quickbase.com', base_url="https://yourrealm.quickbase.com", user_token="your_token")
+ 
+-# to initialize an xml client object
+-xml_client = xml_quickbase.Client(
++# to initialize an xml QuickbaseClient object
++xml_client = xml_quickbase.XmlQuickbaseClient(
+     base_url="https://yourrealm.quickbase.com", username='your.username@mail.com', password='password')
+ ```
+ 
+ ### Note: 
+ Using the JSON SDK is encouraged unless you are going to be sending requests with payloads larger than 10MB. Also note that the XML SDK functions a bit differently from the JSON SDK. Some features may not work or work differently.
+ 
+ # Usage
+-The quickbase `Client` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
++The quickbase `QuickbaseClient` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
+ 
+ ## Querying for Records
+ 
+-One of the primary uses of the quickbase `Client` is querying for records. Querying for records can be done using the `do_query()` method. 
++One of the primary uses of the quickbase `QuickbaseClient` is querying for records. Querying for records can be done using the `do_query()` method. 
+ Here is a basic example of querying for records:
+ ```python
+ 
+ data = qb_client.do_query(query="{6.EX.'example'}", columns=[3,6,7], database='dbid')
+ 
+ for record in data:
+     #do stuff
+@@ -100,15 +100,15 @@
+ `sort=[3,5]` will first sort by field ID 3, and then by field ID 5.
+ 
+ `skip` and `max` will only function when also using a `qid` parameter,
+ and `columns` will only function when also using a `query` parameter.
+ 
+ ## Adding records
+ 
+-The `Client` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
++The `QuickbaseClient` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
+ 
+ Heres an example of `add_record()`:
+ ```python
+ # set fields and their values
+ fields = {
+     '6':value,
+     '8':value,
+@@ -165,15 +165,15 @@
+ If both a `query` and a `rid` list is given, the list takes precedence. Example:
+ ```python
+ qb_client.purge_records(database='dbid', rids=[100,101,102])
+ ```
+ 
+ # Additional Usage
+ 
+-The `Client` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
++The `QuickbaseClient` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
+ 
+ ## File Uploading and Downloading
+ 
+ The `get_file()` method retrieves file data from a given record. It can either take the `url` parameter where `url` is the complete file url extension, or it can take the following arguments: `database` which is the table ID, `record` which is the record ID, `field` which is the field ID, and `version` which is the version number.
+ Example:
+ ```python
+ qb_client.get_file(database='dbid', record=100, field=8, version=1)
+@@ -193,10 +193,10 @@
+ uploads = [fid: {"value" : { "fileName": filename, "data": base64encoded_file_content }}]
+ ```
+ 
+ ## Other features
+ 
+ The `nest()` and `denest()` methods will convert data from `{fid:value}` to `{fid: {'value':value}}` and vice versa.
+ The `import_from_csv()` method will take a csv string and upload the records contained in the string.
+-The `round_int()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
++The `round_ints()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
+ 
+ For more information on these additional features and other features, you can look at their individual documentation in src/json_quickbase.py or src/xml_quickbase.py.
+```
+
+### Comparing `syncqb-0.2.6/pyproject.toml` & `syncqb-1.0.0/pyproject.toml`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+ [build-system]
+ requires = ["setuptools>=61.0",'requests','lxml','chardet']
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "syncqb"
+-version = "0.2.6"
++version = "1.0.0"
+ authors = [
+   { name="Jacob Gearhardt", email="jacob@synctivate.com" },
+ ]
+ description = "A Python SDK for quickbase"
+ readme = "README.md"
+ license = { file="LICENSE" }
+-requires-python = ">=3.7"
++requires-python = ">=3.6"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: MIT License",
+     "Operating System :: OS Independent",
+ ]
+ 
+ [project.scripts]
+```
+
+### Comparing `syncqb-0.2.6/src/syncqb.egg-info/PKG-INFO` & `syncqb-1.0.0/src/syncqb.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: syncqb
+-Version: 0.2.6
++Version: 1.0.0
+ Summary: A Python SDK for quickbase
+ Author-email: Jacob Gearhardt <jacob@synctivate.com>
+ License: Copyright (c) 2018 The Python Packaging Authority
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+@@ -22,41 +22,41 @@
+         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+         SOFTWARE.
+ Project-URL: Homepage, https://github.com/Synctivate/quickbase-json-sdk
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.7
++Requires-Python: >=3.6
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ Quickbase API SDK for Synctivate server development
+ 
+ # Setup
+ 
+ ## Installation
+ To install the SDK, run `pip install syncqb`.
+ 
+-## Initializing a `Client` object
+-
+-NOTE: `set_qb_info` and .env files are non-functional as of version 0.2.0
++## Initializing a `QuickbaseClient` object
+ 
+ You have two options for initializing your client object, utilizing `get_client()` or manual initialization.
+ 
+ To utilize `get_client`, you can first run `setqbinfo` in your terminal after installing to create default credentials, which will prompt you like this:
+ ```bash
+ ~$ setqbinfo
+ Quickbase URL (include https): https://yourrealm.quickbase.com
+ User Token: your_token
+ Username: your.username@mail.com
+ Password: 
+ ```
+ Or you can create a dictionary if you haven't run `setqbinfo` or wish to override the default credentials, and enter your credentials there.
+ 
++### Note: for better type hints and docstrings, use `get_json_client()` or `get_xml_client()` in place of `get_client()`
++
+ Then set up your code to something like this:
+ ```python
+ from syncqb.qb_client import get_client
+ 
+ # if you are setting up your credentials with a dictionary, you must have the keys shown
+ credentials = {
+     'QB_URL': 'https://yourrealm.quickbase.com',
+@@ -83,32 +83,32 @@
+ 
+ 
+ 
+ Or you can manually initialize your client object using code like the example below:
+ ```python
+ from syncqb import json_quickbase, xml_quickbase
+ 
+-# to initialize a json client object
+-json_client = json_quickbase.Client(
++# to initialize a json QuickbaseClient object
++json_client = json_quickbase.JsonQuickbaseClient(
+     realmhost='yourrealm.quickbase.com', base_url="https://yourrealm.quickbase.com", user_token="your_token")
+ 
+-# to initialize an xml client object
+-xml_client = xml_quickbase.Client(
++# to initialize an xml QuickbaseClient object
++xml_client = xml_quickbase.XmlQuickbaseClient(
+     base_url="https://yourrealm.quickbase.com", username='your.username@mail.com', password='password')
+ ```
+ 
+ ### Note: 
+ Using the JSON SDK is encouraged unless you are going to be sending requests with payloads larger than 10MB. Also note that the XML SDK functions a bit differently from the JSON SDK. Some features may not work or work differently.
+ 
+ # Usage
+-The quickbase `Client` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
++The quickbase `QuickbaseClient` object has many uses, the primary ones relating to finding, adding, editing, and deleting records
+ 
+ ## Querying for Records
+ 
+-One of the primary uses of the quickbase `Client` is querying for records. Querying for records can be done using the `do_query()` method. 
++One of the primary uses of the quickbase `QuickbaseClient` is querying for records. Querying for records can be done using the `do_query()` method. 
+ Here is a basic example of querying for records:
+ ```python
+ 
+ data = qb_client.do_query(query="{6.EX.'example'}", columns=[3,6,7], database='dbid')
+ 
+ for record in data:
+     #do stuff
+@@ -132,15 +132,15 @@
+ `sort=[3,5]` will first sort by field ID 3, and then by field ID 5.
+ 
+ `skip` and `max` will only function when also using a `qid` parameter,
+ and `columns` will only function when also using a `query` parameter.
+ 
+ ## Adding records
+ 
+-The `Client` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
++The `QuickbaseClient` object also has two methods to add new records: `add_record()` and `add_multiple_records()`*.
+ 
+ Heres an example of `add_record()`:
+ ```python
+ # set fields and their values
+ fields = {
+     '6':value,
+     '8':value,
+@@ -197,15 +197,15 @@
+ If both a `query` and a `rid` list is given, the list takes precedence. Example:
+ ```python
+ qb_client.purge_records(database='dbid', rids=[100,101,102])
+ ```
+ 
+ # Additional Usage
+ 
+-The `Client` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
++The `QuickbaseClient` object also has some other useful features such as file upload functionality,  `denest()` and `nest()` methods, and an `import_from_csv()` method.
+ 
+ ## File Uploading and Downloading
+ 
+ The `get_file()` method retrieves file data from a given record. It can either take the `url` parameter where `url` is the complete file url extension, or it can take the following arguments: `database` which is the table ID, `record` which is the record ID, `field` which is the field ID, and `version` which is the version number.
+ Example:
+ ```python
+ qb_client.get_file(database='dbid', record=100, field=8, version=1)
+@@ -225,10 +225,10 @@
+ uploads = [fid: {"value" : { "fileName": filename, "data": base64encoded_file_content }}]
+ ```
+ 
+ ## Other features
+ 
+ The `nest()` and `denest()` methods will convert data from `{fid:value}` to `{fid: {'value':value}}` and vice versa.
+ The `import_from_csv()` method will take a csv string and upload the records contained in the string.
+-The `round_int()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
++The `round_ints()` method will take any returned data and change any unneeded floating-points to numbers. This method can be automatically called with an optional parameter `round_ints` in methods that return field data.
+ 
+ For more information on these additional features and other features, you can look at their individual documentation in src/json_quickbase.py or src/xml_quickbase.py.
+```
+

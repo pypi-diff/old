@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pss_scrambler-0.0.1.4400830929-py2.py3-none-any.whl.zip tmp/pss_scrambler-0.0.2.4632135087-py2.py3-none-any.whl.zip --html versions/p/pss-scrambler/0.0.1.4400830929-0.0.2.4632135087/index.html --text versions/p/pss-scrambler/0.0.1.4400830929-0.0.2.4632135087/diff.txt --markdown versions/p/pss-scrambler/0.0.1.4400830929-0.0.2.4632135087/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.45 KB</span></div>
+  <div><span class="source">tmp/pss_scrambler-0.0.1.4400830929-py2.py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/pss_scrambler-0.0.2.4632135087-py2.py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">2.31 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>31<del>343</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>11</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>31<ins>484</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>11</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1829<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>33</del><span class="dp">·</span>pss_scrambler/__main__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1829<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>57</ins><span class="dp">·</span>pss_scrambler/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59296<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>33</del><span class="dp">·</span>pss_scrambler/dictionary.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>59296<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>57</ins><span class="dp">·</span>pss_scrambler/dictionary.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<del>28</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>33</del><span class="dp">·</span>pss_scrambler/pss_keywords.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<ins>36</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>57</ins><span class="dp">·</span>pss_scrambler/pss_keywords.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>3930</del><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>33</del><span class="dp">·</span>pss_scrambler/translator.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>4328</ins><span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>57</ins><span class="dp">·</span>pss_scrambler/translator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1195<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>33</del><span class="dp">·</span>pss_scrambler/cmds/cmd_encode.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1195<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>57</ins><span class="dp">·</span>pss_scrambler/cmds/cmd_encode.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/LICENSE</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>476<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/METADATA</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>476<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/WHEEL</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/entry_points.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/top_level.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent"><del>?</del>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1010<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Ma</del>r-<del>13</del><span class="dp">·</span><del>02</del>:<del>34</del><span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/RECORD</td><td class="diffline">12 </td><td class="diffpresent"><ins>-</ins>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1010<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Ap</ins>r-<ins>06</ins><span class="dp">·</span><ins>18</ins>:<ins>58</ins><span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">11<span class="dp">·</span>files,<span class="dp">·</span>81<del>507</del><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>29<del>603</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>63.7%</td><td class="diffline">13 </td><td class="diffpresent">11<span class="dp">·</span>files,<span class="dp">·</span>81<ins>913</ins><span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>29<ins>744</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>63.7%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">993 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 9, 26 lines modified</td><td colspan="2">Offset 9, 26 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler/translator.py</td><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler/translator.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler/cmds/cmd_encode.py</td><td class="diffline">11 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler/cmds/cmd_encode.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">12 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/LICENSE</td><td class="diffline">13 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">14 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/METADATA</td><td class="diffline">15 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">16 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/WHEEL</td><td class="diffline">17 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">18 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/entry_points.txt</td><td class="diffline">19 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/entry_points.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">20 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/top_level.txt</td><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/RECORD</td><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">25 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">936 B</span></div>
+    <div id="pss_scrambler-pss_keywords.py"><span class="source">pss_scrambler/pss_keywords.py</span>
+      <a class="anchor" href="#pss_scrambler-pss_keywords.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 15 lines modified</td><td colspan="2">Offset 11, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">&quot;init_up&quot;,<span class="dp">·</span>&quot;inout&quot;,<span class="dp">·</span>&quot;input&quot;,<span class="dp">·</span>&quot;instance&quot;,<span class="dp">·</span>&quot;int&quot;,<span class="dp">·</span>&quot;join_branch&quot;,</td><td class="diffline">11 </td><td class="diffpresent">&quot;init_up&quot;,<span class="dp">·</span>&quot;inout&quot;,<span class="dp">·</span>&quot;input&quot;,<span class="dp">·</span>&quot;instance&quot;,<span class="dp">·</span>&quot;int&quot;,<span class="dp">·</span>&quot;join_branch&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">&quot;join_first&quot;,<span class="dp">·</span>&quot;join_none&quot;,<span class="dp">·</span>&quot;join_select&quot;,<span class="dp">·</span>&quot;list&quot;,<span class="dp">·</span>&quot;lock&quot;,<span class="dp">·</span>&quot;map&quot;,</td><td class="diffline">12 </td><td class="diffpresent">&quot;join_first&quot;,<span class="dp">·</span>&quot;join_none&quot;,<span class="dp">·</span>&quot;join_select&quot;,<span class="dp">·</span>&quot;list&quot;,<span class="dp">·</span>&quot;lock&quot;,<span class="dp">·</span>&quot;map&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">&quot;match&quot;,<span class="dp">·</span>&quot;null&quot;,<span class="dp">·</span>&quot;output&quot;,<span class="dp">·</span>&quot;override&quot;,<span class="dp">·</span>&quot;package&quot;,<span class="dp">·</span>&quot;parallel&quot;,</td><td class="diffline">13 </td><td class="diffpresent">&quot;match&quot;,<span class="dp">·</span>&quot;null&quot;,<span class="dp">·</span>&quot;output&quot;,<span class="dp">·</span>&quot;override&quot;,<span class="dp">·</span>&quot;package&quot;,<span class="dp">·</span>&quot;parallel&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">&quot;pool&quot;,<span class="dp">·</span>&quot;post_solve&quot;,<span class="dp">·</span>&quot;pre_solve&quot;,<span class="dp">·</span>&quot;private&quot;,<span class="dp">·</span>&quot;protected&quot;,<span class="dp">·</span>&quot;public&quot;,</td><td class="diffline">14 </td><td class="diffpresent">&quot;pool&quot;,<span class="dp">·</span>&quot;post_solve&quot;,<span class="dp">·</span>&quot;pre_solve&quot;,<span class="dp">·</span>&quot;private&quot;,<span class="dp">·</span>&quot;protected&quot;,<span class="dp">·</span>&quot;public&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">&quot;pure&quot;,<span class="dp">·</span>&quot;rand&quot;,<span class="dp">·</span>&quot;ref&quot;,<span class="dp">·</span>&quot;repeat&quot;,<span class="dp">·</span>&quot;replicate&quot;,<span class="dp">·</span>&quot;resource&quot;,<span class="dp">·</span>&quot;instance_id&quot;</td><td class="diffline">15 </td><td class="diffpresent">&quot;pure&quot;,<span class="dp">·</span>&quot;rand&quot;,<span class="dp">·</span>&quot;ref&quot;,<span class="dp">·</span>&quot;repeat&quot;,<span class="dp">·</span>&quot;replicate&quot;,<span class="dp">·</span>&quot;resource&quot;,<span class="dp">·</span>&quot;instance_id&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">&quot;return&quot;,<span class="dp">·</span>&quot;run_end&quot;,<span class="dp">·</span>&quot;run_start&quot;,<span class="dp">·</span>&quot;schedule&quot;,<span class="dp">·</span>&quot;select&quot;,<span class="dp">·</span>&quot;sequence&quot;,</td><td class="diffline">16 </td><td class="diffpresent">&quot;return&quot;,<span class="dp">·</span>&quot;run_end&quot;,<span class="dp">·</span>&quot;run_start&quot;,<span class="dp">·</span>&quot;schedule&quot;,<span class="dp">·</span>&quot;select&quot;,<span class="dp">·</span>&quot;sequence&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">&quot;set&quot;,<span class="dp">·</span>&quot;share&quot;,<span class="dp">·</span>&quot;solve&quot;,<span class="dp">·</span>&quot;state&quot;,<span class="dp">·</span>&quot;static&quot;,<span class="dp">·</span>&quot;stream&quot;,</td><td class="diffline">17 </td><td class="diffpresent">&quot;set&quot;,<span class="dp">·</span>&quot;share&quot;,<span class="dp">·</span>&quot;solve&quot;,<span class="dp">·</span>&quot;state&quot;,<span class="dp">·</span>&quot;static&quot;,<span class="dp">·</span>&quot;stream&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">&quot;string&quot;,<span class="dp">·</span>&quot;struct&quot;,<span class="dp">·</span>&quot;super&quot;,<span class="dp">·</span>&quot;symbol&quot;,<span class="dp">·</span>&quot;target&quot;,<span class="dp">·</span>&quot;true&quot;,</td><td class="diffline">18 </td><td class="diffpresent">&quot;string&quot;,<span class="dp">·</span>&quot;struct&quot;,<span class="dp">·</span>&quot;super&quot;,<span class="dp">·</span>&quot;symbol&quot;,<span class="dp">·</span>&quot;target&quot;,<span class="dp">·</span>&quot;t<ins>his&quot;,<span class="dp">·</span>&quot;t</ins>rue&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">&quot;type&quot;,<span class="dp">·</span>&quot;typedef&quot;,<span class="dp">·</span>&quot;unique&quot;,<span class="dp">·</span>&quot;void&quot;,<span class="dp">·</span>&quot;while&quot;,<span class="dp">·</span>&quot;with&quot;,</td><td class="diffline">19 </td><td class="diffpresent">&quot;type&quot;,<span class="dp">·</span>&quot;typedef&quot;,<span class="dp">·</span>&quot;unique&quot;,<span class="dp">·</span>&quot;void&quot;,<span class="dp">·</span>&quot;while&quot;,<span class="dp">·</span>&quot;with&quot;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">#<span class="dp">·</span>Built-in<span class="dp">·</span>types<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>library</td><td class="diffline">20 </td><td class="diffpresent">#<span class="dp">·</span>Built-in<span class="dp">·</span>types<span class="dp">·</span>from<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>library</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">&quot;executor_pkg&quot;,<span class="dp">·</span>&quot;executor_trait_s&quot;,<span class="dp">·</span>&quot;empty_executor_trait_s&quot;,</td><td class="diffline">21 </td><td class="diffpresent">&quot;executor_pkg&quot;,<span class="dp">·</span>&quot;executor_trait_s&quot;,<span class="dp">·</span>&quot;empty_executor_trait_s&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">&quot;executor_base_c&quot;,<span class="dp">·</span>&quot;executor_c&quot;,<span class="dp">·</span>&quot;trait&quot;,</td><td class="diffline">22 </td><td class="diffpresent">&quot;executor_base_c&quot;,<span class="dp">·</span>&quot;executor_c&quot;,<span class="dp">·</span>&quot;trait&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">&quot;executor_group_c&quot;,<span class="dp">·</span>&quot;add_executor&quot;,<span class="dp">·</span>&quot;executor_claim_s&quot;,</td><td class="diffline">23 </td><td class="diffpresent">&quot;executor_group_c&quot;,<span class="dp">·</span>&quot;add_executor&quot;,<span class="dp">·</span>&quot;executor_claim_s&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">&quot;executor&quot;,<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">&quot;executor&quot;,<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.12 KB</span></div>
+    <div id="pss_scrambler-translator.py"><span class="source">pss_scrambler/translator.py</span>
+      <a class="anchor" href="#pss_scrambler-translator.py">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 105, 22 lines modified</td><td colspan="2">Offset 105, 31 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_ungetc(self,<span class="dp">·</span>c):</td><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_ungetc(self,<span class="dp">·</span>c):</td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._c<span class="dp">·</span>=<span class="dp">·</span>c</td><td class="diffline">107 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._c<span class="dp">·</span>=<span class="dp">·</span>c</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>map_token(self,<span class="dp">·</span>token):</td><td class="diffline">108 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>map_token(self,<span class="dp">·</span>token):</td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>remap_i<span class="dp">·</span>=<span class="dp">·</span>len(token)-1</td><td class="diffline">109 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>remap_i<span class="dp">·</span>=<span class="dp">·</span>len(token)-1</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Find<span class="dp">·</span>the<span class="dp">·</span>word<span class="dp">·</span>category<span class="dp">·</span>that<span class="dp">·</span>is<span class="dp">·</span>closest<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>length</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>identifier<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>replaced<span class="dp">·</span>that<span class="dp">·</span>still<span class="dp">·</span>has<span class="dp">·</span>available<span class="dp">·</span>replacements</td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>remap_i<span class="dp">·</span>&lt;<span class="dp">·</span>len(self.new_mapping_dict)<span class="dp">·</span>and<span class="dp">·</span>len(self.new_mapping_dict[remap_i])<span class="dp">·</span>==<span class="dp">·</span>0:</td><td class="diffline">112 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>remap_i<span class="dp">·</span>&lt;<span class="dp">·</span>len(self.new_mapping_dict)<span class="dp">·</span>and<span class="dp">·</span>len(self.new_mapping_dict[remap_i])<span class="dp">·</span>==<span class="dp">·</span>0:</td></tr>
+<tr class="diffunmodified"><td class="diffline">111 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>remap_i<span class="dp">·</span>+=<span class="dp">·</span>1</td><td class="diffline">113 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>remap_i<span class="dp">·</span>+=<span class="dp">·</span>1</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">114 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>remap_i<span class="dp">·</span>&gt;=<span class="dp">·</span>len(self.new_mapping_dict)<span class="dp">·</span>or<span class="dp">·</span>len(self.new_mapping_dict[remap_i])<span class="dp">·</span>==<span class="dp">·</span>0:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">115 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>remap_i<span class="dp">·</span>-=<span class="dp">·</span>1<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl_i<span class="dp">·</span>=<span class="dp">·</span>self.rand.randint(0,<span class="dp">·</span>len(self.new_mapping_dict[remap_i])-1)</td><td class="diffline">116 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl_i<span class="dp">·</span>=<span class="dp">·</span>self.rand.randint(0,<span class="dp">·</span>len(self.new_mapping_dict[remap_i])-1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl<span class="dp">·</span>=<span class="dp">·</span>self.new_mapping_dict[remap_i][token_xl_i]</td><td class="diffline">117 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl<span class="dp">·</span>=<span class="dp">·</span>self.new_mapping_dict[remap_i][token_xl_i]</td></tr>
+<tr class="diffunmodified"><td class="diffline">114 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.new_mapping_dict[remap_i].pop(token_xl_i)</td><td class="diffline">118 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.new_mapping_dict[remap_i].pop(token_xl_i)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">115 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>s<span class="dp">·</span>in<span class="dp">·</span>self.suffixes:</td><td class="diffline">119 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>s<span class="dp">·</span>in<span class="dp">·</span>self.suffixes:</td></tr>
+<tr class="diffunmodified"><td class="diffline">116 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>token.endswith(s):</td><td class="diffline">120 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>token.endswith(s):</td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl<span class="dp">·</span>+=<span class="dp">·</span>s</td><td class="diffline">121 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl<span class="dp">·</span>+=<span class="dp">·</span>s</td></tr>
+<tr class="diffunmodified"><td class="diffline">118 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>break</td><td class="diffline">122 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>break</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">123 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>word<span class="dp">·</span>to<span class="dp">·</span>replace<span class="dp">·</span>is<span class="dp">·</span>all-uppercase,<span class="dp">·</span>copy<span class="dp">·</span>that</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>token.isupper():</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>token_xl<span class="dp">·</span>=<span class="dp">·</span>token_xl.upper()</td></tr>
+<tr class="diffunmodified"><td class="diffline">119 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">120 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.defined_mappings[token]<span class="dp">·</span>=<span class="dp">·</span>token_xl</td><td class="diffline">127 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.defined_mappings[token]<span class="dp">·</span>=<span class="dp">·</span>token_xl</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">121 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>token_xl</td><td class="diffline">128 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>token_xl</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">135 B</span></div>
+    <div><span class="source">pss_scrambler-0.0.1.4400830929.dist-info/LICENSE</span> vs.</div>
+    <div id="pss_scrambler--.-.-.----------.dist-info-LICENSE"><span class="source">pss_scrambler-0.0.2.4632135087.dist-info/LICENSE</span>
+      <a class="anchor" href="#pss_scrambler--.-.-.----------.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.89 KB</span></div>
+    <div><span class="source">pss_scrambler-0.0.1.4400830929.dist-info/RECORD</span> vs.</div>
+    <div id="pss_scrambler--.-.-.----------.dist-info-RECORD"><span class="source">pss_scrambler-0.0.2.4632135087.dist-info/RECORD</span>
+      <a class="anchor" href="#pss_scrambler--.-.-.----------.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 21% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">pss_scrambler/__main__.py,sha256=1SudeRWlXTa_zxzSEbAdm9mYFYsouJw5qMMsbFNGpzQ,1829</td><td class="diffline">1 </td><td class="diffpresent">pss_scrambler/__main__.py,sha256=1SudeRWlXTa_zxzSEbAdm9mYFYsouJw5qMMsbFNGpzQ,1829</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">pss_scrambler/dictionary.py,sha256=-DeOqEmXZBiACdCIMk2qEb3quoqzslfpdmUP8z1ReWM,59296</td><td class="diffline">2 </td><td class="diffpresent">pss_scrambler/dictionary.py,sha256=-DeOqEmXZBiACdCIMk2qEb3quoqzslfpdmUP8z1ReWM,59296</td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">pss_scrambler/pss_keywords.py,sha256=ELkToLU9gDZ5lItBl4GfzPJZ_-ry9CtNks2Tkj91IhE,2228</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">pss_scrambler/<del>translat</del>or.py,sha256=<del>L4zhbUxaYyJ9mZrPug99u0M-ed_XG9kO1kXadsLYfz</del>k,<del>39</del>3<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">pss_scrambler/<ins>pss_keyw</ins>or<ins>ds</ins>.py,sha256=<ins>bb2_l4QYDl_OClYTJe85DbVCO4j21ouZsKyugqnqwo</ins>k,<ins>22</ins>3<ins>6</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">pss_scrambler/translator.py,sha256=Np01A6jrnuK8r2P569Suc9FS4rvmR-hIk29-CBKswDk,4328</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">pss_scrambler/cmds/cmd_encode.py,sha256=F3NqFg9xFsIBBpET9Uge0niDId3O5kRfGHHE58gFkFo,1195</td><td class="diffline">5 </td><td class="diffpresent">pss_scrambler/cmds/cmd_encode.py,sha256=F3NqFg9xFsIBBpET9Uge0niDId3O5kRfGHHE58gFkFo,1195</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357</td><td class="diffline">6 </td><td class="diffpresent">pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357</td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">pss_scrambler-0.0.1.4400830929.dist-info/METADATA,sha256=HD7BIImTr5obfEF2GyA8QKuP_Nv1as72fGOZ_DI2pIE,476</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/<del>WHEEL</del>,sha256=<del>b</del><del>b2Ot9scclHKMOLDE</del>H<del>Y6B2sicWOgu</del>g<del>jFKaJsT7vwMQo</del>,<del>110</del></td><td class="diffline">7 </td><td class="diffpresent">pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/<ins>MET</ins><ins>ADATA</ins>,sha256=<ins>cMRPGGIlA1O0iYG8</ins>H<ins>MUpMLnDobld</ins>g<ins>A</ins><ins>eutZ0-_oS804I</ins>,<ins>476</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">pss_scrambler-0.0.2.4632135087.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/entry_points.txt,sha256=zGCNazvFLmPFQeF4kws1Q7Au-eNZmXT-zKNotqH1p20,62</td><td class="diffline">9 </td><td class="diffpresent">pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/entry_points.txt,sha256=zGCNazvFLmPFQeF4kws1Q7Au-eNZmXT-zKNotqH1p20,62</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/top_level.txt,sha256=_sUnAKWBK6trQB3OY_t7exQYlUSa_6XG7rgioIBScyg,14</td><td class="diffline">10 </td><td class="diffpresent">pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/top_level.txt,sha256=_sUnAKWBK6trQB3OY_t7exQYlUSa_6XG7rgioIBScyg,14</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">pss_scrambler-0.0.<del>1</del>.4<del>4008</del>3<del>0929</del>.dist-info/RECORD,,</td><td class="diffline">11 </td><td class="diffpresent">pss_scrambler-0.0.<ins>2</ins>.4<ins>6321</ins>3<ins>5087</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

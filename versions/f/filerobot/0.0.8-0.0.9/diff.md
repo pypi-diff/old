@@ -1,0 +1,241 @@
+# Comparing `tmp/filerobot-0.0.8.tar.gz` & `tmp/filerobot-0.0.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "filerobot-0.0.8.tar", last modified: Mon Mar 13 16:17:57 2023, max compression
++gzip compressed data, was "filerobot-0.0.9.tar", last modified: Mon Mar 13 19:00:04 2023, max compression
+```
+
+## Comparing `filerobot-0.0.8.tar` & `filerobot-0.0.9.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 16:17:57.274866 filerobot-0.0.8/
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)       81 2023-03-13 16:17:06.000000 filerobot-0.0.8/CHANGELOG.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)     1056 2023-03-09 10:22:01.000000 filerobot-0.0.8/LICENCE.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)       30 2023-03-09 16:20:49.000000 filerobot-0.0.8/MANIFEST.in
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)     1759 2023-03-13 16:17:57.274748 filerobot-0.0.8/PKG-INFO
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)     1205 2023-03-09 16:58:39.000000 filerobot-0.0.8/README.md
+-drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 16:17:57.273362 filerobot-0.0.8/filerobot/
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)        0 2023-03-09 13:35:36.000000 filerobot-0.0.8/filerobot/__init__.py
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)    35201 2023-03-13 16:02:01.000000 filerobot-0.0.8/filerobot/filerobot.py
+-drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 16:17:57.274554 filerobot-0.0.8/filerobot.egg-info/
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)     1759 2023-03-13 16:17:57.000000 filerobot-0.0.8/filerobot.egg-info/PKG-INFO
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)      265 2023-03-13 16:17:57.000000 filerobot-0.0.8/filerobot.egg-info/SOURCES.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)        1 2023-03-13 16:17:57.000000 filerobot-0.0.8/filerobot.egg-info/dependency_links.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)      459 2023-03-13 16:17:57.000000 filerobot-0.0.8/filerobot.egg-info/requires.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)       10 2023-03-13 16:17:57.000000 filerobot-0.0.8/filerobot.egg-info/top_level.txt
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)       38 2023-03-13 16:17:57.274910 filerobot-0.0.8/setup.cfg
+--rw-r--r--   0 vladimirmikov   (501) staff       (20)     1791 2023-03-13 16:17:06.000000 filerobot-0.0.8/setup.py
++drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 19:00:04.004125 filerobot-0.0.9/
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)       81 2023-03-13 18:59:57.000000 filerobot-0.0.9/CHANGELOG.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)     1056 2023-03-09 10:22:01.000000 filerobot-0.0.9/LICENCE.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)       30 2023-03-09 16:20:49.000000 filerobot-0.0.9/MANIFEST.in
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)     1759 2023-03-13 19:00:04.004009 filerobot-0.0.9/PKG-INFO
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)     1205 2023-03-09 16:58:39.000000 filerobot-0.0.9/README.md
++drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 19:00:04.002894 filerobot-0.0.9/filerobot/
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)        0 2023-03-09 13:35:36.000000 filerobot-0.0.9/filerobot/__init__.py
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)    36792 2023-03-13 18:59:57.000000 filerobot-0.0.9/filerobot/filerobot.py
++drwxr-xr-x   0 vladimirmikov   (501) staff       (20)        0 2023-03-13 19:00:04.003698 filerobot-0.0.9/filerobot.egg-info/
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)     1759 2023-03-13 19:00:03.000000 filerobot-0.0.9/filerobot.egg-info/PKG-INFO
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)      265 2023-03-13 19:00:04.000000 filerobot-0.0.9/filerobot.egg-info/SOURCES.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)        1 2023-03-13 19:00:03.000000 filerobot-0.0.9/filerobot.egg-info/dependency_links.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)      459 2023-03-13 19:00:03.000000 filerobot-0.0.9/filerobot.egg-info/requires.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)       10 2023-03-13 19:00:03.000000 filerobot-0.0.9/filerobot.egg-info/top_level.txt
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)       38 2023-03-13 19:00:04.004302 filerobot-0.0.9/setup.cfg
++-rw-r--r--   0 vladimirmikov   (501) staff       (20)     1791 2023-03-13 18:59:57.000000 filerobot-0.0.9/setup.py
+```
+
+### Comparing `filerobot-0.0.8/LICENCE.txt` & `filerobot-0.0.9/LICENCE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `filerobot-0.0.8/PKG-INFO` & `filerobot-0.0.9/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: filerobot
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: A filerobot library which interacts with filerobot API
+ Home-page: 
+ Author: Scaleflex
+ Author-email: 
+ License: MIT
+ Classifier: Development Status :: 1 - Planning
+ Classifier: Intended Audience :: Developers
+@@ -68,10 +68,10 @@
+ ## License
+ 
+ [MIT](https://choosealicense.com/licenses/mit/)
+ 
+ Change Log
+ ==========
+ 
+-0.0.8 (14.03.2022)
++0.0.9 (14.03.2022)
+ ------------------
+ - Under development!
+```
+
+### Comparing `filerobot-0.0.8/README.md` & `filerobot-0.0.9/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `filerobot-0.0.8/filerobot/filerobot.py` & `filerobot-0.0.9/filerobot/filerobot.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -148,32 +148,84 @@
+                       'updated_at,desc',
+                       'created_at,asc',
+                       'created_at,desc', ]
+     recursive_ = 0
+     pool = None
+     verbose = False
+ 
+-    def __init__(self, filerobot_token, filerobot_key):
++    def __init__(self, filerobot_token=None, filerobot_key=None):
+         """
+         CREDENTIALS
+         :param filerobot_token: Token, provided by Scaleflex
+         :param filerobot_key:   Key, provided by Scaleflex
+         """
+-        self.filerobot_token = filerobot_token
+-        self.filerobot_key = filerobot_key
++        if filerobot_token is not None:
++            self.filerobot_token = filerobot_token
++        if filerobot_key is not None:
++            self.filerobot_key = filerobot_key
+         self.status_code_auth = None
+ 
+     def verbose_print(self, *args) -> None:
+         """
+         :param args: Accepts string args
+         :return:     If verbose is True prints all strings in new line.
+         """
+         if self.verbose is True:
+             builtins.print(*args, sep="\n")
+ 
++    def get_credentials_from_file(self, file_path):
++        """
++        The method accepts json file path in format
++        {
++         "filerobot_token": <filerobot_token>,
++         "filerobot_key": <filerobot_key>
++        }
++        :param file_path:  str => path
++        :return: str
++        """
++        try:
++            with open(file_path, 'r') as f:
++                data = json.load(f)
++        except:
++            raise FileNotFoundError("Can't open the credentials file. Wrong format or missing file")
++
++        filerobot_token = data.get('filerobot_token')
++        filerobot_key = data.get('filerobot_key')
++        if filerobot_token is not None and filerobot_key is not None:
++            self.filerobot_token = filerobot_token
++            self.filerobot_key = filerobot_key
++        else:
++            raise ValueError('Filerobot token and/or filerobot key are missing!')
++
++        return "OK"
++
++
++    def genrate_json_file_with_credentials(self, json_file_path:str):
++        """
++        This method generates file with credentials in format
++
++        :param json_file_path:  str=> file_name
++        :return:
++        """
++        # Data to be written
++        dictionary = {
++            "filerobot_token": self.filerobot_token,
++            "filerobot_key": self.filerobot_key
++        }
++
++        # Serializing json
++        json_object = json.dumps(dictionary, indent=4)
++
++        # Writing to sample.json
++        with open(json_file_path, "w") as outfile:
++            outfile.write(json_object)
++
++
++
++
+     def check_and_set_filerobot_credentials(self) -> str:
+         """
+         Check if filerobot credentials is correct:
+         If filerobot credentials are right set status_code to 200 and
+         :return: 'Credentials: OK' string
+ 
+         else raise WrongCredentialsError
+```
+
+### Comparing `filerobot-0.0.8/filerobot.egg-info/PKG-INFO` & `filerobot-0.0.9/filerobot.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: filerobot
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: A filerobot library which interacts with filerobot API
+ Home-page: 
+ Author: Scaleflex
+ Author-email: 
+ License: MIT
+ Classifier: Development Status :: 1 - Planning
+ Classifier: Intended Audience :: Developers
+@@ -68,10 +68,10 @@
+ ## License
+ 
+ [MIT](https://choosealicense.com/licenses/mit/)
+ 
+ Change Log
+ ==========
+ 
+-0.0.8 (14.03.2022)
++0.0.9 (14.03.2022)
+ ------------------
+ - Under development!
+```
+
+### Comparing `filerobot-0.0.8/setup.py` & `filerobot-0.0.9/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -6,15 +6,15 @@
+     'Operating System :: MacOS',
+     'License :: OSI Approved :: MIT License',
+     'Programming Language :: Python :: 3'
+ ]
+ 
+ setup(
+     name='filerobot',
+-    version='0.0.8',
++    version='0.0.9',
+     description='A filerobot library which interacts with filerobot API',
+     long_description_content_type='text/markdown',
+     long_description= open('README.md').read() + '\n\n' + open("CHANGELOG.txt").read(),
+     url='',
+     author='Scaleflex',
+     author_email='',
+     license='MIT',
+```
+
