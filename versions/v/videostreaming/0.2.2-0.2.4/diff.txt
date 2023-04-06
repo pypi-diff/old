@@ -1,0 +1,451 @@
+--- tmp/videostreaming-0.2.2.tar.gz
++++ tmp/videostreaming-0.2.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "videostreaming-0.2.2.tar", last modified: Wed Apr  5 07:56:40 2023, max compression
+│ +gzip compressed data, was "videostreaming-0.2.4.tar", last modified: Thu Apr  6 17:38:00 2023, max compression
+│   --- videostreaming-0.2.2.tar
+├── +++ videostreaming-0.2.4.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:56:40.871693 videostreaming-0.2.2/
+│ │ --rw-rw-rw-   0        0        0     1094 2023-03-12 15:09:28.000000 videostreaming-0.2.2/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0      659 2023-04-05 07:56:40.869679 videostreaming-0.2.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       78 2023-03-16 15:22:05.000000 videostreaming-0.2.2/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-05 07:56:40.871693 videostreaming-0.2.2/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      868 2023-04-05 07:56:27.000000 videostreaming-0.2.2/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:56:40.816625 videostreaming-0.2.2/videostreaming/
+│ │ --rw-rw-rw-   0        0        0       44 2023-04-03 18:39:05.000000 videostreaming-0.2.2/videostreaming/__init__.py
+│ │ --rw-rw-rw-   0        0        0    12788 2023-04-04 15:38:11.000000 videostreaming-0.2.2/videostreaming/socket.py
+│ │ --rw-rw-rw-   0        0        0     4950 2023-04-04 15:30:57.000000 videostreaming-0.2.2/videostreaming/utils.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 07:56:40.830034 videostreaming-0.2.2/videostreaming.egg-info/
+│ │ --rw-rw-rw-   0        0        0      659 2023-04-05 07:56:40.000000 videostreaming-0.2.2/videostreaming.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      295 2023-04-05 07:56:40.000000 videostreaming-0.2.2/videostreaming.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 07:56:40.000000 videostreaming-0.2.2/videostreaming.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       14 2023-04-05 07:56:40.000000 videostreaming-0.2.2/videostreaming.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       15 2023-04-05 07:56:40.000000 videostreaming-0.2.2/videostreaming.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:38:00.680619 videostreaming-0.2.4/
+│ │ +-rw-rw-rw-   0        0        0     1094 2023-03-12 15:09:28.000000 videostreaming-0.2.4/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0      659 2023-04-06 17:38:00.679298 videostreaming-0.2.4/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       78 2023-03-16 15:22:05.000000 videostreaming-0.2.4/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 17:38:00.680619 videostreaming-0.2.4/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      868 2023-04-06 17:37:53.000000 videostreaming-0.2.4/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:38:00.669551 videostreaming-0.2.4/videostreaming/
+│ │ +-rw-rw-rw-   0        0        0       44 2023-04-06 17:30:46.000000 videostreaming-0.2.4/videostreaming/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    13345 2023-04-06 17:35:45.000000 videostreaming-0.2.4/videostreaming/hosting.py
+│ │ +-rw-rw-rw-   0        0        0     4953 2023-04-06 17:06:42.000000 videostreaming-0.2.4/videostreaming/utils.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:38:00.677301 videostreaming-0.2.4/videostreaming.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      659 2023-04-06 17:38:00.000000 videostreaming-0.2.4/videostreaming.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      296 2023-04-06 17:38:00.000000 videostreaming-0.2.4/videostreaming.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 17:38:00.000000 videostreaming-0.2.4/videostreaming.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       14 2023-04-06 17:38:00.000000 videostreaming-0.2.4/videostreaming.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       15 2023-04-06 17:38:00.000000 videostreaming-0.2.4/videostreaming.egg-info/top_level.txt
+│ │   --- videostreaming-0.2.2/LICENSE.txt
+│ ├── +++ videostreaming-0.2.4/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- videostreaming-0.2.2/PKG-INFO
+│ ├── +++ videostreaming-0.2.4/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: videostreaming
+│ │ -Version: 0.2.2
+│ │ +Version: 0.2.4
+│ │  Summary: Small package to simplify video streaming using python built-in socket library
+│ │  Home-page: https://github.com/MikiTwenty/Python/tree/main/Libraries/video-streaming
+│ │  Author: MikiTwenty
+│ │  Author-email: terminetor.xx@gmail.com
+│ │  License: MIT
+│ │  Keywords: python,socket,streaming,server,client
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- videostreaming-0.2.2/setup.py
+│ ├── +++ videostreaming-0.2.4/setup.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  from setuptools import setup
+│ │  
+│ │ -VERSION = "0.2.2"
+│ │ +VERSION = "0.2.4"
+│ │  
+│ │  with open("README.md", "r") as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name="videostreaming",
+│ │      version=VERSION,
+│ │   --- videostreaming-0.2.2/videostreaming/socket.py
+│ ├── +++ videostreaming-0.2.4/videostreaming/hosting.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,34 +1,35 @@
+│ │  import socket, pickle, struct, cv2, sys, time
+│ │  
+│ │  class Socket(object):
+│ │      def __init__(self, socket_type, show_ip, capture_video, video_source, verbose) -> None:
+│ │          self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+│ │ -        self.host_name  = socket.gethostname()
+│ │ +        self.host_name = socket.gethostname()
+│ │          self.host_ip = socket.gethostbyname(self.host_name)
+│ │          self.socket_type = socket_type
+│ │          self.capture_video = capture_video
+│ │          self.video_source = video_source
+│ │          self.max_upload_speed = 10*1000*1024
+│ │          self.max_download_speed = 10*1000*1024
+│ │          self._set_verbosity(verbose)
+│ │          self.timed_out = False
+│ │          if show_ip:
+│ │ -            self._log(f"IP address: {self.host_ip}")
+│ │ +            self._log(f"IP address: {self.host_ip}", self.verbosity_level[0])
+│ │          if self.capture_video:
+│ │              self._get_video()
+│ │  
+│ │      def _get_video(self):
+│ │          try:
+│ │ +            self._log("Initializing OpenCV video capture...", self.verbosity_level[2])
+│ │              self.video = cv2.VideoCapture(self.video_source)
+│ │              if self.video is None or not self.video.isOpened():
+│ │ -                self._log(f"Warning: unable to open video source: {self.video_source}")
+│ │ +                self._log(f"Unable to open video source: {self.video_source}")
+│ │                  exit()
+│ │          except Exception as error:
+│ │ -            self._log(error)
+│ │ +            raise(error)
+│ │  
+│ │      def _set_port(self):
+│ │          while True:
+│ │              port = input(f"{self.socket_type} Select port >> ")
+│ │              if len(port) == 4:
+│ │                  try:
+│ │                      port = int(port)
+│ │ @@ -47,82 +48,83 @@
+│ │          - ``send`` (bool) : send the frame size to the connected socket (default: False).\n
+│ │          """
+│ │          try:
+│ │              capturing, frame = self.video.read(self.video_source)
+│ │              if capturing:
+│ │                  frame_size = sys.getsizeof(frame) + 100
+│ │                  self.max_upload_speed = frame_size
+│ │ -                self._log(f"Camera frame size: {(frame_size/(1000*1024)):.2f} MB")
+│ │ +                self._log(f"Camera frame size: {(frame_size/(1000*1024)):.2f} MB", self.verbosity_level[2])
+│ │                  if send:
+│ │                      try:
+│ │                          frame_size_binary = (bin(frame_size)).encode()
+│ │                          self.client_socket.sendall(frame_size_binary)
+│ │ -                        self._log(f"Frame size sent to: {self.client_socket.getsockname()[0]}")
+│ │ +                        self._log(f"Frame size sent to: {self.client_socket.getsockname()[0]}", self.verbosity_level[2])
+│ │                      except Exception as error:
+│ │                          self._log(error)
+│ │          except Exception as error:
+│ │              raise(error)
+│ │  
+│ │      def _set_size(self, size=None):
+│ │          if not size:
+│ │              try:
+│ │                  self.client_socket.settimeout(1)
+│ │                  self.max_download_speed = int(self.client_socket.recv(10*1000*1024), 2)
+│ │                  self.client_socket.setblocking(True)
+│ │ -                self._log(f"Get frame size from: {self.client_socket.getsockname()[0]}")
+│ │ +                self._log(f"Get frame size from: {self.client_socket.getsockname()[0]}", self.verbosity_level[2])
+│ │              except Exception as error:
+│ │                  self._log(error)
+│ │          else:
+│ │              try:
+│ │                  size *= 1000*1024
+│ │                  self.max_download_speed = size
+│ │ +                self._log("Upload speed set as default (10 MB)", self.verbosity_level[2])
+│ │              except Exception as error:
+│ │                  raise(error)
+│ │  
+│ │ -    def send(self, frame=None, resolution=(640, 480), show_video=False) -> None:
+│ │ +    def send(self, frame:object=None, resolution:tuple=(640, 480), show_video:bool=False) -> None:
+│ │          """
+│ │          Send a frame to the connected socket.\n
+│ │          Parameters
+│ │          ----------
+│ │ -        - ``frame`` (obj) : the frame to send.
+│ │ +        - ``frame`` (object) : the frame to send.
+│ │          - ``resolution`` (tuple) : the frame resolution,
+│ │           must be a tuple (int, int), (default: (640, 480)).
+│ │          - ``show_video`` (bool) : show the outgoing video,
+│ │           it works with capture_video=True (default=False).
+│ │          """
+│ │          if self.capture_video:
+│ │              capturing, frame = self.video.read()
+│ │          else:
+│ │              capturing = True
+│ │          if capturing:
+│ │              try:
+│ │                  frame = cv2.resize(frame, dsize=resolution)
+│ │              except Exception as error:
+│ │ -                self._log(error)
+│ │ +                raise(error)
+│ │              serialized_frame = pickle.dumps(frame)
+│ │              message = struct.pack("Q", len(serialized_frame)) + serialized_frame
+│ │              try:
+│ │                  if show_video and self.capture_video:
+│ │                      cv2.imshow(f"{self.socket_type} Trasmitting video...", frame)
+│ │                      if cv2.waitKey(30) == 27:
+│ │                          cv2.destroyAllWindows()
+│ │                  self.client_socket.sendall(message)
+│ │              except Exception as error:
+│ │ -                self._log(error)
+│ │ +                raise(error)
+│ │  
+│ │ -    def receive(self, show_video=False) -> None:
+│ │ +    def receive(self, show_video:bool=False) -> None:
+│ │          """
+│ │          Receive a frame from the connected socket.\n
+│ │          Parameters
+│ │          ----------
+│ │          - ``show_video`` (bool) : show the outgoing video,
+│ │           it works with capture_video=True (default=False).\n
+│ │          Returns
+│ │          -------
+│ │ -        - ``True`` , ``frame`` (obj) : while receiving data.
+│ │ +        - ``True`` | ``frame`` (object) : while receiving data.
+│ │          """
+│ │          data = b""
+│ │          payload_size = struct.calcsize("Q")
+│ │          try:
+│ │              while len(data) < payload_size:
+│ │                  packet = self.client_socket.recv(self.max_download_speed)
+│ │                  if not packet:
+│ │ @@ -141,23 +143,23 @@
+│ │              if show_video and self.capture_video:
+│ │                  cv2.imshow(f"{self.socket_type} Receiving video...", frame)
+│ │                  if cv2.waitKey(30) == 27:
+│ │                      cv2.destroyAllWindows()
+│ │              else:
+│ │                  return True, frame
+│ │          except Exception as error:
+│ │ -            self._log(error)
+│ │ +            raise(error)
+│ │  
+│ │ -    def connected(self) -> object:
+│ │ +    def connected(self) -> socket.socket:
+│ │          """
+│ │          Check if a client is connected with the server.\n
+│ │          Returns
+│ │          -------
+│ │          - ``False`` (bool) : if no socket is connected.
+│ │ -        - ``socket`` (obj) : if a socket is connected.
+│ │ +        - ``socket`` (object) : if a socket is connected.
+│ │          """
+│ │          try:
+│ │              return self.client_socket
+│ │          except:
+│ │              return False
+│ │  
+│ │      def close(self) -> None:
+│ │ @@ -167,15 +169,15 @@
+│ │          self.socket.close()
+│ │          try:
+│ │              cv2.destroyAllWindows()
+│ │          except:
+│ │              pass
+│ │          self._log("Stopped")
+│ │  
+│ │ -    def _set_verbosity(self, verbose=True):
+│ │ +    def _set_verbosity(self, verbose):
+│ │          if verbose == 'high' or verbose == 3:
+│ │              self.verbosity_level = [True, True, True]
+│ │              self._log("Verbosity set to: 'high'", self.verbosity_level[0])
+│ │          elif verbose == 'medium' or verbose == 2:
+│ │              self.verbosity_level = [True, True, False]
+│ │          elif verbose == 'low'or verbose == 1 or verbose == True:
+│ │              self.verbosity_level = [True, False, False]
+│ │ @@ -183,28 +185,28 @@
+│ │              self.verbosity_level = [False, False, False]
+│ │          else:
+│ │              self._log("Invalid verbosity value, see documentation.")
+│ │  
+│ │      def _log(self, string, verbose=True):
+│ │          try:
+│ │              if verbose:
+│ │ -                print(f"{self.socket_type} "+string)
+│ │ +                print(f"{self.socket_type} {string}")
+│ │          except Exception as error:
+│ │              raise(error)
+│ │  
+│ │  class Server(Socket):
+│ │ -    def __init__(self, show_ip=True, capture_video=False, video_source=0, verbose=True):
+│ │ +    def __init__(self, show_ip:bool=True, capture_video:bool=False, video_source:int=0, verbose:str|int|bool=True) -> None:
+│ │          """
+│ │          Streaming server socket.\n
+│ │          Parameters
+│ │          ----------
+│ │          - ``show_ip`` (bool) : self._log server IP address (default=True).
+│ │          - ``capture_video`` (bool) : enable video capturing with cameras (default=False).
+│ │          - ``video_source`` (int) : set camera index (default=0).
+│ │ -        - ``verbose`` (int / bool / str) : set verbosity level,
+│ │ +        - ``verbose`` (int | bool | str) : set verbosity level,
+│ │           it can be 'high' (or 3), 'medium' (or 2), 'low' (or True or 1),
+│ │           False (or 0) (default=True).\n
+│ │          Methods
+│ │          -------
+│ │          - ``connect()`` : open connections for a client socket.
+│ │          - ``send()`` : send a frame to the client socket.
+│ │          - ``receive()`` : receive a frame from the client socket.
+│ │ @@ -218,15 +220,15 @@
+│ │          >>>     server.receive()
+│ │          >>>     server.send()
+│ │          >>> server.disconnect()
+│ │          """
+│ │          super().__init__(socket_type="[Server]", show_ip=show_ip, capture_video=capture_video, video_source=video_source, verbose=verbose)
+│ │          self.server_socket = self.socket
+│ │  
+│ │ -    def connect(self, port=None, timeout=1, blocking=False) -> None:
+│ │ +    def connect(self, port:int=None, timeout:int=1, blocking:bool=False) -> None:
+│ │          """
+│ │          Wait for a client socket connection.\n
+│ │          Parameters
+│ │          ----------
+│ │          - ``port`` (int) : set the port to open for connections (default: False).
+│ │          - ``timeout`` (int) : set timeout to check for connections (default: 1).
+│ │          - ``blocking`` (bool) : looping when searching for connections (default: False).\n
+│ │ @@ -238,47 +240,48 @@
+│ │          if not self.timed_out:
+│ │              if not port:
+│ │                  port = self._set_port()
+│ │              socket_address = (self.host_ip, port)
+│ │              try:
+│ │                  self.server_socket.bind(socket_address)
+│ │              except Exception as error:
+│ │ -                self._log(error)
+│ │ +                raise(error)
+│ │          self.server_socket.listen(5)
+│ │          if not self.timed_out:
+│ │ -            self._log(f"Listening at: {self.host_ip}:{str(port)}...")
+│ │ +            self._log(f"Listening at: {self.host_ip}:{str(port)}...", self.verbosity_level[1])
+│ │          try:
+│ │              self.client_socket, address = self.server_socket.accept()
+│ │              if not self.timed_out:
+│ │ -                self._log(f"Got connection from: {address[0]}")
+│ │ +                self._log(f"Got connection from: {address[0]}", self.verbosity_level[0])
+│ │              self._set_size()
+│ │          except:
+│ │              self.timed_out = True
+│ │              if not blocking:
+│ │                  self._log("Timed out!")
+│ │              else:
+│ │                  self.connect(port, blocking=True)
+│ │  
+│ │  class Client(Socket):
+│ │ -    def __init__(self, show_ip=True, capture_video=True, video_source=0, verbose=True):
+│ │ +    def __init__(self, show_ip:bool=True, capture_video:bool=True, video_source:int=0, verbose:str|int|bool=True) -> None:
+│ │          """
+│ │          Streaming client socket.\n
+│ │          Parameters
+│ │          ----------
+│ │ +        - ``show_ip`` (bool) : self._log server IP address (default=True).
+│ │          - ``capture_video`` (bool) : enable video capturing with cameras (default=False).
+│ │          - ``video_source`` (int) : set camera index (default=0).
+│ │ -        - ``verbose`` (int / bool / str) : set verbosity level,
+│ │ +        - ``verbose`` (int | bool | str) : set verbosity level,
+│ │           it can be 'high' (or 3), 'medium' (or 2), 'low' (or True or 1),
+│ │           False (or 0) (default=True).\n\n
+│ │          Methods
+│ │          -------
+│ │          - ``connect()`` : connect to the server socket.
+│ │          - ``send()`` : send a frame to the server socket.
+│ │          - ``receive()`` : receive a frame from the server socket.
+│ │ -        - ``connected()`` : check if the client is connected with the server (coming soon).
+│ │ +        - ``connected()`` : check if the client is connected with the server (not working!).
+│ │          - ``disconnect()`` : disconnect from the server socket.\n
+│ │          Example
+│ │          -------
+│ │          >>> client = Client()
+│ │          >>> client.connect()
+│ │          >>> while client.connected():
+│ │          >>>     client.send()
+│ │ @@ -287,15 +290,15 @@
+│ │          """
+│ │          super().__init__(socket_type="[Client]", show_ip=show_ip, capture_video=capture_video, video_source=video_source, verbose=verbose)
+│ │          self.client_socket = self.socket
+│ │  
+│ │      def _set_ip(self):
+│ │          return input(f"{self.socket_type} Select ip >> ")
+│ │  
+│ │ -    def connect(self, host_ip=None, port=None, blocking=False) -> None:
+│ │ +    def connect(self, host_ip:str=None, port:int=None, blocking:bool=False) -> None:
+│ │          """
+│ │          Connect to the server socket.\n
+│ │          Parameters
+│ │          ----------
+│ │          - ``host_ip`` (str) : set the host ip,
+│ │           if None, get input (default=None).
+│ │          - ``port`` (int) : set the host port,
+│ │ @@ -304,19 +307,19 @@
+│ │          """
+│ │          if not self.timed_out:
+│ │              if not host_ip:
+│ │                  host_ip = self._set_ip()
+│ │              if not port:
+│ │                  port = self._set_port()
+│ │          if not self.timed_out:
+│ │ -            self._log(f"Connecting to: {host_ip}:{port}...")
+│ │ +            self._log(f"Connecting to: {host_ip}:{port}...", self.verbosity_level[1])
+│ │          try:
+│ │              self.client_socket.connect((host_ip, port))
+│ │              if not self.timed_out:
+│ │ -                self._log(f"Connected to: {host_ip}")
+│ │ +                self._log(f"Connected to: {host_ip}", self.verbosity_level[0])
+│ │              self._get_size(send=True)
+│ │              return True
+│ │          except:
+│ │              self.timed_out = True
+│ │              if blocking:
+│ │                  time.sleep(1)
+│ │                  self.connect(host_ip, port, blocking=True)
+│ │   --- videostreaming-0.2.2/videostreaming/utils.py
+│ ├── +++ videostreaming-0.2.4/videostreaming/utils.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -86,15 +86,15 @@
+│ │          >>> while True:
+│ │          >>>     clock.start()
+│ │          >>>     # do task
+│ │          >>>     clock.get_fps()
+│ │          """
+│ │          self.start_time = time()
+│ │  
+│ │ -    def get_fps(self, get_stats=False, print_output=True, format_text=True) -> str:
+│ │ +    def get_fps(self, get_stats=False, print_output=True, format_text=True) -> list | str:
+│ │          """
+│ │          Calculate the fps of a loop cycle.\n
+│ │          Parameters
+│ │          ----------
+│ │          - ``get_stats`` : get fps_mean, max_fps and min_fps (default=False)
+│ │          - ``print_output`` : print fps on terminal (default=True)
+│ │          - ``format_text`` : return values as string with 2 decimals (default=True)\n
+│ │ @@ -140,17 +140,15 @@
+│ │  
+│ │          results = {
+│ │              'fps'  : fps           ,
+│ │              'mean' : self.fps_mean ,
+│ │              'max'  : self.max_fps  ,
+│ │              'min'  : self.min_fps
+│ │          }
+│ │ -
+│ │          self.start_time = self.end_time
+│ │ -
+│ │          if get_stats:
+│ │              return results
+│ │          else:
+│ │              return results['fps']
+│ │  
+│ │      def _get_stat(self, fps):
+│ │          self.i += 1
+│ │   --- videostreaming-0.2.2/videostreaming.egg-info/PKG-INFO
+│ ├── +++ videostreaming-0.2.4/videostreaming.egg-info/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: videostreaming
+│ │ -Version: 0.2.2
+│ │ +Version: 0.2.4
+│ │  Summary: Small package to simplify video streaming using python built-in socket library
+│ │  Home-page: https://github.com/MikiTwenty/Python/tree/main/Libraries/video-streaming
+│ │  Author: MikiTwenty
+│ │  Author-email: terminetor.xx@gmail.com
+│ │  License: MIT
+│ │  Keywords: python,socket,streaming,server,client
+│ │  Classifier: License :: OSI Approved :: MIT License

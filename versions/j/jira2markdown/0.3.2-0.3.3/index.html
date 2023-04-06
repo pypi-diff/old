@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/jira2markdown-0.3.2.tar.gz tmp/jira2markdown-0.3.3.tar.gz --html versions/j/jira2markdown/0.3.2-0.3.3/index.html --text versions/j/jira2markdown/0.3.2-0.3.3/diff.txt --markdown versions/j/jira2markdown/0.3.2-0.3.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.34 KB</span></div>
+  <div><span class="source">tmp/jira2markdown-0.3.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/jira2markdown-0.3.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">194 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;jira2markdown-0.3.<del>2</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;jira2markdown-0.3.<ins>3</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.09 KB</span></div>
+    <div><span class="source">jira2markdown-0.3.2.tar</span> vs.</div>
+    <div id="jira-markdown--.-.-.tar"><span class="source">jira2markdown-0.3.3.tar</span>
+      <a class="anchor" href="#jira-markdown--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.79 KB</span></div>
+      <div id="jira-markdown--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>5877</del><span class="dp">·</span>202<del>2</del>-<del>12</del>-06<span class="dp">·</span>1<del>5</del>:<del>24</del>:<del>24</del>.<del>761173</del><span class="dp">·</span>jira2markdown-0.3.<del>2</del>/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>6011</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-06<span class="dp">·</span>1<ins>7</ins>:<ins>32</ins>:<ins>37</ins>.<ins>179554</ins><span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<span class="dp">·</span>2021-01-31<span class="dp">·</span>16:47:22.204367<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<span class="dp">·</span>2021-01-31<span class="dp">·</span>16:47:22.204367<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2328<span class="dp">·</span>2022-01-12<span class="dp">·</span>19:03:05.207863<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/elements.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2328<span class="dp">·</span>2022-01-12<span class="dp">·</span>19:03:05.207863<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/elements.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-01-31<span class="dp">·</span>17:11:54.757777<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2021-01-31<span class="dp">·</span>17:11:54.757777<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2207<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.761173<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/advanced.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2207<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.761173<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/advanced.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>477<span class="dp">·</span>2022-11-24<span class="dp">·</span>18:33:27.195584<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/base.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>477<span class="dp">·</span>2022-11-24<span class="dp">·</span>18:33:27.195584<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>762<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.761173<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/headings.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>762<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.761173<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/headings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>748</del><span class="dp">·</span>202<del>2</del>-<del>12</del>-06<span class="dp">·</span>1<del>5</del>:<del>24</del>:<del>24</del>.<del>761173</del><span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/images.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1555</ins><span class="dp">·</span>202<ins>3</ins>-<ins>04</ins>-06<span class="dp">·</span>1<ins>7</ins>:<ins>32</ins>:<ins>37</ins>.<ins>179554</ins><span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/images.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3076<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:53:07.283223<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/links.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3076<span class="dp">·</span>2023-02-03<span class="dp">·</span>14:53:07.283223<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/links.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4074<span class="dp">·</span>2022-12-10<span class="dp">·</span>09:48:27.736671<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/lists.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4074<span class="dp">·</span>2022-12-10<span class="dp">·</span>09:48:27.736671<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/lists.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2213<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/tables.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2213<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/tables.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1230<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/text_breaks.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1230<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/text_breaks.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>9</del>6<del>3</del><span class="dp">·</span>2023-0<del>2</del>-0<del>3</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:<del>0</del>7.<del>2832</del>2<del>3</del><span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/markup/text_effects.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>5</ins>4<ins>5</ins>6<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>36</ins>:<ins>3</ins>7.<ins>0607</ins>2<ins>6</ins><span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/markup/text_effects.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>646<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/jira2markdown/parser.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>646<span class="dp">·</span>2022-12-06<span class="dp">·</span>15:24:24.762173<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/jira2markdown/parser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1044<span class="dp">·</span>2023-0<del>2</del>-0<del>3</del><span class="dp">·</span>1<del>4</del>:<del>53</del>:<del>07</del>.<del>284223</del><span class="dp">·</span>jira2markdown-0.3.<del>2</del>/pyproject.toml</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1044<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>6</ins><span class="dp">·</span>1<ins>7</ins>:<ins>38</ins>:<ins>34</ins>.<ins>547160</ins><span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/pyproject.toml</td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6975<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>jira2markdown-0.3.2/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>6875</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>jira2markdown-0.3.<del>2</del>/PKG-INFO</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>7009</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>jira2markdown-0.3.<ins>3</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">380 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/README.md</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--README.md"><span class="source">jira2markdown-0.3.3/README.md</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 210, 14 lines modified</td><td colspan="2">Offset 210, 28 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent">&lt;td&gt;</td><td class="diffline">210 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent">```</td><td class="diffline">211 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent">![image.jpg](image.jpg)</td><td class="diffline">212 </td><td class="diffpresent">![image.jpg](image.jpg)</td></tr>
+<tr class="diffunmodified"><td class="diffline">213 </td><td class="diffpresent">```</td><td class="diffline">213 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">214 </td><td class="diffpresent">&lt;/td&gt;</td><td class="diffline">214 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">215 </td><td class="diffpresent">&lt;/tr&gt;</td><td class="diffline">215 </td><td class="diffpresent">&lt;/tr&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">216 </td><td class="diffpresent">&lt;tr&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">217 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">218 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">219 </td><td class="diffpresent">!image.jpg|width=300,<span class="dp">·</span>height=200!</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">220 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">221 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">222 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">223 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">224 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;image.jpg&quot;<span class="dp">·</span>width=&quot;300&quot;<span class="dp">·</span>height=&quot;200&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">225 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">226 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">227 </td><td class="diffpresent">&lt;/tr&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">216 </td><td class="diffpresent">&lt;/table&gt;</td><td class="diffline">228 </td><td class="diffpresent">&lt;/table&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">217 </td><td class="diffpresent">##<span class="dp">·</span>Tables</td><td class="diffline">229 </td><td class="diffpresent">##<span class="dp">·</span>Tables</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">218 </td><td class="diffpresent">&lt;table&gt;</td><td class="diffline">230 </td><td class="diffpresent">&lt;table&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">219 </td><td class="diffpresent">&lt;tr&gt;</td><td class="diffline">231 </td><td class="diffpresent">&lt;tr&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">220 </td><td class="diffpresent">&lt;th&gt;Jira&lt;/th&gt;</td><td class="diffline">232 </td><td class="diffpresent">&lt;th&gt;Jira&lt;/th&gt;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/elements.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-elements.py"><span class="source">jira2markdown-0.3.3/jira2markdown/elements.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-elements.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/advanced.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-advanced.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/advanced.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-advanced.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/headings.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-headings.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/headings.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-headings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/links.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-links.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/links.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-links.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/lists.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-lists.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/lists.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-lists.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/tables.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-tables.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/tables.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-tables.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/text_breaks.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-text_breaks.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/text_breaks.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-text_breaks.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.57 KB</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/markup/text_effects.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-text_effects.py"><span class="source">jira2markdown-0.3.3/jira2markdown/markup/text_effects.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-markup-text_effects.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>re</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>re</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pyparsing<span class="dp">·</span>import<span class="dp">·</span>(</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pyparsing<span class="dp">·</span>import<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CaselessLiteral,</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CaselessLiteral,</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Char,</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Char,</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Combine,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Combine,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FollowedBy,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>FollowedBy,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LineEnd,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LineStart,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LineStart,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Literal,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Literal,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>OneOrMore,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Optional,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Optional,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ParserElement,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ParserElement,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ParseResults,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ParseResults,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>PrecededBy,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>PrecededBy,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>QuotedString,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>QuotedString,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Regex,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Regex,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SkipTo,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>SkipTo,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 148, 17 lines modified</td><td colspan="2">Offset 150, 29 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>expr.set_parse_action(self.action)</td><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>expr.set_parse_action(self.action)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">class<span class="dp">·</span>Quote(AbstractMarkup):</td><td class="diffline">151 </td><td class="diffpresent">class<span class="dp">·</span>Quote(AbstractMarkup):</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_inline_element<span class="dp">·</span>=<span class="dp">·</span>False</td><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>is_inline_element<span class="dp">·</span>=<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>action(self,<span class="dp">·</span>tokens:<span class="dp">·</span>ParseResults)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>self.inline_markup.transform_string(tokens.text)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@property</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>expr(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>ParserElement:</td><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>expr(self)<span class="dp">·</span>-&gt;<span class="dp">·</span>ParserElement:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>NL<span class="dp">·</span>=<span class="dp">·</span>LineEnd()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>EMPTY_LINE<span class="dp">·</span>=<span class="dp">·</span>LineStart()<span class="dp">·</span>+<span class="dp">·</span>Optional(Regex(r&quot;[<span class="dp">·</span>\t]+&quot;,<span class="dp">·</span>flags=re.UNICODE))<span class="dp">·</span>+<span class="dp">·</span>NL</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ROW<span class="dp">·</span>=<span class="dp">·</span>(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>LineStart()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>+<span class="dp">·</span>Optional(White())</td></tr>
+<tr class="diffchanged"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>return</del><span class="dp">·</span><del>LineStart()</del><span class="dp">·</span><del>+</del><span class="dp">·</span><del>Optional(White())</del><span class="dp">·</span>+<span class="dp">·</span>Literal(&quot;bq.<span class="dp">·</span>&quot;).set_parse_action(replaceWith(&quot;&gt;<span class="dp">·</span>&quot;))</td><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>+<span class="dp">·</span>Literal(&quot;bq.<span class="dp">·</span>&quot;).set_parse_action(replaceWith(&quot;&gt;<span class="dp">·</span>&quot;))</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>+<span class="dp">·</span>SkipTo(NL<span class="dp">·</span>|<span class="dp">·</span>StringEnd()).set_results_name(&quot;text&quot;).set_parse_action(self.action)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>+<span class="dp">·</span>NL</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">165 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">166 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>OneOrMore(ROW)<span class="dp">·</span>+<span class="dp">·</span>(StringEnd()<span class="dp">·</span>|<span class="dp">·</span>Optional(EMPTY_LINE,<span class="dp">·</span>default=&quot;\n&quot;))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent">class<span class="dp">·</span>BlockQuote(AbstractMarkup):</td><td class="diffline">167 </td><td class="diffpresent">class<span class="dp">·</span>BlockQuote(AbstractMarkup):</td></tr>
+<tr class="diffunmodified"><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>action(self,<span class="dp">·</span>tokens:<span class="dp">·</span>ParseResults)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td><td class="diffline">168 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>action(self,<span class="dp">·</span>tokens:<span class="dp">·</span>ParseResults)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>text<span class="dp">·</span>=<span class="dp">·</span>self.markup.transform_string(&quot;\n&quot;.join([line.lstrip()<span class="dp">·</span>for<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>tokens[0].strip().splitlines()]))</td><td class="diffline">169 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>text<span class="dp">·</span>=<span class="dp">·</span>self.markup.transform_string(&quot;\n&quot;.join([line.lstrip()<span class="dp">·</span>for<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>tokens[0].strip().splitlines()]))</td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>&quot;\n&quot;.join([f&quot;&gt;<span class="dp">·</span>{line}&quot;<span class="dp">·</span>for<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>text.splitlines()])</td><td class="diffline">170 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>&quot;\n&quot;.join([f&quot;&gt;<span class="dp">·</span>{line}&quot;<span class="dp">·</span>for<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>text.splitlines()])</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/jira2markdown/parser.py</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-parser.py"><span class="source">jira2markdown-0.3.3/jira2markdown/parser.py</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--jira-markdown-parser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">491 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/pyproject.toml</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--pyproject.toml"><span class="source">jira2markdown-0.3.3/pyproject.toml</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;jira2markdown&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;jira2markdown&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>2</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Convert<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>JIRA<span class="dp">·</span>markup<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>using<span class="dp">·</span>parsing<span class="dp">·</span>expression<span class="dp">·</span>grammars&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Convert<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>JIRA<span class="dp">·</span>markup<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>using<span class="dp">·</span>parsing<span class="dp">·</span>expression<span class="dp">·</span>grammars&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Evgeniy<span class="dp">·</span>Krysanov<span class="dp">·</span>&lt;evgeniy.krysanov@gmail.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Evgeniy<span class="dp">·</span>Krysanov<span class="dp">·</span>&lt;evgeniy.krysanov@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/catcombo/jira2markdown&quot;</td><td class="diffline">7 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/catcombo/jira2markdown&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">8 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;jira2markdown&quot;<span class="dp">·</span>},</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;jira2markdown&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">]</td><td class="diffline">10 </td><td class="diffpresent">]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">779 B</span></div>
+      <div><span class="source">jira2markdown-0.3.2/PKG-INFO</span> vs.</div>
+      <div id="jira-markdown--.-.-.tar---jira-markdown--.-.--PKG-INFO"><span class="source">jira2markdown-0.3.3/PKG-INFO</span>
+        <a class="anchor" href="#jira-markdown--.-.-.tar---jira-markdown--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jira2markdown</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>jira2markdown</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Convert<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>JIRA<span class="dp">·</span>markup<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>using<span class="dp">·</span>parsing<span class="dp">·</span>expression<span class="dp">·</span>grammars</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Convert<span class="dp">·</span>text<span class="dp">·</span>from<span class="dp">·</span>JIRA<span class="dp">·</span>markup<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>using<span class="dp">·</span>parsing<span class="dp">·</span>expression<span class="dp">·</span>grammars</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/catcombo/jira2markdown</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/catcombo/jira2markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Keywords:<span class="dp">·</span>jira,markdown</td><td class="diffline">6 </td><td class="diffpresent">Keywords:<span class="dp">·</span>jira,markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Evgeniy<span class="dp">·</span>Krysanov</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Evgeniy<span class="dp">·</span>Krysanov</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>evgeniy.krysanov@gmail.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>evgeniy.krysanov@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 234, 14 lines modified</td><td colspan="2">Offset 234, 28 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">234 </td><td class="diffpresent">&lt;td&gt;</td><td class="diffline">234 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">235 </td><td class="diffpresent">```</td><td class="diffline">235 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">236 </td><td class="diffpresent">![image.jpg](image.jpg)</td><td class="diffline">236 </td><td class="diffpresent">![image.jpg](image.jpg)</td></tr>
+<tr class="diffunmodified"><td class="diffline">237 </td><td class="diffpresent">```</td><td class="diffline">237 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">238 </td><td class="diffpresent">&lt;/td&gt;</td><td class="diffline">238 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">239 </td><td class="diffpresent">&lt;/tr&gt;</td><td class="diffline">239 </td><td class="diffpresent">&lt;/tr&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">240 </td><td class="diffpresent">&lt;tr&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">241 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">242 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">243 </td><td class="diffpresent">!image.jpg|width=300,<span class="dp">·</span>height=200!</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">244 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">245 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">246 </td><td class="diffpresent">&lt;td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">247 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">248 </td><td class="diffpresent">&lt;img<span class="dp">·</span>src=&quot;image.jpg&quot;<span class="dp">·</span>width=&quot;300&quot;<span class="dp">·</span>height=&quot;200&quot;<span class="dp">·</span>/&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">249 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">250 </td><td class="diffpresent">&lt;/td&gt;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">251 </td><td class="diffpresent">&lt;/tr&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">240 </td><td class="diffpresent">&lt;/table&gt;</td><td class="diffline">252 </td><td class="diffpresent">&lt;/table&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">241 </td><td class="diffpresent">##<span class="dp">·</span>Tables</td><td class="diffline">253 </td><td class="diffpresent">##<span class="dp">·</span>Tables</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">242 </td><td class="diffpresent">&lt;table&gt;</td><td class="diffline">254 </td><td class="diffpresent">&lt;table&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">243 </td><td class="diffpresent">&lt;tr&gt;</td><td class="diffline">255 </td><td class="diffpresent">&lt;tr&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">244 </td><td class="diffpresent">&lt;th&gt;Jira&lt;/th&gt;</td><td class="diffline">256 </td><td class="diffpresent">&lt;th&gt;Jira&lt;/th&gt;</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

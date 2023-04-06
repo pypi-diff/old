@@ -1,0 +1,256 @@
+--- tmp/puma-hep-0.2.3.tar.gz
++++ tmp/puma-hep-0.2.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "puma-hep-0.2.3.tar", last modified: Tue Mar 28 12:22:39 2023, max compression
+│ +gzip compressed data, was "puma-hep-0.2.4.tar", last modified: Thu Apr  6 17:39:26 2023, max compression
+│   --- puma-hep-0.2.3.tar
+├── +++ puma-hep-0.2.4.tar
+│ ├── file list
+│ │ @@ -1,54 +1,54 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.247222 puma-hep-0.2.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11345 2023-03-28 12:22:23.000000 puma-hep-0.2.3/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-28 12:22:23.000000 puma-hep-0.2.3/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4682 2023-03-28 12:22:39.247222 puma-hep-0.2.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4397 2023-03-28 12:22:23.000000 puma-hep-0.2.3/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.239222 puma-hep-0.2.3/puma/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      382 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23113 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/histogram.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.239222 puma-hep-0.2.3/puma/hlplots/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      186 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/hlplots/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12020 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/hlplots/results.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7515 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/hlplots/tagger.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8016 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/line_plot_2d.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8013 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/metrics.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4154 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/pie.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27383 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/plot_base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    20514 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/roc.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.243222 puma-hep-0.2.3/puma/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.243222 puma-hep-0.2.3/puma/tests/hlplots/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/hlplots/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7087 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/hlplots/test_results.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5746 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/hlplots/test_tagger.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27366 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_histogram.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7441 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_line_2d.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7209 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_metrics.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2973 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_pie_chart.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1367 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_plot_base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18980 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_roc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13678 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/test_var_vs_eff.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.243222 puma-hep-0.2.3/puma/tests/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2425 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/test_discriminant.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1997 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/test_generate.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11455 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/test_histogram_utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      468 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/test_logging.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3291 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/tests/utils/test_utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.247222 puma-hep-0.2.3/puma/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8195 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4528 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/utils/discriminant.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3894 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/utils/generate.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7719 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/utils/histogram.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3049 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/utils/logging.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    24727 2023-03-28 12:22:23.000000 puma-hep-0.2.3/puma/var_vs_eff.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-28 12:22:39.247222 puma-hep-0.2.3/puma_hep.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4682 2023-03-28 12:22:39.000000 puma-hep-0.2.3/puma_hep.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1100 2023-03-28 12:22:39.000000 puma-hep-0.2.3/puma_hep.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-28 12:22:39.000000 puma-hep-0.2.3/puma_hep.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-28 12:22:38.000000 puma-hep-0.2.3/puma_hep.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      111 2023-03-28 12:22:39.000000 puma-hep-0.2.3/puma_hep.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-03-28 12:22:39.000000 puma-hep-0.2.3/puma_hep.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      171 2023-03-28 12:22:23.000000 puma-hep-0.2.3/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      878 2023-03-28 12:22:39.251222 puma-hep-0.2.3/setup.cfg
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)      435 2023-03-28 12:22:23.000000 puma-hep-0.2.3/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.337468 puma-hep-0.2.4/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11345 2023-04-06 17:39:16.000000 puma-hep-0.2.4/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 17:39:16.000000 puma-hep-0.2.4/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4682 2023-04-06 17:39:26.337468 puma-hep-0.2.4/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4397 2023-04-06 17:39:16.000000 puma-hep-0.2.4/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.329468 puma-hep-0.2.4/puma/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      382 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23113 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/histogram.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.329468 puma-hep-0.2.4/puma/hlplots/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      186 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/hlplots/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12020 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/hlplots/results.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7515 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/hlplots/tagger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8016 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/line_plot_2d.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8013 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/metrics.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4154 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/pie.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27383 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/plot_base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    20514 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/roc.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.333468 puma-hep-0.2.4/puma/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.333468 puma-hep-0.2.4/puma/tests/hlplots/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/hlplots/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7087 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/hlplots/test_results.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5746 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/hlplots/test_tagger.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27366 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_histogram.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7441 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_line_2d.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7209 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_metrics.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2973 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_pie_chart.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1367 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_plot_base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18980 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_roc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13678 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/test_var_vs_eff.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.333468 puma-hep-0.2.4/puma/tests/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2425 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/test_discriminant.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1997 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/test_generate.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11455 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/test_histogram_utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      468 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/test_logging.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3291 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/tests/utils/test_utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.337468 puma-hep-0.2.4/puma/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8192 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4528 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/utils/discriminant.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3894 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/utils/generate.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7719 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/utils/histogram.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3049 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/utils/logging.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    24727 2023-04-06 17:39:16.000000 puma-hep-0.2.4/puma/var_vs_eff.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:39:26.337468 puma-hep-0.2.4/puma_hep.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4682 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1100 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 17:39:26.000000 puma-hep-0.2.4/puma_hep.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      171 2023-04-06 17:39:16.000000 puma-hep-0.2.4/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      878 2023-04-06 17:39:26.337468 puma-hep-0.2.4/setup.cfg
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)      435 2023-04-06 17:39:16.000000 puma-hep-0.2.4/setup.py
+│ │   --- puma-hep-0.2.3/LICENSE
+│ ├── +++ puma-hep-0.2.4/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/PKG-INFO
+│ ├── +++ puma-hep-0.2.4/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: puma-hep
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Plotting API for HEP flavour tagging plots.
+│ │  Home-page: https://github.com/umami-hep/puma
+│ │  Keywords: machine learning,flavour tagging,plots
+│ │  Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │   --- puma-hep-0.2.3/README.md
+│ ├── +++ puma-hep-0.2.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/histogram.py
+│ ├── +++ puma-hep-0.2.4/puma/histogram.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/hlplots/results.py
+│ ├── +++ puma-hep-0.2.4/puma/hlplots/results.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/hlplots/tagger.py
+│ ├── +++ puma-hep-0.2.4/puma/hlplots/tagger.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/line_plot_2d.py
+│ ├── +++ puma-hep-0.2.4/puma/line_plot_2d.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/metrics.py
+│ ├── +++ puma-hep-0.2.4/puma/metrics.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/pie.py
+│ ├── +++ puma-hep-0.2.4/puma/pie.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/plot_base.py
+│ ├── +++ puma-hep-0.2.4/puma/plot_base.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/roc.py
+│ ├── +++ puma-hep-0.2.4/puma/roc.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/hlplots/test_results.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/hlplots/test_results.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/hlplots/test_tagger.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/hlplots/test_tagger.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_histogram.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_histogram.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_line_2d.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_line_2d.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_metrics.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_metrics.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_pie_chart.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_pie_chart.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_plot_base.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_plot_base.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_roc.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_roc.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/test_var_vs_eff.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/test_var_vs_eff.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/utils/test_discriminant.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/utils/test_discriminant.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/utils/test_generate.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/utils/test_generate.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/utils/test_histogram_utils.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/utils/test_histogram_utils.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/tests/utils/test_utils.py
+│ ├── +++ puma-hep-0.2.4/puma/tests/utils/test_utils.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/utils/__init__.py
+│ ├── +++ puma-hep-0.2.4/puma/utils/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -286,15 +286,15 @@
+│ │              "colour": "#B45F06",  # Tenne (dark orange)
+│ │              "legend_label": "$Hcc$-jets",
+│ │          },
+│ │          "top": {
+│ │              "colour": "#A300A3",  # dark magenta
+│ │              "legend_label": "$Top$-jets",
+│ │          },
+│ │ -        "dijets": {
+│ │ +        "QCD": {
+│ │              "colour": "#38761D",  # Bilbao (dark green)
+│ │              "legend_label": "QCD-jets",
+│ │          },
+│ │      },
+│ │      "hist_err_style": {
+│ │          "fill": False,
+│ │          "linewidth": 0,
+│ │   --- puma-hep-0.2.3/puma/utils/discriminant.py
+│ ├── +++ puma-hep-0.2.4/puma/utils/discriminant.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/utils/generate.py
+│ ├── +++ puma-hep-0.2.4/puma/utils/generate.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/utils/histogram.py
+│ ├── +++ puma-hep-0.2.4/puma/utils/histogram.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/utils/logging.py
+│ ├── +++ puma-hep-0.2.4/puma/utils/logging.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma/var_vs_eff.py
+│ ├── +++ puma-hep-0.2.4/puma/var_vs_eff.py
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/puma_hep.egg-info/PKG-INFO
+│ ├── +++ puma-hep-0.2.4/puma_hep.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: puma-hep
+│ │ -Version: 0.2.3
+│ │ +Version: 0.2.4
+│ │  Summary: Plotting API for HEP flavour tagging plots.
+│ │  Home-page: https://github.com/umami-hep/puma
+│ │  Keywords: machine learning,flavour tagging,plots
+│ │  Requires-Python: >=3.8
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │   --- puma-hep-0.2.3/puma_hep.egg-info/SOURCES.txt
+│ ├── +++ puma-hep-0.2.4/puma_hep.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- puma-hep-0.2.3/setup.cfg
+│ ├── +++ puma-hep-0.2.4/setup.cfg
+│ │┄ Files identical despite different names
