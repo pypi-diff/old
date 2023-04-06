@@ -1,0 +1,158 @@
+--- tmp/orphe-0.1.5.tar.gz
++++ tmp/orphe-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "orphe-0.1.5.tar", last modified: Wed Oct 26 01:32:53 2022, max compression
+│ +gzip compressed data, was "orphe-0.1.6.tar", last modified: Thu Apr  6 08:06:05 2023, max compression
+│   --- orphe-0.1.5.tar
+├── +++ orphe-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,21 +1,21 @@
+│ │ -drwxr-xr-x   0 mathru     (501) staff       (20)        0 2022-10-26 01:32:53.288888 orphe-0.1.5/
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     4513 2022-10-26 01:32:53.288969 orphe-0.1.5/PKG-INFO
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     4277 2022-09-28 01:56:58.000000 orphe-0.1.5/README.md
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)       38 2022-10-26 01:32:53.289189 orphe-0.1.5/setup.cfg
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     5000 2022-10-26 01:32:00.000000 orphe-0.1.5/setup.py
+│ │ -drwxr-xr-x   0 mathru     (501) staff       (20)        0 2022-10-26 01:32:53.285529 orphe-0.1.5/src/
+│ │ -drwxr-xr-x   0 mathru     (501) staff       (20)        0 2022-10-26 01:32:53.287471 orphe-0.1.5/src/orphe/
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)      734 2022-10-26 01:32:21.000000 orphe-0.1.5/src/orphe/__init__.py
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)    21994 2022-09-28 01:56:58.000000 orphe-0.1.5/src/orphe/_analytics.py
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     6862 2022-09-28 01:56:58.000000 orphe-0.1.5/src/orphe/_filter.py
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)    16655 2022-10-26 01:30:54.000000 orphe-0.1.5/src/orphe/_gait.py
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     6436 2022-09-28 01:56:58.000000 orphe-0.1.5/src/orphe/_pose.py
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     1910 2022-09-28 01:56:58.000000 orphe-0.1.5/src/orphe/_unit.py
+│ │ -drwxr-xr-x   0 mathru     (501) staff       (20)        0 2022-10-26 01:32:53.288392 orphe-0.1.5/src/orphe.egg-info/
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)     4513 2022-10-26 01:32:53.000000 orphe-0.1.5/src/orphe.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)      329 2022-10-26 01:32:53.000000 orphe-0.1.5/src/orphe.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)        1 2022-10-26 01:32:53.000000 orphe-0.1.5/src/orphe.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)       36 2022-10-26 01:32:53.000000 orphe-0.1.5/src/orphe.egg-info/requires.txt
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)        6 2022-10-26 01:32:53.000000 orphe-0.1.5/src/orphe.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 mathru     (501) staff       (20)        0 2022-10-26 01:32:53.288572 orphe-0.1.5/test/
+│ │ --rw-r--r--   0 mathru     (501) staff       (20)      943 2022-10-20 02:57:46.000000 orphe-0.1.5/test/test.py
+│ │ +drwxr-xr-x   0 mathru     (501) staff       (20)        0 2023-04-06 08:06:05.368922 orphe-0.1.6/
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     4513 2023-04-06 08:06:05.369009 orphe-0.1.6/PKG-INFO
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     4277 2022-09-28 01:56:58.000000 orphe-0.1.6/README.md
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)       38 2023-04-06 08:06:05.369211 orphe-0.1.6/setup.cfg
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     5000 2023-04-06 08:05:32.000000 orphe-0.1.6/setup.py
+│ │ +drwxr-xr-x   0 mathru     (501) staff       (20)        0 2023-04-06 08:06:05.365271 orphe-0.1.6/src/
+│ │ +drwxr-xr-x   0 mathru     (501) staff       (20)        0 2023-04-06 08:06:05.367550 orphe-0.1.6/src/orphe/
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)      734 2023-04-06 08:05:50.000000 orphe-0.1.6/src/orphe/__init__.py
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)    22003 2023-04-06 08:04:59.000000 orphe-0.1.6/src/orphe/_analytics.py
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     6862 2022-09-28 01:56:58.000000 orphe-0.1.6/src/orphe/_filter.py
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)    16655 2022-10-26 01:30:54.000000 orphe-0.1.6/src/orphe/_gait.py
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     6436 2022-09-28 01:56:58.000000 orphe-0.1.6/src/orphe/_pose.py
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     1910 2022-09-28 01:56:58.000000 orphe-0.1.6/src/orphe/_unit.py
+│ │ +drwxr-xr-x   0 mathru     (501) staff       (20)        0 2023-04-06 08:06:05.368545 orphe-0.1.6/src/orphe.egg-info/
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)     4513 2023-04-06 08:06:05.000000 orphe-0.1.6/src/orphe.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)      329 2023-04-06 08:06:05.000000 orphe-0.1.6/src/orphe.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)        1 2023-04-06 08:06:05.000000 orphe-0.1.6/src/orphe.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)       36 2023-04-06 08:06:05.000000 orphe-0.1.6/src/orphe.egg-info/requires.txt
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)        6 2023-04-06 08:06:05.000000 orphe-0.1.6/src/orphe.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 mathru     (501) staff       (20)        0 2023-04-06 08:06:05.368673 orphe-0.1.6/test/
+│ │ +-rw-r--r--   0 mathru     (501) staff       (20)      943 2022-10-20 02:57:46.000000 orphe-0.1.6/test/test.py
+│ │   --- orphe-0.1.5/PKG-INFO
+│ ├── +++ orphe-0.1.6/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: orphe
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: ORPHE ANALYTICIS SDK for Python
+│ │  Home-page: https://orphe.io/
+│ │  Author: ORPHE Inc.
+│ │  Author-email: support@orphe.io
+│ │  License: Apache License 2.0
+│ │  Keywords: orphe,orphe analytics
+│ │  Platform: UNKNOWN
+│ │   --- orphe-0.1.5/README.md
+│ ├── +++ orphe-0.1.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- orphe-0.1.5/setup.py
+│ ├── +++ orphe-0.1.6/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -139,15 +139,15 @@
+│ │  
+│ │  Documentation and links to additional resources are available at https://analytics.orphe.io
+│ │  
+│ │  """
+│ │  
+│ │  setup(
+│ │      name="orphe",
+│ │ -    version="0.1.5",
+│ │ +    version="0.1.6",
+│ │      python_requires=">=3.5",
+│ │      url="https://orphe.io/",
+│ │      description=DESCRIPTION,
+│ │      long_description=LONG_DESCRIPTION,
+│ │      long_description_content_type="text/markdown",
+│ │      install_requires=_requires_from_file('requirements.txt'),
+│ │      author='ORPHE Inc.',
+│ │   --- orphe-0.1.5/src/orphe/__init__.py
+│ ├── +++ orphe-0.1.6/src/orphe/__init__.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │ -__version__ = '0.1.5'
+│ │ +__version__ = '0.1.6'
+│ │  
+│ │  from . import (
+│ │      _gait,
+│ │      _analytics,
+│ │      _unit,
+│ │  )
+│ │   --- orphe-0.1.5/src/orphe/_analytics.py
+│ ├── +++ orphe-0.1.6/src/orphe/_analytics.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -152,15 +152,15 @@
+│ │  
+│ │      def analyze_reference_time(self, channel_data) -> List[pandas.Timedelta]:        
+│ │  
+│ │          tmp = [u for u in channel_data if u.channel == 1 and (
+│ │                  u.data.data_type.value == intdash.DataType.float.value) and 
+│ │                  u.data.data_id == 'Reference_Time']        
+│ │  
+│ │ -        times = [u.elapsed_time for u in tmp if u.data.value in [-9999]]
+│ │ +        times = [u.elapsed_time for u in tmp if u.data.value in [-9999, -9999.9]]
+│ │          # end = [{'value': u.data.value, 'elapsed_time': u.elapsed_time} for u in tmp if u.data.value in [9999]]
+│ │  
+│ │          if len(times) < 1:
+│ │              return []
+│ │          
+│ │          return times
+│ │   --- orphe-0.1.5/src/orphe/_filter.py
+│ ├── +++ orphe-0.1.6/src/orphe/_filter.py
+│ │┄ Files identical despite different names
+│ │   --- orphe-0.1.5/src/orphe/_gait.py
+│ ├── +++ orphe-0.1.6/src/orphe/_gait.py
+│ │┄ Files identical despite different names
+│ │   --- orphe-0.1.5/src/orphe/_pose.py
+│ ├── +++ orphe-0.1.6/src/orphe/_pose.py
+│ │┄ Files identical despite different names
+│ │   --- orphe-0.1.5/src/orphe/_unit.py
+│ ├── +++ orphe-0.1.6/src/orphe/_unit.py
+│ │┄ Files identical despite different names
+│ │   --- orphe-0.1.5/src/orphe.egg-info/PKG-INFO
+│ ├── +++ orphe-0.1.6/src/orphe.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: orphe
+│ │ -Version: 0.1.5
+│ │ +Version: 0.1.6
+│ │  Summary: ORPHE ANALYTICIS SDK for Python
+│ │  Home-page: https://orphe.io/
+│ │  Author: ORPHE Inc.
+│ │  Author-email: support@orphe.io
+│ │  License: Apache License 2.0
+│ │  Keywords: orphe,orphe analytics
+│ │  Platform: UNKNOWN
+│ │   --- orphe-0.1.5/test/test.py
+│ ├── +++ orphe-0.1.6/test/test.py
+│ │┄ Files identical despite different names

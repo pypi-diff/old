@@ -1,0 +1,412 @@
+# Comparing `tmp/ytsaurus-spyt-1.69.1b438.post242760.dev3.tar.gz` & `tmp/ytsaurus-spyt-1.69.1b439.post23515129.dev5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/ytsaurus-spyt-1.69.1b438.post242760.dev3.tar", last modified: Mon Apr  3 20:57:08 2023, max compression
++gzip compressed data, was "dist/ytsaurus-spyt-1.69.1b439.post23515129.dev5.tar", last modified: Tue Apr  4 15:16:56 2023, max compression
+```
+
+## Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3.tar` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/
+--rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1119 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-discovery-yt
+--rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    10963 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-launch-yt
+--rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     2225 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-manage-yt
+--rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      687 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-shell-yt
+--rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1155 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-submit-yt
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/jars/
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)  1798359 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/jars/spark-yt-submit.jar
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       95 2023-02-22 20:15:30.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/__init__.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    16426 2023-03-18 23:30:06.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/client.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1106 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/common.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     7306 2023-03-18 23:30:06.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/conf.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     3493 2023-03-18 23:30:06.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/enabler.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    34951 2023-04-03 20:56:09.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/standalone.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     9779 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/submit.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     4003 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/types.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    10227 2023-02-22 20:15:30.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/utils.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      177 2023-04-03 20:56:29.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/version.py
+-drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      331 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/PKG-INFO
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      515 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/SOURCES.txt
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        1 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/dependency_links.txt
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       56 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/requires.txt
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        5 2023-04-03 20:57:07.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/top_level.txt
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      110 2023-02-22 20:15:30.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/MANIFEST.in
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1038 2023-03-18 23:30:06.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/setup.py
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      331 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/PKG-INFO
+--rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       38 2023-04-03 20:57:08.000000 ytsaurus-spyt-1.69.1b438.post242760.dev3/setup.cfg
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/
++-rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1245 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-discovery-yt
++-rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    11097 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-launch-yt
++-rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     2351 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-manage-yt
++-rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      813 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-shell-yt
++-rwxrw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1063 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-submit-yt
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/jars/
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)  1798359 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/jars/spark-yt-submit.jar
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       95 2023-02-22 20:15:30.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/__init__.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    16556 2023-04-04 15:16:01.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/client.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1106 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/common.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     7436 2023-04-04 15:16:01.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/conf.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     3493 2023-03-18 23:30:06.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/enabler.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    34102 2023-04-04 15:16:01.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/standalone.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     9779 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/submit.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     4003 2023-03-14 10:41:35.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/types.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)    10373 2023-04-04 15:16:01.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/utils.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      181 2023-04-04 15:16:42.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/version.py
++drwxrwxr-x   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        0 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      333 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/PKG-INFO
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      515 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/SOURCES.txt
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        1 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/dependency_links.txt
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       40 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/requires.txt
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)        5 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/top_level.txt
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      110 2023-02-22 20:15:30.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/MANIFEST.in
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)     1011 2023-04-04 15:16:01.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/setup.py
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)      333 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/PKG-INFO
++-rw-rw-r--   0 alex-shishkin (323389) dpt_yandex_infra_tech_ytdev_dep8 (246647)       38 2023-04-04 15:16:56.000000 ytsaurus-spyt-1.69.1b439.post23515129.dev5/setup.cfg
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-discovery-yt` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-discovery-yt`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -2,15 +2,18 @@
+ 
+ from __future__ import print_function
+ 
+ import sys
+ import os
+ import subprocess
+ 
+-from yt.wrapper import YtClient
++try:
++    from yt.wrapper import YtClient
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from spyt import utils as spark_utils
+ from spyt.standalone import find_spark_cluster
+ 
+ 
+ def main():
+     args, unknown_args = spark_utils.parse_args(parser_arguments=dict(description="Spark Discovery"))
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-launch-yt` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-launch-yt`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,16 +1,19 @@
+ #!/usr/bin/env python
+ import logging
+ import sys
+ import os
+ import subprocess
+ 
+-from yt.wrapper import YtClient
+-from yt.wrapper.cli_helpers import ParseStructuredArgument
+-from yt.wrapper.http_helpers import get_user_name
++try:
++    from yt.wrapper import YtClient
++    from yt.wrapper.cli_helpers import ParseStructuredArgument
++    from yt.wrapper.http_helpers import get_user_name
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from spyt.standalone import Worker, start_spark_cluster, find_spark_cluster, SparkDefaultArguments, SpytEnablers
+ from spyt import utils as spark_utils
+ 
+ 
+ def main():
+     parser = spark_utils.get_default_arg_parser(description="Spark over YT")
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-manage-yt` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-manage-yt`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,13 @@
+ #!/usr/bin/env python
+ import logging
+-from yt.wrapper import YtClient
++try:
++    from yt.wrapper import YtClient
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from spyt import utils as spark_utils
+ 
+ 
+ def main():
+     parser = spark_utils.get_default_arg_parser(description="Spark over YT")
+     subparser = parser.add_subparsers(dest="command")
+     info_parser = subparser.add_parser('info')
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/bin/spark-shell-yt` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/bin/spark-shell-yt`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,14 +1,17 @@
+ #!/usr/bin/env python
+ 
+ import sys
+ import os
+ import subprocess
+ 
+-from yt.wrapper import YtClient
++try:
++    from yt.wrapper import YtClient
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from spyt.standalone import shell
+ from spyt import utils as spark_utils
+ 
+ 
+ def main():
+     parser = spark_utils.get_default_arg_parser(description="Spark Shell")
+     parser.add_argument("--spyt-version", required=False)
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/deps/jars/spark-yt-submit.jar` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/deps/jars/spark-yt-submit.jar`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/client.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/client.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,18 @@
+ import logging
+ import os
+ import sys
+ from contextlib import contextmanager
+ 
+ from py4j.protocol import Py4JError
+-from yt.wrapper import YtClient, get
+-from yt.wrapper.http_helpers import get_token, get_user_name
++try:
++    from yt.wrapper import YtClient, get
++    from yt.wrapper.http_helpers import get_token, get_user_name
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ 
+ logger = logging.getLogger(__name__)
+ 
+ from .utils import default_token, default_discovery_dir, get_spark_master, set_conf, \
+     SparkDiscovery, parse_memory, format_memory, base_spark_conf
+ from .conf import read_remote_conf, read_global_conf, spyt_jar_path, spyt_python_path, validate_versions_compatibility, \
+     read_cluster_conf, SELF_VERSION
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/common.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/conf.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/conf.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,11 +1,14 @@
+ import logging
+ 
+-from yt.wrapper import get, YPath, list as yt_list, exists
+-from yt.wrapper.common import update_inplace
++try:
++    from yt.wrapper import get, YPath, list as yt_list, exists
++    from yt.wrapper.common import update_inplace
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from .version import __scala_version__
+ 
+ SPARK_BASE_PATH = YPath("//home/spark")
+ 
+ CONF_BASE_PATH = SPARK_BASE_PATH.join("conf")
+ GLOBAL_CONF_PATH = CONF_BASE_PATH.join("global")
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/enabler.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/enabler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/standalone.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/standalone.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,24 +1,25 @@
+ from collections import namedtuple
+ import copy
+ import logging
+ import os
+ import re
+ import subprocess
+-import uuid
+ 
+-from yt.wrapper.common import update_inplace, update
+-from yt.wrapper.cypress_commands import exists
+-from yt.wrapper.acl_commands import check_permission
+-from yt.wrapper.file_commands import write_file
+-from yt.wrapper.http_helpers import get_token, get_user_name, get_proxy_url
+-from yt.wrapper.operation_commands import TimeWatcher, process_operation_unsuccesful_finish_state, \
+-    abort_operation, get_operation_state
+-from yt.wrapper.run_operation_commands import run_operation
+-from yt.wrapper.spec_builders import VanillaSpecBuilder
++try:
++    from yt.wrapper.common import update_inplace, update
++    from yt.wrapper.cypress_commands import exists
++    from yt.wrapper.acl_commands import check_permission
++    from yt.wrapper.http_helpers import get_token, get_user_name, get_proxy_url
++    from yt.wrapper.operation_commands import TimeWatcher, process_operation_unsuccesful_finish_state, \
++        abort_operation, get_operation_state
++    from yt.wrapper.run_operation_commands import run_operation
++    from yt.wrapper.spec_builders import VanillaSpecBuilder
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ 
+ from .conf import read_remote_conf, validate_cluster_version, spyt_jar_path, spyt_python_path, \
+     validate_spyt_version, validate_versions_compatibility, latest_compatible_spyt_version, \
+     latest_cluster_version, update_config_inplace, validate_custom_params, validate_mtn_config, \
+     latest_ytserver_proxy_path, ytserver_proxy_attributes, read_global_conf, python_bin_path, \
+     worker_num_limit, validate_worker_num, read_cluster_conf, validate_ssd_config
+ from .utils import get_spark_master, base_spark_conf, SparkDiscovery, SparkCluster
+@@ -184,16 +185,15 @@
+ 
+     raw_submit(discovery_path=discovery_path,
+                spark_home=spark_home,
+                spark_args=spark_args,
+                client=client)
+ 
+ 
+-def raw_submit(discovery_path, spark_home, spark_args, spyt_version=None,
+-               python_version=None, local_source=False, client=None):
++def raw_submit(discovery_path, spark_home, spark_args, spyt_version=None, python_version=None, client=None):
+     spark_submit_path = "{}/bin/spark-submit".format(spark_home)
+     spark_base_args = [spark_submit_path]
+     permission_status = check_permission(user=client.get_user_name(),
+                                          permission='read', path=discovery_path, client=client)
+     if permission_status.get('action', 'deny') != 'allow':
+         raise RuntimeError(
+             'No permission for reading cluster, actual permission status is ' + str(permission_status))
+@@ -207,32 +207,14 @@
+     _add_shs_option(discovery, spark_base_args, client=client)
+     _add_base_spark_conf(client, discovery, spark_base_args)
+     _add_spyt_deps(spyt_version, spark_base_args, discovery, client, jar_caching_enabled)
+     _add_python_version(python_version, spark_base_args, client)
+     _add_dedicated_driver_op_conf(spark_base_args, dedicated_driver_op)
+     spark_env = _create_spark_env(client, spark_home)
+ 
+-    if local_source:
+-        remote_paths = {}
+-        new_spark_args = []
+-        for spark_arg in spark_args:
+-            if spark_arg.startswith('local:/'):
+-                if spark_arg not in remote_paths:
+-                    file_path = spark_arg[7:] # Drops prefix
+-                    _, file_extension = os.path.splitext(file_path)
+-                    yt_temp_file_path = "//tmp/{}{}".format(uuid.uuid4(), file_extension)
+-                    logger.info("%s will be uploaded to YT as %s", file_path, yt_temp_file_path)
+-                    with open(file_path, 'rb') as source_stream:
+-                        write_file(yt_temp_file_path, source_stream)
+-                    remote_paths[spark_arg] = "yt:/{}".format(yt_temp_file_path)
+-                new_spark_args.append(remote_paths[spark_arg])
+-            else:
+-                new_spark_args.append(spark_arg)
+-        spark_args = new_spark_args
+-
+     # replace stdin to avoid https://bugs.openjdk.java.net/browse/JDK-8211842
+     return subprocess.call(spark_base_args + spark_args, env=spark_env, stdin=subprocess.PIPE)
+ 
+ 
+ def _add_dedicated_driver_op_conf(spark_args, dedicated_driver_op):
+     if dedicated_driver_op:
+         _add_conf({
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/submit.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/submit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/types.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/spyt/utils.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/spyt/utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,20 +1,23 @@
+ import argparse
+ import getpass
+ import logging
+ import os
+ import re
+ import subprocess
+ 
+-from yt.wrapper import YPath
+-from yt.wrapper.cypress_commands import list as yt_list, create, exists
+-from yt.wrapper.errors import YtHttpResponseError
+-from yt.wrapper.http_helpers import get_proxy_url, get_user_name
+-from yt.wrapper.operation_commands import get_operation_url
+-from yt.yson.convert import yson_to_json
++try:
++    from yt.wrapper import YPath
++    from yt.wrapper.cypress_commands import list as yt_list, create, exists
++    from yt.wrapper.errors import YtHttpResponseError
++    from yt.wrapper.http_helpers import get_proxy_url, get_user_name
++    from yt.wrapper.operation_commands import get_operation_url
++    from yt.yson.convert import yson_to_json
++except Exception as e:
++    raise ImportError("Please install ytsaurus-client (yandex-yt for internal users)") from e
+ from spyt.conf import is_supported_cluster_minor_version
+ 
+ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(name)s - %(message)s')
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class SparkCluster(object):
+```
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/ytsaurus_spyt.egg-info/SOURCES.txt` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/ytsaurus_spyt.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `ytsaurus-spyt-1.69.1b438.post242760.dev3/setup.py` & `ytsaurus-spyt-1.69.1b439.post23515129.dev5/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -19,15 +19,14 @@
+     url='https://github.com/ytsaurus/ytsaurus/tree/main/yt/spark/spark-over-yt',
+     packages=[
+         'spyt',
+         'spyt.jars'
+     ],
+     install_requires=[
+         'ytsaurus-pyspark=={}'.format(__spark_version__),
+-        'ytsaurus-client',
+         'pyarrow',
+         'pyyaml'
+     ],
+     scripts=scripts,
+     license='http://www.apache.org/licenses/LICENSE-2.0',
+     package_dir={
+         'spyt.jars': 'deps/jars'
+```
+
