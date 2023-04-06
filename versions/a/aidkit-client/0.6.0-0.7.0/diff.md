@@ -1,0 +1,3460 @@
+# Comparing `tmp/aidkit-client-0.6.0.tar.gz` & `tmp/aidkit_client-0.7.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "aidkit-client-0.6.0.tar", max compression
++gzip compressed data, was "aidkit_client-0.7.0.tar", max compression
+```
+
+## Comparing `aidkit-client-0.6.0.tar` & `aidkit_client-0.7.0.tar`
+
+### file list
+
+```diff
+@@ -1,37 +1,37 @@
+--rw-r--r--   0        0        0    11358 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/LICENSE
+--rw-r--r--   0        0        0      334 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/README_PYPI.md
+--rw-r--r--   0        0        0       62 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/__init__.py
+--rw-r--r--   0        0        0        0 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/__init__.py
+--rw-r--r--   0        0        0      250 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/constants.py
+--rw-r--r--   0        0        0     1870 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/datasets.py
+--rw-r--r--   0        0        0     5076 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/ml_models.py
+--rw-r--r--   0        0        0    33803 2023-02-10 10:05:10.861051 aidkit-client-0.6.0/aidkit_client/_endpoints/models.py
+--rw-r--r--   0        0        0     1837 2023-02-10 10:05:10.861051 aidkit-client-0.6.0/aidkit_client/_endpoints/observations.py
+--rw-r--r--   0        0        0     1925 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/pipeline_runs.py
+--rw-r--r--   0        0        0     1613 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/pipelines.py
+--rw-r--r--   0        0        0     1827 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/report.py
+--rw-r--r--   0        0        0     2599 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/_endpoints/subsets.py
+--rw-r--r--   0        0        0    22234 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/aidkit_api.py
+--rw-r--r--   0        0        0     3996 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/authenticator.py
+--rw-r--r--   0        0        0     2356 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/configuration.py
+--rw-r--r--   0        0        0     1357 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/exceptions.py
+--rw-r--r--   0        0        0        0 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/experimental/__init__.py
+--rw-r--r--   0        0        0       79 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/plotting/__init__.py
+--rw-r--r--   0        0        0    24904 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/plotting/base_objects.py
+--rw-r--r--   0        0        0     3274 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/plotting/plot_renderer.py
+--rw-r--r--   0        0        0   124680 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/plotting/texgyreadventor-regular.otf
+--rw-r--r--   0        0        0        0 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/py.typed
+--rw-r--r--   0        0        0      922 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/__init__.py
+--rw-r--r--   0        0        0     2633 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/data_point.py
+--rw-r--r--   0        0        0    19423 2023-02-10 16:19:39.368854 aidkit-client-0.6.0/aidkit_client/resources/dataset.py
+--rw-r--r--   0        0        0    35673 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/ml_model.py
+--rw-r--r--   0        0        0     5509 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/ml_model_input_configuration.py
+--rw-r--r--   0        0        0     5227 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/ml_model_output_formats.py
+--rw-r--r--   0        0        0    13819 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/pipeline.py
+--rw-r--r--   0        0        0      236 2023-02-10 07:14:00.343614 aidkit-client-0.6.0/aidkit_client/resources/report/__init__.py
+--rw-r--r--   0        0        0    26971 2023-02-10 07:14:00.347614 aidkit-client-0.6.0/aidkit_client/resources/report/_base_report.py
+--rw-r--r--   0        0        0     7980 2023-02-10 07:14:00.347614 aidkit-client-0.6.0/aidkit_client/resources/report/adversarial_report.py
+--rw-r--r--   0        0        0     6857 2023-02-10 10:05:10.861051 aidkit-client-0.6.0/aidkit_client/resources/report/corruption_report.py
+--rw-r--r--   0        0        0     1134 2023-02-10 16:42:39.810963 aidkit-client-0.6.0/pyproject.toml
+--rw-r--r--   0        0        0     1300 2023-02-10 17:41:03.435472 aidkit-client-0.6.0/setup.py
+--rw-r--r--   0        0        0     1158 2023-02-10 17:41:03.435851 aidkit-client-0.6.0/PKG-INFO
++-rw-r--r--   0        0        0    11358 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/LICENSE
++-rw-r--r--   0        0        0      334 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/README_PYPI.md
++-rw-r--r--   0        0        0       62 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/aidkit_client/__init__.py
++-rw-r--r--   0        0        0        0 2023-04-06 14:48:01.694194 aidkit_client-0.7.0/aidkit_client/_endpoints/__init__.py
++-rw-r--r--   0        0        0      250 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/aidkit_client/_endpoints/constants.py
++-rw-r--r--   0        0        0     1870 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/aidkit_client/_endpoints/datasets.py
++-rw-r--r--   0        0        0     5076 2023-04-06 14:48:00.598188 aidkit_client-0.7.0/aidkit_client/_endpoints/ml_models.py
++-rw-r--r--   0        0        0    35062 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/models.py
++-rw-r--r--   0        0        0     1837 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/observations.py
++-rw-r--r--   0        0        0     1925 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/pipeline_runs.py
++-rw-r--r--   0        0        0     1613 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/pipelines.py
++-rw-r--r--   0        0        0     1827 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/report.py
++-rw-r--r--   0        0        0     2599 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/_endpoints/subsets.py
++-rw-r--r--   0        0        0    22234 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/aidkit_api.py
++-rw-r--r--   0        0        0     3996 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/authenticator.py
++-rw-r--r--   0        0        0     2356 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/configuration.py
++-rw-r--r--   0        0        0     1357 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/exceptions.py
++-rw-r--r--   0        0        0        0 2023-04-06 14:48:01.694194 aidkit_client-0.7.0/aidkit_client/experimental/__init__.py
++-rw-r--r--   0        0        0       79 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/plotting/__init__.py
++-rw-r--r--   0        0        0    27520 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/plotting/base_objects.py
++-rw-r--r--   0        0        0     3274 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/plotting/plot_renderer.py
++-rw-r--r--   0        0        0   124680 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/plotting/texgyreadventor-regular.otf
++-rw-r--r--   0        0        0        0 2023-04-06 14:48:01.694194 aidkit_client-0.7.0/aidkit_client/py.typed
++-rw-r--r--   0        0        0      922 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/__init__.py
++-rw-r--r--   0        0        0     2633 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/data_point.py
++-rw-r--r--   0        0        0    22609 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/dataset.py
++-rw-r--r--   0        0        0    34966 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/ml_model.py
++-rw-r--r--   0        0        0     5633 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/ml_model_input_configuration.py
++-rw-r--r--   0        0        0     5227 2023-04-06 14:48:00.602188 aidkit_client-0.7.0/aidkit_client/resources/ml_model_output_formats.py
++-rw-r--r--   0        0        0    12362 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/aidkit_client/resources/pipeline.py
++-rw-r--r--   0        0        0      236 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/aidkit_client/resources/report/__init__.py
++-rw-r--r--   0        0        0    29567 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/aidkit_client/resources/report/_base_report.py
++-rw-r--r--   0        0        0     6588 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/aidkit_client/resources/report/adversarial_report.py
++-rw-r--r--   0        0        0     6875 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/aidkit_client/resources/report/corruption_report.py
++-rw-r--r--   0        0        0     1154 2023-04-06 14:48:00.606188 aidkit_client-0.7.0/pyproject.toml
++-rw-r--r--   0        0        0     1335 1970-01-01 00:00:00.000000 aidkit_client-0.7.0/setup.py
++-rw-r--r--   0        0        0     1199 1970-01-01 00:00:00.000000 aidkit_client-0.7.0/PKG-INFO
+```
+
+### Comparing `aidkit-client-0.6.0/LICENSE` & `aidkit_client-0.7.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/datasets.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/datasets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/ml_models.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/ml_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/models.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/models.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -95,53 +95,53 @@
+     batch: Optional[UnspecifiedLengthDimensionModel] = Field(
+         None, description="Batch axis and length", title="Batch"
+     )
+ 
+ 
+ class ZeroToOneScaler(BaseModel):
+     """
+-    Normalize data to [0, 1] range.
++    Normalize the input image to [0, 1] range.
+     """
+ 
+-    name: Literal["ZeroToOne"] = Field("ZeroToOne", title="Scaler [0, 1]")
++    name: Literal["ZeroToOne"] = Field("ZeroToOne", title="Scale input to range [0, 1]")
+ 
+ 
+ class MinusOneToOneScaler(BaseModel):
+     """
+-    Normalize data to [-1, 1] range.
++    Normalize the input image to [-1, 1] range.
+     """
+ 
+-    name: Literal["MinusOneToOne"] = Field("MinusOneToOne", title="Scaler [-1, 1]")
++    name: Literal["MinusOneToOne"] = Field("MinusOneToOne", title="Scale input to range [-1, 1]")
+ 
+ 
+ class GrayscaleCustomScaler(BaseModel):
+     """
+-    Scale the data with the given mean and standard deviation.
++    Standardize the input image with the given mean and standard deviation.
+     """
+ 
+-    name: Literal["GrayScaleCustom"] = Field("GrayScaleCustom", title="Custom")
++    name: Literal["GrayScaleCustom"] = Field("GrayScaleCustom", title="Custom Standardization")
+     data_mean: float = Field(0.0, title="Mean")
+     data_std: float = Field(1.0, gt=0.0, title="Standard Deviation")
+ 
+ 
+ class GrayScaleImageInputSpecs(BaseModel):
+     """
+     A grayscale image has 1 channel.
+     """
+ 
+     name: Literal["GrayScaleImage"] = Field("GrayScaleImage", title="Image (Grayscale)")
+     batch_dim: BatchDim = Field("No Batch", title="Batch Axis Location")
+     dimensions: GrayScaleImageInputDimensionsModel
+     image_scaler: Union[ZeroToOneScaler, MinusOneToOneScaler, GrayscaleCustomScaler] = Field(
+-        {"name": "ZeroToOne", "_model_version_hash": "bZj687kPju5uLQ=="},
++        {"name": "ZeroToOne", "_model_version_hash": "EzCkxshf-mzMFg=="},
+         description=(
+             "Can choose pre-processing function that normalizes data to a range and standardizes"
+             " data to given mean and standard deviation."
+         ),
+-        title="Image Scaler",
++        title="Input Image Scaler",
+     )
+ 
+ 
+ class ColorChannelDimensionModel(BaseModel):
+     """
+     Color channel dimension must be of length 3.
+     """
+@@ -171,35 +171,35 @@
+ 
+ class DataStdItem(BaseModel):
+     __root__: float = Field(..., gt=0.0)
+ 
+ 
+ class ImageNetPresetScaler(BaseModel):
+     """
+-    Scale data with ImageNet preset mean and standard deviation values.
++    Standardize the input image with ImageNet mean and standard deviation.
+     """
+ 
+-    name: Literal["ImageNetScaler"] = Field("ImageNetScaler", title="ImageNet Preset Scaler")
++    name: Literal["ImageNetScaler"] = Field("ImageNetScaler", title="ImageNet Standardization")
+     data_mean: List[float] = Field([0.485, 0.456, 0.406], max_items=3, min_items=3, title="Mean")
+     data_std: List[DataStdItem] = Field(
+         [0.229, 0.224, 0.225], max_items=3, min_items=3, title="Standard Deviation"
+     )
+ 
+ 
+ class DataStdItem1(BaseModel):
+     __root__: float = Field(..., gt=0.0)
+ 
+ 
+ class RGBCustomScaler(BaseModel):
+     """
+-    Scale the data with the given per-channel mean and standard deviation
+-    values.
++    Standardize the input image with the given per-channel mean and standard
++    deviation values.
+     """
+ 
+-    name: Literal["RGBCustom"] = Field("RGBCustom", title="Custom")
++    name: Literal["RGBCustom"] = Field("RGBCustom", title="Custom Standardization")
+     data_mean: List[float] = Field([0.0, 0.0, 0.0], max_items=3, min_items=3, title="Mean")
+     data_std: List[DataStdItem1] = Field(
+         [1.0, 1.0, 1.0], max_items=3, min_items=3, title="Standard Deviation"
+     )
+ 
+ 
+ class ColorImageInputSpecs(BaseModel):
+@@ -209,20 +209,20 @@
+ 
+     name: Literal["ColorImage"] = Field("ColorImage", title="Image (Color)")
+     batch_dim: BatchDim = Field("No Batch", title="Batch Axis Location")
+     dimensions: ColorImageInputDimensionsModel
+     image_scaler: Union[
+         ZeroToOneScaler, MinusOneToOneScaler, ImageNetPresetScaler, RGBCustomScaler
+     ] = Field(
+-        {"name": "ZeroToOne", "_model_version_hash": "bZj687kPju5uLQ=="},
++        {"name": "ZeroToOne", "_model_version_hash": "EzCkxshf-mzMFg=="},
+         description=(
+             "Can choose pre-processing function that normalizes data to a range and standardizes"
+             " data to given mean and standard deviation."
+         ),
+-        title="Image Scaler",
++        title="Input Image Scaler",
+     )
+ 
+ 
+ class AutogeneratedClasses(BaseModel):
+     """
+     The class names are auto-generated, e.g., class_01, class_02, ..., class_10
+     for a total of 10 classes.
+@@ -316,14 +316,25 @@
+     Enum for bounding box dimension order types.
+     """
+ 
+     boxes_x_coordinates = "boxes_x_coordinates"
+     coordinates_x_boxes = "coordinates_x_boxes"
+ 
+ 
++class BoundingBoxFormatType(Enum):
++    """
++    Bounding box coordinate format.
++    """
++
++    xyxy = "xyxy"
++    yxyx = "yxyx"
++    xywh = "xywh"
++    ccwh = "ccwh"
++
++
+ class DetectionDictOutputFormat(BaseModel):
+     """
+     Model outputs a dictionary of tensors.
+     """
+ 
+     name: Literal["DetectionDict"] = Field("DetectionDict", title="Dictionary of Tensors")
+     scores_key: str = Field(
+@@ -335,14 +346,17 @@
+         title="Scores Key",
+     )
+     score_dimension_type: DetectionScoreDimensionsTypes
+     boxes_key: str = Field(
+         ..., description="Key pointing to bounding box output.", title="Bounding Boxes Key"
+     )
+     box_dimension_type: BoundingBoxDimensionsTypes
++    coordinate_format: BoundingBoxFormatType = Field(
++        ..., description="Format of bounding box coordinates."
++    )
+ 
+ 
+ class SequenceOutputFormat(BaseModel):
+     """
+     Model outputs a sequence of tensors.
+     """
+ 
+@@ -357,37 +371,29 @@
+         title="Scores Index",
+     )
+     score_dimension_type: DetectionScoreDimensionsTypes
+     boxes_key: int = Field(
+         ..., description="Index to bounding box output", ge=0.0, title="Bounding Boxes Index"
+     )
+     box_dimension_type: BoundingBoxDimensionsTypes
++    coordinate_format: BoundingBoxFormatType = Field(
++        ..., description="Format of bounding box coordinates."
++    )
+ 
+ 
+ class DetectionScoreDimensionsModel(BaseModel):
+     """
+     DetectionScore Output.
+     """
+ 
+     proposal: UnspecifiedLengthDimensionModel = Field(..., title="Object proposal")
+     class_: UnspecifiedLengthDimensionModel = Field(..., title="Class")
+     batch: Optional[UnspecifiedLengthDimensionModel] = Field(None, title="Batch")
+ 
+ 
+-class BoundingBoxFormatType(Enum):
+-    """
+-    Bounding box coordinate format.
+-    """
+-
+-    xyxy = "xyxy"
+-    yxyx = "yxyx"
+-    xywh = "xywh"
+-    ccwh = "ccwh"
+-
+-
+ class NMSPostProcessor(BaseModel):
+     """
+     Apply non-max suppression to object proposals.
+     """
+ 
+     iou_threshold: float = Field(
+         0.5,
+@@ -431,17 +437,14 @@
+         ..., description="List of class names or number of classes", title="Class Names"
+     )
+     output_format: Union[DetectionDictOutputFormat, SequenceOutputFormat] = Field(
+         ..., title="Output Format"
+     )
+     dimensions: Optional[DetectionScoreDimensionsModel] = Field(None, title="Dimensions")
+     name: Literal["DetectionOutput"] = Field("DetectionOutput", title="Detection")
+-    coordinate_format: BoundingBoxFormatType = Field(
+-        ..., description="Format of bounding box coordinates."
+-    )
+     post_processor: NMSPostProcessor = Field(
+         ...,
+         description="Apply NMS postprocessing to model output.",
+         title="Post Processor: Non-Max Suppression",
+     )
+     box_dimensions: Optional[BoundingBoxDimensionsModel] = Field(None, title="Box Dimensions")
+ 
+@@ -689,53 +692,46 @@
+ 
+ 
+ class CreatePipelineRunRequest(BaseModel):
+     pipeline_id: int = Field(..., title="Pipeline Id")
+     context: List[UserProvidedContext] = Field(..., title="Context")
+ 
+ 
++class NamedEntity(BaseModel):
++    id: int = Field(..., title="Id")
++    name: str = Field(..., title="Name")
++
++
+ class PipelineRunState(Enum):
+     """
+     Life cycle of a pipeline run node.
+     """
+ 
+     PENDING = "PENDING"
+     STOPPED = "STOPPED"
+     RUNNING = "RUNNING"
+     SUCCESS = "SUCCESS"
+     FAILED = "FAILED"
+     SAVING = "SAVING"
+ 
+ 
+-class PipelineRunNodeBatchResponse(BaseModel):
+-    id: int = Field(..., title="Id")
+-    state: PipelineRunState
+-    start_time: Optional[str] = Field(None, title="Start Time")
+-    finish_time: Optional[str] = Field(None, title="Finish Time")
+-
+-
+-class NamedEntity(BaseModel):
+-    id: int = Field(..., title="Id")
+-    name: str = Field(..., title="Name")
+-
+-
+ class PipelineRunResponse(BaseModel):
+     id: int = Field(..., title="Id")
+-    nodes: List[PipelineRunNodeBatchResponse] = Field(..., title="Nodes")
+     ml_model: Optional[NamedEntity] = None
+     ml_model_version: Optional[NamedEntity] = None
+     dataset: Optional[NamedEntity] = None
+     subset: Optional[NamedEntity] = None
+     pipeline: Optional[NamedEntity] = None
+     state: PipelineRunState
+     started_at: Optional[int] = Field(None, title="Started At")
+     finished_at: Optional[int] = Field(None, title="Finished At")
+     index_in_pipeline: int = Field(..., title="Index In Pipeline")
+-    progress_report: Optional[Dict[str, Any]] = Field(None, title="Progress Report")
+     error_message: Optional[str] = Field(None, title="Error Message")
++    progress: int = Field(0, title="Progress")
++    progress_report: Optional[Dict[str, Any]] = Field(None, title="Progress Report")
+ 
+ 
+ class PipelineRunListResponse(BaseModel):
+     filter: FilterResponse
+     items: List[PipelineRunResponse] = Field(..., title="Items")
+ 
+ 
+@@ -818,34 +814,38 @@
+     model_versions: List[int] = Field(..., title="Model Versions")
+     dataset: int = Field(..., title="Dataset")
+     subset: int = Field(..., title="Subset")
+     metrics: List[str] = Field(..., title="Metrics")
+     success_metric_threshold: float = Field(..., title="Success Metric Threshold")
+ 
+ 
++class ReportData(BaseModel):
++    distance_metric_value: List[float] = Field(..., title="Distance Metric Value")
++    method_name: List[str] = Field(..., title="Method Name")
++    param_string: List[str] = Field(..., title="Param String")
++    observation_id: List[int] = Field(..., title="Observation Id")
++    artifact_id: List[int] = Field(..., title="Artifact Id")
++    target_class: List[str] = Field(..., title="Target Class")
++    success_metric_score: List[float] = Field(..., title="Success Metric Score")
++    perturbation_type: List[str] = Field(..., title="Perturbation Type")
++    success_metric_type: List[str] = Field(..., title="Success Metric Type")
++    model_version_id: List[int] = Field(..., title="Model Version Id")
++    distance_metric_name: List[str] = Field(..., title="Distance Metric Name")
++
++
+ class OutputType(Enum):
+     """
+     Identification of the output type of a model or of the annotation.
+     """
+ 
+     CLASSIFICATION = "CLASSIFICATION"
+     SEGMENTATION = "SEGMENTATION"
+     DETECTION = "DETECTION"
+ 
+ 
+-class CorruptionReportPlotRecipes(BaseModel):
+-    """
+-    Class containing all corruption report plot recipes represented as
+-    dictionaries.
+-    """
+-
+-    model_comparison_mfr: Dict[str, Any] = Field(..., title="Model comparison MFR plot.")
+-    odd_comparison_mfr: Dict[str, Any] = Field(..., title="ODD comparison MFR plot.")
+-
+-
+ class ModelNormStats(BaseModel):
+     """
+     Pydantic model containing the statistics for a model version and distance
+     metric.
+     """
+ 
+     impact: float = Field(..., title="Impact")
+@@ -860,60 +860,90 @@
+     """
+ 
+     model_comparison_stats: Dict[
+         str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]
+     ] = Field(..., title="Model Comparison Stats")
+ 
+ 
+-class ReportCorruptionResponse(BaseModel):
++class CorruptionReportPlotRecipes(BaseModel):
+     """
+-    Server response for the corruption report endpoint.
++    Class containing all corruption report plot recipes represented as
++    dictionaries.
++    """
++
++    model_comparison_mfr: Dict[str, Any] = Field(..., title="Model comparison MFR plot.")
++    odd_comparison_mfr: Dict[str, Any] = Field(..., title="ODD comparison MFR plot.")
++
++
++class CorruptionReport(BaseModel):
++    """
++    Pydantic model class representing the corruption report, consisting  of
++    data and plot recipes.
+     """
+ 
+-    data: Dict[str, List] = Field(..., title="Data")
++    data: ReportData
+     output_type: OutputType
+     observations_to_odd_tags: Dict[str, List[str]] = Field(..., title="Observations To Odd Tags")
+-    plot_recipes: CorruptionReportPlotRecipes
+     stats: CorruptionReportStats
++    plot_recipes: CorruptionReportPlotRecipes
++
++
++class ReportCorruptionResponse(BaseModel):
++    """
++    Server response for the corruption report endpoint.
++    """
++
++    report: CorruptionReport
++    model: MLModelResponse
++    model_versions: List[MLModelVersionResponse] = Field(..., title="Model Versions")
++
++
++class AdversarialReportStats(BaseModel):
++    """
++    Pydantic model containing the summary statistics for the adversarial
++    report.
++    """
++
++    summary_statistics: Dict[
++        str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]]
++    ] = Field(..., title="Summary Statistics")
+ 
+ 
+ class AdversarialReportPlotRecipes(BaseModel):
+     """
+     Class containing all adversarial report plot recipes represented as
+     dictionaries.
+     """
+ 
+     model_comparison_asr: Dict[str, Any] = Field(..., title="Model Comparison Asr")
+     attack_comparison_asr: Dict[str, Any] = Field(..., title="Attack Comparison Asr")
+     attack_detail_asr: Dict[str, Any] = Field(..., title="Attack Detail Asr")
+ 
+ 
+-class AdversarialReportStats(BaseModel):
++class AdversarialReport(BaseModel):
+     """
+-    Pydantic model containing the summary statistics for the model-comparison
+-    and the attack-comparison view.
++    Pydantic model class representing the adversarial report, consisting of
++    data, plot recipes and statistics.
+     """
+ 
+-    model_comparison_stats: Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]] = Field(
+-        ..., title="Model Comparison Stats"
+-    )
+-    attack_comparison_stats: Dict[
+-        str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]
+-    ] = Field(..., title="Attack Comparison Stats")
++    data: ReportData
++    output_type: OutputType
++    observations_to_odd_tags: Dict[str, List[str]] = Field(..., title="Observations To Odd Tags")
++    stats: AdversarialReportStats
++    plot_recipes: AdversarialReportPlotRecipes
+ 
+ 
+ class ReportAdversarialResponse(BaseModel):
+     """
+     Server response for the adversarial report endpoint.
+     """
+ 
+-    data: Dict[str, List] = Field(..., title="Data")
+-    output_type: OutputType
+-    plot_recipes: AdversarialReportPlotRecipes
+-    stats: AdversarialReportStats
++    report: AdversarialReport
++    model: MLModelResponse
++    model_versions: List[MLModelVersionResponse] = Field(..., title="Model Versions")
+ 
+ 
+ class DimensionType(Enum):
+     """
+     An enumeration of dimension types.
+     """
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/observations.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/observations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/pipeline_runs.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/pipeline_runs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/pipelines.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/pipelines.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/report.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/report.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/_endpoints/subsets.py` & `aidkit_client-0.7.0/aidkit_client/_endpoints/subsets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/aidkit_api.py` & `aidkit_client-0.7.0/aidkit_client/aidkit_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/authenticator.py` & `aidkit_client-0.7.0/aidkit_client/authenticator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/configuration.py` & `aidkit_client-0.7.0/aidkit_client/configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/exceptions.py` & `aidkit_client-0.7.0/aidkit_client/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/plotting/base_objects.py` & `aidkit_client-0.7.0/aidkit_client/plotting/base_objects.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,16 @@
+ """
+ Functions to plot basic objects like tables and image comparisons.
+ """
+ 
++import colorsys
+ import difflib
+ import io
+-from hashlib import sha256
+-from typing import Dict, List, Optional, Sequence, Tuple, TypeVar, Union
++from math import ceil
++from typing import Dict, List, Optional, Sequence, Set, Tuple, TypeVar, Union
+ 
+ import numpy as np
+ import PIL.Image
+ import PIL.ImageDraw
+ from IPython.core.display import display
+ from ipywidgets import widgets
+ from matplotlib import cm, colors
+@@ -49,16 +50,15 @@
+ 
+     cols = 1 + len(list(data.values())[0])
+ 
+     if header and cols != (len(header) + 1):
+         raise RuntimeError("The length of the header as to match the data.")
+ 
+     for key, value_list in data.items():
+-
+-        header_html = f"<b>{key}</b>"
++        header_html = f"<span style='display: inline-block; line-height: 1.2em'><b>{key}</b></span>"
+ 
+         # add background color
+         if highlight_row_header and key in highlight_row_header:
+             header_html = (
+                 f"<span style='background-color:{highlight_row_header[key]};"
+                 "'>\u00A0\u00A0\u00A0\u00A0</span> " + header_html
+             )
+@@ -77,16 +77,16 @@
+                         f"<span style='background-color:{highlight};'>" + value_to_print + "</span>"
+                     )
+             items.append(widgets.HTML(value=value_to_print))
+ 
+     return widgets.GridBox(
+         items,
+         layout=widgets.Layout(
+-            grid_template_columns=f"150px repeat({cols-1},\
+-            {(table_width - 150)/(cols-1)}px)"
++            grid_template_columns=f"180px repeat({cols-1},\
++            {(table_width - 180)/(cols-1)}px)"
+         ),
+     )
+ 
+ 
+ def _pretty_print_dict(dictionary: Dict) -> str:
+     """
+     Pretty print a dictionary.
+@@ -256,14 +256,48 @@
+ 
+         blended = PIL.Image.blend(background_rgba, foreground_rgba, alpha=opacity)
+         display(display_observation(blended, title=f"<b>{title}</b>", width=250))
+ 
+     return widgets.interactive_output(_display_blended_images, {"opacity": slider})
+ 
+ 
++def display_target_class_legend_widget(target_classes: List[dict]) -> widgets.HTML:
++    """
++    Display a widget containing a list of classes with their associated color.
++
++    :param target_classes: List of dictionaries containing the name and the color of each class
++         to display.
++    :returns: HTML widget with the list of classes.
++    """
++    target_classes_legend = """<style>
++    .class_legend_element {
++        background-color:#efefef;
++        margin: 3px;
++        padding-left: 5px;
++        padding-right: 5px;
++        float: left;
++
++    .class_legend {
++        display: block;
++    }
++    </style>
++    <div class="class_legend">
++    """
++    for target_class in target_classes:
++        color = target_class["color"]
++        target_classes_legend += (
++            '<span class="class_legend_element">'
++            f'<span style="color:{color}; font-size: 16px">&#9632; </span>'
++            f'{target_class["name"]}</span>'
++        )
++    target_classes_legend += "</div>"
++
++    return widgets.HTML(value=target_classes_legend)
++
++
+ def display_semantic_segmentation_inference_argmax_widget(
+     original: PIL.Image,
+     perturbed: PIL.Image,
+     original_prediction: PIL.Image,
+     perturbed_prediction: PIL.Image,
+     target_classes: List[dict],
+ ) -> widgets.VBox:
+@@ -277,38 +311,15 @@
+         on the original image.
+     :param perturbed_prediction: An image representing the prediction of the model
+         on the perturbed image.
+     :param target_classes: A dictionary containing the name and colors
+         of the target classes.
+     :returns: A widget displaying the inference of the model.
+     """
+-    target_classes_legend = """<style>
+-        .class_legend_element {
+-            background-color:#efefef;
+-            margin: 3px;
+-            padding-left: 5px;
+-            padding-right: 5px;
+-            float: left;
+-
+-        .class_legend {
+-            display: block;
+-        }
+-        </style>
+-        <div class="class_legend">
+-        """
+-    for target_class in target_classes:
+-        target_classes_legend += (
+-            '<span class="class_legend_element">'
+-            f'<span style="color:{target_class["color"]}; font-size: 16px">&#9632; </span>'
+-            f'{target_class["name"]}</span>'
+-        )
+-    target_classes_legend += "</div>"
+-
+-    target_class_legend_widget = widgets.HTML(value=target_classes_legend)
+-
++    target_class_legend_widget = display_target_class_legend_widget(target_classes)
+     class_prediction_opacity_slider = widgets.FloatSlider(
+         value=0.9, min=0.0, max=1.0, step=0.1, continuous_update=False
+     )
+ 
+     class_prediction_opacity_slider_with_description = widgets.HBox(
+         [widgets.Label("Labels Opacity:"), class_prediction_opacity_slider]
+     )
+@@ -362,14 +373,41 @@
+ 
+     image_widget = widgets.Image(value=buff.getvalue())
+     buff.close()
+ 
+     return image_widget
+ 
+ 
++def generate_color_list(n: int) -> List[Tuple[int, int, int]]:
++    """
++    Generate a list of n colors obtained by sampling the HSV space uniformally.
++    This produces colors that are distinct.
++
++    :param n: Number of colors to return.
++    :returns: A list of colors in RGB.
++    """
++    hue_partition = np.linspace(0.0, 1.0, n + 1)[:n]
++    saturation_modifier = np.tile([1.0, 0.5], ceil(n / 2))[:n]
++    value_modifier = np.tile([1.0, 0.6], ceil(n / 2))[:n]
++    hsv_colors = np.stack([hue_partition, saturation_modifier, value_modifier])
++
++    def _hsv_to_rgb(hsv_color: np.ndarray) -> Tuple[int, int, int]:
++        """
++        Convert a numpy array representing a color in the HSV format to RGB.
++
++        :param hsv_color: Numpy array of 3 elements representing a color in the HSV format.
++        :return: Tuple representing the same color in RGB.
++        """
++        (red, green, blue) = colorsys.hsv_to_rgb(hsv_color[0], hsv_color[1], hsv_color[2])
++        return (int(255 * red), int(255 * green), int(255 * blue))
++
++    rgb_colors = np.apply_along_axis(_hsv_to_rgb, 1, hsv_colors.transpose([1, 0]))
++    return list(rgb_colors)
++
++
+ def display_class_color(class_id: int, n_classes: int, color_map: str) -> str:
+     """
+     Map a class ID to a color using the specified color map.
+ 
+     :param class_id: The ID of the class we want the color for.
+     :param n_classes: The total number of clases.
+     :param color_map: A valid string definining a matplotlib color map.
+@@ -397,30 +435,48 @@
+     for image in inference_per_class_confidence:
+         inference_confidence_per_class_images.append(
+             PIL.Image.fromarray(np.uint8(cm.viridis(image, bytes=True)))
+         )
+     return inference_confidence_per_class_images
+ 
+ 
+-def get_inference_argmax_prediction(inference_result: np.ndarray) -> PIL.Image:
++def get_inference_argmax_prediction(
++    inference_result: np.ndarray, class_colors: Optional[List[Tuple[int, int, int]]] = None
++) -> Tuple[PIL.Image.Image, Set[int]]:
+     """
+     Generates an image where each pixel has the color of the class for which it
+     has the highest confidence.
+ 
+     :param inference_result: A numpy array with shape `[r,c,n]` where `r` is the number of rows,
+         `c` the number of columns and `n` the number of classes.
++    :param class_colors: Optional list containing the color associated with each class as a string.
++         If not specified, a default color map is used.
+     :returns: A PIL Image where every pixel has the color of the class for which it has the
+-        highest confidence.
++        highest confidence and a set with the class IDs present in the image.
+     """
+     n_classes = inference_result.shape[2]
+     inference_argmax = inference_result.argmax(axis=2)
++    classes_present = set(np.unique(inference_argmax))
+     n_classes = max(n_classes - 1, 1)
+-    inference_argmax = inference_argmax / n_classes
+-    inference_argmax_image = PIL.Image.fromarray(np.uint8(cm.turbo(inference_argmax, bytes=True)))
+-    return inference_argmax_image
++
++    if not class_colors:
++        color_map = cm.gist_ncar(inference_argmax, bytes=True)
++        inference_argmax = inference_argmax / n_classes
++        inference_argmax_image = PIL.Image.fromarray(np.uint8(color_map))
++
++    else:
++        colors_array = np.array(class_colors)
++
++        def _class_index_to_color(array: np.ndarray) -> np.ndarray:
++            return colors_array[array]
++
++        rgb_inference = _class_index_to_color(inference_argmax).astype(np.uint8)
++        inference_argmax_image = PIL.Image.fromarray(rgb_inference)
++
++    return inference_argmax_image, classes_present
+ 
+ 
+ def display_inference_per_class_widget(
+     per_class_confidence_images: List,
+     perturbed_per_class_confidence_images: List,
+     target_classes_dropdown_options: List[Tuple[str, int]],
+ ) -> widgets.VBox:
+@@ -481,21 +537,23 @@
+     return class_inference_per_class_widget
+ 
+ 
+ def display_object_detection_box_count_widget(
+     original_detection_output: List[ImageObjectDetectionBoundingBox],
+     perturbed_detection_output: List[ImageObjectDetectionBoundingBox],
+     class_names: List[str],
++    class_colors: List[str],
+ ) -> widgets.GridBox:
+     """
+     Create a widget displaying the distribution of boxes in a table.
+ 
+     :param original_detection_output: Object detection inference of the original observation.
+     :param perturbed_detection_output: Object detection inference of the perturbed observation.
+     :param class_names: List of all class names.
++    :param class_colors: Dictionary maping a color to a class name.
+     :return: Table widget.
+     """
+     box_table_1_counter: Dict[int, int] = {}
+     for bbox in original_detection_output:
+         box_table_1_counter[bbox.class_index] = box_table_1_counter.get(bbox.class_index, 0) + 1
+     box_table_2_counter: Dict[int, int] = {}
+     for bbox in perturbed_detection_output:
+@@ -504,38 +562,38 @@
+     box_table_counter: Dict[str, List[Union[str, float, int]]] = {}
+     highlights = {}
+     for class_ in set(list(box_table_1_counter.keys()) + list(box_table_2_counter.keys())):
+         box_table_counter[class_names[class_]] = [
+             box_table_1_counter.get(class_, 0),
+             box_table_2_counter.get(class_, 0),
+         ]
+-        highlights[
+-            class_names[class_]
+-        ] = f"#{sha256(class_names[class_].encode()).hexdigest()[-6:]}"
++        highlights[class_names[class_]] = class_colors[class_]
+ 
+     box_table_counter["Sum"] = [len(original_detection_output), len(perturbed_detection_output)]
+     return display_table(
+         box_table_counter, header=["Original", "Perturbed"], highlight_row_header=highlights
+     )
+ 
+ 
+ def display_detection_observation(
+     observation: PIL.Image.Image,
+     observation_inference: List[ImageObjectDetectionBoundingBox],
+     class_names: List[str],
++    class_colors: List[str],
+     class_filter: str = "All Classes",
+     title: Optional[str] = None,
+     caption: Optional[str] = None,
+ ) -> Union[widgets.VBox, widgets.Image]:
+     """
+     Create a widget displaying a single observation.
+ 
+     :param observation: Observation to display.
+     :param observation_inference: Inference of the passed observation.
+     :param class_names: List of all class names.
++    :param class_colors: List of colors in RGB.
+     :param class_filter: Class name of the class to display,
+                          or "All Classes".
+     :param title: Title to display above the observation.
+     :param caption: Caption to be displayed below the observation.
+     :return: Widget containing the observation.
+     """
+     org = observation.copy()
+@@ -559,15 +617,15 @@
+             y1 = int(y1 * observation.size[1])  # pylint: disable=invalid-name
+             y2 = int(y2 * observation.size[1])  # pylint: disable=invalid-name
+ 
+         draw.rectangle(
+             ((x1, y1), (x2, y2)),
+             fill=(255, 0, 0, 0),
+             width=int(observation.size[1] / 100),
+-            outline=f"#{sha256(class_names[bbox.class_index].encode()).hexdigest()[-6:]}",
++            outline=class_colors[bbox.class_index],
+         )
+ 
+         org = PIL.Image.alpha_composite(org.convert("RGBA"), new)
+ 
+     buff = io.BytesIO()
+     org.save(buff, format="png")
+ 
+@@ -595,28 +653,30 @@
+ 
+ def display_selection_class_detection_widget(
+     observation_image: PIL.Image,
+     adversarial_example_image: PIL.Image,
+     observation_detection_output: List[ImageObjectDetectionBoundingBox],
+     adversarial_example_detection_output: List[ImageObjectDetectionBoundingBox],
+     class_names: List[str],
++    class_colors: List[str],
+     observation_title: Optional[str] = None,
+     observation_caption: Optional[str] = None,
+     perturbation_title: Optional[str] = None,
+     perturbation_caption: Optional[str] = None,
+ ) -> widgets.VBox:
+     """
+     Create a widget displaying an object detection inference in addition to a
+     selector filtering the output by class.
+ 
+     :param observation_image: Image of the original observation.
+     :param adversarial_example_image: Image of the adversarial example.
+     :param observation_detection_output: Inference of the original observation.
+     :param adversarial_example_detection_output: Inference of the adversarial example.
+     :param class_names: List of all class names.
++    :param class_colors: List of colors in RGB.
+     :param observation_title: Title to be displayed above the original observation.
+     :param observation_caption: Caption to be displayed under the original observation.
+     :param perturbation_title: Title to be displayed above the perturbed observation.
+     :param perturbation_caption: Caption to be displayed under the perturbed observation.
+     :return: Widget displaying both detection outputs with a selector to either
+              display only boxes of the selected class or to display all boxes.
+     """
+@@ -627,22 +687,24 @@
+                 [
+                     widgets.HBox(
+                         [
+                             display_detection_observation(
+                                 observation_image,
+                                 observation_detection_output,
+                                 class_names=class_names,
++                                class_colors=class_colors,
+                                 class_filter=selector,
+                                 title=observation_title,
+                                 caption=observation_caption,
+                             ),
+                             display_detection_observation(
+                                 adversarial_example_image,
+                                 adversarial_example_detection_output,
+                                 class_names=class_names,
++                                class_colors=class_colors,
+                                 class_filter=selector,
+                                 title=perturbation_title,
+                                 caption=perturbation_caption,
+                             ),
+                         ]
+                     )
+                 ]
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/plotting/plot_renderer.py` & `aidkit_client-0.7.0/aidkit_client/plotting/plot_renderer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/plotting/texgyreadventor-regular.otf` & `aidkit_client-0.7.0/aidkit_client/plotting/texgyreadventor-regular.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/__init__.py` & `aidkit_client-0.7.0/aidkit_client/resources/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/data_point.py` & `aidkit_client-0.7.0/aidkit_client/resources/data_point.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/dataset.py` & `aidkit_client-0.7.0/aidkit_client/resources/dataset.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,35 +1,64 @@
+ """
+ A dataset is a collection of observations of the same type.
+ 
+-A subset is a set of observations. Observations of a Dataset can be part
++A subset is a set of observations. Observations of a dataset can be part
+ of multiple overlapping subsets.
+ """
++import asyncio
+ import io
++from enum import Enum
+ from hashlib import md5
+ from pathlib import Path
+ from typing import Any, BinaryIO, Dict, Iterable, List, Optional, Sequence, Tuple, Union
+ 
+ from PIL import Image
++from tenacity import retry, stop_after_attempt
++from tqdm import tqdm
+ 
+ from aidkit_client._endpoints.datasets import DatasetAPI
+-from aidkit_client._endpoints.models import (
+-    DatasetResponse,
+-    ObservationResponse,
+-    ObservationType,
+-    SubsetResponse,
+-)
++from aidkit_client._endpoints.models import DatasetResponse, ObservationResponse
++from aidkit_client._endpoints.models import ObservationType as _InternalObservationType
++from aidkit_client._endpoints.models import SubsetResponse
+ from aidkit_client._endpoints.observations import ObservationAPI
+ from aidkit_client._endpoints.subsets import SubsetAPI
+ from aidkit_client.aidkit_api import HTTPService
+ from aidkit_client.configuration import get_api_client
+ from aidkit_client.exceptions import AidkitClientError
+ from aidkit_client.resources.data_point import DataPointType, RemoteFile
+ 
+ 
++class ObservationType(Enum):
++    """
++    Identification of the type of an observation.
++    """
++
++    TEXT = "TEXT"
++    COLOR_IMAGE = "COLOR_IMAGE"
++    GREY_SCALE_IMAGE = "GREY_SCALE_IMAGE"
++
++
++def _to_internal_observation_type(obs_type: ObservationType) -> _InternalObservationType:
++    """
++    Convert an instance of the `resources.dataset.ObservationType` enum - which
++    is part of the stable aidkit client API - to an instance of
++    `_endpoints.models.ObservationType` - which is part of the aidkit web API.
++
++    :param obs_type: Instance to be converted.
++    :return: Corresponding instance which can be used in the web API.
++    """
++    if obs_type is ObservationType.TEXT:
++        return _InternalObservationType.TEXT
++    if obs_type is ObservationType.COLOR_IMAGE:
++        return _InternalObservationType.COLOR_IMAGE
++    if obs_type is ObservationType.GREY_SCALE_IMAGE:
++        return _InternalObservationType.GREY_SCALE_IMAGE
++    return None
++
++
+ def _bytes_to_hash(bytes_to_hash: bytes) -> str:
+     # we are fine with using an unsafe hash function
+     md5_hash = md5()  # noqa
+     md5_hash.update(bytes_to_hash)
+     return md5_hash.hexdigest()
+ 
+ 
+@@ -48,15 +77,17 @@
+         bio.seek(0)
+         if hasattr(observation, "filename"):
+             name = Path(observation.filename).name
+         else:
+             name = _bytes_to_hash(bio.getvalue())
+         return (bio, name)
+ 
+-    raise ValueError(f"Loading observation of type {type(observation)} currently not supported.")
++    raise ValueError(
++        f"Loading an observation of type {type(observation)} is currently not supported."
++    )
+ 
+ 
+ class Observation:
+     """
+     An observation.
+ 
+     An instance of this class references an observation.
+@@ -83,53 +114,60 @@
+         subsets: Sequence[Union["Subset", int]],
+         name: Optional[str] = None,
+         odd_tags: Optional[List[str]] = None,
+     ) -> "Observation":
+         """
+         Create and upload a single observation.
+ 
+-        :param dataset: Dataset to add the observation to.
++        :param dataset: Dataset to add the observation to. An integer is
++            interpreted as the dataset ID.
+         :param file: Observation to upload. How this parameter is interpreted
+             depends on its type:
+ 
+-            * If the parameter is a string, it is interpreted as a text-observation to be uploaded.
+-            * If the parameter is a ``PIL.Image``, it is interpreted as an PNG image to be uploaded.
+-            * If the parameter is a ``pathlib.Path``, it is interpreted as the path of the \
+-                observation file to be uploaded.
++            * If the parameter is a string, it is interpreted as a
++                text-observation to be uploaded.
++            * If the parameter is a ``PIL.Image``, it is interpreted as a PNG
++                image to be uploaded.
++            * If the parameter is a ``pathlib.Path``, it is interpreted as the
++                path of the observation file to be uploaded.
+             * If the parameter is a ``bytes``-object, it is uploaded unchanged.
+ 
+         :param observation_type: Type of the observation to add.
+-        :param subsets: List of subsets this observation belongs to. Strings are
+-            interpreted as subset names.
++        :param subsets: List of subsets to include this observation in.
++            Integers are interpreted as subset IDs.
+         :param name: Name of the observation to create. If set to None, a name
+             is autogenerated by the following rule:
+ 
+-            * If the ``file`` parameter is an instance of ``pathlib.Path``, the file name is used.
+-            * If the ``file`` parameter is an instance of ``PIL.Image``, and has an attribute
+-                ``filename``, ``file.filename`` is used. This is the case if the ``file`` argument
+-                has been created using ``PIL.Image.open``.
+-            * Otherwise, the MD5 hash of the ``file`` attribute converted to bytes, is computed.
+-                The hex representation of this hash is used as observation name.
+-        :param odd_tags: List of parameters from the Operational Design Domain (ODD) that
+-            apply to this observation.
++            * If the ``file`` parameter is an instance of ``pathlib.Path``, the
++                file name is used.
++            * If the ``file`` parameter is an instance of ``PIL.Image`` and has
++                an attribute ``filename``, ``file.filename`` is used.
++                This is the case if the ``file`` argument has been created
++                using ``PIL.Image.open``.
++            * Otherwise, the MD5 hash of the ``file`` attribute converted to
++                bytes, is computed. The hex representation of this hash is used
++                as observation name.
++
++        :param odd_tags: List of tags from the Operational Design Domain (ODD)
++            that apply to this observation.
+         :return: Created observation.
+         """
+         if isinstance(dataset, Dataset):
+             dataset = dataset.id
+ 
+         subset_ids = [subset if isinstance(subset, int) else subset.id for subset in subsets]
+ 
+         api_service = get_api_client()
+         observation_file_object, name_from_file = _observation_to_file_object_and_name(file)
+         if name is None:
+             name = name_from_file
+ 
+         observation_response = await ObservationAPI(api_service).create(
+             dataset_id=dataset,
+-            observation_type=observation_type,
++            observation_type=_to_internal_observation_type(observation_type),
+             subset_ids=subset_ids,
+             odd_tags=odd_tags,
+             obs_name=name,
+             obs_data=observation_file_object,
+         )
+         return Observation(api_service=api_service, observation_response=observation_response)
+ 
+@@ -144,55 +182,55 @@
+         api_service = get_api_client()
+         pipeline_response = await ObservationAPI(api_service).get_by_id(observation_id)
+         return Observation(api_service, pipeline_response)
+ 
+     @classmethod
+     async def delete(cls, observation_id: int) -> None:
+         """
+-        Delete an observation by its ID.
++        Delete an observation.
+ 
+-        :param observation_id: int
++        :param observation_id: ID of the observation to delete.
+         :return: None.
+         """
+         await ObservationAPI(get_api_client()).delete(observation_id)
+ 
+     def as_remote_file(self) -> RemoteFile:
+         """
+         Get the corresponding remote file, which can be used to download the
+         observation.
+ 
+         :return: RemoteFile corresponding to the observation.
+         :raises AidkitClientError: If the observation type is unknown or the
+-            observation url is not set.
++            observation URL is not set.
+         """
+         if self._data.type in ["COLOR_IMAGE", "GREY_SCALE_IMAGE"]:
+             data_point_type = DataPointType.IMAGE
+         elif self._data.type == "TEXT":
+             data_point_type = DataPointType.TEXT
+         else:
+             raise AidkitClientError(f"Unknown observation type {self._data.type}.")
+         if self._data.file_url is None:
+             raise AidkitClientError(f"Observation with id {self.id} has no url.")
+         return RemoteFile(url=self._data.file_url, type=data_point_type)
+ 
+     @property
+     def id(self) -> int:
+         """
+-        Get the ID of the instance.
++        Get the ID of the observation.
+ 
+-        :return: ID of the instance.
++        :return: ID of the observation.
+         """
+         return self._data.id
+ 
+     @property
+     def name(self) -> str:
+         """
+-        Get the name the instance.
++        Get the name the observation.
+ 
+-        :return: Name of the instance.
++        :return: Name of the observation.
+         """
+         return self._data.file_name
+ 
+ 
+ class Subset:
+     """
+     A dataset subset.
+@@ -219,16 +257,16 @@
+         dataset: Union["Dataset", int],
+         observations: Sequence[Union[Observation, int]],
+     ) -> "Subset":
+         """
+         Create a subset of a dataset.
+ 
+         :param name: Name of the subset.
+-        :param dataset: Dataset to upload observations to. Strings are
+-            interpreted as dataset names.
++        :param dataset: Dataset to upload observations to. An integer is
++            interpreted as the dataset ID.
+         :param observations: Observations to be in the subset. Integers are
+             interpreted as observation IDs.
+         :return: Created subset.
+         """
+         if isinstance(dataset, Dataset):
+             dataset = dataset.id
+ 
+@@ -265,44 +303,44 @@
+         api_service = get_api_client()
+         response = await SubsetAPI(api_service).get(subset_id)
+         return Subset(api_service, response)
+ 
+     @property
+     def id(self) -> int:
+         """
+-        Get the ID of the instance.
++        Get the ID of the subset.
+ 
+-        :return: ID of the instance.
++        :return: ID of the subset.
+         """
+         return self._data.id
+ 
+     @property
+     def name(self) -> str:
+         """
+-        Get the name the instance.
++        Get the name the subset.
+ 
+-        :return: Name of the instance.
++        :return: Name of the subset.
+         """
+         return self._data.name
+ 
+     @property
+     def observation_ids(self) -> List[int]:
+         """
+-        Get the observation ids contained in the subset.
++        Get the IDs of the observations contained in the subset.
+ 
+-        :return: List of observation ids in the subset.
++        :return: List of observation IDs in the subset.
+         """
+         return self._data.observation_ids
+ 
+     @classmethod
+     async def delete(cls, subset_id: int) -> None:
+         """
+         Delete a subset.
+ 
+-        :param subset_id: int
++        :param subset_id: ID of the subset to delete.
+         :return: None.
+         """
+         await SubsetAPI(get_api_client()).delete(subset_id)
+ 
+ 
+ class Dataset:
+     """
+@@ -325,210 +363,257 @@
+ 
+     @classmethod
+     async def create(
+         cls,
+         dataset_name: str,
+         dataset_type: ObservationType,
+         files: Optional[Union[Dict[str, Any], List[Any]]] = None,
+-        subsets: Optional[Sequence[Union[Subset, str]]] = None,
++        subset_names: Optional[Sequence[Union[Subset, str]]] = None,
++        progress_bar: bool = True,
++        max_simultaneous_uploads: int = 5,
+     ) -> Tuple["Dataset", List[Subset]]:
+         """
+         Create a dataset.
+ 
+         :param dataset_name: Name of the dataset.
+         :param dataset_type: Type of the dataset.
+         :param files: Files to upload.
+-            Can be either a dictionary of the form ``{observation_name: file}`` or a list of files
+-            to upload.
++            Can be either a dictionary of the form ``{observation_name: file}``
++            or a list of files to upload.
+ 
+             How a file is interpreted depends on its type:
+ 
+-            * If a file is a string, it is interpreted as a text-observation to be uploaded.
+-            * If a file is a ``PIL.Image``, it is interpreted as an PNG image to be uploaded.
+-            * If a file is a ``pathlib.Path``, it is interpreted as the path of the \
+-                observation file to be uploaded.
++            * If a file is a string, it is interpreted as a text-observation to
++                be uploaded.
++            * If a file is a ``PIL.Image``, it is interpreted as an PNG image
++                to be uploaded.
++            * If a file is a ``pathlib.Path``, it is interpreted as the path of
++                the observation file to be uploaded.
+             * If a file is a ``bytes``-object, it is uploaded unchanged.
+ 
+-            If a list of files is passed, the names of the created observations are autogenerated
+-            by the following rule:
++            If a list of files is passed, the names of the created observations
++            are autogenerated by the following rule:
+ 
+-            * If a file is an instance of ``pathlib.Path``, the file name is used.
+-            * If a file is an instance of ``PIL.Image``, and has an attribute
+-                ``filename``, ``file.filename`` is used. This is the case if the file
+-                has been created using ``PIL.Image.open``.
+-            * Otherwise, the MD5 hash of the file converted to bytes is computed.
+-                The hex representation of this hash is used as observation name.
+-
+-        :param subsets: List of subsets to add in the dataset. If the ``files`` argument is not
+-            ``None``, all the created observations are added to all created subsets.
+-        :return: Tuple containing the created dataset and List of created subsets (may be empty)
++            * If a file is an instance of ``pathlib.Path``, the file name is
++                used.
++            * If a file is an instance of ``PIL.Image`` and has an attribute
++                ``filename``, ``file.filename`` is used. This is the case if
++                the file has been created using ``PIL.Image.open``.
++            * Otherwise, the MD5 hash of the file converted to bytes is
++                computed. The hex representation of this hash is used as
++                observation name.
++
++        :param subset_names: List of subsets to add in the dataset. Strings are
++            interpreted as subset names. If the ``files`` argument is not
++            ``None``, all the created observations are added to all the created
++            subsets.
++        :param progress_bar: If set to True, a progress bar is displayed.
++        :param max_simultaneous_uploads: Maximum number of simultaneous uploads.
++        :return: Tuple containing the created dataset and the list of created
++            subsets (may be empty).
+         """
+-        if subsets is None:
+-            subsets = []
++        if subset_names is None:
++            subset_names = []
+         if files is None:
+             files = []
+         api_service = get_api_client()
+         dataset_response = await DatasetAPI(api_service).create(
+             dataset_name=dataset_name,
+-            dataset_type=dataset_type,
++            dataset_type=_to_internal_observation_type(dataset_type),
+         )
+         dataset = Dataset(api_service=api_service, dataset_response=dataset_response)
+         created_subsets = []
+ 
+-        for subset in subsets:
++        for subset in subset_names:
+             subset_name = subset if isinstance(subset, str) else subset.name
+             created_subset = await dataset.create_subset(subset_name, [])
+             created_subsets.append(created_subset)
+ 
+-        await dataset.upload_data(files, [subset.id for subset in created_subsets])
+-        if subsets or files:
++        await dataset.upload_data(
++            files,
++            [subset.id for subset in created_subsets],
++            progress_bar=progress_bar,
++            max_simultaneous_uploads=max_simultaneous_uploads,
++        )
++        if subset_names or files:
+             # reload the dataset to reflect the changes
+             dataset = await Dataset.get_by_id(dataset.id)
+ 
+         return dataset, created_subsets
+ 
+     @classmethod
+     async def delete(cls, dataset_id: int) -> None:
+         """
+         Delete a dataset.
+ 
+-        :param dataset_id: int
++        :param dataset_id: ID of the dataset to delete.
+         :return: None.
+         """
+         await DatasetAPI(get_api_client()).delete(dataset_id)
+ 
+     async def create_subset(
+         self, name: str, observations: Sequence[Union[Observation, int]]
+     ) -> Subset:
+         """
+         Create a subset of the dataset.
+ 
+         :param name: Name of the subset to create.
+-        :param observations: Observations to be part of the subset. Integers are
+-            interpreted as observation IDs.
+-        :return: Created subsets.
++        :param observations: Observations to be included in the subset.
++            Integers are interpreted as observation IDs.
++        :return: Created subset.
+         """
+         return await Subset.create(name=name, dataset=self.id, observations=observations)
+ 
+     async def upload_data(
+         self,
+         files: Union[Dict[str, Any], List[Any]],
+         subsets: Sequence[Union[Subset, int]],
+         odd_tags: Optional[Sequence[Optional[List[str]]]] = None,
++        progress_bar: bool = True,
++        max_simultaneous_uploads: int = 5,
++        n_retry: int = 3,
+     ) -> List[Observation]:
+         """
+         Upload data to the dataset.
+ 
+         :param files: Files to upload.
+-            Can be either a dictionary of the form ``{observation_name: file}`` or a list of files
+-            to upload.
++            Can be either a dictionary of the form ``{observation_name: file}``
++            or a list of files to upload.
+ 
+             How a file is interpreted depends on its type:
+ 
+-            * If a file is a string, it is interpreted as a text-observation to be uploaded.
+-            * If a file is a ``PIL.Image``, it is interpreted as an PNG image to be uploaded.
+-            * If a file is a ``pathlib.Path``, it is interpreted as the path of the \
+-                observation file to be uploaded.
++            * If a file is a string, it is interpreted as a text-observation to
++                be uploaded.
++            * If a file is a ``PIL.Image``, it is interpreted as a PNG image to
++                be uploaded.
++            * If a file is a ``pathlib.Path``, it is interpreted as the path of
++                the observation file to be uploaded.
+             * If a file is a ``bytes``-object, it is uploaded unchanged.
+ 
+-            If a list of files is passed, the names of the created observations are autogenerated
+-            by the following rule:
++            If a list of files is passed, the names of the created observations
++            are autogenerated by the following rule:
+ 
+-            * If a file is an instance of ``pathlib.Path``, the file name is used.
+-            * If a file is an instance of ``PIL.Image``, and has an attribute
+-                ``filename``, ``file.filename`` is used. This is the case if the file
+-                has been created using ``PIL.Image.open``.
+-            * Otherwise, the MD5 hash of the file converted to bytes is computed.
+-                The hex representation of this hash is used as observation name.
+-
+-        :param subsets: List of subsets the observations are in. Strings are
+-            interpreted as subset names.
+-        :param odd_tags: List of parameters from the Operational Design Domain (ODD) for every
+-                observation that will be uploaded.
+-        :raises ValueError: If the number of ODD tags specified does not match the number
+-            of observations.
++            * If a file is an instance of ``pathlib.Path``, the file name is
++                used.
++            * If a file is an instance of ``PIL.Image`` and has an attribute
++                ``filename``, ``file.filename`` is used. This is the case if
++                the file has been created using ``PIL.Image.open``.
++            * Otherwise, the MD5 hash of the file converted to bytes is
++                computed. The hex representation of this hash is used as
++                observation name.
++
++        :param subsets: List of subsets to include the observations in.
++            Integers are interpreted as subset IDs.
++        :param odd_tags: List of tags from the Operational Design Domain (ODD)
++            for every observation that will be uploaded.
++        :param progress_bar: If set to True, a progress bar is displayed.
++        :param max_simultaneous_uploads: Maximum number of simultaneous uploads.
++        :param n_retry: Number of times to retry an observation upload before
++            reraising.
++        :raises ValueError: If the number of ODD tags specified does not match
++            the number of observations.
+         :return: Created observations.
+         """
+         observations = []
+         if isinstance(files, dict):
+-            name_and_files_list: Iterable[Tuple[Optional[str], Any]] = files.items()
++            name_and_files_list: List[Tuple[Optional[str], Any]] = list(files.items())
+         else:
+             name_and_files_list = [(None, file) for file in files]
+ 
+         if not odd_tags:
+             converted_odd_tags: Iterable[Optional[List[str]]] = [None for _ in name_and_files_list]
+         else:
+             if len(odd_tags) != len(files):
+                 raise ValueError(
+                     (
+-                        "The number of provided odd_tags does not match the number of "
+-                        f"observations ({len(odd_tags)} != {len(files)})"
++                        "The number of provided odd_tags does not match the "
++                        f"number of observations: ({len(odd_tags)} != {len(files)})"
+                     )
+                 )
+             converted_odd_tags = odd_tags
+ 
+-        for (name, file), odd_tag in zip(name_and_files_list, converted_odd_tags):
+-            uploaded_observation = await Observation.create(
+-                dataset=self.id,
+-                file=file,
+-                observation_type=ObservationType(self._data.type),
+-                subsets=subsets,
+-                name=name,
+-                odd_tags=odd_tag,
++        semaphore = asyncio.Semaphore(max_simultaneous_uploads)
++        with tqdm(
++            total=len(name_and_files_list), desc="Uploading files...", disable=not progress_bar
++        ) as tqdm_progress_bar:
++
++            @retry(
++                stop=stop_after_attempt(n_retry),
++                reraise=True,
++            )
++            async def upload_file(
++                name: Optional[str], file: Any, odd_tags: Optional[List[str]]
++            ) -> Observation:
++                async with semaphore:
++                    obs = await Observation.create(
++                        dataset=self.id,
++                        file=file,
++                        observation_type=ObservationType(self._data.type),
++                        subsets=subsets,
++                        name=name,
++                        odd_tags=odd_tags,
++                    )
++                    tqdm_progress_bar.update(1)
++                    return obs
++
++            observations = await asyncio.gather(
++                *(
++                    upload_file(name, file, odd_tags)
++                    for ((name, file), odd_tags) in zip(name_and_files_list, converted_odd_tags)
++                )
+             )
+-            observations.append(uploaded_observation)
+ 
+         return observations
+ 
+     @classmethod
+     async def get_all(cls) -> List["Dataset"]:
+         """
+-        Get all Datasets.
++        Get all the datasets created in aidkit.
+ 
+-        :return: List of Datasets
++        :return: List of datasets.
+         """
+         api_service = get_api_client()
+         return [
+             Dataset(api_service, response) for response in await DatasetAPI(api_service).get_all()
+         ]
+ 
+     async def get_all_subsets(self) -> List["Subset"]:
+         """
+-        Get all Subsets for the Dataset.
++        Get all the subsets of the dataset.
+ 
+-        :return: List of Subsets
++        :return: List of subsets.
+         """
+         api_service = get_api_client()
+         return [
+             Subset(api_service, response)
+             for response in await SubsetAPI(api_service).get_all(self.id)
+         ]
+ 
+     @classmethod
+     async def get_by_id(cls, dataset_id: int) -> "Dataset":
+         """
+-        Get a Dataset by its ID.
++        Get a dataset by its ID.
+ 
+         :param dataset_id: ID of the dataset to create an instance of.
+-        :return: Instance of the Dataset with the given ID.
++        :return: Instance of the dataset with the given ID.
+         """
+         api_service = get_api_client()
+         pipeline_response = await DatasetAPI(api_service).get(dataset_id)
+         return Dataset(api_service, pipeline_response)
+ 
+     @property
+     def id(self) -> int:
+         """
+-        Get the ID of the instance.
++        Get the ID of the dataset.
+ 
+-        :return: ID of the instance.
++        :return: ID of the dataset.
+         """
+         return self._data.id
+ 
+     @property
+     def name(self) -> str:
+         """
+-        Get the name the instance.
++        Get the name the dataset.
+ 
+-        :return: Name of the instance.
++        :return: Name of the dataset.
+         """
+         return self._data.name
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/ml_model.py` & `aidkit_client-0.7.0/aidkit_client/resources/ml_model.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,14 @@
+ 
+ Machine learning models must be configured using the web GUI. After a
+ model has been configured, model versions can be uploaded using the
+ python client.
+ """
+ import io
+ import os
+-import string
+ from pathlib import Path
+ from typing import Any, BinaryIO, Dict, List, Literal, Optional, Tuple, Union
+ 
+ from tqdm import tqdm
+ 
+ from aidkit_client._endpoints.ml_models import MLModelsAPI
+ from aidkit_client._endpoints.models import (
+@@ -125,39 +124,42 @@
+         self._model_version_response = model_version_response
+ 
+     @staticmethod
+     def model_to_file_object(model: Any) -> Tuple[BinaryIO, str]:
+         """
+         Convert the passed model to binary.
+ 
+-        :param model: Can be a string path to the model file, a torchscript model or a
+-            TF model. This parameter value is typed as Any so we can avoid additional
+-            imports of either torch or tensorflow.
++        :param model: Can be a string path to the model file, a `pathlib.Path`
++            pointing to a model file, a torchscript model or a TF model. This
++            parameter value is typed as Any so we can avoid additional imports
++            of either torch or tensorflow.
+         :return: Model binary and file name.
+         :raises ImportError: When unsupported model is passed.
+         :raises ValueError: When torch.nn.Module is passed.
+         """
+         if isinstance(model, str):
+-            if model.split(".")[-1] not in TF_EXT + TORCH_EXT:
++            model = Path(model)
++        if isinstance(model, Path):
++            if model.name.split(".")[-1] not in TF_EXT + TORCH_EXT:
+                 raise ImportError(
+                     "Unsupported file format. "
+                     f"The supported formats are Torch: {TORCH_EXT}, TF: {TF_EXT}"
+                 )
+-            return open(model, "rb"), model  # pylint: disable=consider-using-with
++            return open(model, "rb"), model.name  # pylint: disable=consider-using-with
+         try:
+             import torch  # pylint: disable=import-outside-toplevel
+ 
+             if isinstance(model, torch.jit.ScriptModule):
+                 bio = io.BytesIO()
+                 torch.jit.save(model, bio)
+                 bio.seek(0, os.SEEK_SET)
+                 return bio, "temp.ptc"
+ 
+             if isinstance(model, torch.nn.Module):
+-                ValueError(
++                raise ValueError(
+                     f"""ML Models of type {type(model)} are not supported.
+                 Please convert the torch model to a torch.jit.ScriptModule by
+                 calling torch.jit.trace(model, example_input), see
+                 https://pytorch.org/docs/stable/jit.html"""
+                 )
+         except ImportError:
+             pass
+@@ -197,16 +199,16 @@
+     ) -> "MLModelVersion":
+         """
+         Upload a new model version.
+ 
+         :param model_version: Model version to upload. How this parameter is interpreted
+             depends on its type:
+ 
+-            * If the parameter is a string, it is interpreted as the path of the model \
+-                file to be uploaded.
++            * If the parameter is a `pathlib.Path` or a string, it is interpreted as the path of the
++                model file to be uploaded.
+             * If the parameter is an instance of a keras model, the model is saved and \
+                 the resulting file is uploaded.
+             * If the parameter is a torch ``ScriptModule``, the ``ScriptModule`` is \
+                 saved and the resulting file is uploaded.
+ 
+         :param model: Instance of the model or ID of the model to upload a new version of.
+         :param model_version_name: Name of the new model version.
+@@ -340,35 +342,14 @@
+         Get the name of the model instance.
+ 
+         :return: Name of the model instance.
+         """
+         return self._model_response.name
+ 
+     @staticmethod
+-    def _validate_name(name: str) -> str:
+-        """
+-        Validate whether `name` contains only allowed characters.
+-
+-        :param name: Name to validate.
+-        :returns: Validated name.
+-        :raises ValueError: If the name is not valid.
+-        """
+-        allowed_chars = set(string.ascii_letters + string.digits + "-")
+-        used_chars = set(name)
+-
+-        if used_chars.issubset(allowed_chars):
+-            return name
+-
+-        raise ValueError(
+-            f"The provided name {name} is not valid. "
+-            f"It should only contain latin letters, digits and dashes '-'. "
+-            f"Whitespaces and other symbols are not allowed."
+-        )
+-
+-    @staticmethod
+     def _get_class_names(
+         class_names: Union[int, Path, List[str]]
+     ) -> Union[List[str], AutogeneratedClasses]:
+         """
+         Get the class names by parsing a file or autogenerating them if needed.
+ 
+         :param class_names: Either the number of classes, the path to the file
+@@ -599,39 +580,40 @@
+             BoundingBoxDimensionsTypes.boxes_x_coordinates
+             if output_format.boxes.shape == "boxes_coordinates"
+             else BoundingBoxDimensionsTypes.coordinates_x_boxes
+         )
+ 
+         parsed_output_format: Union[DetectionDictOutputFormat, SequenceOutputFormat]
+ 
++        coordinate_format = _BOUNDING_BOXES_FORMATS[output_format.boxes.format]
++
+         if output_format.format == "dictionary":
+             parsed_output_format = DetectionDictOutputFormat(
+                 scores_key=output_format.scores_identifier,
+                 boxes_key=output_format.boxes.identifier,
+                 score_dimension_type=score_dimension_type,
+                 box_dimension_type=box_dimension_type,
++                coordinate_format=coordinate_format,
+             )
+         else:
+             parsed_output_format = SequenceOutputFormat(
+                 scores_key=output_format.scores_identifier,
+                 boxes_key=output_format.boxes.identifier,
+                 score_dimension_type=score_dimension_type,
+                 box_dimension_type=box_dimension_type,
++                coordinate_format=coordinate_format,
+             )
+ 
+-        coordinate_format = _BOUNDING_BOXES_FORMATS[output_format.boxes.format]
+-
+         post_processor: Optional[CoreNMSPostProcessor] = None
+         if output_format.post_processing:
+             post_processor = CoreNMSPostProcessor(**output_format.post_processing.dict())
+ 
+         return DetectionModelOutputSpecs(
+             class_names=class_names_parsed,
+             output_format=parsed_output_format,
+-            coordinate_format=coordinate_format,
+             post_processor=post_processor,
+         )
+ 
+     @classmethod
+     async def create(
+         cls,
+         model: Any,
+@@ -657,28 +639,28 @@
+         """
+         Create and upload a new image model. Currently supports image
+         classification and segmentation models.
+ 
+         :param model: Model to upload. How this parameter is interpreted
+             depends on its type:
+ 
+-            * If the parameter is a string, it is interpreted as the path of the model \
+-                file to be uploaded.
++            * If the parameter is a `pathlib.Path` or a string, it is interpreted as the path of the
++                model file to be uploaded.
+             * If the parameter is an instance of a keras model, the model is saved and \
+                 the resulting file is uploaded.
+             * If the parameter is a torch ``ScriptModule``, the ``ScriptModule`` is \
+                 saved and the resulting file is uploaded.
+ 
+         :param model_name: Name of the model to create.
+         :param model_version_name: Name of the first model version.
+         :param framework: Framework of the model, either "TensorFlow" or "PyTorch".
+         :param class_names: Names of the classes. How this parameter is interpreted
+             depends on its type:
+ 
+-            * If the parameter is a string, it is interpreted as the path of a file \
++            * If the parameter is a `pathlib.Path`, it is interpreted as the path of a file \
+             containing the comma separated list of class names.
+             * If the parameter is a list of strings, each string is interpreted as a \
+             class name.
+             * If the parameter is an integer, it is interpreted as the number of \
+             classes and the names will be autogenerated.
+ 
+         :param image_input_config: Image input configuration.
+@@ -689,17 +671,14 @@
+         :return: Tuple containing the newly created model and the corresponding first
+             model version.
+         :raises ValueError: If the output format doesn't correspond to an image
+             classification or image segmentation model.
+         """
+         api_service = get_api_client()
+ 
+-        model_name = cls._validate_name(model_name)
+-        model_version_name = cls._validate_name(model_version_name)
+-
+         class_names_parsed = cls._get_class_names(class_names=class_names)
+ 
+         input_specs = cls._build_input_specs(
+             batch=batch_axis, image_input_config=image_input_config, image_scaler=image_scaler
+         )
+ 
+         output_specs: Union[
+@@ -875,16 +854,16 @@
+ 
+         :param model_name: Name of the model to create.
+         :param model_version_name: Name of the first model version.
+         :param framework: Framework of the model, either "TensorFlow" or "PyTorch".
+         :param class_names: Names of the classes. How this parameter is interpreted
+             depends on its type:
+ 
+-            * If the parameter is a string, it is interpreted as the path of a file \
+-            containing the comma separated list of class names.
++            * If the parameter is a `pathlib.Path` or a string, it is interpreted as the path of the
++                model file to be uploaded.
+             * If the parameter is a list of strings, each string is interpreted as a \
+             class name.
+             * If the parameter is an integer, it is interpreted as the number of \
+             classes and the names will be autogenerated.
+ 
+         :param output_format: Model output format.
+         :param batch_axis: Optional string indicating the batch dimension, either
+@@ -894,17 +873,14 @@
+         :param tokenizer: Optional Tokenizer to transform tokens into a
+             numerical representation.
+         :return: Tuple containing the newly created model and the corresponding first
+             model version.
+         """
+         api_service = get_api_client()
+ 
+-        model_name = cls._validate_name(model_name)
+-        model_version_name = cls._validate_name(model_version_name)
+-
+         class_names_parsed = cls._get_class_names(class_names=class_names)
+ 
+         input_specs = cls._build_input_specs(
+             batch=batch_axis, pre_tokenizer=pre_tokenizer, tokenizer=tokenizer
+         )
+ 
+         output_specs = cls._build_classification_output_specs(
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/ml_model_input_configuration.py` & `aidkit_client-0.7.0/aidkit_client/resources/ml_model_input_configuration.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -6,57 +6,57 @@
+ from typing import List, Literal, Union
+ 
+ from pydantic import BaseModel, Field
+ 
+ 
+ class ZeroToOneScaler(BaseModel):
+     """
+-    Normalize data to [0, 1] range.
++    Normalize the input image to [0, 1] range.
+     """
+ 
+-    name: Literal["ZeroToOne"] = Field("ZeroToOne", title="Scaler [0, 1]")
++    name: Literal["ZeroToOne"] = Field("ZeroToOne", title="Scale input to range [0,1]")
+ 
+ 
+ class MinusOneToOneScaler(BaseModel):
+     """
+-    Normalize data to [-1, 1] range.
++    Normalize the input image to [-1, 1] range with 0 mean.
+     """
+ 
+-    name: Literal["MinusOneToOne"] = Field("MinusOneToOne", title="Scaler [-1, 1]")
++    name: Literal["MinusOneToOne"] = Field("MinusOneToOne", title="Scale input to range [-1, 1]")
+ 
+ 
+ class ImageNetPresetScaler(BaseModel):
+     """
+-    Scale data with ImageNet preset mean and standard deviation values.
++    Standardize the input image with ImageNet mean and standard deviation.
+     """
+ 
+-    name: Literal["ImageNetScaler"] = Field("ImageNetScaler", title="ImageNet Preset Scaler")
++    name: Literal["ImageNetScaler"] = Field("ImageNetScaler", title="ImageNet Standardization")
+     data_mean: List[float] = Field(default=[0.485, 0.456, 0.406], title="Mean", hidden=True)
+     data_std: List[float] = Field(
+         default=[0.229, 0.224, 0.225], title="Standard Deviation", hidden=True
+     )
+ 
+ 
+ class RGBCustomScaler(BaseModel):
+     """
+-    Scale the data with the given per-channel mean and standard deviation
+-    values.
++    Standardize the input image with the given per-channel mean and standard
++    deviation values.
+     """
+ 
+-    name: Literal["RGBCustom"] = Field("RGBCustom", title="Custom")
++    name: Literal["RGBCustom"] = Field("RGBCustom", title="Custom Standardization")
+     data_mean: List[float] = Field(default=[0.0, 0.0, 0.0], title="Mean")
+     data_std: List[float] = Field(default=[1.0, 1.0, 1.0], title="Standard Deviation")
+ 
+ 
+ class GrayscaleCustomScaler(BaseModel):
+     """
+-    Scale the data with the given mean and standard deviation.
++    Standardize the input image with the given mean and standard deviation.
+     """
+ 
+-    name: Literal["GrayScaleCustom"] = Field("GrayScaleCustom", title="Custom")
++    name: Literal["GrayScaleCustom"] = Field("GrayScaleCustom", title="Custom Standardization")
+     data_mean: float = Field(default=0.0, title="Mean")
+     data_std: float = Field(default=1.0, gt=0.0, title="Standard Deviation")
+ 
+ 
+ class ImageInputConfig(BaseModel):
+     """
+     Configuration of input images.
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/ml_model_output_formats.py` & `aidkit_client-0.7.0/aidkit_client/resources/ml_model_output_formats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/pipeline.py` & `aidkit_client-0.7.0/aidkit_client/resources/pipeline.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -28,15 +28,14 @@
+ )
+ from aidkit_client._endpoints.pipeline_runs import PipelineRunsAPI
+ from aidkit_client._endpoints.pipelines import PipelineResponse, PipelinesAPI
+ from aidkit_client.aidkit_api import HTTPService
+ from aidkit_client.configuration import get_api_client
+ from aidkit_client.exceptions import (
+     AidkitClientError,
+-    PipelineRunError,
+     RunTimeoutError,
+     TargetClassNotPassedError,
+ )
+ from aidkit_client.resources.dataset import Subset
+ from aidkit_client.resources.ml_model import MLModelVersion
+ 
+ 
+@@ -115,24 +114,15 @@
+         # otherwise, it's either pending or finished
+         response = await PipelineRunsAPI(self._api_service).get(self._data.id)
+         if response.error_message is None:
+             state_message = "No errors to report."
+         else:
+             state_message = response.error_message
+ 
+-        states = [node.state for node in response.nodes]
+-        if PipelineRunState.FAILED in states:
+-            return PipelineRunState.FAILED, state_message
+-        if PipelineRunState.STOPPED in states:
+-            return PipelineRunState.STOPPED, state_message
+-        if all(state == PipelineRunState.SUCCESS for state in states):
+-            return PipelineRunState.SUCCESS, state_message
+-        if all(state == PipelineRunState.PENDING for state in states):
+-            return PipelineRunState.PENDING, state_message
+-        return PipelineRunState.RUNNING, state_message
++        return response.state, state_message
+ 
+     async def wait_to_finish(
+         self,
+         pipeline_finish_timeout: Optional[int] = None,
+         progress_bar: bool = False,
+     ) -> None:
+         """
+@@ -146,66 +136,51 @@
+         :param progress_bar: Whether to display a progress bar when waiting for
+             the pipeline to finish.
+         :raises RunTimeoutError: If ``pipeline_finish_timeout`` seconds have
+             passed, but the pipeline run is not finished yet.
+         :return: Return if pipeline finishes
+         """
+ 
+-        async def get_node_states() -> Tuple[int, int]:
++        async def get_progress_percentage() -> float:
+             """
+-            Get the total and finished number of nodes of a pipeline run.
+-
+-            :raises PipelineRunError: If the pipeline run has either failed or was
+-                stopped.
+-            :return: A tuple ``(total_number, finished_number)``. A pipeline run is
+-                a DAG of tasks; ``total_number`` is the total number of tasks in the
+-                pipeline run, whereas ``finished_number`` is the number of tasks in
+-                the pipeline run which are finished.
++            :return: Pipeline progress percentage.
+             """
+             response = await PipelineRunsAPI(self._api_service).get(self._data.id)
+-            states = [node.state for node in response.nodes]
+-            if PipelineRunState.FAILED in states:
+-                raise PipelineRunError(response.error_message)
+-            if PipelineRunState.STOPPED in states:
+-                raise PipelineRunError("Pipeline stopped.")
+-            n_of_finished_nodes = sum(1 for state in states if state == PipelineRunState.SUCCESS)
+-            return len(states), n_of_finished_nodes
++
++            return response.progress
+ 
+         starting_time = time()
+         current_time = starting_time
+ 
+-        n_of_nodes, _ = await get_node_states()
+-
+-        last_finished_nodes = 0
++        last_progress = 0
+         # the below is not missing an f-prefix, but is a format string for tqdm
+         status_bar_format = (
+             "{desc}: {percentage:3.0f}%|{bar}| "  # noqa: FS003
+             "{n_fmt}/{total_fmt} [{elapsed}]"  # noqa: FS003
+         )
+         with tqdm(
+-            total=n_of_nodes,
++            total=100,
+             disable=not progress_bar,
+             desc="Pipeline Run progress",
+             miniters=1,
+             mininterval=0,
+             bar_format=status_bar_format,
+         ) as pbar:
+             while (
+                 pipeline_finish_timeout is None
+                 or current_time - starting_time < pipeline_finish_timeout
+             ):
+-                n_of_nodes, finished_nodes = await get_node_states()
+-
++                progress_percentage = int(await get_progress_percentage())
+                 # keep the elapsed time at x.5 for consistent tqdm "elapsed time" updates
+                 await asyncio.sleep((starting_time - time()) % 1 + 0.5)
+-                pbar.update(finished_nodes - last_finished_nodes)
++                pbar.update(progress_percentage - last_progress)
+                 # without refreshing, tqdm will not update the elapsed time unless there is progress
+                 pbar.refresh()
+-                last_finished_nodes = finished_nodes
+-                if n_of_nodes == finished_nodes:
++                last_progress = progress_percentage
++                if progress_percentage == 100:
+                     return
+                 current_time = time()
+         raise RunTimeoutError(
+             f"Pipeline has not finished after the timeout of {pipeline_finish_timeout} seconds."
+         )
+ 
+     @property
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/report/_base_report.py` & `aidkit_client-0.7.0/aidkit_client/resources/report/_base_report.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,17 +1,15 @@
+ """
+ Shared functionality for the adversarial and corruption reports.
+ """
+ 
+ import json
+ import random
+-from dataclasses import dataclass
+-from typing import Dict, List, Optional, Union
++from typing import Dict, List, Union
+ 
+-import altair as alt
+ import numpy as np
+ import PIL.Image
+ from ipywidgets import widgets
+ from pandas import DataFrame
+ 
+ from aidkit_client._endpoints.models import (
+     ClassificationModelOutput,
+@@ -22,37 +20,28 @@
+     ReportCoreMethodOutputDetailResponse,
+     ReportCorruptionResponse,
+ )
+ from aidkit_client._endpoints.report import ReportAPI
+ from aidkit_client.aidkit_api import HTTPService
+ from aidkit_client.configuration import get_api_client
+ from aidkit_client.plotting.base_objects import (
+-    display_class_color,
+     display_inference_per_class_widget,
+     display_object_detection_box_count_widget,
+     display_observation,
+     display_selection_class_detection_widget,
+     display_semantic_segmentation_inference_argmax_widget,
+     display_static_observation_difference,
+     display_table,
++    generate_color_list,
+     get_inference_argmax_prediction,
+     get_inference_per_class_confidence,
+ )
+ from aidkit_client.resources.data_point import DataPointType, RemoteFile
+ from aidkit_client.resources.dataset import Observation
+-
+-
+-@dataclass
+-class ModelComparisonView:
+-    """
+-    Model-comparison view of the report.
+-    """
+-
+-    plot: alt.LayerChart
+-    stats: DataFrame
++from aidkit_client.resources.ml_model import MLModel, MLModelVersion
+ 
+ 
+ class PerturbedObservationDetails:
+     """
+     Inference results from the report detail view corresponding to the original
+     observation and a perturbed observation.
+     """
+@@ -183,15 +172,14 @@
+ 
+ class _BaseReport:
+     """
+     Base class for the corruption- and the adversarial report.
+     """
+ 
+     _data: Union[ReportCorruptionResponse, ReportAdversarialResponse]
+-    model: Optional[int] = None
+ 
+     @property
+     def data(self) -> DataFrame:
+         """
+         Get the data of the report.
+ 
+         :return: DataFrame containing sample data for the report. The returned DataFrame has one row
+@@ -214,50 +202,64 @@
+                 perturbation.
+             * ``observation_id``: Integer; ID of the original observation the perturbation was
+                 created for.
+             * ``artifact_id``: Integer; ID of the generated perturbation.
+             * ``distance_metric_name``: Categorical; Name of the metric used to measure
+                 ``distance_metric_value``.
+                 One of the names in ``metric_names``.
+-            * ```model_version``: Categorical; Name of the model version the perturbed observation
++            * ```model_version_id``: Integer; ID of the model version the perturbed observation
+                 was created for.
+-                One of the names in ``model_version_names``.
+             * ```perturbation_type``: Categorical; Type of the perturbation, i.e.: 'Corruption'.
+         """
+-        return DataFrame(self._data.data).astype(
++        return DataFrame(self._data.report.data.dict()).astype(
+             {
+-                "model_version": "category",
+                 "distance_metric_name": "category",
+                 "method_name": "category",
+                 "param_string": "category",
+                 "success_metric_type": "category",
+                 "target_class": "category",
+                 "perturbation_type": "category",
+             }
+         )
+ 
++    @property
++    def model(self) -> MLModel:
++        return MLModel(get_api_client(), self._data.model)
++
++    @property
++    def model_versions(self) -> List[MLModelVersion]:
++        return [
++            MLModelVersion(get_api_client(), model_version_data)
++            for model_version_data in self._data.model_versions
++        ]
++
+     def _get_pipeline_info_for_id(self, perturbed_observation_id: int) -> Dict:
+         param_dict = json.loads(
+             self.data[self.data["artifact_id"] == perturbed_observation_id]["param_string"].iloc[0]
+         )
+-        model_version = self.data[self.data["artifact_id"] == perturbed_observation_id][
+-            "model_version"
++        model_version_id: int = self.data[self.data["artifact_id"] == perturbed_observation_id][
++            "model_version_id"
+         ].iloc[0]
++        (model_version,) = [
++            model_version
++            for model_version in self.model_versions
++            if model_version.id == model_version_id
++        ]
+         return {
+-            "Model": [f"Name: {self.model}<br>Version: {model_version}"],
++            "Model": [f"Name: {self.model.name}<br>Version: {model_version.name}"],
++            "Perturbation Type": [
++                self.data[self.data["artifact_id"] == perturbed_observation_id][
++                    "perturbation_type"
++                ].iloc[0]
++            ],
+             "Method Name": [
+                 self.data[self.data["artifact_id"] == perturbed_observation_id]["method_name"].iloc[
+                     0
+                 ]
+             ],
+-            "Type": [
+-                self.data[self.data["artifact_id"] == perturbed_observation_id][
+-                    "perturbation_type"
+-                ].iloc[0]
+-            ],
+             "Parameters": [param_dict],
+         }
+ 
+     def _get_metrics_for_id(self, perturbed_observation_id: int) -> Dict:
+         metric_df = self.data[self.data["artifact_id"] == perturbed_observation_id][
+             ["distance_metric_name", "distance_metric_value"]
+         ]
+@@ -316,34 +318,48 @@
+         return out
+ 
+     async def _get_classification_detail_view(self, perturbed_observation_id: int) -> widgets.VBox:
+         """
+         Produce the classification detail view for a given perturbed
+         observation.
+ 
+-        :raises ValueError: If inference output has wrong type.
+-        :param perturbed_observation_id: ID specifying the perturbed observation.
++        :param perturbed_observation_id: ID specifying the perturbed
++            observation.
++        :raises ValueError: If the inference result type is not classification.
+         :return: View as ipython widget.
+         """
+-        perturbed_obs_details = await PerturbedObservationDetails.get_by_perturbed_observation_id(
+-            perturbed_observation_id
++        perturbed_obs_details = await (
++            PerturbedObservationDetails.get_by_perturbed_observation_id(
++                perturbed_observation_id=perturbed_observation_id
++            )
+         )
+-        perturbed_observation = (
+-            await perturbed_obs_details.perturbed_observation_as_remote_file().fetch_remote_file()
++        perturbed_observation: PIL.Image.Image = await (
++            perturbed_obs_details.perturbed_observation_as_remote_file().fetch_remote_file()
+         )
+ 
+         observation_resource = await perturbed_obs_details.observation
+-        observation = await observation_resource.as_remote_file().fetch_remote_file()
++        observation: PIL.Image.Image = (
++            await observation_resource.as_remote_file().fetch_remote_file()
++        )
++
++        if not isinstance(
++            perturbed_obs_details.observation_inference_result, ClassificationModelOutput
++        ) or not isinstance(
++            perturbed_obs_details.perturbed_observation_inference_result,
++            ClassificationModelOutput,
++        ):
++            raise ValueError("Model task is wrongly configured.")
++
+         original_observation_widget = display_observation(
+-            observation,
++            observation=observation,
+             title="<center><b>Original Observation</b></center>",
+-            caption=[("File", observation_resource.name), ("ID", str(observation_resource.id))],
++            caption=[("ID", str(observation_resource.id)), ("File", observation_resource.name)],
+         )
+         perturbed_observation_widget = display_observation(
+-            perturbed_observation,
++            observation=perturbed_observation,
+             title="<center><b>Perturbed Observation</b></center>",
+             caption=[("ID", str(perturbed_observation_id))],
+         )
+ 
+         if isinstance(observation, str):
+             observation_box = widgets.VBox
+         else:
+@@ -353,27 +369,19 @@
+             [
+                 original_observation_widget,
+                 perturbed_observation_widget,
+             ]
+         )
+ 
+         difference_widget = display_static_observation_difference(
+-            observation, perturbed_observation
++            original=observation, perturbed=perturbed_observation
+         )
+ 
+         class_names = perturbed_obs_details.inference_class_names
+ 
+-        if not isinstance(
+-            perturbed_obs_details.observation_inference_result, ClassificationModelOutput
+-        ) or not isinstance(
+-            perturbed_obs_details.perturbed_observation_inference_result,
+-            ClassificationModelOutput,
+-        ):
+-            raise ValueError("Model task is wrongly configured.")
+-
+         observation_inference_result = perturbed_obs_details.observation_inference_result.data
+         perturbed_inference_result = (
+             perturbed_obs_details.perturbed_observation_inference_result.data
+         )
+ 
+         top_inference_classes = (
+             list(np.array(observation_inference_result).argsort())[-5:]
+@@ -386,107 +394,132 @@
+         inference_table: Dict[str, List[Union[str, float, int]]] = {
+             str(class_names[i]): [
+                 f"{float(observation_inference_result[i]):.2f}",
+                 f"{float(perturbed_inference_result[i]):.2f}",
+             ]
+             for i in set(top_inference_classes)
+         }
+-        inference_table_header = ["Original observation", "Perturbed observation"]
++        inference_table_header = ["Original", "Perturbed"]
+         prediction_highlight = {str(class_names[prediction_original]): {0: "#c0edc0"}}
+         if prediction_original == prediction_perturbed:
+             prediction_highlight[str(class_names[prediction_perturbed])][1] = "#c0edc0"
+         else:
+             prediction_highlight[str(class_names[prediction_perturbed])] = {1: "#c0edc0"}
+         inference_table_widget = display_table(
+-            inference_table, header=inference_table_header, highlight_cells=prediction_highlight
++            data=inference_table,
++            header=inference_table_header,
++            highlight_cells=prediction_highlight,
++        )
++        metrics_table_widget = display_table(
++            data=self._get_metrics_for_id(perturbed_observation_id)
+         )
+-        metrics_table_widget = display_table(self._get_metrics_for_id(perturbed_observation_id))
+         pipeline_info_table_widget = display_table(
+-            self._get_pipeline_info_for_id(perturbed_observation_id)
++            data=self._get_pipeline_info_for_id(perturbed_observation_id)
+         )
+ 
+         view_elements = [
+             inference_table_widget,
+             metrics_table_widget,
+             pipeline_info_table_widget,
+             difference_widget,
+         ]
+         view_element_headers = [
+             "Model Inference",
+             "Perturbation Size",
+             "Perturbation Details",
+-            "Difference between Original and Perturbed Observation",
++            "Difference Between Original and Perturbed Observation",
+         ]
+ 
+         return self._assemble_widgets_in_view(
+-            observation_box_widget, view_elements, view_element_headers
++            observation_widget=observation_box_widget,
++            widget_list=view_elements,
++            widget_header=view_element_headers,
+         )
+ 
+     async def _get_semantic_segmentation_detail_view(
+         self, perturbed_observation_id: int
+     ) -> widgets.VBox:
+         """
+         Produce the semantic segmentation detail view for a given perturbed
+         observation.
+ 
+-        :param perturbed_observation_id: ID specifying the perturbed observation.
++        :param perturbed_observation_id: ID specifying the perturbed
++            observation.
++        :raises ValueError: If the inference result type is not segmentation.
+         :return: View as ipython widget.
+         """
+-        aversarial_example_details = await (
+-            PerturbedObservationDetails.get_by_perturbed_observation_id(perturbed_observation_id)
++        adversarial_example_details = await (
++            PerturbedObservationDetails.get_by_perturbed_observation_id(
++                perturbed_observation_id=perturbed_observation_id
++            )
+         )
+-        perturbed_observation = await (
+-            aversarial_example_details.perturbed_observation_as_remote_file().fetch_remote_file()
++        perturbed_observation: PIL.Image.Image = await (
++            adversarial_example_details.perturbed_observation_as_remote_file().fetch_remote_file()
+         )
+-        observation = (
+-            await (await aversarial_example_details.observation)
+-            .as_remote_file()
+-            .fetch_remote_file()
++
++        observation_resource = await adversarial_example_details.observation
++        observation: PIL.Image.Image = (
++            await observation_resource.as_remote_file().fetch_remote_file()
+         )
+-        observation_resource = await aversarial_example_details.observation
++
++        if not isinstance(
++            adversarial_example_details.observation_inference_result, ImageSegmentationModelOutput
++        ) or not isinstance(
++            adversarial_example_details.perturbed_observation_inference_result,
++            ImageSegmentationModelOutput,
++        ):
++            raise ValueError("Model task is wrongly configured.")
+ 
+         # Display the original and perturbed observation side by side
+         original_observation_widget = display_observation(
+-            observation,
++            observation=observation,
+             title="<center><b>Original Observation</b></center>",
+-            caption=[("File", observation_resource.name), ("ID", str(observation_resource.id))],
++            caption=[("ID", str(observation_resource.id)), ("File", observation_resource.name)],
+         )
+         perturbed_observation_widget = display_observation(
+-            perturbed_observation,
++            observation=perturbed_observation,
+             title="<center><b>Perturbed Observation</b></center>",
+             caption=[("ID", str(perturbed_observation_id))],
+         )
+ 
+         observation_box_widget = widgets.HBox(
+             [
+                 original_observation_widget,
+                 perturbed_observation_widget,
+             ]
+         )
+ 
+         # Perform a fex computation to display in the detail view
+-        target_classes = aversarial_example_details.inference_class_names
++        target_classes = adversarial_example_details.inference_class_names
+         n_classes = len(target_classes)
+ 
++        # Get the list of colors for the classes
++        class_colors = generate_color_list(n_classes)
++
+         # Transform the inference data into numpy arrays
+-        inference_array = np.array(aversarial_example_details.observation_inference_result.data)
++        inference_array = np.array(adversarial_example_details.observation_inference_result.data)
+         perturbed_inference_array = np.array(
+-            aversarial_example_details.perturbed_observation_inference_result.data
++            adversarial_example_details.perturbed_observation_inference_result.data
+         )
+ 
+         # Compute the images to show in the inference section of the detail view
+-        inference_per_class_confidence_images = get_inference_per_class_confidence(inference_array)
++        inference_per_class_confidence_images = get_inference_per_class_confidence(
++            inference_result=inference_array
++        )
+         perturbed_inference_per_class_confidence_images = get_inference_per_class_confidence(
+-            perturbed_inference_array
++            inference_result=perturbed_inference_array
+         )
+ 
+-        inference_argmax_image = get_inference_argmax_prediction(inference_array)
+-        perturbed_inference_argmax_image = get_inference_argmax_prediction(
+-            perturbed_inference_array
++        inference_argmax_image, classes_in_original = get_inference_argmax_prediction(
++            inference_result=inference_array, class_colors=class_colors
+         )
++        perturbed_inference_argmax_image, classes_in_perturbed = get_inference_argmax_prediction(
++            inference_result=perturbed_inference_array, class_colors=class_colors
++        )
++        classes_in_inference = classes_in_original.union(classes_in_perturbed)
+ 
+         # Compute the coverage metrics
+         inference_array_argmax = np.argmax(inference_array, axis=2)
+         inference_array_perturbed_argmax = np.argmax(perturbed_inference_array, axis=2)
+ 
+         coverage_original = (
+             np.bincount(inference_array_argmax.flatten(), minlength=n_classes)
+@@ -503,116 +536,130 @@
+         coverage_per_class: Dict[str, List[Union[str, float, int]]] = {}
+         coverage_class_highlight: Dict[str, str] = {}
+ 
+         # Iterate over the classes. Assign a color to them, create the dropdown
+         # selector and prepare the coverage table.
+         for i, target_class_name in enumerate(target_classes):
+ 
+-            color = display_class_color(i, n_classes, "turbo")
+-            target_classes_properties.append({"name": target_class_name, "color": color})
+-
++            color = f"#{class_colors[i][0]:02x}{class_colors[i][1]:02x}{class_colors[i][2]:02x}"
+             target_classes_dropdown_options.append((target_class_name, i))
+ 
+-            coverage_per_class[target_class_name] = [
+-                f"{coverage_original[i]:.2%}",
+-                f"{coverage_perturbed[i]:.2%}",
+-            ]
++            if i in classes_in_inference:
++                target_classes_properties.append(
++                    {
++                        "name": target_class_name,
++                        "color": color,
++                    }
++                )
++
++                coverage_per_class[target_class_name] = [
++                    f"{coverage_original[i]:.2%}",
++                    f"{coverage_perturbed[i]:.2%}",
++                ]
+ 
+-            coverage_class_highlight[target_class_name] = color
++                coverage_class_highlight[target_class_name] = color
+ 
+         # All classes inference
+         semantic_inference_widget = display_semantic_segmentation_inference_argmax_widget(
+-            observation,
+-            perturbed_observation,
+-            inference_argmax_image,
+-            perturbed_inference_argmax_image,
+-            target_classes_properties,
++            original=observation,
++            perturbed=perturbed_observation,
++            original_prediction=inference_argmax_image,
++            perturbed_prediction=perturbed_inference_argmax_image,
++            target_classes=target_classes_properties,
+         )
+ 
+         # Specific class inference
+         class_inference_per_class_widget = display_inference_per_class_widget(
+-            inference_per_class_confidence_images,
+-            perturbed_inference_per_class_confidence_images,
+-            target_classes_dropdown_options,
++            per_class_confidence_images=inference_per_class_confidence_images,
++            perturbed_per_class_confidence_images=perturbed_inference_per_class_confidence_images,
++            target_classes_dropdown_options=target_classes_dropdown_options,
+         )
+ 
+         # Put the two inference widgets together
+         inference_widget_tabs = widgets.Tab(
+             children=[semantic_inference_widget, class_inference_per_class_widget]
+         )
+         for i, val in enumerate(["All classes", "Specific class"]):
+             inference_widget_tabs.set_title(i, val)
+ 
+         # Coverage widget
+         coverage_table = display_table(
+             data=coverage_per_class,
+             header=["Original", "Perturbed"],
+-            table_width=500,
+             highlight_row_header=coverage_class_highlight,
++            table_width=500,
+         )
+         percentage_of_pixels_that_changed_class = (
+             np.count_nonzero(inference_array_argmax - inference_array_perturbed_argmax)
+             / inference_array_argmax.size
+         )
++
+         coverage_widget = widgets.VBox(
+             [
+                 coverage_table,
+                 widgets.HTML(
+                     value="<b>Percentage of pixels with changed prediction</b>: "
+                     f"{percentage_of_pixels_that_changed_class:.2%}"
+                 ),
+             ]
+         )
+ 
+         # Metrics widget
+-        metrics_table_widget = display_table(self._get_metrics_for_id(perturbed_observation_id))
++        metrics_table_widget = display_table(
++            data=self._get_metrics_for_id(perturbed_observation_id)
++        )
+         pipeline_info_table_widget = display_table(
+-            self._get_pipeline_info_for_id(perturbed_observation_id)
++            data=self._get_pipeline_info_for_id(perturbed_observation_id)
+         )
+ 
+         # Difference Widget
+         difference_widget = display_static_observation_difference(
+-            observation, perturbed_observation
++            original=observation, perturbed=perturbed_observation
+         )
+ 
+         view_elements = [
+             inference_widget_tabs,
+             coverage_widget,
+             metrics_table_widget,
+             pipeline_info_table_widget,
+             difference_widget,
+         ]
+         view_element_headers = [
+             "Model Inference",
+             "Class Coverage",
+             "Perturbation Size",
+             "Perturbation Details",
+-            "Difference between Original and Perturbed Observation",
++            "Difference Between Original and Perturbed Observation",
+         ]
+ 
+         return self._assemble_widgets_in_view(
+-            observation_box_widget, view_elements, view_element_headers
++            observation_widget=observation_box_widget,
++            widget_list=view_elements,
++            widget_header=view_element_headers,
+         )
+ 
+     async def _get_object_detection_detail_view(
+         self, perturbed_observation_id: int
+     ) -> widgets.VBox:
+         """
+         Produce the object detection detail view for a given perturbed
+         observation.
+ 
+-        :raises ValueError: If inference output has wrong type.
+-        :param perturbed_observation_id: ID specifying the perturbed observation.
++        :param perturbed_observation_id: ID specifying the perturbed
++            observation.
++        :raises ValueError: If the inference result type is not detection.
+         :return: View as ipython widget.
+         """
+-        artifact_details = await PerturbedObservationDetails.get_by_perturbed_observation_id(
+-            perturbed_observation_id
++        artifact_details = await (
++            PerturbedObservationDetails.get_by_perturbed_observation_id(
++                perturbed_observation_id=perturbed_observation_id
++            )
+         )
+-        perturbation_observation: PIL.Image.Image = (
+-            await artifact_details.perturbed_observation_as_remote_file().fetch_remote_file()
++        perturbation_observation: PIL.Image.Image = await (
++            artifact_details.perturbed_observation_as_remote_file().fetch_remote_file()
+         )
+         observation_resource = await artifact_details.observation
+         observation: PIL.Image.Image = (
+             await observation_resource.as_remote_file().fetch_remote_file()
+         )
+ 
+         if not isinstance(
+@@ -621,77 +668,87 @@
+             artifact_details.perturbed_observation_inference_result, ImageObjectDetectionModelOutput
+         ):
+             raise ValueError("Model task is wrongly configured.")
+ 
+         observation_inference = artifact_details.observation_inference_result.data
+         perturbed_inference = artifact_details.perturbed_observation_inference_result.data
+ 
++        class_names = artifact_details.inference_class_names
++        n_classes = len(class_names)
++        class_colors = [f"#{r:02x}{g:02x}{b:02x}" for r, g, b in generate_color_list(n_classes)]
++
+         observation_box_with_selector = display_selection_class_detection_widget(
+-            observation,
+-            perturbation_observation,
+-            observation_inference,
+-            perturbed_inference,
+-            class_names=artifact_details.inference_class_names,
++            observation_image=observation,
++            adversarial_example_image=perturbation_observation,
++            observation_detection_output=observation_inference,
++            adversarial_example_detection_output=perturbed_inference,
++            class_names=class_names,
++            class_colors=class_colors,
+             observation_title="<center><b>Original Observation</b></center>",
+-            observation_caption=f"<center><b>File</b>: {observation_resource.name}, "
+-            f"<b>ID</b>: {observation_resource.id}</center>",
++            observation_caption=f"<center><b>ID</b>: {observation_resource.id}<br>"
++            f"<b>File</b>: {observation_resource.name}</center>",
+             perturbation_title="<center><b>Perturbed Observation</b></center>",
+             perturbation_caption=f"<center><b>ID</b>: {perturbed_observation_id}</center>",
+         )
+ 
+         difference_widget = display_static_observation_difference(
+-            observation, perturbation_observation
++            original=observation, perturbed=perturbation_observation
+         )
+ 
+         box_count_widget = display_object_detection_box_count_widget(
+-            observation_inference,
+-            perturbed_inference,
+-            artifact_details.inference_class_names,
++            original_detection_output=observation_inference,
++            perturbed_detection_output=perturbed_inference,
++            class_names=class_names,
++            class_colors=class_colors,
++        )
++        metrics_table_widget = display_table(
++            data=self._get_metrics_for_id(perturbed_observation_id)
+         )
+-        metrics_table_widget = display_table(self._get_metrics_for_id(perturbed_observation_id))
+         pipeline_info_table_widget = display_table(
+-            self._get_pipeline_info_for_id(perturbed_observation_id)
++            data=self._get_pipeline_info_for_id(perturbed_observation_id)
+         )
+ 
+         view_elements = [
+             box_count_widget,
+             metrics_table_widget,
+             pipeline_info_table_widget,
+             difference_widget,
+         ]
+         view_element_headers = [
+             "Bounding Boxes per Class",
+             "Perturbation Size",
+             "Perturbation Details",
+-            "Difference between Original and Perturbed Observation",
++            "Difference Between Original and Perturbed Observation",
+         ]
+ 
+         return self._assemble_widgets_in_view(
+-            observation_box_with_selector, view_elements, view_element_headers
++            observation_widget=observation_box_with_selector,
++            widget_list=view_elements,
++            widget_header=view_element_headers,
+         )
+ 
+     async def get_detail_view(self, perturbed_observation_id: int) -> widgets.VBox:
+         """
+-        Return the detail for a given perturbation.
++        Return the detail view for a given perturbation.
+ 
+         This method automatically selects the view corresponding to the model task.
+ 
+         :param perturbed_observation_id: ID specifying the perturbation.
+         :raises ValueError: If invalid output type is passed.
+         :return: View as ipython widget.
+         """
+-        if self._data.output_type == OutputType.CLASSIFICATION:
++        if self._data.report.output_type == OutputType.CLASSIFICATION:
+             return await self._get_classification_detail_view(
+                 perturbed_observation_id=perturbed_observation_id
+             )
+-        if self._data.output_type == OutputType.SEGMENTATION:
++        if self._data.report.output_type == OutputType.SEGMENTATION:
+             return await self._get_semantic_segmentation_detail_view(
+                 perturbed_observation_id=perturbed_observation_id
+             )
+-        if self._data.output_type == OutputType.DETECTION:
++        if self._data.report.output_type == OutputType.DETECTION:
+             return await self._get_object_detection_detail_view(
+                 perturbed_observation_id=perturbed_observation_id
+             )
+ 
+         raise ValueError(
+             "Unsupported output type. Should be one of 'CLASSIFICATION', 'SEGMENTATION'\
+                 or 'DETECTION'."
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/report/adversarial_report.py` & `aidkit_client-0.7.0/aidkit_client/resources/report/corruption_report.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,216 +1,181 @@
+ """
+-Resources for the Adversarial Report.
++Resources for the Corruption Report.
+ """
+ from collections import defaultdict
+-from dataclasses import dataclass
+ from typing import Dict, List, Optional, Tuple, Union
+ 
+ import altair as alt
+ from pandas import DataFrame
+ 
+ from aidkit_client._endpoints.models import (
+     ModelNormStats,
+-    ReportAdversarialResponse,
++    ReportCorruptionResponse,
+     ReportRequest,
+ )
+ from aidkit_client._endpoints.report import ReportAPI
+ from aidkit_client.aidkit_api import HTTPService
+ from aidkit_client.configuration import get_api_client
+ from aidkit_client.resources.dataset import Dataset, Subset
+ from aidkit_client.resources.ml_model import MLModelVersion
+-from aidkit_client.resources.report._base_report import ModelComparisonView, _BaseReport
++from aidkit_client.resources.report._base_report import _BaseReport
+ 
+ 
+-@dataclass
+-class AttackDetailView:
+-    """
+-    Attack-detail view of the report.
+-    """
+-
+-    plot: alt.LayerChart
+-
+-
+-@dataclass
+-class AttackComparisonView:
+-    """
+-    Attack-comparison view of the report.
+-    """
+-
+-    plot: alt.LayerChart
+-    stats: Dict[str, DataFrame]
+-
+-
+-class AdversarialReport(_BaseReport):
++class CorruptionReport(_BaseReport):
+     """
+     A report which compares model versions.
+     """
+ 
+-    _data: ReportAdversarialResponse
++    _data: ReportCorruptionResponse
+ 
+-    def __init__(
+-        self, api_service: HTTPService, report_response: ReportAdversarialResponse
+-    ) -> None:
++    def __init__(self, api_service: HTTPService, report_response: ReportCorruptionResponse) -> None:
+         """
+         Create a new instance from the server response.
+ 
+         :param api_service: Service instance to use for communicating with the
+             server.
+         :param report_response: Server response describing the report
+             to be created.
+         """
+         self._data = report_response
+         self._api_service = api_service
+-        self.model = None
+ 
+     @classmethod
+     async def get(
+         cls,
+         model_id: int,
+         model_versions: List[Union[int, MLModelVersion]],
+         dataset: Union[int, Dataset],
+         subset: Union[int, Subset],
+         metrics: Optional[List[str]] = None,
+         success_metric_threshold: float = 0.7,
+-    ) -> "AdversarialReport":
++    ) -> "CorruptionReport":
+         """
+-        Get the adversarial report to compare the given model versions.
++        Get the corruption report to compare the given model versions.
+ 
+         :param model_id: ID of the uploaded model of which versions are compared in the report.
+         :param model_versions: List of model versions to compare in the report.
+         :param dataset: Dataset to use for the comparison.
+         :param subset: Subset whose observations are used for the comparison.
+         :param metrics: List of distance metrics to consider in the comparison.
+         :param success_metric_threshold: Threshold used to convert
+                                         a success metric score to a binary success criterion.
+-        :return: Instance of the adversarial report.
++        :return: Instance of the corruption report.
+         """
+         if metrics is None:
+             metrics = []
+         model_version_ids = [
+             model_version.id if isinstance(model_version, MLModelVersion) else model_version
+             for model_version in model_versions
+         ]
+         dataset_id = dataset.id if isinstance(dataset, Dataset) else dataset
+         subset_id = subset.id if isinstance(subset, Subset) else subset
+         api_service = get_api_client()
+-        report = AdversarialReport(
++        report = CorruptionReport(
+             api_service=api_service,
+-            report_response=await ReportAPI(api_service).get_adversarial_report(
++            report_response=await ReportAPI(api_service).get_corruption_report(
+                 request=ReportRequest(
+                     model=model_id,
+                     model_versions=model_version_ids,
+                     dataset=dataset_id,
+                     subset=subset_id,
+                     metrics=metrics,
+                     success_metric_threshold=success_metric_threshold,
+                 )
+             ),
+         )
+-        report.model = model_id
+         return report
+ 
+-    @staticmethod
+-    def _nested_dict_to_tuple_dict(
+-        nested_dict: Dict[str, Dict[str, Dict[str, ModelNormStats]]]
+-    ) -> Dict[Tuple[str, str, str], ModelNormStats]:
+-        return_dict: Dict[Tuple[str, str, str], ModelNormStats] = {}
+-        for index_1, dict_1 in nested_dict.items():
+-            for index_2, dict_2 in dict_1.items():
+-                for index_3, stats in dict_2.items():
+-                    return_dict[(index_1, index_2, index_3)] = stats
+-        return return_dict
+-
+-    @classmethod
+-    def _get_model_comparison_stats(
+-        cls, stats_dict: Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]
+-    ) -> DataFrame:
+-        metrics_to_stat_mapper: Dict[Tuple[str, str, str, str], Dict[str, float]] = defaultdict(
+-            dict
+-        )
+-        for model_version, model_stats in stats_dict.items():
+-            for (
+-                distance_metric,
+-                success_metric,
+-                target_class,
+-            ), stats in cls._nested_dict_to_tuple_dict(model_stats).items():
+-                for stat_name, stat_value in stats:
+-                    metrics_to_stat_mapper[
+-                        (distance_metric, success_metric, target_class, stat_name)
+-                    ][model_version] = stat_value
+-        return DataFrame(metrics_to_stat_mapper)
+-
+-    @classmethod
+-    def _get_attack_comparison_stats(
+-        cls,
+-        stats_dict: Dict[
+-            str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]
+-        ],
+-    ) -> Dict[str, DataFrame]:
+-        model_version_df_dict: Dict[str, DataFrame] = {}
+-        for model_version, attack_dict in stats_dict.items():
+-            stats_dict_in_pandas_form: Dict[
+-                Tuple[str, str, str, str], Dict[Tuple[str, str], float]
+-            ] = defaultdict(dict)
+-            for attack_class, attack_class_stats in attack_dict.items():
+-                for param_string, attack_instance_stats in attack_class_stats.items():
+-                    for (
+-                        distance_metric,
+-                        success_metric,
+-                        target_class,
+-                    ), stats in cls._nested_dict_to_tuple_dict(attack_instance_stats).items():
+-                        for stat_name, stat_value in stats.dict().items():
+-                            stats_dict_in_pandas_form[
+-                                (distance_metric, success_metric, target_class, stat_name)
+-                            ][(attack_class, param_string)] = stat_value
+-                        model_version_df_dict[model_version] = DataFrame(
+-                            data=stats_dict_in_pandas_form
+-                        )
+-        return model_version_df_dict
+-
+     def _fill_plot_with_data(self, plot: alt.LayerChart) -> alt.LayerChart:
+         plot_copy = plot.copy(deep=True)
+-        plot_copy.data = self.data
++        odd_tags = DataFrame.from_records(
++            list(self.odd_tags.items()), columns=["observation_id", "odd_tags"]
++        )
++        plot_copy.datasets = {
++            "data": alt.to_values(self.data)["values"],
++            "odd_tags": alt.to_values(odd_tags)["values"],
++        }
+         return plot_copy
+ 
+     @property
+-    def model_comparison_view(self) -> ModelComparisonView:
++    def model_comparison_plot(self) -> alt.LayerChart:
+         """
+-        Get the model-comparison view of the report.
++        Get the model-comparison altair plot.
+ 
+-        :return: Model-comparison view containing a plot and summary statistics.
++        :return: Altair plot comparing the corruption robustness of the model
++            versions.
+         """
+-        return ModelComparisonView(
+-            plot=self._fill_plot_with_data(
+-                alt.LayerChart.from_dict(self._data.plot_recipes.model_comparison_asr)
+-            ),
+-            stats=self._get_model_comparison_stats(self._data.stats.model_comparison_stats),
++        return self._fill_plot_with_data(
++            alt.LayerChart.from_dict(self._data.report.plot_recipes.model_comparison_mfr)
+         )
+ 
+     @property
+-    def attack_comparison_view(self) -> AttackComparisonView:
++    def odd_comparison_plot(self) -> alt.LayerChart:
+         """
+-        Get the attack-comparison view of the report.
++        Get the ODD-comparison altair plot.
+ 
+-        :return: Attack-comparison view containing a plot and summary statistics.
++        :return: Altair plot comparing the corruption robustness within
++            different ODD sections.
+         """
+-        return AttackComparisonView(
+-            plot=self._fill_plot_with_data(
+-                alt.LayerChart.from_dict(self._data.plot_recipes.attack_comparison_asr)
+-            ),
+-            stats=self._get_attack_comparison_stats(
+-                stats_dict=self._data.stats.attack_comparison_stats
+-            ),
++        return self._fill_plot_with_data(
++            alt.LayerChart.from_dict(self._data.report.plot_recipes.odd_comparison_mfr)
+         )
+ 
+     @property
+-    def attack_detail_view(self) -> AttackDetailView:
++    def summary_statistics(self) -> DataFrame:
+         """
+-        Get the attack-detail view of the report.
++        A pandas DataFrame containing summary statistics about the model
++        robustness within different ODD sections.
+ 
+-        :return: Attack-detail view containing a plot.
++        :return: DataFrame containing the summary statistics.
+         """
+-        return AttackDetailView(
+-            plot=self._fill_plot_with_data(
+-                alt.LayerChart.from_dict(self._data.plot_recipes.attack_detail_asr)
+-            )
+-        )
++        return self._get_model_comparison_stats(self._data.report.stats.model_comparison_stats)
++
++    @classmethod
++    def _get_model_comparison_stats(
++        cls,
++        stats_dict: Dict[
++            str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]
++        ],
++    ) -> DataFrame:
++        metrics_to_stat_mapper: Dict[
++            Tuple[str, str, str, str, str], Dict[Tuple[str, str], float]
++        ] = defaultdict(dict)
++        for odd_tag, odd_stats in stats_dict.items():
++            for model_version, model_stats in odd_stats.items():
++                for (
++                    distance_metric,
++                    success_metric,
++                    target_class,
++                    method_name,
++                ), stats in cls._nested_dict_to_tuple_dict(model_stats).items():
++                    for stat_name, stat_value in stats:
++                        metrics_to_stat_mapper[
++                            (distance_metric, success_metric, target_class, method_name, stat_name)
++                        ][odd_tag, model_version] = stat_value
++        df = DataFrame(metrics_to_stat_mapper)
++        df.index.names = ("ODD Tag", "Model Version")
++        return df
++
++    @staticmethod
++    def _nested_dict_to_tuple_dict(
++        nested_dict: Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]
++    ) -> Dict[Tuple[str, str, str, str], ModelNormStats]:
++        return_dict: Dict[Tuple[str, str, str, str], ModelNormStats] = {}
++        for index_1, dict_1 in nested_dict.items():
++            for index_2, dict_2 in dict_1.items():
++                for index_3, dict_3 in dict_2.items():
++                    for index_4, stats in dict_3.items():
++                        return_dict[(index_1, index_2, index_3, index_4)] = stats
++        return return_dict
++
++    @property
++    def odd_tags(self) -> Dict[int, List[str]]:
++        """
++        Get the ODD tags of the observations in the report.
++
++        :return: A dictionary mapping each observation ID referenced in the
++            report to a list of ODD tags.
++        """
++        return {
++            int(key): value for key, value in self._data.report.observations_to_odd_tags.items()
++        }
+```
+
+### Comparing `aidkit-client-0.6.0/aidkit_client/resources/report/corruption_report.py` & `aidkit_client-0.7.0/aidkit_client/resources/report/adversarial_report.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,180 +1,178 @@
+ """
+-Resources for the Corruption Report.
++Resources for the Adversarial Report.
+ """
+-from collections import defaultdict
+ from typing import Dict, List, Optional, Tuple, Union
+ 
+ import altair as alt
++import pandas as pd
+ from pandas import DataFrame
+ 
+ from aidkit_client._endpoints.models import (
+     ModelNormStats,
+-    ReportCorruptionResponse,
++    ReportAdversarialResponse,
+     ReportRequest,
+ )
+ from aidkit_client._endpoints.report import ReportAPI
+ from aidkit_client.aidkit_api import HTTPService
+ from aidkit_client.configuration import get_api_client
+ from aidkit_client.resources.dataset import Dataset, Subset
+ from aidkit_client.resources.ml_model import MLModelVersion
+ from aidkit_client.resources.report._base_report import _BaseReport
+ 
+ 
+-class CorruptionReport(_BaseReport):
++class AdversarialReport(_BaseReport):
+     """
+     A report which compares model versions.
+     """
+ 
+-    _data: ReportCorruptionResponse
++    _data: ReportAdversarialResponse
+ 
+-    def __init__(self, api_service: HTTPService, report_response: ReportCorruptionResponse) -> None:
++    def __init__(
++        self, api_service: HTTPService, report_response: ReportAdversarialResponse
++    ) -> None:
+         """
+         Create a new instance from the server response.
+ 
+         :param api_service: Service instance to use for communicating with the
+             server.
+         :param report_response: Server response describing the report
+             to be created.
+         """
+         self._data = report_response
+         self._api_service = api_service
++        self.model_id = None
+ 
+     @classmethod
+     async def get(
+         cls,
+         model_id: int,
+         model_versions: List[Union[int, MLModelVersion]],
+         dataset: Union[int, Dataset],
+         subset: Union[int, Subset],
+         metrics: Optional[List[str]] = None,
+         success_metric_threshold: float = 0.7,
+-    ) -> "CorruptionReport":
++    ) -> "AdversarialReport":
+         """
+-        Get the corruption report to compare the given model versions.
++        Get the adversarial report to compare the given model versions.
+ 
+         :param model_id: ID of the uploaded model of which versions are compared in the report.
+         :param model_versions: List of model versions to compare in the report.
+         :param dataset: Dataset to use for the comparison.
+         :param subset: Subset whose observations are used for the comparison.
+         :param metrics: List of distance metrics to consider in the comparison.
+         :param success_metric_threshold: Threshold used to convert
+                                         a success metric score to a binary success criterion.
+-        :return: Instance of the corruption report.
++        :return: Instance of the adversarial report.
+         """
+         if metrics is None:
+             metrics = []
+         model_version_ids = [
+             model_version.id if isinstance(model_version, MLModelVersion) else model_version
+             for model_version in model_versions
+         ]
+         dataset_id = dataset.id if isinstance(dataset, Dataset) else dataset
+         subset_id = subset.id if isinstance(subset, Subset) else subset
+         api_service = get_api_client()
+-        report = CorruptionReport(
++        report = AdversarialReport(
+             api_service=api_service,
+-            report_response=await ReportAPI(api_service).get_corruption_report(
++            report_response=await ReportAPI(api_service).get_adversarial_report(
+                 request=ReportRequest(
+                     model=model_id,
+                     model_versions=model_version_ids,
+                     dataset=dataset_id,
+                     subset=subset_id,
+                     metrics=metrics,
+                     success_metric_threshold=success_metric_threshold,
+                 )
+             ),
+         )
+-        report.model = model_id
+         return report
+ 
++    @staticmethod
++    def _nested_dict_to_tuple_dict(
++        nested_dict: Dict[str, Dict[str, Dict[str, ModelNormStats]]]
++    ) -> Dict[Tuple[str, str, str], ModelNormStats]:
++        return_dict: Dict[Tuple[str, str, str], ModelNormStats] = {}
++        for index_1, dict_1 in nested_dict.items():
++            for index_2, dict_2 in dict_1.items():
++                for index_3, stats in dict_2.items():
++                    return_dict[(index_1, index_2, index_3)] = stats
++        return return_dict
++
++    @classmethod
++    def _get_summary_statistics(
++        cls,
++        stats_dict: Dict[
++            str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]]
++        ],
++    ) -> DataFrame:
++        # Open the nested dictionary in a dataframe.
++        df = pd.json_normalize(stats_dict, sep="\u00AC")
++
++        # Explode the columns so that every key from the dictionary is part of the index.
++        df.columns = pd.MultiIndex.from_arrays(zip(*df.columns.str.split("\u00AC")))
++        df = df.stack(level=0).droplevel(0)
++
++        # Rearrange the dataframe to have the ODD Tag, Model Version, Mehtod and Parameters in the
++        # row index.
++        df = df.stack([0, 1, 2])
++
++        def _f(x: Union[float, Tuple]) -> float:
++            """
++            Given either a float or a tuple containing a string and a float,
++            flatten the tuple by only returning the float it contains.
++
++            :param x: A float value or a (string, float) tuple with the string containing a
++                description for the float.
++            :return: Either the given float or the float from the (string, float) tuple.
++            """
++            if isinstance(x, float):
++                return x
++
++            return x[1]
++
++        # Expand the ModelNormStats objects into multiple columns.
++        df = df.apply(
++            lambda x: x.apply(pd.Series)
++            .stack()
++            .rename({0: "impact", 1: "vulnerability", 2: "p_damage"}),
++            axis=1,
++        ).apply(lambda x: x.apply(_f))
++        df.index.names = ("ODD Tag", "Model Version", "Method", "Parameters")
++        return df
++
+     def _fill_plot_with_data(self, plot: alt.LayerChart) -> alt.LayerChart:
+         plot_copy = plot.copy(deep=True)
+-        odd_tags = DataFrame.from_records(
+-            list(self.odd_tags.items()), columns=["observation_id", "odd_tags"]
+-        )
+-        plot_copy.datasets = {
+-            "data": alt.to_values(self.data)["values"],
+-            "odd_tags": alt.to_values(odd_tags)["values"],
+-        }
++        plot_copy.data = self.data
+         return plot_copy
+ 
+     @property
+-    def model_comparison_plot(self) -> alt.LayerChart:
++    def summary_statistics(self) -> DataFrame:
+         """
+-        Get the model-comparison altair plot.
++        Get the summary statistics for the report.
+ 
+-        :return: Altair plot comparing the corruption robustness of the model
+-            versions.
++        :return: Pandas DataFrame containing statistics about the model robustness.
+         """
+-        return self._fill_plot_with_data(
+-            alt.LayerChart.from_dict(self._data.plot_recipes.model_comparison_mfr)
+-        )
++        return self._get_summary_statistics(self._data.report.stats.summary_statistics)
+ 
+     @property
+-    def odd_comparison_plot(self) -> alt.LayerChart:
++    def model_comparison_plot(self) -> alt.LayerChart:
+         """
+-        Get the ODD-comparison altair plot.
++        Get the model comparison plot of the report.
+ 
+-        :return: Altair plot comparing the corruption robustness within
+-            different ODD sections.
++        :return: Altair chart that compares different model versions.
+         """
+         return self._fill_plot_with_data(
+-            alt.LayerChart.from_dict(self._data.plot_recipes.odd_comparison_mfr)
++            alt.LayerChart.from_dict(self._data.report.plot_recipes.model_comparison_asr)
+         )
+ 
+     @property
+-    def summary_statistics(self) -> DataFrame:
++    def attack_comparison_plot(self) -> alt.LayerChart:
+         """
+-        A pandas DataFrame containing summary statistics about the model
+-        robustness within different ODD sections.
++        Get the attack-comparison plot of the report.
+ 
+-        :return: DataFrame containing the summary statistics.
++        :return: Altair chart that compares different attacks.
+         """
+-        return self._get_model_comparison_stats(self._data.stats.model_comparison_stats)
+-
+-    @classmethod
+-    def _get_model_comparison_stats(
+-        cls,
+-        stats_dict: Dict[
+-            str, Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]]
+-        ],
+-    ) -> DataFrame:
+-        metrics_to_stat_mapper: Dict[
+-            Tuple[str, str, str, str, str], Dict[Tuple[str, str], float]
+-        ] = defaultdict(dict)
+-        for odd_tag, odd_stats in stats_dict.items():
+-            for model_version, model_stats in odd_stats.items():
+-                for (
+-                    distance_metric,
+-                    success_metric,
+-                    target_class,
+-                    method_name,
+-                ), stats in cls._nested_dict_to_tuple_dict(model_stats).items():
+-                    for stat_name, stat_value in stats:
+-                        metrics_to_stat_mapper[
+-                            (distance_metric, success_metric, target_class, method_name, stat_name)
+-                        ][odd_tag, model_version] = stat_value
+-        df = DataFrame(metrics_to_stat_mapper)
+-        df.index.names = ("ODD Tag", "Model Version")
+-        return df
+-
+-    @staticmethod
+-    def _nested_dict_to_tuple_dict(
+-        nested_dict: Dict[str, Dict[str, Dict[str, Dict[str, ModelNormStats]]]]
+-    ) -> Dict[Tuple[str, str, str, str], ModelNormStats]:
+-        return_dict: Dict[Tuple[str, str, str, str], ModelNormStats] = {}
+-        for index_1, dict_1 in nested_dict.items():
+-            for index_2, dict_2 in dict_1.items():
+-                for index_3, dict_3 in dict_2.items():
+-                    for index_4, stats in dict_3.items():
+-                        return_dict[(index_1, index_2, index_3, index_4)] = stats
+-        return return_dict
+-
+-    @property
+-    def odd_tags(self) -> Dict[int, List[str]]:
+-        """
+-        Get the ODD tags of the observations in the report.
+-
+-        :return: A dictionary mapping each observation ID referenced in the
+-            report to a list of ODD tags.
+-        """
+-        return {int(key): value for key, value in self._data.observations_to_odd_tags.items()}
++        return self._fill_plot_with_data(
++            alt.LayerChart.from_dict(self._data.report.plot_recipes.attack_comparison_asr)
++        )
+```
+
+### Comparing `aidkit-client-0.6.0/pyproject.toml` & `aidkit_client-0.7.0/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "aidkit-client"
+-version = "0.6.0"
++version = "0.7.0"
+ description="aidkit for your CI/CD and j-notebooks."
+ authors = ["neurocat GmbH"]
+ readme = "README_PYPI.md"
+ license = "Apache-2.0"
+ 
+ packages = [
+     {include = "aidkit_client"},
+@@ -17,14 +17,15 @@
+ pydantic = "^1.8.2"
+ Pillow = "8.4"
+ altair = "^4.2.0"
+ jsonschema = "3.2.0"
+ matplotlib = "^3.5.3"
+ ipywidgets = "^7.7.1"
+ ipython = "7.34.0"
++tenacity = "^8.2.1"
+ 
+ 
+ [tool.poetry.dev-dependencies]
+ types-tabulate = "^0.8.3"
+ pylint = "^2.12.1"
+ mypy = "^0.910"
+ flake8 = "^4.0.1"
+```
+
+### Comparing `aidkit-client-0.6.0/setup.py` & `aidkit_client-0.7.0/setup.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -17,26 +17,27 @@
+  'altair>=4.2.0,<5.0.0',
+  'httpx>=0.21.1,<0.22.0',
+  'ipython==7.34.0',
+  'ipywidgets>=7.7.1,<8.0.0',
+  'jsonschema==3.2.0',
+  'matplotlib>=3.5.3,<4.0.0',
+  'pandas>=1.1.4,<2.0.0',
+- 'pydantic>=1.8.2,<2.0.0']
++ 'pydantic>=1.8.2,<2.0.0',
++ 'tenacity>=8.2.1,<9.0.0']
+ 
+ setup_kwargs = {
+     'name': 'aidkit-client',
+-    'version': '0.6.0',
++    'version': '0.7.0',
+     'description': 'aidkit for your CI/CD and j-notebooks.',
+     'long_description': '![aidkit](https://www.neurocat.ai/wp-content/uploads/2018/11/addkit-hori.png)\n\naidkit is an MLOps platform that allows you to assess and defend against threads\nand vulnerabilities of AI models before they deploy to production.\naidkit-client is a companion python client library to seamlessly integrate with\naidkit in python projects.\n',
+     'author': 'neurocat GmbH',
+-    'author_email': None,
+-    'maintainer': None,
+-    'maintainer_email': None,
+-    'url': None,
++    'author_email': 'None',
++    'maintainer': 'None',
++    'maintainer_email': 'None',
++    'url': 'None',
+     'packages': packages,
+     'package_data': package_data,
+     'install_requires': install_requires,
+     'python_requires': '>=3.7,<3.10',
+ }
+```
+
+### Comparing `aidkit-client-0.6.0/PKG-INFO` & `aidkit_client-0.7.0/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: aidkit-client
+-Version: 0.6.0
++Version: 0.7.0
+ Summary: aidkit for your CI/CD and j-notebooks.
+ License: Apache-2.0
+ Author: neurocat GmbH
+ Requires-Python: >=3.7,<3.10
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.7
+@@ -15,14 +15,15 @@
+ Requires-Dist: httpx (>=0.21.1,<0.22.0)
+ Requires-Dist: ipython (==7.34.0)
+ Requires-Dist: ipywidgets (>=7.7.1,<8.0.0)
+ Requires-Dist: jsonschema (==3.2.0)
+ Requires-Dist: matplotlib (>=3.5.3,<4.0.0)
+ Requires-Dist: pandas (>=1.1.4,<2.0.0)
+ Requires-Dist: pydantic (>=1.8.2,<2.0.0)
++Requires-Dist: tenacity (>=8.2.1,<9.0.0)
+ Description-Content-Type: text/markdown
+ 
+ ![aidkit](https://www.neurocat.ai/wp-content/uploads/2018/11/addkit-hori.png)
+ 
+ aidkit is an MLOps platform that allows you to assess and defend against threads
+ and vulnerabilities of AI models before they deploy to production.
+ aidkit-client is a companion python client library to seamlessly integrate with
+```
+

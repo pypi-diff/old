@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pyplotbrookings-0.1.1.tar.gz tmp/pyplotbrookings-0.1.2.tar.gz --html versions/p/pyplotbrookings/0.1.1-0.1.2/index.html --text versions/p/pyplotbrookings/0.1.1-0.1.2/diff.txt --markdown versions/p/pyplotbrookings/0.1.1-0.1.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">25.9 KB</span></div>
+  <div><span class="source">tmp/pyplotbrookings-0.1.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pyplotbrookings-0.1.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">25.8 KB</span></div>
+    <div><span class="source">pyplotbrookings-0.1.1.tar</span> vs.</div>
+    <div id="pyplotbrookings--.-.-.tar"><span class="source">pyplotbrookings-0.1.2.tar</span>
+      <a class="anchor" href="#pyplotbrookings--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">12.8 KB</span></div>
+      <div id="pyplotbrookings--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 52 lines modified</td><td colspan="2">Offset 1, 52 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/.DS_Store</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/.DS_Store</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/examples/.DS_Store</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/examples/.DS_Store</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>544308<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/examples/Examples.ipynb</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>544308<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/examples/Examples.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>556797<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/examples/.ipynb_checkpoints/Examples-checkpoint.ipynb</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>556797<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/examples/.ipynb_checkpoints/Examples-checkpoint.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>50649<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/figures/Figure1A.png</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>50649<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/figures/Figure1A.png</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110676<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/figures/Figure2.png</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>110676<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/figures/Figure2.png</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41346<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/figures/Figure3.png</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41346<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/figures/Figure3.png</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30774<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/figures/logo.png</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30774<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/figures/logo.png</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/.DS_Store</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6148<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/.DS_Store</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8196<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/.DS_Store</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8196<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/.DS_Store</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18369<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/pyplotbrookings.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18369<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/pyplotbrookings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>931903<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/.ipynb_checkpoints/Examples-checkpoint.ipynb</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>931903<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/.ipynb_checkpoints/Examples-checkpoint.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11560<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/LICENSE.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11560<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/LICENSE.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168060<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Black.ttf</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168060<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Black.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>174108<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-BlackItalic.ttf</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>174108<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-BlackItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167336<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Bold.ttf</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167336<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Bold.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171508<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-BoldItalic.ttf</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171508<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-BoldItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>170504<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Italic.ttf</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>170504<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Italic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167000<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Light.ttf</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>167000<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Light.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173172<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-LightItalic.ttf</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173172<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-LightItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168644<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Medium.ttf</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168644<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Medium.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173416<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-MediumItalic.ttf</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>173416<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-MediumItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168260<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Regular.ttf</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168260<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Regular.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168488<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-Thin.ttf</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168488<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-Thin.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>172860<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/fonts/Roboto-ThinItalic.ttf</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>172860<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/fonts/Roboto-ThinItalic.ttf</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7706<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/b_logo.png</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7706<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/b_logo.png</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21136<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/bc.png</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21136<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/bc.png</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12097<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/bi.png</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12097<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/bi.png</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17913<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/brookings.png</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17913<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/brookings.png</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18458<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cc.png</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18458<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cc.png</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20676<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/ccf.png</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20676<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/ccf.png</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>101943<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/ceaps.png</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>101943<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/ceaps.png</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26494<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cepm.png</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26494<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cepm.png</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56387<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/chp.png</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>56387<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/chp.png</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>107876<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cmep.png</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>107876<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cmep.png</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>107158<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/crm.png</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>107158<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/crm.png</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22586<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/csd.png</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22586<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/csd.png</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93053<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cti.png</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>93053<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cti.png</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20197<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cue.png</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20197<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cue.png</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96557<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/cuse.png</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96557<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/cuse.png</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14692<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/es.png</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14692<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/es.png</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13597<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/fp.png</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13597<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/fp.png</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21605<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/global.png</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21605<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/global.png</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16084<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/gs.png</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16084<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/gs.png</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47345<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/hc.png</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47345<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/hc.png</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20101<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/metro.png</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20101<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/metro.png</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8222<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/src/pyplotbrookings/logos/thp.png</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8222<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/src/pyplotbrookings/logos/thp.png</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1094<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/LICENSE</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1094<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>4795</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/README.md</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>6323</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>548<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/pyproject.toml</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>548<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>5274</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<del>1</del>/PKG-INFO</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>6802</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pyplotbrookings-0.1.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/.DS_Store</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--.DS_Store"><span class="source">pyplotbrookings-0.1.2/.DS_Store</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--.DS_Store">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/examples/.DS_Store</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-.DS_Store"><span class="source">pyplotbrookings-0.1.2/examples/.DS_Store</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-.DS_Store">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/examples/Examples.ipynb</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-Examples.ipynb"><span class="source">pyplotbrookings-0.1.2/examples/Examples.ipynb</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-Examples.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/examples/.ipynb_checkpoints/Examples-checkpoint.ipynb</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-.ipynb_checkpoints-Examples-checkpoint.ipynb"><span class="source">pyplotbrookings-0.1.2/examples/.ipynb_checkpoints/Examples-checkpoint.ipynb</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--examples-.ipynb_checkpoints-Examples-checkpoint.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/figures/Figure1A.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-A.png"><span class="source">pyplotbrookings-0.1.2/figures/Figure1A.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-A.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/figures/Figure2.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-.png"><span class="source">pyplotbrookings-0.1.2/figures/Figure2.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/figures/Figure3.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-.png-1"><span class="source">pyplotbrookings-0.1.2/figures/Figure3.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-Figure-.png-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/figures/logo.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-logo.png"><span class="source">pyplotbrookings-0.1.2/figures/logo.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--figures-logo.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/.DS_Store</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-.DS_Store"><span class="source">pyplotbrookings-0.1.2/src/.DS_Store</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-.DS_Store">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/.DS_Store</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-.DS_Store"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/.DS_Store</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-.DS_Store">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/pyplotbrookings.py</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-pyplotbrookings.py"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/pyplotbrookings.py</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-pyplotbrookings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">211 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/.ipynb_checkpoints/Examples-checkpoint.ipynb</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-.ipynb_checkpoints-Examples-checkpoint.ipynb"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/.ipynb_checkpoints/Examples-checkpoint.ipynb</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-.ipynb_checkpoints-Examples-checkpoint.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/LICENSE.txt</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-LICENSE.txt"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/LICENSE.txt</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-LICENSE.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Black.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Black.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Black.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Black.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-BlackItalic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-BlackItalic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-BlackItalic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-BlackItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Bold.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Bold.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Bold.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Bold.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-BoldItalic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-BoldItalic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-BoldItalic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-BoldItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Italic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Italic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Italic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Italic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Light.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Light.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Light.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Light.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-LightItalic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-LightItalic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-LightItalic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-LightItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Medium.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Medium.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Medium.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Medium.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-MediumItalic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-MediumItalic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-MediumItalic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-MediumItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Regular.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Regular.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Regular.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Regular.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-Thin.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Thin.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-Thin.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-Thin.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/fonts/Roboto-ThinItalic.ttf</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-ThinItalic.ttf"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/fonts/Roboto-ThinItalic.ttf</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-fonts-Roboto-ThinItalic.ttf">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/b_logo.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-b_logo.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/b_logo.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-b_logo.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/bc.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-bc.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/bc.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-bc.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/bi.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-bi.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/bi.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-bi.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/brookings.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-brookings.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/brookings.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-brookings.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cc.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cc.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cc.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cc.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/ccf.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-ccf.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/ccf.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-ccf.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/ceaps.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-ceaps.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/ceaps.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-ceaps.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cepm.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cepm.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cepm.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cepm.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/chp.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-chp.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/chp.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-chp.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cmep.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cmep.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cmep.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cmep.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/crm.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-crm.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/crm.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-crm.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/csd.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-csd.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/csd.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-csd.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cti.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cti.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cti.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cti.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cue.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cue.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cue.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cue.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/cuse.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cuse.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/cuse.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-cuse.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/es.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-es.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/es.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-es.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/fp.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-fp.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/fp.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-fp.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/global.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-global.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/global.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-global.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/gs.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-gs.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/gs.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-gs.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/hc.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-hc.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/hc.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-hc.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/metro.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-metro.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/metro.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-metro.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/src/pyplotbrookings/logos/thp.png</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-thp.png"><span class="source">pyplotbrookings-0.1.2/src/pyplotbrookings/logos/thp.png</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--src-pyplotbrookings-logos-thp.png">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/LICENSE</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--LICENSE"><span class="source">pyplotbrookings-0.1.2/LICENSE</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">491 B</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/pyproject.toml</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--pyproject.toml"><span class="source">pyplotbrookings-0.1.2/pyproject.toml</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;hatchling&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pyplotbrookings&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pyplotbrookings&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>1</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Adam<span class="dp">·</span>Sedlak&quot;,<span class="dp">·</span>email=&quot;asedlak@brookings.edu&quot;<span class="dp">·</span>},</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>name=&quot;Adam<span class="dp">·</span>Sedlak&quot;,<span class="dp">·</span>email=&quot;asedlak@brookings.edu&quot;<span class="dp">·</span>},</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>plotting<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>Institution&quot;</td><td class="diffline">10 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>plotting<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>Institution&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">11 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td><td class="diffline">12 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">13 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">5.42 KB</span></div>
+      <div><span class="source">pyplotbrookings-0.1.1/PKG-INFO</span> vs.</div>
+      <div id="pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--PKG-INFO"><span class="source">pyplotbrookings-0.1.2/README.md</span>
+        <a class="anchor" href="#pyplotbrookings--.-.-.tar---pyplotbrookings--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 17% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 34 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pyplotbrookings</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.1</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>plotting<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>Institution</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/Adam-Sedlak-Brookings/pyplotbrookings</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Adam<span class="dp">·</span>Sedlak<span class="dp">·</span>&lt;asedlak@brookings.edu&gt;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>pyplotbrookings<span class="dp">·</span>&lt;img<span class="dp">·</span>src=&quot;figures/logo.png&quot;<span class="dp">·</span>align=&quot;right&quot;<span class="dp">·</span>width=&quot;120&quot;/&gt;</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>pyplotbrookings<span class="dp">·</span>&lt;img<span class="dp">·</span>src=&quot;figures/logo.png&quot;<span class="dp">·</span>align=&quot;right&quot;<span class="dp">·</span>width=&quot;120&quot;/&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">##<span class="dp">·</span>Overview</td><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>Overview</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>`matplotlib`<span class="dp">·</span>extension<span class="dp">·</span>which<span class="dp">·</span>implements<span class="dp">·</span>the<span class="dp">·</span>Brookings</td><td class="diffline">3 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>`matplotlib`<span class="dp">·</span>extension<span class="dp">·</span>which<span class="dp">·</span>implements<span class="dp">·</span>the<span class="dp">·</span>Brookings</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Institution<span class="dp">·</span>style<span class="dp">·</span>guide.<span class="dp">·</span>It<span class="dp">·</span>offers<span class="dp">·</span>several<span class="dp">·</span>color<span class="dp">·</span>palettes,<span class="dp">·</span>a<span class="dp">·</span>custom<span class="dp">·</span>theme,<span class="dp">·</span>and<span class="dp">·</span>a<span class="dp">·</span>few</td><td class="diffline">4 </td><td class="diffpresent">Institution<span class="dp">·</span>style<span class="dp">·</span>guide.<span class="dp">·</span>It<span class="dp">·</span>offers<span class="dp">·</span>several<span class="dp">·</span>color<span class="dp">·</span>palettes,<span class="dp">·</span>a<span class="dp">·</span>custom<span class="dp">·</span>theme,<span class="dp">·</span>and<span class="dp">·</span>a<span class="dp">·</span>few</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">helper<span class="dp">·</span>functions.<span class="dp">·</span>`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>implementation<span class="dp">·</span>of<span class="dp">·</span>`ggbrookings`,<span class="dp">·</span></td><td class="diffline">5 </td><td class="diffpresent">helper<span class="dp">·</span>functions.<span class="dp">·</span>`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>implementation<span class="dp">·</span>of<span class="dp">·</span>`ggbrookings`,<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">an<span class="dp">·</span>R<span class="dp">·</span>extension<span class="dp">·</span>for<span class="dp">·</span>`ggplot`.</td><td class="diffline">6 </td><td class="diffpresent">an<span class="dp">·</span>R<span class="dp">·</span>extension<span class="dp">·</span>for<span class="dp">·</span>`ggplot`.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">7 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>now<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>package!<span class="dp">·</span>It<span class="dp">·</span>downloaded<span class="dp">·</span>from<span class="dp">·</span>PyPI<span class="dp">·</span>with<span class="dp">·</span>`pip`<span class="dp">·</span>(https://pypi.org/project/pyplotbrookings/<del>0.1.0/</del>)!</td><td class="diffline">8 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>now<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>package!<span class="dp">·</span>It<span class="dp">·</span>downloaded<span class="dp">·</span>from<span class="dp">·</span>PyPI<span class="dp">·</span>with<span class="dp">·</span>`pip`<span class="dp">·</span>(https://pypi.org/project/pyplotbrookings/)!</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">```</td><td class="diffline">9 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>pyplotbrookings<del>==0.1.0</del></td><td class="diffline">10 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>pyplotbrookings</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">```</td><td class="diffline">11 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">The<span class="dp">·</span>accepted<span class="dp">·</span>alias<span class="dp">·</span>for<span class="dp">·</span>`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>`ppb`.<span class="dp">·</span>For<span class="dp">·</span>example,</td><td class="diffline">12 </td><td class="diffpresent">The<span class="dp">·</span>accepted<span class="dp">·</span>alias<span class="dp">·</span>for<span class="dp">·</span>`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>`ppb`.<span class="dp">·</span>For<span class="dp">·</span>example,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">```python</td><td class="diffline">13 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">import<span class="dp">·</span>pyplotbrookings.pyplotbrookings<span class="dp">·</span>as<span class="dp">·</span>ppb</td><td class="diffline">14 </td><td class="diffpresent">import<span class="dp">·</span>pyplotbrookings.pyplotbrookings<span class="dp">·</span>as<span class="dp">·</span>ppb</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">```</td><td class="diffline">15 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 40, 14 lines modified</td><td colspan="2">Offset 27, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>custom<span class="dp">·</span>one<span class="dp">·</span>which<span class="dp">·</span>adheres<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>style<span class="dp">·</span>guide.</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>custom<span class="dp">·</span>one<span class="dp">·</span>which<span class="dp">·</span>adheres<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>style<span class="dp">·</span>guide.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`get_palette()`<span class="dp">·</span>returns<span class="dp">·</span>the<span class="dp">·</span>colors<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span></td><td class="diffline">28 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`get_palette()`<span class="dp">·</span>returns<span class="dp">·</span>the<span class="dp">·</span>colors<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>palettes.</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>palettes.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`set_palette()`<span class="dp">·</span>sets<span class="dp">·</span>the<span class="dp">·</span>`matplotlib`<span class="dp">·</span>color<span class="dp">·</span>cycler<span class="dp">·</span>to<span class="dp">·</span>one<span class="dp">·</span>of</td><td class="diffline">30 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`set_palette()`<span class="dp">·</span>sets<span class="dp">·</span>the<span class="dp">·</span>`matplotlib`<span class="dp">·</span>color<span class="dp">·</span>cycler<span class="dp">·</span>to<span class="dp">·</span>one<span class="dp">·</span>of</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>palettes.</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>palettes.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Valid<span class="dp">·</span>color<span class="dp">·</span>palettes<span class="dp">·</span>are:<span class="dp">·</span>`default`,<span class="dp">·</span>`brand1`,<span class="dp">·</span>`brand2`,<span class="dp">·</span>`analogous1`,<span class="dp">·</span>`analogous2`,<span class="dp">·</span>`contrasting1`,<span class="dp">·</span>`contrasting2`,<span class="dp">·</span>`semantic1`,<span class="dp">·</span>`semantic2`,<span class="dp">·</span>`semantic3`,<span class="dp">·</span>`pos_neg1`,<span class="dp">·</span>`pos_neg2`,<span class="dp">·</span>`political1`,<span class="dp">·</span>`political2`<span class="dp">·</span>`political3`,<span class="dp">·</span>`political4`,<span class="dp">·</span>`categorical`,<span class="dp">·</span>`sequential1`,<span class="dp">·</span>`sequential2`,<span class="dp">·</span>`diverging`,<span class="dp">·</span>`misc`,<span class="dp">·</span>`brand<span class="dp">·</span>blue`,<span class="dp">·</span>`vivid<span class="dp">·</span>blue`,<span class="dp">·</span>`teal`,<span class="dp">·</span>`green`,<span class="dp">·</span>`yellow`,<span class="dp">·</span>`orange`,<span class="dp">·</span>`red`,<span class="dp">·</span>`magenta`,<span class="dp">·</span>`purple`</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`get_cmap()`<span class="dp">·</span>returns<span class="dp">·</span>a<span class="dp">·</span>continuous<span class="dp">·</span>palette<span class="dp">·</span>(or<span class="dp">·</span>color<span class="dp">·</span>map)<span class="dp">·</span>using<span class="dp">·</span>one<span class="dp">·</span>of</td><td class="diffline">33 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`get_cmap()`<span class="dp">·</span>returns<span class="dp">·</span>a<span class="dp">·</span>continuous<span class="dp">·</span>palette<span class="dp">·</span>(or<span class="dp">·</span>color<span class="dp">·</span>map)<span class="dp">·</span>using<span class="dp">·</span>one<span class="dp">·</span>of</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>the<span class="dp">·</span>color<span class="dp">·</span>Brookings<span class="dp">·</span>color<span class="dp">·</span>palettes.</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>the<span class="dp">·</span>color<span class="dp">·</span>Brookings<span class="dp">·</span>color<span class="dp">·</span>palettes.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`view_palette()`<span class="dp">·</span>helper<span class="dp">·</span>function<span class="dp">·</span>that<span class="dp">·</span>previews<span class="dp">·</span>a<span class="dp">·</span>color<span class="dp">·</span>palette</td><td class="diffline">35 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`view_palette()`<span class="dp">·</span>helper<span class="dp">·</span>function<span class="dp">·</span>that<span class="dp">·</span>previews<span class="dp">·</span>a<span class="dp">·</span>color<span class="dp">·</span>palette</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>showing<span class="dp">·</span>the<span class="dp">·</span>color,<span class="dp">·</span>order,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>appropriate<span class="dp">·</span>text<span class="dp">·</span>color<span class="dp">·</span></td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>showing<span class="dp">·</span>the<span class="dp">·</span>color,<span class="dp">·</span>order,<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>appropriate<span class="dp">·</span>text<span class="dp">·</span>color<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>that<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>applied<span class="dp">·</span>on<span class="dp">·</span>top<span class="dp">·</span>of<span class="dp">·</span>each<span class="dp">·</span>color.</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>that<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>applied<span class="dp">·</span>on<span class="dp">·</span>top<span class="dp">·</span>of<span class="dp">·</span>each<span class="dp">·</span>color.</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 55, 22 lines modified</td><td colspan="2">Offset 43, 27 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_title()`<span class="dp">·</span>adds<span class="dp">·</span>titles<span class="dp">·</span>and<span class="dp">·</span>subtitles<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>consistent<span class="dp">·</span></td><td class="diffline">43 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_title()`<span class="dp">·</span>adds<span class="dp">·</span>titles<span class="dp">·</span>and<span class="dp">·</span>subtitles<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>that<span class="dp">·</span>are<span class="dp">·</span>consistent<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>guidelines.<span class="dp">·</span></td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>guidelines.<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_notes()`<span class="dp">·</span>adds<span class="dp">·</span>notes<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>bottom<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>also<span class="dp">·</span>consistent<span class="dp">·</span></td><td class="diffline">45 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_notes()`<span class="dp">·</span>adds<span class="dp">·</span>notes<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>bottom<span class="dp">·</span>of<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>also<span class="dp">·</span>consistent<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>guidelines.</td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>Brookings<span class="dp">·</span>brand<span class="dp">·</span>guidelines.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_logo()`<span class="dp">·</span>adds<span class="dp">·</span>a<span class="dp">·</span>program/center<span class="dp">·</span>logo<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>figure.</td><td class="diffline">47 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`add_logo()`<span class="dp">·</span>adds<span class="dp">·</span>a<span class="dp">·</span>program/center<span class="dp">·</span>logo<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>figure.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>logo<span class="dp">·</span>using<span class="dp">·</span>a<span class="dp">·</span>local<span class="dp">·</span>path<span class="dp">·</span>or<span class="dp">·</span>use<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>logos<span class="dp">·</span>that<span class="dp">·</span>comes<span class="dp">·</span>with<span class="dp">·</span>`pyplotbrookings`.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>The<span class="dp">·</span>following<span class="dp">·</span>logos<span class="dp">·</span>are<span class="dp">·</span>included<span class="dp">·</span>with<span class="dp">·</span>pyplotbrookings:<span class="dp">·</span>`bc`<span class="dp">·</span>(Brown<span class="dp">·</span>Center),<span class="dp">·</span>`bi`<span class="dp">·</span>(Bass<span class="dp">·</span>Initiative<span class="dp">·</span>on<span class="dp">·</span>Innovation<span class="dp">·</span>and<span class="dp">·</span>Placemaking),<span class="dp">·</span>`brookings`<span class="dp">·</span>(Brookings<span class="dp">·</span>Institution),<span class="dp">·</span>`cc`<span class="dp">·</span>(China<span class="dp">·</span>Center),<span class="dp">·</span>`ccf`<span class="dp">·</span>(Center<span class="dp">·</span>on<span class="dp">·</span>Children<span class="dp">·</span>and<span class="dp">·</span>Families),<span class="dp">·</span>`ceaps`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>East<span class="dp">·</span>Asia<span class="dp">·</span>Policy<span class="dp">·</span>Studies),<span class="dp">·</span>`cepm`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Effective<span class="dp">·</span>Policy<span class="dp">·</span>Management),<span class="dp">·</span>`chp`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Health<span class="dp">·</span>Policy),<span class="dp">·</span>`cmep`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Middle<span class="dp">·</span>Eastern<span class="dp">·</span>Policy),<span class="dp">·</span>`crm`<span class="dp">·</span>(Center<span class="dp">·</span>on<span class="dp">·</span>Regulation<span class="dp">·</span>and<span class="dp">·</span>Markets),<span class="dp">·</span>`csd`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Sustainable<span class="dp">·</span>Development),<span class="dp">·</span>`cti`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Technology<span class="dp">·</span>Innovation),<span class="dp">·</span>`cue`<span class="dp">·</span>(Center<span class="dp">·</span>for<span class="dp">·</span>Universal<span class="dp">·</span>Education),<span class="dp">·</span>`cuse`<span class="dp">·</span>(Center<span class="dp">·</span>on<span class="dp">·</span>United<span class="dp">·</span>States<span class="dp">·</span>and<span class="dp">·</span>Europe),<span class="dp">·</span>`es`<span class="dp">·</span>(Economic<span class="dp">·</span>Studies),<span class="dp">·</span>`fp`<span class="dp">·</span>(Foreign<span class="dp">·</span>Policy),<span class="dp">·</span>`global`<span class="dp">·</span>(Global<span class="dp">·</span>Studies),<span class="dp">·</span>`gs`<span class="dp">·</span>(Governance<span class="dp">·</span>Studies),<span class="dp">·</span>`hc`<span class="dp">·</span>(Hutchins<span class="dp">·</span>Center),<span class="dp">·</span>`metro`<span class="dp">·</span>(Metropolitan<span class="dp">·</span>Policy<span class="dp">·</span>Studies),<span class="dp">·</span>`thp`<span class="dp">·</span>(The<span class="dp">·</span>Hamilton<span class="dp">·</span>Project).</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`figure()`<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>`matplotlib`<span class="dp">·</span>figure<span class="dp">·</span>in<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>standard<span class="dp">·</span></td><td class="diffline">50 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`figure()`<span class="dp">·</span>creates<span class="dp">·</span>a<span class="dp">·</span>`matplotlib`<span class="dp">·</span>figure<span class="dp">·</span>in<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>standard<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Brookings<span class="dp">·</span>sizes.</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Brookings<span class="dp">·</span>sizes.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`save()`<span class="dp">·</span>saves<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>advised<span class="dp">·</span>dpi<span class="dp">·</span>values<span class="dp">·</span>depending</td><td class="diffline">52 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>`save()`<span class="dp">·</span>saves<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>advised<span class="dp">·</span>dpi<span class="dp">·</span>values<span class="dp">·</span>depending</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>on<span class="dp">·</span>content<span class="dp">·</span>type.</td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>on<span class="dp">·</span>content<span class="dp">·</span>type.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">54 </td><td class="diffpresent">##<span class="dp">·</span>Contact</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">55 </td><td class="diffpresent">To<span class="dp">·</span>report<span class="dp">·</span>any<span class="dp">·</span>bugs<span class="dp">·</span>or<span class="dp">·</span>discuss<span class="dp">·</span>contributing<span class="dp">·</span>to<span class="dp">·</span>this<span class="dp">·</span>package<span class="dp">·</span>please<span class="dp">·</span>contact<span class="dp">·</span>Adam<span class="dp">·</span>Sedlak<span class="dp">·</span>or<span class="dp">·</span>Valerie<span class="dp">·</span>Wirtschafter.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">##<span class="dp">·</span>Examples</td><td class="diffline">56 </td><td class="diffpresent">##<span class="dp">·</span>Examples</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">Let&#x27;s<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>plot<span class="dp">·</span>using<span class="dp">·</span>`pyplotbrookings`.<span class="dp">·</span>First<span class="dp">·</span>we&#x27;ll<span class="dp">·</span>need<span class="dp">·</span>some<span class="dp">·</span>data</td><td class="diffline">57 </td><td class="diffpresent">Let&#x27;s<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>figure<span class="dp">·</span>plot<span class="dp">·</span>using<span class="dp">·</span>`pyplotbrookings`.<span class="dp">·</span>First<span class="dp">·</span>we&#x27;ll<span class="dp">·</span>need<span class="dp">·</span>some<span class="dp">·</span>data</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">```python</td><td class="diffline">58 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">import<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt</td><td class="diffline">59 </td><td class="diffpresent">import<span class="dp">·</span>matplotlib.pyplot<span class="dp">·</span>as<span class="dp">·</span>plt</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">import<span class="dp">·</span>pyplotbrookings.pyplotbrookings<span class="dp">·</span>as<span class="dp">·</span>ppb</td><td class="diffline">60 </td><td class="diffpresent">import<span class="dp">·</span>pyplotbrookings.pyplotbrookings<span class="dp">·</span>as<span class="dp">·</span>ppb</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">import<span class="dp">·</span>seaborn<span class="dp">·</span>as<span class="dp">·</span>sns</td><td class="diffline">61 </td><td class="diffpresent">import<span class="dp">·</span>seaborn<span class="dp">·</span>as<span class="dp">·</span>sns</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 104, 14 lines modified</td><td colspan="2">Offset 97, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">104 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>notes</td><td class="diffline">97 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>notes</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent">ppb.add_notes(&#x27;Source:<span class="dp">·</span>Palmer<span class="dp">·</span>Station<span class="dp">·</span>Antarctica<span class="dp">·</span>LTER&#x27;,<span class="dp">·</span></td><td class="diffline">98 </td><td class="diffpresent">ppb.add_notes(&#x27;Source:<span class="dp">·</span>Palmer<span class="dp">·</span>Station<span class="dp">·</span>Antarctica<span class="dp">·</span>LTER&#x27;,<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">106 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Notes:<span class="dp">·</span>Figure<span class="dp">·</span>made<span class="dp">·</span>using<span class="dp">·</span>matplotlib&#x27;)</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Notes:<span class="dp">·</span>Figure<span class="dp">·</span>made<span class="dp">·</span>using<span class="dp">·</span>matplotlib&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent">ppb.add_logo(&#x27;hc&#x27;)</td><td class="diffline">100 </td><td class="diffpresent">ppb.add_logo(&#x27;hc&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent">```</td><td class="diffline">101 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">102 </td><td class="diffpresent">![alt<span class="dp">·</span>text](figures/Figure1A.png)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>designed<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>many<span class="dp">·</span>different<span class="dp">·</span>plots.<span class="dp">·</span>Let&#x27;s<span class="dp">·</span>try<span class="dp">·</span>creating<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>that<span class="dp">·</span>uses<span class="dp">·</span>a<span class="dp">·</span>colormap</td><td class="diffline">103 </td><td class="diffpresent">`pyplotbrookings`<span class="dp">·</span>is<span class="dp">·</span>designed<span class="dp">·</span>to<span class="dp">·</span>work<span class="dp">·</span>with<span class="dp">·</span>many<span class="dp">·</span>different<span class="dp">·</span>plots.<span class="dp">·</span>Let&#x27;s<span class="dp">·</span>try<span class="dp">·</span>creating<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot<span class="dp">·</span>that<span class="dp">·</span>uses<span class="dp">·</span>a<span class="dp">·</span>colormap</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent">```python</td><td class="diffline">104 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">111 </td><td class="diffpresent">#<span class="dp">·</span>Getting<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>sequential2<span class="dp">·</span>color<span class="dp">·</span>map</td><td class="diffline">105 </td><td class="diffpresent">#<span class="dp">·</span>Getting<span class="dp">·</span>the<span class="dp">·</span>Brookings<span class="dp">·</span>sequential2<span class="dp">·</span>color<span class="dp">·</span>map</td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent">cmap<span class="dp">·</span>=<span class="dp">·</span>ppb.get_cmap(&#x27;sequential2&#x27;,<span class="dp">·</span>reverse=True)</td><td class="diffline">106 </td><td class="diffpresent">cmap<span class="dp">·</span>=<span class="dp">·</span>ppb.get_cmap(&#x27;sequential2&#x27;,<span class="dp">·</span>reverse=True)</td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent">#<span class="dp">·</span>Creating<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot</td><td class="diffline">107 </td><td class="diffpresent">#<span class="dp">·</span>Creating<span class="dp">·</span>a<span class="dp">·</span>scatter<span class="dp">·</span>plot</td></tr>
+<tr class="diffunmodified"><td class="diffline">114 </td><td class="diffpresent">plt.scatter(data=penguins,<span class="dp">·</span>x=&#x27;bill_length_mm&#x27;,<span class="dp">·</span>y=&#x27;bill_depth_mm&#x27;,<span class="dp">·</span>c=&#x27;flipper_length_mm&#x27;,<span class="dp">·</span>cmap=cmap)</td><td class="diffline">108 </td><td class="diffpresent">plt.scatter(data=penguins,<span class="dp">·</span>x=&#x27;bill_length_mm&#x27;,<span class="dp">·</span>y=&#x27;bill_depth_mm&#x27;,<span class="dp">·</span>c=&#x27;flipper_length_mm&#x27;,<span class="dp">·</span>cmap=cmap)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 134, 14 lines modified</td><td colspan="2">Offset 129, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">134 </td><td class="diffpresent">ppb.add_notes(&#x27;Source:<span class="dp">·</span>Palmer<span class="dp">·</span>Station<span class="dp">·</span>Antarctica<span class="dp">·</span>LTER&#x27;,</td><td class="diffline">129 </td><td class="diffpresent">ppb.add_notes(&#x27;Source:<span class="dp">·</span>Palmer<span class="dp">·</span>Station<span class="dp">·</span>Antarctica<span class="dp">·</span>LTER&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Example:<span class="dp">·</span>Here<span class="dp">·</span>is<span class="dp">·</span>some<span class="dp">·</span>extra<span class="dp">·</span>long<span class="dp">·</span>text<span class="dp">·</span>that\ngoes<span class="dp">·</span>on<span class="dp">·</span>and<span class="dp">·</span>on<span class="dp">·</span>and<span class="dp">·</span>needs<span class="dp">·</span>a<span class="dp">·</span>linefeed.&#x27;,</td><td class="diffline">130 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Example:<span class="dp">·</span>Here<span class="dp">·</span>is<span class="dp">·</span>some<span class="dp">·</span>extra<span class="dp">·</span>long<span class="dp">·</span>text<span class="dp">·</span>that\ngoes<span class="dp">·</span>on<span class="dp">·</span>and<span class="dp">·</span>on<span class="dp">·</span>and<span class="dp">·</span>needs<span class="dp">·</span>a<span class="dp">·</span>linefeed.&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Notes:<span class="dp">·</span>Figure<span class="dp">·</span>made<span class="dp">·</span>using<span class="dp">·</span>matplotlib&#x27;)</td><td class="diffline">131 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Notes:<span class="dp">·</span>Figure<span class="dp">·</span>made<span class="dp">·</span>using<span class="dp">·</span>matplotlib&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>a<span class="dp">·</span>CRM<span class="dp">·</span>logo</td><td class="diffline">132 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>a<span class="dp">·</span>CRM<span class="dp">·</span>logo</td></tr>
+<tr class="diffunmodified"><td class="diffline">138 </td><td class="diffpresent">ppb.add_logo(&#x27;crm&#x27;,<span class="dp">·</span>scale=0.35,<span class="dp">·</span>offsets=(-0.1,<span class="dp">·</span>0))</td><td class="diffline">133 </td><td class="diffpresent">ppb.add_logo(&#x27;crm&#x27;,<span class="dp">·</span>scale=0.35,<span class="dp">·</span>offsets=(-0.1,<span class="dp">·</span>0))</td></tr>
+<tr class="diffunmodified"><td class="diffline">139 </td><td class="diffpresent">```</td><td class="diffline">134 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">135 </td><td class="diffpresent">![alt<span class="dp">·</span>text](figures/Figure2.png)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent">We<span class="dp">·</span>could<span class="dp">·</span>also<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>box<span class="dp">·</span>plot.<span class="dp">·</span>Note<span class="dp">·</span>that<span class="dp">·</span>titles<span class="dp">·</span>and<span class="dp">·</span>notes<span class="dp">·</span>auto-align<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>left<span class="dp">·</span>margin<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>figure.</td><td class="diffline">136 </td><td class="diffpresent">We<span class="dp">·</span>could<span class="dp">·</span>also<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>box<span class="dp">·</span>plot.<span class="dp">·</span>Note<span class="dp">·</span>that<span class="dp">·</span>titles<span class="dp">·</span>and<span class="dp">·</span>notes<span class="dp">·</span>auto-align<span class="dp">·</span>to<span class="dp">·</span>the<span class="dp">·</span>left<span class="dp">·</span>margin<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>figure.</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent">```python</td><td class="diffline">137 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">142 </td><td class="diffpresent">#<span class="dp">·</span>Creating<span class="dp">·</span>a<span class="dp">·</span>boxplot</td><td class="diffline">138 </td><td class="diffpresent">#<span class="dp">·</span>Creating<span class="dp">·</span>a<span class="dp">·</span>boxplot</td></tr>
+<tr class="diffunmodified"><td class="diffline">143 </td><td class="diffpresent">sns.boxplot(data=penguins,<span class="dp">·</span>x=&#x27;bill_depth_mm&#x27;,<span class="dp">·</span>y=&#x27;island&#x27;,<span class="dp">·</span>palette=ppb.get_palette(&#x27;misc&#x27;))</td><td class="diffline">139 </td><td class="diffpresent">sns.boxplot(data=penguins,<span class="dp">·</span>x=&#x27;bill_depth_mm&#x27;,<span class="dp">·</span>y=&#x27;island&#x27;,<span class="dp">·</span>palette=ppb.get_palette(&#x27;misc&#x27;))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 157, 7 lines modified</td><td colspan="2">Offset 153, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>matplotlib<span class="dp">·</span>legend/labels</td><td class="diffline">153 </td><td class="diffpresent">#<span class="dp">·</span>Adding<span class="dp">·</span>matplotlib<span class="dp">·</span>legend/labels</td></tr>
+<tr class="diffunmodified"><td class="diffline">158 </td><td class="diffpresent">plt.xlabel(&#x27;Bill<span class="dp">·</span>Depth<span class="dp">·</span>(mm)&#x27;)</td><td class="diffline">154 </td><td class="diffpresent">plt.xlabel(&#x27;Bill<span class="dp">·</span>Depth<span class="dp">·</span>(mm)&#x27;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">159 </td><td class="diffpresent">plt.ylabel(&#x27;Island&#x27;)</td><td class="diffline">155 </td><td class="diffpresent">plt.ylabel(&#x27;Island&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">160 </td><td class="diffpresent">ppb.add_logo(&#x27;crm&#x27;,<span class="dp">·</span>scale=0.35,<span class="dp">·</span>offsets=(-0.1,<span class="dp">·</span>0))</td><td class="diffline">156 </td><td class="diffpresent">ppb.add_logo(&#x27;crm&#x27;,<span class="dp">·</span>scale=0.35,<span class="dp">·</span>offsets=(-0.1,<span class="dp">·</span>0))</td></tr>
+<tr class="diffunmodified"><td class="diffline">161 </td><td class="diffpresent">```</td><td class="diffline">157 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">158 </td><td class="diffpresent">![alt<span class="dp">·</span>text](figures/Figure3.png)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

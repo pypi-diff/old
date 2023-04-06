@@ -1,0 +1,723 @@
+# Comparing `tmp/fschat-0.1.4.tar.gz` & `tmp/fschat-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fschat-0.1.4.tar", last modified: Thu Apr  6 02:48:09 2023, max compression
++gzip compressed data, was "fschat-0.1.5.tar", last modified: Thu Apr  6 14:46:10 2023, max compression
+```
+
+## Comparing `fschat-0.1.4.tar` & `fschat-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,49 +1,50 @@
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.836312 fschat-0.1.4/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    11357 2023-04-03 18:06:47.000000 fschat-0.1.4/LICENSE
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9954 2023-04-06 02:48:09.836312 fschat-0.1.4/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9480 2023-04-06 02:45:48.000000 fschat-0.1.4/README.md
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.832312 fschat-0.1.4/fastchat/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       88 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/constants.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6432 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/conversation.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.832312 fschat-0.1.4/fastchat/data/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/data/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1819 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/data/alpaca-converter.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4465 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/data/clean_sharegpt.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      615 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/data/inspect.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2684 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/data/optional_clean.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      475 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/data/pretty_json.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3403 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/data/split_long_conversation.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.832312 fschat-0.1.4/fastchat/eval/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3339 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/eval/eval_gpt_review.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3661 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/eval/generate_webpage_data_from_table.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2341 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/eval/model_qa.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2345 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/eval/qa_baseline_gpt35.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.832312 fschat-0.1.4/fastchat/model/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/model/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1872 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/model/apply_delta.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2135 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/model/make_delta.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.836312 fschat-0.1.4/fastchat/serve/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5660 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/serve/cli.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9942 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/controller.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2717 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/gradio_css.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     7343 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/gradio_patch.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    16246 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/serve/gradio_web_server.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     8749 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/serve/model_worker.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      734 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/register_worker.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2028 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/serve/test_message.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.836312 fschat-0.1.4/fastchat/train/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3982 2023-04-05 07:29:37.000000 fschat-0.1.4/fastchat/train/llama_flash_attn_monkey_patch.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    12260 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/train/train.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2023-04-06 02:45:48.000000 fschat-0.1.4/fastchat/train/train_lora.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-04-03 18:06:47.000000 fschat-0.1.4/fastchat/train/train_mem.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3988 2023-04-06 02:07:43.000000 fschat-0.1.4/fastchat/utils.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 02:48:09.836312 fschat-0.1.4/fschat.egg-info/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9954 2023-04-06 02:48:09.000000 fschat-0.1.4/fschat.egg-info/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1115 2023-04-06 02:48:09.000000 fschat-0.1.4/fschat.egg-info/SOURCES.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-04-06 02:48:09.000000 fschat-0.1.4/fschat.egg-info/dependency_links.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      115 2023-04-06 02:48:09.000000 fschat-0.1.4/fschat.egg-info/requires.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       21 2023-04-06 02:48:09.000000 fschat-0.1.4/fschat.egg-info/top_level.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      938 2023-04-06 02:48:01.000000 fschat-0.1.4/pyproject.toml
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       38 2023-04-06 02:48:09.836312 fschat-0.1.4/setup.cfg
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    11357 2023-04-03 18:06:47.000000 fschat-0.1.5/LICENSE
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 14:46:10.623159 fschat-0.1.5/PKG-INFO
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9634 2023-04-06 14:45:10.000000 fschat-0.1.5/README.md
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       88 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/constants.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6432 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/conversation.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/data/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1819 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/alpaca-converter.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4465 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/data/clean_sharegpt.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      615 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/inspect.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2684 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/data/optional_clean.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      475 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/pretty_json.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3403 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/split_long_conversation.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/eval/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5042 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/eval/eval_gpt_review.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3661 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/eval/generate_webpage_data_from_table.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3054 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/eval/get_model_answer.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2345 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/eval/qa_baseline_gpt35.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/model/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/model/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1872 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/model/apply_delta.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2135 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/model/make_delta.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/serve/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6201 2023-04-06 14:44:46.000000 fschat-0.1.5/fastchat/serve/cli.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9942 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/controller.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2717 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/gradio_css.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     7343 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/gradio_patch.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    16246 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/serve/gradio_web_server.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     8749 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/serve/model_worker.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3997 2023-04-06 14:44:46.000000 fschat-0.1.5/fastchat/serve/monkey_patch_non_inplace.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      734 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/register_worker.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2028 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/test_message.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/fastchat/train/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3982 2023-04-06 14:12:17.000000 fschat-0.1.5/fastchat/train/llama_flash_attn_monkey_patch.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    12308 2023-04-06 13:02:10.000000 fschat-0.1.5/fastchat/train/train.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/train/train_lora.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/train/train_mem.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3988 2023-04-06 14:12:04.000000 fschat-0.1.5/fastchat/utils.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/fschat.egg-info/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/PKG-INFO
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1166 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/SOURCES.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/dependency_links.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      115 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/requires.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       21 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/top_level.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      938 2023-04-06 14:45:57.000000 fschat-0.1.5/pyproject.toml
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       38 2023-04-06 14:46:10.623159 fschat-0.1.5/setup.cfg
+```
+
+### Comparing `fschat-0.1.4/LICENSE` & `fschat-0.1.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/PKG-INFO` & `fschat-0.1.5/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fschat
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: An open platform for training, serving, and evaluating large language model based chatbots.
+ Project-URL: Homepage, https://github.com/lm-sys/fastchat
+ Project-URL: Bug Tracker, https://github.com/lm-sys/fastchat/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+@@ -98,14 +98,19 @@
+ 
+ ### CPU Only
+ This runs on the CPU only and does not require GPU. It requires around 60GB of CPU memory for Vicuna-13B.
+ ```
+ python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device cpu
+ ```
+ 
++### Metal Backend (Mac computers with Apple silicon or AMD GPUs)
++```
++python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device mps
++```
++
+ ### Others (Quantization, Low-end Devices, and More Platforms)
+ 
+ You can load in 8-bit mode to reduce GPU memory usage with slightly degraded model quality.
+ It is tested on a single 4090 and requires around 18GB of GPU memory for Vicuna-13B.
+ Note that this mode only works on a single GPU.
+ You are also required to install `bitsandbytes` according to the printed messages.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: fschat Version: 0.1.4 Summary: An open platform for
++Metadata-Version: 2.1 Name: fschat Version: 0.1.5 Summary: An open platform for
+ training, serving, and evaluating large language model based chatbots. Project-
+ URL: Homepage, https://github.com/lm-sys/fastchat Project-URL: Bug Tracker,
+ https://github.com/lm-sys/fastchat/issues Classifier: Programming Language ::
+ Python :: 3 Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8 Description-Content-Type: text/markdown License-File:
+ LICENSE # FastChat An open platform for training, serving, and evaluating large
+ language model based chatbots. ## Release
+@@ -38,15 +38,17 @@
+ requires around 28GB of GPU memory for Vicuna-13B. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights ``` ### Multiple GPUs
+ If you do not have enough GPU memory, you can use model parallelism to
+ aggregate memory from multiple GPUs on the same machine. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights --num-gpus 2 ``` ###
+ CPU Only This runs on the CPU only and does not require GPU. It requires around
+ 60GB of CPU memory for Vicuna-13B. ``` python3 -m fastchat.serve.cli --model-
+-name /path/to/vicuna/weights --device cpu ``` ### Others (Quantization, Low-end
++name /path/to/vicuna/weights --device cpu ``` ### Metal Backend (Mac computers
++with Apple silicon or AMD GPUs) ``` python3 -m fastchat.serve.cli --model-name
++/path/to/vicuna/weights --device mps ``` ### Others (Quantization, Low-end
+ Devices, and More Platforms) You can load in 8-bit mode to reduce GPU memory
+ usage with slightly degraded model quality. It is tested on a single 4090 and
+ requires around 18GB of GPU memory for Vicuna-13B. Note that this mode only
+ works on a single GPU. You are also required to install `bitsandbytes`
+ according to the printed messages. ``` python3 -m fastchat.serve.cli --model-
+ name /path/to/vicuna/weights --load-8bit ``` Besides, we are actively exploring
+ more methods to make the model easier to run on more platforms. Contributions
+```
+
+### Comparing `fschat-0.1.4/README.md` & `fschat-0.1.5/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -86,14 +86,19 @@
+ 
+ ### CPU Only
+ This runs on the CPU only and does not require GPU. It requires around 60GB of CPU memory for Vicuna-13B.
+ ```
+ python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device cpu
+ ```
+ 
++### Metal Backend (Mac computers with Apple silicon or AMD GPUs)
++```
++python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device mps
++```
++
+ ### Others (Quantization, Low-end Devices, and More Platforms)
+ 
+ You can load in 8-bit mode to reduce GPU memory usage with slightly degraded model quality.
+ It is tested on a single 4090 and requires around 18GB of GPU memory for Vicuna-13B.
+ Note that this mode only works on a single GPU.
+ You are also required to install `bitsandbytes` according to the printed messages.
+```
+
+#### html2text {}
+
+```diff
+@@ -32,15 +32,17 @@
+ requires around 28GB of GPU memory for Vicuna-13B. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights ``` ### Multiple GPUs
+ If you do not have enough GPU memory, you can use model parallelism to
+ aggregate memory from multiple GPUs on the same machine. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights --num-gpus 2 ``` ###
+ CPU Only This runs on the CPU only and does not require GPU. It requires around
+ 60GB of CPU memory for Vicuna-13B. ``` python3 -m fastchat.serve.cli --model-
+-name /path/to/vicuna/weights --device cpu ``` ### Others (Quantization, Low-end
++name /path/to/vicuna/weights --device cpu ``` ### Metal Backend (Mac computers
++with Apple silicon or AMD GPUs) ``` python3 -m fastchat.serve.cli --model-name
++/path/to/vicuna/weights --device mps ``` ### Others (Quantization, Low-end
+ Devices, and More Platforms) You can load in 8-bit mode to reduce GPU memory
+ usage with slightly degraded model quality. It is tested on a single 4090 and
+ requires around 18GB of GPU memory for Vicuna-13B. Note that this mode only
+ works on a single GPU. You are also required to install `bitsandbytes`
+ according to the printed messages. ``` python3 -m fastchat.serve.cli --model-
+ name /path/to/vicuna/weights --load-8bit ``` Besides, we are actively exploring
+ more methods to make the model easier to run on more platforms. Contributions
+```
+
+### Comparing `fschat-0.1.4/fastchat/conversation.py` & `fschat-0.1.5/fastchat/conversation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/data/alpaca-converter.py` & `fschat-0.1.5/fastchat/data/alpaca-converter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/data/clean_sharegpt.py` & `fschat-0.1.5/fastchat/data/clean_sharegpt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/data/inspect.py` & `fschat-0.1.5/fastchat/data/inspect.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/data/optional_clean.py` & `fschat-0.1.5/fastchat/data/optional_clean.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/data/split_long_conversation.py` & `fschat-0.1.5/fastchat/data/split_long_conversation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/eval/generate_webpage_data_from_table.py` & `fschat-0.1.5/fastchat/eval/generate_webpage_data_from_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/eval/model_qa.py` & `fschat-0.1.5/fastchat/eval/get_model_answer.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,34 +1,55 @@
+ import argparse
+ from transformers import AutoTokenizer, AutoModelForCausalLM
+ import torch
+ import os
+ import json
+ from tqdm import tqdm
+ import shortuuid
++import ray
+ 
+ from fastchat.conversation import default_conversation
+ from fastchat.utils import disable_torch_init
+ 
++
++def run_eval(model_path, model_id, question_file, answer_file, num_gpus):
++    # split question file into num_gpus files
++    ques_jsons = []
++    with open(os.path.expanduser(question_file), "r") as ques_file:
++        for line in ques_file:
++            ques_jsons.append(line)
++
++    chunk_size = len(ques_jsons) // num_gpus
++    ans_handles = []
++    for i in range(0, len(ques_jsons), chunk_size):
++        ans_handles.append(get_model_answers.remote(model_path, model_id, ques_jsons[i:i + chunk_size]))
++
++    ans_jsons = []
++    for ans_handle in ans_handles:
++        ans_jsons.extend(ray.get(ans_handle))
++
++    with open(os.path.expanduser(answer_file), "w") as ans_file:
++        for line in ans_jsons:
++            ans_file.write(json.dumps(line) + "\n")
++
++
++@ray.remote(num_gpus=1)
+ @torch.inference_mode()
+-def eval_model(model_name, questions_file, answers_file):
+-    # Model
++def get_model_answers(model_path, model_id, question_jsons):
+     disable_torch_init()
+-    model_name = os.path.expanduser(model_name)
+-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+-    model = AutoModelForCausalLM.from_pretrained(model_name,
++    model_path = os.path.expanduser(model_path)
++    tokenizer = AutoTokenizer.from_pretrained(model_path)
++    model = AutoModelForCausalLM.from_pretrained(model_path,
+         torch_dtype=torch.float16).cuda()
+ 
+-
+-    ques_file = open(os.path.expanduser(questions_file), "r")
+-    ans_file = open(os.path.expanduser(answers_file), "w")
+-    for i, line in enumerate(tqdm(ques_file)):
+-        idx = json.loads(line)["question_id"]
+-        qs = json.loads(line)["text"]
+-        cat = json.loads(line)["category"]
++    ans_jsons = []
++    for i, line in enumerate(tqdm(question_jsons)):
++        ques_json = json.loads(line)
++        idx = ques_json["question_id"]
++        qs = ques_json["text"]
+         conv = default_conversation.copy()
+         conv.append_message(conv.roles[0], qs)
+         prompt = conv.get_prompt()
+         inputs = tokenizer([prompt])
+         output_ids = model.generate(
+             torch.as_tensor(inputs.input_ids).cuda(),
+             do_sample=True,
+@@ -39,23 +60,26 @@
+             index = outputs.index(conv.sep, len(prompt))
+         except ValueError:
+             outputs += conv.sep
+             index = outputs.index(conv.sep, len(prompt))
+ 
+         outputs = outputs[len(prompt) + len(conv.roles[1]) + 2:index].strip()
+         ans_id = shortuuid.uuid()
+-        ans_file.write(json.dumps({"question_id": idx,
+-                                   "text": outputs,
+-                                   "answer_id": ans_id,
+-                                   "model_id": model_name,
+-                                   "metadata": {}}) + "\n")
+-        ans_file.flush()
+-    ans_file.close()
++        ans_jsons.append({"question_id": idx,
++                          "text": outputs,
++                          "answer_id": ans_id,
++                          "model_id": model_id,
++                          "metadata": {}})
++    return ans_jsons
++
+ 
+ if __name__ == "__main__":
+     parser = argparse.ArgumentParser()
+-    parser.add_argument("--model-name", type=str, default="facebook/opt-350m")
+-    parser.add_argument("--question-file", type=str, default="tables/question.jsonl")
++    parser.add_argument("--model-path", type=str, required=True)
++    parser.add_argument("--model-id", type=str, required=True)
++    parser.add_argument("--question-file", type=str, required=True)
+     parser.add_argument("--answer-file", type=str, default="answer.jsonl")
++    parser.add_argument("--num-gpus", type=int, default=1)
+     args = parser.parse_args()
+ 
+-    eval_model(args.model_name, args.question_file, args.answers_file)
++    ray.init()
++    run_eval(args.model_path, args.model_id, args.question_file, args.answer_file, args.num_gpus)
+```
+
+### Comparing `fschat-0.1.4/fastchat/eval/qa_baseline_gpt35.py` & `fschat-0.1.5/fastchat/eval/qa_baseline_gpt35.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/model/apply_delta.py` & `fschat-0.1.5/fastchat/model/apply_delta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/model/make_delta.py` & `fschat-0.1.5/fastchat/model/make_delta.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/cli.py` & `fschat-0.1.5/fastchat/serve/cli.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -5,18 +5,21 @@
+ import argparse
+ import time
+ 
+ import torch
+ from transformers import AutoTokenizer, AutoModelForCausalLM, LlamaTokenizer
+ 
+ from fastchat.conversation import conv_templates, SeparatorStyle
++from fastchat.serve.monkey_patch_non_inplace import replace_llama_attn_with_non_inplace_operations
+ 
+ 
+ def load_model(model_name, device, num_gpus, load_8bit=False):
+-    if device == "cuda":
++    if device == "cpu":
++        kwargs = {}
++    elif device == "cuda":
+         kwargs = {"torch_dtype": torch.float16}
+         if load_8bit:
+             if num_gpus != "auto" and int(num_gpus) != 1:
+                 print("8-bit weights are not supported on multiple GPUs. Revert to use one GPU.")
+             kwargs.update({"load_in_8bit": True, "device_map": "auto"})
+         else:
+             if num_gpus == "auto":
+@@ -24,26 +27,30 @@
+             else:
+                 num_gpus = int(num_gpus)
+                 if num_gpus != 1:
+                     kwargs.update({
+                         "device_map": "auto",
+                         "max_memory": {i: "13GiB" for i in range(num_gpus)},
+                     })
+-    elif device == "cpu":
+-        kwargs = {}
++    elif device == "mps":
++        # Avoid bugs in mps backend by not using in-place operations.
++        kwargs = {"torch_dtype": torch.float16}
++        replace_llama_attn_with_non_inplace_operations()
+     else:
+         raise ValueError(f"Invalid device: {device}")
+ 
+-    tokenizer = AutoTokenizer.from_pretrained(model_name)
++    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
+     model = AutoModelForCausalLM.from_pretrained(model_name,
+         low_cpu_mem_usage=True, **kwargs)
+ 
+     # calling model.cuda() mess up weights if loading 8-bit weights
+     if device == "cuda" and num_gpus == 1 and not load_8bit:
+-        model.cuda()
++        model.to("cuda")
++    elif device == "mps":
++        model.to("mps")
+ 
+     return model, tokenizer
+ 
+ 
+ @torch.inference_mode()
+ def generate_stream(tokenizer, model, params, device,
+                     context_len=2048, stream_interval=2):
+@@ -74,14 +81,19 @@
+                         use_cache=True,
+                         attention_mask=attention_mask,
+                         past_key_values=past_key_values)
+             logits = out.logits
+             past_key_values = out.past_key_values
+ 
+         last_token_logits = logits[0][-1]
++
++        if device == "mps":
++            # Switch to CPU by avoiding some bugs in mps backend.
++            last_token_logits = last_token_logits.float().to("cpu")
++
+         if temperature < 1e-4:
+             token = int(torch.argmax(last_token_logits))
+         else:
+             probs = torch.softmax(last_token_logits / temperature, dim=-1)
+             token = int(torch.multinomial(probs, num_samples=1))
+ 
+         output_ids.append(token)
+@@ -151,15 +163,15 @@
+         if args.debug:
+             print("\n", {"prompt": prompt, "outputs": outputs}, "\n")
+ 
+ 
+ if __name__ == "__main__":
+     parser = argparse.ArgumentParser()
+     parser.add_argument("--model-name", type=str, default="facebook/opt-350m")
+-    parser.add_argument("--device", type=str, choices=["cuda", "cpu"], default="cuda")
++    parser.add_argument("--device", type=str, choices=["cpu", "cuda", "mps"], default="cuda")
+     parser.add_argument("--num-gpus", type=str, default="1")
+     parser.add_argument("--load-8bit", action="store_true")
+     parser.add_argument("--conv-template", type=str, default="v1")
+     parser.add_argument("--temperature", type=float, default=0.7)
+     parser.add_argument("--max-new-tokens", type=int, default=512)
+     parser.add_argument("--debug", action="store_true")
+     args = parser.parse_args()
+```
+
+### Comparing `fschat-0.1.4/fastchat/serve/controller.py` & `fschat-0.1.5/fastchat/serve/controller.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/gradio_css.py` & `fschat-0.1.5/fastchat/serve/gradio_css.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/gradio_patch.py` & `fschat-0.1.5/fastchat/serve/gradio_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/gradio_web_server.py` & `fschat-0.1.5/fastchat/serve/gradio_web_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/model_worker.py` & `fschat-0.1.5/fastchat/serve/model_worker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/register_worker.py` & `fschat-0.1.5/fastchat/serve/register_worker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/serve/test_message.py` & `fschat-0.1.5/fastchat/serve/test_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/train/llama_flash_attn_monkey_patch.py` & `fschat-0.1.5/fastchat/train/llama_flash_attn_monkey_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/train/train.py` & `fschat-0.1.5/fastchat/train/train.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -145,24 +145,28 @@
+ 
+ 
+ def _add_speaker_and_signal(header, source, get_conversation=True):
+     """Add speaker and start/end signal on each round."""
+     BEGIN_SIGNAL = "### "
+     END_SIGNAL = "\n"
+     conversation = header
++    unknown_role = "unknown"  # use default unknown role
++    roles = {
++        "human": conversation_lib.default_conversation.roles[0],  # human role
++        "gpt": conversation_lib.default_conversation.roles[1],  # gpt role
++    }
+     for sentence in source:
+-        from_str = sentence["from"]
+-        if from_str.lower() == "human":
+-            from_str = conversation_lib.default_conversation.roles[0]
+-        elif from_str.lower() == "gpt":
+-            from_str = conversation_lib.default_conversation.roles[1]
+-        else:
+-            from_str = 'unknown'
+-        sentence["value"] = (BEGIN_SIGNAL + from_str + ": " +
+-                             sentence["value"] + END_SIGNAL)
++        sentence_from = sentence["from"].lower()
++        sentence["value"] = (
++            BEGIN_SIGNAL
++            + roles.get(sentence_from, unknown_role)
++            + ": "
++            + sentence["value"]
++            + END_SIGNAL
++        )
+         if get_conversation:
+             conversation += sentence["value"]
+     return conversation
+ 
+ 
+ def preprocess(
+     sources: Sequence[str],
+```
+
+### Comparing `fschat-0.1.4/fastchat/train/train_lora.py` & `fschat-0.1.5/fastchat/train/train_lora.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fastchat/utils.py` & `fschat-0.1.5/fastchat/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.4/fschat.egg-info/PKG-INFO` & `fschat-0.1.5/fschat.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fschat
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: An open platform for training, serving, and evaluating large language model based chatbots.
+ Project-URL: Homepage, https://github.com/lm-sys/fastchat
+ Project-URL: Bug Tracker, https://github.com/lm-sys/fastchat/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+@@ -98,14 +98,19 @@
+ 
+ ### CPU Only
+ This runs on the CPU only and does not require GPU. It requires around 60GB of CPU memory for Vicuna-13B.
+ ```
+ python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device cpu
+ ```
+ 
++### Metal Backend (Mac computers with Apple silicon or AMD GPUs)
++```
++python3 -m fastchat.serve.cli --model-name /path/to/vicuna/weights --device mps
++```
++
+ ### Others (Quantization, Low-end Devices, and More Platforms)
+ 
+ You can load in 8-bit mode to reduce GPU memory usage with slightly degraded model quality.
+ It is tested on a single 4090 and requires around 18GB of GPU memory for Vicuna-13B.
+ Note that this mode only works on a single GPU.
+ You are also required to install `bitsandbytes` according to the printed messages.
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: fschat Version: 0.1.4 Summary: An open platform for
++Metadata-Version: 2.1 Name: fschat Version: 0.1.5 Summary: An open platform for
+ training, serving, and evaluating large language model based chatbots. Project-
+ URL: Homepage, https://github.com/lm-sys/fastchat Project-URL: Bug Tracker,
+ https://github.com/lm-sys/fastchat/issues Classifier: Programming Language ::
+ Python :: 3 Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8 Description-Content-Type: text/markdown License-File:
+ LICENSE # FastChat An open platform for training, serving, and evaluating large
+ language model based chatbots. ## Release
+@@ -38,15 +38,17 @@
+ requires around 28GB of GPU memory for Vicuna-13B. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights ``` ### Multiple GPUs
+ If you do not have enough GPU memory, you can use model parallelism to
+ aggregate memory from multiple GPUs on the same machine. ``` python3 -
+ m fastchat.serve.cli --model-name /path/to/vicuna/weights --num-gpus 2 ``` ###
+ CPU Only This runs on the CPU only and does not require GPU. It requires around
+ 60GB of CPU memory for Vicuna-13B. ``` python3 -m fastchat.serve.cli --model-
+-name /path/to/vicuna/weights --device cpu ``` ### Others (Quantization, Low-end
++name /path/to/vicuna/weights --device cpu ``` ### Metal Backend (Mac computers
++with Apple silicon or AMD GPUs) ``` python3 -m fastchat.serve.cli --model-name
++/path/to/vicuna/weights --device mps ``` ### Others (Quantization, Low-end
+ Devices, and More Platforms) You can load in 8-bit mode to reduce GPU memory
+ usage with slightly degraded model quality. It is tested on a single 4090 and
+ requires around 18GB of GPU memory for Vicuna-13B. Note that this mode only
+ works on a single GPU. You are also required to install `bitsandbytes`
+ according to the printed messages. ``` python3 -m fastchat.serve.cli --model-
+ name /path/to/vicuna/weights --load-8bit ``` Besides, we are actively exploring
+ more methods to make the model easier to run on more platforms. Contributions
+```
+
+### Comparing `fschat-0.1.4/fschat.egg-info/SOURCES.txt` & `fschat-0.1.5/fschat.egg-info/SOURCES.txt`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -10,26 +10,27 @@
+ fastchat/data/clean_sharegpt.py
+ fastchat/data/inspect.py
+ fastchat/data/optional_clean.py
+ fastchat/data/pretty_json.py
+ fastchat/data/split_long_conversation.py
+ fastchat/eval/eval_gpt_review.py
+ fastchat/eval/generate_webpage_data_from_table.py
+-fastchat/eval/model_qa.py
++fastchat/eval/get_model_answer.py
+ fastchat/eval/qa_baseline_gpt35.py
+ fastchat/model/__init__.py
+ fastchat/model/apply_delta.py
+ fastchat/model/make_delta.py
+ fastchat/serve/__init__.py
+ fastchat/serve/cli.py
+ fastchat/serve/controller.py
+ fastchat/serve/gradio_css.py
+ fastchat/serve/gradio_patch.py
+ fastchat/serve/gradio_web_server.py
+ fastchat/serve/model_worker.py
++fastchat/serve/monkey_patch_non_inplace.py
+ fastchat/serve/register_worker.py
+ fastchat/serve/test_message.py
+ fastchat/train/llama_flash_attn_monkey_patch.py
+ fastchat/train/train.py
+ fastchat/train/train_lora.py
+ fastchat/train/train_mem.py
+ fschat.egg-info/PKG-INFO
+```
+
+### Comparing `fschat-0.1.4/pyproject.toml` & `fschat-0.1.5/pyproject.toml`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "fschat"
+-version = "0.1.4"
++version = "0.1.5"
+ description = "An open platform for training, serving, and evaluating large language model based chatbots."
+ readme = "README.md"
+ requires-python = ">=3.8"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: Apache Software License",
+ ]
+ dependencies = [
+     "accelerate", "fastapi", "gradio==3.23", "markdown2[all]", "numpy",
+-    "requests", "sentencepiece", "tokenizers==0.12.1",
++    "requests", "sentencepiece", "tokenizers>=0.12.1",
+     "torch", "uvicorn", "wandb",
+ ]
+ 
+ [project.urls]
+ "Homepage" = "https://github.com/lm-sys/fastchat"
+ "Bug Tracker" = "https://github.com/lm-sys/fastchat/issues"
+```
+

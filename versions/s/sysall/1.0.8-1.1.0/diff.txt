@@ -1,0 +1,588 @@
+--- tmp/sysall-1.0.8.tar.gz
++++ tmp/sysall-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "sysall-1.0.8.tar", last modified: Thu Apr  6 10:40:31 2023, max compression
+│ +gzip compressed data, was "sysall-1.1.0.tar", last modified: Thu Apr  6 14:47:34 2023, max compression
+│   --- sysall-1.0.8.tar
+├── +++ sysall-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:40:31.666973 sysall-1.0.8/
+│ │ --rw-rw-rw-   0        0        0     1067 2023-04-04 19:25:31.000000 sysall-1.0.8/LICENSE
+│ │ --rw-rw-rw-   0        0        0     3907 2023-04-06 10:40:31.664964 sysall-1.0.8/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     3362 2023-04-06 10:38:31.000000 sysall-1.0.8/README.md
+│ │ --rw-rw-rw-   0        0        0      713 2023-04-06 10:40:12.000000 sysall-1.0.8/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 10:40:31.666973 sysall-1.0.8/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      170 2023-04-06 08:37:31.000000 sysall-1.0.8/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:40:31.629108 sysall-1.0.8/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:40:31.645142 sysall-1.0.8/src/sysall/
+│ │ --rw-rw-rw-   0        0        0     9546 2023-04-06 10:40:16.000000 sysall-1.0.8/src/sysall/SysAll.py
+│ │ --rw-rw-rw-   0        0        0       21 2023-04-04 19:51:38.000000 sysall-1.0.8/src/sysall/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 10:40:31.663954 sysall-1.0.8/src/sysall.egg-info/
+│ │ --rw-rw-rw-   0        0        0     3907 2023-04-06 10:40:31.000000 sysall-1.0.8/src/sysall.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      254 2023-04-06 10:40:31.000000 sysall-1.0.8/src/sysall.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 10:40:31.000000 sysall-1.0.8/src/sysall.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       38 2023-04-06 10:40:31.000000 sysall-1.0.8/src/sysall.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        7 2023-04-06 10:40:31.000000 sysall-1.0.8/src/sysall.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:47:34.484825 sysall-1.1.0/
+│ │ +-rw-rw-rw-   0        0        0     1067 2023-04-04 19:25:31.000000 sysall-1.1.0/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     4135 2023-04-06 14:47:34.483319 sysall-1.1.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     3587 2023-04-06 14:47:11.000000 sysall-1.1.0/README.md
+│ │ +-rw-rw-rw-   0        0        0      716 2023-04-06 14:44:20.000000 sysall-1.1.0/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 14:47:34.484825 sysall-1.1.0/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      170 2023-04-06 08:37:31.000000 sysall-1.1.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:47:34.443313 sysall-1.1.0/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:47:34.462513 sysall-1.1.0/src/sysall/
+│ │ +-rw-rw-rw-   0        0        0    12527 2023-04-06 14:47:02.000000 sysall-1.1.0/src/sysall/SysAll.py
+│ │ +-rw-rw-rw-   0        0        0       21 2023-04-04 19:51:38.000000 sysall-1.1.0/src/sysall/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 14:47:34.481295 sysall-1.1.0/src/sysall.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     4135 2023-04-06 14:47:34.000000 sysall-1.1.0/src/sysall.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      254 2023-04-06 14:47:34.000000 sysall-1.1.0/src/sysall.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 14:47:34.000000 sysall-1.1.0/src/sysall.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       38 2023-04-06 14:47:34.000000 sysall-1.1.0/src/sysall.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        7 2023-04-06 14:47:34.000000 sysall-1.1.0/src/sysall.egg-info/top_level.txt
+│ │   --- sysall-1.0.8/LICENSE
+│ ├── +++ sysall-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- sysall-1.0.8/PKG-INFO
+│ ├── +++ sysall-1.1.0/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: sysall
+│ │ -Version: 1.0.8
+│ │ -Summary: Tool to easily retrieve information from the environment and the network
+│ │ +Version: 1.1.0
+│ │ +Summary: Tools to facilitate the use/manipulation of data in the Windows environment
+│ │  Author-email: LixNew <lixnew2@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/LixNew2/SysAll
+│ │  Project-URL: Bug Tracker, https://github.com/LixNew2/SysAll/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │ @@ -14,20 +14,19 @@
+│ │  
+│ │  # SysAll
+│ │  
+│ │  [![Downloads](https://static.pepy.tech/personalized-badge/sysall?period=month&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/sysall)
+│ │  [![sysall Version](https://img.shields.io/pypi/v/sysall)](https://pypi.org/project/sysall/)
+│ │  [![sysall Python Version](https://img.shields.io/pypi/pyversions/sysall)](https://pypi.org/project/sysall/)
+│ │  
+│ │ -SysAll is a tool that allows you to retrieve information about the environment, 
+│ │ -such as the name of the operating system, processor, RAM, IP address, MAC address of the machine.
+│ │ +SysAll is a library that aims to make it easier for python developers,
+│ │ +to use/manipulate data from the Windows environment.
+│ │  
+│ │ -It gathers the functionalities of several libraries such as 
+│ │ -wmi, psutil, platform, getmac, socket in one to facilitate the use/manipulation of environment data
+│ │ -for Python programmers.
+│ │ +With this tool, you will be able to access many system and network features. 
+│ │ +All this with functions that can be modified at will and in a single library.
+│ │  
+│ │  ## Set up
+│ │  ----
+│ │  ### Install
+│ │  
+│ │  ~~~python
+│ │  pip install sysall
+│ │ @@ -156,7 +155,31 @@
+│ │  ~~~
+│ │  
+│ │  
+│ │  Returns the address of the DHCP server
+│ │  ~~~python
+│ │  get_DHCP()
+│ │  ~~~
+│ │ +
+│ │ +
+│ │ +Returns the type of node
+│ │ +~~~python
+│ │ +get_node_type()
+│ │ +~~~ 
+│ │ +
+│ │ +
+│ │ +Returns WINS Proxy status
+│ │ +~~~python
+│ │ +get_WINS_proxy_status()
+│ │ +~~~   
+│ │ +            
+│ │ +
+│ │ +Returns IP routing status
+│ │ +~~~python
+│ │ +get_IP_routing_status()
+│ │ +~~~   
+│ │ +
+│ │ +            
+│ │ +Returns main DNS suffix
+│ │ +~~~python
+│ │ +get_main_DNS_suffix()
+│ │ +~~~
+│ │   --- sysall-1.0.8/README.md
+│ ├── +++ sysall-1.1.0/README.md
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,19 +1,18 @@
+│ │  # SysAll
+│ │  
+│ │  [![Downloads](https://static.pepy.tech/personalized-badge/sysall?period=month&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/sysall)
+│ │  [![sysall Version](https://img.shields.io/pypi/v/sysall)](https://pypi.org/project/sysall/)
+│ │  [![sysall Python Version](https://img.shields.io/pypi/pyversions/sysall)](https://pypi.org/project/sysall/)
+│ │  
+│ │ -SysAll is a tool that allows you to retrieve information about the environment, 
+│ │ -such as the name of the operating system, processor, RAM, IP address, MAC address of the machine.
+│ │ +SysAll is a library that aims to make it easier for python developers,
+│ │ +to use/manipulate data from the Windows environment.
+│ │  
+│ │ -It gathers the functionalities of several libraries such as 
+│ │ -wmi, psutil, platform, getmac, socket in one to facilitate the use/manipulation of environment data
+│ │ -for Python programmers.
+│ │ +With this tool, you will be able to access many system and network features. 
+│ │ +All this with functions that can be modified at will and in a single library.
+│ │  
+│ │  ## Set up
+│ │  ----
+│ │  ### Install
+│ │  
+│ │  ~~~python
+│ │  pip install sysall
+│ │ @@ -141,8 +140,32 @@
+│ │  get_DHCP_status()
+│ │  ~~~
+│ │  
+│ │  
+│ │  Returns the address of the DHCP server
+│ │  ~~~python
+│ │  get_DHCP()
+│ │ -~~~
+│ │ +~~~
+│ │ +
+│ │ +
+│ │ +Returns the type of node
+│ │ +~~~python
+│ │ +get_node_type()
+│ │ +~~~ 
+│ │ +
+│ │ +
+│ │ +Returns WINS Proxy status
+│ │ +~~~python
+│ │ +get_WINS_proxy_status()
+│ │ +~~~   
+│ │ +            
+│ │ +
+│ │ +Returns IP routing status
+│ │ +~~~python
+│ │ +get_IP_routing_status()
+│ │ +~~~   
+│ │ +
+│ │ +            
+│ │ +Returns main DNS suffix
+│ │ +~~~python
+│ │ +get_main_DNS_suffix()
+│ │ +~~~
+│ │   --- sysall-1.0.8/pyproject.toml
+│ ├── +++ sysall-1.1.0/pyproject.toml
+│ │┄ Files 23% similar despite different names
+│ │ @@ -7,19 +7,19 @@
+│ │      "py-cpuinfo",
+│ │      "requests"
+│ │  ]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "sysall"
+│ │ -version = "1.0.8"
+│ │ +version = "1.1.0"
+│ │  authors = [
+│ │    { name="LixNew", email="lixnew2@gmail.com" },
+│ │  ]
+│ │ -description = "Tool to easily retrieve information from the environment and the network"
+│ │ +description = "Tools to facilitate the use/manipulation of data in the Windows environment"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │      "Programming Language :: Python :: 3",
+│ │      "License :: OSI Approved :: MIT License",
+│ │      "Operating System :: OS Independent",
+│ │  ]
+│ │   --- sysall-1.0.8/src/sysall/SysAll.py
+│ ├── +++ sysall-1.1.0/src/sysall/SysAll.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,19 +1,40 @@
+│ │  """
+│ │ -SysAll is a tool that allows you to retrieve information about the environment, 
+│ │ -such as the name of the operating system, processor, RAM, IP address, MAC address of the machine.
+│ │ +SysAll is a library that aims to make it easier for python developers,
+│ │ +to use/manipulate data from the Windows environment.
+│ │  
+│ │ -It gathers the functionalities of several libraries such as 
+│ │ -wmi, psutil, platform, getmac, socket in one to facilitate the use/manipulation of environment data
+│ │ -for Python programmers.
+│ │ +With this tool, you will be able to access many system and network features. 
+│ │ +All this with functions that can be modified at will and in a single library.
+│ │  """
+│ │  
+│ │ -__version__ = '1.0.8'
+│ │ +__copyright__  = """
+│ │ +Copyright (c) 2023 LixNew; lixnew2@gmail.com
+│ │ +
+│ │ +Permission is hereby granted, free of charge, to any person obtaining a copy
+│ │ +of this software and associated documentation files (the "Software"), to deal
+│ │ +in the Software without restriction, including without limitation the rights
+│ │ +to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+│ │ +copies of the Software, and to permit persons to whom the Software is
+│ │ +furnished to do so, subject to the following conditions:
+│ │ +
+│ │ +The above copyright notice and this permission notice shall be included in all
+│ │ +copies or substantial portions of the Software.
+│ │ +
+│ │ +THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ │ +IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │ +FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │ +AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │ +LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │ +OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │ +SOFTWARE.
+│ │ +"""
+│ │ +
+│ │ +__version__ = '1.1.0'
+│ │  __title__ = 'SysAll'
+│ │ -__description__ = "Tool to easily retrieve information from the environment and the network"
+│ │ +__description__ = "Tools to facilitate the use/manipulation of data in the Windows environment"
+│ │  __autor__ = 'LixNew'
+│ │  __twitter__ = '@LixNew2'
+│ │  __url__ = "https://github.com/LixNew2/SysAll"
+│ │  
+│ │  #Import
+│ │  import os
+│ │  import platform
+│ │ @@ -23,15 +44,14 @@
+│ │  import getmac
+│ │  import wmi
+│ │  import requests
+│ │  import multiprocessing
+│ │  import ctypes
+│ │  import subprocess
+│ │  
+│ │ -
+│ │  #System
+│ │  
+│ │  #Functions
+│ │  def get_os(name : bool = True, version : bool = True, release : bool = True) -> dict:
+│ │      """
+│ │      Returns operating system name (Window, Linux, MacOS)
+│ │      
+│ │ @@ -77,22 +97,22 @@
+│ │          hostname (bool) : To return appdata hostname. Defautls to True.
+│ │          appdata_path (bool): To return appdata path. Defaults to True.
+│ │      """
+│ │      
+│ │      #Dictionary that saves the returned information
+│ │      appdata_infos = {}
+│ │      
+│ │ -    appdata_hostname = os.environ['APPDATA']
+│ │ +    _appdata_hostname = os.environ['APPDATA']
+│ │      
+│ │      #If hostname (True) add hostname in appdata_infos
+│ │      if hostname:
+│ │ -        appdata_infos["hostname"] = appdata_hostname.split('\\')[2]
+│ │ +        appdata_infos["hostname"] = _appdata_hostname.split('\\')[2]
+│ │      #If appdata_path (True) add path in appdata_infos 
+│ │      if appdata_path:
+│ │ -        appdata_infos["appdata_path"] = appdata_hostname
+│ │ +        appdata_infos["appdata_path"] = _appdata_hostname
+│ │      
+│ │      #If one or more (True) return appdata_infos   
+│ │      if (hostname or appdata_path):  
+│ │          return appdata_infos
+│ │      else:
+│ │          #Return None
+│ │          return None
+│ │ @@ -141,37 +161,37 @@
+│ │      Args:
+│ │          name (bool, optional): To return graphics card name. Defaults to True.
+│ │          ram (bool, optional): To return graphics card ram. Defaults to True.
+│ │          driver_version (bool,To return graphics card driver verion. Defaults to True.
+│ │      """
+│ │  
+│ │      #Variable
+│ │ -    AMOUNT = 0
+│ │ +    _AMOUNT = 0
+│ │      
+│ │      #WMI object initialisation
+│ │ -    wmi_obj = wmi.WMI()
+│ │ +    _wmi_obj = wmi.WMI()
+│ │      
+│ │      #Get all GPU on the system
+│ │ -    gpus = wmi_obj.Win32_VideoController()
+│ │ +    _gpus = _wmi_obj.Win32_VideoController()
+│ │      
+│ │      #Dictionary that saves the returned information
+│ │      gpu_infos = {}
+│ │      
+│ │      #For all GPU in GPUS get info
+│ │ -    for gpu in gpus:
+│ │ +    for _gpu in _gpus:
+│ │          AMOUNT+=1
+│ │          #If name (True) add name in gpu_infos
+│ │          if name:
+│ │ -            gpu_infos[f"Name GPU{AMOUNT}"] = gpu.Name
+│ │ +            gpu_infos[f"Name GPU{_AMOUNT}"] = _gpu.Name
+│ │          #If ram (True) add ram in gpu_infos    
+│ │          if ram:
+│ │ -            gpu_infos[f"RAM GPU{AMOUNT}"] = gpu.AdapterRAM
+│ │ +            gpu_infos[f"RAM GPU{_AMOUNT}"] = _gpu.AdapterRAM
+│ │          #If driver_version (True) add driver_version in gpu_infos
+│ │          if driver_version:
+│ │ -            gpu_infos[f"Driver_Version GPU{AMOUNT}"] = gpu.DriverVersion
+│ │ +            gpu_infos[f"Driver_Version GPU{_AMOUNT}"] = _gpu.DriverVersion
+│ │      
+│ │      #If one or more (True) returns gpu_infos
+│ │      if (name or ram or driver_version):         
+│ │          return gpu_infos
+│ │      else:
+│ │          #Returns None
+│ │          return None
+│ │ @@ -190,32 +210,32 @@
+│ │      #Returns information about the disk
+│ │      path = f'{path}:'
+│ │     
+│ │      #Dictionary that saves the returned information
+│ │      disk_infos = {}
+│ │      
+│ │      #Get dick space
+│ │ -    total_bytes = ctypes.c_ulonglong(0)
+│ │ -    free_bytes = ctypes.c_ulonglong(0)
+│ │ -    ctypes.windll.kernel32.GetDiskFreeSpaceExW(ctypes.c_wchar_p(path), None, ctypes.pointer(total_bytes), ctypes.pointer(free_bytes))
+│ │ -    
+│ │ -    total_space = total_bytes.value
+│ │ -    free_space = free_bytes.value
+│ │ -    used_space = total_space - free_space
+│ │ +    _total_bytes = ctypes.c_ulonglong(0)
+│ │ +    _free_bytes = ctypes.c_ulonglong(0)
+│ │ +    ctypes.windll.kernel32.GetDiskFreeSpaceExW(ctypes.c_wchar_p(path), None, ctypes.pointer(_total_bytes), ctypes.pointer(_free_bytes))
+│ │ +    
+│ │ +    _total_space = _total_bytes.value
+│ │ +    _free_space = _free_bytes.value
+│ │ +    _used_space = _total_space - _free_space
+│ │      
+│ │      #If total (True) add infos in disk_infos
+│ │      if total:
+│ │ -        disk_infos['total'] = f"{total_space / (1024**3):.2f}"
+│ │ +        disk_infos['total'] = f"{_total_space / (1024**3):.2f}"
+│ │      #If free (True) add infos in disk_infos
+│ │      if free:
+│ │          
+│ │ -        disk_infos['free'] = f"{free_space / (1024**3):.2f}"
+│ │ +        disk_infos['free'] = f"{_free_space / (1024**3):.2f}"
+│ │      #If used (True) add infos in disk_infos
+│ │      if used:
+│ │ -        disk_infos['used'] =  f"{used_space / (1024**3):.2f}"
+│ │ +        disk_infos['used'] =  f"{_used_space / (1024**3):.2f}"
+│ │      
+│ │      #If one or more (True) return gpu_infos
+│ │      if (total or free or used):
+│ │          return disk_infos
+│ │      else:
+│ │          #Return None
+│ │          return None
+│ │ @@ -235,59 +255,106 @@
+│ │      ip = requests.get('https://api64.ipify.org').text
+│ │      return ip
+│ │  
+│ │  def _network_infos():
+│ │      """Do not call"""
+│ │      
+│ │      net = subprocess.check_output('ipconfig /all')
+│ │ -
+│ │      return net
+│ │  
+│ │  def get_gateway(net=_network_infos()) -> str:
+│ │      """Returns the default gateway address"""
+│ │      
+│ │ -    for line in net.split(b'\r\n'):
+│ │ -        if b'Default Gateway' in line or b'Passerelle par d' in line:
+│ │ -            gateway = line.split(b':')[1].decode('utf-8').strip()
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'Default Gateway' in _line or b'Passerelle par d' in _line:
+│ │ +            gateway = _line.split(b':')[1].decode('utf-8').strip()
+│ │              if gateway != "":
+│ │                  return gateway
+│ │              
+│ │  def get_submask(net=_network_infos()) -> str:
+│ │      """Returns the address of the sub-mask"""
+│ │      
+│ │ -    for line in net.split(b'\r\n'):
+│ │ -        if b'Subnet Mask' in line or b'Masque de sous-r' in line:
+│ │ -            submask = line.split(b':')[1].decode('utf-8').strip()
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'Subnet Mask' in _line or b'Masque de sous-r' in _line:
+│ │ +            submask = _line.split(b':')[1].decode('utf-8').strip()
+│ │              return submask
+│ │      
+│ │  def get_DNS(net=_network_infos()) -> str:
+│ │      """Returns the address of the DNS server"""
+│ │      
+│ │ -    for line in net.split(b'\r\n'):
+│ │ -        if b'DNS Servers' in line or b'Serveurs DNS' in line:
+│ │ -            dns = line.split(b':')[1].decode('utf-8').strip()
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'DNS Servers' in _line or b'Serveurs DNS' in _line:
+│ │ +            dns = _line.split(b':')[1].decode('utf-8').strip()
+│ │              if dns != "fec0":
+│ │                  return dns
+│ │              
+│ │ -def get_DHCP_status(net=_network_infos()) -> str:
+│ │ +def get_DHCP_status(net=_network_infos()) -> bool:
+│ │      """Returns the DHCP status
+│ │      
+│ │      If the function returns "True" it means that DHCP is enabled.
+│ │      On the contrary, if the function returns "False", it means that DHCP is disabled.
+│ │      """
+│ │      
+│ │ -    for line in net.split(b'\r\n'):
+│ │ -        if b'DHCP Enabled' in line or b'DHCP activ' in line:
+│ │ -            dhcp_st = line.split(b':')[1].decode('utf-8').strip()
+│ │ -            if dhcp_st == "Yes" or dhcp_st == "Oui":
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'DHCP Enabled' in _line or b'DHCP activ' in _line:
+│ │ +            _dhcp_st = _line.split(b':')[1].decode('utf-8').strip()
+│ │ +            if _dhcp_st == "Yes" or _dhcp_st == "Oui":
+│ │                  return True
+│ │              else:
+│ │                  return False  
+│ │      
+│ │  def get_DHCP(net=_network_infos()) -> str:
+│ │      """Returns the address of the DNS server"""
+│ │      
+│ │ -    for line in net.split(b'\r\n'):
+│ │ -        if b'DHCP Server' in line or b'Serveur DHCP' in line:
+│ │ -            dhcp = line.split(b':')[1].decode('utf-8').strip()
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'DHCP Server' in _line or b'Serveur DHCP' in _line:
+│ │ +            dhcp = _line.split(b':')[1].decode('utf-8').strip()
+│ │              if dhcp != "":
+│ │ -                return dhcp
+│ │ +                return dhcp
+│ │ +            
+│ │ +def get_node_type(net=_network_infos()) -> str:
+│ │ +    """Returns the type of node"""
+│ │ +    
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'Node Type' in _line or b'Type de noeud' in _line:
+│ │ +            node = _line.split(b':')[1].decode('utf-8').strip()
+│ │ +            if node != "":
+│ │ +                return node
+│ │ +
+│ │ +def get_WINS_proxy_status(net=_network_infos()) -> bool:
+│ │ +    """Returns WINS Proxy status
+│ │ +    
+│ │ +    If the function returns "True" it means that WINS proxy is enabled.
+│ │ +    On the contrary, if the function returns "False", it means that WINS proxy is disabled.
+│ │ +    """
+│ │ +    
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'WINS Proxy Enabled' in _line or b'Proxy WINS activ' in _line:
+│ │ +            _winx = _line.split(b':')[1].decode('utf-8').strip()
+│ │ +            if _winx == "Yes" or _winx == "Oui":
+│ │ +                return True
+│ │ +            else:
+│ │ +                return False
+│ │ +            
+│ │ +def get_IP_routing_status(net=_network_infos()) -> bool:
+│ │ +    """Returns IP routing status
+│ │ +    
+│ │ +    If the function returns "True" it means that IP routing is enabled.
+│ │ +    On the contrary, if the function returns "False", it means that IP routing is disabled.
+│ │ +    """
+│ │ +    
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'IP Routing Enabled' in _line or b'Routage IP activ' in _line:
+│ │ +            _routing = _line.split(b':')[1].decode('utf-8').strip()
+│ │ +            if _routing == "Yes" or _routing == "Oui":
+│ │ +                return True
+│ │ +            else:
+│ │ +                return False
+│ │ +            
+│ │ +def get_main_DNS_suffix(net=_network_infos()) -> str:
+│ │ +    """Returns main DNS status"""
+│ │ +    
+│ │ +    for _line in net.split(b'\r\n'):
+│ │ +        if b'Priamry Dns Suffix' in _line or b'Suffixe DNS principal' in _line:
+│ │ +            suffix_dns = _line.split(b':')[1].decode('utf-8').strip()
+│ │ +            if suffix_dns != "":
+│ │ +                return suffix_dns
+│ │   --- sysall-1.0.8/src/sysall.egg-info/PKG-INFO
+│ ├── +++ sysall-1.1.0/src/sysall.egg-info/PKG-INFO
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: sysall
+│ │ -Version: 1.0.8
+│ │ -Summary: Tool to easily retrieve information from the environment and the network
+│ │ +Version: 1.1.0
+│ │ +Summary: Tools to facilitate the use/manipulation of data in the Windows environment
+│ │  Author-email: LixNew <lixnew2@gmail.com>
+│ │  Project-URL: Homepage, https://github.com/LixNew2/SysAll
+│ │  Project-URL: Bug Tracker, https://github.com/LixNew2/SysAll/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Requires-Python: >=3.7
+│ │ @@ -14,20 +14,19 @@
+│ │  
+│ │  # SysAll
+│ │  
+│ │  [![Downloads](https://static.pepy.tech/personalized-badge/sysall?period=month&units=international_system&left_color=grey&right_color=blue&left_text=Downloads)](https://pepy.tech/project/sysall)
+│ │  [![sysall Version](https://img.shields.io/pypi/v/sysall)](https://pypi.org/project/sysall/)
+│ │  [![sysall Python Version](https://img.shields.io/pypi/pyversions/sysall)](https://pypi.org/project/sysall/)
+│ │  
+│ │ -SysAll is a tool that allows you to retrieve information about the environment, 
+│ │ -such as the name of the operating system, processor, RAM, IP address, MAC address of the machine.
+│ │ +SysAll is a library that aims to make it easier for python developers,
+│ │ +to use/manipulate data from the Windows environment.
+│ │  
+│ │ -It gathers the functionalities of several libraries such as 
+│ │ -wmi, psutil, platform, getmac, socket in one to facilitate the use/manipulation of environment data
+│ │ -for Python programmers.
+│ │ +With this tool, you will be able to access many system and network features. 
+│ │ +All this with functions that can be modified at will and in a single library.
+│ │  
+│ │  ## Set up
+│ │  ----
+│ │  ### Install
+│ │  
+│ │  ~~~python
+│ │  pip install sysall
+│ │ @@ -156,7 +155,31 @@
+│ │  ~~~
+│ │  
+│ │  
+│ │  Returns the address of the DHCP server
+│ │  ~~~python
+│ │  get_DHCP()
+│ │  ~~~
+│ │ +
+│ │ +
+│ │ +Returns the type of node
+│ │ +~~~python
+│ │ +get_node_type()
+│ │ +~~~ 
+│ │ +
+│ │ +
+│ │ +Returns WINS Proxy status
+│ │ +~~~python
+│ │ +get_WINS_proxy_status()
+│ │ +~~~   
+│ │ +            
+│ │ +
+│ │ +Returns IP routing status
+│ │ +~~~python
+│ │ +get_IP_routing_status()
+│ │ +~~~   
+│ │ +
+│ │ +            
+│ │ +Returns main DNS suffix
+│ │ +~~~python
+│ │ +get_main_DNS_suffix()
+│ │ +~~~

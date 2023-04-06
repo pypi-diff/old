@@ -1,0 +1,253 @@
+# Comparing `tmp/pyexhange_r3ne-0.0.9.tar.gz` & `tmp/pyexhange_r3ne-0.1.0.tar.gz`
+
+## Comparing `pyexhange_r3ne-0.0.9.tar` & `pyexhange_r3ne-0.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,20 @@
+--rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/.gitattributes
+--rwxr-xr-x   0        0        0       32 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/Run.bat
+--rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/config.json.example
+--rw-r--r--   0        0        0     1907 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/pyexhange.py
+--rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/requirements.txt
+--rw-r--r--   0        0        0      370 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/test.py
+--rwxr-xr-x   0        0        0       71 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/upload.bat
+--rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/data/placeholder
+--rw-r--r--   0        0        0     1541 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/send.py
+--rw-r--r--   0        0        0     2765 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/trade.py
+--rw-r--r--   0        0        0      934 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/wallet.py
+--rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/utils/data.py
+--rw-r--r--   0        0        0     1490 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/modules/utils/finhub.py
+--rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/.gitignore
+--rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/LICENCE.rst
+--rw-r--r--   0        0        0      724 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/README.md
+--rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/pyproject.toml
+--rw-r--r--   0        0        0     1299 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.0.9/PKG-INFO
++-rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/.gitattributes
++-rwxr-xr-x   0        0        0       32 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/Run.bat
++-rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/config.json.example
++-rw-r--r--   0        0        0     1896 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/pyexhange.py
++-rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/requirements.txt
++-rw-r--r--   0        0        0      370 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/test.py
++-rwxr-xr-x   0        0        0       71 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/upload.bat
++-rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/data/placeholder
++-rw-r--r--   0        0        0     1505 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/send.py
++-rw-r--r--   0        0        0     2768 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/trade.py
++-rw-r--r--   0        0        0      934 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/wallet.py
++-rw-r--r--   0        0        0      824 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/utils/coingecko.py
++-rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/utils/data.py
++-rw-r--r--   0        0        0      802 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/utils/exchanges.py
++-rw-r--r--   0        0        0     1213 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/modules/utils/finhub.py
++-rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/.gitignore
++-rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/LICENCE.rst
++-rw-r--r--   0        0        0      709 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/README.md
++-rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/pyproject.toml
++-rw-r--r--   0        0        0     1284 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.0/PKG-INFO
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/pyexhange.py` & `pyexhange_r3ne-0.1.0/pyexhange.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -5,15 +5,14 @@
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+-import os
+ from modules import trade
+ from modules import send
+ from modules import wallet
+ from modules.utils.data import *
+ 
+ try:
+     data = jsonBase("./data")
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/modules/send.py` & `pyexhange_r3ne-0.1.0/modules/send.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -5,15 +5,14 @@
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+-from modules.utils.finhub import *
+ from modules.utils.data import *
+ 
+ data = jsonBase("./data")
+ 
+ def send_function(*args):
+     # Check if number of arguments is correct
+     if len(args) != 5:
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/modules/trade.py` & `pyexhange_r3ne-0.1.0/modules/trade.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -5,15 +5,15 @@
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+-from modules.utils.finhub import *
++from modules.utils.exchanges import *
+ from modules.utils.data import *
+ 
+ data = jsonBase("./data")
+ 
+ def trade_function(*args):
+     if len(args) != 3:
+         return {"status": "failed", "error_code": "INVALID_ARGUMENTS", "error": "Invalid arguments. Usage: trade [user] [amount] [currency]"}
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/modules/wallet.py` & `pyexhange_r3ne-0.1.0/modules/wallet.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.0.9/modules/utils/data.py` & `pyexhange_r3ne-0.1.0/modules/utils/data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.0.9/modules/utils/finhub.py` & `pyexhange_r3ne-0.1.0/modules/utils/finhub.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -18,27 +18,20 @@
+     config = json.load(f)
+     api_key = config["finhub_key"]
+     finnhub_client = finnhub.Client(api_key=api_key)
+ 
+ # Dictionary to store cached prices
+ cache = {}
+ 
+-def get_crypto_price(crypto_symbol):
++def finhub_get_crypto_price(crypto_symbol):
+     crypto_symbol = crypto_symbol.upper()
+     try:
+         timestamp = int(time.time())
+         candles = finnhub_client.crypto_candles(f"BINANCE:{crypto_symbol}USDT", 'D', timestamp - 86400, timestamp)
+         current_price = candles['c'][-1]
+         
+         # Store the price in cache
+         cache[crypto_symbol] = current_price
+         
+         return current_price
+-    except finnhub.exceptions.FinnhubAPIException as e:
+-        # If rate limited, return the cached price
+-        if e.http_status == 429:
+-            if crypto_symbol in cache:
+-                return cache[crypto_symbol]
+-            else:
+-                return None
+-        else:
+-            return None
++    except:
++        return None
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/.gitignore` & `pyexhange_r3ne-0.1.0/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.0.9/LICENCE.rst` & `pyexhange_r3ne-0.1.0/LICENCE.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.0.9/README.md` & `pyexhange_r3ne-0.1.0/README.md`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+ ```
+ 
+ # Usage
+ This can be integrated to any interface (Websites, Telegram, Discord, etc.) with ease.
+ 
+ Example:
+ ```python
+-from pyexhange import pyexhange
++import pyexhange
+ 
+ #Buy 1 Ethereum
+ print(pyexhange.handle_command("trade 1 1 eth"))
+ 
+ #Sell 1 Ethereum
+ print(pyexhange.handle_command("trade 1 -1 eth"))
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/pyproject.toml` & `pyexhange_r3ne-0.1.0/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["hatchling", "finnhub-python"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+ name = "pyexhange_r3ne"
+-version = "0.0.9"
++version = "0.1.0"
+ authors = [
+   { name="R3ne.net", email="mail@r3ne.net" },
+ ]
+ description = "Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+```
+
+### Comparing `pyexhange_r3ne-0.0.9/PKG-INFO` & `pyexhange_r3ne-0.1.0/PKG-INFO`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyexhange_r3ne
+-Version: 0.0.9
++Version: 0.1.0
+ Summary: Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money.
+ Project-URL: Homepage, https://github.com/JAAKKQ/pyexhange
+ Project-URL: Bug Tracker, https://github.com/JAAKKQ/pyexhange/issues
+ Author-email: "R3ne.net" <mail@r3ne.net>
+ License-File: LICENCE.rst
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -22,15 +22,15 @@
+ ```
+ 
+ # Usage
+ This can be integrated to any interface (Websites, Telegram, Discord, etc.) with ease.
+ 
+ Example:
+ ```python
+-from pyexhange import pyexhange
++import pyexhange
+ 
+ #Buy 1 Ethereum
+ print(pyexhange.handle_command("trade 1 1 eth"))
+ 
+ #Sell 1 Ethereum
+ print(pyexhange.handle_command("trade 1 -1 eth"))
+```
+

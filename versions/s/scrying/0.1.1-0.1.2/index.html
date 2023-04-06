@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/scrying-0.1.1.tar.gz tmp/scrying-0.1.2.tar.gz --html versions/s/scrying/0.1.1-0.1.2/index.html --text versions/s/scrying/0.1.1-0.1.2/diff.txt --markdown versions/s/scrying/0.1.1-0.1.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">4.97 KB</span></div>
+  <div><span class="source">tmp/scrying-0.1.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/scrying-0.1.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;scrying-0.1.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>14:<del>35</del>:<del>59</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;scrying-0.1.<ins>2</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.67 KB</span></div>
+    <div><span class="source">scrying-0.1.1.tar</span> vs.</div>
+    <div id="scrying--.-.-.tar"><span class="source">scrying-0.1.2.tar</span>
+      <a class="anchor" href="#scrying--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.48 KB</span></div>
+      <div id="scrying--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#scrying--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.<del>086115</del><span class="dp">·</span>scrying-0.1.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.<ins>568504</ins><span class="dp">·</span>scrying-0.1.<ins>2</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:34:40.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:34:40.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>704</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.<del>086115</del><span class="dp">·</span>scrying-0.1.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1212</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.<ins>568504</ins><span class="dp">·</span>scrying-0.1.<ins>2</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>7</del>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:3<del>2</del>:<del>5</del>5.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>6</ins>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:3<ins>7</ins>:<ins>2</ins>5.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.<del>086115</del><span class="dp">·</span>scrying-0.1.<del>1</del>/scrying/</td><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.<ins>568504</ins><span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>134<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>52</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>134<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>42</ins>:<ins>48</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1225<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:15:48.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying/main.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1225<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:15:48.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.<del>086115</del><span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.<ins>568504</ins><span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>704</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1212</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/SOURCES.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>216<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/dependency_links.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/requires.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/scrying.egg-info/top_level.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/scrying.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:<del>59</del>.<del>086115</del><span class="dp">·</span>scrying-0.1.<del>1</del>/setup.cfg</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>00</ins>.<ins>568504</ins><span class="dp">·</span>scrying-0.1.<ins>2</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>902</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>35</del>:52.000000<span class="dp">·</span>scrying-0.1.<del>1</del>/setup.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>matteo<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1083</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>42</ins>:52.000000<span class="dp">·</span>scrying-0.1.<ins>2</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">scrying-0.1.1/scrying/main.py</span> vs.</div>
+      <div id="scrying--.-.-.tar---scrying--.-.--scrying-main.py"><span class="source">scrying-0.1.2/scrying/main.py</span>
+        <a class="anchor" href="#scrying--.-.-.tar---scrying--.-.--scrying-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.06 KB</span></div>
+      <div><span class="source">scrying-0.1.1/setup.py</span> vs.</div>
+      <div id="scrying--.-.-.tar---scrying--.-.--setup.py"><span class="source">scrying-0.1.2/setup.py</span>
+        <a class="anchor" href="#scrying--.-.-.tar---scrying--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 28 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">this_directory<span class="dp">·</span>=<span class="dp">·</span>Path(__file__).parent</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">setup(</td><td class="diffline">4 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;scrying&#x27;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;scrying&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.1.<del>1</del>&#x27;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.1.<ins>2</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;A<span class="dp">·</span>ScryfallAPI<span class="dp">·</span>port<span class="dp">·</span>written<span class="dp">·</span>in<span class="dp">·</span>Python&#x27;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;A<span class="dp">·</span>ScryfallAPI<span class="dp">·</span>port<span class="dp">·</span>written<span class="dp">·</span>in<span class="dp">·</span>Python&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/chumpblocckami/scrying&#x27;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/chumpblocckami/scrying&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;Matteo<span class="dp">·</span>Mazzola&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;Matteo<span class="dp">·</span>Mazzola&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;contact.matteomazzola@gmail.com&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;contact.matteomazzola@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;BSD<span class="dp">·</span>2-clause&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;BSD<span class="dp">·</span>2-clause&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&quot;scrying&quot;],</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=[&quot;scrying&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;requests&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[&#x27;requests&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pillow&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pillow&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;tqdm&#x27;</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;tqdm&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=(this_directory<span class="dp">·</span>/<span class="dp">·</span>&quot;README.md&quot;).read_text(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&#x27;text/markdown&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>1<span class="dp">·</span>-<span class="dp">·</span>Planning&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>1<span class="dp">·</span>-<span class="dp">·</span>Planning&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>BSD<span class="dp">·</span>License&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>BSD<span class="dp">·</span>License&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>POSIX<span class="dp">·</span>::<span class="dp">·</span>Linux&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>POSIX<span class="dp">·</span>::<span class="dp">·</span>Linux&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>2&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>2&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>2.7&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>2.7&#x27;,</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

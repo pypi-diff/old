@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/ggtag-0.1.0.tar.gz tmp/ggtag-0.1.1.tar.gz --html versions/g/ggtag/0.1.0-0.1.1/index.html --text versions/g/ggtag/0.1.0-0.1.1/diff.txt --markdown versions/g/ggtag/0.1.0-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.3 KB</span></div>
+  <div><span class="source">tmp/ggtag-0.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/ggtag-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">260 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ggtag-0.1.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>14:<del>36</del>:<del>5</del>6<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ggtag-0.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6<span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">12.0 KB</span></div>
+    <div><span class="source">ggtag-0.1.0.tar</span> vs.</div>
+    <div id="ggtag--.-.-.tar"><span class="source">ggtag-0.1.1.tar</span>
+      <a class="anchor" href="#ggtag--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">8.56 KB</span></div>
+      <div id="ggtag--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 33 lines modified</td><td colspan="2">Offset 1, 41 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>510329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>72<span class="dp">·</span>2023-03-24<span class="dp">·</span>11:10:45.000000<span class="dp">·</span>ggtag-0.1.1/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>3</del>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>7</ins>8<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>510329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>883<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:36:27.000000<span class="dp">·</span>ggtag-0.1.1/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2301<span class="dp">·</span>2023-03-30<span class="dp">·</span>06:13:07.<del>497421</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/cggtag.c</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2301<span class="dp">·</span>2023-03-30<span class="dp">·</span>06:13:07.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/cggtag.c</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.506329<span class="dp">·</span>ggtag-0.1.1/ggtag.egg-info/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1378<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.000000<span class="dp">·</span>ggtag-0.1.1/ggtag.egg-info/PKG-INFO</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>644<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.000000<span class="dp">·</span>ggtag-0.1.1/ggtag.egg-info/SOURCES.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.000000<span class="dp">·</span>ggtag-0.1.1/ggtag.egg-info/dependency_links.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.000000<span class="dp">·</span>ggtag-0.1.1/ggtag.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4267<span class="dp">·</span>2023-04-06<span class="dp">·</span>07:34:30.<del>2</del>0<del>1216</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/ggtag.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4267<span class="dp">·</span>2023-04-06<span class="dp">·</span>07:34:30.<ins>0</ins>0<ins>0000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/ggtag.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>974210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/</td><td class="diffline">12 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>506329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/include/</td><td class="diffline">13 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>506329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/include/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>877<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/include/ggtag.h</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>877<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/include/ggtag.h</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/include/utils.h</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/include/utils.h</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/src/</td><td class="diffline">16 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>506329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24874<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>838212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/src/ggtag.cpp</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24874<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/src/ggtag.cpp</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>254<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/src/rfid.cpp</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>254<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/src/rfid.cpp</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28757<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>838212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/host/src/utils.cpp</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28757<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/host/src/utils.cpp</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:43:36.510329<span class="dp">·</span>ggtag-0.1.1/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<del>71</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>27</del>.<del>858493</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/setup.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<ins>67</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>18</ins>.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/</td><td class="diffline">22 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>506329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/</td><td class="diffline">23 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>510329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7274<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/GUI_Paint.h</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7274<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/GUI_Paint.h</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/debug.h</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/debug.h</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3107<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/fonts.h</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3107<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/fonts.h</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1237<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/protocol.h</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1237<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/protocol.h</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17866<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/qrcodegen.h</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17866<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/qrcodegen.h</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/rfid.h</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/rfid.h</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>199033<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/include/stb_truetype.h</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>199033<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/include/stb_truetype.h</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>978210</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/</td><td class="diffline">31 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>510329</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31639<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/GUI_Paint.c</td><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31639<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/GUI_Paint.c</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>453<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/debug.c</td><td class="diffline">33 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>453<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/debug.c</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span>1250359<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>846212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/fa.c</td><td class="diffline">34 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span>1250359<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/fa.c</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25780<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/font12.c</td><td class="diffline">35 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25780<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/font12.c</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47973<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/font16.c</td><td class="diffline">36 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47973<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/font16.c</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>64320<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/font20.c</td><td class="diffline">37 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>64320<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/font20.c</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96590<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/font24.c</td><td class="diffline">38 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96590<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/font24.c</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17398<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/font8.c</td><td class="diffline">39 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17398<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/font8.c</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8696<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/protocol.cpp</td><td class="diffline">40 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8696<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/protocol.cpp</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41771<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<del>36</del>:<del>5</del>6.<del>842212</del><span class="dp">·</span>ggtag-0.1.<del>0</del>/shared/src/qrcodegen.c</td><td class="diffline">41 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>rgerganov<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41771<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:<ins>43</ins>:<ins>3</ins>6.<ins>000000</ins><span class="dp">·</span>ggtag-0.1.<ins>1</ins>/shared/src/qrcodegen.c</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">876 B</span></div>
+      <div><span class="source">ggtag-0.1.0/PKG-INFO</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--PKG-INFO"><span class="source">ggtag-0.1.1/PKG-INFO</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span><del>1</del>.<del>0</del></td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span><ins>2</ins>.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ggtag</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ggtag</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>ggtag</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>ggtag</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/rgerganov/ggtag</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/rgerganov/ggtag</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Radoslav<span class="dp">·</span>Gerganov</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Radoslav<span class="dp">·</span>Gerganov</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rgerganov@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>rgerganov@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>`ggtag`.</td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>`ggtag`.</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 31, 7 lines modified</td><td colspan="2">Offset 31, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>byte<span class="dp">·</span>array<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>programmed<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>ggtag<span class="dp">·</span>device<span class="dp">·</span>using<span class="dp">·</span>either:</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>byte<span class="dp">·</span>array<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>programmed<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>ggtag<span class="dp">·</span>device<span class="dp">·</span>using<span class="dp">·</span>either:</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>data<span class="dp">·</span>over<span class="dp">·</span>sound<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>the<span class="dp">·</span>[ggwave](https://pypi.org/project/ggwave)<span class="dp">·</span>library<span class="dp">·</span></td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>data<span class="dp">·</span>over<span class="dp">·</span>sound<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>the<span class="dp">·</span>[ggwave](https://pypi.org/project/ggwave)<span class="dp">·</span>library<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>serial<span class="dp">·</span>USB<span class="dp">·</span>connection<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>[pyserial](https://pypi.org/project/pyserial)<span class="dp">·</span>library.</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*<span class="dp">·</span>serial<span class="dp">·</span>USB<span class="dp">·</span>connection<span class="dp">·</span>and<span class="dp">·</span>the<span class="dp">·</span>[pyserial](https://pypi.org/project/pyserial)<span class="dp">·</span>library.</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>See<span class="dp">·</span>[demo.py](https://github.com/rgerganov/ggtag/blob/master/examples/demo.py)<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>complete<span class="dp">·</span>demo.</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>See<span class="dp">·</span>[demo.py](https://github.com/rgerganov/ggtag/blob/master/examples/demo.py)<span class="dp">·</span>for<span class="dp">·</span>a<span class="dp">·</span>complete<span class="dp">·</span>demo.</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">37 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/cggtag.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--cggtag.c"><span class="source">ggtag-0.1.1/cggtag.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--cggtag.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/ggtag.py</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--ggtag.py"><span class="source">ggtag-0.1.1/ggtag.py</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--ggtag.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">ggtag-0.1.0/host/include/ggtag.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--host-include-ggtag.h"><span class="source">ggtag-0.1.1/host/include/ggtag.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--host-include-ggtag.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/host/src/ggtag.cpp</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--host-src-ggtag.cpp"><span class="source">ggtag-0.1.1/host/src/ggtag.cpp</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--host-src-ggtag.cpp">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/host/src/utils.cpp</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--host-src-utils.cpp"><span class="source">ggtag-0.1.1/host/src/utils.cpp</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--host-src-utils.cpp">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">700 B</span></div>
+      <div><span class="source">ggtag-0.1.0/setup.py</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--setup.py"><span class="source">ggtag-0.1.1/setup.py</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span><del>di</del>s<del>t</del><del>u</del>t<del>i</del><del>ls.c</del>o<del>re</del><span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>Extension</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>s<ins>e</ins>t<ins>upto</ins>o<ins>ls</ins><span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>Extension</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">def<span class="dp">·</span>main():</td><td class="diffline">2 </td><td class="diffpresent">def<span class="dp">·</span>main():</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(&quot;README.md&quot;,<span class="dp">·</span>&quot;r&quot;)<span class="dp">·</span>as<span class="dp">·</span>fh:</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description<span class="dp">·</span>=<span class="dp">·</span>fh.read()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup(name=&quot;ggtag&quot;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup(name=&quot;ggtag&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.1.<del>0</del>&quot;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.1.<ins>1</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>ggtag&quot;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&quot;Python<span class="dp">·</span>bindings<span class="dp">·</span>for<span class="dp">·</span>ggtag&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&quot;text/markdown&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Radoslav<span class="dp">·</span>Gerganov&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&quot;Radoslav<span class="dp">·</span>Gerganov&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;rgerganov@gmail.com&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&quot;rgerganov@gmail.com&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_dirs<span class="dp">·</span>=<span class="dp">·</span>[&#x27;host/include&#x27;,<span class="dp">·</span>&#x27;shared/include&#x27;],</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>include_dirs<span class="dp">·</span>=<span class="dp">·</span>[&#x27;host/include&#x27;,<span class="dp">·</span>&#x27;shared/include&#x27;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>py_modules<span class="dp">·</span>=<span class="dp">·</span>[&#x27;ggtag&#x27;],</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>py_modules<span class="dp">·</span>=<span class="dp">·</span>[&#x27;ggtag&#x27;],</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/include/GUI_Paint.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-include-GUI_Paint.h"><span class="source">ggtag-0.1.1/shared/include/GUI_Paint.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-include-GUI_Paint.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/include/fonts.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-include-fonts.h"><span class="source">ggtag-0.1.1/shared/include/fonts.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-include-fonts.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/include/protocol.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-include-protocol.h"><span class="source">ggtag-0.1.1/shared/include/protocol.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-include-protocol.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/include/qrcodegen.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-include-qrcodegen.h"><span class="source">ggtag-0.1.1/shared/include/qrcodegen.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-include-qrcodegen.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/include/stb_truetype.h</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-include-stb_truetype.h"><span class="source">ggtag-0.1.1/shared/include/stb_truetype.h</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-include-stb_truetype.h">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/GUI_Paint.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-GUI_Paint.c"><span class="source">ggtag-0.1.1/shared/src/GUI_Paint.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-GUI_Paint.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/fa.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-fa.c"><span class="source">ggtag-0.1.1/shared/src/fa.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-fa.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/font12.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c"><span class="source">ggtag-0.1.1/shared/src/font12.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/font16.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-1"><span class="source">ggtag-0.1.1/shared/src/font16.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/font20.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-2"><span class="source">ggtag-0.1.1/shared/src/font20.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-2">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/font24.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-3"><span class="source">ggtag-0.1.1/shared/src/font24.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-font--.c-3">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/font8.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-font-.c"><span class="source">ggtag-0.1.1/shared/src/font8.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-font-.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/protocol.cpp</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-protocol.cpp"><span class="source">ggtag-0.1.1/shared/src/protocol.cpp</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-protocol.cpp">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">ggtag-0.1.0/shared/src/qrcodegen.c</span> vs.</div>
+      <div id="ggtag--.-.-.tar---ggtag--.-.--shared-src-qrcodegen.c"><span class="source">ggtag-0.1.1/shared/src/qrcodegen.c</span>
+        <a class="anchor" href="#ggtag--.-.-.tar---ggtag--.-.--shared-src-qrcodegen.c">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
