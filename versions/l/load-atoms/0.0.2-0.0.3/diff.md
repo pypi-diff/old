@@ -1,0 +1,257 @@
+# Comparing `tmp/load-atoms-0.0.2.tar.gz` & `tmp/load-atoms-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "load-atoms-0.0.2.tar", last modified: Thu Apr  6 10:05:22 2023, max compression
++gzip compressed data, was "load-atoms-0.0.3.tar", last modified: Thu Apr  6 10:09:45 2023, max compression
+```
+
+## Comparing `load-atoms-0.0.2.tar` & `load-atoms-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,34 @@
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.289968 load-atoms-0.0.2/
+--rw-r--r--   0 john       (504) staff       (20)     1069 2023-04-04 12:18:14.000000 load-atoms-0.0.2/LICENSE
+--rw-r--r--   0 john       (504) staff       (20)       48 2023-03-07 08:55:19.000000 load-atoms-0.0.2/MANIFEST.in
+--rw-r--r--   0 john       (504) staff       (20)     2700 2023-04-06 10:05:22.289815 load-atoms-0.0.2/PKG-INFO
+--rw-r--r--   0 john       (504) staff       (20)      905 2023-04-04 12:19:43.000000 load-atoms-0.0.2/README.md
+--rw-r--r--   0 john       (504) staff       (20)     1309 2023-04-06 09:57:07.000000 load-atoms-0.0.2/pyproject.toml
+--rw-r--r--   0 john       (504) staff       (20)       38 2023-04-06 10:05:22.290014 load-atoms-0.0.2/setup.cfg
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.282707 load-atoms-0.0.2/src/
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.286013 load-atoms-0.0.2/src/load_atoms/
+--rw-r--r--   0 john       (504) staff       (20)      127 2023-04-06 09:57:07.000000 load-atoms-0.0.2/src/load_atoms/__init__.py
+--rw-r--r--   0 john       (504) staff       (20)     1727 2023-04-05 06:56:03.000000 load-atoms-0.0.2/src/load_atoms/api.py
+--rw-r--r--   0 john       (504) staff       (20)     3304 2023-04-05 08:42:48.000000 load-atoms-0.0.2/src/load_atoms/backend.py
+--rw-r--r--   0 john       (504) staff       (20)      535 2023-04-05 08:42:48.000000 load-atoms-0.0.2/src/load_atoms/checksums.py
+--rw-r--r--   0 john       (504) staff       (20)     2051 2023-04-05 08:42:48.000000 load-atoms-0.0.2/src/load_atoms/database.py
+--rw-r--r--   0 john       (504) staff       (20)     3747 2023-04-05 06:56:03.000000 load-atoms-0.0.2/src/load_atoms/dataset.py
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.288123 load-atoms-0.0.2/src/load_atoms/datasets/
+--rw-r--r--   0 john       (504) staff       (20)     1040 2023-04-06 09:55:36.000000 load-atoms-0.0.2/src/load_atoms/datasets/C-GAP-17.yaml
+--rw-r--r--   0 john       (504) staff       (20)     1166 2023-04-06 09:55:23.000000 load-atoms-0.0.2/src/load_atoms/datasets/C-GAP-20.yaml
+--rw-r--r--   0 john       (504) staff       (20)     1356 2023-03-07 08:55:19.000000 load-atoms-0.0.2/src/load_atoms/datasets/QM7.yaml
+--rw-r--r--   0 john       (504) staff       (20)     1222 2023-03-07 16:02:25.000000 load-atoms-0.0.2/src/load_atoms/datasets/amorphous-grahpene.yaml
+--rw-r--r--   0 john       (504) staff       (20)     1240 2023-02-18 11:49:24.000000 load-atoms-0.0.2/src/load_atoms/manipulations.py
+--rw-r--r--   0 john       (504) staff       (20)     1595 2023-03-07 08:55:19.000000 load-atoms-0.0.2/src/load_atoms/util.py
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.287043 load-atoms-0.0.2/src/load_atoms.egg-info/
+--rw-r--r--   0 john       (504) staff       (20)     2700 2023-04-06 10:05:22.000000 load-atoms-0.0.2/src/load_atoms.egg-info/PKG-INFO
+--rw-r--r--   0 john       (504) staff       (20)      715 2023-04-06 10:05:22.000000 load-atoms-0.0.2/src/load_atoms.egg-info/SOURCES.txt
+--rw-r--r--   0 john       (504) staff       (20)        1 2023-04-06 10:05:22.000000 load-atoms-0.0.2/src/load_atoms.egg-info/dependency_links.txt
+--rw-r--r--   0 john       (504) staff       (20)      157 2023-04-06 10:05:22.000000 load-atoms-0.0.2/src/load_atoms.egg-info/requires.txt
+--rw-r--r--   0 john       (504) staff       (20)       11 2023-04-06 10:05:22.000000 load-atoms-0.0.2/src/load_atoms.egg-info/top_level.txt
+-drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:05:22.289559 load-atoms-0.0.2/tests/
+--rw-r--r--   0 john       (504) staff       (20)     1581 2023-04-06 09:06:34.000000 load-atoms-0.0.2/tests/test_backend.py
+--rw-r--r--   0 john       (504) staff       (20)     1965 2023-04-06 09:14:35.000000 load-atoms-0.0.2/tests/test_database.py
+--rw-r--r--   0 john       (504) staff       (20)     2094 2023-04-06 09:14:52.000000 load-atoms-0.0.2/tests/test_dataset.py
+--rw-r--r--   0 john       (504) staff       (20)      857 2023-04-05 06:56:03.000000 load-atoms-0.0.2/tests/test_manipulations.py
+--rw-r--r--   0 john       (504) staff       (20)      441 2023-04-05 08:42:48.000000 load-atoms-0.0.2/tests/test_util.py
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.837371 load-atoms-0.0.3/
++-rw-r--r--   0 john       (504) staff       (20)     1069 2023-04-04 12:18:14.000000 load-atoms-0.0.3/LICENSE
++-rw-r--r--   0 john       (504) staff       (20)       48 2023-03-07 08:55:19.000000 load-atoms-0.0.3/MANIFEST.in
++-rw-r--r--   0 john       (504) staff       (20)     2700 2023-04-06 10:09:45.837217 load-atoms-0.0.3/PKG-INFO
++-rw-r--r--   0 john       (504) staff       (20)      905 2023-04-04 12:19:43.000000 load-atoms-0.0.3/README.md
++-rw-r--r--   0 john       (504) staff       (20)     1309 2023-04-06 10:09:35.000000 load-atoms-0.0.3/pyproject.toml
++-rw-r--r--   0 john       (504) staff       (20)       38 2023-04-06 10:09:45.837414 load-atoms-0.0.3/setup.cfg
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.830909 load-atoms-0.0.3/src/
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.834038 load-atoms-0.0.3/src/load_atoms/
++-rw-r--r--   0 john       (504) staff       (20)      127 2023-04-06 10:09:35.000000 load-atoms-0.0.3/src/load_atoms/__init__.py
++-rw-r--r--   0 john       (504) staff       (20)     1727 2023-04-05 06:56:03.000000 load-atoms-0.0.3/src/load_atoms/api.py
++-rw-r--r--   0 john       (504) staff       (20)     3304 2023-04-05 08:42:48.000000 load-atoms-0.0.3/src/load_atoms/backend.py
++-rw-r--r--   0 john       (504) staff       (20)      535 2023-04-05 08:42:48.000000 load-atoms-0.0.3/src/load_atoms/checksums.py
++-rw-r--r--   0 john       (504) staff       (20)     2051 2023-04-05 08:42:48.000000 load-atoms-0.0.3/src/load_atoms/database.py
++-rw-r--r--   0 john       (504) staff       (20)     3747 2023-04-05 06:56:03.000000 load-atoms-0.0.3/src/load_atoms/dataset.py
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.835744 load-atoms-0.0.3/src/load_atoms/datasets/
++-rw-r--r--   0 john       (504) staff       (20)     1040 2023-04-06 09:55:36.000000 load-atoms-0.0.3/src/load_atoms/datasets/C-GAP-17.yaml
++-rw-r--r--   0 john       (504) staff       (20)     1166 2023-04-06 09:55:23.000000 load-atoms-0.0.3/src/load_atoms/datasets/C-GAP-20.yaml
++-rw-r--r--   0 john       (504) staff       (20)     1356 2023-03-07 08:55:19.000000 load-atoms-0.0.3/src/load_atoms/datasets/QM7.yaml
++-rw-r--r--   0 john       (504) staff       (20)     1222 2023-03-07 16:02:25.000000 load-atoms-0.0.3/src/load_atoms/datasets/amorphous-grahpene.yaml
++-rw-r--r--   0 john       (504) staff       (20)     1240 2023-02-18 11:49:24.000000 load-atoms-0.0.3/src/load_atoms/manipulations.py
++-rw-r--r--   0 john       (504) staff       (20)     1618 2023-04-06 10:09:05.000000 load-atoms-0.0.3/src/load_atoms/util.py
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.834721 load-atoms-0.0.3/src/load_atoms.egg-info/
++-rw-r--r--   0 john       (504) staff       (20)     2700 2023-04-06 10:09:45.000000 load-atoms-0.0.3/src/load_atoms.egg-info/PKG-INFO
++-rw-r--r--   0 john       (504) staff       (20)      715 2023-04-06 10:09:45.000000 load-atoms-0.0.3/src/load_atoms.egg-info/SOURCES.txt
++-rw-r--r--   0 john       (504) staff       (20)        1 2023-04-06 10:09:45.000000 load-atoms-0.0.3/src/load_atoms.egg-info/dependency_links.txt
++-rw-r--r--   0 john       (504) staff       (20)      157 2023-04-06 10:09:45.000000 load-atoms-0.0.3/src/load_atoms.egg-info/requires.txt
++-rw-r--r--   0 john       (504) staff       (20)       11 2023-04-06 10:09:45.000000 load-atoms-0.0.3/src/load_atoms.egg-info/top_level.txt
++drwxr-xr-x   0 john       (504) staff       (20)        0 2023-04-06 10:09:45.836996 load-atoms-0.0.3/tests/
++-rw-r--r--   0 john       (504) staff       (20)     1581 2023-04-06 09:06:34.000000 load-atoms-0.0.3/tests/test_backend.py
++-rw-r--r--   0 john       (504) staff       (20)     1965 2023-04-06 09:14:35.000000 load-atoms-0.0.3/tests/test_database.py
++-rw-r--r--   0 john       (504) staff       (20)     2094 2023-04-06 09:14:52.000000 load-atoms-0.0.3/tests/test_dataset.py
++-rw-r--r--   0 john       (504) staff       (20)      857 2023-04-05 06:56:03.000000 load-atoms-0.0.3/tests/test_manipulations.py
++-rw-r--r--   0 john       (504) staff       (20)      441 2023-04-05 08:42:48.000000 load-atoms-0.0.3/tests/test_util.py
+```
+
+### Comparing `load-atoms-0.0.2/LICENSE` & `load-atoms-0.0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/PKG-INFO` & `load-atoms-0.0.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: load-atoms
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Large Open Access Datasets for Atomistic Materials Science (LOAD-AtoMS)
+ Author-email: John Gardner <gardner.john97@gmail.com>
+ License: MIT License
+         
+         Copyright (c) 2023 John Gardner
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+```
+
+### Comparing `load-atoms-0.0.2/README.md` & `load-atoms-0.0.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/pyproject.toml` & `load-atoms-0.0.3/pyproject.toml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0.0", "wheel"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "load-atoms"
+-version = "0.0.2"
++version = "0.0.3"
+ description = "Large Open Access Datasets for Atomistic Materials Science (LOAD-AtoMS)"
+ readme = "README.md"
+ authors = [{ name = "John Gardner", email = "gardner.john97@gmail.com" }]
+ license = { file = "LICENSE" }
+ classifiers = [
+     "License :: OSI Approved :: MIT License",
+     "Programming Language :: Python",
+@@ -35,15 +35,15 @@
+     "twine",
+ ]
+ 
+ [project.urls]
+ Homepage = "https://github.com/jla-gardner/load-atoms"
+ 
+ [tool.bumpver]
+-current_version = "0.0.2"
++current_version = "0.0.3"
+ version_pattern = "MAJOR.MINOR.PATCH"
+ commit_message = "Bump version {old_version} -> {new_version}"
+ commit = true
+ tag = true
+ push = false
+ 
+ [tool.bumpver.file_patterns]
+```
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/api.py` & `load-atoms-0.0.3/src/load_atoms/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/backend.py` & `load-atoms-0.0.3/src/load_atoms/backend.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/checksums.py` & `load-atoms-0.0.3/src/load_atoms/checksums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/database.py` & `load-atoms-0.0.3/src/load_atoms/database.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/dataset.py` & `load-atoms-0.0.3/src/load_atoms/dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/datasets/C-GAP-17.yaml` & `load-atoms-0.0.3/src/load_atoms/datasets/C-GAP-17.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/datasets/C-GAP-20.yaml` & `load-atoms-0.0.3/src/load_atoms/datasets/C-GAP-20.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/datasets/QM7.yaml` & `load-atoms-0.0.3/src/load_atoms/datasets/QM7.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/datasets/amorphous-grahpene.yaml` & `load-atoms-0.0.3/src/load_atoms/datasets/amorphous-grahpene.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/manipulations.py` & `load-atoms-0.0.3/src/load_atoms/manipulations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/src/load_atoms/util.py` & `load-atoms-0.0.3/src/load_atoms/util.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -8,15 +8,17 @@
+ 
+ def get_dataset_file(relative_path: str) -> Path:
+     """Get the absolute path to a dataset file."""
+     return DATASETS_DIR / relative_path
+ 
+ 
+ DEFAULT_DOWNLOAD_DIR = Path.home() / ".load_atoms"
+-BASE_REMOTE_URL = "https://github.com/jla-gardner/load-atoms/raw/main/datasets/"
++BASE_REMOTE_URL = (
++    "https://github.com/jla-gardner/load-atoms/raw/main/src/load_atoms/datasets/"
++)
+ FRONTEND_URL = "https://jla-gardner.github.io/load-atoms/datasets/"
+ 
+ 
+ def frontend_url(dataset_info):
+     """Get the URL for a dataset."""
+     return FRONTEND_URL + dataset_info.name + ".html"
+```
+
+### Comparing `load-atoms-0.0.2/src/load_atoms.egg-info/PKG-INFO` & `load-atoms-0.0.3/src/load_atoms.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: load-atoms
+-Version: 0.0.2
++Version: 0.0.3
+ Summary: Large Open Access Datasets for Atomistic Materials Science (LOAD-AtoMS)
+ Author-email: John Gardner <gardner.john97@gmail.com>
+ License: MIT License
+         
+         Copyright (c) 2023 John Gardner
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+```
+
+### Comparing `load-atoms-0.0.2/src/load_atoms.egg-info/SOURCES.txt` & `load-atoms-0.0.3/src/load_atoms.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/tests/test_backend.py` & `load-atoms-0.0.3/tests/test_backend.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/tests/test_database.py` & `load-atoms-0.0.3/tests/test_database.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/tests/test_dataset.py` & `load-atoms-0.0.3/tests/test_dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `load-atoms-0.0.2/tests/test_manipulations.py` & `load-atoms-0.0.3/tests/test_manipulations.py`
+
+ * *Files identical despite different names*
+

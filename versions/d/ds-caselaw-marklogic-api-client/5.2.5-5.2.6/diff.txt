@@ -1,0 +1,232 @@
+--- tmp/ds-caselaw-marklogic-api-client-5.2.5.tar.gz
++++ tmp/ds-caselaw-marklogic-api-client-5.2.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ds-caselaw-marklogic-api-client-5.2.5.tar", last modified: Thu Mar 23 16:16:35 2023, max compression
+│ +gzip compressed data, was "ds-caselaw-marklogic-api-client-5.2.6.tar", last modified: Thu Apr  6 10:07:09 2023, max compression
+│   --- ds-caselaw-marklogic-api-client-5.2.5.tar
+├── +++ ds-caselaw-marklogic-api-client-5.2.6.tar
+│ ├── file list
+│ │ @@ -1,51 +1,52 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:35.856678 ds-caselaw-marklogic-api-client-5.2.5/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1108 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/LICENSE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3728 2023-03-23 16:16:35.856678 ds-caselaw-marklogic-api-client-5.2.5/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3139 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       85 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1245 2023-03-23 16:16:35.856678 ds-caselaw-marklogic-api-client-5.2.5/setup.cfg
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:35.848678 ds-caselaw-marklogic-api-client-5.2.5/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:35.852678 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)    25434 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/Client.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1954 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/content_hash.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     2318 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/errors.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3580 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xml_tools.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:35.856678 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      220 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/break_judgment_checkout.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      197 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/checkin_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      385 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/checkout_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      318 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/copy_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      302 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/delete_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      715 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      193 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_judgment_checkout_status.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      292 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_judgment_version.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      172 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_last_modified.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      338 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_metadata_citation.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      339 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_metadata_court.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      221 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_metadata_name.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      358 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_metadata_work_date.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      594 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_properties_for_search_results.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      209 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_property.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      326 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/insert_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      190 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/list_judgment_versions.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      355 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_boolean_property.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      659 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_citation.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1013 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_court.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      756 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_name.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1762 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_this_uri.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      939 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_work_expression_date.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      343 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_property.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      420 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/update_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      556 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/update_locked_judgment.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      371 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/user_has_privilege.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      246 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/user_has_role.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      156 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/validate_all_documents.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)      199 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/xslt.xqy
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1381 2023-03-23 16:16:24.000000 ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/xslt_transform.xqy
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (116)        0 2023-03-23 16:16:35.856678 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     3728 2023-03-23 16:16:35.000000 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)     1991 2023-03-23 16:16:35.000000 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)        1 2023-03-23 16:16:35.000000 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       45 2023-03-23 16:16:35.000000 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (116)       14 2023-03-23 16:16:35.000000 ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:07:09.894854 ds-caselaw-marklogic-api-client-5.2.6/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1108 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/LICENSE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3728 2023-04-06 10:07:09.894854 ds-caselaw-marklogic-api-client-5.2.6/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3139 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1262 2023-04-06 10:07:09.894854 ds-caselaw-marklogic-api-client-5.2.6/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:07:09.886854 ds-caselaw-marklogic-api-client-5.2.6/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:07:09.890854 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    25434 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/Client.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1954 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/content_hash.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2318 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/errors.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3580 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xml_tools.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:07:09.890854 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      220 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/break_judgment_checkout.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      197 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/checkin_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      385 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/checkout_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      318 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/copy_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      302 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/delete_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      715 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      193 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_judgment_checkout_status.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      292 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_judgment_version.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      172 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_last_modified.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      338 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_metadata_citation.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      339 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_metadata_court.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      221 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_metadata_name.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      358 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_metadata_work_date.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      594 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_properties_for_search_results.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      209 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_property.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      326 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/insert_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      190 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/list_judgment_versions.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      355 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_boolean_property.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      659 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_citation.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1013 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_court.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_name.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1762 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_this_uri.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      939 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_work_expression_date.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      343 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_property.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      420 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/update_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      556 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/update_locked_judgment.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      371 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/user_has_privilege.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      246 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/user_has_role.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      156 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/validate_all_documents.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      199 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/xslt.xqy
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1381 2023-04-06 10:06:57.000000 ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/xslt_transform.xqy
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:07:09.894854 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3728 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2049 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       45 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-06 10:07:09.000000 ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/top_level.txt
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/LICENSE.md
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/PKG-INFO
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ds-caselaw-marklogic-api-client
+│ │ -Version: 5.2.5
+│ │ +Version: 5.2.6
+│ │  Summary: An API client for interacting with the Caselaw Marklogic instance
+│ │  Home-page: https://github.com/nationalarchives/ds-caselaw-custom-api-client
+│ │  Author: The National Archives
+│ │  Project-URL: Bug Tracker, https://github.com/nationalarchives/ds-caselaw-custom-api-client/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/README.md
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/setup.cfg
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/setup.cfg
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = ds-caselaw-marklogic-api-client
+│ │ -version = 5.2.5
+│ │ +version = 5.2.6
+│ │  author = The National Archives
+│ │  description = An API client for interacting with the Caselaw Marklogic instance
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/nationalarchives/ds-caselaw-custom-api-client
+│ │  project_urls = 
+│ │  	Bug Tracker = https://github.com/nationalarchives/ds-caselaw-custom-api-client/issues
+│ │ @@ -19,14 +19,15 @@
+│ │  packages = find:
+│ │  install_requires = 
+│ │  	django-environ
+│ │  	requests-toolbelt
+│ │  	memoization
+│ │  python_requires = >=3.8
+│ │  include_package_data = True
+│ │ +zip_safe = False
+│ │  
+│ │  [options.packages.find]
+│ │  where = src
+│ │  
+│ │  [options.package_data]
+│ │  caselawclient = xquery/*.xqy
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/Client.py
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/Client.py
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/content_hash.py
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/content_hash.py
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/errors.py
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/errors.py
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xml_tools.py
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xml_tools.py
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_judgment.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_judgment.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/get_properties_for_search_results.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/get_properties_for_search_results.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_citation.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_citation.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_court.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_court.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_name.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_name.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_this_uri.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_this_uri.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/set_metadata_work_expression_date.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/set_metadata_work_expression_date.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/update_locked_judgment.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/update_locked_judgment.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/caselawclient/xquery/xslt_transform.xqy
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/caselawclient/xquery/xslt_transform.xqy
+│ │┄ Files identical despite different names
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/PKG-INFO
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: ds-caselaw-marklogic-api-client
+│ │ -Version: 5.2.5
+│ │ +Version: 5.2.6
+│ │  Summary: An API client for interacting with the Caselaw Marklogic instance
+│ │  Home-page: https://github.com/nationalarchives/ds-caselaw-custom-api-client
+│ │  Author: The National Archives
+│ │  Project-URL: Bug Tracker, https://github.com/nationalarchives/ds-caselaw-custom-api-client/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │   --- ds-caselaw-marklogic-api-client-5.2.5/src/ds_caselaw_marklogic_api_client.egg-info/SOURCES.txt
+│ ├── +++ ds-caselaw-marklogic-api-client-5.2.6/src/ds_caselaw_marklogic_api_client.egg-info/SOURCES.txt
+│ │┄ Files 2% similar despite different names
+│ │ @@ -37,9 +37,10 @@
+│ │  src/caselawclient/xquery/user_has_role.xqy
+│ │  src/caselawclient/xquery/validate_all_documents.xqy
+│ │  src/caselawclient/xquery/xslt.xqy
+│ │  src/caselawclient/xquery/xslt_transform.xqy
+│ │  src/ds_caselaw_marklogic_api_client.egg-info/PKG-INFO
+│ │  src/ds_caselaw_marklogic_api_client.egg-info/SOURCES.txt
+│ │  src/ds_caselaw_marklogic_api_client.egg-info/dependency_links.txt
+│ │ +src/ds_caselaw_marklogic_api_client.egg-info/not-zip-safe
+│ │  src/ds_caselaw_marklogic_api_client.egg-info/requires.txt
+│ │  src/ds_caselaw_marklogic_api_client.egg-info/top_level.txt
