@@ -1,0 +1,832 @@
+--- tmp/evase-analysis-1.0.7.tar.gz
++++ tmp/evase-analysis-1.0.8.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "evase-analysis-1.0.7.tar", last modified: Tue Apr  4 20:11:49 2023, max compression
+│ +gzip compressed data, was "evase-analysis-1.0.8.tar", last modified: Thu Apr  6 17:21:52 2023, max compression
+│   --- evase-analysis-1.0.7.tar
+├── +++ evase-analysis-1.0.8.tar
+│ ├── file list
+│ │ @@ -1,97 +1,97 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.560093 evase-analysis-1.0.7/
+│ │ --rw-rw-rw-   0        0        0     7071 2023-04-04 20:11:49.560093 evase-analysis-1.0.7/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     6230 2023-04-04 20:11:33.000000 evase-analysis-1.0.7/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.513011 evase-analysis-1.0.7/docs/
+│ │ --rw-rw-rw-   0        0        0     1166 2023-03-30 01:19:57.000000 evase-analysis-1.0.7/docs/conf.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.513011 evase-analysis-1.0.7/evase/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/evase/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.517017 evase-analysis-1.0.7/evase/depanalyze/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/evase/depanalyze/__init__.py
+│ │ --rw-rw-rw-   0        0        0     9152 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/depanalyze/codetraversalnode.py
+│ │ --rw-rw-rw-   0        0        0    12059 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/depanalyze/importresolver.py
+│ │ --rw-rw-rw-   0        0        0     3829 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/depanalyze/scoperesolver.py
+│ │ --rw-rw-rw-   0        0        0    15873 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/depanalyze/searching.py
+│ │ --rw-rw-rw-   0        0        0     1450 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/depanalyze/surfacedetector.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.518018 evase-analysis-1.0.7/evase/exceptions/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/exceptions/__init__.py
+│ │ --rw-rw-rw-   0        0        0      626 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/exceptions/exceptions.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.520017 evase-analysis-1.0.7/evase/sql_injection/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/evase/sql_injection/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4242 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/evase/sql_injection/injectionutil.py
+│ │ --rw-rw-rw-   0        0        0     3902 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/sql_injection/injectionvisitor.py
+│ │ --rw-rw-rw-   0        0        0    10671 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/sql_injection/vulnerabletraversal.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.521522 evase-analysis-1.0.7/evase/structures/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/evase/structures/__init__.py
+│ │ --rw-rw-rw-   0        0        0    14718 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/structures/analysisperformer.py
+│ │ --rw-rw-rw-   0        0        0     4470 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/structures/modulestructure.py
+│ │ --rw-rw-rw-   0        0        0     6054 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/structures/projectstructure.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.523528 evase-analysis-1.0.7/evase/util/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-30 01:19:57.000000 evase-analysis-1.0.7/evase/util/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2900 2023-04-04 19:22:58.000000 evase-analysis-1.0.7/evase/util/fileutil.py
+│ │ --rw-rw-rw-   0        0        0     1273 2023-03-30 01:19:57.000000 evase-analysis-1.0.7/evase/util/logger.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.538061 evase-analysis-1.0.7/evase_analysis.egg-info/
+│ │ --rw-rw-rw-   0        0        0     7071 2023-04-04 20:11:49.000000 evase-analysis-1.0.7/evase_analysis.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2685 2023-04-04 20:11:49.000000 evase-analysis-1.0.7/evase_analysis.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-04 20:11:49.000000 evase-analysis-1.0.7/evase_analysis.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       61 2023-04-04 20:11:49.000000 evase-analysis-1.0.7/evase_analysis.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       22 2023-04-04 20:11:49.000000 evase-analysis-1.0.7/evase_analysis.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0     1343 2023-04-04 20:07:33.000000 evase-analysis-1.0.7/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-04 20:11:49.560093 evase-analysis-1.0.7/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.540058 evase-analysis-1.0.7/tests/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.545578 evase-analysis-1.0.7/tests/resources/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.509499 evase-analysis-1.0.7/tests/resources/demo/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.549577 evase-analysis-1.0.7/tests/resources/demo/backend/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo/backend/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1108 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/demo/backend/app.py
+│ │ --rw-rw-rw-   0        0        0     1098 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo/backend/vul.py
+│ │ --rw-rw-rw-   0        0        0     1140 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/demo/backend/vul_wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.508498 evase-analysis-1.0.7/tests/resources/demo2/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.548576 evase-analysis-1.0.7/tests/resources/demo2/demonstration/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo2/demonstration/__init__.py
+│ │ --rw-rw-rw-   0        0        0      185 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo2/demonstration/api.py
+│ │ --rw-rw-rw-   0        0        0      183 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo2/demonstration/controller.py
+│ │ --rw-rw-rw-   0        0        0      458 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/demo2/demonstration/model.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.550576 evase-analysis-1.0.7/tests/resources/prjstructtest/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/__init__.py
+│ │ --rw-rw-rw-   0        0        0      290 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/runner.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.551576 evase-analysis-1.0.7/tests/resources/prjstructtest/test/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/test/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.552081 evase-analysis-1.0.7/tests/resources/prjstructtest/util/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/util/__init__.py
+│ │ --rw-rw-rw-   0        0        0      163 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/util/helper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.553088 evase-analysis-1.0.7/tests/resources/prjstructtest/util/moreutil/
+│ │ --rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/util/moreutil/__init__.py
+│ │ --rw-rw-rw-   0        0        0       79 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/prjstructtest/util/moreutil/helper2.py
+│ │ --rw-rw-rw-   0        0        0      306 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/screstest.py
+│ │ --rw-rw-rw-   0        0        0      108 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_safe1.py
+│ │ --rw-rw-rw-   0        0        0      150 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_safe2.py
+│ │ --rw-rw-rw-   0        0        0      128 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul1.py
+│ │ --rw-rw-rw-   0        0        0      122 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul2.py
+│ │ --rw-rw-rw-   0        0        0      130 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul3.py
+│ │ --rw-rw-rw-   0        0        0      122 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul4.py
+│ │ --rw-rw-rw-   0        0        0      535 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul5.py
+│ │ --rw-rw-rw-   0        0        0     5135 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/sql_injection_vul6.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.555094 evase-analysis-1.0.7/tests/resources/type_demo/
+│ │ --rw-rw-rw-   0        0        0      911 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/type_demo/app.py
+│ │ --rw-rw-rw-   0        0        0      280 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/type_demo/create_db.py
+│ │ --rw-rw-rw-   0        0        0      759 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/type_demo/user_db_handler.py
+│ │ --rw-rw-rw-   0        0        0      700 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/type_demo/vul.py
+│ │ --rw-rw-rw-   0        0        0      732 2023-03-27 20:42:02.000000 evase-analysis-1.0.7/tests/resources/type_demo/vul_wrapper.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.510499 evase-analysis-1.0.7/tests/resources/webgoat/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.558092 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/
+│ │ --rw-rw-rw-   0        0        0     1534 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2063 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/actions.py
+│ │ --rw-rw-rw-   0        0        0     1633 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/auth.py
+│ │ --rw-rw-rw-   0        0        0      232 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/status.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 20:11:49.560093 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/templates/
+│ │ --rw-rw-rw-   0        0        0       89 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/templates/__init__.py
+│ │ --rw-rw-rw-   0        0        0       32 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/templates/hello.py
+│ │ --rw-rw-rw-   0        0        0       77 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/templates/helper.py
+│ │ --rw-rw-rw-   0        0        0      850 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/ui.py
+│ │ --rw-rw-rw-   0        0        0     1488 2023-03-30 01:20:00.000000 evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/users.py
+│ │ --rw-rw-rw-   0        0        0     2026 2023-04-04 20:06:40.000000 evase-analysis-1.0.7/tests/test_analysisperformer.py
+│ │ --rw-rw-rw-   0        0        0     2593 2023-04-04 20:06:40.000000 evase-analysis-1.0.7/tests/test_fileutil.py
+│ │ --rw-rw-rw-   0        0        0     1618 2023-04-04 20:06:40.000000 evase-analysis-1.0.7/tests/test_projectstructure.py
+│ │ --rw-rw-rw-   0        0        0     1639 2023-04-04 20:06:40.000000 evase-analysis-1.0.7/tests/test_scoperesolver.py
+│ │ --rw-rw-rw-   0        0        0     1714 2023-04-04 20:06:40.000000 evase-analysis-1.0.7/tests/testutil.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.531699 evase-analysis-1.0.8/
+│ │ +-rw-rw-rw-   0        0        0     7071 2023-04-06 17:21:52.531699 evase-analysis-1.0.8/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     6230 2023-04-04 20:11:33.000000 evase-analysis-1.0.8/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.476575 evase-analysis-1.0.8/docs/
+│ │ +-rw-rw-rw-   0        0        0     1166 2023-03-30 01:19:57.000000 evase-analysis-1.0.8/docs/conf.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.477574 evase-analysis-1.0.8/evase/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/evase/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.481082 evase-analysis-1.0.8/evase/depanalyze/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/evase/depanalyze/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     9152 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/depanalyze/codetraversalnode.py
+│ │ +-rw-rw-rw-   0        0        0    12059 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/depanalyze/importresolver.py
+│ │ +-rw-rw-rw-   0        0        0     3829 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/depanalyze/scoperesolver.py
+│ │ +-rw-rw-rw-   0        0        0    15873 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/depanalyze/searching.py
+│ │ +-rw-rw-rw-   0        0        0     1450 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/depanalyze/surfacedetector.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.482089 evase-analysis-1.0.8/evase/exceptions/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/exceptions/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      626 2023-04-04 19:22:58.000000 evase-analysis-1.0.8/evase/exceptions/exceptions.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.484096 evase-analysis-1.0.8/evase/sql_injection/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/evase/sql_injection/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4242 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/evase/sql_injection/injectionutil.py
+│ │ +-rw-rw-rw-   0        0        0     6537 2023-04-06 16:36:00.000000 evase-analysis-1.0.8/evase/sql_injection/injectionvisitor.py
+│ │ +-rw-rw-rw-   0        0        0    10947 2023-04-06 16:39:55.000000 evase-analysis-1.0.8/evase/sql_injection/vulnerabletraversal.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.486096 evase-analysis-1.0.8/evase/structures/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/evase/structures/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    15018 2023-04-06 16:40:47.000000 evase-analysis-1.0.8/evase/structures/analysisperformer.py
+│ │ +-rw-rw-rw-   0        0        0     5410 2023-04-06 16:21:46.000000 evase-analysis-1.0.8/evase/structures/modulestructure.py
+│ │ +-rw-rw-rw-   0        0        0     6608 2023-04-06 16:28:41.000000 evase-analysis-1.0.8/evase/structures/projectstructure.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.488097 evase-analysis-1.0.8/evase/util/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-30 01:19:57.000000 evase-analysis-1.0.8/evase/util/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3012 2023-04-06 16:44:37.000000 evase-analysis-1.0.8/evase/util/fileutil.py
+│ │ +-rw-rw-rw-   0        0        0     1444 2023-04-06 16:47:02.000000 evase-analysis-1.0.8/evase/util/logger.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.505145 evase-analysis-1.0.8/evase_analysis.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     7071 2023-04-06 17:21:52.000000 evase-analysis-1.0.8/evase_analysis.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     2685 2023-04-06 17:21:52.000000 evase-analysis-1.0.8/evase_analysis.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 17:21:52.000000 evase-analysis-1.0.8/evase_analysis.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       61 2023-04-06 17:21:52.000000 evase-analysis-1.0.8/evase_analysis.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       28 2023-04-06 17:21:52.000000 evase-analysis-1.0.8/evase_analysis.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0     1343 2023-04-06 17:21:30.000000 evase-analysis-1.0.8/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 17:21:52.531699 evase-analysis-1.0.8/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.508149 evase-analysis-1.0.8/tests/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.513670 evase-analysis-1.0.8/tests/resources/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.473577 evase-analysis-1.0.8/tests/resources/demo/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.518668 evase-analysis-1.0.8/tests/resources/demo/backend/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo/backend/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1108 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/demo/backend/app.py
+│ │ +-rw-rw-rw-   0        0        0     1098 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo/backend/vul.py
+│ │ +-rw-rw-rw-   0        0        0     1140 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/demo/backend/vul_wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.472576 evase-analysis-1.0.8/tests/resources/demo2/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.515669 evase-analysis-1.0.8/tests/resources/demo2/demonstration/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo2/demonstration/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      185 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo2/demonstration/api.py
+│ │ +-rw-rw-rw-   0        0        0      183 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo2/demonstration/controller.py
+│ │ +-rw-rw-rw-   0        0        0      458 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/demo2/demonstration/model.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.520175 evase-analysis-1.0.8/tests/resources/prjstructtest/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      290 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/runner.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.521184 evase-analysis-1.0.8/tests/resources/prjstructtest/test/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/test/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.522183 evase-analysis-1.0.8/tests/resources/prjstructtest/util/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/util/__init__.py
+│ │ +-rw-rw-rw-   0        0        0      163 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/util/helper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.523190 evase-analysis-1.0.8/tests/resources/prjstructtest/util/moreutil/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/util/moreutil/__init__.py
+│ │ +-rw-rw-rw-   0        0        0       79 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/prjstructtest/util/moreutil/helper2.py
+│ │ +-rw-rw-rw-   0        0        0      306 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/screstest.py
+│ │ +-rw-rw-rw-   0        0        0      108 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_safe1.py
+│ │ +-rw-rw-rw-   0        0        0      150 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_safe2.py
+│ │ +-rw-rw-rw-   0        0        0      128 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul1.py
+│ │ +-rw-rw-rw-   0        0        0      122 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul2.py
+│ │ +-rw-rw-rw-   0        0        0      130 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul3.py
+│ │ +-rw-rw-rw-   0        0        0      122 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul4.py
+│ │ +-rw-rw-rw-   0        0        0      535 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul5.py
+│ │ +-rw-rw-rw-   0        0        0     5135 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/sql_injection_vul6.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.526190 evase-analysis-1.0.8/tests/resources/type_demo/
+│ │ +-rw-rw-rw-   0        0        0      911 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/type_demo/app.py
+│ │ +-rw-rw-rw-   0        0        0      280 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/type_demo/create_db.py
+│ │ +-rw-rw-rw-   0        0        0      759 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/type_demo/user_db_handler.py
+│ │ +-rw-rw-rw-   0        0        0      700 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/type_demo/vul.py
+│ │ +-rw-rw-rw-   0        0        0      732 2023-03-27 20:42:02.000000 evase-analysis-1.0.8/tests/resources/type_demo/vul_wrapper.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.474577 evase-analysis-1.0.8/tests/resources/webgoat/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.529190 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/
+│ │ +-rw-rw-rw-   0        0        0     1534 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2063 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/actions.py
+│ │ +-rw-rw-rw-   0        0        0     1633 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/auth.py
+│ │ +-rw-rw-rw-   0        0        0      232 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/status.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 17:21:52.530889 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/templates/
+│ │ +-rw-rw-rw-   0        0        0       89 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/templates/__init__.py
+│ │ +-rw-rw-rw-   0        0        0       32 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/templates/hello.py
+│ │ +-rw-rw-rw-   0        0        0       77 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/templates/helper.py
+│ │ +-rw-rw-rw-   0        0        0      850 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/ui.py
+│ │ +-rw-rw-rw-   0        0        0     1488 2023-03-30 01:20:00.000000 evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/users.py
+│ │ +-rw-rw-rw-   0        0        0     2026 2023-04-04 20:06:40.000000 evase-analysis-1.0.8/tests/test_analysisperformer.py
+│ │ +-rw-rw-rw-   0        0        0     2593 2023-04-04 20:06:40.000000 evase-analysis-1.0.8/tests/test_fileutil.py
+│ │ +-rw-rw-rw-   0        0        0     1618 2023-04-04 20:06:40.000000 evase-analysis-1.0.8/tests/test_projectstructure.py
+│ │ +-rw-rw-rw-   0        0        0     1639 2023-04-04 20:06:40.000000 evase-analysis-1.0.8/tests/test_scoperesolver.py
+│ │ +-rw-rw-rw-   0        0        0     1714 2023-04-04 20:06:40.000000 evase-analysis-1.0.8/tests/testutil.py
+│ │   --- evase-analysis-1.0.7/PKG-INFO
+│ ├── +++ evase-analysis-1.0.8/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: evase-analysis
+│ │ -Version: 1.0.7
+│ │ +Version: 1.0.8
+│ │  Summary: A Python package with tools for the detection of SQL injection vulnerabilities in projects.
+│ │  Author-email: Tony Abou Zeidan <tony.azp25@gmail.com>, Anthony Dooley <anthonydooley@cmail.carleton.ca>, Ethan Chase <e281828c@gmail.com>, Shaopeng Liu <shaopengliu@cmail.carleton.ca>, Jason Jaskolka <jason.jaskolka@carleton.ca>
+│ │  Maintainer-email: Tony Abou Zeidan <tony.azp25@gmail.com>, Anthony Dooley <anthonydooley@cmail.carleton.ca>, Ethan Chase <e281828c@gmail.com>, Shaopeng Liu <shaopengliu@cmail.carleton.ca>, Jason Jaskolka <jason.jaskolka@carleton.ca>
+│ │  Keywords: attack,security,SQL,injection
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.7
+│ │   --- evase-analysis-1.0.7/README.md
+│ ├── +++ evase-analysis-1.0.8/README.md
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/docs/conf.py
+│ ├── +++ evase-analysis-1.0.8/docs/conf.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/depanalyze/codetraversalnode.py
+│ ├── +++ evase-analysis-1.0.8/evase/depanalyze/codetraversalnode.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/depanalyze/importresolver.py
+│ ├── +++ evase-analysis-1.0.8/evase/depanalyze/importresolver.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/depanalyze/scoperesolver.py
+│ ├── +++ evase-analysis-1.0.8/evase/depanalyze/scoperesolver.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/depanalyze/searching.py
+│ ├── +++ evase-analysis-1.0.8/evase/depanalyze/searching.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/depanalyze/surfacedetector.py
+│ ├── +++ evase-analysis-1.0.8/evase/depanalyze/surfacedetector.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/exceptions/exceptions.py
+│ ├── +++ evase-analysis-1.0.8/evase/exceptions/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/sql_injection/injectionutil.py
+│ ├── +++ evase-analysis-1.0.8/evase/sql_injection/injectionutil.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/evase/sql_injection/vulnerabletraversal.py
+│ ├── +++ evase-analysis-1.0.8/evase/sql_injection/vulnerabletraversal.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,14 +1,15 @@
+│ │  from typing import Collection, List, Set, Dict
+│ │  import ast
+│ │  from collections import deque
+│ │  
+│ │  from evase.depanalyze.codetraversalnode import CodeTraversalNode
+│ │  from evase.depanalyze.searching import FunctionCallFinder as UsesFinder
+│ │  import evase.sql_injection.injectionutil as injectionutil
+│ │ +from evase.util.logger import AnalysisLogger
+│ │  import networkx as nx
+│ │  
+│ │  
+│ │  def copy_list_map_set(list_map_set):
+│ │      """
+│ │      Copy a map to list map.
+│ │  
+│ │ @@ -87,42 +88,43 @@
+│ │      """
+│ │  
+│ │      # allow to continuously add to the
+│ │      visited_func = set()
+│ │      queue = deque()
+│ │  
+│ │      # print("start of bfs")
+│ │ +    AnalysisLogger().info("starting breadth-first search traversal.")
+│ │      vulnerable_vars = set()
+│ │  
+│ │      start = CodeTraversalNode(module_name, func_node=func_node, assignments=assignments, variables=injection_vars,
+│ │                                from_node=start_from)
+│ │      parent_nodes = {
+│ │          start: [[start]]
+│ │      }
+│ │  
+│ │      queue.append(start)
+│ │      vul_endpoints = []
+│ │  
+│ │      while len(queue) != 0:
+│ │          node = queue.popleft()
+│ │ -        # print("visiting func ----------------------", str(node))
+│ │ +        AnalysisLogger().info(f"visiting func ---------------------- {str(node)}")
+│ │  
+│ │          if node.func_node is None:
+│ │              continue
+│ │  
+│ │          vulnerable_vars = collect_vulnerable_vars(node.func_node, node.assignments, [{}], [{}],
+│ │                                                    node.variables)
+│ │  
+│ │          if node.is_endpoint:
+│ │              if len(vulnerable_vars) > 0:
+│ │ -                # print("api", node.get_func_node().name, "is vulnerable")
+│ │ +                AnalysisLogger().info(f"the endpoint {str(node)} is vulnerable.")
+│ │                  vul_endpoints.append(node)
+│ │                  continue
+│ │              else:
+│ │ -                # print("The endpoint isn't vulnerable.")
+│ │ +                AnalysisLogger().info(f"the endpoint {str(node)} is not vulnerable.")
+│ │                  continue
+│ │  
+│ │          else:
+│ │              param_indexes_vulnerable = determine_vul_params_location(vulnerable_vars, node.func_node)
+│ │              if param_indexes_vulnerable == None:
+│ │                  continue
+│ │  
+│ │ @@ -135,27 +137,27 @@
+│ │                  for nodeNext in uses_finder.function_uses:
+│ │  
+│ │                      # stop recursion from breaking the program
+│ │                      if nodeNext.func_node == node.func_node:
+│ │                          continue
+│ │  
+│ │                      if nodeNext in visited_func:
+│ │ -                        # print("SKIPPING")
+│ │                          continue
+│ │  
+│ │                      injection_vars = nodeNext.variables
+│ │                      ind = 0
+│ │                      inj = set()
+│ │                      while ind < len(injection_vars):
+│ │                          if ind in param_indexes_vulnerable[1] and len(injection_vars[ind]) != 0:
+│ │                              inj.update(injection_vars[ind])
+│ │                          ind += 1
+│ │  
+│ │                      nodeNext.variables = inj
+│ │                      if len(inj) == 0: continue  # unique is in set
+│ │ +                    AnalysisLogger().info(f"\tadding ------------- {str(nodeNext)}")
+│ │                      # print("     adding------------- " + nodeNext.get_func_node().name)
+│ │                      queue.append(nodeNext)
+│ │  
+│ │                      if node in parent_nodes:
+│ │                          if nodeNext in parent_nodes:
+│ │                              for path in parent_nodes[node]:
+│ │                                  lst = path.copy()
+│ │ @@ -166,14 +168,15 @@
+│ │                              for path in parent_nodes[node]:
+│ │                                  lst = path.copy()
+│ │                                  lst.append(nodeNext)
+│ │                                  parent_nodes[nodeNext].append(lst)
+│ │                      else:
+│ │                          raise ValueError("There was an error with tracking the breadth-first search paths.")
+│ │  
+│ │ +    AnalysisLogger().info("breath-first search traversal ended.")
+│ │      vul_paths = parent_nodes.copy()
+│ │      for key in parent_nodes:
+│ │          if key not in vul_endpoints:
+│ │              try:
+│ │                  del vul_paths[key]
+│ │              except KeyError:
+│ │                  pass
+│ │   --- evase-analysis-1.0.7/evase/structures/analysisperformer.py
+│ ├── +++ evase-analysis-1.0.8/evase/structures/analysisperformer.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,14 +2,15 @@
+│ │  from typing import Dict, Tuple, Set, Union
+│ │  
+│ │  import networkx as nx
+│ │  from networkx import DiGraph
+│ │  
+│ │  from evase.structures.projectstructure import ProjectAnalysisStruct
+│ │  from evase.sql_injection.injectionvisitor import InjectionNodeVisitor
+│ │ +from evase.util.logger import AnalysisLogger
+│ │  
+│ │  from abc import ABC, abstractmethod
+│ │  import json
+│ │  import os
+│ │  
+│ │  from evase.util.fileutil import check_path
+│ │  
+│ │ @@ -150,39 +151,43 @@
+│ │          Perform the SQL injection analysis and output the result.
+│ │  
+│ │          :return: A dictionary of the analysis results
+│ │          """
+│ │          for m_name, m_struct in self.project_struct.structure.items():
+│ │              visitor = InjectionNodeVisitor(self.project_struct, m_name)
+│ │              visitor.visit(m_struct.tree)
+│ │ -            results = visitor.get_vulnerable_funcs()
+│ │ +            results = visitor.vulnerable_funcs
+│ │              if len(results) > 0:
+│ │                  self.analysis_results['found_any'] = True
+│ │                  self.analysis_results['graph'] = results
+│ │  
+│ │          return self.analysis_results
+│ │  
+│ │  
+│ │  class AnalysisPerformer:
+│ │  
+│ │      def __init__(
+│ │              self,
+│ │              project_name: str = None,
+│ │ -            project_root: Union[str, Path] = None
+│ │ +            project_root: Union[str, Path] = None,
+│ │ +            output_path: Union[str, Path] = None
+│ │      ):
+│ │          """
+│ │          Analyzes the code given for SQL injection vulnerabilities.
+│ │          This class is a wrapper for evase tools provided in this package.
+│ │  
+│ │          :param project_name: The name of the project
+│ │          :param project_root: The root directory of the project
+│ │          """
+│ │  
+│ │          self.project_name = project_name
+│ │          self.project_root = check_path(project_root, file_ok=False, file_req=False, absolute_req=False, ret_absolute=True)
+│ │ +        if output_path is not None:
+│ │ +            output_path = check_path(output_path, file_ok=False, file_req=False, absolute_req=False, ret_absolute=True)
+│ │ +            AnalysisLogger.log_path = output_path
+│ │          self.analysis_results = {}
+│ │  
+│ │          self.sql_injection_detector = SQLInjectionBehaviourAnalyzer()
+│ │  
+│ │      def perform_analysis(self):
+│ │          """
+│ │          Performs analysis on the code structure that is currently loaded.
+│ │   --- evase-analysis-1.0.7/evase/structures/modulestructure.py
+│ ├── +++ evase-analysis-1.0.8/evase/structures/modulestructure.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,29 +1,30 @@
+│ │  import ast
+│ │  from pathlib import Path
+│ │ -from typing import List, Dict, Union, Optional
+│ │ +from typing import List, Dict, Union
+│ │  
+│ │  from evase.depanalyze.importresolver import ModuleImportResolver, DependencyMapping
+│ │  
+│ │  from evase.depanalyze.surfacedetector import SurfaceLevelVisitor
+│ │  
+│ │  from evase.depanalyze.scoperesolver import ScopeResolver
+│ │  from evase.util.fileutil import check_path
+│ │ -
+│ │ +from evase.util.logger import AnalysisLogger
+│ │  
+│ │  class ModuleAnalysisStruct:
+│ │  
+│ │      def __init__(
+│ │              self,
+│ │              module_name: str,
+│ │              ast_tree: ast.AST,
+│ │              within_root_path: Union[str, Path],
+│ │              root_path: Union[str, Path],
+│ │              import_resolver_instance: ModuleImportResolver = None,
+│ │ -            scope_resolver_instance: ScopeResolver = None
+│ │ +            scope_resolver_instance: ScopeResolver = None,
+│ │ +            surface_resolver_instance: SurfaceLevelVisitor = None
+│ │      ):
+│ │          """
+│ │          A structure for the easier analysis of a single code module.
+│ │          Contains properties of the module such as scoping information.
+│ │          Initialize a module analysis structure with a tree.
+│ │  
+│ │          :param ast_tree: The ast of the module
+│ │ @@ -42,68 +43,72 @@
+│ │          if import_resolver_instance is None:
+│ │              import_resolver_instance = ModuleImportResolver()
+│ │          self._import_resolver_instance = import_resolver_instance
+│ │          self._import_resolver_instance.directory = self._root
+│ │  
+│ │          if scope_resolver_instance is None:
+│ │              scope_resolver_instance = ScopeResolver()
+│ │ -
+│ │          self._scope_resolver_instance = scope_resolver_instance
+│ │ +
+│ │ +        if surface_resolver_instance is None:
+│ │ +            surface_resolver_instance = SurfaceLevelVisitor()
+│ │ +        self._surface_resolver_instance = surface_resolver_instance
+│ │ +        
+│ │          self._resolve()
+│ │  
+│ │      def _resolve(self):
+│ │          """
+│ │          Resolve the scopes of the functions inside the AST tree,
+│ │          and all the surface-level importable items from this module.
+│ │          """
+│ │          self._scope_resolver_instance.reset()
+│ │ +        self._surface_resolver_instance.reset()
+│ │          self._scope_resolver_instance.module_name = self._module_name
+│ │  
+│ │          self._ast_tree = self._scope_resolver_instance.visit(self._ast_tree)
+│ │ -        # for efficiency resolver now contains the functions it visited (less traversals)
+│ │          self._funcs = self._scope_resolver_instance.funcs
+│ │ +        AnalysisLogger().info(f"Resolved function scopes for {self._module_name}.")
+│ │  
+│ │ -        visitor = SurfaceLevelVisitor()
+│ │ -        visitor.visit(self._ast_tree)
+│ │ -        self._surface_items = visitor.surface_names
+│ │ +        self._surface_resolver_instance.visit(self._ast_tree)
+│ │ +        self._surface_items = self._surface_resolver_instance.surface_names
+│ │ +        AnalysisLogger().info(f"Resolved surface level importables items for {self._module_name}.")
+│ │  
+│ │      def resolve_imports(self, surface_entities: Dict[str, List[str]]):
+│ │          """
+│ │          Resolve the modules imports at both module and local levels.
+│ │  
+│ │          :param surface_entities: The mapping of all surface entities for each module
+│ │          """
+│ │  
+│ │          transformer = self._import_resolver_instance
+│ │          transformer.reset_same_project()
+│ │          transformer.surface_values = surface_entities
+│ │          transformer.key = self._module_name
+│ │          modified_ast = transformer.visit(self._ast_tree)
+│ │          self._ast_tree = modified_ast
+│ │ +        AnalysisLogger().info(f"Resolved imports for {self._module_name}.")
+│ │  
+│ │          self._module_imports, self._local_imports = transformer.deps
+│ │  
+│ │      @property
+│ │      def name(self) -> str:
+│ │          """
+│ │          Retrieve the name of the module being analyzed.
+│ │  
+│ │          :return: The module name as string
+│ │          """
+│ │ -
+│ │          return self._module_name
+│ │  
+│ │      @property
+│ │      def tree(self) -> ast.AST:
+│ │          """
+│ │          Retrieve the internal ast tree.
+│ │  
+│ │          :return: ast for the module
+│ │          """
+│ │ -
+│ │          return self._ast_tree
+│ │  
+│ │      @property
+│ │      def funcs(self) -> List[ast.FunctionType]:
+│ │          """
+│ │          Get the resolved function nodes.
+│ │  
+│ │ @@ -114,15 +119,14 @@
+│ │      @property
+│ │      def local_imports(self) -> DependencyMapping:
+│ │          """
+│ │          Get the resolved local imports.
+│ │  
+│ │          :return: The mapping of local imports
+│ │          """
+│ │ -
+│ │          return self._local_imports.copy()
+│ │  
+│ │      @property
+│ │      def module_imports(self) -> DependencyMapping:
+│ │          """
+│ │          Get the resolved module imports
+│ │  
+│ │ @@ -133,9 +137,24 @@
+│ │      @property
+│ │      def surface_items(self) -> List[str]:
+│ │          """
+│ │          Get a list of the surface importable items for this module.
+│ │  
+│ │          :return: The surface items
+│ │          """
+│ │ -
+│ │          return self._surface_items.copy()
+│ │ +    
+│ │ +    def __str__(self) -> str:
+│ │ +        """
+│ │ +        Retrieve a string representation of the module structure.
+│ │ +
+│ │ +        :return: String representation
+│ │ +        """
+│ │ +        return self.__repr__()
+│ │ +    
+│ │ +    def __repr__(self) -> str:
+│ │ +        """
+│ │ +        Retrieve a string representation of the module structure.
+│ │ +
+│ │ +        :return: String representation
+│ │ +        """
+│ │ +        return f'{self._module_name}@{self._path}'
+│ │   --- evase-analysis-1.0.7/evase/structures/projectstructure.py
+│ ├── +++ evase-analysis-1.0.8/evase/structures/projectstructure.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,22 +1,25 @@
+│ │  import ast
+│ │  from pathlib import Path
+│ │  from typing import Dict, Union, TypedDict
+│ │  
+│ │  from evase.depanalyze.importresolver import ModuleImportResolver
+│ │  
+│ │  from evase.depanalyze.scoperesolver import ScopeResolver
+│ │ +from evase.depanalyze.surfacedetector import SurfaceLevelVisitor
+│ │  
+│ │  from evase.structures.modulestructure import ModuleAnalysisStruct
+│ │  
+│ │ +from evase.util.logger import AnalysisLogger
+│ │ +
+│ │  from pprint import pprint
+│ │  
+│ │  from evase.util.fileutil import get_project_module_names, check_path
+│ │  
+│ │ -ProjectStructure = TypedDict('ModuleStructure', {
+│ │ +ProjectStructure = TypedDict('ProjectStructure', {
+│ │      str: ModuleAnalysisStruct
+│ │  })
+│ │  
+│ │  
+│ │  def dir_to_module_structure(dirpath: Union[str, Path]) -> ProjectStructure:
+│ │      """
+│ │      Converts a directory into a mapping of package style names to module analysis structures
+│ │ @@ -25,27 +28,31 @@
+│ │      :return: A mapping of module names to analysis structures
+│ │      """
+│ │  
+│ │      tree = {}
+│ │      dirpath = Path(dirpath).absolute()
+│ │      scr = ScopeResolver()
+│ │      mdr = ModuleImportResolver()
+│ │ +    slre = SurfaceLevelVisitor()
+│ │  
+│ │      for module_name, path in get_project_module_names(dirpath):
+│ │ +        AnalysisLogger().info(f"Module name {module_name} found.")
+│ │          path = Path(path).absolute()
+│ │  
+│ │          with open(path, 'r') as file:
+│ │              tree[module_name] = ModuleAnalysisStruct(
+│ │                  module_name,
+│ │                  ast.parse(file.read()),
+│ │                  path,
+│ │                  dirpath,
+│ │                  scope_resolver_instance=scr,  # for efficiency, use the same scope resolver instance
+│ │ -                import_resolver_instance=mdr  # for efficiency, use the same import resolver instance
+│ │ +                import_resolver_instance=mdr,  # for efficiency, use the same import resolver instance
+│ │ +                surface_resolver_instance=slre  # for efficiency, use the same surface resolver instance
+│ │              )
+│ │ +            AnalysisLogger().info(f"Module name {module_name} created.")
+│ │  
+│ │      return tree
+│ │  
+│ │  
+│ │  class ProjectAnalysisStruct:
+│ │  
+│ │      def __init__(self, prj_name: str, prj_root: Union[str, Path]):
+│ │ @@ -59,14 +66,15 @@
+│ │          self._prj_name = prj_name
+│ │          self._prj_root = check_path(prj_root, file_ok=False, absolute_req=False, ret_absolute=True)
+│ │          self._module_structure = dir_to_module_structure(self._prj_root)
+│ │          self._resolve_imports()
+│ │  
+│ │          # dependency graph
+│ │          self._depgraph = None
+│ │ +        AnalysisLogger().info("Making static dependency graph for project.")
+│ │          self._make_static_depgraph()
+│ │  
+│ │      @property
+│ │      def root(self) -> Path:
+│ │          """
+│ │          Retrieve the root given for the project.
+│ │  
+│ │ @@ -102,14 +110,15 @@
+│ │          One traversal to collect surface level importable items for each module.
+│ │          One traversal to alter dependencies based on possible importable items.
+│ │          """
+│ │  
+│ │          surface_values = {mdl_name: mdl_struct.surface_items for mdl_name, mdl_struct in
+│ │                            self._module_structure.items()}
+│ │  
+│ │ +        AnalysisLogger().info("Resolving imports for the entire project.")
+│ │          for mdl_struct in self._module_structure.values():
+│ │              mdl_struct.resolve_imports(surface_values)
+│ │  
+│ │      def _make_static_depgraph(self):
+│ │          """
+│ │          Makes a static dependency graph for the project.
+│ │          """
+│ │ @@ -158,16 +167,16 @@
+│ │                                  depgraph[namer][mdl_name] = []
+│ │  
+│ │                          depgraph[namer][mdl_name].append(aname)
+│ │  
+│ │          self._depgraph = depgraph
+│ │  
+│ │          # display dependency graph after generation
+│ │ -        #print("Static Dependency Graph")
+│ │ -        #pprint(depgraph)
+│ │ +        # print("Static Dependency Graph")
+│ │ +        # pprint(depgraph)
+│ │  
+│ │      def __str__(self):
+│ │          """
+│ │          Make a string representation of the project structure
+│ │          :return:
+│ │          """
+│ │   --- evase-analysis-1.0.7/evase/util/fileutil.py
+│ ├── +++ evase-analysis-1.0.8/evase/util/fileutil.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,35 +1,35 @@
+│ │  from typing import Union, Generator
+│ │  from pathlib import Path
+│ │  
+│ │  from evase.exceptions.exceptions import EvasePathException
+│ │  
+│ │  
+│ │  def check_path(path: Union[str, Path], file_ok: bool = False, file_req: bool = False, absolute_req: bool = False,
+│ │ -               ret_absolute: bool = True) -> Path:
+│ │ +               ret_absolute: bool = True, notexists_ok: bool = False) -> Path:
+│ │      """
+│ │      Check the path for common issues.
+│ │      Raises exceptions based on criteria.
+│ │      Returns the path if everything succeeds.
+│ │  
+│ │  
+│ │      :param path: The path
+│ │      :param file_ok: Whether the path can be a file
+│ │      :param absolute_req: Whether the path has to be absolute or not
+│ │      :param ret_absolute: Whether to return the path as absolute or not
+│ │      """
+│ │  
+│ │      path = Path(path)
+│ │ -    if not path.exists():
+│ │ +    if not path.exists() and not notexists_ok:
+│ │          raise EvasePathException(path, "Evase can't process a code repository that doesn't exist on the file system.")
+│ │ -    elif not path.is_dir() and not file_ok:
+│ │ +    elif not path.is_dir() and not file_ok and not notexists_ok:
+│ │          raise EvasePathException(path, "Evase can't be passed a single file to analyze, it requires a project folder.")
+│ │ -    elif not path.is_file() and file_req:
+│ │ +    elif not path.is_file() and file_req and not notexists_ok:
+│ │          raise EvasePathException(path, "Evase requires a file for this operation.")
+│ │ -    elif not path.is_absolute() and absolute_req:
+│ │ +    elif not path.is_absolute() and absolute_req and not notexists_ok:
+│ │          raise EvasePathException(path, "Evase requires an absolute path for this operation.")
+│ │  
+│ │      if ret_absolute:
+│ │          return path.absolute()
+│ │      else:
+│ │          return path
+│ │   --- evase-analysis-1.0.7/evase_analysis.egg-info/PKG-INFO
+│ ├── +++ evase-analysis-1.0.8/evase_analysis.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: evase-analysis
+│ │ -Version: 1.0.7
+│ │ +Version: 1.0.8
+│ │  Summary: A Python package with tools for the detection of SQL injection vulnerabilities in projects.
+│ │  Author-email: Tony Abou Zeidan <tony.azp25@gmail.com>, Anthony Dooley <anthonydooley@cmail.carleton.ca>, Ethan Chase <e281828c@gmail.com>, Shaopeng Liu <shaopengliu@cmail.carleton.ca>, Jason Jaskolka <jason.jaskolka@carleton.ca>
+│ │  Maintainer-email: Tony Abou Zeidan <tony.azp25@gmail.com>, Anthony Dooley <anthonydooley@cmail.carleton.ca>, Ethan Chase <e281828c@gmail.com>, Shaopeng Liu <shaopengliu@cmail.carleton.ca>, Jason Jaskolka <jason.jaskolka@carleton.ca>
+│ │  Keywords: attack,security,SQL,injection
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.7
+│ │   --- evase-analysis-1.0.7/evase_analysis.egg-info/SOURCES.txt
+│ ├── +++ evase-analysis-1.0.8/evase_analysis.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/pyproject.toml
+│ ├── +++ evase-analysis-1.0.8/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -18,15 +18,15 @@
+│ │      {name = "Shaopeng Liu", email="shaopengliu@cmail.carleton.ca"},
+│ │      {name = "Jason Jaskolka", email="jason.jaskolka@carleton.ca"}
+│ │  ]
+│ │  description = "A Python package with tools for the detection of SQL injection vulnerabilities in projects."
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  keywords = ["attack", "security", "SQL", "injection"]
+│ │ -version="1.0.7"
+│ │ +version="1.0.8"
+│ │  classifiers=[
+│ │      "Programming Language :: Python :: 3 :: Only",
+│ │      "Programming Language :: Python :: 3"
+│ │  ]
+│ │  dependencies = [
+│ │      'Flask~=2.2.2',
+│ │      'Jinja2~=3.1.2',
+│ │   --- evase-analysis-1.0.7/tests/resources/demo/backend/app.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/demo/backend/app.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/demo/backend/vul.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/demo/backend/vul.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/demo/backend/vul_wrapper.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/demo/backend/vul_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/sql_injection_vul5.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/sql_injection_vul5.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/sql_injection_vul6.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/sql_injection_vul6.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/type_demo/app.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/type_demo/app.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/type_demo/user_db_handler.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/type_demo/user_db_handler.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/type_demo/vul.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/type_demo/vul.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/type_demo/vul_wrapper.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/type_demo/vul_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/__init__.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/actions.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/actions.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/auth.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/auth.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/ui.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/ui.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/resources/webgoat/flask_webgoat/users.py
+│ ├── +++ evase-analysis-1.0.8/tests/resources/webgoat/flask_webgoat/users.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/test_analysisperformer.py
+│ ├── +++ evase-analysis-1.0.8/tests/test_analysisperformer.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/test_fileutil.py
+│ ├── +++ evase-analysis-1.0.8/tests/test_fileutil.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/test_projectstructure.py
+│ ├── +++ evase-analysis-1.0.8/tests/test_projectstructure.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/test_scoperesolver.py
+│ ├── +++ evase-analysis-1.0.8/tests/test_scoperesolver.py
+│ │┄ Files identical despite different names
+│ │   --- evase-analysis-1.0.7/tests/testutil.py
+│ ├── +++ evase-analysis-1.0.8/tests/testutil.py
+│ │┄ Files identical despite different names

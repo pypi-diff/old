@@ -1,0 +1,1846 @@
+--- tmp/repository_service_tuf-0.0.1a7.tar.gz
++++ tmp/repository_service_tuf-0.0.1a9.tar.gz
+│   --- repository_service_tuf-0.0.1a7.tar
+├── +++ repository_service_tuf-0.0.1a9.tar
+│ ├── file list
+│ │ @@ -1,81 +1,96 @@
+│ │ --rw-r--r--   0        0        0     1886 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.gitignore
+│ │ --rw-r--r--   0        0        0      979 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.pre-commit-config.yaml
+│ │ --rw-r--r--   0        0        0      564 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.readthedocs.yaml
+│ │ --rw-r--r--   0        0        0     5444 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/CODE_OF_CONDUCT.rst
+│ │ --rw-r--r--   0        0        0     1338 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/CONTRIBUTING.rst
+│ │ --rw-r--r--   0        0        0     1067 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/LICENSE
+│ │ --rw-r--r--   0        0        0      402 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/Makefile
+│ │ --rw-r--r--   0        0        0      707 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/Pipfile
+│ │ --rw-r--r--   0        0        0    49207 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/Pipfile.lock
+│ │ --rw-r--r--   0        0        0     3506 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/README.rst
+│ │ --rw-r--r--   0        0        0     1178 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2604 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/requirements-dev.txt
+│ │ --rw-r--r--   0        0        0      617 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/requirements.txt
+│ │ --rw-r--r--   0        0        0     1327 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tox.ini
+│ │ --rw-r--r--   0        0        0      262 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/dependabot.yml
+│ │ --rw-r--r--   0        0        0     1437 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/bug.yml
+│ │ --rw-r--r--   0        0        0      169 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/config.yml
+│ │ --rw-r--r--   0        0        0     1001 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/other.yml
+│ │ --rw-r--r--   0        0        0     1106 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/task.yml
+│ │ --rw-r--r--   0        0        0     1486 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/PULL_REQUEST_TEMPLATE/pr.yml
+│ │ --rw-r--r--   0        0        0     2452 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/workflows/cd.yml
+│ │ --rw-r--r--   0        0        0      974 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/workflows/ci.yml
+│ │ --rw-r--r--   0        0        0     1237 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/.github/workflows/update-python-deps.yml
+│ │ --rw-r--r--   0        0        0      638 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/Makefile
+│ │ --rw-r--r--   0        0        0      799 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/make.bat
+│ │ --rw-r--r--   0        0        0       26 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/requirements.txt
+│ │ --rw-r--r--   0        0        0     2941 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C1.puml
+│ │ --rw-r--r--   0        0        0     5408 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C2.puml
+│ │ --rw-r--r--   0        0        0     4192 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C3.puml
+│ │ --rw-r--r--   0        0        0     2081 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/conf.py
+│ │ --rw-r--r--   0        0        0      310 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/index.rst
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/_static/INFO
+│ │ --rw-r--r--   0        0        0    19648 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C1.png
+│ │ --rw-r--r--   0        0        0    41916 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C2.png
+│ │ --rw-r--r--   0        0        0    94852 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C3.png
+│ │ --rw-r--r--   0        0        0      921 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/design.rst
+│ │ --rw-r--r--   0        0        0      318 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/index.rst
+│ │ --rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/modules.rst
+│ │ --rw-r--r--   0        0        0      876 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.cli.admin.rst
+│ │ --rw-r--r--   0        0        0      297 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.cli.rst
+│ │ --rw-r--r--   0        0        0      653 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.helpers.rst
+│ │ --rw-r--r--   0        0        0      313 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.rst
+│ │ --rw-r--r--   0        0        0    37664 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/docs/source/guide/index.rst
+│ │ --rw-r--r--   0        0        0      119 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/__init__.py
+│ │ --rw-r--r--   0        0        0      167 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/__version__.py
+│ │ --rw-r--r--   0        0        0     1428 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/cli/__init__.py
+│ │ --rw-r--r--   0        0        0      185 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/__init__.py
+│ │ --rw-r--r--   0        0        0    24708 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/ceremony.py
+│ │ --rw-r--r--   0        0        0     3945 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/login.py
+│ │ --rw-r--r--   0        0        0     2547 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/token.py
+│ │ --rw-r--r--   0        0        0       75 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/helpers/__init__.py
+│ │ --rw-r--r--   0        0        0     1893 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/helpers/api_client.py
+│ │ --rw-r--r--   0        0        0     8816 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/repository_service_tuf/helpers/tuf.py
+│ │ --rw-r--r--   0        0        0      555 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/conftest.py
+│ │ --rw-r--r--   0        0        0      617 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/test_tuf_repository_service.py
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/ChrisCornel.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/ChrisCornel.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JanisJoplin.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JanisJoplin.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JimiHendrix.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JimiHendrix.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JoeCocker.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/JoeCocker.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/KurtCobain.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/KurtCobain.key.pub
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/README.md
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/bins1.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/bins1.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/root3.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/root3.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/snapshot1.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/snapshot1.key.pub
+│ │ --rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/timestamp1.key
+│ │ --rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/files/timestamp1.key.pub
+│ │ --rw-r--r--   0        0        0     1006 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/tools/generate_keys.py
+│ │ --rw-r--r--   0        0        0       75 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/unit/cli/admin/__init__.py
+│ │ --rw-r--r--   0        0        0    26664 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/unit/cli/admin/test_ceremony.py
+│ │ --rw-r--r--   0        0        0    11219 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/unit/cli/admin/test_login.py
+│ │ --rw-r--r--   0        0        0       75 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/unit/helpers/__init__.py
+│ │ --rw-r--r--   0        0        0     1812 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/tests/unit/helpers/test_api_client.py
+│ │ --rw-r--r--   0        0        0     4436 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a7/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1886 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.gitignore
+│ │ +-rw-r--r--   0        0        0     1332 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.pre-commit-config.yaml
+│ │ +-rw-r--r--   0        0        0      564 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.readthedocs.yaml
+│ │ +-rw-r--r--   0        0        0     5444 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/CODE_OF_CONDUCT.rst
+│ │ +-rw-r--r--   0        0        0     4117 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/CONTRIBUTING.rst
+│ │ +-rw-r--r--   0        0        0     1067 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/LICENSE
+│ │ +-rw-r--r--   0        0        0      410 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/MAINTAINERS.rst
+│ │ +-rw-r--r--   0        0        0      415 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/Makefile
+│ │ +-rw-r--r--   0        0        0      812 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/Pipfile
+│ │ +-rw-r--r--   0        0        0    82737 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/Pipfile.lock
+│ │ +-rw-r--r--   0        0        0     1789 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/README.rst
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/id_ed25519
+│ │ +-rwxr-xr-x   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/id_ed25519.pub
+│ │ +-rw-r--r--   0        0        0     1471 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3334 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/requirements-dev.txt
+│ │ +-rw-r--r--   0        0        0     1003 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/requirements.txt
+│ │ +-rw-r--r--   0        0        0     1518 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tox.ini
+│ │ +-rw-r--r--   0        0        0      262 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/dependabot.yml
+│ │ +-rw-r--r--   0        0        0     1437 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/bug.yml
+│ │ +-rw-r--r--   0        0        0      169 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/config.yml
+│ │ +-rw-r--r--   0        0        0     1001 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/other.yml
+│ │ +-rw-r--r--   0        0        0     1106 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/task.yml
+│ │ +-rw-r--r--   0        0        0     1486 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/PULL_REQUEST_TEMPLATE/pr.yml
+│ │ +-rw-r--r--   0        0        0     2452 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/workflows/cd.yml
+│ │ +-rw-r--r--   0        0        0      974 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/workflows/ci.yml
+│ │ +-rw-r--r--   0        0        0     1237 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/.github/workflows/update-python-deps.yml
+│ │ +-rw-r--r--   0        0        0      638 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/Makefile
+│ │ +-rw-r--r--   0        0        0      799 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/make.bat
+│ │ +-rw-r--r--   0        0        0       26 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/requirements.txt
+│ │ +-rw-r--r--   0        0        0     2941 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C1.puml
+│ │ +-rw-r--r--   0        0        0     5408 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C2.puml
+│ │ +-rw-r--r--   0        0        0     4192 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C3.puml
+│ │ +-rw-r--r--   0        0        0     2081 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/conf.py
+│ │ +-rw-r--r--   0        0        0      310 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/index.rst
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/_static/INFO
+│ │ +-rw-r--r--   0        0        0    19648 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C1.png
+│ │ +-rw-r--r--   0        0        0    41916 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C2.png
+│ │ +-rw-r--r--   0        0        0    94852 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C3.png
+│ │ +-rw-r--r--   0        0        0      921 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/design.rst
+│ │ +-rw-r--r--   0        0        0      318 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/index.rst
+│ │ +-rw-r--r--   0        0        0      103 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/modules.rst
+│ │ +-rw-r--r--   0        0        0      876 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.cli.admin.rst
+│ │ +-rw-r--r--   0        0        0      297 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.cli.rst
+│ │ +-rw-r--r--   0        0        0      653 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.helpers.rst
+│ │ +-rw-r--r--   0        0        0      313 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.rst
+│ │ +-rw-r--r--   0        0        0    42980 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/docs/source/guide/index.rst
+│ │ +-rw-r--r--   0        0        0      124 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/__init__.py
+│ │ +-rw-r--r--   0        0        0      177 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/__version__.py
+│ │ +-rw-r--r--   0        0        0     1433 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/__init__.py
+│ │ +-rw-r--r--   0        0        0      190 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/__init__.py
+│ │ +-rw-r--r--   0        0        0    22046 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/ceremony.py
+│ │ +-rw-r--r--   0        0        0     6498 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/import_targets.py
+│ │ +-rw-r--r--   0        0        0     3950 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/login.py
+│ │ +-rw-r--r--   0        0        0     2552 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/token.py
+│ │ +-rw-r--r--   0        0        0       80 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/helpers/__init__.py
+│ │ +-rw-r--r--   0        0        0     4966 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/helpers/api_client.py
+│ │ +-rw-r--r--   0        0        0     9363 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/repository_service_tuf/helpers/tuf.py
+│ │ +-rwxr-xr-x   0        0        0      861 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/2.targets.json
+│ │ +-rw-r--r--   0        0        0      560 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/conftest.py
+│ │ +-rw-r--r--   0        0        0      622 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/test_tuf_repository_service.py
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/ChrisCornel.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/ChrisCornel.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JanisJoplin.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JanisJoplin.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JimiHendrix.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JimiHendrix.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JoeCocker.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/JoeCocker.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/KurtCobain.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/KurtCobain.key.pub
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/README.md
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/bins1.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/bins1.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/root3.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/root3.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/snapshot1.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/snapshot1.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/timestamp1.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/timestamp1.key.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/JanisJoplin.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/JanisJoplin.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/JimiHendrix.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/JimiHendrix.pub
+│ │ +-rw-r--r--   0        0        0      182 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/README.md
+│ │ +-rw-r--r--   0        0        0     2546 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/online-rsa.key
+│ │ +-rwxr-xr-x   0        0        0      624 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/online-rsa.pub
+│ │ +-rw-r--r--   0        0        0      822 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/online.key
+│ │ +-rw-r--r--   0        0        0      180 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/files/keystorage/online.pub
+│ │ +-rw-r--r--   0        0        0     1011 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/tools/generate_keys.py
+│ │ +-rw-r--r--   0        0        0       80 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/cli/admin/__init__.py
+│ │ +-rw-r--r--   0        0        0    20327 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/cli/admin/test_ceremony.py
+│ │ +-rw-r--r--   0        0        0    18182 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/cli/admin/test_import_targets.py
+│ │ +-rw-r--r--   0        0        0    11224 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/cli/admin/test_login.py
+│ │ +-rw-r--r--   0        0        0       80 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/helpers/__init__.py
+│ │ +-rw-r--r--   0        0        0    13196 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/tests/unit/helpers/test_api_client.py
+│ │ +-rw-r--r--   0        0        0     2894 2020-02-02 00:00:00.000000 repository_service_tuf-0.0.1a9/PKG-INFO
+│ │   --- repository_service_tuf-0.0.1a7/.gitignore
+│ ├── +++ repository_service_tuf-0.0.1a9/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/.pre-commit-config.yaml
+│ ├── +++ repository_service_tuf-0.0.1a9/.pre-commit-config.yaml
+│ │┄ Files 16% similar despite different names
+│ │ @@ -6,30 +6,43 @@
+│ │    - id: end-of-file-fixer
+│ │      files: 'repository_service_tuf/'
+│ │    - id: trailing-whitespace
+│ │      files: 'repository_service_tuf/'
+│ │    - id: check-yaml
+│ │      files: '.github/'
+│ │  - repo: https://github.com/pycqa/flake8
+│ │ -  rev: '5.0.4'
+│ │ +  rev: '6.0.0'
+│ │    hooks:
+│ │    - id: flake8
+│ │      exclude: repository_service_tuf/__init__.py|venv|.venv|setting.py|.git|.tox|dist|docs|/*lib/python*|/*egg|build|tools
+│ │  - repo: https://github.com/PyCQA/isort
+│ │ -  rev: '5.10.1'
+│ │ +  rev: '5.12.0'
+│ │    hooks:
+│ │    - id: isort
+│ │      args: [-l79, --profile, black, --check, --diff]
+│ │  - repo: https://github.com/psf/black
+│ │ -  rev: '22.10.0'
+│ │ +  rev: '22.12.0'
+│ │    hooks:
+│ │    - id: black
+│ │      args: [-l79, --check, --diff, .]
+│ │ +- repo: https://github.com/PyCQA/bandit
+│ │ +  rev: '1.7.4'
+│ │ +  hooks:
+│ │ +  - id: bandit
+│ │ +    args: ["-r", "repository_service_tuf"]
+│ │ +    exclude: tests
+│ │  - repo: local
+│ │    hooks:
+│ │      - id: tox-requirements
+│ │        name: run requirements check from tox
+│ │        description: Checks if `make requirements` is up-to-date
+│ │        entry: tox -e requirements
+│ │        language: system
+│ │ -      files: ''
+│ │ +      pass_filenames: false
+│ │ +      verbose: true
+│ │ +    - id: tox-mypy
+│ │ +      name: run typing check from tox
+│ │ +      description: Checks typing with `mypy`
+│ │ +      entry: tox -e typing
+│ │ +      language: system
+│ │ +      pass_filenames: false
+│ │        verbose: true
+│ │   --- repository_service_tuf-0.0.1a7/.readthedocs.yaml
+│ ├── +++ repository_service_tuf-0.0.1a9/.readthedocs.yaml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/CODE_OF_CONDUCT.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/CODE_OF_CONDUCT.rst
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/LICENSE
+│ ├── +++ repository_service_tuf-0.0.1a9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/Pipfile
+│ ├── +++ repository_service_tuf-0.0.1a9/Pipfile
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,24 +1,27 @@
+│ │  [[source]]
+│ │  url = "https://pypi.org/simple"
+│ │  verify_ssl = true
+│ │  name = "pypi"
+│ │  
+│ │  [packages]
+│ │  rich-click = "*"
+│ │ -securesystemslib = "*"
+│ │ +securesystemslib = {extras = ["crypto"], version = "*"}
+│ │  click = "*"
+│ │  rich = "*"
+│ │  PyNaCl = "==1.5.0"
+│ │  requests = "*"
+│ │  tuf = "==2.0.0"
+│ │  dynaconf = {extras = ["ini"], version = "*"}
+│ │ +isort = "*"
+│ │ +sqlalchemy = "*"
+│ │ +psycopg2 = "*"
+│ │  
+│ │  [dev-packages]
+│ │ -black = "==22.3.0"
+│ │ +black = "*"
+│ │  isort = "*"
+│ │  flake8 = "*"
+│ │  tox = "*"
+│ │  pytest = "*"
+│ │  coverage = "*"
+│ │  mypy = "*"
+│ │  pip = "*"
+│ │ @@ -31,10 +34,12 @@
+│ │  sphinxcontrib-qthelp = "*"
+│ │  sphinxcontrib-serializinghtml = "*"
+│ │  sphinxcontrib-plantuml = "*"
+│ │  sphinx-rtd-theme = "*"
+│ │  hatchling = "==0.22.0"
+│ │  build = "*"
+│ │  pre-commit = "*"
+│ │ +bandit = "*"
+│ │ +types-requests = "*"
+│ │  
+│ │  [requires]
+│ │ -python_version = "3.10"
+│ │ +python_version = "3.10"
+│ │   --- repository_service_tuf-0.0.1a7/README.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/CONTRIBUTING.rst
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,37 +1,57 @@
+│ │ -#################################################
+│ │ -Repository Service for TUF Command Line Interface
+│ │ -#################################################
+│ │ -
+│ │ -|Tests and Lint| |Coverage|
+│ │ -
+│ │ -.. |Tests and Lint| image:: https://github.com/vmware/repository-service-tuf-cli/actions/workflows/ci.yml/badge.svg
+│ │ -  :target: https://github.com/vmware/repository-service-tuf-cli/actions/workflows/ci.yml
+│ │ -.. |Coverage| image:: https://codecov.io/gh/vmware/repository-service-tuf-cli/branch/main/graph/badge.svg
+│ │ -  :target: https://codecov.io/gh/vmware/repository-service-tuf-cli
+│ │ -
+│ │ -Repository Service for TUF Command Line Interface (CLI).
+│ │ -
+│ │ -This CLI is part of the Repository Service for TUF (RSTUF).
+│ │ -
+│ │ -.. note::
+│ │ -
+│ │ -    Not a functional tool, it is still in the development stage. Wait for release 0.0.1
+│ │ +==============================================
+│ │ +Contributing to Repository Service for TUF CLI
+│ │ +==============================================
+│ │ +
+│ │ +We welcome contributions from the community and first want to thank you for
+│ │ +taking the time to contribute!
+│ │ +
+│ │ +Please familiarize yourself with the `Code of Conduct
+│ │ +<https://repository-service-tuf.readthedocs.io/en/latest/devel/contributing.html#id1>`_
+│ │ +before contributing.
+│ │ +
+│ │ +DCO
+│ │ +===
+│ │ +
+│ │ +Before you start working with Repository Service for TUF, please read our
+│ │ +`Developer Certificate of Origin <https://cla.vmware.com/dco>`_.
+│ │ +All contributions to this repository must be signed as described on that page.
+│ │ +
+│ │ +To acknowledge the Developer Certificate of Origin (DCO), sign your commits
+│ │ +by appending a ``Signed-off-by:
+│ │ +Your Name <example@domain.com>`` to each git commit message (see `git commit
+│ │ +--signoff <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---signoff>`_).
+│ │ +Your signature certifies that you wrote the patch or have the right to pass it
+│ │ +on as an open-source patch.
+│ │ +
+│ │ +Getting started
+│ │ +===============
+│ │ +
+│ │ +We welcome many different types of contributions and not all of them need a
+│ │ +Pull Request. Contributions may include:
+│ │ +
+│ │ +* New features and proposals
+│ │ +* Documentation
+│ │ +* Bug fixes
+│ │ +* Issue Triage
+│ │ +* Answering questions and giving feedback
+│ │ +* Helping to onboard new contributors
+│ │ +* Other related activities
+│ │  
+│ │  Development
+│ │ -###########
+│ │ +===========
+│ │  
+│ │ -Requirements:
+│ │ -=============
+│ │ +Requirements
+│ │ +-------------
+│ │  
+│ │  - Python >=3.9
+│ │  - Pipenv
+│ │  
+│ │  Getting the source code
+│ │ -=======================
+│ │ +-----------------------
+│ │  
+│ │  `Fork <https://docs.github.com/en/get-started/quickstart/fork-a-repo>`_ the
+│ │  repository on `GitHub <https://github.com/vmware/repository-service-tuf-cli>`_ and
+│ │  `clone <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>`_
+│ │  it to your local machine:
+│ │  
+│ │  .. code-block:: console
+│ │ @@ -46,17 +66,16 @@
+│ │  .. code-block:: console
+│ │  
+│ │      git remote add upstream https://github.com/vmware/repository-service-tuf-cli
+│ │      git checkout main
+│ │      git fetch upstream
+│ │      git merge upstream/main
+│ │  
+│ │ -
+│ │  Preparing the environment
+│ │ -=========================
+│ │ +-------------------------
+│ │  
+│ │  After installing Python, install the pipenv tool:
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │      $ pip install pipenv
+│ │  
+│ │ @@ -86,63 +105,61 @@
+│ │      .. code:: shell
+│ │  
+│ │          $ pip uninstall cryptography cffi -y
+│ │          $ pip cache purge
+│ │          $ LDFLAGS=-L$(brew --prefix libffi)/lib CFLAGS=-I$(brew --prefix libffi)/include pip install cffi cryptography
+│ │  
+│ │  
+│ │ -Running checks with pre-commit:
+│ │ -
+│ │ +Running checks with pre-commit
+│ │ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+│ │  The pre-commit tool is installed as part of the development requirements.
+│ │  
+│ │  To automatically run checks before you commit your changes you should run:
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │      $ make precommit
+│ │  
+│ │ -This will install the git hook scripts for the first time, it will update to the
+│ │ +This will install the git hook scripts for the first time, update to the
+│ │  latest versions of the hooks and run the pre-commit tool.
+│ │  Now ``pre-commit`` will run automatically on ``git commit``.
+│ │  
+│ │  
+│ │ -Running RSTUF CLI:
+│ │ +Running RSTUF CLI
+│ │ +~~~~~~~~~~~~~~~~~
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │      $ rstuf
+│ │  
+│ │      Usage: rstuf [OPTIONS] COMMAND [ARGS]...
+│ │  
+│ │      Repository Service for TUF Command Line Interface (CLI).
+│ │  
+│ │ -
+│ │ -
+│ │  How to add new requirements
+│ │ -===========================
+│ │ +---------------------------
+│ │  
+│ │  Install the requirements package.
+│ │  
+│ │  The flag -d will install the development requirements.
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │      $ pipenv install -d <package>
+│ │      $ pipenv install <package>
+│ │  
+│ │  
+│ │  Update all project requirements
+│ │ --------------------------------
+│ │ +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │      $ make requirements
+│ │  
+│ │  Tests
+│ │ -=====
+│ │ +-----
+│ │  
+│ │  Perform automated testing with the tox tool:
+│ │  
+│ │  .. code:: shell
+│ │  
+│ │ -    $ tox
+│ │ -
+│ │ +    $ tox
+│ │   --- repository_service_tuf-0.0.1a7/pyproject.toml
+│ ├── +++ repository_service_tuf-0.0.1a9/pyproject.toml
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [build-system]
+│ │  # hatchling pinned for reproducibility: version should be kept up-to-date
+│ │ -requires = ["hatchling==0.22.0", "dynaconf[ini]==3.1.9"]
+│ │ +requires = ["hatchling==0.22.0"]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "repository-service-tuf"
+│ │  description = 'Repository Service for TUF Command Line Interface'
+│ │  readme = "README.rst"
+│ │  requires-python = ">=3.9"
+│ │ @@ -22,22 +22,33 @@
+│ │    "Programming Language :: Python :: 3.10",
+│ │    "Programming Language :: Python :: 3.11",
+│ │    "Programming Language :: Python :: Implementation :: CPython",
+│ │    "Programming Language :: Python :: Implementation :: PyPy",
+│ │  ]
+│ │  dependencies = [
+│ │    "click",
+│ │ -  "dynaconf[ini]",
+│ │ +  "dynaconf[ini]==3.1.9",
+│ │    "PyNaCl",
+│ │    "requests",
+│ │    "rich",
+│ │    "rich-click",
+│ │ -  "securesystemslib",
+│ │ +  "securesystemslib[crypto]",
+│ │    "tuf==2.0.0",
+│ │  ]
+│ │  dynamic = ["version"]
+│ │  
+│ │ +[tool.mypy]
+│ │ +exclude = "docs/"
+│ │ +
+│ │ +[[tool.mypy.overrides]]
+│ │ +module = ["dynaconf", "pretend"]
+│ │ +ignore_missing_imports = true
+│ │ +
+│ │  [tool.hatch.version]
+│ │  path = "repository_service_tuf/__version__.py"
+│ │  
+│ │ +[project.optional-dependencies]
+│ │ +psycopg2 = ["psycopg2>=2.9.5"]  # required by import-targets sub-command
+│ │ +sqlalchemy = ["sqlalchemy>=2.0.1"]  # required by import-targets sub-command
+│ │ +
+│ │  [project.scripts]
+│ │  rstuf = "repository_service_tuf.cli:rstuf"
+│ │   --- repository_service_tuf-0.0.1a7/requirements-dev.txt
+│ ├── +++ repository_service_tuf-0.0.1a9/requirements-dev.txt
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,74 +1,88 @@
+│ │  -i https://pypi.org/simple
+│ │ -alabaster==0.7.12
+│ │ -attrs==22.1.0 ; python_version >= '3.5'
+│ │ -babel==2.11.0 ; python_version >= '3.6'
+│ │ -black==22.3.0
+│ │ -build==0.9.0
+│ │ -certifi==2022.9.24 ; python_version >= '3.6'
+│ │ +alabaster==0.7.13 ; python_version >= '3.6'
+│ │ +attrs==22.2.0 ; python_version >= '3.6'
+│ │ +babel==2.12.1 ; python_version >= '3.7'
+│ │ +bandit==1.7.4
+│ │ +black==23.1.0
+│ │ +build==0.10.0
+│ │ +cachetools==5.3.0 ; python_version ~= '3.7'
+│ │ +certifi==2022.12.7 ; python_version >= '3.6'
+│ │  cfgv==3.3.1 ; python_full_version >= '3.6.1'
+│ │ -charset-normalizer==2.1.1 ; python_full_version >= '3.6.0'
+│ │ +chardet==5.1.0 ; python_version >= '3.7'
+│ │ +charset-normalizer==3.0.1
+│ │  click==8.1.3
+│ │ -coverage==6.5.0
+│ │ +colorama==0.4.6 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6'
+│ │ +coverage==7.2.1
+│ │  distlib==0.3.6
+│ │ -docutils==0.17.1 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+│ │ +docutils==0.18.1 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+│ │  editables==0.3 ; python_version >= '3.1'
+│ │ -exceptiongroup==1.0.4 ; python_version < '3.11'
+│ │ -filelock==3.8.0 ; python_version >= '3.7'
+│ │ -flake8==5.0.4
+│ │ +exceptiongroup==1.1.0 ; python_version < '3.11'
+│ │ +filelock==3.9.0 ; python_version >= '3.7'
+│ │ +flake8==6.0.0
+│ │ +gitdb==4.0.10 ; python_version >= '3.7'
+│ │ +gitpython==3.1.31 ; python_version >= '3.7'
+│ │  hatchling==0.22.0
+│ │ -identify==2.5.9 ; python_version >= '3.7'
+│ │ +identify==2.5.18 ; python_version >= '3.7'
+│ │  idna==3.4 ; python_version >= '3.5'
+│ │  imagesize==1.4.1 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+│ │ -iniconfig==1.1.1
+│ │ -isort==5.10.1
+│ │ +iniconfig==2.0.0 ; python_version >= '3.7'
+│ │ +isort==5.12.0
+│ │  jinja2==3.1.2 ; python_version >= '3.7'
+│ │ -markupsafe==2.1.1 ; python_version >= '3.7'
+│ │ +markupsafe==2.1.2 ; python_version >= '3.7'
+│ │  mccabe==0.7.0 ; python_version >= '3.6'
+│ │ -mypy==0.991
+│ │ -mypy-extensions==0.4.3
+│ │ +mypy==1.0.1
+│ │ +mypy-extensions==1.0.0 ; python_version >= '3.5'
+│ │  nodeenv==1.7.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6'
+│ │ -packaging==21.3 ; python_version >= '3.1'
+│ │ -pathspec==0.10.2 ; python_version >= '3.7'
+│ │ -pep517==0.13.0 ; python_version >= '3.6'
+│ │ -pip==22.3.1
+│ │ -platformdirs==2.5.4 ; python_version >= '3.7'
+│ │ +packaging==23.0 ; python_version >= '3.1'
+│ │ +pathspec==0.11.0 ; python_version >= '3.7'
+│ │ +pbr==5.11.1 ; python_version >= '2.6'
+│ │ +pip==23.0.1
+│ │ +platformdirs==3.0.0 ; python_version >= '3.7'
+│ │  pluggy==1.0.0 ; python_version >= '3.1'
+│ │ -pre-commit==2.20.0
+│ │ +pre-commit==3.1.1
+│ │  pretend==1.0.9
+│ │ -py==1.11.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+│ │ -pycodestyle==2.9.1 ; python_version >= '3.6'
+│ │ -pyflakes==2.5.0 ; python_version >= '3.6'
+│ │ -pygments==2.13.0 ; python_version >= '3.6'
+│ │ -pyparsing==3.0.9 ; python_full_version >= '3.6.8'
+│ │ -pytest==7.2.0
+│ │ -pytz==2022.6
+│ │ +pycodestyle==2.10.0 ; python_version >= '3.6'
+│ │ +pyflakes==3.0.1 ; python_version >= '3.6'
+│ │ +pygments==2.14.0 ; python_version >= '3.6'
+│ │ +pyproject-api==1.5.0 ; python_version >= '3.7'
+│ │ +pyproject-hooks==1.0.0 ; python_version >= '3.7'
+│ │ +pytest==7.2.1
+│ │  pyyaml==6.0 ; python_version >= '3.6'
+│ │ -requests==2.28.1
+│ │ -setuptools==65.6.0 ; python_version >= '3.7'
+│ │ -six==1.16.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+│ │ +requests==2.28.2
+│ │ +setuptools==67.4.0 ; python_version >= '3.7'
+│ │ +smmap==5.0.0 ; python_version >= '3.6'
+│ │  snowballstemmer==2.2.0
+│ │ -sphinx==5.3.0
+│ │ -sphinx-rtd-theme==1.1.1
+│ │ -sphinxcontrib-applehelp==1.0.2
+│ │ +sphinx==6.1.3
+│ │ +sphinx-rtd-theme==1.2.0
+│ │ +sphinxcontrib-applehelp==1.0.4
+│ │  sphinxcontrib-devhelp==1.0.2
+│ │ -sphinxcontrib-htmlhelp==2.0.0
+│ │ +sphinxcontrib-htmlhelp==2.0.1
+│ │ +sphinxcontrib-jquery==2.0.0 ; python_version >= '3.1'
+│ │  sphinxcontrib-jsmath==1.0.1
+│ │  sphinxcontrib-plantuml==0.24.1
+│ │  sphinxcontrib-qthelp==1.0.3
+│ │  sphinxcontrib-serializinghtml==1.1.5
+│ │ -toml==0.10.2 ; python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'
+│ │ -tomli==2.0.1 ; python_version < '3.11'
+│ │ -tox==3.27.1
+│ │ -typing-extensions==4.4.0 ; python_version >= '3.7'
+│ │ -urllib3==1.26.12 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5' and python_version < '4'
+│ │ -virtualenv==20.16.7 ; python_version >= '3.6'
+│ │ +stevedore==5.0.0 ; python_version >= '3.8'
+│ │ +tomli==2.0.1 ; python_version >= '3.1'
+│ │ +tox==4.4.6
+│ │ +types-requests==2.28.11.15
+│ │ +types-urllib3==1.26.25.8
+│ │ +typing-extensions==4.5.0 ; python_version >= '3.7'
+│ │ +urllib3==1.26.14 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'
+│ │ +virtualenv==20.20.0 ; python_version >= '3.7'
+│ │  cffi==1.15.1
+│ │ -commonmark==0.9.1
+│ │ -configobj==5.0.6
+│ │ +configobj==5.0.8
+│ │ +cryptography==39.0.1
+│ │  dynaconf[ini]==3.1.11
+│ │ +greenlet==2.0.2 ; platform_machine == 'aarch64' or (platform_machine == 'ppc64le' or (platform_machine == 'x86_64' or (platform_machine == 'amd64' or (platform_machine == 'AMD64' or (platform_machine == 'win32' or platform_machine == 'WIN32')))))
+│ │ +markdown-it-py==2.2.0 ; python_version >= '3.7'
+│ │ +mdurl==0.1.2 ; python_version >= '3.7'
+│ │ +psycopg2==2.9.5
+│ │  pycparser==2.21
+│ │  pynacl==1.5.0
+│ │ -rich==12.6.0
+│ │ -rich-click==1.5.2
+│ │ -securesystemslib==0.25.0
+│ │ +rich==13.3.1
+│ │ +rich-click==1.6.1
+│ │ +securesystemslib[crypto]==0.26.0
+│ │ +six==1.16.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+│ │ +sqlalchemy==2.0.4
+│ │  tuf==2.0.0
+│ │   --- repository_service_tuf-0.0.1a7/tox.ini
+│ ├── +++ repository_service_tuf-0.0.1a9/tox.ini
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tox]
+│ │  isolated_build = true
+│ │ -envlist = py310,lint,requirements,test
+│ │ +envlist = py310,py311,lint,typing,requirements,test
+│ │  skipsdist = true
+│ │  
+│ │  
+│ │  [flake8]
+│ │  exclude = repository_service_tuf/__init__.py,venv,.venv,settings.py,.git,.tox,dist,docs,*lib/python*,*egg,build,tools
+│ │  
+│ │  [testenv]
+│ │ @@ -13,15 +13,19 @@
+│ │  
+│ │  [testenv:lint]
+│ │  deps = pre-commit
+│ │  commands =
+│ │      pre-commit run flake8 --all-files --show-diff-on-failure
+│ │      pre-commit run isort --all-files --show-diff-on-failure
+│ │      pre-commit run black --all-files --show-diff-on-failure
+│ │ -    # mypy . #issue33
+│ │ +    pre-commit run bandit --all-files --show-diff-on-failure
+│ │ +
+│ │ +[testenv:typing]
+│ │ +commands =
+│ │ +    mypy .
+│ │  
+│ │  [testenv:test]
+│ │  allowlist_externals = coverage
+│ │  commands =
+│ │      coverage run --omit='tests/*' -m pytest -vv
+│ │      coverage xml -i
+│ │      coverage report
+│ │ @@ -35,15 +39,18 @@
+│ │  commands =
+│ │      pipenv --version
+│ │      bash -c 'diff -w requirements.txt <(pipenv requirements)'
+│ │      bash -c 'diff -w requirements-dev.txt <(pipenv requirements --dev)'
+│ │  
+│ │  [testenv:docs]
+│ │  deps = -r{toxinidir}/docs/requirements.txt
+│ │ +allowlist_externals =
+│ │ +    plantuml
+│ │  commands =
+│ │      plantuml -o ../source/_static/ -tpng docs/diagrams/*.puml
+│ │  	sphinx-apidoc -o  docs/source/devel/ repository_service_tuf
+│ │  	sphinx-build -E -W -b html docs/source docs/build/html
+│ │  
+│ │  [gh-actions]
+│ │  python =
+│ │ -    3.10: py310,pep8,lint,requirements,test,docs
+│ │ +    3.10: py310,pep8,lint,typing,requirements,test,docs
+│ │ +    3.11: py311,pep8,lint,typing,requirements,test,docs
+│ │   --- repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/bug.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/bug.yml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/other.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/other.yml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/.github/ISSUE_TEMPLATE/task.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/ISSUE_TEMPLATE/task.yml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/.github/PULL_REQUEST_TEMPLATE/pr.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/PULL_REQUEST_TEMPLATE/pr.yml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/.github/workflows/cd.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/workflows/cd.yml
+│ │┄ Files 10% similar despite different names
+│ │ @@ -21,61 +21,61 @@
+│ │      name: Build
+│ │      runs-on: ubuntu-latest
+│ │      needs: functional-latest
+│ │      outputs:
+│ │        release_id: ${{ steps.gh-release.outputs.id }}
+│ │      steps:
+│ │        - name: Checkout release tag
+│ │ -        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+│ │ +        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+│ │          with:
+│ │            ref: ${{ github.event.workflow_run.head_branch }}
+│ │  
+│ │        - name: Set up Python
+│ │ -        uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984
+│ │ +        uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435
+│ │          with:
+│ │            python-version: '3.x'
+│ │  
+│ │        - name: Install build dependency
+│ │          run: python3 -m pip install --upgrade pip build
+│ │  
+│ │        - name: Build binary wheel and source tarball
+│ │          run: python3 -m build --sdist --wheel --outdir dist/ .
+│ │  
+│ │        - id: gh-release
+│ │          name: Publish GitHub release candiate
+│ │ -        uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5
+│ │ +        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844
+│ │          with:
+│ │            name: ${{ github.ref_name }}-rc
+│ │            tag_name: ${{ github.ref }}
+│ │            body: "Release waiting for review..."
+│ │            files: dist/*
+│ │  
+│ │        - name: Store build artifacts
+│ │ -        uses: actions/upload-artifact@83fd05a356d7e2593de66fc9913b3002723633cb
+│ │ +        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce
+│ │          # NOTE: The GitHub release page contains the release artifacts too, but using
+│ │          # GitHub upload/download actions seems robuster: there is no need to compute
+│ │          # download URLs and tampering with artifacts between jobs is more limited.
+│ │          with:
+│ │            name: build-artifacts
+│ │            path: dist
+│ │  
+│ │    release:
+│ │      name: Release
+│ │      runs-on: ubuntu-latest
+│ │      needs: build
+│ │      environment: release
+│ │      steps:
+│ │        - name: Fetch build artifacts
+│ │ -        uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7
+│ │ +        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a
+│ │          with:
+│ │            name: build-artifacts
+│ │            path: dist
+│ │  
+│ │        - name: Finalize GitHub release
+│ │ -        uses: actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0
+│ │ +        uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
+│ │          with:
+│ │            script: |
+│ │              await github.rest.repos.updateRelease({
+│ │                owner: context.repo.owner,
+│ │                repo: context.repo.repo,
+│ │                release_id: '${{ needs.build.outputs.release_id }}',
+│ │                name: '${{ github.ref_name }}',
+│ │   --- repository_service_tuf-0.0.1a7/.github/workflows/ci.yml
+│ ├── +++ repository_service_tuf-0.0.1a9/.github/workflows/ci.yml
+│ │┄ Files 17% similar despite different names
+│ │ @@ -8,19 +8,19 @@
+│ │        - "main"
+│ │  
+│ │  jobs:
+│ │    build:
+│ │      runs-on: ubuntu-latest
+│ │      strategy:
+│ │        matrix:
+│ │ -        python-versions: [ "3.9", "3.10", ]
+│ │ +        python-versions: [ "3.10", "3.11" ]
+│ │  
+│ │      steps:
+│ │ -    - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
+│ │ -    - uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984
+│ │ +    - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+│ │ +    - uses: actions/setup-python@d27e3f3d7c64b4bbf8e4abfb9b63b83e846e0435
+│ │        with:
+│ │          python-version: ${{ matrix.python-versions }}
+│ │  
+│ │      - name: Install tox and coverage
+│ │        run: pip install tox tox-gh-actions build
+│ │  
+│ │      - name: Install build dependency
+│ │   --- repository_service_tuf-0.0.1a7/docs/Makefile
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/Makefile
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/make.bat
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/make.bat
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C1.puml
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C1.puml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C2.puml
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C2.puml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/diagrams/repository-service-tuf-cli-C3.puml
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/diagrams/repository-service-tuf-cli-C3.puml
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/conf.py
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/conf.py
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C1.png
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C1.png
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C2.png
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C2.png
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/_static/repository-service-tuf-cli-C3.png
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/_static/repository-service-tuf-cli-C3.png
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/devel/design.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/devel/design.rst
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.cli.admin.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.cli.admin.rst
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/devel/repository_service_tuf.helpers.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/devel/repository_service_tuf.helpers.rst
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/docs/source/guide/index.rst
+│ ├── +++ repository_service_tuf-0.0.1a9/docs/source/guide/index.rst
+│ │┄ Files 21% similar despite different names
+│ │ @@ -444,8 +444,82 @@
+│ │          "scopes": [
+│ │          "write:targets"
+│ │          ],
+│ │          "expired": false,
+│ │          "expiration": "2022-09-04T08:42:44"
+│ │      },
+│ │      "message": "Token information"
+│ │ -    }
+│ │ +    }
+│ │ +
+│ │ +
+│ │ +Import Targets (``import-targets``)
+│ │ +-----------------------------------
+│ │ +
+│ │ +This feature imports a large number of targets directly to RSTUF Database.
+│ │ +RSTUF doesn't recommend using this feature for regular flow, but in case you're
+│ │ +onboarding an existent repository that contains a large number of targets.
+│ │ +
+│ │ +This feature requires extra dependencies:
+│ │ +
+│ │ +.. code:: shell
+│ │ +
+│ │ +    pip install repository-service-tuf[psycopg2,sqlachemy]
+│ │ +
+│ │ +To use this feature, you need to create CSV files with the content to be imported
+│ │ +by RSTUF CLI.
+│ │ +
+│ │ +This content requires the following data:
+│ │ +
+│ │ +- `path <https://theupdateframework.github.io/specification/latest/#targetpath>`_: The target path
+│ │ +- `size <https://theupdateframework.github.io/specification/latest/#targets-obj-length>`_: The target size
+│ │ +- `hash-type <https://theupdateframework.github.io/specification/latest/#targets-obj-length>`_: The defined hash as a metafile. Example: blak2b-256
+│ │ +- `hash <https://theupdateframework.github.io/specification/latest/#targets-obj-length>`_: The hash
+│ │ +
+│ │ +The CSV must use a semicolon as the separator, following the format
+│ │ +``path;size;hash-type;hash`` without a header.
+│ │ +
+│ │ +See the below CSV file example:
+│ │ +
+│ │ +.. code::
+│ │ +
+│ │ +    relaxed_germainv1.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    vigilant_keldyshv2.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    adoring_teslav3.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    funny_greiderv4.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    clever_ardinghelliv5.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    pbeat_galileov6.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    wonderful_gangulyv7.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    sweet_ardinghelliv8.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    brave_mendelv9.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +    nice_ridev10.tar.gz;12345;blake2b-256;716f6e863f744b9ac22c97ec7b76ea5f5908bc5b2f67c61510bfc4751384ea7a
+│ │ +
+│ │ +
+│ │ +.. code:: shell
+│ │ +
+│ │ +    ❯ rstuf admin import-targets -h
+│ │ +
+│ │ +     Usage: rstuf admin import-targets [OPTIONS]
+│ │ +
+│ │ +     Import targets to RSTUF from exported CSV file.
+│ │ +
+│ │ +    ╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ │ +    │ *                          --metadata-url  TEXT  RSTUF Metadata URL i.e.: http://127.0.0.1 . [required]                                                         │
+│ │ +    │ *                          --db-uri        TEXT  RSTUF DB URI. i.e.: postgresql://postgres:secret@127.0.0.1:5433 [required]                                     │
+│ │ +    │ *                          --csv           TEXT  CSV file to import. Multiple --csv parameters are allowed. See rstuf CLI guide for more details. [required]    │
+│ │ +    │    --skip-publish-targets                       Skip publishing targets in TUF Metadata.                                                                        │
+│ │ +    │    --help                  -h                   Show this message and exit.                                                                                     │
+│ │ +    ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+│ │ +
+│ │ +    ❯ rstuf admin import-targets --db-uri postgresql://postgres:secret@127.0.0.1:5433 --csv targets-1of2.csv --csv targets-2of2.csv --metadata-url http://127.0.0.1:8080/
+│ │ +    Import status: Loading data from ../repository-service-tuf/tests/data/targets-1of2.csv
+│ │ +    Import status: Importing ../repository-service-tuf/tests/data/targets-1of2.csv data
+│ │ +    Import status: ../repository-service-tuf/tests/data/targets-1of2.csv imported
+│ │ +    Import status: Loading data from ../repository-service-tuf/tests/data/targets-2of2.csv
+│ │ +    Import status: Importing ../repository-service-tuf/tests/data/targets-2of2.csv data
+│ │ +    Import status: ../repository-service-tuf/tests/data/targets-2of2.csv imported
+│ │ +    Import status: Commiting all data to the RSTUF database
+│ │ +    Import status: All data imported to RSTUF DB
+│ │ +    Import status: Submitting action publish targets
+│ │ +    Import status: Publish targets task id is dd1cbf2320ad4df6bda9ca62cdc0ef82
+│ │ +    Import status: task STARTED
+│ │ +    Import status: task SUCCESS
+│ │ +    Import status: Finished.
+│ │   --- repository_service_tuf-0.0.1a7/repository_service_tuf/cli/__init__.py
+│ ├── +++ repository_service_tuf-0.0.1a9/repository_service_tuf/cli/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  import importlib
+│ │  import os
+│ │  import pkgutil
+│ │  import re
+│ │   --- repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/ceremony.py
+│ ├── +++ repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/ceremony.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,17 +1,16 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  #
+│ │  # Ceremony
+│ │  #
+│ │  import json
+│ │  import os
+│ │ -import time
+│ │  from dataclasses import asdict, dataclass
+│ │  from enum import Enum
+│ │  from typing import Any, Dict, Optional
+│ │  
+│ │  from rich import box, markdown, prompt, table  # type: ignore
+│ │  from rich.console import Console  # type: ignore
+│ │  from securesystemslib.exceptions import (  # type: ignore
+│ │ @@ -25,16 +24,17 @@
+│ │  )
+│ │  
+│ │  from repository_service_tuf.cli import click
+│ │  from repository_service_tuf.cli.admin import admin
+│ │  from repository_service_tuf.helpers.api_client import (
+│ │      URL,
+│ │      Methods,
+│ │ -    is_logged,
+│ │ +    get_headers,
+│ │      request_server,
+│ │ +    task_status,
+│ │  )
+│ │  from repository_service_tuf.helpers.tuf import (
+│ │      RolesKeysInput,
+│ │      initialize_metadata,
+│ │  )
+│ │  
+│ │  CEREMONY_INTRO = """
+│ │ @@ -422,46 +422,15 @@
+│ │          console.print(
+│ │              ":white_check_mark: Key "
+│ │              f"{key_count}/{role.num_of_keys} [green]Verified[/]"
+│ │          )
+│ │          key_count += 1
+│ │  
+│ │  
+│ │ -def _check_server(settings):
+│ │ -    server = settings.get("SERVER")
+│ │ -    token = settings.get("TOKEN")
+│ │ -    if server and token:
+│ │ -        token_access_check = is_logged(server, token)
+│ │ -        if token_access_check.state is False:
+│ │ -            raise click.ClickException(
+│ │ -                f"{str(token_access_check.data)}"
+│ │ -                "\n\nTry re-login: 'Repository Service for TUF admin login'"
+│ │ -            )
+│ │ -
+│ │ -        expired_admin = token_access_check.data.get("expired")
+│ │ -        if expired_admin is True:
+│ │ -            raise click.ClickException(
+│ │ -                "Token expired. Run 'Repository Service for TUF admin login'"
+│ │ -            )
+│ │ -        else:
+│ │ -            headers = {"Authorization": f"Bearer {token}"}
+│ │ -            response = request_server(
+│ │ -                server, URL.bootstrap.value, Methods.get, headers=headers
+│ │ -            )
+│ │ -            if response.status_code != 200 and (
+│ │ -                response.json().get("bootstrap") is True or None
+│ │ -            ):
+│ │ -                raise click.ClickException(f"{response.json().get('detail')}")
+│ │ -    else:
+│ │ -        raise click.ClickException("Login first. Run 'rstuf-cli admin login'")
+│ │ -
+│ │ -    return headers
+│ │ -
+│ │ -
+│ │ -def _bootstrap(server, headers, json_payload):
+│ │ +def _bootstrap(server, headers, json_payload) -> Optional[str]:
+│ │      task_id = None
+│ │      response = request_server(
+│ │          server,
+│ │          URL.bootstrap.value,
+│ │          Methods.post,
+│ │          json_payload,
+│ │          headers=headers,
+│ │ @@ -482,66 +451,14 @@
+│ │          if data := response_json.get("data"):
+│ │              task_id = data.get("task_id")
+│ │              console.print(f"Bootstrap status: ACCEPTED ({task_id})")
+│ │  
+│ │      return task_id
+│ │  
+│ │  
+│ │ -def _bootstrap_state(task_id, server, headers):
+│ │ -    received_state = []
+│ │ -    while True:
+│ │ -        state_response = request_server(
+│ │ -            server, f"{URL.task.value}{task_id}", Methods.get, headers=headers
+│ │ -        )
+│ │ -
+│ │ -        if state_response.status_code != 200:
+│ │ -            raise click.ClickException(
+│ │ -                f"Unexpected response {state_response.text}"
+│ │ -            )
+│ │ -
+│ │ -        data = state_response.json().get("data")
+│ │ -
+│ │ -        if data:
+│ │ -            if state := data.get("state"):
+│ │ -                if state not in received_state:
+│ │ -                    console.print(f"Bootstrap status: {state}")
+│ │ -                    received_state.append(state)
+│ │ -
+│ │ -                if state == "SUCCESS":
+│ │ -                    try:
+│ │ -                        result = data.get("result")
+│ │ -                        bootstrap_result = result.get("details").get(
+│ │ -                            "bootstrap"
+│ │ -                        )
+│ │ -                    except AttributeError:
+│ │ -                        bootstrap_result = False
+│ │ -
+│ │ -                    if bootstrap_result is not True:
+│ │ -                        raise click.ClickException(
+│ │ -                            f"Something went wrong, result: {result}"
+│ │ -                        )
+│ │ -
+│ │ -                    console.print("[green]Bootstrap finished.[/]")
+│ │ -                    break
+│ │ -
+│ │ -                elif state == "FAILURE":
+│ │ -                    raise click.ClickException(
+│ │ -                        f"Failed: {state_response.text}"
+│ │ -                    )
+│ │ -            else:
+│ │ -                raise click.ClickException(
+│ │ -                    f"No state in data received {state_response.text}"
+│ │ -                )
+│ │ -        else:
+│ │ -            raise click.ClickException(
+│ │ -                f"No data received {state_response.text}"
+│ │ -            )
+│ │ -        time.sleep(2)
+│ │ -
+│ │ -
+│ │  @admin.command()
+│ │  @click.option(
+│ │      "-b",
+│ │      "--bootstrap",
+│ │      "bootstrap",
+│ │      help=(
+│ │          "Bootstrap a Repository Service for TUF using the Repository Metadata "
+│ │ @@ -572,22 +489,22 @@
+│ │      required=False,
+│ │      is_flag=True,
+│ │  )
+│ │  @click.option(
+│ │      "-s",
+│ │      "--save",
+│ │      help=(
+│ │ -        "Save a copy of the metadata localy. This option saves the metadata "
+│ │ -        "files (json) in the 'metadata' dir."
+│ │ +        "Save a copy of the metadata locally. This option saves the metadata "
+│ │ +        "files (json) in the 'metadata' folder in the current directory."
+│ │      ),
+│ │      show_default=True,
+│ │      is_flag=True,
+│ │  )
+│ │  @click.pass_context
+│ │ -def ceremony(context, bootstrap, file, upload, save):
+│ │ +def ceremony(context, bootstrap, file, upload, save) -> None:
+│ │      """
+│ │      Start a new Metadata Ceremony.
+│ │      """
+│ │  
+│ │      if save:
+│ │          try:
+│ │              os.makedirs("metadata", exist_ok=True)
+│ │ @@ -595,28 +512,28 @@
+│ │              raise click.ClickException(str(err))
+│ │  
+│ │      if upload is True and bootstrap is False:
+│ │          raise click.ClickException("Requires '-b/--bootstrap' option.")
+│ │  
+│ │      settings = context.obj["settings"]
+│ │      if bootstrap:
+│ │ -        headers = _check_server(settings)
+│ │ +        headers = get_headers(settings)
+│ │          bs_response = request_server(
+│ │              settings.SERVER, URL.bootstrap.value, Methods.get, headers=headers
+│ │          )
+│ │ -        bs_data = bs_response.json()
+│ │          if bs_response.status_code == 404:
+│ │              raise click.ClickException(
+│ │                  f"Server {settings.SERVER} doesn't allow bootstrap"
+│ │              )
+│ │          if bs_response.status_code != 200:
+│ │              raise click.ClickException(
+│ │ -                f"Error {bs_response.status_code} {bs_data.get('detail')}"
+│ │ +                f"Error {bs_response.status_code} {bs_response.text}"
+│ │              )
+│ │  
+│ │ +        bs_data = bs_response.json()
+│ │          if bs_data.get("bootstrap") is True or None:
+│ │              raise click.ClickException(f"{bs_data.get('message')}")
+│ │  
+│ │      if upload is False:
+│ │          console.print(markdown.Markdown(CEREMONY_INTRO), width=100)
+│ │  
+│ │          ceramony_detailed = prompt.Confirm.ask(
+│ │ @@ -691,14 +608,15 @@
+│ │                          f"\nKeys Type: {key_type}"
+│ │                          f"\nRole Expiration: {role.expiration} days"
+│ │                      ),
+│ │                      keys_table,
+│ │                  )
+│ │  
+│ │                  if rolename == Roles.TARGETS.value:
+│ │ +                    assert role.paths is not None  # nosec B101:assert_used
+│ │                      delegations_row = (
+│ │                          f"\n{SETTINGS.service.targets_base_url}".join(
+│ │                              ["", *role.paths]
+│ │                          )
+│ │                      )
+│ │                      role_table.add_row(
+│ │                          (
+│ │ @@ -733,22 +651,26 @@
+│ │                      break
+│ │  
+│ │          metadata = initialize_metadata(SETTINGS.roles, save=save)
+│ │  
+│ │          json_payload: Dict[str, Any] = dict()
+│ │  
+│ │          json_payload["settings"] = {"service": SETTINGS.service.to_dict()}
+│ │ -        for role, data in SETTINGS.roles.items():
+│ │ +        for settings_role, data in SETTINGS.roles.items():
+│ │              if data.offline_keys is True:
+│ │                  data.keys.clear()
+│ │  
+│ │              if "roles" not in json_payload["settings"]:
+│ │ -                json_payload["settings"]["roles"] = {role: data.to_dict()}
+│ │ +                json_payload["settings"]["roles"] = {
+│ │ +                    settings_role: data.to_dict()
+│ │ +                }
+│ │              else:
+│ │ -                json_payload["settings"]["roles"][role] = data.to_dict()
+│ │ +                json_payload["settings"]["roles"][
+│ │ +                    settings_role
+│ │ +                ] = data.to_dict()
+│ │  
+│ │          json_payload["metadata"] = {
+│ │              key: data.to_dict() for key, data in metadata.items()
+│ │          }
+│ │  
+│ │          if file:
+│ │              with open(file, "w") as f:
+│ │ @@ -766,10 +688,10 @@
+│ │  
+│ │          console.print("Starting online bootstrap")
+│ │          task_id = _bootstrap(settings.SERVER, headers, json_payload)
+│ │  
+│ │          if task_id is None:
+│ │              raise click.ClickException("task id wasn't received")
+│ │  
+│ │ -        _bootstrap_state(task_id, settings.SERVER, headers)
+│ │ +        task_status(task_id, settings.SERVER, headers, "Bootstrap status: ")
+│ │  
+│ │      console.print("\nCeremony done. 🔐 🎉")
+│ │   --- repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/login.py
+│ ├── +++ repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/login.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  from typing import Dict
+│ │  
+│ │  from dynaconf import loaders
+│ │  from rich import markdown, prompt  # type: ignore
+│ │   --- repository_service_tuf-0.0.1a7/repository_service_tuf/cli/admin/token.py
+│ ├── +++ repository_service_tuf-0.0.1a9/repository_service_tuf/cli/admin/token.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  import click
+│ │  from rich.console import Console  # type: ignore
+│ │  
+│ │  from repository_service_tuf.cli.admin import admin
+│ │   --- repository_service_tuf-0.0.1a7/repository_service_tuf/helpers/tuf.py
+│ ├── +++ repository_service_tuf-0.0.1a9/repository_service_tuf/helpers/tuf.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  from dataclasses import asdict, dataclass, field
+│ │  from datetime import datetime, timedelta
+│ │  from typing import Any, Dict, List, Optional, Tuple
+│ │  
+│ │ @@ -136,17 +136,15 @@
+│ │          timestamp.signed.snapshot_meta = MetaFile(version=snapshot_version)
+│ │  
+│ │          _bump_version(timestamp)
+│ │          _bump_expiry(timestamp, Timestamp.type)
+│ │          _sign(timestamp, Timestamp.type)
+│ │          _add_payload(timestamp, Timestamp.type)
+│ │  
+│ │ -    def _update_snapshot(
+│ │ -        targets_meta: List[Tuple[str, int]]
+│ │ -    ) -> Metadata[Snapshot]:
+│ │ +    def _update_snapshot(targets_meta: List[Tuple[str, int]]) -> int:
+│ │          """Loads 'snapshot', updates meta info about passed 'targets'
+│ │          metadata, bumps version and expiration, signs and persists. Returns
+│ │          new snapshot version, e.g. to update 'timestamp'."""
+│ │          snapshot = _load(Snapshot.type)
+│ │  
+│ │          for name, version in targets_meta:
+│ │              snapshot.signed.meta[f"{name}.json"] = MetaFile(version=version)
+│ │ @@ -154,82 +152,95 @@
+│ │          _bump_expiry(snapshot, Snapshot.type)
+│ │          _bump_version(snapshot)
+│ │          _sign(snapshot, Snapshot.type)
+│ │          _add_payload(snapshot, Snapshot.type)
+│ │  
+│ │          return snapshot.signed.version
+│ │  
+│ │ -    # Bootstrap default top-level metadata to be updated below if necessary
+│ │ -    targets = Targets()
+│ │ -    snapshot = Snapshot()
+│ │ -    timestamp = Timestamp()
+│ │ -    root = Root()
+│ │ -
+│ │      # Populate public key store, and define trusted signing keys and required
+│ │      # signature thresholds for each top-level role in 'root'.
+│ │ +    roles: dict[str, Role] = {}
+│ │ +    add_key_args: list[tuple[Key, str]] = []
+│ │      for role_name in TOP_LEVEL_ROLE_NAMES:
+│ │          threshold = settings[role_name].threshold
+│ │          signers = _signers(role_name)
+│ │  
+│ │          # FIXME: Is this a meaningful check? Should we check more than just
+│ │          # the threshold? And maybe in a different place, e.g. independently of
+│ │          # bootstrapping the metadata, because in production we do not have
+│ │          # access to all top-level role signing keys at the time of
+│ │          # bootstrapping the metadata.
+│ │ -        assert len(signers) >= threshold, (
+│ │ -            f"not enough keys ({len(signers)}) for "
+│ │ -            f"signing threshold '{threshold}'"
+│ │ -        )
+│ │ +        if len(signers) < threshold:
+│ │ +            raise ValueError(
+│ │ +                f"not enough keys ({len(signers)}) for "
+│ │ +                f"signing threshold '{threshold}'"
+│ │ +            )
+│ │  
+│ │ -        root.roles[role_name] = Role([], threshold)
+│ │ +        roles[role_name] = Role([], threshold)
+│ │          for signer in signers:
+│ │ -            root.add_key(
+│ │ -                Key.from_securesystemslib_key(signer.key_dict), role_name
+│ │ +            add_key_args.append(
+│ │ +                (Key.from_securesystemslib_key(signer.key_dict), role_name)
+│ │              )
+│ │  
+│ │      # Add signature wrapper, bump expiration, and sign and persist
+│ │ -    for role in [targets, snapshot, timestamp, root]:
+│ │ -        metadata = Metadata(role)
+│ │ -        _bump_expiry(metadata, role.type)
+│ │ -        _sign(metadata, role.type)
+│ │ -        _add_payload(metadata, role.type)
+│ │ +    for role in [Targets, Snapshot, Timestamp, Root]:
+│ │ +
+│ │ +        # Bootstrap default top-level metadata to be updated below if necessary
+│ │ +        if role is Root:
+│ │ +            metadata = Metadata(Root(roles=roles))
+│ │ +            root = metadata.signed
+│ │ +            for arg in add_key_args:
+│ │ +                root.add_key(arg[0], arg[1])
+│ │ +
+│ │ +        else:
+│ │ +            metadata = Metadata(role())
+│ │ +
+│ │ +        metadata_type = metadata.signed.type
+│ │ +        _bump_expiry(metadata, metadata_type)
+│ │ +        _sign(metadata, metadata_type)
+│ │ +        _add_payload(metadata, metadata_type)
+│ │  
+│ │      # Track names and versions of new and updated targets for 'snapshot'
+│ │      # update
+│ │      targets_meta = []
+│ │  
+│ │      # Update top-level 'targets' role, to delegate trust for all target files
+│ │      # to 'bins' role, defining target path patterns, trusted signing keys and
+│ │      # required signature thresholds.
+│ │ -    targets = _load(Targets.type)
+│ │ -    targets.signed.delegations = Delegations(keys={}, roles={})
+│ │ -    targets.signed.delegations.roles[BIN] = DelegatedRole(
+│ │ -        name=BIN,
+│ │ -        keyids=[],
+│ │ -        threshold=settings[BIN].threshold,
+│ │ -        terminating=False,
+│ │ -        paths=settings[Targets.type].paths,
+│ │ -    )
+│ │ +    targets_metadata = _load(Targets.type)
+│ │ +    targets_metadata.signed.delegations = Delegations(keys={}, roles={})
+│ │ +    targets_metadata_roles: dict[str, DelegatedRole] = {
+│ │ +        BIN: DelegatedRole(
+│ │ +            name=BIN,
+│ │ +            keyids=[],
+│ │ +            threshold=settings[BIN].threshold,
+│ │ +            terminating=False,
+│ │ +            paths=settings[Targets.type].paths,
+│ │ +        )
+│ │ +    }
+│ │ +
+│ │ +    targets_metadata.signed.delegations.roles = targets_metadata_roles
+│ │  
+│ │      for signer in _signers(BIN):
+│ │ -        targets.signed.add_key(
+│ │ +        targets_metadata.signed.add_key(
+│ │              Key.from_securesystemslib_key(signer.key_dict), BIN
+│ │          )
+│ │  
+│ │      # Bump version and expiration, and sign and persist updated 'targets'.
+│ │ -    _bump_version(targets)
+│ │ -    _bump_expiry(targets, Targets.type)
+│ │ -    _sign(targets, Targets.type)
+│ │ -    _add_payload(targets, Targets.type)
+│ │ +    _bump_version(targets_metadata)
+│ │ +    _bump_expiry(targets_metadata, Targets.type)
+│ │ +    _sign(targets_metadata, Targets.type)
+│ │ +    _add_payload(targets_metadata, Targets.type)
+│ │  
+│ │ -    targets_meta.append((Targets.type, targets.signed.version))
+│ │ +    targets_meta.append((Targets.type, targets_metadata.signed.version))
+│ │  
+│ │ -    succinct_roles = SuccinctRoles(
+│ │ -        [], 1, settings[BINS].number_hash_prefixes, BINS
+│ │ -    )
+│ │ +    bit_length = settings[BINS].number_hash_prefixes
+│ │ +    assert bit_length is not None  # nosec B101:assert_used
+│ │ +
+│ │ +    succinct_roles = SuccinctRoles([], 1, bit_length, BINS)
+│ │      # Create new 'bins' role and delegate trust from 'bins' for all target
+│ │      # files to 'bin-n' roles based on file path hash prefixes, a.k.a hash bin
+│ │      # delegation.
+│ │      bin = Metadata(Targets())
+│ │      bin.signed.delegations = Delegations(
+│ │          keys={}, succinct_roles=succinct_roles
+│ │      )
+│ │   --- repository_service_tuf-0.0.1a7/tests/conftest.py
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/conftest.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  import os
+│ │  from tempfile import TemporaryDirectory
+│ │  
+│ │  import pytest  # type: ignore
+│ │   --- repository_service_tuf-0.0.1a7/tests/test_tuf_repository_service.py
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/test_tuf_repository_service.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  from repository_service_tuf.__version__ import version
+│ │  from repository_service_tuf.cli import rstuf
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/ChrisCornel.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/ChrisCornel.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/JanisJoplin.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/JanisJoplin.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/JimiHendrix.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/JimiHendrix.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/JoeCocker.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/JoeCocker.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/KurtCobain.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/KurtCobain.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/bins1.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/bins1.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/root3.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/root3.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/snapshot1.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/snapshot1.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/files/timestamp1.key
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/files/timestamp1.key
+│ │┄ Files identical despite different names
+│ │   --- repository_service_tuf-0.0.1a7/tests/tools/generate_keys.py
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/tools/generate_keys.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/bin/python
+│ │  
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  from securesystemslib.interface import (  # type: ignore
+│ │      generate_and_write_ed25519_keypair,
+│ │  )
+│ │   --- repository_service_tuf-0.0.1a7/tests/unit/cli/admin/test_ceremony.py
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/unit/cli/admin/test_ceremony.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  from unittest.mock import MagicMock
+│ │  
+│ │  import pretend  # type: ignore
+│ │  import pytest
+│ │ @@ -67,185 +67,14 @@
+│ │  
+│ │          with pytest.raises(ClickException) as err:
+│ │              ceremony._bootstrap("http://fake-rstuf", {}, {})
+│ │  
+│ │          assert "No message available." in str(err)
+│ │          assert mocked_request_server.json.calls == [pretend.call()]
+│ │  
+│ │ -    def test__bootstrap_state(self, monkeypatch):
+│ │ -        fake_response_started = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "STARTED",
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        fake_response_success = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "SUCCESS",
+│ │ -                        "result": {"details": {"bootstrap": True}},
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        mocked_request_server = MagicMock()
+│ │ -        mocked_request_server.side_effect = [
+│ │ -            fake_response_started,
+│ │ -            fake_response_success,
+│ │ -        ]
+│ │ -        monkeypatch.setattr(ceremony, "request_server", mocked_request_server)
+│ │ -
+│ │ -        result = ceremony._bootstrap_state(
+│ │ -            "task_id_123", "http://fake-server", {}
+│ │ -        )
+│ │ -        assert result is None
+│ │ -        assert fake_response_started.json.calls == [pretend.call()]
+│ │ -        assert fake_response_success.json.calls == [pretend.call()]
+│ │ -
+│ │ -    def test__bootstrap_state_without_bootstrap_true(self, monkeypatch):
+│ │ -        fake_response_started = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "STARTED",
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        fake_response_success = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "SUCCESS",
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        mocked_request_server = MagicMock()
+│ │ -        mocked_request_server.side_effect = [
+│ │ -            fake_response_started,
+│ │ -            fake_response_success,
+│ │ -        ]
+│ │ -        monkeypatch.setattr(ceremony, "request_server", mocked_request_server)
+│ │ -
+│ │ -        with pytest.raises(ClickException) as err:
+│ │ -            ceremony._bootstrap_state("task_id_123", "http://fake-server", {})
+│ │ -
+│ │ -        assert "Something went wrong, result:" in str(err)
+│ │ -        assert fake_response_started.json.calls == [pretend.call()]
+│ │ -        assert fake_response_success.json.calls == [pretend.call()]
+│ │ -
+│ │ -    def test__bootstrap_state_task_failure(self, monkeypatch):
+│ │ -        fake_response_started = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "STARTED",
+│ │ -                        "result": {"details": {"bootstrap": True}},
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        fake_response_success = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "FAILURE",
+│ │ -                        "result": "SomeException: bla bla bla",
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -            text="{'data': {'state': 'FAILURE','result': 'SomeException'}}",
+│ │ -        )
+│ │ -        mocked_request_server = MagicMock()
+│ │ -        mocked_request_server.side_effect = [
+│ │ -            fake_response_started,
+│ │ -            fake_response_success,
+│ │ -        ]
+│ │ -        monkeypatch.setattr(ceremony, "request_server", mocked_request_server)
+│ │ -
+│ │ -        with pytest.raises(ClickException) as err:
+│ │ -            ceremony._bootstrap_state("task_id_123", "http://fake-server", {})
+│ │ -
+│ │ -        assert "Failed:" in str(err)
+│ │ -        assert fake_response_started.json.calls == [pretend.call()]
+│ │ -        assert fake_response_success.json.calls == [pretend.call()]
+│ │ -
+│ │ -    def test__bootstrap_state_not_200(self, monkeypatch):
+│ │ -        fake_response_started = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(
+│ │ -                lambda: {
+│ │ -                    "data": {
+│ │ -                        "state": "STARTED",
+│ │ -                        "result": {"details": {"bootstrap": True}},
+│ │ -                    }
+│ │ -                }
+│ │ -            ),
+│ │ -        )
+│ │ -        fake_response_success = pretend.stub(
+│ │ -            status_code=400,
+│ │ -            text="Bad request",
+│ │ -        )
+│ │ -        mocked_request_server = MagicMock()
+│ │ -        mocked_request_server.side_effect = [
+│ │ -            fake_response_started,
+│ │ -            fake_response_success,
+│ │ -        ]
+│ │ -        monkeypatch.setattr(ceremony, "request_server", mocked_request_server)
+│ │ -
+│ │ -        with pytest.raises(ClickException) as err:
+│ │ -            ceremony._bootstrap_state("task_id_123", "http://fake-server", {})
+│ │ -        assert "Unexpected response Bad request" in str(err)
+│ │ -        assert fake_response_started.json.calls == [pretend.call()]
+│ │ -
+│ │ -    def test__bootstrap_state_bootstrap_no_data(self, monkeypatch):
+│ │ -        fake_response = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(lambda: {"data": {}}),
+│ │ -            text=str("{'data': {}}"),
+│ │ -        )
+│ │ -
+│ │ -        monkeypatch.setattr(
+│ │ -            ceremony, "request_server", lambda *a, **kw: fake_response
+│ │ -        )
+│ │ -
+│ │ -        with pytest.raises(ClickException) as err:
+│ │ -            ceremony._bootstrap_state("task_id_123", "http://fake-server", {})
+│ │ -
+│ │ -        assert "No data received" in str(err)
+│ │ -        assert fake_response.json.calls == [pretend.call()]
+│ │ -
+│ │ -    def test__bootstrap_state_bootstrap_no_state(self, monkeypatch):
+│ │ -        fake_response = pretend.stub(
+│ │ -            status_code=200,
+│ │ -            json=pretend.call_recorder(lambda: {"data": {"state": None}}),
+│ │ -            text=str("{'data': {}}"),
+│ │ -        )
+│ │ -
+│ │ -        monkeypatch.setattr(
+│ │ -            ceremony, "request_server", lambda *a, **kw: fake_response
+│ │ -        )
+│ │ -
+│ │ -        with pytest.raises(ClickException) as err:
+│ │ -            ceremony._bootstrap_state("task_id_123", "http://fake-server", {})
+│ │ -
+│ │ -        assert "No state in data received" in str(err)
+│ │ -        assert fake_response.json.calls == [pretend.call()]
+│ │ -
+│ │      def test_ceremony(self, client, test_context):
+│ │          test_result = client.invoke(ceremony.ceremony, obj=test_context)
+│ │          assert test_result.exit_code == 1
+│ │          assert (
+│ │              "Repository Metadata and Settings for the Repository Service "
+│ │              "for TUF"
+│ │          ) in test_result.output
+│ │ @@ -353,14 +182,15 @@
+│ │          monkeypatch.setattr(
+│ │              "repository_service_tuf.cli.admin.ceremony._load_key",
+│ │              fake__load_key,
+│ │          )
+│ │  
+│ │          test_result = client.invoke(
+│ │              ceremony.ceremony,
+│ │ +            ["--save"],
+│ │              input="\n".join(input_step1 + input_step2),
+│ │              obj=test_context,
+│ │          )
+│ │  
+│ │          assert test_result.exit_code == 0
+│ │          assert "Role: root" in test_result.output
+│ │          assert "Number of Keys: 1" in test_result.output
+│ │ @@ -521,21 +351,18 @@
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │          ]
+│ │  
+│ │ -        mocked_check_server = pretend.call_recorder(
+│ │ +        mocked_get_headers = pretend.call_recorder(
+│ │              lambda s: {"Authorization": "Bearer test"}
+│ │          )
+│ │ -        monkeypatch.setattr(
+│ │ -            "repository_service_tuf.cli.admin.ceremony._check_server",
+│ │ -            mocked_check_server,
+│ │ -        )
+│ │ +        monkeypatch.setattr(ceremony, "get_headers", mocked_get_headers)
+│ │  
+│ │          fake_response_get = pretend.stub(
+│ │              status_code=200,
+│ │              json=pretend.call_recorder(lambda: {"bootstrap": False}),
+│ │          )
+│ │          fake_response_post = pretend.stub(
+│ │              status_code=202,
+│ │ @@ -580,21 +407,18 @@
+│ │          assert "Ceremony done." in test_result.output
+│ │          # passwords not shown in output
+│ │          assert "strongPass" not in test_result.output
+│ │  
+│ │      def test_ceremony_with_flag_bootstrap_already_done(
+│ │          self, client, monkeypatch, test_context
+│ │      ):
+│ │ -        mocked_check_server = pretend.call_recorder(
+│ │ +        mocked_get_headers = pretend.call_recorder(
+│ │              lambda s: {"Authorization": "Bearer test"}
+│ │          )
+│ │ -        monkeypatch.setattr(
+│ │ -            "repository_service_tuf.cli.admin.ceremony._check_server",
+│ │ -            mocked_check_server,
+│ │ -        )
+│ │ +        monkeypatch.setattr(ceremony, "get_headers", mocked_get_headers)
+│ │  
+│ │          mocked_request_server = pretend.stub(
+│ │              status_code=200,
+│ │              json=pretend.call_recorder(
+│ │                  lambda: {
+│ │                      "bootstrap": True,
+│ │                      "message": "System already has a Metadata.",
+│ │ @@ -617,29 +441,27 @@
+│ │  
+│ │          assert test_result.exit_code == 1
+│ │          assert "System already has a Metadata." in test_result.output
+│ │  
+│ │      def test_ceremony_with_flag_bootstrap_forbidden(
+│ │          self, client, monkeypatch, test_context
+│ │      ):
+│ │ -        mocked_check_server = pretend.call_recorder(
+│ │ +        mocked_get_headers = pretend.call_recorder(
+│ │              lambda s: {"Authorization": "Bearer test"}
+│ │          )
+│ │ -        monkeypatch.setattr(
+│ │ -            "repository_service_tuf.cli.admin.ceremony._check_server",
+│ │ -            mocked_check_server,
+│ │ -        )
+│ │ +        monkeypatch.setattr(ceremony, "get_headers", mocked_get_headers)
+│ │  
+│ │          mocked_request_server = pretend.stub(
+│ │              status_code=401,
+│ │              json=pretend.call_recorder(
+│ │                  lambda: {
+│ │                      "detail": "Unauthorized.",
+│ │                  }
+│ │              ),
+│ │ +            text="Unauthorized.",
+│ │          )
+│ │  
+│ │          monkeypatch.setattr(
+│ │              "repository_service_tuf.cli.admin.ceremony.request_server",
+│ │              lambda *a, **kw: mocked_request_server,
+│ │          )
+│ │  
+│ │ @@ -702,22 +524,18 @@
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │          ]
+│ │  
+│ │ -        mocked_check_server = pretend.call_recorder(
+│ │ +        mocked_get_headers = pretend.call_recorder(
+│ │              lambda s: {"Authorization": "Bearer test"}
+│ │          )
+│ │ -        monkeypatch.setattr(
+│ │ -            "repository_service_tuf.cli.admin.ceremony._check_server",
+│ │ -            mocked_check_server,
+│ │ -        )
+│ │ -
+│ │ +        monkeypatch.setattr(ceremony, "get_headers", mocked_get_headers)
+│ │          fake_response_get = pretend.stub(
+│ │              status_code=200,
+│ │              json=pretend.call_recorder(lambda: {"bootstrap": False}),
+│ │          )
+│ │          fake_response_post = pretend.stub(
+│ │              status_code=403,
+│ │              json=pretend.call_recorder(lambda: {"detail": "Forbidden"}),
+│ │ @@ -806,21 +624,18 @@
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │              "y",
+│ │          ]
+│ │  
+│ │ -        mocked_check_server = pretend.call_recorder(
+│ │ +        mocked_get_headers = pretend.call_recorder(
+│ │              lambda s: {"Authorization": "Bearer test"}
+│ │          )
+│ │ -        monkeypatch.setattr(
+│ │ -            "repository_service_tuf.cli.admin.ceremony._check_server",
+│ │ -            mocked_check_server,
+│ │ -        )
+│ │ +        monkeypatch.setattr(ceremony, "get_headers", mocked_get_headers)
+│ │  
+│ │          fake_response_get = pretend.stub(
+│ │              status_code=200,
+│ │              json=pretend.call_recorder(lambda: {"bootstrap": False}),
+│ │          )
+│ │          fake_response_post = pretend.stub(
+│ │              status_code=202,
+│ │   --- repository_service_tuf-0.0.1a7/tests/unit/cli/admin/test_login.py
+│ ├── +++ repository_service_tuf-0.0.1a9/tests/unit/cli/admin/test_login.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# SPDX-FileCopyrightText: 2022 VMware Inc
+│ │ +# SPDX-FileCopyrightText: 2022-2023 VMware Inc
+│ │  #
+│ │  # SPDX-License-Identifier: MIT
+│ │  
+│ │  import pretend
+│ │  import pytest
+│ │  
+│ │  from repository_service_tuf.cli.admin import login

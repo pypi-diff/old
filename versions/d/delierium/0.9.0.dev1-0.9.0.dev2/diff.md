@@ -1,0 +1,167 @@
+# Comparing `tmp/delierium-0.9.0.dev1-py3-none-any.whl.zip` & `tmp/delierium-0.9.0.dev2-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,11 +1,11 @@
+-Zip file size: 15216 bytes, number of entries: 9
++Zip file size: 15438 bytes, number of entries: 9
+ -rw-rw-r--  2.0 unx     6136 b- defN 23-Apr-05 11:00 delierium/DerivativeOperators.py
+--rw-rw-r--  2.0 unx    12627 b- defN 23-Apr-05 12:54 delierium/Infinitesimals.py
++-rw-rw-r--  2.0 unx    13168 b- defN 23-Apr-05 15:05 delierium/Infinitesimals.py
+ -rw-rw-r--  2.0 unx      538 b- defN 23-Apr-05 13:25 delierium/__init__.py
+ -rw-rw-r--  2.0 unx    15332 b- defN 23-Apr-05 11:00 delierium/helpers.py
+--rw-rw-r--  2.0 unx     1065 b- defN 23-Apr-05 14:13 delierium-0.9.0.dev1.dist-info/LICENSE
+--rw-rw-r--  2.0 unx     4481 b- defN 23-Apr-05 14:13 delierium-0.9.0.dev1.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Apr-05 14:13 delierium-0.9.0.dev1.dist-info/WHEEL
+--rw-rw-r--  2.0 unx       16 b- defN 23-Apr-05 14:13 delierium-0.9.0.dev1.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      750 b- defN 23-Apr-05 14:13 delierium-0.9.0.dev1.dist-info/RECORD
+-9 files, 41037 bytes uncompressed, 13922 bytes compressed:  66.1%
++-rw-rw-r--  2.0 unx     1065 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/LICENSE
++-rw-rw-r--  2.0 unx     4504 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/WHEEL
++-rw-rw-r--  2.0 unx       16 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx      750 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/RECORD
++9 files, 41601 bytes uncompressed, 14144 bytes compressed:  66.0%
+```
+
+## zipnote {}
+
+```diff
+@@ -6,23 +6,23 @@
+ 
+ Filename: delierium/__init__.py
+ Comment: 
+ 
+ Filename: delierium/helpers.py
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev1.dist-info/LICENSE
++Filename: delierium-0.9.0.dev2.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev1.dist-info/METADATA
++Filename: delierium-0.9.0.dev2.dist-info/METADATA
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev1.dist-info/WHEEL
++Filename: delierium-0.9.0.dev2.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev1.dist-info/top_level.txt
++Filename: delierium-0.9.0.dev2.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev1.dist-info/RECORD
++Filename: delierium-0.9.0.dev2.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## delierium/Infinitesimals.py
+
+```diff
+@@ -141,22 +141,34 @@
+ import types
+ 
+ def overdeterminedSystemODE (ode, 
+                        dependent, 
+                        independent,  
+                        infinitesimals=None
+                        , *args, **kw):
+-    """
+-    Computes the overdetermined system which is computed from the prolongation
++    """Computes the overdetermined system which is computed from the prolongation
+     of an ODE of order > 1
+     
+-    Only the left hand sides of the equations is returned, for further manipulation
+-    one has to add ' == 0' herself
++    Parameters
++    ----------
++    ode: a sagemath expression as the left side of '<expr> == 0'. No need to
++        add " == 0'!!
++    dependent: the name of the dependent variable, i.e. the unknown function
++    independent: 
++        the name of the independent variable
++    infinitesimals: ordered pair of sagemath variables, to be used as the names 
++        for the infinitesimals, to avoid potential name clashes with  variables in your 
++        application. If not specified, 'xi' and 'phi' are used as the defaults
++
++    Returns
++    -------
++    list
++        a list of expressions, each expression to be interpreted as left side of an
++        'expr' == 0. For further manipulation ane has to add ' == 0'.
+     
+-    Real infinitesimals will follow soon
+     
+     >>> # Arrigo Example 2.20
+     >>> x   = var('x')
+     >>> y   = function('y')
+     >>> ode = diff(y(x), x, 3) + y(x) * diff(y(x), x, 2)
+     >>> X=function('X')
+     >>> Y=function('Y')
+```
+
+## Comparing `delierium-0.9.0.dev1.dist-info/LICENSE` & `delierium-0.9.0.dev2.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `delierium-0.9.0.dev1.dist-info/METADATA` & `delierium-0.9.0.dev2.dist-info/METADATA`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: delierium
+-Version: 0.9.0.dev1
++Version: 0.9.0.dev2
+ Summary: Symmetry Analysis for ODEs/PDEs using SageMath
+ Home-page: UNKNOWN
+ Author: Martin Mayerhofer-Schöpf
+ Author-email: tapir@aon.at
+ License: MIT
+ Project-URL: Source, https://github.com/tapir442/delierium
+ Keywords: ODE PDE Lie Symmetry
+@@ -13,14 +13,15 @@
+ Classifier: Programming Language :: Python :: 3 :: Only
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Topic :: Scientific/Engineering :: Mathematics
+ Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
++Requires-Dist: anytree
+ Requires-Dist: more-itertools
+ 
+ # delierium
+ <span style="font-size:30px;"><b>D</b>ifferential <b>E</b>quations' <b>LIE</b> symmetries <b>R</b>esearch <b>I</b>nstr<b>UM</b>ent</span>
+ 
+ Searching for symmetries in ODEs using Python/SageMath/sympy
+```
+
+## Comparing `delierium-0.9.0.dev1.dist-info/RECORD` & `delierium-0.9.0.dev2.dist-info/RECORD`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ delierium/DerivativeOperators.py,sha256=XxKIkum-7bXdlMTqnhDeysjaKKeV_7OR-DDqEdo4NnQ,6136
+-delierium/Infinitesimals.py,sha256=sAeyor1ssRg95fLGP2xczHnfm6h89dimBPEHApv_pz0,12627
++delierium/Infinitesimals.py,sha256=eYZHBFe2SC-h9IRyKu0igmnhZVsIndwxkkuoE16L5K4,13168
+ delierium/__init__.py,sha256=L3MQwe09Vc6HW5X5NINVtM2MUqS2bAO84Y5Vse0bCdo,538
+ delierium/helpers.py,sha256=zRTx7S-s50gBLmYqmNEGPtihRSkOd0IPqk61DVIUWXo,15332
+-delierium-0.9.0.dev1.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065
+-delierium-0.9.0.dev1.dist-info/METADATA,sha256=IfuYTEalCKOUvdlaa5xcWHaBFl3fkrLiqIAztfk6iNE,4481
+-delierium-0.9.0.dev1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-delierium-0.9.0.dev1.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16
+-delierium-0.9.0.dev1.dist-info/RECORD,,
++delierium-0.9.0.dev2.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065
++delierium-0.9.0.dev2.dist-info/METADATA,sha256=1azywyrl4CRNmUYAIVZ6LOfjU2aVv2guF10na2geY4k,4504
++delierium-0.9.0.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++delierium-0.9.0.dev2.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16
++delierium-0.9.0.dev2.dist-info/RECORD,,
+```
+

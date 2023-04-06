@@ -1,0 +1,65 @@
+--- tmp/dirmarks-0.1.2.tar.gz
++++ tmp/dirmarks-0.1.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dirmarks-0.1.2.tar", max compression
+│ +gzip compressed data, was "dirmarks-0.1.3.tar", max compression
+│   --- dirmarks-0.1.2.tar
+├── +++ dirmarks-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ --rw-r--r--   0        0        0     1070 2023-04-06 16:22:22.890575 dirmarks-0.1.2/LICENSE
+│ │ --rw-r--r--   0        0        0     2419 2023-04-06 16:27:00.205868 dirmarks-0.1.2/README.md
+│ │ --rw-r--r--   0        0        0       88 2023-04-06 16:22:22.895649 dirmarks-0.1.2/dirmarks/__init__.py
+│ │ --rw-r--r--   0        0        0      671 2023-04-06 17:16:54.061796 dirmarks-0.1.2/dirmarks/data/dirmarks.function
+│ │ --rwxr-xr-x   0        0        0     4921 2023-04-06 16:22:22.896269 dirmarks-0.1.2/dirmarks/main.py
+│ │ --rw-r--r--   0        0        0      364 2023-04-06 17:17:03.702590 dirmarks-0.1.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2895 1970-01-01 00:00:00.000000 dirmarks-0.1.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1070 2023-04-06 16:22:22.890575 dirmarks-0.1.3/LICENSE
+│ │ +-rw-r--r--   0        0        0     2419 2023-04-06 16:27:00.205868 dirmarks-0.1.3/README.md
+│ │ +-rw-r--r--   0        0        0       88 2023-04-06 16:22:22.895649 dirmarks-0.1.3/dirmarks/__init__.py
+│ │ +-rw-r--r--   0        0        0      671 2023-04-06 17:18:28.779427 dirmarks-0.1.3/dirmarks/data/dirmarks.function
+│ │ +-rwxr-xr-x   0        0        0     4921 2023-04-06 16:22:22.896269 dirmarks-0.1.3/dirmarks/main.py
+│ │ +-rw-r--r--   0        0        0      364 2023-04-06 17:18:46.786468 dirmarks-0.1.3/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2895 1970-01-01 00:00:00.000000 dirmarks-0.1.3/PKG-INFO
+│ │   --- dirmarks-0.1.2/LICENSE
+│ ├── +++ dirmarks-0.1.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dirmarks-0.1.2/README.md
+│ ├── +++ dirmarks-0.1.3/README.md
+│ │┄ Files identical despite different names
+│ │   --- dirmarks-0.1.2/dirmarks/data/dirmarks.function
+│ ├── +++ dirmarks-0.1.3/dirmarks/data/dirmarks.function
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  #!/bin/bash
+│ │  dir() {
+│ │ -if [ "$#" -eq 0 ]; then
+│ │ -    dirmarks list
+│ │ +if [ $# -eq 0 ]; then
+│ │ +    dirmarks --list
+│ │      return
+│ │  fi
+│ │  OPT=$1;
+│ │  shift;
+│ │  case $OPT in
+│ │          -l)
+│ │          dirmarks --list
+│ │   --- dirmarks-0.1.2/dirmarks/main.py
+│ ├── +++ dirmarks-0.1.3/dirmarks/main.py
+│ │┄ Files identical despite different names
+│ │   --- dirmarks-0.1.2/PKG-INFO
+│ ├── +++ dirmarks-0.1.3/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dirmarks
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: Bookmarks for the filesystem
+│ │  License: MIT
+│ │  Author: Meir Michanie
+│ │  Author-email: meirm@riunx.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3

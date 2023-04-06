@@ -1,0 +1,186 @@
+# Comparing `tmp/delierium-0.9.0.dev2-py3-none-any.whl.zip` & `tmp/delierium-0.9.0.dev3-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,11 +1,11 @@
+-Zip file size: 15438 bytes, number of entries: 9
++Zip file size: 15455 bytes, number of entries: 9
+ -rw-rw-r--  2.0 unx     6136 b- defN 23-Apr-05 11:00 delierium/DerivativeOperators.py
+--rw-rw-r--  2.0 unx    13168 b- defN 23-Apr-05 15:05 delierium/Infinitesimals.py
++-rw-rw-r--  2.0 unx    13186 b- defN 23-Apr-06 17:24 delierium/Infinitesimals.py
+ -rw-rw-r--  2.0 unx      538 b- defN 23-Apr-05 13:25 delierium/__init__.py
+ -rw-rw-r--  2.0 unx    15332 b- defN 23-Apr-05 11:00 delierium/helpers.py
+--rw-rw-r--  2.0 unx     1065 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/LICENSE
+--rw-rw-r--  2.0 unx     4504 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/METADATA
+--rw-rw-r--  2.0 unx       92 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/WHEEL
+--rw-rw-r--  2.0 unx       16 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      750 b- defN 23-Apr-06 17:12 delierium-0.9.0.dev2.dist-info/RECORD
+-9 files, 41601 bytes uncompressed, 14144 bytes compressed:  66.0%
++-rw-rw-r--  2.0 unx     1065 b- defN 23-Apr-06 17:25 delierium-0.9.0.dev3.dist-info/LICENSE
++-rw-rw-r--  2.0 unx     4504 b- defN 23-Apr-06 17:25 delierium-0.9.0.dev3.dist-info/METADATA
++-rw-rw-r--  2.0 unx       92 b- defN 23-Apr-06 17:25 delierium-0.9.0.dev3.dist-info/WHEEL
++-rw-rw-r--  2.0 unx       16 b- defN 23-Apr-06 17:25 delierium-0.9.0.dev3.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx      750 b- defN 23-Apr-06 17:25 delierium-0.9.0.dev3.dist-info/RECORD
++9 files, 41619 bytes uncompressed, 14161 bytes compressed:  66.0%
+```
+
+## zipnote {}
+
+```diff
+@@ -6,23 +6,23 @@
+ 
+ Filename: delierium/__init__.py
+ Comment: 
+ 
+ Filename: delierium/helpers.py
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev2.dist-info/LICENSE
++Filename: delierium-0.9.0.dev3.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev2.dist-info/METADATA
++Filename: delierium-0.9.0.dev3.dist-info/METADATA
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev2.dist-info/WHEEL
++Filename: delierium-0.9.0.dev3.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev2.dist-info/top_level.txt
++Filename: delierium-0.9.0.dev3.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: delierium-0.9.0.dev2.dist-info/RECORD
++Filename: delierium-0.9.0.dev3.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## delierium/Infinitesimals.py
+
+```diff
+@@ -14,15 +14,15 @@
+ from sage.calculus.var import function, var
+ from sage.misc.html import html
+ from sage.symbolic.operators import FDerivativeOperator
+ from sage.symbolic.relation import solve
+ 
+ from delierium.DerivativeOperators import FrechetD
+ from delierium.helpers import latexer, ExpressionTree
+-from delierium.JanetBasis import Janet_Basis
++#from delierium.JanetBasis import Janet_Basis
+ 
+ from IPython.core.debugger import set_trace
+ from IPython.display import Math
+ 
+ def prolongationFunction(f: list, x: list, order) -> list:
+     '''
+     >>> x, y, z = var("x y z")
+@@ -259,34 +259,34 @@
+         if new != 0:
+             equations.append(new)
+         e = (e - new * _.coeff).expand()
+     if e != 0:
+         equations.append(e)
+     return equations
+ 
+-def Janet_Basis_from_ODE(ode, dependent, independent, order = "Mgrevlex", *args, **kw):
+-    overdetermined_system = overdeterminedSystemODE(ode, dependent, independent)
+-    # ToDo: 2 way: 
+-    #    * either as Janet_Basis 
+-    #    * or try to solve the undetermined system
+-    Y = var('Y')
+-    intermediate_system = []
+-    for e in overdetermined_system:
+-        # ToDo: make the next three lines into a function for helpers(code duplication
+-        #       with overdeterminedSystemODE. Idea: return a dict with {function: order}
+-        tree = ExpressionTree(e)         
+-        mine = [_ for _ in tree.diffs if _.operator().function() in [dependent]]
+-        order= max([len(_.operator().parameter_set()) for _ in mine]) if mine else 0  
+-        e = e.subs({dependent(independent) : Y})
+-        for j in range(1, order+1):
+-            d = diff(dependent(independent), independent, j)
+-            e = e.subs({d : 0})
+-        intermediate_system.append(e)
+-    # ToDo: get rid of hardcoded phi and xi
+-    janet = Janet_Basis(intermediate_system, [phi, xi], [Y, independent])
+-    pols = map(lambda _ : _.expression().subs({Y : dependent(independent)}), janet.S)
+-    return pols    
++#def Janet_Basis_from_ODE(ode, dependent, independent, order = "Mgrevlex", *args, **kw):
++#    overdetermined_system = overdeterminedSystemODE(ode, dependent, independent)
++# ToDo: 2 way: 
++#    #    * either as Janet_Basis 
++#    #    * or try to solve the undetermined system
++#    Y = var('Y')
++#    intermediate_system = []
++#    for e in overdetermined_system:
++#        # ToDo: make the next three lines into a function for helpers(code duplication
++#        #       with overdeterminedSystemODE. Idea: return a dict with {function: order}#
++#        tree = ExpressionTree(e)        
++#        mine = [_ for _ in tree.diffs if _.operator().function() in [dependent]]
++#        order= max([len(_.operator().parameter_set()) for _ in mine]) if mine else 0  
++#        e = e.subs({dependent(independent) : Y})
++#        for j in range(1, order+1):
++#            d = diff(dependent(independent), independent, j)
++#            e = e.subs({d : 0})
++#        intermediate_system.append(e)
++#    # ToDo: get rid of hardcoded phi and xi
++#    janet = Janet_Basis(intermediate_system, [phi, xi], [Y, independent])
++#    pols = map(lambda _ : _.expression().subs({Y : dependent(independent)}), janet.S)
++#    return pols    
+ 
+ 
+ if __name__ == "__main__":
+     import doctest
+     doctest.testmod()
+```
+
+## Comparing `delierium-0.9.0.dev2.dist-info/LICENSE` & `delierium-0.9.0.dev3.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `delierium-0.9.0.dev2.dist-info/METADATA` & `delierium-0.9.0.dev3.dist-info/METADATA`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: delierium
+-Version: 0.9.0.dev2
++Version: 0.9.0.dev3
+ Summary: Symmetry Analysis for ODEs/PDEs using SageMath
+ Home-page: UNKNOWN
+ Author: Martin Mayerhofer-Schöpf
+ Author-email: tapir@aon.at
+ License: MIT
+ Project-URL: Source, https://github.com/tapir442/delierium
+ Keywords: ODE PDE Lie Symmetry
+```
+
+## Comparing `delierium-0.9.0.dev2.dist-info/RECORD` & `delierium-0.9.0.dev3.dist-info/RECORD`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ delierium/DerivativeOperators.py,sha256=XxKIkum-7bXdlMTqnhDeysjaKKeV_7OR-DDqEdo4NnQ,6136
+-delierium/Infinitesimals.py,sha256=eYZHBFe2SC-h9IRyKu0igmnhZVsIndwxkkuoE16L5K4,13168
++delierium/Infinitesimals.py,sha256=eevvunPuVF5OMN-HnTOmMwd_OPq2DFraleqZvWMslQQ,13186
+ delierium/__init__.py,sha256=L3MQwe09Vc6HW5X5NINVtM2MUqS2bAO84Y5Vse0bCdo,538
+ delierium/helpers.py,sha256=zRTx7S-s50gBLmYqmNEGPtihRSkOd0IPqk61DVIUWXo,15332
+-delierium-0.9.0.dev2.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065
+-delierium-0.9.0.dev2.dist-info/METADATA,sha256=1azywyrl4CRNmUYAIVZ6LOfjU2aVv2guF10na2geY4k,4504
+-delierium-0.9.0.dev2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-delierium-0.9.0.dev2.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16
+-delierium-0.9.0.dev2.dist-info/RECORD,,
++delierium-0.9.0.dev3.dist-info/LICENSE,sha256=ZcfIKbSmoFLTRZMbjWIpVYj_ZEN8BuULitryeWVU6sY,1065
++delierium-0.9.0.dev3.dist-info/METADATA,sha256=qnqFNTt6oC6IFyooVeynz_UfNBuNi8E31N1TilGW430,4504
++delierium-0.9.0.dev3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++delierium-0.9.0.dev3.dist-info/top_level.txt,sha256=8DqLv98rXmQHRO0RT49fWKTYUwiQgsOlqlPAMepy6lA,16
++delierium-0.9.0.dev3.dist-info/RECORD,,
+```
+

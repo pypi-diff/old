@@ -1,0 +1,134 @@
+--- tmp/macrometa-target-collection-0.0.46.tar.gz
++++ tmp/macrometa-target-collection-0.0.47.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "macrometa-target-collection-0.0.46.tar", last modified: Thu Apr  6 13:18:50 2023, max compression
+│ +gzip compressed data, was "macrometa-target-collection-0.0.47.tar", last modified: Thu Apr  6 17:23:30 2023, max compression
+│   --- macrometa-target-collection-0.0.46.tar
+├── +++ macrometa-target-collection-0.0.47.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:50.541711 macrometa-target-collection-0.0.46/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10765 2023-04-06 13:18:24.000000 macrometa-target-collection-0.0.46/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13259 2023-04-06 13:18:50.541711 macrometa-target-collection-0.0.46/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      331 2023-04-06 13:18:24.000000 macrometa-target-collection-0.0.46/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:50.541711 macrometa-target-collection-0.0.46/macrometa_target_collection/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3751 2023-04-06 13:18:24.000000 macrometa-target-collection-0.0.46/macrometa_target_collection/__init__.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)    12936 2023-04-06 13:18:24.000000 macrometa-target-collection-0.0.46/macrometa_target_collection/main.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:18:50.541711 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13259 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       86 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      128 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 13:18:50.000000 macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1611 2023-04-06 13:18:24.000000 macrometa-target-collection-0.0.46/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       49 2023-04-06 13:18:50.541711 macrometa-target-collection-0.0.46/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:23:30.386081 macrometa-target-collection-0.0.47/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10765 2023-04-06 17:23:09.000000 macrometa-target-collection-0.0.47/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13259 2023-04-06 17:23:30.386081 macrometa-target-collection-0.0.47/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      331 2023-04-06 17:23:09.000000 macrometa-target-collection-0.0.47/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:23:30.386081 macrometa-target-collection-0.0.47/macrometa_target_collection/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3751 2023-04-06 17:23:09.000000 macrometa-target-collection-0.0.47/macrometa_target_collection/__init__.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)    13048 2023-04-06 17:23:09.000000 macrometa-target-collection-0.0.47/macrometa_target_collection/main.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:23:30.386081 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13259 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       86 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      128 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 17:23:30.000000 macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1611 2023-04-06 17:23:09.000000 macrometa-target-collection-0.0.47/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       49 2023-04-06 17:23:30.386081 macrometa-target-collection-0.0.47/setup.cfg
+│ │   --- macrometa-target-collection-0.0.46/LICENSE
+│ ├── +++ macrometa-target-collection-0.0.47/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- macrometa-target-collection-0.0.46/PKG-INFO
+│ ├── +++ macrometa-target-collection-0.0.47/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: macrometa-target-collection
+│ │ -Version: 0.0.46
+│ │ +Version: 0.0.47
+│ │  Summary: Singer.io target for writing to Macrometa GDN collections
+│ │  Author-email: Macrometa <info@macrometa.co>
+│ │  License: 
+│ │                                           Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  https://www.apache.org/licenses/
+│ │   --- macrometa-target-collection-0.0.46/macrometa_target_collection/__init__.py
+│ ├── +++ macrometa-target-collection-0.0.47/macrometa_target_collection/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- macrometa-target-collection-0.0.46/macrometa_target_collection/main.py
+│ ├── +++ macrometa-target-collection-0.0.47/macrometa_target_collection/main.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -276,27 +276,30 @@
+│ │      event_loop = setup_batch_task(collection, record_batch)
+│ │      input_messages = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
+│ │      state = persist_messages(collection, input_messages, record_batch)
+│ │  
+│ │      # There can still be records in the `record_batch` which is not processed,
+│ │      # So, we have to force process it one last time before the workflow terminates.
+│ │      try_upsert(collection, record_batch, force=True)
+│ │ +    
+│ │ +    # Wait for Prometheus to scrape the metrics
+│ │ +    logger.info("Waiting for metrics scrape...")
+│ │ +    while not is_scrape_complete(metric_service_url, f"{scrape_complete_flag._name}_total", f"workflow=\"{workflow_label}\""):
+│ │ +        time.sleep(15)
+│ │ +    logger.info("Metrics scrape complete. Exiting...")
+│ │ +
+│ │      emit_state(state)
+│ │      event_loop.stop()
+│ │ -    logger.info("Exiting normally...")
+│ │ +    logger.info("Completing normally...")
+│ │  
+│ │  
+│ │  def is_scrape_complete(prometheus_url, metric_name, filter):
+│ │      response = requests.get(f"{prometheus_url}/query", params={"query": f"{metric_name}{{{filter}}}"})
+│ │      if response.status_code == 200:
+│ │          json_data = response.json()
+│ │          if json_data["data"]["result"] and len(json_data["data"]["result"]) > 0:
+│ │              return True
+│ │      return False
+│ │  
+│ │  
+│ │  if __name__ == '__main__':
+│ │      main()
+│ │ -
+│ │ -    # Wait for Prometheus to scrape the metrics
+│ │ -    while not is_scrape_complete(metric_service_url, f"{scrape_complete_flag._name}_total", f"workflow=\"{workflow_label}\""):
+│ │ -        time.sleep(15)
+│ │   --- macrometa-target-collection-0.0.46/macrometa_target_collection.egg-info/PKG-INFO
+│ ├── +++ macrometa-target-collection-0.0.47/macrometa_target_collection.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: macrometa-target-collection
+│ │ -Version: 0.0.46
+│ │ +Version: 0.0.47
+│ │  Summary: Singer.io target for writing to Macrometa GDN collections
+│ │  Author-email: Macrometa <info@macrometa.co>
+│ │  License: 
+│ │                                           Apache License
+│ │                                     Version 2.0, January 2004
+│ │                                  https://www.apache.org/licenses/
+│ │   --- macrometa-target-collection-0.0.46/pyproject.toml
+│ ├── +++ macrometa-target-collection-0.0.47/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools", "wheel"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "macrometa-target-collection"
+│ │ -version = "0.0.46"
+│ │ +version = "0.0.47"
+│ │  authors = [
+│ │      { name = "Macrometa", email = "info@macrometa.co" },
+│ │  ]
+│ │  description = "Singer.io target for writing to Macrometa GDN collections"
+│ │  readme = "README.md"
+│ │  license = { file = "LICENSE" }
+│ │  requires-python = ">=3.7"
