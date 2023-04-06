@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+python3 fetch.py
+AUTHOR="pypi diffbot <foo@bar.com>"
+
+NOW=$(date +'%Y%m%d%H%M')
+
+# do not try to hit any limits ..
+find versions  -type f ! -name "*.gz" -and -size +50M -exec gzip {} \;
+
+git add versions
+git commit -m "changes: $NOW" -a --author "$AUTHOR"
+git push 
+git tag -a "v$NOW" -m "$NOW"
+git push origin "v$NOW"
