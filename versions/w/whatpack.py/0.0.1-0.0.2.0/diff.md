@@ -1,0 +1,285 @@
+# Comparing `tmp/whatpack.py-0.0.1.tar.gz` & `tmp/whatpack.py-0.0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "whatpack.py-0.0.1.tar", last modified: Thu Apr  6 12:38:18 2023, max compression
++gzip compressed data, was "whatpack.py-0.0.2.0.tar", last modified: Thu Apr  6 12:46:39 2023, max compression
+```
+
+## Comparing `whatpack.py-0.0.1.tar` & `whatpack.py-0.0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,67 +1,23 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.560176 whatpack.py-0.0.1/.github/
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.560176 whatpack.py-0.0.1/.github/ISSUE_TEMPLATE/
+--rw-rw-rw-   0        0        0     1061 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/.github/ISSUE_TEMPLATE/bug_report.md
+--rw-rw-rw-   0        0        0      509 2023-04-05 06:51:37.000000 whatpack.py-0.0.1/.github/dependabot.yml
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.575913 whatpack.py-0.0.1/.idea/
+--rw-rw-rw-   0        0        0       50 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/.idea/.gitignore
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.575913 whatpack.py-0.0.1/.idea/inspectionProfiles/
+--rw-rw-rw-   0        0        0      179 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/.idea/inspectionProfiles/profiles_settings.xml
+--rw-rw-rw-   0        0        0      281 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/.idea/modules.xml
+--rw-rw-rw-   0        0        0      172 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/.idea/vcs.xml
+--rw-rw-rw-   0        0        0      797 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/.idea/whatpack.py.iml
+--rw-rw-rw-   0        0        0     5146 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/CODE_OF_CONDUCT.md
+--rw-rw-rw-   0        0        0     9896 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/CONTRIBUTING.md
+--rw-rw-rw-   0        0        0    11551 2023-04-03 13:57:52.000000 whatpack.py-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0     4243 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0     3333 2023-04-05 09:26:10.000000 whatpack.py-0.0.1/README.md
+--rw-rw-rw-   0        0        0      642 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/SECURITY.md
+--rw-rw-rw-   0        0        0    12371 2023-04-03 14:44:28.000000 whatpack.py-0.0.1/logo.jpg
+--rw-rw-rw-   0        0        0       99 2023-03-30 06:56:17.000000 whatpack.py-0.0.1/requirements.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0     2096 2023-04-06 12:37:58.000000 whatpack.py-0.0.1/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.560176 whatpack.py-0.0.1/whatpack/
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.575913 whatpack.py-0.0.1/whatpack/async/
+--rw-rw-rw-   0        0        0      667 2023-03-30 05:52:08.000000 whatpack.py-0.0.1/whatpack/async/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.575913 whatpack.py-0.0.1/whatpack/async/core/
+--rw-rw-rw-   0        0        0      672 2023-03-30 06:41:57.000000 whatpack.py-0.0.1/whatpack/async/core/__init__.py
+--rw-rw-rw-   0        0        0     9018 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/async/core/core_.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/whatpack/async/core/data/
+--rw-rw-rw-   0        0        0      317 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/document.png
+--rw-rw-rw-   0        0        0      234 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/img_icon.png
+--rw-rw-rw-   0        0        0      496 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/link.png
+--rw-rw-rw-   0        0        0      479 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/link2.png
+--rw-rw-rw-   0        0        0      434 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/photo_or_video.png
+--rw-rw-rw-   0        0        0      629 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/pywhatkit_smile.png
+--rw-rw-rw-   0        0        0      656 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/pywhatkit_smile1.png
+--rw-rw-rw-   0        0        0     2161 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/searchbar2.png
+--rw-rw-rw-   0        0        0      787 2023-03-26 06:16:42.000000 whatpack.py-0.0.1/whatpack/async/core/data/unread_icon.png
+--rw-rw-rw-   0        0        0      946 2023-03-30 06:29:37.000000 whatpack.py-0.0.1/whatpack/async/core/exceptions.py
+--rw-rw-rw-   0        0        0    12761 2023-04-03 08:19:14.000000 whatpack.py-0.0.1/whatpack/async/whats.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/whatpack/headless/
+--rw-rw-rw-   0        0        0      639 2023-03-30 05:47:06.000000 whatpack.py-0.0.1/whatpack/headless/__init__.py
+--rw-rw-rw-   0        0        0     1416 2023-03-30 05:50:43.000000 whatpack.py-0.0.1/whatpack/headless/app.py
+--rw-rw-rw-   0        0        0     9715 2023-03-30 05:43:14.000000 whatpack.py-0.0.1/whatpack/headless/whats.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/whatpack/sync/
+--rw-rw-rw-   0        0        0      667 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/whatpack/sync/core/
+--rw-rw-rw-   0        0        0      672 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/__init__.py
+--rw-rw-rw-   0        0        0     8732 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/core_.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.591940 whatpack.py-0.0.1/whatpack/sync/core/data/
+--rw-rw-rw-   0        0        0      317 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/document.png
+--rw-rw-rw-   0        0        0      234 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/img_icon.png
+--rw-rw-rw-   0        0        0      496 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/link.png
+--rw-rw-rw-   0        0        0      479 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/link2.png
+--rw-rw-rw-   0        0        0      434 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/photo_or_video.png
+--rw-rw-rw-   0        0        0      629 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/pywhatkit_smile.png
+--rw-rw-rw-   0        0        0      656 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/pywhatkit_smile1.png
+--rw-rw-rw-   0        0        0     2161 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/searchbar2.png
+--rw-rw-rw-   0        0        0      787 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/data/unread_icon.png
+--rw-rw-rw-   0        0        0      946 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/core/exceptions.py
+--rw-rw-rw-   0        0        0    12549 2023-04-06 12:33:52.000000 whatpack.py-0.0.1/whatpack/sync/whats.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 12:38:18.575913 whatpack.py-0.0.1/whatpack.py.egg-info/
+--rw-rw-rw-   0        0        0     4243 2023-04-06 12:38:18.000000 whatpack.py-0.0.1/whatpack.py.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     1533 2023-04-06 12:38:18.000000 whatpack.py-0.0.1/whatpack.py.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 12:38:18.000000 whatpack.py-0.0.1/whatpack.py.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       91 2023-04-06 12:38:18.000000 whatpack.py-0.0.1/whatpack.py.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-04-06 12:38:18.000000 whatpack.py-0.0.1/whatpack.py.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.704078 whatpack.py-0.0.2.0/
++-rw-rw-rw-   0        0        0    11551 2023-04-03 13:57:52.000000 whatpack.py-0.0.2.0/LICENSE
++-rw-rw-rw-   0        0        0     4245 2023-04-06 12:46:39.704078 whatpack.py-0.0.2.0/PKG-INFO
++-rw-rw-rw-   0        0        0     3333 2023-04-05 09:26:10.000000 whatpack.py-0.0.2.0/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-06 12:46:39.704078 whatpack.py-0.0.2.0/setup.cfg
++-rw-rw-rw-   0        0        0     2100 2023-04-06 12:46:07.000000 whatpack.py-0.0.2.0/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.685411 whatpack.py-0.0.2.0/whatpack/
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.699138 whatpack.py-0.0.2.0/whatpack/asyncpy/
++-rw-rw-rw-   0        0        0      669 2023-04-06 12:46:07.000000 whatpack.py-0.0.2.0/whatpack/asyncpy/__init__.py
++-rw-rw-rw-   0        0        0    12763 2023-04-06 12:46:07.000000 whatpack.py-0.0.2.0/whatpack/asyncpy/whats.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.701301 whatpack.py-0.0.2.0/whatpack/headless/
++-rw-rw-rw-   0        0        0      639 2023-03-30 05:47:06.000000 whatpack.py-0.0.2.0/whatpack/headless/__init__.py
++-rw-rw-rw-   0        0        0     1416 2023-03-30 05:50:43.000000 whatpack.py-0.0.2.0/whatpack/headless/app.py
++-rw-rw-rw-   0        0        0     9715 2023-03-30 05:43:14.000000 whatpack.py-0.0.2.0/whatpack/headless/whats.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.702703 whatpack.py-0.0.2.0/whatpack/sync/
++-rw-rw-rw-   0        0        0      669 2023-04-06 12:46:07.000000 whatpack.py-0.0.2.0/whatpack/sync/__init__.py
++-rw-rw-rw-   0        0        0    12549 2023-04-06 12:33:52.000000 whatpack.py-0.0.2.0/whatpack/sync/whats.py
++drwxrwxrwx   0        0        0        0 2023-04-06 12:46:39.698102 whatpack.py-0.0.2.0/whatpack.py.egg-info/
++-rw-rw-rw-   0        0        0     4245 2023-04-06 12:46:39.000000 whatpack.py-0.0.2.0/whatpack.py.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      386 2023-04-06 12:46:39.000000 whatpack.py-0.0.2.0/whatpack.py.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 12:46:39.000000 whatpack.py-0.0.2.0/whatpack.py.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       91 2023-04-06 12:46:39.000000 whatpack.py-0.0.2.0/whatpack.py.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 12:46:39.000000 whatpack.py-0.0.2.0/whatpack.py.egg-info/top_level.txt
+```
+
+### Comparing `whatpack.py-0.0.1/LICENSE` & `whatpack.py-0.0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `whatpack.py-0.0.1/PKG-INFO` & `whatpack.py-0.0.2.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: whatpack.py
+-Version: 0.0.1
++Version: 0.0.2.0
+ Summary: About whatpack.py is a Python package that
+ Home-page: https://github.com/SigireddyBalasai/whatpack.py
+ Download-URL: https://github.com/SigireddyBalasai/whatpack.py
+ Author: SigireddyBalasai
+ Author-email: sigireddybalasai@gmail.com
+ Maintainer: SigireddyBalasai
+ Maintainer-email: SigireddyBalasai@gmail.com
+```
+
+### Comparing `whatpack.py-0.0.1/README.md` & `whatpack.py-0.0.2.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `whatpack.py-0.0.1/setup.py` & `whatpack.py-0.0.2.0/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,16 +18,16 @@
+     with open((dir_path + "//requirements.txt"), "r", encoding="UTF-8") as file:
+         requirements = [line.strip() for line in file]
+         return requirements
+ 
+ 
+ setup(
+     name="whatpack.py",
+-    packages=['whatpack', 'whatpack.async', 'whatpack.sync', 'whatpack.headless'],
+-    version="0.0.1",
++    packages=['whatpack', 'whatpack.asyncpy', 'whatpack.sync', 'whatpack.headless'],
++    version="0.0.2.0",
+     maintainer="SigireddyBalasai",
+     maintainer_email="SigireddyBalasai@gmail.com",
+     setup_requires=['setuptools_scm'],
+     use_scm_version=True,
+     license="MIT",
+     description="""About whatpack.py is a Python package that
+     allows you to automate WhatsApp and YouTube tasks in an asynchronous
+```
+
+### Comparing `whatpack.py-0.0.1/whatpack/async/__init__.py` & `whatpack.py-0.0.2.0/whatpack/asyncpy/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-"""This is async module for whatpack
++"""This is asyncpy module for whatpack
+ Apache License 2.0
+ Copyright [2023] [Sigireddy Balasai]
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+```
+
+### Comparing `whatpack.py-0.0.1/whatpack/async/core/__init__.py` & `whatpack.py-0.0.2.0/whatpack/headless/__init__.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,17 +1,16 @@
+-"""This is core
++"""InitFile
+ Apache License 2.0
+ Copyright [2023] [Sigireddy Balasai]
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+-    Unless required by applicable law or agreed to in writing, software
+-    distributed under the License is distributed on an "AS IS" BASIS,
+-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-    See the License for the specific language governing permissions and
+-    limitations under the License.
+-"""
+-__all__ = ['core_', 'exceptions']
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License."""
++__all__ = ['app', 'whats']
+```
+
+### Comparing `whatpack.py-0.0.1/whatpack/async/whats.py` & `whatpack.py-0.0.2.0/whatpack/asyncpy/whats.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-"""This is the main whatsapp module for the async version of the package"""
++"""This is the main whatsapp module for the asyncpy version of the package"""
+ import typing
+ import time
+ import asyncio
+ import pathlib
+ import webbrowser as web
+ from datetime import datetime
+ from re import fullmatch
+```
+
+### Comparing `whatpack.py-0.0.1/whatpack/headless/__init__.py` & `whatpack.py-0.0.2.0/whatpack/sync/__init__.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,16 +1,17 @@
+-"""InitFile
++"""This is asyncpy module for whatpack
+ Apache License 2.0
+ Copyright [2023] [Sigireddy Balasai]
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+     http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+-limitations under the License."""
+-__all__ = ['app', 'whats']
++limitations under the License.
++"""
++__all__ = ['core', 'whats']
+```
+
+### Comparing `whatpack.py-0.0.1/whatpack/headless/app.py` & `whatpack.py-0.0.2.0/whatpack/headless/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `whatpack.py-0.0.1/whatpack/headless/whats.py` & `whatpack.py-0.0.2.0/whatpack/headless/whats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `whatpack.py-0.0.1/whatpack/sync/whats.py` & `whatpack.py-0.0.2.0/whatpack/sync/whats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `whatpack.py-0.0.1/whatpack.py.egg-info/PKG-INFO` & `whatpack.py-0.0.2.0/whatpack.py.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: whatpack.py
+-Version: 0.0.1
++Version: 0.0.2.0
+ Summary: About whatpack.py is a Python package that
+ Home-page: https://github.com/SigireddyBalasai/whatpack.py
+ Download-URL: https://github.com/SigireddyBalasai/whatpack.py
+ Author: SigireddyBalasai
+ Author-email: sigireddybalasai@gmail.com
+ Maintainer: SigireddyBalasai
+ Maintainer-email: SigireddyBalasai@gmail.com
+```
+

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/speasy-1.1.0.tar.gz tmp/speasy-1.1.1.tar.gz --html versions/s/speasy/1.1.0-1.1.1/index.html --text versions/s/speasy/1.1.0-1.1.1/diff.txt --markdown versions/s/speasy/1.1.0-1.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">20.3 KB</span></div>
+  <div><span class="source">tmp/speasy-1.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/speasy-1.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">262 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;speasy-1.1.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>12:4<del>4</del>:<del>26</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;speasy-1.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>12:4<ins>6</ins>:<ins>52</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">20.0 KB</span></div>
+    <div><span class="source">speasy-1.1.0.tar</span> vs.</div>
+    <div id="speasy--.-.-.tar"><span class="source">speasy-1.1.1.tar</span>
+      <a class="anchor" href="#speasy--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">11.3 KB</span></div>
+      <div id="speasy--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#speasy--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 50 lines modified</td><td colspan="2">Offset 1, 50 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1660<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>15</del>6<del>97</del><span class="dp">·</span>speasy-1.1.<del>0</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1660<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>52</ins>6<ins>00</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5850<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>15</del>6<del>97</del><span class="dp">·</span>speasy-1.1.<del>0</del>/README.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5850<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>52</ins>6<ins>00</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1359<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1359<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>920<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>920<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7468<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/config/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7468<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/config/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6567<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6567<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>533<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>533<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2061<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/_function_cache.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2061<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/_function_cache.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/_instance.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/_instance.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<del>295</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/_providers_caches.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14<ins>306</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/_providers_caches.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2386<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.6<del>63</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/cache.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2386<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.6<ins>96</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/cache.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1941<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cache/version.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1941<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cache/version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2010<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/cdf/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2010<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/cdf/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8835<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/data_containers.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8835<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/data_containers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4616<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/dataprovider.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4616<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/dataprovider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2204<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/datetime_range.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2204<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/datetime_range.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3586<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/http.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3586<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/http.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/index/__init__.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>80<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/index/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>525<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>663</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/index/speasy_index.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>525<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/index/speasy_index.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1871<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/inventory/__init__.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1871<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/inventory/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4637<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/inventory/indexes.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4637<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/inventory/indexes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4928<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/proxy/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4928<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/proxy/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/requests_scheduling/__init__.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/requests_scheduling/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11374<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/requests_scheduling/request_dispatch.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11374<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/requests_scheduling/request_dispatch.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1089<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/requests_scheduling/split_large_requests.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1089<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/requests_scheduling/split_large_requests.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3500<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/core/span_utils.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3500<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/core/span_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>165<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/inventories/__init__.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>165<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/inventories/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2867<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/plotting/__init__.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2867<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/plotting/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2165<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/plotting/mpl_backend/__init__.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2165<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/plotting/mpl_backend/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>686<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/__init__.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>686<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/base_product.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/base_product.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4582<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/catalog.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4582<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/catalog.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1654<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/dataset.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1654<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/dataset.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1696<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/timetable.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1696<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/timetable.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18641<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/products/variable.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18641<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/products/variable.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>130<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/__init__.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>130<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1729<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/__init__.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1729<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9131<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/_impl.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9131<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/_impl.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/exceptions.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6034<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/inventory.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6034<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/inventory.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11428<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/rest_client.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11428<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/rest_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6833<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/utils.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6833<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22336<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/amda/ws.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22336<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/amda/ws.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6844<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/cda/__init__.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6844<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/cda/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2939<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/cda/_inventory_builder/__init__.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2939<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/cda/_inventory_builder/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2533<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2533<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3456<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3456<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10011<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/csa/__init__.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10011<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/csa/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5777<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<del>4</del>:<del>08</del>.<del>667</del>6<del>96</del><span class="dp">·</span>speasy-1.1.<del>0</del>/speasy/webservices/ssc/__init__.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5777<span class="dp">·</span>2023-04-06<span class="dp">·</span>12:4<ins>6</ins>:<ins>34</ins>.<ins>700</ins>6<ins>01</ins><span class="dp">·</span>speasy-1.1.<ins>1</ins>/speasy/webservices/ssc/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7212<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>speasy-1.1.<del>0</del>/PKG-INFO</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7212<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>speasy-1.1.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">79.0 B</span></div>
+      <div><span class="source">speasy-1.1.0/LICENSE</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--LICENSE"><span class="source">speasy-1.1.1/LICENSE</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">speasy-1.1.0/README.rst</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--README.rst"><span class="source">speasy-1.1.1/README.rst</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">556 B</span></div>
+      <div><span class="source">speasy-1.1.0/pyproject.toml</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--pyproject.toml"><span class="source">speasy-1.1.1/pyproject.toml</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;flit_core.buildapi&quot;</td><td class="diffline">2 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;flit_core.buildapi&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;flit_core&quot;]</td><td class="diffline">3 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;flit_core&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&#x27;speasy&#x27;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&#x27;speasy&#x27;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<del>0</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<ins>1</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>simple<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>deal<span class="dp">·</span>with<span class="dp">·</span>main<span class="dp">·</span>Space<span class="dp">·</span>Physics<span class="dp">·</span>WebServices<span class="dp">·</span>(CDA,<span class="dp">·</span>CSA,<span class="dp">·</span>AMDA<span class="dp">·</span>and<span class="dp">·</span>SSC).&quot;</td><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>simple<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>deal<span class="dp">·</span>with<span class="dp">·</span>main<span class="dp">·</span>Space<span class="dp">·</span>Physics<span class="dp">·</span>WebServices<span class="dp">·</span>(CDA,<span class="dp">·</span>CSA,<span class="dp">·</span>AMDA<span class="dp">·</span>and<span class="dp">·</span>SSC).&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">keywords=<span class="dp">·</span>[&quot;satellite&quot;,<span class="dp">·</span>&quot;plasma-physics&quot;,<span class="dp">·</span>&quot;nasa-data&quot;,<span class="dp">·</span>&quot;amda&quot;,<span class="dp">·</span>&quot;cdpp&quot;,<span class="dp">·</span>&quot;CDF&quot;]</td><td class="diffline">8 </td><td class="diffpresent">keywords=<span class="dp">·</span>[&quot;satellite&quot;,<span class="dp">·</span>&quot;plasma-physics&quot;,<span class="dp">·</span>&quot;nasa-data&quot;,<span class="dp">·</span>&quot;amda&quot;,<span class="dp">·</span>&quot;cdpp&quot;,<span class="dp">·</span>&quot;CDF&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{name<span class="dp">·</span>=<span class="dp">·</span>&quot;Alexis<span class="dp">·</span>Jeandet&quot;,<span class="dp">·</span>email<span class="dp">·</span>=<span class="dp">·</span>&quot;alexis.jeandet@member.fsf.org&quot;<span class="dp">·</span>}</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{name<span class="dp">·</span>=<span class="dp">·</span>&quot;Alexis<span class="dp">·</span>Jeandet&quot;,<span class="dp">·</span>email<span class="dp">·</span>=<span class="dp">·</span>&quot;alexis.jeandet@member.fsf.org&quot;<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">]</td><td class="diffline">11 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">12 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">697 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-__init__.py"><span class="source">speasy-1.1.1/speasy/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 15 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>speasy<span class="dp">·</span>as<span class="dp">·</span>spz</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>speasy<span class="dp">·</span>as<span class="dp">·</span>spz</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">&quot;&quot;&quot;</td><td class="diffline">5 </td><td class="diffpresent">&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;Alexis<span class="dp">·</span>Jeandet&quot;&quot;&quot;</td><td class="diffline">6 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;Alexis<span class="dp">·</span>Jeandet&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">__email__<span class="dp">·</span>=<span class="dp">·</span>&#x27;alexis.jeandet@member.fsf.org&#x27;</td><td class="diffline">7 </td><td class="diffpresent">__email__<span class="dp">·</span>=<span class="dp">·</span>&#x27;alexis.jeandet@member.fsf.org&#x27;</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.1.<del>0</del>&#x27;</td><td class="diffline">8 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&#x27;1.1.<ins>1</ins>&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&#x27;amda&#x27;,<span class="dp">·</span>&#x27;cda&#x27;,<span class="dp">·</span>&#x27;ssc&#x27;,<span class="dp">·</span>&#x27;csa&#x27;,<span class="dp">·</span>&#x27;get_data&#x27;,<span class="dp">·</span>&#x27;SpeasyVariable&#x27;,<span class="dp">·</span>&#x27;Catalog&#x27;,<span class="dp">·</span>&#x27;Event&#x27;,<span class="dp">·</span>&#x27;Dataset&#x27;,<span class="dp">·</span>&#x27;TimeTable&#x27;]</td><td class="diffline">9 </td><td class="diffpresent">__all__<span class="dp">·</span>=<span class="dp">·</span>[&#x27;amda&#x27;,<span class="dp">·</span>&#x27;cda&#x27;,<span class="dp">·</span>&#x27;ssc&#x27;,<span class="dp">·</span>&#x27;csa&#x27;,<span class="dp">·</span>&#x27;get_data&#x27;,<span class="dp">·</span>&#x27;SpeasyVariable&#x27;,<span class="dp">·</span>&#x27;Catalog&#x27;,<span class="dp">·</span>&#x27;Event&#x27;,<span class="dp">·</span>&#x27;Dataset&#x27;,<span class="dp">·</span>&#x27;TimeTable&#x27;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">__docformat__<span class="dp">·</span>=<span class="dp">·</span>&quot;numpy&quot;</td><td class="diffline">10 </td><td class="diffpresent">__docformat__<span class="dp">·</span>=<span class="dp">·</span>&quot;numpy&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core.inventory.indexes<span class="dp">·</span>import<span class="dp">·</span>SpeasyIndex</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core.inventory.indexes<span class="dp">·</span>import<span class="dp">·</span>SpeasyIndex</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>.products<span class="dp">·</span>import<span class="dp">·</span>SpeasyVariable,<span class="dp">·</span>Catalog,<span class="dp">·</span>Event,<span class="dp">·</span>Dataset,<span class="dp">·</span>TimeTable,<span class="dp">·</span>MaybeAnyProduct</td><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>.products<span class="dp">·</span>import<span class="dp">·</span>SpeasyVariable,<span class="dp">·</span>Catalog,<span class="dp">·</span>Event,<span class="dp">·</span>Dataset,<span class="dp">·</span>TimeTable,<span class="dp">·</span>MaybeAnyProduct</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List</td><td class="diffline">13 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>.core.requests_scheduling.request_dispatch<span class="dp">·</span>import<span class="dp">·</span>get_data,<span class="dp">·</span>list_providers,<span class="dp">·</span>amda,<span class="dp">·</span>cda,<span class="dp">·</span>csa,<span class="dp">·</span>ssc</td><td class="diffline">14 </td><td class="diffpresent">from<span class="dp">·</span>.core.requests_scheduling.request_dispatch<span class="dp">·</span>import<span class="dp">·</span>get_data,<span class="dp">·</span>list_providers,<span class="dp">·</span>amda,<span class="dp">·</span>cda,<span class="dp">·</span>csa,<span class="dp">·</span>ssc</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/config/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-config-__init__.py"><span class="source">speasy-1.1.1/speasy/config/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-config-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-__init__.py"><span class="source">speasy-1.1.1/speasy/core/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cache/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cache-__init__.py"><span class="source">speasy-1.1.1/speasy/core/cache/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cache-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cache/_function_cache.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cache-_function_cache.py"><span class="source">speasy-1.1.1/speasy/core/cache/_function_cache.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cache-_function_cache.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.92 KB</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cache/_providers_caches.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cache-_providers_caches.py"><span class="source">speasy-1.1.1/speasy/core/cache/_providers_caches.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cache-_providers_caches.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 19 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>speasy<span class="dp">·</span>import<span class="dp">·</span>SpeasyVariable</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent"><del>from<span class="dp">·</span>.cache<span class="dp">·</span></del>import<span class="dp">·</span><del>Ca</del><del>cheItem</del></td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span><ins>logging</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>math</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>datetime<span class="dp">·</span>import<span class="dp">·</span>datetime,<span class="dp">·</span>timedelta</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>functools<span class="dp">·</span>import<span class="dp">·</span>wraps</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List,<span class="dp">·</span>Tuple</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>List,<span class="dp">·</span>Tuple</td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core.datetime_range<span class="dp">·</span>import<span class="dp">·</span>DateTimeRange</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>speasy<span class="dp">·</span>import<span class="dp">·</span>SpeasyVariable</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core<span class="dp">·</span>import<span class="dp">·</span>progress_bar</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core<span class="dp">·</span>import<span class="dp">·</span>progress_bar</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>speasy.<del>produ</del>c<del>ts.v</del><del>a</del>r<del>iabl</del>e<del><span class="dp">·</span>im</del><del>por</del>t<del><span class="dp">·</span>merg</del>e<del><span class="dp">·</span>a</del><del>s<span class="dp">·</span></del>m<del>erg</del>e_<del>va</del>r<del>i</del>a<del>bl</del>e<del>s,</del><span class="dp">·</span><del>to_d</del>i<del>c</del><del>ti</del>o<del>na</del>r<del>y</del><del>,</del><span class="dp">·</span><del>f</del><del>rom_d</del>i<del>ctio</del>n<del>a</del><del>ry</del></td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>speasy.c<ins>o</ins>re<ins>.da</ins>te<ins>ti</ins>me_ra<ins>ng</ins>e<span class="dp">·</span>i<ins>mp</ins>or<ins>t</ins><span class="dp">·</span><ins>DateT</ins>i<ins>meRa</ins>n<ins>ge</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core.inventory.indexes<span class="dp">·</span>import<span class="dp">·</span>ParameterIndex</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>speasy.core.inventory.indexes<span class="dp">·</span>import<span class="dp">·</span>ParameterIndex</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>speasy.products.variable<span class="dp">·</span>import<span class="dp">·</span>merge<span class="dp">·</span>as<span class="dp">·</span>merge_variables,<span class="dp">·</span>to_dictionary,<span class="dp">·</span>from_dictionary</td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>datetime<span class="dp">·</span>import<span class="dp">·</span>datetime,<span class="dp">·</span>timedelta</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>functools<span class="dp">·</span>import<span class="dp">·</span>wraps</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>logging</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>math</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>._instance<span class="dp">·</span>import<span class="dp">·</span>_cache</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>._instance<span class="dp">·</span>import<span class="dp">·</span>_cache</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">from<span class="dp">·</span>.cache<span class="dp">·</span>import<span class="dp">·</span>CacheItem</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">log<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td><td class="diffline">13 </td><td class="diffpresent">log<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">CACHE_ALLOWED_KWARGS<span class="dp">·</span>=<span class="dp">·</span>[&#x27;disable_cache&#x27;]</td><td class="diffline">14 </td><td class="diffpresent">CACHE_ALLOWED_KWARGS<span class="dp">·</span>=<span class="dp">·</span>[&#x27;disable_cache&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">def<span class="dp">·</span>lower_hour_bound(dt:<span class="dp">·</span>datetime,<span class="dp">·</span>factor:<span class="dp">·</span>int):</td><td class="diffline">15 </td><td class="diffpresent">def<span class="dp">·</span>lower_hour_bound(dt:<span class="dp">·</span>datetime,<span class="dp">·</span>factor:<span class="dp">·</span>int):</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 83, 15 lines modified</td><td colspan="2">Offset 84, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>add_to_cache(self,<span class="dp">·</span>variable:<span class="dp">·</span>SpeasyVariable<span class="dp">·</span>or<span class="dp">·</span>None,<span class="dp">·</span>fragments,<span class="dp">·</span>product,<span class="dp">·</span>fragment_duration_hours,<span class="dp">·</span>version,</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>add_to_cache(self,<span class="dp">·</span>variable:<span class="dp">·</span>SpeasyVariable<span class="dp">·</span>or<span class="dp">·</span>None,<span class="dp">·</span>fragments,<span class="dp">·</span>product,<span class="dp">·</span>fragment_duration_hours,<span class="dp">·</span>version,</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs)<span class="dp">·</span>-&gt;<span class="dp">·</span>SpeasyVariable<span class="dp">·</span>or<span class="dp">·</span>None:</td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs)<span class="dp">·</span>-&gt;<span class="dp">·</span>SpeasyVariable<span class="dp">·</span>or<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>variable<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>variable<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>fragment<span class="dp">·</span>in<span class="dp">·</span>fragments:</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>fragment<span class="dp">·</span>in<span class="dp">·</span>fragments:</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.set_cache_entry(fragment,<span class="dp">·</span>product,</td><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.set_cache_entry(fragment,<span class="dp">·</span>product,</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CacheItem(to_dictionary(</td><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>CacheItem(to_dictionary(</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>variable[fragment:(fragment<span class="dp">·</span>+<span class="dp">·</span>timedelta(hours=fragment_duration_hours))]),</td><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>variable[fragment:(fragment<span class="dp">·</span>+<span class="dp">·</span>timedelta(hours=fragment_duration_hours))]),</td></tr>
+<tr class="diffchanged"><td class="diffline">90 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version))</td><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version)<ins>,<span class="dp">·</span>**kwargs</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>variable</td><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>variable</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>set_cache_entry(self,<span class="dp">·</span>fragment,<span class="dp">·</span>product:<span class="dp">·</span>str,<span class="dp">·</span>entry,<span class="dp">·</span>**kwargs):</td><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>set_cache_entry(self,<span class="dp">·</span>fragment,<span class="dp">·</span>product:<span class="dp">·</span>str,<span class="dp">·</span>entry,<span class="dp">·</span>**kwargs):</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>self.entry_name(self.prefix,<span class="dp">·</span>product,<span class="dp">·</span>fragment.isoformat(),<span class="dp">·</span>**kwargs)</td><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>key<span class="dp">·</span>=<span class="dp">·</span>self.entry_name(self.prefix,<span class="dp">·</span>product,<span class="dp">·</span>fragment.isoformat(),<span class="dp">·</span>**kwargs)</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>log.debug(f&quot;add<span class="dp">·</span>{key}<span class="dp">·</span>into<span class="dp">·</span>cache&quot;)</td><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>log.debug(f&quot;add<span class="dp">·</span>{key}<span class="dp">·</span>into<span class="dp">·</span>cache&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.cache[key]<span class="dp">·</span>=<span class="dp">·</span>entry</td><td class="diffline">96 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.cache[key]<span class="dp">·</span>=<span class="dp">·</span>entry</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cache/cache.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cache-cache.py"><span class="source">speasy-1.1.1/speasy/core/cache/cache.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cache-cache.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cache/version.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cache-version.py"><span class="source">speasy-1.1.1/speasy/core/cache/version.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cache-version.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/cdf/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-cdf-__init__.py"><span class="source">speasy-1.1.1/speasy/core/cdf/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-cdf-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/data_containers.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-data_containers.py"><span class="source">speasy-1.1.1/speasy/core/data_containers.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-data_containers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/dataprovider.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-dataprovider.py"><span class="source">speasy-1.1.1/speasy/core/dataprovider.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-dataprovider.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/datetime_range.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-datetime_range.py"><span class="source">speasy-1.1.1/speasy/core/datetime_range.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-datetime_range.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/http.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-http.py"><span class="source">speasy-1.1.1/speasy/core/http.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-http.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/index/speasy_index.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-index-speasy_index.py"><span class="source">speasy-1.1.1/speasy/core/index/speasy_index.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-index-speasy_index.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/inventory/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-inventory-__init__.py"><span class="source">speasy-1.1.1/speasy/core/inventory/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-inventory-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/inventory/indexes.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-inventory-indexes.py"><span class="source">speasy-1.1.1/speasy/core/inventory/indexes.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-inventory-indexes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/proxy/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-proxy-__init__.py"><span class="source">speasy-1.1.1/speasy/core/proxy/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-proxy-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/requests_scheduling/request_dispatch.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-requests_scheduling-request_dispatch.py"><span class="source">speasy-1.1.1/speasy/core/requests_scheduling/request_dispatch.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-requests_scheduling-request_dispatch.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/requests_scheduling/split_large_requests.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-requests_scheduling-split_large_requests.py"><span class="source">speasy-1.1.1/speasy/core/requests_scheduling/split_large_requests.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-requests_scheduling-split_large_requests.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/core/span_utils.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-core-span_utils.py"><span class="source">speasy-1.1.1/speasy/core/span_utils.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-core-span_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/plotting/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-plotting-__init__.py"><span class="source">speasy-1.1.1/speasy/plotting/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-plotting-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/plotting/mpl_backend/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-plotting-mpl_backend-__init__.py"><span class="source">speasy-1.1.1/speasy/plotting/mpl_backend/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-plotting-mpl_backend-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/products/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-products-__init__.py"><span class="source">speasy-1.1.1/speasy/products/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-products-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/products/catalog.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-products-catalog.py"><span class="source">speasy-1.1.1/speasy/products/catalog.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-products-catalog.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/products/dataset.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-products-dataset.py"><span class="source">speasy-1.1.1/speasy/products/dataset.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-products-dataset.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/products/timetable.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-products-timetable.py"><span class="source">speasy-1.1.1/speasy/products/timetable.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-products-timetable.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/products/variable.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-products-variable.py"><span class="source">speasy-1.1.1/speasy/products/variable.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-products-variable.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-__init__.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/_impl.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-_impl.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/_impl.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-_impl.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/inventory.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-inventory.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/inventory.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-inventory.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/rest_client.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-rest_client.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/rest_client.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-rest_client.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/utils.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-utils.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/utils.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/amda/ws.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-ws.py"><span class="source">speasy-1.1.1/speasy/webservices/amda/ws.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-amda-ws.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/cda/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-__init__.py"><span class="source">speasy-1.1.1/speasy/webservices/cda/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/cda/_inventory_builder/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-__init__.py"><span class="source">speasy-1.1.1/speasy/webservices/cda/_inventory_builder/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-_cdf_masters_parser.py"><span class="source">speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-_cdf_masters_parser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-_xml_catalogs_parser.py"><span class="source">speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-cda-_inventory_builder-_xml_catalogs_parser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/csa/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-csa-__init__.py"><span class="source">speasy-1.1.1/speasy/webservices/csa/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-csa-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">speasy-1.1.0/speasy/webservices/ssc/__init__.py</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--speasy-webservices-ssc-__init__.py"><span class="source">speasy-1.1.1/speasy/webservices/ssc/__init__.py</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--speasy-webservices-ssc-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">580 B</span></div>
+      <div><span class="source">speasy-1.1.0/PKG-INFO</span> vs.</div>
+      <div id="speasy--.-.-.tar---speasy--.-.--PKG-INFO"><span class="source">speasy-1.1.1/PKG-INFO</span>
+        <a class="anchor" href="#speasy--.-.-.tar---speasy--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>speasy</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>speasy</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>simple<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>deal<span class="dp">·</span>with<span class="dp">·</span>main<span class="dp">·</span>Space<span class="dp">·</span>Physics<span class="dp">·</span>WebServices<span class="dp">·</span>(CDA,<span class="dp">·</span>CSA,<span class="dp">·</span>AMDA<span class="dp">·</span>and<span class="dp">·</span>SSC).</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>simple<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>to<span class="dp">·</span>deal<span class="dp">·</span>with<span class="dp">·</span>main<span class="dp">·</span>Space<span class="dp">·</span>Physics<span class="dp">·</span>WebServices<span class="dp">·</span>(CDA,<span class="dp">·</span>CSA,<span class="dp">·</span>AMDA<span class="dp">·</span>and<span class="dp">·</span>SSC).</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Keywords:<span class="dp">·</span>satellite,plasma-physics,nasa-data,amda,cdpp,CDF</td><td class="diffline">5 </td><td class="diffpresent">Keywords:<span class="dp">·</span>satellite,plasma-physics,nasa-data,amda,cdpp,CDF</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Alexis<span class="dp">·</span>Jeandet<span class="dp">·</span>&lt;alexis.jeandet@member.fsf.org&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Alexis<span class="dp">·</span>Jeandet<span class="dp">·</span>&lt;alexis.jeandet@member.fsf.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Alexis<span class="dp">·</span>Jeandet<span class="dp">·</span>&lt;alexis.jeandet@member.fsf.org&gt;</td><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>Alexis<span class="dp">·</span>Jeandet<span class="dp">·</span>&lt;alexis.jeandet@member.fsf.org&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>5<span class="dp">·</span>-<span class="dp">·</span>Production/Stable</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,762 @@
+--- tmp/speasy-1.0.5.tar.gz
++++ tmp/speasy-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "speasy-1.0.5.tar", last modified: Thu Dec 22 08:02:45 2022, max compression
+│ +gzip compressed data, was "speasy-1.1.0.tar", last modified: Thu Apr  6 12:44:26 2023, max compression
+│   --- speasy-1.0.5.tar
+├── +++ speasy-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,50 +1,50 @@
+│ │ --rw-r--r--   0        0        0     1660 2022-12-22 08:02:32.821838 speasy-1.0.5/LICENSE
+│ │ --rw-r--r--   0        0        0     5677 2022-12-22 08:02:32.825838 speasy-1.0.5/README.rst
+│ │ --rw-r--r--   0        0        0     1340 2022-12-22 08:02:32.861839 speasy-1.0.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0      920 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/__init__.py
+│ │ --rw-r--r--   0        0        0     7286 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/config/__init__.py
+│ │ --rw-r--r--   0        0        0     6567 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/__init__.py
+│ │ --rw-r--r--   0        0        0      533 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/__init__.py
+│ │ --rw-r--r--   0        0        0     2061 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/_function_cache.py
+│ │ --rw-r--r--   0        0        0      100 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/_instance.py
+│ │ --rw-r--r--   0        0        0    14295 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/_providers_caches.py
+│ │ --rw-r--r--   0        0        0     2386 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/cache.py
+│ │ --rw-r--r--   0        0        0     1941 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cache/version.py
+│ │ --rw-r--r--   0        0        0     2010 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/cdf/__init__.py
+│ │ --rw-r--r--   0        0        0     8835 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/data_containers.py
+│ │ --rw-r--r--   0        0        0     4616 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/dataprovider.py
+│ │ --rw-r--r--   0        0        0     2204 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/datetime_range.py
+│ │ --rw-r--r--   0        0        0     3586 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/http.py
+│ │ --rw-r--r--   0        0        0       80 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/index/__init__.py
+│ │ --rw-r--r--   0        0        0      525 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/index/speasy_index.py
+│ │ --rw-r--r--   0        0        0     1871 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/inventory/__init__.py
+│ │ --rw-r--r--   0        0        0     4637 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/inventory/indexes.py
+│ │ --rw-r--r--   0        0        0     4928 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/proxy/__init__.py
+│ │ --rw-r--r--   0        0        0       92 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/requests_scheduling/__init__.py
+│ │ --rw-r--r--   0        0        0    11374 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/requests_scheduling/request_dispatch.py
+│ │ --rw-r--r--   0        0        0     1089 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/requests_scheduling/split_large_requests.py
+│ │ --rw-r--r--   0        0        0     3500 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/core/span_utils.py
+│ │ --rw-r--r--   0        0        0      165 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/inventories/__init__.py
+│ │ --rw-r--r--   0        0        0     2867 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/plotting/__init__.py
+│ │ --rw-r--r--   0        0        0     2165 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/plotting/mpl_backend/__init__.py
+│ │ --rw-r--r--   0        0        0      686 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/__init__.py
+│ │ --rw-r--r--   0        0        0      241 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/base_product.py
+│ │ --rw-r--r--   0        0        0     4582 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/catalog.py
+│ │ --rw-r--r--   0        0        0     1654 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/dataset.py
+│ │ --rw-r--r--   0        0        0     1696 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/timetable.py
+│ │ --rw-r--r--   0        0        0    18641 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/products/variable.py
+│ │ --rw-r--r--   0        0        0      130 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/__init__.py
+│ │ --rw-r--r--   0        0        0     1729 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/__init__.py
+│ │ --rw-r--r--   0        0        0     8466 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/_impl.py
+│ │ --rw-r--r--   0        0        0       46 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/exceptions.py
+│ │ --rw-r--r--   0        0        0     6034 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/inventory.py
+│ │ --rw-r--r--   0        0        0    11427 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/rest_client.py
+│ │ --rw-r--r--   0        0        0     6776 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/utils.py
+│ │ --rw-r--r--   0        0        0    21683 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/amda/ws.py
+│ │ --rw-r--r--   0        0        0     6844 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/cda/__init__.py
+│ │ --rw-r--r--   0        0        0     2880 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/cda/_inventory_builder/__init__.py
+│ │ --rw-r--r--   0        0        0     2533 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
+│ │ --rw-r--r--   0        0        0     3456 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
+│ │ --rw-r--r--   0        0        0    10011 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/csa/__init__.py
+│ │ --rw-r--r--   0        0        0     5777 2022-12-22 08:02:32.861839 speasy-1.0.5/speasy/webservices/ssc/__init__.py
+│ │ --rw-r--r--   0        0        0     7008 1970-01-01 00:00:00.000000 speasy-1.0.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1660 2023-04-06 12:44:08.615697 speasy-1.1.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     5850 2023-04-06 12:44:08.615697 speasy-1.1.0/README.rst
+│ │ +-rw-r--r--   0        0        0     1359 2023-04-06 12:44:08.663696 speasy-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      920 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/__init__.py
+│ │ +-rw-r--r--   0        0        0     7468 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/config/__init__.py
+│ │ +-rw-r--r--   0        0        0     6567 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/__init__.py
+│ │ +-rw-r--r--   0        0        0      533 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/__init__.py
+│ │ +-rw-r--r--   0        0        0     2061 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_function_cache.py
+│ │ +-rw-r--r--   0        0        0      100 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_instance.py
+│ │ +-rw-r--r--   0        0        0    14295 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_providers_caches.py
+│ │ +-rw-r--r--   0        0        0     2386 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/cache.py
+│ │ +-rw-r--r--   0        0        0     1941 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/version.py
+│ │ +-rw-r--r--   0        0        0     2010 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cdf/__init__.py
+│ │ +-rw-r--r--   0        0        0     8835 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/data_containers.py
+│ │ +-rw-r--r--   0        0        0     4616 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/dataprovider.py
+│ │ +-rw-r--r--   0        0        0     2204 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/datetime_range.py
+│ │ +-rw-r--r--   0        0        0     3586 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/http.py
+│ │ +-rw-r--r--   0        0        0       80 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/index/__init__.py
+│ │ +-rw-r--r--   0        0        0      525 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/index/speasy_index.py
+│ │ +-rw-r--r--   0        0        0     1871 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/inventory/__init__.py
+│ │ +-rw-r--r--   0        0        0     4637 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/inventory/indexes.py
+│ │ +-rw-r--r--   0        0        0     4928 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/proxy/__init__.py
+│ │ +-rw-r--r--   0        0        0       92 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/__init__.py
+│ │ +-rw-r--r--   0        0        0    11374 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/request_dispatch.py
+│ │ +-rw-r--r--   0        0        0     1089 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/split_large_requests.py
+│ │ +-rw-r--r--   0        0        0     3500 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/span_utils.py
+│ │ +-rw-r--r--   0        0        0      165 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/inventories/__init__.py
+│ │ +-rw-r--r--   0        0        0     2867 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/plotting/__init__.py
+│ │ +-rw-r--r--   0        0        0     2165 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/plotting/mpl_backend/__init__.py
+│ │ +-rw-r--r--   0        0        0      686 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/__init__.py
+│ │ +-rw-r--r--   0        0        0      241 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/base_product.py
+│ │ +-rw-r--r--   0        0        0     4582 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/catalog.py
+│ │ +-rw-r--r--   0        0        0     1654 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/dataset.py
+│ │ +-rw-r--r--   0        0        0     1696 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/timetable.py
+│ │ +-rw-r--r--   0        0        0    18641 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/variable.py
+│ │ +-rw-r--r--   0        0        0      130 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/__init__.py
+│ │ +-rw-r--r--   0        0        0     1729 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/__init__.py
+│ │ +-rw-r--r--   0        0        0     9131 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/_impl.py
+│ │ +-rw-r--r--   0        0        0       46 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/exceptions.py
+│ │ +-rw-r--r--   0        0        0     6034 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/inventory.py
+│ │ +-rw-r--r--   0        0        0    11428 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/rest_client.py
+│ │ +-rw-r--r--   0        0        0     6833 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/utils.py
+│ │ +-rw-r--r--   0        0        0    22336 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/ws.py
+│ │ +-rw-r--r--   0        0        0     6844 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/__init__.py
+│ │ +-rw-r--r--   0        0        0     2939 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/__init__.py
+│ │ +-rw-r--r--   0        0        0     2533 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
+│ │ +-rw-r--r--   0        0        0     3456 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
+│ │ +-rw-r--r--   0        0        0    10011 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/csa/__init__.py
+│ │ +-rw-r--r--   0        0        0     5777 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/ssc/__init__.py
+│ │ +-rw-r--r--   0        0        0     7212 1970-01-01 00:00:00.000000 speasy-1.1.0/PKG-INFO
+│ │   --- speasy-1.0.5/LICENSE
+│ ├── +++ speasy-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/README.rst
+│ ├── +++ speasy-1.1.0/README.rst
+│ │┄ Files 4% similar despite different names
+│ │ @@ -33,14 +33,18 @@
+│ │     :target: https://doi.org/10.5281/zenodo.4118780
+│ │     :alt: Zendoo DOI
+│ │  
+│ │  .. image:: https://mybinder.org/badge_logo.svg
+│ │      :target: https://mybinder.org/v2/gh/SciQLop/speasy/main?labpath=docs/examples
+│ │      :alt: Discover on MyBinder
+│ │  
+│ │ +.. image:: https://colab.research.google.com/assets/colab-badge.svg
+│ │ +    :target: https://colab.research.google.com/github/SciQLop/speasy
+│ │ +    :alt: Discover on Google Colab
+│ │ +
+│ │  .. image:: https://img.shields.io/uptimerobot/ratio/m792771930-24b7f89c03d5090a13462b70
+│ │     :target: http://sciqlop.lpp.polytechnique.fr/cache
+│ │     :alt: Speasy proxy uptime (30 days)
+│ │  
+│ │  Speasy is an open source Python client for Space Physics web services such as `CDAWEB <https://cdaweb.gsfc.nasa.gov/index.html/>`__
+│ │  or `AMDA <http://amda.irap.omp.eu/>`__.
+│ │  Most space physics data analysis starts with finding which server provides which dataset then figuring out how to download them.
+│ │   --- speasy-1.0.5/pyproject.toml
+│ ├── +++ speasy-1.1.0/pyproject.toml
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  build-backend = "flit_core.buildapi"
+│ │  requires = ["flit_core"]
+│ │  
+│ │  [project]
+│ │  name = 'speasy'
+│ │ -version = "1.0.5"
+│ │ +version = "1.1.0"
+│ │  description = "A simple Python package to deal with main Space Physics WebServices (CDA, CSA, AMDA and SSC)."
+│ │  keywords= ["satellite", "plasma-physics", "nasa-data", "amda", "cdpp", "CDF"]
+│ │  authors = [
+│ │    {name = "Alexis Jeandet", email = "alexis.jeandet@member.fsf.org" }
+│ │  ]
+│ │  
+│ │  maintainers = [
+│ │ @@ -27,14 +27,14 @@
+│ │      "Programming Language :: Python :: 3",
+│ │      "Programming Language :: Python :: 3.7",
+│ │      "Programming Language :: Python :: 3.8",
+│ │      "Programming Language :: Python :: 3.9",
+│ │      "Programming Language :: Python :: 3.10",
+│ │  ]
+│ │  dependencies = ['requests', 'pandas', 'diskcache', 'appdirs', 'numpy', 'packaging', 'python-dateutil',
+│ │ -                'astropy', 'astroquery', 'pyistp', 'tqdm', 'matplotlib']
+│ │ +                'astropy', 'astroquery', 'pyistp', 'tqdm', 'matplotlib', 'urllib3>=1.26.0']
+│ │  [project.urls]
+│ │  homepage = "https://github.com/SciQLop/speasy"
+│ │  
+│ │  [project.optional-dependencies]
+│ │  zstd = ["zstd"]
+│ │   --- speasy-1.0.5/speasy/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/__init__.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -4,15 +4,15 @@
+│ │  
+│ │     import speasy as spz
+│ │  
+│ │  """
+│ │  
+│ │  __author__ = """Alexis Jeandet"""
+│ │  __email__ = 'alexis.jeandet@member.fsf.org'
+│ │ -__version__ = '1.0.5'
+│ │ +__version__ = '1.1.0'
+│ │  __all__ = ['amda', 'cda', 'ssc', 'csa', 'get_data', 'SpeasyVariable', 'Catalog', 'Event', 'Dataset', 'TimeTable']
+│ │  __docformat__ = "numpy"
+│ │  
+│ │  from speasy.core.inventory.indexes import SpeasyIndex
+│ │  from .products import SpeasyVariable, Catalog, Event, Dataset, TimeTable, MaybeAnyProduct
+│ │  from typing import List
+│ │  from .core.requests_scheduling.request_dispatch import get_data, list_providers, amda, cda, csa, ssc
+│ │   --- speasy-1.0.5/speasy/config/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/config/__init__.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -186,15 +186,18 @@
+│ │                                             "type_ctor": int
+│ │                                             },
+│ │                       max_chunk_size_days={
+│ │                           "default": 10,
+│ │                           "description": "Maximum request duration in days, any request over a longer period will be split into smaller ones.",
+│ │                           "type_ctor": int},
+│ │                       entry_point={
+│ │ -                         "default": "http://amda.irap.omp.eu"}
+│ │ +                         "default": "http://amda.irap.omp.eu"},
+│ │ +                     output_format={
+│ │ +                         "description": "File format requested to AMDA, either ASCII or CDF_ISTP",
+│ │ +                         "default": "ASCII"}
+│ │                       )
+│ │  
+│ │  inventories = ConfigSection("INVENTORIES",
+│ │                              cache_retention_days={
+│ │                                  "default": 2,
+│ │                                  "description": "Maximum times in days speasy will keep inventories in cache before fetching newer version.",
+│ │                                  "type_ctor": int}
+│ │   --- speasy-1.0.5/speasy/core/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/core/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cache/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/core/cache/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cache/_function_cache.py
+│ ├── +++ speasy-1.1.0/speasy/core/cache/_function_cache.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cache/_providers_caches.py
+│ ├── +++ speasy-1.1.0/speasy/core/cache/_providers_caches.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cache/cache.py
+│ ├── +++ speasy-1.1.0/speasy/core/cache/cache.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cache/version.py
+│ ├── +++ speasy-1.1.0/speasy/core/cache/version.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/cdf/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/core/cdf/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/data_containers.py
+│ ├── +++ speasy-1.1.0/speasy/core/data_containers.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/dataprovider.py
+│ ├── +++ speasy-1.1.0/speasy/core/dataprovider.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/datetime_range.py
+│ ├── +++ speasy-1.1.0/speasy/core/datetime_range.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/http.py
+│ ├── +++ speasy-1.1.0/speasy/core/http.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/index/speasy_index.py
+│ ├── +++ speasy-1.1.0/speasy/core/index/speasy_index.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/inventory/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/core/inventory/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/inventory/indexes.py
+│ ├── +++ speasy-1.1.0/speasy/core/inventory/indexes.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/proxy/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/core/proxy/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -14,15 +14,15 @@
+│ │  from ...products.variable import from_dictionary as var_from_dict
+│ │  from .. import http
+│ │  from ..inventory.indexes import from_dict as inventory_from_dict
+│ │  from ..index import index
+│ │  
+│ │  log = logging.getLogger(__name__)
+│ │  PROXY_ALLOWED_KWARGS = ['disable_proxy']
+│ │ -MINIMUM_REQUIRED_PROXY_VERSION = Version("0.6.0")
+│ │ +MINIMUM_REQUIRED_PROXY_VERSION = Version("0.8.0")
+│ │  _CURRENT_PROXY_SERVER_VERSION = None
+│ │  
+│ │  if proxy_cfg.url() == "" or proxy_cfg.enabled() == False:
+│ │      warnings.warn("""Proxy server is disabled you might want to use it both to improve Speasy performances and to reduce pressure on remote servers
+│ │  use the following python snippet to configure proxy server:
+│ │  ===========================================================================
+│ │  import speasy as spz
+│ │   --- speasy-1.0.5/speasy/core/requests_scheduling/request_dispatch.py
+│ ├── +++ speasy-1.1.0/speasy/core/requests_scheduling/request_dispatch.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/requests_scheduling/split_large_requests.py
+│ ├── +++ speasy-1.1.0/speasy/core/requests_scheduling/split_large_requests.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/core/span_utils.py
+│ ├── +++ speasy-1.1.0/speasy/core/span_utils.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/plotting/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/plotting/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/plotting/mpl_backend/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/plotting/mpl_backend/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/products/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/products/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/products/catalog.py
+│ ├── +++ speasy-1.1.0/speasy/products/catalog.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/products/dataset.py
+│ ├── +++ speasy-1.1.0/speasy/products/dataset.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/products/timetable.py
+│ ├── +++ speasy-1.1.0/speasy/products/timetable.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/products/variable.py
+│ ├── +++ speasy-1.1.0/speasy/products/variable.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/amda/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/amda/_impl.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/_impl.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -2,15 +2,17 @@
+│ │  from datetime import datetime, timedelta
+│ │  from types import SimpleNamespace
+│ │  from typing import Dict, Optional
+│ │  
+│ │  # General modules
+│ │  from ...config import amda as amda_cfg
+│ │  from ...core.cache import CacheCall
+│ │ +from ...core.http import urlopen_with_retry
+│ │  from ...core.inventory.indexes import SpeasyIndex
+│ │ +from ...core.cdf import load_variable as load_cdf
+│ │  from ...inventories import flat_inventories
+│ │  from ...products.variable import SpeasyVariable, merge
+│ │  from . import rest_client
+│ │  from .exceptions import MissingCredentials
+│ │  from .inventory import AmdaXMLParser
+│ │  from .rest_client import auth_args
+│ │  from .utils import load_catalog, load_csv, load_timetable
+│ │ @@ -88,49 +90,58 @@
+│ │          return root
+│ │  
+│ │      def build_private_inventory(self, root: SpeasyIndex):
+│ │          self._update_private_lists(TimeTables=root.TimeTables, Catalogs=root.Catalogs, root=root)
+│ │          return root
+│ │  
+│ │      def dl_parameter_chunk(self, start_time: datetime, stop_time: datetime, parameter_id: str,
+│ │ -                           extra_http_headers: Dict or None = None, **kwargs) -> Optional[SpeasyVariable]:
+│ │ +                           extra_http_headers: Dict or None = None, output_format: str = 'ASCII', **kwargs) -> Optional[
+│ │ +        SpeasyVariable]:
+│ │          url = rest_client.get_parameter(server_url=self.server_url, startTime=start_time.timestamp(),
+│ │                                          stopTime=stop_time.timestamp(), parameterID=parameter_id, timeFormat='UNIXTIME',
+│ │ -                                        extra_http_headers=extra_http_headers, **kwargs)
+│ │ +                                        extra_http_headers=extra_http_headers, outputFormat=output_format, **kwargs)
+│ │          # check status until done
+│ │          if url is not None:
+│ │ -            var = load_csv(url)
+│ │ +            if output_format == "CDF_ISTP":
+│ │ +                if url is not None:
+│ │ +                    with urlopen_with_retry(url) as remote_cdf:
+│ │ +                        var = load_cdf(buffer=remote_cdf.read(), variable=parameter_id)
+│ │ +            else:
+│ │ +                var = load_csv(url)
+│ │              if len(var):
+│ │                  log.debug(
+│ │                      f'Loaded var: data shape = {var.values.shape}, data start time = {var.time[0]}, \
+│ │                              data stop time = {var.time[-1]}')
+│ │              else:
+│ │                  log.debug('Loaded var: Empty var')
+│ │              return var
+│ │          return None
+│ │  
+│ │      def dl_parameter(self, start_time: datetime, stop_time: datetime, parameter_id: str,
+│ │ -                     extra_http_headers: Dict or None = None, **kwargs) -> Optional[SpeasyVariable]:
+│ │ +                     extra_http_headers: Dict or None = None, output_format: str = 'ASCII', **kwargs) -> Optional[
+│ │ +        SpeasyVariable]:
+│ │          dt = timedelta(days=amda_cfg.max_chunk_size_days())
+│ │  
+│ │          if stop_time - start_time > dt:
+│ │              var = None
+│ │              curr_t = start_time
+│ │              while curr_t < stop_time:
+│ │                  if curr_t + dt < stop_time:
+│ │                      var = merge([var, self.dl_parameter_chunk(curr_t, curr_t + dt, parameter_id,
+│ │ -                                                              extra_http_headers=extra_http_headers, **kwargs)])
+│ │ +                                                              extra_http_headers=extra_http_headers,
+│ │ +                                                              output_format=output_format, **kwargs)])
+│ │                  else:
+│ │                      var = merge([var, self.dl_parameter_chunk(curr_t, stop_time, parameter_id,
+│ │ -                                                              extra_http_headers=extra_http_headers, **kwargs)])
+│ │ +                                                              extra_http_headers=extra_http_headers,
+│ │ +                                                              output_format=output_format, **kwargs)])
+│ │                  curr_t += dt
+│ │              return var
+│ │          else:
+│ │              return self.dl_parameter_chunk(start_time, stop_time, parameter_id, extra_http_headers=extra_http_headers,
+│ │ -                                           **kwargs)
+│ │ +                                           output_format=output_format, **kwargs)
+│ │  
+│ │      def dl_user_parameter(self, start_time: datetime, stop_time: datetime, parameter_id: str,
+│ │                            **kwargs) -> Optional[SpeasyVariable]:
+│ │          username, password = _get_credentials()
+│ │          return self.dl_parameter(parameter_id=parameter_id, start_time=start_time, stop_time=stop_time,
+│ │                                   **auth_args(username=username, password=password), **kwargs)
+│ │   --- speasy-1.0.5/speasy/webservices/amda/inventory.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/inventory.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/amda/rest_client.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/rest_client.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -167,22 +167,22 @@
+│ │      url = request_url(endpoint, server_url=server_url)
+│ │      params = params or {}
+│ │      http_headers = extra_http_headers or {}
+│ │      params['token'] = token(server_url=server_url)
+│ │      r = http.get(url, params=params, headers=http_headers, timeout=timeout)
+│ │      js = r.json()
+│ │      if 'success' in js and \
+│ │ -       js['success'] is True and \
+│ │ -       'dataFileURLs' in js:
+│ │ +        js['success'] is True and \
+│ │ +        'dataFileURLs' in js:
+│ │          log.debug(f"success: {js['dataFileURLs']}")
+│ │          return js['dataFileURLs']
+│ │      elif "success" in js and \
+│ │ -         js["success"] is True and \
+│ │ -         "status" in js and \
+│ │ -         js["status"] == "in progress":
+│ │ +        js["success"] is True and \
+│ │ +        "status" in js and \
+│ │ +        js["status"] == "in progress":
+│ │          log.warning("This request duration is too long, consider reducing time range")
+│ │          while True:
+│ │              default_sleep_time = 10.
+│ │              time.sleep(default_sleep_time)
+│ │              url = request_url(Endpoint.GETSTATUS, server_url=server_url)
+│ │  
+│ │              status = http.get(url, params=js, headers=http_headers).json()
+│ │ @@ -362,15 +362,15 @@
+│ │          extra request arguments such as username and password for private parameters
+│ │  
+│ │      Returns
+│ │      -------
+│ │      str or None
+│ │          request result, XML formatted text
+│ │      """
+│ │ -    return send_request_json(Endpoint.GETPARAM, params=kwargs, server_url=server_url, timeout=AMDA_BATCH_MODE_TIME+10,
+│ │ +    return send_request_json(Endpoint.GETPARAM, params=kwargs, server_url=server_url, timeout=AMDA_BATCH_MODE_TIME + 10,
+│ │                               extra_http_headers=extra_http_headers)
+│ │  
+│ │  
+│ │  @CacheCall(cache_retention=24 * 60 * 60, is_pure=True)
+│ │  def get_obs_data_tree(server_url: str = amda_cfg.entry_point()) -> str or None:
+│ │      """Get observatory data tree.
+│ │   --- speasy-1.0.5/speasy/webservices/amda/utils.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/utils.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,23 +1,23 @@
+│ │  """AMDA_Webservice utility functions. This module defines some conversion functions specific to AMDA_Webservice, mainly
+│ │  conversion procedures for parsing CSV and VOTable data.
+│ │  
+│ │  """
+│ │ -import logging
+│ │  import datetime
+│ │ +import logging
+│ │  import os
+│ │ -from typing import Dict, List
+│ │  import tempfile
+│ │ +from typing import Dict, List
+│ │  
+│ │  import numpy as np
+│ │  import pandas as pds
+│ │  
+│ │  from speasy.core import epoch_to_datetime64
+│ │ -from speasy.core.http import urlopen_with_retry
+│ │  from speasy.core.datetime_range import DateTimeRange
+│ │ +from speasy.core.http import urlopen_with_retry
+│ │  from speasy.products.catalog import Catalog, Event
+│ │  from speasy.products.timetable import TimeTable
+│ │  from speasy.products.variable import (DataContainer, SpeasyVariable,
+│ │                                        VariableAxis, VariableTimeAxis)
+│ │  
+│ │  log = logging.getLogger(__name__)
+│ │  
+│ │ @@ -36,15 +36,15 @@
+│ │      while True:
+│ │          chunk = csv.read(chunk_size)
+│ │          if not chunk:
+│ │              break
+│ │          fd.write(chunk)
+│ │          size += len(chunk)
+│ │          if content_length:
+│ │ -            percent = int((size / content_length)*100)
+│ │ +            percent = int((size / content_length) * 100)
+│ │              log.debug(f"Download data: {percent}%")
+│ │      fd.seek(0)
+│ │      return fd
+│ │  
+│ │  
+│ │  def load_csv(filename: str) -> SpeasyVariable:
+│ │      """Load a CSV file
+│ │ @@ -196,8 +196,8 @@
+│ │  
+│ │      Returns
+│ │      -------
+│ │      dict
+│ │          parameter arguments in dictionary
+│ │      """
+│ │      return {'path': f"amda/{product}", 'start_time': f'{start_time.isoformat()}',
+│ │ -            'stop_time': f'{stop_time.isoformat()}'}
+│ │ +            'stop_time': f'{stop_time.isoformat()}', 'output_format': kwargs.get('output_format', 'ASCII')}
+│ │   --- speasy-1.0.5/speasy/webservices/amda/ws.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/amda/ws.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -2,35 +2,43 @@
+│ │  """
+│ │  
+│ │  import logging
+│ │  from datetime import datetime
+│ │  from enum import Enum
+│ │  from typing import Dict, List, Optional, Union
+│ │  
+│ │ +from ._impl import is_private, is_public
+│ │ +from .inventory import to_xmlid
+│ │ +from .utils import get_parameter_args
+│ │  from ...config import amda as amda_cfg
+│ │  from ...core import AllowedKwargs, make_utc_datetime
+│ │  from ...core.cache import CACHE_ALLOWED_KWARGS, Cacheable, CacheCall
+│ │  from ...core.dataprovider import (GET_DATA_ALLOWED_KWARGS, DataProvider,
+│ │                                    ParameterRangeCheck)
+│ │  from ...core.datetime_range import DateTimeRange
+│ │  from ...core.inventory.indexes import (CatalogIndex, ComponentIndex,
+│ │                                         DatasetIndex, ParameterIndex,
+│ │                                         SpeasyIndex, TimetableIndex)
+│ │  from ...core.proxy import PROXY_ALLOWED_KWARGS, GetProduct, Proxyfiable
+│ │  from ...products.catalog import Catalog
+│ │  from ...products.dataset import Dataset
+│ │  from ...products.timetable import TimeTable
+│ │  from ...products.variable import SpeasyVariable
+│ │ -from ._impl import is_private, is_public
+│ │ -from .inventory import to_xmlid
+│ │ -from .utils import get_parameter_args
+│ │  
+│ │  log = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │ +def _amda_cache_entry_name(prefix: str, product: str, start_time: str, **kwargs):
+│ │ +    output_format: str = kwargs.get('output_format', 'csv')
+│ │ +    if output_format.lower() == 'cdf_istp':
+│ │ +        return f"{prefix}/{product}-cdf_istp/{start_time}"
+│ │ +    else:
+│ │ +        return f"{prefix}/{product}/{start_time}"
+│ │ +
+│ │ +
+│ │  class ProductType(Enum):
+│ │      """Enumeration of the type of products available in AMDA_Webservice.
+│ │      """
+│ │      UNKNOWN = 0
+│ │      DATASET = 1
+│ │      PARAMETER = 2
+│ │      COMPONENT = 3
+│ │ @@ -309,32 +317,35 @@
+│ │              login credentials will result in a :class:`~speasy.config.exceptions.UndefinedConfigEntry`
+│ │              exception being raised.
+│ │  
+│ │          """
+│ │          catalog_id = to_xmlid(catalog_id)
+│ │          return self._impl.dl_user_catalog(catalog_id=catalog_id)
+│ │  
+│ │ -    @AllowedKwargs(PROXY_ALLOWED_KWARGS + CACHE_ALLOWED_KWARGS + GET_DATA_ALLOWED_KWARGS)
+│ │ +    @AllowedKwargs(PROXY_ALLOWED_KWARGS + CACHE_ALLOWED_KWARGS + GET_DATA_ALLOWED_KWARGS + ['output_format'])
+│ │      @ParameterRangeCheck()
+│ │ -    @Cacheable(prefix="amda", version=product_version, fragment_hours=lambda x: 12)
+│ │ +    @Cacheable(prefix="amda", version=product_version, fragment_hours=lambda x: 12, entry_name=_amda_cache_entry_name)
+│ │      @Proxyfiable(GetProduct, get_parameter_args)
+│ │      def get_parameter(self, product, start_time, stop_time,
+│ │ -                      extra_http_headers: Dict or None = None, **kwargs) -> Optional[SpeasyVariable]:
+│ │ +                      extra_http_headers: Dict or None = None, output_format: str or None = None, **kwargs) -> Optional[
+│ │ +        SpeasyVariable]:
+│ │          """Get parameter data.
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          product: str or AMDAParameterIndex
+│ │              parameter id
+│ │          start_time:
+│ │              desired data start time
+│ │          stop_time:
+│ │              desired data stop time
+│ │          extra_http_headers: dict
+│ │              reserved for internal use
+│ │ +        output_format: str
+│ │ +            request output format in case of success, allowed values are ASCII and CDF_ISTP
+│ │  
+│ │          Returns
+│ │          -------
+│ │          Optional[SpeasyVariable]
+│ │              product data if available
+│ │  
+│ │          Examples
+│ │ @@ -347,15 +358,16 @@
+│ │          ['imf[0]', 'imf[1]', 'imf[2]']
+│ │          >>> print(imf_data.values.shape)
+│ │          (225, 3)
+│ │  
+│ │          """
+│ │          log.debug(f'Get data: product = {product}, data start time = {start_time}, data stop time = {stop_time}')
+│ │          return self._impl.dl_parameter(start_time=start_time, stop_time=stop_time, parameter_id=product,
+│ │ -                                       extra_http_headers=extra_http_headers)
+│ │ +                                       extra_http_headers=extra_http_headers,
+│ │ +                                       output_format=output_format or amda_cfg.output_format())
+│ │  
+│ │      def get_dataset(self, dataset_id: str or DatasetIndex, start: str or datetime, stop: str or datetime,
+│ │                      **kwargs) -> Dataset or None:
+│ │          """Get dataset contents. Returns list of SpeasyVariable objects, one for each
+│ │          parameter in the dataset.
+│ │  
+│ │          Parameters
+│ │ @@ -391,15 +403,16 @@
+│ │              return None
+│ │  
+│ │          dataset_id = to_xmlid(dataset_id)
+│ │          name = self.flat_inventory.datasets[dataset_id].name
+│ │          meta = {k: v for k, v in self.flat_inventory.datasets[dataset_id].__dict__.items() if
+│ │                  not isinstance(v, SpeasyIndex)}
+│ │          parameters = self.list_parameters(dataset_id)
+│ │ -        return Dataset(name=name, variables={p.name: self.get_parameter(p, start, stop, **kwargs) for p in parameters},
+│ │ +        return Dataset(name=name,
+│ │ +                       variables={p.name: self.get_parameter(p, start, stop, **kwargs) for p in parameters},
+│ │                         meta=meta)
+│ │  
+│ │      @CacheCall(cache_retention=amda_cfg.user_cache_retention())
+│ │      def get_timetable(self, timetable_id: str or TimetableIndex, **kwargs) -> Optional[TimeTable]:
+│ │          """Get timetable data by ID.
+│ │  
+│ │          Parameters
+│ │ @@ -613,15 +626,16 @@
+│ │          <DatasetIndex: ...>
+│ │          >>> amda_datasets[0].desc
+│ │          '...'
+│ │  
+│ │          """
+│ │          return list(filter(is_public, self.flat_inventory.datasets.values()))
+│ │  
+│ │ -    def _find_parent_dataset(self, product_id: str or DatasetIndex or ParameterIndex or ComponentIndex) -> Optional[str]:
+│ │ +    def _find_parent_dataset(self, product_id: str or DatasetIndex or ParameterIndex or ComponentIndex) -> Optional[
+│ │ +        str]:
+│ │  
+│ │          product_id = to_xmlid(product_id)
+│ │          product_type = self.product_type(product_id)
+│ │          if product_type is ProductType.DATASET:
+│ │              return product_id
+│ │          elif product_type in (ProductType.COMPONENT, ProductType.PARAMETER):
+│ │              for dataset in self.flat_inventory.datasets.values():
+│ │   --- speasy-1.0.5/speasy/webservices/cda/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/cda/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/cda/_inventory_builder/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/cda/_inventory_builder/__init__.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,17 +1,18 @@
+│ │ -from ._xml_catalogs_parser import load_xml_catalog
+│ │ +import os
+│ │ +import tarfile
+│ │ +from glob import glob
+│ │ +from tempfile import TemporaryDirectory
+│ │ +
+│ │ +from speasy.core import http
+│ │  from ._cdf_masters_parser import update_tree
+│ │ +from ._xml_catalogs_parser import load_xml_catalog
+│ │ +from ....config import cdaweb as cda_cfg
+│ │  from ....core.index import index
+│ │ -from speasy.core import http 
+│ │  from ....core.inventory.indexes import SpeasyIndex, to_dict, from_dict
+│ │ -from ....config import cdaweb as cda_cfg
+│ │ -from tempfile import NamedTemporaryFile
+│ │ -import tarfile
+│ │ -import os
+│ │ -from glob import glob
+│ │  
+│ │  _MASTERS_CDF_PATH = f"{cda_cfg.inventory_data_path()}/masters_cdf/"
+│ │  _XML_CATALOG_PATH = f"{cda_cfg.inventory_data_path()}/all.xml"
+│ │  
+│ │  
+│ │  def _ensure_path_exists(path: str):
+│ │      dirname = os.path.dirname(path)
+│ │ @@ -23,19 +24,20 @@
+│ │      _ensure_path_exists(_MASTERS_CDF_PATH)
+│ │      cdf_files = glob(f"{_MASTERS_CDF_PATH}/*.cdf")
+│ │      for cdf_file in cdf_files:
+│ │          os.remove(cdf_file)
+│ │  
+│ │  
+│ │  def _download_and_extract_master_cdf(masters_url: str):
+│ │ -    with NamedTemporaryFile('wb') as master_archive:
+│ │ -        master_archive.write(http.get(masters_url).content)
+│ │ -        master_archive.flush()
+│ │ -        tar = tarfile.open(master_archive.name)
+│ │ +    with TemporaryDirectory() as tmp_path:
+│ │ +        with open(f"{tmp_path}/masters.tar", 'wb') as master_archive:
+│ │ +            master_archive.write(http.get(masters_url).content)
+│ │ +        tar = tarfile.open(f"{tmp_path}/masters.tar")
+│ │          tar.extractall(_MASTERS_CDF_PATH)
+│ │ +        tar.close()
+│ │  
+│ │  
+│ │  def update_master_cdf(masters_url: str = "https://spdf.gsfc.nasa.gov/pub/software/cdawlib/0MASTERS/master.tar"):
+│ │      last_modified = http.get(masters_url, head_only=True).headers['last-modified']
+│ │      if index.get("cdaweb-inventory", "masters-last-modified", "") != last_modified:
+│ │          _clean_master_cdf_folder()
+│ │          _download_and_extract_master_cdf(masters_url)
+│ │   --- speasy-1.0.5/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/csa/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/csa/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/speasy/webservices/ssc/__init__.py
+│ ├── +++ speasy-1.1.0/speasy/webservices/ssc/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- speasy-1.0.5/PKG-INFO
+│ ├── +++ speasy-1.1.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: speasy
+│ │ -Version: 1.0.5
+│ │ +Version: 1.1.0
+│ │  Summary: A simple Python package to deal with main Space Physics WebServices (CDA, CSA, AMDA and SSC).
+│ │  Keywords: satellite,plasma-physics,nasa-data,amda,cdpp,CDF
+│ │  Author-email: Alexis Jeandet <alexis.jeandet@member.fsf.org>
+│ │  Maintainer-email: Alexis Jeandet <alexis.jeandet@member.fsf.org>
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/x-rst
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │ @@ -25,14 +25,15 @@
+│ │  Requires-Dist: packaging
+│ │  Requires-Dist: python-dateutil
+│ │  Requires-Dist: astropy
+│ │  Requires-Dist: astroquery
+│ │  Requires-Dist: pyistp
+│ │  Requires-Dist: tqdm
+│ │  Requires-Dist: matplotlib
+│ │ +Requires-Dist: urllib3>=1.26.0
+│ │  Requires-Dist: zstd ; extra == "zstd"
+│ │  Project-URL: homepage, https://github.com/SciQLop/speasy
+│ │  Provides-Extra: zstd
+│ │  
+│ │  =======================
+│ │  Space Physics made EASY
+│ │  =======================
+│ │ @@ -68,14 +69,18 @@
+│ │     :target: https://doi.org/10.5281/zenodo.4118780
+│ │     :alt: Zendoo DOI
+│ │  
+│ │  .. image:: https://mybinder.org/badge_logo.svg
+│ │      :target: https://mybinder.org/v2/gh/SciQLop/speasy/main?labpath=docs/examples
+│ │      :alt: Discover on MyBinder
+│ │  
+│ │ +.. image:: https://colab.research.google.com/assets/colab-badge.svg
+│ │ +    :target: https://colab.research.google.com/github/SciQLop/speasy
+│ │ +    :alt: Discover on Google Colab
+│ │ +
+│ │  .. image:: https://img.shields.io/uptimerobot/ratio/m792771930-24b7f89c03d5090a13462b70
+│ │     :target: http://sciqlop.lpp.polytechnique.fr/cache
+│ │     :alt: Speasy proxy uptime (30 days)
+│ │  
+│ │  Speasy is an open source Python client for Space Physics web services such as `CDAWEB <https://cdaweb.gsfc.nasa.gov/index.html/>`__
+│ │  or `AMDA <http://amda.irap.omp.eu/>`__.
+│ │  Most space physics data analysis starts with finding which server provides which dataset then figuring out how to download them.

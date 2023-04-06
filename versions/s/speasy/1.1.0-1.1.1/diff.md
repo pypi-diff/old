@@ -1,0 +1,392 @@
+# Comparing `tmp/speasy-1.1.0.tar.gz` & `tmp/speasy-1.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "speasy-1.1.0.tar", last modified: Thu Apr  6 12:44:26 2023, max compression
++gzip compressed data, was "speasy-1.1.1.tar", last modified: Thu Apr  6 12:46:52 2023, max compression
+```
+
+## Comparing `speasy-1.1.0.tar` & `speasy-1.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,50 @@
+--rw-r--r--   0        0        0     1660 2023-04-06 12:44:08.615697 speasy-1.1.0/LICENSE
+--rw-r--r--   0        0        0     5850 2023-04-06 12:44:08.615697 speasy-1.1.0/README.rst
+--rw-r--r--   0        0        0     1359 2023-04-06 12:44:08.663696 speasy-1.1.0/pyproject.toml
+--rw-r--r--   0        0        0      920 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/__init__.py
+--rw-r--r--   0        0        0     7468 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/config/__init__.py
+--rw-r--r--   0        0        0     6567 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/__init__.py
+--rw-r--r--   0        0        0      533 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/__init__.py
+--rw-r--r--   0        0        0     2061 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_function_cache.py
+--rw-r--r--   0        0        0      100 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_instance.py
+--rw-r--r--   0        0        0    14295 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/_providers_caches.py
+--rw-r--r--   0        0        0     2386 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/cache.py
+--rw-r--r--   0        0        0     1941 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cache/version.py
+--rw-r--r--   0        0        0     2010 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/cdf/__init__.py
+--rw-r--r--   0        0        0     8835 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/data_containers.py
+--rw-r--r--   0        0        0     4616 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/dataprovider.py
+--rw-r--r--   0        0        0     2204 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/datetime_range.py
+--rw-r--r--   0        0        0     3586 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/http.py
+--rw-r--r--   0        0        0       80 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/index/__init__.py
+--rw-r--r--   0        0        0      525 2023-04-06 12:44:08.663696 speasy-1.1.0/speasy/core/index/speasy_index.py
+--rw-r--r--   0        0        0     1871 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/inventory/__init__.py
+--rw-r--r--   0        0        0     4637 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/inventory/indexes.py
+--rw-r--r--   0        0        0     4928 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/proxy/__init__.py
+--rw-r--r--   0        0        0       92 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/__init__.py
+--rw-r--r--   0        0        0    11374 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/request_dispatch.py
+--rw-r--r--   0        0        0     1089 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/requests_scheduling/split_large_requests.py
+--rw-r--r--   0        0        0     3500 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/core/span_utils.py
+--rw-r--r--   0        0        0      165 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/inventories/__init__.py
+--rw-r--r--   0        0        0     2867 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/plotting/__init__.py
+--rw-r--r--   0        0        0     2165 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/plotting/mpl_backend/__init__.py
+--rw-r--r--   0        0        0      686 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/__init__.py
+--rw-r--r--   0        0        0      241 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/base_product.py
+--rw-r--r--   0        0        0     4582 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/catalog.py
+--rw-r--r--   0        0        0     1654 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/dataset.py
+--rw-r--r--   0        0        0     1696 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/timetable.py
+--rw-r--r--   0        0        0    18641 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/products/variable.py
+--rw-r--r--   0        0        0      130 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/__init__.py
+--rw-r--r--   0        0        0     1729 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/__init__.py
+--rw-r--r--   0        0        0     9131 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/_impl.py
+--rw-r--r--   0        0        0       46 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/exceptions.py
+--rw-r--r--   0        0        0     6034 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/inventory.py
+--rw-r--r--   0        0        0    11428 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/rest_client.py
+--rw-r--r--   0        0        0     6833 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/utils.py
+--rw-r--r--   0        0        0    22336 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/amda/ws.py
+--rw-r--r--   0        0        0     6844 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/__init__.py
+--rw-r--r--   0        0        0     2939 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/__init__.py
+--rw-r--r--   0        0        0     2533 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
+--rw-r--r--   0        0        0     3456 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
+--rw-r--r--   0        0        0    10011 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/csa/__init__.py
+--rw-r--r--   0        0        0     5777 2023-04-06 12:44:08.667696 speasy-1.1.0/speasy/webservices/ssc/__init__.py
+--rw-r--r--   0        0        0     7212 1970-01-01 00:00:00.000000 speasy-1.1.0/PKG-INFO
++-rw-r--r--   0        0        0     1660 2023-04-06 12:46:34.652600 speasy-1.1.1/LICENSE
++-rw-r--r--   0        0        0     5850 2023-04-06 12:46:34.652600 speasy-1.1.1/README.rst
++-rw-r--r--   0        0        0     1359 2023-04-06 12:46:34.696601 speasy-1.1.1/pyproject.toml
++-rw-r--r--   0        0        0      920 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/__init__.py
++-rw-r--r--   0        0        0     7468 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/config/__init__.py
++-rw-r--r--   0        0        0     6567 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/__init__.py
++-rw-r--r--   0        0        0      533 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/cache/__init__.py
++-rw-r--r--   0        0        0     2061 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/cache/_function_cache.py
++-rw-r--r--   0        0        0      100 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/cache/_instance.py
++-rw-r--r--   0        0        0    14306 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/cache/_providers_caches.py
++-rw-r--r--   0        0        0     2386 2023-04-06 12:46:34.696601 speasy-1.1.1/speasy/core/cache/cache.py
++-rw-r--r--   0        0        0     1941 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/cache/version.py
++-rw-r--r--   0        0        0     2010 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/cdf/__init__.py
++-rw-r--r--   0        0        0     8835 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/data_containers.py
++-rw-r--r--   0        0        0     4616 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/dataprovider.py
++-rw-r--r--   0        0        0     2204 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/datetime_range.py
++-rw-r--r--   0        0        0     3586 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/http.py
++-rw-r--r--   0        0        0       80 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/index/__init__.py
++-rw-r--r--   0        0        0      525 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/index/speasy_index.py
++-rw-r--r--   0        0        0     1871 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/inventory/__init__.py
++-rw-r--r--   0        0        0     4637 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/inventory/indexes.py
++-rw-r--r--   0        0        0     4928 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/proxy/__init__.py
++-rw-r--r--   0        0        0       92 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/requests_scheduling/__init__.py
++-rw-r--r--   0        0        0    11374 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/requests_scheduling/request_dispatch.py
++-rw-r--r--   0        0        0     1089 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/requests_scheduling/split_large_requests.py
++-rw-r--r--   0        0        0     3500 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/core/span_utils.py
++-rw-r--r--   0        0        0      165 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/inventories/__init__.py
++-rw-r--r--   0        0        0     2867 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/plotting/__init__.py
++-rw-r--r--   0        0        0     2165 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/plotting/mpl_backend/__init__.py
++-rw-r--r--   0        0        0      686 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/__init__.py
++-rw-r--r--   0        0        0      241 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/base_product.py
++-rw-r--r--   0        0        0     4582 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/catalog.py
++-rw-r--r--   0        0        0     1654 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/dataset.py
++-rw-r--r--   0        0        0     1696 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/timetable.py
++-rw-r--r--   0        0        0    18641 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/products/variable.py
++-rw-r--r--   0        0        0      130 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/__init__.py
++-rw-r--r--   0        0        0     1729 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/__init__.py
++-rw-r--r--   0        0        0     9131 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/_impl.py
++-rw-r--r--   0        0        0       46 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/exceptions.py
++-rw-r--r--   0        0        0     6034 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/inventory.py
++-rw-r--r--   0        0        0    11428 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/rest_client.py
++-rw-r--r--   0        0        0     6833 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/utils.py
++-rw-r--r--   0        0        0    22336 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/amda/ws.py
++-rw-r--r--   0        0        0     6844 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/cda/__init__.py
++-rw-r--r--   0        0        0     2939 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/cda/_inventory_builder/__init__.py
++-rw-r--r--   0        0        0     2533 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py
++-rw-r--r--   0        0        0     3456 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py
++-rw-r--r--   0        0        0    10011 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/csa/__init__.py
++-rw-r--r--   0        0        0     5777 2023-04-06 12:46:34.700601 speasy-1.1.1/speasy/webservices/ssc/__init__.py
++-rw-r--r--   0        0        0     7212 1970-01-01 00:00:00.000000 speasy-1.1.1/PKG-INFO
+```
+
+### Comparing `speasy-1.1.0/LICENSE` & `speasy-1.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/README.rst` & `speasy-1.1.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/pyproject.toml` & `speasy-1.1.1/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ build-backend = "flit_core.buildapi"
+ requires = ["flit_core"]
+ 
+ [project]
+ name = 'speasy'
+-version = "1.1.0"
++version = "1.1.1"
+ description = "A simple Python package to deal with main Space Physics WebServices (CDA, CSA, AMDA and SSC)."
+ keywords= ["satellite", "plasma-physics", "nasa-data", "amda", "cdpp", "CDF"]
+ authors = [
+   {name = "Alexis Jeandet", email = "alexis.jeandet@member.fsf.org" }
+ ]
+ 
+ maintainers = [
+```
+
+### Comparing `speasy-1.1.0/speasy/__init__.py` & `speasy-1.1.1/speasy/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ 
+    import speasy as spz
+ 
+ """
+ 
+ __author__ = """Alexis Jeandet"""
+ __email__ = 'alexis.jeandet@member.fsf.org'
+-__version__ = '1.1.0'
++__version__ = '1.1.1'
+ __all__ = ['amda', 'cda', 'ssc', 'csa', 'get_data', 'SpeasyVariable', 'Catalog', 'Event', 'Dataset', 'TimeTable']
+ __docformat__ = "numpy"
+ 
+ from speasy.core.inventory.indexes import SpeasyIndex
+ from .products import SpeasyVariable, Catalog, Event, Dataset, TimeTable, MaybeAnyProduct
+ from typing import List
+ from .core.requests_scheduling.request_dispatch import get_data, list_providers, amda, cda, csa, ssc
+```
+
+### Comparing `speasy-1.1.0/speasy/config/__init__.py` & `speasy-1.1.1/speasy/config/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/__init__.py` & `speasy-1.1.1/speasy/core/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/cache/__init__.py` & `speasy-1.1.1/speasy/core/cache/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/cache/_function_cache.py` & `speasy-1.1.1/speasy/core/cache/_function_cache.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/cache/_providers_caches.py` & `speasy-1.1.1/speasy/core/cache/_providers_caches.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+-from speasy import SpeasyVariable
+-from .cache import CacheItem
++import logging
++import math
++from datetime import datetime, timedelta
++from functools import wraps
+ from typing import List, Tuple
+-from speasy.core.datetime_range import DateTimeRange
++
++from speasy import SpeasyVariable
+ from speasy.core import progress_bar
+-from speasy.products.variable import merge as merge_variables, to_dictionary, from_dictionary
++from speasy.core.datetime_range import DateTimeRange
+ from speasy.core.inventory.indexes import ParameterIndex
+-from datetime import datetime, timedelta
+-from functools import wraps
+-import logging
+-import math
++from speasy.products.variable import merge as merge_variables, to_dictionary, from_dictionary
+ from ._instance import _cache
++from .cache import CacheItem
+ 
+ log = logging.getLogger(__name__)
+ 
+ CACHE_ALLOWED_KWARGS = ['disable_cache']
+ 
+ 
+ def lower_hour_bound(dt: datetime, factor: int):
+@@ -83,15 +84,15 @@
+     def add_to_cache(self, variable: SpeasyVariable or None, fragments, product, fragment_duration_hours, version,
+                      **kwargs) -> SpeasyVariable or None:
+         if variable is not None:
+             for fragment in fragments:
+                 self.set_cache_entry(fragment, product,
+                                      CacheItem(to_dictionary(
+                                          variable[fragment:(fragment + timedelta(hours=fragment_duration_hours))]),
+-                                         version))
++                                         version), **kwargs)
+         return variable
+ 
+     def set_cache_entry(self, fragment, product: str, entry, **kwargs):
+         key = self.entry_name(self.prefix, product, fragment.isoformat(), **kwargs)
+         log.debug(f"add {key} into cache")
+         self.cache[key] = entry
+```
+
+### Comparing `speasy-1.1.0/speasy/core/cache/cache.py` & `speasy-1.1.1/speasy/core/cache/cache.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/cache/version.py` & `speasy-1.1.1/speasy/core/cache/version.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/cdf/__init__.py` & `speasy-1.1.1/speasy/core/cdf/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/data_containers.py` & `speasy-1.1.1/speasy/core/data_containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/dataprovider.py` & `speasy-1.1.1/speasy/core/dataprovider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/datetime_range.py` & `speasy-1.1.1/speasy/core/datetime_range.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/http.py` & `speasy-1.1.1/speasy/core/http.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/index/speasy_index.py` & `speasy-1.1.1/speasy/core/index/speasy_index.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/inventory/__init__.py` & `speasy-1.1.1/speasy/core/inventory/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/inventory/indexes.py` & `speasy-1.1.1/speasy/core/inventory/indexes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/proxy/__init__.py` & `speasy-1.1.1/speasy/core/proxy/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/requests_scheduling/request_dispatch.py` & `speasy-1.1.1/speasy/core/requests_scheduling/request_dispatch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/requests_scheduling/split_large_requests.py` & `speasy-1.1.1/speasy/core/requests_scheduling/split_large_requests.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/core/span_utils.py` & `speasy-1.1.1/speasy/core/span_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/plotting/__init__.py` & `speasy-1.1.1/speasy/plotting/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/plotting/mpl_backend/__init__.py` & `speasy-1.1.1/speasy/plotting/mpl_backend/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/products/__init__.py` & `speasy-1.1.1/speasy/products/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/products/catalog.py` & `speasy-1.1.1/speasy/products/catalog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/products/dataset.py` & `speasy-1.1.1/speasy/products/dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/products/timetable.py` & `speasy-1.1.1/speasy/products/timetable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/products/variable.py` & `speasy-1.1.1/speasy/products/variable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/__init__.py` & `speasy-1.1.1/speasy/webservices/amda/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/_impl.py` & `speasy-1.1.1/speasy/webservices/amda/_impl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/inventory.py` & `speasy-1.1.1/speasy/webservices/amda/inventory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/rest_client.py` & `speasy-1.1.1/speasy/webservices/amda/rest_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/utils.py` & `speasy-1.1.1/speasy/webservices/amda/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/amda/ws.py` & `speasy-1.1.1/speasy/webservices/amda/ws.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/cda/__init__.py` & `speasy-1.1.1/speasy/webservices/cda/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/cda/_inventory_builder/__init__.py` & `speasy-1.1.1/speasy/webservices/cda/_inventory_builder/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py` & `speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_cdf_masters_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py` & `speasy-1.1.1/speasy/webservices/cda/_inventory_builder/_xml_catalogs_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/csa/__init__.py` & `speasy-1.1.1/speasy/webservices/csa/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/speasy/webservices/ssc/__init__.py` & `speasy-1.1.1/speasy/webservices/ssc/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `speasy-1.1.0/PKG-INFO` & `speasy-1.1.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: speasy
+-Version: 1.1.0
++Version: 1.1.1
+ Summary: A simple Python package to deal with main Space Physics WebServices (CDA, CSA, AMDA and SSC).
+ Keywords: satellite,plasma-physics,nasa-data,amda,cdpp,CDF
+ Author-email: Alexis Jeandet <alexis.jeandet@member.fsf.org>
+ Maintainer-email: Alexis Jeandet <alexis.jeandet@member.fsf.org>
+ Requires-Python: >=3.7
+ Description-Content-Type: text/x-rst
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
