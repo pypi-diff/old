@@ -1,0 +1,127 @@
+# Comparing `tmp/w32py-0.3.4.tar.gz` & `tmp/w32py-0.3.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "w32py-0.3.4.tar", last modified: Fri Mar 10 23:13:45 2023, max compression
++gzip compressed data, was "w32py-0.3.5.tar", last modified: Thu Apr  6 11:40:23 2023, max compression
+```
+
+## Comparing `w32py-0.3.4.tar` & `w32py-0.3.5.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+--rw-r--r--   0        0        0     1928 2023-02-27 00:06:25.404193 w32py-0.3.4/.gitignore
+--rw-r--r--   0        0        0     1081 2023-02-27 00:06:25.406271 w32py-0.3.4/LICENSE
+--rw-r--r--   0        0        0      261 2023-02-27 00:06:25.407194 w32py-0.3.4/README.md
+--rwxr-xr-x   0        0        0      156 2023-02-27 00:06:25.408194 w32py-0.3.4/lint.cmd
+--rw-r--r--   0        0        0     1437 2023-03-10 15:49:14.927281 w32py-0.3.4/pyproject.toml
+--rw-r--r--   0        0        0       49 2023-03-10 23:09:49.668584 w32py-0.3.4/w32py/__init__.py
+--rw-r--r--   0        0        0    13270 2023-03-10 23:08:58.977780 w32py-0.3.4/w32py/ebest.py
+--rw-r--r--   0        0        0    11247 2023-03-10 23:09:13.910601 w32py-0.3.4/w32py/korea.py
+--rw-r--r--   0        0        0      188 2023-02-27 00:06:25.415582 w32py-0.3.4/w32py/psutil.py
+--rw-r--r--   0        0        0        0 2023-02-27 00:06:25.415582 w32py-0.3.4/w32py/py.typed
+--rw-r--r--   0        0        0      921 2023-02-27 00:06:25.416774 w32py-0.3.4/w32py/win.py
+--rw-r--r--   0        0        0      163 2023-02-27 00:06:25.416774 w32py-0.3.4/w32py/winauto.py
+--rw-r--r--   0        0        0     1067 1970-01-01 00:00:00.000000 w32py-0.3.4/PKG-INFO
++-rw-r--r--   0        0        0     1928 2023-02-27 00:06:25.404193 w32py-0.3.5/.gitignore
++-rw-r--r--   0        0        0     1081 2023-02-27 00:06:25.406271 w32py-0.3.5/LICENSE
++-rw-r--r--   0        0        0      261 2023-02-27 00:06:25.407194 w32py-0.3.5/README.md
++-rwxr-xr-x   0        0        0      156 2023-02-27 00:06:25.408194 w32py-0.3.5/lint.cmd
++-rw-r--r--   0        0        0     1437 2023-04-04 22:58:25.435106 w32py-0.3.5/pyproject.toml
++-rw-r--r--   0        0        0       49 2023-04-06 11:39:08.414252 w32py-0.3.5/w32py/__init__.py
++-rw-r--r--   0        0        0    13270 2023-04-04 22:58:25.440103 w32py-0.3.5/w32py/ebest.py
++-rw-r--r--   0        0        0    11514 2023-04-06 11:39:08.415251 w32py-0.3.5/w32py/korea.py
++-rw-r--r--   0        0        0      188 2023-02-27 00:06:25.415582 w32py-0.3.5/w32py/psutil.py
++-rw-r--r--   0        0        0        0 2023-02-27 00:06:25.415582 w32py-0.3.5/w32py/py.typed
++-rw-r--r--   0        0        0      921 2023-02-27 00:06:25.416774 w32py-0.3.5/w32py/win.py
++-rw-r--r--   0        0        0      163 2023-02-27 00:06:25.416774 w32py-0.3.5/w32py/winauto.py
++-rw-r--r--   0        0        0     1067 1970-01-01 00:00:00.000000 w32py-0.3.5/PKG-INFO
+```
+
+### Comparing `w32py-0.3.4/.gitignore` & `w32py-0.3.5/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `w32py-0.3.4/LICENSE` & `w32py-0.3.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `w32py-0.3.4/pyproject.toml` & `w32py-0.3.5/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `w32py-0.3.4/w32py/ebest.py` & `w32py-0.3.5/w32py/ebest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `w32py-0.3.4/w32py/korea.py` & `w32py-0.3.5/w32py/korea.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -61,14 +61,19 @@
+         self.com.ReceiveData.connect(self.OnReceiveData)
+         self.com.ReceiveErrorData.connect(self.OnReceiveErrorData)
+         self.meta = parse_res(p)
+         self.received = False
+         self.tr = p.stem
+ 
+     def OnReceiveData(self) -> None:
++        RtCode = self.com.dynamicCall("GetRtCode()")
++        if RtCode != "0":
++            self.OnReceiveErrorData()
++            return
++
+         block: dict[str, Any] = {}
+         for nBlockIdx, (szBlockName, v) in enumerate(
+             self.meta["output"].items()
+         ):
+             fields = v["fields"]
+             if v["occurs"]:
+                 block[szBlockName] = [
+@@ -136,14 +141,16 @@
+             szFieldName = field["name"]
+             val = block.get(szFieldName)
+             if val is None:
+                 return (
+                     f"InvalidField, {szBlockName}"
+                     f", {nRecIdx}, {szFieldName}"
+                 )
++            if szFieldName.endswith("PWD"):
++                val = self.com.dynamicCall("GetEncryptPassword(QString)", val)
+             self.com.dynamicCall(
+                 "SetMultiBlockData(int, int, int, QString)",
+                 nBlockIdx,
+                 nRecIdx,
+                 nFieldIdx,
+                 val,
+             )
+```
+
+### Comparing `w32py-0.3.4/w32py/win.py` & `w32py-0.3.5/w32py/win.py`
+
+ * *Files identical despite different names*
+
+### Comparing `w32py-0.3.4/PKG-INFO` & `w32py-0.3.5/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: w32py
+-Version: 0.3.4
++Version: 0.3.5
+ Summary: Python Win32 API
+ Author-email: Tom <nanticj@users.noreply.github.com>
+ Requires-Python: >=3.10
+ Description-Content-Type: text/markdown
+ Classifier: License :: OSI Approved :: MIT License
+ Requires-Dist: PyQt5 >=5.15,<5.16
+ Requires-Dist: loguru >=0.6,<0.7
+```
+

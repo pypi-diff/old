@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/clickzetta-sqlalchemy-0.6.2.tar.gz tmp/clickzetta-sqlalchemy-0.6.3.tar.gz --html versions/c/clickzetta-sqlalchemy/0.6.2-0.6.3/index.html --text versions/c/clickzetta-sqlalchemy/0.6.2-0.6.3/diff.txt --markdown versions/c/clickzetta-sqlalchemy/0.6.2-0.6.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.55 KB</span></div>
+  <div><span class="source">tmp/clickzetta-sqlalchemy-0.6.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/clickzetta-sqlalchemy-0.6.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">292 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;clickzetta-sqlalchemy-0.6.<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Wed</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;clickzetta-sqlalchemy-0.6.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><ins><span class="dp">·</span>6</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.19 KB</span></div>
+    <div><span class="source">clickzetta-sqlalchemy-0.6.2.tar</span> vs.</div>
+    <div id="clickzetta-sqlalchemy--.-.-.tar"><span class="source">clickzetta-sqlalchemy-0.6.3.tar</span>
+      <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.77 KB</span></div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.<del>5</del>4<del>9660</del><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.<ins>6</ins>4<ins>2754</ins><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>423<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.<del>5</del>4<del>95</del>2<del>1</del><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>423<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.<ins>6</ins>4<ins>26</ins>2<ins>4</ins><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.<del>5</del>4<del>7436</del><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/</td><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.<ins>6</ins>4<ins>0562</ins><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>423<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>423<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/SOURCES.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/dependency_links.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>76<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/entry_points.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>76<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/not-zip-safe</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>642<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/requires.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>642<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/clickzetta_sqlalchemy.egg-info/top_level.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/clickzetta_sqlalchemy.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.<del>5</del>4<del>9712</del><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/setup.cfg</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.<ins>6</ins>4<ins>2800</ins><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1877<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>06</del>:<del>45</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/setup.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1877<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>13</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>07</del>:<del>09</del>.<del>5</del>4<del>9264</del><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>33</ins>.<ins>6</ins>4<ins>2409</ins><span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>499<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>499<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1079<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/_helpers.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1079<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/_helpers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1626<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/_types.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1626<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/_types.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20343<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/base.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20343<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1146<span class="dp">·</span>2023-02-24<span class="dp">·</span>06:29:49.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/parse_url.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1146<span class="dp">·</span>2023-02-24<span class="dp">·</span>06:29:49.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/parse_url.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2742<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/requirements.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2742<span class="dp">·</span>2023-02-24<span class="dp">·</span>03:50:44.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/requirements.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-0<del>3</del>-<del>29</del><span class="dp">·</span><del>08</del>:<del>06</del>:<del>45</del>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<del>2</del>/sqlalchemy_clickzetta/version.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>lihanmiao<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(501)<span class="dp">·</span>staff<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(20)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>11</ins>:<ins>33</ins>:<ins>13</ins>.000000<span class="dp">·</span>clickzetta-sqlalchemy-0.6.<ins>3</ins>/sqlalchemy_clickzetta/version.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/clickzetta_sqlalchemy.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--clickzetta_sqlalchemy.egg-info-SOURCES.txt"><span class="source">clickzetta-sqlalchemy-0.6.3/clickzetta_sqlalchemy.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--clickzetta_sqlalchemy.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">634 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/clickzetta_sqlalchemy.egg-info/requires.txt</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--clickzetta_sqlalchemy.egg-info-requires.txt"><span class="source">clickzetta-sqlalchemy-0.6.3/clickzetta_sqlalchemy.egg-info/requires.txt</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--clickzetta_sqlalchemy.egg-info-requires.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">proto-plus&lt;2.0.0dev,&gt;=1.22.0</td><td class="diffline">1 </td><td class="diffpresent">proto-plus&lt;2.0.0dev,&gt;=1.22.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">packaging&lt;24.0.0dev,&gt;=14.3</td><td class="diffline">2 </td><td class="diffpresent">packaging&lt;24.0.0dev,&gt;=14.3</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.19.5</td><td class="diffline">3 </td><td class="diffpresent">protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,&lt;5.0.0dev,&gt;=3.19.5</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">python-dateutil&lt;3.0dev,&gt;=2.7.2</td><td class="diffline">4 </td><td class="diffpresent">python-dateutil&lt;3.0dev,&gt;=2.7.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">requests&lt;3.0.0dev,&gt;=2.21.0</td><td class="diffline">5 </td><td class="diffpresent">requests&lt;3.0.0dev,&gt;=2.21.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">sqlalchemy&lt;=1.4.27,&gt;=1.2.0</td><td class="diffline">6 </td><td class="diffpresent">sqlalchemy&lt;=1.4.27,&gt;=1.2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">future</td><td class="diffline">7 </td><td class="diffpresent">future</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">clickzetta-connector==0.6.<del>2</del></td><td class="diffline">8 </td><td class="diffpresent">clickzetta-connector==0.6.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">[all]</td><td class="diffline">9 </td><td class="diffpresent">[all]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">pandas&gt;=1.0.0</td><td class="diffline">10 </td><td class="diffpresent">pandas&gt;=1.0.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">db-dtypes&lt;2.0.0dev,&gt;=0.3.0</td><td class="diffline">11 </td><td class="diffpresent">db-dtypes&lt;2.0.0dev,&gt;=0.3.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">ipywidgets==7.7.1</td><td class="diffline">12 </td><td class="diffpresent">ipywidgets==7.7.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">geopandas&lt;1.0dev,&gt;=0.9.0</td><td class="diffline">13 </td><td class="diffpresent">geopandas&lt;1.0dev,&gt;=0.9.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Shapely&lt;2.0dev,&gt;=1.6.0</td><td class="diffline">14 </td><td class="diffpresent">Shapely&lt;2.0dev,&gt;=1.6.0</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">804 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/setup.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--setup.py"><span class="source">clickzetta-sqlalchemy-0.6.3/setup.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 17, 15 lines modified</td><td colspan="2">Offset 17, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;proto-plus<span class="dp">·</span>&gt;=<span class="dp">·</span>1.22.0,<span class="dp">·</span>&lt;2.0.0dev&quot;,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;proto-plus<span class="dp">·</span>&gt;=<span class="dp">·</span>1.22.0,<span class="dp">·</span>&lt;2.0.0dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;packaging<span class="dp">·</span>&gt;=<span class="dp">·</span>14.3,<span class="dp">·</span>&lt;24.0.0dev&quot;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;packaging<span class="dp">·</span>&gt;=<span class="dp">·</span>14.3,<span class="dp">·</span>&lt;24.0.0dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;protobuf&gt;=3.19.5,&lt;5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5&quot;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;protobuf&gt;=3.19.5,&lt;5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;python-dateutil<span class="dp">·</span>&gt;=<span class="dp">·</span>2.7.2,<span class="dp">·</span>&lt;3.0dev&quot;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;python-dateutil<span class="dp">·</span>&gt;=<span class="dp">·</span>2.7.2,<span class="dp">·</span>&lt;3.0dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;requests<span class="dp">·</span>&gt;=<span class="dp">·</span>2.21.0,<span class="dp">·</span>&lt;<span class="dp">·</span>3.0.0dev&quot;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;requests<span class="dp">·</span>&gt;=<span class="dp">·</span>2.21.0,<span class="dp">·</span>&lt;<span class="dp">·</span>3.0.0dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;sqlalchemy&gt;=1.2.0,&lt;=1.4.27&quot;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;sqlalchemy&gt;=1.2.0,&lt;=1.4.27&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;future&quot;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;future&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;clickzetta-connector==0.6.<del>2</del>&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;clickzetta-connector==0.6.<ins>3</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">]</td><td class="diffline">25 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">extras<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">26 </td><td class="diffpresent">extras<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pandas&quot;:<span class="dp">·</span>[&quot;pandas&gt;=1.0.0&quot;,<span class="dp">·</span>&quot;db-dtypes&gt;=0.3.0,&lt;2.0.0dev&quot;],</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pandas&quot;:<span class="dp">·</span>[&quot;pandas&gt;=1.0.0&quot;,<span class="dp">·</span>&quot;db-dtypes&gt;=0.3.0,&lt;2.0.0dev&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ipywidgets&quot;:<span class="dp">·</span>[&quot;ipywidgets==7.7.1&quot;],</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ipywidgets&quot;:<span class="dp">·</span>[&quot;ipywidgets==7.7.1&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;geopandas&quot;:<span class="dp">·</span>[&quot;geopandas&gt;=0.9.0,<span class="dp">·</span>&lt;1.0dev&quot;,<span class="dp">·</span>&quot;Shapely&gt;=1.6.0,<span class="dp">·</span>&lt;2.0dev&quot;],</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;geopandas&quot;:<span class="dp">·</span>[&quot;geopandas&gt;=0.9.0,<span class="dp">·</span>&lt;1.0dev&quot;,<span class="dp">·</span>&quot;Shapely&gt;=1.6.0,<span class="dp">·</span>&lt;2.0dev&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ipython&quot;:<span class="dp">·</span>[&quot;ipython&gt;=7.0.1,!=8.1.0&quot;],</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ipython&quot;:<span class="dp">·</span>[&quot;ipython&gt;=7.0.1,!=8.1.0&quot;],</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;tqdm&quot;:<span class="dp">·</span>[&quot;tqdm<span class="dp">·</span>&gt;=<span class="dp">·</span>4.7.4,<span class="dp">·</span>&lt;5.0.0dev&quot;],</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;tqdm&quot;:<span class="dp">·</span>[&quot;tqdm<span class="dp">·</span>&gt;=<span class="dp">·</span>4.7.4,<span class="dp">·</span>&lt;5.0.0dev&quot;],</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/sqlalchemy_clickzetta/_helpers.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-_helpers.py"><span class="source">clickzetta-sqlalchemy-0.6.3/sqlalchemy_clickzetta/_helpers.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-_helpers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/sqlalchemy_clickzetta/_types.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-_types.py"><span class="source">clickzetta-sqlalchemy-0.6.3/sqlalchemy_clickzetta/_types.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-_types.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/sqlalchemy_clickzetta/base.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-base.py"><span class="source">clickzetta-sqlalchemy-0.6.3/sqlalchemy_clickzetta/base.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/sqlalchemy_clickzetta/parse_url.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-parse_url.py"><span class="source">clickzetta-sqlalchemy-0.6.3/sqlalchemy_clickzetta/parse_url.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-parse_url.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">clickzetta-sqlalchemy-0.6.2/sqlalchemy_clickzetta/requirements.py</span> vs.</div>
+      <div id="clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-requirements.py"><span class="source">clickzetta-sqlalchemy-0.6.3/sqlalchemy_clickzetta/requirements.py</span>
+        <a class="anchor" href="#clickzetta-sqlalchemy--.-.-.tar---clickzetta-sqlalchemy--.-.--sqlalchemy_clickzetta-requirements.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

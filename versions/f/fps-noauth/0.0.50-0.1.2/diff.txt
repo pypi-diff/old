@@ -1,0 +1,145 @@
+--- tmp/fps_noauth-0.0.50.tar.gz
++++ tmp/fps_noauth-0.1.2.tar.gz
+│   --- fps_noauth-0.0.50.tar
+├── +++ fps_noauth-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,10 +1,10 @@
+│ │ --rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/MANIFEST.in
+│ │ --rw-r--r--   0        0        0       23 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/fps_noauth/__init__.py
+│ │ --rw-r--r--   0        0        0      664 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/fps_noauth/backends.py
+│ │ --rw-r--r--   0        0        0      336 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/fps_noauth/models.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/fps_noauth/py.typed
+│ │ --rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/.gitignore
+│ │ --rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/COPYING.md
+│ │ --rw-r--r--   0        0        0       52 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/README.md
+│ │ --rw-r--r--   0        0        0      897 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/pyproject.toml
+│ │ --rw-r--r--   0        0        0      429 2020-02-02 00:00:00.000000 fps_noauth-0.0.50/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/MANIFEST.in
+│ │ +-rw-r--r--   0        0        0       22 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/fps_noauth/__init__.py
+│ │ +-rw-r--r--   0        0        0      787 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/fps_noauth/backends.py
+│ │ +-rw-r--r--   0        0        0      293 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/fps_noauth/main.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/fps_noauth/py.typed
+│ │ +-rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/.gitignore
+│ │ +-rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/COPYING.md
+│ │ +-rw-r--r--   0        0        0       52 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0      868 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      450 2020-02-02 00:00:00.000000 fps_noauth-0.1.2/PKG-INFO
+│ │   --- fps_noauth-0.0.50/fps_noauth/backends.py
+│ ├── +++ fps_noauth-0.1.2/fps_noauth/backends.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,34 +1,32 @@
+│ │  from typing import Any, Dict, List, Optional, Tuple
+│ │  
+│ │  from fastapi import WebSocket
+│ │ -
+│ │ -from .models import User
+│ │ +from jupyverse_api.auth import Auth, User
+│ │  
+│ │  USER = User()
+│ │  
+│ │  
+│ │ -def current_user(*args, **kwargs):
+│ │ -    async def _():
+│ │ -        return USER
+│ │ -
+│ │ -    return _
+│ │ -
+│ │ -
+│ │ -def websocket_auth(permissions: Optional[Dict[str, List[str]]] = None):
+│ │ -    async def _(
+│ │ -        websocket: WebSocket,
+│ │ -    ) -> Optional[Tuple[WebSocket, Optional[Dict[str, List[str]]]]]:
+│ │ -        return websocket, permissions
+│ │ -
+│ │ -    return _
+│ │ -
+│ │ -
+│ │ -async def update_user():
+│ │ -    async def _(data: Dict[str, Any]) -> User:
+│ │ -        global USER
+│ │ -        user = dict(USER)
+│ │ -        user.update(data)
+│ │ -        USER = User(**user)
+│ │ -        return USER
+│ │ +class _NoAuth(Auth):
+│ │ +    def current_user(self, *args, **kwargs):
+│ │ +        async def _():
+│ │ +            return USER
+│ │ +
+│ │ +        return _
+│ │ +
+│ │ +    def websocket_auth(self, permissions: Optional[Dict[str, List[str]]] = None):
+│ │ +        async def _(
+│ │ +            websocket: WebSocket,
+│ │ +        ) -> Optional[Tuple[WebSocket, Optional[Dict[str, List[str]]]]]:
+│ │ +            return websocket, permissions
+│ │ +
+│ │ +        return _
+│ │ +
+│ │ +    async def update_user(self):
+│ │ +        async def _(data: Dict[str, Any]) -> User:
+│ │ +            global USER
+│ │ +            user = dict(USER)
+│ │ +            user.update(data)
+│ │ +            USER = User(**user)
+│ │ +            return USER
+│ │  
+│ │ -    return _
+│ │ +        return _
+│ │   --- fps_noauth-0.0.50/.gitignore
+│ ├── +++ fps_noauth-0.1.2/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- fps_noauth-0.0.50/COPYING.md
+│ ├── +++ fps_noauth-0.1.2/COPYING.md
+│ │┄ Files identical despite different names
+│ │   --- fps_noauth-0.0.50/pyproject.toml
+│ ├── +++ fps_noauth-0.1.2/pyproject.toml
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,17 +1,20 @@
+│ │  [build-system]
+│ │  requires = [ "hatchling",]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "fps_noauth"
+│ │  description = "An FPS plugin for an unprotected API"
+│ │ -keywords = ["jupyter", "server", "fastapi", "pluggy", "plugins"]
+│ │ +keywords = ["jupyter", "server", "fastapi", "plugins"]
+│ │  dynamic = ["version"]
+│ │  requires-python = ">=3.8"
+│ │ +dependencies = [
+│ │ +    "jupyverse-api",
+│ │ +]
+│ │  
+│ │  [[project.authors]]
+│ │  name = "Jupyter Development Team"
+│ │  email = "jupyter@googlegroups.com"
+│ │  
+│ │  [project.readme]
+│ │  file = "README.md"
+│ │ @@ -19,21 +22,19 @@
+│ │  
+│ │  [project.license]
+│ │  text = "BSD 3-Clause License"
+│ │  
+│ │  [project.urls]
+│ │  Homepage = "https://jupyter.org"
+│ │  
+│ │ +[project.entry-points]
+│ │ +"asphalt.components"   = {noauth = "fps_noauth.main:NoAuthComponent"}
+│ │ +"jupyverse.components" = {noauth = "fps_noauth.main:NoAuthComponent"}
+│ │ +
+│ │  [tool.check-manifest]
+│ │  ignore = [ ".*",]
+│ │  
+│ │  [tool.jupyter-releaser]
+│ │  skip = [ "check-links",]
+│ │  
+│ │ -[project.entry-points.jupyverse_auth]
+│ │ -User = "fps_noauth.models:User"
+│ │ -current_user = "fps_noauth.backends:current_user"
+│ │ -update_user = "fps_noauth.backends:update_user"
+│ │ -websocket_auth = "fps_noauth.backends:websocket_auth"
+│ │ -
+│ │  [tool.hatch.version]
+│ │  path = "fps_noauth/__init__.py"

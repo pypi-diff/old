@@ -1,0 +1,859 @@
+--- tmp/fps_contents-0.0.50.tar.gz
++++ tmp/fps_contents-0.1.2.tar.gz
+│   --- fps_contents-0.0.50.tar
+├── +++ fps_contents-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,11 +1,12 @@
+│ │ --rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_contents-0.0.50/MANIFEST.in
+│ │ --rw-r--r--   0        0        0       23 2020-02-02 00:00:00.000000 fps_contents-0.0.50/fps_contents/__init__.py
+│ │ --rw-r--r--   0        0        0     7613 2020-02-02 00:00:00.000000 fps_contents-0.0.50/fps_contents/fileid.py
+│ │ --rw-r--r--   0        0        0      673 2020-02-02 00:00:00.000000 fps_contents-0.0.50/fps_contents/models.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 fps_contents-0.0.50/fps_contents/py.typed
+│ │ --rw-r--r--   0        0        0     9049 2020-02-02 00:00:00.000000 fps_contents-0.0.50/fps_contents/routes.py
+│ │ --rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_contents-0.0.50/.gitignore
+│ │ --rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_contents-0.0.50/COPYING.md
+│ │ --rw-r--r--   0        0        0       52 2020-02-02 00:00:00.000000 fps_contents-0.0.50/README.md
+│ │ --rw-r--r--   0        0        0      879 2020-02-02 00:00:00.000000 fps_contents-0.0.50/pyproject.toml
+│ │ --rw-r--r--   0        0        0      609 2020-02-02 00:00:00.000000 fps_contents-0.0.50/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_contents-0.1.2/MANIFEST.in
+│ │ +-rw-r--r--   0        0        0       22 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/__init__.py
+│ │ +-rw-r--r--   0        0        0     8386 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/fileid.py
+│ │ +-rw-r--r--   0        0        0      501 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/main.py
+│ │ +-rw-r--r--   0        0        0      259 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/models.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/py.typed
+│ │ +-rw-r--r--   0        0        0    10716 2020-02-02 00:00:00.000000 fps_contents-0.1.2/fps_contents/routes.py
+│ │ +-rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_contents-0.1.2/.gitignore
+│ │ +-rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_contents-0.1.2/COPYING.md
+│ │ +-rw-r--r--   0        0        0       52 2020-02-02 00:00:00.000000 fps_contents-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0      965 2020-02-02 00:00:00.000000 fps_contents-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      554 2020-02-02 00:00:00.000000 fps_contents-0.1.2/PKG-INFO
+│ │   --- fps_contents-0.0.50/fps_contents/fileid.py
+│ ├── +++ fps_contents-0.1.2/fps_contents/fileid.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │  import asyncio
+│ │ +import logging
+│ │  from typing import Dict, List, Optional
+│ │  from uuid import uuid4
+│ │  
+│ │  import aiosqlite
+│ │  from anyio import Path
+│ │ -from fps.logging import get_configured_logger  # type: ignore
+│ │ +from jupyverse_api import Singleton
+│ │  from watchfiles import Change, awatch
+│ │  
+│ │ -watchfiles_logger = get_configured_logger("watchfiles.main", "warning")
+│ │ -logger = get_configured_logger("contents")
+│ │ +logger = logging.getLogger("contents")
+│ │  
+│ │  
+│ │  class Watcher:
+│ │      def __init__(self, path: str) -> None:
+│ │          self.path = path
+│ │          self._event = asyncio.Event()
+│ │  
+│ │ @@ -25,129 +25,144 @@
+│ │          return self._change
+│ │  
+│ │      def notify(self, change):
+│ │          self._change = change
+│ │          self._event.set()
+│ │  
+│ │  
+│ │ -class Singleton(type):
+│ │ -    _instances: Dict = {}
+│ │ -
+│ │ -    def __call__(cls, *args, **kwargs):
+│ │ -        if cls not in cls._instances:
+│ │ -            cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
+│ │ -        return cls._instances[cls]
+│ │ -
+│ │ -
+│ │  class FileIdManager(metaclass=Singleton):
+│ │      db_path: str
+│ │      initialized: asyncio.Event
+│ │      watchers: Dict[str, List[Watcher]]
+│ │ +    lock: asyncio.Lock
+│ │  
+│ │      def __init__(self, db_path: str = "fileid.db"):
+│ │          self.db_path = db_path
+│ │          self.initialized = asyncio.Event()
+│ │          self.watchers = {}
+│ │ -        self._watch_files_task = asyncio.create_task(self.watch_files())
+│ │ +        self.watch_files_task = asyncio.create_task(self.watch_files())
+│ │ +        self.stop_watching_files = asyncio.Event()
+│ │ +        self.stopped_watching_files = asyncio.Event()
+│ │ +        self.lock = asyncio.Lock()
+│ │  
+│ │      async def get_id(self, path: str) -> Optional[str]:
+│ │          await self.initialized.wait()
+│ │ -        async with aiosqlite.connect(self.db_path) as db:
+│ │ -            async with db.execute("SELECT id FROM fileids WHERE path = ?", (path,)) as cursor:
+│ │ -                async for idx, in cursor:
+│ │ -                    return idx
+│ │ -                return None
+│ │ +        async with self.lock:
+│ │ +            async with aiosqlite.connect(self.db_path) as db:
+│ │ +                async with db.execute("SELECT id FROM fileids WHERE path = ?", (path,)) as cursor:
+│ │ +                    async for idx, in cursor:
+│ │ +                        return idx
+│ │ +                    return None
+│ │  
+│ │      async def get_path(self, idx: str) -> Optional[str]:
+│ │          await self.initialized.wait()
+│ │ -        async with aiosqlite.connect(self.db_path) as db:
+│ │ -            async with db.execute("SELECT path FROM fileids WHERE id = ?", (idx,)) as cursor:
+│ │ -                async for path, in cursor:
+│ │ -                    return path
+│ │ -                return None
+│ │ +        async with self.lock:
+│ │ +            async with aiosqlite.connect(self.db_path) as db:
+│ │ +                async with db.execute("SELECT path FROM fileids WHERE id = ?", (idx,)) as cursor:
+│ │ +                    async for path, in cursor:
+│ │ +                        return path
+│ │ +                    return None
+│ │  
+│ │      async def index(self, path: str) -> Optional[str]:
+│ │          await self.initialized.wait()
+│ │ -        async with aiosqlite.connect(self.db_path) as db:
+│ │ -            apath = Path(path)
+│ │ -            if not await apath.exists():
+│ │ -                return None
+│ │ -
+│ │ -            idx = uuid4().hex
+│ │ -            mtime = (await apath.stat()).st_mtime
+│ │ -            await db.execute("INSERT INTO fileids VALUES (?, ?, ?)", (idx, path, mtime))
+│ │ -            await db.commit()
+│ │ -            return idx
+│ │ +        async with self.lock:
+│ │ +            async with aiosqlite.connect(self.db_path) as db:
+│ │ +                apath = Path(path)
+│ │ +                if not await apath.exists():
+│ │ +                    return None
+│ │ +
+│ │ +                idx = uuid4().hex
+│ │ +                mtime = (await apath.stat()).st_mtime
+│ │ +                await db.execute("INSERT INTO fileids VALUES (?, ?, ?)", (idx, path, mtime))
+│ │ +                await db.commit()
+│ │ +                return idx
+│ │  
+│ │      async def watch_files(self):
+│ │ -        async with aiosqlite.connect(self.db_path) as db:
+│ │ -            await db.execute("DROP TABLE IF EXISTS fileids")
+│ │ -            await db.execute(
+│ │ -                "CREATE TABLE fileids "
+│ │ -                "(id TEXT PRIMARY KEY, path TEXT NOT NULL UNIQUE, mtime REAL NOT NULL)"
+│ │ -            )
+│ │ -            await db.commit()
+│ │ +        async with self.lock:
+│ │ +            async with aiosqlite.connect(self.db_path) as db:
+│ │ +                await db.execute("DROP TABLE IF EXISTS fileids")
+│ │ +                await db.execute(
+│ │ +                    "CREATE TABLE fileids "
+│ │ +                    "(id TEXT PRIMARY KEY, path TEXT NOT NULL UNIQUE, mtime REAL NOT NULL)"
+│ │ +                )
+│ │ +                await db.commit()
+│ │  
+│ │          # index files
+│ │ -        async with aiosqlite.connect(self.db_path) as db:
+│ │ -            async for path in Path().rglob("*"):
+│ │ -                idx = uuid4().hex
+│ │ -                mtime = (await path.stat()).st_mtime
+│ │ -                await db.execute("INSERT INTO fileids VALUES (?, ?, ?)", (idx, str(path), mtime))
+│ │ -            await db.commit()
+│ │ -            self.initialized.set()
+│ │ -
+│ │ -            async for changes in awatch("."):
+│ │ -                deleted_paths = []
+│ │ -                added_paths = []
+│ │ -                for change, changed_path in changes:
+│ │ -                    # get relative path
+│ │ -                    changed_path = Path(changed_path).relative_to(await Path().absolute())
+│ │ -                    changed_path_str = str(changed_path)
+│ │ -
+│ │ -                    if change == Change.deleted:
+│ │ -                        logger.debug("File %s was deleted", changed_path_str)
+│ │ -                        async with db.execute(
+│ │ -                            "SELECT COUNT(*) FROM fileids WHERE path = ?", (changed_path_str,)
+│ │ -                        ) as cursor:
+│ │ -                            if not (await cursor.fetchone())[0]:
+│ │ -                                # path is not indexed, ignore
+│ │ -                                logger.debug("File %s is not indexed, ignoring", changed_path_str)
+│ │ -                                continue
+│ │ -                        # path is indexed
+│ │ -                        await maybe_rename(db, changed_path_str, deleted_paths, added_paths, False)
+│ │ -                    elif change == Change.added:
+│ │ -                        logger.debug("File %s was added", changed_path_str)
+│ │ -                        await maybe_rename(db, changed_path_str, added_paths, deleted_paths, True)
+│ │ -                    elif change == Change.modified:
+│ │ -                        logger.debug("File %s was modified", changed_path_str)
+│ │ -                        if changed_path_str == self.db_path:
+│ │ -                            continue
+│ │ -                        async with db.execute(
+│ │ -                            "SELECT COUNT(*) FROM fileids WHERE path = ?", (changed_path_str,)
+│ │ -                        ) as cursor:
+│ │ -                            if not (await cursor.fetchone())[0]:
+│ │ -                                # path is not indexed, ignore
+│ │ -                                logger.debug("File %s is not indexed, ignoring", changed_path_str)
+│ │ -                                continue
+│ │ -                        mtime = (await changed_path.stat()).st_mtime
+│ │ -                        await db.execute(
+│ │ -                            "UPDATE fileids SET mtime = ? WHERE path = ?", (mtime, changed_path_str)
+│ │ -                        )
+│ │ -
+│ │ -                for path in deleted_paths + added_paths:
+│ │ -                    await db.execute("DELETE FROM fileids WHERE path = ?", (path,))
+│ │ +        async with self.lock:
+│ │ +            async with aiosqlite.connect(self.db_path) as db:
+│ │ +                async for path in Path().rglob("*"):
+│ │ +                    idx = uuid4().hex
+│ │ +                    mtime = (await path.stat()).st_mtime
+│ │ +                    await db.execute(
+│ │ +                        "INSERT INTO fileids VALUES (?, ?, ?)", (idx, str(path), mtime)
+│ │ +                    )
+│ │                  await db.commit()
+│ │ +                self.initialized.set()
+│ │ +
+│ │ +        async for changes in awatch(".", stop_event=self.stop_watching_files):
+│ │ +            async with self.lock:
+│ │ +                async with aiosqlite.connect(self.db_path) as db:
+│ │ +                    deleted_paths = []
+│ │ +                    added_paths = []
+│ │ +                    for change, changed_path in changes:
+│ │ +                        # get relative path
+│ │ +                        changed_path = Path(changed_path).relative_to(await Path().absolute())
+│ │ +                        changed_path_str = str(changed_path)
+│ │ +
+│ │ +                        if change == Change.deleted:
+│ │ +                            logger.debug("File %s was deleted", changed_path_str)
+│ │ +                            async with db.execute(
+│ │ +                                "SELECT COUNT(*) FROM fileids WHERE path = ?", (changed_path_str,)
+│ │ +                            ) as cursor:
+│ │ +                                if not (await cursor.fetchone())[0]:
+│ │ +                                    # path is not indexed, ignore
+│ │ +                                    logger.debug(
+│ │ +                                        "File %s is not indexed, ignoring", changed_path_str
+│ │ +                                    )
+│ │ +                                    continue
+│ │ +                            # path is indexed
+│ │ +                            await maybe_rename(
+│ │ +                                db, changed_path_str, deleted_paths, added_paths, False
+│ │ +                            )
+│ │ +                        elif change == Change.added:
+│ │ +                            logger.debug("File %s was added", changed_path_str)
+│ │ +                            await maybe_rename(
+│ │ +                                db, changed_path_str, added_paths, deleted_paths, True
+│ │ +                            )
+│ │ +                        elif change == Change.modified:
+│ │ +                            logger.debug("File %s was modified", changed_path_str)
+│ │ +                            if changed_path_str == self.db_path:
+│ │ +                                continue
+│ │ +                            async with db.execute(
+│ │ +                                "SELECT COUNT(*) FROM fileids WHERE path = ?", (changed_path_str,)
+│ │ +                            ) as cursor:
+│ │ +                                if not (await cursor.fetchone())[0]:
+│ │ +                                    # path is not indexed, ignore
+│ │ +                                    logger.debug(
+│ │ +                                        "File %s is not indexed, ignoring", changed_path_str
+│ │ +                                    )
+│ │ +                                    continue
+│ │ +                            mtime = (await changed_path.stat()).st_mtime
+│ │ +                            await db.execute(
+│ │ +                                "UPDATE fileids SET mtime = ? WHERE path = ?",
+│ │ +                                (mtime, changed_path_str),
+│ │ +                            )
+│ │ +
+│ │ +                    for path in deleted_paths + added_paths:
+│ │ +                        await db.execute("DELETE FROM fileids WHERE path = ?", (path,))
+│ │ +                    await db.commit()
+│ │ +
+│ │ +            for change in changes:
+│ │ +                changed_path = change[1]
+│ │ +                # get relative path
+│ │ +                changed_path = str(Path(changed_path).relative_to(await Path().absolute()))
+│ │ +                for watcher in self.watchers.get(changed_path, []):
+│ │ +                    watcher.notify(change)
+│ │  
+│ │ -                for change in changes:
+│ │ -                    changed_path = change[1]
+│ │ -                    # get relative path
+│ │ -                    changed_path = str(Path(changed_path).relative_to(await Path().absolute()))
+│ │ -                    for watcher in self.watchers.get(changed_path, []):
+│ │ -                        watcher.notify(change)
+│ │ +        self.stopped_watching_files.set()
+│ │  
+│ │      def watch(self, path: str) -> Watcher:
+│ │          watcher = Watcher(path)
+│ │          self.watchers.setdefault(path, []).append(watcher)
+│ │          return watcher
+│ │  
+│ │      def unwatch(self, path: str, watcher: Watcher):
+│ │   --- fps_contents-0.0.50/fps_contents/routes.py
+│ ├── +++ fps_contents-0.1.2/fps_contents/routes.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -4,149 +4,266 @@
+│ │  from datetime import datetime
+│ │  from http import HTTPStatus
+│ │  from pathlib import Path
+│ │  from typing import Dict, List, Optional, Union, cast
+│ │  
+│ │  from anyio import open_file
+│ │  from fastapi import APIRouter, Depends, HTTPException, Response
+│ │ -from fps.hooks import register_router  # type: ignore
+│ │ -from fps_auth_base import User, current_user  # type: ignore
+│ │ -from starlette.requests import Request  # type: ignore
+│ │ -
+│ │ -from .models import Checkpoint, Content, CreateContent, RenameContent, SaveContent
+│ │ -
+│ │ -router = APIRouter()
+│ │ -
+│ │ -
+│ │ -@router.post(
+│ │ -    "/api/contents/{path:path}/checkpoints",
+│ │ -    status_code=201,
+│ │ -)
+│ │ -async def create_checkpoint(
+│ │ -    path, user: User = Depends(current_user(permissions={"contents": ["write"]}))
+│ │ -):
+│ │ -    src_path = Path(path)
+│ │ -    dst_path = Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ -    try:
+│ │ -        dst_path.parent.mkdir(exist_ok=True)
+│ │ -        shutil.copyfile(src_path, dst_path)
+│ │ -    except Exception:
+│ │ -        # FIXME: return error code?
+│ │ -        return []
+│ │ -    mtime = get_file_modification_time(dst_path)
+│ │ -    return Checkpoint(**{"id": "checkpoint", "last_modified": mtime})
+│ │ -
+│ │ -
+│ │ -@router.post(
+│ │ -    "/api/contents{path:path}",
+│ │ -    status_code=201,
+│ │ -)
+│ │ -async def create_content(
+│ │ -    path: Optional[str],
+│ │ -    request: Request,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["write"]})),
+│ │ -):
+│ │ -    create_content = CreateContent(**(await request.json()))
+│ │ -    content_path = Path(create_content.path)
+│ │ -    if create_content.type == "notebook":
+│ │ -        available_path = get_available_path(content_path / "Untitled.ipynb")
+│ │ -        async with await open_file(available_path, "w") as f:
+│ │ -            await f.write(
+│ │ -                json.dumps({"cells": [], "metadata": {}, "nbformat": 4, "nbformat_minor": 5})
+│ │ -            )
+│ │ -        src_path = available_path
+│ │ -        dst_path = Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ -        try:
+│ │ -            dst_path.parent.mkdir(exist_ok=True)
+│ │ -            shutil.copyfile(src_path, dst_path)
+│ │ -        except Exception:
+│ │ -            # FIXME: return error code?
+│ │ -            pass
+│ │ -    elif create_content.type == "directory":
+│ │ -        name = "Untitled Folder"
+│ │ -        available_path = get_available_path(content_path / name, sep=" ")
+│ │ -        available_path.mkdir(parents=True, exist_ok=True)
+│ │ -    else:
+│ │ -        assert create_content.ext is not None
+│ │ -        available_path = get_available_path(content_path / ("untitled" + create_content.ext))
+│ │ -        open(available_path, "w").close()
+│ │ -
+│ │ -    return await read_content(available_path, False)
+│ │ -
+│ │ -
+│ │ -@router.get("/api/contents")
+│ │ -async def get_root_content(
+│ │ -    content: int,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["read"]})),
+│ │ -):
+│ │ -    return await read_content("", bool(content))
+│ │ -
+│ │ -
+│ │ -@router.get("/api/contents/{path:path}/checkpoints")
+│ │ -async def get_checkpoint(
+│ │ -    path, user: User = Depends(current_user(permissions={"contents": ["read"]}))
+│ │ -):
+│ │ -    src_path = Path(path)
+│ │ -    dst_path = Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ -    if not dst_path.exists():
+│ │ -        return []
+│ │ -    mtime = get_file_modification_time(dst_path)
+│ │ -    return [Checkpoint(**{"id": "checkpoint", "last_modified": mtime})]
+│ │ -
+│ │ -
+│ │ -@router.get("/api/contents/{path:path}")
+│ │ -async def get_content(
+│ │ -    path: str,
+│ │ -    content: int = 0,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["read"]})),
+│ │ -):
+│ │ -    return await read_content(path, bool(content))
+│ │ -
+│ │ -
+│ │ -@router.put("/api/contents/{path:path}")
+│ │ -async def save_content(
+│ │ -    path,
+│ │ -    request: Request,
+│ │ -    response: Response,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["write"]})),
+│ │ -):
+│ │ -    content = SaveContent(**(await request.json()))
+│ │ -    try:
+│ │ -        await write_content(content)
+│ │ -    except Exception:
+│ │ -        raise HTTPException(status_code=404, detail=f"Error saving {content.path}")
+│ │ -    return await read_content(content.path, False)
+│ │ -
+│ │ -
+│ │ -@router.delete(
+│ │ -    "/api/contents/{path:path}",
+│ │ -    status_code=204,
+│ │ -)
+│ │ -async def delete_content(
+│ │ -    path,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["write"]})),
+│ │ -):
+│ │ -    p = Path(path)
+│ │ -    if p.exists():
+│ │ -        if p.is_dir():
+│ │ -            shutil.rmtree(p)
+│ │ +from jupyverse_api.app import App
+│ │ +from jupyverse_api.auth import Auth, User
+│ │ +from jupyverse_api.contents import Contents, Content, SaveContent
+│ │ +from starlette.requests import Request
+│ │ +
+│ │ +from .fileid import FileIdManager
+│ │ +from .models import Checkpoint, CreateContent, RenameContent
+│ │ +
+│ │ +
+│ │ +class _Contents(Contents):
+│ │ +    def __init__(self, app: App, auth: Auth):
+│ │ +        super().__init__(app=app)
+│ │ +
+│ │ +        router = APIRouter()
+│ │ +
+│ │ +        @router.post(
+│ │ +            "/api/contents/{path:path}/checkpoints",
+│ │ +            status_code=201,
+│ │ +        )
+│ │ +        async def create_checkpoint(
+│ │ +            path, user: User = Depends(auth.current_user(permissions={"contents": ["write"]}))
+│ │ +        ):
+│ │ +            src_path = Path(path)
+│ │ +            dst_path = Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ +            try:
+│ │ +                dst_path.parent.mkdir(exist_ok=True)
+│ │ +                shutil.copyfile(src_path, dst_path)
+│ │ +            except Exception:
+│ │ +                # FIXME: return error code?
+│ │ +                return []
+│ │ +            mtime = get_file_modification_time(dst_path)
+│ │ +            return Checkpoint(**{"id": "checkpoint", "last_modified": mtime})
+│ │ +
+│ │ +        @router.post(
+│ │ +            "/api/contents{path:path}",
+│ │ +            status_code=201,
+│ │ +        )
+│ │ +        async def create_content(
+│ │ +            path: Optional[str],
+│ │ +            request: Request,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["write"]})),
+│ │ +        ):
+│ │ +            create_content = CreateContent(**(await request.json()))
+│ │ +            content_path = Path(create_content.path)
+│ │ +            if create_content.type == "notebook":
+│ │ +                available_path = get_available_path(content_path / "Untitled.ipynb")
+│ │ +                async with await open_file(available_path, "w") as f:
+│ │ +                    await f.write(
+│ │ +                        json.dumps(
+│ │ +                            {"cells": [], "metadata": {}, "nbformat": 4, "nbformat_minor": 5}
+│ │ +                        )
+│ │ +                    )
+│ │ +                src_path = available_path
+│ │ +                dst_path = (
+│ │ +                    Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ +                )
+│ │ +                try:
+│ │ +                    dst_path.parent.mkdir(exist_ok=True)
+│ │ +                    shutil.copyfile(src_path, dst_path)
+│ │ +                except Exception:
+│ │ +                    # FIXME: return error code?
+│ │ +                    pass
+│ │ +            elif create_content.type == "directory":
+│ │ +                name = "Untitled Folder"
+│ │ +                available_path = get_available_path(content_path / name, sep=" ")
+│ │ +                available_path.mkdir(parents=True, exist_ok=True)
+│ │ +            else:
+│ │ +                assert create_content.ext is not None
+│ │ +                available_path = get_available_path(
+│ │ +                    content_path / ("untitled" + create_content.ext)
+│ │ +                )
+│ │ +                open(available_path, "w").close()
+│ │ +
+│ │ +            return await self.read_content(available_path, False)
+│ │ +
+│ │ +        @router.get("/api/contents")
+│ │ +        async def get_root_content(
+│ │ +            content: int,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["read"]})),
+│ │ +        ):
+│ │ +            return await self.read_content("", bool(content))
+│ │ +
+│ │ +        @router.get("/api/contents/{path:path}/checkpoints")
+│ │ +        async def get_checkpoint(
+│ │ +            path, user: User = Depends(auth.current_user(permissions={"contents": ["read"]}))
+│ │ +        ):
+│ │ +            src_path = Path(path)
+│ │ +            dst_path = Path(".ipynb_checkpoints") / f"{src_path.stem}-checkpoint{src_path.suffix}"
+│ │ +            if not dst_path.exists():
+│ │ +                return []
+│ │ +            mtime = get_file_modification_time(dst_path)
+│ │ +            return [Checkpoint(**{"id": "checkpoint", "last_modified": mtime})]
+│ │ +
+│ │ +        @router.get("/api/contents/{path:path}")
+│ │ +        async def get_content(
+│ │ +            path: str,
+│ │ +            content: int = 0,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["read"]})),
+│ │ +        ):
+│ │ +            return await self.read_content(path, bool(content))
+│ │ +
+│ │ +        @router.put("/api/contents/{path:path}")
+│ │ +        async def save_content(
+│ │ +            path,
+│ │ +            request: Request,
+│ │ +            response: Response,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["write"]})),
+│ │ +        ):
+│ │ +            content = SaveContent(**(await request.json()))
+│ │ +            try:
+│ │ +                await self.write_content(content)
+│ │ +            except Exception:
+│ │ +                raise HTTPException(status_code=404, detail=f"Error saving {content.path}")
+│ │ +            return await self.read_content(content.path, False)
+│ │ +
+│ │ +        @router.delete(
+│ │ +            "/api/contents/{path:path}",
+│ │ +            status_code=204,
+│ │ +        )
+│ │ +        async def delete_content(
+│ │ +            path,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["write"]})),
+│ │ +        ):
+│ │ +            p = Path(path)
+│ │ +            if p.exists():
+│ │ +                if p.is_dir():
+│ │ +                    shutil.rmtree(p)
+│ │ +                else:
+│ │ +                    p.unlink()
+│ │ +            return Response(status_code=HTTPStatus.NO_CONTENT.value)
+│ │ +
+│ │ +        @router.patch("/api/contents/{path:path}")
+│ │ +        async def rename_content(
+│ │ +            path,
+│ │ +            request: Request,
+│ │ +            user: User = Depends(auth.current_user(permissions={"contents": ["write"]})),
+│ │ +        ):
+│ │ +            rename_content = RenameContent(**(await request.json()))
+│ │ +            Path(path).rename(rename_content.path)
+│ │ +            return await self.read_content(rename_content.path, False)
+│ │ +
+│ │ +        self.include_router(router)
+│ │ +
+│ │ +    async def read_content(
+│ │ +        self, path: Union[str, Path], get_content: bool, as_json: bool = False
+│ │ +    ) -> Content:
+│ │ +        if isinstance(path, str):
+│ │ +            path = Path(path)
+│ │ +        content: Optional[Union[str, Dict, List[Dict]]] = None
+│ │ +        if get_content:
+│ │ +            if path.is_dir():
+│ │ +                content = [
+│ │ +                    (await self.read_content(subpath, get_content=False)).dict()
+│ │ +                    for subpath in path.iterdir()
+│ │ +                    if not subpath.name.startswith(".")
+│ │ +                ]
+│ │ +            elif path.is_file() or path.is_symlink():
+│ │ +                try:
+│ │ +                    async with await open_file(path) as f:
+│ │ +                        content = await f.read()
+│ │ +                    if as_json:
+│ │ +                        content = json.loads(content)
+│ │ +                except Exception:
+│ │ +                    raise HTTPException(status_code=404, detail="Item not found")
+│ │ +        format: Optional[str] = None
+│ │ +        if path.is_dir():
+│ │ +            size = None
+│ │ +            type = "directory"
+│ │ +            format = "json"
+│ │ +            mimetype = None
+│ │ +        elif path.is_file() or path.is_symlink():
+│ │ +            size = get_file_size(path)
+│ │ +            if path.suffix == ".ipynb":
+│ │ +                type = "notebook"
+│ │ +                format = None
+│ │ +                mimetype = None
+│ │ +                if content is not None:
+│ │ +                    nb: dict
+│ │ +                    if as_json:
+│ │ +                        content = cast(Dict, content)
+│ │ +                        nb = content
+│ │ +                    else:
+│ │ +                        content = cast(str, content)
+│ │ +                        nb = json.loads(content)
+│ │ +                    for cell in nb["cells"]:
+│ │ +                        if "metadata" not in cell:
+│ │ +                            cell["metadata"] = {}
+│ │ +                        cell["metadata"].update({"trusted": False})
+│ │ +                    if not as_json:
+│ │ +                        content = json.dumps(nb)
+│ │ +            elif path.suffix == ".json":
+│ │ +                type = "json"
+│ │ +                format = "text"
+│ │ +                mimetype = "application/json"
+│ │ +            else:
+│ │ +                type = "file"
+│ │ +                format = None
+│ │ +                mimetype = "text/plain"
+│ │          else:
+│ │ -            p.unlink()
+│ │ -    return Response(status_code=HTTPStatus.NO_CONTENT.value)
+│ │ +            raise HTTPException(status_code=404, detail="Item not found")
+│ │  
+│ │ +        return Content(
+│ │ +            **{
+│ │ +                "name": path.name,
+│ │ +                "path": path.as_posix(),
+│ │ +                "last_modified": get_file_modification_time(path),
+│ │ +                "created": get_file_creation_time(path),
+│ │ +                "content": content,
+│ │ +                "format": format,
+│ │ +                "mimetype": mimetype,
+│ │ +                "size": size,
+│ │ +                "writable": is_file_writable(path),
+│ │ +                "type": type,
+│ │ +            }
+│ │ +        )
+│ │ +
+│ │ +    async def write_content(self, content: Union[SaveContent, Dict]) -> None:
+│ │ +        if not isinstance(content, SaveContent):
+│ │ +            content = SaveContent(**content)
+│ │ +        async with await open_file(content.path, "w") as f:
+│ │ +            if content.format == "json":
+│ │ +                dict_content = cast(Dict, content.content)
+│ │ +                if content.type == "notebook":
+│ │ +                    # see https://github.com/jupyterlab/jupyterlab/issues/11005
+│ │ +                    if "metadata" in dict_content and "orig_nbformat" in dict_content["metadata"]:
+│ │ +                        del dict_content["metadata"]["orig_nbformat"]
+│ │ +                await f.write(json.dumps(dict_content, indent=2))
+│ │ +            else:
+│ │ +                content.content = cast(str, content.content)
+│ │ +                await f.write(content.content)
+│ │ +
+│ │ +    @property
+│ │ +    def file_id_manager(self):
+│ │ +        return FileIdManager()
+│ │  
+│ │ -@router.patch("/api/contents/{path:path}")
+│ │ -async def rename_content(
+│ │ -    path,
+│ │ -    request: Request,
+│ │ -    user: User = Depends(current_user(permissions={"contents": ["write"]})),
+│ │ -):
+│ │ -    rename_content = RenameContent(**(await request.json()))
+│ │ -    Path(path).rename(rename_content.path)
+│ │ -    return await read_content(rename_content.path, False)
+│ │ +
+│ │ +def get_available_path(path: Path, sep: str = ""):
+│ │ +    directory = path.parent
+│ │ +    name = Path(path.name)
+│ │ +    i = None
+│ │ +    while True:
+│ │ +        if i is None:
+│ │ +            i_str = ""
+│ │ +            i = 1
+│ │ +        else:
+│ │ +            i_str = str(i)
+│ │ +            i += 1
+│ │ +        if i_str:
+│ │ +            i_str = sep + i_str
+│ │ +        available_path = directory / (name.stem + i_str + name.suffix)
+│ │ +        if not available_path.exists():
+│ │ +            return available_path
+│ │  
+│ │  
+│ │  def get_file_modification_time(path: Path):
+│ │      if path.exists():
+│ │          return datetime.utcfromtimestamp(path.stat().st_mtime).isoformat() + "Z"
+│ │  
+│ │  
+│ │ @@ -165,116 +282,7 @@
+│ │      if path.exists():
+│ │          if path.is_dir():
+│ │              # FIXME
+│ │              return True
+│ │          else:
+│ │              return os.access(path, os.W_OK)
+│ │      return False
+│ │ -
+│ │ -
+│ │ -async def read_content(path: Union[str, Path], get_content: bool, as_json: bool = False) -> Content:
+│ │ -    if isinstance(path, str):
+│ │ -        path = Path(path)
+│ │ -    content: Optional[Union[str, Dict, List[Dict]]] = None
+│ │ -    if get_content:
+│ │ -        if path.is_dir():
+│ │ -            content = [
+│ │ -                (await read_content(subpath, get_content=False)).dict()
+│ │ -                for subpath in path.iterdir()
+│ │ -                if not subpath.name.startswith(".")
+│ │ -            ]
+│ │ -        elif path.is_file() or path.is_symlink():
+│ │ -            try:
+│ │ -                async with await open_file(path) as f:
+│ │ -                    content = await f.read()
+│ │ -                if as_json:
+│ │ -                    content = json.loads(content)
+│ │ -            except Exception:
+│ │ -                raise HTTPException(status_code=404, detail="Item not found")
+│ │ -    format: Optional[str] = None
+│ │ -    if path.is_dir():
+│ │ -        size = None
+│ │ -        type = "directory"
+│ │ -        format = "json"
+│ │ -        mimetype = None
+│ │ -    elif path.is_file() or path.is_symlink():
+│ │ -        size = get_file_size(path)
+│ │ -        if path.suffix == ".ipynb":
+│ │ -            type = "notebook"
+│ │ -            format = None
+│ │ -            mimetype = None
+│ │ -            if content is not None:
+│ │ -                nb: dict
+│ │ -                if as_json:
+│ │ -                    content = cast(Dict, content)
+│ │ -                    nb = content
+│ │ -                else:
+│ │ -                    content = cast(str, content)
+│ │ -                    nb = json.loads(content)
+│ │ -                for cell in nb["cells"]:
+│ │ -                    if "metadata" not in cell:
+│ │ -                        cell["metadata"] = {}
+│ │ -                    cell["metadata"].update({"trusted": False})
+│ │ -                if not as_json:
+│ │ -                    content = json.dumps(nb)
+│ │ -        elif path.suffix == ".json":
+│ │ -            type = "json"
+│ │ -            format = "text"
+│ │ -            mimetype = "application/json"
+│ │ -        else:
+│ │ -            type = "file"
+│ │ -            format = None
+│ │ -            mimetype = "text/plain"
+│ │ -    else:
+│ │ -        raise HTTPException(status_code=404, detail="Item not found")
+│ │ -
+│ │ -    return Content(
+│ │ -        **{
+│ │ -            "name": path.name,
+│ │ -            "path": path.as_posix(),
+│ │ -            "last_modified": get_file_modification_time(path),
+│ │ -            "created": get_file_creation_time(path),
+│ │ -            "content": content,
+│ │ -            "format": format,
+│ │ -            "mimetype": mimetype,
+│ │ -            "size": size,
+│ │ -            "writable": is_file_writable(path),
+│ │ -            "type": type,
+│ │ -        }
+│ │ -    )
+│ │ -
+│ │ -
+│ │ -async def write_content(content: Union[SaveContent, Dict]) -> None:
+│ │ -    if not isinstance(content, SaveContent):
+│ │ -        content = SaveContent(**content)
+│ │ -    async with await open_file(content.path, "w") as f:
+│ │ -        if content.format == "json":
+│ │ -            dict_content = cast(Dict, content.content)
+│ │ -            if content.type == "notebook":
+│ │ -                # see https://github.com/jupyterlab/jupyterlab/issues/11005
+│ │ -                if "metadata" in dict_content and "orig_nbformat" in dict_content["metadata"]:
+│ │ -                    del dict_content["metadata"]["orig_nbformat"]
+│ │ -            await f.write(json.dumps(dict_content, indent=2))
+│ │ -        else:
+│ │ -            content.content = cast(str, content.content)
+│ │ -            await f.write(content.content)
+│ │ -
+│ │ -
+│ │ -def get_available_path(path: Path, sep: str = ""):
+│ │ -    directory = path.parent
+│ │ -    name = Path(path.name)
+│ │ -    i = None
+│ │ -    while True:
+│ │ -        if i is None:
+│ │ -            i_str = ""
+│ │ -            i = 1
+│ │ -        else:
+│ │ -            i_str = str(i)
+│ │ -            i += 1
+│ │ -        if i_str:
+│ │ -            i_str = sep + i_str
+│ │ -        available_path = directory / (name.stem + i_str + name.suffix)
+│ │ -        if not available_path.exists():
+│ │ -            return available_path
+│ │ -
+│ │ -
+│ │ -r = register_router(router)
+│ │   --- fps_contents-0.0.50/.gitignore
+│ ├── +++ fps_contents-0.1.2/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- fps_contents-0.0.50/COPYING.md
+│ ├── +++ fps_contents-0.1.2/COPYING.md
+│ │┄ Files identical despite different names
+│ │   --- fps_contents-0.0.50/pyproject.toml
+│ ├── +++ fps_contents-0.1.2/pyproject.toml
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,17 +1,22 @@
+│ │  [build-system]
+│ │  requires = [ "hatchling",]
+│ │  build-backend = "hatchling.build"
+│ │  
+│ │  [project]
+│ │  name = "fps_contents"
+│ │  description = "An FPS plugin for the contents API"
+│ │ -keywords = [ "jupyter", "server", "fastapi", "pluggy", "plugins",]
+│ │ +keywords = ["jupyter", "server", "fastapi", "plugins"]
+│ │  requires-python = ">=3.8"
+│ │ -dependencies = [ "fps >=0.0.8", "fps-auth-base", "anyio", "watchfiles >=0.16.1,<1", "aiosqlite >=0.17.0,<1", "anyio>=3.6.2,<4"]
+│ │ +dependencies = [
+│ │ +    "watchfiles >=0.18.1,<1",
+│ │ +    "aiosqlite >=0.17.0,<1",
+│ │ +    "anyio>=3.6.2,<4",
+│ │ +    "jupyverse-api",
+│ │ +]
+│ │  dynamic = [ "version",]
+│ │  [[project.authors]]
+│ │  name = "Jupyter Development Team"
+│ │  email = "jupyter@googlegroups.com"
+│ │  
+│ │  [project.readme]
+│ │  file = "README.md"
+│ │ @@ -25,12 +30,13 @@
+│ │  
+│ │  [tool.check-manifest]
+│ │  ignore = [ ".*",]
+│ │  
+│ │  [tool.jupyter-releaser]
+│ │  skip = [ "check-links",]
+│ │  
+│ │ -[project.entry-points.fps_router]
+│ │ -fps-contents = "fps_contents.routes"
+│ │ +[project.entry-points]
+│ │ +"asphalt.components"   = {contents = "fps_contents.main:ContentsComponent"}
+│ │ +"jupyverse.components" = {contents = "fps_contents.main:ContentsComponent"}
+│ │  
+│ │  [tool.hatch.version]
+│ │  path = "fps_contents/__init__.py"

@@ -1,0 +1,1381 @@
+# Comparing `tmp/clickzetta-connector-0.6.2.tar.gz` & `tmp/clickzetta-connector-0.6.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "clickzetta-connector-0.6.2.tar", last modified: Wed Mar 29 08:06:53 2023, max compression
++gzip compressed data, was "clickzetta-connector-0.6.3.tar", last modified: Thu Apr  6 11:33:19 2023, max compression
+```
+
+## Comparing `clickzetta-connector-0.6.2.tar` & `clickzetta-connector-0.6.3.tar`
+
+### file list
+
+```diff
+@@ -1,148 +1,148 @@
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.462217 clickzetta-connector-0.6.2/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)       49 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.2/MANIFEST.in
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      421 2023-03-29 08:06:53.462054 clickzetta-connector-0.6.2/PKG-INFO
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.444793 clickzetta-connector-0.6.2/clickzetta/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      159 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/__init__.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     9899 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/_helpers.py
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.445918 clickzetta-connector-0.6.2/clickzetta/bulkload/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)        0 2023-03-20 02:30:34.000000 clickzetta-connector-0.6.2/clickzetta/bulkload/__init__.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     7242 2023-03-28 04:27:25.000000 clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_enums.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4387 2023-03-28 04:27:25.000000 clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_stream.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    14861 2023-03-28 04:27:06.000000 clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_writer.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      679 2023-03-28 06:56:51.000000 clickzetta-connector-0.6.2/clickzetta/bulkload/cz_table.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    34507 2023-03-28 04:27:06.000000 clickzetta-connector-0.6.2/clickzetta/client.py
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.447561 clickzetta-connector-0.6.2/clickzetta/dbapi/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1677 2022-11-05 16:51:08.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/__init__.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1000 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/_helpers.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2761 2022-12-13 11:25:14.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/connection.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     3995 2023-03-13 07:16:08.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/cursor.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1100 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/exceptions.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1131 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/dbapi/types.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     7203 2023-03-13 07:16:08.000000 clickzetta-connector-0.6.2/clickzetta/enums.py
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.441319 clickzetta-connector-0.6.2/clickzetta/proto/
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.456502 clickzetta-connector-0.6.2/clickzetta/proto/generated/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/__init__.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2488 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/account_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/account_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1623 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/block_bloom_filter_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/block_bloom_filter_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1078 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/bucket_info_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/bucket_info_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1233 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/compression_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/compression_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1739 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/connection_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/connection_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     5567 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/data_type_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/data_type_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4689 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/expression_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/expression_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1251 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_format_type_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_format_type_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     3623 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_meta_data_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_meta_data_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1087 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_system_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/file_system_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2232 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/function_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/function_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1106 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/hash_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/hash_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    30924 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/ingestion_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    34323 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/ingestion_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     6794 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/input_split_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/input_split_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     5520 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/job_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/job_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1683 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/job_result_cache_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/job_result_cache_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    11392 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/kudu_common_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/kudu_common_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4271 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/metadata_entity_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/metadata_entity_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1300 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/network_policy_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/network_policy_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2847 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/object_identifier_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/object_identifier_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    35572 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/operator_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/operator_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1430 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/pb_util_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/pb_util_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1130 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/property_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/property_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1861 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/rm_app_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/rm_app_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1354 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/role_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/role_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2102 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/row_operations_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/row_operations_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      944 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/schema_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/schema_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1509 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/share_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/share_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     5493 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/statistics_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/statistics_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    11527 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/table_common_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/table_common_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     3834 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/table_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/table_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4089 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_meta_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     6210 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1382 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_size_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_size_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1836 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_value_info_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_value_info_pb2_grpc.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1208 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/workspace_meta_pb2.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta/proto/generated/workspace_meta_pb2_grpc.py
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.460835 clickzetta-connector-0.6.2/clickzetta/proto/source/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      770 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/account.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1549 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/block_bloom_filter.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      190 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/bucket_info.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1017 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/compression.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      413 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/connection_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2033 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/data_type.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1697 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/expression.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      284 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/file_format_type.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1781 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/file_meta_data.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      121 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/file_system.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      643 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/function_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1007 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/hash.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    13622 2023-03-28 04:27:06.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/ingestion.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2908 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/input_split.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2134 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/job_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      444 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/job_result_cache_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    18379 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/kudu_common.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1417 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/metadata_entity.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      311 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/network_policy.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1071 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/object_identifier.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)    16166 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/operator.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1805 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/pb_util.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      157 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/property.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      515 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/rm_app_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      232 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/role_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     3795 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/row_operations.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)       81 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/schema.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      312 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/share_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2539 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/statistics.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4801 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/table_common.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1895 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/table_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2387 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_cluster.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1337 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_cluster_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      253 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_cluster_size.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     1034 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_value_info.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      376 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.2/clickzetta/proto/source/workspace_meta.proto
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     8617 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.2/clickzetta/query_result.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     6368 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/schema.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     3557 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.2/clickzetta/session.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     4780 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.2/clickzetta/standard_sql.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2277 2022-11-09 13:50:16.000000 clickzetta-connector-0.6.2/clickzetta/table.py
+--rw-r--r--   0 lihanmiao   (501) staff       (20)       21 2023-03-29 08:06:45.000000 clickzetta-connector-0.6.2/clickzetta/version.py
+-drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-03-29 08:06:53.461834 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      421 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/PKG-INFO
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     6027 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/SOURCES.txt
+--rw-r--r--   0 lihanmiao   (501) staff       (20)        1 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/dependency_links.txt
+--rw-r--r--   0 lihanmiao   (501) staff       (20)        1 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/not-zip-safe
+--rw-r--r--   0 lihanmiao   (501) staff       (20)      629 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/requires.txt
+--rw-r--r--   0 lihanmiao   (501) staff       (20)       11 2023-03-29 08:06:53.000000 clickzetta-connector-0.6.2/clickzetta_connector.egg-info/top_level.txt
+--rw-r--r--   0 lihanmiao   (501) staff       (20)       38 2023-03-29 08:06:53.462269 clickzetta-connector-0.6.2/setup.cfg
+--rw-r--r--   0 lihanmiao   (501) staff       (20)     2888 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.2/setup.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.231652 clickzetta-connector-0.6.3/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)       49 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.3/MANIFEST.in
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      421 2023-04-06 11:33:19.231523 clickzetta-connector-0.6.3/PKG-INFO
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.214432 clickzetta-connector-0.6.3/clickzetta/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      159 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/__init__.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     9899 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/_helpers.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.215621 clickzetta-connector-0.6.3/clickzetta/bulkload/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)        0 2023-03-20 02:30:34.000000 clickzetta-connector-0.6.3/clickzetta/bulkload/__init__.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     7190 2023-04-06 09:43:36.000000 clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_enums.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4387 2023-03-28 04:27:25.000000 clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_stream.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    14842 2023-04-06 11:29:29.000000 clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_writer.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      483 2023-04-06 09:41:45.000000 clickzetta-connector-0.6.3/clickzetta/bulkload/cz_table.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    35779 2023-04-06 09:47:02.000000 clickzetta-connector-0.6.3/clickzetta/client.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.217036 clickzetta-connector-0.6.3/clickzetta/dbapi/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1677 2022-11-05 16:51:08.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/__init__.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1000 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/_helpers.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2761 2022-12-13 11:25:14.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/connection.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     3995 2023-03-13 07:16:08.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/cursor.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1100 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/exceptions.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1131 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/dbapi/types.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     7203 2023-03-13 07:16:08.000000 clickzetta-connector-0.6.3/clickzetta/enums.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.211124 clickzetta-connector-0.6.3/clickzetta/proto/
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.226256 clickzetta-connector-0.6.3/clickzetta/proto/generated/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/__init__.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2488 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/account_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/account_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1623 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/block_bloom_filter_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/block_bloom_filter_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1078 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/bucket_info_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/bucket_info_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1233 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/compression_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/compression_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1739 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/connection_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/connection_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     5567 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/data_type_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/data_type_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4689 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/expression_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/expression_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1251 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_format_type_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_format_type_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     3623 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_meta_data_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_meta_data_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1087 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_system_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/file_system_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2232 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/function_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/function_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1106 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/hash_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/hash_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    17705 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/ingestion_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    20165 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/ingestion_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     6794 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/input_split_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/input_split_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     5520 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/job_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/job_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1683 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/job_result_cache_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/job_result_cache_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    11392 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/kudu_common_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/kudu_common_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4271 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/metadata_entity_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/metadata_entity_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1300 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/network_policy_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/network_policy_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2847 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/object_identifier_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/object_identifier_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    35572 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/operator_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/operator_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1430 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/pb_util_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/pb_util_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1130 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/property_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/property_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1861 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/rm_app_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/rm_app_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1354 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/role_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/role_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2102 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/row_operations_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/row_operations_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      944 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/schema_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/schema_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1509 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/share_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/share_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     5493 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/statistics_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/statistics_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    11527 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/table_common_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/table_common_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     3834 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/table_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/table_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4089 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_meta_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     6210 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1382 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_size_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_size_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1836 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_value_info_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_value_info_pb2_grpc.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1208 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/workspace_meta_pb2.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      166 2023-04-06 11:33:18.000000 clickzetta-connector-0.6.3/clickzetta/proto/generated/workspace_meta_pb2_grpc.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.230701 clickzetta-connector-0.6.3/clickzetta/proto/source/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      770 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/account.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1549 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/block_bloom_filter.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      190 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/bucket_info.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1017 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/compression.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      413 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/connection_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2033 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/data_type.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1697 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/expression.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      284 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/file_format_type.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1781 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/file_meta_data.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      121 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/file_system.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      643 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/function_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1007 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/hash.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     7935 2023-04-06 09:17:22.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/ingestion.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2908 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/input_split.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2134 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/job_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      444 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/job_result_cache_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    18379 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/kudu_common.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1417 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/metadata_entity.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      311 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/network_policy.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1071 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/object_identifier.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)    16166 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/operator.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1805 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/pb_util.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      157 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/property.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      515 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/rm_app_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      232 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/role_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     3795 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/row_operations.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)       81 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/schema.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      312 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/share_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2539 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/statistics.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4801 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/table_common.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1895 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/table_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2387 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_cluster.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1337 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_cluster_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      253 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_cluster_size.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     1034 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_value_info.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      376 2023-03-20 02:30:48.000000 clickzetta-connector-0.6.3/clickzetta/proto/source/workspace_meta.proto
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     8617 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.3/clickzetta/query_result.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     6368 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/schema.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     3557 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.3/clickzetta/session.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     4780 2022-11-01 03:39:08.000000 clickzetta-connector-0.6.3/clickzetta/standard_sql.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2277 2022-11-09 13:50:16.000000 clickzetta-connector-0.6.3/clickzetta/table.py
++-rw-r--r--   0 lihanmiao   (501) staff       (20)       21 2023-04-06 11:33:13.000000 clickzetta-connector-0.6.3/clickzetta/version.py
++drwxr-xr-x   0 lihanmiao   (501) staff       (20)        0 2023-04-06 11:33:19.231331 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      421 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/PKG-INFO
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     6027 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/SOURCES.txt
++-rw-r--r--   0 lihanmiao   (501) staff       (20)        1 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/dependency_links.txt
++-rw-r--r--   0 lihanmiao   (501) staff       (20)        1 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/not-zip-safe
++-rw-r--r--   0 lihanmiao   (501) staff       (20)      629 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/requires.txt
++-rw-r--r--   0 lihanmiao   (501) staff       (20)       11 2023-04-06 11:33:19.000000 clickzetta-connector-0.6.3/clickzetta_connector.egg-info/top_level.txt
++-rw-r--r--   0 lihanmiao   (501) staff       (20)       38 2023-04-06 11:33:19.231697 clickzetta-connector-0.6.3/setup.cfg
++-rw-r--r--   0 lihanmiao   (501) staff       (20)     2888 2023-03-27 06:46:23.000000 clickzetta-connector-0.6.3/setup.py
+```
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/_helpers.py` & `clickzetta-connector-0.6.3/clickzetta/_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_enums.py` & `clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_enums.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -65,15 +65,15 @@
+             return CZOSSFileSystem(endpoint=self.endpoint, secret=self.secret, token=self.token, key=self.id,
+                                    cz_feature='bulkload')
+         else:
+             return fs.LocalFileSystem()
+ 
+ 
+ class BulkLoadConfig:
+-    def __init__(self, config: ingestion_pb2.BulkloadStreamWriterConfig):
++    def __init__(self, config: ingestion_pb2.BulkLoadStreamWriterConfig):
+         self.config = config
+ 
+     def get_staging_config(self):
+         staging_path = self.config.staging_path
+         oss_path = staging_path.oss_path
+         staging_config = StagingConfig(oss_path.path, oss_path.sts_ak_id, oss_path.sts_ak_secret, oss_path.sts_token,
+                                        oss_path.oss_endpoint)
+@@ -136,19 +136,18 @@
+         self._properties = {'operation': operation, 'partition_specs': partition_specs, 'record_keys': record_keys}
+ 
+     def to_api_repr(self) -> dict:
+         return copy.deepcopy(self._properties)
+ 
+ 
+ class BulkLoadMetaData:
+-    def __init__(self, instance_id: int, info: ingestion_pb2.BulkloadStreamInfo):
++    def __init__(self, instance_id: int, info: ingestion_pb2.BulkLoadStreamInfo):
+         self.instance_id = instance_id
+         self.info = info
+-        self.table = cz_table.CZTable(info.table_meta, info.identifier.schema_name, info.identifier.table_name,
+-                                      info.table_type)
++        self.table = cz_table.CZTable(info.stream_schema, info.identifier.schema_name, info.identifier.table_name)
+ 
+     def get_instance_id(self):
+         return self.instance_id
+ 
+     def get_workspace(self):
+         return self.info.identifier.workspace
+ 
+@@ -161,33 +160,33 @@
+     def get_stream_id(self):
+         return self.info.stream_id
+ 
+     def get_table(self):
+         return self.table
+ 
+     def get_operation(self):
+-        if self.info.operation == ingestion_pb2.BulkloadStreamOperation.BS_APPEND:
++        if self.info.operation == ingestion_pb2.BulkLoadStreamOperation.BL_APPEND:
+             return BulkLoadOperation.APPEND
+-        elif self.info.operation == ingestion_pb2.BulkloadStreamOperation.BS_OVERWRITE:
++        elif self.info.operation == ingestion_pb2.BulkLoadStreamOperation.BL_OVERWRITE:
+             return BulkLoadOperation.OVERWRITE
+-        elif self.info.operation == ingestion_pb2.BulkloadStreamOperation.BS_UPSERT:
++        elif self.info.operation == ingestion_pb2.BulkLoadStreamOperation.BL_UPSERT:
+             return BulkLoadOperation.UPSERT
+ 
+     def get_state(self):
+-        if self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_CREATED:
++        if self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_CREATED:
+             return BulkLoadState.CREATED
+-        elif self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_SEALED:
++        elif self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_SEALED:
+             return BulkLoadState.SEALED
+-        elif self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_COMMIT_SUBMITTED:
++        elif self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_COMMIT_SUBMITTED:
+             return BulkLoadState.COMMIT_SUBMITTED
+-        elif self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_COMMIT_SUCCESS:
++        elif self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_COMMIT_SUCCESS:
+             return BulkLoadState.COMMIT_SUCCESS
+-        elif self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_COMMIT_FAILED:
++        elif self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_COMMIT_FAILED:
+             return BulkLoadState.COMMIT_FAILED
+-        elif self.info.stream_state == ingestion_pb2.BulkloadStreamState.BS_ABORTED:
++        elif self.info.stream_state == ingestion_pb2.BulkLoadStreamState.BL_ABORTED:
+             return BulkLoadState.ABORTED
+ 
+     def get_sql_error_msg(self):
+         return self.info.sql_error_msg
+ 
+     def get_partition_specs(self):
+         return self.info.partition_spec
+```
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_stream.py` & `clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_stream.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/bulkload/bulkload_writer.py` & `clickzetta-connector-0.6.3/clickzetta/bulkload/bulkload_writer.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -77,25 +77,24 @@
+         self._check_file_status()
+         if not self.current_record_batch:
+             self._construct_new_record_batch()
+ 
+         for partition in self.partition_spec:
+             row.field_name_values[partition] = self.partition_spec[partition]
+ 
+-        # batch rows set to 2000, will get from session config later
+-        if self.current_batch_rows == 2000:
+-            buffer_size = self._flush_record_batch()
+-            self.current_total_size = self.current_total_size + buffer_size
+-            return
+-
+         for filed_name in row.field_name_values:
+             self.current_record_batch[filed_name].append(row.field_name_values[filed_name])
+         self.current_batch_rows = self.current_total_rows + 1
+         self.current_total_rows = self.current_total_rows + 1
+ 
++        # batch rows set to 2000, will get from session config later
++        if self.current_batch_rows == 2000:
++            buffer_size = self._flush_record_batch()
++            self.current_total_size = self.current_total_size + buffer_size
++
+     def finish(self):
+         if self.closed:
+             raise AssertionError('BulkLoadWriter is already closed.')
+         self._close_current_file()
+         status = self.client.finish_bulkload_stream_writer(self.meta_data.get_instance_id(),
+                                                            self.meta_data.get_workspace(),
+                                                            self.meta_data.get_schema_name(),
+```
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/client.py` & `clickzetta-connector-0.6.3/clickzetta/client.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -150,160 +150,186 @@
+                     else:
+                         continue
+                 break
+         return {'columns': columns, 'types': types}
+ 
+     def create_bulkload_stream(self, schema_name: string, table_name: string,
+                                options: BulkLoadOptions) -> BulkLoadMetaData:
+-        create_bulk_load_request = ingestion_pb2.CreateBulkloadStreamRequest()
++        create_bulk_load_request = ingestion_pb2.CreateBulkLoadStreamRequest()
+         account = ingestion_pb2.Account()
+-        account.user_name = self.username
++        user_ident = ingestion_pb2.UserIdentifier()
++        user_ident.instance_id = self.instance_id
++        user_ident.workspace = self.workspace
++        user_ident.user_name = self.username
++        account.user_ident.CopyFrom(user_ident)
++        account.token = self.token
+         create_bulk_load_request.account.CopyFrom(account)
+-        create_bulk_load_request.instance_id = self.instance_id
+         table_identifier = ingestion_pb2.TableIdentifier()
+         table_identifier.instance_id = self.instance_id
+         table_identifier.workspace = self.workspace
+         table_identifier.schema_name = schema_name
+         table_identifier.table_name = table_name
+         create_bulk_load_request.identifier.CopyFrom(table_identifier)
+         if options.operation == BulkLoadOperation.APPEND:
+-            create_bulk_load_request.operation = ingestion_pb2.BulkloadStreamOperation.BS_APPEND
++            create_bulk_load_request.operation = ingestion_pb2.BulkLoadStreamOperation.BL_APPEND
+         elif options.operation == BulkLoadOperation.UPSERT:
+-            create_bulk_load_request.operation = ingestion_pb2.BulkloadStreamOperation.BS_UPSERT
++            create_bulk_load_request.operation = ingestion_pb2.BulkLoadStreamOperation.BL_UPSERT
+         elif options.operation == BulkLoadOperation.OVERWRITE:
+-            create_bulk_load_request.operation = ingestion_pb2.BulkloadStreamOperation.BS_OVERWRITE
++            create_bulk_load_request.operation = ingestion_pb2.BulkLoadStreamOperation.BL_OVERWRITE
+         if options.partition_specs is not None:
+             create_bulk_load_request.partition_spec = options.partition_specs
+         if options.record_keys is not None:
+             keys = []
+             for key in options.record_keys:
+                 keys.append(key)
+             create_bulk_load_request.record_keys.extend(keys)
+-        response = self._gate_way_call(create_bulk_load_request, ingestion_pb2.MethodEnum.CREATE_BULK_LOAD_STREAM)
+-        response_pb = ParseDict(response, ingestion_pb2.CreateBulkloadStreamResponse())
+-        self.instance_id = response_pb.instance_id
+-        bulkload_meta_data = BulkLoadMetaData(response_pb.instance_id, response_pb.info)
++        response = self._gate_way_call(create_bulk_load_request, ingestion_pb2.MethodEnum.CREATE_BULK_LOAD_STREAM_V2)
++        response_pb = ParseDict(response, ingestion_pb2.CreateBulkLoadStreamResponse())
++        self.instance_id = response_pb.info.identifier.instance_id
++        bulkload_meta_data = BulkLoadMetaData(response_pb.info.identifier.instance_id, response_pb.info)
+ 
+         return bulkload_meta_data
+ 
+     def commit_bulkload_stream(self, instance_id: int, workspace: string, schema_name: string, table_name: string,
+                                stream_id: string, execute_workspace: string, execute_vc: string,
+                                commit_mode: BulkLoadCommitMode) -> BulkLoadMetaData:
+-        commit_bulkload_request = ingestion_pb2.CommitBulkloadStreamRequest()
++        commit_bulkload_request = ingestion_pb2.CommitBulkLoadStreamRequest()
+         account = ingestion_pb2.Account()
+-        account.user_name = self.username
++        user_ident = ingestion_pb2.UserIdentifier()
++        user_ident.instance_id = instance_id
++        user_ident.workspace = workspace
++        user_ident.user_name = self.username
++        account.user_ident.CopyFrom(user_ident)
++        account.token = self.token
+         commit_bulkload_request.account.CopyFrom(account)
+-        commit_bulkload_request.instance_id = instance_id
+         table_identifier = ingestion_pb2.TableIdentifier()
+         table_identifier.instance_id = instance_id
+         table_identifier.workspace = workspace
+         table_identifier.schema_name = schema_name
+         table_identifier.table_name = table_name
+         commit_bulkload_request.identifier.CopyFrom(table_identifier)
+         commit_bulkload_request.stream_id = stream_id
+         commit_bulkload_request.execute_workspace = execute_workspace
+         commit_bulkload_request.execute_vc_name = execute_vc
+         if commit_mode == BulkLoadCommitMode.COMMIT_STREAM:
+-            commit_bulkload_request.commit_mode = ingestion_pb2.CommitBulkloadStreamRequest.CommitMode.COMMIT_STREAM
++            commit_bulkload_request.commit_mode = ingestion_pb2.CommitBulkLoadStreamRequest.CommitMode.COMMIT_STREAM
+         elif commit_mode == BulkLoadCommitMode.ABORT_STREAM:
+-            commit_bulkload_request.commit_mode = ingestion_pb2.CommitBulkloadStreamRequest.CommitMode.ABORT_STREAM
++            commit_bulkload_request.commit_mode = ingestion_pb2.CommitBulkLoadStreamRequest.CommitMode.ABORT_STREAM
+ 
+-        response = self._gate_way_call(commit_bulkload_request, ingestion_pb2.MethodEnum.COMMIT_BULK_LOAD_STREAM)
+-        response_pb = ParseDict(response, ingestion_pb2.CommitBulkloadStreamResponse())
++        response = self._gate_way_call(commit_bulkload_request, ingestion_pb2.MethodEnum.COMMIT_BULK_LOAD_STREAM_V2)
++        response_pb = ParseDict(response, ingestion_pb2.CommitBulkLoadStreamResponse())
+         bulkload_meta_data = BulkLoadMetaData(self.instance_id, response_pb.info)
+         return bulkload_meta_data
+ 
+     def get_bulkload_stream(self, schema_name: string, table_name: string, stream_id: string) -> BulkLoadMetaData:
+-        get_bulkload_stream_request = ingestion_pb2.GetBulkloadStreamRequest()
++        get_bulkload_stream_request = ingestion_pb2.GetBulkLoadStreamRequest()
+         account = ingestion_pb2.Account()
+-        account.user_name = self.username
++        user_ident = ingestion_pb2.UserIdentifier()
++        user_ident.instance_id = self.instance_id
++        user_ident.workspace = self.workspace
++        user_ident.user_name = self.username
++        account.user_ident.CopyFrom(user_ident)
++        account.token = self.token
+         get_bulkload_stream_request.account.CopyFrom(account)
+-        get_bulkload_stream_request.instance_id = self.instance_id
+         table_identifier = ingestion_pb2.TableIdentifier()
+         table_identifier.instance_id = self.instance_id
+         table_identifier.workspace = self.workspace
+         table_identifier.schema_name = schema_name
+         table_identifier.table_name = table_name
+         get_bulkload_stream_request.identifier.CopyFrom(table_identifier)
+         get_bulkload_stream_request.stream_id = stream_id
+         get_bulkload_stream_request.need_table_meta = True
+-        response = self._gate_way_call(get_bulkload_stream_request, ingestion_pb2.MethodEnum.GET_BULK_LOAD_STREAM)
+-        response_pb = ParseDict(response, ingestion_pb2.GetBulkloadStreamResponse())
+-        bulkload_meta_data = BulkLoadMetaData(response_pb.instance_id, response_pb.info)
++        response = self._gate_way_call(get_bulkload_stream_request, ingestion_pb2.MethodEnum.GET_BULK_LOAD_STREAM_V2)
++        response_pb = ParseDict(response, ingestion_pb2.GetBulkLoadStreamResponse())
++        bulkload_meta_data = BulkLoadMetaData(self.instance_id, response_pb.info)
+         return bulkload_meta_data
+ 
+     def open_bulkload_stream_writer(self, instance_id: int, workspace: string, schema_name: string, table_name: string,
+                                     stream_id: string, partition_id: int) -> BulkLoadConfig:
+-        open_bulkload_stream_requuest = ingestion_pb2.OpenBulkloadStreamWriterRequest()
++        open_bulkload_stream_requuest = ingestion_pb2.OpenBulkLoadStreamWriterRequest()
+         account = ingestion_pb2.Account()
+-        account.user_name = self.username
++        user_ident = ingestion_pb2.UserIdentifier()
++        user_ident.instance_id = instance_id
++        user_ident.workspace = workspace
++        user_ident.user_name = self.username
++        account.user_ident.CopyFrom(user_ident)
++        account.token = self.token
+         open_bulkload_stream_requuest.account.CopyFrom(account)
+-        open_bulkload_stream_requuest.instance_id = instance_id
+         table_identifier = ingestion_pb2.TableIdentifier()
+         table_identifier.instance_id = instance_id
+         table_identifier.workspace = workspace
+         table_identifier.schema_name = schema_name
+         table_identifier.table_name = table_name
+         open_bulkload_stream_requuest.identifier.CopyFrom(table_identifier)
+         open_bulkload_stream_requuest.stream_id = stream_id
+         open_bulkload_stream_requuest.partition_id = partition_id
+         response = self._gate_way_call(open_bulkload_stream_requuest,
+-                                       ingestion_pb2.MethodEnum.OPEN_BULK_LOAD_STREAM_WRITER)
+-        response_pb = ParseDict(response, ingestion_pb2.OpenBulkloadStreamWriterResponse())
++                                       ingestion_pb2.MethodEnum.OPEN_BULK_LOAD_STREAM_WRITER_V2)
++        response_pb = ParseDict(response, ingestion_pb2.OpenBulkLoadStreamWriterResponse())
+         bulkload_config = response_pb.config
+         return BulkLoadConfig(bulkload_config)
+ 
+     def finish_bulkload_stream_writer(self, instance_id: int, workspace: string, schema_name: string,
+                                       table_name: string,
+                                       stream_id: string, partition_id: int, written_files: list,
+                                       written_lengths: list) -> ingestion_pb2.ResponseStatus:
+-        finish_bulkload_stream_request = ingestion_pb2.FinishBulkloadStreamWriterRequest()
++        finish_bulkload_stream_request = ingestion_pb2.FinishBulkLoadStreamWriterRequest()
+         account = ingestion_pb2.Account()
+-        account.user_name = self.username
++        user_ident = ingestion_pb2.UserIdentifier()
++        user_ident.instance_id = instance_id
++        user_ident.workspace = workspace
++        user_ident.user_name = self.username
++        account.user_ident.CopyFrom(user_ident)
++        account.token = self.token
+         finish_bulkload_stream_request.account.CopyFrom(account)
+-        finish_bulkload_stream_request.instance_id = instance_id
+         table_identifier = ingestion_pb2.TableIdentifier()
+         table_identifier.instance_id = instance_id
+         table_identifier.workspace = workspace
+         table_identifier.schema_name = schema_name
+         table_identifier.table_name = table_name
+         finish_bulkload_stream_request.identifier.CopyFrom(table_identifier)
+         finish_bulkload_stream_request.stream_id = stream_id
+         finish_bulkload_stream_request.partition_id = partition_id
+         finish_bulkload_stream_request.written_files.extend(written_files)
+         finish_bulkload_stream_request.written_lengths.extend(written_lengths)
+         response = self._gate_way_call(finish_bulkload_stream_request,
+-                                       ingestion_pb2.MethodEnum.FINISH_BULK_LOAD_STREAM_WRITER)
+-        response_pb = ParseDict(response, ingestion_pb2.FinishBulkloadStreamWriterResponse())
++                                       ingestion_pb2.MethodEnum.FINISH_BULK_LOAD_STREAM_WRITER_V2)
++        response_pb = ParseDict(response, ingestion_pb2.FinishBulkLoadStreamWriterResponse())
+         return response_pb.status
+ 
+     def _gate_way_call(self, request, method: ingestion_pb2.MethodEnum):
+         path = '/igs/gatewayEndpoint'
+         gate_way_request = ingestion_pb2.GatewayRequest()
+         gate_way_request.methodEnumValue = method
+         gate_way_request.message = MessageToJson(request)
+ 
+         HEADERS['instanceName'] = self.instance_name
+         HEADERS['X-ClickZetta-Token'] = self.token
+         try:
+             api_response = requests.post(self.base_url + path, data=MessageToJson(gate_way_request), headers=HEADERS)
+             result = api_response.text
+             result_dict = json.loads(result)
+-            result_status = ParseDict(result_dict['status'], ingestion_pb2.ResponseStatus())
++            result_status = ParseDict(result_dict['status'], ingestion_pb2.GateWayResponseStatus)
+             if result_status.code == ingestion_pb2.Code.SUCCESS:
+-                return json.loads(result_dict['message'])
++                message_json = json.loads(result_dict['message'])
++                internal_result_status = message_json['status']
++                if internal_result_status["code"] == "SUCCESS":
++                    return json.loads(result_dict['message'])
++                else:
++                    raise requests.exceptions.RequestException(
++                        'gate_way_call return failed code.Error message:' + internal_result_status["error_message"])
+             else:
+                 raise requests.exceptions.RequestException(
+                     'gate_way_call return failed code.Error message:' + result_status.message)
+ 
+         except requests.exceptions.RequestException:
+-            logging.error('gate_way_request error:{}, reqeust body:{}'.format(result_dict['message'],
++            logging.error('gate_way_request error:{}, reqeust body:{}'.format(result_status['message'],
+                                                                               MessageToJson(gate_way_request)))
+             raise requests.exceptions.RequestException(
+-                'gate_way_request error:{}, reqeust body:{}'.format(result_dict['message'],
++                'gate_way_request error:{}, reqeust body:{}'.format(result_status['message'],
+                                                                     MessageToJson(gate_way_request)))
+ 
+     def show_table(self, token: str, query_sql: str, schema=None) -> QueryResult:
+         path = "/lh/submitJob"
+         table = Table(self.workspace, '', self.instance_name, self.vc_name)
+         vc = table.vc_name
+         job_type = JobType.SQL_JOB
+```
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/__init__.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/_helpers.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/connection.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/cursor.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/cursor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/exceptions.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/dbapi/types.py` & `clickzetta-connector-0.6.3/clickzetta/dbapi/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/enums.py` & `clickzetta-connector-0.6.3/clickzetta/enums.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/account_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/account_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/block_bloom_filter_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/block_bloom_filter_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/bucket_info_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/bucket_info_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/compression_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/compression_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/connection_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/connection_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/data_type_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/data_type_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/expression_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/expression_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/file_format_type_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/file_format_type_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/file_meta_data_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/file_meta_data_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/file_system_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/file_system_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/function_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/function_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/hash_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/hash_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/ingestion_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/operator_pb2.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,193 +1,233 @@
+ # -*- coding: utf-8 -*-
+ # Generated by the protocol buffer compiler.  DO NOT EDIT!
+-# source: ingestion.proto
++# source: operator.proto
+ """Generated protocol buffer code."""
+ from google.protobuf.internal import builder as _builder
+ from google.protobuf import descriptor as _descriptor
+ from google.protobuf import descriptor_pool as _descriptor_pool
+ from google.protobuf import symbol_database as _symbol_database
+ # @@protoc_insertion_point(imports)
+ 
+ _sym_db = _symbol_database.Default()
+ 
+ 
+-from . import file_format_type_pb2 as file__format__type__pb2
+-from . import metadata_entity_pb2 as metadata__entity__pb2
+-from . import row_operations_pb2 as row__operations__pb2
+-from . import kudu_common_pb2 as kudu__common__pb2
++from . import table_meta_pb2 as table__meta__pb2
++from . import table_common_pb2 as table__common__pb2
+ from . import data_type_pb2 as data__type__pb2
++from . import expression_pb2 as expression__pb2
++from . import file_format_type_pb2 as file__format__type__pb2
++from . import file_meta_data_pb2 as file__meta__data__pb2
++from . import input_split_pb2 as input__split__pb2
++from . import file_system_pb2 as file__system__pb2
++from . import virtual_value_info_pb2 as virtual__value__info__pb2
+ 
+ 
+-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0fingestion.proto\x12\x12\x63z.proto.ingestion\x1a\x16\x66ile_format_type.proto\x1a\x15metadata_entity.proto\x1a\x14row_operations.proto\x1a\x11kudu_common.proto\x1a\x0f\x64\x61ta_type.proto\"\xa7\x01\n\x13GetTableMetaRequest\x12\x11\n\tclient_id\x18\x01 \x01(\t\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\x12\x11\n\tworkspace\x18\x04 \x01(\t\x12\x13\n\x0binstance_id\x18\x05 \x01(\x03\x12,\n\x07\x61\x63\x63ount\x18\x06 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\"\xbb\x01\n\x14GetTableMetaResponse\x12$\n\ntable_meta\x18\x01 \x01(\x0b\x32\x10.cz.proto.Entity\x12\x34\n\ntable_type\x18\x02 \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x13\n\x0binstance_id\x18\x03 \x01(\x03\x12\x32\n\x06status\x18\x04 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"\xcd\x02\n\x1d\x43ontrollerCreateTabletRequest\x12\x13\n\x0bschema_name\x18\x01 \x01(\t\x12\x12\n\ntable_name\x18\x02 \x01(\t\x12$\n\ntable_meta\x18\x03 \x01(\x0b\x32\x10.cz.proto.Entity\x12\x13\n\x0btablet_nums\x18\x04 \x01(\x03\x12\x34\n\ntable_type\x18\x05 \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x11\n\tkey_names\x18\x06 \x03(\t\x12\x15\n\rbuckets_count\x18\x07 \x01(\x04\x12\x12\n\nsort_names\x18\x08 \x03(\t\x12\x11\n\tworkspace\x18\t \x01(\t\x12\x13\n\x0binstance_id\x18\n \x01(\x03\x12,\n\x07\x61\x63\x63ount\x18\x0b \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\"\xea\x03\n\x19WorkerCreateTabletRequest\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\x12#\n\x0btablet_meta\x18\x04 \x01(\x0b\x32\x0e.kudu.SchemaPB\x12\x11\n\tworker_id\x18\x05 \x01(\x03\x12$\n\ntable_meta\x18\x06 \x01(\x0b\x32\x10.cz.proto.Entity\x12\x12\n\ntable_path\x18\x07 \x01(\t\x12\x34\n\ntable_type\x18\x08 \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x11\n\tkey_names\x18\t \x03(\t\x12\x17\n\x0fhash_range_list\x18\n \x03(\x04\x12\x14\n\x0c\x62uckets_list\x18\x0b \x03(\r\x12\x12\n\nsort_names\x18\x0c \x03(\t\x12\x11\n\tworkspace\x18\r \x01(\t\x12\x13\n\x0binstance_id\x18\x0e \x01(\x03\x12@\n\x0fpartition_infos\x18\x0f \x03(\x0b\x32\'.cz.proto.ingestion.PartitionColumnInfo\x12)\n\x0ftable_full_meta\x18\x10 \x01(\x0b\x32\x10.cz.proto.Entity\"\xab\x01\n\x13PartitionColumnInfo\x12%\n\x1dvirtual_partition_column_name\x18\x01 \x01(\t\x12#\n\x1bvirtual_partition_column_id\x18\x02 \x01(\r\x12$\n\x1csource_partition_column_name\x18\x03 \x01(\t\x12\"\n\x1asource_partition_column_id\x18\x04 \x01(\r\"`\n\x14\x43reateTabletResponse\x12\x14\n\x0c\x63reated_time\x18\x01 \x01(\x03\x12\x32\n\x06status\x18\x02 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"\xb8\x01\n\x13\x43ommitTabletRequest\x12\x13\n\x0binstance_id\x18\x01 \x01(\x03\x12\x11\n\tworkspace\x18\x02 \x01(\t\x12\x13\n\x0bschema_name\x18\x03 \x01(\t\x12\x12\n\ntable_name\x18\x04 \x01(\t\x12\x0f\n\x07tableId\x18\x05 \x01(\x03\x12\x11\n\ttablet_id\x18\x06 \x03(\x03\x12,\n\x07\x61\x63\x63ount\x18\x07 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\"J\n\x14\x43ommitTabletResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"\xca\x01\n\x11\x44ropTabletRequest\x12\x13\n\x0binstance_id\x18\x01 \x01(\x03\x12\x11\n\tworkspace\x18\x02 \x01(\t\x12\x13\n\x0bschema_name\x18\x03 \x01(\t\x12\x12\n\ntable_name\x18\x04 \x01(\t\x12\x0f\n\x07tableId\x18\x05 \x01(\x03\x12\x11\n\ttablet_id\x18\x06 \x03(\x03\x12,\n\x07\x61\x63\x63ount\x18\x07 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x12\n\nrequest_id\x18\x08 \x01(\t\"H\n\x12\x44ropTabletResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\":\n\x14RestartTabletRequest\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\"o\n\x15RestartTabletResponse\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"6\n\x10\x44\x65lTabletRequest\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\"k\n\x11\x44\x65lTabletResponse\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"a\n\x10\x42roadcastRequest\x12\x13\n\x0binstance_id\x18\x01 \x01(\x03\x12\x10\n\x08table_id\x18\x02 \x01(\x03\x12\x11\n\ttablet_id\x18\x03 \x03(\x03\x12\x13\n\x0b\x63lear_cache\x18\x04 \x01(\x08\"G\n\x11\x42roadcastResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"_\n\x0fWorkerHBRequest\x12\x11\n\tworker_id\x18\x01 \x01(\x03\x12\x13\n\x0bworker_port\x18\x02 \x01(\x03\x12\x13\n\x0bworker_host\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t\"j\n\x10WorkerHBResponse\x12\x11\n\tworker_id\x18\x01 \x01(\x03\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"V\n\x18GetTabletsMappingRequest\x12\x11\n\tworker_id\x18\x01 \x01(\x03\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\"\x81\x02\n\x19GetTabletsMappingResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12X\n\x0etablet_mapping\x18\x02 \x03(\x0b\x32@.cz.proto.ingestion.GetTabletsMappingResponse.TabletMappingEntry\x1aV\n\x12TabletMappingEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12/\n\x05value\x18\x02 \x01(\x0b\x32 .cz.proto.ingestion.TabletIdList:\x02\x38\x01\"!\n\x0cTabletIdList\x12\x11\n\ttablet_id\x18\x01 \x03(\x03\"+\n\rHostPortTuple\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\"\\\n\x1eGetTabletPhysicsMappingRequest\x12\x11\n\ttablet_id\x18\x01 \x01(\x03\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\"j\n\x11TabletPhysicsInfo\x12\x11\n\tworker_id\x18\x01 \x01(\x03\x12\x11\n\ttablet_id\x18\x02 \x01(\x03\x12/\n\x04host\x18\x03 \x01(\x0b\x32!.cz.proto.ingestion.HostPortTuple\"\x8d\x01\n\x1fGetTabletPhysicsMappingResponse\x12\x36\n\x07tablets\x18\x01 \x03(\x0b\x32%.cz.proto.ingestion.TabletPhysicsInfo\x12\x32\n\x06status\x18\x02 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"-\n\x18GetWorkersMappingRequest\x12\x11\n\tworker_id\x18\x01 \x01(\x03\"\x85\x02\n\x19GetWorkersMappingResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12Z\n\x0fworkers_mapping\x18\x02 \x03(\x0b\x32\x41.cz.proto.ingestion.GetWorkersMappingResponse.WorkersMappingEntry\x1aX\n\x13WorkersMappingEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x30\n\x05value\x18\x02 \x01(\x0b\x32!.cz.proto.ingestion.HostPortTuple:\x02\x38\x01\"\xa7\x01\n\x17\x43heckTableExistsRequest\x12\x10\n\x08instance\x18\x01 \x01(\x03\x12\x11\n\tworkspace\x18\x02 \x01(\t\x12\x13\n\x0bschema_name\x18\x03 \x01(\t\x12\x12\n\ntable_name\x18\x04 \x01(\t\x12\x10\n\x08table_id\x18\x05 \x01(\x03\x12,\n\x07\x61\x63\x63ount\x18\x06 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\"N\n\x18\x43heckTableExistsResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"\x84\x05\n\x11\x44\x61taMutateRequest\x12\x10\n\x08\x62\x61tch_id\x18\x01 \x01(\x03\x12\x17\n\x0fwrite_timestamp\x18\x02 \x01(\x03\x12-\n\x0erow_operations\x18\x03 \x01(\x0b\x32\x15.kudu.RowOperationsPB\x12\x13\n\x0bschema_name\x18\x04 \x01(\t\x12\x12\n\ntable_name\x18\x05 \x01(\t\x12 \n\x06schema\x18\x06 \x01(\x0b\x32\x10.cz.proto.Entity\x12!\n\tschema_pb\x18\x07 \x01(\x0b\x32\x0e.kudu.SchemaPB\x12\x34\n\ntable_type\x18\x08 \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x15\n\rbuckets_count\x18\t \x01(\x04\x12\x13\n\x0bis_dispatch\x18\n \x01(\x08\x12\x11\n\ttablet_id\x18\x0b \x01(\x03\x12\x11\n\tkey_names\x18\x0c \x03(\t\x12\x12\n\nsort_names\x18\r \x03(\t\x12\x31\n\x12key_row_operations\x18\x0e \x01(\x0b\x32\x15.kudu.RowOperationsPB\x12%\n\rkey_schema_pb\x18\x0f \x01(\x0b\x32\x0e.kudu.SchemaPB\x12\x12\n\nbucket_ids\x18\x10 \x03(\r\x12\x0f\n\x07indexes\x18\x11 \x03(\x05\x12\x13\n\x0binstance_id\x18\x12 \x01(\x03\x12\x11\n\tworkspace\x18\x13 \x01(\t\x12,\n\x07\x61\x63\x63ount\x18\x14 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\r\n\x05token\x18\x15 \x01(\t\x12\x12\n\nrequest_id\x18\x16 \x01(\t\x12\x13\n\x0b\x62\x61tch_count\x18\x17 \x01(\x05\"\x96\x03\n\x19\x44\x61taMutateRequestInternal\x12\x10\n\x08\x62\x61tch_id\x18\x01 \x01(\x03\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\x12 \n\x06schema\x18\x04 \x01(\x0b\x32\x10.cz.proto.Entity\x12!\n\tschema_pb\x18\x05 \x01(\x0b\x32\x0e.kudu.SchemaPB\x12\x34\n\ntable_type\x18\x06 \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x13\n\x0bis_dispatch\x18\x07 \x01(\x08\x12\x12\n\ntablet_ids\x18\x08 \x03(\x03\x12\x13\n\x0binstance_id\x18\t \x01(\x03\x12\x11\n\tworkspace\x18\n \x01(\t\x12\x12\n\nrequest_id\x18\x0b \x01(\t\x12\x38\n\x19\x64ispatched_row_operations\x18\x0c \x03(\x0b\x32\x15.kudu.RowOperationsPB\x12\x0f\n\x07indexes\x18\r \x03(\x05\x12\x13\n\x0b\x62\x61tch_count\x18\x0e \x01(\x05\"\xb9\x01\n\x12\x44\x61taMutateResponse\x12\x10\n\x08\x62\x61tch_id\x18\x01 \x01(\x03\x12\x10\n\x08rows_num\x18\x02 \x01(\x03\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12\x12\n\nrequest_id\x18\x04 \x01(\t\x12\x37\n\nrow_status\x18\x05 \x03(\x0b\x32#.cz.proto.ingestion.MutateRowStatus\"m\n\x12GetWorkerIdRequest\x12\x13\n\x0bworker_host\x18\x01 \x01(\t\x12\x18\n\x10\x63reate_timestamp\x18\x02 \x01(\x03\x12\x13\n\x0bworker_port\x18\x03 \x01(\x03\x12\x13\n\x0bworker_name\x18\x04 \x01(\t\"\\\n\x13GetWorkerIdResponse\x12\x11\n\tworker_id\x18\x01 \x01(\x03\x12\x32\n\x06status\x18\x02 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"]\n\x0fMutateRowStatus\x12&\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x18.cz.proto.ingestion.Code\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x11\n\trow_index\x18\x03 \x01(\x05\"]\n\x0eResponseStatus\x12&\n\x04\x63ode\x18\x01 \x01(\x0e\x32\x18.cz.proto.ingestion.Code\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x12\n\nrequest_id\x18\x03 \x01(\t\"-\n\x07\x41\x63\x63ount\x12\x0f\n\x07user_id\x18\x01 \x01(\x03\x12\x11\n\tuser_name\x18\x02 \x01(\t\"\xb3\x01\n\x17GetMutateWorkersRequest\x12\x10\n\x08table_id\x18\x01 \x01(\x03\x12\x13\n\x0bschema_name\x18\x02 \x01(\t\x12\x12\n\ntable_name\x18\x03 \x01(\t\x12\x35\n\x0c\x63onnect_mode\x18\x04 \x01(\x0e\x32\x1f.cz.proto.ingestion.ConnectMode\x12\x11\n\ttablet_id\x18\x05 \x03(\x03\x12\x13\n\x0binstance_id\x18\x06 \x01(\x03\"\x93\x01\n\x18GetMutateWorkersResponse\x12\x30\n\x05tuple\x18\x01 \x03(\x0b\x32!.cz.proto.ingestion.HostPortTuple\x12\x11\n\ttablet_id\x18\x02 \x03(\x03\x12\x32\n\x06status\x18\x03 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"w\n\x12\x46lushTabletRequest\x12\x13\n\x0bschema_name\x18\x01 \x01(\t\x12\x12\n\ntable_name\x18\x02 \x01(\t\x12\x11\n\ttablet_id\x18\x03 \x01(\x03\x12\x10\n\x08table_id\x18\x04 \x01(\x03\x12\x13\n\x0binstance_id\x18\x05 \x01(\x03\"I\n\x13\x46lushTabletResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"^\n\x0eGatewayRequest\x12\x17\n\x0fmethodEnumValue\x18\x01 \x01(\x05\x12\x0f\n\x07message\x18\x02 \x01(\t\x12\x12\n\ninstanceId\x18\x03 \x01(\x03\x12\x0e\n\x06userId\x18\x04 \x01(\x03\"V\n\x0fGatewayResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12\x0f\n\x07message\x18\x02 \x01(\t\"+\n\tTimestamp\x12\x0f\n\x07seconds\x18\x01 \x01(\x03\x12\r\n\x05nanos\x18\x02 \x01(\x05\"b\n\x0fTableIdentifier\x12\x13\n\x0binstance_id\x18\x01 \x01(\x03\x12\x11\n\tworkspace\x18\x02 \x01(\t\x12\x13\n\x0bschema_name\x18\x03 \x01(\t\x12\x12\n\ntable_name\x18\x04 \x01(\t\"\x93\x03\n\x12\x42ulkloadStreamInfo\x12\x11\n\tstream_id\x18\x01 \x01(\t\x12=\n\x0cstream_state\x18\x02 \x01(\x0e\x32\'.cz.proto.ingestion.BulkloadStreamState\x12\x12\n\nsql_job_id\x18\x03 \x01(\t\x12\x37\n\nidentifier\x18\x04 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12>\n\toperation\x18\x05 \x01(\x0e\x32+.cz.proto.ingestion.BulkloadStreamOperation\x12\x16\n\x0epartition_spec\x18\x06 \x01(\t\x12\x13\n\x0brecord_keys\x18\x07 \x03(\t\x12$\n\ntable_meta\x18\x08 \x01(\x0b\x32\x10.cz.proto.Entity\x12\x34\n\ntable_type\x18\t \x01(\x0e\x32 .cz.proto.ingestion.IGSTableType\x12\x15\n\rsql_error_msg\x18\n \x01(\t\"\xc9\x01\n\x1a\x42ulkloadStreamWriterConfig\x12\x39\n\x0cstaging_path\x18\x01 \x01(\x0b\x32#.cz.proto.ingestion.StagingPathInfo\x12-\n\x0b\x66ile_format\x18\x02 \x01(\x0e\x32\x18.cz.proto.FileFormatType\x12\x1d\n\x15max_num_rows_per_file\x18\x03 \x01(\x03\x12\"\n\x1amax_size_in_bytes_per_file\x18\x04 \x01(\x03\"\x86\x02\n\x1b\x43reateBulkloadStreamRequest\x12,\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x37\n\nidentifier\x18\x03 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12>\n\toperation\x18\x04 \x01(\x0e\x32+.cz.proto.ingestion.BulkloadStreamOperation\x12\x16\n\x0epartition_spec\x18\x05 \x01(\t\x12\x13\n\x0brecord_keys\x18\x06 \x03(\t\"\x9d\x01\n\x1c\x43reateBulkloadStreamResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x34\n\x04info\x18\x03 \x01(\x0b\x32&.cz.proto.ingestion.BulkloadStreamInfo\"\xc2\x01\n\x18GetBulkloadStreamRequest\x12,\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x37\n\nidentifier\x18\x03 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12\x11\n\tstream_id\x18\x04 \x01(\t\x12\x17\n\x0fneed_table_meta\x18\x05 \x01(\x08\"\x9a\x01\n\x19GetBulkloadStreamResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x34\n\x04info\x18\x03 \x01(\x0b\x32&.cz.proto.ingestion.BulkloadStreamInfo\"\x80\x03\n\x1b\x43ommitBulkloadStreamRequest\x12,\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x37\n\nidentifier\x18\x03 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12\x11\n\tstream_id\x18\x04 \x01(\t\x12\x19\n\x11\x65xecute_workspace\x18\x05 \x01(\t\x12\x17\n\x0f\x65xecute_vc_name\x18\x06 \x01(\t\x12O\n\x0b\x63ommit_mode\x18\x07 \x01(\x0e\x32:.cz.proto.ingestion.CommitBulkloadStreamRequest.CommitMode\x12\x1a\n\x12spec_partition_ids\x18\x08 \x03(\r\"1\n\nCommitMode\x12\x11\n\rCOMMIT_STREAM\x10\x00\x12\x10\n\x0c\x41\x42ORT_STREAM\x10\x01\"\x88\x01\n\x1c\x43ommitBulkloadStreamResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12\x34\n\x04info\x18\x03 \x01(\x0b\x32&.cz.proto.ingestion.BulkloadStreamInfo\"\xc6\x01\n\x1fOpenBulkloadStreamWriterRequest\x12,\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x37\n\nidentifier\x18\x03 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12\x11\n\tstream_id\x18\x04 \x01(\t\x12\x14\n\x0cpartition_id\x18\x05 \x01(\r\"\x96\x01\n OpenBulkloadStreamWriterResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\x12>\n\x06\x63onfig\x18\x03 \x01(\x0b\x32..cz.proto.ingestion.BulkloadStreamWriterConfig\"\xf8\x01\n!FinishBulkloadStreamWriterRequest\x12,\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x1b.cz.proto.ingestion.Account\x12\x13\n\x0binstance_id\x18\x02 \x01(\x03\x12\x37\n\nidentifier\x18\x03 \x01(\x0b\x32#.cz.proto.ingestion.TableIdentifier\x12\x11\n\tstream_id\x18\x04 \x01(\t\x12\x14\n\x0cpartition_id\x18\x05 \x01(\r\x12\x15\n\rwritten_files\x18\x06 \x03(\t\x12\x17\n\x0fwritten_lengths\x18\x07 \x03(\x04\"X\n\"FinishBulkloadStreamWriterResponse\x12\x32\n\x06status\x18\x01 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus\"\x94\x01\n\x12OSSStagingPathInfo\x12\x0c\n\x04path\x18\x01 \x01(\t\x12\x11\n\tsts_ak_id\x18\x03 \x01(\t\x12\x15\n\rsts_ak_secret\x18\x04 \x01(\t\x12\x11\n\tsts_token\x18\x05 \x01(\t\x12\x14\n\x0coss_endpoint\x18\x06 \x01(\t\x12\x1d\n\x15oss_internal_endpoint\x18\x07 \x01(\t\"Z\n\x0fStagingPathInfo\x12:\n\x08oss_path\x18\x01 \x01(\x0b\x32&.cz.proto.ingestion.OSSStagingPathInfoH\x00\x42\x0b\n\tpath_info\"\xa2\x01\n\x14StreamReadIdentifier\x12\x13\n\x0binstance_id\x18\x01 \x01(\x03\x12\x11\n\tworkspace\x18\x02 \x01(\t\x12\x13\n\x0bschema_name\x18\x03 \x01(\t\x12\x12\n\ntable_name\x18\x04 \x01(\t\x12\x10\n\x08table_id\x18\x05 \x01(\x03\x12\x11\n\ttablet_id\x18\x06 \x01(\x03\x12\x14\n\x0c\x63omponent_id\x18\x07 \x01(\x03\"\xde\x01\n\x11StreamReadOptions\x12<\n\nidentifier\x18\x01 \x01(\x0b\x32(.cz.proto.ingestion.StreamReadIdentifier\x12\'\n\x0bread_schema\x18\x02 \x01(\x0b\x32\x12.cz.proto.DataType\x12\x11\n\tbucket_id\x18\x03 \x01(\r\x12\x37\n\x10\x63utoff_timestamp\x18\x04 \x01(\x0b\x32\x1d.cz.proto.ingestion.Timestamp\x12\x16\n\x0erow_batch_size\x18\x05 \x01(\x04\"Z\n\x11StreamReadRequest\x12\x36\n\x07options\x18\x01 \x01(\x0b\x32%.cz.proto.ingestion.StreamReadOptions\x12\r\n\x05\x63lose\x18\x02 \x01(\x08\"\xaa\x01\n\x16StreamReadDeltaOptions\x12<\n\nidentifier\x18\x01 \x01(\x0b\x32(.cz.proto.ingestion.StreamReadIdentifier\x12\x37\n\x10\x63utoff_timestamp\x18\x04 \x01(\x0b\x32\x1d.cz.proto.ingestion.Timestamp\x12\x19\n\x11record_batch_size\x18\x05 \x01(\x04\"d\n\x16StreamReadDeltaRequest\x12;\n\x07options\x18\x01 \x01(\x0b\x32*.cz.proto.ingestion.StreamReadDeltaOptions\x12\r\n\x05\x63lose\x18\x02 \x01(\x08\"C\n\x12StreamReadOpenInfo\x12\x19\n\x11\x66\x61llback_oss_path\x18\x01 \x01(\t\x12\x12\n\nrequest_id\x18\x02 \x01(\t\"\xe7\x01\n\x12StreamReadResponse\x12\x39\n\topen_info\x18\x01 \x01(\x0b\x32&.cz.proto.ingestion.StreamReadOpenInfo\x12\x18\n\x10payload_metadata\x18\x02 \x01(\x0c\x12\x1b\n\x13payload_body_buffer\x18\x03 \x01(\x0c\x12\x14\n\x0c\x65nd_of_batch\x18\x04 \x01(\x08\x12\x15\n\rend_of_stream\x18\x05 \x01(\x08\x12\x32\n\x06status\x18\x06 \x01(\x0b\x32\".cz.proto.ingestion.ResponseStatus*>\n\x0cIGSTableType\x12\n\n\x06NORMAL\x10\x00\x12\x0b\n\x07\x43LUSTER\x10\x01\x12\x08\n\x04\x41\x43ID\x10\x02\x12\x0b\n\x07UNKNOWN\x10\x03*\x9f\x01\n\x04\x43ode\x12\x0b\n\x07SUCCESS\x10\x00\x12\n\n\x06\x46\x41ILED\x10\x01\x12\x17\n\x13IGS_WORKER_REGISTED\x10\x02\x12\r\n\tTHROTTLED\x10\x03\x12\r\n\tNOT_FOUND\x10\x04\x12\x13\n\x0f\x41LREADY_PRESENT\x10\x05\x12\x0f\n\x0bTABLE_EXIST\x10\x06\x12\x11\n\rTABLE_DROPPED\x10\x07\x12\x0e\n\nCORRUPTION\x10\x08*<\n\x0b\x43onnectMode\x12\n\n\x06\x44IRECT\x10\x00\x12\x0b\n\x07GATEWAY\x10\x01\x12\x14\n\x10GATEWAY_INTERNAL\x10\x02*\x9d\x03\n\nMethodEnum\x12\x14\n\x10GATEWAY_RPC_CALL\x10\x00\x12\x12\n\x0eGET_TABLE_META\x10\x01\x12\x11\n\rCREATE_TABLET\x10\x02\x12\x15\n\x11GET_MUTATE_WORKER\x10\x03\x12\x11\n\rCOMMIT_TABLET\x10\x04\x12\x0f\n\x0b\x44ROP_TABLET\x10\x05\x12\x16\n\x12\x43HECK_TABLE_EXISTS\x10\x06\x12\x19\n\x15\x43REATE_PENDING_STREAM\x10\x07\x12\x19\n\x15\x43OMMIT_PENDING_STREAM\x10\x08\x12\x16\n\x12GET_PENDING_STREAM\x10\t\x12\x17\n\x13JOIN_PENDING_STREAM\x10\n\x12\x1b\n\x17\x43REATE_BULK_LOAD_STREAM\x10\x0b\x12\x18\n\x14GET_BULK_LOAD_STREAM\x10\x0c\x12\x1b\n\x17\x43OMMIT_BULK_LOAD_STREAM\x10\r\x12 \n\x1cOPEN_BULK_LOAD_STREAM_WRITER\x10\x0e\x12\"\n\x1e\x46INISH_BULK_LOAD_STREAM_WRITER\x10\x0f*\x8a\x01\n\x13\x42ulkloadStreamState\x12\x0e\n\nBS_CREATED\x10\x00\x12\r\n\tBS_SEALED\x10\x01\x12\x17\n\x13\x42S_COMMIT_SUBMITTED\x10\x02\x12\x15\n\x11\x42S_COMMIT_SUCCESS\x10\x03\x12\x14\n\x10\x42S_COMMIT_FAILED\x10\x04\x12\x0e\n\nBS_ABORTED\x10\x05*I\n\x17\x42ulkloadStreamOperation\x12\r\n\tBS_APPEND\x10\x00\x12\x10\n\x0c\x42S_OVERWRITE\x10\x01\x12\r\n\tBS_UPSERT\x10\x02*T\n\x12StreamReadDataType\x12\x0e\n\nSCHEMAMETA\x10\x00\x12\x0e\n\nSCHEMABODY\x10\x01\x12\x0e\n\nRECORDMETA\x10\x02\x12\x0e\n\nRECORDBODY\x10\x03\x32\x95\x03\n\x10IGSWorkerService\x12\x61\n\x0c\x43ommitTablet\x12\'.cz.proto.ingestion.CommitTabletRequest\x1a(.cz.proto.ingestion.CommitTabletResponse\x12[\n\x06Mutate\x12%.cz.proto.ingestion.DataMutateRequest\x1a&.cz.proto.ingestion.DataMutateResponse(\x01\x30\x01\x12X\n\tBroadcast\x12$.cz.proto.ingestion.BroadcastRequest\x1a%.cz.proto.ingestion.BroadcastResponse\x12g\n\x0eMutateInternal\x12-.cz.proto.ingestion.DataMutateRequestInternal\x1a&.cz.proto.ingestion.DataMutateResponse2z\n\x18IGSWorkerInternalService\x12^\n\x0b\x46lushTablet\x12&.cz.proto.ingestion.FlushTabletRequest\x1a\'.cz.proto.ingestion.FlushTabletResponse2\xdd\n\n\x14IGSControllerService\x12Y\n\x0eGatewayRpcCall\x12\".cz.proto.ingestion.GatewayRequest\x1a#.cz.proto.ingestion.GatewayResponse\x12\x61\n\x0cGetTableMeta\x12\'.cz.proto.ingestion.GetTableMetaRequest\x1a(.cz.proto.ingestion.GetTableMetaResponse\x12k\n\x0c\x43reateTablet\x12\x31.cz.proto.ingestion.ControllerCreateTabletRequest\x1a(.cz.proto.ingestion.CreateTabletResponse\x12\x61\n\x0c\x43ommitTablet\x12\'.cz.proto.ingestion.CommitTabletRequest\x1a(.cz.proto.ingestion.CommitTabletResponse\x12[\n\nDropTablet\x12%.cz.proto.ingestion.DropTabletRequest\x1a&.cz.proto.ingestion.DropTabletResponse\x12m\n\x10GetMutateWorkers\x12+.cz.proto.ingestion.GetMutateWorkersRequest\x1a,.cz.proto.ingestion.GetMutateWorkersResponse\x12m\n\x10\x43heckTableExists\x12+.cz.proto.ingestion.CheckTableExistsRequest\x1a,.cz.proto.ingestion.CheckTableExistsResponse\x12y\n\x14\x43reateBulkloadStream\x12/.cz.proto.ingestion.CreateBulkloadStreamRequest\x1a\x30.cz.proto.ingestion.CreateBulkloadStreamResponse\x12p\n\x11GetBulkloadStream\x12,.cz.proto.ingestion.GetBulkloadStreamRequest\x1a-.cz.proto.ingestion.GetBulkloadStreamResponse\x12y\n\x14\x43ommitBulkloadStream\x12/.cz.proto.ingestion.CommitBulkloadStreamRequest\x1a\x30.cz.proto.ingestion.CommitBulkloadStreamResponse\x12\x85\x01\n\x18OpenBulkloadStreamWriter\x12\x33.cz.proto.ingestion.OpenBulkloadStreamWriterRequest\x1a\x34.cz.proto.ingestion.OpenBulkloadStreamWriterResponse\x12\x8b\x01\n\x1a\x46inishBulkloadStreamWriter\x12\x35.cz.proto.ingestion.FinishBulkloadStreamWriterRequest\x1a\x36.cz.proto.ingestion.FinishBulkloadStreamWriterResponse2\xd6\x01\n\x14IGSWorkerDataService\x12Y\n\x04Read\x12%.cz.proto.ingestion.StreamReadRequest\x1a&.cz.proto.ingestion.StreamReadResponse(\x01\x30\x01\x12\x63\n\tReadDelta\x12*.cz.proto.ingestion.StreamReadDeltaRequest\x1a&.cz.proto.ingestion.StreamReadResponse(\x01\x30\x01\x42\x14\n\x12\x63z.proto.ingestionb\x06proto3')
++DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eoperator.proto\x12\x08\x63z.proto\x1a\x10table_meta.proto\x1a\x12table_common.proto\x1a\x0f\x64\x61ta_type.proto\x1a\x10\x65xpression.proto\x1a\x16\x66ile_format_type.proto\x1a\x14\x66ile_meta_data.proto\x1a\x11input_split.proto\x1a\x11\x66ile_system.proto\x1a\x18virtual_value_info.proto\"2\n\rColumnMapping\x12\x10\n\x08outputId\x18\x01 \x01(\x04\x12\x0f\n\x07inputId\x18\x02 \x01(\x04\"\x8c\x0b\n\x08Operator\x12\n\n\x02id\x18\x01 \x01(\t\x12\x10\n\x08inputIds\x18\x02 \x03(\t\x12\"\n\x06schema\x18\x03 \x01(\x0b\x32\x12.cz.proto.DataType\x12/\n\x0e\x63olumnMappings\x18\x04 \x03(\x0b\x32\x17.cz.proto.ColumnMapping\x12\x11\n\tsignature\x18\x05 \x01(\x04\x12)\n\ntable_scan\x18\n \x01(\x0b\x32\x13.cz.proto.TableScanH\x00\x12)\n\ntable_sink\x18\x0b \x01(\x0b\x32\x13.cz.proto.TableSinkH\x00\x12\x1e\n\x04\x63\x61lc\x18\x0c \x01(\x0b\x32\x0e.cz.proto.CalcH\x00\x12)\n\nmerge_sort\x18\r \x01(\x0b\x32\x13.cz.proto.MergeSortH\x00\x12/\n\rshuffle_write\x18\x0e \x01(\x0b\x32\x16.cz.proto.ShuffleWriteH\x00\x12-\n\x0cshuffle_read\x18\x0f \x01(\x0b\x32\x15.cz.proto.ShuffleReadH\x00\x12\"\n\x06values\x18\x10 \x01(\x0b\x32\x10.cz.proto.ValuesH\x00\x12+\n\x08hash_agg\x18\x11 \x01(\x0b\x32\x17.cz.proto.HashAggregateH\x00\x12/\n\nsorted_agg\x18\x12 \x01(\x0b\x32\x19.cz.proto.SortedAggregateH\x00\x12-\n\nmerge_join\x18\x13 \x01(\x0b\x32\x17.cz.proto.SortMergeJoinH\x00\x12\'\n\thash_join\x18\x14 \x01(\x0b\x32\x12.cz.proto.HashJoinH\x00\x12)\n\nlocal_sort\x18\x15 \x01(\x0b\x32\x13.cz.proto.LocalSortH\x00\x12\'\n\tunion_all\x18\x16 \x01(\x0b\x32\x12.cz.proto.UnionAllH\x00\x12\"\n\x06\x62uffer\x18\x17 \x01(\x0b\x32\x10.cz.proto.BufferH\x00\x12\"\n\x06window\x18\x18 \x01(\x0b\x32\x10.cz.proto.WindowH\x00\x12\"\n\x06\x65xpand\x18\x19 \x01(\x0b\x32\x10.cz.proto.ExpandH\x00\x12-\n\x0clateral_view\x18\x1a \x01(\x0b\x32\x15.cz.proto.LateralViewH\x00\x12&\n\x08grouping\x18\x1b \x01(\x0b\x32\x12.cz.proto.GroupingH\x00\x12%\n\x04join\x18\x32 \x01(\x0b\x32\x15.cz.proto.LogicalJoinH\x00\x12/\n\taggregate\x18\x33 \x01(\x0b\x32\x1a.cz.proto.LogicalAggregateH\x00\x12-\n\x0clogical_calc\x18\x34 \x01(\x0b\x32\x15.cz.proto.LogicalCalcH\x00\x12-\n\x0clogical_sort\x18\x35 \x01(\x0b\x32\x15.cz.proto.LogicalSortH\x00\x12-\n\x0cset_operator\x18\x36 \x01(\x0b\x32\x15.cz.proto.SetOperatorH\x00\x12-\n\tagg_phase\x18\x37 \x01(\x0b\x32\x18.cz.proto.AggregatePhaseH\x00\x12 \n\x05spool\x18\x38 \x01(\x0b\x32\x0f.cz.proto.SpoolH\x00\x12>\n\x15partial_window_filter\x18\x39 \x01(\x0b\x32\x1d.cz.proto.PartialWindowFilterH\x00\x12\'\n\ttree_join\x18: \x01(\x0b\x32\x12.cz.proto.TreeJoinH\x00\x12\x30\n\x0etree_join_leaf\x18; \x01(\x0b\x32\x16.cz.proto.TreeJoinLeafH\x00\x12\x31\n\x0elocal_exchange\x18< \x01(\x0b\x32\x17.cz.proto.LocalExchangeH\x00\x42\x04\n\x02op\"\xd2\x02\n\rAggregateCall\x12,\n\x08\x66unction\x18\x01 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x10\n\x08\x64istinct\x18\x02 \x01(\x08\x12!\n\x05stage\x18\x03 \x01(\x0e\x32\x12.cz.proto.AggStage\x12%\n\x06orders\x18\x04 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12#\n\x06\x66ilter\x18\x05 \x01(\x0b\x32\x13.cz.proto.Reference\x12\x15\n\routput_fields\x18\x06 \x03(\x04\x12(\n\x0cinitial_Type\x18\n \x01(\x0b\x32\x12.cz.proto.DataType\x12(\n\x0cpartial_Type\x18\x0b \x01(\x0b\x32\x12.cz.proto.DataType\x12\'\n\x0boutput_Type\x18\x0c \x01(\x0b\x32\x12.cz.proto.DataType\"g\n\x10LogicalAggregate\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.cz.proto.Reference\x12\x30\n\x0f\x61ggregate_calls\x18\x02 \x03(\x0b\x32\x17.cz.proto.AggregateCall\"a\n\rHashAggregate\x12-\n\taggregate\x18\x01 \x01(\x0b\x32\x1a.cz.proto.LogicalAggregate\x12!\n\x05stage\x18\x02 \x01(\x0e\x32\x12.cz.proto.AggStage\"\x8a\x01\n\x0fSortedAggregate\x12-\n\taggregate\x18\x01 \x01(\x0b\x32\x1a.cz.proto.LogicalAggregate\x12!\n\x05stage\x18\x02 \x01(\x0e\x32\x12.cz.proto.AggStage\x12%\n\x06orders\x18\x03 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\"b\n\x0e\x41ggregatePhase\x12-\n\taggregate\x18\x01 \x01(\x0b\x32\x1a.cz.proto.LogicalAggregate\x12!\n\x05stage\x18\x02 \x01(\x0e\x32\x12.cz.proto.AggStage\"\xaa\x01\n\x11\x44ynamicFilterInfo\x12)\n\x04type\x18\x01 \x01(\x0e\x32\x1b.cz.proto.DynamicFilterType\x12\x10\n\x08\x63onsumer\x18\x02 \x01(\x08\x12\x13\n\x0bselectivity\x18\x03 \x01(\x01\x12\r\n\x05probe\x18\x04 \x01(\r\x12\x18\n\x10partition_filter\x18\x05 \x01(\x08\x12\x1a\n\x12table_scan_parents\x18\x06 \x01(\r\")\n\x0cJoinHintInfo\x12\x19\n\x11hintBroadcastSide\x18\x01 \x01(\x05\"6\n\x08TreeJoin\x12*\n\x0eroot_operators\x18\x01 \x03(\x0b\x32\x12.cz.proto.Operator\";\n\x0cTreeJoinLeaf\x12\x13\n\x0binput_index\x18\x01 \x01(\x05\x12\x16\n\x0ehint_broadcast\x18\x02 \x01(\x08\"\xd7\x01\n\x0bLogicalJoin\x12 \n\x04type\x18\x01 \x01(\x0e\x32\x12.cz.proto.JoinType\x12-\n\tcondition\x18\x02 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x18\n\x10input_references\x18\x03 \x03(\x04\x12\x33\n\x0e\x64ynamic_filter\x18\x04 \x01(\x0b\x32\x1b.cz.proto.DynamicFilterInfo\x12(\n\x08hintInfo\x18\x05 \x01(\x0b\x32\x16.cz.proto.JoinHintInfo\"\x8a\x01\n\rSortMergeJoin\x12#\n\x04join\x18\x01 \x01(\x0b\x32\x15.cz.proto.LogicalJoin\x12)\n\nlhs_orders\x18\x02 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12)\n\nrhs_orders\x18\x03 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\"]\n\x08HashJoin\x12#\n\x04join\x18\x01 \x01(\x0b\x32\x15.cz.proto.LogicalJoin\x12\x19\n\x11probe_operator_id\x18\x02 \x01(\t\x12\x11\n\tbroadcast\x18\x03 \x01(\x08\"/\n\x06Timing\x12\x11\n\tcpu_nanos\x18\x01 \x01(\x04\x12\x12\n\nwall_nanos\x18\x02 \x01(\x04\"\xe3\n\n\rOperatorStats\x12\x13\n\x0boperator_id\x18\x01 \x01(\t\x12\x11\n\trow_count\x18\x02 \x01(\x04\x12 \n\x06timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x34\n\x10table_scan_stats\x18\x04 \x01(\x0b\x32\x18.cz.proto.TableScanStatsH\x00\x12\x34\n\x10table_sink_stats\x18\x05 \x01(\x0b\x32\x18.cz.proto.TableSinkStatsH\x00\x12)\n\ncalc_stats\x18\x06 \x01(\x0b\x32\x13.cz.proto.CalcStatsH\x00\x12\x32\n\x0fhash_join_stats\x18\x07 \x01(\x0b\x32\x17.cz.proto.HashJoinStatsH\x00\x12\x34\n\x10merge_join_stats\x18\x08 \x01(\x0b\x32\x18.cz.proto.MergeJoinStatsH\x00\x12<\n\x14hash_aggregate_stats\x18\t \x01(\x0b\x32\x1c.cz.proto.HashAggregateStatsH\x00\x12>\n\x15merge_aggregate_stats\x18\n \x01(\x0b\x32\x1d.cz.proto.MergeAggregateStatsH\x00\x12\x34\n\x10local_sort_stats\x18\x0b \x01(\x0b\x32\x18.cz.proto.LocalSortStatsH\x00\x12\x34\n\x10merge_sort_stats\x18\x0c \x01(\x0b\x32\x18.cz.proto.MergeSortStatsH\x00\x12-\n\x0cvalues_stats\x18\r \x01(\x0b\x32\x15.cz.proto.ValuesStatsH\x00\x12:\n\x13\x65xchange_sink_stats\x18\x0e \x01(\x0b\x32\x1b.cz.proto.ExchangeSinkStatsH\x00\x12>\n\x15\x65xchange_source_stats\x18\x0f \x01(\x0b\x32\x1d.cz.proto.ExchangeSourceStatsH\x00\x12\x32\n\x0funion_all_stats\x18\x10 \x01(\x0b\x32\x17.cz.proto.UnionAllStatsH\x00\x12-\n\x0c\x62uffer_stats\x18\x11 \x01(\x0b\x32\x15.cz.proto.BufferStatsH\x00\x12-\n\x0cwindow_stats\x18\x12 \x01(\x0b\x32\x15.cz.proto.WindowStatsH\x00\x12-\n\x0c\x65xpand_stats\x18\x13 \x01(\x0b\x32\x15.cz.proto.ExpandStatsH\x00\x12\x38\n\x12lateral_view_stats\x18\x14 \x01(\x0b\x32\x1a.cz.proto.LateralViewStatsH\x00\x12<\n\x14partial_window_stats\x18\x15 \x01(\x0b\x32\x1c.cz.proto.PartialWindowStatsH\x00\x12%\n\x0binit_timing\x18\x64 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x13\n\x0b\x62\x61tch_count\x18\x65 \x01(\x04\x12\x13\n\x0bpeak_memory\x18\x66 \x01(\x04\x12\x18\n\x10start_time_nanos\x18g \x01(\x04\x12\x16\n\x0e\x65nd_time_nanos\x18h \x01(\x04\x12\x17\n\x0f\x62\x61tch_signature\x18i \x01(\x04\x12\x14\n\x0c\x65xec_node_id\x18j \x01(\t\x12\x13\n\x0bpipeline_id\x18k \x01(\x04\x12\x17\n\x0f\x64river_sequence\x18l \x01(\x04\x12\x1a\n\x12\x62lock_timing_nanos\x18m \x01(\x04\x12\x1b\n\x12\x65xtra_stats_binary\x18\xfe\x01 \x01(\x0c\x12\x14\n\x0b\x65xtra_stats\x18\xff\x01 \x01(\tB\n\n\x08op_stats\"U\n\x0bOrderByDesc\x12&\n\treference\x18\x01 \x01(\x0b\x32\x13.cz.proto.Reference\x12\x1e\n\x05order\x18\x02 \x01(\x0e\x32\x0f.cz.proto.Order\"L\n\tMergeSort\x12%\n\x06orders\x18\x01 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\x18\n\x10input_references\x18\x02 \x03(\x04\"$\n\x08UnionAll\x12\x18\n\x10input_references\x18\x01 \x03(\x04\"\x18\n\x06\x42uffer\x12\x0e\n\x06shared\x18\x01 \x01(\x08\"v\n\x13PartialWindowFilter\x12,\n\x08\x66unction\x18\x01 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\"\n\x04spec\x18\x02 \x01(\x0b\x32\x14.cz.proto.WindowSpec\x12\r\n\x05limit\x18\x03 \x01(\x04\"I\n\x06Window\x12%\n\x06groups\x18\x01 \x03(\x0b\x32\x15.cz.proto.WindowGroup\x12\x18\n\x10input_references\x18\x02 \x03(\x04\"Z\n\x0bWindowGroup\x12\'\n\tfunctions\x18\x01 \x03(\x0b\x32\x14.cz.proto.WindowCall\x12\"\n\x04spec\x18\x02 \x01(\x0b\x32\x14.cz.proto.WindowSpec\"v\n\nWindowCall\x12,\n\x08\x66unction\x18\x01 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x10\n\x08\x64istinct\x18\x02 \x01(\x08\x12(\n\x0cpartial_type\x18\x03 \x01(\x0b\x32\x12.cz.proto.DataType\"\x9e\x02\n\nWindowSpec\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.cz.proto.Reference\x12%\n\x06orders\x18\x02 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\x38\n\rboundary_type\x18\x03 \x01(\x0e\x32!.cz.proto.WindowSpec.BoundaryType\x12-\n\x0blower_bound\x18\x04 \x01(\x0b\x32\x18.cz.proto.WindowBoundary\x12-\n\x0bupper_bound\x18\x05 \x01(\x0b\x32\x18.cz.proto.WindowBoundary\".\n\x0c\x42oundaryType\x12\x08\n\x04ROWS\x10\x00\x12\t\n\x05RANGE\x10\x01\x12\t\n\x05GROUP\x10\x02\"Z\n\x0eWindowBoundary\x12\x16\n\tpreceding\x18\x01 \x01(\x08H\x00\x88\x01\x01\x12\"\n\x06offset\x18\x02 \x01(\x0b\x32\x12.cz.proto.ConstantB\x0c\n\n_preceding\"W\n\x0bLateralView\x12.\n\tfunctions\x18\x01 \x03(\x0b\x32\x1b.cz.proto.TableFunctionCall\x12\x18\n\x10input_references\x18\x02 \x03(\x04\"e\n\x11TableFunctionCall\x12,\n\x08\x66unction\x18\x01 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\r\n\x05outer\x18\x02 \x01(\x08\x12\x13\n\x0bused_fields\x18\x03 \x03(\x04\"\x19\n\x05Spool\x12\x10\n\x08spool_id\x18\x01 \x01(\x04\"\xfb\x01\n\x04\x43\x61lc\x12/\n\x0b\x65xpressions\x18\x01 \x03(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x13\n\tno_filter\x18\x02 \x01(\x08H\x00\x12\x10\n\x06\x66ilter\x18\x03 \x01(\x04H\x00\x12\x10\n\x08projects\x18\x04 \x03(\x04\x12 \n\x04lazy\x18\x05 \x03(\x0e\x32\x12.cz.proto.LazyEval\x12.\n!partial_window_filter_selectivity\x18\x06 \x01(\x01H\x01\x88\x01\x01\x42\x11\n\x0foptional_filterB$\n\"_partial_window_filter_selectivity\"\xc0\x01\n\x0bLogicalCalc\x12-\n\tcondition\x18\x01 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12,\n\x08projects\x18\x02 \x03(\x0b\x32\x1a.cz.proto.ScalarExpression\x12.\n!partial_window_filter_selectivity\x18\x03 \x01(\x01H\x00\x88\x01\x01\x42$\n\"_partial_window_filter_selectivity\"9\n\x06\x45xpand\x12/\n\x0b\x65xpressions\x18\x01 \x03(\x0b\x32\x1a.cz.proto.ScalarExpression\"3\n\x0eGroupingKeySet\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.cz.proto.Reference\"\xea\x01\n\x08Grouping\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.cz.proto.Reference\x12)\n\x07keySets\x18\x02 \x03(\x0b\x32\x18.cz.proto.GroupingKeySet\x12\x30\n\x0f\x61ggregate_calls\x18\x03 \x03(\x0b\x32\x17.cz.proto.AggregateCall\x12\x1e\n\x16grouping_id_start_from\x18\x04 \x01(\x04\x12#\n\x16grouping_id_col_offset\x18\x05 \x01(\x04H\x00\x88\x01\x01\x42\x19\n\x17_grouping_id_col_offset\"\x0b\n\tCalcStats\"\x8e\x01\n\x0eHashTableStats\x12\x13\n\x0bnum_buckets\x18\x01 \x01(\x04\x12\x10\n\x08num_keys\x18\x02 \x01(\x04\x12\x12\n\nnum_resize\x18\x03 \x01(\x04\x12\x14\n\x0cnum_accesses\x18\x04 \x01(\x04\x12\x16\n\x0enum_collisions\x18\x05 \x01(\x04\x12\x13\n\x0bused_memory\x18\x06 \x01(\x04\"\xed\x04\n\rHashJoinStats\x12&\n\x0c\x62uild_timing\x18\x01 \x01(\x0b\x32\x10.cz.proto.Timing\x12-\n\x13\x66inish_build_timing\x18\x02 \x01(\x0b\x32\x10.cz.proto.Timing\x12&\n\x0cprobe_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12+\n\x11post_probe_timing\x18\x04 \x01(\x0b\x32\x10.cz.proto.Timing\x12*\n\x08ht_stats\x18\x05 \x01(\x0b\x32\x18.cz.proto.HashTableStats\x12\x16\n\x0enum_build_rows\x18\x06 \x01(\x04\x12\x1f\n\x17num_distinct_build_rows\x18\x07 \x01(\x04\x12\x1c\n\x14max_equal_build_rows\x18\x08 \x01(\x04\x12/\n\x11\x62uild_spill_stats\x18\t \x01(\x0b\x32\x14.cz.proto.SpillStats\x12/\n\x11probe_spill_stats\x18\n \x01(\x0b\x32\x14.cz.proto.SpillStats\x12.\n\x14probe_find_ht_timing\x18\x0b \x01(\x0b\x32\x10.cz.proto.Timing\x12-\n\x13probe_output_timing\x18\x0c \x01(\x0b\x32\x10.cz.proto.Timing\x12\x34\n\x1aprobe_eval_conjunct_timing\x18\r \x01(\x0b\x32\x10.cz.proto.Timing\x12\x36\n\x1cprobe_output_conjunct_timing\x18\x0e \x01(\x0b\x32\x10.cz.proto.Timing\"\x10\n\x0eMergeJoinStats\"\xe7\x02\n\x12HashAggregateStats\x12.\n\x14\x61ssign_states_timing\x18\x01 \x01(\x0b\x32\x10.cz.proto.Timing\x12.\n\x14update_states_timing\x18\x02 \x01(\x0b\x32\x10.cz.proto.Timing\x12\'\n\routput_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12*\n\x08ht_stats\x18\x04 \x01(\x0b\x32\x18.cz.proto.HashTableStats\x12\x1a\n\x12states_used_memory\x18\x05 \x01(\x04\x12\x19\n\x11pass_through_rows\x18\x06 \x01(\x04\x12/\n\x11input_spill_stats\x18\x07 \x01(\x0b\x32\x14.cz.proto.SpillStats\x12\x34\n\x16\x61ggregated_spill_stats\x18\x08 \x01(\x0b\x32\x14.cz.proto.SpillStats\"\x9e\x01\n\x13MergeAggregateStats\x12.\n\x14\x61ssign_states_timing\x18\x01 \x01(\x0b\x32\x10.cz.proto.Timing\x12.\n\x14update_states_timing\x18\x02 \x01(\x0b\x32\x10.cz.proto.Timing\x12\'\n\routput_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\"\xff\x02\n\x0eLocalSortStats\x12)\n\x0bspill_stats\x18\x01 \x01(\x0b\x32\x14.cz.proto.SpillStats\x12-\n\x13generate_run_timing\x18\x02 \x01(\x0b\x32\x10.cz.proto.Timing\x12*\n\x10merge_run_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12+\n\x11init_merge_timing\x18\x04 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x31\n\x17\x61\x63\x63umulate_block_timing\x18\x05 \x01(\x0b\x32\x10.cz.proto.Timing\x12)\n\x0fsort_key_timing\x18\x06 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x30\n\x16permute_payload_timing\x18\x07 \x01(\x0b\x32\x10.cz.proto.Timing\x12*\n\x10spill_run_timing\x18\x08 \x01(\x0b\x32\x10.cz.proto.Timing\"\x10\n\x0eMergeSortStats\"\x0f\n\rUnionAllStats\"\r\n\x0bValuesStats\"8\n\x0b\x42ufferStats\x12)\n\x0bspill_stats\x18\x01 \x01(\x0b\x32\x14.cz.proto.SpillStats\"\r\n\x0bWindowStats\"\x14\n\x12PartialWindowStats\"\r\n\x0b\x45xpandStats\"\x12\n\x10LateralViewStats\"\x9d\x03\n\x11\x45xchangeSinkStats\x12\x17\n\x0fsent_byte_count\x18\x01 \x01(\x04\x12!\n\x19\x63ompress_input_byte_count\x18\x02 \x01(\x04\x12\x30\n\x16serialize_write_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x30\n\x16serialize_flush_timing\x18\x04 \x01(\x0b\x32\x10.cz.proto.Timing\x12)\n\x0f\x63ompress_timing\x18\x05 \x01(\x0b\x32\x10.cz.proto.Timing\x12/\n\x15\x61\x63quire_buffer_timing\x18\x06 \x01(\x0b\x32\x10.cz.proto.Timing\x12.\n\x14submit_buffer_timing\x18\x07 \x01(\x0b\x32\x10.cz.proto.Timing\x12&\n\x0c\x63lose_timing\x18\x08 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x34\n\x1asubmit_buffer_async_timing\x18\t \x01(\x0b\x32\x10.cz.proto.Timing\"\xba\x02\n\x13\x45xchangeSourceStats\x12\x1b\n\x13received_byte_count\x18\x01 \x01(\x04\x12$\n\x1c\x64\x65\x63ompress_output_byte_count\x18\x02 \x01(\x04\x12,\n\x12\x64\x65serialize_timing\x18\x03 \x01(\x0b\x32\x10.cz.proto.Timing\x12+\n\x11\x64\x65\x63ompress_timing\x18\x04 \x01(\x0b\x32\x10.cz.proto.Timing\x12,\n\x12read_buffer_timing\x18\x05 \x01(\x0b\x32\x10.cz.proto.Timing\x12%\n\x0bsort_timing\x18\x06 \x01(\x0b\x32\x10.cz.proto.Timing\x12\x30\n\x12sorter_spill_stats\x18\x07 \x01(\x0b\x32\x14.cz.proto.SpillStats\"S\n\x05Table\x12\x0c\n\x04path\x18\x01 \x03(\t\x12\'\n\ntable_meta\x18\x02 \x01(\x0b\x32\x13.cz.proto.TableMeta\x12\x13\n\x0binstance_id\x18\x03 \x01(\x03\"k\n\x06Values\x12\x11\n\trow_count\x18\x01 \x01(\r\x12\x11\n\tcol_count\x18\x02 \x01(\r\x12(\n\x04\x64\x61ta\x18\x03 \x03(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x11\n\tbroadcast\x18\x04 \x01(\x08\"9\n\x0bSortKeyDesc\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1e\n\x05order\x18\x02 \x01(\x0e\x32\x0f.cz.proto.Order\"\xf6\x03\n\tTableScan\x12\x1e\n\x05table\x18\x01 \x01(\x0b\x32\x0f.cz.proto.Table\x12\x1b\n\x13\x64\x61ta_source_info_id\x18\x02 \x01(\x05\x12\x0c\n\x04\x63ols\x18\x03 \x03(\x04\x12*\n\x06\x66ilter\x18\x04 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x31\n\rensuredFilter\x18\x05 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12-\n\x05props\x18\x06 \x03(\x0b\x32\x1e.cz.proto.TableScan.PropsEntry\x12\r\n\x05\x61lign\x18\x07 \x01(\x08\x12\x10\n\x08\x61lignDop\x18\x08 \x01(\x04\x12%\n\x06orders\x18\t \x03(\x0b\x32\x15.cz.proto.SortKeyDesc\x12\x12\n\nrange_keys\x18\n \x03(\r\x12\x1d\n\x15range_distribution_id\x18\x0b \x01(\r\x12\x36\n\x12tvr_table_property\x18\x0c \x01(\x0b\x32\x1a.cz.proto.TvrTableProperty\x12/\n\x0b\x66ilter4Meta\x18\r \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x1a,\n\nPropsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"?\n\x0eTableScanStats\x12-\n\x0binput_stats\x18\x01 \x01(\x0b\x32\x18.cz.proto.DataInputStats\"\x99\x01\n\x10TvrTableProperty\x12\x0c\n\x04\x66rom\x18\x01 \x01(\x03\x12\n\n\x02to\x18\x02 \x01(\x03\x12\x13\n\x0b\x63onsolidate\x18\x03 \x01(\x08\x12\x17\n\x0f\x66romMetaVersion\x18\x04 \x01(\x03\x12\x15\n\rtoMetaVersion\x18\x05 \x01(\x03\x12\x10\n\x08rowCount\x18\x06 \x01(\x03\x12\x14\n\x0c\x62\x61seRowCount\x18\x07 \x01(\x03\"\xc3\x01\n\x0bShuffleType\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.cz.proto.ShuffleType.Type\"\x89\x01\n\x04Type\x12\x08\n\x04HASH\x10\x00\x12\t\n\x05RANGE\x10\x01\x12\r\n\tBROADCAST\x10\x02\x12\n\n\x06SINGLE\x10\x03\x12\n\n\x06RANDOM\x10\x04\x12\r\n\tPAIR_WIZE\x10\x05\x12\x11\n\rADAPTIVE_HASH\x10\x06\x12\x12\n\x0e\x41\x44\x41PTIVE_RANGE\x10\x07\x12\x0f\n\x0bROUND_ROBIN\x10\x08\"\xd6\x02\n\tTableSink\x12\x1e\n\x05table\x18\x01 \x01(\x0b\x32\x0f.cz.proto.Table\x12\x11\n\toverwrite\x18\x02 \x01(\x08\x12\x1b\n\x13\x64\x61ta_source_info_id\x18\x03 \x01(\x05\x12!\n\x04keys\x18\x04 \x03(\x0b\x32\x13.cz.proto.Reference\x12\r\n\x05\x66lags\x18\x05 \x01(\r\x12+\n\x0epart_sort_keys\x18\x06 \x03(\x0b\x32\x13.cz.proto.Reference\x12\x14\n\x0cinput_fields\x18\x07 \x03(\x04\x12,\n\x0f\x66ile_slice_keys\x18\x08 \x03(\x0b\x32\x13.cz.proto.Reference\x12\x18\n\x10static_partition\x18\t \x01(\x08\x12/\n\x0bpart_values\x18\n \x01(\x0b\x32\x1a.cz.proto.VirtualValueInfo\x12\x0b\n\x03nop\x18\x0b \x01(\x08\"\xfb\x01\n\x0cShuffleWrite\x12*\n\x0bshuffleType\x18\x01 \x01(\x0b\x32\x15.cz.proto.ShuffleType\x12!\n\x04keys\x18\x02 \x03(\x0b\x32\x13.cz.proto.Reference\x12%\n\x06orders\x18\x03 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\r\n\x05limit\x18\x04 \x01(\r\x12\x18\n\x10\x66unction_version\x18\x05 \x01(\r\x12-\n\x0b\x62ucket_type\x18\x06 \x01(\x0e\x32\x18.cz.proto.HashBucketType\x12\x1d\n\x15range_distribution_id\x18\x07 \x01(\r\"\xbe\x01\n\x0bShuffleRead\x12%\n\x06orders\x18\x01 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\r\n\x05limit\x18\x02 \x01(\r\x12\x0e\n\x06offset\x18\x03 \x01(\r\x12*\n\x0bshuffleType\x18\x04 \x01(\x0b\x32\x15.cz.proto.ShuffleType\x12\x16\n\x0emulti_accessed\x18\x05 \x01(\x08\x12\x11\n\tpre_start\x18\x06 \x01(\x08\x12\x12\n\nmerge_sort\x18\x07 \x01(\x08\"\xbe\x01\n\rLocalExchange\x12*\n\x0bshuffleType\x18\x01 \x01(\x0b\x32\x15.cz.proto.ShuffleType\x12!\n\x04keys\x18\x02 \x03(\x0b\x32\x13.cz.proto.Reference\x12%\n\x06orders\x18\x03 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\r\n\x05limit\x18\x04 \x01(\r\x12\x0e\n\x06offset\x18\x05 \x01(\r\x12\x18\n\x10\x66unction_version\x18\x06 \x01(\r\"Q\n\tLocalSort\x12%\n\x06orders\x18\x01 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12\r\n\x05limit\x18\x02 \x01(\x04\x12\x0e\n\x06offset\x18\x03 \x01(\x04\"\xbe\x01\n\x0bLogicalSort\x12!\n\x04keys\x18\x01 \x03(\x0b\x32\x13.cz.proto.Reference\x12%\n\x06orders\x18\x02 \x03(\x0b\x32\x15.cz.proto.OrderByDesc\x12)\n\x05limit\x18\x03 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12*\n\x06offset\x18\x04 \x01(\x0b\x32\x1a.cz.proto.ScalarExpression\x12\x0e\n\x06global\x18\x05 \x01(\x08\"W\n\x0bSetOperator\x12!\n\x04type\x18\x01 \x01(\x0e\x32\x13.cz.proto.SetOpType\x12\x0b\n\x03\x61ll\x18\x02 \x01(\x08\x12\x18\n\x10input_references\x18\x03 \x03(\x04\"\xdc\x01\n\x0e\x44\x61taInputStats\x12\x1c\n\x14raw_input_byte_count\x18\x01 \x01(\x04\x12\x11\n\trow_count\x18\x02 \x01(\x04\x12:\n\x10\x66ile_input_stats\x18\x03 \x01(\x0b\x32\x1e.cz.proto.FileRangesInputStatsH\x00\x12\x35\n\x11\x66ile_format_stats\x18\x04 \x01(\x0b\x32\x18.cz.proto.FileInputStatsH\x00\x12\x17\n\x0ftime_elapsed_us\x18\x05 \x01(\x04\x42\r\n\x0binput_stats\"J\n\x14\x46ileRangesInputStats\x12\x32\n\x10\x66ile_input_stats\x18\x01 \x03(\x0b\x32\x18.cz.proto.DataInputStats\"\x9f\x05\n\x0e\x46ileInputStats\x12-\n\x0b\x66ormat_type\x18\x01 \x01(\x0e\x32\x18.cz.proto.FileFormatType\x12\"\n\x05range\x18\x02 \x01(\x0b\x32\x13.cz.proto.FileRange\x12\x34\n\x10text_input_stats\x18\x03 \x01(\x0b\x32\x18.cz.proto.TextInputStatsH\x00\x12:\n\x13parquet_input_stats\x18\x04 \x01(\x0b\x32\x1b.cz.proto.ParquetInputStatsH\x00\x12=\n\x12memory_input_stats\x18\x05 \x01(\x0b\x32\x1f.cz.proto.MemoryTableInputStatsH\x00\x12\x32\n\x0forc_input_stats\x18\x08 \x01(\x0b\x32\x17.cz.proto.OrcInputStatsH\x00\x12\x36\n\x11\x64ummy_input_stats\x18\t \x01(\x0b\x32\x19.cz.proto.DummyInputStatsH\x00\x12\x32\n\x0f\x63sv_input_stats\x18\n \x01(\x0b\x32\x17.cz.proto.CSVInputStatsH\x00\x12\x34\n\x10\x61vro_input_stats\x18\x0b \x01(\x0b\x32\x18.cz.proto.AvroInputStatsH\x00\x12\x36\n\x11\x61rrow_input_stats\x18\x0c \x01(\x0b\x32\x19.cz.proto.ArrowInputStatsH\x00\x12,\n\x08io_stats\x18\x06 \x01(\x0b\x32\x1a.cz.proto.FileIOInputStats\x12\x32\n\x10\x64\x65lta_file_stats\x18\x07 \x03(\x0b\x32\x18.cz.proto.DataInputStatsB\x19\n\x17\x66ile_format_input_stats\"\xb9\x01\n\x10\x46ileIOInputStats\x12\x12\n\nread_count\x18\x01 \x01(\x04\x12\x12\n\nread_bytes\x18\x02 \x01(\x04\x12\x17\n\x0ftime_elapsed_us\x18\x03 \x01(\x04\x12/\n\x0eprefetch_stats\x18\x04 \x01(\x0b\x32\x17.cz.proto.PrefetchStats\x12\x33\n\x0binput_stats\x18\x05 \x01(\x0b\x32\x1e.cz.proto.FileInputStreamStats\",\n\x11\x46ileIOOutputStats\x12\x17\n\x0ftime_elapsed_us\x18\x01 \x01(\x04\"\xc2\x01\n\rPrefetchStats\x12\x13\n\x0b\x64river_type\x18\x08 \x01(\t\x12\x12\n\nread_count\x18\x01 \x01(\x04\x12\x12\n\nread_bytes\x18\x02 \x01(\x04\x12\x16\n\x0eread_hit_cache\x18\x03 \x01(\x04\x12\x1c\n\x14read_time_elapsed_us\x18\x04 \x01(\x04\x12\x10\n\x08io_count\x18\x05 \x01(\x04\x12\x10\n\x08io_bytes\x18\x06 \x01(\x04\x12\x1a\n\x12io_time_elapsed_us\x18\x07 \x01(\x04\"\xb3\x01\n\x14\x46ileInputStreamStats\x12\x32\n\x10\x66ile_system_type\x18\x01 \x01(\x0e\x32\x18.cz.proto.FileSystemType\x12L\n\x1d\x63\x61\x63he_file_input_stream_stats\x18\x04 \x01(\x0b\x32#.cz.proto.CacheFileInputStreamStatsH\x00\x42\x19\n\x17\x66ile_input_stream_stats\"\x83\x02\n\x19\x43\x61\x63heFileInputStreamStats\x12\x11\n\tcache_hit\x18\x01 \x01(\x08\x12!\n\x19short_circuit_stream_type\x18\x02 \x01(\t\x12\x14\n\x0csegment_mode\x18\x03 \x01(\x08\x12 \n\x18non_read_time_elapsed_us\x18\x04 \x01(\x04\x12\x16\n\x0erpc_read_bytes\x18\x05 \x01(\x04\x12 \n\x18rpc_read_time_elapsed_us\x18\x06 \x01(\x04\x12\x19\n\x11\x64irect_read_bytes\x18\x07 \x01(\x04\x12#\n\x1b\x64irect_read_time_elapsed_us\x18\x08 \x01(\x04\"V\n\x0eTextInputStats\x12\"\n\x1amissing_field_warned_count\x18\x01 \x01(\x04\x12 \n\x18\x65xtra_field_warned_count\x18\x02 \x01(\x04\",\n\x15MemoryTableInputStats\x12\x13\n\x0b\x62\x61tch_count\x18\x01 \x01(\x04\"\x8b\x02\n\x11ParquetInputStats\x12\x13\n\x0b\x62\x61tch_count\x18\x01 \x01(\x04\x12 \n\x18\x64\x65\x63ompression_latency_ns\x18\x02 \x01(\x04\x12\"\n\x1alevels_decoding_latency_ns\x18\x03 \x01(\x04\x12\x1f\n\x17\x64\x61ta_loading_latency_ns\x18\x04 \x01(\x04\x12 \n\x18ppd_inclusive_latency_ns\x18\x05 \x01(\x04\x12#\n\x1breader_inclusive_latency_ns\x18\x06 \x01(\x04\x12\x1b\n\x13requested_row_count\x18\x07 \x01(\x04\x12\x16\n\x0eread_row_count\x18\x08 \x01(\x04\"$\n\rOrcInputStats\x12\x13\n\x0b\x62\x61tch_count\x18\x01 \x01(\x04\"\x0f\n\rCSVInputStats\"&\n\x0f\x44ummyInputStats\x12\x13\n\x0b\x62\x61tch_count\x18\x01 \x01(\x04\"\x10\n\x0e\x41vroInputStats\"\x11\n\x0f\x41rrowInputStats\"\xd3\x01\n\x0f\x44\x61taOutputStats\x12\x1d\n\x15raw_output_byte_count\x18\x01 \x01(\x04\x12\x11\n\trow_count\x18\x02 \x01(\x04\x12\x36\n\x11\x66ile_output_stats\x18\x03 \x01(\x0b\x32\x19.cz.proto.FileOutputStatsH\x00\x12G\n\x1amultiple_file_output_stats\x18\x04 \x01(\x0b\x32!.cz.proto.MultipleFileOutputStatsH\x00\x42\r\n\x0boutputStats\"\xdd\x03\n\x0f\x46ileOutputStats\x12.\n\x0e\x66ile_meta_data\x18\x01 \x01(\x0b\x32\x16.cz.proto.FileMetaData\x12\x36\n\x11text_output_stats\x18\x02 \x01(\x0b\x32\x19.cz.proto.TextOutputStatsH\x00\x12<\n\x14parquet_output_stats\x18\x03 \x01(\x0b\x32\x1c.cz.proto.ParquetOutputStatsH\x00\x12\x34\n\x10orc_output_stats\x18\x06 \x01(\x0b\x32\x18.cz.proto.OrcOutputStatsH\x00\x12\x36\n\x11\x61vro_output_stats\x18\x07 \x01(\x0b\x32\x19.cz.proto.AvroOutputStatsH\x00\x12\x38\n\x12\x61rrow_output_stats\x18\x08 \x01(\x0b\x32\x1a.cz.proto.ArrowOutputStatsH\x00\x12-\n\x08io_stats\x18\x04 \x01(\x0b\x32\x1b.cz.proto.FileIOOutputStats\x12\x31\n\x11\x64\x65lete_file_metas\x18\x05 \x03(\x0b\x32\x16.cz.proto.FileMetaDataB\x1a\n\x18\x66ile_format_output_stats\"O\n\x17MultipleFileOutputStats\x12\x34\n\x11\x66ile_output_stats\x18\x01 \x03(\x0b\x32\x19.cz.proto.DataOutputStats\"\x11\n\x0fTextOutputStats\"c\n\x12ParquetOutputStats\x12\x1a\n\x12\x61rrow_casting_time\x18\x01 \x01(\x04\x12\x1a\n\x12page_compress_time\x18\x02 \x01(\x04\x12\x15\n\rencoding_time\x18\x03 \x01(\x04\"\x10\n\x0eOrcOutputStats\"\x11\n\x0f\x41vroOutputStats\"\x12\n\x10\x41rrowOutputStats\"A\n\x0eTableSinkStats\x12/\n\x0coutput_stats\x18\x01 \x01(\x0b\x32\x19.cz.proto.DataOutputStats\"_\n\nSpillStats\x12\x17\n\x0f\x63ompressed_size\x18\x01 \x01(\x04\x12\x10\n\x08raw_size\x18\x02 \x01(\x04\x12\x13\n\x0bspill_count\x18\x03 \x01(\x04\x12\x11\n\trow_count\x18\x04 \x01(\x04*N\n\x08\x41ggStage\x12\r\n\tDUPLICATE\x10\x00\x12\x0c\n\x08PARTIAL1\x10\x01\x12\x0c\n\x08PARTIAL2\x10\x02\x12\t\n\x05\x46INAL\x10\x03\x12\x0c\n\x08\x43OMPLETE\x10\x04*R\n\x08JoinType\x12\t\n\x05INNER\x10\x00\x12\x08\n\x04LEFT\x10\x01\x12\t\n\x05RIGHT\x10\x02\x12\x08\n\x04\x46ULL\x10\x03\x12\r\n\tLEFT_SEMI\x10\x04\x12\r\n\tLEFT_ANTI\x10\x05*R\n\x11\x44ynamicFilterType\x12\x0b\n\x07\x44\x46_NONE\x10\x00\x12\r\n\tDF_GLOBAL\x10\x01\x12\x10\n\x0c\x44\x46_BROADCAST\x10\x02\x12\x0f\n\x0b\x44\x46_SHUFFLED\x10\x03*@\n\x08LazyEval\x12\x0c\n\x08NOT_LAZY\x10\x00\x12\x15\n\x11LAZY_IN_CONDITION\x10\x01\x12\x0f\n\x0b\x41LWAYS_LAZY\x10\x02*1\n\tSetOpType\x12\t\n\x05UNION\x10\x00\x12\r\n\tINTERSECT\x10\x01\x12\n\n\x06\x45XCEPT\x10\x02\x42\x11\x42\rOperatorProtoP\x01\x62\x06proto3')
+ 
+ _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
+-_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ingestion_pb2', globals())
++_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'operator_pb2', globals())
+ if _descriptor._USE_C_DESCRIPTORS == False:
+ 
+   DESCRIPTOR._options = None
+-  DESCRIPTOR._serialized_options = b'\n\022cz.proto.ingestion'
+-  _GETTABLETSMAPPINGRESPONSE_TABLETMAPPINGENTRY._options = None
+-  _GETTABLETSMAPPINGRESPONSE_TABLETMAPPINGENTRY._serialized_options = b'8\001'
+-  _GETWORKERSMAPPINGRESPONSE_WORKERSMAPPINGENTRY._options = None
+-  _GETWORKERSMAPPINGRESPONSE_WORKERSMAPPINGENTRY._serialized_options = b'8\001'
+-  _IGSTABLETYPE._serialized_start=10653
+-  _IGSTABLETYPE._serialized_end=10715
+-  _CODE._serialized_start=10718
+-  _CODE._serialized_end=10877
+-  _CONNECTMODE._serialized_start=10879
+-  _CONNECTMODE._serialized_end=10939
+-  _METHODENUM._serialized_start=10942
+-  _METHODENUM._serialized_end=11355
+-  _BULKLOADSTREAMSTATE._serialized_start=11358
+-  _BULKLOADSTREAMSTATE._serialized_end=11496
+-  _BULKLOADSTREAMOPERATION._serialized_start=11498
+-  _BULKLOADSTREAMOPERATION._serialized_end=11571
+-  _STREAMREADDATATYPE._serialized_start=11573
+-  _STREAMREADDATATYPE._serialized_end=11657
+-  _GETTABLEMETAREQUEST._serialized_start=145
+-  _GETTABLEMETAREQUEST._serialized_end=312
+-  _GETTABLEMETARESPONSE._serialized_start=315
+-  _GETTABLEMETARESPONSE._serialized_end=502
+-  _CONTROLLERCREATETABLETREQUEST._serialized_start=505
+-  _CONTROLLERCREATETABLETREQUEST._serialized_end=838
+-  _WORKERCREATETABLETREQUEST._serialized_start=841
+-  _WORKERCREATETABLETREQUEST._serialized_end=1331
+-  _PARTITIONCOLUMNINFO._serialized_start=1334
+-  _PARTITIONCOLUMNINFO._serialized_end=1505
+-  _CREATETABLETRESPONSE._serialized_start=1507
+-  _CREATETABLETRESPONSE._serialized_end=1603
+-  _COMMITTABLETREQUEST._serialized_start=1606
+-  _COMMITTABLETREQUEST._serialized_end=1790
+-  _COMMITTABLETRESPONSE._serialized_start=1792
+-  _COMMITTABLETRESPONSE._serialized_end=1866
+-  _DROPTABLETREQUEST._serialized_start=1869
+-  _DROPTABLETREQUEST._serialized_end=2071
+-  _DROPTABLETRESPONSE._serialized_start=2073
+-  _DROPTABLETRESPONSE._serialized_end=2145
+-  _RESTARTTABLETREQUEST._serialized_start=2147
+-  _RESTARTTABLETREQUEST._serialized_end=2205
+-  _RESTARTTABLETRESPONSE._serialized_start=2207
+-  _RESTARTTABLETRESPONSE._serialized_end=2318
+-  _DELTABLETREQUEST._serialized_start=2320
+-  _DELTABLETREQUEST._serialized_end=2374
+-  _DELTABLETRESPONSE._serialized_start=2376
+-  _DELTABLETRESPONSE._serialized_end=2483
+-  _BROADCASTREQUEST._serialized_start=2485
+-  _BROADCASTREQUEST._serialized_end=2582
+-  _BROADCASTRESPONSE._serialized_start=2584
+-  _BROADCASTRESPONSE._serialized_end=2655
+-  _WORKERHBREQUEST._serialized_start=2657
+-  _WORKERHBREQUEST._serialized_end=2752
+-  _WORKERHBRESPONSE._serialized_start=2754
+-  _WORKERHBRESPONSE._serialized_end=2860
+-  _GETTABLETSMAPPINGREQUEST._serialized_start=2862
+-  _GETTABLETSMAPPINGREQUEST._serialized_end=2948
+-  _GETTABLETSMAPPINGRESPONSE._serialized_start=2951
+-  _GETTABLETSMAPPINGRESPONSE._serialized_end=3208
+-  _GETTABLETSMAPPINGRESPONSE_TABLETMAPPINGENTRY._serialized_start=3122
+-  _GETTABLETSMAPPINGRESPONSE_TABLETMAPPINGENTRY._serialized_end=3208
+-  _TABLETIDLIST._serialized_start=3210
+-  _TABLETIDLIST._serialized_end=3243
+-  _HOSTPORTTUPLE._serialized_start=3245
+-  _HOSTPORTTUPLE._serialized_end=3288
+-  _GETTABLETPHYSICSMAPPINGREQUEST._serialized_start=3290
+-  _GETTABLETPHYSICSMAPPINGREQUEST._serialized_end=3382
+-  _TABLETPHYSICSINFO._serialized_start=3384
+-  _TABLETPHYSICSINFO._serialized_end=3490
+-  _GETTABLETPHYSICSMAPPINGRESPONSE._serialized_start=3493
+-  _GETTABLETPHYSICSMAPPINGRESPONSE._serialized_end=3634
+-  _GETWORKERSMAPPINGREQUEST._serialized_start=3636
+-  _GETWORKERSMAPPINGREQUEST._serialized_end=3681
+-  _GETWORKERSMAPPINGRESPONSE._serialized_start=3684
+-  _GETWORKERSMAPPINGRESPONSE._serialized_end=3945
+-  _GETWORKERSMAPPINGRESPONSE_WORKERSMAPPINGENTRY._serialized_start=3857
+-  _GETWORKERSMAPPINGRESPONSE_WORKERSMAPPINGENTRY._serialized_end=3945
+-  _CHECKTABLEEXISTSREQUEST._serialized_start=3948
+-  _CHECKTABLEEXISTSREQUEST._serialized_end=4115
+-  _CHECKTABLEEXISTSRESPONSE._serialized_start=4117
+-  _CHECKTABLEEXISTSRESPONSE._serialized_end=4195
+-  _DATAMUTATEREQUEST._serialized_start=4198
+-  _DATAMUTATEREQUEST._serialized_end=4842
+-  _DATAMUTATEREQUESTINTERNAL._serialized_start=4845
+-  _DATAMUTATEREQUESTINTERNAL._serialized_end=5251
+-  _DATAMUTATERESPONSE._serialized_start=5254
+-  _DATAMUTATERESPONSE._serialized_end=5439
+-  _GETWORKERIDREQUEST._serialized_start=5441
+-  _GETWORKERIDREQUEST._serialized_end=5550
+-  _GETWORKERIDRESPONSE._serialized_start=5552
+-  _GETWORKERIDRESPONSE._serialized_end=5644
+-  _MUTATEROWSTATUS._serialized_start=5646
+-  _MUTATEROWSTATUS._serialized_end=5739
+-  _RESPONSESTATUS._serialized_start=5741
+-  _RESPONSESTATUS._serialized_end=5834
+-  _ACCOUNT._serialized_start=5836
+-  _ACCOUNT._serialized_end=5881
+-  _GETMUTATEWORKERSREQUEST._serialized_start=5884
+-  _GETMUTATEWORKERSREQUEST._serialized_end=6063
+-  _GETMUTATEWORKERSRESPONSE._serialized_start=6066
+-  _GETMUTATEWORKERSRESPONSE._serialized_end=6213
+-  _FLUSHTABLETREQUEST._serialized_start=6215
+-  _FLUSHTABLETREQUEST._serialized_end=6334
+-  _FLUSHTABLETRESPONSE._serialized_start=6336
+-  _FLUSHTABLETRESPONSE._serialized_end=6409
+-  _GATEWAYREQUEST._serialized_start=6411
+-  _GATEWAYREQUEST._serialized_end=6505
+-  _GATEWAYRESPONSE._serialized_start=6507
+-  _GATEWAYRESPONSE._serialized_end=6593
+-  _TIMESTAMP._serialized_start=6595
+-  _TIMESTAMP._serialized_end=6638
+-  _TABLEIDENTIFIER._serialized_start=6640
+-  _TABLEIDENTIFIER._serialized_end=6738
+-  _BULKLOADSTREAMINFO._serialized_start=6741
+-  _BULKLOADSTREAMINFO._serialized_end=7144
+-  _BULKLOADSTREAMWRITERCONFIG._serialized_start=7147
+-  _BULKLOADSTREAMWRITERCONFIG._serialized_end=7348
+-  _CREATEBULKLOADSTREAMREQUEST._serialized_start=7351
+-  _CREATEBULKLOADSTREAMREQUEST._serialized_end=7613
+-  _CREATEBULKLOADSTREAMRESPONSE._serialized_start=7616
+-  _CREATEBULKLOADSTREAMRESPONSE._serialized_end=7773
+-  _GETBULKLOADSTREAMREQUEST._serialized_start=7776
+-  _GETBULKLOADSTREAMREQUEST._serialized_end=7970
+-  _GETBULKLOADSTREAMRESPONSE._serialized_start=7973
+-  _GETBULKLOADSTREAMRESPONSE._serialized_end=8127
+-  _COMMITBULKLOADSTREAMREQUEST._serialized_start=8130
+-  _COMMITBULKLOADSTREAMREQUEST._serialized_end=8514
+-  _COMMITBULKLOADSTREAMREQUEST_COMMITMODE._serialized_start=8465
+-  _COMMITBULKLOADSTREAMREQUEST_COMMITMODE._serialized_end=8514
+-  _COMMITBULKLOADSTREAMRESPONSE._serialized_start=8517
+-  _COMMITBULKLOADSTREAMRESPONSE._serialized_end=8653
+-  _OPENBULKLOADSTREAMWRITERREQUEST._serialized_start=8656
+-  _OPENBULKLOADSTREAMWRITERREQUEST._serialized_end=8854
+-  _OPENBULKLOADSTREAMWRITERRESPONSE._serialized_start=8857
+-  _OPENBULKLOADSTREAMWRITERRESPONSE._serialized_end=9007
+-  _FINISHBULKLOADSTREAMWRITERREQUEST._serialized_start=9010
+-  _FINISHBULKLOADSTREAMWRITERREQUEST._serialized_end=9258
+-  _FINISHBULKLOADSTREAMWRITERRESPONSE._serialized_start=9260
+-  _FINISHBULKLOADSTREAMWRITERRESPONSE._serialized_end=9348
+-  _OSSSTAGINGPATHINFO._serialized_start=9351
+-  _OSSSTAGINGPATHINFO._serialized_end=9499
+-  _STAGINGPATHINFO._serialized_start=9501
+-  _STAGINGPATHINFO._serialized_end=9591
+-  _STREAMREADIDENTIFIER._serialized_start=9594
+-  _STREAMREADIDENTIFIER._serialized_end=9756
+-  _STREAMREADOPTIONS._serialized_start=9759
+-  _STREAMREADOPTIONS._serialized_end=9981
+-  _STREAMREADREQUEST._serialized_start=9983
+-  _STREAMREADREQUEST._serialized_end=10073
+-  _STREAMREADDELTAOPTIONS._serialized_start=10076
+-  _STREAMREADDELTAOPTIONS._serialized_end=10246
+-  _STREAMREADDELTAREQUEST._serialized_start=10248
+-  _STREAMREADDELTAREQUEST._serialized_end=10348
+-  _STREAMREADOPENINFO._serialized_start=10350
+-  _STREAMREADOPENINFO._serialized_end=10417
+-  _STREAMREADRESPONSE._serialized_start=10420
+-  _STREAMREADRESPONSE._serialized_end=10651
+-  _IGSWORKERSERVICE._serialized_start=11660
+-  _IGSWORKERSERVICE._serialized_end=12065
+-  _IGSWORKERINTERNALSERVICE._serialized_start=12067
+-  _IGSWORKERINTERNALSERVICE._serialized_end=12189
+-  _IGSCONTROLLERSERVICE._serialized_start=12192
+-  _IGSCONTROLLERSERVICE._serialized_end=13565
+-  _IGSWORKERDATASERVICE._serialized_start=13568
+-  _IGSWORKERDATASERVICE._serialized_end=13782
++  DESCRIPTOR._serialized_options = b'B\rOperatorProtoP\001'
++  _TABLESCAN_PROPSENTRY._options = None
++  _TABLESCAN_PROPSENTRY._serialized_options = b'8\001'
++  _AGGSTAGE._serialized_start=15373
++  _AGGSTAGE._serialized_end=15451
++  _JOINTYPE._serialized_start=15453
++  _JOINTYPE._serialized_end=15535
++  _DYNAMICFILTERTYPE._serialized_start=15537
++  _DYNAMICFILTERTYPE._serialized_end=15619
++  _LAZYEVAL._serialized_start=15621
++  _LAZYEVAL._serialized_end=15685
++  _SETOPTYPE._serialized_start=15687
++  _SETOPTYPE._serialized_end=15736
++  _COLUMNMAPPING._serialized_start=211
++  _COLUMNMAPPING._serialized_end=261
++  _OPERATOR._serialized_start=264
++  _OPERATOR._serialized_end=1684
++  _AGGREGATECALL._serialized_start=1687
++  _AGGREGATECALL._serialized_end=2025
++  _LOGICALAGGREGATE._serialized_start=2027
++  _LOGICALAGGREGATE._serialized_end=2130
++  _HASHAGGREGATE._serialized_start=2132
++  _HASHAGGREGATE._serialized_end=2229
++  _SORTEDAGGREGATE._serialized_start=2232
++  _SORTEDAGGREGATE._serialized_end=2370
++  _AGGREGATEPHASE._serialized_start=2372
++  _AGGREGATEPHASE._serialized_end=2470
++  _DYNAMICFILTERINFO._serialized_start=2473
++  _DYNAMICFILTERINFO._serialized_end=2643
++  _JOINHINTINFO._serialized_start=2645
++  _JOINHINTINFO._serialized_end=2686
++  _TREEJOIN._serialized_start=2688
++  _TREEJOIN._serialized_end=2742
++  _TREEJOINLEAF._serialized_start=2744
++  _TREEJOINLEAF._serialized_end=2803
++  _LOGICALJOIN._serialized_start=2806
++  _LOGICALJOIN._serialized_end=3021
++  _SORTMERGEJOIN._serialized_start=3024
++  _SORTMERGEJOIN._serialized_end=3162
++  _HASHJOIN._serialized_start=3164
++  _HASHJOIN._serialized_end=3257
++  _TIMING._serialized_start=3259
++  _TIMING._serialized_end=3306
++  _OPERATORSTATS._serialized_start=3309
++  _OPERATORSTATS._serialized_end=4688
++  _ORDERBYDESC._serialized_start=4690
++  _ORDERBYDESC._serialized_end=4775
++  _MERGESORT._serialized_start=4777
++  _MERGESORT._serialized_end=4853
++  _UNIONALL._serialized_start=4855
++  _UNIONALL._serialized_end=4891
++  _BUFFER._serialized_start=4893
++  _BUFFER._serialized_end=4917
++  _PARTIALWINDOWFILTER._serialized_start=4919
++  _PARTIALWINDOWFILTER._serialized_end=5037
++  _WINDOW._serialized_start=5039
++  _WINDOW._serialized_end=5112
++  _WINDOWGROUP._serialized_start=5114
++  _WINDOWGROUP._serialized_end=5204
++  _WINDOWCALL._serialized_start=5206
++  _WINDOWCALL._serialized_end=5324
++  _WINDOWSPEC._serialized_start=5327
++  _WINDOWSPEC._serialized_end=5613
++  _WINDOWSPEC_BOUNDARYTYPE._serialized_start=5567
++  _WINDOWSPEC_BOUNDARYTYPE._serialized_end=5613
++  _WINDOWBOUNDARY._serialized_start=5615
++  _WINDOWBOUNDARY._serialized_end=5705
++  _LATERALVIEW._serialized_start=5707
++  _LATERALVIEW._serialized_end=5794
++  _TABLEFUNCTIONCALL._serialized_start=5796
++  _TABLEFUNCTIONCALL._serialized_end=5897
++  _SPOOL._serialized_start=5899
++  _SPOOL._serialized_end=5924
++  _CALC._serialized_start=5927
++  _CALC._serialized_end=6178
++  _LOGICALCALC._serialized_start=6181
++  _LOGICALCALC._serialized_end=6373
++  _EXPAND._serialized_start=6375
++  _EXPAND._serialized_end=6432
++  _GROUPINGKEYSET._serialized_start=6434
++  _GROUPINGKEYSET._serialized_end=6485
++  _GROUPING._serialized_start=6488
++  _GROUPING._serialized_end=6722
++  _CALCSTATS._serialized_start=6724
++  _CALCSTATS._serialized_end=6735
++  _HASHTABLESTATS._serialized_start=6738
++  _HASHTABLESTATS._serialized_end=6880
++  _HASHJOINSTATS._serialized_start=6883
++  _HASHJOINSTATS._serialized_end=7504
++  _MERGEJOINSTATS._serialized_start=7506
++  _MERGEJOINSTATS._serialized_end=7522
++  _HASHAGGREGATESTATS._serialized_start=7525
++  _HASHAGGREGATESTATS._serialized_end=7884
++  _MERGEAGGREGATESTATS._serialized_start=7887
++  _MERGEAGGREGATESTATS._serialized_end=8045
++  _LOCALSORTSTATS._serialized_start=8048
++  _LOCALSORTSTATS._serialized_end=8431
++  _MERGESORTSTATS._serialized_start=8433
++  _MERGESORTSTATS._serialized_end=8449
++  _UNIONALLSTATS._serialized_start=8451
++  _UNIONALLSTATS._serialized_end=8466
++  _VALUESSTATS._serialized_start=8468
++  _VALUESSTATS._serialized_end=8481
++  _BUFFERSTATS._serialized_start=8483
++  _BUFFERSTATS._serialized_end=8539
++  _WINDOWSTATS._serialized_start=8541
++  _WINDOWSTATS._serialized_end=8554
++  _PARTIALWINDOWSTATS._serialized_start=8556
++  _PARTIALWINDOWSTATS._serialized_end=8576
++  _EXPANDSTATS._serialized_start=8578
++  _EXPANDSTATS._serialized_end=8591
++  _LATERALVIEWSTATS._serialized_start=8593
++  _LATERALVIEWSTATS._serialized_end=8611
++  _EXCHANGESINKSTATS._serialized_start=8614
++  _EXCHANGESINKSTATS._serialized_end=9027
++  _EXCHANGESOURCESTATS._serialized_start=9030
++  _EXCHANGESOURCESTATS._serialized_end=9344
++  _TABLE._serialized_start=9346
++  _TABLE._serialized_end=9429
++  _VALUES._serialized_start=9431
++  _VALUES._serialized_end=9538
++  _SORTKEYDESC._serialized_start=9540
++  _SORTKEYDESC._serialized_end=9597
++  _TABLESCAN._serialized_start=9600
++  _TABLESCAN._serialized_end=10102
++  _TABLESCAN_PROPSENTRY._serialized_start=10058
++  _TABLESCAN_PROPSENTRY._serialized_end=10102
++  _TABLESCANSTATS._serialized_start=10104
++  _TABLESCANSTATS._serialized_end=10167
++  _TVRTABLEPROPERTY._serialized_start=10170
++  _TVRTABLEPROPERTY._serialized_end=10323
++  _SHUFFLETYPE._serialized_start=10326
++  _SHUFFLETYPE._serialized_end=10521
++  _SHUFFLETYPE_TYPE._serialized_start=10384
++  _SHUFFLETYPE_TYPE._serialized_end=10521
++  _TABLESINK._serialized_start=10524
++  _TABLESINK._serialized_end=10866
++  _SHUFFLEWRITE._serialized_start=10869
++  _SHUFFLEWRITE._serialized_end=11120
++  _SHUFFLEREAD._serialized_start=11123
++  _SHUFFLEREAD._serialized_end=11313
++  _LOCALEXCHANGE._serialized_start=11316
++  _LOCALEXCHANGE._serialized_end=11506
++  _LOCALSORT._serialized_start=11508
++  _LOCALSORT._serialized_end=11589
++  _LOGICALSORT._serialized_start=11592
++  _LOGICALSORT._serialized_end=11782
++  _SETOPERATOR._serialized_start=11784
++  _SETOPERATOR._serialized_end=11871
++  _DATAINPUTSTATS._serialized_start=11874
++  _DATAINPUTSTATS._serialized_end=12094
++  _FILERANGESINPUTSTATS._serialized_start=12096
++  _FILERANGESINPUTSTATS._serialized_end=12170
++  _FILEINPUTSTATS._serialized_start=12173
++  _FILEINPUTSTATS._serialized_end=12844
++  _FILEIOINPUTSTATS._serialized_start=12847
++  _FILEIOINPUTSTATS._serialized_end=13032
++  _FILEIOOUTPUTSTATS._serialized_start=13034
++  _FILEIOOUTPUTSTATS._serialized_end=13078
++  _PREFETCHSTATS._serialized_start=13081
++  _PREFETCHSTATS._serialized_end=13275
++  _FILEINPUTSTREAMSTATS._serialized_start=13278
++  _FILEINPUTSTREAMSTATS._serialized_end=13457
++  _CACHEFILEINPUTSTREAMSTATS._serialized_start=13460
++  _CACHEFILEINPUTSTREAMSTATS._serialized_end=13719
++  _TEXTINPUTSTATS._serialized_start=13721
++  _TEXTINPUTSTATS._serialized_end=13807
++  _MEMORYTABLEINPUTSTATS._serialized_start=13809
++  _MEMORYTABLEINPUTSTATS._serialized_end=13853
++  _PARQUETINPUTSTATS._serialized_start=13856
++  _PARQUETINPUTSTATS._serialized_end=14123
++  _ORCINPUTSTATS._serialized_start=14125
++  _ORCINPUTSTATS._serialized_end=14161
++  _CSVINPUTSTATS._serialized_start=14163
++  _CSVINPUTSTATS._serialized_end=14178
++  _DUMMYINPUTSTATS._serialized_start=14180
++  _DUMMYINPUTSTATS._serialized_end=14218
++  _AVROINPUTSTATS._serialized_start=14220
++  _AVROINPUTSTATS._serialized_end=14236
++  _ARROWINPUTSTATS._serialized_start=14238
++  _ARROWINPUTSTATS._serialized_end=14255
++  _DATAOUTPUTSTATS._serialized_start=14258
++  _DATAOUTPUTSTATS._serialized_end=14469
++  _FILEOUTPUTSTATS._serialized_start=14472
++  _FILEOUTPUTSTATS._serialized_end=14949
++  _MULTIPLEFILEOUTPUTSTATS._serialized_start=14951
++  _MULTIPLEFILEOUTPUTSTATS._serialized_end=15030
++  _TEXTOUTPUTSTATS._serialized_start=15032
++  _TEXTOUTPUTSTATS._serialized_end=15049
++  _PARQUETOUTPUTSTATS._serialized_start=15051
++  _PARQUETOUTPUTSTATS._serialized_end=15150
++  _ORCOUTPUTSTATS._serialized_start=15152
++  _ORCOUTPUTSTATS._serialized_end=15168
++  _AVROOUTPUTSTATS._serialized_start=15170
++  _AVROOUTPUTSTATS._serialized_end=15187
++  _ARROWOUTPUTSTATS._serialized_start=15189
++  _ARROWOUTPUTSTATS._serialized_end=15207
++  _TABLESINKSTATS._serialized_start=15209
++  _TABLESINKSTATS._serialized_end=15274
++  _SPILLSTATS._serialized_start=15276
++  _SPILLSTATS._serialized_end=15371
+ # @@protoc_insertion_point(module_scope)
+```
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/input_split_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/input_split_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/job_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/job_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/job_result_cache_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/job_result_cache_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/kudu_common_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/kudu_common_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/metadata_entity_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/metadata_entity_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/network_policy_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/network_policy_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/object_identifier_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/object_identifier_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/pb_util_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/pb_util_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/property_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/property_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/rm_app_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/rm_app_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/role_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/role_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/row_operations_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/row_operations_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/schema_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/schema_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/share_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/share_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/statistics_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/statistics_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/table_common_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/table_common_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/table_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/table_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_cluster_size_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_cluster_size_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/virtual_value_info_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/virtual_value_info_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/generated/workspace_meta_pb2.py` & `clickzetta-connector-0.6.3/clickzetta/proto/generated/workspace_meta_pb2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/account.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/account.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/block_bloom_filter.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/block_bloom_filter.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/compression.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/compression.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/data_type.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/data_type.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/expression.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/expression.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/file_meta_data.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/file_meta_data.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/function_meta.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/function_meta.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/hash.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/hash.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/input_split.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/input_split.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/job_meta.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/job_meta.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/kudu_common.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/kudu_common.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/metadata_entity.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/metadata_entity.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/object_identifier.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/object_identifier.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/operator.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/operator.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/pb_util.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/pb_util.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/rm_app_meta.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/rm_app_meta.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/row_operations.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/row_operations.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/statistics.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/statistics.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/table_common.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/table_common.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/table_meta.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/table_meta.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_cluster.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_cluster.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_cluster_meta.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_cluster_meta.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/proto/source/virtual_value_info.proto` & `clickzetta-connector-0.6.3/clickzetta/proto/source/virtual_value_info.proto`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/query_result.py` & `clickzetta-connector-0.6.3/clickzetta/query_result.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/schema.py` & `clickzetta-connector-0.6.3/clickzetta/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/session.py` & `clickzetta-connector-0.6.3/clickzetta/session.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/standard_sql.py` & `clickzetta-connector-0.6.3/clickzetta/standard_sql.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta/table.py` & `clickzetta-connector-0.6.3/clickzetta/table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta_connector.egg-info/SOURCES.txt` & `clickzetta-connector-0.6.3/clickzetta_connector.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/clickzetta_connector.egg-info/requires.txt` & `clickzetta-connector-0.6.3/clickzetta_connector.egg-info/requires.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `clickzetta-connector-0.6.2/setup.py` & `clickzetta-connector-0.6.3/setup.py`
+
+ * *Files identical despite different names*
+

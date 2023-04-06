@@ -1,0 +1,688 @@
+# Comparing `tmp/mk-2.3.1.tar.gz` & `tmp/mk-2.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mk-2.3.1.tar", last modified: Mon Mar 20 17:12:23 2023, max compression
++gzip compressed data, was "mk-2.4.0.tar", last modified: Thu Apr  6 11:35:50 2023, max compression
+```
+
+## Comparing `mk-2.3.1.tar` & `mk-2.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,97 +1,98 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.432025 mk-2.3.1/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/.config/
+--rw-r--r--   0 runner    (1001) docker     (123)      241 2023-03-20 17:11:50.000000 mk-2.3.1/.config/requirements-docs.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       56 2023-03-20 17:11:50.000000 mk-2.3.1/.config/requirements-test.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      301 2023-03-20 17:11:50.000000 mk-2.3.1/.config/requirements.in
+--rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-03-20 17:11:50.000000 mk-2.3.1/.config/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      206 2023-03-20 17:11:50.000000 mk-2.3.1/.flake8
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/.github/
+--rw-r--r--   0 runner    (1001) docker     (123)       12 2023-03-20 17:11:50.000000 mk-2.3.1/.github/CODEOWNERS
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-20 17:11:50.000000 mk-2.3.1/.github/FUNDING.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      262 2023-03-20 17:11:50.000000 mk-2.3.1/.github/SECURITY.md
+--rw-r--r--   0 runner    (1001) docker     (123)      392 2023-03-20 17:11:50.000000 mk-2.3.1/.github/dependabot.yml
+--rw-r--r--   0 runner    (1001) docker     (123)       73 2023-03-20 17:11:50.000000 mk-2.3.1/.github/release-drafter.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)      244 2023-03-20 17:11:50.000000 mk-2.3.1/.github/workflows/ack.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      248 2023-03-20 17:11:50.000000 mk-2.3.1/.github/workflows/push.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      946 2023-03-20 17:11:50.000000 mk-2.3.1/.github/workflows/release.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     4528 2023-03-20 17:11:50.000000 mk-2.3.1/.github/workflows/tox.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      159 2023-03-20 17:11:50.000000 mk-2.3.1/.gitignore
+--rw-r--r--   0 runner    (1001) docker     (123)     2353 2023-03-20 17:11:50.000000 mk-2.3.1/.pre-commit-config.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      439 2023-03-20 17:11:50.000000 mk-2.3.1/.readthedocs.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/.vscode/
+--rw-r--r--   0 runner    (1001) docker     (123)      195 2023-03-20 17:11:50.000000 mk-2.3.1/.vscode/settings.json
+--rw-r--r--   0 runner    (1001) docker     (123)      417 2023-03-20 17:11:50.000000 mk-2.3.1/.yamllint
+--rw-r--r--   0 runner    (1001) docker     (123)     1091 2023-03-20 17:11:50.000000 mk-2.3.1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      120 2023-03-20 17:11:50.000000 mk-2.3.1/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     6368 2023-03-20 17:12:23.432025 mk-2.3.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)       55 2023-03-20 17:11:50.000000 mk-2.3.1/codecov.yml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/docs/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.420025 mk-2.3.1/docs/.overrides/
+--rw-r--r--   0 runner    (1001) docker     (123)      452 2023-03-20 17:11:50.000000 mk-2.3.1/docs/.overrides/main.html
+--rw-r--r--   0 runner    (1001) docker     (123)     5053 2023-03-20 17:11:50.000000 mk-2.3.1/docs/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/docs/images/
+--rw-r--r--   0 runner    (1001) docker     (123)     8379 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/android-chrome-192x192.png
+--rw-r--r--   0 runner    (1001) docker     (123)    31065 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/android-chrome-512x512.png
+--rw-r--r--   0 runner    (1001) docker     (123)     7345 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/apple-touch-icon.png
+--rw-r--r--   0 runner    (1001) docker     (123)      471 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/favicon-16x16.png
+--rw-r--r--   0 runner    (1001) docker     (123)      910 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/favicon-32x32.png
+--rw-r--r--   0 runner    (1001) docker     (123)    15406 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/favicon.ico
+--rw-r--r--   0 runner    (1001) docker     (123)    22103 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/logo.afdesign
+--rw-r--r--   0 runner    (1001) docker     (123)     5880 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/logo.png
+--rw-r--r--   0 runner    (1001) docker     (123)     1858 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/logo.svg
+--rw-r--r--   0 runner    (1001) docker     (123)   110782 2023-03-20 17:11:50.000000 mk-2.3.1/docs/images/mk-social-preview.png
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/docs/stylesheets/
+--rw-r--r--   0 runner    (1001) docker     (123)     3317 2023-03-20 17:11:50.000000 mk-2.3.1/docs/stylesheets/extra.css
+--rw-r--r--   0 runner    (1001) docker     (123)     2441 2023-03-20 17:11:50.000000 mk-2.3.1/docs/tools.md
+--rw-r--r--   0 runner    (1001) docker     (123)     2568 2023-03-20 17:11:50.000000 mk-2.3.1/mkdocs.yml
+--rw-r--r--   0 runner    (1001) docker     (123)      835 2023-03-20 17:11:50.000000 mk-2.3.1/mypy.ini
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/playbooks/
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-03-20 17:11:50.000000 mk-2.3.1/playbooks/example-playbook.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     2206 2023-03-20 17:11:50.000000 mk-2.3.1/playbooks/test-integration.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     3509 2023-03-20 17:11:50.000000 mk-2.3.1/pyproject.toml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.416025 mk-2.3.1/samples/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/samples/deep/
+--rw-r--r--   0 runner    (1001) docker     (123)       72 2023-03-20 17:11:50.000000 mk-2.3.1/samples/deep/package.json
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/samples/integration/
+--rw-r--r--   0 runner    (1001) docker     (123)      129 2023-03-20 17:11:50.000000 mk-2.3.1/samples/integration/ansible-lint.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      219 2023-03-20 17:11:50.000000 mk-2.3.1/samples/integration/cookiecutter.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       24 2023-03-20 17:11:50.000000 mk-2.3.1/samples/integration/flask-babel.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      132 2023-03-20 17:11:50.000000 mk-2.3.1/samples/integration/podman.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       79 2023-03-20 17:11:50.000000 mk-2.3.1/samples/integration/typeshed.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-20 17:12:23.432025 mk-2.3.1/setup.cfg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.416025 mk-2.3.1/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/src/mk/
+--rw-r--r--   0 runner    (1001) docker     (123)      202 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4779 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      762 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/_typer.py
+--rw-r--r--   0 runner    (1001) docker     (123)      160 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk/_version.py
+--rw-r--r--   0 runner    (1001) docker     (123)      311 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/ctx.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1496 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/exec.py
+--rw-r--r--   0 runner    (1001) docker     (123)      416 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/loaders.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2242 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/runner.py
+--rw-r--r--   0 runner    (1001) docker     (123)      356 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/text.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.432025 mk-2.3.1/src/mk/tools/
+--rw-r--r--   0 runner    (1001) docker     (123)     1473 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1105 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/ansible.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4698 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/git.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1445 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/make.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1848 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/node.py
+--rw-r--r--   0 runner    (1001) docker     (123)      621 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/pre_commit.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3128 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/py_package.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1114 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/pytest.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1289 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/shell.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1895 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/taskfile.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2309 2023-03-20 17:11:50.000000 mk-2.3.1/src/mk/tools/tox.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.424025 mk-2.3.1/src/mk.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     6368 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1765 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      408 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      549 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        3 2023-03-20 17:12:23.000000 mk-2.3.1/src/mk.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.432025 mk-2.3.1/test/
+--rw-r--r--   0 runner    (1001) docker     (123)     3098 2023-03-20 17:11:50.000000 mk-2.3.1/test/test_cli.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-20 17:12:23.432025 mk-2.3.1/tools/
+--rwxr-xr-x   0 runner    (1001) docker     (123)       21 2023-03-20 17:11:50.000000 mk-2.3.1/tools/example-shell.sh
+--rw-r--r--   0 runner    (1001) docker     (123)     3366 2023-03-20 17:11:50.000000 mk-2.3.1/tox.ini
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.509682 mk-2.4.0/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.493682 mk-2.4.0/.config/
++-rw-r--r--   0 runner    (1001) docker     (123)      241 2023-04-06 11:35:19.000000 mk-2.4.0/.config/requirements-docs.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       56 2023-04-06 11:35:19.000000 mk-2.4.0/.config/requirements-test.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      301 2023-04-06 11:35:19.000000 mk-2.4.0/.config/requirements.in
++-rw-r--r--   0 runner    (1001) docker     (123)     1047 2023-04-06 11:35:19.000000 mk-2.4.0/.config/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      206 2023-04-06 11:35:19.000000 mk-2.4.0/.flake8
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.493682 mk-2.4.0/.github/
++-rw-r--r--   0 runner    (1001) docker     (123)       12 2023-04-06 11:35:19.000000 mk-2.4.0/.github/CODEOWNERS
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 11:35:19.000000 mk-2.4.0/.github/FUNDING.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 11:35:19.000000 mk-2.4.0/.github/SECURITY.md
++-rw-r--r--   0 runner    (1001) docker     (123)      392 2023-04-06 11:35:19.000000 mk-2.4.0/.github/dependabot.yml
++-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 11:35:19.000000 mk-2.4.0/.github/release-drafter.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.493682 mk-2.4.0/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)      244 2023-04-06 11:35:19.000000 mk-2.4.0/.github/workflows/ack.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      248 2023-04-06 11:35:19.000000 mk-2.4.0/.github/workflows/push.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      946 2023-04-06 11:35:19.000000 mk-2.4.0/.github/workflows/release.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     4528 2023-04-06 11:35:19.000000 mk-2.4.0/.github/workflows/tox.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      170 2023-04-06 11:35:19.000000 mk-2.4.0/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)     2354 2023-04-06 11:35:19.000000 mk-2.4.0/.pre-commit-config.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      439 2023-04-06 11:35:19.000000 mk-2.4.0/.readthedocs.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.493682 mk-2.4.0/.vscode/
++-rw-r--r--   0 runner    (1001) docker     (123)      195 2023-04-06 11:35:19.000000 mk-2.4.0/.vscode/settings.json
++-rw-r--r--   0 runner    (1001) docker     (123)      417 2023-04-06 11:35:19.000000 mk-2.4.0/.yamllint
++-rw-r--r--   0 runner    (1001) docker     (123)     1091 2023-04-06 11:35:19.000000 mk-2.4.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      120 2023-04-06 11:35:19.000000 mk-2.4.0/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     6369 2023-04-06 11:35:50.505682 mk-2.4.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)       55 2023-04-06 11:35:19.000000 mk-2.4.0/codecov.yml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/docs/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/docs/.overrides/
++-rw-r--r--   0 runner    (1001) docker     (123)      452 2023-04-06 11:35:19.000000 mk-2.4.0/docs/.overrides/main.html
++-rw-r--r--   0 runner    (1001) docker     (123)     5054 2023-04-06 11:35:19.000000 mk-2.4.0/docs/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/docs/images/
++-rw-r--r--   0 runner    (1001) docker     (123)     8379 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/android-chrome-192x192.png
++-rw-r--r--   0 runner    (1001) docker     (123)    31065 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/android-chrome-512x512.png
++-rw-r--r--   0 runner    (1001) docker     (123)     7345 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/apple-touch-icon.png
++-rw-r--r--   0 runner    (1001) docker     (123)      471 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/favicon-16x16.png
++-rw-r--r--   0 runner    (1001) docker     (123)      910 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/favicon-32x32.png
++-rw-r--r--   0 runner    (1001) docker     (123)    15406 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/favicon.ico
++-rw-r--r--   0 runner    (1001) docker     (123)    22103 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/logo.afdesign
++-rw-r--r--   0 runner    (1001) docker     (123)     5880 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/logo.png
++-rw-r--r--   0 runner    (1001) docker     (123)     1858 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/logo.svg
++-rw-r--r--   0 runner    (1001) docker     (123)   110782 2023-04-06 11:35:19.000000 mk-2.4.0/docs/images/mk-social-preview.png
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/docs/stylesheets/
++-rw-r--r--   0 runner    (1001) docker     (123)     3317 2023-04-06 11:35:19.000000 mk-2.4.0/docs/stylesheets/extra.css
++-rw-r--r--   0 runner    (1001) docker     (123)     2441 2023-04-06 11:35:19.000000 mk-2.4.0/docs/tools.md
++-rw-r--r--   0 runner    (1001) docker     (123)     2567 2023-04-06 11:35:19.000000 mk-2.4.0/mkdocs.yml
++-rw-r--r--   0 runner    (1001) docker     (123)      835 2023-04-06 11:35:19.000000 mk-2.4.0/mypy.ini
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/playbooks/
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 11:35:19.000000 mk-2.4.0/playbooks/example-playbook.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     2206 2023-04-06 11:35:19.000000 mk-2.4.0/playbooks/test-integration.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     3544 2023-04-06 11:35:19.000000 mk-2.4.0/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.489682 mk-2.4.0/samples/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.497682 mk-2.4.0/samples/deep/
++-rw-r--r--   0 runner    (1001) docker     (123)       72 2023-04-06 11:35:19.000000 mk-2.4.0/samples/deep/package.json
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.501682 mk-2.4.0/samples/integration/
++-rw-r--r--   0 runner    (1001) docker     (123)      129 2023-04-06 11:35:19.000000 mk-2.4.0/samples/integration/ansible-lint.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      219 2023-04-06 11:35:19.000000 mk-2.4.0/samples/integration/cookiecutter.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-06 11:35:19.000000 mk-2.4.0/samples/integration/flask-babel.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-06 11:35:19.000000 mk-2.4.0/samples/integration/podman.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-06 11:35:19.000000 mk-2.4.0/samples/integration/typeshed.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 11:35:50.509682 mk-2.4.0/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.489682 mk-2.4.0/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.501682 mk-2.4.0/src/mk/
++-rw-r--r--   0 runner    (1001) docker     (123)      202 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4779 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      762 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/_typer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk/_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)      311 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/ctx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1496 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/exec.py
++-rw-r--r--   0 runner    (1001) docker     (123)      416 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/loaders.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2242 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/runner.py
++-rw-r--r--   0 runner    (1001) docker     (123)      356 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/text.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.505682 mk-2.4.0/src/mk/tools/
++-rw-r--r--   0 runner    (1001) docker     (123)     1473 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1105 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/ansible.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1562 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/cmake.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4698 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/git.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1445 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/make.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1848 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/node.py
++-rw-r--r--   0 runner    (1001) docker     (123)      621 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/pre_commit.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3128 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/py_package.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1114 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/pytest.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1289 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/shell.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1895 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/taskfile.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2309 2023-04-06 11:35:19.000000 mk-2.4.0/src/mk/tools/tox.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.501682 mk-2.4.0/src/mk.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     6369 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      441 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      549 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        3 2023-04-06 11:35:50.000000 mk-2.4.0/src/mk.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.505682 mk-2.4.0/test/
++-rw-r--r--   0 runner    (1001) docker     (123)     3098 2023-04-06 11:35:19.000000 mk-2.4.0/test/test_cli.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:35:50.505682 mk-2.4.0/tools/
++-rwxr-xr-x   0 runner    (1001) docker     (123)       21 2023-04-06 11:35:19.000000 mk-2.4.0/tools/example-shell.sh
++-rw-r--r--   0 runner    (1001) docker     (123)     3366 2023-04-06 11:35:19.000000 mk-2.4.0/tox.ini
+```
+
+### Comparing `mk-2.3.1/.config/requirements.txt` & `mk-2.4.0/.config/requirements.txt`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -32,15 +32,15 @@
+ pygments==2.14.0
+ pyproject-hooks==1.0.0
+ pyyaml==6.0
+ readme-renderer==37.3
+ requests==2.28.2
+ requests-toolbelt==0.10.1
+ rfc3986==2.0.0
+-rich==13.3.2
++rich==13.3.3
+ secretstorage==3.3.3
+ shellingham==1.5.0.post1
+ six==1.16.0
+ smmap==5.0.0
+ subprocess-tee==0.4.1
+ twine==4.0.2
+ typer==0.7.0
+```
+
+### Comparing `mk-2.3.1/.github/workflows/release.yml` & `mk-2.4.0/.github/workflows/release.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/.github/workflows/tox.yml` & `mk-2.4.0/.github/workflows/tox.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/.pre-commit-config.yaml` & `mk-2.4.0/.pre-commit-config.yaml`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -20,15 +20,15 @@
+     rev: 5.12.0
+     hooks:
+       - id: isort
+         args:
+           # https://github.com/pre-commit/mirrors-isort/issues/9#issuecomment-624404082
+           - --filter-files
+   - repo: https://github.com/psf/black
+-    rev: 23.1.0
++    rev: 23.3.0
+     hooks:
+       - id: black
+         args: [--safe]
+   - repo: https://github.com/pre-commit/pre-commit-hooks
+     rev: v4.4.0
+     hooks:
+       - id: end-of-file-fixer
+@@ -45,15 +45,15 @@
+       - id: flake8
+         additional_dependencies:
+           - flake8-absolute-import
+           - flake8-black>=0.1.1
+           - flake8-docstrings>=1.5.0
+         language_version: python3
+   - repo: https://github.com/adrienverge/yamllint.git
+-    rev: v1.29.0
++    rev: v1.30.0
+     hooks:
+       - id: yamllint
+         files: \.(yaml|yml)$
+         types: [file, yaml]
+         entry: yamllint --strict
+   - repo: https://github.com/pre-commit/mirrors-mypy
+     rev: v1.1.1
+@@ -68,15 +68,15 @@
+           - diskcache
+           - importlib-metadata
+           - packaging
+           - rich
+           - subprocess-tee
+           - typer>=0.7.0
+   - repo: https://github.com/pycqa/pylint
+-    rev: v2.17.0
++    rev: v3.0.0a6
+     hooks:
+       - id: pylint
+         additional_dependencies:
+           - GitPython
+           - click-help-colors
+           - diskcache
+           - importlib-metadata
+```
+
+### Comparing `mk-2.3.1/LICENSE` & `mk-2.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/PKG-INFO` & `mk-2.4.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mk
+-Version: 2.3.1
++Version: 2.4.0
+ Summary: mk
+ Author-email: Sorin Sbarnea <sorin.sbarnea@gmail.com>
+ License: MIT
+ Project-URL: homepage, https://github.com/pycontribs/mk
+ Project-URL: repository, https://github.com/pycontribs/mk
+ Project-URL: changelog, https://github.com/pycontribs/mk/releases
+ Keywords: mk
+@@ -91,15 +91,15 @@
+ One of the benefits of `mk` is that it should reduce the amount of
+ how-to-contribute documentation the author needs to write.
+ 
+ A considerable amount of maintainer effort can go into producing documentation
+ that makes it easier for someone to contribute.
+ 
+ Some projects are less affected than others. That is usually related to how well
+-do the potential contributors know the practices used by the project. Still, if
++the potential contributors know the practices used by the project. Still, if
+ your project has a wide range of uses, you will quickly discover that newbie
+ contributors may hit a knowledge wall. Such a barrier will likely prevent most
+ of them from becoming active contributors. The remaining ones will flood the
+ project with questions, distracting other maintainers from doing more advanced
+ tasks.
+ 
+ Unless you want to deter contributions, you should plan to make it as easy as
+@@ -111,29 +111,29 @@
+ `mk` allows typing as little as possible by automatically aliasing commands. For
+ example, you can run `mk lint` just by typing `mk l` as long there is no other
+ command starting with the same letter. Aliases are available for one, two and
+ three letters prefixes.
+ 
+ ## Using mk to propose changes to projects
+ 
+-Instead of writing long list of tasks to follow, we can use a tool that tells
++Instead of writing a long list of tasks to follow, we can use a tool that tells
+ him what to do next. For example, `mk` has a built-in command named `up(load)`
+ that aims to ease preparing a local change from being proposed to the project.
+ 
+ This command detects if it should use GitHub workflow or Gerrit and will run the
+ appropriate commands for opening or updating a CR/PR. Users will be allowed to
+ upload a change only after passing the minimal set of local tests, preventing
+ noisy mistakes or clog CI/CD pipelines.
+ 
+ In addition to linting, it will also check that the repository is not in dirty
+ status or that the testing did not leave untracked files.
+ 
+ ## Planned features
+ 
+-- Persistent state of each command run - This means that it will know if a
++- A persistent state of each command run - This means that it will know if a
+   specific command was run and if it failed or not. The state would be linked to
+   the repository state, so modifying a tracked file would reset the state to be
+   unknown. (#20)
+ - Configuration file where additional actions can be added. (#21)
+ - Dependencies between commands. While some tools support dependencies, many do
+   not. You should be able to declare that a specific command would run only
+   after another one already passed. (#22)
+```
+
+### Comparing `mk-2.3.1/docs/README.md` & `mk-2.4.0/docs/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -57,15 +57,15 @@
+ One of the benefits of `mk` is that it should reduce the amount of
+ how-to-contribute documentation the author needs to write.
+ 
+ A considerable amount of maintainer effort can go into producing documentation
+ that makes it easier for someone to contribute.
+ 
+ Some projects are less affected than others. That is usually related to how well
+-do the potential contributors know the practices used by the project. Still, if
++the potential contributors know the practices used by the project. Still, if
+ your project has a wide range of uses, you will quickly discover that newbie
+ contributors may hit a knowledge wall. Such a barrier will likely prevent most
+ of them from becoming active contributors. The remaining ones will flood the
+ project with questions, distracting other maintainers from doing more advanced
+ tasks.
+ 
+ Unless you want to deter contributions, you should plan to make it as easy as
+@@ -77,29 +77,29 @@
+ `mk` allows typing as little as possible by automatically aliasing commands. For
+ example, you can run `mk lint` just by typing `mk l` as long there is no other
+ command starting with the same letter. Aliases are available for one, two and
+ three letters prefixes.
+ 
+ ## Using mk to propose changes to projects
+ 
+-Instead of writing long list of tasks to follow, we can use a tool that tells
++Instead of writing a long list of tasks to follow, we can use a tool that tells
+ him what to do next. For example, `mk` has a built-in command named `up(load)`
+ that aims to ease preparing a local change from being proposed to the project.
+ 
+ This command detects if it should use GitHub workflow or Gerrit and will run the
+ appropriate commands for opening or updating a CR/PR. Users will be allowed to
+ upload a change only after passing the minimal set of local tests, preventing
+ noisy mistakes or clog CI/CD pipelines.
+ 
+ In addition to linting, it will also check that the repository is not in dirty
+ status or that the testing did not leave untracked files.
+ 
+ ## Planned features
+ 
+-- Persistent state of each command run - This means that it will know if a
++- A persistent state of each command run - This means that it will know if a
+   specific command was run and if it failed or not. The state would be linked to
+   the repository state, so modifying a tracked file would reset the state to be
+   unknown. (#20)
+ - Configuration file where additional actions can be added. (#21)
+ - Dependencies between commands. While some tools support dependencies, many do
+   not. You should be able to declare that a specific command would run only
+   after another one already passed. (#22)
+```
+
+### Comparing `mk-2.3.1/docs/images/android-chrome-192x192.png` & `mk-2.4.0/docs/images/android-chrome-192x192.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/android-chrome-512x512.png` & `mk-2.4.0/docs/images/android-chrome-512x512.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/apple-touch-icon.png` & `mk-2.4.0/docs/images/apple-touch-icon.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/favicon-32x32.png` & `mk-2.4.0/docs/images/favicon-32x32.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/favicon.ico` & `mk-2.4.0/docs/images/favicon.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/logo.afdesign` & `mk-2.4.0/docs/images/logo.afdesign`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/logo.png` & `mk-2.4.0/docs/images/logo.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/logo.svg` & `mk-2.4.0/docs/images/logo.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/images/mk-social-preview.png` & `mk-2.4.0/docs/images/mk-social-preview.png`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/stylesheets/extra.css` & `mk-2.4.0/docs/stylesheets/extra.css`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/docs/tools.md` & `mk-2.4.0/docs/tools.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/mkdocs.yml` & `mk-2.4.0/mkdocs.yml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ ---
+ site_name: mk tool documentation
+-site_url: https://mk2.readthedocs.io/
++site_url: https://mk.readthedocs.io/
+ repo_url: https://github.com/pycontribs/mk
+ edit_uri: blob/main/docs/
+ copyright: Copyright © 2021-2023 Sorin Sbarnea
+ docs_dir: docs
+ strict: true
+ 
+ extra_css:
+```
+
+### Comparing `mk-2.3.1/mypy.ini` & `mk-2.4.0/mypy.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/playbooks/test-integration.yml` & `mk-2.4.0/playbooks/test-integration.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/pyproject.toml` & `mk-2.4.0/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -44,14 +44,15 @@
+ changelog = "https://github.com/pycontribs/mk/releases"
+ 
+ [project.scripts]
+ mk = "mk.__main__:cli"
+ 
+ [project.entry-points."mk_tools"]
+ ansible = "mk.tools.ansible:AnsibleTool"
++cmake = "mk.tools.cmake:CMakeTool"
+ git = "mk.tools.git:GitTool"
+ make = "mk.tools.make:MakeTool"
+ node = "mk.tools.node:NodeTool"
+ pypackage = "mk.tools.py_package:PyPackageTool"
+ pytest = "mk.tools.pytest:PyTestTool"
+ pre-commit = "mk.tools.pre_commit:PreCommitTool"
+ shell = "mk.tools.shell:ShellTool"
+```
+
+### Comparing `mk-2.3.1/src/mk/__main__.py` & `mk-2.4.0/src/mk/__main__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/_typer.py` & `mk-2.4.0/src/mk/_typer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/exec.py` & `mk-2.4.0/src/mk/exec.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/runner.py` & `mk-2.4.0/src/mk/runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/__init__.py` & `mk-2.4.0/src/mk/tools/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/ansible.py` & `mk-2.4.0/src/mk/tools/ansible.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/git.py` & `mk-2.4.0/src/mk/tools/git.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/make.py` & `mk-2.4.0/src/mk/tools/make.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/node.py` & `mk-2.4.0/src/mk/tools/node.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/pre_commit.py` & `mk-2.4.0/src/mk/tools/pre_commit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/py_package.py` & `mk-2.4.0/src/mk/tools/py_package.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/pytest.py` & `mk-2.4.0/src/mk/tools/pytest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/shell.py` & `mk-2.4.0/src/mk/tools/shell.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/taskfile.py` & `mk-2.4.0/src/mk/tools/taskfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk/tools/tox.py` & `mk-2.4.0/src/mk/tools/tox.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/src/mk.egg-info/PKG-INFO` & `mk-2.4.0/src/mk.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mk
+-Version: 2.3.1
++Version: 2.4.0
+ Summary: mk
+ Author-email: Sorin Sbarnea <sorin.sbarnea@gmail.com>
+ License: MIT
+ Project-URL: homepage, https://github.com/pycontribs/mk
+ Project-URL: repository, https://github.com/pycontribs/mk
+ Project-URL: changelog, https://github.com/pycontribs/mk/releases
+ Keywords: mk
+@@ -91,15 +91,15 @@
+ One of the benefits of `mk` is that it should reduce the amount of
+ how-to-contribute documentation the author needs to write.
+ 
+ A considerable amount of maintainer effort can go into producing documentation
+ that makes it easier for someone to contribute.
+ 
+ Some projects are less affected than others. That is usually related to how well
+-do the potential contributors know the practices used by the project. Still, if
++the potential contributors know the practices used by the project. Still, if
+ your project has a wide range of uses, you will quickly discover that newbie
+ contributors may hit a knowledge wall. Such a barrier will likely prevent most
+ of them from becoming active contributors. The remaining ones will flood the
+ project with questions, distracting other maintainers from doing more advanced
+ tasks.
+ 
+ Unless you want to deter contributions, you should plan to make it as easy as
+@@ -111,29 +111,29 @@
+ `mk` allows typing as little as possible by automatically aliasing commands. For
+ example, you can run `mk lint` just by typing `mk l` as long there is no other
+ command starting with the same letter. Aliases are available for one, two and
+ three letters prefixes.
+ 
+ ## Using mk to propose changes to projects
+ 
+-Instead of writing long list of tasks to follow, we can use a tool that tells
++Instead of writing a long list of tasks to follow, we can use a tool that tells
+ him what to do next. For example, `mk` has a built-in command named `up(load)`
+ that aims to ease preparing a local change from being proposed to the project.
+ 
+ This command detects if it should use GitHub workflow or Gerrit and will run the
+ appropriate commands for opening or updating a CR/PR. Users will be allowed to
+ upload a change only after passing the minimal set of local tests, preventing
+ noisy mistakes or clog CI/CD pipelines.
+ 
+ In addition to linting, it will also check that the repository is not in dirty
+ status or that the testing did not leave untracked files.
+ 
+ ## Planned features
+ 
+-- Persistent state of each command run - This means that it will know if a
++- A persistent state of each command run - This means that it will know if a
+   specific command was run and if it failed or not. The state would be linked to
+   the repository state, so modifying a tracked file would reset the state to be
+   unknown. (#20)
+ - Configuration file where additional actions can be added. (#21)
+ - Dependencies between commands. While some tools support dependencies, many do
+   not. You should be able to declare that a specific command would run only
+   after another one already passed. (#22)
+```
+
+### Comparing `mk-2.3.1/src/mk.egg-info/SOURCES.txt` & `mk-2.4.0/src/mk.egg-info/SOURCES.txt`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -59,14 +59,15 @@
+ src/mk.egg-info/SOURCES.txt
+ src/mk.egg-info/dependency_links.txt
+ src/mk.egg-info/entry_points.txt
+ src/mk.egg-info/requires.txt
+ src/mk.egg-info/top_level.txt
+ src/mk/tools/__init__.py
+ src/mk/tools/ansible.py
++src/mk/tools/cmake.py
+ src/mk/tools/git.py
+ src/mk/tools/make.py
+ src/mk/tools/node.py
+ src/mk/tools/pre_commit.py
+ src/mk/tools/py_package.py
+ src/mk/tools/pytest.py
+ src/mk/tools/shell.py
+```
+
+### Comparing `mk-2.3.1/src/mk.egg-info/requires.txt` & `mk-2.4.0/src/mk.egg-info/requires.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/test/test_cli.py` & `mk-2.4.0/test/test_cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mk-2.3.1/tox.ini` & `mk-2.4.0/tox.ini`
+
+ * *Files identical despite different names*
+

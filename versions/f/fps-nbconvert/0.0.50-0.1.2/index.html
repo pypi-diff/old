@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/fps_nbconvert-0.0.50.tar.gz tmp/fps_nbconvert-0.1.2.tar.gz --html versions/f/fps-nbconvert/0.0.50-0.1.2/index.html --text versions/f/fps-nbconvert/0.0.50-0.1.2/diff.txt --markdown versions/f/fps-nbconvert/0.0.50-0.1.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.05 KB</span></div>
+  <div><span class="source">tmp/fps_nbconvert-0.0.50.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/fps_nbconvert-0.1.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.99 KB</span></div>
+    <div><span class="source">fps_nbconvert-0.0.50.tar</span> vs.</div>
+    <div id="fps_nbconvert--.-.--.tar"><span class="source">fps_nbconvert-0.1.2.tar</span>
+      <a class="anchor" href="#fps_nbconvert--.-.--.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.79 KB</span></div>
+      <div id="fps_nbconvert--.-.--.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#fps_nbconvert--.-.--.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 8 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/MANIFEST.in</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>3</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/fps_nbconvert/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>2</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/fps_nbconvert/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.1.2/fps_nbconvert/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>224</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/fps_nbconvert/routes.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>563</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/fps_nbconvert/routes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6359<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/.gitignore</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6359<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2833<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/COPYING.md</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2833<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/COPYING.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/README.md</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>81</del>9<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/pyproject.toml</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>90</ins>9<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>513</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<del>0</del>.<del>5</del><del>0</del>/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>479</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>fps_nbconvert-0.<ins>1</ins>.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.82 KB</span></div>
+      <div><span class="source">fps_nbconvert-0.0.50/fps_nbconvert/routes.py</span> vs.</div>
+      <div id="fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---fps_nbconvert-routes.py"><span class="source">fps_nbconvert-0.1.2/fps_nbconvert/routes.py</span>
+        <a class="anchor" href="#fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---fps_nbconvert-routes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 40 lines modified</td><td colspan="2">Offset 1, 47 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>tempfile</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>tempfile</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>nbconvert<del><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</del></td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>nbconvert</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>fastapi<span class="dp">·</span>import<span class="dp">·</span>APIRouter,<span class="dp">·</span>Depends</td><td class="diffline">4 </td><td class="diffpresent">from<span class="dp">·</span>fastapi<span class="dp">·</span>import<span class="dp">·</span>APIRouter,<span class="dp">·</span>Depends</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>fastapi.responses<span class="dp">·</span>import<span class="dp">·</span>FileResponse</td><td class="diffline">5 </td><td class="diffpresent">from<span class="dp">·</span>fastapi.responses<span class="dp">·</span>import<span class="dp">·</span>FileResponse</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>fps.hooks<span class="dp">·</span>import<span class="dp">·</span>register_router<span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>type:<span class="dp">·</span>ignore</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span><del>fps_</del><del>a</del>u<del>th_base<span class="dp">·</span>im</del>p<del>ort<span class="dp">·</span></del><del>Us</del>e<del>r,<span class="dp">·</span>cu</del>r<del>r</del>e<del>nt</del>_<del>user<span class="dp">·</span><span class="dp">·</span>#</del><span class="dp">·</span><del>ty</del>p<del>e:</del><del><span class="dp">·</span>ignore</del></td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span><ins>j</ins>up<ins>yv</ins>er<ins>s</ins>e_<ins>api.app</ins><span class="dp">·</span><ins>im</ins>p<ins>ort<span class="dp">·</span>App</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>jupyverse_api.auth<span class="dp">·</span>import<span class="dp">·</span>Auth,<span class="dp">·</span>User</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>jupyverse_api.nbconvert<span class="dp">·</span>import<span class="dp">·</span>Nbconvert</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">9 </td><td class="diffpresent">class<span class="dp">·</span>_Nbconvert(Nbconvert):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>app:<span class="dp">·</span>App,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>auth:<span class="dp">·</span>Auth,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(app)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>router<span class="dp">·</span>=<span class="dp">·</span>APIRouter()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@router.get(&quot;/api/nbconvert&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>get_nbconvert_formats():</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>{</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>{&quot;output_mimetype&quot;:<span class="dp">·</span>nbconvert.exporters.get_exporter(name).output_mimetype}</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>name<span class="dp">·</span>in<span class="dp">·</span>nbconvert.exporters.get_export_names()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@router.get(&quot;/nbconvert/{format}/{path}&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>async<span class="dp">·</span>def<span class="dp">·</span>get_nbconvert_document(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>format:<span class="dp">·</span>str,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>path:<span class="dp">·</span>str,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>download:<span class="dp">·</span>bool,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>user:<span class="dp">·</span>User<span class="dp">·</span>=<span class="dp">·</span>Depends(auth.current_user(permissions={&quot;nbconvert&quot;:<span class="dp">·</span>[&quot;read&quot;]})),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>exporter<span class="dp">·</span>=<span class="dp">·</span>nbconvert.exporters.get_exporter(format)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>download:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>media_type<span class="dp">·</span>=<span class="dp">·</span>&quot;application/octet-stream&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>media_type<span class="dp">·</span>=<span class="dp">·</span>exporter.output_mimetype</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tmp_dir<span class="dp">·</span>=<span class="dp">·</span>Path(tempfile.mkdtemp())</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tmp_path<span class="dp">·</span>=<span class="dp">·</span>tmp_dir<span class="dp">·</span>/<span class="dp">·</span>(Path(path).stem<span class="dp">·</span>+<span class="dp">·</span>exporter().file_extension)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(tmp_path,<span class="dp">·</span>&quot;wt&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(exporter().from_filename(path)[0])</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>FileResponse(tmp_path,<span class="dp">·</span>media_type=media_type,<span class="dp">·</span>filename=tmp_path.name)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.include_router(router)</td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">router<span class="dp">·</span>=<span class="dp">·</span>APIRouter()</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">@router.get(&quot;/api/nbconvert&quot;)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>get_nbconvert_formats():</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>{</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name:<span class="dp">·</span>{&quot;output_mimetype&quot;:<span class="dp">·</span>nbconvert.exporters.get_exporter(name).output_mimetype}</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>name<span class="dp">·</span>in<span class="dp">·</span>nbconvert.exporters.get_export_names()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">@router.get(&quot;/nbconvert/{format}/{path}&quot;)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">16 </td><td class="diffpresent">async<span class="dp">·</span>def<span class="dp">·</span>get_nbconvert_document(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>format:<span class="dp">·</span>str,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>path:<span class="dp">·</span>str,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>download:<span class="dp">·</span>bool,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>user:<span class="dp">·</span>User<span class="dp">·</span>=<span class="dp">·</span>Depends(current_user(permissions={&quot;nbconvert&quot;:<span class="dp">·</span>[&quot;read&quot;]})),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent">):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>exporter<span class="dp">·</span>=<span class="dp">·</span>nbconvert.exporters.get_exporter(format)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>download:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>media_type<span class="dp">·</span>=<span class="dp">·</span>&quot;application/octet-stream&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>media_type<span class="dp">·</span>=<span class="dp">·</span>exporter.output_mimetype</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tmp_dir<span class="dp">·</span>=<span class="dp">·</span>Path(tempfile.mkdtemp())</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tmp_path<span class="dp">·</span>=<span class="dp">·</span>tmp_dir<span class="dp">·</span>/<span class="dp">·</span>(Path(path).stem<span class="dp">·</span>+<span class="dp">·</span>exporter().file_extension)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with<span class="dp">·</span>open(tmp_path,<span class="dp">·</span>&quot;wt&quot;)<span class="dp">·</span>as<span class="dp">·</span>f:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f.write(exporter().from_filename(path)[0])</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>FileResponse(tmp_path,<span class="dp">·</span>media_type=media_type,<span class="dp">·</span>filename=tmp_path.name)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">32 </td><td class="diffpresent">r<span class="dp">·</span>=<span class="dp">·</span>register_router(router)</td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">100 B</span></div>
+      <div><span class="source">fps_nbconvert-0.0.50/.gitignore</span> vs.</div>
+      <div id="fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---.gitignore"><span class="source">fps_nbconvert-0.1.2/.gitignore</span>
+        <a class="anchor" href="#fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">100 B</span></div>
+      <div><span class="source">fps_nbconvert-0.0.50/COPYING.md</span> vs.</div>
+      <div id="fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---COPYING.md"><span class="source">fps_nbconvert-0.1.2/COPYING.md</span>
+        <a class="anchor" href="#fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---COPYING.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.14 KB</span></div>
+      <div><span class="source">fps_nbconvert-0.0.50/pyproject.toml</span> vs.</div>
+      <div id="fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---pyproject.toml"><span class="source">fps_nbconvert-0.1.2/pyproject.toml</span>
+        <a class="anchor" href="#fps_nbconvert--.-.--.tar---fps_nbconvert--.-.---pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 25% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 17 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;hatchling&quot;,]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;hatchling&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;hatchling.build&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;An<span class="dp">·</span>FPS<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>nbconvert<span class="dp">·</span>API&quot;</td><td class="diffline">6 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;An<span class="dp">·</span>FPS<span class="dp">·</span>plugin<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>nbconvert<span class="dp">·</span>API&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[<del><span class="dp">·</span></del>&quot;jupyter&quot;,<span class="dp">·</span>&quot;server&quot;,<span class="dp">·</span>&quot;fastapi<del>&quot;,<span class="dp">·</span>&quot;pluggy</del>&quot;,<span class="dp">·</span>&quot;plugins&quot;<del>,</del>]</td><td class="diffline">7 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;jupyter&quot;,<span class="dp">·</span>&quot;server&quot;,<span class="dp">·</span>&quot;fastapi&quot;,<span class="dp">·</span>&quot;plugins&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td><td class="diffline">8 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[<del><span class="dp">·</span>&quot;fps<span class="dp">·</span>&gt;=0.0.8&quot;,<span class="dp">·</span>&quot;fps-auth-base&quot;,<span class="dp">·</span>&quot;nbconvert&quot;,]</del></td><td class="diffline">9 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;nbconvert&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;jupyverse-api&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;version&quot;,]</td><td class="diffline">13 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;version&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">[[project.authors]]</td><td class="diffline">14 </td><td class="diffpresent">[[project.authors]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;Jupyter<span class="dp">·</span>Development<span class="dp">·</span>Team&quot;</td><td class="diffline">15 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;Jupyter<span class="dp">·</span>Development<span class="dp">·</span>Team&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">email<span class="dp">·</span>=<span class="dp">·</span>&quot;jupyter@googlegroups.com&quot;</td><td class="diffline">16 </td><td class="diffpresent">email<span class="dp">·</span>=<span class="dp">·</span>&quot;jupyter@googlegroups.com&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">[project.readme]</td><td class="diffline">17 </td><td class="diffpresent">[project.readme]</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">file<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">18 </td><td class="diffpresent">file<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 25, 12 lines modified</td><td colspan="2">Offset 28, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">[tool.check-manifest]</td><td class="diffline">28 </td><td class="diffpresent">[tool.check-manifest]</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">ignore<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;.*&quot;,]</td><td class="diffline">29 </td><td class="diffpresent">ignore<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;.*&quot;,]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">[tool.jupyter-releaser]</td><td class="diffline">30 </td><td class="diffpresent">[tool.jupyter-releaser]</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">skip<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;check-links&quot;,]</td><td class="diffline">31 </td><td class="diffpresent">skip<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;check-links&quot;,]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">[project.entry-points<del>.fps_router</del>]</td><td class="diffline">32 </td><td class="diffpresent">[project.entry-points]</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent"><del>f</del>ps<del>-</del>nbconvert<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert.ro<del>ut</del>e<del>s</del>&quot;</td><td class="diffline">33 </td><td class="diffpresent"><ins>&quot;asphalt.co</ins><ins>m</ins>p<ins>onent</ins>s<ins>&quot;<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>=<span class="dp">·</span></ins><ins>{</ins>nbconvert<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert.<ins>main:Nbconve</ins>r<ins>tC</ins>o<ins>mp</ins><ins>on</ins>e<ins>n</ins><ins>t</ins>&quot;<ins>}</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">&quot;jupyverse.components&quot;<span class="dp">·</span>=<span class="dp">·</span>{nbconvert<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert.main:NbconvertComponent&quot;}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">[tool.hatch.version]</td><td class="diffline">35 </td><td class="diffpresent">[tool.hatch.version]</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">path<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert/__init__.py&quot;</td><td class="diffline">36 </td><td class="diffpresent">path<span class="dp">·</span>=<span class="dp">·</span>&quot;fps_nbconvert/__init__.py&quot;</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
