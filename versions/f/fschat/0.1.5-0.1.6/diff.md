@@ -1,0 +1,402 @@
+# Comparing `tmp/fschat-0.1.5.tar.gz` & `tmp/fschat-0.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fschat-0.1.5.tar", last modified: Thu Apr  6 14:46:10 2023, max compression
++gzip compressed data, was "fschat-0.1.6.tar", last modified: Thu Apr  6 15:41:37 2023, max compression
+```
+
+## Comparing `fschat-0.1.5.tar` & `fschat-0.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,50 @@
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    11357 2023-04-03 18:06:47.000000 fschat-0.1.5/LICENSE
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 14:46:10.623159 fschat-0.1.5/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9634 2023-04-06 14:45:10.000000 fschat-0.1.5/README.md
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       88 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/constants.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6432 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/conversation.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/data/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1819 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/alpaca-converter.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4465 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/data/clean_sharegpt.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      615 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/inspect.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2684 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/data/optional_clean.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      475 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/pretty_json.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3403 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/data/split_long_conversation.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/eval/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5042 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/eval/eval_gpt_review.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3661 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/eval/generate_webpage_data_from_table.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3054 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/eval/get_model_answer.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2345 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/eval/qa_baseline_gpt35.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/model/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/model/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1872 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/model/apply_delta.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2135 2023-04-06 02:45:48.000000 fschat-0.1.5/fastchat/model/make_delta.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.619159 fschat-0.1.5/fastchat/serve/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6201 2023-04-06 14:44:46.000000 fschat-0.1.5/fastchat/serve/cli.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9942 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/controller.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2717 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/gradio_css.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     7343 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/gradio_patch.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    16246 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/serve/gradio_web_server.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     8749 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/serve/model_worker.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3997 2023-04-06 14:44:46.000000 fschat-0.1.5/fastchat/serve/monkey_patch_non_inplace.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      734 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/register_worker.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2028 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/serve/test_message.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/fastchat/train/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3982 2023-04-06 14:12:17.000000 fschat-0.1.5/fastchat/train/llama_flash_attn_monkey_patch.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    12308 2023-04-06 13:02:10.000000 fschat-0.1.5/fastchat/train/train.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2023-04-06 05:27:02.000000 fschat-0.1.5/fastchat/train/train_lora.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-04-03 18:06:47.000000 fschat-0.1.5/fastchat/train/train_mem.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3988 2023-04-06 14:12:04.000000 fschat-0.1.5/fastchat/utils.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 14:46:10.623159 fschat-0.1.5/fschat.egg-info/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1166 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/SOURCES.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/dependency_links.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      115 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/requires.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       21 2023-04-06 14:46:10.000000 fschat-0.1.5/fschat.egg-info/top_level.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      938 2023-04-06 14:45:57.000000 fschat-0.1.5/pyproject.toml
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       38 2023-04-06 14:46:10.623159 fschat-0.1.5/setup.cfg
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.963410 fschat-0.1.6/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    11357 2023-04-03 18:06:47.000000 fschat-0.1.6/LICENSE
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 15:41:37.963410 fschat-0.1.6/PKG-INFO
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9634 2023-04-06 14:45:10.000000 fschat-0.1.6/README.md
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.959411 fschat-0.1.6/fastchat/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       88 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/constants.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6432 2023-04-06 02:45:48.000000 fschat-0.1.6/fastchat/conversation.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.959411 fschat-0.1.6/fastchat/data/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/data/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1819 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/data/alpaca-converter.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4465 2023-04-06 02:45:48.000000 fschat-0.1.6/fastchat/data/clean_sharegpt.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      615 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/data/inspect.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2684 2023-04-06 02:45:48.000000 fschat-0.1.6/fastchat/data/optional_clean.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      475 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/data/pretty_json.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3403 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/data/split_long_conversation.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.959411 fschat-0.1.6/fastchat/eval/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     5042 2023-04-06 05:27:02.000000 fschat-0.1.6/fastchat/eval/eval_gpt_review.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3661 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/eval/generate_webpage_data_from_table.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3054 2023-04-06 05:27:02.000000 fschat-0.1.6/fastchat/eval/get_model_answer.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2345 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/eval/qa_baseline_gpt35.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.959411 fschat-0.1.6/fastchat/model/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/model/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1904 2023-04-06 15:41:16.000000 fschat-0.1.6/fastchat/model/apply_delta.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2167 2023-04-06 15:41:16.000000 fschat-0.1.6/fastchat/model/make_delta.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.959411 fschat-0.1.6/fastchat/serve/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/__init__.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6201 2023-04-06 15:35:02.000000 fschat-0.1.6/fastchat/serve/cli.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9942 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/controller.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2717 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/gradio_css.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     7343 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/gradio_patch.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    16246 2023-04-06 05:27:02.000000 fschat-0.1.6/fastchat/serve/gradio_web_server.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     8756 2023-04-06 14:49:35.000000 fschat-0.1.6/fastchat/serve/model_worker.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3997 2023-04-06 14:44:46.000000 fschat-0.1.6/fastchat/serve/monkey_patch_non_inplace.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      734 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/register_worker.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2028 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/serve/test_message.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.963410 fschat-0.1.6/fastchat/train/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3982 2023-04-06 14:12:17.000000 fschat-0.1.6/fastchat/train/llama_flash_attn_monkey_patch.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    12308 2023-04-06 13:02:10.000000 fschat-0.1.6/fastchat/train/train.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3657 2023-04-06 05:27:02.000000 fschat-0.1.6/fastchat/train/train_lora.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-04-03 18:06:47.000000 fschat-0.1.6/fastchat/train/train_mem.py
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     3988 2023-04-06 14:12:04.000000 fschat-0.1.6/fastchat/utils.py
++drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-04-06 15:41:37.963410 fschat-0.1.6/fschat.egg-info/
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10108 2023-04-06 15:41:37.000000 fschat-0.1.6/fschat.egg-info/PKG-INFO
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1166 2023-04-06 15:41:37.000000 fschat-0.1.6/fschat.egg-info/SOURCES.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-04-06 15:41:37.000000 fschat-0.1.6/fschat.egg-info/dependency_links.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      115 2023-04-06 15:41:37.000000 fschat-0.1.6/fschat.egg-info/requires.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       21 2023-04-06 15:41:37.000000 fschat-0.1.6/fschat.egg-info/top_level.txt
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      938 2023-04-06 15:41:21.000000 fschat-0.1.6/pyproject.toml
++-rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       38 2023-04-06 15:41:37.963410 fschat-0.1.6/setup.cfg
+```
+
+### Comparing `fschat-0.1.5/LICENSE` & `fschat-0.1.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/PKG-INFO` & `fschat-0.1.6/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fschat
+-Version: 0.1.5
++Version: 0.1.6
+ Summary: An open platform for training, serving, and evaluating large language model based chatbots.
+ Project-URL: Homepage, https://github.com/lm-sys/fastchat
+ Project-URL: Bug Tracker, https://github.com/lm-sys/fastchat/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: fschat Version: 0.1.5 Summary: An open platform for
++Metadata-Version: 2.1 Name: fschat Version: 0.1.6 Summary: An open platform for
+ training, serving, and evaluating large language model based chatbots. Project-
+ URL: Homepage, https://github.com/lm-sys/fastchat Project-URL: Bug Tracker,
+ https://github.com/lm-sys/fastchat/issues Classifier: Programming Language ::
+ Python :: 3 Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8 Description-Content-Type: text/markdown License-File:
+ LICENSE # FastChat An open platform for training, serving, and evaluating large
+ language model based chatbots. ## Release
+```
+
+### Comparing `fschat-0.1.5/README.md` & `fschat-0.1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/conversation.py` & `fschat-0.1.6/fastchat/conversation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/data/alpaca-converter.py` & `fschat-0.1.6/fastchat/data/alpaca-converter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/data/clean_sharegpt.py` & `fschat-0.1.6/fastchat/data/clean_sharegpt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/data/inspect.py` & `fschat-0.1.6/fastchat/data/inspect.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/data/optional_clean.py` & `fschat-0.1.6/fastchat/data/optional_clean.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/data/split_long_conversation.py` & `fschat-0.1.6/fastchat/data/split_long_conversation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/eval/eval_gpt_review.py` & `fschat-0.1.6/fastchat/eval/eval_gpt_review.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/eval/generate_webpage_data_from_table.py` & `fschat-0.1.6/fastchat/eval/generate_webpage_data_from_table.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/eval/get_model_answer.py` & `fschat-0.1.6/fastchat/eval/get_model_answer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/eval/qa_baseline_gpt35.py` & `fschat-0.1.6/fastchat/eval/qa_baseline_gpt35.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/model/apply_delta.py` & `fschat-0.1.6/fastchat/model/apply_delta.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -12,18 +12,18 @@
+ def apply_delta(base_model_path, target_model_path, delta_path):
+     print("Loading base model")
+     base = AutoModelForCausalLM.from_pretrained(
+         base_model_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+ 
+     print("Loading delta")
+     delta = AutoModelForCausalLM.from_pretrained(delta_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+-    delta_tokenizer = AutoTokenizer.from_pretrained(delta_path)
++    delta_tokenizer = AutoTokenizer.from_pretrained(delta_path, use_fast=False)
+ 
+     DEFAULT_PAD_TOKEN = "[PAD]"
+-    base_tokenizer = AutoTokenizer.from_pretrained(base_model_path)
++    base_tokenizer = AutoTokenizer.from_pretrained(base_model_path, use_fast=False)
+     num_new_tokens = base_tokenizer.add_special_tokens(dict(pad_token=DEFAULT_PAD_TOKEN))
+ 
+     base.resize_token_embeddings(len(base_tokenizer))
+     input_embeddings = base.get_input_embeddings().weight.data
+     output_embeddings = base.get_output_embeddings().weight.data
+     input_embeddings[-num_new_tokens:] = 0
+     output_embeddings[-num_new_tokens:] = 0
+```
+
+### Comparing `fschat-0.1.5/fastchat/model/make_delta.py` & `fschat-0.1.6/fastchat/model/make_delta.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -14,15 +14,15 @@
+     base = AutoModelForCausalLM.from_pretrained(
+         base_model_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+ 
+     print("Loading target model")
+     target = AutoModelForCausalLM.from_pretrained(target_model_path, torch_dtype=torch.float16, low_cpu_mem_usage=True)
+ 
+     DEFAULT_PAD_TOKEN = "[PAD]"
+-    base_tokenizer = AutoTokenizer.from_pretrained(base_model_path)
++    base_tokenizer = AutoTokenizer.from_pretrained(base_model_path, use_fast=False)
+     num_new_tokens = base_tokenizer.add_special_tokens(dict(pad_token=DEFAULT_PAD_TOKEN))
+ 
+     base.resize_token_embeddings(len(base_tokenizer))
+     input_embeddings = base.get_input_embeddings().weight.data
+     output_embeddings = base.get_output_embeddings().weight.data
+     input_embeddings[-num_new_tokens:] = 0
+     output_embeddings[-num_new_tokens:] = 0
+@@ -34,15 +34,15 @@
+ 
+     print("Saving delta")
+     if args.hub_repo_id:
+         kwargs = {"push_to_hub": True, "repo_id": args.hub_repo_id}
+     else:
+         kwargs = {}
+     target.save_pretrained(delta_path, **kwargs)
+-    target_tokenizer = AutoTokenizer.from_pretrained(target_model_path)
++    target_tokenizer = AutoTokenizer.from_pretrained(target_model_path, use_fast=False)
+     target_tokenizer.save_pretrained(delta_path, **kwargs)
+ 
+ 
+ if __name__ == "__main__":
+     parser = argparse.ArgumentParser()
+     parser.add_argument("--base-model-path", type=str, required=True)
+     parser.add_argument("--target-model-path", type=str, required=True)
+```
+
+### Comparing `fschat-0.1.5/fastchat/serve/cli.py` & `fschat-0.1.6/fastchat/serve/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/controller.py` & `fschat-0.1.6/fastchat/serve/controller.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/gradio_css.py` & `fschat-0.1.6/fastchat/serve/gradio_css.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/gradio_patch.py` & `fschat-0.1.6/fastchat/serve/gradio_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/gradio_web_server.py` & `fschat-0.1.6/fastchat/serve/gradio_web_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/model_worker.py` & `fschat-0.1.6/fastchat/serve/model_worker.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -228,15 +228,15 @@
+     parser.add_argument("--port", type=int, default=21002)
+     parser.add_argument("--worker-address", type=str,
+         default="http://localhost:21002")
+     parser.add_argument("--controller-address", type=str,
+         default="http://localhost:21001")
+     parser.add_argument("--model-path", type=str, default="facebook/opt-350m")
+     parser.add_argument("--model-name", type=str)
+-    parser.add_argument("--device", type=str, choices=["cuda", "cpu"], default="cuda")
++    parser.add_argument("--device", type=str, choices=["cpu", "cuda", "mps"], default="cuda")
+     parser.add_argument("--num-gpus", type=int, default=1)
+     parser.add_argument("--load-8bit", action="store_true")
+     parser.add_argument("--limit-model-concurrency", type=int, default=5)
+     parser.add_argument("--stream-interval", type=int, default=2)
+     parser.add_argument("--no-register", action="store_true")
+     args = parser.parse_args()
+     logger.info(f"args: {args}")
+```
+
+### Comparing `fschat-0.1.5/fastchat/serve/monkey_patch_non_inplace.py` & `fschat-0.1.6/fastchat/serve/monkey_patch_non_inplace.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/register_worker.py` & `fschat-0.1.6/fastchat/serve/register_worker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/serve/test_message.py` & `fschat-0.1.6/fastchat/serve/test_message.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/train/llama_flash_attn_monkey_patch.py` & `fschat-0.1.6/fastchat/train/llama_flash_attn_monkey_patch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/train/train.py` & `fschat-0.1.6/fastchat/train/train.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/train/train_lora.py` & `fschat-0.1.6/fastchat/train/train_lora.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fastchat/utils.py` & `fschat-0.1.6/fastchat/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/fschat.egg-info/PKG-INFO` & `fschat-0.1.6/fschat.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: fschat
+-Version: 0.1.5
++Version: 0.1.6
+ Summary: An open platform for training, serving, and evaluating large language model based chatbots.
+ Project-URL: Homepage, https://github.com/lm-sys/fastchat
+ Project-URL: Bug Tracker, https://github.com/lm-sys/fastchat/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+```
+
+#### html2text {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Metadata-Version: 2.1 Name: fschat Version: 0.1.5 Summary: An open platform for
++Metadata-Version: 2.1 Name: fschat Version: 0.1.6 Summary: An open platform for
+ training, serving, and evaluating large language model based chatbots. Project-
+ URL: Homepage, https://github.com/lm-sys/fastchat Project-URL: Bug Tracker,
+ https://github.com/lm-sys/fastchat/issues Classifier: Programming Language ::
+ Python :: 3 Classifier: License :: OSI Approved :: Apache Software License
+ Requires-Python: >=3.8 Description-Content-Type: text/markdown License-File:
+ LICENSE # FastChat An open platform for training, serving, and evaluating large
+ language model based chatbots. ## Release
+```
+
+### Comparing `fschat-0.1.5/fschat.egg-info/SOURCES.txt` & `fschat-0.1.6/fschat.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `fschat-0.1.5/pyproject.toml` & `fschat-0.1.6/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "fschat"
+-version = "0.1.5"
++version = "0.1.6"
+ description = "An open platform for training, serving, and evaluating large language model based chatbots."
+ readme = "README.md"
+ requires-python = ">=3.8"
+ classifiers = [
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: Apache Software License",
+ ]
+```
+

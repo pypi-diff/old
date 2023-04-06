@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/leafmap-0.9.5.tar.gz tmp/leafmap-0.9.6.tar.gz --html versions/l/leafmap/0.9.5-0.9.6/index.html --text versions/l/leafmap/0.9.5-0.9.6/diff.txt --markdown versions/l/leafmap/0.9.5-0.9.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">21.7 KB</span></div>
+  <div><span class="source">tmp/leafmap-0.9.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/leafmap-0.9.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;leafmap-0.9.<del>5</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Mon</del><span class="dp">·</span>Ju<del>n</del><span class="dp">·</span><del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;leafmap-0.9.<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Ju<ins>l</ins><span class="dp">·</span><ins><span class="dp">·</span>1</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">21.4 KB</span></div>
+    <div><span class="source">leafmap-0.9.5.tar</span> vs.</div>
+    <div id="leafmap--.-.-.tar"><span class="source">leafmap-0.9.6.tar</span>
+      <a class="anchor" href="#leafmap--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">11.6 KB</span></div>
+      <div id="leafmap--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 49 lines modified</td><td colspan="2">Offset 1, 50 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>277<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>277<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9243<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9243<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8395<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8395<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<del>14</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<ins>42</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18901<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/basemaps.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18901<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/basemaps.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10175<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/colormaps.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10175<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/colormaps.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<del>2998</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/common.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<ins>6669</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/common.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/</td><td class="diffline">11 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70055<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/census_data.json</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>70055<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/census_data.json</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7707<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/pc_inventory.json</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7707<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/pc_inventory.json</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/template/</td><td class="diffline">14 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/template/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1353<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/template/legend.html</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1353<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/template/legend.html</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2197<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/data/template/legend.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2197<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/data/template/legend.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9586<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/deck.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9586<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/deck.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/examples/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/examples/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1306<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/examples/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1306<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/examples/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/examples/datasets.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/examples/datasets.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>111656<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/foliumap.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>111656<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/foliumap.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25561<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/heremap.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25561<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/heremap.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17640<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/kepler.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17640<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/kepler.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>148918<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/leafmap.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>148918<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/leafmap.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23935<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/legends.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23935<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/legends.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26029<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/osm.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26029<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/osm.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3527<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/pc.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3527<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/pc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30325<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/plotlymap.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30325<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/plotlymap.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2022-07-01<span class="dp">·</span>19:50:26.000000<span class="dp">·</span>leafmap-0.9.6/leafmap/report.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162814<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap/toolbar.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162814<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap/toolbar.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/</td><td class="diffline">31 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9243<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/PKG-INFO</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9243<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>886</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/SOURCES.txt</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>904</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<del>2</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/dependency_links.txt</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<ins>9</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/not-zip-safe</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<del>34</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/requires.txt</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<ins>48</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/leafmap.egg-info/top_level.txt</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/leafmap.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<del>1</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/requirements.txt</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<ins>8</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>44</del><span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/requirements_dev.txt</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>51</ins><span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/requirements_dev.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>304<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/requirements_docs.txt</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>304<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/requirements_docs.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>390<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/setup.cfg</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>390<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2368<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/setup.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2368<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>58</del>.<del>2</del>95<del>454</del><span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/</td><td class="diffline">43 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>36</ins>.95<ins>8</ins><ins>071</ins><span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/__init__.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4343<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_colormaps.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4343<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_colormaps.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2171<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_common.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2171<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_common.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18205<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_foliumap.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18205<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_foliumap.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16934<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_leafmap.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16934<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_leafmap.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1299<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_osm.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1299<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_osm.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2375<span class="dp">·</span>2022-0<del>6</del>-<del>27</del><span class="dp">·</span><del>03</del>:5<del>8</del>:<del>49</del>.000000<span class="dp">·</span>leafmap-0.9.<del>5</del>/tests/test_toolbar.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2375<span class="dp">·</span>2022-0<ins>7</ins>-<ins>01</ins><span class="dp">·</span><ins>19</ins>:5<ins>0</ins>:<ins>26</ins>.000000<span class="dp">·</span>leafmap-0.9.<ins>6</ins>/tests/test_toolbar.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">leafmap-0.9.5/LICENSE</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--LICENSE"><span class="source">leafmap-0.9.6/LICENSE</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">432 B</span></div>
+      <div><span class="source">leafmap-0.9.5/PKG-INFO</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--PKG-INFO"><span class="source">leafmap-0.9.6/PKG-INFO</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>leafmap</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>leafmap</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>geospatial<span class="dp">·</span>analysis<span class="dp">·</span>and<span class="dp">·</span>interactive<span class="dp">·</span>mapping<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>Jupyter<span class="dp">·</span>environment.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>geospatial<span class="dp">·</span>analysis<span class="dp">·</span>and<span class="dp">·</span>interactive<span class="dp">·</span>mapping<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>Jupyter<span class="dp">·</span>environment.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/giswqs/leafmap</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/giswqs/leafmap</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Qiusheng<span class="dp">·</span>Wu</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Qiusheng<span class="dp">·</span>Wu</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>giswqs@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>giswqs@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>license</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>license</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>leafmap</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>leafmap</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">leafmap-0.9.5/README.md</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--README.md"><span class="source">leafmap-0.9.6/README.md</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">601 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/__init__.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-__init__.py"><span class="source">leafmap-0.9.6/leafmap/__init__.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 12 lines modified</td><td colspan="2">Offset 1, 12 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">&quot;&quot;&quot;Top-level<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>leafmap.&quot;&quot;&quot;</td><td class="diffline">1 </td><td class="diffpresent">&quot;&quot;&quot;Top-level<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>leafmap.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;Qiusheng<span class="dp">·</span>Wu&quot;&quot;&quot;</td><td class="diffline">2 </td><td class="diffpresent">__author__<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;&quot;Qiusheng<span class="dp">·</span>Wu&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">__email__<span class="dp">·</span>=<span class="dp">·</span>&quot;giswqs@gmail.com&quot;</td><td class="diffline">3 </td><td class="diffpresent">__email__<span class="dp">·</span>=<span class="dp">·</span>&quot;giswqs@gmail.com&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<del>5</del>&quot;</td><td class="diffline">4 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.9.<ins>6</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">import<span class="dp">·</span>os</td><td class="diffline">5 </td><td class="diffpresent">import<span class="dp">·</span>os</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">def<span class="dp">·</span>_in_colab_shell():</td><td class="diffline">6 </td><td class="diffpresent">def<span class="dp">·</span>_in_colab_shell():</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Tests<span class="dp">·</span>if<span class="dp">·</span>the<span class="dp">·</span>code<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>executed<span class="dp">·</span>within<span class="dp">·</span>Google<span class="dp">·</span>Colab.&quot;&quot;&quot;</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Tests<span class="dp">·</span>if<span class="dp">·</span>the<span class="dp">·</span>code<span class="dp">·</span>is<span class="dp">·</span>being<span class="dp">·</span>executed<span class="dp">·</span>within<span class="dp">·</span>Google<span class="dp">·</span>Colab.&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>sys</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>sys</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 7 lines modified</td><td colspan="2">Offset 30, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">else:</td><td class="diffline">30 </td><td class="diffpresent">else:</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>.leafmap<span class="dp">·</span>import<span class="dp">·</span>*</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>.leafmap<span class="dp">·</span>import<span class="dp">·</span>*</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>_in_colab_shell():</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>_in_colab_shell():</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>google.colab<span class="dp">·</span>import<span class="dp">·</span>output</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>from<span class="dp">·</span>google.colab<span class="dp">·</span>import<span class="dp">·</span>output</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>output.enable_custom_widget_manager()</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>output.enable_custom_widget_manager()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">from<span class="dp">·</span>.report<span class="dp">·</span>import<span class="dp">·</span>Report</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/basemaps.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-basemaps.py"><span class="source">leafmap-0.9.6/leafmap/basemaps.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-basemaps.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/colormaps.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-colormaps.py"><span class="source">leafmap-0.9.6/leafmap/colormaps.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-colormaps.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">4.1 KB</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/common.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-common.py"><span class="source">leafmap-0.9.6/leafmap/common.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-common.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 5754, 7 lines modified</td><td colspan="2">Offset 5754, 118 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">5754 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>Exception(f&quot;{cmap}<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>colormap.&quot;)</td><td class="diffline">5754 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>Exception(f&quot;{cmap}<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>colormap.&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">5755 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>Box):</td><td class="diffline">5755 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>Box):</td></tr>
+<tr class="diffunmodified"><td class="diffline">5756 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>list(cmap[&quot;default&quot;])</td><td class="diffline">5756 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>list(cmap[&quot;default&quot;])</td></tr>
+<tr class="diffunmodified"><td class="diffline">5757 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>list)<span class="dp">·</span>or<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>tuple):</td><td class="diffline">5757 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>list)<span class="dp">·</span>or<span class="dp">·</span>isinstance(cmap,<span class="dp">·</span>tuple):</td></tr>
+<tr class="diffunmodified"><td class="diffline">5758 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cmap</td><td class="diffline">5758 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cmap</td></tr>
+<tr class="diffunmodified"><td class="diffline">5759 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td><td class="diffline">5759 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td></tr>
+<tr class="diffunmodified"><td class="diffline">5760 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>Exception(f&quot;{cmap}<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>colormap.&quot;)</td><td class="diffline">5760 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>Exception(f&quot;{cmap}<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>a<span class="dp">·</span>valid<span class="dp">·</span>colormap.&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5761 </td><td class="diffpresent">def<span class="dp">·</span>plot_raster(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5762 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5763 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>band=None,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5764 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmap=&quot;terrain&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5765 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>proj=&quot;EPSG:3857&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5766 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>figsize=None,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5767 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>open_kwargs={},</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5768 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5769 </td><td class="diffpresent">):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5770 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Plot<span class="dp">·</span>a<span class="dp">·</span>raster<span class="dp">·</span>image.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5771 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Args:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5772 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image<span class="dp">·</span>(str<span class="dp">·</span>|<span class="dp">·</span>xarray.DataArray<span class="dp">·</span>):<span class="dp">·</span>The<span class="dp">·</span>input<span class="dp">·</span>raster<span class="dp">·</span>image,<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>path,<span class="dp">·</span>HTTP<span class="dp">·</span>URL,<span class="dp">·</span>or<span class="dp">·</span>xarray.DataArray.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5773 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>band<span class="dp">·</span>(int,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>band<span class="dp">·</span>index,<span class="dp">·</span>starting<span class="dp">·</span>from<span class="dp">·</span>zero.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>None.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5774 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmap<span class="dp">·</span>(str,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>matplotlib<span class="dp">·</span>colormap<span class="dp">·</span>to<span class="dp">·</span>use.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>&quot;terrain&quot;.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5775 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>proj<span class="dp">·</span>(str,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>EPSG<span class="dp">·</span>projection<span class="dp">·</span>code.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>&quot;EPSG:3857&quot;.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5776 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>figsize<span class="dp">·</span>(tuple,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>figure<span class="dp">·</span>size<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>tuple,<span class="dp">·</span>such<span class="dp">·</span>as<span class="dp">·</span>(10,<span class="dp">·</span>8).<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>None.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5777 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>open_kwargs<span class="dp">·</span>(dict,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>keyword<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>pass<span class="dp">·</span>to<span class="dp">·</span>rioxarray.open_rasterio.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>{}.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5778 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs:<span class="dp">·</span>Additional<span class="dp">·</span>keyword<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>pass<span class="dp">·</span>to<span class="dp">·</span>xarray.DataArray.plot().</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5779 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5780 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>os.environ.get(&quot;USE_MKDOCS&quot;)<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5781 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5782 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5783 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>pvxarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5784 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>rioxarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5785 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>xarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5786 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>ImportError:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5787 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ImportError(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5788 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pyxarray<span class="dp">·</span>and<span class="dp">·</span>rioxarray<span class="dp">·</span>are<span class="dp">·</span>required<span class="dp">·</span>for<span class="dp">·</span>plotting.<span class="dp">·</span>Please<span class="dp">·</span>install<span class="dp">·</span>them<span class="dp">·</span>using<span class="dp">·</span>&#x27;pip<span class="dp">·</span>install<span class="dp">·</span>rioxarray<span class="dp">·</span>pyvista-xarray&#x27;.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5789 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5790 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(image,<span class="dp">·</span>str):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5791 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>rioxarray.open_rasterio(image,<span class="dp">·</span>**open_kwargs)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5792 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(image,<span class="dp">·</span>xarray.DataArray):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5793 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>image</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5794 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5795 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(&quot;image<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>string<span class="dp">·</span>or<span class="dp">·</span>xarray.Dataset.&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5796 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>band<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5797 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>da[dict(band=band)]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5798 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>da.rio.reproject(proj)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5799 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kwargs[&quot;cmap&quot;]<span class="dp">·</span>=<span class="dp">·</span>cmap</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5800 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kwargs[&quot;figsize&quot;]<span class="dp">·</span>=<span class="dp">·</span>figsize</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5801 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da.plot(**kwargs)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5802 </td><td class="diffpresent">def<span class="dp">·</span>plot_raster_3d(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5803 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5804 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>band=None,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5805 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmap=&quot;terrain&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5806 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>factor=1.0,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5807 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>proj=&quot;EPSG:3857&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5808 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>background=None,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5809 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>open_kwargs={},</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5810 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mesh_kwargs={},</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5811 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5812 </td><td class="diffpresent">):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5813 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;Plot<span class="dp">·</span>a<span class="dp">·</span>raster<span class="dp">·</span>image<span class="dp">·</span>in<span class="dp">·</span>3D.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5814 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Args:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5815 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>image<span class="dp">·</span>(str<span class="dp">·</span>|<span class="dp">·</span>xarray.DataArray<span class="dp">·</span>):<span class="dp">·</span>The<span class="dp">·</span>input<span class="dp">·</span>raster<span class="dp">·</span>image,<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>path,<span class="dp">·</span>HTTP<span class="dp">·</span>URL,<span class="dp">·</span>or<span class="dp">·</span>xarray.DataArray.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5816 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>band<span class="dp">·</span>(int,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>band<span class="dp">·</span>index,<span class="dp">·</span>starting<span class="dp">·</span>from<span class="dp">·</span>zero.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>None.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5817 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cmap<span class="dp">·</span>(str,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>matplotlib<span class="dp">·</span>colormap<span class="dp">·</span>to<span class="dp">·</span>use.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>&quot;terrain&quot;.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5818 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>factor<span class="dp">·</span>(float,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>scaling<span class="dp">·</span>factor<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>raster.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>1.0.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5819 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>proj<span class="dp">·</span>(str,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>EPSG<span class="dp">·</span>projection<span class="dp">·</span>code.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>&quot;EPSG:3857&quot;.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5820 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>background<span class="dp">·</span>(str,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>background<span class="dp">·</span>color.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>None.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5821 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>open_kwargs<span class="dp">·</span>(dict,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>keyword<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>pass<span class="dp">·</span>to<span class="dp">·</span>rioxarray.open_rasterio.<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>{}.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5822 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mesh_kwargs<span class="dp">·</span>(dict,<span class="dp">·</span>optional):<span class="dp">·</span>The<span class="dp">·</span>keyword<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>pass<span class="dp">·</span>to<span class="dp">·</span>pyvista.mesh.warp_by_scalar().<span class="dp">·</span>Defaults<span class="dp">·</span>to<span class="dp">·</span>{}.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5823 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>**kwargs:<span class="dp">·</span>Additional<span class="dp">·</span>keyword<span class="dp">·</span>arguments<span class="dp">·</span>to<span class="dp">·</span>pass<span class="dp">·</span>to<span class="dp">·</span>xarray.DataArray.plot().</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5824 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5825 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>os.environ.get(&quot;USE_MKDOCS&quot;)<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5826 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5827 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5828 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>pvxarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5829 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>pyvista</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5830 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>rioxarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5831 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>import<span class="dp">·</span>xarray</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5832 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>ImportError:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5833 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ImportError(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5834 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pyxarray<span class="dp">·</span>and<span class="dp">·</span>rioxarray<span class="dp">·</span>are<span class="dp">·</span>required<span class="dp">·</span>for<span class="dp">·</span>plotting.<span class="dp">·</span>Please<span class="dp">·</span>install<span class="dp">·</span>them<span class="dp">·</span>using<span class="dp">·</span>&#x27;pip<span class="dp">·</span>install<span class="dp">·</span>rioxarray<span class="dp">·</span>pyvista-xarray&#x27;.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5835 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5836 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(background,<span class="dp">·</span>str):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5837 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pyvista.global_theme.background<span class="dp">·</span>=<span class="dp">·</span>background</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5838 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(image,<span class="dp">·</span>str):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5839 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>rioxarray.open_rasterio(image,<span class="dp">·</span>**open_kwargs)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5840 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>isinstance(image,<span class="dp">·</span>xarray.DataArray):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5841 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>image</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5842 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>else:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5843 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ValueError(&quot;image<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>string<span class="dp">·</span>or<span class="dp">·</span>xarray.Dataset.&quot;)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5844 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>band<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5845 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>da[dict(band=band)]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5846 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>da<span class="dp">·</span>=<span class="dp">·</span>da.rio.reproject(proj)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5847 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mesh_kwargs[&quot;factor&quot;]<span class="dp">·</span>=<span class="dp">·</span>factor</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5848 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kwargs[&quot;cmap&quot;]<span class="dp">·</span>=<span class="dp">·</span>cmap</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5849 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Grab<span class="dp">·</span>the<span class="dp">·</span>mesh<span class="dp">·</span>object<span class="dp">·</span>for<span class="dp">·</span>use<span class="dp">·</span>with<span class="dp">·</span>PyVista</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5850 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mesh<span class="dp">·</span>=<span class="dp">·</span>da.pyvista.mesh</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5851 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Warp<span class="dp">·</span>top<span class="dp">·</span>and<span class="dp">·</span>plot<span class="dp">·</span>in<span class="dp">·</span>3D</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">5852 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mesh.warp_by_scalar(**mesh_kwargs).plot(**kwargs)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/data/census_data.json</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-data-census_data.json"><span class="source">leafmap-0.9.6/leafmap/data/census_data.json</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-data-census_data.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/data/pc_inventory.json</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-data-pc_inventory.json"><span class="source">leafmap-0.9.6/leafmap/data/pc_inventory.json</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-data-pc_inventory.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/data/template/legend.html</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-data-template-legend.html"><span class="source">leafmap-0.9.6/leafmap/data/template/legend.html</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-data-template-legend.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/data/template/legend.txt</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-data-template-legend.txt"><span class="source">leafmap-0.9.6/leafmap/data/template/legend.txt</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-data-template-legend.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/deck.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-deck.py"><span class="source">leafmap-0.9.6/leafmap/deck.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-deck.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/examples/__init__.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-examples-__init__.py"><span class="source">leafmap-0.9.6/leafmap/examples/__init__.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-examples-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/examples/datasets.txt</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-examples-datasets.txt"><span class="source">leafmap-0.9.6/leafmap/examples/datasets.txt</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-examples-datasets.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/foliumap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-foliumap.py"><span class="source">leafmap-0.9.6/leafmap/foliumap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-foliumap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/heremap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-heremap.py"><span class="source">leafmap-0.9.6/leafmap/heremap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-heremap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/kepler.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-kepler.py"><span class="source">leafmap-0.9.6/leafmap/kepler.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-kepler.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/leafmap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-leafmap.py"><span class="source">leafmap-0.9.6/leafmap/leafmap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-leafmap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/legends.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-legends.py"><span class="source">leafmap-0.9.6/leafmap/legends.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-legends.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/osm.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-osm.py"><span class="source">leafmap-0.9.6/leafmap/osm.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-osm.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/pc.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-pc.py"><span class="source">leafmap-0.9.6/leafmap/pc.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-pc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/plotlymap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-plotlymap.py"><span class="source">leafmap-0.9.6/leafmap/plotlymap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-plotlymap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap/toolbar.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap-toolbar.py"><span class="source">leafmap-0.9.6/leafmap/toolbar.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap-toolbar.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">466 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap.egg-info/PKG-INFO</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-PKG-INFO"><span class="source">leafmap-0.9.6/leafmap.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>leafmap</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>leafmap</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>geospatial<span class="dp">·</span>analysis<span class="dp">·</span>and<span class="dp">·</span>interactive<span class="dp">·</span>mapping<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>Jupyter<span class="dp">·</span>environment.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>geospatial<span class="dp">·</span>analysis<span class="dp">·</span>and<span class="dp">·</span>interactive<span class="dp">·</span>mapping<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>Jupyter<span class="dp">·</span>environment.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/giswqs/leafmap</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/giswqs/leafmap</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Qiusheng<span class="dp">·</span>Wu</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Qiusheng<span class="dp">·</span>Wu</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>giswqs@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>giswqs@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>license</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT<span class="dp">·</span>license</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>leafmap</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>leafmap</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">505 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-SOURCES.txt"><span class="source">leafmap-0.9.6/leafmap.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 14 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">leafmap/heremap.py</td><td class="diffline">15 </td><td class="diffpresent">leafmap/heremap.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">leafmap/kepler.py</td><td class="diffline">16 </td><td class="diffpresent">leafmap/kepler.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">leafmap/leafmap.py</td><td class="diffline">17 </td><td class="diffpresent">leafmap/leafmap.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">leafmap/legends.py</td><td class="diffline">18 </td><td class="diffpresent">leafmap/legends.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">leafmap/osm.py</td><td class="diffline">19 </td><td class="diffpresent">leafmap/osm.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">leafmap/pc.py</td><td class="diffline">20 </td><td class="diffpresent">leafmap/pc.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">leafmap/plotlymap.py</td><td class="diffline">21 </td><td class="diffpresent">leafmap/plotlymap.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent">leafmap/report.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">leafmap/toolbar.py</td><td class="diffline">23 </td><td class="diffpresent">leafmap/toolbar.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">leafmap.egg-info/PKG-INFO</td><td class="diffline">24 </td><td class="diffpresent">leafmap.egg-info/PKG-INFO</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">leafmap.egg-info/SOURCES.txt</td><td class="diffline">25 </td><td class="diffpresent">leafmap.egg-info/SOURCES.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">leafmap.egg-info/dependency_links.txt</td><td class="diffline">26 </td><td class="diffpresent">leafmap.egg-info/dependency_links.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">leafmap.egg-info/not-zip-safe</td><td class="diffline">27 </td><td class="diffpresent">leafmap.egg-info/not-zip-safe</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">leafmap.egg-info/requires.txt</td><td class="diffline">28 </td><td class="diffpresent">leafmap.egg-info/requires.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">leafmap.egg-info/top_level.txt</td><td class="diffline">29 </td><td class="diffpresent">leafmap.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">497 B</span></div>
+      <div><span class="source">leafmap-0.9.5/leafmap.egg-info/requires.txt</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-requires.txt"><span class="source">leafmap-0.9.6/leafmap.egg-info/requires.txt</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--leafmap.egg-info-requires.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 14 lines modified</td><td colspan="2">Offset 11, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">matplotlib</td><td class="diffline">11 </td><td class="diffpresent">matplotlib</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">numpy</td><td class="diffline">12 </td><td class="diffpresent">numpy</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">pandas</td><td class="diffline">13 </td><td class="diffpresent">pandas</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">pycrs</td><td class="diffline">14 </td><td class="diffpresent">pycrs</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">pyshp&gt;=2.1.3</td><td class="diffline">15 </td><td class="diffpresent">pyshp&gt;=2.1.3</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">pystac-client</td><td class="diffline">16 </td><td class="diffpresent">pystac-client</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">python-box</td><td class="diffline">17 </td><td class="diffpresent">python-box</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">18 </td><td class="diffpresent">scooby</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">whiteboxgui&gt;=0.6.0</td><td class="diffline">19 </td><td class="diffpresent">whiteboxgui&gt;=0.6.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">xyzservices</td><td class="diffline">20 </td><td class="diffpresent">xyzservices</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">[all]</td><td class="diffline">21 </td><td class="diffpresent">[all]</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">black</td><td class="diffline">22 </td><td class="diffpresent">black</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">black[jupyter]</td><td class="diffline">23 </td><td class="diffpresent">black[jupyter]</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">codespell</td><td class="diffline">24 </td><td class="diffpresent">codespell</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 39, 15 lines modified</td><td colspan="2">Offset 40, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">owslib</td><td class="diffline">40 </td><td class="diffpresent">owslib</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">palettable</td><td class="diffline">41 </td><td class="diffpresent">palettable</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">panel</td><td class="diffline">42 </td><td class="diffpresent">panel</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">plotly</td><td class="diffline">43 </td><td class="diffpresent">plotly</td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">psycopg2</td><td class="diffline">44 </td><td class="diffpresent">psycopg2</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">pydeck</td><td class="diffline">45 </td><td class="diffpresent">pydeck</td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">pyntcloud[las]</td><td class="diffline">46 </td><td class="diffpresent">pyntcloud[las]</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">pyvista</td><td class="diffline">47 </td><td class="diffpresent">pyvista<ins>-xarray</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">rio-cogeo</td><td class="diffline">48 </td><td class="diffpresent">rio-cogeo</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">rioxarray</td><td class="diffline">49 </td><td class="diffpresent">rioxarray</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">sqlalchemy</td><td class="diffline">50 </td><td class="diffpresent">sqlalchemy</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">streamlit-folium</td><td class="diffline">51 </td><td class="diffpresent">streamlit-folium</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">xarray_leaflet</td><td class="diffline">52 </td><td class="diffpresent">xarray_leaflet</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">[apps]</td><td class="diffline">53 </td><td class="diffpresent">[apps]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">430 B</span></div>
+      <div><span class="source">leafmap-0.9.5/setup.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--setup.py"><span class="source">leafmap-0.9.6/setup.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 68, 10 lines modified</td><td colspan="2">Offset 68, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&quot;leafmap&quot;,</td><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&quot;leafmap&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;leafmap&quot;,</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&quot;leafmap&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(include=[&quot;leafmap&quot;,<span class="dp">·</span>&quot;leafmap.*&quot;]),</td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(include=[&quot;leafmap&quot;,<span class="dp">·</span>&quot;leafmap.*&quot;]),</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup_requires=setup_requirements,</td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup_requires=setup_requirements,</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite=&quot;tests&quot;,</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite=&quot;tests&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tests_require=test_requirements,</td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tests_require=test_requirements,</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/giswqs/leafmap&quot;,</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&quot;https://github.com/giswqs/leafmap&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.9.<del>5</del>&quot;,</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&quot;0.9.<ins>6</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=False,</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=False,</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">)</td><td class="diffline">77 </td><td class="diffpresent">)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_colormaps.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_colormaps.py"><span class="source">leafmap-0.9.6/tests/test_colormaps.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_colormaps.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_common.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_common.py"><span class="source">leafmap-0.9.6/tests/test_common.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_common.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_foliumap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_foliumap.py"><span class="source">leafmap-0.9.6/tests/test_foliumap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_foliumap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_leafmap.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_leafmap.py"><span class="source">leafmap-0.9.6/tests/test_leafmap.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_leafmap.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_osm.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_osm.py"><span class="source">leafmap-0.9.6/tests/test_osm.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_osm.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">leafmap-0.9.5/tests/test_toolbar.py</span> vs.</div>
+      <div id="leafmap--.-.-.tar---leafmap--.-.--tests-test_toolbar.py"><span class="source">leafmap-0.9.6/tests/test_toolbar.py</span>
+        <a class="anchor" href="#leafmap--.-.-.tar---leafmap--.-.--tests-test_toolbar.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

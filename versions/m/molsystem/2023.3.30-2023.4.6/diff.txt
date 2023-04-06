@@ -1,0 +1,538 @@
+--- tmp/molsystem-2023.3.30.tar.gz
++++ tmp/molsystem-2023.4.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "molsystem-2023.3.30.tar", last modified: Fri Mar 31 13:59:01 2023, max compression
+│ +gzip compressed data, was "molsystem-2023.4.6.tar", last modified: Thu Apr  6 15:46:21 2023, max compression
+│   --- molsystem-2023.3.30.tar
+├── +++ molsystem-2023.4.6.tar
+│ ├── file list
+│ │ @@ -1,96 +1,96 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.534487 molsystem-2023.3.30/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      147 2023-03-31 13:58:42.000000 molsystem-2023.3.30/AUTHORS.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3246 2023-03-31 13:58:42.000000 molsystem-2023.3.30/CONTRIBUTING.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1628 2023-03-31 13:58:42.000000 molsystem-2023.3.30/HISTORY.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7652 2023-03-31 13:58:42.000000 molsystem-2023.3.30/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      319 2023-03-31 13:58:42.000000 molsystem-2023.3.30/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4547 2023-03-31 13:59:01.534487 molsystem-2023.3.30/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-03-31 13:58:42.000000 molsystem-2023.3.30/README.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.522486 molsystem-2023.3.30/docs/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6774 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/Makefile
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/authors.rst
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)     8695 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/conf.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.522486 molsystem-2023.3.30/docs/developer/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       36 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/developer/contributing.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      234 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/developer/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1147 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/developer/installation.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       30 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/developer/readme.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       73 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/developer/usage.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/history.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      533 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6465 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/make.bat
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2602 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/molsystem.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.522486 molsystem-2023.3.30/docs/user/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      166 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/user/index.rst
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       59 2023-03-31 13:58:42.000000 molsystem-2023.3.30/docs/user/overview.rst
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.534487 molsystem-2023.3.30/molsystem/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      668 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      501 2023-03-31 13:59:01.534487 molsystem-2023.3.30/molsystem/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    43965 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/atoms.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26481 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/bonds.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19758 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/cell.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    33500 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/cif.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1524 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/cms_schema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/column.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29373 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/configuration.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5794 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/configuration_properties.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.530486 molsystem-2023.3.30/molsystem/data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1781 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/data/standard_properties.csv
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26799 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/elements.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2377 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/frozencolumn.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6557 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/molfile.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4826 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/openbabel.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18217 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/pdb.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26461 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/properties.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2920 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/qcschema.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3441 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/rdkit_.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5939 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/smiles.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2571 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/subset.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6395 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/subsets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4318 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/symmetry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    19385 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/system.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    32871 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/system_db.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5300 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/system_properties.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    26849 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/table.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7892 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/template.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8266 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/templates.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17862 2023-03-31 13:58:42.000000 molsystem-2023.3.30/molsystem/topology.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.530486 molsystem-2023.3.30/molsystem.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4547 2023-03-31 13:59:01.000000 molsystem-2023.3.30/molsystem.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1887 2023-03-31 13:59:01.000000 molsystem-2023.3.30/molsystem.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-31 13:59:01.000000 molsystem-2023.3.30/molsystem.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       34 2023-03-31 13:59:01.000000 molsystem-2023.3.30/molsystem.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       10 2023-03-31 13:59:01.000000 molsystem-2023.3.30/molsystem.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      357 2023-03-31 13:59:01.534487 molsystem-2023.3.30/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2672 2023-03-31 13:58:42.000000 molsystem-2023.3.30/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.530486 molsystem-2023.3.30/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       64 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13045 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/conftest.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-31 13:59:01.534487 molsystem-2023.3.30/tests/data/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   269083 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/data/1n9v.cif
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)  1055288 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/data/aa-variants-v1.cif
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4318 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/data/acy.mmcif
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)   117392 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/data/aminoacids.mmcif
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3692 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/data/hoh.mmcif
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8016 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_angiotensin.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12879 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_atoms.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4415 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_bonds.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2797 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_cell.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7047 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_cif.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1820 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_configuration_properties.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1485 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_configurations.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3608 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_molfile.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    18784 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_openbabel.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10334 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_pdb.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1809 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_properties.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3168 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_property_timings.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1064 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_rdkit.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1636 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_smiles.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1733 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_subsets.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2254 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_system.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4633 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_system_db.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14598 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_table.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5837 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_templates.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5719 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_timings.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2988 2023-03-31 13:58:42.000000 molsystem-2023.3.30/tests/test_topology.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-03-31 13:58:42.000000 molsystem-2023.3.30/versioneer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.784197 molsystem-2023.4.6/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      147 2023-04-06 15:46:03.000000 molsystem-2023.4.6/AUTHORS.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3246 2023-04-06 15:46:03.000000 molsystem-2023.4.6/CONTRIBUTING.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1744 2023-04-06 15:46:03.000000 molsystem-2023.4.6/HISTORY.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7652 2023-04-06 15:46:03.000000 molsystem-2023.4.6/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      319 2023-04-06 15:46:03.000000 molsystem-2023.4.6/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4662 2023-04-06 15:46:21.784197 molsystem-2023.4.6/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2022 2023-04-06 15:46:03.000000 molsystem-2023.4.6/README.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.772196 molsystem-2023.4.6/docs/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6774 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/Makefile
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/authors.rst
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)     8695 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/conf.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.772196 molsystem-2023.4.6/docs/developer/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       36 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/developer/contributing.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      234 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/developer/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1147 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/developer/installation.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/developer/readme.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       73 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/developer/usage.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/history.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      533 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6465 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/make.bat
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2602 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/molsystem.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.772196 molsystem-2023.4.6/docs/user/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      166 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/user/index.rst
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       59 2023-04-06 15:46:03.000000 molsystem-2023.4.6/docs/user/overview.rst
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.784197 molsystem-2023.4.6/molsystem/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      668 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      500 2023-04-06 15:46:21.784197 molsystem-2023.4.6/molsystem/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    43965 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/atoms.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26481 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/bonds.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19758 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/cell.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33626 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/cif.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1524 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/cms_schema.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3579 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/column.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    29373 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/configuration.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5794 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/configuration_properties.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.776197 molsystem-2023.4.6/molsystem/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1781 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/data/standard_properties.csv
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26799 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/elements.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2377 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/frozencolumn.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6557 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/molfile.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4826 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/openbabel.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18217 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/pdb.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26461 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/properties.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2920 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/qcschema.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3441 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/rdkit_.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5939 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/smiles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2571 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/subset.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6395 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/subsets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4318 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/symmetry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    19385 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/system.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    32871 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/system_db.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5300 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/system_properties.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    26849 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/table.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7892 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/template.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8266 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/templates.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17862 2023-04-06 15:46:03.000000 molsystem-2023.4.6/molsystem/topology.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.776197 molsystem-2023.4.6/molsystem.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4662 2023-04-06 15:46:21.000000 molsystem-2023.4.6/molsystem.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1887 2023-04-06 15:46:21.000000 molsystem-2023.4.6/molsystem.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:46:21.000000 molsystem-2023.4.6/molsystem.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       34 2023-04-06 15:46:21.000000 molsystem-2023.4.6/molsystem.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 15:46:21.000000 molsystem-2023.4.6/molsystem.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      357 2023-04-06 15:46:21.784197 molsystem-2023.4.6/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2672 2023-04-06 15:46:03.000000 molsystem-2023.4.6/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.780197 molsystem-2023.4.6/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       64 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13045 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/conftest.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:46:21.784197 molsystem-2023.4.6/tests/data/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   269083 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/data/1n9v.cif
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)  1055288 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/data/aa-variants-v1.cif
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4318 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/data/acy.mmcif
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)   117392 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/data/aminoacids.mmcif
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3692 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/data/hoh.mmcif
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8016 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_angiotensin.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12879 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_atoms.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4415 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_bonds.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2797 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_cell.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7047 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_cif.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1820 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_configuration_properties.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1485 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_configurations.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3608 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_molfile.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    18784 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_openbabel.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10334 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_pdb.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1809 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_properties.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3168 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_property_timings.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1064 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_rdkit.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1636 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_smiles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1733 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_subsets.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2254 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_system.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4633 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_system_db.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14598 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_table.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5837 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_templates.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5719 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_timings.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2988 2023-04-06 15:46:03.000000 molsystem-2023.4.6/tests/test_topology.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-04-06 15:46:03.000000 molsystem-2023.4.6/versioneer.py
+│ │   --- molsystem-2023.3.30/CONTRIBUTING.rst
+│ ├── +++ molsystem-2023.4.6/CONTRIBUTING.rst
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/HISTORY.rst
+│ ├── +++ molsystem-2023.4.6/HISTORY.rst
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,11 +1,14 @@
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Enhancements for CIF files
+│ │ +    * Handle uncertainties in CIF files expressed as '(x)' at end of value.
+│ │ +
+│ │  2023.3.30 -- Enhancements to QCSchema support
+│ │      * Improved naming of molecule in QCSchema
+│ │      * Added creation of configurations from QCSchema objects.
+│ │  
+│ │  2023.2.13 -- Fixed issue with valence in RDkit for cations like NH4+
+│ │  
+│ │  2022.11.20 -- Added a method to copy a configuration.
+│ │   --- molsystem-2023.3.30/LICENSE
+│ ├── +++ molsystem-2023.4.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/PKG-INFO
+│ ├── +++ molsystem-2023.4.6/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: molsystem
+│ │ -Version: 2023.3.30
+│ │ +Version: 2023.4.6
+│ │  Summary: molsystem
+│ │  Home-page: https://github.com/molssi-seamm/molsystem
+│ │  Author: Paul Saxe
+│ │  Author-email: psaxe@molssi.org
+│ │  License: GNU Lesser General Public License v3 or later (LGPLv3+)
+│ │  Keywords: molsystem,SEAMM
+│ │  Platform: Linux
+│ │ @@ -85,14 +85,17 @@
+│ │  .. _`National Science Foundation`: https://www.nsf.gov
+│ │  
+│ │  
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Enhancements for CIF files
+│ │ +    * Handle uncertainties in CIF files expressed as '(x)' at end of value.
+│ │ +
+│ │  2023.3.30 -- Enhancements to QCSchema support
+│ │      * Improved naming of molecule in QCSchema
+│ │      * Added creation of configurations from QCSchema objects.
+│ │  
+│ │  2023.2.13 -- Fixed issue with valence in RDkit for cations like NH4+
+│ │  
+│ │  2022.11.20 -- Added a method to copy a configuration.
+│ │   --- molsystem-2023.3.30/README.rst
+│ ├── +++ molsystem-2023.4.6/README.rst
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/Makefile
+│ ├── +++ molsystem-2023.4.6/docs/Makefile
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/conf.py
+│ ├── +++ molsystem-2023.4.6/docs/conf.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/developer/installation.rst
+│ ├── +++ molsystem-2023.4.6/docs/developer/installation.rst
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/index.rst
+│ ├── +++ molsystem-2023.4.6/docs/index.rst
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/make.bat
+│ ├── +++ molsystem-2023.4.6/docs/make.bat
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/docs/molsystem.rst
+│ ├── +++ molsystem-2023.4.6/docs/molsystem.rst
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/__init__.py
+│ ├── +++ molsystem-2023.4.6/molsystem/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/atoms.py
+│ ├── +++ molsystem-2023.4.6/molsystem/atoms.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/bonds.py
+│ ├── +++ molsystem-2023.4.6/molsystem/bonds.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/cell.py
+│ ├── +++ molsystem-2023.4.6/molsystem/cell.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/cif.py
+│ ├── +++ molsystem-2023.4.6/molsystem/cif.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -212,20 +212,20 @@
+│ │          # Reset the system
+│ │          self.clear()
+│ │  
+│ │          # The cell
+│ │          dot = "."
+│ │          if "_cell_length_a" in data_block:
+│ │              dot = "_"
+│ │ -        a = data_block["_cell" + dot + "length_a"]
+│ │ -        b = data_block["_cell" + dot + "length_b"]
+│ │ -        c = data_block["_cell" + dot + "length_c"]
+│ │ -        alpha = data_block["_cell" + dot + "angle_alpha"]
+│ │ -        beta = data_block["_cell" + dot + "angle_beta"]
+│ │ -        gamma = data_block["_cell" + dot + "angle_gamma"]
+│ │ +        a = data_block["_cell" + dot + "length_a"].split("(")[0]
+│ │ +        b = data_block["_cell" + dot + "length_b"].split("(")[0]
+│ │ +        c = data_block["_cell" + dot + "length_c"].split("(")[0]
+│ │ +        alpha = data_block["_cell" + dot + "angle_alpha"].split("(")[0]
+│ │ +        beta = data_block["_cell" + dot + "angle_beta"].split("(")[0]
+│ │ +        gamma = data_block["_cell" + dot + "angle_gamma"].split("(")[0]
+│ │          if float(a) != 1 and float(b) != 1 and float(c) != 1:
+│ │              self.periodicity = 3
+│ │              self.coordinate_system = "fractional"
+│ │              self.cell.parameters = (a, b, c, alpha, beta, gamma)
+│ │  
+│ │              # Add the atoms
+│ │              # TEMPORARILY lower the symmetry to P1
+│ │ @@ -384,17 +384,17 @@
+│ │                  if symbol[1].isalpha():
+│ │                      symbol = symbol[0:2]
+│ │                  else:
+│ │                      symbol = symbol[0]
+│ │              if symbol == "D":
+│ │                  symbol = "H"
+│ │              # These variables *are* used in the eval below.
+│ │ -            x = float(x)
+│ │ -            y = float(y)
+│ │ -            z = float(z)
+│ │ +            x = float(x.split("(")[0])
+│ │ +            y = float(y.split("(")[0])
+│ │ +            z = float(z.split("(")[0])
+│ │              logger.debug(f"xyz = {x:7.3f} {y:7.3f} {z:7.3f}")
+│ │              if self.periodicity == 3:
+│ │                  if not have_fractionals:
+│ │                      # Convert Cartesians to fractionals
+│ │                      x, y, z = self.cell.to_fractionals([[x, y, z]])[0]
+│ │  
+│ │                  if len(operators) > 1:
+│ │   --- molsystem-2023.3.30/molsystem/cms_schema.py
+│ ├── +++ molsystem-2023.4.6/molsystem/cms_schema.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/column.py
+│ ├── +++ molsystem-2023.4.6/molsystem/column.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/configuration.py
+│ ├── +++ molsystem-2023.4.6/molsystem/configuration.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/configuration_properties.py
+│ ├── +++ molsystem-2023.4.6/molsystem/configuration_properties.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/data/standard_properties.csv
+│ ├── +++ molsystem-2023.4.6/molsystem/data/standard_properties.csv
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/elements.py
+│ ├── +++ molsystem-2023.4.6/molsystem/elements.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/frozencolumn.py
+│ ├── +++ molsystem-2023.4.6/molsystem/frozencolumn.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/molfile.py
+│ ├── +++ molsystem-2023.4.6/molsystem/molfile.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/openbabel.py
+│ ├── +++ molsystem-2023.4.6/molsystem/openbabel.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/pdb.py
+│ ├── +++ molsystem-2023.4.6/molsystem/pdb.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/properties.py
+│ ├── +++ molsystem-2023.4.6/molsystem/properties.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/qcschema.py
+│ ├── +++ molsystem-2023.4.6/molsystem/qcschema.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/rdkit_.py
+│ ├── +++ molsystem-2023.4.6/molsystem/rdkit_.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/smiles.py
+│ ├── +++ molsystem-2023.4.6/molsystem/smiles.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/subset.py
+│ ├── +++ molsystem-2023.4.6/molsystem/subset.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/subsets.py
+│ ├── +++ molsystem-2023.4.6/molsystem/subsets.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/symmetry.py
+│ ├── +++ molsystem-2023.4.6/molsystem/symmetry.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/system.py
+│ ├── +++ molsystem-2023.4.6/molsystem/system.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/system_db.py
+│ ├── +++ molsystem-2023.4.6/molsystem/system_db.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/system_properties.py
+│ ├── +++ molsystem-2023.4.6/molsystem/system_properties.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/table.py
+│ ├── +++ molsystem-2023.4.6/molsystem/table.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/template.py
+│ ├── +++ molsystem-2023.4.6/molsystem/template.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/templates.py
+│ ├── +++ molsystem-2023.4.6/molsystem/templates.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem/topology.py
+│ ├── +++ molsystem-2023.4.6/molsystem/topology.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/molsystem.egg-info/PKG-INFO
+│ ├── +++ molsystem-2023.4.6/molsystem.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: molsystem
+│ │ -Version: 2023.3.30
+│ │ +Version: 2023.4.6
+│ │  Summary: molsystem
+│ │  Home-page: https://github.com/molssi-seamm/molsystem
+│ │  Author: Paul Saxe
+│ │  Author-email: psaxe@molssi.org
+│ │  License: GNU Lesser General Public License v3 or later (LGPLv3+)
+│ │  Keywords: molsystem,SEAMM
+│ │  Platform: Linux
+│ │ @@ -85,14 +85,17 @@
+│ │  .. _`National Science Foundation`: https://www.nsf.gov
+│ │  
+│ │  
+│ │  =======
+│ │  History
+│ │  =======
+│ │  
+│ │ +2023.4.6 -- Enhancements for CIF files
+│ │ +    * Handle uncertainties in CIF files expressed as '(x)' at end of value.
+│ │ +
+│ │  2023.3.30 -- Enhancements to QCSchema support
+│ │      * Improved naming of molecule in QCSchema
+│ │      * Added creation of configurations from QCSchema objects.
+│ │  
+│ │  2023.2.13 -- Fixed issue with valence in RDkit for cations like NH4+
+│ │  
+│ │  2022.11.20 -- Added a method to copy a configuration.
+│ │   --- molsystem-2023.3.30/molsystem.egg-info/SOURCES.txt
+│ ├── +++ molsystem-2023.4.6/molsystem.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/setup.py
+│ ├── +++ molsystem-2023.4.6/setup.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/conftest.py
+│ ├── +++ molsystem-2023.4.6/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/data/1n9v.cif
+│ ├── +++ molsystem-2023.4.6/tests/data/1n9v.cif
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/data/aa-variants-v1.cif
+│ ├── +++ molsystem-2023.4.6/tests/data/aa-variants-v1.cif
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/data/acy.mmcif
+│ ├── +++ molsystem-2023.4.6/tests/data/acy.mmcif
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/data/aminoacids.mmcif
+│ ├── +++ molsystem-2023.4.6/tests/data/aminoacids.mmcif
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/data/hoh.mmcif
+│ ├── +++ molsystem-2023.4.6/tests/data/hoh.mmcif
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_angiotensin.py
+│ ├── +++ molsystem-2023.4.6/tests/test_angiotensin.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_atoms.py
+│ ├── +++ molsystem-2023.4.6/tests/test_atoms.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_bonds.py
+│ ├── +++ molsystem-2023.4.6/tests/test_bonds.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_cell.py
+│ ├── +++ molsystem-2023.4.6/tests/test_cell.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_cif.py
+│ ├── +++ molsystem-2023.4.6/tests/test_cif.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_configuration_properties.py
+│ ├── +++ molsystem-2023.4.6/tests/test_configuration_properties.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_configurations.py
+│ ├── +++ molsystem-2023.4.6/tests/test_configurations.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_molfile.py
+│ ├── +++ molsystem-2023.4.6/tests/test_molfile.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_openbabel.py
+│ ├── +++ molsystem-2023.4.6/tests/test_openbabel.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_pdb.py
+│ ├── +++ molsystem-2023.4.6/tests/test_pdb.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_properties.py
+│ ├── +++ molsystem-2023.4.6/tests/test_properties.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_property_timings.py
+│ ├── +++ molsystem-2023.4.6/tests/test_property_timings.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_rdkit.py
+│ ├── +++ molsystem-2023.4.6/tests/test_rdkit.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_smiles.py
+│ ├── +++ molsystem-2023.4.6/tests/test_smiles.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_subsets.py
+│ ├── +++ molsystem-2023.4.6/tests/test_subsets.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_system.py
+│ ├── +++ molsystem-2023.4.6/tests/test_system.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_system_db.py
+│ ├── +++ molsystem-2023.4.6/tests/test_system_db.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_table.py
+│ ├── +++ molsystem-2023.4.6/tests/test_table.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_templates.py
+│ ├── +++ molsystem-2023.4.6/tests/test_templates.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_timings.py
+│ ├── +++ molsystem-2023.4.6/tests/test_timings.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/tests/test_topology.py
+│ ├── +++ molsystem-2023.4.6/tests/test_topology.py
+│ │┄ Files identical despite different names
+│ │   --- molsystem-2023.3.30/versioneer.py
+│ ├── +++ molsystem-2023.4.6/versioneer.py
+│ │┄ Files identical despite different names

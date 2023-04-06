@@ -1,0 +1,273 @@
+# Comparing `tmp/cieloApi3Mon-0.1.5.tar.gz` & `tmp/cieloApi3Mon-0.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/cieloApi3Mon-0.1.5.tar", last modified: Thu Jan 14 14:47:06 2021, max compression
++gzip compressed data, was "cieloApi3Mon-0.1.6.tar", last modified: Thu Apr  6 15:31:38 2023, max compression
+```
+
+## Comparing `cieloApi3Mon-0.1.5.tar` & `cieloApi3Mon-0.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+-drwxrwxr-x   0 abner     (1000) abner     (1000)        0 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/
+--rw-rw-r--   0 abner     (1000) abner     (1000)      537 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/PKG-INFO
+--rw-rw-r--   0 abner     (1000) abner     (1000)    14397 2021-01-06 10:32:33.000000 cieloApi3Mon-0.1.5/README.md
+-drwxrwxr-x   0 abner     (1000) abner     (1000)        0 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/cieloApi3Mon/
+--rw-rw-r--   0 abner     (1000) abner     (1000)      298 2021-01-04 15:14:08.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/__init__.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      243 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/address.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)     2010 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/cieloEcommerce.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      479 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/creditCard.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      266 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/customer.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      421 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/environment.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      102 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/merchant.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)     1480 2020-10-06 11:10:36.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/objectJSON.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)     1723 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/payment.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      137 2021-01-04 15:17:30.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/paymentfacilitator.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      410 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/recurrentPayment.py
+-drwxrwxr-x   0 abner     (1000) abner     (1000)        0 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/cieloApi3Mon/request/
+--rw-rw-r--   0 abner     (1000) abner     (1000)        0 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/__init__.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)     1515 2020-10-20 00:36:31.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/base.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      416 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/createCardToken.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      389 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/createSale.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      386 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/deactivateRecorrency.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      365 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/queryRecorrency.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      342 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/querySale.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      386 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/reactivateRecorrency.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      655 2020-09-30 13:40:39.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/request/updateSale.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      642 2021-01-04 15:09:43.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/sale.py
+--rw-rw-r--   0 abner     (1000) abner     (1000)      328 2021-01-04 15:13:03.000000 cieloApi3Mon-0.1.5/cieloApi3Mon/subestablishment.py
+-drwxrwxr-x   0 abner     (1000) abner     (1000)        0 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/
+--rw-rw-r--   0 abner     (1000) abner     (1000)      537 2021-01-14 14:47:06.000000 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/PKG-INFO
+--rw-rw-r--   0 abner     (1000) abner     (1000)      901 2021-01-14 14:47:06.000000 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/SOURCES.txt
+--rw-rw-r--   0 abner     (1000) abner     (1000)        1 2021-01-14 14:47:06.000000 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/dependency_links.txt
+--rw-rw-r--   0 abner     (1000) abner     (1000)       16 2021-01-14 14:47:06.000000 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/requires.txt
+--rw-rw-r--   0 abner     (1000) abner     (1000)       13 2021-01-14 14:47:06.000000 cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/top_level.txt
+--rw-rw-r--   0 abner     (1000) abner     (1000)       79 2021-01-14 14:47:06.361813 cieloApi3Mon-0.1.5/setup.cfg
+--rw-rw-r--   0 abner     (1000) abner     (1000)      964 2021-01-14 14:46:30.000000 cieloApi3Mon-0.1.5/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:31:38.188403 cieloApi3Mon-0.1.6/
++-rw-r--r--   0 root         (0) root         (0)      498 2023-04-06 15:31:38.188403 cieloApi3Mon-0.1.6/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)    14397 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/README.md
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:31:38.184403 cieloApi3Mon-0.1.6/cieloApi3Mon/
++-rw-r--r--   0 root         (0) root         (0)      298 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/__init__.py
++-rw-r--r--   0 root         (0) root         (0)      243 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/address.py
++-rw-r--r--   0 root         (0) root         (0)     2224 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/cieloEcommerce.py
++-rw-r--r--   0 root         (0) root         (0)      479 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/creditCard.py
++-rw-r--r--   0 root         (0) root         (0)      266 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/customer.py
++-rw-r--r--   0 root         (0) root         (0)      421 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/environment.py
++-rw-r--r--   0 root         (0) root         (0)      102 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/merchant.py
++-rw-r--r--   0 root         (0) root         (0)     1480 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/objectJSON.py
++-rw-r--r--   0 root         (0) root         (0)     1763 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/payment.py
++-rw-r--r--   0 root         (0) root         (0)      137 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/paymentfacilitator.py
++-rw-r--r--   0 root         (0) root         (0)      410 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/recurrentPayment.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:31:38.188403 cieloApi3Mon-0.1.6/cieloApi3Mon/request/
++-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/__init__.py
++-rw-r--r--   0 root         (0) root         (0)     2500 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/base.py
++-rw-r--r--   0 root         (0) root         (0)      416 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/createCardToken.py
++-rw-r--r--   0 root         (0) root         (0)      389 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/createSale.py
++-rw-r--r--   0 root         (0) root         (0)      386 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/deactivateRecorrency.py
++-rw-r--r--   0 root         (0) root         (0)      365 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/queryRecorrency.py
++-rw-r--r--   0 root         (0) root         (0)      342 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/querySale.py
++-rw-r--r--   0 root         (0) root         (0)      386 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/reactivateRecorrency.py
++-rw-r--r--   0 root         (0) root         (0)      655 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/request/updateSale.py
++-rw-r--r--   0 root         (0) root         (0)      602 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/sale.py
++-rw-r--r--   0 root         (0) root         (0)      328 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/cieloApi3Mon/subestablishment.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 15:31:38.188403 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/
++-rw-r--r--   0 root         (0) root         (0)      498 2023-04-06 15:31:38.000000 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      901 2023-04-06 15:31:38.000000 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 15:31:38.000000 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       16 2023-04-06 15:31:38.000000 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       13 2023-04-06 15:31:38.000000 cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/top_level.txt
++-rw-r--r--   0 root         (0) root         (0)       79 2023-04-06 15:31:38.188403 cieloApi3Mon-0.1.6/setup.cfg
++-rw-r--r--   0 root         (0) root         (0)      964 2023-04-06 15:29:29.000000 cieloApi3Mon-0.1.6/setup.py
+```
+
+### Comparing `cieloApi3Mon-0.1.5/README.md` & `cieloApi3Mon-0.1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon/cieloEcommerce.py` & `cieloApi3Mon-0.1.6/cieloApi3Mon/cieloEcommerce.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,67 +1,62 @@
+-
+ from .request.createSale import CreateSale
+ from .request.querySale import QuerySale
+ from .request.updateSale import UpdateSale
+ from .request.createCardToken import CreateCardToken
+ from .request.queryRecorrency import QueryRecorrency
+ from .request.deactivateRecorrency import DeactivateRecorrency
+ from .request.reactivateRecorrency import ReactivateRecorrency
+ 
+-class CieloEcommerce(object):
+ 
++class CieloEcommerce(object):
+     def __init__(self, merchant, environment):
+-
+         self.environment = environment
+         self.merchant = merchant
++        self.request = None
+ 
+     def create_sale(self, sale):
++        self.request = CreateSale(self.merchant, self.environment)
+ 
+-        request = CreateSale(self.merchant, self.environment)
+-
+-        return request.execute(sale)
++        return self.request.execute(sale)
+ 
+-    def capture_sale(self, payment_id, amount = None, service_tax_amount = None):
+-        request = UpdateSale('capture', self.merchant, self.environment)
++    def capture_sale(self, payment_id, amount=None, service_tax_amount=None):
++        self.request = UpdateSale('capture', self.merchant, self.environment)
+ 
+-        request.amount = amount
+-        request.service_tax_amount = service_tax_amount
++        self.request.amount = amount
++        self.request.service_tax_amount = service_tax_amount
+ 
+-        return request.execute(payment_id)
++        return self.request.execute(payment_id)
+ 
+-    def cancel_sale(self, payment_id, amount = None):
+-        request = UpdateSale('void', self.merchant, self.environment)
++    def cancel_sale(self, payment_id, amount=None):
++        self.request = UpdateSale('void', self.merchant, self.environment)
+ 
+-        request.amount = amount
++        self.request.amount = amount
+ 
+-        return request.execute(payment_id)
++        return self.request.execute(payment_id)
+ 
+     def get_sale(self, payment_id):
+-        request = QuerySale(self.merchant, self.environment)
++        self.request = QuerySale(self.merchant, self.environment)
+ 
+-        return request.execute(payment_id)
++        return self.request.execute(payment_id)
+ 
+     def create_card_token(self, creditCard):
++        self.request = CreateCardToken(self.merchant, self.environment)
+ 
+-        request = CreateCardToken(self.merchant, self.environment)
+-
+-        return request.execute(creditCard)
++        return self.request.execute(creditCard)
+ 
+     def get_recurrent_payment(self, recurrent_payment_id):
++        self.request = QueryRecorrency(self.merchant, self.environment)
+ 
+-        request = QueryRecorrency(self.merchant, self.environment)
+-
+-        return request.execute(recurrent_payment_id)
++        return self.request.execute(recurrent_payment_id)
+ 
+     def deactivate_recurrent_payment(self, recurrent_payment_id):
++        self.request = DeactivateRecorrency(self.merchant, self.environment)
+ 
+-        request = DeactivateRecorrency(self.merchant, self.environment)
+-
+-        return request.execute(recurrent_payment_id)
++        return self.request.execute(recurrent_payment_id)
+ 
+     def reactivate_recurrent_payment(self, recurrent_payment_id):
++        self.request = ReactivateRecorrency(self.merchant, self.environment)
+ 
+-        request = ReactivateRecorrency(self.merchant, self.environment)
+-
+-        return request.execute(recurrent_payment_id)
+-
++        return self.request.execute(recurrent_payment_id)
+ 
++    def get_last_request(self, print_out=False):
++        return self.request.get_last_request(print_out)
+```
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon/objectJSON.py` & `cieloApi3Mon-0.1.6/cieloApi3Mon/objectJSON.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon/payment.py` & `cieloApi3Mon-0.1.6/cieloApi3Mon/payment.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -43,14 +43,15 @@
+         self.extra_data_collection = None
+         self.expiration_date = None
+         self.url = None
+         self.number = None
+         self.bar_code_number = None
+         self.digitable_line = None
+         self.address = None
++        self.payment_facilitator = None
+ 
+         #Boleto
+         self.boleto_number = None
+         self.assignor = None
+         self.demonstrative = None
+         self.identification = None
+         self.instructions = None
+```
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon/request/updateSale.py` & `cieloApi3Mon-0.1.6/cieloApi3Mon/request/updateSale.py`
+
+ * *Files identical despite different names*
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon/sale.py` & `cieloApi3Mon-0.1.6/cieloApi3Mon/sale.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -4,15 +4,14 @@
+ class Sale(ObjectJSON):
+ 
+     def __init__(self, merchant_order_id):
+ 
+         self.merchant_order_id = merchant_order_id
+         self.customer = None
+         self.payment = None
+-        self.payment_facilitator = None
+ 
+     def update_return(self, r):
+ 
+         payment = r.get('Payment') or {}
+         self.payment.payment_id = payment.get('PaymentId')
+         self.payment.url = payment.get('Url')
+```
+
+### Comparing `cieloApi3Mon-0.1.5/cieloApi3Mon.egg-info/SOURCES.txt` & `cieloApi3Mon-0.1.6/cieloApi3Mon.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `cieloApi3Mon-0.1.5/setup.py` & `cieloApi3Mon-0.1.6/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+ # Publish Helper.
+ if sys.argv[-1] == 'publish':
+     os.system('python setup.py sdist upload')
+     sys.exit()
+ 
+ settings.update(
+     name='cieloApi3Mon',
+-    version='0.1.5',
++    version='0.1.6',
+     description='SDK API-3.0 Python Cielo Atualizada',
+     author='Monetizze',
+     author_email='suporte@monetizze.com.br',
+     url='https://github.com/Monetizze/API-3.0-Python',
+     keywords='api3.0 cielo python sdk ecommerce',
+     packages=find_packages(),
+     install_requires=['requests', 'future'],
+```
+

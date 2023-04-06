@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/pysqlx_core-0.1.8a0.tar.gz tmp/pysqlx_core-0.1.9.tar.gz --html versions/p/pysqlx-core/0.1.8a0-0.1.9/index.html --text versions/p/pysqlx-core/0.1.8a0-0.1.9/diff.txt --markdown versions/p/pysqlx-core/0.1.8a0-0.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">9.05 KB</span></div>
+  <div><span class="source">tmp/pysqlx_core-0.1.8a0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/pysqlx_core-0.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.99 KB</span></div>
+    <div><span class="source">pysqlx_core-0.1.8a0.tar</span> vs.</div>
+    <div id="pysqlx_core--.-.-a-.tar"><span class="source">pysqlx_core-0.1.9.tar</span>
+      <a class="anchor" href="#pysqlx_core--.-.-a-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.62 KB</span></div>
+      <div id="pysqlx_core--.-.-a-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>450<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/py_types/Cargo.toml</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>450<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/py_types/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2950<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/py_types/src/errors.rs</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2950<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/py_types/src/errors.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>181<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/py_types/src/lib.rs</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>181<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/py_types/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1901<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/py_types/src/rows.rs</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1901<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/py_types/src/rows.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3429<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/py_types/src/types.rs</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3429<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/py_types/src/types.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>346<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/convert/Cargo.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>346<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/convert/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1356<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/convert/src/columns.rs</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1356<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/convert/src/columns.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/convert/src/lib.rs</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/convert/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1217<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/convert/src/rows.rs</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1217<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/convert/src/rows.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>844<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/database/Cargo.toml</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>844<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/database/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3343<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/database/src/conn.rs</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3343<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/database/src/conn.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/local_dependencies/database/src/lib.rs</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/local_dependencies/database/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>75<del>7</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/Cargo.toml</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>75<ins>1</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/Cargo.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1080<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/LICENSE</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1080<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>371</del><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/README.md</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>465</ins><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>495</del><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/pyproject.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>624</ins><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3365<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/pysqlx_core.pyi</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3365<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/pysqlx_core.pyi</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1193<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/src/lib.rs</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1193<span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/src/lib.rs</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>610<del>42</del><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<del>18</del>:<del>07</del>.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/Cargo.lock</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1001<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>121<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>610<ins>36</ins><span class="dp">·</span>2022-10-22<span class="dp">·</span>18:<ins>49</ins>:<ins>15</ins>.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/Cargo.lock</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>282</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<del>8a</del><del>0</del>/PKG-INFO</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>495</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>pysqlx_core-0.1.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/py_types/src/errors.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-errors.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/py_types/src/errors.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-errors.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/py_types/src/rows.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-rows.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/py_types/src/rows.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-rows.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/py_types/src/types.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-types.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/py_types/src/types.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-py_types-src-types.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/convert/src/columns.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-convert-src-columns.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/convert/src/columns.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-convert-src-columns.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/convert/src/rows.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-convert-src-rows.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/convert/src/rows.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-convert-src-rows.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/database/Cargo.toml</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-database-Cargo.toml"><span class="source">pysqlx_core-0.1.9/local_dependencies/database/Cargo.toml</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-database-Cargo.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/local_dependencies/database/src/conn.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-database-src-conn.rs"><span class="source">pysqlx_core-0.1.9/local_dependencies/database/src/conn.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--local_dependencies-database-src-conn.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/LICENSE</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--LICENSE"><span class="source">pysqlx_core-0.1.9/LICENSE</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">452 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/README.md</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--README.md"><span class="source">pysqlx_core-0.1.9/README.md</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>pysqlx-core</td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>pysqlx-core</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">2 </td><td class="diffpresent">pysqlx-core<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extremely<span class="dp">·</span>fast<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>communicating<span class="dp">·</span>with<span class="dp">·</span>various<span class="dp">·</span>SQL<span class="dp">·</span>databases.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>provides<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>PySQLX-Engine.</td><td class="diffline">3 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>provides<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>PySQLX-Engine.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">The<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>a<span class="dp">·</span>work<span class="dp">·</span>in<span class="dp">·</span>progress<span class="dp">·</span>and<span class="dp">·</span>subject<span class="dp">·</span>to<span class="dp">·</span>significant<span class="dp">·</span>change.</td><td class="diffline">4 </td><td class="diffpresent">The<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>a<span class="dp">·</span>work<span class="dp">·</span>in<span class="dp">·</span>progress<span class="dp">·</span>and<span class="dp">·</span>subject<span class="dp">·</span>to<span class="dp">·</span>significant<span class="dp">·</span>change.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">__pysqlx-core__<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>separate<span class="dp">·</span>package,<span class="dp">·</span>required<span class="dp">·</span>by<span class="dp">·</span>`pysqlx-engine`.</td><td class="diffline">5 </td><td class="diffpresent">__pysqlx-core__<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>separate<span class="dp">·</span>package,<span class="dp">·</span>required<span class="dp">·</span>by<span class="dp">·</span>`pysqlx-engine`.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">607 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/pyproject.toml</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--pyproject.toml"><span class="source">pysqlx_core-0.1.9/pyproject.toml</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 40, 14 lines modified</td><td colspan="2">Offset 40, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>Flask&quot;,</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>Flask&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>IPython&quot;,</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Framework<span class="dp">·</span>::<span class="dp">·</span>IPython&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">]</td><td class="diffline">42 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[&quot;version&quot;,<span class="dp">·</span>&quot;license&quot;,<span class="dp">·</span>&quot;readme&quot;,<span class="dp">·</span>&quot;description&quot;]</td><td class="diffline">43 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[&quot;version&quot;,<span class="dp">·</span>&quot;license&quot;,<span class="dp">·</span>&quot;readme&quot;,<span class="dp">·</span>&quot;description&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;async&quot;,<span class="dp">·</span>&quot;database&quot;,<span class="dp">·</span>&quot;sql&quot;,<span class="dp">·</span>&quot;faster&quot;,<span class="dp">·</span>&quot;pysqlx&quot;]</td><td class="diffline">44 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;async&quot;,<span class="dp">·</span>&quot;database&quot;,<span class="dp">·</span>&quot;sql&quot;,<span class="dp">·</span>&quot;faster&quot;,<span class="dp">·</span>&quot;pysqlx&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>fast<span class="dp">·</span>and<span class="dp">·</span>async<span class="dp">·</span>SQL<span class="dp">·</span>database<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>Python,<span class="dp">·</span>with<span class="dp">·</span>support<span class="dp">·</span>for<span class="dp">·</span>MySQL,<span class="dp">·</span>PostgreSQL,<span class="dp">·</span>SQLite<span class="dp">·</span>and<span class="dp">·</span>MS<span class="dp">·</span>SQL<span class="dp">·</span>Server.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">[project.urls]</td><td class="diffline">46 </td><td class="diffpresent">[project.urls]</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">Homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/carlos-rian/pysqlx-core&quot;</td><td class="diffline">47 </td><td class="diffpresent">Homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/carlos-rian/pysqlx-core&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">Source<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/carlos-rian/pysqlx-core&quot;</td><td class="diffline">48 </td><td class="diffpresent">Source<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/carlos-rian/pysqlx-core&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">[tool.maturin]</td><td class="diffline">49 </td><td class="diffpresent">[tool.maturin]</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">bindings<span class="dp">·</span>=<span class="dp">·</span>&quot;pyo3&quot;</td><td class="diffline">50 </td><td class="diffpresent">bindings<span class="dp">·</span>=<span class="dp">·</span>&quot;pyo3&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/pysqlx_core.pyi</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--pysqlx_core.pyi"><span class="source">pysqlx_core-0.1.9/pysqlx_core.pyi</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--pysqlx_core.pyi">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/src/lib.rs</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--src-lib.rs"><span class="source">pysqlx_core-0.1.9/src/lib.rs</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--src-lib.rs">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">333 B</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/Cargo.lock</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--Cargo.lock"><span class="source">pysqlx_core-0.1.9/Cargo.lock</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--Cargo.lock">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1562, 15 lines modified</td><td colspan="2">Offset 1562, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1562 </td><td class="diffpresent"><span class="dp">·</span>&quot;proc-macro2&quot;,</td><td class="diffline">1562 </td><td class="diffpresent"><span class="dp">·</span>&quot;proc-macro2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1563 </td><td class="diffpresent"><span class="dp">·</span>&quot;quote&quot;,</td><td class="diffline">1563 </td><td class="diffpresent"><span class="dp">·</span>&quot;quote&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1564 </td><td class="diffpresent"><span class="dp">·</span>&quot;syn&quot;,</td><td class="diffline">1564 </td><td class="diffpresent"><span class="dp">·</span>&quot;syn&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1565 </td><td class="diffpresent">]</td><td class="diffline">1565 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">1566 </td><td class="diffpresent">[[package]]</td><td class="diffline">1566 </td><td class="diffpresent">[[package]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">1567 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pysqlx-core&quot;</td><td class="diffline">1567 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;pysqlx-core&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">1568 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>8-alph</del><del>a</del>&quot;</td><td class="diffline">1568 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">1569 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">1569 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">1570 </td><td class="diffpresent"><span class="dp">·</span>&quot;convert&quot;,</td><td class="diffline">1570 </td><td class="diffpresent"><span class="dp">·</span>&quot;convert&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1571 </td><td class="diffpresent"><span class="dp">·</span>&quot;database&quot;,</td><td class="diffline">1571 </td><td class="diffpresent"><span class="dp">·</span>&quot;database&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1572 </td><td class="diffpresent"><span class="dp">·</span>&quot;py_types&quot;,</td><td class="diffline">1572 </td><td class="diffpresent"><span class="dp">·</span>&quot;py_types&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1573 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td><td class="diffline">1573 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1574 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3-asyncio&quot;,</td><td class="diffline">1574 </td><td class="diffpresent"><span class="dp">·</span>&quot;pyo3-asyncio&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">1575 </td><td class="diffpresent">]</td><td class="diffline">1575 </td><td class="diffpresent">]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.62 KB</span></div>
+      <div><span class="source">pysqlx_core-0.1.8a0/PKG-INFO</span> vs.</div>
+      <div id="pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--PKG-INFO"><span class="source">pysqlx_core-0.1.9/PKG-INFO</span>
+        <a class="anchor" href="#pysqlx_core--.-.-a-.tar---pysqlx_core--.-.-a--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 13% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pysqlx-core</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>pysqlx-core</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>8a</del><del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">4 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Rust</td><td class="diffline">5 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Rust</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>CPython</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>CPython</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>PyPy</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>Implementation<span class="dp">·</span>::<span class="dp">·</span>PyPy</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 30, 23 lines modified</td><td colspan="2">Offset 30, 25 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed</td><td class="diffline">30 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Typing<span class="dp">·</span>::<span class="dp">·</span>Typed</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>AsyncIO</td><td class="diffline">31 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>AsyncIO</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>AnyIO</td><td class="diffline">32 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>AnyIO</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>FastAPI</td><td class="diffline">33 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>FastAPI</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>Flask</td><td class="diffline">34 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>Flask</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>IPython</td><td class="diffline">35 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Framework<span class="dp">·</span>::<span class="dp">·</span>IPython</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">36 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>fast<span class="dp">·</span>and<span class="dp">·</span>async<span class="dp">·</span>SQL<span class="dp">·</span>database<span class="dp">·</span>wrapper<span class="dp">·</span>for<span class="dp">·</span>Python,<span class="dp">·</span>with<span class="dp">·</span>support<span class="dp">·</span>for<span class="dp">·</span>MySQL,<span class="dp">·</span>PostgreSQL,<span class="dp">·</span>SQLite<span class="dp">·</span>and<span class="dp">·</span>MS<span class="dp">·</span>SQL<span class="dp">·</span>Server.</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">Keywords:<span class="dp">·</span>async,database,sql,faster,pysqlx</td><td class="diffline">38 </td><td class="diffpresent">Keywords:<span class="dp">·</span>async,database,sql,faster,pysqlx</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Carlos<span class="dp">·</span>Rian<span class="dp">·</span>&lt;crian.rian@gmail.com&gt;</td><td class="diffline">39 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Carlos<span class="dp">·</span>Rian<span class="dp">·</span>&lt;crian.rian@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">40 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown;<span class="dp">·</span>charset=UTF-8;<span class="dp">·</span>variant=GFM</td><td class="diffline">41 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown;<span class="dp">·</span>charset=UTF-8;<span class="dp">·</span>variant=GFM</td></tr>
+<tr class="diffdeleted"><td class="diffline">41 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/carlos-rian/pysqlx-core</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/carlos-rian/pysqlx-core</td><td class="diffline">42 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/carlos-rian/pysqlx-core</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/carlos-rian/pysqlx-core</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">#<span class="dp">·</span>pysqlx-core</td><td class="diffline">44 </td><td class="diffpresent">#<span class="dp">·</span>pysqlx-core</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent">pysqlx-core<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>extremely<span class="dp">·</span>fast<span class="dp">·</span>Python<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>communicating<span class="dp">·</span>with<span class="dp">·</span>various<span class="dp">·</span>SQL<span class="dp">·</span>databases.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>provides<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>PySQLX-Engine.</td><td class="diffline">46 </td><td class="diffpresent">This<span class="dp">·</span>package<span class="dp">·</span>provides<span class="dp">·</span>the<span class="dp">·</span>core<span class="dp">·</span>functionality<span class="dp">·</span>for<span class="dp">·</span>PySQLX-Engine.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">The<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>a<span class="dp">·</span>work<span class="dp">·</span>in<span class="dp">·</span>progress<span class="dp">·</span>and<span class="dp">·</span>subject<span class="dp">·</span>to<span class="dp">·</span>significant<span class="dp">·</span>change.</td><td class="diffline">47 </td><td class="diffpresent">The<span class="dp">·</span>package<span class="dp">·</span>is<span class="dp">·</span>currently<span class="dp">·</span>a<span class="dp">·</span>work<span class="dp">·</span>in<span class="dp">·</span>progress<span class="dp">·</span>and<span class="dp">·</span>subject<span class="dp">·</span>to<span class="dp">·</span>significant<span class="dp">·</span>change.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">__pysqlx-core__<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>separate<span class="dp">·</span>package,<span class="dp">·</span>required<span class="dp">·</span>by<span class="dp">·</span>`pysqlx-engine`.</td><td class="diffline">48 </td><td class="diffpresent">__pysqlx-core__<span class="dp">·</span>will<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>separate<span class="dp">·</span>package,<span class="dp">·</span>required<span class="dp">·</span>by<span class="dp">·</span>`pysqlx-engine`.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

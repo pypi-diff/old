@@ -1,0 +1,499 @@
+# Comparing `tmp/seamm_util-2023.2.28.tar.gz` & `tmp/seamm_util-2023.4.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "seamm_util-2023.2.28.tar", last modified: Tue Feb 28 21:14:56 2023, max compression
++gzip compressed data, was "seamm_util-2023.4.6.tar", last modified: Thu Apr  6 15:43:51 2023, max compression
+```
+
+## Comparing `seamm_util-2023.2.28.tar` & `seamm_util-2023.4.6.tar`
+
+### file list
+
+```diff
+@@ -1,93 +1,93 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/
+--rw-r--r--   0 runner    (1001) docker     (123)      151 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/AUTHORS.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     3267 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/CONTRIBUTING.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      381 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/HISTORY.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1502 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      306 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     2920 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1807 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/README.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.080589 seamm_util-2023.2.28/docs/
+--rw-r--r--   0 runner    (1001) docker     (123)     6778 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/Makefile
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/authors.rst
+--rwxr-xr-x   0 runner    (1001) docker     (123)     8689 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/conf.py
+--rw-r--r--   0 runner    (1001) docker     (123)       33 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/contributing.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/history.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      874 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/index.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     2236 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/installation.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     6467 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/make.bat
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/readme.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       75 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/docs/usage.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       33 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       95 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/requirements_dev.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/requirements_install.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/seamm_util/
+--rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      501 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/seamm_util/_version.py
+--rw-r--r--   0 runner    (1001) docker     (123)    23284 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/argument_parser.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2612 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/check_executable.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4055 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/compact_json_encoder.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2371 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/dictionary.py
+--rw-r--r--   0 runner    (1001) docker     (123)    63121 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/elemental_data.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6673 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/include_open.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6026 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/md_statistics.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3081 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/output.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15841 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/plotting.py
+--rw-r--r--   0 runner    (1001) docker     (123)    30207 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/printing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3793 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/seamm_file.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4407 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/seamm_json.py
+--rw-r--r--   0 runner    (1001) docker     (123)       44 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/seamm_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6438 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/units.py
+--rw-r--r--   0 runner    (1001) docker     (123)      795 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/variable_names.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6897 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/water_models.py
+--rw-r--r--   0 runner    (1001) docker     (123)    20582 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/seamm_util/zenodo.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.088589 seamm_util-2023.2.28/seamm_util.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2920 2023-02-28 21:14:56.000000 seamm_util-2023.2.28/seamm_util.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2092 2023-02-28 21:14:56.000000 seamm_util-2023.2.28/seamm_util.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-28 21:14:56.000000 seamm_util-2023.2.28/seamm_util.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-02-28 21:14:56.000000 seamm_util-2023.2.28/seamm_util.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       11 2023-02-28 21:14:56.000000 seamm_util-2023.2.28/seamm_util.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      360 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     2455 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.088589 seamm_util-2023.2.28/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)       65 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/tests/data/
+--rw-r--r--   0 runner    (1001) docker     (123)       49 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/blank_lines.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       74 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/blank_lines.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       69 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/blank_lines.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/empty_file.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       14 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/empty_file.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       35 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/empty_file.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       52 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file1.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       62 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file1.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       53 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file1.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       76 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_#include.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       89 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_#include.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       85 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_#include.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       66 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_end.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       85 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_end.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       75 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_end.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       41 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_include1.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       79 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_include1.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       74 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_include1.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       75 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_middle.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       86 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_middle.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       82 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/file_middle.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       62 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_blank_lines.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       90 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_blank_lines.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       96 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_blank_lines.txt.gz
+--rw-r--r--   0 runner    (1001) docker     (123)       71 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_empty_file.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       89 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_empty_file.txt.bz2
+--rw-r--r--   0 runner    (1001) docker     (123)       90 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/data/include_empty_file.txt.gz
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/tests/results/
+--rw-r--r--   0 runner    (1001) docker     (123)     1811 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/results/simple_plot.html
+--rw-r--r--   0 runner    (1001) docker     (123)     2578 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/results/two_plots.html
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-28 21:14:56.096589 seamm_util-2023.2.28/tests/templates/
+--rw-r--r--   0 runner    (1001) docker     (123)     2492 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/templates/line.html_template
+--rw-r--r--   0 runner    (1001) docker     (123)     2105 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_dictionary.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6139 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_open.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6191 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_open_bzip2.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6178 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_open_gzipped.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4248 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_plotting.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5914 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_plotting_figure.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1331 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/tests/test_units.py
+--rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-02-28 21:14:38.000000 seamm_util-2023.2.28/versioneer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.058423 seamm_util-2023.4.6/
++-rw-r--r--   0 runner    (1001) docker     (123)      151 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/AUTHORS.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     3267 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/CONTRIBUTING.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      532 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/HISTORY.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1502 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      306 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     3070 2023-04-06 15:43:51.062423 seamm_util-2023.4.6/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1807 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/README.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.046423 seamm_util-2023.4.6/docs/
++-rw-r--r--   0 runner    (1001) docker     (123)     6778 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/Makefile
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/authors.rst
++-rwxr-xr-x   0 runner    (1001) docker     (123)     8689 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/conf.py
++-rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/contributing.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/history.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      874 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     2236 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/installation.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     6467 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/make.bat
++-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/readme.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/docs/usage.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       95 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/requirements_dev.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/requirements_install.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.062423 seamm_util-2023.4.6/seamm_util/
++-rw-r--r--   0 runner    (1001) docker     (123)     1274 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      500 2023-04-06 15:43:51.062423 seamm_util-2023.4.6/seamm_util/_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)    23511 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/argument_parser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2612 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/check_executable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4055 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/compact_json_encoder.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2371 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/dictionary.py
++-rw-r--r--   0 runner    (1001) docker     (123)    63121 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/elemental_data.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6673 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/include_open.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6026 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/md_statistics.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3081 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/output.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15841 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/plotting.py
++-rw-r--r--   0 runner    (1001) docker     (123)    30207 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/printing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3793 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/seamm_file.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4407 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/seamm_json.py
++-rw-r--r--   0 runner    (1001) docker     (123)       44 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/seamm_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7182 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/units.py
++-rw-r--r--   0 runner    (1001) docker     (123)      795 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/variable_names.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6897 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/water_models.py
++-rw-r--r--   0 runner    (1001) docker     (123)    20582 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/seamm_util/zenodo.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.050423 seamm_util-2023.4.6/seamm_util.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3070 2023-04-06 15:43:51.000000 seamm_util-2023.4.6/seamm_util.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2092 2023-04-06 15:43:51.000000 seamm_util-2023.4.6/seamm_util.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 15:43:51.000000 seamm_util-2023.4.6/seamm_util.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 15:43:51.000000 seamm_util-2023.4.6/seamm_util.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       11 2023-04-06 15:43:51.000000 seamm_util-2023.4.6/seamm_util.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      360 2023-04-06 15:43:51.062423 seamm_util-2023.4.6/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     2455 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.054423 seamm_util-2023.4.6/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)       65 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.058423 seamm_util-2023.4.6/tests/data/
++-rw-r--r--   0 runner    (1001) docker     (123)       49 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/blank_lines.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/blank_lines.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       69 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/blank_lines.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/empty_file.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/empty_file.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/empty_file.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       52 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file1.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file1.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file1.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       76 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_#include.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       89 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_#include.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_#include.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       66 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_end.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_end.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_end.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_include1.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_include1.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_include1.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_middle.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       86 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_middle.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       82 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/file_middle.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_blank_lines.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       90 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_blank_lines.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       96 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_blank_lines.txt.gz
++-rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_empty_file.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       89 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_empty_file.txt.bz2
++-rw-r--r--   0 runner    (1001) docker     (123)       90 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/data/include_empty_file.txt.gz
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.058423 seamm_util-2023.4.6/tests/results/
++-rw-r--r--   0 runner    (1001) docker     (123)     1811 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/results/simple_plot.html
++-rw-r--r--   0 runner    (1001) docker     (123)     2578 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/results/two_plots.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 15:43:51.058423 seamm_util-2023.4.6/tests/templates/
++-rw-r--r--   0 runner    (1001) docker     (123)     2492 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/templates/line.html_template
++-rw-r--r--   0 runner    (1001) docker     (123)     2105 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_dictionary.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6139 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_open.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6191 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_open_bzip2.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6178 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_open_gzipped.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4248 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_plotting.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5914 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_plotting_figure.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1331 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/tests/test_units.py
++-rw-r--r--   0 runner    (1001) docker     (123)    68611 2023-04-06 15:43:36.000000 seamm_util-2023.4.6/versioneer.py
+```
+
+### Comparing `seamm_util-2023.2.28/CONTRIBUTING.rst` & `seamm_util-2023.4.6/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/LICENSE` & `seamm_util-2023.4.6/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/PKG-INFO` & `seamm_util-2023.4.6/PKG-INFO`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: seamm_util
+-Version: 2023.2.28
++Version: 2023.4.6
+ Summary: seamm_util
+ Home-page: https://github.com/molssi-seamm/seamm_util
+ Author: Paul Saxe
+ Author-email: psaxe@molssi.org
+ License: BSD-3-Clause
+ Keywords: seamm_util
+ Platform: Linux
+@@ -80,14 +80,17 @@
+ .. _`National Science Foundation`: https://www.nsf.gov
+ 
+ 
+ =======
+ History
+ =======
+ 
++2023.4.6 -- Added more unit conversions to support Buckingham potentials
++  * added e.g. eV*Å^6 to kcal/mol*Å^6 to support Buckingham pontetials
++    
+ 2023.2.28 -- Added a compact JSON encoder
+   * To make the schema-type JSON more human-readable.
+     
+ 2022.11.3 -- More conversions involving substance (mol) to number
+   * Added energy/mol/Å^2 --> energy/Å^2 for force constants
+   * Added energy/mol/Å^3 --> energy/Å^3 for stress/pressure/elastic constants
+```
+
+### Comparing `seamm_util-2023.2.28/README.rst` & `seamm_util-2023.4.6/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/docs/Makefile` & `seamm_util-2023.4.6/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/docs/conf.py` & `seamm_util-2023.4.6/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/docs/index.rst` & `seamm_util-2023.4.6/docs/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/docs/installation.rst` & `seamm_util-2023.4.6/docs/installation.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/docs/make.bat` & `seamm_util-2023.4.6/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/__init__.py` & `seamm_util-2023.4.6/seamm_util/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/argument_parser.py` & `seamm_util-2023.4.6/seamm_util/argument_parser.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -647,14 +647,23 @@
+         dest="title",
+         default="",
+         action="store",
+         help="The title for this run.",
+     )
+     parser.add_argument(
+         "SEAMM",
++        "--description",
++        group="job options",
++        dest="description",
++        default="",
++        action="store",
++        help="The longer description for this run.",
++    )
++    parser.add_argument(
++        "SEAMM",
+         "--force",
+         group="job options",
+         dest="force",
+         action="store_true",
+         help="Overwrite the job output if it exists.",
+     )
+```
+
+### Comparing `seamm_util-2023.2.28/seamm_util/check_executable.py` & `seamm_util-2023.4.6/seamm_util/check_executable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/compact_json_encoder.py` & `seamm_util-2023.4.6/seamm_util/compact_json_encoder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/dictionary.py` & `seamm_util-2023.4.6/seamm_util/dictionary.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/elemental_data.py` & `seamm_util-2023.4.6/seamm_util/elemental_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/include_open.py` & `seamm_util-2023.4.6/seamm_util/include_open.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/md_statistics.py` & `seamm_util-2023.4.6/seamm_util/md_statistics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/output.py` & `seamm_util-2023.4.6/seamm_util/output.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/plotting.py` & `seamm_util-2023.4.6/seamm_util/plotting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/printing.py` & `seamm_util-2023.4.6/seamm_util/printing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/seamm_file.py` & `seamm_util-2023.4.6/seamm_util/seamm_file.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/seamm_json.py` & `seamm_util-2023.4.6/seamm_util/seamm_json.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/units.py` & `seamm_util-2023.4.6/seamm_util/units.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -200,14 +200,42 @@
+ # eV/Å^3 --> kJ/mol/Å^3
+ _d.add_transformation(
+     "[mass] / [length] / [time] ** 2",
+     "[mass] / [length] / [substance] / [time] ** 2",
+     lambda ureg, x: x / factor,
+ )
+ 
++# kJ/mol/Å^4 --> eV/Å^4
++_d.add_transformation(
++    "[mass] / [length] ** 2 / [substance] / [time] ** 2",
++    "[mass] / [length] ** 2 / [time] ** 2",
++    lambda ureg, x: x * factor,
++)
++
++# eV/Å^4 --> kJ/mol/Å^4
++_d.add_transformation(
++    "[mass] / [length] ** 2 / [time] ** 2",
++    "[mass] / [length] ** 2 / [substance] / [time] ** 2",
++    lambda ureg, x: x / factor,
++)
++
++# kJ/mol*Å^6 --> eV*Å^6
++_d.add_transformation(
++    "[length] ** 8 * [mass] / [substance] / [time] ** 2",
++    "[length] ** 8 * [mass] / [time] ** 2",
++    lambda ureg, x: x * factor,
++)
++
++# eV*Å^6 --> kJ/mol*Å^6
++_d.add_transformation(
++    "[length] ** 8 * [mass] / [time] ** 2",
++    "[length] ** 8 * [mass] / [substance] / [time] ** 2",
++    lambda ureg, x: x / factor,
++)
++
+ ureg.add_context(_d)
+ ureg.enable_contexts("chemistry")
+ 
+ 
+ def default_units(units_or_dimensions):
+     """Return the default units.
+```
+
+### Comparing `seamm_util-2023.2.28/seamm_util/variable_names.py` & `seamm_util-2023.4.6/seamm_util/variable_names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/water_models.py` & `seamm_util-2023.4.6/seamm_util/water_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util/zenodo.py` & `seamm_util-2023.4.6/seamm_util/zenodo.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/seamm_util.egg-info/PKG-INFO` & `seamm_util-2023.4.6/seamm_util.egg-info/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: seamm-util
+-Version: 2023.2.28
++Version: 2023.4.6
+ Summary: seamm_util
+ Home-page: https://github.com/molssi-seamm/seamm_util
+ Author: Paul Saxe
+ Author-email: psaxe@molssi.org
+ License: BSD-3-Clause
+ Keywords: seamm_util
+ Platform: Linux
+@@ -80,14 +80,17 @@
+ .. _`National Science Foundation`: https://www.nsf.gov
+ 
+ 
+ =======
+ History
+ =======
+ 
++2023.4.6 -- Added more unit conversions to support Buckingham potentials
++  * added e.g. eV*Å^6 to kcal/mol*Å^6 to support Buckingham pontetials
++    
+ 2023.2.28 -- Added a compact JSON encoder
+   * To make the schema-type JSON more human-readable.
+     
+ 2022.11.3 -- More conversions involving substance (mol) to number
+   * Added energy/mol/Å^2 --> energy/Å^2 for force constants
+   * Added energy/mol/Å^3 --> energy/Å^3 for stress/pressure/elastic constants
+```
+
+### Comparing `seamm_util-2023.2.28/seamm_util.egg-info/SOURCES.txt` & `seamm_util-2023.4.6/seamm_util.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/setup.py` & `seamm_util-2023.4.6/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/results/simple_plot.html` & `seamm_util-2023.4.6/tests/results/simple_plot.html`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/results/two_plots.html` & `seamm_util-2023.4.6/tests/results/two_plots.html`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/templates/line.html_template` & `seamm_util-2023.4.6/tests/templates/line.html_template`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_dictionary.py` & `seamm_util-2023.4.6/tests/test_dictionary.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_open.py` & `seamm_util-2023.4.6/tests/test_open.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_open_bzip2.py` & `seamm_util-2023.4.6/tests/test_open_bzip2.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_open_gzipped.py` & `seamm_util-2023.4.6/tests/test_open_gzipped.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_plotting.py` & `seamm_util-2023.4.6/tests/test_plotting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_plotting_figure.py` & `seamm_util-2023.4.6/tests/test_plotting_figure.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/tests/test_units.py` & `seamm_util-2023.4.6/tests/test_units.py`
+
+ * *Files identical despite different names*
+
+### Comparing `seamm_util-2023.2.28/versioneer.py` & `seamm_util-2023.4.6/versioneer.py`
+
+ * *Files identical despite different names*
+
