@@ -1,0 +1,638 @@
+# Comparing `tmp/Pandora-Cloud-0.0.4.tar.gz` & `tmp/Pandora-Cloud-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/home/runner/work/pandora-cloud/pandora-cloud/dist/.tmp-6n_9i1zz/Pandora-Cloud-0.0.4.tar", last modified: Mon Apr  3 02:08:51 2023, max compression
++gzip compressed data, was "/home/runner/work/pandora-cloud/pandora-cloud/dist/.tmp-qmq7t_js/Pandora-Cloud-0.0.5.tar", last modified: Thu Apr  6 11:04:11 2023, max compression
+```
+
+## Comparing `Pandora-Cloud-0.0.4.tar` & `Pandora-Cloud-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,92 +1,92 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/
+--rw-r--r--   0 runner    (1001) docker     (123)    18092 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/PKG-INFO
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4278 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      797 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1790 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/
+--rw-r--r--   0 runner    (1001) docker     (123)       47 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/
+--rw-r--r--   0 runner    (1001) docker     (123)   905448 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/113-23682f80a24dd00d.js
+--rw-r--r--   0 runner    (1001) docker     (123)    14115 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/14-0cb0d20affbd720d.js
+--rw-r--r--   0 runner    (1001) docker     (123)     9531 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/174-bd28069f281ef76f.js
+--rw-r--r--   0 runner    (1001) docker     (123)   264961 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/1f110208-44a6f43ddc5e9011.js
+--rw-r--r--   0 runner    (1001) docker     (123)    12837 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/264-13e92c51b0315184.js
+--rw-r--r--   0 runner    (1001) docker     (123)    24138 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/360-442b869f1ba4bb1b.js
+--rw-r--r--   0 runner    (1001) docker     (123)    20480 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js
+--rw-r--r--   0 runner    (1001) docker     (123)     3232 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/554.9b8bfd0762461d74.js
+--rw-r--r--   0 runner    (1001) docker     (123)      389 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/68a27ff6-1185184b61bc22d0.js
+--rw-r--r--   0 runner    (1001) docker     (123)    11674 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/762-222df1028c0c1555.js
+--rw-r--r--   0 runner    (1001) docker     (123)     2433 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/949.1a6eb804b5e91f61.js
+--rw-r--r--   0 runner    (1001) docker     (123)      462 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/bd26816a-981e1ddc27b37cc6.js
+--rw-r--r--   0 runner    (1001) docker     (123)   141370 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/framework-7a789ee31d2a7534.js
+--rw-r--r--   0 runner    (1001) docker     (123)   105266 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/main-149b337e061b4d04.js
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/
+--rw-r--r--   0 runner    (1001) docker     (123)   305883 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/_app-90236c4e04307644.js
+--rw-r--r--   0 runner    (1001) docker     (123)      250 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/_error-786d27d84962122a.js
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/
+--rw-r--r--   0 runner    (1001) docker     (123)   154581 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/[[...chatId]]-2b434f3f0b594dba.js
+--rw-r--r--   0 runner    (1001) docker     (123)    91460 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js
+--rw-r--r--   0 runner    (1001) docker     (123)     3926 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/webpack-98709a717aa5cc1e.js
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/css/
+--rw-r--r--   0 runner    (1001) docker     (123)   108682 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/css/23406a6edf4b081a.css
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/
+--rw-r--r--   0 runner    (1001) docker     (123)     2308 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js
+--rw-r--r--   0 runner    (1001) docker     (123)       77 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_ssgManifest.js
+--rw-r--r--   0 runner    (1001) docker     (123)     4159 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/apple-touch-icon.png
+--rw-r--r--   0 runner    (1001) docker     (123)      730 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/favicon-16x16.png
+--rw-r--r--   0 runner    (1001) docker     (123)     1292 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/favicon-32x32.png
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/
+--rw-r--r--   0 runner    (1001) docker     (123)    34336 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    27412 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff2
+--rw-r--r--   0 runner    (1001) docker     (123)    35956 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    28532 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff2
+--rw-r--r--   0 runner    (1001) docker     (123)    35268 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    28060 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff2
+--rw-r--r--   0 runner    (1001) docker     (123)    37480 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    29824 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff2
+--rw-r--r--   0 runner    (1001) docker     (123)     7716 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Bold.woff
+--rw-r--r--   0 runner    (1001) docker     (123)     7656 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    13296 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Bold.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    13208 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    29912 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Bold.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    19412 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-BoldItalic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    19676 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Italic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    30772 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    18668 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Math-BoldItalic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    18748 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Math-Italic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    14408 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Bold.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    14112 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Italic.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    12316 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    10588 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Script-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)     6496 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size1-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)     6188 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size2-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)     4420 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size3-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)     5980 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size4-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)    16028 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Typewriter-Regular.woff
+--rw-r--r--   0 runner    (1001) docker     (123)   324208 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Signifier-Regular.otf
+--rw-r--r--   0 runner    (1001) docker     (123)   210840 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Sohne-Buch.otf
+--rw-r--r--   0 runner    (1001) docker     (123)   230012 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Sohne-Halbfett.otf
+--rw-r--r--   0 runner    (1001) docker     (123)    30824 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/SohneMono-Buch.otf
+--rw-r--r--   0 runner    (1001) docker     (123)    31116 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/SohneMono-Halbfett.otf
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/react-components/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/
+--rw-r--r--   0 runner    (1001) docker     (123)   233073 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/main.cdn.min.css
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:51.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/templates/
+--rw-r--r--   0 runner    (1001) docker     (123)     9214 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/templates/chat.html
+--rw-r--r--   0 runner    (1001) docker     (123)    17860 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/flask/templates/login.html
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/py.typed
+--rw-r--r--   0 runner    (1001) docker     (123)     8232 2023-04-03 02:08:41.000000 Pandora-Cloud-0.0.4/src/pandora_cloud/server.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/
++-rw-r--r--   0 runner    (1001) docker     (123)    18092 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/PKG-INFO
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2164 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4278 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       14 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      797 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1790 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/
++-rw-r--r--   0 runner    (1001) docker     (123)       47 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/
++-rw-r--r--   0 runner    (1001) docker     (123)   905448 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/113-23682f80a24dd00d.js
++-rw-r--r--   0 runner    (1001) docker     (123)    14115 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/14-0cb0d20affbd720d.js
++-rw-r--r--   0 runner    (1001) docker     (123)     9531 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/174-bd28069f281ef76f.js
++-rw-r--r--   0 runner    (1001) docker     (123)   264961 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/1f110208-44a6f43ddc5e9011.js
++-rw-r--r--   0 runner    (1001) docker     (123)    12825 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/264-13e92c51b0315184.js
++-rw-r--r--   0 runner    (1001) docker     (123)    24138 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/360-442b869f1ba4bb1b.js
++-rw-r--r--   0 runner    (1001) docker     (123)    20480 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js
++-rw-r--r--   0 runner    (1001) docker     (123)     3232 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/554.9b8bfd0762461d74.js
++-rw-r--r--   0 runner    (1001) docker     (123)      389 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/68a27ff6-1185184b61bc22d0.js
++-rw-r--r--   0 runner    (1001) docker     (123)    11674 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/762-222df1028c0c1555.js
++-rw-r--r--   0 runner    (1001) docker     (123)     2433 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/949.1a6eb804b5e91f61.js
++-rw-r--r--   0 runner    (1001) docker     (123)      462 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/bd26816a-981e1ddc27b37cc6.js
++-rw-r--r--   0 runner    (1001) docker     (123)   141370 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/framework-7a789ee31d2a7534.js
++-rw-r--r--   0 runner    (1001) docker     (123)   105266 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/main-149b337e061b4d04.js
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/
++-rw-r--r--   0 runner    (1001) docker     (123)   305883 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/_app-90236c4e04307644.js
++-rw-r--r--   0 runner    (1001) docker     (123)      250 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/_error-786d27d84962122a.js
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/
++-rw-r--r--   0 runner    (1001) docker     (123)   154581 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/[[...chatId]]-2b434f3f0b594dba.js
++-rw-r--r--   0 runner    (1001) docker     (123)    91460 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js
++-rw-r--r--   0 runner    (1001) docker     (123)     3926 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/webpack-98709a717aa5cc1e.js
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/css/
++-rw-r--r--   0 runner    (1001) docker     (123)   108682 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/css/23406a6edf4b081a.css
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/
++-rw-r--r--   0 runner    (1001) docker     (123)     2308 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js
++-rw-r--r--   0 runner    (1001) docker     (123)       77 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_ssgManifest.js
++-rw-r--r--   0 runner    (1001) docker     (123)     4159 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/apple-touch-icon.png
++-rw-r--r--   0 runner    (1001) docker     (123)      730 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/favicon-16x16.png
++-rw-r--r--   0 runner    (1001) docker     (123)     1292 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/favicon-32x32.png
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/
++-rw-r--r--   0 runner    (1001) docker     (123)    34336 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    27412 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff2
++-rw-r--r--   0 runner    (1001) docker     (123)    35956 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    28532 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff2
++-rw-r--r--   0 runner    (1001) docker     (123)    35268 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    28060 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff2
++-rw-r--r--   0 runner    (1001) docker     (123)    37480 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    29824 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff2
++-rw-r--r--   0 runner    (1001) docker     (123)     7716 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Bold.woff
++-rw-r--r--   0 runner    (1001) docker     (123)     7656 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    13296 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Bold.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    13208 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    29912 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Bold.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    19412 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-BoldItalic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    19676 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Italic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    30772 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    18668 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Math-BoldItalic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    18748 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Math-Italic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    14408 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Bold.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    14112 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Italic.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    12316 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    10588 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Script-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)     6496 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size1-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)     6188 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size2-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)     4420 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size3-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)     5980 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size4-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)    16028 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Typewriter-Regular.woff
++-rw-r--r--   0 runner    (1001) docker     (123)   324208 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Signifier-Regular.otf
++-rw-r--r--   0 runner    (1001) docker     (123)   210840 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Sohne-Buch.otf
++-rw-r--r--   0 runner    (1001) docker     (123)   230012 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Sohne-Halbfett.otf
++-rw-r--r--   0 runner    (1001) docker     (123)    30824 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/SohneMono-Buch.otf
++-rw-r--r--   0 runner    (1001) docker     (123)    31116 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/SohneMono-Halbfett.otf
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/react-components/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/
++-rw-r--r--   0 runner    (1001) docker     (123)   233073 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/main.cdn.min.css
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:04:11.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/templates/
++-rw-r--r--   0 runner    (1001) docker     (123)     9256 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/templates/chat.html
++-rw-r--r--   0 runner    (1001) docker     (123)    17856 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/flask/templates/login.html
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/py.typed
++-rw-r--r--   0 runner    (1001) docker     (123)     8406 2023-04-06 11:03:53.000000 Pandora-Cloud-0.0.5/src/pandora_cloud/server.py
+```
+
+### Comparing `Pandora-Cloud-0.0.4/LICENSE` & `Pandora-Cloud-0.0.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/PKG-INFO` & `Pandora-Cloud-0.0.5/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Pandora-Cloud
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: A package for Pandora-ChatGPT
+ Home-page: https://github.com/pengzhile/pandora-cloud
+ Author: Neo Peng
+ Author-email: pengzhile@gmail.com
+ Project-URL: Source, https://github.com/pengzhile/pandora-cloud
+ Project-URL: Tracker, https://github.com/pengzhile/pandora-cloud/issues
+ Keywords: OpenAI ChatGPT ChatGPT-Plus
+```
+
+### Comparing `Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/PKG-INFO` & `Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: Pandora-Cloud
+-Version: 0.0.4
++Version: 0.0.5
+ Summary: A package for Pandora-ChatGPT
+ Home-page: https://github.com/pengzhile/pandora-cloud
+ Author: Neo Peng
+ Author-email: pengzhile@gmail.com
+ Project-URL: Source, https://github.com/pengzhile/pandora-cloud
+ Project-URL: Tracker, https://github.com/pengzhile/pandora-cloud/issues
+ Keywords: OpenAI ChatGPT ChatGPT-Plus
+```
+
+### Comparing `Pandora-Cloud-0.0.4/Pandora_Cloud.egg-info/SOURCES.txt` & `Pandora-Cloud-0.0.5/Pandora_Cloud.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/README.md` & `Pandora-Cloud-0.0.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/setup.py` & `Pandora-Cloud-0.0.5/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/113-23682f80a24dd00d.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/113-23682f80a24dd00d.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/14-0cb0d20affbd720d.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/14-0cb0d20affbd720d.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/174-bd28069f281ef76f.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/174-bd28069f281ef76f.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/1f110208-44a6f43ddc5e9011.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/1f110208-44a6f43ddc5e9011.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/264-13e92c51b0315184.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/264-13e92c51b0315184.js`
+
+ * *Files 2% similar despite different names*
+
+#### js-beautify {}
+
+```diff
+@@ -21,15 +21,15 @@
+                 c = n(42928),
+                 h = n(45813),
+                 u = n(48879),
+                 d = n(44928);
+             n(138);
+             var p = n(34388),
+                 l = n(49674),
+-                f = "https://chat.gateway.do/api",
++                f = window.__api_prefix + "/api",
+                 g = ["cf-ipcountry"],
+                 m = function() {
+                     function e() {
+                         (0, i.Z)(this, e)
+                     }
+                     return e.setAccessToken = function(e) {
+                         this.accessToken = e
+@@ -238,15 +238,15 @@
+                                     action: e.completionType,
+                                     messages: e.messages.length > 0 ? e.messages : void 0,
+                                     conversation_id: e.threadId,
+                                     parent_message_id: e.parentMessageId,
+                                     model: e.model,
+                                     plugin_ids: e.threadId ? void 0 : e.enabledPluginIds,
+                                     timezone_offset_min: new Date().getTimezoneOffset()
+-                                }, (0, u.L)("".concat("https://chat.gateway.do/api", "/conversation"), {
++                                }, (0, u.L)("".concat(window.__api_prefix, "/api/conversation"), {
+                                     method: "POST",
+                                     credentials: "same-origin",
+                                     headers: (0, s.Z)({
+                                         "Content-Type": "application/json"
+                                     }, n.getAuthHeader()),
+                                     body: JSON.stringify(r),
+                                     signal: i.signal,
+@@ -543,15 +543,15 @@
+                         return this.fetch("".concat(f, "/opengraph/tags?url=").concat(encodeURIComponent(t)), {
+                             method: "GET",
+                             headers: (0, s.Z)({
+                                 "Content-Type": "application/json"
+                             }, this.getAuthHeader())
+                         })
+                     }, e.getModelMessageCap = function() {
+-                        return this.fetch("https://chat.gateway.do/api/conversation_limit", {
++                        return this.fetch(window.__api_prefix + "/api/conversation_limit", {
+                             method: "GET",
+                             headers: (0, s.Z)({
+                                 "Content-Type": "application/json"
+                             }, this.getAuthHeader())
+                         })
+                     }, e
+                 }();
+```
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/360-442b869f1ba4bb1b.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/360-442b869f1ba4bb1b.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/554.9b8bfd0762461d74.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/554.9b8bfd0762461d74.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/762-222df1028c0c1555.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/762-222df1028c0c1555.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/949.1a6eb804b5e91f61.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/949.1a6eb804b5e91f61.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/framework-7a789ee31d2a7534.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/framework-7a789ee31d2a7534.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/main-149b337e061b4d04.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/main-149b337e061b4d04.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/_app-90236c4e04307644.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/_app-90236c4e04307644.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/[[...chatId]]-2b434f3f0b594dba.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/pages/chat/[[...chatId]]-2b434f3f0b594dba.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/chunks/webpack-98709a717aa5cc1e.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/chunks/webpack-98709a717aa5cc1e.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/css/23406a6edf4b081a.css` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/css/23406a6edf4b081a.css`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/apple-touch-icon.png` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/apple-touch-icon.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/favicon-16x16.png` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/favicon-16x16.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/favicon-32x32.png` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/favicon-32x32.png`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff2` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBold.woff2`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff2` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIBoldItalic.woff2`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff2` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegular.woff2`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff2` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/ColfaxAIRegularItalic.woff2`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Bold.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Bold.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Caligraphic-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Bold.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Bold.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Fraktur-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Bold.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Bold.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-BoldItalic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-BoldItalic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Italic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Italic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Main-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Math-BoldItalic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Math-BoldItalic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Math-Italic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Math-Italic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Bold.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Bold.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Italic.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Italic.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_SansSerif-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Script-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Script-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size1-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size1-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size2-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size2-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size3-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size3-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Size4-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Size4-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/KaTeX_Typewriter-Regular.woff` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/KaTeX_Typewriter-Regular.woff`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Signifier-Regular.otf` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Signifier-Regular.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Sohne-Buch.otf` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Sohne-Buch.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/Sohne-Halbfett.otf` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/Sohne-Halbfett.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/SohneMono-Buch.otf` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/SohneMono-Buch.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/fonts/SohneMono-Halbfett.otf` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/fonts/SohneMono-Halbfett.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/main.cdn.min.css` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/static/ulp/react-components/1.66.5/css/main.cdn.min.css`
+
+ * *Files identical despite different names*
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/templates/chat.html` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/templates/chat.html`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1 +1 @@
+-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/><title>New chat</title><meta name="next-head-count" content="3"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="preload" href="/fonts/Signifier-Regular.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/Sohne-Buch.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/Sohne-Halbfett.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/SohneMono-Buch.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/SohneMono-Halbfett.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/KaTeX_Caligraphic-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Caligraphic-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Fraktur-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Fraktur-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-BoldItalic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Math-BoldItalic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Math-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Script-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size1-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size2-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size3-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size4-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Typewriter-Regular.woff" as="font"/><meta name="description" content="A conversational AI system that listens, learns, and challenges"/><meta property="og:title" content="ChatGPT"/><meta property="og:description" content="A conversational AI system that listens, learns, and challenges"/><meta property="og:url" content="https://chat.openai.com"/><link rel="preload" href="/_next/static/css/23406a6edf4b081a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/23406a6edf4b081a.css" data-n-g=""/><noscript data-n-css=""></noscript><script>window.__pandora_sentry={{pandora_sentry|lower}};</script><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-98709a717aa5cc1e.js" defer=""></script><script src="/_next/static/chunks/framework-7a789ee31d2a7534.js" defer=""></script><script src="/_next/static/chunks/main-149b337e061b4d04.js" defer=""></script><script src="/_next/static/chunks/pages/_app-90236c4e04307644.js" defer=""></script><script src="/_next/static/chunks/68a27ff6-1185184b61bc22d0.js" defer=""></script><script src="/_next/static/chunks/1f110208-44a6f43ddc5e9011.js" defer=""></script><script src="/_next/static/chunks/bd26816a-981e1ddc27b37cc6.js" defer=""></script><script src="/_next/static/chunks/762-222df1028c0c1555.js" defer=""></script><script src="/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js" defer=""></script><script src="/_next/static/chunks/174-bd28069f281ef76f.js" defer=""></script><script src="/_next/static/chunks/360-442b869f1ba4bb1b.js" defer=""></script><script src="/_next/static/chunks/113-23682f80a24dd00d.js" defer=""></script><script src="/_next/static/chunks/264-13e92c51b0315184.js" defer=""></script><script src="/_next/static/chunks/14-0cb0d20affbd720d.js" defer=""></script><script src="/_next/static/chunks/pages/chat/%5B%5B...chatId%5D%5D-2b434f3f0b594dba.js" defer=""></script><script src="/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js" defer=""></script><script src="/_next/static/tTShkecJDS0nIc9faO2vC/_ssgManifest.js" defer=""></script></head><body><div id="__next"><script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script><div class="overflow-hidden w-full h-full relative"><div class="flex h-full flex-1 flex-col md:pl-[260px]"><main class="relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch flex-1"><div class="flex-1 overflow-hidden"></div><div class="absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:bg-vert-light-gradient bg-white dark:bg-gray-800 md:!bg-transparent dark:md:bg-vert-dark-gradient pt-2"><form class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-3xl"><div class="relative flex h-full flex-1 md:flex-col"><div class="flex ml-1 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center"></div><div class="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"><textarea tabindex="0" data-id="root" style="max-height:200px" rows="1" class="m-0 w-full resize-none border-0 bg-transparent p-0 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent pl-2 md:pl-0"></textarea><button class="absolute p-1 rounded-md text-gray-500 bottom-1.5 md:bottom-2.5 hover:bg-gray-100 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button></div></div></form><div class="px-3 pt-2 pb-3 text-center text-xs text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noreferrer" class="underline">ChatGPT Mar 14 Version</a>. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.</div></div></main></div><div class="dark hidden bg-gray-900 md:fixed md:inset-y-0 md:flex md:w-[260px] md:flex-col"><div class="flex h-full min-h-0 flex-col "><div class="scrollbar-trigger flex h-full w-full flex-1 items-start border-white/20"><nav class="flex h-full flex-1 flex-col space-y-1 p-2"><a class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm mb-2 flex-shrink-0 border border-white/20"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>New chat</a><div class="flex-col flex-1 overflow-y-auto border-b border-white/20"><div class="flex flex-col gap-2 text-gray-100 text-sm"><div class="p-3 text-center italic text-gray-500">History is temporarily unavailable. We&#x27;re working to restore this feature as soon as possible.</div></div></div><a href="https://github.com/pengzhile/pandora" target="_blank" class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Pandora on GitHub</a><a class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>Log out</a></nav></div></div></div></div><div class="absolute top-0 left-0 right-0 z-[2]"></div></div><script id="__NEXT_DATA__" type="application/json">{{props|tojson|safe}}</script></body></html>
++<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/><title>New chat</title><meta name="next-head-count" content="3"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="preload" href="/fonts/Signifier-Regular.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/Sohne-Buch.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/Sohne-Halbfett.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/SohneMono-Buch.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/SohneMono-Halbfett.otf" as="font" crossorigin=""/><link rel="preload" href="/fonts/KaTeX_Caligraphic-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Caligraphic-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Fraktur-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Fraktur-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-BoldItalic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Main-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Math-BoldItalic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Math-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Bold.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Italic.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_SansSerif-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Script-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size1-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size2-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size3-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Size4-Regular.woff" as="font"/><link rel="preload" href="/fonts/KaTeX_Typewriter-Regular.woff" as="font"/><meta name="description" content="A conversational AI system that listens, learns, and challenges"/><meta property="og:title" content="ChatGPT"/><meta property="og:description" content="A conversational AI system that listens, learns, and challenges"/><meta property="og:url" content="https://chat.openai.com"/><link rel="preload" href="/_next/static/css/23406a6edf4b081a.css" as="style"/><link rel="stylesheet" href="/_next/static/css/23406a6edf4b081a.css" data-n-g=""/><noscript data-n-css=""></noscript><script>window.__pandora_sentry={{pandora_sentry|lower}};window.__api_prefix='{{api_prefix|safe}}';</script><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-98709a717aa5cc1e.js" defer=""></script><script src="/_next/static/chunks/framework-7a789ee31d2a7534.js" defer=""></script><script src="/_next/static/chunks/main-149b337e061b4d04.js" defer=""></script><script src="/_next/static/chunks/pages/_app-90236c4e04307644.js" defer=""></script><script src="/_next/static/chunks/68a27ff6-1185184b61bc22d0.js" defer=""></script><script src="/_next/static/chunks/1f110208-44a6f43ddc5e9011.js" defer=""></script><script src="/_next/static/chunks/bd26816a-981e1ddc27b37cc6.js" defer=""></script><script src="/_next/static/chunks/762-222df1028c0c1555.js" defer=""></script><script src="/_next/static/chunks/424-d1d3bfe6a3ca6c4a.js" defer=""></script><script src="/_next/static/chunks/174-bd28069f281ef76f.js" defer=""></script><script src="/_next/static/chunks/360-442b869f1ba4bb1b.js" defer=""></script><script src="/_next/static/chunks/113-23682f80a24dd00d.js" defer=""></script><script src="/_next/static/chunks/264-13e92c51b0315184.js" defer=""></script><script src="/_next/static/chunks/14-0cb0d20affbd720d.js" defer=""></script><script src="/_next/static/chunks/pages/chat/%5B%5B...chatId%5D%5D-2b434f3f0b594dba.js" defer=""></script><script src="/_next/static/tTShkecJDS0nIc9faO2vC/_buildManifest.js" defer=""></script><script src="/_next/static/tTShkecJDS0nIc9faO2vC/_ssgManifest.js" defer=""></script></head><body><div id="__next"><script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script><div class="overflow-hidden w-full h-full relative"><div class="flex h-full flex-1 flex-col md:pl-[260px]"><main class="relative h-full w-full transition-width flex flex-col overflow-hidden items-stretch flex-1"><div class="flex-1 overflow-hidden"></div><div class="absolute bottom-0 left-0 w-full border-t md:border-t-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:bg-vert-light-gradient bg-white dark:bg-gray-800 md:!bg-transparent dark:md:bg-vert-dark-gradient pt-2"><form class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-3xl"><div class="relative flex h-full flex-1 md:flex-col"><div class="flex ml-1 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center"></div><div class="flex flex-col w-full py-2 flex-grow md:py-3 md:pl-4 relative border border-black/10 bg-white dark:border-gray-900/50 dark:text-white dark:bg-gray-700 rounded-md shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:shadow-[0_0_15px_rgba(0,0,0,0.10)]"><textarea tabindex="0" data-id="root" style="max-height:200px" rows="1" class="m-0 w-full resize-none border-0 bg-transparent p-0 pr-7 focus:ring-0 focus-visible:ring-0 dark:bg-transparent pl-2 md:pl-0"></textarea><button class="absolute p-1 rounded-md text-gray-500 bottom-1.5 md:bottom-2.5 hover:bg-gray-100 dark:hover:text-gray-400 dark:hover:bg-gray-900 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent right-1 md:right-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></button></div></div></form><div class="px-3 pt-2 pb-3 text-center text-xs text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6"><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noreferrer" class="underline">ChatGPT Mar 14 Version</a>. Free Research Preview. Our goal is to make AI systems more natural and safe to interact with. Your feedback will help us improve.</div></div></main></div><div class="dark hidden bg-gray-900 md:fixed md:inset-y-0 md:flex md:w-[260px] md:flex-col"><div class="flex h-full min-h-0 flex-col "><div class="scrollbar-trigger flex h-full w-full flex-1 items-start border-white/20"><nav class="flex h-full flex-1 flex-col space-y-1 p-2"><a class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm mb-2 flex-shrink-0 border border-white/20"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>New chat</a><div class="flex-col flex-1 overflow-y-auto border-b border-white/20"><div class="flex flex-col gap-2 text-gray-100 text-sm"><div class="p-3 text-center italic text-gray-500">History is temporarily unavailable. We&#x27;re working to restore this feature as soon as possible.</div></div></div><a href="https://github.com/pengzhile/pandora" target="_blank" class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Pandora on GitHub</a><a class="flex py-3 px-3 items-center gap-3 rounded-md hover:bg-gray-500/10 transition-colors duration-200 text-white cursor-pointer text-sm"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>Log out</a></nav></div></div></div></div><div class="absolute top-0 left-0 right-0 z-[2]"></div></div><script id="__NEXT_DATA__" type="application/json">{{props|tojson|safe}}</script></body></html>
+```
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/flask/templates/login.html` & `Pandora-Cloud-0.0.5/src/pandora_cloud/flask/templates/login.html`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1 +1 @@
+-<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible"content="IE=edge"/><meta name="viewport"content="width=device-width, initial-scale=1"/><meta name="robots"content="noindex, nofollow"/><link rel="stylesheet"href="/ulp/react-components/1.66.5/css/main.cdn.min.css"/><style id="custom-styles-container">body{background:#ffffff;font-family:ulp-font,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,sans-serif}.cb5d9646a{background:#ffffff}.ccc0ccfed.c9e0e495f{background:#D00E17}.ccc0ccfed.ce493028a{background:#0A8852}.c2fd8f218{background-color:#10a37f;color:#ffffff}.c2fd8f218 a,.c2fd8f218 a:visited{color:#ffffff}.c2ed2d5ea{background-color:#0A8852}.c57c3fbaa{background-color:#D00E17}.input.c224a8982{border-color:#D00E17}.error-cloud{background-color:#D00E17}.error-fatal{background-color:#D00E17}.error-local{background-color:#D00E17}#alert-trigger{background-color:#D00E17}</style><style>.no-js{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}</style><noscript><style>.js-required{display:none!important}.no-js{clip:auto;clip-path:none;height:auto;overflow:auto;position:static;white-space:normal;width:var(--prompt-width)}</style></noscript><style>@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIRegular.woff2)format("woff2"),url(/fonts/ColfaxAIRegular.woff)format("woff");font-weight:normal;font-style:normal}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIRegularItalic.woff2)format("woff2"),url(/fonts/ColfaxAIRegularItalic.woff)format("woff");font-weight:normal;font-style:italic}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIBold.woff2)format("woff2"),url(/fonts/ColfaxAIBold.woff)format("woff");font-weight:bold;font-style:normal}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIBoldItalic.woff2)format("woff2"),url(/fonts/ColfaxAIBoldItalic.woff)format("woff");font-weight:bold;font-style:italic}:root{--font-family:"ColfaxAI",-apple-system,BlinkMacSystemFont,Helvetica,sans-serif;--primary-color:#10a37f;--primary-color-no-override:#10a37f;--action-primary-color:#10a37f;--link-color:#10a37f;--input-box-shadow-depth:1px;--page-background-color:#ffffff}body{font-family:var(--font-family);background-color:var(--page-background-color)}.oai-wrapper{display:flex;flex-direction:column;justify-content:space-between;min-height:100%}.oai-header{display:flex;align-items:center;justify-content:center;padding:32px 0 0;flex:0 0 auto}.oai-header svg{width:32px;height:32px;fill:#202123}.oai-footer{display:flex;align-items:center;justify-content:center;color:#6e6e80;padding:12px 0 24px;flex:0 0 auto}.oai-footer a{color:var(--primary-color);margin:0 10px}._widget-auto-layout main._widget{flex:1 0 auto;min-height:0}main header>img:first-of-type{display:none}main>section,main>section>div:first-child{box-shadow:none}main header>h1{font-weight:bold!important;font-size:32px!important}main a{font-weight:normal!important}.ulp-alternate-action{text-align:center}button[type="submit"]{font-family:var(--font-family)}main header>h1{margin-bottom:0!important}main header>h1+div{display:none!important}</style></head><body class="_widget-auto-layout"><div class="oai-wrapper"><header class="oai-header"><svg viewBox="140 140 520 520"xmlns="http://www.w3.org/2000/svg"><path d="m617.24 354a126.36 126.36 0 0 0 -10.86-103.79 127.8 127.8 0 0 0 -137.65-61.32 126.36 126.36 0 0 0 -95.31-42.49 127.81 127.81 0 0 0 -121.92 88.49 126.4 126.4 0 0 0 -84.5 61.3 127.82 127.82 0 0 0 15.72 149.86 126.36 126.36 0 0 0 10.86 103.79 127.81 127.81 0 0 0 137.65 61.32 126.36 126.36 0 0 0 95.31 42.49 127.81 127.81 0 0 0 121.96-88.54 126.4 126.4 0 0 0 84.5-61.3 127.82 127.82 0 0 0 -15.76-149.81zm-190.66 266.49a94.79 94.79 0 0 1 -60.85-22c.77-.42 2.12-1.16 3-1.7l101-58.34a16.42 16.42 0 0 0 8.3-14.37v-142.39l42.69 24.65a1.52 1.52 0 0 1 .83 1.17v117.92a95.18 95.18 0 0 1 -94.97 95.06zm-204.24-87.23a94.74 94.74 0 0 1 -11.34-63.7c.75.45 2.06 1.25 3 1.79l101 58.34a16.44 16.44 0 0 0 16.59 0l123.31-71.2v49.3a1.53 1.53 0 0 1 -.61 1.31l-102.1 58.95a95.16 95.16 0 0 1 -129.85-34.79zm-26.57-220.49a94.71 94.71 0 0 1 49.48-41.68c0 .87-.05 2.41-.05 3.48v116.68a16.41 16.41 0 0 0 8.29 14.36l123.31 71.19-42.69 24.65a1.53 1.53 0 0 1 -1.44.13l-102.11-59a95.16 95.16 0 0 1 -34.79-129.81zm350.74 81.62-123.31-71.2 42.69-24.64a1.53 1.53 0 0 1 1.44-.13l102.11 58.95a95.08 95.08 0 0 1 -14.69 171.55c0-.88 0-2.42 0-3.49v-116.68a16.4 16.4 0 0 0 -8.24-14.36zm42.49-63.95c-.75-.46-2.06-1.25-3-1.79l-101-58.34a16.46 16.46 0 0 0 -16.59 0l-123.31 71.2v-49.3a1.53 1.53 0 0 1 .61-1.31l102.1-58.9a95.07 95.07 0 0 1 141.19 98.44zm-267.11 87.87-42.7-24.65a1.52 1.52 0 0 1 -.83-1.17v-117.92a95.07 95.07 0 0 1 155.9-73c-.77.42-2.11 1.16-3 1.7l-101 58.34a16.41 16.41 0 0 0 -8.3 14.36zm23.19-50 54.92-31.72 54.92 31.7v63.42l-54.92 31.7-54.92-31.7z"/></svg></header><main class="_widget login"><section class="c44996798 _prompt-box-outer c90f12a70"><div class="c1d338956 ca92c9765"><div class="cb60e04f7"><header class="c729fb2be cc2b5de2d"><div title="OpenAI"id="custom-prompt-logo"style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div><h1 class="ca61186d8 cb87ac8dc">Welcome Back</h1><div class="cc6691322 ccd3868ad"></div></header><div class="cd073cc55 c3057e255"><form method="POST"class="c15ce5740 _form-login-password"data-form-primary="true"><div class="ce7821f58 c9ee3d098"><div class="c83779892"><div class="input-wrapper _input-wrapper"><div class="c51fadc8b c7cc0d651 text c183d9a0a"data-action-text=""data-alternate-action-text=""><label class="c41b9071b no-js c6e062879 cd80352de"for="username">Email address</label><input class="input cdb43277e c07239cfd"inputMode="email"name="username"id="username"type="text"value="{{ username }}"required autoComplete="username"autoCapitalize="none"spellCheck="false"autoFocus/><div class="c41b9071b js-required c6e062879 cd80352de"data-dynamic-label-for="username"aria-hidden="true">Email address</div></div></div><div class="input-wrapper _input-wrapper"><div class="c51fadc8b c7cc0d651 password c9378f091{{ ' c3ab3f08e c666327b8' if error else '' }}"data-action-text=""data-alternate-action-text=""><label class="c41b9071b no-js c6e062879 c3c2bcd98"for="password">Password</label><input class="input cdb43277e c94bb61d1 {{ ' cca61e7fa c224a8982 c08661137' if error else '' }}"name="password"id="password"type="password"required autoComplete="current-password"autoCapitalize="none"spellCheck="false"autoFocus/><div class="c41b9071b js-required c6e062879 c3c2bcd98"data-dynamic-label-for="password"aria-hidden="true">Password</div><button type="button"class="c994ae14c ulp-button-icon ca2dc35c7 _button-icon"data-action="toggle"><span aria-hidden="true"class="password-icon-tooltip show-password-tooltip">Show password</span><span aria-hidden="true"class="password-icon-tooltip hide-password-tooltip hide">Hide password</span><span class="screen-reader-only password-toggle-label"data-label="show-password">Show password</span><span class="screen-reader-only password-toggle-label hide"data-label="hide-password">Hide password</span><span class="c9e3d0156 password js-required"aria-hidden="true"></span></button></div>{%if error%}<span id="error-element-password"class="ulp-input-error-message"data-error-code="wrong-email-credentials"><span class="ulp-input-error-icon"role="img"aria-label="Error"></span>{{error}}</span>{%endif%}</div></div></div><div class="cc336b8c1"><button type="submit"name="action"value="default"class="c994ae14c c2fd8f218 ca2dc35c7 c0c7f649b _button-login-password"data-action-button-primary="true">Continue</button></div></form><div class="ulp-alternate-action  _alternate-action __s16nu9"><p class="cb21c50a9 cba0941cc cf12e064e">Need an access token?<a class="c34934055 c2dd6083e" href="https://chat.gateway.do/auth" target="_blank">Go get it</a></p></div><div class="c11767592 c16884ee3"><span>Or</span></div><div class="c497a10c6 c87650a4b"><form method="post"data-provider="windowslive"class="cada38124 c856cfac0 c45d84291"data-form-secondary="true"><button type="button"id="submit-token"class="cb920eae9 c4a315d94 c5c10a20c"data-action-button-secondary="true"><input type="hidden"name="action"value="token"><span class="c47d81fe7">Continue with Access Token</span></button></form></div></div></div></div></section></main><script id="client-scripts"type="text/javascript">!function(){var t,e,v,h,r,n={exports:function(r,a){var n={};function i(t,e,r,n){return t.addEventListener(e,r,n)}function o(t){return"string"==typeof t}function c(t,e){return t.getAttribute(e)}function s(t,e,r){return t.setAttribute(e,r)}return{addClass:function(t,e){if(t.classList)return t.classList.add(e);var r=t.className.split(" ");-1===r.indexOf(e)&&(r.push(e),t.className=r.join(" "))},toggleClass:function(t,e){if(t.classList)return t.classList.toggle(e);var r=t.className.split(" "),n=r.indexOf(e);-1!==n?r.splice(n,1):r.push(e),t.className=r.join(" ")},addClickListener:function(t,e){return i(t,"click",e)},addEventListener:i,getAttribute:c,getElementById:function(t){return a.getElementById(t)},getParent:function(t){return t.parentNode},isString:o,loadScript:function(t){var e=a.createElement("script");e.src=t,e.async=!0,a.body.appendChild(e)},poll:function(t){var i=t.interval||2e3,e=t.url||r.location.href,o=t.condition||function(){return!0},c=t.onSuccess||function(){},s=t.onError||function(){};return setTimeout(function n(){var a=new XMLHttpRequest;return a.open("GET",e),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var t="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(t)?c():setTimeout(n,i)}if(429!==a.status)return s({status:a.status,responseText:a.responseText});var e=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),r=e-(new Date).getTime();return setTimeout(n,i<r?r:i)},a.send()},i)},querySelector:function(t,e){return o(t)?a.querySelector(t):t.querySelector(e)},querySelectorAll:function(t,e){var r=o(t)?a.querySelectorAll(t):t.querySelectorAll(e);return Array.prototype.slice.call(r)},removeClass:function(t,e){if(t.classList)return t.classList.remove(e);var r=t.className.split(" "),n=r.indexOf(e);-1!==n&&(r.splice(n,1),t.className=r.join(" "))},setAttribute:s,removeAttribute:function(t,e){return t.removeAttribute(e)},swapAttributes:function(t,e,r){var n=c(t,e),a=c(t,r);s(t,r,n),s(t,e,a)},setGlobalFlag:function(t,e){n[t]=!!e},getGlobalFlag:function(t){return!!n[t]},preventFormSubmit:function(t){t.stopPropagation(),t.preventDefault()},matchMedia:function(t){return"function"!=typeof r.matchMedia&&r.matchMedia(t).matches},dispatchEvent:function(t,e,r){var n;"function"!=typeof Event?(n=a.createEvent("Event")).initCustomEvent(e,r,!1):n=new Event(e,{bubbles:r}),t.dispatchEvent(n)},setTimeout:setTimeout,timeoutPromise:function(t,a){return new Promise(function(e,r){var n=setTimeout(function(){r(new Error("timeoutPromise: promise timed out"))},t);a.then(function(t){clearTimeout(n),e(t)},function(t){clearTimeout(n),r(t)})})}}}}.exports(window,document),a={exports:function(t,e){for(var i="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",l=new Uint8Array(256),o=0;o<i.length;o++)l[i.charCodeAt(o)]=o;function c(t){var e,r=new Uint8Array(t),n=r.length,a="";for(e=0;e<n;e+=3)a+=i[r[e]>>2],a+=i[(3&r[e])<<4|r[e+1]>>4],a+=i[(15&r[e+1])<<2|r[e+2]>>6],a+=i[63&r[e+2]];return n%3==2?a=a.substring(0,a.length-1):n%3==1&&(a=a.substring(0,a.length-2)),a}function r(){return navigator&&navigator.credentials&&"undefined"!=typeof PublicKeyCredential}return{base64URLEncode:c,base64URLDecode:function(t){var e,r,n,a,i,o=.75*t.length,c=t.length,s=0,u=new Uint8Array(o);for(e=0;e<c;e+=4)r=l[t.charCodeAt(e)],n=l[t.charCodeAt(e+1)],a=l[t.charCodeAt(e+2)],i=l[t.charCodeAt(e+3)],u[s++]=r<<2|n>>4,u[s++]=(15&n)<<4|a>>2,u[s++]=(3&a)<<6|63&i;return u.buffer},publicKeyCredentialToJSON:function t(e){if(e instanceof Array){var r=[];for(o=0;o<e.length;o+=1)r.push(t(e[o]));return r}if(e instanceof ArrayBuffer)return c(e);if(e instanceof Object){var n={};for(var a in e)n[a]=t(e[a]);return n}return e},str2ab:function(t){for(var e=new ArrayBuffer(t.length),r=new Uint8Array(e),n=0,a=t.length;n<a;n++)r[n]=t.charCodeAt(n);return e},isWebAuthnAvailable:r,isWebauthnPlatformAuthenticatorAvailableAsync:function(t){return r()?t(1e3,PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()):Promise.resolve(!1)}}}}.exports(window,document);((t={}).exports=function(n,t,o,c,s,u,l){t("div.c51fadc8b.password").forEach(function(t){var a,i,e=n(t,"input"),r=n(t,'[data-action="toggle"]');o(t,(a=e,i=r,function(t){if(t.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var e=i.querySelector(".show-password-tooltip"),r=i.querySelector(".hide-password-tooltip");e&&u(e,"hide"),r&&u(r,"hide")}var n=l(a);"text"===a.type?c(n,"show"):s(n,"show")}}))})},t.exports)(n.querySelector,n.querySelectorAll,n.addClickListener,n.addClass,n.removeClass,n.toggleClass,n.getParent),{exports:function(t,n,a,e){var r=t(".cfd2e2d98"),i=t("#alert-trigger"),o=t(".c5f2f0292"),c=t(".c989a3dfe"),s=!1;i&&c&&r&&e(r,function(t){var e=t.target===i,r=c.contains(t.target);return e&&!s?(n(o,"show"),void(s=!0)):e&&s||s&&!r?(a(o,"show"),void(s=!1)):void 0})}}.exports(n.querySelector,n.addClass,n.removeClass,n.addClickListener),(v="recaptcha_v2",h="recaptcha_enterprise",(e={}).exports=function(t,a,i,o,c,n){var s,u=a("div[data-recaptcha-sitekey]"),e=a("div[data-recaptcha-sitekey] input"),l=a("#ulp-recaptcha");function f(){return u.getAttribute("data-recaptcha-provider")}function d(t){return e.value=t}function p(t,e){if(t&&t.getBoundingClientRect){if(!n("(max-width: 480px)"))return l.style.transform="",void(l.style.height="");(void 0===e||isNaN(e))&&(e=1.4);var r=72*e;l.style.transform="scale("+e+")",l.style.height=r+"px",l.style.width="10px",u.clientWidth+8<t.getBoundingClientRect().width&&p(t,e-.01)}}u&&(s="recaptchaCallback_"+Math.floor(1000001*Math.random()),window[s]=function(){var t,e,r,n;delete window[s],t=function(t){switch(t){case v:return window.grecaptcha;case h:return window.grecaptcha.enterprise}}(f()),e=t.render(l,{sitekey:u.getAttribute("data-recaptcha-sitekey"),"expired-callback":function(){d(""),i(u,"c3ab3f08e"),t.reset(e)},callback:function(t){d(t),o(u,"c3ab3f08e")}}),r=function(t){p(t),c(window,"resize",function(){p(t)})},n=setInterval(function(){var t=a("#ulp-recaptcha iframe");if(t)return clearInterval(n),r(t)},200)},t(function(t,e,r){switch(t){case v:return"https://www.recaptcha.net/recaptcha/api.js?hl="+e+"&onload="+r;case h:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+r}}(f(),u.getAttribute("data-recaptcha-lang"),s)))},e.exports)(n.loadScript,n.querySelector,n.addClass,n.removeClass,n.addEventListener,n.matchMedia),((r={}).exports=function(n,t,a,i,o,c,s,u,r,l){function f(t){var e=t.target,r=c(e);e.value||l(e,"data-autofilled")?i(r,"c819d1bdd"):o(r,"c819d1bdd")}function d(t){var e=t.target;"onAutoFillStart"===t.animationName&&(r(e,"data-autofilled",!0),u(t.target,"change",!0),a(e,"keyup",p,{once:!0}))}function p(t){var e=t.target;r(e,"data-autofilled","")}if(n("body._simple-labels"))return t(".c41b9071b.no-js").forEach(function(t){o(t,"no-js")}),void t(".c41b9071b.js-required").forEach(function(t){i(t,"hide")});t(".c51fadc8b:not(.cf8bf2cb6):not(disabled)").forEach(function(t){i(t,"c85b18936");var e,r=n(t,".input");r.value&&i(t,"c819d1bdd"),a(t,"change",f),a(r,"blur",f),a(r,"animationstart",d),e=r,s(function(){e.value&&u(e,"change",!0)},100)})},r.exports)(n.querySelector,n.querySelectorAll,n.addEventListener,n.addClass,n.removeClass,n.getParent,n.setTimeout,n.dispatchEvent,n.setAttribute,n.getAttribute),{exports:function(t,e,r,n,a,i){function o(t){var e=r("submitted");n("submitted",!0),e?a(t):"apple"===i(t.target,"data-provider")&&setTimeout(function(){n("submitted",!1)},2e3)}var c=t("form");c&&c.forEach(function(t){e(t,"submit",o)})}}.exports(n.querySelectorAll,n.addEventListener,n.getGlobalFlag,n.setGlobalFlag,n.preventFormSubmit,n.getAttribute),{exports:function(e,t,r){var n=e("form._form-detect-browser-capabilities"),a=e("main.login-id");if(n||a){var i=t.isWebAuthnAvailable();e("#webauthn-available").value=i?"true":"false",e("#js-available").value="true",navigator.brave?navigator.brave.isBrave().then(function(t){e("#is-brave").value=t,o()}):o()}function o(){i?t.isWebauthnPlatformAuthenticatorAvailableAsync(r).then(function(t){e("#webauthn-platform-available").value=t?"true":"false",n&&n.submit()}).catch(function(t){e("#webauthn-platform-available").value="false",n&&n.submit()}):(e("#webauthn-platform-available").value="false",n&&n.submit())}}}.exports(n.querySelector,a,n.timeoutPromise)}();</script><footer class="oai-footer"><a href="https://github.com/pengzhile/pandora"target="_blank">Pandora on GitHub</a></footer></div><script type="text/javascript">function updateHeader(text){const $h1=document.querySelector('main header > h1');if($h1){$h1.innerText=text}}updateHeader('Welcome Back');window.addEventListener('load',function(){const submitBtn=document.querySelector('#submit-token');submitBtn.addEventListener('click',function(){const accessToken=prompt('Please input access token:');if(accessToken){fetch('login_token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'action=token&access_token='+encodeURIComponent(accessToken)}).then(response=>response.json()).then(data=>{if(0===data.code){window.location.href=data.url}else{alert(data.message)}}).catch(error=>console.error(error))}})});</script></body></html>
++<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible"content="IE=edge"/><meta name="viewport"content="width=device-width, initial-scale=1"/><meta name="robots"content="noindex, nofollow"/><link rel="stylesheet"href="/ulp/react-components/1.66.5/css/main.cdn.min.css"/><style id="custom-styles-container">body{background:#ffffff;font-family:ulp-font,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,sans-serif}.cb5d9646a{background:#ffffff}.ccc0ccfed.c9e0e495f{background:#D00E17}.ccc0ccfed.ce493028a{background:#0A8852}.c2fd8f218{background-color:#10a37f;color:#ffffff}.c2fd8f218 a,.c2fd8f218 a:visited{color:#ffffff}.c2ed2d5ea{background-color:#0A8852}.c57c3fbaa{background-color:#D00E17}.input.c224a8982{border-color:#D00E17}.error-cloud{background-color:#D00E17}.error-fatal{background-color:#D00E17}.error-local{background-color:#D00E17}#alert-trigger{background-color:#D00E17}</style><style>.no-js{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}</style><noscript><style>.js-required{display:none!important}.no-js{clip:auto;clip-path:none;height:auto;overflow:auto;position:static;white-space:normal;width:var(--prompt-width)}</style></noscript><style>@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIRegular.woff2)format("woff2"),url(/fonts/ColfaxAIRegular.woff)format("woff");font-weight:normal;font-style:normal}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIRegularItalic.woff2)format("woff2"),url(/fonts/ColfaxAIRegularItalic.woff)format("woff");font-weight:normal;font-style:italic}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIBold.woff2)format("woff2"),url(/fonts/ColfaxAIBold.woff)format("woff");font-weight:bold;font-style:normal}@font-face{font-family:"ColfaxAI";src:url(/fonts/ColfaxAIBoldItalic.woff2)format("woff2"),url(/fonts/ColfaxAIBoldItalic.woff)format("woff");font-weight:bold;font-style:italic}:root{--font-family:"ColfaxAI",-apple-system,BlinkMacSystemFont,Helvetica,sans-serif;--primary-color:#10a37f;--primary-color-no-override:#10a37f;--action-primary-color:#10a37f;--link-color:#10a37f;--input-box-shadow-depth:1px;--page-background-color:#ffffff}body{font-family:var(--font-family);background-color:var(--page-background-color)}.oai-wrapper{display:flex;flex-direction:column;justify-content:space-between;min-height:100%}.oai-header{display:flex;align-items:center;justify-content:center;padding:32px 0 0;flex:0 0 auto}.oai-header svg{width:32px;height:32px;fill:#202123}.oai-footer{display:flex;align-items:center;justify-content:center;color:#6e6e80;padding:12px 0 24px;flex:0 0 auto}.oai-footer a{color:var(--primary-color);margin:0 10px}._widget-auto-layout main._widget{flex:1 0 auto;min-height:0}main header>img:first-of-type{display:none}main>section,main>section>div:first-child{box-shadow:none}main header>h1{font-weight:bold!important;font-size:32px!important}main a{font-weight:normal!important}.ulp-alternate-action{text-align:center}button[type="submit"]{font-family:var(--font-family)}main header>h1{margin-bottom:0!important}main header>h1+div{display:none!important}</style></head><body class="_widget-auto-layout"><div class="oai-wrapper"><header class="oai-header"><svg viewBox="140 140 520 520"xmlns="http://www.w3.org/2000/svg"><path d="m617.24 354a126.36 126.36 0 0 0 -10.86-103.79 127.8 127.8 0 0 0 -137.65-61.32 126.36 126.36 0 0 0 -95.31-42.49 127.81 127.81 0 0 0 -121.92 88.49 126.4 126.4 0 0 0 -84.5 61.3 127.82 127.82 0 0 0 15.72 149.86 126.36 126.36 0 0 0 10.86 103.79 127.81 127.81 0 0 0 137.65 61.32 126.36 126.36 0 0 0 95.31 42.49 127.81 127.81 0 0 0 121.96-88.54 126.4 126.4 0 0 0 84.5-61.3 127.82 127.82 0 0 0 -15.76-149.81zm-190.66 266.49a94.79 94.79 0 0 1 -60.85-22c.77-.42 2.12-1.16 3-1.7l101-58.34a16.42 16.42 0 0 0 8.3-14.37v-142.39l42.69 24.65a1.52 1.52 0 0 1 .83 1.17v117.92a95.18 95.18 0 0 1 -94.97 95.06zm-204.24-87.23a94.74 94.74 0 0 1 -11.34-63.7c.75.45 2.06 1.25 3 1.79l101 58.34a16.44 16.44 0 0 0 16.59 0l123.31-71.2v49.3a1.53 1.53 0 0 1 -.61 1.31l-102.1 58.95a95.16 95.16 0 0 1 -129.85-34.79zm-26.57-220.49a94.71 94.71 0 0 1 49.48-41.68c0 .87-.05 2.41-.05 3.48v116.68a16.41 16.41 0 0 0 8.29 14.36l123.31 71.19-42.69 24.65a1.53 1.53 0 0 1 -1.44.13l-102.11-59a95.16 95.16 0 0 1 -34.79-129.81zm350.74 81.62-123.31-71.2 42.69-24.64a1.53 1.53 0 0 1 1.44-.13l102.11 58.95a95.08 95.08 0 0 1 -14.69 171.55c0-.88 0-2.42 0-3.49v-116.68a16.4 16.4 0 0 0 -8.24-14.36zm42.49-63.95c-.75-.46-2.06-1.25-3-1.79l-101-58.34a16.46 16.46 0 0 0 -16.59 0l-123.31 71.2v-49.3a1.53 1.53 0 0 1 .61-1.31l102.1-58.9a95.07 95.07 0 0 1 141.19 98.44zm-267.11 87.87-42.7-24.65a1.52 1.52 0 0 1 -.83-1.17v-117.92a95.07 95.07 0 0 1 155.9-73c-.77.42-2.11 1.16-3 1.7l-101 58.34a16.41 16.41 0 0 0 -8.3 14.36zm23.19-50 54.92-31.72 54.92 31.7v63.42l-54.92 31.7-54.92-31.7z"/></svg></header><main class="_widget login"><section class="c44996798 _prompt-box-outer c90f12a70"><div class="c1d338956 ca92c9765"><div class="cb60e04f7"><header class="c729fb2be cc2b5de2d"><div title="OpenAI"id="custom-prompt-logo"style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div><h1 class="ca61186d8 cb87ac8dc">Welcome Back</h1><div class="cc6691322 ccd3868ad"></div></header><div class="cd073cc55 c3057e255"><form method="POST"class="c15ce5740 _form-login-password"data-form-primary="true"><div class="ce7821f58 c9ee3d098"><div class="c83779892"><div class="input-wrapper _input-wrapper"><div class="c51fadc8b c7cc0d651 text c183d9a0a"data-action-text=""data-alternate-action-text=""><label class="c41b9071b no-js c6e062879 cd80352de"for="username">Email address</label><input class="input cdb43277e c07239cfd"inputMode="email"name="username"id="username"type="text"value="{{ username }}"required autoComplete="username"autoCapitalize="none"spellCheck="false"autoFocus/><div class="c41b9071b js-required c6e062879 cd80352de"data-dynamic-label-for="username"aria-hidden="true">Email address</div></div></div><div class="input-wrapper _input-wrapper"><div class="c51fadc8b c7cc0d651 password c9378f091{{ ' c3ab3f08e c666327b8' if error else '' }}"data-action-text=""data-alternate-action-text=""><label class="c41b9071b no-js c6e062879 c3c2bcd98"for="password">Password</label><input class="input cdb43277e c94bb61d1 {{ ' cca61e7fa c224a8982 c08661137' if error else '' }}"name="password"id="password"type="password"required autoComplete="current-password"autoCapitalize="none"spellCheck="false"autoFocus/><div class="c41b9071b js-required c6e062879 c3c2bcd98"data-dynamic-label-for="password"aria-hidden="true">Password</div><button type="button"class="c994ae14c ulp-button-icon ca2dc35c7 _button-icon"data-action="toggle"><span aria-hidden="true"class="password-icon-tooltip show-password-tooltip">Show password</span><span aria-hidden="true"class="password-icon-tooltip hide-password-tooltip hide">Hide password</span><span class="screen-reader-only password-toggle-label"data-label="show-password">Show password</span><span class="screen-reader-only password-toggle-label hide"data-label="hide-password">Hide password</span><span class="c9e3d0156 password js-required"aria-hidden="true"></span></button></div>{%if error%}<span id="error-element-password"class="ulp-input-error-message"data-error-code="wrong-email-credentials"><span class="ulp-input-error-icon"role="img"aria-label="Error"></span>{{error}}</span>{%endif%}</div></div></div><div class="cc336b8c1"><button type="submit"name="action"value="default"class="c994ae14c c2fd8f218 ca2dc35c7 c0c7f649b _button-login-password"data-action-button-primary="true">Continue</button></div></form><div class="ulp-alternate-action  _alternate-action __s16nu9"><p class="cb21c50a9 cba0941cc cf12e064e">Need an access token?<a class="c34934055 c2dd6083e" href="{{api_prefix|safe}}/auth" target="_blank">Go get it</a></p></div><div class="c11767592 c16884ee3"><span>Or</span></div><div class="c497a10c6 c87650a4b"><form method="post"data-provider="windowslive"class="cada38124 c856cfac0 c45d84291"data-form-secondary="true"><button type="button"id="submit-token"class="cb920eae9 c4a315d94 c5c10a20c"data-action-button-secondary="true"><input type="hidden"name="action"value="token"><span class="c47d81fe7">Continue with Access Token</span></button></form></div></div></div></div></section></main><script id="client-scripts"type="text/javascript">!function(){var t,e,v,h,r,n={exports:function(r,a){var n={};function i(t,e,r,n){return t.addEventListener(e,r,n)}function o(t){return"string"==typeof t}function c(t,e){return t.getAttribute(e)}function s(t,e,r){return t.setAttribute(e,r)}return{addClass:function(t,e){if(t.classList)return t.classList.add(e);var r=t.className.split(" ");-1===r.indexOf(e)&&(r.push(e),t.className=r.join(" "))},toggleClass:function(t,e){if(t.classList)return t.classList.toggle(e);var r=t.className.split(" "),n=r.indexOf(e);-1!==n?r.splice(n,1):r.push(e),t.className=r.join(" ")},addClickListener:function(t,e){return i(t,"click",e)},addEventListener:i,getAttribute:c,getElementById:function(t){return a.getElementById(t)},getParent:function(t){return t.parentNode},isString:o,loadScript:function(t){var e=a.createElement("script");e.src=t,e.async=!0,a.body.appendChild(e)},poll:function(t){var i=t.interval||2e3,e=t.url||r.location.href,o=t.condition||function(){return!0},c=t.onSuccess||function(){},s=t.onError||function(){};return setTimeout(function n(){var a=new XMLHttpRequest;return a.open("GET",e),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var t="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(t)?c():setTimeout(n,i)}if(429!==a.status)return s({status:a.status,responseText:a.responseText});var e=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),r=e-(new Date).getTime();return setTimeout(n,i<r?r:i)},a.send()},i)},querySelector:function(t,e){return o(t)?a.querySelector(t):t.querySelector(e)},querySelectorAll:function(t,e){var r=o(t)?a.querySelectorAll(t):t.querySelectorAll(e);return Array.prototype.slice.call(r)},removeClass:function(t,e){if(t.classList)return t.classList.remove(e);var r=t.className.split(" "),n=r.indexOf(e);-1!==n&&(r.splice(n,1),t.className=r.join(" "))},setAttribute:s,removeAttribute:function(t,e){return t.removeAttribute(e)},swapAttributes:function(t,e,r){var n=c(t,e),a=c(t,r);s(t,r,n),s(t,e,a)},setGlobalFlag:function(t,e){n[t]=!!e},getGlobalFlag:function(t){return!!n[t]},preventFormSubmit:function(t){t.stopPropagation(),t.preventDefault()},matchMedia:function(t){return"function"!=typeof r.matchMedia&&r.matchMedia(t).matches},dispatchEvent:function(t,e,r){var n;"function"!=typeof Event?(n=a.createEvent("Event")).initCustomEvent(e,r,!1):n=new Event(e,{bubbles:r}),t.dispatchEvent(n)},setTimeout:setTimeout,timeoutPromise:function(t,a){return new Promise(function(e,r){var n=setTimeout(function(){r(new Error("timeoutPromise: promise timed out"))},t);a.then(function(t){clearTimeout(n),e(t)},function(t){clearTimeout(n),r(t)})})}}}}.exports(window,document),a={exports:function(t,e){for(var i="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_",l=new Uint8Array(256),o=0;o<i.length;o++)l[i.charCodeAt(o)]=o;function c(t){var e,r=new Uint8Array(t),n=r.length,a="";for(e=0;e<n;e+=3)a+=i[r[e]>>2],a+=i[(3&r[e])<<4|r[e+1]>>4],a+=i[(15&r[e+1])<<2|r[e+2]>>6],a+=i[63&r[e+2]];return n%3==2?a=a.substring(0,a.length-1):n%3==1&&(a=a.substring(0,a.length-2)),a}function r(){return navigator&&navigator.credentials&&"undefined"!=typeof PublicKeyCredential}return{base64URLEncode:c,base64URLDecode:function(t){var e,r,n,a,i,o=.75*t.length,c=t.length,s=0,u=new Uint8Array(o);for(e=0;e<c;e+=4)r=l[t.charCodeAt(e)],n=l[t.charCodeAt(e+1)],a=l[t.charCodeAt(e+2)],i=l[t.charCodeAt(e+3)],u[s++]=r<<2|n>>4,u[s++]=(15&n)<<4|a>>2,u[s++]=(3&a)<<6|63&i;return u.buffer},publicKeyCredentialToJSON:function t(e){if(e instanceof Array){var r=[];for(o=0;o<e.length;o+=1)r.push(t(e[o]));return r}if(e instanceof ArrayBuffer)return c(e);if(e instanceof Object){var n={};for(var a in e)n[a]=t(e[a]);return n}return e},str2ab:function(t){for(var e=new ArrayBuffer(t.length),r=new Uint8Array(e),n=0,a=t.length;n<a;n++)r[n]=t.charCodeAt(n);return e},isWebAuthnAvailable:r,isWebauthnPlatformAuthenticatorAvailableAsync:function(t){return r()?t(1e3,PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable()):Promise.resolve(!1)}}}}.exports(window,document);((t={}).exports=function(n,t,o,c,s,u,l){t("div.c51fadc8b.password").forEach(function(t){var a,i,e=n(t,"input"),r=n(t,'[data-action="toggle"]');o(t,(a=e,i=r,function(t){if(t.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var e=i.querySelector(".show-password-tooltip"),r=i.querySelector(".hide-password-tooltip");e&&u(e,"hide"),r&&u(r,"hide")}var n=l(a);"text"===a.type?c(n,"show"):s(n,"show")}}))})},t.exports)(n.querySelector,n.querySelectorAll,n.addClickListener,n.addClass,n.removeClass,n.toggleClass,n.getParent),{exports:function(t,n,a,e){var r=t(".cfd2e2d98"),i=t("#alert-trigger"),o=t(".c5f2f0292"),c=t(".c989a3dfe"),s=!1;i&&c&&r&&e(r,function(t){var e=t.target===i,r=c.contains(t.target);return e&&!s?(n(o,"show"),void(s=!0)):e&&s||s&&!r?(a(o,"show"),void(s=!1)):void 0})}}.exports(n.querySelector,n.addClass,n.removeClass,n.addClickListener),(v="recaptcha_v2",h="recaptcha_enterprise",(e={}).exports=function(t,a,i,o,c,n){var s,u=a("div[data-recaptcha-sitekey]"),e=a("div[data-recaptcha-sitekey] input"),l=a("#ulp-recaptcha");function f(){return u.getAttribute("data-recaptcha-provider")}function d(t){return e.value=t}function p(t,e){if(t&&t.getBoundingClientRect){if(!n("(max-width: 480px)"))return l.style.transform="",void(l.style.height="");(void 0===e||isNaN(e))&&(e=1.4);var r=72*e;l.style.transform="scale("+e+")",l.style.height=r+"px",l.style.width="10px",u.clientWidth+8<t.getBoundingClientRect().width&&p(t,e-.01)}}u&&(s="recaptchaCallback_"+Math.floor(1000001*Math.random()),window[s]=function(){var t,e,r,n;delete window[s],t=function(t){switch(t){case v:return window.grecaptcha;case h:return window.grecaptcha.enterprise}}(f()),e=t.render(l,{sitekey:u.getAttribute("data-recaptcha-sitekey"),"expired-callback":function(){d(""),i(u,"c3ab3f08e"),t.reset(e)},callback:function(t){d(t),o(u,"c3ab3f08e")}}),r=function(t){p(t),c(window,"resize",function(){p(t)})},n=setInterval(function(){var t=a("#ulp-recaptcha iframe");if(t)return clearInterval(n),r(t)},200)},t(function(t,e,r){switch(t){case v:return"https://www.recaptcha.net/recaptcha/api.js?hl="+e+"&onload="+r;case h:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+r}}(f(),u.getAttribute("data-recaptcha-lang"),s)))},e.exports)(n.loadScript,n.querySelector,n.addClass,n.removeClass,n.addEventListener,n.matchMedia),((r={}).exports=function(n,t,a,i,o,c,s,u,r,l){function f(t){var e=t.target,r=c(e);e.value||l(e,"data-autofilled")?i(r,"c819d1bdd"):o(r,"c819d1bdd")}function d(t){var e=t.target;"onAutoFillStart"===t.animationName&&(r(e,"data-autofilled",!0),u(t.target,"change",!0),a(e,"keyup",p,{once:!0}))}function p(t){var e=t.target;r(e,"data-autofilled","")}if(n("body._simple-labels"))return t(".c41b9071b.no-js").forEach(function(t){o(t,"no-js")}),void t(".c41b9071b.js-required").forEach(function(t){i(t,"hide")});t(".c51fadc8b:not(.cf8bf2cb6):not(disabled)").forEach(function(t){i(t,"c85b18936");var e,r=n(t,".input");r.value&&i(t,"c819d1bdd"),a(t,"change",f),a(r,"blur",f),a(r,"animationstart",d),e=r,s(function(){e.value&&u(e,"change",!0)},100)})},r.exports)(n.querySelector,n.querySelectorAll,n.addEventListener,n.addClass,n.removeClass,n.getParent,n.setTimeout,n.dispatchEvent,n.setAttribute,n.getAttribute),{exports:function(t,e,r,n,a,i){function o(t){var e=r("submitted");n("submitted",!0),e?a(t):"apple"===i(t.target,"data-provider")&&setTimeout(function(){n("submitted",!1)},2e3)}var c=t("form");c&&c.forEach(function(t){e(t,"submit",o)})}}.exports(n.querySelectorAll,n.addEventListener,n.getGlobalFlag,n.setGlobalFlag,n.preventFormSubmit,n.getAttribute),{exports:function(e,t,r){var n=e("form._form-detect-browser-capabilities"),a=e("main.login-id");if(n||a){var i=t.isWebAuthnAvailable();e("#webauthn-available").value=i?"true":"false",e("#js-available").value="true",navigator.brave?navigator.brave.isBrave().then(function(t){e("#is-brave").value=t,o()}):o()}function o(){i?t.isWebauthnPlatformAuthenticatorAvailableAsync(r).then(function(t){e("#webauthn-platform-available").value=t?"true":"false",n&&n.submit()}).catch(function(t){e("#webauthn-platform-available").value="false",n&&n.submit()}):(e("#webauthn-platform-available").value="false",n&&n.submit())}}}.exports(n.querySelector,a,n.timeoutPromise)}();</script><footer class="oai-footer"><a href="https://github.com/pengzhile/pandora"target="_blank">Pandora on GitHub</a></footer></div><script type="text/javascript">function updateHeader(text){const $h1=document.querySelector('main header > h1');if($h1){$h1.innerText=text}}updateHeader('Welcome Back');window.addEventListener('load',function(){const submitBtn=document.querySelector('#submit-token');submitBtn.addEventListener('click',function(){const accessToken=prompt('Please input access token:');if(accessToken){fetch('login_token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'action=token&access_token='+encodeURIComponent(accessToken)}).then(response=>response.json()).then(data=>{if(0===data.code){window.location.href=data.url}else{alert(data.message)}}).catch(error=>console.error(error))}})});</script></body></html>
+```
+
+### Comparing `Pandora-Cloud-0.0.4/src/pandora_cloud/server.py` & `Pandora-Cloud-0.0.5/src/pandora_cloud/server.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,11 +1,12 @@
+ # -*- coding: utf-8 -*-
+ 
+ import logging
+ from datetime import datetime
++from os import getenv
+ from os.path import join, abspath, dirname
+ 
+ from flask import Flask, jsonify, request, render_template, redirect, url_for, make_response
+ from pandora.exts.hooks import hook_logging
+ from pandora.exts.token import check_access_token
+ from pandora.openai.auth import Auth0
+ from waitress import serve
+@@ -22,14 +23,15 @@
+ 
+     def __init__(self, proxy, debug=False, sentry=False, login_local=False):
+         self.proxy = proxy
+         self.debug = debug
+         self.sentry = sentry
+         self.login_local = login_local
+         self.log_level = logging.DEBUG if debug else logging.WARN
++        self.api_prefix = getenv('CHATGPT_API_PREFIX', 'https://chat.gateway.do')
+ 
+         hook_logging(level=self.log_level, format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s')
+         self.logger = logging.getLogger('waitress')
+ 
+     def run(self, bind_str):
+         host, port = self.__parse_bind(bind_str)
+ 
+@@ -95,17 +97,16 @@
+ 
+     def logout(self):
+         resp = jsonify({'url': url_for('login')})
+         self.__set_cookie(resp, '', 0)
+ 
+         return resp
+ 
+-    @staticmethod
+-    def login():
+-        return render_template('login.html')
++    def login(self):
++        return render_template('login.html', api_prefix=self.api_prefix)
+ 
+     def login_post(self):
+         username = request.form.get('username')
+         password = request.form.get('password')
+         error = None
+ 
+         if username and password:
+@@ -117,15 +118,15 @@
+                 resp.headers.set('Location', url_for('chat'))
+                 self.__set_cookie(resp, access_token, payload['exp'])
+ 
+                 return resp
+             except Exception as e:
+                 error = str(e)
+ 
+-        return render_template('login.html', username=username, error=error)
++        return render_template('login.html', username=username, error=error, api_prefix=self.api_prefix)
+ 
+     def login_token(self):
+         access_token = request.form.get('access_token')
+         error = None
+ 
+         if access_token:
+             try:
+@@ -171,15 +172,15 @@
+             'query': {'chatId': [conversation_id]} if conversation_id else {},
+             'buildId': self.__build_id,
+             'isFallback': False,
+             'gssp': True,
+             'scriptLoader': []
+         }
+ 
+-        return render_template('chat.html', pandora_sentry=self.sentry, props=props)
++        return render_template('chat.html', pandora_sentry=self.sentry, api_prefix=self.api_prefix, props=props)
+ 
+     def session(self):
+         err, user_id, email, access_token, payload = self.__get_userinfo()
+         if err:
+             return jsonify({})
+ 
+         ret = {
+```
+

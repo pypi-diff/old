@@ -1,0 +1,1851 @@
+# Comparing `tmp/dirigera-0.0.2.tar.gz` & `tmp/dirigera-0.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dirigera-0.0.2.tar", last modified: Wed Mar 22 19:44:50 2023, max compression
++gzip compressed data, was "dirigera-0.0.3.tar", last modified: Thu Apr  6 11:00:34 2023, max compression
+```
+
+## Comparing `dirigera-0.0.2.tar` & `dirigera-0.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,31 @@
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.890990 dirigera-0.0.2/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     1063 2023-02-18 11:51:39.000000 dirigera-0.0.2/LICENSE
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     6106 2023-03-22 19:44:50.890776 dirigera-0.0.2/PKG-INFO
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     4306 2023-03-22 19:35:24.000000 dirigera-0.0.2/README.md
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)      884 2023-03-22 19:30:43.000000 dirigera-0.0.2/pyproject.toml
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       38 2023-03-22 19:44:50.891046 dirigera-0.0.2/setup.cfg
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       37 2023-02-25 12:56:27.000000 dirigera-0.0.2/setup.py
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.886184 dirigera-0.0.2/src/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)        0 2023-02-25 11:09:03.000000 dirigera-0.0.2/src/__init__.py
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.886448 dirigera-0.0.2/src/dirigera/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       25 2023-03-22 19:25:24.000000 dirigera-0.0.2/src/dirigera/__init__.py
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.888511 dirigera-0.0.2/src/dirigera/devices/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)        0 2023-02-18 11:52:34.000000 dirigera-0.0.2/src/dirigera/devices/__init__.py
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     5594 2023-03-22 19:27:47.000000 dirigera-0.0.2/src/dirigera/devices/light.py
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.889943 dirigera-0.0.2/src/dirigera/hub/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)        0 2023-02-25 12:05:15.000000 dirigera-0.0.2/src/dirigera/hub/__init__.py
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)      717 2023-02-18 11:52:34.000000 dirigera-0.0.2/src/dirigera/hub/abstract_smart_home_hub.py
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     2360 2023-03-22 19:30:29.000000 dirigera-0.0.2/src/dirigera/hub/auth.py
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     3324 2023-03-22 19:37:22.000000 dirigera-0.0.2/src/dirigera/hub/hub.py
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.888131 dirigera-0.0.2/src/dirigera.egg-info/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     6106 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/PKG-INFO
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)      505 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/SOURCES.txt
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)        1 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/dependency_links.txt
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       58 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/entry_points.txt
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       61 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/requires.txt
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)       18 2023-03-22 19:44:50.000000 dirigera-0.0.2/src/dirigera.egg-info/top_level.txt
+-drwxr-xr-x   0 nicolas.hilberg   (502) staff       (20)        0 2023-03-22 19:44:50.890306 dirigera-0.0.2/tests/
+--rw-r--r--   0 nicolas.hilberg   (502) staff       (20)     5361 2023-02-25 12:23:29.000000 dirigera-0.0.2/tests/test_light.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.213531 dirigera-0.0.3/
++-rw-rw-rw-   0        0        0     1084 2023-04-05 15:32:26.000000 dirigera-0.0.3/LICENSE
++-rw-rw-rw-   0        0        0     6262 2023-04-06 11:00:34.207581 dirigera-0.0.3/PKG-INFO
++-rw-rw-rw-   0        0        0     4424 2023-04-05 15:32:26.000000 dirigera-0.0.3/README.md
++-rw-rw-rw-   0        0        0      919 2023-04-06 10:59:36.000000 dirigera-0.0.3/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 11:00:34.213531 dirigera-0.0.3/setup.cfg
++-rw-rw-rw-   0        0        0       39 2023-04-05 15:32:26.000000 dirigera-0.0.3/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.108955 dirigera-0.0.3/src/
++-rw-rw-rw-   0        0        0        0 2023-04-05 15:32:26.000000 dirigera-0.0.3/src/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.108955 dirigera-0.0.3/src/dirigera/
++-rw-rw-rw-   0        0        0       26 2023-04-05 15:32:26.000000 dirigera-0.0.3/src/dirigera/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.175153 dirigera-0.0.3/src/dirigera/devices/
++-rw-rw-rw-   0        0        0        0 2023-04-05 15:32:26.000000 dirigera-0.0.3/src/dirigera/devices/__init__.py
++-rw-rw-rw-   0        0        0     2356 2023-04-05 19:03:14.000000 dirigera-0.0.3/src/dirigera/devices/environment_sensor.py
++-rw-rw-rw-   0        0        0     5750 2023-04-06 10:55:48.000000 dirigera-0.0.3/src/dirigera/devices/light.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.196382 dirigera-0.0.3/src/dirigera/hub/
++-rw-rw-rw-   0        0        0        0 2023-04-05 15:32:26.000000 dirigera-0.0.3/src/dirigera/hub/__init__.py
++-rw-rw-rw-   0        0        0      741 2023-04-05 15:32:26.000000 dirigera-0.0.3/src/dirigera/hub/abstract_smart_home_hub.py
++-rw-rw-rw-   0        0        0     2440 2023-04-06 10:55:44.000000 dirigera-0.0.3/src/dirigera/hub/auth.py
++-rw-rw-rw-   0        0        0     3426 2023-04-06 10:55:44.000000 dirigera-0.0.3/src/dirigera/hub/hub.py
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.159413 dirigera-0.0.3/src/dirigera.egg-info/
++-rw-rw-rw-   0        0        0     6262 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      607 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       58 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       61 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       18 2023-04-06 11:00:34.000000 dirigera-0.0.3/src/dirigera.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 11:00:34.207581 dirigera-0.0.3/tests/
++-rw-rw-rw-   0        0        0     3072 2023-04-05 19:03:33.000000 dirigera-0.0.3/tests/test_environment_sensor.py
++-rw-rw-rw-   0        0        0      433 2023-04-05 18:56:54.000000 dirigera-0.0.3/tests/test_integration.py
++-rw-rw-rw-   0        0        0     5510 2023-04-05 19:03:02.000000 dirigera-0.0.3/tests/test_light.py
+```
+
+### Comparing `dirigera-0.0.2/LICENSE` & `dirigera-0.0.3/LICENSE`
+
+ * *Ordering differences only*
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+-MIT License
+-
+-Copyright (c) 2023 Leggin
+-
+-Permission is hereby granted, free of charge, to any person obtaining a copy
+-of this software and associated documentation files (the "Software"), to deal
+-in the Software without restriction, including without limitation the rights
+-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-copies of the Software, and to permit persons to whom the Software is
+-furnished to do so, subject to the following conditions:
+-
+-The above copyright notice and this permission notice shall be included in all
+-copies or substantial portions of the Software.
+-
+-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-SOFTWARE.
++MIT License
++
++Copyright (c) 2023 Leggin
++
++Permission is hereby granted, free of charge, to any person obtaining a copy
++of this software and associated documentation files (the "Software"), to deal
++in the Software without restriction, including without limitation the rights
++to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++copies of the Software, and to permit persons to whom the Software is
++furnished to do so, subject to the following conditions:
++
++The above copyright notice and this permission notice shall be included in all
++copies or substantial portions of the Software.
++
++THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++SOFTWARE.
+```
+
+### Comparing `dirigera-0.0.2/PKG-INFO` & `dirigera-0.0.3/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,155 +1,155 @@
+-Metadata-Version: 2.1
+-Name: dirigera
+-Version: 0.0.2
+-Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
+-Author-email: Leggin <legginsun@gmail.com>
+-License: MIT License
+-        
+-        Copyright (c) 2023 Leggin
+-        
+-        Permission is hereby granted, free of charge, to any person obtaining a copy
+-        of this software and associated documentation files (the "Software"), to deal
+-        in the Software without restriction, including without limitation the rights
+-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-        copies of the Software, and to permit persons to whom the Software is
+-        furnished to do so, subject to the following conditions:
+-        
+-        The above copyright notice and this permission notice shall be included in all
+-        copies or substantial portions of the Software.
+-        
+-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-        SOFTWARE.
+-        
+-Project-URL: Homepage, https://github.com/Leggin/dirigera
+-Keywords: python,iot,smarthome,hub,lighting,ikea,tradfri,dirigera
+-Classifier: Programming Language :: Python :: 3
+-Classifier: License :: OSI Approved :: MIT License
+-Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.10
+-Description-Content-Type: text/markdown
+-Provides-Extra: dev
+-License-File: LICENSE
+-
+-# Dirigera Python client
+-
+-This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
+-
+-## Installation
+-
+-```bash
+-pip install dirigera
+-```
+-
+-## Quickstart
+-
+-1. Find out the ip-address of your Dirigera (check your router)
+-2. Run the generate-token script:
+-   ```bash
+-   generate-token <Dirigera ip-address>
+-   ```
+-   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
+-   Example:
+-   ```
+-    Press the action button on Dirigera then hit ENTER ...
+-    Your Token:
+-    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
+-   ```
+-6. Done
+-
+-## Dirigera Hub
+-
+-Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
+-
+-```python
+-import dirigera
+-
+-dirigera_hub = dirigera.Hub(
+-    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
+-    ip_address="192.1..."
+-)
+-```
+-
+-## [Controlling Lights](./src/dirigera/devices/light.py)
+-
+-To get information about the available lights, you can use the `get_lights()` method:
+-
+-```python
+-light = dirigera_hub.get_lights()
+-```
+-
+-The light object has the following attributes:
+-
+-```python
+-    light_id: str
+-    is_reachable: bool
+-    custom_name: str
+-    is_on: bool
+-    startup_on_off: StartupEnum
+-    light_level: int | None  # not all lights have a light level
+-    color_temp: int | None  # not all lights have a color temperature
+-    color_temp_min: int | None
+-    color_temp_max: int | None
+-    color_hue: int | None  # not all lights have a color hue
+-    color_saturation: float | None  # not all lights have a color saturation
+-    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+-```
+-
+-Available methods for light are:
+-
+-```python
+-    light.set_name(name="kitchen light 1")
+-
+-    light.set_light(lamp_on=True)
+-
+-    light.set_light_level(light_level=90)
+-
+-    light.set_color_temperature(color_temp=3000)
+-
+-    light.set_light_color(hue=128, saturation=0.5)
+-
+-    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
+-```
+-
+-
+-## Event Listener
+-The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
+-
+-```python
+-
+-def on_message(ws: Any, message: str):
+-    message_dict = json.loads(message)
+-    data = message_dict["data"]
+-    if data["id"] == bed_light.light_id:
+-        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
+-
+-def on_error(ws: Any, message: str):
+-    print(message)
+-
+-dirigera_hub.create_event_listener(
+-    on_message=on_message, on_error=on_error
+-)
+-```
+-```
+-deviceStateChanged event on Bed Light, attributes: {'isOn': False}
+-```
+-
+-## Motivation
+-The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
+-The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
+-The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
+-I can not guarantee that all IKEA lamps offer this functionality.
+-
+-## Contributing
+-
+-Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
+-
+-## License
+-
+-The MIT License (MIT)
+-
+-Copyright (c) 2023 Leggin
++Metadata-Version: 2.1
++Name: dirigera
++Version: 0.0.3
++Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
++Author-email: Leggin <legginsun@gmail.com>
++License: MIT License
++        
++        Copyright (c) 2023 Leggin
++        
++        Permission is hereby granted, free of charge, to any person obtaining a copy
++        of this software and associated documentation files (the "Software"), to deal
++        in the Software without restriction, including without limitation the rights
++        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++        copies of the Software, and to permit persons to whom the Software is
++        furnished to do so, subject to the following conditions:
++        
++        The above copyright notice and this permission notice shall be included in all
++        copies or substantial portions of the Software.
++        
++        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++        SOFTWARE.
++        
++Project-URL: Homepage, https://github.com/Leggin/dirigera
++Keywords: python,iot,smarthome,hub,lighting,ikea,tradfri,dirigera
++Classifier: Programming Language :: Python :: 3
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Operating System :: OS Independent
++Requires-Python: >=3.10
++Description-Content-Type: text/markdown
++Provides-Extra: dev
++License-File: LICENSE
++
++# Dirigera Python client
++
++This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
++
++## Installation
++
++```bash
++pip install dirigera
++```
++
++## Quickstart
++
++1. Find out the ip-address of your Dirigera (check your router)
++2. Run the generate-token script:
++   ```bash
++   generate-token <Dirigera ip-address>
++   ```
++   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
++   Example:
++   ```
++    Press the action button on Dirigera then hit ENTER ...
++    Your Token:
++    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
++   ```
++6. Done
++
++## Dirigera Hub
++
++Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
++
++```python
++import dirigera
++
++dirigera_hub = dirigera.Hub(
++    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
++    ip_address="192.1..."
++)
++```
++
++## [Controlling Lights](./src/dirigera/devices/light.py)
++
++To get information about the available lights, you can use the `get_lights()` method:
++
++```python
++lights = dirigera_hub.get_lights()
++```
++
++The light object has the following attributes:
++
++```python
++    light_id: str
++    is_reachable: bool
++    custom_name: str
++    is_on: bool
++    startup_on_off: StartupEnum
++    light_level: int | None  # not all lights have a light level
++    color_temp: int | None  # not all lights have a color temperature
++    color_temp_min: int | None
++    color_temp_max: int | None
++    color_hue: int | None  # not all lights have a color hue
++    color_saturation: float | None  # not all lights have a color saturation
++    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
++```
++
++Available methods for light are:
++
++```python
++    light.set_name(name="kitchen light 1")
++
++    light.set_light(lamp_on=True)
++
++    light.set_light_level(light_level=90)
++
++    light.set_color_temperature(color_temp=3000)
++
++    light.set_light_color(hue=128, saturation=0.5)
++
++    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
++```
++
++
++## Event Listener
++The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
++
++```python
++
++def on_message(ws: Any, message: str):
++    message_dict = json.loads(message)
++    data = message_dict["data"]
++    if data["id"] == bed_light.light_id:
++        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
++
++def on_error(ws: Any, message: str):
++    print(message)
++
++dirigera_hub.create_event_listener(
++    on_message=on_message, on_error=on_error
++)
++```
++```
++deviceStateChanged event on Bed Light, attributes: {'isOn': False}
++```
++
++## Motivation
++The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
++The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
++The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
++I can not guarantee that all IKEA lamps offer this functionality.
++
++## Contributing
++
++Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
++
++## License
++
++The MIT License (MIT)
++
++Copyright (c) 2023 Leggin
+```
+
+### Comparing `dirigera-0.0.2/README.md` & `dirigera-0.0.3/README.md`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,118 +1,118 @@
+-# Dirigera Python client
+-
+-This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
+-
+-## Installation
+-
+-```bash
+-pip install dirigera
+-```
+-
+-## Quickstart
+-
+-1. Find out the ip-address of your Dirigera (check your router)
+-2. Run the generate-token script:
+-   ```bash
+-   generate-token <Dirigera ip-address>
+-   ```
+-   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
+-   Example:
+-   ```
+-    Press the action button on Dirigera then hit ENTER ...
+-    Your Token:
+-    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
+-   ```
+-6. Done
+-
+-## Dirigera Hub
+-
+-Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
+-
+-```python
+-import dirigera
+-
+-dirigera_hub = dirigera.Hub(
+-    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
+-    ip_address="192.1..."
+-)
+-```
+-
+-## [Controlling Lights](./src/dirigera/devices/light.py)
+-
+-To get information about the available lights, you can use the `get_lights()` method:
+-
+-```python
+-light = dirigera_hub.get_lights()
+-```
+-
+-The light object has the following attributes:
+-
+-```python
+-    light_id: str
+-    is_reachable: bool
+-    custom_name: str
+-    is_on: bool
+-    startup_on_off: StartupEnum
+-    light_level: int | None  # not all lights have a light level
+-    color_temp: int | None  # not all lights have a color temperature
+-    color_temp_min: int | None
+-    color_temp_max: int | None
+-    color_hue: int | None  # not all lights have a color hue
+-    color_saturation: float | None  # not all lights have a color saturation
+-    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+-```
+-
+-Available methods for light are:
+-
+-```python
+-    light.set_name(name="kitchen light 1")
+-
+-    light.set_light(lamp_on=True)
+-
+-    light.set_light_level(light_level=90)
+-
+-    light.set_color_temperature(color_temp=3000)
+-
+-    light.set_light_color(hue=128, saturation=0.5)
+-
+-    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
+-```
+-
+-
+-## Event Listener
+-The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
+-
+-```python
+-
+-def on_message(ws: Any, message: str):
+-    message_dict = json.loads(message)
+-    data = message_dict["data"]
+-    if data["id"] == bed_light.light_id:
+-        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
+-
+-def on_error(ws: Any, message: str):
+-    print(message)
+-
+-dirigera_hub.create_event_listener(
+-    on_message=on_message, on_error=on_error
+-)
+-```
+-```
+-deviceStateChanged event on Bed Light, attributes: {'isOn': False}
+-```
+-
+-## Motivation
+-The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
+-The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
+-The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
+-I can not guarantee that all IKEA lamps offer this functionality.
+-
+-## Contributing
+-
+-Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
+-
+-## License
+-
+-The MIT License (MIT)
+-
++# Dirigera Python client
++
++This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
++
++## Installation
++
++```bash
++pip install dirigera
++```
++
++## Quickstart
++
++1. Find out the ip-address of your Dirigera (check your router)
++2. Run the generate-token script:
++   ```bash
++   generate-token <Dirigera ip-address>
++   ```
++   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
++   Example:
++   ```
++    Press the action button on Dirigera then hit ENTER ...
++    Your Token:
++    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
++   ```
++6. Done
++
++## Dirigera Hub
++
++Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
++
++```python
++import dirigera
++
++dirigera_hub = dirigera.Hub(
++    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
++    ip_address="192.1..."
++)
++```
++
++## [Controlling Lights](./src/dirigera/devices/light.py)
++
++To get information about the available lights, you can use the `get_lights()` method:
++
++```python
++lights = dirigera_hub.get_lights()
++```
++
++The light object has the following attributes:
++
++```python
++    light_id: str
++    is_reachable: bool
++    custom_name: str
++    is_on: bool
++    startup_on_off: StartupEnum
++    light_level: int | None  # not all lights have a light level
++    color_temp: int | None  # not all lights have a color temperature
++    color_temp_min: int | None
++    color_temp_max: int | None
++    color_hue: int | None  # not all lights have a color hue
++    color_saturation: float | None  # not all lights have a color saturation
++    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
++```
++
++Available methods for light are:
++
++```python
++    light.set_name(name="kitchen light 1")
++
++    light.set_light(lamp_on=True)
++
++    light.set_light_level(light_level=90)
++
++    light.set_color_temperature(color_temp=3000)
++
++    light.set_light_color(hue=128, saturation=0.5)
++
++    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
++```
++
++
++## Event Listener
++The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
++
++```python
++
++def on_message(ws: Any, message: str):
++    message_dict = json.loads(message)
++    data = message_dict["data"]
++    if data["id"] == bed_light.light_id:
++        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
++
++def on_error(ws: Any, message: str):
++    print(message)
++
++dirigera_hub.create_event_listener(
++    on_message=on_message, on_error=on_error
++)
++```
++```
++deviceStateChanged event on Bed Light, attributes: {'isOn': False}
++```
++
++## Motivation
++The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
++The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
++The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
++I can not guarantee that all IKEA lamps offer this functionality.
++
++## Contributing
++
++Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
++
++## License
++
++The MIT License (MIT)
++
+ Copyright (c) 2023 Leggin
+```
+
+### Comparing `dirigera-0.0.2/pyproject.toml` & `dirigera-0.0.3/pyproject.toml`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,35 +1,35 @@
+-[build-system]
+-requires = [
+-   "setuptools",
+-   "wheel"
+-]
+-build-backend = "setuptools.build_meta"
+-
+-[project]
+-name = "dirigera"
+-version = "0.0.2"
+-description = "An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub"
+-readme = "README.md"
+-authors = [{ name = "Leggin", email = "legginsun@gmail.com" }]
+-license = { file = "LICENSE" }
+-keywords = ["python", "iot", "smarthome", "hub", "lighting", "ikea", "tradfri", "dirigera"]
+-dependencies = [
+-    "requests >= 2.22.0",
+-    "websocket-client >= 1.0.0",
+-]
+-requires-python = ">=3.10"
+-classifiers = [
+-    "Programming Language :: Python :: 3",
+-    "License :: OSI Approved :: MIT License",
+-    "Operating System :: OS Independent",
+-]
+-
+-
+-[project.optional-dependencies]
+-dev = ["black", "pytest"]
+-
+-[project.scripts]
+-generate-token = "dirigera.hub.auth:main"
+-
+-[project.urls]
+-Homepage = "https://github.com/Leggin/dirigera"
++[build-system]
++requires = [
++   "setuptools",
++   "wheel"
++]
++build-backend = "setuptools.build_meta"
++
++[project]
++name = "dirigera"
++version = "0.0.3"
++description = "An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub"
++readme = "README.md"
++authors = [{ name = "Leggin", email = "legginsun@gmail.com" }]
++license = { file = "LICENSE" }
++keywords = ["python", "iot", "smarthome", "hub", "lighting", "ikea", "tradfri", "dirigera"]
++dependencies = [
++    "requests >= 2.22.0",
++    "websocket-client >= 1.0.0",
++]
++requires-python = ">=3.10"
++classifiers = [
++    "Programming Language :: Python :: 3",
++    "License :: OSI Approved :: MIT License",
++    "Operating System :: OS Independent",
++]
++
++
++[project.optional-dependencies]
++dev = ["black", "pytest"]
++
++[project.scripts]
++generate-token = "dirigera.hub.auth:main"
++
++[project.urls]
++Homepage = "https://github.com/Leggin/dirigera"
+```
+
+### Comparing `dirigera-0.0.2/src/dirigera/devices/light.py` & `dirigera-0.0.3/src/dirigera/devices/light.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,139 +1,140 @@
+-from dataclasses import dataclass
+-from enum import Enum
+-from typing import Any, Dict, List
+-
+-from ..hub.abstract_smart_home_hub import AbstractSmartHomeHub
+-
+-
+-class StartupEnum(Enum):
+-    START_ON = "startOn"
+-    START_OFF = "startOff"
+-
+-
+-@dataclass
+-class Light:
+-    dirigera_client: AbstractSmartHomeHub
+-    light_id: str
+-    is_reachable: bool
+-    custom_name: str
+-    is_on: bool
+-    startup_on_off: StartupEnum
+-    light_level: int | None
+-    color_temp: int | None
+-    color_temp_min: int | None
+-    color_temp_max: int | None
+-    color_hue: int | None
+-    color_saturation: float | None
+-    can_receive: List[str]
+-
+-    def refresh(self) -> None:
+-        data = self.dirigera_client.get(route=f"/devices/{self.light_id}")
+-        attributes: Dict[str, Any] = data["attributes"]
+-        self.light_id=data["id"]
+-        self.is_reachable=data["isReachable"]
+-        self.custom_name=attributes["customName"]
+-        self.is_on=attributes["isOn"]
+-        self.startup_on_off=attributes["startupOnOff"]
+-        self.light_level=attributes.get("lightLevel")
+-        self.color_temp=attributes.get("colorTemperature")
+-        self.color_temp_min=attributes.get("colorTemperatureMin")
+-        self.color_temp_max=attributes.get("colorTemperatureMax")
+-        self.color_hue=attributes.get("colorHue")
+-        self.color_saturation=attributes.get("colorSaturation")
+-        self.can_receive=data["capabilities"]["canReceive"]
+-
+-    def set_name(self, name: str) -> None:
+-        if "customName" not in self.can_receive:
+-            raise AssertionError("This lamp does not support the swith-off function")
+-
+-        data = [{"attributes": {"customName": name}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.custom_name = name
+-
+-    def set_light(self, lamp_on: bool) -> None:
+-        if "isOn" not in self.can_receive:
+-            raise AssertionError("This lamp does not support the swith-off function")
+-
+-        data = [{"attributes": {"isOn": lamp_on}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.is_on = lamp_on
+-
+-    def set_light_level(self, light_level: int) -> None:
+-        if "lightLevel" not in self.can_receive:
+-            raise AssertionError(
+-                "This lamp does not support the set lightLevel function"
+-            )
+-        if light_level < 0 or light_level > 100:
+-            raise AssertionError("light_level must be a value between 0 and 100")
+-
+-        data = [{"attributes": {"lightLevel": light_level}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.light_level = light_level
+-
+-    def set_color_temperature(self, color_temp: int) -> None:
+-        if "colorTemperature" not in self.can_receive:
+-            raise AssertionError(
+-                "This lamp does not support the set colorTemperature function"
+-            )
+-        if color_temp < self.color_temp_max or color_temp > self.color_temp_min:
+-            raise AssertionError(
+-                f"color_temperature must be a value between {self.color_temp_max} and {self.color_temp_min}"
+-            )
+-
+-        data = [{"attributes": {"colorTemperature": color_temp}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.color_temp = color_temp
+-
+-    def set_light_color(self, hue: int, saturation: float) -> None:
+-        if (
+-            "colorHue" not in self.can_receive
+-            or "colorSaturation" not in self.can_receive
+-        ):
+-            raise AssertionError(
+-                "This lamp does not support the set light color function"
+-            )
+-        if hue < 0 or hue > 360:
+-            raise AssertionError("hue must be a value between 0 and 360")
+-        if saturation < 0.0 or saturation > 1.0:
+-            raise AssertionError("saturation must be a value between 0.0 and 1.0")
+-
+-        data = [{"attributes": {"colorHue": hue, "colorSaturation": saturation}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.color_hue = hue
+-        self.color_saturation = saturation
+-
+-    def set_startup_behaviour(self, behaviour: StartupEnum) -> None:
+-        """
+-        Sets the behaviour of the lamp in case of a power outage.
+-        When set to START_ON the lamp will turn on once the power is back.
+-        When set to START_OFF the lamp will stay off once the power is back.
+-        """
+-        data = [{"attributes": {"startupOnOff": behaviour}}]
+-        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
+-        self.startup_on_off = behaviour
+-
+-
+-def dict_to_light(data: Dict[str, Any], dirigera_client: AbstractSmartHomeHub):
+-    attributes: Dict[str, Any] = data["attributes"]
+-    light_level = attributes.get("lightLevel")
+-    color_temp = attributes.get("colorTemperature")
+-    color_temp_min = attributes.get("colorTemperatureMin")
+-    color_temp_max = attributes.get("colorTemperatureMax")
+-    color_hue = attributes.get("colorHue")
+-    color_saturation = attributes.get("colorSaturation")
+-
+-    return Light(
+-        dirigera_client=dirigera_client,
+-        light_id=data["id"],
+-        is_reachable=data["isReachable"],
+-        custom_name=attributes["customName"],
+-        is_on=attributes["isOn"],
+-        startup_on_off=attributes["startupOnOff"],
+-        light_level=light_level,
+-        color_temp=color_temp,
+-        color_temp_min=color_temp_min,
+-        color_temp_max=color_temp_max,
+-        color_hue=color_hue,
+-        color_saturation=color_saturation,
+-        can_receive=data["capabilities"]["canReceive"],
+-    )
++from dataclasses import dataclass
++from enum import Enum
++from typing import Any, Dict, List
++
++from ..hub.abstract_smart_home_hub import AbstractSmartHomeHub
++
++
++class StartupEnum(Enum):
++    START_ON = "startOn"
++    START_OFF = "startOff"
++
++
++@dataclass
++class Light:
++    dirigera_client: AbstractSmartHomeHub
++    light_id: str
++    is_reachable: bool
++    custom_name: str
++    is_on: bool
++    startup_on_off: StartupEnum | None
++    light_level: int | None
++    color_temp: int | None
++    color_temp_min: int | None
++    color_temp_max: int | None
++    color_hue: int | None
++    color_saturation: float | None
++    can_receive: List[str]
++
++    def refresh(self) -> None:
++        data = self.dirigera_client.get(route=f"/devices/{self.light_id}")
++        attributes: Dict[str, Any] = data["attributes"]
++        self.light_id=data["id"]
++        self.is_reachable=data["isReachable"]
++        self.custom_name=attributes["customName"]
++        self.is_on=attributes["isOn"]
++        self.startup_on_off=attributes.get("startupOnOff")
++        self.light_level=attributes.get("lightLevel")
++        self.color_temp=attributes.get("colorTemperature")
++        self.color_temp_min=attributes.get("colorTemperatureMin")
++        self.color_temp_max=attributes.get("colorTemperatureMax")
++        self.color_hue=attributes.get("colorHue")
++        self.color_saturation=attributes.get("colorSaturation")
++        self.can_receive=data["capabilities"]["canReceive"]
++
++    def set_name(self, name: str) -> None:
++        if "customName" not in self.can_receive:
++            raise AssertionError("This lamp does not support the swith-off function")
++
++        data = [{"attributes": {"customName": name}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.custom_name = name
++
++    def set_light(self, lamp_on: bool) -> None:
++        if "isOn" not in self.can_receive:
++            raise AssertionError("This lamp does not support the swith-off function")
++
++        data = [{"attributes": {"isOn": lamp_on}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.is_on = lamp_on
++
++    def set_light_level(self, light_level: int) -> None:
++        if "lightLevel" not in self.can_receive:
++            raise AssertionError(
++                "This lamp does not support the set lightLevel function"
++            )
++        if light_level < 0 or light_level > 100:
++            raise AssertionError("light_level must be a value between 0 and 100")
++
++        data = [{"attributes": {"lightLevel": light_level}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.light_level = light_level
++
++    def set_color_temperature(self, color_temp: int) -> None:
++        if "colorTemperature" not in self.can_receive:
++            raise AssertionError(
++                "This lamp does not support the set colorTemperature function"
++            )
++        if color_temp < self.color_temp_max or color_temp > self.color_temp_min:
++            raise AssertionError(
++                f"color_temperature must be a value between {self.color_temp_max} and {self.color_temp_min}"
++            )
++
++        data = [{"attributes": {"colorTemperature": color_temp}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.color_temp = color_temp
++
++    def set_light_color(self, hue: int, saturation: float) -> None:
++        if (
++            "colorHue" not in self.can_receive
++            or "colorSaturation" not in self.can_receive
++        ):
++            raise AssertionError(
++                "This lamp does not support the set light color function"
++            )
++        if hue < 0 or hue > 360:
++            raise AssertionError("hue must be a value between 0 and 360")
++        if saturation < 0.0 or saturation > 1.0:
++            raise AssertionError("saturation must be a value between 0.0 and 1.0")
++
++        data = [{"attributes": {"colorHue": hue, "colorSaturation": saturation}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.color_hue = hue
++        self.color_saturation = saturation
++
++    def set_startup_behaviour(self, behaviour: StartupEnum) -> None:
++        """
++        Sets the behaviour of the lamp in case of a power outage.
++        When set to START_ON the lamp will turn on once the power is back.
++        When set to START_OFF the lamp will stay off once the power is back.
++        """
++        data = [{"attributes": {"startupOnOff": behaviour}}]
++        self.dirigera_client.patch(route=f"/devices/{self.light_id}", data=data)
++        self.startup_on_off = behaviour
++
++
++def dict_to_light(data: Dict[str, Any], dirigera_client: AbstractSmartHomeHub):
++    attributes: Dict[str, Any] = data["attributes"]
++
++    light_level = attributes.get("lightLevel")
++    color_temp = attributes.get("colorTemperature")
++    color_temp_min = attributes.get("colorTemperatureMin")
++    color_temp_max = attributes.get("colorTemperatureMax")
++    color_hue = attributes.get("colorHue")
++    color_saturation = attributes.get("colorSaturation")
++
++    return Light(
++        dirigera_client=dirigera_client,
++        light_id=data["id"],
++        is_reachable=data["isReachable"],
++        custom_name=attributes["customName"],
++        is_on=attributes["isOn"],
++        startup_on_off=attributes.get("startupOnOff"),
++        light_level=light_level,
++        color_temp=color_temp,
++        color_temp_min=color_temp_min,
++        color_temp_max=color_temp_max,
++        color_hue=color_hue,
++        color_saturation=color_saturation,
++        can_receive=data["capabilities"]["canReceive"],
++    )
+```
+
+### Comparing `dirigera-0.0.2/src/dirigera/hub/auth.py` & `dirigera-0.0.3/src/dirigera/hub/auth.py`
+
+ * *Ordering differences only*
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,80 +1,80 @@
+-import string
+-import hashlib
+-import random
+-import socket
+-import base64
+-import sys
+-import requests
+-from urllib3.exceptions import InsecureRequestWarning
+-
+-requests.packages.urllib3.disable_warnings(  # pylint: disable=no-member
+-    category=InsecureRequestWarning
+-)
+-
+-ALPHABET = f"_-~.{string.ascii_letters}{string.digits}"
+-CODE_LENGTH = 128
+-
+-
+-def random_char(alphabet: str) -> str:
+-    return alphabet[random.randrange(0, len(alphabet))]
+-
+-
+-def random_code(alphabet: str, length: int):
+-    return "".join([random_char(alphabet) for _ in range(0, length)])
+-
+-
+-def code_challenge(code_verifier: str):
+-    sha256_hash = hashlib.sha256()
+-    sha256_hash.update(code_verifier.encode())
+-    digest = sha256_hash.digest()
+-    sha256_hash_as_base64 = (
+-        base64.urlsafe_b64encode(digest).rstrip(b"=").decode("us-ascii")
+-    )
+-    return sha256_hash_as_base64
+-
+-
+-def send_challenge(ip_address: str, code_verifier: str) -> str:
+-    auth_url = f"https://{ip_address}:8443/v1/oauth/authorize"
+-    params = {
+-        "audience": "homesmart.local",
+-        "response_type": "code",
+-        "code_challenge": code_challenge(code_verifier),
+-        "code_challenge_method": "S256",
+-    }
+-    response = requests.get(auth_url, params=params, verify=False, timeout=10)
+-    response.raise_for_status()
+-    return response.json()["code"]
+-
+-
+-def get_token(ip_address: str, code: str, code_verifier: str) -> str:
+-    data = str(
+-        "code="
+-        + code
+-        + "&name="
+-        + socket.gethostname()
+-        + "&grant_type="
+-        + "authorization_code"
+-        + "&code_verifier="
+-        + code_verifier
+-    )
+-    headers = {"Content-Type": "application/x-www-form-urlencoded"}
+-    token_url = f"https://{ip_address}:8443/v1/oauth/token"
+-
+-    response = requests.post(
+-        token_url, headers=headers, data=data, verify=False, timeout=10
+-    )
+-    response.raise_for_status()
+-    return response.json()["access_token"]
+-
+-
+-def main():
+-    if len(sys.argv) > 1:
+-        ip_address = sys.argv[1]
+-    else:
+-        ip_address = input("Input the ip address of your Dirigera then hit ENTER ...\n")
+-    code_verifier = random_code(ALPHABET, CODE_LENGTH)
+-    code = send_challenge(ip_address, code_verifier)
+-    input("Press the action button on Dirigera then hit ENTER ...")
+-    token = get_token(ip_address, code, code_verifier)
+-    print("Your TOKEN :")
+-    print(token)
++import string
++import hashlib
++import random
++import socket
++import base64
++import sys
++import requests
++from urllib3.exceptions import InsecureRequestWarning
++
++requests.packages.urllib3.disable_warnings(  # pylint: disable=no-member
++    category=InsecureRequestWarning
++)
++
++ALPHABET = f"_-~.{string.ascii_letters}{string.digits}"
++CODE_LENGTH = 128
++
++
++def random_char(alphabet: str) -> str:
++    return alphabet[random.randrange(0, len(alphabet))]
++
++
++def random_code(alphabet: str, length: int):
++    return "".join([random_char(alphabet) for _ in range(0, length)])
++
++
++def code_challenge(code_verifier: str):
++    sha256_hash = hashlib.sha256()
++    sha256_hash.update(code_verifier.encode())
++    digest = sha256_hash.digest()
++    sha256_hash_as_base64 = (
++        base64.urlsafe_b64encode(digest).rstrip(b"=").decode("us-ascii")
++    )
++    return sha256_hash_as_base64
++
++
++def send_challenge(ip_address: str, code_verifier: str) -> str:
++    auth_url = f"https://{ip_address}:8443/v1/oauth/authorize"
++    params = {
++        "audience": "homesmart.local",
++        "response_type": "code",
++        "code_challenge": code_challenge(code_verifier),
++        "code_challenge_method": "S256",
++    }
++    response = requests.get(auth_url, params=params, verify=False, timeout=10)
++    response.raise_for_status()
++    return response.json()["code"]
++
++
++def get_token(ip_address: str, code: str, code_verifier: str) -> str:
++    data = str(
++        "code="
++        + code
++        + "&name="
++        + socket.gethostname()
++        + "&grant_type="
++        + "authorization_code"
++        + "&code_verifier="
++        + code_verifier
++    )
++    headers = {"Content-Type": "application/x-www-form-urlencoded"}
++    token_url = f"https://{ip_address}:8443/v1/oauth/token"
++
++    response = requests.post(
++        token_url, headers=headers, data=data, verify=False, timeout=10
++    )
++    response.raise_for_status()
++    return response.json()["access_token"]
++
++
++def main():
++    if len(sys.argv) > 1:
++        ip_address = sys.argv[1]
++    else:
++        ip_address = input("Input the ip address of your Dirigera then hit ENTER ...\n")
++    code_verifier = random_code(ALPHABET, CODE_LENGTH)
++    code = send_challenge(ip_address, code_verifier)
++    input("Press the action button on Dirigera then hit ENTER ...")
++    token = get_token(ip_address, code, code_verifier)
++    print("Your TOKEN :")
++    print(token)
+```
+
+### Comparing `dirigera-0.0.2/src/dirigera.egg-info/PKG-INFO` & `dirigera-0.0.3/src/dirigera.egg-info/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,155 +1,155 @@
+-Metadata-Version: 2.1
+-Name: dirigera
+-Version: 0.0.2
+-Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
+-Author-email: Leggin <legginsun@gmail.com>
+-License: MIT License
+-        
+-        Copyright (c) 2023 Leggin
+-        
+-        Permission is hereby granted, free of charge, to any person obtaining a copy
+-        of this software and associated documentation files (the "Software"), to deal
+-        in the Software without restriction, including without limitation the rights
+-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+-        copies of the Software, and to permit persons to whom the Software is
+-        furnished to do so, subject to the following conditions:
+-        
+-        The above copyright notice and this permission notice shall be included in all
+-        copies or substantial portions of the Software.
+-        
+-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+-        SOFTWARE.
+-        
+-Project-URL: Homepage, https://github.com/Leggin/dirigera
+-Keywords: python,iot,smarthome,hub,lighting,ikea,tradfri,dirigera
+-Classifier: Programming Language :: Python :: 3
+-Classifier: License :: OSI Approved :: MIT License
+-Classifier: Operating System :: OS Independent
+-Requires-Python: >=3.10
+-Description-Content-Type: text/markdown
+-Provides-Extra: dev
+-License-File: LICENSE
+-
+-# Dirigera Python client
+-
+-This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
+-
+-## Installation
+-
+-```bash
+-pip install dirigera
+-```
+-
+-## Quickstart
+-
+-1. Find out the ip-address of your Dirigera (check your router)
+-2. Run the generate-token script:
+-   ```bash
+-   generate-token <Dirigera ip-address>
+-   ```
+-   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
+-   Example:
+-   ```
+-    Press the action button on Dirigera then hit ENTER ...
+-    Your Token:
+-    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
+-   ```
+-6. Done
+-
+-## Dirigera Hub
+-
+-Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
+-
+-```python
+-import dirigera
+-
+-dirigera_hub = dirigera.Hub(
+-    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
+-    ip_address="192.1..."
+-)
+-```
+-
+-## [Controlling Lights](./src/dirigera/devices/light.py)
+-
+-To get information about the available lights, you can use the `get_lights()` method:
+-
+-```python
+-light = dirigera_hub.get_lights()
+-```
+-
+-The light object has the following attributes:
+-
+-```python
+-    light_id: str
+-    is_reachable: bool
+-    custom_name: str
+-    is_on: bool
+-    startup_on_off: StartupEnum
+-    light_level: int | None  # not all lights have a light level
+-    color_temp: int | None  # not all lights have a color temperature
+-    color_temp_min: int | None
+-    color_temp_max: int | None
+-    color_hue: int | None  # not all lights have a color hue
+-    color_saturation: float | None  # not all lights have a color saturation
+-    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+-```
+-
+-Available methods for light are:
+-
+-```python
+-    light.set_name(name="kitchen light 1")
+-
+-    light.set_light(lamp_on=True)
+-
+-    light.set_light_level(light_level=90)
+-
+-    light.set_color_temperature(color_temp=3000)
+-
+-    light.set_light_color(hue=128, saturation=0.5)
+-
+-    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
+-```
+-
+-
+-## Event Listener
+-The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
+-
+-```python
+-
+-def on_message(ws: Any, message: str):
+-    message_dict = json.loads(message)
+-    data = message_dict["data"]
+-    if data["id"] == bed_light.light_id:
+-        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
+-
+-def on_error(ws: Any, message: str):
+-    print(message)
+-
+-dirigera_hub.create_event_listener(
+-    on_message=on_message, on_error=on_error
+-)
+-```
+-```
+-deviceStateChanged event on Bed Light, attributes: {'isOn': False}
+-```
+-
+-## Motivation
+-The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
+-The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
+-The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
+-I can not guarantee that all IKEA lamps offer this functionality.
+-
+-## Contributing
+-
+-Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
+-
+-## License
+-
+-The MIT License (MIT)
+-
+-Copyright (c) 2023 Leggin
++Metadata-Version: 2.1
++Name: dirigera
++Version: 0.0.3
++Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
++Author-email: Leggin <legginsun@gmail.com>
++License: MIT License
++        
++        Copyright (c) 2023 Leggin
++        
++        Permission is hereby granted, free of charge, to any person obtaining a copy
++        of this software and associated documentation files (the "Software"), to deal
++        in the Software without restriction, including without limitation the rights
++        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++        copies of the Software, and to permit persons to whom the Software is
++        furnished to do so, subject to the following conditions:
++        
++        The above copyright notice and this permission notice shall be included in all
++        copies or substantial portions of the Software.
++        
++        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
++        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
++        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++        SOFTWARE.
++        
++Project-URL: Homepage, https://github.com/Leggin/dirigera
++Keywords: python,iot,smarthome,hub,lighting,ikea,tradfri,dirigera
++Classifier: Programming Language :: Python :: 3
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Operating System :: OS Independent
++Requires-Python: >=3.10
++Description-Content-Type: text/markdown
++Provides-Extra: dev
++License-File: LICENSE
++
++# Dirigera Python client
++
++This repository provides an unofficial Python client for controlling the IKEA Dirigera Smart Home Hub. Currently, only light control is supported, but support for other features will be added in the future.
++
++## Installation
++
++```bash
++pip install dirigera
++```
++
++## Quickstart
++
++1. Find out the ip-address of your Dirigera (check your router)
++2. Run the generate-token script:
++   ```bash
++   generate-token <Dirigera ip-address>
++   ```
++   When prompted, you must push the action button on Dirigera. After that hit ENTER and your `token` will be printed to the console.  
++   Example:
++   ```
++    Press the action button on Dirigera then hit ENTER ...
++    Your Token:
++    mgwB.aXqwpzV89N0aUwBhZMJjD8a.UBPyzy2InGtqgwo2MO5.xX4ug7.uBcVJquwYzLnAijF7SdYKvNxTo0uzQKahV10A-3ZQOz-UAubGP6sHWt1CJx3QmWZyE7ZcMZKgODXjSzWL1lumKgGz5dUIwFi3rhNxgK-IsBGeGVhNXPt8vGrYEcZePwPvNAIg8RqmlH27L-JZPnkAtP2wHoOdW72Djot3yJsohtEsb0p9mJvoZFSavTlTr4LDuf584vuH5fha5xoR9QhhIvvgbAP-s4EHFqENNi6vrYLHKR.sdqnv4sYw6UH-l6oiPnnRLxinoqBPOlWhlcL9doFviXQE.tZ9X8WVqyBrd0NYHlo9iorEvUbnZuD02BEJrg4NLwgh3rZtyF0Mi46HenynzBohbPn4RnuSYYCiHt5EZnWedxBtDqc7mSTm1ZtyD
++   ```
++6. Done
++
++## Dirigera Hub
++
++Setting up the client works by providing the token and ip address that is read from your .env file by the `config.py`
++
++```python
++import dirigera
++
++dirigera_hub = dirigera.Hub(
++    token="mgwB.aXqwpzV89N0aUwBhZMJjD8a...",
++    ip_address="192.1..."
++)
++```
++
++## [Controlling Lights](./src/dirigera/devices/light.py)
++
++To get information about the available lights, you can use the `get_lights()` method:
++
++```python
++lights = dirigera_hub.get_lights()
++```
++
++The light object has the following attributes:
++
++```python
++    light_id: str
++    is_reachable: bool
++    custom_name: str
++    is_on: bool
++    startup_on_off: StartupEnum
++    light_level: int | None  # not all lights have a light level
++    color_temp: int | None  # not all lights have a color temperature
++    color_temp_min: int | None
++    color_temp_max: int | None
++    color_hue: int | None  # not all lights have a color hue
++    color_saturation: float | None  # not all lights have a color saturation
++    can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
++```
++
++Available methods for light are:
++
++```python
++    light.set_name(name="kitchen light 1")
++
++    light.set_light(lamp_on=True)
++
++    light.set_light_level(light_level=90)
++
++    light.set_color_temperature(color_temp=3000)
++
++    light.set_light_color(hue=128, saturation=0.5)
++
++    light.set_startup_behaviour(behaviour=StartupEnum.START_OFF)
++```
++
++
++## Event Listener
++The event listener allows you to listen to events that are published by your Dirigera hub. This is useful if you want to automate tasks based on events such as when a light is turned on or off, or when the color temperature of a light is changed.
++
++```python
++
++def on_message(ws: Any, message: str):
++    message_dict = json.loads(message)
++    data = message_dict["data"]
++    if data["id"] == bed_light.light_id:
++        print(f"{message_dict['type']} event on {bed_light.custom_name}, attributes: {data['attributes']}")
++
++def on_error(ws: Any, message: str):
++    print(message)
++
++dirigera_hub.create_event_listener(
++    on_message=on_message, on_error=on_error
++)
++```
++```
++deviceStateChanged event on Bed Light, attributes: {'isOn': False}
++```
++
++## Motivation
++The primary motivation for this project was to provide users with the ability to control the startup behavior of their smart home lamps when there is a power outage.  
++The default behavior of the hub is to turn on all lights when power is restored, which can be problematic if the user is away from home or on vacation, and a small power fluctuation causes all lights to turn on and stay on. Unfortunately, the IKEA app does not offer a way to change this default behavior.  
++The `set_startup_behaviour()` function enables users to override the default behavior and choose the startup behavior that best suits their needs (START_ON = turn on light when power is back, START_OFF = light stays off when power is back).  
++I can not guarantee that all IKEA lamps offer this functionality.
++
++## Contributing
++
++Contributions are welcome! If you have an idea for a new feature or a bug fix, please submit a pull request.
++
++## License
++
++The MIT License (MIT)
++
++Copyright (c) 2023 Leggin
+```
+
+### Comparing `dirigera-0.0.2/tests/test_light.py` & `dirigera-0.0.3/tests/test_light.py`
+
+ * *Ordering differences only*
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,149 +1,149 @@
+-import pytest
+-from src.dirigera.hub.abstract_smart_home_hub import FakeDirigeraHub
+-from src.dirigera.devices.light import dict_to_light
+-from src.dirigera.devices.light import Light, StartupEnum
+-
+-
+-@pytest.fixture(name="fake_client")
+-def fixture_fake_client():
+-    return FakeDirigeraHub()
+-
+-
+-@pytest.fixture(name="fake_light")
+-def fixture_light(fake_client: FakeDirigeraHub):
+-    return Light(
+-        dirigera_client=fake_client,
+-        light_id="abcd",
+-        is_reachable=True,
+-        custom_name="good lamp",
+-        is_on=True,
+-        startup_on_off=StartupEnum.START_ON,
+-        light_level=20,
+-        color_temp=45,
+-        color_temp_min=4000,
+-        color_temp_max=2000,
+-        color_hue=200,
+-        color_saturation=0.7,
+-        can_receive=[
+-            "customName",
+-            "isOn",
+-            "lightLevel",
+-            "colorTemperature",
+-            "colorHue",
+-            "colorSaturation",
+-        ],
+-    )
+-
+-
+-def test_set_name(fake_light: Light, fake_client: FakeDirigeraHub):
+-    new_name = "stadtlampefluss"
+-    fake_light.set_name(new_name)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"customName": new_name}}]
+-    assert fake_light.custom_name == new_name
+-
+-
+-def test_set_light_on(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
+-    fake_light.set_light(True)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"isOn": True}}]
+-    assert fake_light.is_on
+-
+-
+-def test_set_light_off(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
+-    fake_light.set_light(False)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"isOn": False}}]
+-    assert not fake_light.is_on
+-
+-
+-def test_set_light_level(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
+-    level = 80
+-    fake_light.set_light_level(level)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"lightLevel": level}}]
+-    assert fake_light.light_level == level
+-
+-
+-def test_set_color_temperature(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
+-    temp = 2200
+-    fake_light.set_color_temperature(temp)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"colorTemperature": temp}}]
+-    assert fake_light.color_temp == temp
+-
+-
+-def test_set_light_color(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
+-    hue = 120
+-    saturation = 0.9
+-    fake_light.set_light_color(hue, saturation)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [
+-        {"attributes": {"colorHue": hue, "colorSaturation": saturation}}
+-    ]
+-    assert fake_light.color_hue == hue
+-    assert fake_light.color_saturation == saturation
+-
+-
+-def test_set_startup_behaviour_off(
+-    fake_light: Light, fake_client: FakeDirigeraHub
+-) -> None:
+-    behaviour = StartupEnum.START_OFF
+-    fake_light.set_startup_behaviour(behaviour)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"startupOnOff": behaviour}}]
+-    assert fake_light.startup_on_off == behaviour
+-
+-
+-def test_set_startup_behaviour_on(
+-    fake_light: Light, fake_client: FakeDirigeraHub
+-) -> None:
+-    behaviour = StartupEnum.START_ON
+-    fake_light.set_startup_behaviour(behaviour)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_light.light_id}"
+-    assert action["data"] == [{"attributes": {"startupOnOff": behaviour}}]
+-    assert fake_light.startup_on_off == behaviour
+-
+-
+-def test_dict_to_light(fake_client: FakeDirigeraHub):
+-    data = {
+-        "id": "1237-343-2dfa",
+-        "type": "light",
+-        "deviceType": "light",
+-        "isReachable": True,
+-        "attributes": {
+-            "customName": "Light 2",
+-            "isOn": False,
+-            "startupOnOff": "startOn",
+-            "lightLevel": 100,
+-            "colorTemperature": 2710,
+-            "colorTemperatureMin": 4000,
+-            "colorTemperatureMax": 2202,
+-            "colorMode": "temperature",
+-        },
+-        "capabilities": {
+-            "canSend": [],
+-            "canReceive": ["customName", "isOn", "lightLevel"],
+-        },
+-    }
+-
+-    light = dict_to_light(data, fake_client)
+-    assert light.dirigera_client == fake_client
+-    assert light.light_id == data["id"]
+-    assert light.is_reachable == data["isReachable"]
+-    assert light.custom_name == data["attributes"]["customName"]
+-    assert light.is_on == data["attributes"]["isOn"]
+-    assert light.startup_on_off == data["attributes"]["startupOnOff"]
+-    assert light.light_level == data["attributes"]["lightLevel"]
+-    assert light.color_temp == data["attributes"]["colorTemperature"]
+-    assert light.color_temp_min == data["attributes"]["colorTemperatureMin"]
+-    assert light.color_temp_max == data["attributes"]["colorTemperatureMax"]
+-    assert light.can_receive == data["capabilities"]["canReceive"]
++import pytest
++from src.dirigera.hub.abstract_smart_home_hub import FakeDirigeraHub
++from src.dirigera.devices.light import dict_to_light
++from src.dirigera.devices.light import Light, StartupEnum
++
++
++@pytest.fixture(name="fake_client")
++def fixture_fake_client():
++    return FakeDirigeraHub()
++
++
++@pytest.fixture(name="fake_light")
++def fixture_light(fake_client: FakeDirigeraHub):
++    return Light(
++        dirigera_client=fake_client,
++        light_id="abcd",
++        is_reachable=True,
++        custom_name="good lamp",
++        is_on=True,
++        startup_on_off=StartupEnum.START_ON,
++        light_level=20,
++        color_temp=45,
++        color_temp_min=4000,
++        color_temp_max=2000,
++        color_hue=200,
++        color_saturation=0.7,
++        can_receive=[
++            "customName",
++            "isOn",
++            "lightLevel",
++            "colorTemperature",
++            "colorHue",
++            "colorSaturation",
++        ],
++    )
++
++
++def test_set_name(fake_light: Light, fake_client: FakeDirigeraHub):
++    new_name = "stadtlampefluss"
++    fake_light.set_name(new_name)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"customName": new_name}}]
++    assert fake_light.custom_name == new_name
++
++
++def test_set_light_on(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
++    fake_light.set_light(True)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"isOn": True}}]
++    assert fake_light.is_on
++
++
++def test_set_light_off(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
++    fake_light.set_light(False)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"isOn": False}}]
++    assert not fake_light.is_on
++
++
++def test_set_light_level(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
++    level = 80
++    fake_light.set_light_level(level)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"lightLevel": level}}]
++    assert fake_light.light_level == level
++
++
++def test_set_color_temperature(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
++    temp = 2200
++    fake_light.set_color_temperature(temp)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"colorTemperature": temp}}]
++    assert fake_light.color_temp == temp
++
++
++def test_set_light_color(fake_light: Light, fake_client: FakeDirigeraHub) -> None:
++    hue = 120
++    saturation = 0.9
++    fake_light.set_light_color(hue, saturation)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [
++        {"attributes": {"colorHue": hue, "colorSaturation": saturation}}
++    ]
++    assert fake_light.color_hue == hue
++    assert fake_light.color_saturation == saturation
++
++
++def test_set_startup_behaviour_off(
++    fake_light: Light, fake_client: FakeDirigeraHub
++) -> None:
++    behaviour = StartupEnum.START_OFF
++    fake_light.set_startup_behaviour(behaviour)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"startupOnOff": behaviour}}]
++    assert fake_light.startup_on_off == behaviour
++
++
++def test_set_startup_behaviour_on(
++    fake_light: Light, fake_client: FakeDirigeraHub
++) -> None:
++    behaviour = StartupEnum.START_ON
++    fake_light.set_startup_behaviour(behaviour)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_light.light_id}"
++    assert action["data"] == [{"attributes": {"startupOnOff": behaviour}}]
++    assert fake_light.startup_on_off == behaviour
++
++
++def test_dict_to_light(fake_client: FakeDirigeraHub):
++    data = {
++        "id": "1237-343-2dfa",
++        "type": "light",
++        "deviceType": "light",
++        "isReachable": True,
++        "attributes": {
++            "customName": "Light 2",
++            "isOn": False,
++            "startupOnOff": "startOn",
++            "lightLevel": 100,
++            "colorTemperature": 2710,
++            "colorTemperatureMin": 4000,
++            "colorTemperatureMax": 2202,
++            "colorMode": "temperature",
++        },
++        "capabilities": {
++            "canSend": [],
++            "canReceive": ["customName", "isOn", "lightLevel"],
++        },
++    }
++
++    light = dict_to_light(data, fake_client)
++    assert light.dirigera_client == fake_client
++    assert light.light_id == data["id"]
++    assert light.is_reachable == data["isReachable"]
++    assert light.custom_name == data["attributes"]["customName"]
++    assert light.is_on == data["attributes"]["isOn"]
++    assert light.startup_on_off == data["attributes"]["startupOnOff"]
++    assert light.light_level == data["attributes"]["lightLevel"]
++    assert light.color_temp == data["attributes"]["colorTemperature"]
++    assert light.color_temp_min == data["attributes"]["colorTemperatureMin"]
++    assert light.color_temp_max == data["attributes"]["colorTemperatureMax"]
++    assert light.can_receive == data["capabilities"]["canReceive"]
+```
+

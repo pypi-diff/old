@@ -1,0 +1,865 @@
+--- tmp/labelme-5.1.1.tar.gz
++++ tmp/labelme-5.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "labelme-5.1.1.tar", last modified: Sun Nov 20 07:10:16 2022, max compression
+│ +gzip compressed data, was "labelme-5.2.0.tar", last modified: Thu Apr  6 11:07:31 2023, max compression
+│   --- labelme-5.1.1.tar
+├── +++ labelme-5.2.0.tar
+│ ├── file list
+│ │ @@ -1,88 +1,88 @@
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      692 2022-11-20 07:07:21.000000 labelme-5.1.1/LICENSE
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)       18 2022-11-20 07:07:21.000000 labelme-5.1.1/MANIFEST.in
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    10975 2022-11-20 07:10:16.880731 labelme-5.1.1/PKG-INFO
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     8746 2022-11-20 07:08:57.000000 labelme-5.1.1/README.md
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      604 2022-11-20 07:09:35.000000 labelme-5.1.1/labelme/__init__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     5792 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/__main__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    73438 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/app.py
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/cli/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      123 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/cli/__init__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1345 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/cli/draw_json.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      636 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/cli/draw_label_png.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2388 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/cli/json_to_dataset.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2749 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/cli/on_docker.py
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/config/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2698 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/config/__init__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2203 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/config/default_config.yaml
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/icons/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2136 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/cancel.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     3111 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/close.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2368 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/color-line.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1461 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/color.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      646 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/copy.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1486 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/delete.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2198 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/done.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    22232 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/done.svg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1092 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/edit.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     7718 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/expert.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1264 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/eye.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     8059 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/feBlend-icon.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      765 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/file.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1365 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/fit-width.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1102 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/fit-window.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2262 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/fit.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1587 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/help.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)  1128131 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/icon.icns
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)   183198 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/icon.ico
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    44771 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/icon.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2381 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/labels.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    36694 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/labels.svg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      977 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/new.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    30288 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/next.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1103 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/objects.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2073 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/open.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    18197 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/open.svg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    30665 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/prev.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1915 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/quit.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2811 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/save-as.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    64005 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/save-as.svg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1187 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/save.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    30613 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/save.svg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2004 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/undo-cross.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2018 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/undo.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1099 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/zoom-in.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1074 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/zoom-out.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1139 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/icons/zoom.png
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     6354 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/label_file.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1836 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/logger.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     9317 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/shape.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      849 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/testing.py
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/utils/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      722 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/utils/__init__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      675 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/utils/_io.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2367 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/utils/image.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2392 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/utils/qt.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     3650 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/utils/shape.py
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme/widgets/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      510 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/__init__.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1468 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/brightness_contrast_dialog.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    33599 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/canvas.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1200 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/color_dialog.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      281 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/escapable_qlist_widget.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     2434 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/file_dialog_preview.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     8150 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/label_dialog.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     5792 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/label_list_widget.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      970 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/tool_bar.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1374 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/unique_label_qlist_widget.py
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      712 2022-11-20 07:07:21.000000 labelme-5.1.1/labelme/widgets/zoom_widget.py
+│ │ -drwxrwxr-x   0 wkentaro  (1000) wkentaro  (1000)        0 2022-11-20 07:10:16.880731 labelme-5.1.1/labelme.egg-info/
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)    10975 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     1984 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)        1 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      260 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)      110 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/requires.txt
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)        8 2022-11-20 07:10:16.000000 labelme-5.1.1/labelme.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)       38 2022-11-20 07:10:16.880731 labelme-5.1.1/setup.cfg
+│ │ --rw-rw-r--   0 wkentaro  (1000) wkentaro  (1000)     4533 2022-11-20 07:08:45.000000 labelme-5.1.1/setup.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.182290 labelme-5.2.0/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      692 2023-04-02 13:08:10.000000 labelme-5.2.0/LICENSE
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)       18 2023-04-02 13:08:10.000000 labelme-5.2.0/MANIFEST.in
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    10956 2023-04-06 11:07:31.182067 labelme-5.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     8746 2023-04-06 10:08:23.000000 labelme-5.2.0/README.md
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.170682 labelme-5.2.0/labelme/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      604 2023-04-06 11:07:20.000000 labelme-5.2.0/labelme/__init__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     5792 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/__main__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    73726 2023-04-06 11:06:25.000000 labelme-5.2.0/labelme/app.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.172075 labelme-5.2.0/labelme/cli/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      123 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/cli/__init__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1345 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/cli/draw_json.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      636 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/cli/draw_label_png.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2388 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/cli/json_to_dataset.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2749 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/cli/on_docker.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.172324 labelme-5.2.0/labelme/config/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2698 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/config/__init__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2203 2023-04-06 10:08:23.000000 labelme-5.2.0/labelme/config/default_config.yaml
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.179797 labelme-5.2.0/labelme/icons/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2136 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/cancel.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     3111 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/close.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2368 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/color-line.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1461 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/color.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      646 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/copy.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1486 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/delete.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2198 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/done.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    22232 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/done.svg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1092 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/edit.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     7718 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/expert.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1264 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/eye.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     8059 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/feBlend-icon.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      765 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/file.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1365 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/fit-width.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1102 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/fit-window.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2262 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/fit.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1587 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/help.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)  1128131 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/icon.icns
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)   183198 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/icon.ico
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    44771 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/icon.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2381 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/labels.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    36694 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/labels.svg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      977 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/new.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    30288 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/next.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1103 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/objects.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2073 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/open.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    18197 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/open.svg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    30665 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/prev.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1915 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/quit.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2811 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/save-as.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    64005 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/save-as.svg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1187 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/save.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    30613 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/save.svg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2004 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/undo-cross.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2018 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/undo.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1099 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/zoom-in.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1074 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/zoom-out.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1139 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/icons/zoom.png
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     6435 2023-04-06 11:06:25.000000 labelme-5.2.0/labelme/label_file.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1836 2023-04-06 10:08:23.000000 labelme-5.2.0/labelme/logger.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    10149 2023-04-06 11:06:25.000000 labelme-5.2.0/labelme/shape.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      849 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/testing.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.180406 labelme-5.2.0/labelme/utils/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      722 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/utils/__init__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      675 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/utils/_io.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2367 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/utils/image.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2392 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/utils/qt.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     3650 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/utils/shape.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.181847 labelme-5.2.0/labelme/widgets/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      510 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/__init__.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1468 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/brightness_contrast_dialog.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    33601 2023-04-06 10:08:23.000000 labelme-5.2.0/labelme/widgets/canvas.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1200 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/color_dialog.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      281 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/escapable_qlist_widget.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     2434 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/file_dialog_preview.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     8780 2023-04-06 11:06:25.000000 labelme-5.2.0/labelme/widgets/label_dialog.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     5792 2023-04-06 10:08:23.000000 labelme-5.2.0/labelme/widgets/label_list_widget.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      970 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/tool_bar.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1374 2023-04-06 10:08:23.000000 labelme-5.2.0/labelme/widgets/unique_label_qlist_widget.py
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      712 2023-04-02 13:08:10.000000 labelme-5.2.0/labelme/widgets/zoom_widget.py
+│ │ +drwxr-xr-x   0 wkentaro   (501) staff       (20)        0 2023-04-06 11:07:31.171432 labelme-5.2.0/labelme.egg-info/
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)    10956 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     1984 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)        1 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)      260 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)       87 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/requires.txt
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)        8 2023-04-06 11:07:31.000000 labelme-5.2.0/labelme.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)       38 2023-04-06 11:07:31.182337 labelme-5.2.0/setup.cfg
+│ │ +-rw-r--r--   0 wkentaro   (501) staff       (20)     4533 2023-04-06 10:08:23.000000 labelme-5.2.0/setup.py
+│ │   --- labelme-5.1.1/LICENSE
+│ ├── +++ labelme-5.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/PKG-INFO
+│ ├── +++ labelme-5.2.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,17 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: labelme
+│ │ -Version: 5.1.1
+│ │ +Version: 5.2.0
+│ │  Summary: Image Polygonal Annotation with Python
+│ │  Home-page: https://github.com/wkentaro/labelme
+│ │  Author: Kentaro Wada
+│ │  Author-email: www.kentaro.wada@gmail.com
+│ │  License: GPLv3
+│ │  Keywords: Image Annotation,Machine Learning
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3.5
+│ │ @@ -237,8 +236,7 @@
+│ │  MPLBACKEND='agg' pytest -vsx tests/
+│ │  ```
+│ │  
+│ │  
+│ │  ## Acknowledgement
+│ │  
+│ │  This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
+│ │ -
+│ │ ├── html2text {}
+│ │ │ @@ -1,20 +1,20 @@
+│ │ │ -Metadata-Version: 2.1 Name: labelme Version: 5.1.1 Summary: Image Polygonal
+│ │ │ +Metadata-Version: 2.1 Name: labelme Version: 5.2.0 Summary: Image Polygonal
+│ │ │  Annotation with Python Home-page: https://github.com/wkentaro/labelme Author:
+│ │ │  Kentaro Wada Author-email: www.kentaro.wada@gmail.com License: GPLv3 Keywords:
+│ │ │ -Image Annotation,Machine Learning Platform: UNKNOWN Classifier: Development
+│ │ │ -Status :: 5 - Production/Stable Classifier: Intended Audience :: Developers
+│ │ │ -Classifier: Intended Audience :: Science/Research Classifier: Natural Language
+│ │ │ -:: English Classifier: Operating System :: OS Independent Classifier:
+│ │ │ -Programming Language :: Python Classifier: Programming Language :: Python ::
+│ │ │ -3.5 Classifier: Programming Language :: Python :: 3.6 Classifier: Programming
+│ │ │ -Language :: Python :: 3.7 Classifier: Programming Language :: Python :: 3.8
+│ │ │ -Classifier: Programming Language :: Python :: 3.9 Classifier: Programming
+│ │ │ -Language :: Python :: 3 :: Only Description-Content-Type: text/markdown
+│ │ │ -License-File: LICENSE
+│ │ │ +Image Annotation,Machine Learning Classifier: Development Status :: 5 -
+│ │ │ +Production/Stable Classifier: Intended Audience :: Developers Classifier:
+│ │ │ +Intended Audience :: Science/Research Classifier: Natural Language :: English
+│ │ │ +Classifier: Operating System :: OS Independent Classifier: Programming Language
+│ │ │ +:: Python Classifier: Programming Language :: Python :: 3.5 Classifier:
+│ │ │ +Programming Language :: Python :: 3.6 Classifier: Programming Language ::
+│ │ │ +Python :: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+│ │ │ +Programming Language :: Python :: 3.9 Classifier: Programming Language ::
+│ │ │ +Python :: 3 :: Only Description-Content-Type: text/markdown License-File:
+│ │ │ +LICENSE
+│ │ │       ****** [https://github.com/wkentaro/labelme/blob/main/labelme/icons/
+│ │ │                                icon.png?raw=true]
+│ │ │                                  labelme ******
+│ │ │                  *** Image Polygonal Annotation with Python ***
+│ │ │     [https://img.shields.io/pypi/v/labelme.svg] [https://img.shields.io/pypi/
+│ │ │    pyversions/labelme.svg] [https://github.com/wkentaro/labelme/workflows/ci/
+│ │ │                         badge.svg?branch=main&event=push]
+│ │   --- labelme-5.1.1/README.md
+│ ├── +++ labelme-5.2.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/__init__.py
+│ ├── +++ labelme-5.2.0/labelme/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -8,15 +8,15 @@
+│ │  
+│ │  __appname__ = "labelme"
+│ │  
+│ │  # Semantic Versioning 2.0.0: https://semver.org/
+│ │  # 1. MAJOR version when you make incompatible API changes;
+│ │  # 2. MINOR version when you add functionality in a backwards-compatible manner;
+│ │  # 3. PATCH version when you make backwards-compatible bug fixes.
+│ │ -__version__ = "5.1.1"
+│ │ +__version__ = "5.2.0"
+│ │  
+│ │  QT4 = QT_VERSION[0] == "4"
+│ │  QT5 = QT_VERSION[0] == "5"
+│ │  del QT_VERSION
+│ │  
+│ │  PY2 = sys.version[0] == "2"
+│ │  PY3 = sys.version[0] == "3"
+│ │   --- labelme-5.1.1/labelme/__main__.py
+│ ├── +++ labelme-5.2.0/labelme/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/app.py
+│ ├── +++ labelme-5.2.0/labelme/app.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1051,32 +1051,34 @@
+│ │          if not item:
+│ │              item = self.currentItem()
+│ │          if item is None:
+│ │              return
+│ │          shape = item.shape()
+│ │          if shape is None:
+│ │              return
+│ │ -        text, flags, group_id = self.labelDialog.popUp(
+│ │ +        text, flags, group_id, description = self.labelDialog.popUp(
+│ │              text=shape.label,
+│ │              flags=shape.flags,
+│ │              group_id=shape.group_id,
+│ │ +            description=shape.description,
+│ │          )
+│ │          if text is None:
+│ │              return
+│ │          if not self.validateLabel(text):
+│ │              self.errorMessage(
+│ │                  self.tr("Invalid label"),
+│ │                  self.tr("Invalid label '{}' with validation type '{}'").format(
+│ │                      text, self._config["validate_label"]
+│ │                  ),
+│ │              )
+│ │              return
+│ │          shape.label = text
+│ │          shape.flags = flags
+│ │          shape.group_id = group_id
+│ │ +        shape.description = description
+│ │  
+│ │          self._update_shape_color(shape)
+│ │          if shape.group_id is None:
+│ │              item.setText(
+│ │                  '{} <font color="#{:02x}{:02x}{:02x}">●</font>'.format(
+│ │                      html.escape(shape.label), *shape.fill_color.getRgb()[:3]
+│ │                  )
+│ │ @@ -1200,25 +1202,27 @@
+│ │      def loadLabels(self, shapes):
+│ │          s = []
+│ │          for shape in shapes:
+│ │              label = shape["label"]
+│ │              points = shape["points"]
+│ │              shape_type = shape["shape_type"]
+│ │              flags = shape["flags"]
+│ │ +            description = shape["description"]
+│ │              group_id = shape["group_id"]
+│ │              other_data = shape["other_data"]
+│ │  
+│ │              if not points:
+│ │                  # skip point-empty shape
+│ │                  continue
+│ │  
+│ │              shape = Shape(
+│ │                  label=label,
+│ │                  shape_type=shape_type,
+│ │                  group_id=group_id,
+│ │ +                description=description,
+│ │              )
+│ │              for x, y in points:
+│ │                  shape.addPoint(QtCore.QPointF(x, y))
+│ │              shape.close()
+│ │  
+│ │              default_flags = {}
+│ │              if self._config["label_flags"]:
+│ │ @@ -1247,14 +1251,15 @@
+│ │          def format_shape(s):
+│ │              data = s.other_data.copy()
+│ │              data.update(
+│ │                  dict(
+│ │                      label=s.label.encode("utf-8") if PY2 else s.label,
+│ │                      points=[(p.x(), p.y()) for p in s.points],
+│ │                      group_id=s.group_id,
+│ │ +                    description=s.description,
+│ │                      shape_type=s.shape_type,
+│ │                      flags=s.flags,
+│ │                  )
+│ │              )
+│ │              return data
+│ │  
+│ │          shapes = [format_shape(item.shape()) for item in self.labelList]
+│ │ @@ -1342,15 +1347,15 @@
+│ │          text = None
+│ │          if items:
+│ │              text = items[0].data(Qt.UserRole)
+│ │          flags = {}
+│ │          group_id = None
+│ │          if self._config["display_label_popup"] or not text:
+│ │              previous_text = self.labelDialog.edit.text()
+│ │ -            text, flags, group_id = self.labelDialog.popUp(text)
+│ │ +            text, flags, group_id, description = self.labelDialog.popUp(text)
+│ │              if not text:
+│ │                  self.labelDialog.edit.setText(previous_text)
+│ │  
+│ │          if text and not self.validateLabel(text):
+│ │              self.errorMessage(
+│ │                  self.tr("Invalid label"),
+│ │                  self.tr("Invalid label '{}' with validation type '{}'").format(
+│ │ @@ -1358,14 +1363,15 @@
+│ │                  ),
+│ │              )
+│ │              text = ""
+│ │          if text:
+│ │              self.labelList.clearSelection()
+│ │              shape = self.canvas.setLastLabel(text, flags)
+│ │              shape.group_id = group_id
+│ │ +            shape.description = description
+│ │              self.addLabel(shape)
+│ │              self.actions.editMode.setEnabled(True)
+│ │              self.actions.undoLastPoint.setEnabled(False)
+│ │              self.actions.undo.setEnabled(True)
+│ │              self.setDirty()
+│ │          else:
+│ │              self.canvas.undoLastLine()
+│ │   --- labelme-5.1.1/labelme/cli/draw_json.py
+│ ├── +++ labelme-5.2.0/labelme/cli/draw_json.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/cli/draw_label_png.py
+│ ├── +++ labelme-5.2.0/labelme/cli/draw_label_png.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/cli/json_to_dataset.py
+│ ├── +++ labelme-5.2.0/labelme/cli/json_to_dataset.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/cli/on_docker.py
+│ ├── +++ labelme-5.2.0/labelme/cli/on_docker.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/config/__init__.py
+│ ├── +++ labelme-5.2.0/labelme/config/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/config/default_config.yaml
+│ ├── +++ labelme-5.2.0/labelme/config/default_config.yaml
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/cancel.png
+│ ├── +++ labelme-5.2.0/labelme/icons/cancel.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/close.png
+│ ├── +++ labelme-5.2.0/labelme/icons/close.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/color-line.png
+│ ├── +++ labelme-5.2.0/labelme/icons/color-line.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/color.png
+│ ├── +++ labelme-5.2.0/labelme/icons/color.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/copy.png
+│ ├── +++ labelme-5.2.0/labelme/icons/copy.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/delete.png
+│ ├── +++ labelme-5.2.0/labelme/icons/delete.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/done.png
+│ ├── +++ labelme-5.2.0/labelme/icons/done.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/done.svg
+│ ├── +++ labelme-5.2.0/labelme/icons/done.svg
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/edit.png
+│ ├── +++ labelme-5.2.0/labelme/icons/edit.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/expert.png
+│ ├── +++ labelme-5.2.0/labelme/icons/expert.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/eye.png
+│ ├── +++ labelme-5.2.0/labelme/icons/eye.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/feBlend-icon.png
+│ ├── +++ labelme-5.2.0/labelme/icons/feBlend-icon.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/file.png
+│ ├── +++ labelme-5.2.0/labelme/icons/file.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/fit-width.png
+│ ├── +++ labelme-5.2.0/labelme/icons/fit-width.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/fit-window.png
+│ ├── +++ labelme-5.2.0/labelme/icons/fit-window.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/fit.png
+│ ├── +++ labelme-5.2.0/labelme/icons/fit.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/help.png
+│ ├── +++ labelme-5.2.0/labelme/icons/help.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/icon.icns
+│ ├── +++ labelme-5.2.0/labelme/icons/icon.icns
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/icon.ico
+│ ├── +++ labelme-5.2.0/labelme/icons/icon.ico
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/icon.png
+│ ├── +++ labelme-5.2.0/labelme/icons/icon.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/labels.png
+│ ├── +++ labelme-5.2.0/labelme/icons/labels.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/labels.svg
+│ ├── +++ labelme-5.2.0/labelme/icons/labels.svg
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/new.png
+│ ├── +++ labelme-5.2.0/labelme/icons/new.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/next.png
+│ ├── +++ labelme-5.2.0/labelme/icons/next.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/objects.png
+│ ├── +++ labelme-5.2.0/labelme/icons/objects.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/open.png
+│ ├── +++ labelme-5.2.0/labelme/icons/open.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/open.svg
+│ ├── +++ labelme-5.2.0/labelme/icons/open.svg
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/prev.png
+│ ├── +++ labelme-5.2.0/labelme/icons/prev.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/quit.png
+│ ├── +++ labelme-5.2.0/labelme/icons/quit.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/save-as.png
+│ ├── +++ labelme-5.2.0/labelme/icons/save-as.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/save-as.svg
+│ ├── +++ labelme-5.2.0/labelme/icons/save-as.svg
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/save.png
+│ ├── +++ labelme-5.2.0/labelme/icons/save.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/save.svg
+│ ├── +++ labelme-5.2.0/labelme/icons/save.svg
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/undo-cross.png
+│ ├── +++ labelme-5.2.0/labelme/icons/undo-cross.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/undo.png
+│ ├── +++ labelme-5.2.0/labelme/icons/undo.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/zoom-in.png
+│ ├── +++ labelme-5.2.0/labelme/icons/zoom-in.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/zoom-out.png
+│ ├── +++ labelme-5.2.0/labelme/icons/zoom-out.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/icons/zoom.png
+│ ├── +++ labelme-5.2.0/labelme/icons/zoom.png
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/label_file.py
+│ ├── +++ labelme-5.2.0/labelme/label_file.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -79,14 +79,15 @@
+│ │          ]
+│ │          shape_keys = [
+│ │              "label",
+│ │              "points",
+│ │              "group_id",
+│ │              "shape_type",
+│ │              "flags",
+│ │ +            "description",
+│ │          ]
+│ │          try:
+│ │              with open(filename, "r") as f:
+│ │                  data = json.load(f)
+│ │              version = data.get("version")
+│ │              if version is None:
+│ │                  logger.warning(
+│ │ @@ -120,14 +121,15 @@
+│ │              )
+│ │              shapes = [
+│ │                  dict(
+│ │                      label=s["label"],
+│ │                      points=s["points"],
+│ │                      shape_type=s.get("shape_type", "polygon"),
+│ │                      flags=s.get("flags", {}),
+│ │ +                    description=s.get("description"),
+│ │                      group_id=s.get("group_id"),
+│ │                      other_data={
+│ │                          k: v for k, v in s.items() if k not in shape_keys
+│ │                      },
+│ │                  )
+│ │                  for s in data["shapes"]
+│ │              ]
+│ │   --- labelme-5.1.1/labelme/logger.py
+│ ├── +++ labelme-5.2.0/labelme/logger.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/shape.py
+│ ├── +++ labelme-5.2.0/labelme/shape.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,13 +1,14 @@
+│ │  import copy
+│ │  import math
+│ │  
+│ │  from qtpy import QtCore
+│ │  from qtpy import QtGui
+│ │  
+│ │ +from labelme.logger import logger
+│ │  import labelme.utils
+│ │  
+│ │  
+│ │  # TODO(unknown):
+│ │  # - [opt] Store paths instead of creating new ones at each paint.
+│ │  
+│ │  
+│ │ @@ -47,22 +48,24 @@
+│ │      def __init__(
+│ │          self,
+│ │          label=None,
+│ │          line_color=None,
+│ │          shape_type=None,
+│ │          flags=None,
+│ │          group_id=None,
+│ │ +        description=None,
+│ │      ):
+│ │          self.label = label
+│ │          self.group_id = group_id
+│ │          self.points = []
+│ │          self.fill = False
+│ │          self.selected = False
+│ │          self.shape_type = shape_type
+│ │          self.flags = flags
+│ │ +        self.description = description
+│ │          self.other_data = {}
+│ │  
+│ │          self._highlightIndex = None
+│ │          self._highlightMode = self.NEAR_VERTEX
+│ │          self._highlightSettings = {
+│ │              self.NEAR_VERTEX: (4, self.P_ROUND),
+│ │              self.MOVE_VERTEX: (1.5, self.P_SQUARE),
+│ │ @@ -114,14 +117,37 @@
+│ │              return self.points.pop()
+│ │          return None
+│ │  
+│ │      def insertPoint(self, i, point):
+│ │          self.points.insert(i, point)
+│ │  
+│ │      def removePoint(self, i):
+│ │ +        if not self.canAddPoint():
+│ │ +            logger.warning(
+│ │ +                "Cannot remove point from: shape_type=%r",
+│ │ +                self.shape_type,
+│ │ +            )
+│ │ +            return
+│ │ +
+│ │ +        if self.shape_type == "polygon" and len(self.points) <= 3:
+│ │ +            logger.warning(
+│ │ +                "Cannot remove point from: shape_type=%r, len(points)=%d",
+│ │ +                self.shape_type,
+│ │ +                len(self.points),
+│ │ +            )
+│ │ +            return
+│ │ +
+│ │ +        if self.shape_type == "linestrip" and len(self.points) <= 2:
+│ │ +            logger.warning(
+│ │ +                "Cannot remove point from: shape_type=%r, len(points)=%d",
+│ │ +                self.shape_type,
+│ │ +                len(self.points),
+│ │ +            )
+│ │ +            return
+│ │ +
+│ │          self.points.pop(i)
+│ │  
+│ │      def isClosed(self):
+│ │          return self._closed
+│ │  
+│ │      def setOpen(self):
+│ │          self._closed = False
+│ │   --- labelme-5.1.1/labelme/testing.py
+│ ├── +++ labelme-5.2.0/labelme/testing.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/utils/__init__.py
+│ ├── +++ labelme-5.2.0/labelme/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/utils/_io.py
+│ ├── +++ labelme-5.2.0/labelme/utils/_io.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/utils/image.py
+│ ├── +++ labelme-5.2.0/labelme/utils/image.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/utils/qt.py
+│ ├── +++ labelme-5.2.0/labelme/utils/qt.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/utils/shape.py
+│ ├── +++ labelme-5.2.0/labelme/utils/shape.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/brightness_contrast_dialog.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/brightness_contrast_dialog.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/canvas.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/canvas.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -552,18 +552,18 @@
+│ │          shape.moveVertexBy(index, pos - point)
+│ │  
+│ │      def boundedMoveShapes(self, shapes, pos):
+│ │          if self.outOfPixmap(pos):
+│ │              return False  # No need to move
+│ │          o1 = pos + self.offsets[0]
+│ │          if self.outOfPixmap(o1):
+│ │ -            pos -= QtCore.QPoint(min(0, o1.x()), min(0, o1.y()))
+│ │ +            pos -= QtCore.QPointF(min(0, o1.x()), min(0, o1.y()))
+│ │          o2 = pos + self.offsets[1]
+│ │          if self.outOfPixmap(o2):
+│ │ -            pos += QtCore.QPoint(
+│ │ +            pos += QtCore.QPointF(
+│ │                  min(0, self.pixmap.width() - o2.x()),
+│ │                  min(0, self.pixmap.height() - o2.y()),
+│ │              )
+│ │          # XXX: The next line tracks the new position of the cursor
+│ │          # relative to the shape, but also results in making it
+│ │          # a bit "shaky" when nearing the border and allows it to
+│ │          # go outside of the shape's area for some reason.
+│ │   --- labelme-5.1.1/labelme/widgets/color_dialog.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/color_dialog.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/file_dialog_preview.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/file_dialog_preview.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/label_dialog.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/label_dialog.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -89,24 +89,30 @@
+│ │              self.labelList.sortItems()
+│ │          else:
+│ │              self.labelList.setDragDropMode(
+│ │                  QtWidgets.QAbstractItemView.InternalMove
+│ │              )
+│ │          self.labelList.currentItemChanged.connect(self.labelSelected)
+│ │          self.labelList.itemDoubleClicked.connect(self.labelDoubleClicked)
+│ │ +        self.labelList.setFixedHeight(150)
+│ │          self.edit.setListWidget(self.labelList)
+│ │          layout.addWidget(self.labelList)
+│ │          # label_flags
+│ │          if flags is None:
+│ │              flags = {}
+│ │          self._flags = flags
+│ │          self.flagsLayout = QtWidgets.QVBoxLayout()
+│ │          self.resetFlags()
+│ │          layout.addItem(self.flagsLayout)
+│ │          self.edit.textChanged.connect(self.updateFlags)
+│ │ +        # text edit
+│ │ +        self.editDescription = QtWidgets.QTextEdit()
+│ │ +        self.editDescription.setPlaceholderText("Label description")
+│ │ +        self.editDescription.setFixedHeight(50)
+│ │ +        layout.addWidget(self.editDescription)
+│ │          self.setLayout(layout)
+│ │          # completion
+│ │          completer = QtWidgets.QCompleter()
+│ │          if not QT5 and completion != "startswith":
+│ │              logger.warn(
+│ │                  "completion other than 'startswith' is only "
+│ │                  "supported with Qt5. Using 'startswith'"
+│ │ @@ -196,26 +202,32 @@
+│ │  
+│ │      def getGroupId(self):
+│ │          group_id = self.edit_group_id.text()
+│ │          if group_id:
+│ │              return int(group_id)
+│ │          return None
+│ │  
+│ │ -    def popUp(self, text=None, move=True, flags=None, group_id=None):
+│ │ +    def popUp(
+│ │ +        self, text=None, move=True, flags=None, group_id=None, description=None
+│ │ +    ):
+│ │          if self._fit_to_content["row"]:
+│ │              self.labelList.setMinimumHeight(
+│ │                  self.labelList.sizeHintForRow(0) * self.labelList.count() + 2
+│ │              )
+│ │          if self._fit_to_content["column"]:
+│ │              self.labelList.setMinimumWidth(
+│ │                  self.labelList.sizeHintForColumn(0) + 2
+│ │              )
+│ │          # if text is None, the previous label in self.edit is kept
+│ │          if text is None:
+│ │              text = self.edit.text()
+│ │ +        # description is always initialized by empty text c.f., self.edit.text
+│ │ +        if description is None:
+│ │ +            description = ""
+│ │ +        self.editDescription.setPlainText(description)
+│ │          if flags:
+│ │              self.setFlags(flags)
+│ │          else:
+│ │              self.resetFlags(text)
+│ │          self.edit.setText(text)
+│ │          self.edit.setSelection(0, len(text))
+│ │          if group_id is None:
+│ │ @@ -229,10 +241,15 @@
+│ │              self.labelList.setCurrentItem(items[0])
+│ │              row = self.labelList.row(items[0])
+│ │              self.edit.completer().setCurrentRow(row)
+│ │          self.edit.setFocus(QtCore.Qt.PopupFocusReason)
+│ │          if move:
+│ │              self.move(QtGui.QCursor.pos())
+│ │          if self.exec_():
+│ │ -            return self.edit.text(), self.getFlags(), self.getGroupId()
+│ │ +            return (
+│ │ +                self.edit.text(),
+│ │ +                self.getFlags(),
+│ │ +                self.getGroupId(),
+│ │ +                self.editDescription.toPlainText(),
+│ │ +            )
+│ │          else:
+│ │ -            return None, None, None
+│ │ +            return None, None, None, None
+│ │   --- labelme-5.1.1/labelme/widgets/label_list_widget.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/label_list_widget.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/tool_bar.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/tool_bar.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/unique_label_qlist_widget.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/unique_label_qlist_widget.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme/widgets/zoom_widget.py
+│ ├── +++ labelme-5.2.0/labelme/widgets/zoom_widget.py
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/labelme.egg-info/PKG-INFO
+│ ├── +++ labelme-5.2.0/labelme.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,17 +1,16 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: labelme
+│ │ -Version: 5.1.1
+│ │ +Version: 5.2.0
+│ │  Summary: Image Polygonal Annotation with Python
+│ │  Home-page: https://github.com/wkentaro/labelme
+│ │  Author: Kentaro Wada
+│ │  Author-email: www.kentaro.wada@gmail.com
+│ │  License: GPLv3
+│ │  Keywords: Image Annotation,Machine Learning
+│ │ -Platform: UNKNOWN
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: Intended Audience :: Science/Research
+│ │  Classifier: Natural Language :: English
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3.5
+│ │ @@ -237,8 +236,7 @@
+│ │  MPLBACKEND='agg' pytest -vsx tests/
+│ │  ```
+│ │  
+│ │  
+│ │  ## Acknowledgement
+│ │  
+│ │  This repo is the fork of [mpitid/pylabelme](https://github.com/mpitid/pylabelme).
+│ │ -
+│ │ ├── html2text {}
+│ │ │ @@ -1,20 +1,20 @@
+│ │ │ -Metadata-Version: 2.1 Name: labelme Version: 5.1.1 Summary: Image Polygonal
+│ │ │ +Metadata-Version: 2.1 Name: labelme Version: 5.2.0 Summary: Image Polygonal
+│ │ │  Annotation with Python Home-page: https://github.com/wkentaro/labelme Author:
+│ │ │  Kentaro Wada Author-email: www.kentaro.wada@gmail.com License: GPLv3 Keywords:
+│ │ │ -Image Annotation,Machine Learning Platform: UNKNOWN Classifier: Development
+│ │ │ -Status :: 5 - Production/Stable Classifier: Intended Audience :: Developers
+│ │ │ -Classifier: Intended Audience :: Science/Research Classifier: Natural Language
+│ │ │ -:: English Classifier: Operating System :: OS Independent Classifier:
+│ │ │ -Programming Language :: Python Classifier: Programming Language :: Python ::
+│ │ │ -3.5 Classifier: Programming Language :: Python :: 3.6 Classifier: Programming
+│ │ │ -Language :: Python :: 3.7 Classifier: Programming Language :: Python :: 3.8
+│ │ │ -Classifier: Programming Language :: Python :: 3.9 Classifier: Programming
+│ │ │ -Language :: Python :: 3 :: Only Description-Content-Type: text/markdown
+│ │ │ -License-File: LICENSE
+│ │ │ +Image Annotation,Machine Learning Classifier: Development Status :: 5 -
+│ │ │ +Production/Stable Classifier: Intended Audience :: Developers Classifier:
+│ │ │ +Intended Audience :: Science/Research Classifier: Natural Language :: English
+│ │ │ +Classifier: Operating System :: OS Independent Classifier: Programming Language
+│ │ │ +:: Python Classifier: Programming Language :: Python :: 3.5 Classifier:
+│ │ │ +Programming Language :: Python :: 3.6 Classifier: Programming Language ::
+│ │ │ +Python :: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+│ │ │ +Programming Language :: Python :: 3.9 Classifier: Programming Language ::
+│ │ │ +Python :: 3 :: Only Description-Content-Type: text/markdown License-File:
+│ │ │ +LICENSE
+│ │ │       ****** [https://github.com/wkentaro/labelme/blob/main/labelme/icons/
+│ │ │                                icon.png?raw=true]
+│ │ │                                  labelme ******
+│ │ │                  *** Image Polygonal Annotation with Python ***
+│ │ │     [https://img.shields.io/pypi/v/labelme.svg] [https://img.shields.io/pypi/
+│ │ │    pyversions/labelme.svg] [https://github.com/wkentaro/labelme/workflows/ci/
+│ │ │                         badge.svg?branch=main&event=push]
+│ │   --- labelme-5.1.1/labelme.egg-info/SOURCES.txt
+│ ├── +++ labelme-5.2.0/labelme.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- labelme-5.1.1/setup.py
+│ ├── +++ labelme-5.2.0/setup.py
+│ │┄ Files identical despite different names

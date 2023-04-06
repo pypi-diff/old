@@ -1,0 +1,145 @@
+--- tmp/callisto-python-0.0.6.tar.gz
++++ tmp/callisto-python-0.0.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/callisto-python-0.0.6.tar", last modified: Tue Mar 28 14:13:47 2023, max compression
+│ +gzip compressed data, was "dist/callisto-python-0.0.7.tar", last modified: Thu Apr  6 11:06:37 2023, max compression
+│   --- callisto-python-0.0.6.tar
+├── +++ callisto-python-0.0.7.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-03-28 14:13:47.000000 callisto-python-0.0.6/
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)       43 2023-02-16 17:57:49.000000 callisto-python-0.0.6/README.md
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      811 2023-02-16 17:57:49.000000 callisto-python-0.0.6/setup.py
+│ │ -drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)       36 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/requires.txt
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      395 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)        1 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)        9 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/top_level.txt
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      506 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto_python.egg-info/PKG-INFO
+│ │ -drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-03-28 14:13:47.000000 callisto-python-0.0.6/callisto/
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)       88 2023-03-07 15:42:30.000000 callisto-python-0.0.6/callisto/version.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      130 2023-02-16 17:57:49.000000 callisto-python-0.0.6/callisto/command.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)     1976 2023-03-23 12:33:49.000000 callisto-python-0.0.6/callisto/pandas_statistics.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)     1770 2023-02-16 17:57:49.000000 callisto-python-0.0.6/callisto/download.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)    27644 2023-02-27 13:17:00.000000 callisto-python-0.0.6/callisto/var_utils.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      518 2023-02-16 17:57:49.000000 callisto-python-0.0.6/callisto/notification.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)     2182 2023-03-07 15:42:30.000000 callisto-python-0.0.6/callisto/stats_utils.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      423 2023-03-07 15:42:30.000000 callisto-python-0.0.6/callisto/__init__.py
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)       38 2023-03-28 14:13:47.000000 callisto-python-0.0.6/setup.cfg
+│ │ --rw-r--r--   0 teamcity  (1001) teamcity  (1001)      506 2023-03-28 14:13:47.000000 callisto-python-0.0.6/PKG-INFO
+│ │ +drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-04-06 11:06:37.000000 callisto-python-0.0.7/
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)       43 2023-02-16 17:57:49.000000 callisto-python-0.0.7/README.md
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      811 2023-02-16 17:57:49.000000 callisto-python-0.0.7/setup.py
+│ │ +drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)       36 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/requires.txt
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      395 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)        1 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)        9 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      506 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto_python.egg-info/PKG-INFO
+│ │ +drwxr-xr-x   0 teamcity  (1001) teamcity  (1001)        0 2023-04-06 11:06:37.000000 callisto-python-0.0.7/callisto/
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)       88 2023-04-06 11:05:41.000000 callisto-python-0.0.7/callisto/version.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      130 2023-02-16 17:57:49.000000 callisto-python-0.0.7/callisto/command.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)     1976 2023-03-23 12:33:49.000000 callisto-python-0.0.7/callisto/pandas_statistics.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)     1770 2023-02-16 17:57:49.000000 callisto-python-0.0.7/callisto/download.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)    27644 2023-02-27 13:17:00.000000 callisto-python-0.0.7/callisto/var_utils.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      518 2023-02-16 17:57:49.000000 callisto-python-0.0.7/callisto/notification.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)     2676 2023-04-06 10:21:46.000000 callisto-python-0.0.7/callisto/stats_utils.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      423 2023-03-07 15:42:30.000000 callisto-python-0.0.7/callisto/__init__.py
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)       38 2023-04-06 11:06:37.000000 callisto-python-0.0.7/setup.cfg
+│ │ +-rw-r--r--   0 teamcity  (1001) teamcity  (1001)      506 2023-04-06 11:06:37.000000 callisto-python-0.0.7/PKG-INFO
+│ │   --- callisto-python-0.0.6/setup.py
+│ ├── +++ callisto-python-0.0.7/setup.py
+│ │┄ Files identical despite different names
+│ │   --- callisto-python-0.0.6/callisto/pandas_statistics.py
+│ ├── +++ callisto-python-0.0.7/callisto/pandas_statistics.py
+│ │┄ Files identical despite different names
+│ │   --- callisto-python-0.0.6/callisto/download.py
+│ ├── +++ callisto-python-0.0.7/callisto/download.py
+│ │┄ Files identical despite different names
+│ │   --- callisto-python-0.0.6/callisto/var_utils.py
+│ ├── +++ callisto-python-0.0.7/callisto/var_utils.py
+│ │┄ Files identical despite different names
+│ │   --- callisto-python-0.0.6/callisto/notification.py
+│ ├── +++ callisto-python-0.0.7/callisto/notification.py
+│ │┄ Files identical despite different names
+│ │   --- callisto-python-0.0.6/callisto/stats_utils.py
+│ ├── +++ callisto-python-0.0.7/callisto/stats_utils.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -17,40 +17,48 @@
+│ │          "name": "Error getting statistical summary",
+│ │          "type": type(e).__name__,
+│ │          "summary": str(e),
+│ │          "error": tuple(map(lambda x: [x], traceback_lines)),
+│ │      }
+│ │  
+│ │  
+│ │ -def get_stat_summary(obj, name):
+│ │ +def get_stat_summary(obj, name, column):
+│ │      obj_type = type(obj)
+│ │      stats = {}
+│ │  
+│ │      # pandas dataframe
+│ │      if obj_type.__name__ == "DataFrame":
+│ │ -        for col_name in obj:
+│ │ -            col = obj[col_name]
+│ │ -            stats[col_name] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │ -
+│ │ +        if column is None:
+│ │ +            for col_name in obj:
+│ │ +                col = obj[col_name]
+│ │ +                stats[col_name] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │ +        elif column in obj:
+│ │ +            col = obj[column]
+│ │ +            stats[column] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │      # pandas series
+│ │      elif obj_type.__name__ == "Series":
+│ │          stats[name] = get_single_column_stats(obj, DEFAULT_TOP_VALUES)
+│ │  
+│ │      # numpy 1d array
+│ │      elif obj_type.__name__ == "ndarray" and obj.ndim == 1:
+│ │          col = pd.Series(obj)
+│ │          stats["0"] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │  
+│ │      # numpy 2d array
+│ │      elif obj_type.__name__ == "ndarray" and obj.ndim == 2:
+│ │ -        for col_index in range(0, obj.shape[1]):
+│ │ -            col_name = col_index
+│ │ -            col = pd.Series(obj[:, col_index])
+│ │ -            stats[col_name] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │ -
+│ │ +        if column is None:
+│ │ +            for col_index in range(0, obj.shape[1]):
+│ │ +                col_name = col_index
+│ │ +                col = pd.Series(obj[:, col_index])
+│ │ +                stats[col_name] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │ +        else:
+│ │ +            column_int = int(column)
+│ │ +            if column_int >= 0 and column_int < obj.shape[1]:
+│ │ +                col = pd.Series(obj[:, column_int])
+│ │ +                stats[column] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │      # list
+│ │      elif obj_type.__name__ == "list" or obj_type.__name__ == "tuple":
+│ │          col = pd.Series(obj)
+│ │          stats[name] = get_single_column_stats(col, DEFAULT_TOP_VALUES)
+│ │  
+│ │      # dictionary
+│ │      elif obj_type.__name__ == "dict":
+│ │ @@ -62,15 +70,16 @@
+│ │  
+│ │      return stats
+│ │  
+│ │  
+│ │  def get_var_stats(
+│ │      obj,
+│ │      name,
+│ │ +    column=None,
+│ │      **kwargs,
+│ │  ):
+│ │      try:
+│ │ -        stats = get_stat_summary(obj, name)
+│ │ +        stats = get_stat_summary(obj, name, column)
+│ │      except Exception as e:
+│ │          stats = create_exception_stats(e)
+│ │  
+│ │      return json.dumps(stats, default=str)

@@ -1,0 +1,238 @@
+# Comparing `tmp/get_html_from_safari-0.2.2.tar.gz` & `tmp/get_html_from_safari-0.2.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "get_html_from_safari-0.2.2.tar", last modified: Thu Apr  6 00:54:26 2023, max compression
++gzip compressed data, was "get_html_from_safari-0.2.3.tar", last modified: Thu Apr  6 11:00:38 2023, max compression
+```
+
+## Comparing `get_html_from_safari-0.2.2.tar` & `get_html_from_safari-0.2.3.tar`
+
+### file list
+
+```diff
+@@ -1,43 +1,43 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/
+--rw-r--r--   0 runner    (1001) docker     (123)      152 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/AUTHORS.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     3664 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/CONTRIBUTING.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       89 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/HISTORY.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      585 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     3367 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2419 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/README.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.631911 get_html_from_safari-0.2.2/docs/
+--rw-r--r--   0 runner    (1001) docker     (123)      621 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/Makefile
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/authors.rst
+--rwxr-xr-x   0 runner    (1001) docker     (123)     4950 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/conf.py
+--rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/contributing.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/history.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      317 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/index.rst
+--rw-r--r--   0 runner    (1001) docker     (123)     1218 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/installation.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      818 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/make.bat
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/readme.rst
+--rw-r--r--   0 runner    (1001) docker     (123)       95 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/docs/usage.rst
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.631911 get_html_from_safari-0.2.2/get_html_from_safari/
+--rw-r--r--   0 runner    (1001) docker     (123)      134 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/
+--rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/fetch_html.scpt
+--rwxr-xr-x   0 runner    (1001) docker     (123)       61 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_activate.scpt
+--rwxr-xr-x   0 runner    (1001) docker     (123)      192 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_grab_source.scpt
+--rwxr-xr-x   0 runner    (1001) docker     (123)      153 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_has_windows.scpt
+--rwxr-xr-x   0 runner    (1001) docker     (123)      173 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_is_running.scpt
+--rwxr-xr-x   0 runner    (1001) docker     (123)       35 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_quit.scpt
+--rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/applescripts/safari_window_exists.scpt
+--rw-r--r--   0 runner    (1001) docker     (123)      371 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/get_html.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1619 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/get_html_from_safari/get_html_from_safari.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     3367 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (123)       21 2023-04-06 00:54:26.000000 get_html_from_safari-0.2.2/get_html_from_safari.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      407 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/setup.cfg
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1647 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 00:54:26.635911 get_html_from_safari-0.2.2/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)       50 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      821 2023-04-06 00:54:16.000000 get_html_from_safari-0.2.2/tests/test_get_html_from_safari.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/
++-rw-r--r--   0 runner    (1001) docker     (123)      152 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/AUTHORS.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     3664 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/CONTRIBUTING.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       89 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/HISTORY.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      585 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      262 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     3362 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2419 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/README.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.169536 get_html_from_safari-0.2.3/docs/
++-rw-r--r--   0 runner    (1001) docker     (123)      621 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/Makefile
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/authors.rst
++-rwxr-xr-x   0 runner    (1001) docker     (123)     4950 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/conf.py
++-rw-r--r--   0 runner    (1001) docker     (123)       33 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/contributing.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/history.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      317 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     1218 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/installation.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      818 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/make.bat
++-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/readme.rst
++-rw-r--r--   0 runner    (1001) docker     (123)       95 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/docs/usage.rst
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/get_html_from_safari/
++-rw-r--r--   0 runner    (1001) docker     (123)      134 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/
++-rwxr-xr-x   0 runner    (1001) docker     (123)      504 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/fetch_html.scpt
++-rwxr-xr-x   0 runner    (1001) docker     (123)       61 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_activate.scpt
++-rwxr-xr-x   0 runner    (1001) docker     (123)      192 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_grab_source.scpt
++-rwxr-xr-x   0 runner    (1001) docker     (123)      153 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_has_windows.scpt
++-rwxr-xr-x   0 runner    (1001) docker     (123)      173 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_is_running.scpt
++-rwxr-xr-x   0 runner    (1001) docker     (123)       35 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_quit.scpt
++-rw-r--r--   0 runner    (1001) docker     (123)      154 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/applescripts/safari_window_exists.scpt
++-rw-r--r--   0 runner    (1001) docker     (123)      371 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/get_html.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1619 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/get_html_from_safari/get_html_from_safari.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3362 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1074 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       71 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (123)       21 2023-04-06 11:00:38.000000 get_html_from_safari-0.2.3/get_html_from_safari.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      407 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/setup.cfg
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1642 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 11:00:38.173536 get_html_from_safari-0.2.3/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)       50 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      821 2023-04-06 11:00:22.000000 get_html_from_safari-0.2.3/tests/test_get_html_from_safari.py
+```
+
+### Comparing `get_html_from_safari-0.2.2/CONTRIBUTING.rst` & `get_html_from_safari-0.2.3/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/LICENSE` & `get_html_from_safari-0.2.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/PKG-INFO` & `get_html_from_safari-0.2.3/get_html_from_safari.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ Metadata-Version: 2.1
+-Name: get_html_from_safari
+-Version: 0.2.2
++Name: get-html-from-safari
++Version: 0.2.3
+ Summary: Get HTMl code from the Safari browser
+ Home-page: https://github.com/sdondley/get_html_from_safari
+ Author: Steve Dondley
+ Author-email: s@dondley.com
+ License: Apache Software License 2.0
+ Keywords: get_html_from_safari
+ Platform: MacOS
+-Classifier: Development Status :: 2 - Pre-Alpha
++Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: MacOS
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.6
+```
+
+### Comparing `get_html_from_safari-0.2.2/README.rst` & `get_html_from_safari-0.2.3/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/docs/Makefile` & `get_html_from_safari-0.2.3/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/docs/conf.py` & `get_html_from_safari-0.2.3/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/docs/installation.rst` & `get_html_from_safari-0.2.3/docs/installation.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/docs/make.bat` & `get_html_from_safari-0.2.3/docs/make.bat`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/get_html_from_safari/get_html_from_safari.py` & `get_html_from_safari-0.2.3/get_html_from_safari/get_html_from_safari.py`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/get_html_from_safari.egg-info/PKG-INFO` & `get_html_from_safari-0.2.3/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ Metadata-Version: 2.1
+-Name: get-html-from-safari
+-Version: 0.2.2
++Name: get_html_from_safari
++Version: 0.2.3
+ Summary: Get HTMl code from the Safari browser
+ Home-page: https://github.com/sdondley/get_html_from_safari
+ Author: Steve Dondley
+ Author-email: s@dondley.com
+ License: Apache Software License 2.0
+ Keywords: get_html_from_safari
+ Platform: MacOS
+-Classifier: Development Status :: 2 - Pre-Alpha
++Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Natural Language :: English
+ Classifier: Operating System :: MacOS :: MacOS X
+ Classifier: Operating System :: MacOS
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.6
+```
+
+### Comparing `get_html_from_safari-0.2.2/get_html_from_safari.egg-info/SOURCES.txt` & `get_html_from_safari-0.2.3/get_html_from_safari.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `get_html_from_safari-0.2.2/setup.py` & `get_html_from_safari-0.2.3/setup.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -21,15 +21,15 @@
+     package_data={"get_html_from_safari": ["applescripts/*"]},
+     entry_points={
+         'console_scripts': [
+             'html-source-get=get_html_from_safari.get_html:main',
+         ],
+     },
+     classifiers=[
+-        'Development Status :: 2 - Pre-Alpha',
++        'Development Status :: 4 - Beta',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: Apache Software License',
+         'Natural Language :: English',
+         'Operating System :: MacOS :: MacOS X',
+         'Operating System :: MacOS',
+         'Programming Language :: Python :: 3',
+         'Programming Language :: Python :: 3.6',
+@@ -44,10 +44,10 @@
+     keywords='get_html_from_safari',
+     name='get_html_from_safari',
+     packages=find_packages(include=['get_html_from_safari', 'get_html_from_safari.*']),
+     platforms='MacOS',
+     test_suite='tests',
+     tests_require=test_requirements,
+     url='https://github.com/sdondley/get_html_from_safari',
+-    version='0.2.2',
++    version='0.2.3',
+     zip_safe=False,
+ )
+```
+
+### Comparing `get_html_from_safari-0.2.2/tests/test_get_html_from_safari.py` & `get_html_from_safari-0.2.3/tests/test_get_html_from_safari.py`
+
+ * *Files identical despite different names*
+
