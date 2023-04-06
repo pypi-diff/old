@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/deduce-2.0.2.tar.gz tmp/deduce-2.0.3.tar.gz --html versions/d/deduce/2.0.2-2.0.3/index.html --text versions/d/deduce/2.0.2-2.0.3/diff.txt --markdown versions/d/deduce/2.0.2-2.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.0 KB</span></div>
+  <div><span class="source">tmp/deduce-2.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/deduce-2.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">180 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;deduce-2.0.<del>2</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;deduce-2.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.7 KB</span></div>
+    <div><span class="source">deduce-2.0.2.tar</span> vs.</div>
+    <div id="deduce--.-.-.tar"><span class="source">deduce-2.0.3.tar</span>
+      <a class="anchor" href="#deduce--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.82 KB</span></div>
+      <div id="deduce--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#deduce--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 32 lines modified</td><td colspan="2">Offset 1, 32 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7660<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>8</del><del>2</del>92<del>26</del><span class="dp">·</span>deduce-2.0.<del>2</del>/LICENSE.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7660<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>0</ins>92<ins>3</ins><ins>59</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/LICENSE.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6438<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>8</del><del>2</del>92<del>26</del><span class="dp">·</span>deduce-2.0.<del>2</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6438<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>0</ins>92<ins>3</ins><ins>59</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10189<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/config.json</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10189<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/config.json</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62362<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/first_names.txt</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62362<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/first_names.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>83<del>9</del>9<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/institutions.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>83<ins>8</ins>9<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/institutions.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26132<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/interfix_surnames.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26132<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/interfix_surnames.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1660<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/interfixes.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1660<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/interfixes.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2838<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/medical_terms.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2838<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/medical_terms.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/prefixes.txt</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>106<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/prefixes.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24182<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/residences.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24182<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/residences.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>452<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/stop_words.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>452<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/stop_words.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62481<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/surnames.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>62481<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/surnames.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6813<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/data/lookup_lists/top_1000_terms.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6813<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/data/lookup_lists/top_1000_terms.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>213<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>213<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5591<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/backwards_compat.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5591<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/backwards_compat.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7858<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/deduce.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7858<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/deduce.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5582<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/lookup_sets.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5582<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/lookup_sets.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>486<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/pattern/__init__.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>486<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/pattern/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3693<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/pattern/name.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3693<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/pattern/name.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4744<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/pattern/name_context.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4744<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/pattern/name_context.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3691<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/pattern/name_patient.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3691<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/pattern/name_patient.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1491<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/person.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1491<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/person.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/process/__init__.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/process/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2828<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/process/annotation_processing.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2828<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/process/annotation_processing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4007<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/process/annotator.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4007<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/process/annotator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1936<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/process/redact.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1936<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/process/redact.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/str/__init__.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>118<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/str/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2074<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/str/processor.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2074<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/str/processor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5053<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/tokenize.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5053<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/tokenize.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2298<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>833226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/deduce/utils.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2298<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>096359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/deduce/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1561<span class="dp">·</span>2023-0<del>3</del>-<del>28</del><span class="dp">·</span><del>14</del>:<del>56</del>:<del>18</del>.<del>837226</del><span class="dp">·</span>deduce-2.0.<del>2</del>/pyproject.toml</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1561<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>08</ins>:<ins>47</ins>:<ins>49</ins>.<ins>100359</ins><span class="dp">·</span>deduce-2.0.<ins>3</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7897<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>deduce-2.0.<del>2</del>/PKG-INFO</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7897<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>deduce-2.0.<ins>3</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/LICENSE.md</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--LICENSE.md"><span class="source">deduce-2.0.3/LICENSE.md</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--LICENSE.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/README.md</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--README.md"><span class="source">deduce-2.0.3/README.md</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/config.json</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--config.json"><span class="source">deduce-2.0.3/config.json</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--config.json">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/first_names.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-first_names.txt"><span class="source">deduce-2.0.3/data/lookup_lists/first_names.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-first_names.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">351 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/institutions.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-institutions.txt"><span class="source">deduce-2.0.3/data/lookup_lists/institutions.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-institutions.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 148, 15 lines modified</td><td colspan="2">Offset 148, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent">De<span class="dp">·</span>Wartburg</td><td class="diffline">148 </td><td class="diffpresent">De<span class="dp">·</span>Wartburg</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">De<span class="dp">·</span>Weiderij</td><td class="diffline">149 </td><td class="diffpresent">De<span class="dp">·</span>Weiderij</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent">De<span class="dp">·</span>Wielewaal</td><td class="diffline">150 </td><td class="diffpresent">De<span class="dp">·</span>Wielewaal</td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent">De<span class="dp">·</span>Wijngaard</td><td class="diffline">151 </td><td class="diffpresent">De<span class="dp">·</span>Wijngaard</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent">De<span class="dp">·</span>Wiltzangk</td><td class="diffline">152 </td><td class="diffpresent">De<span class="dp">·</span>Wiltzangk</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent">De<span class="dp">·</span>Wyngaard</td><td class="diffline">153 </td><td class="diffpresent">De<span class="dp">·</span>Wyngaard</td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent">De<span class="dp">·</span>Zwaluw</td><td class="diffline">154 </td><td class="diffpresent">De<span class="dp">·</span>Zwaluw</td></tr>
+<tr class="diffdeleted"><td class="diffline">155 </td><td class="diffpresent">Decubitus</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent">Dedoensserre</td><td class="diffline">155 </td><td class="diffpresent">Dedoensserre</td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent">Demisal<span class="dp">·</span>Communicatie</td><td class="diffline">156 </td><td class="diffpresent">Demisal<span class="dp">·</span>Communicatie</td></tr>
+<tr class="diffunmodified"><td class="diffline">158 </td><td class="diffpresent">Demuwahu</td><td class="diffline">157 </td><td class="diffpresent">Demuwahu</td></tr>
+<tr class="diffunmodified"><td class="diffline">159 </td><td class="diffpresent">Dencor<span class="dp">·</span>Company</td><td class="diffline">158 </td><td class="diffpresent">Dencor<span class="dp">·</span>Company</td></tr>
+<tr class="diffunmodified"><td class="diffline">160 </td><td class="diffpresent">Dennendal</td><td class="diffline">159 </td><td class="diffpresent">Dennendal</td></tr>
+<tr class="diffunmodified"><td class="diffline">161 </td><td class="diffpresent">Dermalink</td><td class="diffline">160 </td><td class="diffpresent">Dermalink</td></tr>
+<tr class="diffunmodified"><td class="diffline">162 </td><td class="diffpresent">Dermis</td><td class="diffline">161 </td><td class="diffpresent">Dermis</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/interfix_surnames.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-interfix_surnames.txt"><span class="source">deduce-2.0.3/data/lookup_lists/interfix_surnames.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-interfix_surnames.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/interfixes.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-interfixes.txt"><span class="source">deduce-2.0.3/data/lookup_lists/interfixes.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-interfixes.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/medical_terms.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-medical_terms.txt"><span class="source">deduce-2.0.3/data/lookup_lists/medical_terms.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-medical_terms.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/residences.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-residences.txt"><span class="source">deduce-2.0.3/data/lookup_lists/residences.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-residences.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/surnames.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-surnames.txt"><span class="source">deduce-2.0.3/data/lookup_lists/surnames.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-surnames.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">deduce-2.0.2/data/lookup_lists/top_1000_terms.txt</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--data-lookup_lists-top_----_terms.txt"><span class="source">deduce-2.0.3/data/lookup_lists/top_1000_terms.txt</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--data-lookup_lists-top_----_terms.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/backwards_compat.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-backwards_compat.py"><span class="source">deduce-2.0.3/deduce/backwards_compat.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-backwards_compat.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/deduce.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-deduce.py"><span class="source">deduce-2.0.3/deduce/deduce.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-deduce.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/lookup_sets.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-lookup_sets.py"><span class="source">deduce-2.0.3/deduce/lookup_sets.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-lookup_sets.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/pattern/name.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-pattern-name.py"><span class="source">deduce-2.0.3/deduce/pattern/name.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-pattern-name.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/pattern/name_context.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-pattern-name_context.py"><span class="source">deduce-2.0.3/deduce/pattern/name_context.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-pattern-name_context.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/pattern/name_patient.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-pattern-name_patient.py"><span class="source">deduce-2.0.3/deduce/pattern/name_patient.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-pattern-name_patient.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/person.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-person.py"><span class="source">deduce-2.0.3/deduce/person.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-person.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/process/annotation_processing.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-process-annotation_processing.py"><span class="source">deduce-2.0.3/deduce/process/annotation_processing.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-process-annotation_processing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/process/annotator.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-process-annotator.py"><span class="source">deduce-2.0.3/deduce/process/annotator.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-process-annotator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/process/redact.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-process-redact.py"><span class="source">deduce-2.0.3/deduce/process/redact.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-process-redact.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/str/processor.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-str-processor.py"><span class="source">deduce-2.0.3/deduce/str/processor.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-str-processor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/tokenize.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-tokenize.py"><span class="source">deduce-2.0.3/deduce/tokenize.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-tokenize.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">deduce-2.0.2/deduce/utils.py</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--deduce-utils.py"><span class="source">deduce-2.0.3/deduce/utils.py</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--deduce-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">540 B</span></div>
+      <div><span class="source">deduce-2.0.2/pyproject.toml</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--pyproject.toml"><span class="source">deduce-2.0.3/pyproject.toml</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;deduce&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;deduce&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2.0.<del>2</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2.0.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Deduce:<span class="dp">·</span>de-identification<span class="dp">·</span>method<span class="dp">·</span>for<span class="dp">·</span>Dutch<span class="dp">·</span>medical<span class="dp">·</span>text&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Deduce:<span class="dp">·</span>de-identification<span class="dp">·</span>method<span class="dp">·</span>for<span class="dp">·</span>Dutch<span class="dp">·</span>medical<span class="dp">·</span>text&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Vincent<span class="dp">·</span>Menger<span class="dp">·</span>&lt;vmenger@protonmail.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Vincent<span class="dp">·</span>Menger<span class="dp">·</span>&lt;vmenger@protonmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[&quot;Vincent<span class="dp">·</span>Menger<span class="dp">·</span>&lt;vmenger@protonmail.com&gt;&quot;]</td><td class="diffline">6 </td><td class="diffpresent">maintainers<span class="dp">·</span>=<span class="dp">·</span>[&quot;Vincent<span class="dp">·</span>Menger<span class="dp">·</span>&lt;vmenger@protonmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL-3.0-or-later&quot;</td><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL-3.0-or-later&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/vmenger/deduce/&quot;</td><td class="diffline">9 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/vmenger/deduce/&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;de-identification&quot;,<span class="dp">·</span>&quot;clinical<span class="dp">·</span>text&quot;,<span class="dp">·</span>&quot;dutch&quot;,<span class="dp">·</span>&quot;nlp&quot;]</td><td class="diffline">10 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;de-identification&quot;,<span class="dp">·</span>&quot;clinical<span class="dp">·</span>text&quot;,<span class="dp">·</span>&quot;dutch&quot;,<span class="dp">·</span>&quot;nlp&quot;]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">453 B</span></div>
+      <div><span class="source">deduce-2.0.2/PKG-INFO</span> vs.</div>
+      <div id="deduce--.-.-.tar---deduce--.-.--PKG-INFO"><span class="source">deduce-2.0.3/PKG-INFO</span>
+        <a class="anchor" href="#deduce--.-.-.tar---deduce--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>deduce</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>deduce</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Deduce:<span class="dp">·</span>de-identification<span class="dp">·</span>method<span class="dp">·</span>for<span class="dp">·</span>Dutch<span class="dp">·</span>medical<span class="dp">·</span>text</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Deduce:<span class="dp">·</span>de-identification<span class="dp">·</span>method<span class="dp">·</span>for<span class="dp">·</span>Dutch<span class="dp">·</span>medical<span class="dp">·</span>text</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/vmenger/deduce/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/vmenger/deduce/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3.0-or-later</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3.0-or-later</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>de-identification,clinical<span class="dp">·</span>text,dutch,nlp</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>de-identification,clinical<span class="dp">·</span>text,dutch,nlp</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Vincent<span class="dp">·</span>Menger</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Vincent<span class="dp">·</span>Menger</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>vmenger@protonmail.com</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>vmenger@protonmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Vincent<span class="dp">·</span>Menger</td><td class="diffline">10 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Vincent<span class="dp">·</span>Menger</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

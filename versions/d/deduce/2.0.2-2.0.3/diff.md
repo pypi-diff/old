@@ -1,0 +1,235 @@
+# Comparing `tmp/deduce-2.0.2.tar.gz` & `tmp/deduce-2.0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "deduce-2.0.2.tar", max compression
++gzip compressed data, was "deduce-2.0.3.tar", max compression
+```
+
+## Comparing `deduce-2.0.2.tar` & `deduce-2.0.3.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+--rw-r--r--   0        0        0     7660 2023-03-28 14:56:18.829226 deduce-2.0.2/LICENSE.md
+--rw-r--r--   0        0        0     6438 2023-03-28 14:56:18.829226 deduce-2.0.2/README.md
+--rw-r--r--   0        0        0    10189 2023-03-28 14:56:18.833226 deduce-2.0.2/config.json
+--rw-r--r--   0        0        0    62362 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/first_names.txt
+--rw-r--r--   0        0        0     8399 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/institutions.txt
+--rw-r--r--   0        0        0    26132 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/interfix_surnames.txt
+--rw-r--r--   0        0        0     1660 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/interfixes.txt
+--rw-r--r--   0        0        0     2838 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/medical_terms.txt
+--rw-r--r--   0        0        0      106 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/prefixes.txt
+--rw-r--r--   0        0        0    24182 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/residences.txt
+--rw-r--r--   0        0        0      452 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/stop_words.txt
+--rw-r--r--   0        0        0    62481 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/surnames.txt
+--rw-r--r--   0        0        0     6813 2023-03-28 14:56:18.833226 deduce-2.0.2/data/lookup_lists/top_1000_terms.txt
+--rw-r--r--   0        0        0      213 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/__init__.py
+--rw-r--r--   0        0        0     5591 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/backwards_compat.py
+--rw-r--r--   0        0        0     7858 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/deduce.py
+--rw-r--r--   0        0        0     5582 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/lookup_sets.py
+--rw-r--r--   0        0        0      486 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/pattern/__init__.py
+--rw-r--r--   0        0        0     3693 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/pattern/name.py
+--rw-r--r--   0        0        0     4744 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/pattern/name_context.py
+--rw-r--r--   0        0        0     3691 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/pattern/name_patient.py
+--rw-r--r--   0        0        0     1491 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/person.py
+--rw-r--r--   0        0        0        0 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/process/__init__.py
+--rw-r--r--   0        0        0     2828 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/process/annotation_processing.py
+--rw-r--r--   0        0        0     4007 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/process/annotator.py
+--rw-r--r--   0        0        0     1936 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/process/redact.py
+--rw-r--r--   0        0        0      118 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/str/__init__.py
+--rw-r--r--   0        0        0     2074 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/str/processor.py
+--rw-r--r--   0        0        0     5053 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/tokenize.py
+--rw-r--r--   0        0        0     2298 2023-03-28 14:56:18.833226 deduce-2.0.2/deduce/utils.py
+--rw-r--r--   0        0        0     1561 2023-03-28 14:56:18.837226 deduce-2.0.2/pyproject.toml
+--rw-r--r--   0        0        0     7897 1970-01-01 00:00:00.000000 deduce-2.0.2/PKG-INFO
++-rw-r--r--   0        0        0     7660 2023-04-06 08:47:49.092359 deduce-2.0.3/LICENSE.md
++-rw-r--r--   0        0        0     6438 2023-04-06 08:47:49.092359 deduce-2.0.3/README.md
++-rw-r--r--   0        0        0    10189 2023-04-06 08:47:49.096359 deduce-2.0.3/config.json
++-rw-r--r--   0        0        0    62362 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/first_names.txt
++-rw-r--r--   0        0        0     8389 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/institutions.txt
++-rw-r--r--   0        0        0    26132 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/interfix_surnames.txt
++-rw-r--r--   0        0        0     1660 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/interfixes.txt
++-rw-r--r--   0        0        0     2838 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/medical_terms.txt
++-rw-r--r--   0        0        0      106 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/prefixes.txt
++-rw-r--r--   0        0        0    24182 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/residences.txt
++-rw-r--r--   0        0        0      452 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/stop_words.txt
++-rw-r--r--   0        0        0    62481 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/surnames.txt
++-rw-r--r--   0        0        0     6813 2023-04-06 08:47:49.096359 deduce-2.0.3/data/lookup_lists/top_1000_terms.txt
++-rw-r--r--   0        0        0      213 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/__init__.py
++-rw-r--r--   0        0        0     5591 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/backwards_compat.py
++-rw-r--r--   0        0        0     7858 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/deduce.py
++-rw-r--r--   0        0        0     5582 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/lookup_sets.py
++-rw-r--r--   0        0        0      486 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/pattern/__init__.py
++-rw-r--r--   0        0        0     3693 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/pattern/name.py
++-rw-r--r--   0        0        0     4744 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/pattern/name_context.py
++-rw-r--r--   0        0        0     3691 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/pattern/name_patient.py
++-rw-r--r--   0        0        0     1491 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/person.py
++-rw-r--r--   0        0        0        0 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/process/__init__.py
++-rw-r--r--   0        0        0     2828 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/process/annotation_processing.py
++-rw-r--r--   0        0        0     4007 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/process/annotator.py
++-rw-r--r--   0        0        0     1936 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/process/redact.py
++-rw-r--r--   0        0        0      118 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/str/__init__.py
++-rw-r--r--   0        0        0     2074 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/str/processor.py
++-rw-r--r--   0        0        0     5053 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/tokenize.py
++-rw-r--r--   0        0        0     2298 2023-04-06 08:47:49.096359 deduce-2.0.3/deduce/utils.py
++-rw-r--r--   0        0        0     1561 2023-04-06 08:47:49.100359 deduce-2.0.3/pyproject.toml
++-rw-r--r--   0        0        0     7897 1970-01-01 00:00:00.000000 deduce-2.0.3/PKG-INFO
+```
+
+### Comparing `deduce-2.0.2/LICENSE.md` & `deduce-2.0.3/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/README.md` & `deduce-2.0.3/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/config.json` & `deduce-2.0.3/config.json`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/first_names.txt` & `deduce-2.0.3/data/lookup_lists/first_names.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/institutions.txt` & `deduce-2.0.3/data/lookup_lists/institutions.txt`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -148,15 +148,14 @@
+ De Wartburg
+ De Weiderij
+ De Wielewaal
+ De Wijngaard
+ De Wiltzangk
+ De Wyngaard
+ De Zwaluw
+-Decubitus
+ Dedoensserre
+ Demisal Communicatie
+ Demuwahu
+ Dencor Company
+ Dennendal
+ Dermalink
+ Dermis
+```
+
+### Comparing `deduce-2.0.2/data/lookup_lists/interfix_surnames.txt` & `deduce-2.0.3/data/lookup_lists/interfix_surnames.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/interfixes.txt` & `deduce-2.0.3/data/lookup_lists/interfixes.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/medical_terms.txt` & `deduce-2.0.3/data/lookup_lists/medical_terms.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/residences.txt` & `deduce-2.0.3/data/lookup_lists/residences.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/surnames.txt` & `deduce-2.0.3/data/lookup_lists/surnames.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/data/lookup_lists/top_1000_terms.txt` & `deduce-2.0.3/data/lookup_lists/top_1000_terms.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/backwards_compat.py` & `deduce-2.0.3/deduce/backwards_compat.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/deduce.py` & `deduce-2.0.3/deduce/deduce.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/lookup_sets.py` & `deduce-2.0.3/deduce/lookup_sets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/pattern/name.py` & `deduce-2.0.3/deduce/pattern/name.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/pattern/name_context.py` & `deduce-2.0.3/deduce/pattern/name_context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/pattern/name_patient.py` & `deduce-2.0.3/deduce/pattern/name_patient.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/person.py` & `deduce-2.0.3/deduce/person.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/process/annotation_processing.py` & `deduce-2.0.3/deduce/process/annotation_processing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/process/annotator.py` & `deduce-2.0.3/deduce/process/annotator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/process/redact.py` & `deduce-2.0.3/deduce/process/redact.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/str/processor.py` & `deduce-2.0.3/deduce/str/processor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/tokenize.py` & `deduce-2.0.3/deduce/tokenize.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/deduce/utils.py` & `deduce-2.0.3/deduce/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `deduce-2.0.2/pyproject.toml` & `deduce-2.0.3/pyproject.toml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "deduce"
+-version = "2.0.2"
++version = "2.0.3"
+ description = "Deduce: de-identification method for Dutch medical text"
+ authors = ["Vincent Menger <vmenger@protonmail.com>"]
+ maintainers = ["Vincent Menger <vmenger@protonmail.com>"]
+ license = "LGPL-3.0-or-later"
+ readme = "README.md"
+ repository = "https://github.com/vmenger/deduce/"
+ keywords = ["de-identification", "clinical text", "dutch", "nlp"]
+```
+
+### Comparing `deduce-2.0.2/PKG-INFO` & `deduce-2.0.3/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: deduce
+-Version: 2.0.2
++Version: 2.0.3
+ Summary: Deduce: de-identification method for Dutch medical text
+ Home-page: https://github.com/vmenger/deduce/
+ License: LGPL-3.0-or-later
+ Keywords: de-identification,clinical text,dutch,nlp
+ Author: Vincent Menger
+ Author-email: vmenger@protonmail.com
+ Maintainer: Vincent Menger
+```
+
