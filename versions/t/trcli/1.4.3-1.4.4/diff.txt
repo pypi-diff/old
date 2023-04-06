@@ -1,0 +1,303 @@
+--- tmp/trcli-1.4.3.tar.gz
++++ tmp/trcli-1.4.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "trcli-1.4.3.tar", last modified: Wed Feb 22 18:05:17 2023, max compression
+│ +gzip compressed data, was "trcli-1.4.4.tar", last modified: Thu Apr  6 17:15:42 2023, max compression
+│   --- trcli-1.4.3.tar
+├── +++ trcli-1.4.4.tar
+│ ├── file list
+│ │ @@ -1,48 +1,48 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16725 2023-02-22 18:05:06.000000 trcli-1.4.3/LICENSE.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      186 2023-02-22 18:05:17.830525 trcli-1.4.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11969 2023-02-22 18:05:06.000000 trcli-1.4.3/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-22 18:05:17.830525 trcli-1.4.3/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      640 2023-02-22 18:05:06.000000 trcli-1.4.3/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/tests/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11420 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_api_client.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4766 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_api_data_provider.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31484 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_api_request_handler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11568 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3368 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_dataclass_creation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7039 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_junit_parser.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9721 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_load_data_from_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3802 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_response_verify.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31398 2023-02-22 18:05:06.000000 trcli-1.4.3/tests/test_results_uploader.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       22 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/api/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/api/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7093 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/api/api_client.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    27476 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/api/api_request_handler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2903 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/api/api_response_verify.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17758 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/api/results_uploader.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (123)    10831 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/cli.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/commands/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/commands/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4050 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/commands/cmd_parse_junit.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5304 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/constants.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/data_classes/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/data_classes/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2565 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/data_classes/data_parsers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7671 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/data_classes/dataclass_testrail.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      562 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/data_classes/validation_exception.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/data_providers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7033 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/data_providers/api_data_provider.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli/readers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/readers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      897 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/readers/file_parser.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7827 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/readers/junit_xml.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      163 2023-02-22 18:05:06.000000 trcli-1.4.3/trcli/settings.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-22 18:05:17.830525 trcli-1.4.3/trcli.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      186 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1016 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       40 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       61 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        6 2023-02-22 18:05:17.000000 trcli-1.4.3/trcli.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16725 2023-04-06 17:15:32.000000 trcli-1.4.4/LICENSE.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      186 2023-04-06 17:15:42.229703 trcli-1.4.4/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11969 2023-04-06 17:15:32.000000 trcli-1.4.4/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 17:15:42.229703 trcli-1.4.4/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      640 2023-04-06 17:15:32.000000 trcli-1.4.4/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.225703 trcli-1.4.4/tests/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11420 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_api_client.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4766 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_api_data_provider.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31484 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_api_request_handler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11568 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3368 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_dataclass_creation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7039 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_junit_parser.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9721 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_load_data_from_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3802 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_response_verify.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31398 2023-04-06 17:15:32.000000 trcli-1.4.4/tests/test_results_uploader.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.225703 trcli-1.4.4/trcli/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/trcli/api/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/api/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7093 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/api/api_client.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    27476 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/api/api_request_handler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2903 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/api/api_response_verify.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17758 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/api/results_uploader.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (123)    10831 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/cli.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/trcli/commands/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/commands/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4050 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/commands/cmd_parse_junit.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5304 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/constants.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/trcli/data_classes/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/data_classes/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2565 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/data_classes/data_parsers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7581 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/data_classes/dataclass_testrail.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      562 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/data_classes/validation_exception.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/trcli/data_providers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7033 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/data_providers/api_data_provider.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.229703 trcli-1.4.4/trcli/readers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/readers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      897 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/readers/file_parser.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7723 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/readers/junit_xml.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      163 2023-04-06 17:15:32.000000 trcli-1.4.4/trcli/settings.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 17:15:42.225703 trcli-1.4.4/trcli.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      186 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1016 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       40 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 17:15:42.000000 trcli-1.4.4/trcli.egg-info/top_level.txt
+│ │   --- trcli-1.4.3/LICENSE.md
+│ ├── +++ trcli-1.4.4/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/README.md
+│ ├── +++ trcli-1.4.4/README.md
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/setup.py
+│ ├── +++ trcli-1.4.4/setup.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_api_client.py
+│ ├── +++ trcli-1.4.4/tests/test_api_client.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_api_data_provider.py
+│ ├── +++ trcli-1.4.4/tests/test_api_data_provider.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_api_request_handler.py
+│ ├── +++ trcli-1.4.4/tests/test_api_request_handler.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_cli.py
+│ ├── +++ trcli-1.4.4/tests/test_cli.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_dataclass_creation.py
+│ ├── +++ trcli-1.4.4/tests/test_dataclass_creation.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_junit_parser.py
+│ ├── +++ trcli-1.4.4/tests/test_junit_parser.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_load_data_from_config.py
+│ ├── +++ trcli-1.4.4/tests/test_load_data_from_config.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_response_verify.py
+│ ├── +++ trcli-1.4.4/tests/test_response_verify.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/tests/test_results_uploader.py
+│ ├── +++ trcli-1.4.4/tests/test_results_uploader.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/api/api_client.py
+│ ├── +++ trcli-1.4.4/trcli/api/api_client.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/api/api_request_handler.py
+│ ├── +++ trcli-1.4.4/trcli/api/api_request_handler.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/api/api_response_verify.py
+│ ├── +++ trcli-1.4.4/trcli/api/api_response_verify.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/api/results_uploader.py
+│ ├── +++ trcli-1.4.4/trcli/api/results_uploader.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/cli.py
+│ ├── +++ trcli-1.4.4/trcli/cli.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/commands/cmd_parse_junit.py
+│ ├── +++ trcli-1.4.4/trcli/commands/cmd_parse_junit.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/constants.py
+│ ├── +++ trcli-1.4.4/trcli/constants.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/data_classes/data_parsers.py
+│ ├── +++ trcli-1.4.4/trcli/data_classes/data_parsers.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/data_classes/dataclass_testrail.py
+│ ├── +++ trcli-1.4.4/trcli/data_classes/dataclass_testrail.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -106,16 +106,16 @@
+│ │  
+│ │  @serialize
+│ │  @deserialize
+│ │  @dataclass
+│ │  class TestRailCase:
+│ │      """Class for creating Test Rail test case"""
+│ │  
+│ │ -    section_id: int
+│ │      title: str
+│ │ +    section_id: int = field(default=None, skip_if_default=True)
+│ │      case_id: int = field(default=None, skip_if_default=True)
+│ │      estimate: str = field(default=None, skip_if_default=True)
+│ │      template_id: int = field(default=None, skip_if_default=True)
+│ │      type_id: int = field(default=None, skip_if_default=True)
+│ │      milestone_id: int = field(default=None, skip_if_default=True)
+│ │      refs: str = field(default=None, skip_if_default=True)
+│ │      case_fields: Optional[dict] = field(default_factory=dict, skip=True)
+│ │ @@ -176,15 +176,14 @@
+│ │  @deserialize
+│ │  @dataclass
+│ │  class TestRailSection:
+│ │      """Class for creating Test Rail test section"""
+│ │  
+│ │      name: str
+│ │      suite_id: int = field(default=None, skip_if_default=True)
+│ │ -    time: str = field(default=None, metadata={"serde_skip": True})
+│ │      parent_id: int = field(default=None, skip_if_default=True)
+│ │      description: str = field(default=None, skip_if_default=True)
+│ │      section_id: int = field(default=None, metadata={"serde_skip": True})
+│ │      testcases: List[TestRailCase] = field(
+│ │          default_factory=list, metadata={"serde_skip": True}
+│ │      )
+│ │      properties: List[TestRailProperty] = field(
+│ │ @@ -207,15 +206,14 @@
+│ │  @deserialize
+│ │  @dataclass
+│ │  class TestRailSuite:
+│ │      """Class for creating Test Rail Suite fields"""
+│ │  
+│ │      name: str
+│ │      suite_id: int = field(default=None, skip_if_default=True)
+│ │ -    time: str = field(default=None, metadata={"serde_skip": True})
+│ │      description: str = field(default=None, skip_if_default=True)
+│ │      testsections: List[TestRailSection] = field(
+│ │          default_factory=list, metadata={"serde_skip": True}
+│ │      )
+│ │      source: str = field(default=None, metadata={"serde_skip": True})
+│ │  
+│ │      def __post_init__(self):
+│ │   --- trcli-1.4.3/trcli/data_classes/validation_exception.py
+│ ├── +++ trcli-1.4.4/trcli/data_classes/validation_exception.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/data_providers/api_data_provider.py
+│ ├── +++ trcli-1.4.4/trcli/data_providers/api_data_provider.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/readers/file_parser.py
+│ ├── +++ trcli-1.4.4/trcli/readers/file_parser.py
+│ │┄ Files identical despite different names
+│ │   --- trcli-1.4.3/trcli/readers/junit_xml.py
+│ ├── +++ trcli-1.4.4/trcli/readers/junit_xml.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,26 +1,27 @@
+│ │  from pathlib import Path
+│ │  from typing import Union
+│ │ +from unittest import TestCase, TestSuite
+│ │  from xml.etree import ElementTree as etree
+│ │  
+│ │ -from junitparser import TestCase, TestSuite, JUnitXml, IntAttr, JUnitXmlError, Element, Attr
+│ │ +from junitparser import JUnitXml, JUnitXmlError, Element, Attr
+│ │  
+│ │  from trcli.data_classes.data_parsers import MatchersParser, FieldsParser
+│ │  from trcli.data_classes.dataclass_testrail import (
+│ │      TestRailCase,
+│ │      TestRailSuite,
+│ │      TestRailSection,
+│ │      TestRailProperty,
+│ │      TestRailResult,
+│ │  )
+│ │  from trcli.readers.file_parser import FileParser
+│ │  
+│ │ -TestCase.id = IntAttr("id")
+│ │ -TestSuite.id = IntAttr("id")
+│ │ -JUnitXml.id = IntAttr("id")
+│ │ +TestCase.id = Attr("id")
+│ │ +TestSuite.id = Attr("id")
+│ │ +JUnitXml.id = Attr("id")
+│ │  
+│ │  
+│ │  class Properties(Element):
+│ │      _tag = "properties"
+│ │  
+│ │  
+│ │  class Property(Element):
+│ │ @@ -118,35 +119,32 @@
+│ │                      )
+│ │                      for comment in reversed(comments):
+│ │                          result.prepend_comment(comment)
+│ │                      if sauce_session:
+│ │                          result.prepend_comment(f"SauceLabs session: {sauce_session}")
+│ │                      test_cases.append(
+│ │                          TestRailCase(
+│ │ -                            section.id,
+│ │ -                            case_name,
+│ │ -                            case_id,
+│ │ +                            title=case_name,
+│ │ +                            case_id=case_id,
+│ │                              result=result,
+│ │                              custom_automation_id=automation_id,
+│ │                              case_fields=case_fields_dict
+│ │                          )
+│ │                      )
+│ │                  test_sections.append(
+│ │                      TestRailSection(
+│ │                          section.name,
+│ │ -                        time=section.time,
+│ │                          testcases=test_cases,
+│ │                          properties=properties,
+│ │                      )
+│ │                  )
+│ │              self.env.log(f"Processed {cases_count} test cases in {len(test_sections)} sections.")
+│ │              testrail_suites.append(
+│ │                  TestRailSuite(
+│ │                      suite.name,
+│ │ -                    time=suite.time,
+│ │                      testsections=test_sections,
+│ │                      source=self.filename,
+│ │                  )
+│ │              )
+│ │  
+│ │          return testrail_suites
+│ │   --- trcli-1.4.3/trcli.egg-info/SOURCES.txt
+│ ├── +++ trcli-1.4.4/trcli.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

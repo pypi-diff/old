@@ -1,0 +1,574 @@
+# Comparing `tmp/scselpy-1.0.1.tar.gz` & `tmp/scselpy-1.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "scselpy-1.0.1.tar", last modified: Tue Mar 21 18:03:00 2023, max compression
++gzip compressed data, was "scselpy-1.1.3.tar", last modified: Thu Apr  6 17:11:21 2023, max compression
+```
+
+## Comparing `scselpy-1.0.1.tar` & `scselpy-1.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+--rw-r--r--   0        0        0      830 2023-03-21 16:49:21.216292 scselpy-1.0.1/README.md
+--rw-r--r--   0        0        0      898 2023-03-21 18:02:17.796231 scselpy-1.0.1/pyproject.toml
+--rw-r--r--   0        0        0     2075 2023-02-08 20:22:06.225149 scselpy-1.0.1/scselpy/AnndataTestObj/_CreateAnndataObj.py
+--rw-r--r--   0        0        0       76 2021-10-04 13:18:11.988429 scselpy-1.0.1/scselpy/AnndataTestObj/__init__.py
+--rw-r--r--   0        0        0      337 2022-07-02 12:22:31.203866 scselpy-1.0.1/scselpy/Rename_annotation/_GenerateDict.py
+--rw-r--r--   0        0        0     1773 2022-07-05 15:22:34.862482 scselpy-1.0.1/scselpy/Rename_annotation/_RenameAnno.py
+--rw-r--r--   0        0        0      202 2022-07-02 12:54:47.491839 scselpy-1.0.1/scselpy/Rename_annotation/__init__.py
+--rw-r--r--   0        0        0      245 2023-03-15 10:26:31.448006 scselpy-1.0.1/scselpy/__init__.py
+--rw-r--r--   0        0        0       75 2022-07-07 13:34:32.845258 scselpy-1.0.1/scselpy/__main__.py
+--rw-r--r--   0        0        0      229 2022-07-07 13:50:29.973245 scselpy-1.0.1/scselpy/call_main.py
+--rw-r--r--   0        0        0      390 2023-03-21 16:57:41.456285 scselpy-1.0.1/scselpy/config.py
+--rw-r--r--   0        0        0     1308 2023-03-17 14:29:25.040972 scselpy-1.0.1/scselpy/plotting/__init__.py
+--rw-r--r--   0        0        0    39028 2023-03-21 16:58:02.700284 scselpy-1.0.1/scselpy/plotting/_scselpy.py
+--rw-r--r--   0        0        0     5386 2021-10-04 13:18:11.984429 scselpy-1.0.1/scselpy/tests/REMAP_val.txt
+--rw-r--r--   0        0        0     5135 2021-10-12 17:42:07.877314 scselpy-1.0.1/scselpy/tests/REMAP_val2.txt
+--rw-r--r--   0        0        0     5155 2021-10-12 18:18:37.977322 scselpy-1.0.1/scselpy/tests/REMAP_val3.txt
+--rw-r--r--   0        0        0        0 2021-10-04 13:18:11.984429 scselpy-1.0.1/scselpy/tests/__init__.py
+--rw-r--r--   0        0        0    21701 2023-03-17 14:11:30.529000 scselpy-1.0.1/scselpy/tests/scselpy_tests.py
+--rw-r--r--   0        0        0      434 2021-10-04 13:18:11.984429 scselpy-1.0.1/scselpy/tests/utils.py
+--rw-r--r--   0        0        0      144 2023-02-08 19:34:20.109189 scselpy-1.0.1/scselpy/tools/__init__.py
+--rw-r--r--   0        0        0     2933 2023-02-08 20:13:16.033156 scselpy-1.0.1/scselpy/tools/_calculate_stats.py
+--rw-r--r--   0        0        0       17 2023-03-21 18:02:33.068230 scselpy-1.0.1/scselpy/version.py
+--rw-r--r--   0        0        0        5 2023-03-21 18:02:33.068230 scselpy-1.0.1/scselpy/version.txt
+--rw-r--r--   0        0        0     1584 1970-01-01 00:00:00.000000 scselpy-1.0.1/PKG-INFO
++-rw-r--r--   0        0        0     1747 2023-04-06 17:10:37.240881 scselpy-1.1.3/README.md
++-rw-r--r--   0        0        0      915 2023-03-22 13:42:12.675245 scselpy-1.1.3/pyproject.toml
++-rw-r--r--   0        0        0     2075 2023-02-08 20:22:06.225149 scselpy-1.1.3/scselpy/AnndataTestObj/_CreateAnndataObj.py
++-rw-r--r--   0        0        0       76 2021-10-04 13:18:11.988429 scselpy-1.1.3/scselpy/AnndataTestObj/__init__.py
++-rw-r--r--   0        0        0      337 2022-07-02 12:22:31.203866 scselpy-1.1.3/scselpy/Rename_annotation/_GenerateDict.py
++-rw-r--r--   0        0        0     1773 2022-07-05 15:22:34.862482 scselpy-1.1.3/scselpy/Rename_annotation/_RenameAnno.py
++-rw-r--r--   0        0        0      202 2022-07-02 12:54:47.491839 scselpy-1.1.3/scselpy/Rename_annotation/__init__.py
++-rw-r--r--   0        0        0      245 2023-03-15 10:26:31.448006 scselpy-1.1.3/scselpy/__init__.py
++-rw-r--r--   0        0        0       75 2022-07-07 13:34:32.845258 scselpy-1.1.3/scselpy/__main__.py
++-rw-r--r--   0        0        0      229 2022-07-07 13:50:29.973245 scselpy-1.1.3/scselpy/call_main.py
++-rw-r--r--   0        0        0      390 2023-03-21 16:57:41.456285 scselpy-1.1.3/scselpy/config.py
++-rw-r--r--   0        0        0     1308 2023-03-17 14:29:25.040972 scselpy-1.1.3/scselpy/plotting/__init__.py
++-rw-r--r--   0        0        0    39156 2023-04-06 16:42:50.832875 scselpy-1.1.3/scselpy/plotting/_scselpy.py
++-rw-r--r--   0        0        0     5386 2021-10-04 13:18:11.984429 scselpy-1.1.3/scselpy/tests/REMAP_val.txt
++-rw-r--r--   0        0        0     5135 2021-10-12 17:42:07.877314 scselpy-1.1.3/scselpy/tests/REMAP_val2.txt
++-rw-r--r--   0        0        0     5155 2021-10-12 18:18:37.977322 scselpy-1.1.3/scselpy/tests/REMAP_val3.txt
++-rw-r--r--   0        0        0        0 2021-10-04 13:18:11.984429 scselpy-1.1.3/scselpy/tests/__init__.py
++-rw-r--r--   0        0        0    21701 2023-03-17 14:11:30.529000 scselpy-1.1.3/scselpy/tests/scselpy_tests.py
++-rw-r--r--   0        0        0      434 2021-10-04 13:18:11.984429 scselpy-1.1.3/scselpy/tests/utils.py
++-rw-r--r--   0        0        0      144 2023-02-08 19:34:20.109189 scselpy-1.1.3/scselpy/tools/__init__.py
++-rw-r--r--   0        0        0     2933 2023-02-08 20:13:16.033156 scselpy-1.1.3/scselpy/tools/_calculate_stats.py
++-rw-r--r--   0        0        0       17 2023-04-06 17:10:53.456881 scselpy-1.1.3/scselpy/version.py
++-rw-r--r--   0        0        0        5 2023-04-06 17:10:53.456881 scselpy-1.1.3/scselpy/version.txt
++-rw-r--r--   0        0        0     2501 1970-01-01 00:00:00.000000 scselpy-1.1.3/PKG-INFO
+```
+
+### Comparing `scselpy-1.0.1/pyproject.toml` & `scselpy-1.1.3/pyproject.toml`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ 
+ [build-system]
+ build-backend = "flit_core.buildapi"
+ requires = [
+     "flit_core >=3.4,<4",
+     "setuptools_scm",
++    "tomli",
+     'wheel',
+ ]
+ 
+ [project]
+ name = "scselpy"
+ authors = [
+   { name="Mark Dedden"},
+@@ -34,10 +35,14 @@
+     "scanpy >= 1.6",
+     "anndata>=0.7.6",
+     "numpy>=1.17.0",
+     "matplotlib>=3.4",
+ 
+ ]
+ 
++
++
++
+ [tool.setuptools]
+ py-modules = ["scselpy"]
+ 
++
+```
+
+### Comparing `scselpy-1.0.1/scselpy/AnndataTestObj/_CreateAnndataObj.py` & `scselpy-1.1.3/scselpy/AnndataTestObj/_CreateAnndataObj.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/Rename_annotation/_RenameAnno.py` & `scselpy-1.1.3/scselpy/Rename_annotation/_RenameAnno.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/plotting/__init__.py` & `scselpy-1.1.3/scselpy/plotting/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/plotting/_scselpy.py` & `scselpy-1.1.3/scselpy/plotting/_scselpy.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -2,15 +2,14 @@
+ Created on Tue Oct 12 17:55:21 2021
+ 
+ @author: Mark Dedden
+ """
+ 
+ from ..config import settings
+ 
+-
+ import numpy as np
+ 
+ import scanpy as sc
+ #from scanpy.plotting._tools import scatterplots as scsp
+ from scanpy import logging as logger
+ 
+ import matplotlib
+@@ -78,73 +77,73 @@
+         hh = plt.plot(x,y,color=inp_color,linestyle=inp_style)
+     if custom_lines != None: # Here we catch the line handles for the legends and return it. This is only required for plotting in the REMAP function.
+         custom_lines = custom_lines + hh
+         return (custom_lines)
+     else: #In the other sections, we do not care about the legends. Here we want to calculate the polygons and therefore return the cordinates.
+         return([(p[0],p[1]) for p in cordlist])
+ 
+-def on_close(event):
+-
+-    event.canvas.stop_event_loop()
+-    
+-
+-    logger_info('Please only close the plot window by pressing 2x Escape, Enter or right click. Especially if using TkAgg backend.')
+ 
++def draw_line(Amount_of_inp,scat_plot,returnVar,Mock,lc,colorline,linestyle,printcords,timeout,plot_is_open):
++    class Track_openness:
++        is_open = plot_is_open
++    def on_close(event):
+ 
++ 
+ 
+-        
+-    """
+-    This section needs some explaining. When the matplotlib plot is closed by pressing the X/cross in the top corner, ginput stays active.
+-    Therefore the program becomes unresponsive, which in most cases leads to forcefully ending the entire python session, with the risk of losing all data.
+-    To solve this problem, before running ginput, we link this function to the canvas using "mpl_connect". 
+-    When the plot is closed while running ginput, this function will be called.
+-    As ginput is in a "blocking loop" listening for events (maybe even for infinite time), there is no way to stop it unless we call the stop_event_loop() function.
+-    
+-    If the user closes the ginput normally, using key presses or mouse button clicks, the mpl_disconnect() function will be called before the plot is closed and therefore this function will never be called.
+-    
+-    This solution does not work on TkAgg backend, therefore I changed away from using TkAgg by default.
+-    """
++        event.canvas.stop_event_loop()
++        Track_openness.is_open = False
+     
++        """
++        This section needs some explaining. When the matplotlib plot is closed by pressing the X/cross in the top corner or by using a key of plt.rcParams["keymap.quit"], ginput stays active for two reasons:
++            1) The matplotlib event loop is not terminated on a close_event.
++            2) As this current draw_line() function is called in a while loop, closing the plot will never have the draw_line() function return None (returning None will break the while loop), therefore after closing the plot, this function and thus also ginput() will be called again, causing an unresponsive program. 
++                Since plt.fignum_exists(plt.gcf().number), a function to check if the plot is still open, will return True even on a closed plot, the only way I could fix it is by defining on_close() as an inner function with Track_openness as an inner class. 
++                Therefore when the plot is closed and the close_event is invoked in the matplotlib interactive backend, Track_opennes.is_open will be set to False. Returning this to the interactive_plot_selecting_cells will lead to breaking of the whileloop. 
++            
++        If this fix is not added to scSELpy, the program becomes unresponsive, which in most cases leads to forcefully ending the entire python session, with the risk of losing all data.
++        To make sure Track_opennes is changed on closing the plot, we link on_close to the canvas using "mpl_connect". 
++        When the plot is closed while running ginput, this on_close() function will be called.
+ 
+-def ginput_child_process(Amount_of_inp,timeout):
+-    return(plt.ginput(Amount_of_inp,mouse_add=MouseButton.LEFT, mouse_pop=MouseButton.MIDDLE, mouse_stop=MouseButton.RIGHT,timeout=timeout))
++        If the user closes the ginput normally, using key presses or mouse button clicks, the mpl_disconnect() function will be called before the plot is closed and therefore this function will never be called. Also the ginput() function will return None, which is returned by draw_line() aswell, resulting in a break of the while loop and everything concluding nominal.
+ 
+-def draw_line(Amount_of_inp,scat_plot,returnVar,Mock,lc,colorline,linestyle,printcords):
+-    
++        """
+     ax = plt.gca()
+-    if Mock is not None:
++
++    if Mock is not None: #If we passed a mock, we do not want to call ginput. Instead, we just assign the mock to xy.
+         xy = Mock
+         
+     else:
+-        cid = returnVar.figure.canvas.mpl_connect('close_event', on_close)
+-       
++        cid = returnVar.figure.canvas.mpl_connect('close_event', on_close) #In the event that someone closes the plot, we want to call on_close().
++
+         try:
+             
+-            xy = plt.ginput(Amount_of_inp,mouse_add=MouseButton.LEFT, mouse_pop=MouseButton.MIDDLE, mouse_stop=MouseButton.RIGHT,timeout=60)
++
++
++            xy = plt.ginput(n=Amount_of_inp,mouse_add=MouseButton.LEFT, mouse_pop=MouseButton.MIDDLE, mouse_stop=MouseButton.RIGHT,timeout=timeout) #matplotlib.ginput() is responsible for recording the user input. Each click is stored in a tuple as (x,y). All coordinates for a single polygon are stored in a list [(x1,y1),(x2,y2)].
++ 
+         except Exception as except_error:
+             returnVar.figure.canvas.mpl_disconnect(cid)
+             logger_info("Drawing of polygon not concluded correctly. Exception: "+str(except_error),warning=True)
+             return(None)
+         if printcords:
+             if len(xy) != 0:
+                 logger_info(xy)
+         returnVar.figure.canvas.mpl_disconnect(cid)
+ 
++
+     if len(xy) == 0:
+-        return(None)
++        return(None,Track_openness.is_open)
+ 
+         
+     polygon = getXY(xy,scat_plot,returnVar,lc,colorline,linestyle,None)
+     ax.figure.canvas.draw()
+ 
+ 
+     
+-    return(polygon)
+-
+-
++    return(polygon,Track_openness.is_open)
+     
+ def tryPass(inp):
+     try:
+ 
+         inp
+ 
+     except:
+@@ -202,15 +201,16 @@
+     ParamDict["use_log_scale"] = [False,[bool],"If you wish to use the log scale in plots. Could be used e.g. for selecting antibody data in scatter plots in combination with use_raw=True."]
+                                   
+     ParamDict['skip_float_check'] = [False,[bool],"When running scatter plots, scSELpy will automatically check if the input is float. If this is not the case, it will return an error. To disable this error, run <code>skip_float_check = True</code>"]
+     ParamDict['mock'] = [None,[type(None),dict],"Automatically runs scSELpy with preset coordinates, the user will not be able to make a selection. This can be handy when rerunning pipelines. For usage instructions please check the <code>Mock</code> section in the documentation."]# Load tests
+     
+     ParamDict['save'] = [None,[type(None),str],"Saves figure in provided path+filename. If only a filename is provided, will save in \"figures/\"+filename. Does not work the same as in scanpy. <code>scanpy.set_figure_params</code> should still work."]
+     #ParamDict['interactive_backend'] = ["Qt5agg" if "win" in sys.platform else "TkAgg",[str],"For the drawing of polygons, an interactive backend will be used. If a default back-end does not work propperly on your computer, you can change it. More information at https://matplotlib.org/stable/users/explain/backends.html"] 
+-    ParamDict['interactive_backend'] = ["Qt5agg",[str],"If running scSELpy on Jupyter Notebook, the drawing of polygons requires the use of an interactive backend. If the default back-end does not work propperly on your computer, you can change it. More information at https://matplotlib.org/stable/users/explain/backends.html"]
++    ParamDict['interactive_backend'] = [None if is_notebook() == False else "Qt5Agg" ,[str,type(None)],"Default: None if not running on Jupyter Notebook (In this case, backend will only switch if you specify this parameter). If running on Jupyter: Qt5Agg. If running scSELpy on Jupyter Notebook, the drawing of polygons requires the use of an interactive backend. If the default back-end does not work propperly on your computer, you can change it. More information at https://matplotlib.org/stable/users/explain/backends.html"]
++    ParamDict['timeout'] = [60,[float,int],"Amount of seconds until the drawing of the polygons will automatically stop."]
+     ParamDict['helpbox'] = [False,[bool],"Before drawing, shows some text that gives instructions for drawing polygons"]
+     
+     ParamDict['components'] = [None,[type(None),str],""]
+     ParamDict['layer'] = [None,["skip"],""]
+     ParamDict['layers'] = [None,["skip"],""]
+     return(ParamDict)
+                                      
+@@ -369,44 +369,44 @@
+     return(VarDict)  
+     
+ 
+ 
+ # Below, we decide which attribute we will plot, e.g. umap, tsne etc. Based on the "map_attr" arg.
+ def set_map_attr(adata,VarDict,**kwargs):
+ 
+-    avail_atr = "\"umap\",\"tsne\",\"pca\" or \"scatter\""
++    avail_atr = "\"umap\",\"tsne\",\"pca\", \"scatter\" or \"embedding\""
+     scat_plot = False
+-    if VarDict['map_attr'].lower() == "umap": 
+-        if VarDict['basis'] not in adata.obsm:
+-            
+-            raise AttributeError(VarDict['basis'] +" not found in anndata.obsm.")
+-        plotattr = sc.pl.umap
+-    elif VarDict['map_attr'].lower() == "tsne": 
+-        if VarDict['basis']  not in adata.obsm:
+-            raise AttributeError(VarDict['basis'] +" not found in anndata.obsm")
+-        plotattr = sc.pl.tsne
+-    elif VarDict['map_attr'].lower() == "pca": 
+-        if VarDict['basis']  not in adata.obsm:
+-            raise AttributeError(VarDict['basis'] +" not found in anndata.obsm")
+-        plotattr = sc.pl.pca
+-    elif VarDict['map_attr'].lower() == "scatter" or VarDict['map_attr'].lower() == "scat": 
++    
++    if VarDict['map_attr'].lower() == "scatter" or VarDict['map_attr'].lower() == "scat": 
+         if VarDict['x_scat'] is None or VarDict['y_scat'] is None:
+             raise AttributeError('When choosing the scatter plot, please make sure the y_scat and x_scat args are defined.')
+         scat_plot = "scat"
+         plotattr = sc.pl.scatter
+-    elif VarDict['map_attr'].lower() == "embedding":
+-        scat_plot = "embedding"
++    else:
+         if "basis" not in VarDict:
+             raise AttributeError("The basis parameter is not found")
+         elif VarDict['basis'] not in adata.obsm:
+-            raise AttributeError(VarDict['basis'].lower()+" not found in anndata.obsm")
+-        plotattr = sc.pl.embedding
+-        
+-    else: #If the input of map_attr differs from what we have listed above, raise an error.
+-        raise ValueError('The plotting attribute '+VarDict['map_attr']+' entered is not whitelisted. The following attributes are available: '+avail_atr+'. e.g. Try Remap(adata,map_attr="umap").')
++            raise AttributeError(str(VarDict['basis'])+" not found in anndata.obsm")
++
++
++        if VarDict['map_attr'].lower() == "umap": 
++            plotattr = sc.pl.umap
++            
++        elif VarDict['map_attr'].lower() == "tsne": 
++            plotattr = sc.pl.tsne
++            
++        elif VarDict['map_attr'].lower() == "pca": 
++            plotattr = sc.pl.pca
++
++        elif VarDict['map_attr'].lower() == "embedding":
++            scat_plot = "embedding"
++            plotattr = sc.pl.embedding
++
++        else: #If the input of map_attr differs from what we have listed above, raise an error.
++            raise ValueError('The attribute '+VarDict['basis']+' entered is not whitelisted. The following attributes are available: '+avail_atr+'. e.g. Remap(adata,map_attr="umap"). If you meant to override this whitelist, please check if you specified Remap(adata,override=True).')
+ 
+ 
+ 
+     return(scat_plot,plotattr)
+ 
+ 
+ 
+@@ -439,25 +439,24 @@
+         counts = 0
+     else: # If 'load' has an object name stored for anndata.obs, get the highest number in that list, but filter out any string.
+             
+ 
+ 
+         counts = Get_Max_val_from_list_with_commas(adata.obs[VarDict['load']])
+ 
+-    if VarDict['mock'] is None and is_notebook():
++    if VarDict['mock'] is None and VarDict['interactive_backend'] != None:
+         matplotlib.use(VarDict['interactive_backend'], force=True) # We have to switch to a different matplotlib backend in order to be able to interact with the plot on Jupyter Notebook.
+ 
+ 
+     return(counts)
+     
+ def AddTextBox(txt,y,ret):
+     props = dict(boxstyle='round', facecolor='wheat', alpha=0.8)
+     return(ret.text(0.05, y, txt, transform=ret.transAxes, fontsize=14,
+                   verticalalignment='top', bbox=props))
+-
+ def interactive_plot_selecting_cells(adata,VarDict,scat_plot,plotattr,counts,MainmlpBackend,unsError,**kwargs_copy):
+     if VarDict['replot_lines'] != None:
+         try:
+ 
+             ShapeDict = adata.uns[VarDict['replot_lines']].copy()
+ 
+         except:
+@@ -475,36 +474,21 @@
+ 
+         else:
+             returned = plotattr(adata, **kwargs_copy) # Here we plot. plotattr is e.g. sc.pl.umap. As we switched the back-end, this plot will be interactive.
+             
+         
+     except: #In the case that we cannot make the interactive plot, we need to switch back to the original backend in the case that we use Jupyter Notebook and switched to an interactive backend.
+         plt.close()
+-        if is_notebook():
++        if VarDict['interactive_backend'] != None:
+             matplotlib.use(MainmlpBackend, force=True)
+-            print("happens")
+-
+-            if scat_plot == "scat":
+-                returned = plotattr(adata,VarDict['x_scat'],VarDict['y_scat'], **kwargs_copy) 
+-            elif scat_plot == "embedding":
+-                returned = plotattr(adata,basis=VarDict['basis'], **kwargs_copy) #The "show" parameter will always be false, even if user puts it on True.
+ 
+-            else:
+-                returned = plotattr(adata, **kwargs_copy) # Here we plot. plotattr is e.g. sc.pl.umap. As we switched the back-end, this plot will be interactive.
+-            """
+-            This part needs some explaining. When using try and scanpy returns an error, e.g. when a parameter is wrong, the interactive backend for some reason does not stop correctly, which could cause a system crash, similar to what the on_close() function is addressing.
+-            Since it is nearly impossible in Python to run an exception without try (sys.excepthook doesnt work either here), the same work around as with atexit call on_close() will not be possible here.
+-            The only thing that I figured out works in this case, is to force an error in the exception, however not with raise. 
+-            Therefore, I could either run an non-existing command or alternatively, rerun the code that caused the error. For some reason, doing so avoids a crash.
+-            """
+-        
+         
+-        else:    
++      
+ 
+-            raise AttributeError("Unexpected error:", sys.exc_info()[0])
++        raise AttributeError("Unexpected error:", sys.exc_info()[1])
+         
+         
+     try:
+         if type(returned) == list:
+             returned = returned[-1]   
+         if type(returned) == dict: #In cases of heatmap. Other cases were dict is returned are not supported.
+             returned = returned['heatmap_ax']
+@@ -534,49 +518,52 @@
+        
+         lc = len(ShapeDict)-1        
+         mock_int = -1
+         if VarDict['replot_lines'] != None and VarDict['load'] != None:
+             for iteration,ShapeKey in enumerate(adata.uns[VarDict['replot_lines']]):
+                 getXY(adata.uns[VarDict['replot_lines']][ShapeKey],scat_plot,returned,iteration,VarDict['line_palette'],VarDict['linestyle'],None)
+ 
+-         
++        plot_is_open = True 
+         while True:
+             
+             
+             lc = lc + 1
+            
+             mock_int = mock_int + 1
+             if VarDict['mock'] != None:
+                 if len(VarDict['mock'][VarDict['map_attr']]) == mock_int:
+                     break
+                 mock_inp = VarDict['mock'][VarDict['map_attr']][mock_int]
+             else:
+                 mock_inp = None
+             counts = counts + 1
+-            outp = draw_line(100000,scat_plot,returned,mock_inp,lc,VarDict['line_palette'],VarDict['linestyle'],VarDict['printcords']) 
++            outp,plot_is_open = draw_line(100000,scat_plot,returned,mock_inp,lc,VarDict['line_palette'],VarDict['linestyle'],VarDict['printcords'],VarDict["timeout"],plot_is_open) 
++
++            if plot_is_open == False:
++                break
+             if outp != None:
+                 ShapeDict[str(counts)] = outp
+             else:
+                 break
+ 
+ 
+         plt.close()
+     except: #In the case that we cannot make the interactive plot, we need to switch back to the original backend in the case that we use Jupyter Notebook and switched to an interactive backend.
+         plt.close()
+-        if is_notebook():
++        if VarDict['interactive_backend'] != None:
+             matplotlib.use(MainmlpBackend, force=True)
+-            print("happens")
++
+ 
+ 
+         
+     
+-        raise AttributeError("Unexpected error:", sys.exc_info()[0])
++        raise AttributeError("Unexpected error:", sys.exc_info()[1])
+         
+     tryPass(plt.close()) # We do not want to continue with the plot we drawn. We will draw a new one later.
+-    if is_notebook():
++    if VarDict['interactive_backend'] != None:
+         matplotlib.use(MainmlpBackend, force=True)
+ 
+         
+     return(ShapeDict)  
+                 
+ 
+ def Save(VarDict,scat_plot,returnVar):
+@@ -704,26 +691,28 @@
+     
+     
+     #To be able to use sc.pl.*, we need to remove the 'REMAP_*_colors' uns entry.
+     if str(VarDict['load'])+"_colors" in adata.uns:
+         del adata.uns[VarDict['load']+"_colors"]   
+ 
+ 
+-def ReturnToNormalBackend(mlpb):
+-    if is_notebook():
++def ReturnToNormalBackend(mlpb,VarDict):
++    if VarDict['interactive_backend'] != None:
+         matplotlib.use(mlpb, force=True)
+-        print("happens")
++
++
+ 
+     try:
+         plt.close()
+     except:
+         pass
+     
+ def Remap(adata,override=False,remove_show_override=True,**kwargs): # Here is where it all starts. 
+-    
++       
++    #plt.rcParams["keymap.quit"] = [""]
+     MainmlpBackend = matplotlib.get_backend() # Get the current backend. This should happen before the prepare() function is executed. 
+     
+     
+     
+     
+     kwargs_copy,VarDict = setup(adata,**kwargs) # Create VarDict to keep track of scSELpy native args.
+     if remove_show_override == True:
+@@ -746,15 +735,15 @@
+         try:
+             ShapeDict = adata.uns[VarDict['replot_lines']].copy()
+         except:
+             
+             raise AttributeError(unsError)
+ 
+     else:
+-        atexit.register(ReturnToNormalBackend,MainmlpBackend) #In case the user closes the plot window during the other backend, this function would revert to the normal backend on exit
++        atexit.register(ReturnToNormalBackend,mlpb=MainmlpBackend,VarDict=VarDict) #In case the user closes the plot window during the other backend, this function would revert to the normal backend on exit
+         counts = prepare(adata,VarDict) # Switch matplotlib backend to interactive plot.
+         #Now it is time to run the interactive plot and select the cells.
+         ShapeDict = interactive_plot_selecting_cells(adata,VarDict,scat_plot,plotattr,counts,MainmlpBackend,unsError,**kwargs_copy)
+         atexit.unregister(ReturnToNormalBackend)
+     if scat_plot == "scat":
+         returnVar = plotattr(adata,VarDict['x_scat'],VarDict['y_scat'], **kwargs_copy) #The "show" parameter will always be false, even if user puts it on True.
+     elif scat_plot == "embedding":
+@@ -813,8 +802,7 @@
+ 
+     if VarDict['return_fig_backup'] == False and VarDict['show_backup'] != False:
+ 
+         pass
+     else:
+ 
+         return(returnVar)
+-
+```
+
+### Comparing `scselpy-1.0.1/scselpy/tests/REMAP_val.txt` & `scselpy-1.1.3/scselpy/tests/REMAP_val.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/tests/REMAP_val2.txt` & `scselpy-1.1.3/scselpy/tests/REMAP_val2.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/tests/REMAP_val3.txt` & `scselpy-1.1.3/scselpy/tests/REMAP_val3.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/tests/scselpy_tests.py` & `scselpy-1.1.3/scselpy/tests/scselpy_tests.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/scselpy/tools/_calculate_stats.py` & `scselpy-1.1.3/scselpy/tools/_calculate_stats.py`
+
+ * *Files identical despite different names*
+
+### Comparing `scselpy-1.0.1/PKG-INFO` & `scselpy-1.1.3/PKG-INFO`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: scselpy
+-Version: 1.0.1
++Version: 1.1.3
+ Summary: A tool to select cells on scanpy-based scRNA-seq analysis pipelines.
+ Author: Mark Dedden
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ Classifier: Environment :: Console
+ Classifier: Framework :: Jupyter
+ Classifier: Natural Language :: English
+@@ -25,14 +25,23 @@
+ ## Installation
+ Python3-7+  
+   
+ ```pip install scselpy```  
+   
+ Installation and import are fully in lower-case.
+ 
++## Backend
++When running scSELpy on Jupyter Notebook, the backend will temprary change to an interactive backend. The default interactive backend is Qt5Agg. If you are getting this error:  ```ImportError: Failed to import any of the following Qt binding modules: PyQt6, PySide6, PyQt5, PySide2``` please install PyQt5 with ```pip install PyQt5```. 
++
++If the backend does not work on your computer, try using to a different one by running ```scselpy.pl.umap(adata,interactive_backend="TkAgg")```. All matplotlib supported backends can be found [here].
++
++While running scSELpy in a Python shell such as ipython the default backend is usually interactive and therefore a switch will not be conducted, however, if you are experiencing troubles, it is possible to temporary switch the interactive backend to e.g. Qt5Agg or TkAgg by using the command above.
++
+ ## Running scSELpy
+ In order to get started with scSELpy, please refer to the [documentation].
+ The Tutorial can also be found as a notebook on this github/folder. 
+ 
+ 
+ [documentation]: https://scselpy.readthedocs.io/
++[here]: https://matplotlib.org/stable/users/explain/backends.html
++
+```
+

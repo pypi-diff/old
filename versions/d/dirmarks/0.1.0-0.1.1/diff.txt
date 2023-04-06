@@ -1,0 +1,262 @@
+--- tmp/dirmarks-0.1.0.tar.gz
++++ tmp/dirmarks-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dirmarks-0.1.0.tar", max compression
+│ +gzip compressed data, was "dirmarks-0.1.1.tar", max compression
+│   --- dirmarks-0.1.0.tar
+├── +++ dirmarks-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,6 +1,7 @@
+│ │ --rw-r--r--   0        0        0     2388 2023-04-06 15:59:15.041212 dirmarks-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0       88 2023-04-06 16:05:41.347011 dirmarks-0.1.0/dirmarks/__init__.py
+│ │ --rw-r--r--   0        0        0      672 2023-04-06 16:15:16.315412 dirmarks-0.1.0/dirmarks/data/dirmarks.function
+│ │ --rwxr-xr-x   0        0        0     4796 2023-04-06 16:11:43.116745 dirmarks-0.1.0/dirmarks/main.py
+│ │ --rw-r--r--   0        0        0      363 2023-04-06 14:52:08.835211 dirmarks-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2864 1970-01-01 00:00:00.000000 dirmarks-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1070 2023-04-06 16:22:22.890575 dirmarks-0.1.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     2419 2023-04-06 16:27:00.205868 dirmarks-0.1.1/README.md
+│ │ +-rw-r--r--   0        0        0       88 2023-04-06 16:22:22.895649 dirmarks-0.1.1/dirmarks/__init__.py
+│ │ +-rw-r--r--   0        0        0      672 2023-04-06 16:22:22.895990 dirmarks-0.1.1/dirmarks/data/dirmarks.function
+│ │ +-rwxr-xr-x   0        0        0     4921 2023-04-06 16:22:22.896269 dirmarks-0.1.1/dirmarks/main.py
+│ │ +-rw-r--r--   0        0        0      364 2023-04-06 17:06:59.076272 dirmarks-0.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2895 1970-01-01 00:00:00.000000 dirmarks-0.1.1/PKG-INFO
+│ │   --- dirmarks-0.1.0/README.md
+│ ├── +++ dirmarks-0.1.1/README.md
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,19 +1,19 @@
+│ │ -= Dirmarks
+│ │ +# Dirmarks
+│ │  Dirmarks is a directory bookmarking tool that allows you to easily manage, navigate, and switch between directories using bookmarks. This tool can save you time and make working with the command line more efficient.
+│ │  
+│ │  
+│ │ -== Installation
+│ │ +## Installation
+│ │  Install the Markdirs package using pip:
+│ │  
+│ │  ```
+│ │  pip install dirmarks
+│ │  ```
+│ │  
+│ │ -== Shell Function Setup
+│ │ +## Shell Function Setup
+│ │  To enable the dir command for changing directories using bookmarks, add the following shell function to your .profile, .bashrc, or .zshrc file, depending on your shell:
+│ │  
+│ │  ```
+│ │  #!/bin/bash
+│ │  dir() {
+│ │  if [ "$#" -eq 0 ]; then
+│ │      dirmarks list
+│ │ @@ -54,54 +54,60 @@
+│ │          ;;
+│ │  esac
+│ │  }
+│ │  ```
+│ │  
+│ │  Or add a file .functions in your home directory and source it in .bashrc
+│ │  
+│ │ -
+│ │ +```
+│ │  echo "source ~/.functions" >> ~/.bashrc
+│ │ +```
+│ │ +## Setup dirmarks for all users 
+│ │  
+│ │ -== Setup dirmarks for all users 
+│ │  ```
+│ │  mkdir -p /etc/bash.functions 
+│ │  cp data/marks.function /etc/bsh.fucntions
+│ │ -Append the following line in /etc/bash.bashrc
+│ │ +```
+│ │ +
+│ │ +### Append the following line in /etc/bash.bashrc
+│ │ +
+│ │  ```
+│ │  if [ -d /etc/bash.functions ]; then
+│ │          for i in /etc/bash.functions/*;do 
+│ │                  source $i
+│ │          done
+│ │  fi
+│ │  ```
+│ │  
+│ │ -== Usage:
+│ │ +## Usage:
+│ │ +
+│ │  ```
+│ │  dir -h   ------------------ prints this help
+│ │  dir -l	------------------ list marks
+│ │ -dir <[0-9]+> -------------- gm to mark[x] where is x is the index
+│ │ -dir <name> ---------------- gm to mark where key=<shortname>
+│ │ +dir <[0-9]+> -------------- dir to mark[x] where is x is the index
+│ │ +dir <name> ---------------- dir to mark where key=<shortname>
+│ │  dir -a <name> <path> ------ add new mark
+│ │  dir -d <name>|[0-9]+ ------ delete mark
+│ │  dir -u <name> <path> ------ update mark
+│ │  dir -m <name> ------------- add mark for PWD
+│ │  dir -p <name> ------------- prints mark
+│ │  ```
+│ │  
+│ │ -== Usage example
+│ │ +## Usage example
+│ │ +
+│ │  ```
+│ │ -majam@dirose:~$ gm -l
+│ │ +majam@dirose:~$ dir -l
+│ │  0 => meirm:/net/xen/mnt/sdb1/meirm
+│ │  1 => edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming
+│ │  2 => init:/etc/init.d
+│ │  3 => majam:/net/xen/mnt/sdb1/majam
+│ │  
+│ │ -majam@gmose:~$ gm 1
+│ │ -majam@gmose:/net/xen/mnt/sdb1/majam/aMule/Incoming$ 
+│ │ +majam@dirose:~$ dir 1
+│ │ +majam@dirose:/net/xen/mnt/sdb1/majam/aMule/Incoming$ 
+│ │  
+│ │ -majam@gmose:/etc/init.d$ gm majam
+│ │ -majam@gmose:/net/xen/mnt/sdb1/majam$ 
+│ │ +majam@dirose:/etc/init.d$ dir majam
+│ │ +majam@dirose:/net/xen/mnt/sdb1/majam$ 
+│ │  
+│ │ -majam@gmose:~$ gm -d 2
+│ │ -majam@gmose:~$
+│ │ +majam@dirose:~$ dir -d 2
+│ │ +majam@dirose:~$
+│ │  ```
+│ │   --- dirmarks-0.1.0/dirmarks/data/dirmarks.function
+│ ├── +++ dirmarks-0.1.1/dirmarks/data/dirmarks.function
+│ │┄ Files identical despite different names
+│ │   --- dirmarks-0.1.0/dirmarks/main.py
+│ ├── +++ dirmarks-0.1.1/dirmarks/main.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -101,14 +101,16 @@
+│ │  
+│ │      command = sys.argv[1]
+│ │  
+│ │      if command == "--list":
+│ │          Marks().list_marks()
+│ │      elif command == "--help":
+│ │          sys.stderr.write("""Usage:
+│ │ +Run dirmarks --shell to print the shell function to be imported.
+│ │ +For more information: https://www.github.com/meirm/dirmarks
+│ │  dir -h   ------------------ prints this help
+│ │  dir -l	------------------ list marks
+│ │  dir <[0-9]+> -------------- gm to mark[x] where is x is the index
+│ │  dir <name> ---------------- gm to mark where key=<shortname>
+│ │  dir -a <name> <path> ------ add new mark
+│ │  dir -d <name>|[0-9]+ ------ delete mark
+│ │  dir -u <name> <path> ------ update mark
+│ │   --- dirmarks-0.1.0/PKG-INFO
+│ ├── +++ dirmarks-0.1.1/PKG-INFO
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,34 +1,34 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dirmarks
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Bookmarks for the filesystem
+│ │  License: MIT
+│ │  Author: Meir Michanie
+│ │  Author-email: meirm@riunx.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │ -= Dirmarks
+│ │ +# Dirmarks
+│ │  Dirmarks is a directory bookmarking tool that allows you to easily manage, navigate, and switch between directories using bookmarks. This tool can save you time and make working with the command line more efficient.
+│ │  
+│ │  
+│ │ -== Installation
+│ │ +## Installation
+│ │  Install the Markdirs package using pip:
+│ │  
+│ │  ```
+│ │  pip install dirmarks
+│ │  ```
+│ │  
+│ │ -== Shell Function Setup
+│ │ +## Shell Function Setup
+│ │  To enable the dir command for changing directories using bookmarks, add the following shell function to your .profile, .bashrc, or .zshrc file, depending on your shell:
+│ │  
+│ │  ```
+│ │  #!/bin/bash
+│ │  dir() {
+│ │  if [ "$#" -eq 0 ]; then
+│ │      dirmarks list
+│ │ @@ -69,55 +69,61 @@
+│ │          ;;
+│ │  esac
+│ │  }
+│ │  ```
+│ │  
+│ │  Or add a file .functions in your home directory and source it in .bashrc
+│ │  
+│ │ -
+│ │ +```
+│ │  echo "source ~/.functions" >> ~/.bashrc
+│ │ +```
+│ │ +## Setup dirmarks for all users 
+│ │  
+│ │ -== Setup dirmarks for all users 
+│ │  ```
+│ │  mkdir -p /etc/bash.functions 
+│ │  cp data/marks.function /etc/bsh.fucntions
+│ │ -Append the following line in /etc/bash.bashrc
+│ │ +```
+│ │ +
+│ │ +### Append the following line in /etc/bash.bashrc
+│ │ +
+│ │  ```
+│ │  if [ -d /etc/bash.functions ]; then
+│ │          for i in /etc/bash.functions/*;do 
+│ │                  source $i
+│ │          done
+│ │  fi
+│ │  ```
+│ │  
+│ │ -== Usage:
+│ │ +## Usage:
+│ │ +
+│ │  ```
+│ │  dir -h   ------------------ prints this help
+│ │  dir -l	------------------ list marks
+│ │ -dir <[0-9]+> -------------- gm to mark[x] where is x is the index
+│ │ -dir <name> ---------------- gm to mark where key=<shortname>
+│ │ +dir <[0-9]+> -------------- dir to mark[x] where is x is the index
+│ │ +dir <name> ---------------- dir to mark where key=<shortname>
+│ │  dir -a <name> <path> ------ add new mark
+│ │  dir -d <name>|[0-9]+ ------ delete mark
+│ │  dir -u <name> <path> ------ update mark
+│ │  dir -m <name> ------------- add mark for PWD
+│ │  dir -p <name> ------------- prints mark
+│ │  ```
+│ │  
+│ │ -== Usage example
+│ │ +## Usage example
+│ │ +
+│ │  ```
+│ │ -majam@dirose:~$ gm -l
+│ │ +majam@dirose:~$ dir -l
+│ │  0 => meirm:/net/xen/mnt/sdb1/meirm
+│ │  1 => edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming
+│ │  2 => init:/etc/init.d
+│ │  3 => majam:/net/xen/mnt/sdb1/majam
+│ │  
+│ │ -majam@gmose:~$ gm 1
+│ │ -majam@gmose:/net/xen/mnt/sdb1/majam/aMule/Incoming$ 
+│ │ +majam@dirose:~$ dir 1
+│ │ +majam@dirose:/net/xen/mnt/sdb1/majam/aMule/Incoming$ 
+│ │  
+│ │ -majam@gmose:/etc/init.d$ gm majam
+│ │ -majam@gmose:/net/xen/mnt/sdb1/majam$ 
+│ │ +majam@dirose:/etc/init.d$ dir majam
+│ │ +majam@dirose:/net/xen/mnt/sdb1/majam$ 
+│ │  
+│ │ -majam@gmose:~$ gm -d 2
+│ │ -majam@gmose:~$
+│ │ +majam@dirose:~$ dir -d 2
+│ │ +majam@dirose:~$
+│ │  ```

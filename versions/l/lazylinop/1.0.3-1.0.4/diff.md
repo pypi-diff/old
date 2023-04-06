@@ -1,0 +1,227 @@
+# Comparing `tmp/lazylinop-1.0.3-py3-none-any.whl.zip` & `tmp/lazylinop-1.0.4-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 23273 bytes, number of entries: 8
+--rw-r--r--  2.0 unx       49 b- defN 23-Apr-06 13:06 lazylinop/__init__.py
+--rw-r--r--  2.0 unx    63971 b- defN 23-Apr-06 13:06 lazylinop/lazylinop.py
+--rw-r--r--  2.0 unx    28442 b- defN 23-Apr-06 13:06 lazylinop/wip/lsignal.py
+--rw-rw-rw-  2.0 unx     1434 b- defN 23-Apr-06 13:06 lazylinop-1.0.3.dist-info/LICENSE.txt
+--rw-r--r--  2.0 unx     4617 b- defN 23-Apr-06 13:06 lazylinop-1.0.3.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 13:06 lazylinop-1.0.3.dist-info/WHEEL
+--rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 13:06 lazylinop-1.0.3.dist-info/top_level.txt
+--rw-rw-r--  2.0 unx      638 b- defN 23-Apr-06 13:06 lazylinop-1.0.3.dist-info/RECORD
+-8 files, 99253 bytes uncompressed, 22163 bytes compressed:  77.7%
++Zip file size: 23307 bytes, number of entries: 8
++-rw-r--r--  2.0 unx       49 b- defN 23-Apr-06 17:08 lazylinop/__init__.py
++-rw-r--r--  2.0 unx    63971 b- defN 23-Apr-06 17:08 lazylinop/lazylinop.py
++-rw-r--r--  2.0 unx    28887 b- defN 23-Apr-06 17:08 lazylinop/wip/lsignal.py
++-rw-rw-rw-  2.0 unx     1434 b- defN 23-Apr-06 17:08 lazylinop-1.0.4.dist-info/LICENSE.txt
++-rw-r--r--  2.0 unx     4617 b- defN 23-Apr-06 17:08 lazylinop-1.0.4.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 17:08 lazylinop-1.0.4.dist-info/WHEEL
++-rw-r--r--  2.0 unx       10 b- defN 23-Apr-06 17:08 lazylinop-1.0.4.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      638 b- defN 23-Apr-06 17:08 lazylinop-1.0.4.dist-info/RECORD
++8 files, 99698 bytes uncompressed, 22197 bytes compressed:  77.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -3,23 +3,23 @@
+ 
+ Filename: lazylinop/lazylinop.py
+ Comment: 
+ 
+ Filename: lazylinop/wip/lsignal.py
+ Comment: 
+ 
+-Filename: lazylinop-1.0.3.dist-info/LICENSE.txt
++Filename: lazylinop-1.0.4.dist-info/LICENSE.txt
+ Comment: 
+ 
+-Filename: lazylinop-1.0.3.dist-info/METADATA
++Filename: lazylinop-1.0.4.dist-info/METADATA
+ Comment: 
+ 
+-Filename: lazylinop-1.0.3.dist-info/WHEEL
++Filename: lazylinop-1.0.4.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: lazylinop-1.0.3.dist-info/top_level.txt
++Filename: lazylinop-1.0.4.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: lazylinop-1.0.3.dist-info/RECORD
++Filename: lazylinop-1.0.4.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## lazylinop/wip/lsignal.py
+
+```diff
+@@ -248,34 +248,38 @@
+             input_array: (np.ndarray)
+                  to convolve with kernel, shape is (S, ) or (S, T)
+ 
+     Returns:
+         LazyLinearOperator or np.ndarray
+ 
+     Raises:
+-        
++
+         ValueError
+             number of dimensions of the signal and/or the kernel is greater than one.
+         ValueError
+             mode is either 'full' (default), 'valid' or 'same'
+         ValueError
+             boundary is either 'fill' (default), 'wrap' or 'symm'
+         ValueError
+             backend is either 'pyfaust' (defualt) or 'scipy'
+         ValueError
+             'shape' or 'input_array' are expected
+         ValueError
+             expect 'shape' or 'input_array' not both.
+ 
+     Examples:
++        >>> import numpy as np
++        >>> from lazylinop.wip.lsignal import pyfaust_convolve
++        >>> from scipy.signal import convolve2d
+         >>> image = np.random.rand(6, 6)
+         >>> kernel = np.random.rand(3, 3)
+         >>> c1 = np.real(pyfaust_convolve(kernel, mode='same', shape=image.shape) @ image.flatten()).reshape(image.shape)
+         >>> c2 = convolve2d(image, kernel, mode='same', boundary='fill')
+         >>> print(np.allclose(c1, c2))
++        True
+     """
+     from pyfaust import toeplitz
+     if not mode in ['full', 'valid', 'same']:
+         raise ValueError("mode is either 'full' (default), 'valid' or 'same'")
+     if not boundary in ['fill', 'wrap', 'symm']:
+         raise ValueError("boundary is either 'fill' (default), 'wrap' or 'symm'")
+     # if not backend in ['pyfaust', 'scipy']:
+@@ -463,19 +467,22 @@
+         expect 'shape' or 'input_array' not both.
+         ValueError
+         'block_size' argument expects a value that is a power of two.
+         ValueError
+         'block_size' must be greater than the kernel size.
+ 
+     Examples:
++        >>> import numpy as np
++        >>> from lazylinop.wip.lsignal import pyfaust_oaconvolve
+         >>> signal = np.random.rand(32768)
+         >>> kernel = np.random.rand(4)
+         >>> c1 = np.real(pyfaust_oaconvolve(kernel, mode='same', input_array=signal))
+         >>> c2 = oaconvolve(signal, kernel, mode='same')
+         >>> print(np.allclose(c1, c2))
++        True
+     """
+     if not mode in ['full', 'valid', 'same']:
+         raise ValueError("mode is either 'full' (default), 'valid' or 'same'")
+     if not "shape" in kwargs.keys() and not "input_array" in kwargs.keys():
+         raise ValueError("'shape' or 'input_array' are expected")
+     if "shape" in kwargs.keys() and "input_array" in kwargs.keys():
+         raise ValueError("expect 'shape' or 'input_array' not both.")
+@@ -597,23 +604,25 @@
+              number of blocks
+ 
+      Returns:
+         LazyLinearOp
+ 
+ 
+     Examples:
++        >>> import numpy as np
++        >>> from lazylinop.wip.lsignal import pyfaust_multi_pad
+         >>> signal = np.full(5, 1.0)
+         >>> print(signal)
+-        >>> [1. 1. 1. 1. 1.]
++        [1. 1. 1. 1. 1.]
+         >>> print(signal.shape)
+-        >>> (5,)
++        (5,)
+         >>> print(pyfaust_multi_pad(1, 5) @ signal)
+-        >>> [1. 0. 1. 0. 1. 0. 1. 0. 1. 0.]
++        [1. 0. 1. 0. 1. 0. 1. 0. 1. 0.]
+         >>> print((pyfaust_multi_pad(1, 5) @ signal).shape)
+-        >>> (10,)
++        (10,)
+     """
+     mp = np.zeros((2 * X, X))
+     for x in np.arange(0, 2 * X, 2):
+         mp[x, x // 2] = 1
+     return kron(mp, eye(L, n=L, k=0), use_pylops=True)
+ 
+ 
+@@ -649,18 +658,21 @@
+             L is strictly positive.
+         ValueError
+             X is strictly positive.
+         ValueError
+             number of columns of the linear operator is not equal to the size of the signal.
+ 
+     Examples:
++        >>> import numpy as np
++        >>> from lazylinop.wip.lsignal import pyfaust_overlap_add
+         >>> signal = np.full(16, 1.0)
+         >>> oa1 = pyfaust_overlap_add(2, 4, None) @ signal
+         >>> oa2 = pyfaust_overlap_add(2, 4, signal)
+         >>> np.allclose(oa1, oa2)
++        True
+     """
+     if L <= 0:
+         raise ValueError("L is strictly positive.")
+     if X <= 0:
+         raise ValueError("X is strictly positive.")
+     if (2 * X * L) != signal.size:
+         raise ValueError("number of columns of the linear operator is not equal to the size of the signal.")
+```
+
+## Comparing `lazylinop-1.0.3.dist-info/LICENSE.txt` & `lazylinop-1.0.4.dist-info/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+## Comparing `lazylinop-1.0.3.dist-info/METADATA` & `lazylinop-1.0.4.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: lazylinop
+-Version: 1.0.3
++Version: 1.0.4
+ Summary: A package dedicated to lazy linear operators based on diverse backends/libraries.
+ Author-email: Inria <remi.gribonval@inria.fr>, Pascal Carrivain <pascal.carrivain@inria.fr>, Simon Delamare <simon.delamare@ens-lyon.fr>, Hakim Hadj-Djilani <hakim.hadj-djilani@inria.fr>, Rémi Gribonval <remi.gribonval@inria.fr>
+ License: Copyright 2023, Inria
+         
+         BSD License 2.0
+         
+         Redistribution and use in source and binary forms, with or without
+```
+
+## Comparing `lazylinop-1.0.3.dist-info/RECORD` & `lazylinop-1.0.4.dist-info/RECORD`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+ lazylinop/__init__.py,sha256=hXG7SWENpXzy1AY1Ee2bqirTHLc3zoQ9DaU8LWBV19k,49
+ lazylinop/lazylinop.py,sha256=0vYzM13ttwSqHsYHaGsQWSEX2P80kbb6uxv1I3iZ3qc,63971
+-lazylinop/wip/lsignal.py,sha256=529Jr8Z7g1AQWw8SXAoUjzbwDhQlXgpv7B5YMPQmMQE,28442
+-lazylinop-1.0.3.dist-info/LICENSE.txt,sha256=jHt8qQXwxwsxIgSCZbFwPqQw3R1QWQK0JzZZ3PAwlU0,1434
+-lazylinop-1.0.3.dist-info/METADATA,sha256=JVZOkzGiLBvtnHp1_DgqLHE8UA33ZL0Q7ypTw-zaAg0,4617
+-lazylinop-1.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+-lazylinop-1.0.3.dist-info/top_level.txt,sha256=zq6N2WH1Vl_0zSzqC12W0Oil87_uMjD3sYhWGjRioIc,10
+-lazylinop-1.0.3.dist-info/RECORD,,
++lazylinop/wip/lsignal.py,sha256=c5EFZqgjYGmyReTyi2ftVr69vFhivSY0Sjn-9P8MQUM,28887
++lazylinop-1.0.4.dist-info/LICENSE.txt,sha256=jHt8qQXwxwsxIgSCZbFwPqQw3R1QWQK0JzZZ3PAwlU0,1434
++lazylinop-1.0.4.dist-info/METADATA,sha256=mVq6ESrlL_ltw3MU4PNVNadSJ8rl8VOrqRVht-R70Dc,4617
++lazylinop-1.0.4.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++lazylinop-1.0.4.dist-info/top_level.txt,sha256=zq6N2WH1Vl_0zSzqC12W0Oil87_uMjD3sYhWGjRioIc,10
++lazylinop-1.0.4.dist-info/RECORD,,
+```
+

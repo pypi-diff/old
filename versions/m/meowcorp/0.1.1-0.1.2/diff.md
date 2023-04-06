@@ -1,0 +1,228 @@
+# Comparing `tmp/meowcorp-0.1.1.tar.gz` & `tmp/meowcorp-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "meowcorp-0.1.1.tar", last modified: Thu Apr  6 16:44:37 2023, max compression
++gzip compressed data, was "meowcorp-0.1.2.tar", last modified: Thu Apr  6 17:10:00 2023, max compression
+```
+
+## Comparing `meowcorp-0.1.1.tar` & `meowcorp-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,68 +1,98 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.324172 meowcorp-0.1.1/
+--rw-rw-rw-   0        0        0        0 2023-04-06 15:16:37.000000 meowcorp-0.1.1/LICENSE
+--rw-rw-rw-   0        0        0       20 2023-04-06 16:32:30.000000 meowcorp-0.1.1/MANIFEST.in
+--rw-rw-rw-   0        0        0      295 2023-04-06 16:44:37.323171 meowcorp-0.1.1/PKG-INFO
+--rw-rw-rw-   0        0        0       46 2023-04-06 15:16:06.000000 meowcorp-0.1.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.280231 meowcorp-0.1.1/meowcorp/
+--rw-rw-rw-   0        0        0       69 2022-12-01 23:02:58.000000 meowcorp-0.1.1/meowcorp/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.287231 meowcorp-0.1.1/meowcorp/commands/
+--rw-rw-rw-   0        0        0       57 2023-04-06 16:36:07.000000 meowcorp-0.1.1/meowcorp/commands/__init__.py
+--rw-rw-rw-   0        0        0       91 2023-04-06 16:35:37.000000 meowcorp-0.1.1/meowcorp/commands/commands_handler.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.288299 meowcorp-0.1.1/meowcorp/conf/
+--rw-rw-rw-   0        0        0        0 2023-04-06 16:12:11.000000 meowcorp-0.1.1/meowcorp/conf/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.290308 meowcorp-0.1.1/meowcorp/conf/project_tempalte/
+--rw-rw-rw-   0        0        0      108 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/.env-tpl
+--rw-rw-rw-   0        0        0        0 2023-04-06 16:12:20.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/__init__.py
+--rw-rw-rw-   0        0        0      208 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/main.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.292307 meowcorp-0.1.1/meowcorp/conf/project_tempalte/models/
+--rw-rw-rw-   0        0        0        0 2023-04-06 14:56:07.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/models/__init__.py-tpl
+--rw-rw-rw-   0        0        0     1335 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/models/models.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.298036 meowcorp-0.1.1/meowcorp/conf/project_tempalte/settings/
+--rw-rw-rw-   0        0        0       42 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/settings/__init__.py-tpl
+--rw-rw-rw-   0        0        0     1023 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/settings/logging_config.py-tpl
+--rw-rw-rw-   0        0        0       17 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/settings/settings.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.300048 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/
+--rw-rw-rw-   0        0        0        0 2022-08-01 13:14:51.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/__init__.py-tpl
+--rw-rw-rw-   0        0        0     3037 2023-04-06 14:32:14.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/bot.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.302048 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/
+--rw-rw-rw-   0        0        0      263 2022-12-03 01:24:46.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/BranchExample.py-tpl
+--rw-rw-rw-   0        0        0     2466 2023-04-06 14:26:06.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/__init__.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.303048 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/start/
+--rw-rw-rw-   0        0        0      349 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/start/BranchExample.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.305048 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/callbacks/
+--rw-rw-rw-   0        0        0      286 2022-12-03 01:24:46.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/callbacks/TestCallback.py-tpl
+--rw-rw-rw-   0        0        0     2618 2022-12-03 01:35:57.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/callbacks/__init__.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.307875 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/status/
+--rw-rw-rw-   0        0        0       88 2022-11-18 16:20:13.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/status/__init__.py-tpl
+--rw-rw-rw-   0        0        0      119 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/status/status_branch.py-tpl
+--rw-rw-rw-   0        0        0      113 2023-04-06 15:03:17.000000 meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/status/status_callback.py-tpl
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.312428 meowcorp-0.1.1/meowcorp/exceptions/
+--rw-rw-rw-   0        0        0        0 2022-12-02 23:41:03.000000 meowcorp-0.1.1/meowcorp/exceptions/__init__.py
+--rw-rw-rw-   0        0        0      126 2022-12-16 09:06:48.000000 meowcorp-0.1.1/meowcorp/exceptions/keyboard.py
+--rw-rw-rw-   0        0        0       89 2022-12-03 00:58:59.000000 meowcorp-0.1.1/meowcorp/exceptions/status.py
+--rw-rw-rw-   0        0        0      431 2022-12-03 00:10:07.000000 meowcorp-0.1.1/meowcorp/exceptions/validation.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.314425 meowcorp-0.1.1/meowcorp/factory/
+--rw-rw-rw-   0        0        0       30 2022-06-28 04:57:54.000000 meowcorp-0.1.1/meowcorp/factory/__init__.py
+--rw-rw-rw-   0        0        0      883 2022-12-16 08:57:38.000000 meowcorp-0.1.1/meowcorp/factory/factory.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.316424 meowcorp-0.1.1/meowcorp/handlers/
+--rw-rw-rw-   0        0        0       35 2022-12-03 00:09:57.000000 meowcorp-0.1.1/meowcorp/handlers/__init__.py
+--rw-rw-rw-   0        0        0     3388 2023-01-18 16:07:37.000000 meowcorp-0.1.1/meowcorp/handlers/args.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.319172 meowcorp-0.1.1/meowcorp/interfaces/
+--rw-rw-rw-   0        0        0     1179 2023-04-06 14:41:40.000000 meowcorp-0.1.1/meowcorp/interfaces/IBranch.py
+--rw-rw-rw-   0        0        0     1212 2023-04-06 14:41:40.000000 meowcorp-0.1.1/meowcorp/interfaces/ICallback.py
+--rw-rw-rw-   0        0        0       62 2022-12-03 01:24:46.000000 meowcorp-0.1.1/meowcorp/interfaces/__init__.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.321171 meowcorp-0.1.1/meowcorp/keyboard/
+--rw-rw-rw-   0        0        0        0 2022-12-01 23:01:53.000000 meowcorp-0.1.1/meowcorp/keyboard/__init__.py
+--rw-rw-rw-   0        0        0     1648 2022-12-03 00:58:59.000000 meowcorp-0.1.1/meowcorp/keyboard/utils.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.322171 meowcorp-0.1.1/meowcorp/status/
+--rw-rw-rw-   0        0        0        0 2022-12-02 23:41:10.000000 meowcorp-0.1.1/meowcorp/status/__init__.py
+--rw-rw-rw-   0        0        0     1431 2023-04-06 14:38:38.000000 meowcorp-0.1.1/meowcorp/status/status.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 16:44:37.285231 meowcorp-0.1.1/meowcorp.egg-info/
+--rw-rw-rw-   0        0        0      295 2023-04-06 16:44:36.000000 meowcorp-0.1.1/meowcorp.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0     1856 2023-04-06 16:44:37.000000 meowcorp-0.1.1/meowcorp.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 16:44:36.000000 meowcorp-0.1.1/meowcorp.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       80 2023-04-06 16:44:36.000000 meowcorp-0.1.1/meowcorp.egg-info/entry_points.txt
+--rw-rw-rw-   0        0        0       73 2023-04-06 16:44:36.000000 meowcorp-0.1.1/meowcorp.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-04-06 16:44:36.000000 meowcorp-0.1.1/meowcorp.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-06 16:44:37.324172 meowcorp-0.1.1/setup.cfg
+--rw-rw-rw-   0        0        0      697 2023-04-06 16:44:27.000000 meowcorp-0.1.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.354827 meowcorp-0.1.2/
++-rw-rw-rw-   0        0        0        0 2023-04-06 15:16:37.000000 meowcorp-0.1.2/LICENSE
++-rw-rw-rw-   0        0        0       20 2023-04-06 16:32:30.000000 meowcorp-0.1.2/MANIFEST.in
++-rw-rw-rw-   0        0        0      450 2023-04-06 17:10:00.353827 meowcorp-0.1.2/PKG-INFO
++-rw-rw-rw-   0        0        0       46 2023-04-06 15:16:06.000000 meowcorp-0.1.2/README.md
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.281826 meowcorp-0.1.2/meowcorp/
++-rw-rw-rw-   0        0        0       69 2022-12-01 23:02:58.000000 meowcorp-0.1.2/meowcorp/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.292827 meowcorp-0.1.2/meowcorp/commands/
++-rw-rw-rw-   0        0        0       57 2023-04-06 16:36:07.000000 meowcorp-0.1.2/meowcorp/commands/__init__.py
++-rw-rw-rw-   0        0        0     1373 2023-04-06 17:07:22.000000 meowcorp-0.1.2/meowcorp/commands/commands_handler.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.293826 meowcorp-0.1.2/meowcorp/conf/
++-rw-rw-rw-   0        0        0        0 2023-04-06 16:12:11.000000 meowcorp-0.1.2/meowcorp/conf/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.296826 meowcorp-0.1.2/meowcorp/conf/project_tempalte/
++-rw-rw-rw-   0        0        0      108 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/.env-tpl
++-rw-rw-rw-   0        0        0        0 2023-04-06 16:12:20.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/__init__.py
++-rw-rw-rw-   0        0        0      208 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/main.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.298827 meowcorp-0.1.2/meowcorp/conf/project_tempalte/models/
++-rw-rw-rw-   0        0        0        0 2023-04-06 14:56:07.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/models/__init__.py-tpl
++-rw-rw-rw-   0        0        0     1335 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/models/models.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.302829 meowcorp-0.1.2/meowcorp/conf/project_tempalte/settings/
++-rw-rw-rw-   0        0        0       42 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/settings/__init__.py-tpl
++-rw-rw-rw-   0        0        0     1023 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/settings/logging_config.py-tpl
++-rw-rw-rw-   0        0        0       17 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/settings/settings.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.305828 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/
++-rw-rw-rw-   0        0        0        0 2022-08-01 13:14:51.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/__init__.py-tpl
++-rw-rw-rw-   0        0        0     3037 2023-04-06 14:32:14.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/bot.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.309044 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/
++-rw-rw-rw-   0        0        0      263 2022-12-03 01:24:46.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/BranchExample.py-tpl
++-rw-rw-rw-   0        0        0     2466 2023-04-06 14:26:06.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/__init__.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.309827 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/start/
++-rw-rw-rw-   0        0        0      349 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/start/BranchExample.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.311826 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/callbacks/
++-rw-rw-rw-   0        0        0      286 2022-12-03 01:24:46.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/callbacks/TestCallback.py-tpl
++-rw-rw-rw-   0        0        0     2618 2022-12-03 01:35:57.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/callbacks/__init__.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.314826 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/status/
++-rw-rw-rw-   0        0        0       88 2022-11-18 16:20:13.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/status/__init__.py-tpl
++-rw-rw-rw-   0        0        0      119 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/status/status_branch.py-tpl
++-rw-rw-rw-   0        0        0      113 2023-04-06 15:03:17.000000 meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/status/status_callback.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.320826 meowcorp-0.1.2/meowcorp/exceptions/
++-rw-rw-rw-   0        0        0        0 2022-12-02 23:41:03.000000 meowcorp-0.1.2/meowcorp/exceptions/__init__.py
++-rw-rw-rw-   0        0        0      126 2022-12-16 09:06:48.000000 meowcorp-0.1.2/meowcorp/exceptions/keyboard.py
++-rw-rw-rw-   0        0        0       89 2022-12-03 00:58:59.000000 meowcorp-0.1.2/meowcorp/exceptions/status.py
++-rw-rw-rw-   0        0        0      431 2022-12-03 00:10:07.000000 meowcorp-0.1.2/meowcorp/exceptions/validation.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.322827 meowcorp-0.1.2/meowcorp/factory/
++-rw-rw-rw-   0        0        0       30 2022-06-28 04:57:54.000000 meowcorp-0.1.2/meowcorp/factory/__init__.py
++-rw-rw-rw-   0        0        0      883 2022-12-16 08:57:38.000000 meowcorp-0.1.2/meowcorp/factory/factory.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.324826 meowcorp-0.1.2/meowcorp/handlers/
++-rw-rw-rw-   0        0        0       35 2022-12-03 00:09:57.000000 meowcorp-0.1.2/meowcorp/handlers/__init__.py
++-rw-rw-rw-   0        0        0     3388 2023-01-18 16:07:37.000000 meowcorp-0.1.2/meowcorp/handlers/args.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.327825 meowcorp-0.1.2/meowcorp/interfaces/
++-rw-rw-rw-   0        0        0     1179 2023-04-06 14:41:40.000000 meowcorp-0.1.2/meowcorp/interfaces/IBranch.py
++-rw-rw-rw-   0        0        0     1212 2023-04-06 14:41:40.000000 meowcorp-0.1.2/meowcorp/interfaces/ICallback.py
++-rw-rw-rw-   0        0        0       62 2022-12-03 01:24:46.000000 meowcorp-0.1.2/meowcorp/interfaces/__init__.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.329825 meowcorp-0.1.2/meowcorp/keyboard/
++-rw-rw-rw-   0        0        0        0 2022-12-01 23:01:53.000000 meowcorp-0.1.2/meowcorp/keyboard/__init__.py
++-rw-rw-rw-   0        0        0     1648 2022-12-03 00:58:59.000000 meowcorp-0.1.2/meowcorp/keyboard/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.331825 meowcorp-0.1.2/meowcorp/status/
++-rw-rw-rw-   0        0        0        0 2022-12-02 23:41:10.000000 meowcorp-0.1.2/meowcorp/status/__init__.py
++-rw-rw-rw-   0        0        0     1431 2023-04-06 14:38:38.000000 meowcorp-0.1.2/meowcorp/status/status.py
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.290826 meowcorp-0.1.2/meowcorp.egg-info/
++-rw-rw-rw-   0        0        0      450 2023-04-06 17:09:59.000000 meowcorp-0.1.2/meowcorp.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0     3333 2023-04-06 17:10:00.000000 meowcorp-0.1.2/meowcorp.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 17:09:59.000000 meowcorp-0.1.2/meowcorp.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       80 2023-04-06 17:09:59.000000 meowcorp-0.1.2/meowcorp.egg-info/entry_points.txt
++-rw-rw-rw-   0        0        0       73 2023-04-06 17:09:59.000000 meowcorp-0.1.2/meowcorp.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 17:09:59.000000 meowcorp-0.1.2/meowcorp.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.273826 meowcorp-0.1.2/new_venv/
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.273826 meowcorp-0.1.2/new_venv/Lib/
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.274828 meowcorp-0.1.2/new_venv/Lib/site-packages/
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.274828 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.274828 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.334828 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/
++-rw-rw-rw-   0        0        0      108 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/.env-tpl
++-rw-rw-rw-   0        0        0      208 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/main.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.336826 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/models/
++-rw-rw-rw-   0        0        0        0 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/models/__init__.py-tpl
++-rw-rw-rw-   0        0        0     1335 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/models/models.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.340825 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/settings/
++-rw-rw-rw-   0        0        0       42 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/settings/__init__.py-tpl
++-rw-rw-rw-   0        0        0     1023 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/settings/logging_config.py-tpl
++-rw-rw-rw-   0        0        0       17 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/settings/settings.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.342825 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/
++-rw-rw-rw-   0        0        0        0 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/__init__.py-tpl
++-rw-rw-rw-   0        0        0     3037 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/bot.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.344825 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/branches/
++-rw-rw-rw-   0        0        0      263 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/branches/BranchExample.py-tpl
++-rw-rw-rw-   0        0        0     2466 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/branches/__init__.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.345826 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/branches/start/
++-rw-rw-rw-   0        0        0      349 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/branches/start/BranchExample.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.347825 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/callbacks/
++-rw-rw-rw-   0        0        0      286 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/callbacks/TestCallback.py-tpl
++-rw-rw-rw-   0        0        0     2618 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/callbacks/__init__.py-tpl
++drwxrwxrwx   0        0        0        0 2023-04-06 17:10:00.352828 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/status/
++-rw-rw-rw-   0        0        0       88 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/status/__init__.py-tpl
++-rw-rw-rw-   0        0        0      119 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/status/status_branch.py-tpl
++-rw-rw-rw-   0        0        0      113 2023-04-06 16:46:26.000000 meowcorp-0.1.2/new_venv/Lib/site-packages/meowcorp/conf/project_tempalte/telegram/status/status_callback.py-tpl
++-rw-rw-rw-   0        0        0       42 2023-04-06 17:10:00.354827 meowcorp-0.1.2/setup.cfg
++-rw-rw-rw-   0        0        0      990 2023-04-06 17:09:38.000000 meowcorp-0.1.2/setup.py
+```
+
+### Comparing `meowcorp-0.1.1/meowcorp/conf/project_tempalte/models/models.py-tpl` & `meowcorp-0.1.2/meowcorp/conf/project_tempalte/models/models.py-tpl`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/conf/project_tempalte/settings/logging_config.py-tpl` & `meowcorp-0.1.2/meowcorp/conf/project_tempalte/settings/logging_config.py-tpl`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/bot.py-tpl` & `meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/bot.py-tpl`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/branches/__init__.py-tpl` & `meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/branches/__init__.py-tpl`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/conf/project_tempalte/telegram/callbacks/__init__.py-tpl` & `meowcorp-0.1.2/meowcorp/conf/project_tempalte/telegram/callbacks/__init__.py-tpl`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/factory/factory.py` & `meowcorp-0.1.2/meowcorp/factory/factory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/handlers/args.py` & `meowcorp-0.1.2/meowcorp/handlers/args.py`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/interfaces/IBranch.py` & `meowcorp-0.1.2/meowcorp/interfaces/IBranch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/interfaces/ICallback.py` & `meowcorp-0.1.2/meowcorp/interfaces/ICallback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/keyboard/utils.py` & `meowcorp-0.1.2/meowcorp/keyboard/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `meowcorp-0.1.1/meowcorp/status/status.py` & `meowcorp-0.1.2/meowcorp/status/status.py`
+
+ * *Files identical despite different names*
+

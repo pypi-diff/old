@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/dirmarks-0.1.0.tar.gz tmp/dirmarks-0.1.1.tar.gz --html versions/d/dirmarks/0.1.0-0.1.1/index.html --text versions/d/dirmarks/0.1.0-0.1.1/diff.txt --markdown versions/d/dirmarks/0.1.0-0.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.93 KB</span></div>
+  <div><span class="source">tmp/dirmarks-0.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/dirmarks-0.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">184 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dirmarks-0.1.<del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dirmarks-0.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.7 KB</span></div>
+    <div><span class="source">dirmarks-0.1.0.tar</span> vs.</div>
+    <div id="dirmarks--.-.-.tar"><span class="source">dirmarks-0.1.1.tar</span>
+      <a class="anchor" href="#dirmarks--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.32 KB</span></div>
+      <div id="dirmarks--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#dirmarks--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 6 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1070<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:22:22.890575<span class="dp">·</span>dirmarks-0.1.1/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>388</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>5</del>:<del>59</del>:<del>15</del>.<del>041212</del><span class="dp">·</span>dirmarks-0.1.<del>0</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>419</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>6</ins>:<ins>27</ins>:<ins>00</ins>.<ins>205868</ins><span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<del>05</del>:<del>41</del>.<del>347011</del><span class="dp">·</span>dirmarks-0.1.<del>0</del>/dirmarks/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>88<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<ins>22</ins>:<ins>22</ins>.<ins>895649</ins><span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/dirmarks/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>672<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<del>15</del>:<del>16</del>.<del>31</del>5<del>412</del><span class="dp">·</span>dirmarks-0.1.<del>0</del>/dirmarks/data/dirmarks.function</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>672<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<ins>22</ins>:<ins>22</ins>.<ins>89</ins>5<ins>990</ins><span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/dirmarks/data/dirmarks.function</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>796</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<del>11</del>:<del>43</del>.<del>11</del>6<del>745</del><span class="dp">·</span>dirmarks-0.1.<del>0</del>/dirmarks/main.py</td><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>921</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<ins>22</ins>:<ins>22</ins>.<ins>89</ins>6<ins>269</ins><span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/dirmarks/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<del>3</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<del>4</del>:<del>52</del>:<del>08</del>.<del>835</del>2<del>11</del><span class="dp">·</span>dirmarks-0.1.<del>0</del>/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36<ins>4</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>1<ins>7</ins>:<ins>06</ins>:<ins>59</ins>.<ins>076</ins>2<ins>72</ins><span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28<del>64</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>dirmarks-0.1.<del>0</del>/PKG-INFO</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28<ins>95</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>dirmarks-0.1.<ins>1</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.5 KB</span></div>
+      <div><span class="source">dirmarks-0.1.0/README.md</span> vs.</div>
+      <div id="dirmarks--.-.-.tar---dirmarks--.-.--README.md"><span class="source">dirmarks-0.1.1/README.md</span>
+        <a class="anchor" href="#dirmarks--.-.-.tar---dirmarks--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 19 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent"><del>=</del><span class="dp">·</span>Dirmarks</td><td class="diffline">1 </td><td class="diffpresent"><ins>#</ins><span class="dp">·</span>Dirmarks</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Dirmarks<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>directory<span class="dp">·</span>bookmarking<span class="dp">·</span>tool<span class="dp">·</span>that<span class="dp">·</span>allows<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>easily<span class="dp">·</span>manage,<span class="dp">·</span>navigate,<span class="dp">·</span>and<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks.<span class="dp">·</span>This<span class="dp">·</span>tool<span class="dp">·</span>can<span class="dp">·</span>save<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>make<span class="dp">·</span>working<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>more<span class="dp">·</span>efficient.</td><td class="diffline">2 </td><td class="diffpresent">Dirmarks<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>directory<span class="dp">·</span>bookmarking<span class="dp">·</span>tool<span class="dp">·</span>that<span class="dp">·</span>allows<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>easily<span class="dp">·</span>manage,<span class="dp">·</span>navigate,<span class="dp">·</span>and<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks.<span class="dp">·</span>This<span class="dp">·</span>tool<span class="dp">·</span>can<span class="dp">·</span>save<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>make<span class="dp">·</span>working<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>more<span class="dp">·</span>efficient.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Installation</td><td class="diffline">3 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Install<span class="dp">·</span>the<span class="dp">·</span>Markdirs<span class="dp">·</span>package<span class="dp">·</span>using<span class="dp">·</span>pip:</td><td class="diffline">4 </td><td class="diffpresent">Install<span class="dp">·</span>the<span class="dp">·</span>Markdirs<span class="dp">·</span>package<span class="dp">·</span>using<span class="dp">·</span>pip:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">```</td><td class="diffline">5 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>dirmarks</td><td class="diffline">6 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>dirmarks</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">```</td><td class="diffline">7 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Shell<span class="dp">·</span>Function<span class="dp">·</span>Setup</td><td class="diffline">8 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Shell<span class="dp">·</span>Function<span class="dp">·</span>Setup</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>dir<span class="dp">·</span>command<span class="dp">·</span>for<span class="dp">·</span>changing<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks,<span class="dp">·</span>add<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>shell<span class="dp">·</span>function<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>.profile,<span class="dp">·</span>.bashrc,<span class="dp">·</span>or<span class="dp">·</span>.zshrc<span class="dp">·</span>file,<span class="dp">·</span>depending<span class="dp">·</span>on<span class="dp">·</span>your<span class="dp">·</span>shell:</td><td class="diffline">9 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>dir<span class="dp">·</span>command<span class="dp">·</span>for<span class="dp">·</span>changing<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks,<span class="dp">·</span>add<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>shell<span class="dp">·</span>function<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>.profile,<span class="dp">·</span>.bashrc,<span class="dp">·</span>or<span class="dp">·</span>.zshrc<span class="dp">·</span>file,<span class="dp">·</span>depending<span class="dp">·</span>on<span class="dp">·</span>your<span class="dp">·</span>shell:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">```</td><td class="diffline">10 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#!/bin/bash</td><td class="diffline">11 </td><td class="diffpresent">#!/bin/bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">dir()<span class="dp">·</span>{</td><td class="diffline">12 </td><td class="diffpresent">dir()<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>&quot;$#&quot;<span class="dp">·</span>-eq<span class="dp">·</span>0<span class="dp">·</span>];<span class="dp">·</span>then</td><td class="diffline">13 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>&quot;$#&quot;<span class="dp">·</span>-eq<span class="dp">·</span>0<span class="dp">·</span>];<span class="dp">·</span>then</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dirmarks<span class="dp">·</span>list</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dirmarks<span class="dp">·</span>list</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 54, 54 lines modified</td><td colspan="2">Offset 54, 60 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>;;</td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>;;</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">esac</td><td class="diffline">55 </td><td class="diffpresent">esac</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">}</td><td class="diffline">56 </td><td class="diffpresent">}</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">```</td><td class="diffline">57 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">Or<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>.functions<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>home<span class="dp">·</span>directory<span class="dp">·</span>and<span class="dp">·</span>source<span class="dp">·</span>it<span class="dp">·</span>in<span class="dp">·</span>.bashrc</td><td class="diffline">58 </td><td class="diffpresent">Or<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>.functions<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>home<span class="dp">·</span>directory<span class="dp">·</span>and<span class="dp">·</span>source<span class="dp">·</span>it<span class="dp">·</span>in<span class="dp">·</span>.bashrc</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">59 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">echo<span class="dp">·</span>&quot;source<span class="dp">·</span>~/.functions&quot;<span class="dp">·</span>&gt;&gt;<span class="dp">·</span>~/.bashrc</td><td class="diffline">60 </td><td class="diffpresent">echo<span class="dp">·</span>&quot;source<span class="dp">·</span>~/.functions&quot;<span class="dp">·</span>&gt;&gt;<span class="dp">·</span>~/.bashrc</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">61 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">62 </td><td class="diffpresent">##<span class="dp">·</span>Setup<span class="dp">·</span>dirmarks<span class="dp">·</span>for<span class="dp">·</span>all<span class="dp">·</span>users<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">60 </td><td class="diffpresent">==<span class="dp">·</span>Setup<span class="dp">·</span>dirmarks<span class="dp">·</span>for<span class="dp">·</span>all<span class="dp">·</span>users<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">```</td><td class="diffline">63 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">mkdir<span class="dp">·</span>-p<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span></td><td class="diffline">64 </td><td class="diffpresent">mkdir<span class="dp">·</span>-p<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">cp<span class="dp">·</span>data/marks.function<span class="dp">·</span>/etc/bsh.fucntions</td><td class="diffline">65 </td><td class="diffpresent">cp<span class="dp">·</span>data/marks.function<span class="dp">·</span>/etc/bsh.fucntions</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">66 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">Append<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.bashrc</td><td class="diffline">67 </td><td class="diffpresent"><ins>###<span class="dp">·</span></ins>Append<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.bashrc</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">```</td><td class="diffline">68 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>-d<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span>];<span class="dp">·</span>then</td><td class="diffline">69 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>-d<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span>];<span class="dp">·</span>then</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.functions/*;do<span class="dp">·</span></td><td class="diffline">70 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.functions/*;do<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>source<span class="dp">·</span>$i</td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>source<span class="dp">·</span>$i</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>done</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>done</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent">fi</td><td class="diffline">73 </td><td class="diffpresent">fi</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">```</td><td class="diffline">74 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">72 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Usage:</td><td class="diffline">75 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Usage:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">```</td><td class="diffline">76 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td><td class="diffline">77 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td><td class="diffline">78 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td></tr>
+<tr class="diffchanged"><td class="diffline">76 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span><del>gm</del><span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td><td class="diffline">79 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td></tr>
+<tr class="diffchanged"><td class="diffline">77 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span><del>gm</del><span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td><td class="diffline">80 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td><td class="diffline">81 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td><td class="diffline">82 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td><td class="diffline">83 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">dir<span class="dp">·</span>-m<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>add<span class="dp">·</span>mark<span class="dp">·</span>for<span class="dp">·</span>PWD</td><td class="diffline">84 </td><td class="diffpresent">dir<span class="dp">·</span>-m<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>add<span class="dp">·</span>mark<span class="dp">·</span>for<span class="dp">·</span>PWD</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent">dir<span class="dp">·</span>-p<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>prints<span class="dp">·</span>mark</td><td class="diffline">85 </td><td class="diffpresent">dir<span class="dp">·</span>-p<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>prints<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent">```</td><td class="diffline">86 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">84 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Usage<span class="dp">·</span>example</td><td class="diffline">87 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Usage<span class="dp">·</span>example</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">```</td><td class="diffline">88 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">86 </td><td class="diffpresent">majam@dirose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>-l</td><td class="diffline">89 </td><td class="diffpresent">majam@dirose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>-l</td></tr>
+<tr class="diffunmodified"><td class="diffline">87 </td><td class="diffpresent">0<span class="dp">·</span>=&gt;<span class="dp">·</span>meirm:/net/xen/mnt/sdb1/meirm</td><td class="diffline">90 </td><td class="diffpresent">0<span class="dp">·</span>=&gt;<span class="dp">·</span>meirm:/net/xen/mnt/sdb1/meirm</td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent">1<span class="dp">·</span>=&gt;<span class="dp">·</span>edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming</td><td class="diffline">91 </td><td class="diffpresent">1<span class="dp">·</span>=&gt;<span class="dp">·</span>edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">2<span class="dp">·</span>=&gt;<span class="dp">·</span>init:/etc/init.d</td><td class="diffline">92 </td><td class="diffpresent">2<span class="dp">·</span>=&gt;<span class="dp">·</span>init:/etc/init.d</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">3<span class="dp">·</span>=&gt;<span class="dp">·</span>majam:/net/xen/mnt/sdb1/majam</td><td class="diffline">93 </td><td class="diffpresent">3<span class="dp">·</span>=&gt;<span class="dp">·</span>majam:/net/xen/mnt/sdb1/majam</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">91 </td><td class="diffpresent">majam@<del>gm</del>ose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>1</td><td class="diffline">94 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>1</td></tr>
+<tr class="diffchanged"><td class="diffline">92 </td><td class="diffpresent">majam@<del>gm</del>ose:/net/xen/mnt/sdb1/majam/aMule/Incoming$<span class="dp">·</span></td><td class="diffline">95 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/net/xen/mnt/sdb1/majam/aMule/Incoming$<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">93 </td><td class="diffpresent">majam@<del>gm</del>ose:/etc/init.d$<span class="dp">·</span><del>gm</del><span class="dp">·</span>majam</td><td class="diffline">96 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/etc/init.d$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>majam</td></tr>
+<tr class="diffchanged"><td class="diffline">94 </td><td class="diffpresent">majam@<del>gm</del>ose:/net/xen/mnt/sdb1/majam$<span class="dp">·</span></td><td class="diffline">97 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/net/xen/mnt/sdb1/majam$<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">95 </td><td class="diffpresent">majam@<del>gm</del>ose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>-d<span class="dp">·</span>2</td><td class="diffline">98 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>-d<span class="dp">·</span>2</td></tr>
+<tr class="diffchanged"><td class="diffline">96 </td><td class="diffpresent">majam@<del>gm</del>ose:~$</td><td class="diffline">99 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent">```</td><td class="diffline">100 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">dirmarks-0.1.0/dirmarks/data/dirmarks.function</span> vs.</div>
+      <div id="dirmarks--.-.-.tar---dirmarks--.-.--dirmarks-data-dirmarks.function"><span class="source">dirmarks-0.1.1/dirmarks/data/dirmarks.function</span>
+        <a class="anchor" href="#dirmarks--.-.-.tar---dirmarks--.-.--dirmarks-data-dirmarks.function">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">745 B</span></div>
+      <div><span class="source">dirmarks-0.1.0/dirmarks/main.py</span> vs.</div>
+      <div id="dirmarks--.-.-.tar---dirmarks--.-.--dirmarks-main.py"><span class="source">dirmarks-0.1.1/dirmarks/main.py</span>
+        <a class="anchor" href="#dirmarks--.-.-.tar---dirmarks--.-.--dirmarks-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 101, 14 lines modified</td><td colspan="2">Offset 101, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>command<span class="dp">·</span>=<span class="dp">·</span>sys.argv[1]</td><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>command<span class="dp">·</span>=<span class="dp">·</span>sys.argv[1]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>command<span class="dp">·</span>==<span class="dp">·</span>&quot;--list&quot;:</td><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>command<span class="dp">·</span>==<span class="dp">·</span>&quot;--list&quot;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Marks().list_marks()</td><td class="diffline">103 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Marks().list_marks()</td></tr>
+<tr class="diffunmodified"><td class="diffline">104 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>command<span class="dp">·</span>==<span class="dp">·</span>&quot;--help&quot;:</td><td class="diffline">104 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>elif<span class="dp">·</span>command<span class="dp">·</span>==<span class="dp">·</span>&quot;--help&quot;:</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sys.stderr.write(&quot;&quot;&quot;Usage:</td><td class="diffline">105 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sys.stderr.write(&quot;&quot;&quot;Usage:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">106 </td><td class="diffpresent">Run<span class="dp">·</span>dirmarks<span class="dp">·</span>--shell<span class="dp">·</span>to<span class="dp">·</span>print<span class="dp">·</span>the<span class="dp">·</span>shell<span class="dp">·</span>function<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>imported.</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">107 </td><td class="diffpresent">For<span class="dp">·</span>more<span class="dp">·</span>information:<span class="dp">·</span>https://www.github.com/meirm/dirmarks</td></tr>
+<tr class="diffunmodified"><td class="diffline">106 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td><td class="diffline">108 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td></tr>
+<tr class="diffunmodified"><td class="diffline">107 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td><td class="diffline">109 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td></tr>
+<tr class="diffunmodified"><td class="diffline">108 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span>gm<span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td><td class="diffline">110 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span>gm<span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td></tr>
+<tr class="diffunmodified"><td class="diffline">109 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span>gm<span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td><td class="diffline">111 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span>gm<span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">110 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td><td class="diffline">112 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">111 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td><td class="diffline">113 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td><td class="diffline">114 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.99 KB</span></div>
+      <div><span class="source">dirmarks-0.1.0/PKG-INFO</span> vs.</div>
+      <div id="dirmarks--.-.-.tar---dirmarks--.-.--PKG-INFO"><span class="source">dirmarks-0.1.1/PKG-INFO</span>
+        <a class="anchor" href="#dirmarks--.-.-.tar---dirmarks--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 13% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 34 lines modified</td><td colspan="2">Offset 1, 34 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dirmarks</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>dirmarks</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Bookmarks<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>filesystem</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Bookmarks<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>filesystem</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Meir<span class="dp">·</span>Michanie</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Meir<span class="dp">·</span>Michanie</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meirm@riunx.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>meirm@riunx.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">14 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><del>=</del><span class="dp">·</span>Dirmarks</td><td class="diffline">15 </td><td class="diffpresent"><ins>#</ins><span class="dp">·</span>Dirmarks</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Dirmarks<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>directory<span class="dp">·</span>bookmarking<span class="dp">·</span>tool<span class="dp">·</span>that<span class="dp">·</span>allows<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>easily<span class="dp">·</span>manage,<span class="dp">·</span>navigate,<span class="dp">·</span>and<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks.<span class="dp">·</span>This<span class="dp">·</span>tool<span class="dp">·</span>can<span class="dp">·</span>save<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>make<span class="dp">·</span>working<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>more<span class="dp">·</span>efficient.</td><td class="diffline">16 </td><td class="diffpresent">Dirmarks<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>directory<span class="dp">·</span>bookmarking<span class="dp">·</span>tool<span class="dp">·</span>that<span class="dp">·</span>allows<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>easily<span class="dp">·</span>manage,<span class="dp">·</span>navigate,<span class="dp">·</span>and<span class="dp">·</span>switch<span class="dp">·</span>between<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks.<span class="dp">·</span>This<span class="dp">·</span>tool<span class="dp">·</span>can<span class="dp">·</span>save<span class="dp">·</span>you<span class="dp">·</span>time<span class="dp">·</span>and<span class="dp">·</span>make<span class="dp">·</span>working<span class="dp">·</span>with<span class="dp">·</span>the<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>more<span class="dp">·</span>efficient.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Installation</td><td class="diffline">17 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Install<span class="dp">·</span>the<span class="dp">·</span>Markdirs<span class="dp">·</span>package<span class="dp">·</span>using<span class="dp">·</span>pip:</td><td class="diffline">18 </td><td class="diffpresent">Install<span class="dp">·</span>the<span class="dp">·</span>Markdirs<span class="dp">·</span>package<span class="dp">·</span>using<span class="dp">·</span>pip:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">```</td><td class="diffline">19 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>dirmarks</td><td class="diffline">20 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>dirmarks</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">```</td><td class="diffline">21 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Shell<span class="dp">·</span>Function<span class="dp">·</span>Setup</td><td class="diffline">22 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Shell<span class="dp">·</span>Function<span class="dp">·</span>Setup</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>dir<span class="dp">·</span>command<span class="dp">·</span>for<span class="dp">·</span>changing<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks,<span class="dp">·</span>add<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>shell<span class="dp">·</span>function<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>.profile,<span class="dp">·</span>.bashrc,<span class="dp">·</span>or<span class="dp">·</span>.zshrc<span class="dp">·</span>file,<span class="dp">·</span>depending<span class="dp">·</span>on<span class="dp">·</span>your<span class="dp">·</span>shell:</td><td class="diffline">23 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>the<span class="dp">·</span>dir<span class="dp">·</span>command<span class="dp">·</span>for<span class="dp">·</span>changing<span class="dp">·</span>directories<span class="dp">·</span>using<span class="dp">·</span>bookmarks,<span class="dp">·</span>add<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>shell<span class="dp">·</span>function<span class="dp">·</span>to<span class="dp">·</span>your<span class="dp">·</span>.profile,<span class="dp">·</span>.bashrc,<span class="dp">·</span>or<span class="dp">·</span>.zshrc<span class="dp">·</span>file,<span class="dp">·</span>depending<span class="dp">·</span>on<span class="dp">·</span>your<span class="dp">·</span>shell:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">```</td><td class="diffline">24 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">#!/bin/bash</td><td class="diffline">25 </td><td class="diffpresent">#!/bin/bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">dir()<span class="dp">·</span>{</td><td class="diffline">26 </td><td class="diffpresent">dir()<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>&quot;$#&quot;<span class="dp">·</span>-eq<span class="dp">·</span>0<span class="dp">·</span>];<span class="dp">·</span>then</td><td class="diffline">27 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>&quot;$#&quot;<span class="dp">·</span>-eq<span class="dp">·</span>0<span class="dp">·</span>];<span class="dp">·</span>then</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dirmarks<span class="dp">·</span>list</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>dirmarks<span class="dp">·</span>list</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 69, 55 lines modified</td><td colspan="2">Offset 69, 61 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>;;</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>;;</td></tr>
+<tr class="diffunmodified"><td class="diffline">70 </td><td class="diffpresent">esac</td><td class="diffline">70 </td><td class="diffpresent">esac</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">}</td><td class="diffline">71 </td><td class="diffpresent">}</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent">```</td><td class="diffline">72 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">Or<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>.functions<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>home<span class="dp">·</span>directory<span class="dp">·</span>and<span class="dp">·</span>source<span class="dp">·</span>it<span class="dp">·</span>in<span class="dp">·</span>.bashrc</td><td class="diffline">73 </td><td class="diffpresent">Or<span class="dp">·</span>add<span class="dp">·</span>a<span class="dp">·</span>file<span class="dp">·</span>.functions<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>home<span class="dp">·</span>directory<span class="dp">·</span>and<span class="dp">·</span>source<span class="dp">·</span>it<span class="dp">·</span>in<span class="dp">·</span>.bashrc</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">74 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent">echo<span class="dp">·</span>&quot;source<span class="dp">·</span>~/.functions&quot;<span class="dp">·</span>&gt;&gt;<span class="dp">·</span>~/.bashrc</td><td class="diffline">75 </td><td class="diffpresent">echo<span class="dp">·</span>&quot;source<span class="dp">·</span>~/.functions&quot;<span class="dp">·</span>&gt;&gt;<span class="dp">·</span>~/.bashrc</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">76 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">77 </td><td class="diffpresent">##<span class="dp">·</span>Setup<span class="dp">·</span>dirmarks<span class="dp">·</span>for<span class="dp">·</span>all<span class="dp">·</span>users<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">75 </td><td class="diffpresent">==<span class="dp">·</span>Setup<span class="dp">·</span>dirmarks<span class="dp">·</span>for<span class="dp">·</span>all<span class="dp">·</span>users<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent">```</td><td class="diffline">78 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">mkdir<span class="dp">·</span>-p<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span></td><td class="diffline">79 </td><td class="diffpresent">mkdir<span class="dp">·</span>-p<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">78 </td><td class="diffpresent">cp<span class="dp">·</span>data/marks.function<span class="dp">·</span>/etc/bsh.fucntions</td><td class="diffline">80 </td><td class="diffpresent">cp<span class="dp">·</span>data/marks.function<span class="dp">·</span>/etc/bsh.fucntions</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">81 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">79 </td><td class="diffpresent">Append<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.bashrc</td><td class="diffline">82 </td><td class="diffpresent"><ins>###<span class="dp">·</span></ins>Append<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>line<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.bashrc</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">```</td><td class="diffline">83 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>-d<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span>];<span class="dp">·</span>then</td><td class="diffline">84 </td><td class="diffpresent">if<span class="dp">·</span>[<span class="dp">·</span>-d<span class="dp">·</span>/etc/bash.functions<span class="dp">·</span>];<span class="dp">·</span>then</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.functions/*;do<span class="dp">·</span></td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>i<span class="dp">·</span>in<span class="dp">·</span>/etc/bash.functions/*;do<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>source<span class="dp">·</span>$i</td><td class="diffline">86 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>source<span class="dp">·</span>$i</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>done</td><td class="diffline">87 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>done</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">fi</td><td class="diffline">88 </td><td class="diffpresent">fi</td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">```</td><td class="diffline">89 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">87 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Usage:</td><td class="diffline">90 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Usage:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">88 </td><td class="diffpresent">```</td><td class="diffline">91 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td><td class="diffline">92 </td><td class="diffpresent">dir<span class="dp">·</span>-h<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>------------------<span class="dp">·</span>prints<span class="dp">·</span>this<span class="dp">·</span>help</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td><td class="diffline">93 </td><td class="diffpresent">dir<span class="dp">·</span>-l<span class="dp">»</span>  ------------------<span class="dp">·</span>list<span class="dp">·</span>marks</td></tr>
+<tr class="diffchanged"><td class="diffline">91 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span><del>gm</del><span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td><td class="diffline">94 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;[0-9]+&gt;<span class="dp">·</span>--------------<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>to<span class="dp">·</span>mark[x]<span class="dp">·</span>where<span class="dp">·</span>is<span class="dp">·</span>x<span class="dp">·</span>is<span class="dp">·</span>the<span class="dp">·</span>index</td></tr>
+<tr class="diffchanged"><td class="diffline">92 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span><del>gm</del><span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td><td class="diffline">95 </td><td class="diffpresent">dir<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>----------------<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>to<span class="dp">·</span>mark<span class="dp">·</span>where<span class="dp">·</span>key=&lt;shortname&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td><td class="diffline">96 </td><td class="diffpresent">dir<span class="dp">·</span>-a<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>add<span class="dp">·</span>new<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td><td class="diffline">97 </td><td class="diffpresent">dir<span class="dp">·</span>-d<span class="dp">·</span>&lt;name&gt;|[0-9]+<span class="dp">·</span>------<span class="dp">·</span>delete<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">95 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td><td class="diffline">98 </td><td class="diffpresent">dir<span class="dp">·</span>-u<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>&lt;path&gt;<span class="dp">·</span>------<span class="dp">·</span>update<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent">dir<span class="dp">·</span>-m<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>add<span class="dp">·</span>mark<span class="dp">·</span>for<span class="dp">·</span>PWD</td><td class="diffline">99 </td><td class="diffpresent">dir<span class="dp">·</span>-m<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>add<span class="dp">·</span>mark<span class="dp">·</span>for<span class="dp">·</span>PWD</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent">dir<span class="dp">·</span>-p<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>prints<span class="dp">·</span>mark</td><td class="diffline">100 </td><td class="diffpresent">dir<span class="dp">·</span>-p<span class="dp">·</span>&lt;name&gt;<span class="dp">·</span>-------------<span class="dp">·</span>prints<span class="dp">·</span>mark</td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent">```</td><td class="diffline">101 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">99 </td><td class="diffpresent"><del>==</del><span class="dp">·</span>Usage<span class="dp">·</span>example</td><td class="diffline">102 </td><td class="diffpresent"><ins>##</ins><span class="dp">·</span>Usage<span class="dp">·</span>example</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">100 </td><td class="diffpresent">```</td><td class="diffline">103 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">101 </td><td class="diffpresent">majam@dirose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>-l</td><td class="diffline">104 </td><td class="diffpresent">majam@dirose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>-l</td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent">0<span class="dp">·</span>=&gt;<span class="dp">·</span>meirm:/net/xen/mnt/sdb1/meirm</td><td class="diffline">105 </td><td class="diffpresent">0<span class="dp">·</span>=&gt;<span class="dp">·</span>meirm:/net/xen/mnt/sdb1/meirm</td></tr>
+<tr class="diffunmodified"><td class="diffline">103 </td><td class="diffpresent">1<span class="dp">·</span>=&gt;<span class="dp">·</span>edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming</td><td class="diffline">106 </td><td class="diffpresent">1<span class="dp">·</span>=&gt;<span class="dp">·</span>edonkey:/net/xen/mnt/sdb1/majam/aMule/Incoming</td></tr>
+<tr class="diffunmodified"><td class="diffline">104 </td><td class="diffpresent">2<span class="dp">·</span>=&gt;<span class="dp">·</span>init:/etc/init.d</td><td class="diffline">107 </td><td class="diffpresent">2<span class="dp">·</span>=&gt;<span class="dp">·</span>init:/etc/init.d</td></tr>
+<tr class="diffunmodified"><td class="diffline">105 </td><td class="diffpresent">3<span class="dp">·</span>=&gt;<span class="dp">·</span>majam:/net/xen/mnt/sdb1/majam</td><td class="diffline">108 </td><td class="diffpresent">3<span class="dp">·</span>=&gt;<span class="dp">·</span>majam:/net/xen/mnt/sdb1/majam</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">106 </td><td class="diffpresent">majam@<del>gm</del>ose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>1</td><td class="diffline">109 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>1</td></tr>
+<tr class="diffchanged"><td class="diffline">107 </td><td class="diffpresent">majam@<del>gm</del>ose:/net/xen/mnt/sdb1/majam/aMule/Incoming$<span class="dp">·</span></td><td class="diffline">110 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/net/xen/mnt/sdb1/majam/aMule/Incoming$<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">108 </td><td class="diffpresent">majam@<del>gm</del>ose:/etc/init.d$<span class="dp">·</span><del>gm</del><span class="dp">·</span>majam</td><td class="diffline">111 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/etc/init.d$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>majam</td></tr>
+<tr class="diffchanged"><td class="diffline">109 </td><td class="diffpresent">majam@<del>gm</del>ose:/net/xen/mnt/sdb1/majam$<span class="dp">·</span></td><td class="diffline">112 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:/net/xen/mnt/sdb1/majam$<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">110 </td><td class="diffpresent">majam@<del>gm</del>ose:~$<span class="dp">·</span><del>gm</del><span class="dp">·</span>-d<span class="dp">·</span>2</td><td class="diffline">113 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$<span class="dp">·</span><ins>d</ins><ins>ir</ins><span class="dp">·</span>-d<span class="dp">·</span>2</td></tr>
+<tr class="diffchanged"><td class="diffline">111 </td><td class="diffpresent">majam@<del>gm</del>ose:~$</td><td class="diffline">114 </td><td class="diffpresent">majam@<ins>d</ins><ins>ir</ins>ose:~$</td></tr>
+<tr class="diffunmodified"><td class="diffline">112 </td><td class="diffpresent">```</td><td class="diffline">115 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

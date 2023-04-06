@@ -1,0 +1,406 @@
+# Comparing `tmp/tecoradors-elunico-5.0.0.tar.gz` & `tmp/tecoradors-elunico-5.1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "tecoradors-elunico-5.0.0.tar", last modified: Sat Feb 25 20:30:15 2023, max compression
++gzip compressed data, was "tecoradors-elunico-5.1.0.tar", last modified: Thu Apr  6 17:15:40 2023, max compression
+```
+
+## Comparing `tecoradors-elunico-5.0.0.tar` & `tecoradors-elunico-5.1.0.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,18 @@
+-drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-02-25 20:30:15.175271 tecoradors-elunico-5.0.0/
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1073 2023-02-25 18:38:36.000000 tecoradors-elunico-5.0.0/LICENSE
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      100 2023-02-25 18:38:36.000000 tecoradors-elunico-5.0.0/MANIFEST.in
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1005 2023-02-25 20:30:15.175010 tecoradors-elunico-5.0.0/PKG-INFO
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      541 2023-02-25 18:38:36.000000 tecoradors-elunico-5.0.0/README.md
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      103 2023-02-25 18:38:36.000000 tecoradors-elunico-5.0.0/pyproject.toml
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)       38 2023-02-25 20:30:15.175356 tecoradors-elunico-5.0.0/setup.cfg
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      725 2023-02-25 19:44:19.000000 tecoradors-elunico-5.0.0/setup.py
+-drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-02-25 20:30:15.173276 tecoradors-elunico-5.0.0/tecoradors/
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      577 2023-02-25 18:38:36.000000 tecoradors-elunico-5.0.0/tecoradors/__init__.py
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)    31013 2023-02-25 19:47:13.000000 tecoradors-elunico-5.0.0/tecoradors/tecoradors.py
+-drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-02-25 20:30:15.174623 tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1005 2023-02-25 20:30:15.000000 tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/PKG-INFO
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)      269 2023-02-25 20:30:15.000000 tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/SOURCES.txt
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)        1 2023-02-25 20:30:15.000000 tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/dependency_links.txt
+--rw-r--r--   0 thomaspovinelli   (501) staff       (20)       11 2023-02-25 20:30:15.000000 tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/top_level.txt
++drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-04-06 17:15:40.585147 tecoradors-elunico-5.1.0/
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1073 2023-02-25 18:38:36.000000 tecoradors-elunico-5.1.0/LICENSE
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      100 2023-02-25 18:38:36.000000 tecoradors-elunico-5.1.0/MANIFEST.in
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1136 2023-04-06 17:15:40.584751 tecoradors-elunico-5.1.0/PKG-INFO
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      672 2023-04-06 17:15:06.000000 tecoradors-elunico-5.1.0/README.md
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      103 2023-02-25 18:38:36.000000 tecoradors-elunico-5.1.0/pyproject.toml
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)       38 2023-04-06 17:15:40.585260 tecoradors-elunico-5.1.0/setup.cfg
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      729 2023-04-06 17:13:51.000000 tecoradors-elunico-5.1.0/setup.py
++drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-04-06 17:15:40.581401 tecoradors-elunico-5.1.0/tecoradors/
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      596 2023-03-07 14:50:49.000000 tecoradors-elunico-5.1.0/tecoradors/__init__.py
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)    35403 2023-04-05 15:30:25.000000 tecoradors-elunico-5.1.0/tecoradors/tecoradors.py
++drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-04-06 17:15:40.583349 tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)     1136 2023-04-06 17:15:40.000000 tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/PKG-INFO
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      282 2023-04-06 17:15:40.000000 tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/SOURCES.txt
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)        1 2023-04-06 17:15:40.000000 tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/dependency_links.txt
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)       11 2023-04-06 17:15:40.000000 tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/top_level.txt
++drwxr-xr-x   0 thomaspovinelli   (501) staff       (20)        0 2023-04-06 17:15:40.583949 tecoradors-elunico-5.1.0/test/
++-rw-r--r--   0 thomaspovinelli   (501) staff       (20)      287 2023-04-05 15:29:47.000000 tecoradors-elunico-5.1.0/test/test.py
+```
+
+### Comparing `tecoradors-elunico-5.0.0/LICENSE` & `tecoradors-elunico-5.1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `tecoradors-elunico-5.0.0/PKG-INFO` & `tecoradors-elunico-5.1.0/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: tecoradors-elunico
+-Version: 5.0.0
++Version: 5.1.0
+ Summary: A small collection of decorators I like to use often
+ Home-page: https://github.com/elunico/tecoradors
+ Author: Thomas Povinelli
+ Author-email: tompov227@gmail.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -16,29 +16,33 @@
+ 
+ Python decorators that I like to use a lot.
+ 
+ [Find the github repo here](https://github.com/elunico/tecoradors)
+ 
+ [Find the pypi package here](https://pypi.org/project/tecoradors-elunico/)
+ 
+-Named based on my name which starts with a T.
++Named based on my name which starts with a T. You can find more information reading the docstrings of the functions
+ 
+-### Decorators are 
++### Decorators are
+   *  accepts
+   *  json_serializable
+   *  spread
+   *  timed
+   *  squash
+   *  stringable
+   *  equatable
+   *  hashable
+   *  dataclass
+   *  final
+   *  freeze
+-  *  deprecated 
++  *  deprecated
+   *  log
+   *  synchronized
+   *  count_calls
+   *  interruptable
++  *  lazy
++  *  precompute
+ 
+-### Support from 
+-  *  Self (class)
++### Support from types
++  *  Self
++  *  PrecomputeStorage
++  *  NoSuchValue
+```
+
+### Comparing `tecoradors-elunico-5.0.0/README.md` & `tecoradors-elunico-5.1.0/README.md`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -2,29 +2,33 @@
+ 
+ Python decorators that I like to use a lot.
+ 
+ [Find the github repo here](https://github.com/elunico/tecoradors)
+ 
+ [Find the pypi package here](https://pypi.org/project/tecoradors-elunico/)
+ 
+-Named based on my name which starts with a T.
++Named based on my name which starts with a T. You can find more information reading the docstrings of the functions
+ 
+-### Decorators are 
++### Decorators are
+   *  accepts
+   *  json_serializable
+   *  spread
+   *  timed
+   *  squash
+   *  stringable
+   *  equatable
+   *  hashable
+   *  dataclass
+   *  final
+   *  freeze
+-  *  deprecated 
++  *  deprecated
+   *  log
+   *  synchronized
+   *  count_calls
+   *  interruptable
++  *  lazy
++  *  precompute
+ 
+-### Support from 
+-  *  Self (class)
++### Support from types
++  *  Self
++  *  PrecomputeStorage
++  *  NoSuchValue
+```
+
+### Comparing `tecoradors-elunico-5.0.0/setup.py` & `tecoradors-elunico-5.1.0/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,21 +1,21 @@
+ import setuptools
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="tecoradors-elunico",
+-    version="5.0.0",
++    version="5.1.0",
+     author="Thomas Povinelli",
+     author_email="tompov227@gmail.com",
+     description="A small collection of decorators I like to use often",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+-include_package_data=True,
++    include_package_data=True,
+     url="https://github.com/elunico/tecoradors",
+     classifiers=[
+         "Programming Language :: Python :: 3",
+         "License :: OSI Approved :: MIT License",
+         "Operating System :: OS Independent",
+     ],
+     packages=setuptools.find_packages(),
+```
+
+### Comparing `tecoradors-elunico-5.0.0/tecoradors/tecoradors.py` & `tecoradors-elunico-5.1.0/tecoradors/tecoradors.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -449,15 +449,15 @@
+     out of the object's __dict__ attribute and includes the class name at the beginning
+ 
+     Note that this decorator will return the original cls value passed into it. You will get the same object out that
+     gets put in, though, obviously, it will be mutated.
+     """
+ 
+     def __str__(self):
+-        items = ['{}={}'.format(k, repr(v)) for (k, v) in self.__dict__.items()]
++        items = ['{}={}'.format(k, repr(v)) for (k, v) in self.__dict__.items() if not k.startswith('__') and not k.endswith('__')]
+         items_string = ', '.join(items)
+         return '{}[{}]'.format(self.__class__.__name__, items_string)
+ 
+     setattr(cls, '__str__', __str__)
+     setattr(cls, '__repr__', __str__)
+ 
+     return cls
+@@ -514,24 +514,24 @@
+     """
+ 
+     def inherit(child):
+         return type(child.__name__, (cls, child), {})
+ 
+     cls_str = '''
+     @inherit
+-    class {cls}_equatable:
++    class {cls}:
+         def __eq__(self, other):
+             if not isinstance(other, type(self)):
+                 return NotImplemented
+             pairs = zip(self.__dict__.values(), other.__dict__.values())
+             return all([i[0] == i[1] for i in pairs])
+     '''.format(cls=cls.__name__).replace('\n    ', '\n')
+ 
+     exec(cls_str)
+-    return locals()['{}_equatable'.format(cls.__name__)]
++    return locals()['{}'.format(cls.__name__)]
+ 
+ 
+ def hashable(cls):
+     """
+     Implicitly calls 'equatable' for the class and also generates a __hash__
+     method for the class so it can be used in a dictionary
+ 
+@@ -836,7 +836,105 @@
+                 raise ValueError("kwargs passed to a count_calls() function, but with_kwargs was not passed to "
+                                  "count_calls()")
+ 
+         setattr(wrapper, 'reset_call_count', reset_count)
+         return wrapper
+ 
+     return decorator
++
++
++T = typing.TypeVar('T')
++R = typing.TypeVar('R')
++
++
++class Descriptor(typing.Protocol):
++    def __get__(this, self: typing.Optional[R], owner: typing.Optional[typing.Any] = None, *args, **kwargs) -> typing.Union[T, typing.Self]:
++        ...
++
++
++def lazy(method: typing.Callable[[typing.Any], T]) -> Descriptor:
++    '''
++    Similar to the `@property` decorator, lazy allows you to access the value computed by a method
++    call as if it were a simple attribute on an instance. The main difference between `@property`
++    and `@lazy` is that `@property` performs the computation on every attribute access, where as
++    `@lazy` performs the calculation once on the first access, and then overwrites the attribute
++    field with the value of the property upon its first computation. Subsequent accesses of the
++    property will only return the initial value that computed on the first access.
++
++    In this way, it creates a lazy attribute, storing the code to initialize the attribute
++    in a function, and only evaluating the function when accessed. It also elimited the overhead of
++    other similar solutions like `@functools.cache` by re-writing the attribute after first access,
++    removing the descriptor and obviating the need for an `if arg in cache` check
++    '''
++
++    class descriptor(Descriptor):
++        def __get__(self, receiver: typing.Optional[R], owner: typing.Optional[typing.Any] = None, *args, **kwargs) -> typing.Union[T, typing.Self]:
++            if receiver is None:
++                return self
++            value = method(receiver, *args, **kwargs)
++            setattr(receiver, method.__name__, value)
++            return value
++
++    return descriptor()
++
++
++class PrecomputeStorage(enum.Enum):
++    EXCLUSIVE = 1
++    LIMITED = 2
++    PRESERVING = 3
++
++
++class NoSuchValue(ValueError):
++    pass
++
++
++def precompute(argument_tuples: typing.Iterable[tuple], storage: PrecomputeStorage = PrecomputeStorage.PRESERVING, max: typing.Optional[int] = None):
++    """
++    Function decorator used to declaratively state precomputed values for a function
++
++    On defintion of a function decorated with precompute, the decorated function will be called once for each item
++    in argument_tuples. On each call, that item of argument_tuples is splatted into the function.
++
++    The decorator can also storage method as the storage parameter. This indicates how the decorated function
++    should behave regarding its values
++        EXCLUSIVE indicates the decorated function should only allow the precomputed values to be retrieved and raise an Exception otherwise
++        LIMITED indicates the decorated function will return pre-computed values and will perform computation for *every* call for a non precomputed value
++        PRESERVING indicates the decorated function will return pre-computed values where application, perform computations for non-precomputed values, and then store those results so no computation is done more than once, like @functools.lru_cache
++
++    The max argument works the same as maxsize for @functools.lru_cache and only makes sense when storage == PRESERVING
++    """
++    if storage != PrecomputeStorage.PRESERVING and max is not None:
++        raise ValueError("storage must be PRESERVING or max must be None")
++    if storage == PrecomputeStorage.PRESERVING:
++        def wrapper(fn):
++            @functools.lru_cache(maxsize=max)
++            def decorator(*args):
++                return fn(*args)
++            for args in argument_tuples:
++                decorator(*args)  # cached by functools
++            return decorator
++        return wrapper
++    elif storage == PrecomputeStorage.LIMITED:
++        def wrapper(fn):
++            cache = {}
++            for args in argument_tuples:
++                cache[args] = fn(*args)
++
++            def decorator(*args):
++                if args in cache:
++                    return cache[args]
++                else:
++                    return fn(*args)
++            return decorator
++        return wrapper
++    else:
++        def wrapper(fn):
++            cache = {}
++            for args in argument_tuples:
++                cache[args] = fn(*args)
++
++            def decorator(*args):
++                if args not in cache:
++                    raise NoSuchValue('{} was not precomputed for the given function'.format(args))
++                return cache[args]
++            return decorator
++        return wrapper
+```
+
+### Comparing `tecoradors-elunico-5.0.0/tecoradors_elunico.egg-info/PKG-INFO` & `tecoradors-elunico-5.1.0/tecoradors_elunico.egg-info/PKG-INFO`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: tecoradors-elunico
+-Version: 5.0.0
++Version: 5.1.0
+ Summary: A small collection of decorators I like to use often
+ Home-page: https://github.com/elunico/tecoradors
+ Author: Thomas Povinelli
+ Author-email: tompov227@gmail.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -16,29 +16,33 @@
+ 
+ Python decorators that I like to use a lot.
+ 
+ [Find the github repo here](https://github.com/elunico/tecoradors)
+ 
+ [Find the pypi package here](https://pypi.org/project/tecoradors-elunico/)
+ 
+-Named based on my name which starts with a T.
++Named based on my name which starts with a T. You can find more information reading the docstrings of the functions
+ 
+-### Decorators are 
++### Decorators are
+   *  accepts
+   *  json_serializable
+   *  spread
+   *  timed
+   *  squash
+   *  stringable
+   *  equatable
+   *  hashable
+   *  dataclass
+   *  final
+   *  freeze
+-  *  deprecated 
++  *  deprecated
+   *  log
+   *  synchronized
+   *  count_calls
+   *  interruptable
++  *  lazy
++  *  precompute
+ 
+-### Support from 
+-  *  Self (class)
++### Support from types
++  *  Self
++  *  PrecomputeStorage
++  *  NoSuchValue
+```
+
