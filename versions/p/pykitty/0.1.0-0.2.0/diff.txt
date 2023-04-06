@@ -1,0 +1,244 @@
+--- tmp/pykitty-0.1.0.tar.gz
++++ tmp/pykitty-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pykitty-0.1.0.tar", max compression
+│ +gzip compressed data, was "pykitty-0.2.0.tar", max compression
+│   --- pykitty-0.1.0.tar
+├── +++ pykitty-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ --rw-r--r--   0        0        0     1700 2023-03-29 21:38:40.307602 pykitty-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0       35 2023-03-27 19:20:21.848084 pykitty-0.1.0/pykitty/__init__.py
+│ │ --rw-r--r--   0        0        0     3507 2023-03-29 21:23:28.838688 pykitty-0.1.0/pykitty/cli.py
+│ │ --rw-r--r--   0        0        0     5051 2023-03-29 21:26:53.673425 pykitty-0.1.0/pykitty/client.py
+│ │ --rw-r--r--   0        0        0     1806 2023-03-27 06:19:00.880708 pykitty-0.1.0/pykitty/kitty_parser.py
+│ │ --rw-r--r--   0        0        0      504 2023-03-29 21:28:51.876654 pykitty-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2295 1970-01-01 00:00:00.000000 pykitty-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     2151 2023-04-06 19:00:49.233258 pykitty-0.2.0/README.md
+│ │ +-rw-r--r--   0        0        0       35 2023-03-27 19:20:21.848084 pykitty-0.2.0/pykitty/__init__.py
+│ │ +-rw-r--r--   0        0        0     2943 2023-04-06 19:00:01.649008 pykitty-0.2.0/pykitty/cli.py
+│ │ +-rw-r--r--   0        0        0     5543 2023-04-06 18:58:39.794979 pykitty-0.2.0/pykitty/client.py
+│ │ +-rw-r--r--   0        0        0     1806 2023-03-27 06:19:00.880708 pykitty-0.2.0/pykitty/kitty_parser.py
+│ │ +-rw-r--r--   0        0        0      504 2023-04-06 19:18:33.307163 pykitty-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2746 1970-01-01 00:00:00.000000 pykitty-0.2.0/PKG-INFO
+│ │   --- pykitty-0.1.0/README.md
+│ ├── +++ pykitty-0.2.0/README.md
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,29 +1,34 @@
+│ │  # PyKitty
+│ │  
+│ │ -This Python SDK allows you to interact with [KittySplit](www.kittysplit.de/) to manage expenses in a group. You can fetch a list of users, select a user and add expenses.
+│ │ +This Python SDK allows you to interact with [KittySplit](https://kittysplit.de/) to manage expenses in a group. You can fetch a list of users, select a user and add expenses.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  To install the package, use the following command:
+│ │  
+│ │  ```bash
+│ │  pip install pykitty
+│ │  ```
+│ │  
+│ │  ## Usage
+│ │  
+│ │ -1. Open a kitty on https://kittysplit.de/
+│ │ -2. Once opened, you can extract your `kitty_id` from the URL, e.g. `test_kitty/ADLKFJLAKD.../` in https://kittysplit.de/test_kitty/ADLKFJLAKD.../
+│ │ +1. Open a kitty on https://kittysplit.de/ and set a username
+│ │ +2. Once opened, copy the full Kittysplit URL, e.g. `https://kittysplit.de/test_kitty/ADLKFJLAKD.../`
+│ │  
+│ │ -Create an instance of the `KittySplitAPI` class with the Kitty ID:
+│ │ +Create your first expense with the following code (replace `<kitty_URL>` and `<your_username>`):
+│ │  
+│ │  ```python
+│ │  from pykitty import KittySplitAPI
+│ │ -api = KittySplitAPI("your_kitty_id")
+│ │ +api = KittySplitAPI("<kitty_URL>")
+│ │ +api.select_user("<your_username>")
+│ │ +api.add_expense(
+│ │ +    amount="10.00",
+│ │ +    description="A warm welcome by pykitty!",
+│ │ +)
+│ │  ```
+│ │  
+│ │  ### Get Users
+│ │  
+│ │  To fetch a list of users, use the `get_users` method:
+│ │  
+│ │  ```python
+│ │ @@ -46,24 +51,43 @@
+│ │  
+│ │  To add an expense, use the `add_expense` method:
+│ │  
+│ │  ```python
+│ │  api.add_expense(
+│ │      amount="10.00",
+│ │      description="Lunch",
+│ │ -    entry_date="2023-03-29",
+│ │ -    weight_mapping={"username1": 0.6, "username2": 0.4},  # optional, if not specified, expense will be split evenly
+│ │  )
+│ │  ```
+│ │  
+│ │  This method will add a new expense with the specified details.
+│ │  
+│ │ +With the `entry_date` parameter, you can specify the date of the expense:
+│ │ +
+│ │ +```python
+│ │ +api.add_expense(
+│ │ +    amount="10.00",
+│ │ +    description="Lunch",
+│ │ +    entry_date="2023-03-29",
+│ │ +)
+│ │ +```
+│ │ +
+│ │ +With the `weight_mapping` parameter, you can specify how much each user should pay for the expense. The sum of the weights must be `1`.
+│ │ +
+│ │ +```python
+│ │ +api.add_expense(
+│ │ +    amount="10.00",
+│ │ +    description="Lunch",
+│ │ +    weight_mapping={"username1": 0.6, "username2": 0.4},
+│ │ +)
+│ │ +```
+│ │ +
+│ │  ## License
+│ │  
+│ │  This project is licensed under the MIT License.
+│ │  
+│ │  ## Next Steps (TODO)
+│ │  
+│ │ -- [ ] Add Kitty URL parser to extract `kitty_id` and language from any kittysplit URL
+│ │ +- [x] Parse Kitty URL parser to extract `kitty_id` 
+│ │  - [ ] Implement `get_expenses` method to retrieve all expenses.
+│ │  - [ ] Add support for updating and deleting expenses.
+│ │  - [ ] Document CLI usage.
+│ │ +- [ ] Support for Kittysplit in other languages.
+│ │   --- pykitty-0.1.0/pykitty/cli.py
+│ ├── +++ pykitty-0.2.0/pykitty/cli.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,36 +1,20 @@
+│ │  import csv
+│ │  import time
+│ │  from datetime import datetime
+│ │  from typing import Union
+│ │ -from urllib.parse import urlparse
+│ │  
+│ │  import typer
+│ │  from rich.progress import track
+│ │  
+│ │  from pykitty import client
+│ │  
+│ │  app = typer.Typer()
+│ │  
+│ │  
+│ │ -def parse_kitty_id(kitty_url) -> str:
+│ │ -    kitty_url_parser = urlparse(kitty_url)
+│ │ -
+│ │ -    if "kittysplit." not in kitty_url_parser.netloc:
+│ │ -        raise ValueError("Invalid Domain! Must be a kittysplit domain.")
+│ │ -
+│ │ -    kitty_url_parts = kitty_url_parser.path.split(
+│ │ -        "/"
+│ │ -    )  # e.g. ['', 'test_kitty', 'QRMCYapVh-2', 'entries']
+│ │ -    if len(kitty_url_parts) < 3:
+│ │ -        raise ValueError("Invalid URL! Must be a Kittysplit URL.")
+│ │ -
+│ │ -    return f"{kitty_url_parts[1]}/{kitty_url_parts[2]}"
+│ │ -
+│ │ -
+│ │  def convert_date_format(date_string: str) -> str:
+│ │      datetime_obj = datetime.strptime(date_string, "%d.%m.%Y")
+│ │      return datetime_obj.strftime("%Y-%m-%d")
+│ │  
+│ │  
+│ │  @app.callback()
+│ │  def callback():
+│ │ @@ -52,17 +36,15 @@
+│ │      Args:
+│ │          kitty_url (str): The Kittysplit url, e.g. https://kittysplit.de/test_kitty/ADFKYapVh5_N4wlMKZmPFhAiGqfz2_44-2
+│ │          kitty_username (str): Your Kittysplit username.
+│ │          csv_file (typer.FileText): The path to the csv file, e.g. "~/expenses.csv"
+│ │          expense_weight (float, optional): The weights for your expenses, e.g. '0.4' would assign your expenses a weight of 0.4 while it distributes the weights of the other users equally. Defaults to None.
+│ │          timeout_between_requests (float, optional): Be nice to Kittysplit and add timeouts between the requests. Defaults to 0.5.
+│ │      """
+│ │ -    kitty_id = parse_kitty_id(kitty_url)
+│ │ -
+│ │ -    kitty_api = client.KittySplitAPI(kitty_id=kitty_id)
+│ │ +    kitty_api = client.KittySplitAPI(kitty_url)
+│ │      kitty_api.select_user(kitty_username)
+│ │  
+│ │      # calculate weight mapping
+│ │      if expense_weight is not None:
+│ │          weight_mapping = dict()
+│ │          for username in kitty_api.available_users.keys():
+│ │              if username == kitty_username:
+│ │ @@ -100,12 +82,12 @@
+│ │          time.sleep(timeout_between_requests)
+│ │  
+│ │      print(
+│ │          f"Added {added_expenses_counter} expenses! Total expenses amount added: {sum([float(expense['amount']) for expense in expenses])}"
+│ │      )
+│ │      print()
+│ │      print("Check your expenses! Will open your kitty...")
+│ │ -    typer.launch(f"https://kittysplit.de/{kitty_id}/entries/")
+│ │ +    typer.launch(f"https://kittysplit.de/{kitty_api.kitty_id}/entries/")
+│ │  
+│ │  
+│ │  if __name__ == "__main__":
+│ │      app()
+│ │   --- pykitty-0.1.0/pykitty/client.py
+│ ├── +++ pykitty-0.2.0/pykitty/client.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,15 +1,31 @@
+│ │  from datetime import datetime
+│ │  from typing import Dict, Union
+│ │ +from urllib.parse import urlparse
+│ │  
+│ │  import requests
+│ │  
+│ │  from pykitty import kitty_parser
+│ │  
+│ │  
+│ │ +def parse_kitty_id(kitty_url) -> str:
+│ │ +    kitty_url_parser = urlparse(kitty_url)
+│ │ +
+│ │ +    if "kittysplit." not in kitty_url_parser.netloc:
+│ │ +        raise ValueError("Invalid Domain! Must be a kittysplit domain.")
+│ │ +
+│ │ +    kitty_url_parts = kitty_url_parser.path.split(
+│ │ +        "/"
+│ │ +    )  # e.g. ['', 'test_kitty', 'QRMCYapVh-2', 'entries']
+│ │ +    if len(kitty_url_parts) < 3:
+│ │ +        raise ValueError("Invalid URL! Must be a Kittysplit URL.")
+│ │ +
+│ │ +    return f"{kitty_url_parts[1]}/{kitty_url_parts[2]}"
+│ │ +
+│ │ +
+│ │  def get_csrf_token(
+│ │      session: requests.Session, base_url: str, path: str
+│ │  ) -> Union[str, None]:
+│ │      response = session.get(base_url + path)
+│ │      csrf_parser = kitty_parser.CSRFHTMLParser()
+│ │      csrf_parser.feed(response.text)
+│ │      return csrf_parser.csrf_token
+│ │ @@ -38,16 +54,16 @@
+│ │  
+│ │      return decorator
+│ │  
+│ │  
+│ │  class KittySplitAPI:
+│ │      base_url = "https://kittysplit.de/"
+│ │  
+│ │ -    def __init__(self, kitty_id: str) -> None:
+│ │ -        self.kitty_id: str = kitty_id[:-1] if kitty_id.endswith("/") else kitty_id
+│ │ +    def __init__(self, kitty_url: str) -> None:
+│ │ +        self.kitty_id = parse_kitty_id(kitty_url)
+│ │          self.session: requests.Session = requests.Session()
+│ │          self.available_users: Dict[str, str] = self.get_users()
+│ │          self.selected_viewing_party_id: Union[str, None] = None
+│ │  
+│ │      def _request(
+│ │          self,
+│ │          method: str,
+│ │   --- pykitty-0.1.0/pykitty/kitty_parser.py
+│ ├── +++ pykitty-0.2.0/pykitty/kitty_parser.py
+│ │┄ Files identical despite different names

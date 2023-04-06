@@ -1,0 +1,136 @@
+--- tmp/perceiver-ar-pytorch-0.0.8.tar.gz
++++ tmp/perceiver-ar-pytorch-0.0.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "perceiver-ar-pytorch-0.0.8.tar", last modified: Sat Jul  2 15:32:48 2022, max compression
+│ +gzip compressed data, was "perceiver-ar-pytorch-0.0.9.tar", last modified: Sat Jul  2 17:27:36 2022, max compression
+│   --- perceiver-ar-pytorch-0.0.8.tar
+├── +++ perceiver-ar-pytorch-0.0.9.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 15:32:48.461277 perceiver-ar-pytorch-0.0.8/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1066 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      619 2022-07-02 15:32:48.461277 perceiver-ar-pytorch-0.0.8/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2577 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 15:32:48.461277 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       66 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2200 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/autoregressive_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    10282 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/perceiver_ar_pytorch.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 15:32:48.461277 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      619 2022-07-02 15:32:47.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      370 2022-07-02 15:32:48.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-07-02 15:32:47.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       23 2022-07-02 15:32:48.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       21 2022-07-02 15:32:48.000000 perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       38 2022-07-02 15:32:48.461277 perceiver-ar-pytorch-0.0.8/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      821 2022-07-02 15:32:36.000000 perceiver-ar-pytorch-0.0.8/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 17:27:36.141657 perceiver-ar-pytorch-0.0.9/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1066 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      619 2022-07-02 17:27:36.141657 perceiver-ar-pytorch-0.0.9/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2577 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 17:27:36.141657 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       66 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2164 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/autoregressive_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    10282 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/perceiver_ar_pytorch.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-07-02 17:27:36.141657 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      619 2022-07-02 17:27:35.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      370 2022-07-02 17:27:36.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-07-02 17:27:35.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       23 2022-07-02 17:27:35.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       21 2022-07-02 17:27:35.000000 perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       38 2022-07-02 17:27:36.141657 perceiver-ar-pytorch-0.0.9/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      821 2022-07-02 17:27:17.000000 perceiver-ar-pytorch-0.0.9/setup.py
+│ │   --- perceiver-ar-pytorch-0.0.8/LICENSE
+│ ├── +++ perceiver-ar-pytorch-0.0.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- perceiver-ar-pytorch-0.0.8/PKG-INFO
+│ ├── +++ perceiver-ar-pytorch-0.0.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: perceiver-ar-pytorch
+│ │ -Version: 0.0.8
+│ │ +Version: 0.0.9
+│ │  Summary: Perceiver AR
+│ │  Home-page: https://github.com/lucidrains/perceiver-ar-pytorch
+│ │  Author: Phil Wang
+│ │  Author-email: lucidrains@gmail.com
+│ │  License: MIT
+│ │  Keywords: artificial intelligence,deep learning,transformers,long context,attention
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- perceiver-ar-pytorch-0.0.8/README.md
+│ ├── +++ perceiver-ar-pytorch-0.0.9/README.md
+│ │┄ Files identical despite different names
+│ │   --- perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/autoregressive_wrapper.py
+│ ├── +++ perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/autoregressive_wrapper.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -46,17 +46,16 @@
+│ │          start_tokens,
+│ │          seq_len,
+│ │          eos_token=None,
+│ │          temperature=1.0,
+│ │          filter_thres=0.9,
+│ │          **kwargs
+│ │      ):
+│ │ -        b, seq_len, device = *start_tokens.shape, start_tokens.device
+│ │ +        b, n, device = *start_tokens.shape, start_tokens.device
+│ │  
+│ │ -        offset = seq_len
+│ │          out = start_tokens
+│ │  
+│ │          for _ in range(seq_len):
+│ │              logits = self.net(
+│ │                  out[:, -self.max_seq_len:],
+│ │                  **kwargs
+│ │              )[:, -1]
+│ │ @@ -73,13 +72,13 @@
+│ │                  if is_eos_token.any(dim=-1).all():
+│ │                      # mask out everything after the eos tokens
+│ │                      shifted_is_eos_tokens = F.pad(is_eos_tokens, (1, -1))
+│ │                      mask = shifted_is_eos_tokens.float().cumsum(dim=-1) >= 1
+│ │                      out = out.masked_fill(mask, self.pad_value)
+│ │                      break
+│ │  
+│ │ -        out = out[:, offset:]
+│ │ +        out = out[:, n:]
+│ │          return out
+│ │  
+│ │      def forward(self, x, **kwargs):
+│ │          x_inp, x_labels = x[:, :-1], x[:, 1:]
+│ │          return self.net(x_inp, labels = x_labels, **kwargs)
+│ │   --- perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch/perceiver_ar_pytorch.py
+│ ├── +++ perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch/perceiver_ar_pytorch.py
+│ │┄ Files identical despite different names
+│ │   --- perceiver-ar-pytorch-0.0.8/perceiver_ar_pytorch.egg-info/PKG-INFO
+│ ├── +++ perceiver-ar-pytorch-0.0.9/perceiver_ar_pytorch.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: perceiver-ar-pytorch
+│ │ -Version: 0.0.8
+│ │ +Version: 0.0.9
+│ │  Summary: Perceiver AR
+│ │  Home-page: https://github.com/lucidrains/perceiver-ar-pytorch
+│ │  Author: Phil Wang
+│ │  Author-email: lucidrains@gmail.com
+│ │  License: MIT
+│ │  Keywords: artificial intelligence,deep learning,transformers,long context,attention
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- perceiver-ar-pytorch-0.0.8/setup.py
+│ ├── +++ perceiver-ar-pytorch-0.0.9/setup.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │    name = 'perceiver-ar-pytorch',
+│ │    packages = find_packages(exclude=[]),
+│ │ -  version = '0.0.8',
+│ │ +  version = '0.0.9',
+│ │    license='MIT',
+│ │    description = 'Perceiver AR',
+│ │    author = 'Phil Wang',
+│ │    author_email = 'lucidrains@gmail.com',
+│ │    long_description_content_type = 'text/markdown',
+│ │    url = 'https://github.com/lucidrains/perceiver-ar-pytorch',
+│ │    keywords = [

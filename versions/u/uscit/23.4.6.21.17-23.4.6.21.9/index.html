@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/uscit-23.4.6.21.17.tar.gz tmp/uscit-23.4.6.21.9.tar.gz --html versions/u/uscit/23.4.6.21.17-23.4.6.21.9/index.html --text versions/u/uscit/23.4.6.21.17-23.4.6.21.9/diff.txt --markdown versions/u/uscit/23.4.6.21.17-23.4.6.21.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.84 KB</span></div>
+  <div><span class="source">tmp/uscit-23.4.6.21.17.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/uscit-23.4.6.21.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">273 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;uscit-23.4.6.21.<del>1</del><del>7</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>19:1<del>7</del>:<del>13</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;uscit-23.4.6.21.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.52 KB</span></div>
+    <div><span class="source">uscit-23.4.6.21.17.tar</span> vs.</div>
+    <div id="uscit---.-.-.--.--.tar"><span class="source">uscit-23.4.6.21.9.tar</span>
+      <a class="anchor" href="#uscit---.-.-.--.--.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.48 KB</span></div>
+      <div id="uscit---.-.-.--.--.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.<del>896624</del><span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.<ins>669305</ins><span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:12:06.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1073<span class="dp">·</span>2023-04-05<span class="dp">·</span>22:12:06.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<del>4</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.<del>8964</del>8<del>5</del><span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<ins>3</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.<ins>6691</ins>8<ins>1</ins><span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>198<span class="dp">·</span>2023-04-06<span class="dp">·</span>18:46:52.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>198<span class="dp">·</span>2023-04-06<span class="dp">·</span>18:46:52.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>640<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:<del>17</del>:<del>03</del>.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/pyproject.toml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>640<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:<ins>09</ins>:<ins>11</ins>.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.<del>89666</del>4<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/setup.cfg</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.<ins>66934</ins>4<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.<del>895523</del><span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.<ins>667959</ins><span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:1<del>3.8</del>9<del>62</del>9<del>4</del><span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.egg-info/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>0</ins>1<ins>.66</ins>9<ins>00</ins>9<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<del>4</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.egg-info/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78<ins>3</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.egg-info/SOURCES.txt</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.egg-info/dependency_links.txt</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<del>7</del>:<del>13</del>.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.egg-info/top_level.txt</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-04-06<span class="dp">·</span>19:1<ins>4</ins>:<ins>01</ins>.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5700<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:13:26.000000<span class="dp">·</span>uscit-23.4.6.21.<del>1</del><del>7</del>/src/uscit.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>aliaga<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1828311938)<span class="dp">·</span>ATKK\hyad-all<span class="dp">·</span>(984178727)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5700<span class="dp">·</span>2023-04-06<span class="dp">·</span>15:13:26.000000<span class="dp">·</span>uscit-23.4.6.21.<ins>9</ins>/src/uscit.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">90.0 B</span></div>
+      <div><span class="source">uscit-23.4.6.21.17/LICENSE</span> vs.</div>
+      <div id="uscit---.-.-.--.--.tar---uscit---.-.-.--.---LICENSE"><span class="source">uscit-23.4.6.21.9/LICENSE</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---uscit---.-.-.--.---LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">595 B</span></div>
+      <div><span class="source">uscit-23.4.6.21.17/PKG-INFO</span> vs.</div>
+      <div id="uscit---.-.-.--.--.tar---uscit---.-.-.--.---PKG-INFO"><span class="source">uscit-23.4.6.21.9/PKG-INFO</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---uscit---.-.-.--.---PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uscit</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uscit</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>23.4.6.21.<del>1</del><del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>23.4.6.21.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>diego<span class="dp">·</span>aliaga<span class="dp">·</span>&lt;daliaga@chacaltaya.edu.bo&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>diego<span class="dp">·</span>aliaga<span class="dp">·</span>&lt;daliaga@chacaltaya.edu.bo&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/daliagachc/uscit</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/daliagachc/uscit</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/daliagachc/uscit/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/daliagachc/uscit/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://daliagachc.github.io/uscit/</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://daliagachc.github.io/uscit/</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">625 B</span></div>
+      <div><span class="source">uscit-23.4.6.21.17/pyproject.toml</span> vs.</div>
+      <div id="uscit---.-.-.--.--.tar---uscit---.-.-.--.---pyproject.toml"><span class="source">uscit-23.4.6.21.9/pyproject.toml</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---uscit---.-.-.--.---pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[build-system]</td><td class="diffline">1 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;setuptools&gt;=61.0&quot;,]</td><td class="diffline">2 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;setuptools&gt;=61.0&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td><td class="diffline">3 </td><td class="diffpresent">build-backend<span class="dp">·</span>=<span class="dp">·</span>&quot;setuptools.build_meta&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">[project]</td><td class="diffline">4 </td><td class="diffpresent">[project]</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;uscit&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;uscit&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;23.04.06.21.<del>17</del>&quot;</td><td class="diffline">6 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;23.04.06.21.<ins>09</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions&quot;</td><td class="diffline">7 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">8 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td><td class="diffline">9 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,<span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,<span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,]</td><td class="diffline">10 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,<span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License&quot;,<span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,]</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">[[project.authors]]</td><td class="diffline">11 </td><td class="diffpresent">[[project.authors]]</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;diego<span class="dp">·</span>aliaga&quot;</td><td class="diffline">12 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;diego<span class="dp">·</span>aliaga&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">email<span class="dp">·</span>=<span class="dp">·</span>&quot;daliaga@chacaltaya.edu.bo&quot;</td><td class="diffline">13 </td><td class="diffpresent">email<span class="dp">·</span>=<span class="dp">·</span>&quot;daliaga@chacaltaya.edu.bo&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">633 B</span></div>
+      <div><span class="source">uscit-23.4.6.21.17/src/uscit.egg-info/PKG-INFO</span> vs.</div>
+      <div id="uscit---.-.-.--.--.tar---uscit---.-.-.--.---src-uscit.egg-info-PKG-INFO"><span class="source">uscit-23.4.6.21.9/src/uscit.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---uscit---.-.-.--.---src-uscit.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uscit</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uscit</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>23.4.6.21.<del>1</del><del>7</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>23.4.6.21.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>simple<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>very<span class="dp">·</span>common<span class="dp">·</span>functions</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>diego<span class="dp">·</span>aliaga<span class="dp">·</span>&lt;daliaga@chacaltaya.edu.bo&gt;</td><td class="diffline">5 </td><td class="diffpresent">Author-email:<span class="dp">·</span>diego<span class="dp">·</span>aliaga<span class="dp">·</span>&lt;daliaga@chacaltaya.edu.bo&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/daliagachc/uscit</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/daliagachc/uscit</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/daliagachc/uscit/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/daliagachc/uscit/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://daliagachc.github.io/uscit/</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://daliagachc.github.io/uscit/</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">100 B</span></div>
+      <div><span class="source">uscit-23.4.6.21.17/src/uscit.py</span> vs.</div>
+      <div id="uscit---.-.-.--.--.tar---uscit---.-.-.--.---src-uscit.py"><span class="source">uscit-23.4.6.21.9/src/uscit.py</span>
+        <a class="anchor" href="#uscit---.-.-.--.--.tar---uscit---.-.-.--.---src-uscit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

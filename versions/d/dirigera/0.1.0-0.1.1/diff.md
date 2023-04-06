@@ -1,0 +1,621 @@
+# Comparing `tmp/dirigera-0.1.0.tar.gz` & `tmp/dirigera-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dirigera-0.1.0.tar", last modified: Thu Apr  6 18:02:20 2023, max compression
++gzip compressed data, was "dirigera-0.1.1.tar", last modified: Thu Apr  6 19:20:35 2023, max compression
+```
+
+## Comparing `dirigera-0.1.0.tar` & `dirigera-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,31 +1,31 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.101806 dirigera-0.1.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     1063 2023-04-06 18:02:09.000000 dirigera-0.1.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-04-06 18:02:20.101806 dirigera-0.1.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4307 2023-04-06 18:02:09.000000 dirigera-0.1.0/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-06 18:02:09.000000 dirigera-0.1.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 18:02:20.101806 dirigera-0.1.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-06 18:02:09.000000 dirigera-0.1.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.097806 dirigera-0.1.0/src/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.097806 dirigera-0.1.0/src/dirigera/
+--rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.101806 dirigera-0.1.0/src/dirigera/devices/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/devices/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      164 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/devices/device.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2294 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/devices/environment_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5460 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/devices/light.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.101806 dirigera-0.1.0/src/dirigera/hub/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/hub/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      705 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/hub/abstract_smart_home_hub.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2360 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/hub/auth.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3312 2023-04-06 18:02:09.000000 dirigera-0.1.0/src/dirigera/hub/hub.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.101806 dirigera-0.1.0/src/dirigera.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     6107 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      612 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-06 18:02:20.000000 dirigera-0.1.0/src/dirigera.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:02:20.101806 dirigera-0.1.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     2990 2023-04-06 18:02:09.000000 dirigera-0.1.0/tests/test_environment_sensor.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5620 2023-04-06 18:02:09.000000 dirigera-0.1.0/tests/test_light.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.588326 dirigera-0.1.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     1063 2023-04-06 19:20:26.000000 dirigera-0.1.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     6151 2023-04-06 19:20:35.588326 dirigera-0.1.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4351 2023-04-06 19:20:26.000000 dirigera-0.1.1/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-06 19:20:26.000000 dirigera-0.1.1/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 19:20:35.588326 dirigera-0.1.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)       37 2023-04-06 19:20:26.000000 dirigera-0.1.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.584326 dirigera-0.1.1/src/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.584326 dirigera-0.1.1/src/dirigera/
++-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.588326 dirigera-0.1.1/src/dirigera/devices/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/devices/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      311 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/devices/device.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2342 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/devices/environment_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5900 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/devices/light.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.588326 dirigera-0.1.1/src/dirigera/hub/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/hub/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      705 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/hub/abstract_smart_home_hub.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2360 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/hub/auth.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3783 2023-04-06 19:20:26.000000 dirigera-0.1.1/src/dirigera/hub/hub.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.588326 dirigera-0.1.1/src/dirigera.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     6151 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      612 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       18 2023-04-06 19:20:35.000000 dirigera-0.1.1/src/dirigera.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:20:35.588326 dirigera-0.1.1/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     3442 2023-04-06 19:20:26.000000 dirigera-0.1.1/tests/test_environment_sensor.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6207 2023-04-06 19:20:26.000000 dirigera-0.1.1/tests/test_light.py
+```
+
+### Comparing `dirigera-0.1.0/LICENSE` & `dirigera-0.1.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `dirigera-0.1.0/PKG-INFO` & `dirigera-0.1.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: dirigera
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
+ Author-email: Leggin <legginsun@gmail.com>
+ License: MIT License
+         
+         Copyright (c) 2023 Leggin
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+@@ -81,25 +81,27 @@
+ ```python
+ lights = dirigera_hub.get_lights()
+ ```
+ 
+ The light object has the following attributes:
+ 
+ ```python
+-    light_id: str
++    device_id: str
+     is_reachable: bool
+     custom_name: str
+     is_on: bool
+-    startup_on_off: StartupEnum
++    startup_on_off: StartupEnum | None
+     light_level: int | None  # not all lights have a light level
+     color_temp: int | None  # not all lights have a color temperature
+     color_temp_min: int | None
+     color_temp_max: int | None
+     color_hue: int | None  # not all lights have a color hue
+     color_saturation: float | None  # not all lights have a color saturation
++    room_id: str
++    room_name: str
+     can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+ ```
+ 
+ Available methods for light are:
+ 
+ ```python
+     light.set_name(name="kitchen light 1")
+```
+
+### Comparing `dirigera-0.1.0/README.md` & `dirigera-0.1.1/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -44,25 +44,27 @@
+ ```python
+ lights = dirigera_hub.get_lights()
+ ```
+ 
+ The light object has the following attributes:
+ 
+ ```python
+-    light_id: str
++    device_id: str
+     is_reachable: bool
+     custom_name: str
+     is_on: bool
+-    startup_on_off: StartupEnum
++    startup_on_off: StartupEnum | None
+     light_level: int | None  # not all lights have a light level
+     color_temp: int | None  # not all lights have a color temperature
+     color_temp_min: int | None
+     color_temp_max: int | None
+     color_hue: int | None  # not all lights have a color hue
+     color_saturation: float | None  # not all lights have a color saturation
++    room_id: str
++    room_name: str
+     can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+ ```
+ 
+ Available methods for light are:
+ 
+ ```python
+     light.set_name(name="kitchen light 1")
+```
+
+### Comparing `dirigera-0.1.0/pyproject.toml` & `dirigera-0.1.1/pyproject.toml`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+    "setuptools",
+    "wheel"
+ ]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "dirigera"
+-version = "0.1.0"
++version = "0.1.1"
+ description = "An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub"
+ readme = "README.md"
+ authors = [{ name = "Leggin", email = "legginsun@gmail.com" }]
+ license = { file = "LICENSE" }
+ keywords = ["python", "iot", "smarthome", "hub", "lighting", "ikea", "tradfri", "dirigera"]
+ dependencies = [
+     "requests >= 2.22.0",
+```
+
+### Comparing `dirigera-0.1.0/src/dirigera/devices/environment_sensor.py` & `dirigera-0.1.1/src/dirigera/devices/environment_sensor.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,62 +1,62 @@
+ from dataclasses import dataclass
+ from typing import Any
++
++from .device import Device
+ from ..hub.abstract_smart_home_hub import AbstractSmartHomeHub
+ 
+ 
+ @dataclass
+-class EnvironmentSensor:
++class EnvironmentSensor(Device):
+     dirigera_client: AbstractSmartHomeHub
+-    device_id: str
+     is_reachable: bool
+-    custom_name: str
+-    firmware_version: str
+-    hardware_version: str
+-    model: str
+-    product_code: str
+-    serial_number: str
+     current_temperature: str
+     current_rh: int
+     current_pm25: int
+     max_measured_pm25: int
+     min_measured_pm25: int
+     voc_index: int
+-    can_receive: list[str]
+ 
+     def refresh(self) -> None:
+         data = self.dirigera_client.get(route=f"/devices/{self.device_id}")
+         attributes: dict[str, Any] = data["attributes"]
+         self.firmware_version = attributes["firmwareVersion"]
+         self.current_temperature = attributes["currentTemperature"]
+         self.current_rh = attributes["currentRH"]
+         self.current_pm25 = attributes["currentPM25"]
+         self.voc_index = attributes["vocIndex"]
++        self.room_id = data["room"]["id"]
++        self.room_name = data["room"]["name"]
+ 
+     def set_name(self, name: str) -> None:
+         if "customName" not in self.can_receive:
+             raise AssertionError("This sensor does not support the set_name function")
+ 
+         data = [{"attributes": {"customName": name}}]
+         self.dirigera_client.patch(route=f"/devices/{self.device_id}", data=data)
+         self.custom_name = name
+ 
+ 
+-def dict_to_environment_sensor(data: dict[str, Any], dirigera_client: AbstractSmartHomeHub):
++def dict_to_environment_sensor(
++    data: dict[str, Any], dirigera_client: AbstractSmartHomeHub
++):
+     attributes: dict[str, Any] = data["attributes"]
+     return EnvironmentSensor(
+         dirigera_client=dirigera_client,
+         device_id=data["id"],
+         is_reachable=data["isReachable"],
+         custom_name=attributes["customName"],
+-        firmware_version=attributes["firmwareVersion"],
+-        hardware_version=attributes["hardwareVersion"],
+-        model=attributes["model"],
+-        product_code=attributes["productCode"],
+-        serial_number=attributes["serialNumber"],
++        firmware_version=attributes.get("firmwareVersion"),
++        hardware_version=attributes.get("hardwareVersion"),
++        model=attributes.get("model"),
++        manufacturer=attributes.get("manufacturer"),
++        serial_number=attributes.get("serialNumber"),
+         current_temperature=attributes["currentTemperature"],
+         current_rh=attributes["currentRH"],
+         current_pm25=attributes["currentPM25"],
+         max_measured_pm25=attributes["maxMeasuredPM25"],
+         min_measured_pm25=attributes["minMeasuredPM25"],
+         voc_index=attributes["vocIndex"],
++        room_id=data["room"]["id"],
++        room_name=data["room"]["name"],
+         can_receive=data["capabilities"]["canReceive"],
+     )
+```
+
+### Comparing `dirigera-0.1.0/src/dirigera/devices/light.py` & `dirigera-0.1.1/src/dirigera/devices/light.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -20,31 +20,33 @@
+     startup_on_off: StartupEnum | None
+     light_level: int | None
+     color_temp: int | None
+     color_temp_min: int | None
+     color_temp_max: int | None
+     color_hue: int | None
+     color_saturation: float | None
+-    
+ 
+     def refresh(self) -> None:
+         data = self.dirigera_client.get(route=f"/devices/{self.device_id}")
+         attributes: dict[str, Any] = data["attributes"]
+-        self.device_id=data["id"]
+-        self.is_reachable=data["isReachable"]
+-        self.custom_name=attributes["customName"]
+-        self.is_on=attributes["isOn"]
+-        self.startup_on_off=attributes.get("startupOnOff")
+-        self.light_level=attributes.get("lightLevel")
+-        self.color_temp=attributes.get("colorTemperature")
+-        self.color_temp_min=attributes.get("colorTemperatureMin")
+-        self.color_temp_max=attributes.get("colorTemperatureMax")
+-        self.color_hue=attributes.get("colorHue")
+-        self.color_saturation=attributes.get("colorSaturation")
+-        self.can_receive=data["capabilities"]["canReceive"]
++        self.device_id = data["id"]
++        self.is_reachable = data["isReachable"]
++        self.custom_name = attributes["customName"]
++        self.is_on = attributes["isOn"]
++        self.startup_on_off = attributes.get("startupOnOff")
++        self.light_level = attributes.get("lightLevel")
++        self.color_temp = attributes.get("colorTemperature")
++        self.color_temp_min = attributes.get("colorTemperatureMin")
++        self.color_temp_max = attributes.get("colorTemperatureMax")
++        self.color_hue = attributes.get("colorHue")
++        self.color_saturation = attributes.get("colorSaturation")
++        self.firmware_version = attributes.get("firmwareVersion")
++        self.room_id = data["room"]["id"]
++        self.room_name = data["room"]["name"]
++        self.can_receive = data["capabilities"]["canReceive"]
+ 
+     def set_name(self, name: str) -> None:
+         if "customName" not in self.can_receive:
+             raise AssertionError("This lamp does not support the swith-off function")
+ 
+         data = [{"attributes": {"customName": name}}]
+         self.dirigera_client.patch(route=f"/devices/{self.device_id}", data=data)
+@@ -127,9 +129,14 @@
+         color_temp=attributes.get("colorTemperature"),
+         color_temp_min=attributes.get("colorTemperatureMin"),
+         color_temp_max=attributes.get("colorTemperatureMax"),
+         color_hue=attributes.get("colorHue"),
+         color_saturation=attributes.get("colorSaturation"),
+         can_receive=data["capabilities"]["canReceive"],
+         room_id=data["room"]["id"],
+-        room_name=data["room"]["name"]
++        room_name=data["room"]["name"],
++        firmware_version=attributes.get("firmwareVersion"),
++        hardware_version=attributes.get("hardwareVersion"),
++        model=attributes.get("model"),
++        manufacturer=attributes.get("manufacturer"),
++        serial_number=attributes.get("serialNumber"),
+     )
+```
+
+### Comparing `dirigera-0.1.0/src/dirigera/hub/abstract_smart_home_hub.py` & `dirigera-0.1.1/src/dirigera/hub/abstract_smart_home_hub.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dirigera-0.1.0/src/dirigera/hub/auth.py` & `dirigera-0.1.1/src/dirigera/hub/auth.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dirigera-0.1.0/src/dirigera/hub/hub.py` & `dirigera-0.1.1/src/dirigera/hub/hub.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -2,14 +2,15 @@
+ from typing import Any
+ import requests
+ import websocket
+ from urllib3.exceptions import InsecureRequestWarning
+ 
+ from .abstract_smart_home_hub import AbstractSmartHomeHub
+ from ..devices.light import Light, dict_to_light
++from ..devices.environment_sensor import EnvironmentSensor, dict_to_environment_sensor
+ 
+ requests.packages.urllib3.disable_warnings(  # pylint: disable=no-member
+     category=InsecureRequestWarning
+ )
+ 
+ 
+ class Hub(AbstractSmartHomeHub):
+@@ -96,7 +97,17 @@
+         Fetches all lights and returns first result that matches this name
+         """
+         lights = self.get_lights()
+         lights = list(filter(lambda x: x.custom_name == lamp_name, lights))
+         if len(lights) == 0:
+             raise AssertionError(f"No light found with name {lamp_name}")
+         return lights[0]
++
++    def get_environment_sensors(self) -> list[EnvironmentSensor]:
++        """
++        Fetches all environment sensors registered in the Hub
++        """
++        devices = self.get("/devices")
++        sensors = list(
++            filter(lambda x: x["deviceType"] == "environmentSensor", devices)
++        )
++        return [dict_to_environment_sensor(sensor, self) for sensor in sensors]
+```
+
+### Comparing `dirigera-0.1.0/src/dirigera.egg-info/PKG-INFO` & `dirigera-0.1.1/src/dirigera.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: dirigera
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: An unofficial Python client for controlling the IKEA Dirigera Smart Home Hub
+ Author-email: Leggin <legginsun@gmail.com>
+ License: MIT License
+         
+         Copyright (c) 2023 Leggin
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+@@ -81,25 +81,27 @@
+ ```python
+ lights = dirigera_hub.get_lights()
+ ```
+ 
+ The light object has the following attributes:
+ 
+ ```python
+-    light_id: str
++    device_id: str
+     is_reachable: bool
+     custom_name: str
+     is_on: bool
+-    startup_on_off: StartupEnum
++    startup_on_off: StartupEnum | None
+     light_level: int | None  # not all lights have a light level
+     color_temp: int | None  # not all lights have a color temperature
+     color_temp_min: int | None
+     color_temp_max: int | None
+     color_hue: int | None  # not all lights have a color hue
+     color_saturation: float | None  # not all lights have a color saturation
++    room_id: str
++    room_name: str
+     can_receive: List[str]  # list of all available commands ["customName", "isOn", "lightLevel", ...]
+ ```
+ 
+ Available methods for light are:
+ 
+ ```python
+     light.set_name(name="kitchen light 1")
+```
+
+### Comparing `dirigera-0.1.0/src/dirigera.egg-info/SOURCES.txt` & `dirigera-0.1.1/src/dirigera.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `dirigera-0.1.0/tests/test_environment_sensor.py` & `dirigera-0.1.1/tests/test_environment_sensor.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -17,39 +17,33 @@
+         dirigera_client=fake_client,
+         device_id="abc",
+         is_reachable=True,
+         custom_name="abc",
+         firmware_version="abc",
+         hardware_version="abc",
+         model="abc",
+-        product_code="abc",
+         serial_number="abc",
+         current_temperature="abc",
+         current_rh=50,
+         current_pm25=5,
+         max_measured_pm25=999,
+         min_measured_pm25=0,
+         voc_index=200,
++        room_id="123",
++        room_name="upstairs",
++        manufacturer="IKEA",
+         can_receive=[
+             "customName",
+         ],
+     )
+ 
+ 
+-def test_set_name(fake_sensor: EnvironmentSensor, fake_client: FakeDirigeraHub):
+-    new_name = "staubsensor"
+-    fake_sensor.set_name(new_name)
+-    action = fake_client.patch_actions.pop()
+-    assert action["route"] == f"/devices/{fake_sensor.device_id}"
+-    assert action["data"] == [{"attributes": {"customName": new_name}}]
+-    assert fake_sensor.custom_name == new_name
+-
+-
+-def test_dict_to_sensor(fake_client: FakeDirigeraHub):
+-    data = {
++@pytest.fixture(name="sensor_dict")
++def fixture_sensor_dict():
++    return {
+         "id": "abc123",
+         "isReachable": True,
+         "attributes": {
+             "customName": "Sensor 1",
+             "firmwareVersion": "1.0.11",
+             "hardwareVersion": "1",
+             "model": "VINDSTYRKA",
+@@ -57,26 +51,42 @@
+             "serialNumber": "FFB123",
+             "currentTemperature": 19,
+             "currentRH": 55,
+             "currentPM25": 3,
+             "maxMeasuredPM25": 999,
+             "minMeasuredPM25": 0,
+             "vocIndex": 227,
++            "manufacturer": "IKEA",
+         },
++        "room": {"id": "123", "name": "upstairs"},
+         "capabilities": {"canSend": [], "canReceive": ["customName"]},
+     }
+-    sensor = dict_to_environment_sensor(data, fake_client)
+-    assert sensor.device_id == data["id"]
+-    assert sensor.is_reachable == data["isReachable"]
+-    assert sensor.custom_name == data["attributes"]["customName"]
+-    assert sensor.firmware_version == data["attributes"]["firmwareVersion"]
+-    assert sensor.hardware_version == data["attributes"]["hardwareVersion"]
+-    assert sensor.model == data["attributes"]["model"]
+-    assert sensor.product_code == data["attributes"]["productCode"]
+-    assert sensor.serial_number == data["attributes"]["serialNumber"]
+-    assert sensor.current_temperature == data["attributes"]["currentTemperature"]
+-    assert sensor.current_rh == data["attributes"]["currentRH"]
+-    assert sensor.current_pm25 == data["attributes"]["currentPM25"]
+-    assert sensor.max_measured_pm25 == data["attributes"]["maxMeasuredPM25"]
+-    assert sensor.min_measured_pm25 == data["attributes"]["minMeasuredPM25"]
+-    assert sensor.voc_index == data["attributes"]["vocIndex"]
+-    assert sensor.can_receive == data["capabilities"]["canReceive"]
++
++
++def test_set_name(fake_sensor: EnvironmentSensor, fake_client: FakeDirigeraHub):
++    new_name = "staubsensor"
++    fake_sensor.set_name(new_name)
++    action = fake_client.patch_actions.pop()
++    assert action["route"] == f"/devices/{fake_sensor.device_id}"
++    assert action["data"] == [{"attributes": {"customName": new_name}}]
++    assert fake_sensor.custom_name == new_name
++
++
++def test_dict_to_sensor(fake_client: FakeDirigeraHub, sensor_dict: dict):
++    sensor = dict_to_environment_sensor(sensor_dict, fake_client)
++    assert sensor.device_id == sensor_dict["id"]
++    assert sensor.is_reachable == sensor_dict["isReachable"]
++    assert sensor.custom_name == sensor_dict["attributes"]["customName"]
++    assert sensor.firmware_version == sensor_dict["attributes"]["firmwareVersion"]
++    assert sensor.hardware_version == sensor_dict["attributes"]["hardwareVersion"]
++    assert sensor.model == sensor_dict["attributes"]["model"]
++    assert sensor.serial_number == sensor_dict["attributes"]["serialNumber"]
++    assert sensor.current_temperature == sensor_dict["attributes"]["currentTemperature"]
++    assert sensor.current_rh == sensor_dict["attributes"]["currentRH"]
++    assert sensor.current_pm25 == sensor_dict["attributes"]["currentPM25"]
++    assert sensor.max_measured_pm25 == sensor_dict["attributes"]["maxMeasuredPM25"]
++    assert sensor.min_measured_pm25 == sensor_dict["attributes"]["minMeasuredPM25"]
++    assert sensor.voc_index == sensor_dict["attributes"]["vocIndex"]
++    assert sensor.can_receive == sensor_dict["capabilities"]["canReceive"]
++    assert sensor.room_id == sensor_dict["room"]["id"]
++    assert sensor.room_name == sensor_dict["room"]["name"]
++    assert sensor.manufacturer == sensor_dict["attributes"]["manufacturer"]
+```
+
+### Comparing `dirigera-0.1.0/tests/test_light.py` & `dirigera-0.1.1/tests/test_light.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -22,14 +22,19 @@
+         color_temp=45,
+         color_temp_min=4000,
+         color_temp_max=2000,
+         color_hue=200,
+         color_saturation=0.7,
+         room_id="123",
+         room_name="Upstairs",
++        firmware_version="1",
++        hardware_version="1",
++        model="a",
++        manufacturer="IKEA",
++        serial_number="abc-abc",
+         can_receive=[
+             "customName",
+             "isOn",
+             "lightLevel",
+             "colorTemperature",
+             "colorHue",
+             "colorSaturation",
+@@ -119,14 +124,18 @@
+     data = {
+         "id": "1237-343-2dfa",
+         "type": "light",
+         "deviceType": "light",
+         "isReachable": True,
+         "attributes": {
+             "customName": "Light 2",
++            "model": "TRADFRI bulb E27 WW 806lm",
++            "manufacturer": "IKEA of Sweden",
++            "firmwareVersion": "2.3.093",
++            "hardwareVersion": "2",
+             "isOn": False,
+             "startupOnOff": "startOn",
+             "lightLevel": 100,
+             "colorTemperature": 2710,
+             "colorTemperatureMin": 4000,
+             "colorTemperatureMax": 2202,
+             "colorMode": "temperature",
+@@ -151,7 +160,11 @@
+     assert light.light_level == data["attributes"]["lightLevel"]
+     assert light.color_temp == data["attributes"]["colorTemperature"]
+     assert light.color_temp_min == data["attributes"]["colorTemperatureMin"]
+     assert light.color_temp_max == data["attributes"]["colorTemperatureMax"]
+     assert light.can_receive == data["capabilities"]["canReceive"]
+     assert light.room_id == data["room"]["id"]
+     assert light.room_name == data["room"]["name"]
++    assert light.firmware_version == data["attributes"]["firmwareVersion"]
++    assert light.hardware_version == data["attributes"]["hardwareVersion"]
++    assert light.model == data["attributes"]["model"]
++    assert light.manufacturer == data["attributes"]["manufacturer"]
+```
+

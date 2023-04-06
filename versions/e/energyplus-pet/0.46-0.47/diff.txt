@@ -1,0 +1,235 @@
+--- tmp/energyplus_pet-0.46.tar.gz
++++ tmp/energyplus_pet-0.47.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "energyplus_pet-0.46.tar", last modified: Thu Apr  6 19:05:59 2023, max compression
+│ +gzip compressed data, was "energyplus_pet-0.47.tar", last modified: Thu Apr  6 19:20:25 2023, max compression
+│   --- energyplus_pet-0.46.tar
+├── +++ energyplus_pet-0.47.tar
+│ ├── file list
+│ │ @@ -1,44 +1,44 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:59.429499 energyplus_pet-0.46/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2133 2023-04-06 19:05:59.429499 energyplus_pet-0.46/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1582 2023-04-06 19:05:35.000000 energyplus_pet-0.46/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:59.429499 energyplus_pet-0.46/energyplus_pet/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       49 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       56 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/__main__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      318 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/configure.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     7858 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/correction_factor.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5776 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/data_manager.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:59.429499 energyplus_pet-0.46/energyplus_pet/equipment/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    13066 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2486 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/column_header.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2291 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/common_curves.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1908 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/equip_types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1709 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    20165 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/wahp_cooling_curve.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    15424 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/wahp_heating_curve.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    15053 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/wwhp_cooling_curve.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    15053 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/equipment/wwhp_heating_curve.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      137 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/exceptions.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:59.429499 energyplus_pet-0.46/energyplus_pet/forms/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    16776 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/base_data_form.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1045 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/basic_message_form.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4170 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/catalog_plot.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4268 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/comparison_plot.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8198 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/constant_parameters.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    22194 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/correction_detail_form.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9698 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/correction_summary_form.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6408 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/correction_summary_widget.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3421 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/header_preview.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    31600 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/forms/main.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      152 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/runner.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    12745 2023-04-06 19:05:35.000000 energyplus_pet-0.46/energyplus_pet/units.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:05:59.429499 energyplus_pet-0.46/energyplus_pet.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2133 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1352 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      152 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       41 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       15 2023-04-06 19:05:59.000000 energyplus_pet-0.46/energyplus_pet.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      174 2023-04-06 19:05:59.433499 energyplus_pet-0.46/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1209 2023-04-06 19:05:35.000000 energyplus_pet-0.46/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:25.604337 energyplus_pet-0.47/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2133 2023-04-06 19:20:25.604337 energyplus_pet-0.47/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1582 2023-04-06 19:20:01.000000 energyplus_pet-0.47/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:25.600336 energyplus_pet-0.47/energyplus_pet/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       73 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       56 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/__main__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      325 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/configure.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     7858 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/correction_factor.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5776 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/data_manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:25.604337 energyplus_pet-0.47/energyplus_pet/equipment/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    13066 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2486 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/column_header.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2291 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/common_curves.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1908 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/equip_types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1709 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    20165 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/wahp_cooling_curve.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    15424 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/wahp_heating_curve.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    15053 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/wwhp_cooling_curve.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    15053 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/equipment/wwhp_heating_curve.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      137 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/exceptions.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:25.604337 energyplus_pet-0.47/energyplus_pet/forms/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    16776 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/base_data_form.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1045 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/basic_message_form.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4170 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/catalog_plot.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4268 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/comparison_plot.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8198 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/constant_parameters.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    22194 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/correction_detail_form.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9698 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/correction_summary_form.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6408 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/correction_summary_widget.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3421 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/header_preview.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    31620 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/forms/main.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      152 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/runner.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    12745 2023-04-06 19:20:01.000000 energyplus_pet-0.47/energyplus_pet/units.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 19:20:25.600336 energyplus_pet-0.47/energyplus_pet.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2133 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1352 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      152 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       41 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       15 2023-04-06 19:20:25.000000 energyplus_pet-0.47/energyplus_pet.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      174 2023-04-06 19:20:25.604337 energyplus_pet-0.47/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1209 2023-04-06 19:20:01.000000 energyplus_pet-0.47/setup.py
+│ │   --- energyplus_pet-0.46/PKG-INFO
+│ ├── +++ energyplus_pet-0.47/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: energyplus_pet
+│ │ -Version: 0.46
+│ │ +Version: 0.47
+│ │  Summary: Parameter Estimation Tools for Generating EnergyPlus Inputs from Raw Performance Data
+│ │  Home-page: https://github.com/Myoldmopar/EnergyPlusPet
+│ │  Author: Edwin Lee
+│ │  Author-email: a@a.a
+│ │  License: UnlicensedForNow
+│ │  Description: # EnergyPlus "PET"
+│ │   --- energyplus_pet-0.46/README.md
+│ ├── +++ energyplus_pet-0.47/README.md
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/correction_factor.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/correction_factor.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/data_manager.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/data_manager.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/base.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/base.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/column_header.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/column_header.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/common_curves.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/common_curves.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/equip_types.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/equip_types.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/manager.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/manager.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/wahp_cooling_curve.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/wahp_cooling_curve.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/wahp_heating_curve.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/wahp_heating_curve.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/wwhp_cooling_curve.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/wwhp_cooling_curve.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/equipment/wwhp_heating_curve.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/equipment/wwhp_heating_curve.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/base_data_form.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/base_data_form.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/basic_message_form.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/basic_message_form.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/catalog_plot.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/catalog_plot.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/comparison_plot.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/comparison_plot.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/constant_parameters.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/constant_parameters.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/correction_detail_form.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/correction_detail_form.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/correction_summary_form.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/correction_summary_form.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/correction_summary_widget.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/correction_summary_widget.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/header_preview.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/header_preview.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet/forms/main.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/forms/main.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -12,15 +12,15 @@
+│ │  from tkinter import Tk, Button, Frame, Label, PhotoImage, scrolledtext, Scrollbar, Menu  # widgets
+│ │  from tkinter import messagebox, filedialog  # simple dialogs for user messages
+│ │  from tkinter.ttk import LabelFrame, Progressbar, Treeview, Separator, Notebook  # ttk widgets
+│ │  from webbrowser import open as browser_open
+│ │  
+│ │  from plan_tools.runtime import fixup_taskbar_icon_on_windows
+│ │  
+│ │ -from energyplus_pet import NICE_NAME, VERSION
+│ │ +from energyplus_pet import NAME, NICE_NAME, VERSION
+│ │  from energyplus_pet.forms.correction_detail_form import DetailedCorrectionFactorForm
+│ │  from energyplus_pet.data_manager import CatalogDataManager
+│ │  from energyplus_pet.equipment.base import BaseEquipment
+│ │  from energyplus_pet.equipment.manager import EquipmentFactory
+│ │  from energyplus_pet.equipment.equip_types import EquipType, EquipTypeUniqueStrings as ETString
+│ │  from energyplus_pet.forms.constant_parameters import ConstantParameterEntryForm
+│ │  from energyplus_pet.forms.correction_summary_form import CorrectionFactorSummaryForm
+│ │ @@ -34,15 +34,15 @@
+│ │      """This form is the primary GUI entry point for the program; all control runs through here"""
+│ │  
+│ │      def __init__(self):
+│ │          """
+│ │          The main window of the parameter estimation tool GUI workflow.
+│ │          This window is an instance of a tk.Tk object
+│ │          """
+│ │ -        super().__init__()
+│ │ +        super().__init__(className=NAME)
+│ │  
+│ │          # set some basic program information like title and an icon
+│ │          self._program_name = NICE_NAME
+│ │          program_name_with_version = f"{self._program_name} {VERSION}"
+│ │          self.title(program_name_with_version)
+│ │          # add the taskbar icon, but its having issues reading the png on Mac, not sure.
+│ │          if system() == 'Darwin':
+│ │   --- energyplus_pet-0.46/energyplus_pet/units.py
+│ ├── +++ energyplus_pet-0.47/energyplus_pet/units.py
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/energyplus_pet.egg-info/PKG-INFO
+│ ├── +++ energyplus_pet-0.47/energyplus_pet.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: energyplus-pet
+│ │ -Version: 0.46
+│ │ +Version: 0.47
+│ │  Summary: Parameter Estimation Tools for Generating EnergyPlus Inputs from Raw Performance Data
+│ │  Home-page: https://github.com/Myoldmopar/EnergyPlusPet
+│ │  Author: Edwin Lee
+│ │  Author-email: a@a.a
+│ │  License: UnlicensedForNow
+│ │  Description: # EnergyPlus "PET"
+│ │   --- energyplus_pet-0.46/energyplus_pet.egg-info/SOURCES.txt
+│ ├── +++ energyplus_pet-0.47/energyplus_pet.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- energyplus_pet-0.46/setup.py
+│ ├── +++ energyplus_pet-0.47/setup.py
+│ │┄ Files identical despite different names

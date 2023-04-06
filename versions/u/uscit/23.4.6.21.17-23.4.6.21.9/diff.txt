@@ -1,0 +1,91 @@
+--- tmp/uscit-23.4.6.21.17.tar.gz
++++ tmp/uscit-23.4.6.21.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "uscit-23.4.6.21.17.tar", last modified: Thu Apr  6 19:17:13 2023, max compression
+│ +gzip compressed data, was "uscit-23.4.6.21.9.tar", last modified: Thu Apr  6 19:14:01 2023, max compression
+│   --- uscit-23.4.6.21.17.tar
+├── +++ uscit-23.4.6.21.9.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:17:13.896624 uscit-23.4.6.21.17/
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     1073 2023-04-05 22:12:06.000000 uscit-23.4.6.21.17/LICENSE
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      784 2023-04-06 19:17:13.896485 uscit-23.4.6.21.17/PKG-INFO
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      198 2023-04-06 18:46:52.000000 uscit-23.4.6.21.17/README.md
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      640 2023-04-06 19:17:03.000000 uscit-23.4.6.21.17/pyproject.toml
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)       38 2023-04-06 19:17:13.896664 uscit-23.4.6.21.17/setup.cfg
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:17:13.895523 uscit-23.4.6.21.17/src/
+│ │ -drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:17:13.896294 uscit-23.4.6.21.17/src/uscit.egg-info/
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      784 2023-04-06 19:17:13.000000 uscit-23.4.6.21.17/src/uscit.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      177 2023-04-06 19:17:13.000000 uscit-23.4.6.21.17/src/uscit.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        1 2023-04-06 19:17:13.000000 uscit-23.4.6.21.17/src/uscit.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        6 2023-04-06 19:17:13.000000 uscit-23.4.6.21.17/src/uscit.egg-info/top_level.txt
+│ │ --rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     5700 2023-04-06 15:13:26.000000 uscit-23.4.6.21.17/src/uscit.py
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:14:01.669305 uscit-23.4.6.21.9/
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     1073 2023-04-05 22:12:06.000000 uscit-23.4.6.21.9/LICENSE
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      783 2023-04-06 19:14:01.669181 uscit-23.4.6.21.9/PKG-INFO
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      198 2023-04-06 18:46:52.000000 uscit-23.4.6.21.9/README.md
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      640 2023-04-06 19:09:11.000000 uscit-23.4.6.21.9/pyproject.toml
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)       38 2023-04-06 19:14:01.669344 uscit-23.4.6.21.9/setup.cfg
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:14:01.667959 uscit-23.4.6.21.9/src/
+│ │ +drwxr-xr-x   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        0 2023-04-06 19:14:01.669009 uscit-23.4.6.21.9/src/uscit.egg-info/
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      783 2023-04-06 19:14:01.000000 uscit-23.4.6.21.9/src/uscit.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)      177 2023-04-06 19:14:01.000000 uscit-23.4.6.21.9/src/uscit.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        1 2023-04-06 19:14:01.000000 uscit-23.4.6.21.9/src/uscit.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)        6 2023-04-06 19:14:01.000000 uscit-23.4.6.21.9/src/uscit.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 aliaga   (1828311938) ATKK\hyad-all (984178727)     5700 2023-04-06 15:13:26.000000 uscit-23.4.6.21.9/src/uscit.py
+│ │   --- uscit-23.4.6.21.17/LICENSE
+│ ├── +++ uscit-23.4.6.21.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- uscit-23.4.6.21.17/PKG-INFO
+│ ├── +++ uscit-23.4.6.21.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uscit
+│ │ -Version: 23.4.6.21.17
+│ │ +Version: 23.4.6.21.9
+│ │  Summary: simple package for very common functions
+│ │  Author-email: diego aliaga <daliaga@chacaltaya.edu.bo>
+│ │  Project-URL: Homepage, https://github.com/daliagachc/uscit
+│ │  Project-URL: Bug Tracker, https://github.com/daliagachc/uscit/issues
+│ │  Project-URL: Documentation, https://daliagachc.github.io/uscit/
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- uscit-23.4.6.21.17/pyproject.toml
+│ ├── +++ uscit-23.4.6.21.9/pyproject.toml
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = [ "setuptools>=61.0",]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "uscit"
+│ │ -version = "23.04.06.21.17"
+│ │ +version = "23.04.06.21.09"
+│ │  description = "simple package for very common functions"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+│ │  [[project.authors]]
+│ │  name = "diego aliaga"
+│ │  email = "daliaga@chacaltaya.edu.bo"
+│ │   --- uscit-23.4.6.21.17/src/uscit.egg-info/PKG-INFO
+│ ├── +++ uscit-23.4.6.21.9/src/uscit.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uscit
+│ │ -Version: 23.4.6.21.17
+│ │ +Version: 23.4.6.21.9
+│ │  Summary: simple package for very common functions
+│ │  Author-email: diego aliaga <daliaga@chacaltaya.edu.bo>
+│ │  Project-URL: Homepage, https://github.com/daliagachc/uscit
+│ │  Project-URL: Bug Tracker, https://github.com/daliagachc/uscit/issues
+│ │  Project-URL: Documentation, https://daliagachc.github.io/uscit/
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- uscit-23.4.6.21.17/src/uscit.py
+│ ├── +++ uscit-23.4.6.21.9/src/uscit.py
+│ │┄ Files identical despite different names
