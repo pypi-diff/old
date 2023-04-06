@@ -1,0 +1,157 @@
+# Comparing `tmp/test_query_tool-0.2.6.tar.gz` & `tmp/test_query_tool-0.2.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "test_query_tool-0.2.6.tar", last modified: Thu Apr  6 08:39:59 2023, max compression
++gzip compressed data, was "test_query_tool-0.2.7.tar", last modified: Thu Apr  6 08:45:13 2023, max compression
+```
+
+## Comparing `test_query_tool-0.2.6.tar` & `test_query_tool-0.2.7.tar`
+
+### file list
+
+```diff
+@@ -1,29 +1,29 @@
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.551086 test_query_tool-0.2.6/
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1063 2023-04-03 17:08:00.000000 test_query_tool-0.2.6/LICENSE
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       45 2023-04-05 19:58:10.000000 test_query_tool-0.2.6/MANIFEST.in
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      323 2023-04-06 08:39:59.550253 test_query_tool-0.2.6/PKG-INFO
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.538669 test_query_tool-0.2.6/query_tool/
+--rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     3373 2023-04-06 08:27:37.000000 test_query_tool-0.2.6/query_tool/__init__.py
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.536274 test_query_tool-0.2.6/query_tool/frontend/
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.539619 test_query_tool-0.2.6/query_tool/frontend/dist/
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.541860 test_query_tool-0.2.6/query_tool/frontend/dist/assets/
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)  1044469 2023-04-06 08:39:43.000000 test_query_tool-0.2.6/query_tool/frontend/dist/assets/index-2acf2a44.js
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      300 2023-04-06 08:39:43.000000 test_query_tool-0.2.6/query_tool/frontend/dist/assets/index-d081bea5.css
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      464 2023-04-06 08:39:43.000000 test_query_tool-0.2.6/query_tool/frontend/dist/index.html
+--rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     1497 2023-04-06 08:39:43.000000 test_query_tool-0.2.6/query_tool/frontend/dist/vite.svg
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.546788 test_query_tool-0.2.6/query_tool/services/
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/__init__.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1438 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/dimension_service.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     3941 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/entities_service.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     3653 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/filters_service.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      437 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/query_tool_factory.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1987 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/query_tool_service.py
+--rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     2153 2023-04-03 16:47:55.000000 test_query_tool-0.2.6/query_tool/services/register.py
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       38 2023-04-06 08:39:59.554922 test_query_tool-0.2.6/setup.cfg
+--rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)      646 2023-04-06 08:39:58.000000 test_query_tool-0.2.6/setup.py
+-drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:39:59.549556 test_query_tool-0.2.6/test_query_tool.egg-info/
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      323 2023-04-06 08:39:59.000000 test_query_tool-0.2.6/test_query_tool.egg-info/PKG-INFO
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      684 2023-04-06 08:39:59.000000 test_query_tool-0.2.6/test_query_tool.egg-info/SOURCES.txt
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)        1 2023-04-06 08:39:59.000000 test_query_tool-0.2.6/test_query_tool.egg-info/dependency_links.txt
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       18 2023-04-06 08:39:59.000000 test_query_tool-0.2.6/test_query_tool.egg-info/requires.txt
+--rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       11 2023-04-06 08:39:59.000000 test_query_tool-0.2.6/test_query_tool.egg-info/top_level.txt
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.783547 test_query_tool-0.2.7/
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1063 2023-04-03 17:08:00.000000 test_query_tool-0.2.7/LICENSE
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       45 2023-04-05 19:58:10.000000 test_query_tool-0.2.7/MANIFEST.in
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      323 2023-04-06 08:45:13.783216 test_query_tool-0.2.7/PKG-INFO
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.770884 test_query_tool-0.2.7/query_tool/
++-rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     3372 2023-04-06 08:45:04.000000 test_query_tool-0.2.7/query_tool/__init__.py
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.768617 test_query_tool-0.2.7/query_tool/frontend/
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.771717 test_query_tool-0.2.7/query_tool/frontend/dist/
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.776451 test_query_tool-0.2.7/query_tool/frontend/dist/assets/
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)  1044469 2023-04-06 08:39:43.000000 test_query_tool-0.2.7/query_tool/frontend/dist/assets/index-2acf2a44.js
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      300 2023-04-06 08:39:43.000000 test_query_tool-0.2.7/query_tool/frontend/dist/assets/index-d081bea5.css
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      463 2023-04-06 08:44:51.000000 test_query_tool-0.2.7/query_tool/frontend/dist/index.html
++-rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     1497 2023-04-06 08:39:43.000000 test_query_tool-0.2.7/query_tool/frontend/dist/vite.svg
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.780421 test_query_tool-0.2.7/query_tool/services/
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/__init__.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1438 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/dimension_service.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     3941 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/entities_service.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     3653 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/filters_service.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      437 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/query_tool_factory.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)     1987 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/query_tool_service.py
++-rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)     2153 2023-04-03 16:47:55.000000 test_query_tool-0.2.7/query_tool/services/register.py
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       38 2023-04-06 08:45:13.783687 test_query_tool-0.2.7/setup.cfg
++-rw-rw-r--   0 menakapanchaksharam   (501) staff       (20)      646 2023-04-06 08:44:58.000000 test_query_tool-0.2.7/setup.py
++drwxr-xr-x   0 menakapanchaksharam   (501) staff       (20)        0 2023-04-06 08:45:13.782645 test_query_tool-0.2.7/test_query_tool.egg-info/
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      323 2023-04-06 08:45:13.000000 test_query_tool-0.2.7/test_query_tool.egg-info/PKG-INFO
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)      684 2023-04-06 08:45:13.000000 test_query_tool-0.2.7/test_query_tool.egg-info/SOURCES.txt
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)        1 2023-04-06 08:45:13.000000 test_query_tool-0.2.7/test_query_tool.egg-info/dependency_links.txt
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       18 2023-04-06 08:45:13.000000 test_query_tool-0.2.7/test_query_tool.egg-info/requires.txt
++-rw-r--r--   0 menakapanchaksharam   (501) staff       (20)       11 2023-04-06 08:45:13.000000 test_query_tool-0.2.7/test_query_tool.egg-info/top_level.txt
+```
+
+### Comparing `test_query_tool-0.2.6/LICENSE` & `test_query_tool-0.2.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/__init__.py` & `test_query_tool-0.2.7/query_tool/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+     set_component_rerender_count,
+ )
+ 
+ # Create a _RELEASE constant. We'll set this to False while we're developing
+ # the component, and True when we're ready to package and distribute it.
+ # (This is, of course, optional - there are innumerable ways to manage your
+ # release process.)
+-_RELEASE = False
++_RELEASE = True
+ 
+ # Create a wrapper function for the component. This is an optional
+ # best practice - we could simply expose the component function returned by
+ # `declare_component` and call it done. The wrapper allows us to customize
+ # our component's API: we can pre-process its input args, post-process its
+ # output value, and add a docstring for users.
+ init()
+```
+
+### Comparing `test_query_tool-0.2.6/query_tool/frontend/dist/assets/index-2acf2a44.js` & `test_query_tool-0.2.7/query_tool/frontend/dist/assets/index-2acf2a44.js`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/frontend/dist/vite.svg` & `test_query_tool-0.2.7/query_tool/frontend/dist/vite.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/services/dimension_service.py` & `test_query_tool-0.2.7/query_tool/services/dimension_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/services/entities_service.py` & `test_query_tool-0.2.7/query_tool/services/entities_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/services/filters_service.py` & `test_query_tool-0.2.7/query_tool/services/filters_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/services/query_tool_service.py` & `test_query_tool-0.2.7/query_tool/services/query_tool_service.py`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/query_tool/services/register.py` & `test_query_tool-0.2.7/query_tool/services/register.py`
+
+ * *Files identical despite different names*
+
+### Comparing `test_query_tool-0.2.6/setup.py` & `test_query_tool-0.2.7/setup.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ import setuptools
+ 
+ setuptools.setup(
+     name="test_query_tool",
+-    version="0.2.6",
++    version="0.2.7",
+     author="Bluepinapple",
+     author_email="viveksthul@bluepinapple.com",
+     description="Query tool to generate query from selection",
+     long_description="",
+     long_description_content_type="text/plain",
+     url="",
+     packages=setuptools.find_packages(),
+```
+
+### Comparing `test_query_tool-0.2.6/test_query_tool.egg-info/SOURCES.txt` & `test_query_tool-0.2.7/test_query_tool.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

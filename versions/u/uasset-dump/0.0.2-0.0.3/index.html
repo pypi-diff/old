@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/uasset_dump-0.0.2.tar.gz tmp/uasset_dump-0.0.3.tar.gz --html versions/u/uasset-dump/0.0.2-0.0.3/index.html --text versions/u/uasset-dump/0.0.2-0.0.3/diff.txt --markdown versions/u/uasset-dump/0.0.2-0.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.8 KB</span></div>
+  <div><span class="source">tmp/uasset_dump-0.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/uasset_dump-0.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">190 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;uasset_dump-0.0.<del>2</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;uasset_dump-0.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.5 KB</span></div>
+    <div><span class="source">uasset_dump-0.0.2.tar</span> vs.</div>
+    <div id="uasset_dump--.-.-.tar"><span class="source">uasset_dump-0.0.3.tar</span>
+      <a class="anchor" href="#uasset_dump--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.52 KB</span></div>
+      <div id="uasset_dump--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>306<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:18:04.579115<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/CHANGELOG.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>306<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:18:04.579115<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/CHANGELOG.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>761<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:22:24.297536<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/LICENSE.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>761<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:22:24.297536<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/LICENSE.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<del>7</del>9<span class="dp">·</span>2023-04-06<span class="dp">·</span>0<del>7</del>:<del>14</del>:<del>26</del>.<del>70670</del>5<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<ins>8</ins>9<span class="dp">·</span>2023-04-06<span class="dp">·</span>0<ins>8</ins>:<ins>39</ins>:<ins>51</ins>.<ins>41033</ins>5<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/cli/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/cli/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2445<span class="dp">·</span>2023-04-06<span class="dp">·</span>03:55:38.985331<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/cli/uassetdump.py</td><td class="diffline">7 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2445<span class="dp">·</span>2023-04-06<span class="dp">·</span>03:55:38.985331<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/cli/uassetdump.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.975392<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/constant/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.975392<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/constant/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4797<span class="dp">·</span>2023-04-05<span class="dp">·</span>15:31:25.693554<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/constant/uasset.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4797<span class="dp">·</span>2023-04-05<span class="dp">·</span>15:31:25.693554<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/constant/uasset.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.975392<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/model/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.975392<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/model/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2915<span class="dp">·</span>2023-04-05<span class="dp">·</span>14:09:09.558252<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/model/uasset.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2915<span class="dp">·</span>2023-04-05<span class="dp">·</span>14:09:09.558252<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/model/uasset.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/utils/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>859<span class="dp">·</span>2023-03-31<span class="dp">·</span>11:21:05.979756<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>825</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>08:<del>02</del>:0<del>8</del>.<del>777383</del><span class="dp">·</span>uasset_dump-0.0.<del>2</del>/bootloader/ue/utils/uasset_dump.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>917</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>08:<ins>45</ins>:0<ins>2</ins>.<ins>183427</ins><span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/bootloader/ue/utils/uasset_dump.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1024<span class="dp">·</span>2023-04-06<span class="dp">·</span>08:<del>02</del>:<del>50</del>.<del>774</del>5<del>25</del><span class="dp">·</span>uasset_dump-0.0.<del>2</del>/pyproject.toml</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1024<span class="dp">·</span>2023-04-06<span class="dp">·</span>08:<ins>45</ins>:<ins>15</ins>.<ins>951</ins>5<ins>32</ins><span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<del>4</del>0<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/setup.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<ins>5</ins>0<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<del>5</del>1<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>uasset_dump-0.0.<del>2</del>/PKG-INFO</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<ins>6</ins>1<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>uasset_dump-0.0.<ins>3</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/LICENSE.md</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--LICENSE.md"><span class="source">uasset_dump-0.0.3/LICENSE.md</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--LICENSE.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">405 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/README.md</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--README.md"><span class="source">uasset_dump-0.0.3/README.md</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 27, 9 lines modified</td><td colspan="2">Offset 27, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">poetry<span class="dp">·</span>update</td><td class="diffline">27 </td><td class="diffpresent">poetry<span class="dp">·</span>update</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">```</td><td class="diffline">28 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">29 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">```shell</td><td class="diffline">30 </td><td class="diffpresent">```shell</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">/Users/Shared/Epic\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>uasset-dump</td><td class="diffline">31 </td><td class="diffpresent">/Users/Shared/Epic\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span><ins>--upgrade<span class="dp">·</span></ins>uasset-dump</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">```</td><td class="diffline">32 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/cli/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-cli-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/cli/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-cli-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/cli/uassetdump.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-cli-uassetdump.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/cli/uassetdump.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-cli-uassetdump.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/constant/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-constant-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/constant/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-constant-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/constant/uasset.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-constant-uasset.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/constant/uasset.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-constant-uasset.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/model/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-model-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/model/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-model-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/model/uasset.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-model-uasset.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/model/uasset.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-model-uasset.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/utils/__init__.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-utils-__init__.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/utils/__init__.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-utils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.05 KB</span></div>
+      <div><span class="source">uasset_dump-0.0.2/bootloader/ue/utils/uasset_dump.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-utils-uasset_dump.py"><span class="source">uasset_dump-0.0.3/bootloader/ue/utils/uasset_dump.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--bootloader-ue-utils-uasset_dump.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 9, 26 lines modified</td><td colspan="2">Offset 9, 28 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">#<span class="dp">·</span>BOOTLOADER<span class="dp">·</span>MAKES<span class="dp">·</span>NO<span class="dp">·</span>REPRESENTATIONS<span class="dp">·</span>OR<span class="dp">·</span>WARRANTIES<span class="dp">·</span>ABOUT<span class="dp">·</span>THE</td><td class="diffline">9 </td><td class="diffpresent">#<span class="dp">·</span>BOOTLOADER<span class="dp">·</span>MAKES<span class="dp">·</span>NO<span class="dp">·</span>REPRESENTATIONS<span class="dp">·</span>OR<span class="dp">·</span>WARRANTIES<span class="dp">·</span>ABOUT<span class="dp">·</span>THE</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">#<span class="dp">·</span>SUITABILITY<span class="dp">·</span>OF<span class="dp">·</span>THE<span class="dp">·</span>SOFTWARE,<span class="dp">·</span>EITHER<span class="dp">·</span>EXPRESS<span class="dp">·</span>OR<span class="dp">·</span>IMPLIED,<span class="dp">·</span>INCLUDING<span class="dp">·</span>BUT</td><td class="diffline">10 </td><td class="diffpresent">#<span class="dp">·</span>SUITABILITY<span class="dp">·</span>OF<span class="dp">·</span>THE<span class="dp">·</span>SOFTWARE,<span class="dp">·</span>EITHER<span class="dp">·</span>EXPRESS<span class="dp">·</span>OR<span class="dp">·</span>IMPLIED,<span class="dp">·</span>INCLUDING<span class="dp">·</span>BUT</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>NOT<span class="dp">·</span>LIMITED<span class="dp">·</span>TO<span class="dp">·</span>THE<span class="dp">·</span>IMPLIED<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OF<span class="dp">·</span>MERCHANTABILITY,<span class="dp">·</span>FITNESS<span class="dp">·</span>FOR</td><td class="diffline">11 </td><td class="diffpresent">#<span class="dp">·</span>NOT<span class="dp">·</span>LIMITED<span class="dp">·</span>TO<span class="dp">·</span>THE<span class="dp">·</span>IMPLIED<span class="dp">·</span>WARRANTIES<span class="dp">·</span>OF<span class="dp">·</span>MERCHANTABILITY,<span class="dp">·</span>FITNESS<span class="dp">·</span>FOR</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>A<span class="dp">·</span>PARTICULAR<span class="dp">·</span>PURPOSE,<span class="dp">·</span>OR<span class="dp">·</span>NON-INFRINGEMENT.<span class="dp">·</span><span class="dp">·</span>BOOTLOADER<span class="dp">·</span>SHALL<span class="dp">·</span>NOT<span class="dp">·</span>BE</td><td class="diffline">12 </td><td class="diffpresent">#<span class="dp">·</span>A<span class="dp">·</span>PARTICULAR<span class="dp">·</span>PURPOSE,<span class="dp">·</span>OR<span class="dp">·</span>NON-INFRINGEMENT.<span class="dp">·</span><span class="dp">·</span>BOOTLOADER<span class="dp">·</span>SHALL<span class="dp">·</span>NOT<span class="dp">·</span>BE</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>LIABLE<span class="dp">·</span>FOR<span class="dp">·</span>ANY<span class="dp">·</span>LOSSES<span class="dp">·</span>OR<span class="dp">·</span>DAMAGES<span class="dp">·</span>SUFFERED<span class="dp">·</span>BY<span class="dp">·</span>LICENSEE<span class="dp">·</span>AS<span class="dp">·</span>A<span class="dp">·</span>RESULT<span class="dp">·</span>OF</td><td class="diffline">13 </td><td class="diffpresent">#<span class="dp">·</span>LIABLE<span class="dp">·</span>FOR<span class="dp">·</span>ANY<span class="dp">·</span>LOSSES<span class="dp">·</span>OR<span class="dp">·</span>DAMAGES<span class="dp">·</span>SUFFERED<span class="dp">·</span>BY<span class="dp">·</span>LICENSEE<span class="dp">·</span>AS<span class="dp">·</span>A<span class="dp">·</span>RESULT<span class="dp">·</span>OF</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>USING,<span class="dp">·</span>MODIFYING<span class="dp">·</span>OR<span class="dp">·</span>DISTRIBUTING<span class="dp">·</span>THIS<span class="dp">·</span>SOFTWARE<span class="dp">·</span>OR<span class="dp">·</span>ITS<span class="dp">·</span>DERIVATIVES.</td><td class="diffline">14 </td><td class="diffpresent">#<span class="dp">·</span>USING,<span class="dp">·</span>MODIFYING<span class="dp">·</span>OR<span class="dp">·</span>DISTRIBUTING<span class="dp">·</span>THIS<span class="dp">·</span>SOFTWARE<span class="dp">·</span>OR<span class="dp">·</span>ITS<span class="dp">·</span>DERIVATIVES.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">15 </td><td class="diffpresent">import<span class="dp">·</span>json</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td><td class="diffline">16 </td><td class="diffpresent">from<span class="dp">·</span>pathlib<span class="dp">·</span>import<span class="dp">·</span>Path</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">import<span class="dp">·</span>unreal</td><td class="diffline">17 </td><td class="diffpresent">import<span class="dp">·</span>unreal</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">from<span class="dp">·</span>bootloader.ue.model.uasset<span class="dp">·</span>import<span class="dp">·</span>UAsset</td><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>bootloader.ue.model.uasset<span class="dp">·</span>import<span class="dp">·</span>UAsset</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">UNREAL_ENGINE_PROJECT_CONTENT_PATH<span class="dp">·</span>=<span class="dp">·</span>&#x27;/Game/&#x27;</td><td class="diffline">19 </td><td class="diffpresent">UNREAL_ENGINE_PROJECT_CONTENT_PATH<span class="dp">·</span>=<span class="dp">·</span>&#x27;/Game/&#x27;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">def<span class="dp">·</span>dump_assets(root_path:<span class="dp">·</span>str<span class="dp">·</span>or<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">20 </td><td class="diffpresent">def<span class="dp">·</span>dump_assets(root_path:<span class="dp">·</span>str<span class="dp">·</span>or<span class="dp">·</span>Path)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>find_assets(root_path)</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>assets<span class="dp">·</span>=<span class="dp">·</span></ins>find_assets(root_path)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(json.dumps([asset.to_json()<span class="dp">·</span>for<span class="dp">·</span>asset<span class="dp">·</span>in<span class="dp">·</span>assets],<span class="dp">·</span>indent=2))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">def<span class="dp">·</span>find_assets(content_path:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>list[UAsset]:</td><td class="diffline">23 </td><td class="diffpresent">def<span class="dp">·</span>find_assets(content_path:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>list[UAsset]:</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Return<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>found<span class="dp">·</span>recursively<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>path.</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Return<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>found<span class="dp">·</span>recursively<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>path.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">610 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/pyproject.toml</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--pyproject.toml"><span class="source">uasset_dump-0.0.3/pyproject.toml</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 15 lines modified</td><td colspan="2">Offset 13, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">]</td><td class="diffline">13 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;cli&quot;,<span class="dp">·</span>&quot;tool&quot;,<span class="dp">·</span>&quot;utility&quot;,<span class="dp">·</span>&quot;unreal&quot;,<span class="dp">·</span>&quot;engine&quot;,<span class="dp">·</span>&quot;asset&quot;,<span class="dp">·</span>&quot;inventory&quot;,<span class="dp">·</span>&quot;dump&quot;,<span class="dp">·</span>&quot;json&quot;]</td><td class="diffline">14 </td><td class="diffpresent">keywords<span class="dp">·</span>=<span class="dp">·</span>[&quot;cli&quot;,<span class="dp">·</span>&quot;tool&quot;,<span class="dp">·</span>&quot;utility&quot;,<span class="dp">·</span>&quot;unreal&quot;,<span class="dp">·</span>&quot;engine&quot;,<span class="dp">·</span>&quot;asset&quot;,<span class="dp">·</span>&quot;inventory&quot;,<span class="dp">·</span>&quot;dump&quot;,<span class="dp">·</span>&quot;json&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;SEE<span class="dp">·</span>LICENSE<span class="dp">·</span>IN<span class="dp">·</span>&lt;LICENSE.md&gt;&quot;</td><td class="diffline">15 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;SEE<span class="dp">·</span>LICENSE<span class="dp">·</span>IN<span class="dp">·</span>&lt;LICENSE.md&gt;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;uasset-dump&quot;</td><td class="diffline">16 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;uasset-dump&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;bootloader&quot;<span class="dp">·</span>}]</td><td class="diffline">17 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;bootloader&quot;<span class="dp">·</span>}]</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">18 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/bootloader-studio/cli-uasset-dump&quot;</td><td class="diffline">19 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/bootloader-studio/cli-uasset-dump&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<del>2</del>&quot;</td><td class="diffline">20 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.0.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">21 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">perseus-core-library<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.19.2&quot;</td><td class="diffline">22 </td><td class="diffpresent">perseus-core-library<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.19.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td><td class="diffline">23 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">[tool.poetry.scripts]</td><td class="diffline">24 </td><td class="diffpresent">[tool.poetry.scripts]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">ueprjver<span class="dp">·</span>=<span class="dp">·</span>&#x27;bootloader.ue.cli.uassetdump:run&#x27;</td><td class="diffline">25 </td><td class="diffpresent">ueprjver<span class="dp">·</span>=<span class="dp">·</span>&#x27;bootloader.ue.cli.uassetdump:run&#x27;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.79 KB</span></div>
+      <div><span class="source">uasset_dump-0.0.2/setup.py</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--setup.py"><span class="source">uasset_dump-0.0.3/setup.py</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 17 lines modified</td><td colspan="2">Offset 16, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">[&#x27;perseus-core-library&gt;=1.19.2,&lt;2.0.0&#x27;]</td><td class="diffline">16 </td><td class="diffpresent">[&#x27;perseus-core-library&gt;=1.19.2,&lt;2.0.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">17 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;ueprjver<span class="dp">·</span>=<span class="dp">·</span>bootloader.ue.cli.uassetdump:run&#x27;]}</td><td class="diffline">18 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;ueprjver<span class="dp">·</span>=<span class="dp">·</span>bootloader.ue.cli.uassetdump:run&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">19 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;uasset-dump&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;uasset-dump&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.0.<del>2</del>&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.0.<ins>3</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Command-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Command-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>Assets<span class="dp">·</span>Dump\n\nCommand-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure.\n\n##<span class="dp">·</span>Development\n\n###<span class="dp">·</span>Poetry\n\nUnreal<span class="dp">·</span>Engine<span class="dp">·</span>Assets<span class="dp">·</span>Dump<span class="dp">·</span>used<span class="dp">·</span>Poetry<span class="dp">·</span>to<span class="dp">·</span>declare<span class="dp">·</span>all<span class="dp">·</span>its<span class="dp">·</span>dependencies.<span class="dp">·</span><span class="dp">·</span>[Poetry](https://python-poetry.org/)<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>dependency<span class="dp">·</span>management<span class="dp">·</span>tool<span class="dp">·</span>to<span class="dp">·</span>manage<span class="dp">·</span>dependencies,<span class="dp">·</span>packages,<span class="dp">·</span>and<span class="dp">·</span>libraries<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>python<span class="dp">·</span>project.\n\nWe<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>install<span class="dp">·</span>Poetry<span class="dp">·</span>with<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>Python:\n\n```shell\ncurl<span class="dp">·</span>-sSL<span class="dp">·</span>https://install.python-poetry.org<span class="dp">·</span>|<span class="dp">·</span>python3<span class="dp">·</span>-\n```\n\nThen,<span class="dp">·</span>we<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>virtual<span class="dp">·</span>environment<span class="dp">·</span>using<span class="dp">·</span>Poetry:\n\n```shell\npoetry<span class="dp">·</span>env<span class="dp">·</span>use<span class="dp">·</span>/Users/Shared/Epic\\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3\n```\n\nWe<span class="dp">·</span>can<span class="dp">·</span>enter<span class="dp">·</span>this<span class="dp">·</span>virtual<span class="dp">·</span>environment<span class="dp">·</span>and<span class="dp">·</span>install<span class="dp">·</span>all<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>dependencies:\n\n```shell\npoetry<span class="dp">·</span>shell\npoetry<span class="dp">·</span>update\n```\n\n\n##<span class="dp">·</span>Installation\n\n```shell\n/Users/Shared/Epic\\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>uasset-dump\n```&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>Assets<span class="dp">·</span>Dump\n\nCommand-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure.\n\n##<span class="dp">·</span>Development\n\n###<span class="dp">·</span>Poetry\n\nUnreal<span class="dp">·</span>Engine<span class="dp">·</span>Assets<span class="dp">·</span>Dump<span class="dp">·</span>used<span class="dp">·</span>Poetry<span class="dp">·</span>to<span class="dp">·</span>declare<span class="dp">·</span>all<span class="dp">·</span>its<span class="dp">·</span>dependencies.<span class="dp">·</span><span class="dp">·</span>[Poetry](https://python-poetry.org/)<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>python<span class="dp">·</span>dependency<span class="dp">·</span>management<span class="dp">·</span>tool<span class="dp">·</span>to<span class="dp">·</span>manage<span class="dp">·</span>dependencies,<span class="dp">·</span>packages,<span class="dp">·</span>and<span class="dp">·</span>libraries<span class="dp">·</span>in<span class="dp">·</span>your<span class="dp">·</span>python<span class="dp">·</span>project.\n\nWe<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>install<span class="dp">·</span>Poetry<span class="dp">·</span>with<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>Python:\n\n```shell\ncurl<span class="dp">·</span>-sSL<span class="dp">·</span>https://install.python-poetry.org<span class="dp">·</span>|<span class="dp">·</span>python3<span class="dp">·</span>-\n```\n\nThen,<span class="dp">·</span>we<span class="dp">·</span>need<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>the<span class="dp">·</span>Python<span class="dp">·</span>virtual<span class="dp">·</span>environment<span class="dp">·</span>using<span class="dp">·</span>Poetry:\n\n```shell\npoetry<span class="dp">·</span>env<span class="dp">·</span>use<span class="dp">·</span>/Users/Shared/Epic\\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3\n```\n\nWe<span class="dp">·</span>can<span class="dp">·</span>enter<span class="dp">·</span>this<span class="dp">·</span>virtual<span class="dp">·</span>environment<span class="dp">·</span>and<span class="dp">·</span>install<span class="dp">·</span>all<span class="dp">·</span>the<span class="dp">·</span>required<span class="dp">·</span>dependencies:\n\n```shell\npoetry<span class="dp">·</span>shell\npoetry<span class="dp">·</span>update\n```\n\n\n##<span class="dp">·</span>Installation\n\n```shell\n/Users/Shared/Epic\\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span><ins>--upgrade<span class="dp">·</span></ins>uasset-dump\n```&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Daniel<span class="dp">·</span>CAUNE&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Daniel<span class="dp">·</span>CAUNE&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;daniel@bootloader.studio&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;daniel@bootloader.studio&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/bootloader-studio/cli-uasset-dump&#x27;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://github.com/bootloader-studio/cli-uasset-dump&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;packages&#x27;:<span class="dp">·</span>packages,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;packages&#x27;:<span class="dp">·</span>packages,</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;package_data&#x27;:<span class="dp">·</span>package_data,</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;package_data&#x27;:<span class="dp">·</span>package_data,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">894 B</span></div>
+      <div><span class="source">uasset_dump-0.0.2/PKG-INFO</span> vs.</div>
+      <div id="uasset_dump--.-.-.tar---uasset_dump--.-.--PKG-INFO"><span class="source">uasset_dump-0.0.3/PKG-INFO</span>
+        <a class="anchor" href="#uasset_dump--.-.-.tar---uasset_dump--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uasset-dump</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>uasset-dump</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Command-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Command-line<span class="dp">·</span>Interface<span class="dp">·</span>(CLI)<span class="dp">·</span>responsible<span class="dp">·</span>for<span class="dp">·</span>returning<span class="dp">·</span>the<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>assets<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>Unreal<span class="dp">·</span>Engine<span class="dp">·</span>project<span class="dp">·</span>into<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>structure</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/bootloader-studio/cli-uasset-dump</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/bootloader-studio/cli-uasset-dump</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>SEE<span class="dp">·</span>LICENSE<span class="dp">·</span>IN<span class="dp">·</span>&lt;LICENSE.md&gt;</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>SEE<span class="dp">·</span>LICENSE<span class="dp">·</span>IN<span class="dp">·</span>&lt;LICENSE.md&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>cli,tool,utility,unreal,engine,asset,inventory,dump,json</td><td class="diffline">7 </td><td class="diffpresent">Keywords:<span class="dp">·</span>cli,tool,utility,unreal,engine,asset,inventory,dump,json</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>CAUNE</td><td class="diffline">8 </td><td class="diffpresent">Author:<span class="dp">·</span>Daniel<span class="dp">·</span>CAUNE</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>daniel@bootloader.studio</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>daniel@bootloader.studio</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">10 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 50, 9 lines modified</td><td colspan="2">Offset 50, 9 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">poetry<span class="dp">·</span>update</td><td class="diffline">50 </td><td class="diffpresent">poetry<span class="dp">·</span>update</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">```</td><td class="diffline">51 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td><td class="diffline">52 </td><td class="diffpresent">##<span class="dp">·</span>Installation</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">```shell</td><td class="diffline">53 </td><td class="diffpresent">```shell</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">/Users/Shared/Epic\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>uasset-dump</td><td class="diffline">54 </td><td class="diffpresent">/Users/Shared/Epic\<span class="dp">·</span>Games/UE_5.1/Engine/Binaries/ThirdParty/Python3/Mac/bin/python3<span class="dp">·</span>-m<span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span><ins>--upgrade<span class="dp">·</span></ins>uasset-dump</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">```</td><td class="diffline">55 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

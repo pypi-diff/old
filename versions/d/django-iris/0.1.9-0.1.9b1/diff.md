@@ -1,0 +1,153 @@
+# Comparing `tmp/django-iris-0.1.9.tar.gz` & `tmp/django-iris-0.1.9b1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "django-iris-0.1.9.tar", last modified: Sat Mar 19 19:01:33 2022, max compression
++gzip compressed data, was "django-iris-0.1.9b1.tar", last modified: Sat Mar 19 18:59:31 2022, max compression
+```
+
+## Comparing `django-iris-0.1.9.tar` & `django-iris-0.1.9b1.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,21 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 19:01:33.017324 django-iris-0.1.9/
+--rw-r--r--   0 runner    (1001) docker     (121)     1075 2022-03-19 19:01:18.000000 django-iris-0.1.9/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)     1534 2022-03-19 19:01:33.017324 django-iris-0.1.9/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      607 2022-03-19 19:01:18.000000 django-iris-0.1.9/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 19:01:33.017324 django-iris-0.1.9/django_iris/
+--rw-r--r--   0 runner    (1001) docker     (121)      314 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)     6128 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/base.py
+--rw-r--r--   0 runner    (1001) docker     (121)      199 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/creation.py
+--rw-r--r--   0 runner    (1001) docker     (121)     1715 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/cursor.py
+--rw-r--r--   0 runner    (1001) docker     (121)      687 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/features.py
+--rw-r--r--   0 runner    (1001) docker     (121)     9652 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/introspection.py
+--rw-r--r--   0 runner    (1001) docker     (121)     3101 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/operations.py
+--rw-r--r--   0 runner    (1001) docker     (121)      981 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/schema.py
+--rw-r--r--   0 runner    (1001) docker     (121)      233 2022-03-19 19:01:18.000000 django-iris-0.1.9/django_iris/validation.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 19:01:33.017324 django-iris-0.1.9/django_iris.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     1534 2022-03-19 19:01:32.000000 django-iris-0.1.9/django_iris.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      393 2022-03-19 19:01:33.000000 django-iris-0.1.9/django_iris.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      123 2022-03-19 19:01:32.000000 django-iris-0.1.9/django_iris.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       12 2022-03-19 19:01:32.000000 django-iris-0.1.9/django_iris.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      894 2022-03-19 19:01:33.017324 django-iris-0.1.9/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (121)      541 2022-03-19 19:01:18.000000 django-iris-0.1.9/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 18:59:31.974400 django-iris-0.1.9b1/
++-rw-r--r--   0 runner    (1001) docker     (121)     1075 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (121)     1536 2022-03-19 18:59:31.974400 django-iris-0.1.9b1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (121)      607 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 18:59:31.974400 django-iris-0.1.9b1/django_iris/
++-rw-r--r--   0 runner    (1001) docker     (121)      314 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (121)     6128 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/base.py
++-rw-r--r--   0 runner    (1001) docker     (121)      199 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/creation.py
++-rw-r--r--   0 runner    (1001) docker     (121)     1715 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/cursor.py
++-rw-r--r--   0 runner    (1001) docker     (121)      687 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/features.py
++-rw-r--r--   0 runner    (1001) docker     (121)     9652 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/introspection.py
++-rw-r--r--   0 runner    (1001) docker     (121)     3101 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/operations.py
++-rw-r--r--   0 runner    (1001) docker     (121)      981 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/schema.py
++-rw-r--r--   0 runner    (1001) docker     (121)      233 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/django_iris/validation.py
++drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-03-19 18:59:31.974400 django-iris-0.1.9b1/django_iris.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (121)     1536 2022-03-19 18:59:31.000000 django-iris-0.1.9b1/django_iris.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (121)      393 2022-03-19 18:59:31.000000 django-iris-0.1.9b1/django_iris.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (121)      123 2022-03-19 18:59:31.000000 django-iris-0.1.9b1/django_iris.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (121)       12 2022-03-19 18:59:31.000000 django-iris-0.1.9b1/django_iris.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (121)      896 2022-03-19 18:59:31.974400 django-iris-0.1.9b1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (121)      541 2022-03-19 18:59:16.000000 django-iris-0.1.9b1/setup.py
+```
+
+### Comparing `django-iris-0.1.9/LICENSE` & `django-iris-0.1.9b1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/PKG-INFO` & `django-iris-0.1.9b1/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django-iris
+-Version: 0.1.9
++Version: 0.1.9b1
+ Summary: Django backend for InterSystems IRIS
+ Home-page: https://github.com/caretdev/django-iris
+ Maintainer: CaretDev
+ Maintainer-email: dmitry@caretdev.com
+ License: MIT
+ Project-URL: Source, https://github.com/caretdev/django-iris
+ Project-URL: Tracker, https://github.com/caretdev/django-iris/issues
+```
+
+### Comparing `django-iris-0.1.9/README.md` & `django-iris-0.1.9b1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/base.py` & `django-iris-0.1.9b1/django_iris/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/cursor.py` & `django-iris-0.1.9b1/django_iris/cursor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/features.py` & `django-iris-0.1.9b1/django_iris/features.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/introspection.py` & `django-iris-0.1.9b1/django_iris/introspection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/operations.py` & `django-iris-0.1.9b1/django_iris/operations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris/schema.py` & `django-iris-0.1.9b1/django_iris/schema.py`
+
+ * *Files identical despite different names*
+
+### Comparing `django-iris-0.1.9/django_iris.egg-info/PKG-INFO` & `django-iris-0.1.9b1/django_iris.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: django-iris
+-Version: 0.1.9
++Version: 0.1.9b1
+ Summary: Django backend for InterSystems IRIS
+ Home-page: https://github.com/caretdev/django-iris
+ Maintainer: CaretDev
+ Maintainer-email: dmitry@caretdev.com
+ License: MIT
+ Project-URL: Source, https://github.com/caretdev/django-iris
+ Project-URL: Tracker, https://github.com/caretdev/django-iris/issues
+```
+
+### Comparing `django-iris-0.1.9/setup.cfg` & `django-iris-0.1.9b1/setup.cfg`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [metadata]
+ name = django-iris
+-version = 0.1.9
++version = 0.1.9b1
+ url = https://github.com/caretdev/django-iris
+ maintainer = CaretDev
+ maintainer_email = dmitry@caretdev.com
+ license = MIT
+ description = Django backend for InterSystems IRIS
+ long_description = file: README.md
+ long_description_content_type = text/markdown
+```
+
+### Comparing `django-iris-0.1.9/setup.py` & `django-iris-0.1.9b1/setup.py`
+
+ * *Files identical despite different names*
+
