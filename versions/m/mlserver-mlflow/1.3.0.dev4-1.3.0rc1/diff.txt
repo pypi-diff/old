@@ -1,0 +1,110 @@
+--- tmp/mlserver-mlflow-1.3.0.dev4.tar.gz
++++ tmp/mlserver-mlflow-1.3.0rc1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mlserver-mlflow-1.3.0.dev4.tar", last modified: Wed Mar 22 09:49:28 2023, max compression
+│ +gzip compressed data, was "mlserver-mlflow-1.3.0rc1.tar", last modified: Thu Apr  6 13:36:28 2023, max compression
+│   --- mlserver-mlflow-1.3.0.dev4.tar
+├── +++ mlserver-mlflow-1.3.0rc1.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:28.074636 mlserver-mlflow-1.3.0.dev4/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1367 2023-03-22 09:49:28.074636 mlserver-mlflow-1.3.0.dev4/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      843 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:28.070635 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      119 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1938 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/codecs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/metadata.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7249 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/runtime.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       27 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:28.074636 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1367 2023-03-22 09:49:27.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      356 2023-03-22 09:49:27.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-22 09:49:27.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       16 2023-03-22 09:49:27.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       16 2023-03-22 09:49:27.000000 mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-22 09:49:28.074636 mlserver-mlflow-1.3.0.dev4/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1103 2023-03-22 09:48:47.000000 mlserver-mlflow-1.3.0.dev4/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:28.014638 mlserver-mlflow-1.3.0rc1/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1365 2023-04-06 13:36:28.010637 mlserver-mlflow-1.3.0rc1/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      843 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:28.010637 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      119 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1938 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/codecs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2526 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/metadata.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7217 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/runtime.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:28.010637 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1365 2023-04-06 13:36:27.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      356 2023-04-06 13:36:27.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:36:27.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       16 2023-04-06 13:36:27.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       16 2023-04-06 13:36:27.000000 mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:36:28.014638 mlserver-mlflow-1.3.0rc1/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1103 2023-04-06 13:35:53.000000 mlserver-mlflow-1.3.0rc1/setup.py
+│ │   --- mlserver-mlflow-1.3.0.dev4/LICENSE
+│ ├── +++ mlserver-mlflow-1.3.0rc1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mlserver-mlflow-1.3.0.dev4/PKG-INFO
+│ ├── +++ mlserver-mlflow-1.3.0rc1/PKG-INFO
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mlserver-mlflow
+│ │ -Version: 1.3.0.dev4
+│ │ +Version: 1.3.0rc1
+│ │  Summary: MLflow runtime for MLServer
+│ │  Home-page: https://github.com/SeldonIO/MLServer.git
+│ │  Author: Seldon Technologies Ltd.
+│ │  Author-email: hello@seldon.io
+│ │  License: Apache 2.0
+│ │  Description: # MLflow runtime for MLServer
+│ │   --- mlserver-mlflow-1.3.0.dev4/README.md
+│ ├── +++ mlserver-mlflow-1.3.0rc1/README.md
+│ │┄ Files identical despite different names
+│ │   --- mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/codecs.py
+│ ├── +++ mlserver-mlflow-1.3.0rc1/mlserver_mlflow/codecs.py
+│ │┄ Files identical despite different names
+│ │   --- mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/metadata.py
+│ ├── +++ mlserver-mlflow-1.3.0rc1/mlserver_mlflow/metadata.py
+│ │┄ Files identical despite different names
+│ │   --- mlserver-mlflow-1.3.0.dev4/mlserver_mlflow/runtime.py
+│ ├── +++ mlserver-mlflow-1.3.0rc1/mlserver_mlflow/runtime.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -154,16 +154,15 @@
+│ │          model_uri = await get_model_uri(self._settings)
+│ │          self._model = mlflow.pyfunc.load_model(model_uri)
+│ │  
+│ │          self._input_schema = self._model.metadata.get_input_schema()
+│ │          self._signature = self._model.metadata.signature
+│ │          self._sync_metadata()
+│ │  
+│ │ -        self.ready = True
+│ │ -        return self.ready
+│ │ +        return True
+│ │  
+│ │      def _sync_metadata(self) -> None:
+│ │          # Update metadata from model signature (if present)
+│ │          if self._signature is None:
+│ │              return
+│ │  
+│ │          if self.inputs:
+│ │   --- mlserver-mlflow-1.3.0.dev4/mlserver_mlflow.egg-info/PKG-INFO
+│ ├── +++ mlserver-mlflow-1.3.0rc1/mlserver_mlflow.egg-info/PKG-INFO
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mlserver-mlflow
+│ │ -Version: 1.3.0.dev4
+│ │ +Version: 1.3.0rc1
+│ │  Summary: MLflow runtime for MLServer
+│ │  Home-page: https://github.com/SeldonIO/MLServer.git
+│ │  Author: Seldon Technologies Ltd.
+│ │  Author-email: hello@seldon.io
+│ │  License: Apache 2.0
+│ │  Description: # MLflow runtime for MLServer
+│ │   --- mlserver-mlflow-1.3.0.dev4/setup.py
+│ ├── +++ mlserver-mlflow-1.3.0rc1/setup.py
+│ │┄ Files identical despite different names

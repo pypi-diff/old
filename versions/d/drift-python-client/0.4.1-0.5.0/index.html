@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/drift_python_client-0.4.1-py3-none-any.whl.zip tmp/drift_python_client-0.5.0-py3-none-any.whl.zip --html versions/d/drift-python-client/0.4.1-0.5.0/index.html --text versions/d/drift-python-client/0.4.1-0.5.0/diff.txt --markdown versions/d/drift-python-client/0.4.1-0.5.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.44 KB</span></div>
+  <div><span class="source">tmp/drift_python_client-0.4.1-py3-none-any.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/drift_python_client-0.5.0-py3-none-any.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">2.67 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 16 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1769<del>2</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>14</td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span>1769<ins>0</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>14</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/VERSION</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/VERSION</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>474<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>474<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10664<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/drift_client.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10664<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/drift_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3419<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/drift_data_package.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3419<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/drift_data_package.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/error.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/error.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2644<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/influxdb_client.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2644<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/influxdb_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1828<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/minio_client.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1828<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/minio_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4047<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/mqtt_client.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4047<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/mqtt_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3307<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_client/reduct_client.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3307<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_client/reduct_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16725<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/LICENSE</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16725<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3054<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/METADATA</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3054<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/WHEEL</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>92<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/top_level.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent"><del>?</del>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1198<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<del>Feb</del>-<del>21</del><span class="dp">·</span>1<del>6</del>:<del>18</del><span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/RECORD</td><td class="diffline">15 </td><td class="diffpresent"><ins>-</ins>rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1198<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-<ins>Apr</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>34</ins><span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">14<span class="dp">·</span>files,<span class="dp">·</span>47571<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1568<del>4</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>67.0%</td><td class="diffline">16 </td><td class="diffpresent">14<span class="dp">·</span>files,<span class="dp">·</span>47571<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span>1568<ins>2</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>67.0%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">791 B</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 23 lines modified</td><td colspan="2">Offset 21, 23 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_client/mqtt_client.py</td><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_client/mqtt_client.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_client/reduct_client.py</td><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_client/reduct_client.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/LICENSE</td><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/METADATA</td><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/METADATA</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/WHEEL</td><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/WHEEL</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/top_level.txt</td><td class="diffline">31 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/top_level.txt</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">32 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/RECORD</td><td class="diffline">33 </td><td class="diffpresent">Filename:<span class="dp">·</span>drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/RECORD</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">34 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">35 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">66.0 B</span></div>
+    <div id="drift_client-VERSION"><span class="source">drift_client/VERSION</span>
+      <a class="anchor" href="#drift_client-VERSION">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">0.<del>4</del>.<del>1</del></td><td class="diffline">1 </td><td class="diffpresent">0.<ins>5</ins>.<ins>0</ins></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">125 B</span></div>
+    <div><span class="source">drift_python_client-0.4.1.dist-info/LICENSE</span> vs.</div>
+    <div id="drift_python_client--.-.-.dist-info-LICENSE"><span class="source">drift_python_client-0.5.0.dist-info/LICENSE</span>
+      <a class="anchor" href="#drift_python_client--.-.-.dist-info-LICENSE">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files identical despite different names
+    </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">894 B</span></div>
+    <div><span class="source">drift_python_client-0.4.1.dist-info/METADATA</span> vs.</div>
+    <div id="drift_python_client--.-.-.dist-info-METADATA"><span class="source">drift_python_client-0.5.0.dist-info/METADATA</span>
+      <a class="anchor" href="#drift_python_client--.-.-.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 1% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 20 lines modified</td><td colspan="2">Offset 1, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>drift-python-client</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>drift-python-client</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>4</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Drift<span class="dp">·</span>Python<span class="dp">·</span>Client</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Drift<span class="dp">·</span>Python<span class="dp">·</span>Client</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/panda-official/DriftPythonClient</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/panda-official/DriftPythonClient</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>PANDA,<span class="dp">·</span>GmbH</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>PANDA,<span class="dp">·</span>GmbH</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@panda.technology</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@panda.technology</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">9 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>influxdb-client<span class="dp">·</span>(==1.30.0)</td><td class="diffline">11 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>influxdb-client<span class="dp">·</span>(==1.30.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>drift-protocol<span class="dp">·</span>(&lt;1.0,&gt;=0.3.0)</td><td class="diffline">12 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>drift-protocol<span class="dp">·</span>(&lt;1.0,&gt;=0.3.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>wavelet-buffer<span class="dp">·</span>(&lt;1.0,&gt;=0.<del>4</del>.0)</td><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>wavelet-buffer<span class="dp">·</span>(&lt;1.0,&gt;=0.<ins>6</ins>.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>paho-mqtt<span class="dp">·</span>(==1.6.1)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>paho-mqtt<span class="dp">·</span>(==1.6.1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(==1.23.1)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(==1.23.1)</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>deprecation<span class="dp">·</span>(==2.1.0)</td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>deprecation<span class="dp">·</span>(==2.1.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>reduct-py<span class="dp">·</span>(~=1.3)</td><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>reduct-py<span class="dp">·</span>(~=1.3)</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>minio<span class="dp">·</span>(==7.1.10)</td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>minio<span class="dp">·</span>(==7.1.10)</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>docs</td><td class="diffline">19 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>docs</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>mkdocs<span class="dp">·</span>(~=1.3)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;docs&#x27;</td><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>mkdocs<span class="dp">·</span>(~=1.3)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;docs&#x27;</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">1.84 KB</span></div>
+    <div><span class="source">drift_python_client-0.4.1.dist-info/RECORD</span> vs.</div>
+    <div id="drift_python_client--.-.-.dist-info-RECORD"><span class="source">drift_python_client-0.5.0.dist-info/RECORD</span>
+      <a class="anchor" href="#drift_python_client--.-.-.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 18% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drift_client/VERSION,sha256=<del>9iGEzuh4fy9pQcggQaVyX</del>U<del>7cmqKT6-Xb9mRAboLsH-E</del>,6</td><td class="diffline">1 </td><td class="diffpresent">drift_client/VERSION,sha256=<ins>oK1QZAE5pST4ZZEVcUW_H</ins>U<ins>Z06pwGW_6iFVjw97BEMMg</ins>,6</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">drift_client/__init__.py,sha256=KwSDABVc-Qmyou53upDzz9SEtxspVQg3_pp0qR9f56E,474</td><td class="diffline">2 </td><td class="diffpresent">drift_client/__init__.py,sha256=KwSDABVc-Qmyou53upDzz9SEtxspVQg3_pp0qR9f56E,474</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">drift_client/drift_client.py,sha256=h1-kb0FNc1ctwY6UVkI_Khjul7EKlU0NpzZB0ywtcXk,10664</td><td class="diffline">3 </td><td class="diffpresent">drift_client/drift_client.py,sha256=h1-kb0FNc1ctwY6UVkI_Khjul7EKlU0NpzZB0ywtcXk,10664</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">drift_client/drift_data_package.py,sha256=-v8Wbhv7PU3WlpfWIAO6aVkhciD0Pox8onKOCBTrkL0,3419</td><td class="diffline">4 </td><td class="diffpresent">drift_client/drift_data_package.py,sha256=-v8Wbhv7PU3WlpfWIAO6aVkhciD0Pox8onKOCBTrkL0,3419</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">drift_client/error.py,sha256=VSSWHJiakIsRjtGx8sHyJ0nqS0uYavrc9TCFIuD7atA,100</td><td class="diffline">5 </td><td class="diffpresent">drift_client/error.py,sha256=VSSWHJiakIsRjtGx8sHyJ0nqS0uYavrc9TCFIuD7atA,100</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">drift_client/influxdb_client.py,sha256=n_7rNPOI_h3r7Ry0uBgZV59ECDk2mSaJaW5lMhLYZDM,2644</td><td class="diffline">6 </td><td class="diffpresent">drift_client/influxdb_client.py,sha256=n_7rNPOI_h3r7Ry0uBgZV59ECDk2mSaJaW5lMhLYZDM,2644</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">drift_client/minio_client.py,sha256=-l5ty2sam073B_tsLRwqM1e9TiTSahXX-2H_mjcX1jo,1828</td><td class="diffline">7 </td><td class="diffpresent">drift_client/minio_client.py,sha256=-l5ty2sam073B_tsLRwqM1e9TiTSahXX-2H_mjcX1jo,1828</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">drift_client/mqtt_client.py,sha256=4-r4ZomTrw7YHqLZ6SU-PLmhxuw8CGqeMxzANFxz2wk,4047</td><td class="diffline">8 </td><td class="diffpresent">drift_client/mqtt_client.py,sha256=4-r4ZomTrw7YHqLZ6SU-PLmhxuw8CGqeMxzANFxz2wk,4047</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">drift_client/reduct_client.py,sha256=bGkt6AO0gU-KADm0UjtTqjwN3mSeETCG7R7vM7X7Kk8,3307</td><td class="diffline">9 </td><td class="diffpresent">drift_client/reduct_client.py,sha256=bGkt6AO0gU-KADm0UjtTqjwN3mSeETCG7R7vM7X7Kk8,3307</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725</td><td class="diffline">10 </td><td class="diffpresent">drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725</td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">drift_python_client-0.4.1.dist-info/METADATA,sha256=Qn7oAqd9tc4gXusqQQ4B5GV4p-AQdHNlUro3VcUmCnU,3054</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/<del>WHEEL</del>,sha256=<del>2wepM1nk4DS4eFpY</del>r<del>W1TTqPcoGNfHhhO_i5m4cOimbo</del>,<del>92</del></td><td class="diffline">11 </td><td class="diffpresent">drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/<ins>MET</ins><ins>ADATA</ins>,sha256=<ins>BBizqeldbQAC8rqC</ins>r<ins>mdXceak3qSLLe4-Rv9W1spH8HM</ins>,<ins>30</ins><ins>54</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">drift_python_client-0.5.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/top_level.txt,sha256=g36GfF0WcMjKkwPW7zawUU5n5XsLJT-4oLxcVgeobno,13</td><td class="diffline">13 </td><td class="diffpresent">drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/top_level.txt,sha256=g36GfF0WcMjKkwPW7zawUU5n5XsLJT-4oLxcVgeobno,13</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drift_python_client-0.<del>4</del>.<del>1</del>.dist-info/RECORD,,</td><td class="diffline">14 </td><td class="diffpresent">drift_python_client-0.<ins>5</ins>.<ins>0</ins>.dist-info/RECORD,,</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

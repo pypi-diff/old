@@ -1,0 +1,367 @@
+--- tmp/pylavi-0.3.1.tar.gz
++++ tmp/pylavi-0.3.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "pylavi-0.3.1.tar", last modified: Mon Mar 27 16:48:56 2023, max compression
+│ +gzip compressed data, was "pylavi-0.3.2.tar", last modified: Thu Apr  6 13:39:20 2023, max compression
+│   --- pylavi-0.3.1.tar
+├── +++ pylavi-0.3.2.tar
+│ ├── file list
+│ │ @@ -1,20 +1,20 @@
+│ │ -drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-03-27 16:48:56.342659 pylavi-0.3.1/
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)     1211 2023-03-10 20:01:01.000000 pylavi-0.3.1/LICENSE
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    11259 2023-03-27 16:48:56.342517 pylavi-0.3.1/PKG-INFO
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    10352 2023-03-27 16:46:23.000000 pylavi-0.3.1/README.md
+│ │ -drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-03-27 16:48:56.341493 pylavi-0.3.1/pylavi/
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)      112 2023-03-27 16:48:37.000000 pylavi-0.3.1/pylavi/__init__.py
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)     1794 2023-03-20 17:25:10.000000 pylavi-0.3.1/pylavi/assembler.py
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    25366 2023-03-22 09:17:22.000000 pylavi-0.3.1/pylavi/data_types.py
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    15606 2023-03-22 09:17:22.000000 pylavi-0.3.1/pylavi/file.py
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)     8467 2023-03-22 08:12:09.000000 pylavi-0.3.1/pylavi/resource_types.py
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    21136 2023-03-24 09:37:03.000000 pylavi-0.3.1/pylavi/validate.py
+│ │ -drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-03-27 16:48:56.342346 pylavi-0.3.1/pylavi.egg-info/
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)    11259 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)      327 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)        1 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)       91 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)        7 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/requires.txt
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)        7 2023-03-27 16:48:56.000000 pylavi-0.3.1/pylavi.egg-info/top_level.txt
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)       38 2023-03-27 16:48:56.342698 pylavi-0.3.1/setup.cfg
+│ │ --rw-r--r--   0 marcp      (501) staff       (20)     2428 2023-03-23 02:58:03.000000 pylavi-0.3.1/setup.py
+│ │ +drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-04-06 13:39:20.435868 pylavi-0.3.2/
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)     1211 2023-03-27 16:55:39.000000 pylavi-0.3.2/LICENSE
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    11259 2023-04-06 13:39:20.435746 pylavi-0.3.2/PKG-INFO
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    10352 2023-04-06 13:39:12.000000 pylavi-0.3.2/README.md
+│ │ +drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-04-06 13:39:20.434872 pylavi-0.3.2/pylavi/
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)      112 2023-04-06 13:39:12.000000 pylavi-0.3.2/pylavi/__init__.py
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)     1794 2023-03-27 16:55:39.000000 pylavi-0.3.2/pylavi/assembler.py
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    25366 2023-03-27 16:55:39.000000 pylavi-0.3.2/pylavi/data_types.py
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    15606 2023-03-27 16:55:39.000000 pylavi-0.3.2/pylavi/file.py
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)     8467 2023-03-27 16:55:39.000000 pylavi-0.3.2/pylavi/resource_types.py
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    20407 2023-04-06 13:37:34.000000 pylavi-0.3.2/pylavi/validate.py
+│ │ +drwxr-xr-x   0 marcp      (501) staff       (20)        0 2023-04-06 13:39:20.435590 pylavi-0.3.2/pylavi.egg-info/
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)    11259 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)      327 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)        1 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)       91 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)        7 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/requires.txt
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)        7 2023-04-06 13:39:20.000000 pylavi-0.3.2/pylavi.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)       38 2023-04-06 13:39:20.435903 pylavi-0.3.2/setup.cfg
+│ │ +-rw-r--r--   0 marcp      (501) staff       (20)     2428 2023-03-27 16:55:39.000000 pylavi-0.3.2/setup.py
+│ │   --- pylavi-0.3.1/LICENSE
+│ ├── +++ pylavi-0.3.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- pylavi-0.3.1/PKG-INFO
+│ ├── +++ pylavi-0.3.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pylavi
+│ │ -Version: 0.3.1
+│ │ +Version: 0.3.2
+│ │  Summary: Python LabVIEW File Parser
+│ │  Home-page: https://github.com/marcpage/pylavi
+│ │  Author: marcpage
+│ │  Author-email: MarcAllenPage@gmail.com
+│ │  License: Unlicense
+│ │  Project-URL: Bug Reports, https://github.com/marcpage/pylavi/issues
+│ │  Project-URL: Source, https://github.com/marcpage/pylavi/
+│ │ @@ -18,15 +18,15 @@
+│ │  Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Utilities
+│ │  Classifier: Topic :: Software Development
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ -[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.1&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │ +[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.2&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │  ![status sheild](https://img.shields.io/static/v1?label=test+coverage&message=99%&color=active&style=plastic)
+│ │  ![GitHub](https://img.shields.io/github/license/marcpage/pylavi?style=plastic)
+│ │  [![commit sheild](https://img.shields.io/github/last-commit/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  [![activity sheild](https://img.shields.io/github/commit-activity/m/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  ![GitHub top language](https://img.shields.io/github/languages/top/marcpage/pylavi?style=plastic)
+│ │  [![size sheild](https://img.shields.io/github/languages/code-size/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi)
+│ │  [![issues sheild](https://img.shields.io/github/issues-raw/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/issues)
+│ │   --- pylavi-0.3.1/README.md
+│ ├── +++ pylavi-0.3.2/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.1&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │ +[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.2&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │  ![status sheild](https://img.shields.io/static/v1?label=test+coverage&message=99%&color=active&style=plastic)
+│ │  ![GitHub](https://img.shields.io/github/license/marcpage/pylavi?style=plastic)
+│ │  [![commit sheild](https://img.shields.io/github/last-commit/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  [![activity sheild](https://img.shields.io/github/commit-activity/m/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  ![GitHub top language](https://img.shields.io/github/languages/top/marcpage/pylavi?style=plastic)
+│ │  [![size sheild](https://img.shields.io/github/languages/code-size/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi)
+│ │  [![issues sheild](https://img.shields.io/github/issues-raw/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/issues)
+│ │   --- pylavi-0.3.1/pylavi/assembler.py
+│ ├── +++ pylavi-0.3.2/pylavi/assembler.py
+│ │┄ Files identical despite different names
+│ │   --- pylavi-0.3.1/pylavi/data_types.py
+│ ├── +++ pylavi-0.3.2/pylavi/data_types.py
+│ │┄ Files identical despite different names
+│ │   --- pylavi-0.3.1/pylavi/file.py
+│ ├── +++ pylavi-0.3.2/pylavi/file.py
+│ │┄ Files identical despite different names
+│ │   --- pylavi-0.3.1/pylavi/resource_types.py
+│ ├── +++ pylavi-0.3.2/pylavi/resource_types.py
+│ │┄ Files identical despite different names
+│ │   --- pylavi-0.3.1/pylavi/validate.py
+│ ├── +++ pylavi-0.3.2/pylavi/validate.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -35,14 +35,17 @@
+│ │          return f"{self.message}: {self.path}" + (
+│ │              ("\n\t" + "\n\t".join(self.other)) if self.other else ""
+│ │          )
+│ │  
+│ │      def __str__(self):
+│ │          return self.to_string()
+│ │  
+│ │ +    def __repr__(self):
+│ │ +        return self.to_string()
+│ │ +
+│ │  
+│ │  def add_version_options(parser):
+│ │      """adds options related to LabVIEW version that saved the file"""
+│ │      parser.add_argument(
+│ │          "-l", "--lt", type=str, help="LabVIEW version must be less than this"
+│ │      )
+│ │      parser.add_argument(
+│ │ @@ -275,108 +278,86 @@
+│ │              data = data[paths[-1].size() :]
+│ │          except AssertionError:  # Just a random PTH in the resource, not a path
+│ │              data = data[1:]
+│ │  
+│ │      return paths
+│ │  
+│ │  
+│ │ -# pylint: disable=too-many-return-statements
+│ │ -def validate_run(args, save_record: TypeLVSR, problems: list, next_path: str) -> bool:
+│ │ +def validate_run(args, save_record: TypeLVSR, problems: list, next_path: str):
+│ │      """validate run flags"""
+│ │  
+│ │      if (
+│ │          args.clear_indicators - args.no_clear_indicators < 0
+│ │          and save_record.clear_indicators()
+│ │      ):
+│ │          problems.append(Problem(next_path, "Clear Indicators is on"))
+│ │ -        return True
+│ │  
+│ │      if (
+│ │          args.clear_indicators - args.no_clear_indicators > 0
+│ │          and not save_record.clear_indicators()
+│ │      ):
+│ │          problems.append(Problem(next_path, "Clear Indicators is off"))
+│ │ -        return True
+│ │  
+│ │      if args.run_on_open - args.no_run_on_open > 0 and not save_record.run_on_open():
+│ │          problems.append(Problem(next_path, "Run on open is off"))
+│ │ -        return True
+│ │  
+│ │      if args.run_on_open - args.no_run_on_open < 0 and save_record.run_on_open():
+│ │          problems.append(Problem(next_path, "Run on open is on"))
+│ │ -        return True
+│ │  
+│ │      if (
+│ │          args.suspend_on_run - args.no_suspend_on_run > 0
+│ │          and not save_record.suspend_on_run()
+│ │      ):
+│ │          problems.append(Problem(next_path, "Suspend on run is off"))
+│ │ -        return True
+│ │  
+│ │      if (
+│ │          args.suspend_on_run - args.no_suspend_on_run < 0
+│ │          and save_record.suspend_on_run()
+│ │      ):
+│ │          problems.append(Problem(next_path, "Suspend on run is on"))
+│ │ -        return True
+│ │  
+│ │ -    return False
+│ │  
+│ │ -
+│ │ -def validate_code(args, save_record: TypeLVSR, problems: list, next_path: str) -> bool:
+│ │ +def validate_code(args, save_record: TypeLVSR, problems: list, next_path: str):
+│ │      """Validates if the separate code flags matches the command line arguments"""
+│ │  
+│ │      if args.code - args.no_code > 0 and save_record.separate_code():
+│ │          problems.append(Problem(next_path, "Code is separate from VI"))
+│ │ -        return True
+│ │  
+│ │      if args.code - args.no_code < 0 and not save_record.separate_code():
+│ │          problems.append(Problem(next_path, "Code is not separate from VI"))
+│ │ -        return True
+│ │  
+│ │      if args.debuggable - args.not_debuggable > 0 and not save_record.debuggable():
+│ │          problems.append(Problem(next_path, "Not debuggable"))
+│ │ -        return True
+│ │  
+│ │      if args.debuggable - args.not_debuggable < 0 and save_record.debuggable():
+│ │          problems.append(Problem(next_path, "Debuggable"))
+│ │ -        return True
+│ │ -
+│ │ -    return False
+│ │  
+│ │  
+│ │  def validate_locked_password(
+│ │      args, save_record: TypeLVSR, password: TypeBDPW, problems: list, next_path: str
+│ │ -) -> bool:
+│ │ +):
+│ │      """Validates if the separate code flags matches the command line arguments"""
+│ │      if args.password_match and not password.password_matches(args.password_match):
+│ │          problems.append(Problem(next_path, f"Password is not '{args.password_match}'"))
+│ │ -        return True
+│ │  
+│ │      if args.password - args.no_password > 0:
+│ │          if not save_record.locked() or not password.has_password():
+│ │              problems.append(Problem(next_path, "No password"))
+│ │ -            return True
+│ │  
+│ │      if args.password - args.no_password < 0:
+│ │          if save_record.locked() and password.has_password():
+│ │              problems.append(Problem(next_path, "Has password"))
+│ │ -            return True
+│ │  
+│ │      if args.locked - args.not_locked > 0:
+│ │          if not save_record.locked():
+│ │              problems.append(Problem(next_path, "Not locked"))
+│ │ -            return True
+│ │  
+│ │      if args.locked - args.not_locked < 0:
+│ │          if save_record.locked():
+│ │              problems.append(Problem(next_path, "Locked"))
+│ │ -            return True
+│ │ -
+│ │ -    return False
+│ │  
+│ │  
+│ │  def validate_version(args, versions, problems, next_path):
+│ │      """Validates the version checking logic"""
+│ │      for version in versions:
+│ │          version_string = version.to_string()
+│ │          phase = version.phase()
+│ │ @@ -469,17 +450,14 @@
+│ │              bad_paths.append(str(path))
+│ │  
+│ │      if bad_paths:
+│ │          plural = "" if len(bad_paths) == 1 else "s"
+│ │          problems.append(
+│ │              Problem(next_path, f"Absolute linker path{plural} found", bad_paths)
+│ │          )
+│ │ -        return True
+│ │ -
+│ │ -    return False
+│ │  
+│ │  
+│ │  # pylint: disable=no-member
+│ │  def validate(args, resources: Resources, problems: list, next_path: str):
+│ │      """Validate that the given resources file is valid"""
+│ │      version_resources = resources.get_resources("vers")
+│ │      save_record_resources = resources.get_resources("LVSR")
+│ │ @@ -491,58 +469,48 @@
+│ │          if save_record_resources
+│ │          else None
+│ │      )
+│ │      password_record = (
+│ │          TypeBDPW().from_bytes(password_resources[0][2]) if password_resources else None
+│ │      )
+│ │      problem_count = len(problems)
+│ │ -    invalid = False
+│ │  
+│ │      if save_record:
+│ │          versions.append(save_record.version)
+│ │  
+│ │ -    if not invalid and args.no_absolute_path:
+│ │ -        invalid = validate_links(resources, problems, next_path)
+│ │ +    if args.no_absolute_path:
+│ │ +        validate_links(resources, problems, next_path)
+│ │  
+│ │ -    if not invalid and args.path_length and len(next_path) > args.path_length:
+│ │ +    if args.path_length and len(next_path) > args.path_length:
+│ │          problems.append(
+│ │              Problem(next_path, f"Path length {len(next_path)} > {args.path_length}")
+│ │          )
+│ │ -        invalid = True
+│ │  
+│ │ -    if not invalid and args.breakpoints and save_record:
+│ │ +    if args.breakpoints and save_record:
+│ │          if save_record.has_breakpoints():
+│ │              number = save_record.breakpoint_count()
+│ │              plural = "" if number == 1 else "s"
+│ │              number = "" if number is None else f"{number} "
+│ │              problems.append(Problem(next_path, f"{number} breakpoint{plural} found"))
+│ │ -            invalid = True
+│ │  
+│ │ -    if (
+│ │ -        not invalid
+│ │ -        and args.autoerror
+│ │ -        and save_record
+│ │ -        and save_record.auto_error_handling()
+│ │ -    ):
+│ │ +    if args.autoerror and save_record and save_record.auto_error_handling():
+│ │          problems.append(Problem(next_path, "Auto error handling turned on"))
+│ │ -        invalid = True
+│ │  
+│ │ -    if not invalid and save_record_resources:
+│ │ -        invalid = validate_code(args, save_record, problems, next_path)
+│ │ +    if save_record_resources:
+│ │ +        validate_code(args, save_record, problems, next_path)
+│ │  
+│ │ -    if not invalid and save_record_resources:
+│ │ -        invalid = validate_run(args, save_record, problems, next_path)
+│ │ +    if save_record_resources:
+│ │ +        validate_run(args, save_record, problems, next_path)
+│ │  
+│ │ -    if not invalid and save_record_resources and password_record:
+│ │ -        invalid = validate_locked_password(
+│ │ +    if save_record_resources and password_record:
+│ │ +        validate_locked_password(
+│ │              args, save_record, password_record, problems, next_path
+│ │          )
+│ │  
+│ │ -    if not invalid:
+│ │ -        validate_version(args, versions, problems, next_path)
+│ │ +    validate_version(args, versions, problems, next_path)
+│ │  
+│ │      if len(problems) > problem_count and args.quiet < 1:
+│ │          print(f"FAIL: {problems[-1]}")
+│ │  
+│ │  
+│ │  def should_skip(args, path, verbose: int):
+│ │      """Determine if the file should be skipped"""
+│ │   --- pylavi-0.3.1/pylavi.egg-info/PKG-INFO
+│ ├── +++ pylavi-0.3.2/pylavi.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: pylavi
+│ │ -Version: 0.3.1
+│ │ +Version: 0.3.2
+│ │  Summary: Python LabVIEW File Parser
+│ │  Home-page: https://github.com/marcpage/pylavi
+│ │  Author: marcpage
+│ │  Author-email: MarcAllenPage@gmail.com
+│ │  License: Unlicense
+│ │  Project-URL: Bug Reports, https://github.com/marcpage/pylavi/issues
+│ │  Project-URL: Source, https://github.com/marcpage/pylavi/
+│ │ @@ -18,15 +18,15 @@
+│ │  Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Utilities
+│ │  Classifier: Topic :: Software Development
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ -[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.1&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │ +[![status sheild](https://img.shields.io/static/v1?label=released&message=v0.3.2&color=active&style=plastic)](https://pypi.org/project/pylavi/)
+│ │  ![status sheild](https://img.shields.io/static/v1?label=test+coverage&message=99%&color=active&style=plastic)
+│ │  ![GitHub](https://img.shields.io/github/license/marcpage/pylavi?style=plastic)
+│ │  [![commit sheild](https://img.shields.io/github/last-commit/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  [![activity sheild](https://img.shields.io/github/commit-activity/m/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/commits)
+│ │  ![GitHub top language](https://img.shields.io/github/languages/top/marcpage/pylavi?style=plastic)
+│ │  [![size sheild](https://img.shields.io/github/languages/code-size/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi)
+│ │  [![issues sheild](https://img.shields.io/github/issues-raw/marcpage/pylavi?style=plastic)](https://github.com/marcpage/pylavi/issues)
+│ │   --- pylavi-0.3.1/setup.py
+│ ├── +++ pylavi-0.3.2/setup.py
+│ │┄ Files identical despite different names

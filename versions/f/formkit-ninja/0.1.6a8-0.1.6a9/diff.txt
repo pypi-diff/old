@@ -1,0 +1,216 @@
+--- tmp/formkit_ninja-0.1.6a8.tar.gz
++++ tmp/formkit_ninja-0.1.6a9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "formkit_ninja-0.1.6a8.tar", max compression
+│ +gzip compressed data, was "formkit_ninja-0.1.6a9.tar", max compression
+│   --- formkit_ninja-0.1.6a8.tar
+├── +++ formkit_ninja-0.1.6a9.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ --rw-r--r--   0        0        0      813 2023-01-12 08:15:06.575969 formkit_ninja-0.1.6a8/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a8/formkit_ninja/__init__.py
+│ │ --rw-r--r--   0        0        0       21 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a8/formkit_ninja/__main__.py
+│ │ --rw-r--r--   0        0        0    13076 2023-01-17 16:21:09.217069 formkit_ninja-0.1.6a8/formkit_ninja/admin.py
+│ │ --rw-r--r--   0        0        0     1171 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a8/formkit_ninja/api.py
+│ │ --rw-r--r--   0        0        0     4333 2023-01-12 08:12:59.487316 formkit_ninja-0.1.6a8/formkit_ninja/fields.py
+│ │ --rw-r--r--   0        0        0    12838 2023-03-10 04:52:08.313758 formkit_ninja-0.1.6a8/formkit_ninja/formkit_schema.py
+│ │ --rw-r--r--   0        0        0        0 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a8/formkit_ninja/management/commands/__init__.py
+│ │ --rw-r--r--   0        0        0     1962 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/management/commands/create_sf11_form.py
+│ │ --rw-r--r--   0        0        0     8369 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0001_initial.py
+│ │ --rw-r--r--   0        0        0     1947 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0002_remove_formkitschemanode_children_and_more.py
+│ │ --rw-r--r--   0        0        0     1477 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0003_alter_formcomponents_options_formkitschemanode_group_and_more.py
+│ │ --rw-r--r--   0        0        0     2276 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0004_alter_formkitschemanode_group_nodechildren_and_more.py
+│ │ --rw-r--r--   0        0        0      878 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0005_delete_schemacondition_and_more.py
+│ │ --rw-r--r--   0        0        0      468 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0006_formkitschemanode_placeholder.py
+│ │ --rw-r--r--   0        0        0      610 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0007_alter_formcomponents_options_and_more.py
+│ │ --rw-r--r--   0        0        0      732 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/0008_rename_new_values_formkitschemanode_node_and_more.py
+│ │ --rw-r--r--   0        0        0        0 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/migrations/__init__.py
+│ │ --rw-r--r--   0        0        0    10767 2023-01-17 16:16:29.719611 formkit_ninja-0.1.6a8/formkit_ninja/models.py
+│ │ --rw-r--r--   0        0        0      101 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a8/formkit_ninja/urls.py
+│ │ --rw-r--r--   0        0        0     1035 2023-03-10 04:52:14.720806 formkit_ninja-0.1.6a8/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1699 1970-01-01 00:00:00.000000 formkit_ninja-0.1.6a8/setup.py
+│ │ --rw-r--r--   0        0        0     1574 1970-01-01 00:00:00.000000 formkit_ninja-0.1.6a8/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      813 2023-01-12 08:15:06.575969 formkit_ninja-0.1.6a9/README.md
+│ │ +-rw-r--r--   0        0        0        0 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a9/formkit_ninja/__init__.py
+│ │ +-rw-r--r--   0        0        0       21 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a9/formkit_ninja/__main__.py
+│ │ +-rw-r--r--   0        0        0    13076 2023-01-17 16:21:09.217069 formkit_ninja-0.1.6a9/formkit_ninja/admin.py
+│ │ +-rw-r--r--   0        0        0     1171 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a9/formkit_ninja/api.py
+│ │ +-rw-r--r--   0        0        0     4333 2023-01-12 08:12:59.487316 formkit_ninja-0.1.6a9/formkit_ninja/fields.py
+│ │ +-rw-r--r--   0        0        0    12965 2023-03-15 14:10:18.572029 formkit_ninja-0.1.6a9/formkit_ninja/formkit_schema.py
+│ │ +-rw-r--r--   0        0        0        0 2023-01-12 08:07:03.327754 formkit_ninja-0.1.6a9/formkit_ninja/management/commands/__init__.py
+│ │ +-rw-r--r--   0        0        0     1962 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/management/commands/create_sf11_form.py
+│ │ +-rw-r--r--   0        0        0     8369 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0001_initial.py
+│ │ +-rw-r--r--   0        0        0     1947 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0002_remove_formkitschemanode_children_and_more.py
+│ │ +-rw-r--r--   0        0        0     1477 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0003_alter_formcomponents_options_formkitschemanode_group_and_more.py
+│ │ +-rw-r--r--   0        0        0     2276 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0004_alter_formkitschemanode_group_nodechildren_and_more.py
+│ │ +-rw-r--r--   0        0        0      878 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0005_delete_schemacondition_and_more.py
+│ │ +-rw-r--r--   0        0        0      468 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0006_formkitschemanode_placeholder.py
+│ │ +-rw-r--r--   0        0        0      610 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0007_alter_formcomponents_options_and_more.py
+│ │ +-rw-r--r--   0        0        0      732 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/0008_rename_new_values_formkitschemanode_node_and_more.py
+│ │ +-rw-r--r--   0        0        0        0 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0    10728 2023-03-15 14:10:18.572029 formkit_ninja-0.1.6a9/formkit_ninja/models.py
+│ │ +-rw-r--r--   0        0        0      101 2023-01-12 08:07:03.328754 formkit_ninja-0.1.6a9/formkit_ninja/urls.py
+│ │ +-rw-r--r--   0        0        0     1035 2023-03-22 04:20:56.997224 formkit_ninja-0.1.6a9/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1699 1970-01-01 00:00:00.000000 formkit_ninja-0.1.6a9/setup.py
+│ │ +-rw-r--r--   0        0        0     1574 1970-01-01 00:00:00.000000 formkit_ninja-0.1.6a9/PKG-INFO
+│ │   --- formkit_ninja-0.1.6a8/README.md
+│ ├── +++ formkit_ninja-0.1.6a9/README.md
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/admin.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/admin.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/api.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/api.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/fields.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/fields.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/formkit_schema.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/formkit_schema.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -404,15 +404,18 @@
+│ │  class FormKitNode(BaseModel):
+│ │      __root__: Node
+│ │  
+│ │      @classmethod
+│ │      def parse_obj(cls: Type["Model"], obj: Any) -> "Model":
+│ │          if "id" in obj:
+│ │              obj["html_id"] = obj.pop("id")
+│ │ -        return super().parse_obj({**get_node_type(obj), **obj})
+│ │ +        try:
+│ │ +            return super().parse_obj({**get_node_type(obj), **obj})
+│ │ +        except KeyError as E:
+│ │ +            raise Exception(f"Unable to parse content {obj} to a {cls}") from E
+│ │  
+│ │  
+│ │  class FormKitSchema(BaseModel):
+│ │      __root__: list[Node]
+│ │  
+│ │      @classmethod
+│ │      def parse_obj(cls: Type["Model"], obj: Any) -> "Model":
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/management/commands/create_sf11_form.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/management/commands/create_sf11_form.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0001_initial.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0002_remove_formkitschemanode_children_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0002_remove_formkitschemanode_children_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0003_alter_formcomponents_options_formkitschemanode_group_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0003_alter_formcomponents_options_formkitschemanode_group_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0004_alter_formkitschemanode_group_nodechildren_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0004_alter_formkitschemanode_group_nodechildren_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0005_delete_schemacondition_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0005_delete_schemacondition_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0007_alter_formcomponents_options_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0007_alter_formcomponents_options_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/migrations/0008_rename_new_values_formkitschemanode_node_and_more.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/migrations/0008_rename_new_values_formkitschemanode_node_and_more.py
+│ │┄ Files identical despite different names
+│ │   --- formkit_ninja-0.1.6a8/formkit_ninja/models.py
+│ ├── +++ formkit_ninja-0.1.6a9/formkit_ninja/models.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -141,15 +141,14 @@
+│ │  
+│ │      def get_db_prep_value(self, value: BaseModel, connection, prepared=False):
+│ │          if isinstance(value, BaseModel):
+│ │              _value = value.dict(
+│ │                  # by_alias=True,
+│ │                  exclude_unset=True,
+│ │                  exclude_none=True,
+│ │ -                exclude_defaults=True,
+│ │              )
+│ │              return super().get_db_prep_value(
+│ │                  _value.get(ROOT_KEY) if ROOT_KEY in _value else _value,
+│ │                  connection,
+│ │                  prepared,
+│ │              )
+│ │          return super().get_db_prep_value(value, connection, prepared)
+│ │   --- formkit_ninja-0.1.6a8/pyproject.toml
+│ ├── +++ formkit_ninja-0.1.6a9/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  [tool.poetry]
+│ │  name = "formkit-ninja"
+│ │ -version = "0.1.6a8"
+│ │ +version = "0.1.6a9"
+│ │  description = "A Django-Ninja backend to specify FormKit schemas"
+│ │  authors = ["Josh Brooks <josh@catalpa.io>"]
+│ │  license = "GPLv3"
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/catalpainternational/formkit-ninja"
+│ │  repository = "https://github.com/catalpainternational/formkit-ninja"
+│ │  packages = [{include = "formkit_ninja"}]
+│ │  exclude = ["tests", "formkit_ninja/samples"]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.10"
+│ │ -django-ninja = "^0.20.0"
+│ │ +django-ninja = "^0.21.0"
+│ │  Django = "^4.1.5"
+│ │  django-ordered-model = "^3.6"
+│ │  pydantic = "<2"
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  pytest = "^7.2.0"
+│ │  pytest-django = "^4.5.2"
+│ │   --- formkit_ninja-0.1.6a8/setup.py
+│ ├── +++ formkit_ninja-0.1.6a9/setup.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -7,21 +7,21 @@
+│ │   'formkit_ninja.migrations']
+│ │  
+│ │  package_data = \
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │  ['Django>=4.1.5,<5.0.0',
+│ │ - 'django-ninja>=0.20.0,<0.21.0',
+│ │ + 'django-ninja>=0.21.0,<0.22.0',
+│ │   'django-ordered-model>=3.6,<4.0',
+│ │   'pydantic<2']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'formkit-ninja',
+│ │ -    'version': '0.1.6a8',
+│ │ +    'version': '0.1.6a9',
+│ │      'description': 'A Django-Ninja backend to specify FormKit schemas',
+│ │      'long_description': '# Formkit-Ninja\n\nA Django-Ninja framework for FormKit schemas and form submissions\n\n## Why\n\nFormKit out of the box has awesome schema support - this lets us integrate FormKit instances as Django models\n\n- Upload / edit / download basic FormKit schemas\n- Translated "option" values from the Django admin\n- Reorder "options" and schema nodes\n- List and Fetch schemas for different form types\n\n## Use\n\nTo use, `pip install formkit-ninja` and add the following to settings `INSTALLED_APPS`:\n\n```py\nINSTALLED_APPS = [\n    ...\n    "formkit_ninja",\n    "ordered_model",\n    "ninja",\n    ...\n]\n```\n\n## Test\n\nPull the repo:\n\n`gh repo clone catalpainternational/formkit-ninja`\n`cd formkit-ninja`\n`poetry install`\n`poetry run pytest`\n\n## Lint\n\n`poetry run black --check .`\n`poetry run isort --check .`\n`poetry run flake8 .`\n',
+│ │      'author': 'Josh Brooks',
+│ │      'author_email': 'josh@catalpa.io',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/catalpainternational/formkit-ninja',
+│ │   --- formkit_ninja-0.1.6a8/PKG-INFO
+│ ├── +++ formkit_ninja-0.1.6a9/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,22 +1,22 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: formkit-ninja
+│ │ -Version: 0.1.6a8
+│ │ +Version: 0.1.6a9
+│ │  Summary: A Django-Ninja backend to specify FormKit schemas
+│ │  Home-page: https://github.com/catalpainternational/formkit-ninja
+│ │  License: GPLv3
+│ │  Author: Josh Brooks
+│ │  Author-email: josh@catalpa.io
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: License :: Other/Proprietary License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Dist: Django (>=4.1.5,<5.0.0)
+│ │ -Requires-Dist: django-ninja (>=0.20.0,<0.21.0)
+│ │ +Requires-Dist: django-ninja (>=0.21.0,<0.22.0)
+│ │  Requires-Dist: django-ordered-model (>=3.6,<4.0)
+│ │  Requires-Dist: pydantic (<2)
+│ │  Project-URL: Repository, https://github.com/catalpainternational/formkit-ninja
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Formkit-Ninja

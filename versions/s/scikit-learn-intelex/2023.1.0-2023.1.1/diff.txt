@@ -1,0 +1,2260 @@
+--- tmp/scikit_learn_intelex-2023.1.0-py39-none-win_amd64.whl.zip
++++ tmp/scikit_learn_intelex-2023.1.1-py39-none-manylinux1_x86_64.whl.zip
+├── zipinfo {}
+│ @@ -1,79 +1,90 @@
+│ -Zip file size: 113153 bytes, number of entries: 77
+│ --rw-rw-rw-  2.0 fat     1492 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__init__.py
+│ --rw-rw-rw-  2.0 fat     1968 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__main__.py
+│ --rw-rw-rw-  2.0 fat     3928 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_config.py
+│ --rw-rw-rw-  2.0 fat     6919 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_device_offload.py
+│ --rw-rw-rw-  2.0 fat     2907 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_utils.py
+│ --rw-rw-rw-  2.0 fat     9262 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/dispatcher.py
+│ --rw-rw-rw-  2.0 fat      874 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/__init__.py
+│ --rw-rw-rw-  2.0 fat      827 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/dbscan.py
+│ --rw-rw-rw-  2.0 fat      827 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/k_means.py
+│ --rw-rw-rw-  2.0 fat     1236 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_dbscan.py
+│ --rw-rw-rw-  2.0 fat     1251 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_kmeans.py
+│ --rw-rw-rw-  2.0 fat      826 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/__init__.py
+│ --rw-rw-rw-  2.0 fat      830 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/pca.py
+│ --rw-rw-rw-  2.0 fat     1165 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/tests/test_pca.py
+│ --rw-rw-rw-  2.0 fat    21773 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/doc/third-party-programs.txt
+│ --rw-rw-rw-  2.0 fat      895 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/__init__.py
+│ --rw-rw-rw-  2.0 fat      849 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/forest.py
+│ --rw-rw-rw-  2.0 fat     2036 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/tests/test_random_forest.py
+│ --rw-rw-rw-  2.0 fat     2507 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/__main__.py
+│ --rw-rw-rw-  2.0 fat     3063 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/dispatcher.py
+│ --rw-rw-rw-  2.0 fat     1120 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/__init__.py
+│ --rw-rw-rw-  2.0 fat      843 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/coordinate_descent.py
+│ --rw-rw-rw-  2.0 fat      821 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/linear.py
+│ --rw-rw-rw-  2.0 fat      870 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/logistic_path.py
+│ --rw-rw-rw-  2.0 fat      831 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/ridge.py
+│ --rw-rw-rw-  2.0 fat     2404 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_linear.py
+│ --rw-rw-rw-  2.0 fat     1194 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_logreg.py
+│ --rw-rw-rw-  2.0 fat      830 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/__init__.py
+│ --rw-rw-rw-  2.0 fat      826 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/t_sne.py
+│ --rw-rw-rw-  2.0 fat     1082 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/tests/test_tsne.py
+│ --rw-rw-rw-  2.0 fat      928 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/__init__.py
+│ --rw-rw-rw-  2.0 fat      866 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/pairwise.py
+│ --rw-rw-rw-  2.0 fat      857 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/ranking.py
+│ --rw-rw-rw-  2.0 fat     1592 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/tests/test_metrics.py
+│ --rw-rw-rw-  2.0 fat      863 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/__init__.py
+│ --rw-rw-rw-  2.0 fat      871 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/split.py
+│ --rw-rw-rw-  2.0 fat     1277 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/tests/test_model_selection.py
+│ --rw-rw-rw-  2.0 fat     1015 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/__init__.py
+│ --rw-rw-rw-  2.0 fat    19426 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_classification.py
+│ --rw-rw-rw-  2.0 fat    17924 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_regression.py
+│ --rw-rw-rw-  2.0 fat    14840 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_unsupervised.py
+│ --rw-rw-rw-  2.0 fat     1811 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/tests/test_neighbors.py
+│ --rw-rw-rw-  2.0 fat      822 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/__init__.py
+│ --rw-rw-rw-  2.0 fat      826 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/__init__.py
+│ --rw-rw-rw-  2.0 fat    13175 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/pca.py
+│ --rw-rw-rw-  2.0 fat     1221 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/tests/test_preview_pca.py
+│ --rw-rw-rw-  2.0 fat      917 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/__init__.py
+│ --rw-rw-rw-  2.0 fat    44388 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/forest.py
+│ --rw-rw-rw-  2.0 fat     1831 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+│ --rw-rw-rw-  2.0 fat      863 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/__init__.py
+│ --rw-rw-rw-  2.0 fat     2180 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/_common.py
+│ --rw-rw-rw-  2.0 fat     9700 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/linear.py
+│ --rw-rw-rw-  2.0 fat     1525 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/tests/test_preview_linear.py
+│ --rw-rw-rw-  2.0 fat      771 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/__init__.py
+│ --rw-rw-rw-  2.0 fat      819 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/__init__.py
+│ --rw-rw-rw-  2.0 fat      883 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/linear_model.py
+│ --rw-rw-rw-  2.0 fat     1076 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/__init__.py
+│ --rw-rw-rw-  2.0 fat     6119 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/_common.py
+│ --rw-rw-rw-  2.0 fat     8469 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvc.py
+│ --rw-rw-rw-  2.0 fat     5146 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvr.py
+│ --rw-rw-rw-  2.0 fat     9285 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svc.py
+│ --rw-rw-rw-  2.0 fat     5142 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svr.py
+│ --rw-rw-rw-  2.0 fat     2626 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/tests/test_svm.py
+│ --rw-rw-rw-  2.0 fat     4406 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/_models_info.py
+│ --rw-rw-rw-  2.0 fat     1407 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_config.py
+│ --rw-rw-rw-  2.0 fat     7248 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_memory_usage.py
+│ --rw-rw-rw-  2.0 fat     7523 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_monkeypatch.py
+│ --rw-rw-rw-  2.0 fat     2773 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_patching.py
+│ --rw-rw-rw-  2.0 fat    13937 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_run_to_run_stability_tests.py
+│ --rw-rw-rw-  2.0 fat     3778 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/utils/_launch_algorithms.py
+│ --rw-rw-rw-  2.0 fat      838 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/__init__.py
+│ --rw-rw-rw-  2.0 fat      874 b- defN 23-Mar-01 02:19 scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/validation.py
+│ --rw-rw-rw-  2.0 fat    10999 b- defN 23-Mar-21 04:08 scikit_learn_intelex-2023.1.0.dist-info/LICENSE.txt
+│ --rw-rw-rw-  2.0 fat    12394 b- defN 23-Mar-21 04:08 scikit_learn_intelex-2023.1.0.dist-info/METADATA
+│ --rw-rw-rw-  2.0 fat       99 b- defN 23-Mar-21 04:08 scikit_learn_intelex-2023.1.0.dist-info/WHEEL
+│ --rw-rw-rw-  2.0 fat        1 b- defN 23-Mar-21 04:08 scikit_learn_intelex-2023.1.0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 fat    11197 b- defN 23-Mar-21 04:08 scikit_learn_intelex-2023.1.0.dist-info/RECORD
+│ -77 files, 333784 bytes uncompressed, 93509 bytes compressed:  72.0%
+│ +Zip file size: 115306 bytes, number of entries: 88
+│ +-rw-r--r--  2.0 unx     1512 b- defN 23-Mar-31 13:04 sklearnex/__init__.py
+│ +-rw-r--r--  2.0 unx     1968 b- defN 23-Mar-31 13:04 sklearnex/__main__.py
+│ +-rw-r--r--  2.0 unx     3928 b- defN 23-Mar-31 13:04 sklearnex/_config.py
+│ +-rw-r--r--  2.0 unx     7075 b- defN 23-Mar-31 13:04 sklearnex/_device_offload.py
+│ +-rw-r--r--  2.0 unx     2907 b- defN 23-Mar-31 13:04 sklearnex/_utils.py
+│ +-rw-r--r--  2.0 unx     9597 b- defN 23-Mar-31 13:04 sklearnex/dispatcher.py
+│ +-rw-r--r--  2.0 unx      843 b- defN 23-Mar-31 13:04 sklearnex/basic_statistics/__init__.py
+│ +-rw-r--r--  2.0 unx      796 b- defN 23-Mar-31 13:04 sklearnex/basic_statistics/basic_statistics.py
+│ +-rw-r--r--  2.0 unx      874 b- defN 23-Mar-31 13:04 sklearnex/cluster/__init__.py
+│ +-rw-r--r--  2.0 unx      827 b- defN 23-Mar-31 13:04 sklearnex/cluster/dbscan.py
+│ +-rw-r--r--  2.0 unx      827 b- defN 23-Mar-31 13:04 sklearnex/cluster/k_means.py
+│ +-rw-r--r--  2.0 unx     1236 b- defN 23-Mar-31 13:04 sklearnex/cluster/tests/test_dbscan.py
+│ +-rw-r--r--  2.0 unx     1251 b- defN 23-Mar-31 13:04 sklearnex/cluster/tests/test_kmeans.py
+│ +-rw-r--r--  2.0 unx      826 b- defN 23-Mar-31 13:04 sklearnex/decomposition/__init__.py
+│ +-rw-r--r--  2.0 unx      830 b- defN 23-Mar-31 13:04 sklearnex/decomposition/pca.py
+│ +-rw-r--r--  2.0 unx     1165 b- defN 23-Mar-31 13:04 sklearnex/decomposition/tests/test_pca.py
+│ +-rw-r--r--  2.0 unx    21773 b- defN 23-Mar-31 13:04 sklearnex/doc/third-party-programs.txt
+│ +-rw-r--r--  2.0 unx      895 b- defN 23-Mar-31 13:04 sklearnex/ensemble/__init__.py
+│ +-rw-r--r--  2.0 unx      849 b- defN 23-Mar-31 13:04 sklearnex/ensemble/forest.py
+│ +-rw-r--r--  2.0 unx     2036 b- defN 23-Mar-31 13:04 sklearnex/ensemble/tests/test_random_forest.py
+│ +-rw-r--r--  2.0 unx     2507 b- defN 23-Mar-31 13:04 sklearnex/glob/__main__.py
+│ +-rw-r--r--  2.0 unx     3063 b- defN 23-Mar-31 13:04 sklearnex/glob/dispatcher.py
+│ +-rw-r--r--  2.0 unx     1120 b- defN 23-Mar-31 13:04 sklearnex/linear_model/__init__.py
+│ +-rw-r--r--  2.0 unx      843 b- defN 23-Mar-31 13:04 sklearnex/linear_model/coordinate_descent.py
+│ +-rw-r--r--  2.0 unx      821 b- defN 23-Mar-31 13:04 sklearnex/linear_model/linear.py
+│ +-rw-r--r--  2.0 unx      870 b- defN 23-Mar-31 13:04 sklearnex/linear_model/logistic_path.py
+│ +-rw-r--r--  2.0 unx      831 b- defN 23-Mar-31 13:04 sklearnex/linear_model/ridge.py
+│ +-rw-r--r--  2.0 unx     2404 b- defN 23-Mar-31 13:04 sklearnex/linear_model/tests/test_linear.py
+│ +-rw-r--r--  2.0 unx     1194 b- defN 23-Mar-31 13:04 sklearnex/linear_model/tests/test_logreg.py
+│ +-rw-r--r--  2.0 unx      830 b- defN 23-Mar-31 13:04 sklearnex/manifold/__init__.py
+│ +-rw-r--r--  2.0 unx      826 b- defN 23-Mar-31 13:04 sklearnex/manifold/t_sne.py
+│ +-rw-r--r--  2.0 unx     1082 b- defN 23-Mar-31 13:04 sklearnex/manifold/tests/test_tsne.py
+│ +-rw-r--r--  2.0 unx      928 b- defN 23-Mar-31 13:04 sklearnex/metrics/__init__.py
+│ +-rw-r--r--  2.0 unx      866 b- defN 23-Mar-31 13:04 sklearnex/metrics/pairwise.py
+│ +-rw-r--r--  2.0 unx      857 b- defN 23-Mar-31 13:04 sklearnex/metrics/ranking.py
+│ +-rw-r--r--  2.0 unx     1592 b- defN 23-Mar-31 13:04 sklearnex/metrics/tests/test_metrics.py
+│ +-rw-r--r--  2.0 unx      863 b- defN 23-Mar-31 13:04 sklearnex/model_selection/__init__.py
+│ +-rw-r--r--  2.0 unx      871 b- defN 23-Mar-31 13:04 sklearnex/model_selection/split.py
+│ +-rw-r--r--  2.0 unx     1277 b- defN 23-Mar-31 13:04 sklearnex/model_selection/tests/test_model_selection.py
+│ +-rw-r--r--  2.0 unx     1086 b- defN 23-Mar-31 13:04 sklearnex/neighbors/__init__.py
+│ +-rw-r--r--  2.0 unx    19426 b- defN 23-Mar-31 13:04 sklearnex/neighbors/knn_classification.py
+│ +-rw-r--r--  2.0 unx    17868 b- defN 23-Mar-31 13:04 sklearnex/neighbors/knn_regression.py
+│ +-rw-r--r--  2.0 unx    14858 b- defN 23-Mar-31 13:04 sklearnex/neighbors/knn_unsupervised.py
+│ +-rw-r--r--  2.0 unx    15130 b- defN 23-Mar-31 13:04 sklearnex/neighbors/lof.py
+│ +-rw-r--r--  2.0 unx     2203 b- defN 23-Mar-31 13:04 sklearnex/neighbors/tests/test_neighbors.py
+│ +-rw-r--r--  2.0 unx      822 b- defN 23-Mar-31 13:04 sklearnex/preview/__init__.py
+│ +-rw-r--r--  2.0 unx      826 b- defN 23-Mar-31 13:04 sklearnex/preview/decomposition/__init__.py
+│ +-rw-r--r--  2.0 unx    13883 b- defN 23-Mar-31 13:04 sklearnex/preview/decomposition/pca.py
+│ +-rw-r--r--  2.0 unx     1221 b- defN 23-Mar-31 13:04 sklearnex/preview/decomposition/tests/test_preview_pca.py
+│ +-rw-r--r--  2.0 unx      917 b- defN 23-Mar-31 13:04 sklearnex/preview/ensemble/__init__.py
+│ +-rw-r--r--  2.0 unx    48478 b- defN 23-Mar-31 13:04 sklearnex/preview/ensemble/forest.py
+│ +-rw-r--r--  2.0 unx     1831 b- defN 23-Mar-31 13:04 sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+│ +-rw-r--r--  2.0 unx      863 b- defN 23-Mar-31 13:04 sklearnex/preview/linear_model/__init__.py
+│ +-rw-r--r--  2.0 unx     2180 b- defN 23-Mar-31 13:04 sklearnex/preview/linear_model/_common.py
+│ +-rw-r--r--  2.0 unx    10284 b- defN 23-Mar-31 13:04 sklearnex/preview/linear_model/linear.py
+│ +-rw-r--r--  2.0 unx     1525 b- defN 23-Mar-31 13:04 sklearnex/preview/linear_model/tests/test_preview_linear.py
+│ +-rw-r--r--  2.0 unx      833 b- defN 23-Mar-31 13:04 sklearnex/spmd/__init__.py
+│ +-rw-r--r--  2.0 unx      821 b- defN 23-Mar-31 13:04 sklearnex/spmd/basic_statistics/__init__.py
+│ +-rw-r--r--  2.0 unx      886 b- defN 23-Mar-31 13:04 sklearnex/spmd/basic_statistics/basic_statistics.py
+│ +-rw-r--r--  2.0 unx      784 b- defN 23-Mar-31 13:04 sklearnex/spmd/decomposition/__init__.py
+│ +-rw-r--r--  2.0 unx      871 b- defN 23-Mar-31 13:04 sklearnex/spmd/decomposition/pca.py
+│ +-rw-r--r--  2.0 unx      873 b- defN 23-Mar-31 13:04 sklearnex/spmd/ensemble/__init__.py
+│ +-rw-r--r--  2.0 unx     3103 b- defN 23-Mar-31 13:04 sklearnex/spmd/ensemble/forest.py
+│ +-rw-r--r--  2.0 unx      819 b- defN 23-Mar-31 13:04 sklearnex/spmd/linear_model/__init__.py
+│ +-rw-r--r--  2.0 unx      883 b- defN 23-Mar-31 13:04 sklearnex/spmd/linear_model/linear_model.py
+│ +-rw-r--r--  2.0 unx      906 b- defN 23-Mar-31 13:04 sklearnex/spmd/neighbors/__init__.py
+│ +-rw-r--r--  2.0 unx      939 b- defN 23-Mar-31 13:04 sklearnex/spmd/neighbors/neighbors.py
+│ +-rw-r--r--  2.0 unx     1076 b- defN 23-Mar-31 13:04 sklearnex/svm/__init__.py
+│ +-rw-r--r--  2.0 unx     6119 b- defN 23-Mar-31 13:04 sklearnex/svm/_common.py
+│ +-rw-r--r--  2.0 unx     8469 b- defN 23-Mar-31 13:04 sklearnex/svm/nusvc.py
+│ +-rw-r--r--  2.0 unx     5146 b- defN 23-Mar-31 13:04 sklearnex/svm/nusvr.py
+│ +-rw-r--r--  2.0 unx     9285 b- defN 23-Mar-31 13:04 sklearnex/svm/svc.py
+│ +-rw-r--r--  2.0 unx     5142 b- defN 23-Mar-31 13:04 sklearnex/svm/svr.py
+│ +-rw-r--r--  2.0 unx     2626 b- defN 23-Mar-31 13:04 sklearnex/svm/tests/test_svm.py
+│ +-rw-r--r--  2.0 unx     4683 b- defN 23-Mar-31 13:04 sklearnex/tests/_models_info.py
+│ +-rw-r--r--  2.0 unx     1407 b- defN 23-Mar-31 13:04 sklearnex/tests/test_config.py
+│ +-rw-r--r--  2.0 unx     7314 b- defN 23-Mar-31 13:04 sklearnex/tests/test_memory_usage.py
+│ +-rw-r--r--  2.0 unx     7523 b- defN 23-Mar-31 13:04 sklearnex/tests/test_monkeypatch.py
+│ +-rw-r--r--  2.0 unx     2773 b- defN 23-Mar-31 13:04 sklearnex/tests/test_patching.py
+│ +-rw-r--r--  2.0 unx    14286 b- defN 23-Mar-31 13:04 sklearnex/tests/test_run_to_run_stability_tests.py
+│ +-rw-r--r--  2.0 unx     3778 b- defN 23-Mar-31 13:04 sklearnex/tests/utils/_launch_algorithms.py
+│ +-rw-r--r--  2.0 unx      838 b- defN 23-Mar-31 13:04 sklearnex/utils/__init__.py
+│ +-rw-r--r--  2.0 unx      874 b- defN 23-Mar-31 13:04 sklearnex/utils/validation.py
+│ +-rw-rw-rw-  2.0 unx    10797 b- defN 23-Apr-01 04:12 scikit_learn_intelex-2023.1.1.dist-info/LICENSE.txt
+│ +-rw-r--r--  2.0 unx    12395 b- defN 23-Apr-01 04:12 scikit_learn_intelex-2023.1.1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx      107 b- defN 23-Apr-01 04:12 scikit_learn_intelex-2023.1.1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       10 b- defN 23-Apr-01 04:12 scikit_learn_intelex-2023.1.1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     8063 b- defN 23-Apr-01 04:12 scikit_learn_intelex-2023.1.1.dist-info/RECORD
+│ +88 files, 363490 bytes uncompressed, 102338 bytes compressed:  71.8%
+├── zipnote {}
+│ @@ -1,232 +1,265 @@
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__init__.py
+│ +Filename: sklearnex/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__main__.py
+│ +Filename: sklearnex/__main__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_config.py
+│ +Filename: sklearnex/_config.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_device_offload.py
+│ +Filename: sklearnex/_device_offload.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_utils.py
+│ +Filename: sklearnex/_utils.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/dispatcher.py
+│ +Filename: sklearnex/dispatcher.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/__init__.py
+│ +Filename: sklearnex/basic_statistics/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/dbscan.py
+│ +Filename: sklearnex/basic_statistics/basic_statistics.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/k_means.py
+│ +Filename: sklearnex/cluster/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_dbscan.py
+│ +Filename: sklearnex/cluster/dbscan.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_kmeans.py
+│ +Filename: sklearnex/cluster/k_means.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/__init__.py
+│ +Filename: sklearnex/cluster/tests/test_dbscan.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/pca.py
+│ +Filename: sklearnex/cluster/tests/test_kmeans.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/tests/test_pca.py
+│ +Filename: sklearnex/decomposition/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/doc/third-party-programs.txt
+│ +Filename: sklearnex/decomposition/pca.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/__init__.py
+│ +Filename: sklearnex/decomposition/tests/test_pca.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/forest.py
+│ +Filename: sklearnex/doc/third-party-programs.txt
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/tests/test_random_forest.py
+│ +Filename: sklearnex/ensemble/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/__main__.py
+│ +Filename: sklearnex/ensemble/forest.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/dispatcher.py
+│ +Filename: sklearnex/ensemble/tests/test_random_forest.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/__init__.py
+│ +Filename: sklearnex/glob/__main__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/coordinate_descent.py
+│ +Filename: sklearnex/glob/dispatcher.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/linear.py
+│ +Filename: sklearnex/linear_model/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/logistic_path.py
+│ +Filename: sklearnex/linear_model/coordinate_descent.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/ridge.py
+│ +Filename: sklearnex/linear_model/linear.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_linear.py
+│ +Filename: sklearnex/linear_model/logistic_path.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_logreg.py
+│ +Filename: sklearnex/linear_model/ridge.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/__init__.py
+│ +Filename: sklearnex/linear_model/tests/test_linear.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/t_sne.py
+│ +Filename: sklearnex/linear_model/tests/test_logreg.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/tests/test_tsne.py
+│ +Filename: sklearnex/manifold/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/__init__.py
+│ +Filename: sklearnex/manifold/t_sne.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/pairwise.py
+│ +Filename: sklearnex/manifold/tests/test_tsne.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/ranking.py
+│ +Filename: sklearnex/metrics/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/tests/test_metrics.py
+│ +Filename: sklearnex/metrics/pairwise.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/__init__.py
+│ +Filename: sklearnex/metrics/ranking.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/split.py
+│ +Filename: sklearnex/metrics/tests/test_metrics.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/tests/test_model_selection.py
+│ +Filename: sklearnex/model_selection/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/__init__.py
+│ +Filename: sklearnex/model_selection/split.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_classification.py
+│ +Filename: sklearnex/model_selection/tests/test_model_selection.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_regression.py
+│ +Filename: sklearnex/neighbors/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_unsupervised.py
+│ +Filename: sklearnex/neighbors/knn_classification.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/tests/test_neighbors.py
+│ +Filename: sklearnex/neighbors/knn_regression.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/__init__.py
+│ +Filename: sklearnex/neighbors/knn_unsupervised.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/__init__.py
+│ +Filename: sklearnex/neighbors/lof.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/pca.py
+│ +Filename: sklearnex/neighbors/tests/test_neighbors.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/tests/test_preview_pca.py
+│ +Filename: sklearnex/preview/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/__init__.py
+│ +Filename: sklearnex/preview/decomposition/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/forest.py
+│ +Filename: sklearnex/preview/decomposition/pca.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+│ +Filename: sklearnex/preview/decomposition/tests/test_preview_pca.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/__init__.py
+│ +Filename: sklearnex/preview/ensemble/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/_common.py
+│ +Filename: sklearnex/preview/ensemble/forest.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/linear.py
+│ +Filename: sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/tests/test_preview_linear.py
+│ +Filename: sklearnex/preview/linear_model/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/__init__.py
+│ +Filename: sklearnex/preview/linear_model/_common.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/__init__.py
+│ +Filename: sklearnex/preview/linear_model/linear.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/linear_model.py
+│ +Filename: sklearnex/preview/linear_model/tests/test_preview_linear.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/__init__.py
+│ +Filename: sklearnex/spmd/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/_common.py
+│ +Filename: sklearnex/spmd/basic_statistics/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvc.py
+│ +Filename: sklearnex/spmd/basic_statistics/basic_statistics.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvr.py
+│ +Filename: sklearnex/spmd/decomposition/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svc.py
+│ +Filename: sklearnex/spmd/decomposition/pca.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svr.py
+│ +Filename: sklearnex/spmd/ensemble/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/tests/test_svm.py
+│ +Filename: sklearnex/spmd/ensemble/forest.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/_models_info.py
+│ +Filename: sklearnex/spmd/linear_model/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_config.py
+│ +Filename: sklearnex/spmd/linear_model/linear_model.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_memory_usage.py
+│ +Filename: sklearnex/spmd/neighbors/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_monkeypatch.py
+│ +Filename: sklearnex/spmd/neighbors/neighbors.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_patching.py
+│ +Filename: sklearnex/svm/__init__.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_run_to_run_stability_tests.py
+│ +Filename: sklearnex/svm/_common.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/utils/_launch_algorithms.py
+│ +Filename: sklearnex/svm/nusvc.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/__init__.py
+│ +Filename: sklearnex/svm/nusvr.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/validation.py
+│ +Filename: sklearnex/svm/svc.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.dist-info/LICENSE.txt
+│ +Filename: sklearnex/svm/svr.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.dist-info/METADATA
+│ +Filename: sklearnex/svm/tests/test_svm.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.dist-info/WHEEL
+│ +Filename: sklearnex/tests/_models_info.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.dist-info/top_level.txt
+│ +Filename: sklearnex/tests/test_config.py
+│  Comment: 
+│  
+│ -Filename: scikit_learn_intelex-2023.1.0.dist-info/RECORD
+│ +Filename: sklearnex/tests/test_memory_usage.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/tests/test_monkeypatch.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/tests/test_patching.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/tests/test_run_to_run_stability_tests.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/tests/utils/_launch_algorithms.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/utils/__init__.py
+│ +Comment: 
+│ +
+│ +Filename: sklearnex/utils/validation.py
+│ +Comment: 
+│ +
+│ +Filename: scikit_learn_intelex-2023.1.1.dist-info/LICENSE.txt
+│ +Comment: 
+│ +
+│ +Filename: scikit_learn_intelex-2023.1.1.dist-info/METADATA
+│ +Comment: 
+│ +
+│ +Filename: scikit_learn_intelex-2023.1.1.dist-info/WHEEL
+│ +Comment: 
+│ +
+│ +Filename: scikit_learn_intelex-2023.1.1.dist-info/top_level.txt
+│ +Comment: 
+│ +
+│ +Filename: scikit_learn_intelex-2023.1.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__init__.py
+├── +++ sklearnex/__init__.py
+│┄ Files 14% similar despite different names
+│ @@ -19,18 +19,18 @@
+│  from .dispatcher import unpatch_sklearn
+│  from .dispatcher import get_patch_names
+│  from .dispatcher import get_patch_map
+│  from .dispatcher import sklearn_is_patched
+│  from ._config import get_config, set_config, config_context
+│  
+│  __all__ = [
+│ -    'cluster', 'config_context', 'decomposition', 'ensemble', 'get_config',
+│ -    'get_patch_names', 'linear_model', 'manifold', 'metrics', 'neighbors',
+│ -    'patch_sklearn', 'set_config', 'sklearn_is_patchedget_patch_map',
+│ -    'svm', 'unpatch_sklearn', 'utils'
+│ +    'cluster', 'config_context', 'basic_statistics', 'decomposition', 'ensemble',
+│ +    'get_config', 'get_patch_names', 'linear_model', 'manifold', 'metrics',
+│ +    'neighbors', 'patch_sklearn', 'set_config', 'svm', 'unpatch_sklearn',
+│ +    'utils', 'sklearn_is_patchedget_patch_map'
+│  ]
+│  
+│  from onedal import _is_dpc_backend
+│  
+│  if _is_dpc_backend:
+│      __all__.append('spmd')
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/__main__.py
+├── +++ sklearnex/__main__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_config.py
+├── +++ sklearnex/_config.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_device_offload.py
+├── +++ sklearnex/_device_offload.py
+│┄ Files 2% similar despite different names
+│ @@ -39,14 +39,17 @@
+│      to allow device dispatching in scenarios when dpctl is not available'''
+│  
+│      class DummySyclDevice:
+│          def __init__(self, filter_string):
+│              self._filter_string = filter_string
+│              self.is_cpu = 'cpu' in filter_string
+│              self.is_gpu = 'gpu' in filter_string
+│ +            # TODO: check for possibility of fp64 support
+│ +            # on other devices in this dummy class
+│ +            self.has_aspect_fp64 = self.is_cpu
+│  
+│              if not (self.is_cpu):
+│                  import logging
+│                  logging.warning("Device support is limited. "
+│                                  "Please install dpctl for full experience")
+│  
+│          def get_filter_string(self):
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/_utils.py
+├── +++ sklearnex/_utils.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/dispatcher.py
+├── +++ sklearnex/dispatcher.py
+│┄ Files 5% similar despite different names
+│ @@ -1,9 +1,9 @@
+│  #!/usr/bin/env python
+│ -# ===============================================================================
+│ +#===============================================================================
+│  # Copyright 2021 Intel Corporation
+│  #
+│  # Licensed under the Apache License, Version 2.0 (the "License");
+│  # you may not use this file except in compliance with the License.
+│  # You may obtain a copy of the License at
+│  #
+│  #     http://www.apache.org/licenses/LICENSE-2.0
+│ @@ -47,14 +47,15 @@
+│          from .svm import SVC as SVC_sklearnex
+│          from .svm import NuSVR as NuSVR_sklearnex
+│          from .svm import NuSVC as NuSVC_sklearnex
+│  
+│          from .neighbors import KNeighborsClassifier as KNeighborsClassifier_sklearnex
+│          from .neighbors import KNeighborsRegressor as KNeighborsRegressor_sklearnex
+│          from .neighbors import NearestNeighbors as NearestNeighbors_sklearnex
+│ +        from .neighbors import LocalOutlierFactor as LocalOutlierFactor_sklearnex
+│  
+│          # Preview classes for patching
+│  
+│          from .preview.decomposition import PCA as PCA_sklearnex
+│  
+│          from .preview.linear_model import LinearRegression as LinearRegression_sklearnex
+│  
+│ @@ -126,14 +127,20 @@
+│          mapping['nearest_neighbors'] = [[(neighbors_module,
+│                                            'NearestNeighbors',
+│                                            NearestNeighbors_sklearnex), None]]
+│          mapping['kneighborsclassifier'] = mapping['knn_classifier']
+│          mapping['kneighborsregressor'] = mapping['knn_regressor']
+│          mapping['nearestneighbors'] = mapping['nearest_neighbors']
+│  
+│ +        # LocalOutlierFactor
+│ +        mapping['lof'] = [[(neighbors_module,
+│ +                            'LocalOutlierFactor',
+│ +                            LocalOutlierFactor_sklearnex), None]]
+│ +        mapping['localoutlierfactor'] = mapping['lof']
+│ +
+│          # Configs
+│          mapping['set_config'] = [[(base_module,
+│                                     'set_config',
+│                                     set_config_sklearnex), None]]
+│          mapping['get_config'] = [[(base_module,
+│                                     'get_config',
+│                                     get_config_sklearnex), None]]
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/__init__.py
+├── +++ sklearnex/cluster/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/dbscan.py
+├── +++ sklearnex/cluster/dbscan.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/k_means.py
+├── +++ sklearnex/cluster/k_means.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_dbscan.py
+├── +++ sklearnex/cluster/tests/test_dbscan.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/cluster/tests/test_kmeans.py
+├── +++ sklearnex/cluster/tests/test_kmeans.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/__init__.py
+├── +++ sklearnex/decomposition/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/pca.py
+├── +++ sklearnex/decomposition/pca.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/decomposition/tests/test_pca.py
+├── +++ sklearnex/decomposition/tests/test_pca.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/doc/third-party-programs.txt
+├── +++ sklearnex/doc/third-party-programs.txt
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/__init__.py
+├── +++ sklearnex/ensemble/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/forest.py
+├── +++ sklearnex/ensemble/forest.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/ensemble/tests/test_random_forest.py
+├── +++ sklearnex/ensemble/tests/test_random_forest.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/__main__.py
+├── +++ sklearnex/glob/__main__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/glob/dispatcher.py
+├── +++ sklearnex/glob/dispatcher.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/__init__.py
+├── +++ sklearnex/linear_model/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/coordinate_descent.py
+├── +++ sklearnex/linear_model/coordinate_descent.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/linear.py
+├── +++ sklearnex/linear_model/linear.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/logistic_path.py
+├── +++ sklearnex/linear_model/logistic_path.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/ridge.py
+├── +++ sklearnex/linear_model/ridge.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_linear.py
+├── +++ sklearnex/linear_model/tests/test_linear.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/linear_model/tests/test_logreg.py
+├── +++ sklearnex/linear_model/tests/test_logreg.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/__init__.py
+├── +++ sklearnex/manifold/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/t_sne.py
+├── +++ sklearnex/manifold/t_sne.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/manifold/tests/test_tsne.py
+├── +++ sklearnex/manifold/tests/test_tsne.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/__init__.py
+├── +++ sklearnex/metrics/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/pairwise.py
+├── +++ sklearnex/metrics/pairwise.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/ranking.py
+├── +++ sklearnex/metrics/ranking.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/metrics/tests/test_metrics.py
+├── +++ sklearnex/metrics/tests/test_metrics.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/__init__.py
+├── +++ sklearnex/model_selection/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/split.py
+├── +++ sklearnex/model_selection/split.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/model_selection/tests/test_model_selection.py
+├── +++ sklearnex/model_selection/tests/test_model_selection.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/__init__.py
+├── +++ sklearnex/spmd/neighbors/neighbors.py
+│┄ Files 22% similar despite different names
+│ @@ -1,22 +1,25 @@
+│ -#!/usr/bin/env python
+│ -#===============================================================================
+│ -# Copyright 2021 Intel Corporation
+│ -#
+│ -# Licensed under the Apache License, Version 2.0 (the "License");
+│ -# you may not use this file except in compliance with the License.
+│ -# You may obtain a copy of the License at
+│ -#
+│ -#     http://www.apache.org/licenses/LICENSE-2.0
+│ -#
+│ -# Unless required by applicable law or agreed to in writing, software
+│ -# distributed under the License is distributed on an "AS IS" BASIS,
+│ -# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ -# See the License for the specific language governing permissions and
+│ -# limitations under the License.
+│ -#===============================================================================
+│ -
+│ -from .knn_classification import KNeighborsClassifier
+│ -from .knn_unsupervised import NearestNeighbors
+│ -from .knn_regression import KNeighborsRegressor
+│ -
+│ -__all__ = ['KNeighborsClassifier', 'KNeighborsRegressor', 'NearestNeighbors']
+│ +#===============================================================================
+│ +# Copyright 2023 Intel Corporation
+│ +#
+│ +# Licensed under the Apache License, Version 2.0 (the "License");
+│ +# you may not use this file except in compliance with the License.
+│ +# You may obtain a copy of the License at
+│ +#
+│ +#     http://www.apache.org/licenses/LICENSE-2.0
+│ +#
+│ +# Unless required by applicable law or agreed to in writing, software
+│ +# distributed under the License is distributed on an "AS IS" BASIS,
+│ +# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ +# See the License for the specific language governing permissions and
+│ +# limitations under the License.
+│ +#===============================================================================
+│ +
+│ +from onedal.spmd.neighbors import (
+│ +    KNeighborsClassifier,
+│ +    KNeighborsRegressor,
+│ +    NearestNeighbors
+│ +)
+│ +
+│ +# TODO:
+│ +# Currently it uses `onedal` module interface.
+│ +# Add sklearnex dispatching.
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_classification.py
+├── +++ sklearnex/neighbors/knn_classification.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_regression.py
+├── +++ sklearnex/neighbors/knn_regression.py
+│┄ Files 1% similar despite different names
+│ @@ -401,14 +401,13 @@
+│  
+│      def _onedal_kneighbors(self, X=None, n_neighbors=None,
+│                             return_distance=True, queue=None):
+│          return self._onedal_estimator.kneighbors(
+│              X, n_neighbors, return_distance, queue=queue)
+│  
+│      def _save_attributes(self):
+│ -        self.classes_ = self._onedal_estimator.classes_
+│          self.n_features_in_ = self._onedal_estimator.n_features_in_
+│          self.n_samples_fit_ = self._onedal_estimator.n_samples_fit_
+│          self._fit_X = self._onedal_estimator._fit_X
+│          self._y = self._onedal_estimator._y
+│          self._fit_method = self._onedal_estimator._fit_method
+│          self._tree = self._onedal_estimator._tree
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/knn_unsupervised.py
+├── +++ sklearnex/neighbors/knn_unsupervised.py
+│┄ Files 1% similar despite different names
+│ @@ -195,15 +195,15 @@
+│              'sklearn': sklearn_NearestNeighbors.fit,
+│          }, X, None)
+│          return self
+│  
+│      @wrap_output_data
+│      def kneighbors(self, X=None, n_neighbors=None, return_distance=True):
+│          check_is_fitted(self)
+│ -        if sklearn_check_version("1.0"):
+│ +        if sklearn_check_version("1.0") and X is not None:
+│              self._check_feature_names(X, reset=False)
+│          return dispatch(self, 'neighbors.NearestNeighbors.kneighbors', {
+│              'onedal': self.__class__._onedal_kneighbors,
+│              'sklearn': sklearn_NearestNeighbors.kneighbors,
+│          }, X, n_neighbors, return_distance)
+│  
+│      @wrap_output_data
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/neighbors/tests/test_neighbors.py
+├── +++ sklearnex/neighbors/tests/test_neighbors.py
+│┄ Files 7% similar despite different names
+│ @@ -40,7 +40,18 @@
+│  def test_sklearnex_import_nn():
+│      from sklearnex.neighbors import NearestNeighbors
+│      X = [[0, 0, 2], [1, 0, 0], [0, 0, 1]]
+│      neigh = NearestNeighbors(n_neighbors=2).fit(X)
+│      assert 'sklearnex' in neigh.__module__
+│      result = neigh.kneighbors([[0, 0, 1.3]], 2, return_distance=False)
+│      assert_allclose(result, [[2, 0]])
+│ +
+│ +
+│ +def test_sklearnex_import_lof():
+│ +    from sklearnex.neighbors import LocalOutlierFactor
+│ +    X = [[7, 7, 7], [1, 0, 0], [0, 0, 1], [0, 0, 1]]
+│ +    lof = LocalOutlierFactor(n_neighbors=2)
+│ +    result = lof.fit_predict(X)
+│ +    assert hasattr(lof, '_knn')
+│ +    assert 'sklearnex' in lof.__module__
+│ +    assert 'sklearnex' in lof._knn.__module__
+│ +    assert_allclose(result, [-1, 1, 1, 1])
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/__init__.py
+├── +++ sklearnex/preview/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/__init__.py
+├── +++ sklearnex/preview/decomposition/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/pca.py
+├── +++ sklearnex/preview/decomposition/pca.py
+│┄ Files 4% similar despite different names
+│ @@ -24,24 +24,29 @@
+│  from daal4py.sklearn._utils import sklearn_check_version
+│  
+│  from sklearn.utils.extmath import stable_cumsum
+│  from onedal.datatypes import _check_array
+│  from sklearn.utils.validation import check_array
+│  from sklearn.base import BaseEstimator
+│  from sklearn.utils.validation import check_is_fitted
+│ +if sklearn_check_version('1.1') and not sklearn_check_version('1.2'):
+│ +    from sklearn.utils import check_scalar
+│  if sklearn_check_version('0.23'):
+│      from sklearn.decomposition._pca import _infer_dimension
+│  else:
+│      from sklearn.decomposition._pca import _infer_dimension_
+│  
+│  from onedal.decomposition import PCA as onedal_PCA
+│  from sklearn.decomposition import PCA as sklearn_PCA
+│  
+│  
+│  class PCA(sklearn_PCA):
+│ +    if sklearn_check_version('1.2'):
+│ +        _parameter_constraints: dict = {**sklearn_PCA._parameter_constraints}
+│ +
+│      def __init__(
+│          self,
+│          n_components=None,
+│          *,
+│          copy=True,
+│          whiten=False,
+│          svd_solver="auto",
+│ @@ -79,30 +84,39 @@
+│              if not isinstance(n_components, numbers.Integral):
+│                  raise ValueError("n_components=%r must be of type int "
+│                                   "when greater than or equal to 1, "
+│                                   "was of type=%r"
+│                                   % (n_components, type(n_components)))
+│  
+│      def fit(self, X, y=None):
+│ +        if sklearn_check_version('1.2'):
+│ +            self._validate_params()
+│ +        elif sklearn_check_version('1.1'):
+│ +            check_scalar(
+│ +                self.n_oversamples,
+│ +                "n_oversamples",
+│ +                min_val=1,
+│ +                target_type=numbers.Integral,
+│ +            )
+│          self._fit(X)
+│          return self
+│  
+│      def _fit(self, X):
+│          if issparse(X):
+│              raise TypeError(
+│                  "PCA does not support sparse input. See "
+│                  "TruncatedSVD for a possible alternative."
+│              )
+│  
+│ -        X = _check_array(
+│ -            X,
+│ -            dtype=[np.float64, np.float32],
+│ -            ensure_2d=True,
+│ -            copy=False
+│ -        )
+│ +        if sklearn_check_version('0.23'):
+│ +            X = self._validate_data(X, dtype=[np.float64, np.float32],
+│ +                                    ensure_2d=True, copy=False)
+│ +        else:
+│ +            X = _check_array(X, dtype=[np.float64, np.float32],
+│ +                             ensure_2d=True, copy=False)
+│  
+│          n_samples, n_features = X.shape
+│          n_sf_min = min(n_samples, n_features)
+│  
+│          if self.n_components is None:
+│              if self.svd_solver == "arpack":
+│                  n_components = n_sf_min - 1
+│ @@ -196,15 +210,15 @@
+│  
+│          onedal_params = {
+│              'n_components': onedal_n_components,
+│              'is_deterministic': True,
+│              'method': "precomputed",
+│          }
+│          self._onedal_estimator = onedal_PCA(**onedal_params)
+│ -        self._onedal_estimator.fit(X, y, queue=queue)
+│ +        self._onedal_estimator.fit(X, queue=queue)
+│          self._save_attributes()
+│  
+│          U = None
+│          S = self.singular_values_
+│          V = self.components_
+│  
+│          return U, S, V
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/decomposition/tests/test_preview_pca.py
+├── +++ sklearnex/preview/decomposition/tests/test_preview_pca.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/__init__.py
+├── +++ sklearnex/preview/ensemble/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/forest.py
+├── +++ sklearnex/preview/ensemble/forest.py
+│┄ Files 4% similar despite different names
+│ @@ -35,15 +35,16 @@
+│  
+│  from sklearn.ensemble import RandomForestClassifier as sklearn_RandomForestClassifier
+│  from sklearn.ensemble import RandomForestRegressor as sklearn_RandomForestRegressor
+│  
+│  from sklearn.utils.validation import (
+│      check_is_fitted,
+│      check_consistent_length,
+│ -    check_array)
+│ +    check_array,
+│ +    check_X_y)
+│  
+│  from onedal.datatypes import _check_array, _num_features, _num_samples
+│  
+│  from sklearn.utils import check_random_state, deprecated
+│  
+│  from sklearn.base import clone
+│  
+│ @@ -53,15 +54,15 @@
+│  from onedal.ensemble import RandomForestClassifier as onedal_RandomForestClassifier
+│  from onedal.ensemble import RandomForestRegressor as onedal_RandomForestRegressor
+│  from onedal.primitives import get_tree_state_cls, get_tree_state_reg
+│  
+│  from scipy import sparse as sp
+│  
+│  if sklearn_check_version('1.2'):
+│ -    from sklearn.utils._param_validation import Interval
+│ +    from sklearn.utils._param_validation import Interval, StrOptions
+│  
+│  
+│  class BaseRandomForest(ABC):
+│      def _fit_proba(self, X, y, sample_weight=None, queue=None):
+│          params = self.get_params()
+│          self.__class__(**params)
+│  
+│ @@ -75,14 +76,20 @@
+│          # TODO:
+│          # update for regression
+│          if self.oob_score:
+│              self.oob_score_ = self._onedal_estimator.oob_score_
+│              self.oob_prediction_ = self._onedal_estimator.oob_prediction_
+│          return self
+│  
+│ +    def _onedal_classifier(self, **onedal_params):
+│ +        return onedal_RandomForestClassifier(**onedal_params)
+│ +
+│ +    def _onedal_regressor(self, **onedal_params):
+│ +        return onedal_RandomForestRegressor(**onedal_params)
+│ +
+│      # TODO:
+│      # move to onedal modul.
+│      def _check_parameters(self):
+│          if not self.bootstrap and self.max_samples is not None:
+│              raise ValueError(
+│                  "`max_sample` cannot be set if `bootstrap=False`. "
+│                  "Either switch to `bootstrap=True` or set "
+│ @@ -182,15 +189,16 @@
+│  class RandomForestClassifier(sklearn_RandomForestClassifier, BaseRandomForest):
+│      __doc__ = sklearn_RandomForestClassifier.__doc__
+│  
+│      if sklearn_check_version('1.2'):
+│          _parameter_constraints: dict = {
+│              **sklearn_RandomForestClassifier._parameter_constraints,
+│              "max_bins": [Interval(numbers.Integral, 2, None, closed="left")],
+│ -            "min_bin_size": [Interval(numbers.Integral, 1, None, closed="left")]
+│ +            "min_bin_size": [Interval(numbers.Integral, 1, None, closed="left")],
+│ +            "splitter_mode": [StrOptions({"best", "random"})]
+│          }
+│  
+│      if sklearn_check_version('1.0'):
+│          def __init__(
+│                  self,
+│                  n_estimators=100,
+│                  criterion="gini",
+│ @@ -207,15 +215,16 @@
+│                  random_state=None,
+│                  verbose=0,
+│                  warm_start=False,
+│                  class_weight=None,
+│                  ccp_alpha=0.0,
+│                  max_samples=None,
+│                  max_bins=256,
+│ -                min_bin_size=1):
+│ +                min_bin_size=1,
+│ +                splitter_mode='best'):
+│              super(RandomForestClassifier, self).__init__(
+│                  n_estimators=n_estimators,
+│                  criterion=criterion,
+│                  max_depth=max_depth,
+│                  min_samples_split=min_samples_split,
+│                  min_samples_leaf=min_samples_leaf,
+│                  min_weight_fraction_leaf=min_weight_fraction_leaf,
+│ @@ -232,14 +241,15 @@
+│              )
+│              self.warm_start = warm_start
+│              self.ccp_alpha = ccp_alpha
+│              self.max_samples = max_samples
+│              self.max_bins = max_bins
+│              self.min_bin_size = min_bin_size
+│              self.min_impurity_split = None
+│ +            self.splitter_mode = splitter_mode
+│              # self._estimator = DecisionTreeClassifier()
+│      else:
+│          def __init__(self,
+│                       n_estimators=100,
+│                       criterion="gini",
+│                       max_depth=None,
+│                       min_samples_split=2,
+│ @@ -255,15 +265,16 @@
+│                       random_state=None,
+│                       verbose=0,
+│                       warm_start=False,
+│                       class_weight=None,
+│                       ccp_alpha=0.0,
+│                       max_samples=None,
+│                       max_bins=256,
+│ -                     min_bin_size=1):
+│ +                     min_bin_size=1,
+│ +                     splitter_mode='best'):
+│              super(RandomForestClassifier, self).__init__(
+│                  n_estimators=n_estimators,
+│                  criterion=criterion,
+│                  max_depth=max_depth,
+│                  min_samples_split=min_samples_split,
+│                  min_samples_leaf=min_samples_leaf,
+│                  min_weight_fraction_leaf=min_weight_fraction_leaf,
+│ @@ -283,14 +294,15 @@
+│              )
+│              self.warm_start = warm_start
+│              self.ccp_alpha = ccp_alpha
+│              self.max_samples = max_samples
+│              self.max_bins = max_bins
+│              self.min_bin_size = min_bin_size
+│              self.min_impurity_split = None
+│ +            self.splitter_mode = splitter_mode
+│              # self._estimator = DecisionTreeClassifier()
+│  
+│      def fit(self, X, y, sample_weight=None):
+│          """
+│          Build a forest of trees from the training set (X, y).
+│  
+│          Parameters
+│ @@ -335,16 +347,14 @@
+│          if not self.bootstrap and self.oob_score:
+│              raise ValueError("Out of bag estimation only available"
+│                               " if bootstrap=True")
+│          if sklearn_check_version("1.2"):
+│              self._validate_params()
+│          else:
+│              self._check_parameters()
+│ -        if sample_weight is not None:
+│ -            sample_weight = self.check_sample_weight(sample_weight, X)
+│  
+│          correct_sparsity = not sp.issparse(X)
+│          correct_ccp_alpha = self.ccp_alpha == 0.0
+│          correct_criterion = self.criterion == "gini"
+│          correct_warm_start = self.warm_start is False
+│  
+│          if daal_check_version((2021, 'P', 500)):
+│ @@ -520,24 +530,33 @@
+│  
+│          self._cached_estimators_ = estimators_
+│          return estimators_
+│  
+│      def _onedal_cpu_supported(self, method_name, *data):
+│          if method_name == 'ensemble.RandomForestClassifier.fit':
+│              ready, X, y, sample_weight = self._onedal_ready(*data)
+│ +            if self.splitter_mode == 'random':
+│ +                warnings.warn("'random' splitter mode supports GPU devices only "
+│ +                              "and requires oneDAL version >= 2023.1.1. "
+│ +                              "Using 'best' mode instead.", RuntimeWarning)
+│ +                self.splitter_mode = 'best'
+│              if not ready:
+│                  return False
+│ +            elif sp.issparse(X):
+│ +                return False
+│              elif sp.issparse(y):
+│                  return False
+│              elif sp.issparse(sample_weight):
+│                  return False
+│              elif not self.ccp_alpha == 0.0:
+│                  return False
+│              elif self.warm_start:
+│                  return False
+│ +            elif self.oob_score and not daal_check_version((2023, 'P', 101)):
+│ +                return False
+│              elif not self.n_outputs_ == 1:
+│                  return False
+│              elif hasattr(self, 'estimators_'):
+│                  return False
+│              else:
+│                  return True
+│          if method_name in ['ensemble.RandomForestClassifier.predict',
+│ @@ -557,24 +576,35 @@
+│                  return True
+│          raise RuntimeError(
+│              f'Unknown method {method_name} in {self.__class__.__name__}')
+│  
+│      def _onedal_gpu_supported(self, method_name, *data):
+│          if method_name == 'ensemble.RandomForestClassifier.fit':
+│              ready, X, y, sample_weight = self._onedal_ready(*data)
+│ +            if self.splitter_mode == 'random' and \
+│ +                    not daal_check_version((2023, 'P', 101)):
+│ +                warnings.warn("'random' splitter mode requires OneDAL >= 2023.1.1. "
+│ +                              "Using 'best' mode instead.", RuntimeWarning)
+│ +                self.splitter_mode = 'best'
+│              if not ready:
+│                  return False
+│ +            elif sp.issparse(X):
+│ +                return False
+│              elif sp.issparse(y):
+│                  return False
+│ -            elif not sample_weight:  # `sample_weight` is not supported.
+│ +            elif sp.issparse(sample_weight):
+│ +                return False
+│ +            elif sample_weight is not None:  # `sample_weight` is not supported.
+│                  return False
+│              elif not self.ccp_alpha == 0.0:
+│                  return False
+│              elif self.warm_start:
+│                  return False
+│ +            elif self.oob_score:
+│ +                return False
+│              elif not self.n_outputs_ == 1:
+│                  return False
+│              elif hasattr(self, 'estimators_'):
+│                  return False
+│              else:
+│                  return True
+│          if method_name in ['ensemble.RandomForestClassifier.predict',
+│ @@ -592,17 +622,41 @@
+│                  return False
+│              else:
+│                  return True
+│          raise RuntimeError(
+│              f'Unknown method {method_name} in {self.__class__.__name__}')
+│  
+│      def _onedal_fit(self, X, y, sample_weight=None, queue=None):
+│ -        X, y = make2d(np.asarray(X)), make2d(np.asarray(y))
+│ +        if sklearn_check_version('1.2'):
+│ +            X, y = self._validate_data(
+│ +                X, y, multi_output=False, accept_sparse=False,
+│ +                dtype=[np.float64, np.float32]
+│ +            )
+│ +        else:
+│ +            X, y = check_X_y(
+│ +                X, y, accept_sparse=False, dtype=[np.float64, np.float32],
+│ +                multi_output=False
+│ +            )
+│ +
+│ +        if sample_weight is not None:
+│ +            sample_weight = self.check_sample_weight(sample_weight, X)
+│  
+│ -        y = check_array(y, ensure_2d=False)
+│ +        y = np.atleast_1d(y)
+│ +        if y.ndim == 2 and y.shape[1] == 1:
+│ +            warnings.warn(
+│ +                "A column-vector y was passed when a 1d array was"
+│ +                " expected. Please change the shape of y to "
+│ +                "(n_samples,), for example using ravel().",
+│ +                DataConversionWarning,
+│ +                stacklevel=2,
+│ +            )
+│ +        if y.ndim == 1:
+│ +            # reshape is necessary to preserve the data contiguity against vs
+│ +            # [:, np.newaxis] that does not.
+│ +            y = np.reshape(y, (-1, 1))
+│  
+│          y, expanded_class_weight = self._validate_y_class_weight(y)
+│  
+│          n_classes_ = self.n_classes_[0]
+│          self.n_features_in_ = X.shape[1]
+│          if not sklearn_check_version('1.0'):
+│              self.n_features_ = self.n_features_in_
+│ @@ -616,15 +670,15 @@
+│              sample_weight = [sample_weight]
+│  
+│          if n_classes_ < 2:
+│              raise ValueError(
+│                  "Training data only contain information about one class.")
+│  
+│          if self.oob_score:
+│ -            err = 'out_of_bag_error|out_of_bag_error_per_observation'
+│ +            err = 'out_of_bag_error_accuracy|out_of_bag_error_decision_function'
+│          else:
+│              err = 'none'
+│  
+│          onedal_params = {
+│              'n_estimators': self.n_estimators,
+│              'criterion': self.criterion,
+│              'max_depth': self.max_depth,
+│ @@ -644,59 +698,62 @@
+│              'error_metric_mode': err,
+│              'variable_importance_mode': 'mdi',
+│              'class_weight': self.class_weight,
+│              'max_bins': self.max_bins,
+│              'min_bin_size': self.min_bin_size,
+│              'max_samples': self.max_samples
+│          }
+│ +        if daal_check_version((2023, 'P', 101)):
+│ +            onedal_params['splitter_mode'] = self.splitter_mode
+│          self._cached_estimators_ = None
+│  
+│          # Compute
+│ -        self._onedal_estimator = onedal_RandomForestClassifier(**onedal_params)
+│ +        self._onedal_estimator = self._onedal_classifier(**onedal_params)
+│          self._onedal_estimator.fit(X, y, sample_weight, queue=queue)
+│  
+│          self._save_attributes()
+│          if sklearn_check_version("1.2"):
+│              self._estimator = DecisionTreeClassifier()
+│          self.estimators_ = self._estimators_
+│          # Decapsulate classes_ attributes
+│          self.n_classes_ = self.n_classes_[0]
+│          self.classes_ = self.classes_[0]
+│          return self
+│  
+│      def _onedal_predict(self, X, queue=None):
+│ +        X = check_array(X, dtype=[np.float32, np.float64])
+│ +        check_is_fitted(self)
+│          if sklearn_check_version("1.0"):
+│              self._check_feature_names(X, reset=False)
+│ -        X = check_array(
+│ -            X,
+│ -            accept_sparse=False,  # is not supported
+│ -            dtype=[np.float64, np.float32]
+│ -        )
+│  
+│          res = self._onedal_estimator.predict(X, queue=queue)
+│          return np.take(self.classes_,
+│                         res.ravel().astype(np.int64, casting='unsafe'))
+│  
+│      def _onedal_predict_proba(self, X, queue=None):
+│ +        X = check_array(X, dtype=[np.float64, np.float32])
+│          check_is_fitted(self)
+│          if sklearn_check_version('0.23'):
+│              self._check_n_features(X, reset=False)
+│          if sklearn_check_version("1.0"):
+│              self._check_feature_names(X, reset=False)
+│ -        X = check_array(
+│ -            X,
+│ -            accept_sparse=False,  # is not supported
+│ -            dtype=[np.float64, np.float32]
+│ -        )
+│          return self._onedal_estimator.predict_proba(X, queue=queue)
+│  
+│  
+│  class RandomForestRegressor(sklearn_RandomForestRegressor, BaseRandomForest):
+│      __doc__ = sklearn_RandomForestRegressor.__doc__
+│  
+│ +    if sklearn_check_version('1.2'):
+│ +        _parameter_constraints: dict = {
+│ +            **sklearn_RandomForestRegressor._parameter_constraints,
+│ +            "max_bins": [Interval(numbers.Integral, 2, None, closed="left")],
+│ +            "min_bin_size": [Interval(numbers.Integral, 1, None, closed="left")],
+│ +            "splitter_mode": [StrOptions({"best", "random"})]
+│ +        }
+│ +
+│      if sklearn_check_version('1.0'):
+│          def __init__(
+│                  self,
+│                  n_estimators=100,
+│                  *,
+│                  criterion="squared_error",
+│                  max_depth=None,
+│ @@ -711,15 +768,16 @@
+│                  n_jobs=None,
+│                  random_state=None,
+│                  verbose=0,
+│                  warm_start=False,
+│                  ccp_alpha=0.0,
+│                  max_samples=None,
+│                  max_bins=256,
+│ -                min_bin_size=1):
+│ +                min_bin_size=1,
+│ +                splitter_mode='best'):
+│              super(RandomForestRegressor, self).__init__(
+│                  n_estimators=n_estimators,
+│                  criterion=criterion,
+│                  max_depth=max_depth,
+│                  min_samples_split=min_samples_split,
+│                  min_samples_leaf=min_samples_leaf,
+│                  min_weight_fraction_leaf=min_weight_fraction_leaf,
+│ @@ -735,14 +793,15 @@
+│              )
+│              self.warm_start = warm_start
+│              self.ccp_alpha = ccp_alpha
+│              self.max_samples = max_samples
+│              self.max_bins = max_bins
+│              self.min_bin_size = min_bin_size
+│              self.min_impurity_split = None
+│ +            self.splitter_mode = splitter_mode
+│      else:
+│          def __init__(self,
+│                       n_estimators=100, *,
+│                       criterion="mse",
+│                       max_depth=None,
+│                       min_samples_split=2,
+│                       min_samples_leaf=1,
+│ @@ -756,15 +815,16 @@
+│                       n_jobs=None,
+│                       random_state=None,
+│                       verbose=0,
+│                       warm_start=False,
+│                       ccp_alpha=0.0,
+│                       max_samples=None,
+│                       max_bins=256,
+│ -                     min_bin_size=1):
+│ +                     min_bin_size=1,
+│ +                     splitter_mode='best'):
+│              super(RandomForestRegressor, self).__init__(
+│                  n_estimators=n_estimators,
+│                  criterion=criterion,
+│                  max_depth=max_depth,
+│                  min_samples_split=min_samples_split,
+│                  min_samples_leaf=min_samples_leaf,
+│                  min_weight_fraction_leaf=min_weight_fraction_leaf,
+│ @@ -783,14 +843,15 @@
+│              )
+│              self.warm_start = warm_start
+│              self.ccp_alpha = ccp_alpha
+│              self.max_samples = max_samples
+│              self.max_bins = max_bins
+│              self.min_bin_size = min_bin_size
+│              self.min_impurity_split = None
+│ +            self.splitter_mode = splitter_mode
+│  
+│      @property
+│      def _estimators_(self):
+│          if hasattr(self, '_cached_estimators_'):
+│              if self._cached_estimators_:
+│                  return self._cached_estimators_
+│          if sklearn_check_version('0.22'):
+│ @@ -840,32 +901,57 @@
+│                  self.n_features_in_, np.array(
+│                      [1], dtype=np.intp), self.n_outputs_)
+│              est_i.tree_.__setstate__(tree_i_state_dict)
+│              estimators_.append(est_i)
+│  
+│          return estimators_
+│  
+│ +    def _onedal_ready(self, X, y, sample_weight):
+│ +        # TODO:
+│ +        # move some common checks for both devices here.
+│ +
+│ +        # We have to get `n_outputs_` before dispatching
+│ +        # oneDAL requirements: Number of outputs `n_outputs_` should be 1.
+│ +        y = np.asarray(y)
+│ +
+│ +        if y.ndim == 1:
+│ +            # reshape is necessary to preserve the data contiguity against vs
+│ +            # [:, np.newaxis] that does not.
+│ +            y = np.reshape(y, (-1, 1))
+│ +        self.n_outputs_ = y.shape[1]
+│ +        ready = self.n_outputs_ == 1
+│ +        return ready, X, y, sample_weight
+│ +
+│      def _onedal_cpu_supported(self, method_name, *data):
+│          if method_name == 'ensemble.RandomForestRegressor.fit':
+│ -            X, y, sample_weight = data
+│ -            if not (self.oob_score and daal_check_version(
+│ +            ready, X, y, sample_weight = self._onedal_ready(*data)
+│ +            if self.splitter_mode == 'random':
+│ +                warnings.warn("'random' splitter mode supports GPU devices only "
+│ +                              "and requires oneDAL version >= 2023.1.1. "
+│ +                              "Using 'best' mode instead.", RuntimeWarning)
+│ +                self.splitter_mode = 'best'
+│ +            if not ready:
+│ +                return False
+│ +            elif not (self.oob_score and daal_check_version(
+│                      (2021, 'P', 500)) or not self.oob_score):
+│                  return False
+│              elif self.criterion not in ["mse", "squared_error"]:
+│                  return False
+│              elif sp.issparse(X):
+│                  return False
+│              elif sp.issparse(y):
+│                  return False
+│              elif sp.issparse(sample_weight):
+│                  return False
+│              elif not self.ccp_alpha == 0.0:
+│                  return False
+│              elif self.warm_start:
+│                  return False
+│ +            elif self.oob_score and not daal_check_version((2023, 'P', 101)):
+│ +                return False
+│              elif not self.n_outputs_ == 1:
+│                  return False
+│              elif hasattr(self, 'estimators_'):
+│                  return False
+│              else:
+│                  return True
+│          if method_name in ['ensemble.RandomForestRegressor.predict',
+│ @@ -882,39 +968,47 @@
+│                  return False
+│              else:
+│                  return True
+│          raise RuntimeError(
+│              f'Unknown method {method_name} in {self.__class__.__name__}')
+│  
+│      def _onedal_gpu_supported(self, method_name, *data):
+│ -        X, y, sample_weight = data
+│          if method_name == 'ensemble.RandomForestRegressor.fit':
+│ -            if not (self.oob_score and daal_check_version(
+│ +            ready, X, y, sample_weight = self._onedal_ready(*data)
+│ +            if self.splitter_mode == 'random' and \
+│ +                    not daal_check_version((2023, 'P', 101)):
+│ +                warnings.warn("'random' splitter mode requires OneDAL >= 2023.1.1. "
+│ +                              "Using 'best' mode instead.", RuntimeWarning)
+│ +                self.splitter_mode = 'best'
+│ +            if not ready:
+│ +                return False
+│ +            elif not (self.oob_score and daal_check_version(
+│                      (2021, 'P', 500)) or not self.oob_score):
+│                  return False
+│              elif self.criterion not in ["mse", "squared_error"]:
+│                  return False
+│              elif sp.issparse(X):
+│                  return False
+│              elif sp.issparse(y):
+│                  return False
+│ -            elif not sample_weight:  # `sample_weight` is not supported.
+│ +            elif sample_weight is not None:  # `sample_weight` is not supported.
+│                  return False
+│              elif not self.ccp_alpha == 0.0:
+│                  return False
+│              elif self.warm_start:
+│                  return False
+│ -            elif not self.n_outputs_ == 1:
+│ +            elif self.oob_score:
+│                  return False
+│              elif hasattr(self, 'estimators_'):
+│                  return False
+│              else:
+│                  return True
+│          if method_name in ['ensemble.RandomForestRegressor.predict',
+│                             'ensemble.RandomForestRegressor.predict_proba']:
+│ +            X = data[0]
+│              if not hasattr(self, '_onedal_model'):
+│                  return False
+│              elif sp.issparse(X):
+│                  return False
+│              elif not (hasattr(self, 'n_outputs_') and self.n_outputs_ == 1):
+│                  return False
+│              elif not daal_check_version((2021, 'P', 400)):
+│ @@ -945,15 +1039,15 @@
+│          check_consistent_length(X, y)
+│          self.n_features_in_ = X.shape[1]
+│          if not sklearn_check_version('1.0'):
+│              self.n_features_ = self.n_features_in_
+│          rs_ = check_random_state(self.random_state)
+│  
+│          if self.oob_score:
+│ -            err = 'out_of_bag_error|out_of_bag_error_per_observation'
+│ +            err = 'out_of_bag_error_r2|out_of_bag_error_prediction'
+│          else:
+│              err = 'none'
+│  
+│          onedal_params = {
+│              'n_estimators': self.n_estimators,
+│              'criterion': self.criterion,
+│              'max_depth': self.max_depth,
+│ @@ -969,35 +1063,32 @@
+│              'random_state': rs_,
+│              'verbose': self.verbose,
+│              'warm_start': self.warm_start,
+│              'error_metric_mode': err,
+│              'variable_importance_mode': 'mdi',
+│              'max_samples': self.max_samples
+│          }
+│ +        if daal_check_version((2023, 'P', 101)):
+│ +            onedal_params['splitter_mode'] = self.splitter_mode
+│          self._cached_estimators_ = None
+│ -        self._onedal_estimator = onedal_RandomForestRegressor(**onedal_params)
+│ +        self._onedal_estimator = self._onedal_regressor(**onedal_params)
+│          self._onedal_estimator.fit(X, y, sample_weight, queue=queue)
+│  
+│          self._save_attributes()
+│          if sklearn_check_version("1.2"):
+│              self._estimator = DecisionTreeRegressor()
+│          self.estimators_ = self._estimators_
+│          return self
+│  
+│      def _onedal_predict(self, X, queue=None):
+│          if sklearn_check_version("1.0"):
+│              self._check_feature_names(X, reset=False)
+│ -        X = check_array(
+│ -            X,
+│ -            accept_sparse=False,
+│ -            dtype=[np.float64, np.float32]
+│ -        )
+│ +        X = self._validate_X_predict(X)
+│          return self._onedal_estimator.predict(X, queue=queue)
+│  
+│ -    @wrap_output_data
+│      def fit(self, X, y, sample_weight=None):
+│          """
+│          Build a forest of trees from the training set (X, y).
+│  
+│          Parameters
+│          ----------
+│          X : {array-like, sparse matrix} of shape (n_samples, n_features)
+│ @@ -1022,24 +1113,14 @@
+│          """
+│          if not self.bootstrap and self.max_samples is not None:
+│              raise ValueError(
+│                  "`max_sample` cannot be set if `bootstrap=False`. "
+│                  "Either switch to `bootstrap=True` or set "
+│                  "`max_sample=None`."
+│              )
+│ -        # We have to get `n_outputs_` before dispatching
+│ -        # oneDAL requirements: Number of outputs `n_outputs_` should be 1.
+│ -        y = np.asarray(y)
+│ -
+│ -        if y.ndim == 1:
+│ -            # reshape is necessary to preserve the data contiguity against vs
+│ -            # [:, np.newaxis] that does not.
+│ -            y = np.reshape(y, (-1, 1))
+│ -        self.n_outputs_ = y.shape[1]
+│ -
+│          dispatch(self, 'ensemble.RandomForestRegressor.fit', {
+│              'onedal': self.__class__._onedal_fit,
+│              'sklearn': sklearn_RandomForestRegressor.fit,
+│          }, X, y, sample_weight)
+│          return self
+│  
+│      @wrap_output_data
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+├── +++ sklearnex/preview/ensemble/tests/test_random_preview_forest.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/__init__.py
+├── +++ sklearnex/preview/linear_model/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/_common.py
+├── +++ sklearnex/preview/linear_model/_common.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/linear.py
+├── +++ sklearnex/preview/linear_model/linear.py
+│┄ Files 9% similar despite different names
+│ @@ -26,15 +26,15 @@
+│      from ...utils.validation import assert_all_finite
+│      from daal4py.sklearn._utils import (get_dtype, make2d)
+│      from sklearn.linear_model import LinearRegression as sklearn_LinearRegression
+│  
+│      if sklearn_check_version('1.0') and not sklearn_check_version('1.2'):
+│          from sklearn.linear_model._base import _deprecate_normalize
+│  
+│ -    from sklearn.utils.validation import _deprecate_positional_args
+│ +    from sklearn.utils.validation import _deprecate_positional_args, check_X_y
+│      from sklearn.exceptions import NotFittedError
+│      from scipy.sparse import issparse
+│  
+│      from onedal.linear_model import LinearRegression as onedal_LinearRegression
+│      from onedal.datatypes import (_num_samples, _get_2d_shape)
+│  
+│      class LinearRegression(sklearn_LinearRegression, BaseLinearRegression):
+│ @@ -229,28 +229,43 @@
+│                  'fit_intercept': self.fit_intercept,
+│                  'copy_X': self.copy_X}
+│              self._onedal_estimator = onedal_LinearRegression(**onedal_params)
+│  
+│          def _onedal_fit(self, X, y, sample_weight, queue=None):
+│              assert sample_weight is None
+│  
+│ +            check_params = {
+│ +                'X': X,
+│ +                'y': y,
+│ +                'dtype': [np.float64, np.float32],
+│ +                'accept_sparse': ['csr', 'csc', 'coo'],
+│ +                'y_numeric': True,
+│ +                'multi_output': True,
+│ +                'force_all_finite': False
+│ +            }
+│ +            if sklearn_check_version('1.2'):
+│ +                X, y = self._validate_data(**check_params)
+│ +            else:
+│ +                X, y = check_X_y(**check_params)
+│ +
+│              if sklearn_check_version(
+│                      '1.0') and not sklearn_check_version('1.2'):
+│                  self._normalize = _deprecate_normalize(
+│                      self.normalize,
+│                      default=False,
+│                      estimator_name=self.__class__.__name__,
+│                  )
+│  
+│              self._initialize_onedal_estimator()
+│              self._onedal_estimator.fit(X, y, queue=queue)
+│  
+│              self._save_attributes()
+│  
+│          def _onedal_predict(self, X, queue=None):
+│ +            X = self._validate_data(X, accept_sparse=False, reset=False)
+│              if not hasattr(self, '_onedal_estimator'):
+│                  self._initialize_onedal_estimator()
+│                  self._onedal_estimator.coef_ = self.coef_
+│                  self._onedal_estimator.intercept_ = self.intercept_
+│  
+│              return self._onedal_estimator.predict(X, queue=queue)
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/preview/linear_model/tests/test_preview_linear.py
+├── +++ sklearnex/preview/linear_model/tests/test_preview_linear.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/__init__.py
+├── +++ sklearnex/spmd/__init__.py
+│┄ Files 10% similar despite different names
+│ @@ -10,8 +10,8 @@
+│  # Unless required by applicable law or agreed to in writing, software
+│  # distributed under the License is distributed on an "AS IS" BASIS,
+│  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│  # See the License for the specific language governing permissions and
+│  # limitations under the License.
+│  #===============================================================================
+│  
+│ -__all__ = ['linear_model']
+│ +__all__ = ['basic_statistics', 'decomposition', 'ensemble', 'linear_model', 'neighbors']
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/__init__.py
+├── +++ sklearnex/spmd/linear_model/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/spmd/linear_model/linear_model.py
+├── +++ sklearnex/spmd/linear_model/linear_model.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/__init__.py
+├── +++ sklearnex/svm/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/_common.py
+├── +++ sklearnex/svm/_common.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvc.py
+├── +++ sklearnex/svm/nusvc.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/nusvr.py
+├── +++ sklearnex/svm/nusvr.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svc.py
+├── +++ sklearnex/svm/svc.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/svr.py
+├── +++ sklearnex/svm/svr.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/svm/tests/test_svm.py
+├── +++ sklearnex/svm/tests/test_svm.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/_models_info.py
+├── +++ sklearnex/tests/_models_info.py
+│┄ Files 12% similar despite different names
+│ @@ -17,15 +17,16 @@
+│  import numpy as np
+│  
+│  from sklearn.svm import SVC
+│  from sklearn.ensemble import (RandomForestClassifier, RandomForestRegressor)
+│  from sklearn.neighbors import (
+│      KNeighborsClassifier,
+│      KNeighborsRegressor,
+│ -    NearestNeighbors)
+│ +    NearestNeighbors,
+│ +    LocalOutlierFactor)
+│  from sklearn.linear_model import (
+│      LogisticRegression,
+│      LogisticRegressionCV,
+│      LinearRegression,
+│      Ridge,
+│      ElasticNet,
+│      Lasso)
+│ @@ -46,14 +47,24 @@
+│      },
+│      {
+│          'model': NearestNeighbors(algorithm='brute'),
+│          'methods': ['kneighbors'],
+│          'dataset': 'blobs',
+│      },
+│      {
+│ +        'model': LocalOutlierFactor(novelty=False),
+│ +        'methods': ['fit_predict'],
+│ +        'dataset': 'blobs',
+│ +    },
+│ +    {
+│ +        'model': LocalOutlierFactor(novelty=True),
+│ +        'methods': ['predict'],
+│ +        'dataset': 'blobs',
+│ +    },
+│ +    {
+│          'model': DBSCAN(),
+│          'methods': ['fit_predict'],
+│          'dataset': 'blobs',
+│      },
+│      {
+│          'model': SVC(probability=True),
+│          'methods': ['decision_function', 'predict', 'predict_proba', 'score'],
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_config.py
+├── +++ sklearnex/tests/test_config.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_memory_usage.py
+├── +++ sklearnex/tests/test_memory_usage.py
+│┄ Files 2% similar despite different names
+│ @@ -82,14 +82,15 @@
+│              if name not in ban_list:
+│                  if isinstance(estimator(), BaseEstimator):
+│                      if hasattr(estimator, 'fit'):
+│                          output_list.append(estimator)
+│  
+│  
+│  BANNED_ESTIMATORS = (
+│ +    'LocalOutlierFactor',  # fails on ndarray_c for sklearn > 1.0
+│      'TSNE',  # too slow for using in testing on common data size
+│      'RandomForestClassifier',  # Failed, need to investigate and fix this issue
+│      'RandomForestRegressor',  # Failed, need to investigate and fix this issue
+│  )
+│  estimators = [
+│      PreviewPCA,
+│      PreviewLinearRegression,
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_monkeypatch.py
+├── +++ sklearnex/tests/test_monkeypatch.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_patching.py
+├── +++ sklearnex/tests/test_patching.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/test_run_to_run_stability_tests.py
+├── +++ sklearnex/tests/test_run_to_run_stability_tests.py
+│┄ Files 2% similar despite different names
+│ @@ -20,15 +20,16 @@
+│  import random
+│  
+│  from sklearnex import patch_sklearn
+│  patch_sklearn()
+│  
+│  from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+│  from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
+│ -from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor, NearestNeighbors
+│ +from sklearn.neighbors import (KNeighborsClassifier, KNeighborsRegressor,
+│ +                               NearestNeighbors, LocalOutlierFactor)
+│  from sklearn.linear_model import LinearRegression, Ridge, ElasticNet, Lasso
+│  from sklearn.cluster import KMeans, DBSCAN
+│  from sklearn.decomposition import PCA
+│  from sklearn.svm import SVC, NuSVC, SVR, NuSVR
+│  from sklearn.manifold import TSNE
+│  from sklearn.model_selection import train_test_split
+│  
+│ @@ -187,14 +188,24 @@
+│      },
+│      {
+│          'model': NearestNeighbors(n_neighbors=10, algorithm='kd_tree'),
+│          'methods': ['kneighbors'],
+│          'dataset': 'blobs',
+│      },
+│      {
+│ +        'model': LocalOutlierFactor(n_neighbors=10, novelty=False),
+│ +        'methods': ['fit_predict'],
+│ +        'dataset': 'blobs',
+│ +    },
+│ +    {
+│ +        'model': LocalOutlierFactor(n_neighbors=10, novelty=True),
+│ +        'methods': ['predict'],
+│ +        'dataset': 'blobs',
+│ +    },
+│ +    {
+│          'model': DBSCAN(algorithm="brute", n_jobs=-1),
+│          'methods': [],
+│          'dataset': 'blobs',
+│      },
+│      {
+│          'model': SVC(kernel='rbf'),
+│          'methods': ['predict', 'decision_function'],
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/tests/utils/_launch_algorithms.py
+├── +++ sklearnex/tests/utils/_launch_algorithms.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/__init__.py
+├── +++ sklearnex/utils/__init__.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.data/data/Lib/site-packages/sklearnex/utils/validation.py
+├── +++ sklearnex/utils/validation.py
+│┄ Files identical despite different names
+│   --- scikit_learn_intelex-2023.1.0.dist-info/LICENSE.txt
+├── +++ scikit_learn_intelex-2023.1.1.dist-info/LICENSE.txt
+│┄ Ordering differences only
+│┄ Files 14% similar despite different names
+│ @@ -1,202 +1,202 @@
+│ -                                 Apache License
+│ -                           Version 2.0, January 2004
+│ -                        http://www.apache.org/licenses/
+│ -
+│ -TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ -
+│ - 1. Definitions.
+│ -
+│ -  "License" shall mean the terms and conditions for use, reproduction,
+│ -  and distribution as defined by Sections 1 through 9 of this document.
+│ -
+│ -  "Licensor" shall mean the copyright owner or entity authorized by
+│ -  the copyright owner that is granting the License.
+│ -
+│ -  "Legal Entity" shall mean the union of the acting entity and all
+│ -  other entities that control, are controlled by, or are under common
+│ -  control with that entity. For the purposes of this definition,
+│ -  "control" means (i) the power, direct or indirect, to cause the
+│ -  direction or management of such entity, whether by contract or
+│ -  otherwise, or (ii) ownership of fifty percent (50%) or more of the
+│ -  outstanding shares, or (iii) beneficial ownership of such entity.
+│ -
+│ -  "You" (or "Your") shall mean an individual or Legal Entity
+│ -  exercising permissions granted by this License.
+│ -
+│ -  "Source" form shall mean the preferred form for making modifications,
+│ -  including but not limited to software source code, documentation
+│ -  source, and configuration files.
+│ -
+│ -  "Object" form shall mean any form resulting from mechanical
+│ -  transformation or translation of a Source form, including but
+│ -  not limited to compiled object code, generated documentation,
+│ -  and conversions to other media types.
+│ -
+│ -  "Work" shall mean the work of authorship, whether in Source or
+│ -  Object form, made available under the License, as indicated by a
+│ -  copyright notice that is included in or attached to the work
+│ -  (an example is provided in the Appendix below).
+│ -
+│ -  "Derivative Works" shall mean any work, whether in Source or Object
+│ -  form, that is based on (or derived from) the Work and for which the
+│ -  editorial revisions, annotations, elaborations, or other modifications
+│ -  represent, as a whole, an original work of authorship. For the purposes
+│ -  of this License, Derivative Works shall not include works that remain
+│ -  separable from, or merely link (or bind by name) to the interfaces of,
+│ -  the Work and Derivative Works thereof.
+│ -
+│ -  "Contribution" shall mean any work of authorship, including
+│ -  the original version of the Work and any modifications or additions
+│ -  to that Work or Derivative Works thereof, that is intentionally
+│ -  submitted to Licensor for inclusion in the Work by the copyright owner
+│ -  or by an individual or Legal Entity authorized to submit on behalf of
+│ -  the copyright owner. For the purposes of this definition, "submitted"
+│ -  means any form of electronic, verbal, or written communication sent
+│ -  to the Licensor or its representatives, including but not limited to
+│ -  communication on electronic mailing lists, source code control systems,
+│ -  and issue tracking systems that are managed by, or on behalf of, the
+│ -  Licensor for the purpose of discussing and improving the Work, but
+│ -  excluding communication that is conspicuously marked or otherwise
+│ -  designated in writing by the copyright owner as "Not a Contribution."
+│ -
+│ -  "Contributor" shall mean Licensor and any individual or Legal Entity
+│ -  on behalf of whom a Contribution has been received by Licensor and
+│ -  subsequently incorporated within the Work.
+│ -
+│ - 2. Grant of Copyright License. Subject to the terms and conditions of
+│ -  this License, each Contributor hereby grants to You a perpetual,
+│ -  worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+│ -  copyright license to reproduce, prepare Derivative Works of,
+│ -  publicly display, publicly perform, sublicense, and distribute the
+│ -  Work and such Derivative Works in Source or Object form.
+│ -
+│ - 3. Grant of Patent License. Subject to the terms and conditions of
+│ -  this License, each Contributor hereby grants to You a perpetual,
+│ -  worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+│ -  (except as stated in this section) patent license to make, have made,
+│ -  use, offer to sell, sell, import, and otherwise transfer the Work,
+│ -  where such license applies only to those patent claims licensable
+│ -  by such Contributor that are necessarily infringed by their
+│ -  Contribution(s) alone or by combination of their Contribution(s)
+│ -  with the Work to which such Contribution(s) was submitted. If You
+│ -  institute patent litigation against any entity (including a
+│ -  cross-claim or counterclaim in a lawsuit) alleging that the Work
+│ -  or a Contribution incorporated within the Work constitutes direct
+│ -  or contributory patent infringement, then any patent licenses
+│ -  granted to You under this License for that Work shall terminate
+│ -  as of the date such litigation is filed.
+│ -
+│ - 4. Redistribution. You may reproduce and distribute copies of the
+│ -  Work or Derivative Works thereof in any medium, with or without
+│ -  modifications, and in Source or Object form, provided that You
+│ -  meet the following conditions:
+│ -
+│ -  (a) You must give any other recipients of the Work or
+│ -      Derivative Works a copy of this License; and
+│ -
+│ -  (b) You must cause any modified files to carry prominent notices
+│ -      stating that You changed the files; and
+│ -
+│ -  (c) You must retain, in the Source form of any Derivative Works
+│ -      that You distribute, all copyright, patent, trademark, and
+│ -      attribution notices from the Source form of the Work,
+│ -      excluding those notices that do not pertain to any part of
+│ -      the Derivative Works; and
+│ -
+│ -  (d) If the Work includes a "NOTICE" text file as part of its
+│ -      distribution, then any Derivative Works that You distribute must
+│ -      include a readable copy of the attribution notices contained
+│ -      within such NOTICE file, excluding those notices that do not
+│ -      pertain to any part of the Derivative Works, in at least one
+│ -      of the following places: within a NOTICE text file distributed
+│ -      as part of the Derivative Works; within the Source form or
+│ -      documentation, if provided along with the Derivative Works; or,
+│ -      within a display generated by the Derivative Works, if and
+│ -      wherever such third-party notices normally appear. The contents
+│ -      of the NOTICE file are for informational purposes only and
+│ -      do not modify the License. You may add Your own attribution
+│ -      notices within Derivative Works that You distribute, alongside
+│ -      or as an addendum to the NOTICE text from the Work, provided
+│ -      that such additional attribution notices cannot be construed
+│ -      as modifying the License.
+│ -
+│ -  You may add Your own copyright statement to Your modifications and
+│ -  may provide additional or different license terms and conditions
+│ -  for use, reproduction, or distribution of Your modifications, or
+│ -  for any such Derivative Works as a whole, provided Your use,
+│ -  reproduction, and distribution of the Work otherwise complies with
+│ -  the conditions stated in this License.
+│ -
+│ - 5. Submission of Contributions. Unless You explicitly state otherwise,
+│ -  any Contribution intentionally submitted for inclusion in the Work
+│ -  by You to the Licensor shall be under the terms and conditions of
+│ -  this License, without any additional terms or conditions.
+│ -  Notwithstanding the above, nothing herein shall supersede or modify
+│ -  the terms of any separate license agreement you may have executed
+│ -  with Licensor regarding such Contributions.
+│ -
+│ - 6. Trademarks. This License does not grant permission to use the trade
+│ -  names, trademarks, service marks, or product names of the Licensor,
+│ -  except as required for reasonable and customary use in describing the
+│ -  origin of the Work and reproducing the content of the NOTICE file.
+│ -
+│ - 7. Disclaimer of Warranty. Unless required by applicable law or
+│ -  agreed to in writing, Licensor provides the Work (and each
+│ -  Contributor provides its Contributions) on an "AS IS" BASIS,
+│ -  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+│ -  implied, including, without limitation, any warranties or conditions
+│ -  of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+│ -  PARTICULAR PURPOSE. You are solely responsible for determining the
+│ -  appropriateness of using or redistributing the Work and assume any
+│ -  risks associated with Your exercise of permissions under this License.
+│ -
+│ - 8. Limitation of Liability. In no event and under no legal theory,
+│ -  whether in tort (including negligence), contract, or otherwise,
+│ -  unless required by applicable law (such as deliberate and grossly
+│ -  negligent acts) or agreed to in writing, shall any Contributor be
+│ -  liable to You for damages, including any direct, indirect, special,
+│ -  incidental, or consequential damages of any character arising as a
+│ -  result of this License or out of the use or inability to use the
+│ -  Work (including but not limited to damages for loss of goodwill,
+│ -  work stoppage, computer failure or malfunction, or any and all
+│ -  other commercial damages or losses), even if such Contributor
+│ -  has been advised of the possibility of such damages.
+│ -
+│ - 9. Accepting Warranty or Additional Liability. While redistributing
+│ -  the Work or Derivative Works thereof, You may choose to offer,
+│ -  and charge a fee for, acceptance of support, warranty, indemnity,
+│ -  or other liability obligations and/or rights consistent with this
+│ -  License. However, in accepting such obligations, You may act only
+│ -  on Your own behalf and on Your sole responsibility, not on behalf
+│ -  of any other Contributor, and only if You agree to indemnify,
+│ -  defend, and hold each Contributor harmless for any liability
+│ -  incurred by, or claims asserted against, such Contributor by reason
+│ -  of your accepting any such warranty or additional liability.
+│ -
+│ - END OF TERMS AND CONDITIONS
+│ -
+│ - APPENDIX: How to apply the Apache License to your work.
+│ -
+│ -  To apply the Apache License to your work, attach the following
+│ -  boilerplate notice, with the fields enclosed by brackets "[]"
+│ -  replaced with your own identifying information. (Don't include
+│ -  the brackets!)  The text should be enclosed in the appropriate
+│ -  comment syntax for the file format. We also recommend that a
+│ -  file or class name and description of purpose be included on the
+│ -  same "printed page" as the copyright notice for easier
+│ -  identification within third-party archives.
+│ - Copyright 2017, The TensorFlow Authors.
+│ -
+│ - Licensed under the Apache License, Version 2.0 (the "License");
+│ - you may not use this file except in compliance with the License.
+│ - You may obtain a copy of the License at
+│ -
+│ -  http://www.apache.org/licenses/LICENSE-2.0
+│ -
+│ - Unless required by applicable law or agreed to in writing, software
+│ - distributed under the License is distributed on an "AS IS" BASIS,
+│ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ - See the License for the specific language governing permissions and
+│ - limitations under the License.
+│ -
+│ -* Other names and brands may be claimed as the property of others.
+│ +                                 Apache License
+│ +                           Version 2.0, January 2004
+│ +                        http://www.apache.org/licenses/
+│ +
+│ +TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+│ +
+│ + 1. Definitions.
+│ +
+│ +  "License" shall mean the terms and conditions for use, reproduction,
+│ +  and distribution as defined by Sections 1 through 9 of this document.
+│ +
+│ +  "Licensor" shall mean the copyright owner or entity authorized by
+│ +  the copyright owner that is granting the License.
+│ +
+│ +  "Legal Entity" shall mean the union of the acting entity and all
+│ +  other entities that control, are controlled by, or are under common
+│ +  control with that entity. For the purposes of this definition,
+│ +  "control" means (i) the power, direct or indirect, to cause the
+│ +  direction or management of such entity, whether by contract or
+│ +  otherwise, or (ii) ownership of fifty percent (50%) or more of the
+│ +  outstanding shares, or (iii) beneficial ownership of such entity.
+│ +
+│ +  "You" (or "Your") shall mean an individual or Legal Entity
+│ +  exercising permissions granted by this License.
+│ +
+│ +  "Source" form shall mean the preferred form for making modifications,
+│ +  including but not limited to software source code, documentation
+│ +  source, and configuration files.
+│ +
+│ +  "Object" form shall mean any form resulting from mechanical
+│ +  transformation or translation of a Source form, including but
+│ +  not limited to compiled object code, generated documentation,
+│ +  and conversions to other media types.
+│ +
+│ +  "Work" shall mean the work of authorship, whether in Source or
+│ +  Object form, made available under the License, as indicated by a
+│ +  copyright notice that is included in or attached to the work
+│ +  (an example is provided in the Appendix below).
+│ +
+│ +  "Derivative Works" shall mean any work, whether in Source or Object
+│ +  form, that is based on (or derived from) the Work and for which the
+│ +  editorial revisions, annotations, elaborations, or other modifications
+│ +  represent, as a whole, an original work of authorship. For the purposes
+│ +  of this License, Derivative Works shall not include works that remain
+│ +  separable from, or merely link (or bind by name) to the interfaces of,
+│ +  the Work and Derivative Works thereof.
+│ +
+│ +  "Contribution" shall mean any work of authorship, including
+│ +  the original version of the Work and any modifications or additions
+│ +  to that Work or Derivative Works thereof, that is intentionally
+│ +  submitted to Licensor for inclusion in the Work by the copyright owner
+│ +  or by an individual or Legal Entity authorized to submit on behalf of
+│ +  the copyright owner. For the purposes of this definition, "submitted"
+│ +  means any form of electronic, verbal, or written communication sent
+│ +  to the Licensor or its representatives, including but not limited to
+│ +  communication on electronic mailing lists, source code control systems,
+│ +  and issue tracking systems that are managed by, or on behalf of, the
+│ +  Licensor for the purpose of discussing and improving the Work, but
+│ +  excluding communication that is conspicuously marked or otherwise
+│ +  designated in writing by the copyright owner as "Not a Contribution."
+│ +
+│ +  "Contributor" shall mean Licensor and any individual or Legal Entity
+│ +  on behalf of whom a Contribution has been received by Licensor and
+│ +  subsequently incorporated within the Work.
+│ +
+│ + 2. Grant of Copyright License. Subject to the terms and conditions of
+│ +  this License, each Contributor hereby grants to You a perpetual,
+│ +  worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+│ +  copyright license to reproduce, prepare Derivative Works of,
+│ +  publicly display, publicly perform, sublicense, and distribute the
+│ +  Work and such Derivative Works in Source or Object form.
+│ +
+│ + 3. Grant of Patent License. Subject to the terms and conditions of
+│ +  this License, each Contributor hereby grants to You a perpetual,
+│ +  worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+│ +  (except as stated in this section) patent license to make, have made,
+│ +  use, offer to sell, sell, import, and otherwise transfer the Work,
+│ +  where such license applies only to those patent claims licensable
+│ +  by such Contributor that are necessarily infringed by their
+│ +  Contribution(s) alone or by combination of their Contribution(s)
+│ +  with the Work to which such Contribution(s) was submitted. If You
+│ +  institute patent litigation against any entity (including a
+│ +  cross-claim or counterclaim in a lawsuit) alleging that the Work
+│ +  or a Contribution incorporated within the Work constitutes direct
+│ +  or contributory patent infringement, then any patent licenses
+│ +  granted to You under this License for that Work shall terminate
+│ +  as of the date such litigation is filed.
+│ +
+│ + 4. Redistribution. You may reproduce and distribute copies of the
+│ +  Work or Derivative Works thereof in any medium, with or without
+│ +  modifications, and in Source or Object form, provided that You
+│ +  meet the following conditions:
+│ +
+│ +  (a) You must give any other recipients of the Work or
+│ +      Derivative Works a copy of this License; and
+│ +
+│ +  (b) You must cause any modified files to carry prominent notices
+│ +      stating that You changed the files; and
+│ +
+│ +  (c) You must retain, in the Source form of any Derivative Works
+│ +      that You distribute, all copyright, patent, trademark, and
+│ +      attribution notices from the Source form of the Work,
+│ +      excluding those notices that do not pertain to any part of
+│ +      the Derivative Works; and
+│ +
+│ +  (d) If the Work includes a "NOTICE" text file as part of its
+│ +      distribution, then any Derivative Works that You distribute must
+│ +      include a readable copy of the attribution notices contained
+│ +      within such NOTICE file, excluding those notices that do not
+│ +      pertain to any part of the Derivative Works, in at least one
+│ +      of the following places: within a NOTICE text file distributed
+│ +      as part of the Derivative Works; within the Source form or
+│ +      documentation, if provided along with the Derivative Works; or,
+│ +      within a display generated by the Derivative Works, if and
+│ +      wherever such third-party notices normally appear. The contents
+│ +      of the NOTICE file are for informational purposes only and
+│ +      do not modify the License. You may add Your own attribution
+│ +      notices within Derivative Works that You distribute, alongside
+│ +      or as an addendum to the NOTICE text from the Work, provided
+│ +      that such additional attribution notices cannot be construed
+│ +      as modifying the License.
+│ +
+│ +  You may add Your own copyright statement to Your modifications and
+│ +  may provide additional or different license terms and conditions
+│ +  for use, reproduction, or distribution of Your modifications, or
+│ +  for any such Derivative Works as a whole, provided Your use,
+│ +  reproduction, and distribution of the Work otherwise complies with
+│ +  the conditions stated in this License.
+│ +
+│ + 5. Submission of Contributions. Unless You explicitly state otherwise,
+│ +  any Contribution intentionally submitted for inclusion in the Work
+│ +  by You to the Licensor shall be under the terms and conditions of
+│ +  this License, without any additional terms or conditions.
+│ +  Notwithstanding the above, nothing herein shall supersede or modify
+│ +  the terms of any separate license agreement you may have executed
+│ +  with Licensor regarding such Contributions.
+│ +
+│ + 6. Trademarks. This License does not grant permission to use the trade
+│ +  names, trademarks, service marks, or product names of the Licensor,
+│ +  except as required for reasonable and customary use in describing the
+│ +  origin of the Work and reproducing the content of the NOTICE file.
+│ +
+│ + 7. Disclaimer of Warranty. Unless required by applicable law or
+│ +  agreed to in writing, Licensor provides the Work (and each
+│ +  Contributor provides its Contributions) on an "AS IS" BASIS,
+│ +  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+│ +  implied, including, without limitation, any warranties or conditions
+│ +  of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+│ +  PARTICULAR PURPOSE. You are solely responsible for determining the
+│ +  appropriateness of using or redistributing the Work and assume any
+│ +  risks associated with Your exercise of permissions under this License.
+│ +
+│ + 8. Limitation of Liability. In no event and under no legal theory,
+│ +  whether in tort (including negligence), contract, or otherwise,
+│ +  unless required by applicable law (such as deliberate and grossly
+│ +  negligent acts) or agreed to in writing, shall any Contributor be
+│ +  liable to You for damages, including any direct, indirect, special,
+│ +  incidental, or consequential damages of any character arising as a
+│ +  result of this License or out of the use or inability to use the
+│ +  Work (including but not limited to damages for loss of goodwill,
+│ +  work stoppage, computer failure or malfunction, or any and all
+│ +  other commercial damages or losses), even if such Contributor
+│ +  has been advised of the possibility of such damages.
+│ +
+│ + 9. Accepting Warranty or Additional Liability. While redistributing
+│ +  the Work or Derivative Works thereof, You may choose to offer,
+│ +  and charge a fee for, acceptance of support, warranty, indemnity,
+│ +  or other liability obligations and/or rights consistent with this
+│ +  License. However, in accepting such obligations, You may act only
+│ +  on Your own behalf and on Your sole responsibility, not on behalf
+│ +  of any other Contributor, and only if You agree to indemnify,
+│ +  defend, and hold each Contributor harmless for any liability
+│ +  incurred by, or claims asserted against, such Contributor by reason
+│ +  of your accepting any such warranty or additional liability.
+│ +
+│ + END OF TERMS AND CONDITIONS
+│ +
+│ + APPENDIX: How to apply the Apache License to your work.
+│ +
+│ +  To apply the Apache License to your work, attach the following
+│ +  boilerplate notice, with the fields enclosed by brackets "[]"
+│ +  replaced with your own identifying information. (Don't include
+│ +  the brackets!)  The text should be enclosed in the appropriate
+│ +  comment syntax for the file format. We also recommend that a
+│ +  file or class name and description of purpose be included on the
+│ +  same "printed page" as the copyright notice for easier
+│ +  identification within third-party archives.
+│ + Copyright 2017, The TensorFlow Authors.
+│ +
+│ + Licensed under the Apache License, Version 2.0 (the "License");
+│ + you may not use this file except in compliance with the License.
+│ + You may obtain a copy of the License at
+│ +
+│ +  http://www.apache.org/licenses/LICENSE-2.0
+│ +
+│ + Unless required by applicable law or agreed to in writing, software
+│ + distributed under the License is distributed on an "AS IS" BASIS,
+│ + WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ + See the License for the specific language governing permissions and
+│ + limitations under the License.
+│ +
+│ +* Other names and brands may be claimed as the property of others.
+│   --- scikit_learn_intelex-2023.1.0.dist-info/METADATA
+├── +++ scikit_learn_intelex-2023.1.1.dist-info/METADATA
+│┄ Files 1% similar despite different names
+│ @@ -1,16 +1,16 @@
+│  Metadata-Version: 2.1
+│  Name: scikit-learn-intelex
+│ -Version: 2023.1.0
+│ +Version: 2023.1.1
+│  Summary: Intel(R) Extension for Scikit-learn is a seamless way to speed up your Scikit-learn application.
+│  Home-page: https://github.com/intel/scikit-learn-intelex
+│  Author: Intel Corporation
+│  Author-email: scripting@intel.com
+│  Maintainer-email: onedal.maintainers@intel.com
+│ -License: Apache-2.0
+│ +License: Apache v2.0
+│  Project-URL: Bug Tracker, https://github.com/intel/scikit-learn-intelex/issues
+│  Project-URL: Documentation, https://intel.github.io/scikit-learn-intelex/
+│  Project-URL: Source Code, https://github.com/intel/scikit-learn-intelex
+│  Keywords: machine learning,scikit-learn,data science,data analytics
+│  Platform: UNKNOWN
+│  Classifier: Development Status :: 5 - Production/Stable
+│  Classifier: Environment :: Console
+│ @@ -28,15 +28,15 @@
+│  Classifier: Programming Language :: Python :: 3.9
+│  Classifier: Topic :: Scientific/Engineering
+│  Classifier: Topic :: System
+│  Classifier: Topic :: Software Development
+│  Requires-Python: >=3.7
+│  Description-Content-Type: text/markdown
+│  License-File: LICENSE.txt
+│ -Requires-Dist: daal4py (==2023.1.0)
+│ +Requires-Dist: daal4py (==2023.1.1)
+│  Requires-Dist: scikit-learn (>=0.22)
+│  
+│  
+│  # Intel(R) Extension for Scikit-learn*
+│  
+│  [![Build Status](https://dev.azure.com/daal/daal4py/_apis/build/status/CI?branchName=master)](https://dev.azure.com/daal/daal4py/_build/latest?definitionId=9&branchName=master)
+│  [![Coverity Scan Build Status](https://scan.coverity.com/projects/21716/badge.svg)](https://scan.coverity.com/projects/daal4py)

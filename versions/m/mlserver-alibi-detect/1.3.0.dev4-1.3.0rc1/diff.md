@@ -1,0 +1,123 @@
+# Comparing `tmp/mlserver-alibi-detect-1.3.0.dev4.tar.gz` & `tmp/mlserver-alibi-detect-1.3.0rc1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mlserver-alibi-detect-1.3.0.dev4.tar", last modified: Wed Mar 22 09:49:15 2023, max compression
++gzip compressed data, was "mlserver-alibi-detect-1.3.0rc1.tar", last modified: Thu Apr  6 13:36:16 2023, max compression
+```
+
+## Comparing `mlserver-alibi-detect-1.3.0.dev4.tar` & `mlserver-alibi-detect-1.3.0rc1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:15.810134 mlserver-alibi-detect-1.3.0.dev4/
+--rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     2359 2023-03-22 09:49:15.810134 mlserver-alibi-detect-1.3.0.dev4/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1575 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:15.810134 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect/
+--rw-r--r--   0 runner    (1001) docker     (123)       74 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4953 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect/runtime.py
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:15.810134 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2359 2023-03-22 09:49:15.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      350 2023-03-22 09:49:15.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-22 09:49:15.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       34 2023-03-22 09:49:15.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       22 2023-03-22 09:49:15.000000 mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-22 09:49:15.810134 mlserver-alibi-detect-1.3.0.dev4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1133 2023-03-22 09:48:43.000000 mlserver-alibi-detect-1.3.0.dev4/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:16.733538 mlserver-alibi-detect-1.3.0rc1/
++-rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     2357 2023-04-06 13:36:16.733538 mlserver-alibi-detect-1.3.0rc1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1575 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:16.729538 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect/
++-rw-r--r--   0 runner    (1001) docker     (123)       74 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4921 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect/runtime.py
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:36:16.729538 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     2357 2023-04-06 13:36:16.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      350 2023-04-06 13:36:16.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:36:16.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       34 2023-04-06 13:36:16.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       22 2023-04-06 13:36:16.000000 mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:36:16.733538 mlserver-alibi-detect-1.3.0rc1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1133 2023-04-06 13:35:44.000000 mlserver-alibi-detect-1.3.0rc1/setup.py
+```
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/LICENSE` & `mlserver-alibi-detect-1.3.0rc1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/PKG-INFO` & `mlserver-alibi-detect-1.3.0rc1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlserver-alibi-detect
+-Version: 1.3.0.dev4
++Version: 1.3.0rc1
+ Summary: Alibi-Detect runtime for MLServer
+ Home-page: https://github.com/SeldonIO/MLServer.git
+ Author: Seldon Technologies Ltd.
+ Author-email: hello@seldon.io
+ License: Apache 2.0
+ Description: # Alibi-Detect runtime for MLServer
+```
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/README.md` & `mlserver-alibi-detect-1.3.0rc1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect/runtime.py` & `mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect/runtime.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -68,16 +68,15 @@
+             NotImplementedError,
+             ValidationError,
+         ) as e:
+             raise MLServerError(
+                 f"Invalid configuration for model {self._settings.name}: {e}"
+             ) from e
+ 
+-        self.ready = True
+-        return self.ready
++        return True
+ 
+     async def predict(self, payload: InferenceRequest) -> InferenceResponse:
+         # If batch is not configured, run the detector and return the output
+         if not self._ad_settings.batch_size:
+             return self._detect(payload)
+ 
+         if len(self._batch) < self._ad_settings.batch_size:
+```
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/mlserver_alibi_detect.egg-info/PKG-INFO` & `mlserver-alibi-detect-1.3.0rc1/mlserver_alibi_detect.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlserver-alibi-detect
+-Version: 1.3.0.dev4
++Version: 1.3.0rc1
+ Summary: Alibi-Detect runtime for MLServer
+ Home-page: https://github.com/SeldonIO/MLServer.git
+ Author: Seldon Technologies Ltd.
+ Author-email: hello@seldon.io
+ License: Apache 2.0
+ Description: # Alibi-Detect runtime for MLServer
+```
+
+### Comparing `mlserver-alibi-detect-1.3.0.dev4/setup.py` & `mlserver-alibi-detect-1.3.0rc1/setup.py`
+
+ * *Files identical despite different names*
+

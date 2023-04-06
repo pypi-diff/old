@@ -1,0 +1,231 @@
+--- tmp/imgtool-1.9.0rc1.tar.gz
++++ tmp/imgtool-1.9.0rc2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "imgtool-1.9.0rc1.tar", last modified: Fri Jan 21 21:43:15 2022, max compression
+│ +gzip compressed data, was "imgtool-1.9.0rc2.tar", last modified: Thu Feb 10 19:32:18 2022, max compression
+│   --- imgtool-1.9.0rc1.tar
+├── +++ imgtool-1.9.0rc2.tar
+│ ├── file list
+│ │ @@ -1,27 +1,27 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-21 21:43:15.049953 imgtool-1.9.0rc1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      522 2022-01-21 21:43:15.049953 imgtool-1.9.0rc1/PKG-INFO
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-21 21:43:15.045952 imgtool-1.9.0rc1/imgtool/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      653 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1681 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/boot_record.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)    25006 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/image.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-21 21:43:15.045952 imgtool-1.9.0rc1/imgtool/keys/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3737 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5388 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/ecdsa.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     2981 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/ecdsa_test.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3090 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/ed25519.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3037 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/ed25519_test.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1814 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/general.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     5422 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/rsa.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3833 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/rsa_test.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     3169 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/keys/x25519.py
+│ │ --rwxr-xr-x   0 runner    (1001) docker     (121)    15931 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/main.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)     1773 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/imgtool/version.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-01-21 21:43:15.045952 imgtool-1.9.0rc1/imgtool.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      522 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      510 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        1 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       50 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       48 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)        8 2022-01-21 21:43:14.000000 imgtool-1.9.0rc1/imgtool.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)       38 2022-01-21 21:43:15.049953 imgtool-1.9.0rc1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (121)      898 2022-01-21 21:43:06.000000 imgtool-1.9.0rc1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-02-10 19:32:18.006727 imgtool-1.9.0rc2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      522 2022-02-10 19:32:18.006727 imgtool-1.9.0rc2/PKG-INFO
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-02-10 19:32:18.002727 imgtool-1.9.0rc2/imgtool/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      653 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1681 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/boot_record.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    25030 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/image.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-02-10 19:32:18.006727 imgtool-1.9.0rc2/imgtool/keys/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     3737 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     5388 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/ecdsa.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     2981 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/ecdsa_test.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     3090 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/ed25519.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     3037 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/ed25519_test.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1814 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/general.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     5422 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/rsa.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     3833 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/rsa_test.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     3169 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/keys/x25519.py
+│ │ +-rwxr-xr-x   0 runner    (1001) docker     (121)    16110 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/main.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1773 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/imgtool/version.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-02-10 19:32:18.002727 imgtool-1.9.0rc2/imgtool.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      522 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      510 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       50 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       48 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        8 2022-02-10 19:32:17.000000 imgtool-1.9.0rc2/imgtool.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       38 2022-02-10 19:32:18.006727 imgtool-1.9.0rc2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      898 2022-02-10 19:32:10.000000 imgtool-1.9.0rc2/setup.py
+│ │   --- imgtool-1.9.0rc1/PKG-INFO
+│ ├── +++ imgtool-1.9.0rc2/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: imgtool
+│ │ -Version: 1.9.0rc1
+│ │ +Version: 1.9.0rc2
+│ │  Summary: MCUboot's image signing and key management
+│ │  Home-page: http://github.com/mcu-tools/mcuboot
+│ │  Author: The MCUboot committers
+│ │  Author-email: mcuboot@groups.io
+│ │  License: Apache Software License
+│ │  Description: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │   --- imgtool-1.9.0rc1/imgtool/__init__.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -10,8 +10,8 @@
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ -imgtool_version = "1.9.0rc1"
+│ │ +imgtool_version = "1.9.0rc2"
+│ │   --- imgtool-1.9.0rc1/imgtool/boot_record.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/boot_record.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/image.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/image.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -128,15 +128,15 @@
+│ │  class Image():
+│ │  
+│ │      def __init__(self, version=None, header_size=IMAGE_HEADER_SIZE,
+│ │                   pad_header=False, pad=False, confirm=False, align=1,
+│ │                   slot_size=0, max_sectors=DEFAULT_MAX_SECTORS,
+│ │                   overwrite_only=False, endian="little", load_addr=0,
+│ │                   rom_fixed=None, erased_val=None, save_enctlv=False,
+│ │ -                 security_counter=None, max_align=DEFAULT_MAX_ALIGN):
+│ │ +                 security_counter=None, max_align=None):
+│ │  
+│ │          if load_addr and rom_fixed:
+│ │              raise click.UsageError("Can not set rom_fixed and load_addr at the same time")
+│ │  
+│ │          self.version = version or versmod.decode_version("0")
+│ │          self.header_size = header_size
+│ │          self.pad_header = pad_header
+│ │ @@ -151,15 +151,15 @@
+│ │          self.load_addr = 0 if load_addr is None else load_addr
+│ │          self.rom_fixed = rom_fixed
+│ │          self.erased_val = 0xff if erased_val is None else int(erased_val, 0)
+│ │          self.payload = []
+│ │          self.enckey = None
+│ │          self.save_enctlv = save_enctlv
+│ │          self.enctlv_len = 0
+│ │ -        self.max_align = DEFAULT_MAX_ALIGN if max_align is None else int(max_align)
+│ │ +        self.max_align = max(DEFAULT_MAX_ALIGN, align) if max_align is None else int(max_align)
+│ │  
+│ │          if self.max_align == DEFAULT_MAX_ALIGN:
+│ │              self.boot_magic = bytes([
+│ │                  0x77, 0xc2, 0x95, 0xf3,
+│ │                  0x60, 0xd2, 0xef, 0x7f,
+│ │                  0x35, 0x52, 0x50, 0x0f,
+│ │                  0x2c, 0xb6, 0x79, 0x80, ])
+│ │ @@ -238,23 +238,23 @@
+│ │              if self.pad:
+│ │                  trailer_size = self._trailer_size(self.align, self.max_sectors,
+│ │                                                    self.overwrite_only,
+│ │                                                    self.enckey,
+│ │                                                    self.save_enctlv,
+│ │                                                    self.enctlv_len)
+│ │                  trailer_addr = (self.base_addr + self.slot_size) - trailer_size
+│ │ -                padding = bytearray([self.erased_val] * 
+│ │ -                                    (trailer_size - len(self.boot_magic)))
+│ │ -                padding += self.boot_magic
+│ │                  if self.confirm and not self.overwrite_only:
+│ │                      magic_size = 16
+│ │                      magic_align_size = align_up(magic_size, self.max_align)
+│ │                      image_ok_idx = -(magic_align_size + self.max_align)
+│ │ -                    padding[image_ok_idx] = 0x01  # image_ok = 0x01
+│ │ -                h.puts(trailer_addr, bytes(padding))
+│ │ +                    flag = bytearray([self.erased_val] * magic_align_size)
+│ │ +                    flag[0] = 0x01 # image_ok = 0x01
+│ │ +                    h.puts(trailer_addr + image_ok_idx, bytes(flag))
+│ │ +                h.puts(trailer_addr + (trailer_size - len(self.boot_magic)),
+│ │ +                       bytes(self.boot_magic))
+│ │              h.tofile(path, 'hex')
+│ │          else:
+│ │              if self.pad:
+│ │                  self.pad_to(self.slot_size)
+│ │              with open(path, 'wb') as f:
+│ │                  f.write(self.payload)
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/__init__.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/ecdsa.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/ecdsa.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/ecdsa_test.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/ecdsa_test.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/ed25519.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/ed25519.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/ed25519_test.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/ed25519_test.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/general.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/general.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/rsa.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/rsa.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/rsa_test.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/rsa_test.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/keys/x25519.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/keys/x25519.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool/main.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/main.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -291,15 +291,18 @@
+│ │  @click.option('-s', '--security-counter', callback=validate_security_counter,
+│ │                help='Specify the value of security counter. Use the `auto` '
+│ │                'keyword to automatically generate it from the image version.')
+│ │  @click.option('-v', '--version', callback=validate_version,  required=True)
+│ │  @click.option('--align', type=click.Choice(['1', '2', '4', '8', '16', '32']),
+│ │                required=True)
+│ │  @click.option('--max-align', type=click.Choice(['8', '16', '32']),
+│ │ -              required=False)
+│ │ +              required=False,
+│ │ +              help='Maximum flash alignment. Set if flash alignment of the '
+│ │ +              'primary and secondary slot differ and any of them is larger '
+│ │ +              'than 8.')
+│ │  @click.option('--public-key-format', type=click.Choice(['hash', 'full']),
+│ │                default='hash', help='In what format to add the public key to '
+│ │                'the image manifest: full key or hash of the key.')
+│ │  @click.option('-k', '--key', metavar='filename')
+│ │  @click.command(help='''Create a signed or unsigned image\n
+│ │                 INFILE and OUTFILE are parsed as Intel HEX if the params have
+│ │                 .hex extension, otherwise binary format is used''')
+│ │   --- imgtool-1.9.0rc1/imgtool/version.py
+│ ├── +++ imgtool-1.9.0rc2/imgtool/version.py
+│ │┄ Files identical despite different names
+│ │   --- imgtool-1.9.0rc1/imgtool.egg-info/PKG-INFO
+│ ├── +++ imgtool-1.9.0rc2/imgtool.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: imgtool
+│ │ -Version: 1.9.0rc1
+│ │ +Version: 1.9.0rc2
+│ │  Summary: MCUboot's image signing and key management
+│ │  Home-page: http://github.com/mcu-tools/mcuboot
+│ │  Author: The MCUboot committers
+│ │  Author-email: mcuboot@groups.io
+│ │  License: Apache Software License
+│ │  Description: UNKNOWN
+│ │  Platform: UNKNOWN
+│ │   --- imgtool-1.9.0rc1/setup.py
+│ ├── +++ imgtool-1.9.0rc2/setup.py
+│ │┄ Files identical despite different names

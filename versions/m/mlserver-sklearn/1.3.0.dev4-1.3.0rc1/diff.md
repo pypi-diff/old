@@ -1,0 +1,123 @@
+# Comparing `tmp/mlserver-sklearn-1.3.0.dev4.tar.gz` & `tmp/mlserver-sklearn-1.3.0rc1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mlserver-sklearn-1.3.0.dev4.tar", last modified: Wed Mar 22 09:49:32 2023, max compression
++gzip compressed data, was "mlserver-sklearn-1.3.0rc1.tar", last modified: Thu Apr  6 13:37:29 2023, max compression
+```
+
+## Comparing `mlserver-sklearn-1.3.0.dev4.tar` & `mlserver-sklearn-1.3.0rc1.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:32.803734 mlserver-sklearn-1.3.0.dev4/
+--rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     1265 2023-03-22 09:49:32.803734 mlserver-sklearn-1.3.0.dev4/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      766 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:32.803734 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn/
+--rw-r--r--   0 runner    (1001) docker     (123)       62 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4523 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn/sklearn.py
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn/version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-03-22 09:49:32.803734 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     1265 2023-03-22 09:49:32.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      310 2023-03-22 09:49:32.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-03-22 09:49:32.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       29 2023-03-22 09:49:32.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       17 2023-03-22 09:49:32.000000 mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-03-22 09:49:32.803734 mlserver-sklearn-1.3.0.dev4/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1126 2023-03-22 09:48:48.000000 mlserver-sklearn-1.3.0.dev4/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:37:29.765463 mlserver-sklearn-1.3.0rc1/
++-rw-r--r--   0 runner    (1001) docker     (123)    11354 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     1263 2023-04-06 13:37:29.765463 mlserver-sklearn-1.3.0rc1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      766 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:37:29.765463 mlserver-sklearn-1.3.0rc1/mlserver_sklearn/
++-rw-r--r--   0 runner    (1001) docker     (123)       62 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4491 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn/sklearn.py
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn/version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:37:29.765463 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1263 2023-04-06 13:37:29.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      310 2023-04-06 13:37:29.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:37:29.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-06 13:37:29.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       17 2023-04-06 13:37:29.000000 mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:37:29.765463 mlserver-sklearn-1.3.0rc1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1126 2023-04-06 13:36:53.000000 mlserver-sklearn-1.3.0rc1/setup.py
+```
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/LICENSE` & `mlserver-sklearn-1.3.0rc1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/PKG-INFO` & `mlserver-sklearn-1.3.0rc1/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlserver-sklearn
+-Version: 1.3.0.dev4
++Version: 1.3.0rc1
+ Summary: Scikit-Learn runtime for MLServer
+ Home-page: https://github.com/SeldonIO/MLServer.git
+ Author: Seldon Technologies Ltd.
+ Author-email: hello@seldon.io
+ License: Apache 2.0
+ Description: # Scikit-Learn runtime for MLServer
+```
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/README.md` & `mlserver-sklearn-1.3.0rc1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/mlserver_sklearn/sklearn.py` & `mlserver-sklearn-1.3.0rc1/mlserver_sklearn/sklearn.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -32,16 +32,15 @@
+     async def load(self) -> bool:
+         # TODO: Log info message
+         model_uri = await get_model_uri(
+             self._settings, wellknown_filenames=WELLKNOWN_MODEL_FILENAMES
+         )
+         self._model = joblib.load(model_uri)
+ 
+-        self.ready = True
+-        return self.ready
++        return True
+ 
+     async def predict(self, payload: InferenceRequest) -> InferenceResponse:
+         payload = self._check_request(payload)
+ 
+         outputs = self._get_model_outputs(payload)
+ 
+         return InferenceResponse(
+```
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/mlserver_sklearn.egg-info/PKG-INFO` & `mlserver-sklearn-1.3.0rc1/mlserver_sklearn.egg-info/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: mlserver-sklearn
+-Version: 1.3.0.dev4
++Version: 1.3.0rc1
+ Summary: Scikit-Learn runtime for MLServer
+ Home-page: https://github.com/SeldonIO/MLServer.git
+ Author: Seldon Technologies Ltd.
+ Author-email: hello@seldon.io
+ License: Apache 2.0
+ Description: # Scikit-Learn runtime for MLServer
+```
+
+### Comparing `mlserver-sklearn-1.3.0.dev4/setup.py` & `mlserver-sklearn-1.3.0rc1/setup.py`
+
+ * *Files identical despite different names*
+

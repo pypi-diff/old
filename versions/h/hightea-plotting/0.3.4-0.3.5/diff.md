@@ -1,0 +1,335 @@
+# Comparing `tmp/hightea-plotting-0.3.4.tar.gz` & `tmp/hightea-plotting-0.3.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/hightea-plotting-0.3.4.tar", last modified: Sun Mar 26 04:34:38 2023, max compression
++gzip compressed data, was "dist/hightea-plotting-0.3.5.tar", last modified: Thu Apr  6 13:39:51 2023, max compression
+```
+
+## Comparing `hightea-plotting-0.3.4.tar` & `hightea-plotting-0.3.5.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxrwxr-x   0 rene      (1001) rene      (1001)        0 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/
+--rw-rw-r--   0 rene      (1001) rene      (1001)      281 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/PKG-INFO
+--rw-rw-r--   0 rene      (1001) rene      (1001)      687 2022-11-19 15:11:24.000000 hightea-plotting-0.3.4/README.md
+--rw-rw-r--   0 rene      (1001) rene      (1001)       38 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/setup.cfg
+--rw-rw-r--   0 rene      (1001) rene      (1001)      761 2022-11-19 15:11:24.000000 hightea-plotting-0.3.4/setup.py
+-drwxrwxr-x   0 rene      (1001) rene      (1001)        0 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/src/
+-drwxrwxr-x   0 rene      (1001) rene      (1001)        0 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/src/hightea/
+-drwxrwxr-x   0 rene      (1001) rene      (1001)        0 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/src/hightea/plotting/
+--rw-rw-r--   0 rene      (1001) rene      (1001)     8384 2021-11-05 19:07:13.000000 hightea-plotting-0.3.4/src/hightea/plotting/_MeasurementTools.py
+--rw-rw-r--   0 rene      (1001) rene      (1001)      110 2023-03-26 04:23:56.000000 hightea-plotting-0.3.4/src/hightea/plotting/__init__.py
+--rw-rw-r--   0 rene      (1001) rene      (1001)    16169 2023-03-26 04:07:44.000000 hightea-plotting-0.3.4/src/hightea/plotting/plotting.py
+--rw-rw-r--   0 rene      (1001) rene      (1001)    37657 2023-03-26 04:07:44.000000 hightea-plotting-0.3.4/src/hightea/plotting/run.py
+--rw-rw-r--   0 rene      (1001) rene      (1001)     3723 2022-11-19 15:11:24.000000 hightea-plotting-0.3.4/src/hightea/plotting/stripper.py
+-drwxrwxr-x   0 rene      (1001) rene      (1001)        0 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/
+--rw-rw-r--   0 rene      (1001) rene      (1001)      281 2023-03-26 04:34:37.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/PKG-INFO
+--rw-rw-r--   0 rene      (1001) rene      (1001)      406 2023-03-26 04:34:38.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/SOURCES.txt
+--rw-rw-r--   0 rene      (1001) rene      (1001)        1 2023-03-26 04:34:37.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/dependency_links.txt
+--rw-rw-r--   0 rene      (1001) rene      (1001)       48 2023-03-26 04:34:37.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/requires.txt
+--rw-rw-r--   0 rene      (1001) rene      (1001)        8 2023-03-26 04:34:37.000000 hightea-plotting-0.3.4/src/hightea_plotting.egg-info/top_level.txt
++drwxrwxr-x   0 rene      (1000) rene      (1000)        0 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/
++-rw-rw-r--   0 rene      (1000) rene      (1000)      281 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/PKG-INFO
++-rw-rw-r--   0 rene      (1000) rene      (1000)      687 2022-11-19 15:11:24.000000 hightea-plotting-0.3.5/README.md
++-rw-rw-r--   0 rene      (1000) rene      (1000)       38 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/setup.cfg
++-rw-rw-r--   0 rene      (1000) rene      (1000)      761 2022-11-19 15:11:24.000000 hightea-plotting-0.3.5/setup.py
++drwxrwxr-x   0 rene      (1000) rene      (1000)        0 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/
++drwxrwxr-x   0 rene      (1000) rene      (1000)        0 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea/
++drwxrwxr-x   0 rene      (1000) rene      (1000)        0 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea/plotting/
++-rw-rw-r--   0 rene      (1000) rene      (1000)     8384 2021-11-05 19:07:13.000000 hightea-plotting-0.3.5/src/hightea/plotting/_MeasurementTools.py
++-rw-rw-r--   0 rene      (1000) rene      (1000)      110 2023-04-06 13:39:03.000000 hightea-plotting-0.3.5/src/hightea/plotting/__init__.py
++-rw-rw-r--   0 rene      (1000) rene      (1000)    16448 2023-04-06 13:38:25.000000 hightea-plotting-0.3.5/src/hightea/plotting/plotting.py
++-rw-rw-r--   0 rene      (1000) rene      (1000)    38597 2023-04-06 13:38:25.000000 hightea-plotting-0.3.5/src/hightea/plotting/run.py
++-rw-rw-r--   0 rene      (1000) rene      (1000)     3723 2022-11-19 15:11:24.000000 hightea-plotting-0.3.5/src/hightea/plotting/stripper.py
++drwxrwxr-x   0 rene      (1000) rene      (1000)        0 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/
++-rw-rw-r--   0 rene      (1000) rene      (1000)      281 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/PKG-INFO
++-rw-rw-r--   0 rene      (1000) rene      (1000)      406 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/SOURCES.txt
++-rw-rw-r--   0 rene      (1000) rene      (1000)        1 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/dependency_links.txt
++-rw-rw-r--   0 rene      (1000) rene      (1000)       48 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/requires.txt
++-rw-rw-r--   0 rene      (1000) rene      (1000)        8 2023-04-06 13:39:51.000000 hightea-plotting-0.3.5/src/hightea_plotting.egg-info/top_level.txt
+```
+
+### Comparing `hightea-plotting-0.3.4/README.md` & `hightea-plotting-0.3.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `hightea-plotting-0.3.4/setup.py` & `hightea-plotting-0.3.5/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hightea-plotting-0.3.4/src/hightea/plotting/_MeasurementTools.py` & `hightea-plotting-0.3.5/src/hightea/plotting/_MeasurementTools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `hightea-plotting-0.3.4/src/hightea/plotting/plotting.py` & `hightea-plotting-0.3.5/src/hightea/plotting/plotting.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -123,48 +123,49 @@
+ 
+     Returns
+     -------
+     matplotlib.pyplot.Figure
+         Figure which used in plotting to allow further manipulations.
+     """
+     _fig = kwargs.get('figure')
++    _axes = kwargs.get('axes')
+     _show = kwargs.get('show', True)
+     _output = kwargs.get('output', None)
+     _ratio = kwargs.get('ratio', None)
+     _logscale = kwargs.get('logscale', None)
+     _lim = kwargs.get('lim', {})
+     _latex = kwargs.get('latex', None)
+     _showRatio = not(_ratio == None)
+     _showSetup = kwargs.get('show_setup', None)
+-    _info = _get_info(runs, *'obs process variation'.split())
++    _info = _get_info(runs, *'obs binning process variation generation_params'.split())
+ 
+     if not _latex is None:
+         if _latex:
+             plt.rc('font', family='CMU Serif', serif=['Roman'], size=14)
+             plt.rc('text', usetex=True)
+             plt.rc('text.latex',
+                     preamble=r'\usepackage{amsmath}\usepackage{amssymb}')
+         else:
+             plt.style.use('default')
+ 
+-    if _fig is None:
++    if _fig is None and _axes is None:
+         if _show:
+             _fig = plt.figure(**_select_keys(kwargs,'figsize'))
+         else:
+             _fig = Figure(**_select_keys(kwargs,'figsize'))
+ 
+     obs = _info.get('obs','')
+ 
+     if (_logscale == None):
+         for k in 'transverse energy mass'.split():
+             if (k in obs):
+                 _logscale = True
+ 
+     _fig.suptitle(kwargs.get('title', obs))
+-    axes = _fig.get_axes()
++    axes = _fig.get_axes() if _axes is None else _axes
+     if axes:
+         ax1 = axes[0]
+     else:
+         ax1 = _fig.add_subplot(3, 1, (1, 2)) if (_showRatio) else _fig.gca()
+     plot_unrolled(ax1, *runs, **kwargs)
+ 
+     if (_logscale):
+@@ -205,14 +206,15 @@
+         if ('y1' in _lim): ax1.set_ylim(_lim.get('y1'))
+ 
+     if (_showSetup) or (len(runs) == 1 and (_showSetup == None)):
+         headerinfo = []
+         headerinfo.append('Process: '+_info.get("process")) if "process" in _info else ...
+         headerinfo.append('Central setup: '+_info.get("variation",'')[0]) \
+                           if len(_info.get('variation',[])) else ...
++        headerinfo.append(_info.get("generation_params")) if "generation_params" in _info else ...
+         if (headerinfo):
+             ax1.text(.02,.98, (5*' ').join(headerinfo),
+                       bbox = dict(facecolor='white',alpha=.6,linewidth=.5),
+                       verticalalignment = 'top',
+                       transform=ax1.transAxes)
+ 
+     if (_output):
+@@ -456,15 +458,17 @@
+         else:
+             for y in m(run.lower()), m(run.upper()):
+                 ax.step(_edges, y,
+                         where='post',
+                         linestyle=_showScaleBand,
+                         linewidth=.7*_linewidth,
+                         color=_color,
+-                        alpha=_alpha)
++                        alpha=_alpha,
++                        **_finetune.get('step',{})
++                        )
+ 
+     if (_showErrors):
+         errXs = (.5 + _errshift)*_edges[1:] +\
+                 (.5 - _errshift)*_edges[:-1]
+         ax.errorbar(errXs,
+                     run.v(),
+                     yerr=run.e(),
+```
+
+### Comparing `hightea-plotting-0.3.4/src/hightea/plotting/run.py` & `hightea-plotting-0.3.5/src/hightea/plotting/run.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -287,29 +287,31 @@
+                 elif (ext) == '.csv':
+                     """File format as provided by HEPDATA"""
+                     header = kwargs.get('header','infer')
+                     df = pd.read_csv(request,header=header,comment='#')
+ 
+                     edges = [[df.iat[0,1]] + list(df.iloc[:,2])]
+                     bins = Run.convert_to_bins(edges)
+-                    if (len(df.columns) == 6):
++                    if (len(df.columns) < 6):
++                        raise Exception(f'Bad number of columns in CSV file')
++                    elif len(df.columns) == 6:
+                         vals = df.iloc[:,3:6].values
+                         vals[:,1] += vals[:,0]
+                         vals[:,2] += vals[:,0]
+                         errs = np.zeros(vals.shape)
+                     elif (len(df.columns) == 8):
+                         vals = df.iloc[:,[3,6,7]].values
+                         vals[:,1] += vals[:,0]
+                         vals[:,2] += vals[:,0]
+                         errs = np.zeros(vals.shape)
+                         errs[:,0] = (df.iloc[:,4].values - df.iloc[:,5].values)/2
+                         errs[:,1] = errs[:,0]
+                         errs[:,2] = errs[:,0]
+                     else:
+-                        raise Exception('Supported cases: 6 or 8 columns.')
++                        raise Exception(f'Meaning of {len(df.columns)} columns in CSV file is unclear.')
+ 
+                     data = {'histograms': [
+                               {
+                                 'name':None,
+                                 'binning':[
+                                    {
+                                      'edges': [{
+@@ -423,16 +425,15 @@
+                 xsec[0].append(xsec[0][0] - np.sqrt(sum([e.get('neg',0)**2 for e in syserr])))
+                 xsec[0].append(xsec[0][0] + np.sqrt(sum([e.get('pos',0)**2 for e in syserr])))
+ 
+             xsec.append(request.get('fiducial_error', [0.]*len(xsec[0])))
+             if not(isinstance(xsec[1],list)): xsec[1] = [xsec[1]]
+             if len(xsec[0]) > 1 and len(xsec[1]) == 1: xsec[1] *= len(xsec[0])
+ 
+-            xsec = np.array(xsec,dtype=object)
+-            self.xsec = np.transpose(xsec)
++            self.xsec = np.array(xsec,dtype=float)
+ 
+         # Final corrections
+         for key,value in kwargs.items():
+             self.info[key] = value
+ 
+         if not(self.is_differential()):
+             self.make_differential()
+@@ -528,14 +529,20 @@
+         res = self.minicopy()
+         if (isinstance(other,Run)):
+             len_self, len_other = res.values.shape[0], other.values.shape[0]
+             if not(len_self == len_other):
+                 raise Exception(f"Incompatible run shapes: {len_self}, {len_other}")
+             res.values += other.values
+             res.errors = np.sqrt(res.errors**2 + other.errors**2)
++
++            if hasattr(self,'xsec') and hasattr(other, 'xsec'):
++                res.xsec = self.xsec.copy()
++                res.xsec[0,:] += other.xsec[0,:]
++                res.xsec[1,:] = np.sqrt(res.xsec[1,:]**2 + other.xsec[1,:]**2)
++
+         elif isinstance(other,float) or isinstance(other,int):
+             res.values += other
+         else:
+             raise Exception("Add operation failed")
+         return res
+ 
+ 
+@@ -596,15 +603,15 @@
+                     res.values *= other[:,np.newaxis]
+                     res.errors *= other[:,np.newaxis]
+                 else:
+                     res.values *= other
+                     res.errors *= other
+             else:
+                 raise Exception(f"ndarray shape: {other.shape} "
+-                                + "incompatible to run {self.dimensions}")
++                                + f"incompatible to run shape: {self.dimensions()}")
+         else:
+             raise Exception("Mul operation failed")
+         return res
+ 
+ 
+     __rmul__ = __mul__
+ 
+@@ -649,15 +656,15 @@
+                     res.values /= other[:,np.newaxis]
+                     res.errors /= other[:,np.newaxis]
+                 else:
+                     res.values /= other
+                     res.errors /= other
+             else:
+                 raise Exception(f"ndarray shape: {other.shape} "
+-                                + "incompatible to run {self.dimensions}")
++                                + f"incompatible to run shape: {self.dimensions()}")
+         else:
+             raise Exception("Div operation failed")
+         np.seterr(**warnings)
+         return res
+ 
+ 
+     def _get_attributes(self):
+@@ -789,14 +796,34 @@
+             if not(value == None):
+                 newrun.info['obs'] += f' ({value})'
+             else:
+                 newrun.info['obs'] += f' [line={line}]'
+         return newrun
+ 
+ 
++    def transpose(self):
++        if (self.dim() == 1):
++            return self
++        if (self.dim() != 2):
++            raise Exception("Transposing runs with ndim>2 not implemented")
++
++        ni, nj = self.dimensions()
++        vals = []
++        errs = []
++        for j in range(nj):
++            for i in range(ni):
++                vals.append(self.values[i*nj + j])
++                errs.append(self.errors[i*nj + j])
++
++        self.values = np.array(vals)
++        self.errors = np.array(errs)
++        self.edges = [self.edges[1], self.edges[0]]
++        return self
++
++
+     def mergebins(self, values=None, pos=None):
+         """Merge bins by values or positions
+ 
+         Specify the values or positions for bins to be
+         merged into one.
+         The metadata is passed on as is.
+         Only 1-dim runs are supported.
+@@ -997,16 +1024,16 @@
+                                       for b in bb],
+                             'mean': v[0] if len(v) == 1 else v,
+                             'error': e[0] if len(e) == 1 else e,
+                             }
+                             for bb,v,e in zip(self.bins, values, errors)
+         ]
+         if hasattr(self,'xsec'):
+-            res['fiducial_mean'] = self.xsec[:,0]
+-            res['fiducial_error'] = self.xsec[:,1]
++            res['fiducial_mean'] = self.xsec[0,:]
++            res['fiducial_error'] = self.xsec[1,:]
+ 
+         res['info'] = self.info
+         return res
+ 
+ 
+     def to_json(self,file,combined=False,verbose=True):
+         """Dump run to JSON file in hightea format
+```
+
+### Comparing `hightea-plotting-0.3.4/src/hightea/plotting/stripper.py` & `hightea-plotting-0.3.5/src/hightea/plotting/stripper.py`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,239 @@
+--- tmp/quorum_mininode_py-1.2.0.tar.gz
++++ tmp/quorum_mininode_py-1.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "quorum_mininode_py-1.2.0.tar", last modified: Thu Apr  6 11:39:28 2023, max compression
+│ +gzip compressed data, was "quorum_mininode_py-1.2.1.tar", last modified: Thu Apr  6 13:41:15 2023, max compression
+│   --- quorum_mininode_py-1.2.0.tar
+├── +++ quorum_mininode_py-1.2.1.tar
+│ ├── file list
+│ │ @@ -1,34 +1,34 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.531351 quorum_mininode_py-1.2.0/
+│ │ --rw-rw-rw-   0        0        0     1087 2023-04-03 04:23:18.000000 quorum_mininode_py-1.2.0/LICENSE
+│ │ --rw-rw-rw-   0        0        0     2440 2023-04-06 11:39:28.530377 quorum_mininode_py-1.2.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     1580 2023-04-03 04:24:50.000000 quorum_mininode_py-1.2.0/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.489594 quorum_mininode_py-1.2.0/quorum_mininode_py/
+│ │ --rw-rw-rw-   0        0        0      607 2023-04-06 11:36:21.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.505962 quorum_mininode_py-1.2.0/quorum_mininode_py/api/
+│ │ --rw-rw-rw-   0        0        0       59 2023-03-11 06:14:59.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/api/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2339 2023-03-30 11:03:37.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/api/base.py
+│ │ --rw-rw-rw-   0        0        0     3861 2023-04-06 11:33:33.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/api/lightnode.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.511947 quorum_mininode_py-1.2.0/quorum_mininode_py/client/
+│ │ --rw-rw-rw-   0        0        0      134 2023-03-17 17:21:12.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/client/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1339 2023-03-30 05:11:33.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/client/_http.py
+│ │ --rw-rw-rw-   0        0        0     2918 2023-03-30 08:24:17.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/client/mininode.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.521337 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/
+│ │ --rw-rw-rw-   0        0        0      117 2023-03-11 06:14:59.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/__init__.py
+│ │ --rw-rw-rw-   0        0        0     3094 2023-03-17 17:44:01.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/account.py
+│ │ --rw-rw-rw-   0        0        0      517 2023-03-17 17:44:01.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/aes.py
+│ │ --rw-rw-rw-   0        0        0     1369 2023-03-30 09:45:11.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/age.py
+│ │ --rw-rw-rw-   0        0        0     3856 2023-04-06 11:33:57.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/trx.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.524355 quorum_mininode_py-1.2.0/quorum_mininode_py/proto/
+│ │ --rw-rw-rw-   0        0        0       87 2023-03-10 05:56:49.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/proto/__init__.py
+│ │ --rw-rw-rw-   0        0        0    15822 2023-03-30 04:24:35.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/proto/quorum_pb2.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.528360 quorum_mininode_py-1.2.0/quorum_mininode_py/utils/
+│ │ --rw-rw-rw-   0        0        0       75 2023-04-06 11:35:51.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/utils/__init__.py
+│ │ --rw-rw-rw-   0        0        0     4554 2023-03-30 08:24:57.000000 quorum_mininode_py-1.2.0/quorum_mininode_py/utils/url.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-06 11:39:28.499566 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/
+│ │ --rw-rw-rw-   0        0        0     2440 2023-04-06 11:39:28.000000 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      798 2023-04-06 11:39:28.000000 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-06 11:39:28.000000 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       46 2023-04-06 11:39:28.000000 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       19 2023-04-06 11:39:28.000000 quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-06 11:39:28.531351 quorum_mininode_py-1.2.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1301 2023-04-06 11:36:17.000000 quorum_mininode_py-1.2.0/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.732454 quorum_mininode_py-1.2.1/
+│ │ +-rw-rw-rw-   0        0        0     1087 2023-04-03 04:23:18.000000 quorum_mininode_py-1.2.1/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     2440 2023-04-06 13:41:15.731456 quorum_mininode_py-1.2.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     1580 2023-04-03 04:24:50.000000 quorum_mininode_py-1.2.1/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.678598 quorum_mininode_py-1.2.1/quorum_mininode_py/
+│ │ +-rw-rw-rw-   0        0        0      607 2023-04-06 13:36:39.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.697547 quorum_mininode_py-1.2.1/quorum_mininode_py/api/
+│ │ +-rw-rw-rw-   0        0        0       59 2023-03-11 06:14:59.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/api/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2339 2023-03-30 11:03:37.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/api/base.py
+│ │ +-rw-rw-rw-   0        0        0     3822 2023-04-06 12:33:18.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/api/lightnode.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.706525 quorum_mininode_py-1.2.1/quorum_mininode_py/client/
+│ │ +-rw-rw-rw-   0        0        0      134 2023-03-17 17:21:12.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/client/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1339 2023-03-30 05:11:33.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/client/_http.py
+│ │ +-rw-rw-rw-   0        0        0     3377 2023-04-06 13:36:11.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/client/mininode.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.719490 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/
+│ │ +-rw-rw-rw-   0        0        0      117 2023-03-11 06:14:59.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     3094 2023-03-17 17:44:01.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/account.py
+│ │ +-rw-rw-rw-   0        0        0      517 2023-03-17 17:44:01.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/aes.py
+│ │ +-rw-rw-rw-   0        0        0     1369 2023-03-30 09:45:11.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/age.py
+│ │ +-rw-rw-rw-   0        0        0     3856 2023-04-06 11:33:57.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/trx.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.724476 quorum_mininode_py-1.2.1/quorum_mininode_py/proto/
+│ │ +-rw-rw-rw-   0        0        0       87 2023-03-10 05:56:49.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/proto/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    15822 2023-03-30 04:24:35.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/proto/quorum_pb2.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.729462 quorum_mininode_py-1.2.1/quorum_mininode_py/utils/
+│ │ +-rw-rw-rw-   0        0        0       75 2023-04-06 11:35:51.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/utils/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     4554 2023-03-30 08:24:57.000000 quorum_mininode_py-1.2.1/quorum_mininode_py/utils/url.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 13:41:15.691566 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     2440 2023-04-06 13:41:15.000000 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      798 2023-04-06 13:41:15.000000 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 13:41:15.000000 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       46 2023-04-06 13:41:15.000000 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       19 2023-04-06 13:41:15.000000 quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 13:41:15.732454 quorum_mininode_py-1.2.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1301 2023-04-06 13:16:19.000000 quorum_mininode_py-1.2.1/setup.py
+│ │   --- quorum_mininode_py-1.2.0/LICENSE
+│ ├── +++ quorum_mininode_py-1.2.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/PKG-INFO
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/PKG-INFO
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: quorum_mininode_py
+│ │ -Version: 1.2.0
+│ │ +Name: quorum-mininode-py
+│ │ +Version: 1.2.1
+│ │  Summary: a mini python sdk for quorum lightnode with http/https requests to quorum fullnode
+│ │  Home-page: https://github.com/liujuanjuan1984/quorum_mininode_py
+│ │  Author: liujuanjuan1984, zhangwm404
+│ │  Author-email: qiaoanlu@163.com
+│ │  Project-URL: Github Repo, https://github.com/liujuanjuan1984/quorum_mininode_py
+│ │  Project-URL: Bug Tracker, https://github.com/liujuanjuan1984/quorum_mininode_py/issues
+│ │  Project-URL: About Quorum, https://github.com/rumsystem/quorum
+│ │   --- quorum_mininode_py-1.2.0/README.md
+│ ├── +++ quorum_mininode_py-1.2.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/__init__.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │      create_age_keypair,
+│ │      create_private_key,
+│ │      private_key_to_pubkey,
+│ │      public_key_to_address,
+│ │  )
+│ │  from quorum_mininode_py.utils import decode_seed_url, update_seed_url
+│ │  
+│ │ -__version__ = "1.2.0"
+│ │ +__version__ = "1.2.1"
+│ │  __author__ = "liujuanjuan1984, zhangwm404"
+│ │  
+│ │  # Set default logging handler to avoid "No handler found" warnings.
+│ │  logger = logging.getLogger(__name__)
+│ │  logger.addHandler(logging.NullHandler())
+│ │  
+│ │  logger.info("Version: %s", __version__)
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/api/base.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/api/base.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/api/lightnode.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/api/lightnode.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,8 @@
+│ │  import logging
+│ │ -import time
+│ │ -from typing import Union
+│ │  
+│ │  from quorum_mininode_py.api.base import BaseAPI
+│ │  from quorum_mininode_py.crypto.account import check_private_key
+│ │  from quorum_mininode_py.crypto.trx import trx_decrypt, trx_encrypt
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/client/_http.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/client/_http.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/client/mininode.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/client/mininode.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -57,19 +57,21 @@
+│ │  
+│ │  
+│ │  class MiniNode:
+│ │      """python for quorum lightnode, without datastore, one MiniNode client for one group"""
+│ │  
+│ │      def __init__(self, seed_url: str, pvtkey=None, age_pvtkey=None):
+│ │          self.group = RumGroup(seed_url)
+│ │ -        self.account = RumAccount(pvtkey, age_pvtkey, self.group.encryption_type)
+│ │ -
+│ │          chain_url = self.get_best_http(self.group.chain_urls)
+│ │ -        http = HttpRequest(chain_url["baseurl"] + "/api/v1", chain_url["jwt"])
+│ │ -        self.api = LightNodeAPI(http, self.group, self.account)
+│ │ +        if chain_url is None:
+│ │ +            raise Exception("no available chain url")
+│ │ +        self.http = HttpRequest(chain_url["baseurl"] + "/api/v1", chain_url["jwt"])
+│ │ +
+│ │ +        self.account = RumAccount(pvtkey, age_pvtkey, self.group.encryption_type)
+│ │ +        self.api = LightNodeAPI(self.http, self.group, self.account)
+│ │  
+│ │      def get_best_http(self, chain_urls):
+│ │          headers = {"Content-Type": "application/json"}
+│ │          best = None
+│ │          for chain_url in chain_urls:
+│ │              jwt = chain_url["jwt"]
+│ │              headers.update({"Authorization": f"Bearer {jwt}"})
+│ │ @@ -78,7 +80,13 @@
+│ │                  response = requests.get(url, headers=headers, timeout=5)
+│ │                  if response.status_code == 200:
+│ │                      best = chain_url
+│ │                      break
+│ │              except Exception as e:
+│ │                  logger.warning("get_best_http error: %s", e)
+│ │          return best
+│ │ +
+│ │ +    def change_account(self, pvtkey, age_pvtkey=None):
+│ │ +        age_pvtkey = age_pvtkey or self.account.age_pvtkey
+│ │ +        if pvtkey != self.account.pvtkey or age_pvtkey != self.account.age_pvtkey:
+│ │ +            self.account = RumAccount(pvtkey, age_pvtkey, self.group.encryption_type)
+│ │ +            self.api = LightNodeAPI(self.http, self.group, self.account)
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/account.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/account.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/aes.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/aes.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/age.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/age.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/crypto/trx.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/crypto/trx.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/proto/quorum_pb2.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/proto/quorum_pb2.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py/utils/url.py
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py/utils/url.py
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/PKG-INFO
+│ ├── +++ quorum_mininode_py-1.2.1/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │ -Name: quorum-mininode-py
+│ │ -Version: 1.2.0
+│ │ +Name: quorum_mininode_py
+│ │ +Version: 1.2.1
+│ │  Summary: a mini python sdk for quorum lightnode with http/https requests to quorum fullnode
+│ │  Home-page: https://github.com/liujuanjuan1984/quorum_mininode_py
+│ │  Author: liujuanjuan1984, zhangwm404
+│ │  Author-email: qiaoanlu@163.com
+│ │  Project-URL: Github Repo, https://github.com/liujuanjuan1984/quorum_mininode_py
+│ │  Project-URL: Bug Tracker, https://github.com/liujuanjuan1984/quorum_mininode_py/issues
+│ │  Project-URL: About Quorum, https://github.com/rumsystem/quorum
+│ │   --- quorum_mininode_py-1.2.0/quorum_mininode_py.egg-info/SOURCES.txt
+│ ├── +++ quorum_mininode_py-1.2.1/quorum_mininode_py.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- quorum_mininode_py-1.2.0/setup.py
+│ ├── +++ quorum_mininode_py-1.2.1/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r", encoding="utf-8") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name="quorum_mininode_py",
+│ │ -    version="1.2.0",
+│ │ +    version="1.2.1",
+│ │      author="liujuanjuan1984, zhangwm404",
+│ │      author_email="qiaoanlu@163.com",
+│ │      description="a mini python sdk for quorum lightnode with http/https requests to quorum fullnode",
+│ │      keywords=["rumsystem", "quorum", "lightnode", "sdk"],
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/liujuanjuan1984/quorum_mininode_py",
