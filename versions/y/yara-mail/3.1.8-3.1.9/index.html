@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/yara_mail-3.1.8.tar.gz tmp/yara_mail-3.1.9.tar.gz --html versions/y/yara-mail/3.1.8-3.1.9/index.html --text versions/y/yara-mail/3.1.8-3.1.9/diff.txt --markdown versions/y/yara-mail/3.1.8-3.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">6.64 KB</span></div>
+  <div><span class="source">tmp/yara_mail-3.1.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/yara_mail-3.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.59 KB</span></div>
+    <div><span class="source">yara_mail-3.1.8.tar</span> vs.</div>
+    <div id="yara_mail--.-.-.tar"><span class="source">yara_mail-3.1.9.tar</span>
+      <a class="anchor" href="#yara_mail--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">1.39 KB</span></div>
+      <div id="yara_mail--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 7 lines modified</td><td colspan="2">Offset 1, 7 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24277<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/yaramail/__init__.py</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24277<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/yaramail/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12074<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/yaramail/_cli.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12074<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/yaramail/_cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1251<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/.gitignore</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1251<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/LICENSE</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11357<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>421</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>575</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1324<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1324<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>409</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<del>8</del>/PKG-INFO</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>563</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>yara_mail-3.1.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">731 B</span></div>
+      <div><span class="source">yara_mail-3.1.8/yaramail/__init__.py</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--yaramail-__init__.py"><span class="source">yara_mail-3.1.9/yaramail/__init__.py</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--yaramail-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 10, 15 lines modified</td><td colspan="2">Offset 10, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>pdftotext</td><td class="diffline">10 </td><td class="diffpresent">import<span class="dp">·</span>pdftotext</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>mailsuite.utils<span class="dp">·</span>import<span class="dp">·</span>parse_email,<span class="dp">·</span>from_trusted_domain,<span class="dp">·</span>decode_base64</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>mailsuite.utils<span class="dp">·</span>import<span class="dp">·</span>parse_email,<span class="dp">·</span>from_trusted_domain,<span class="dp">·</span>decode_base64</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">logger<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td><td class="diffline">12 </td><td class="diffpresent">logger<span class="dp">·</span>=<span class="dp">·</span>logging.getLogger(__name__)</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">logger.addHandler(logging.NullHandler())</td><td class="diffline">13 </td><td class="diffpresent">logger.addHandler(logging.NullHandler())</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;3.1.<del>8</del>&quot;</td><td class="diffline">14 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;3.1.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">delimiters<span class="dp">·</span>=<span class="dp">·</span>[&quot;r\&quot;&quot;,<span class="dp">·</span>r&quot;&#x27;&quot;,<span class="dp">·</span>r&quot;`&quot;,<span class="dp">·</span>r&quot;\*&quot;,<span class="dp">·</span>r&quot;\*\*&quot;,<span class="dp">·</span>r&quot;_&quot;,<span class="dp">·</span>r&quot;|&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>r&quot;’&quot;,</td><td class="diffline">15 </td><td class="diffpresent">delimiters<span class="dp">·</span>=<span class="dp">·</span>[&quot;r\&quot;&quot;,<span class="dp">·</span>r&quot;&#x27;&quot;,<span class="dp">·</span>r&quot;`&quot;,<span class="dp">·</span>r&quot;\*&quot;,<span class="dp">·</span>r&quot;\*\*&quot;,<span class="dp">·</span>r&quot;_&quot;,<span class="dp">·</span>r&quot;|&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>r&quot;’&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r&quot;‚&quot;,<span class="dp">·</span>r&quot;＂&quot;,<span class="dp">·</span>r&quot;“&quot;,<span class="dp">·</span>r&quot;〝&quot;,<span class="dp">·</span>r&quot;‟&quot;,<span class="dp">·</span>r&quot;〞&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>(&quot;❝&quot;,<span class="dp">·</span>r&quot;❞&quot;),</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>r&quot;‚&quot;,<span class="dp">·</span>r&quot;＂&quot;,<span class="dp">·</span>r&quot;“&quot;,<span class="dp">·</span>r&quot;〝&quot;,<span class="dp">·</span>r&quot;‟&quot;,<span class="dp">·</span>r&quot;〞&quot;,<span class="dp">·</span>r&quot;”&quot;,<span class="dp">·</span>(&quot;❝&quot;,<span class="dp">·</span>r&quot;❞&quot;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;❮&quot;,<span class="dp">·</span>r&quot;❯&quot;),<span class="dp">·</span><span class="dp">·</span>(r&quot;\(&quot;,<span class="dp">·</span>r&quot;\)&quot;),<span class="dp">·</span>(r&quot;\[&quot;,<span class="dp">·</span>r&quot;\]&quot;),<span class="dp">·</span>(r&quot;\{&quot;,<span class="dp">·</span>r&quot;\}&quot;),</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;❮&quot;,<span class="dp">·</span>r&quot;❯&quot;),<span class="dp">·</span><span class="dp">·</span>(r&quot;\(&quot;,<span class="dp">·</span>r&quot;\)&quot;),<span class="dp">·</span>(r&quot;\[&quot;,<span class="dp">·</span>r&quot;\]&quot;),<span class="dp">·</span>(r&quot;\{&quot;,<span class="dp">·</span>r&quot;\}&quot;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;&lt;&quot;,<span class="dp">·</span>r&quot;&gt;&quot;),<span class="dp">·</span>(r&quot;&gt;&quot;,<span class="dp">·</span>&quot;&lt;/&quot;),<span class="dp">·</span>(r&quot;”&quot;,<span class="dp">·</span>r&quot;„&quot;),<span class="dp">·</span>(r&quot;‘&quot;,<span class="dp">·</span>r&quot;’&quot;),</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;&lt;&quot;,<span class="dp">·</span>r&quot;&gt;&quot;),<span class="dp">·</span>(r&quot;&gt;&quot;,<span class="dp">·</span>&quot;&lt;/&quot;),<span class="dp">·</span>(r&quot;”&quot;,<span class="dp">·</span>r&quot;„&quot;),<span class="dp">·</span>(r&quot;‘&quot;,<span class="dp">·</span>r&quot;’&quot;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;‹&quot;,<span class="dp">·</span>&quot;›&quot;),<span class="dp">·</span>(r&quot;»&quot;,<span class="dp">·</span>&quot;«&quot;),<span class="dp">·</span>(r&quot;«&quot;,<span class="dp">·</span>r&quot;»&quot;),<span class="dp">·</span>(r&quot;「&quot;,<span class="dp">·</span>r&quot;」&quot;),</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(r&quot;‹&quot;,<span class="dp">·</span>&quot;›&quot;),<span class="dp">·</span>(r&quot;»&quot;,<span class="dp">·</span>&quot;«&quot;),<span class="dp">·</span>(r&quot;«&quot;,<span class="dp">·</span>r&quot;»&quot;),<span class="dp">·</span>(r&quot;「&quot;,<span class="dp">·</span>r&quot;」&quot;),</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">yara_mail-3.1.8/yaramail/_cli.py</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--yaramail-_cli.py"><span class="source">yara_mail-3.1.9/yaramail/_cli.py</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--yaramail-_cli.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">yara_mail-3.1.8/.gitignore</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--.gitignore"><span class="source">yara_mail-3.1.9/.gitignore</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">yara_mail-3.1.8/LICENSE</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--LICENSE"><span class="source">yara_mail-3.1.9/LICENSE</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.27 KB</span></div>
+      <div><span class="source">yara_mail-3.1.8/README.md</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--README.md"><span class="source">yara_mail-3.1.9/README.md</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 22% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 6, 14 lines modified</td><td colspan="2">Offset 6, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI<span class="dp">·</span>-<span class="dp">·</span>Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI<span class="dp">·</span>-<span class="dp">·</span>Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">&lt;/div&gt;</td><td class="diffline">8 </td><td class="diffpresent">&lt;/div&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">`yaramail`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with</td><td class="diffline">9 </td><td class="diffpresent">`yaramail`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">[YARA<span class="dp">·</span>rules][yara].<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>Ideal<span class="dp">·</span>for<span class="dp">·</span>automated<span class="dp">·</span>triage<span class="dp">·</span>of<span class="dp">·</span>phishing<span class="dp">·</span>reports.</td><td class="diffline">10 </td><td class="diffpresent">[YARA<span class="dp">·</span>rules][yara].<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>Ideal<span class="dp">·</span>for<span class="dp">·</span>automated<span class="dp">·</span>triage<span class="dp">·</span>of<span class="dp">·</span>phishing<span class="dp">·</span>reports.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">##<span class="dp">·</span>CLI<span class="dp">·</span>Demo</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">12 </td><td class="diffpresent">[![asciicast](https://asciinema.org/a/529801.svg)][cli-demo]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">##<span class="dp">·</span>Features</td><td class="diffline">13 </td><td class="diffpresent">##<span class="dp">·</span>Features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">-<span class="dp">·</span>Scans<span class="dp">·</span>all<span class="dp">·</span>parts<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>email<span class="dp">·</span>via<span class="dp">·</span>API<span class="dp">·</span>or<span class="dp">·</span>CLI</td><td class="diffline">14 </td><td class="diffpresent">-<span class="dp">·</span>Scans<span class="dp">·</span>all<span class="dp">·</span>parts<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>email<span class="dp">·</span>via<span class="dp">·</span>API<span class="dp">·</span>or<span class="dp">·</span>CLI</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Headers</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Headers</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Removes<span class="dp">·</span>header<span class="dp">·</span>indents<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Removes<span class="dp">·</span>header<span class="dp">·</span>indents<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Plain<span class="dp">·</span>text<span class="dp">·</span>and<span class="dp">·</span>HTML<span class="dp">·</span>body<span class="dp">·</span>content</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Plain<span class="dp">·</span>text<span class="dp">·</span>and<span class="dp">·</span>HTML<span class="dp">·</span>body<span class="dp">·</span>content</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Converts<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Converts<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 24, 7 lines modified</td><td colspan="2">Offset 28, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>ZIP<span class="dp">·</span>file<span class="dp">·</span>contents,<span class="dp">·</span>including<span class="dp">·</span>nested<span class="dp">·</span>ZIP<span class="dp">·</span>files</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>ZIP<span class="dp">·</span>file<span class="dp">·</span>contents,<span class="dp">·</span>including<span class="dp">·</span>nested<span class="dp">·</span>ZIP<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Uses<span class="dp">·</span>message<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>possible<span class="dp">·</span>ZIP<span class="dp">·</span>passwords</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Uses<span class="dp">·</span>message<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>possible<span class="dp">·</span>ZIP<span class="dp">·</span>passwords</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Customizable<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>passwords<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>when<span class="dp">·</span>attempting<span class="dp">·</span>to<span class="dp">·</span>scan<span class="dp">·</span>encrypted<span class="dp">·</span>ZIP<span class="dp">·</span>files</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Customizable<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>passwords<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>when<span class="dp">·</span>attempting<span class="dp">·</span>to<span class="dp">·</span>scan<span class="dp">·</span>encrypted<span class="dp">·</span>ZIP<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">-<span class="dp">·</span>Provides<span class="dp">·</span>a<span class="dp">·</span>built-in<span class="dp">·</span>methodology<span class="dp">·</span>for<span class="dp">·</span>categorizing<span class="dp">·</span>emails</td><td class="diffline">31 </td><td class="diffpresent">-<span class="dp">·</span>Provides<span class="dp">·</span>a<span class="dp">·</span>built-in<span class="dp">·</span>methodology<span class="dp">·</span>for<span class="dp">·</span>categorizing<span class="dp">·</span>emails</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">-<span class="dp">·</span>Parses<span class="dp">·</span>`Authentication-Results`<span class="dp">·</span>headers</td><td class="diffline">32 </td><td class="diffpresent">-<span class="dp">·</span>Parses<span class="dp">·</span>`Authentication-Results`<span class="dp">·</span>headers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">[yara]:<span class="dp">·</span>https://yara.readthedocs.io/en/stable/writingrules.html</td><td class="diffline">33 </td><td class="diffpresent">[yara]:<span class="dp">·</span>https://yara.readthedocs.io/en/stable/writingrules.html</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">[cli-demo]:<span class="dp">·</span>https://seanthegeek.github.io/yaramail/tutorial.html#using-the-cli</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">478 B</span></div>
+      <div><span class="source">yara_mail-3.1.8/pyproject.toml</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--pyproject.toml"><span class="source">yara_mail-3.1.9/pyproject.toml</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 25, 15 lines modified</td><td colspan="2">Offset 25, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License&quot;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Security&quot;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Security&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Communications<span class="dp">·</span>::<span class="dp">·</span>Email&quot;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Topic<span class="dp">·</span>::<span class="dp">·</span>Communications<span class="dp">·</span>::<span class="dp">·</span>Email&quot;,</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">]</td><td class="diffline">29 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">30 </td><td class="diffpresent">dependencies<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;mailsuite&gt;=1.9.1<del>2</del>&quot;,</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;mailsuite&gt;=1.9.1<ins>3</ins>&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pdftotext==2.2.2&quot;,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;pdftotext==2.2.2&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;simplejson&gt;=3.17.6&quot;,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;simplejson&gt;=3.17.6&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;yara-python&gt;=4.2.3&quot;,</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;yara-python&gt;=4.2.3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">]</td><td class="diffline">35 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">36 </td><td class="diffpresent">dynamic<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;,</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;version&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">]</td><td class="diffline">38 </td><td class="diffpresent">]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.44 KB</span></div>
+      <div><span class="source">yara_mail-3.1.8/PKG-INFO</span> vs.</div>
+      <div id="yara_mail--.-.-.tar---yara_mail--.-.--PKG-INFO"><span class="source">yara_mail-3.1.9/PKG-INFO</span>
+        <a class="anchor" href="#yara_mail--.-.-.tar---yara_mail--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 25 lines modified</td><td colspan="2">Offset 1, 25 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>yara-mail</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>yara-mail</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.1.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with<span class="dp">·</span>YARA<span class="dp">·</span>rules</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with<span class="dp">·</span>YARA<span class="dp">·</span>rules</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/seanthegeek/yaramail</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/seanthegeek/yaramail</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://seanthegeek.github.io/yaramail/</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://seanthegeek.github.io/yaramail/</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/seanthegeek/yaramail/issues</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/seanthegeek/yaramail/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Changelog,<span class="dp">·</span>https://github.com/seanthegeek/yaramail/blob/master/CHANGELOG.md</td><td class="diffline">8 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Changelog,<span class="dp">·</span>https://github.com/seanthegeek/yaramail/blob/master/CHANGELOG.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Sean<span class="dp">·</span>Whalen<span class="dp">·</span>&lt;whalenster@gmail.com&gt;</td><td class="diffline">9 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Sean<span class="dp">·</span>Whalen<span class="dp">·</span>&lt;whalenster@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">10 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Keywords:<span class="dp">·</span>YARA,email,information<span class="dp">·</span>security,infosec,security</td><td class="diffline">11 </td><td class="diffpresent">Keywords:<span class="dp">·</span>YARA,email,information<span class="dp">·</span>security,infosec,security</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>Apache<span class="dp">·</span>Software<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Operating<span class="dp">·</span>System<span class="dp">·</span>::<span class="dp">·</span>OS<span class="dp">·</span>Independent</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Communications<span class="dp">·</span>::<span class="dp">·</span>Email</td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Communications<span class="dp">·</span>::<span class="dp">·</span>Email</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Security</td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Topic<span class="dp">·</span>::<span class="dp">·</span>Security</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td><td class="diffline">17 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>mailsuite&gt;=1.9.1<del>2</del></td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>mailsuite&gt;=1.9.1<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pdftotext==2.2.2</td><td class="diffline">19 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pdftotext==2.2.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>simplejson&gt;=3.17.6</td><td class="diffline">20 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>simplejson&gt;=3.17.6</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>yara-python&gt;=4.2.3</td><td class="diffline">21 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>yara-python&gt;=4.2.3</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">22 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;</td><td class="diffline">23 </td><td class="diffpresent">&lt;div<span class="dp">·</span>align=&quot;center&quot;&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;img<span class="dp">·</span>src=&quot;https://seanthegeek.github.io/yaramail/_static/yaramail-logo.png&quot;<span class="dp">·</span>alt=&quot;yaramail<span class="dp">·</span>logo&quot;&gt;</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&lt;img<span class="dp">·</span>src=&quot;https://seanthegeek.github.io/yaramail/_static/yaramail-logo.png&quot;<span class="dp">·</span>alt=&quot;yaramail<span class="dp">·</span>logo&quot;&gt;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 29, 14 lines modified</td><td colspan="2">Offset 29, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI<span class="dp">·</span>-<span class="dp">·</span>Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>[![PyPI<span class="dp">·</span>-<span class="dp">·</span>Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">&lt;/div&gt;</td><td class="diffline">31 </td><td class="diffpresent">&lt;/div&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">`yaramail`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with</td><td class="diffline">32 </td><td class="diffpresent">`yaramail`<span class="dp">·</span>is<span class="dp">·</span>a<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>and<span class="dp">·</span>command<span class="dp">·</span>line<span class="dp">·</span>utility<span class="dp">·</span>for<span class="dp">·</span>scanning<span class="dp">·</span>emails<span class="dp">·</span>with</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">[YARA<span class="dp">·</span>rules][yara].<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>Ideal<span class="dp">·</span>for<span class="dp">·</span>automated<span class="dp">·</span>triage<span class="dp">·</span>of<span class="dp">·</span>phishing<span class="dp">·</span>reports.</td><td class="diffline">33 </td><td class="diffpresent">[YARA<span class="dp">·</span>rules][yara].<span class="dp">·</span>It<span class="dp">·</span>is<span class="dp">·</span>Ideal<span class="dp">·</span>for<span class="dp">·</span>automated<span class="dp">·</span>triage<span class="dp">·</span>of<span class="dp">·</span>phishing<span class="dp">·</span>reports.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>CLI<span class="dp">·</span>Demo</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">[![asciicast](https://asciinema.org/a/529801.svg)][cli-demo]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Features</td><td class="diffline">36 </td><td class="diffpresent">##<span class="dp">·</span>Features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">-<span class="dp">·</span>Scans<span class="dp">·</span>all<span class="dp">·</span>parts<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>email<span class="dp">·</span>via<span class="dp">·</span>API<span class="dp">·</span>or<span class="dp">·</span>CLI</td><td class="diffline">37 </td><td class="diffpresent">-<span class="dp">·</span>Scans<span class="dp">·</span>all<span class="dp">·</span>parts<span class="dp">·</span>of<span class="dp">·</span>an<span class="dp">·</span>email<span class="dp">·</span>via<span class="dp">·</span>API<span class="dp">·</span>or<span class="dp">·</span>CLI</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Headers</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Headers</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Removes<span class="dp">·</span>header<span class="dp">·</span>indents<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Removes<span class="dp">·</span>header<span class="dp">·</span>indents<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Plain<span class="dp">·</span>text<span class="dp">·</span>and<span class="dp">·</span>HTML<span class="dp">·</span>body<span class="dp">·</span>content</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Plain<span class="dp">·</span>text<span class="dp">·</span>and<span class="dp">·</span>HTML<span class="dp">·</span>body<span class="dp">·</span>content</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Converts<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Converts<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>to<span class="dp">·</span>Markdown<span class="dp">·</span>by<span class="dp">·</span>default<span class="dp">·</span>for<span class="dp">·</span>consistent<span class="dp">·</span>scanning</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 47, 7 lines modified</td><td colspan="2">Offset 51, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>ZIP<span class="dp">·</span>file<span class="dp">·</span>contents,<span class="dp">·</span>including<span class="dp">·</span>nested<span class="dp">·</span>ZIP<span class="dp">·</span>files</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>ZIP<span class="dp">·</span>file<span class="dp">·</span>contents,<span class="dp">·</span>including<span class="dp">·</span>nested<span class="dp">·</span>ZIP<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Uses<span class="dp">·</span>message<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>possible<span class="dp">·</span>ZIP<span class="dp">·</span>passwords</td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Uses<span class="dp">·</span>message<span class="dp">·</span>body<span class="dp">·</span>content<span class="dp">·</span>as<span class="dp">·</span>a<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>possible<span class="dp">·</span>ZIP<span class="dp">·</span>passwords</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Customizable<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>passwords<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>when<span class="dp">·</span>attempting<span class="dp">·</span>to<span class="dp">·</span>scan<span class="dp">·</span>encrypted<span class="dp">·</span>ZIP<span class="dp">·</span>files</td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>Customizable<span class="dp">·</span>list<span class="dp">·</span>of<span class="dp">·</span>passwords<span class="dp">·</span>to<span class="dp">·</span>use<span class="dp">·</span>when<span class="dp">·</span>attempting<span class="dp">·</span>to<span class="dp">·</span>scan<span class="dp">·</span>encrypted<span class="dp">·</span>ZIP<span class="dp">·</span>files</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">-<span class="dp">·</span>Provides<span class="dp">·</span>a<span class="dp">·</span>built-in<span class="dp">·</span>methodology<span class="dp">·</span>for<span class="dp">·</span>categorizing<span class="dp">·</span>emails</td><td class="diffline">54 </td><td class="diffpresent">-<span class="dp">·</span>Provides<span class="dp">·</span>a<span class="dp">·</span>built-in<span class="dp">·</span>methodology<span class="dp">·</span>for<span class="dp">·</span>categorizing<span class="dp">·</span>emails</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">-<span class="dp">·</span>Parses<span class="dp">·</span>`Authentication-Results`<span class="dp">·</span>headers</td><td class="diffline">55 </td><td class="diffpresent">-<span class="dp">·</span>Parses<span class="dp">·</span>`Authentication-Results`<span class="dp">·</span>headers</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">[yara]:<span class="dp">·</span>https://yara.readthedocs.io/en/stable/writingrules.html</td><td class="diffline">56 </td><td class="diffpresent">[yara]:<span class="dp">·</span>https://yara.readthedocs.io/en/stable/writingrules.html</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">[cli-demo]:<span class="dp">·</span>https://seanthegeek.github.io/yaramail/tutorial.html#using-the-cli</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

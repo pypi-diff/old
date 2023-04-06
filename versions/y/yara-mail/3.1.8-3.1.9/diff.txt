@@ -1,0 +1,159 @@
+--- tmp/yara_mail-3.1.8.tar.gz
++++ tmp/yara_mail-3.1.9.tar.gz
+│   --- yara_mail-3.1.8.tar
+├── +++ yara_mail-3.1.9.tar
+│ ├── file list
+│ │ @@ -1,7 +1,7 @@
+│ │ --rw-r--r--   0        0        0    24277 2020-02-02 00:00:00.000000 yara_mail-3.1.8/yaramail/__init__.py
+│ │ --rw-r--r--   0        0        0    12074 2020-02-02 00:00:00.000000 yara_mail-3.1.8/yaramail/_cli.py
+│ │ --rw-r--r--   0        0        0     1251 2020-02-02 00:00:00.000000 yara_mail-3.1.8/.gitignore
+│ │ --rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 yara_mail-3.1.8/LICENSE
+│ │ --rw-r--r--   0        0        0     1421 2020-02-02 00:00:00.000000 yara_mail-3.1.8/README.md
+│ │ --rw-r--r--   0        0        0     1324 2020-02-02 00:00:00.000000 yara_mail-3.1.8/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2409 2020-02-02 00:00:00.000000 yara_mail-3.1.8/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    24277 2020-02-02 00:00:00.000000 yara_mail-3.1.9/yaramail/__init__.py
+│ │ +-rw-r--r--   0        0        0    12074 2020-02-02 00:00:00.000000 yara_mail-3.1.9/yaramail/_cli.py
+│ │ +-rw-r--r--   0        0        0     1251 2020-02-02 00:00:00.000000 yara_mail-3.1.9/.gitignore
+│ │ +-rw-r--r--   0        0        0    11357 2020-02-02 00:00:00.000000 yara_mail-3.1.9/LICENSE
+│ │ +-rw-r--r--   0        0        0     1575 2020-02-02 00:00:00.000000 yara_mail-3.1.9/README.md
+│ │ +-rw-r--r--   0        0        0     1324 2020-02-02 00:00:00.000000 yara_mail-3.1.9/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2563 2020-02-02 00:00:00.000000 yara_mail-3.1.9/PKG-INFO
+│ │   --- yara_mail-3.1.8/yaramail/__init__.py
+│ ├── +++ yara_mail-3.1.9/yaramail/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -10,15 +10,15 @@
+│ │  import pdftotext
+│ │  
+│ │  from mailsuite.utils import parse_email, from_trusted_domain, decode_base64
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  logger.addHandler(logging.NullHandler())
+│ │  
+│ │ -__version__ = "3.1.8"
+│ │ +__version__ = "3.1.9"
+│ │  
+│ │  
+│ │  delimiters = ["r\"", r"'", r"`", r"\*", r"\*\*", r"_", r"|", r"”", r"”", r"’",
+│ │                r"‚", r"＂", r"“", r"〝", r"‟", r"〞", r"”", ("❝", r"❞"),
+│ │                (r"❮", r"❯"),  (r"\(", r"\)"), (r"\[", r"\]"), (r"\{", r"\}"),
+│ │                (r"<", r">"), (r">", "</"), (r"”", r"„"), (r"‘", r"’"),
+│ │                (r"‹", "›"), (r"»", "«"), (r"«", r"»"), (r"「", r"」"),
+│ │   --- yara_mail-3.1.8/yaramail/_cli.py
+│ ├── +++ yara_mail-3.1.9/yaramail/_cli.py
+│ │┄ Files identical despite different names
+│ │   --- yara_mail-3.1.8/.gitignore
+│ ├── +++ yara_mail-3.1.9/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- yara_mail-3.1.8/LICENSE
+│ ├── +++ yara_mail-3.1.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- yara_mail-3.1.8/README.md
+│ ├── +++ yara_mail-3.1.9/README.md
+│ │┄ Files 22% similar despite different names
+│ │ @@ -6,14 +6,18 @@
+│ │    [![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)
+│ │    [![PyPI - Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)
+│ │  </div>
+│ │  
+│ │  `yaramail` is a Python package and command line utility for scanning emails with
+│ │  [YARA rules][yara]. It is Ideal for automated triage of phishing reports.
+│ │  
+│ │ +## CLI Demo
+│ │ +
+│ │ +[![asciicast](https://asciinema.org/a/529801.svg)][cli-demo]
+│ │ +
+│ │  ## Features
+│ │  
+│ │  - Scans all parts of an email via API or CLI
+│ │    - Headers
+│ │      - Removes header indents by default for consistent scanning
+│ │    - Plain text and HTML body content
+│ │      - Converts body content to Markdown by default for consistent scanning
+│ │ @@ -24,7 +28,8 @@
+│ │      - ZIP file contents, including nested ZIP files
+│ │        - Uses message body content as a list of possible ZIP passwords
+│ │        - Customizable list of passwords to use when attempting to scan encrypted ZIP files
+│ │  - Provides a built-in methodology for categorizing emails
+│ │  - Parses `Authentication-Results` headers
+│ │  
+│ │  [yara]: https://yara.readthedocs.io/en/stable/writingrules.html
+│ │ +[cli-demo]: https://seanthegeek.github.io/yaramail/tutorial.html#using-the-cli
+│ │   --- yara_mail-3.1.8/pyproject.toml
+│ ├── +++ yara_mail-3.1.9/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -25,15 +25,15 @@
+│ │      "Operating System :: OS Independent",
+│ │      "License :: OSI Approved :: Apache Software License",
+│ │      "Topic :: Security",
+│ │      "Topic :: Communications :: Email",
+│ │  
+│ │  ]
+│ │  dependencies = [
+│ │ -    "mailsuite>=1.9.12",
+│ │ +    "mailsuite>=1.9.13",
+│ │      "pdftotext==2.2.2",
+│ │      "simplejson>=3.17.6",
+│ │      "yara-python>=4.2.3",
+│ │  ]
+│ │  dynamic = [
+│ │      "version",
+│ │  ]
+│ │   --- yara_mail-3.1.8/PKG-INFO
+│ ├── +++ yara_mail-3.1.9/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,25 +1,25 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: yara-mail
+│ │ -Version: 3.1.8
+│ │ +Version: 3.1.9
+│ │  Summary: A Python package and command line utility for scanning emails with YARA rules
+│ │  Project-URL: Homepage, https://github.com/seanthegeek/yaramail
+│ │  Project-URL: Documentation, https://seanthegeek.github.io/yaramail/
+│ │  Project-URL: Issues, https://github.com/seanthegeek/yaramail/issues
+│ │  Project-URL: Changelog, https://github.com/seanthegeek/yaramail/blob/master/CHANGELOG.md
+│ │  Author-email: Sean Whalen <whalenster@gmail.com>
+│ │  License-File: LICENSE
+│ │  Keywords: YARA,email,information security,infosec,security
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Topic :: Communications :: Email
+│ │  Classifier: Topic :: Security
+│ │  Requires-Python: >=3.7
+│ │ -Requires-Dist: mailsuite>=1.9.12
+│ │ +Requires-Dist: mailsuite>=1.9.13
+│ │  Requires-Dist: pdftotext==2.2.2
+│ │  Requires-Dist: simplejson>=3.17.6
+│ │  Requires-Dist: yara-python>=4.2.3
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  <div align="center">
+│ │    <img src="https://seanthegeek.github.io/yaramail/_static/yaramail-logo.png" alt="yaramail logo">
+│ │ @@ -29,14 +29,18 @@
+│ │    [![PyPI](https://img.shields.io/pypi/v/yara-mail)](https://pypi.org/project/yara-mail/)
+│ │    [![PyPI - Downloads](https://img.shields.io/pypi/dm/yara-mail?color=blue)](https://pypistats.org/packages/yara-mail)
+│ │  </div>
+│ │  
+│ │  `yaramail` is a Python package and command line utility for scanning emails with
+│ │  [YARA rules][yara]. It is Ideal for automated triage of phishing reports.
+│ │  
+│ │ +## CLI Demo
+│ │ +
+│ │ +[![asciicast](https://asciinema.org/a/529801.svg)][cli-demo]
+│ │ +
+│ │  ## Features
+│ │  
+│ │  - Scans all parts of an email via API or CLI
+│ │    - Headers
+│ │      - Removes header indents by default for consistent scanning
+│ │    - Plain text and HTML body content
+│ │      - Converts body content to Markdown by default for consistent scanning
+│ │ @@ -47,7 +51,8 @@
+│ │      - ZIP file contents, including nested ZIP files
+│ │        - Uses message body content as a list of possible ZIP passwords
+│ │        - Customizable list of passwords to use when attempting to scan encrypted ZIP files
+│ │  - Provides a built-in methodology for categorizing emails
+│ │  - Parses `Authentication-Results` headers
+│ │  
+│ │  [yara]: https://yara.readthedocs.io/en/stable/writingrules.html
+│ │ +[cli-demo]: https://seanthegeek.github.io/yaramail/tutorial.html#using-the-cli

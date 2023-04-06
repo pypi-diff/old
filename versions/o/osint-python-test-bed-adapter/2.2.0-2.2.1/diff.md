@@ -1,0 +1,300 @@
+# Comparing `tmp/osint-python-test-bed-adapter-2.2.0.tar.gz` & `tmp/osint-python-test-bed-adapter-2.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "osint-python-test-bed-adapter-2.2.0.tar", last modified: Wed Mar 29 08:09:31 2023, max compression
++gzip compressed data, was "osint-python-test-bed-adapter-2.2.1.tar", last modified: Thu Apr  6 23:41:41 2023, max compression
+```
+
+## Comparing `osint-python-test-bed-adapter-2.2.0.tar` & `osint-python-test-bed-adapter-2.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.626671 osint-python-test-bed-adapter-2.2.0/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-test-bed-adapter-2.2.0/LICENSE
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1742 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/PKG-INFO
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1315 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.0/README.md
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1742 2023-03-29 08:09:31.000000 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/PKG-INFO
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      782 2023-03-29 08:09:31.000000 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/SOURCES.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-03-29 08:09:31.000000 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/dependency_links.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       39 2023-03-29 08:09:31.000000 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/requires.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       17 2023-03-29 08:09:31.000000 osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/top_level.txt
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-03-29 08:09:31.626671 osint-python-test-bed-adapter-2.2.0/setup.cfg
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      757 2023-03-16 17:46:07.000000 osint-python-test-bed-adapter-2.2.0/setup.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1361 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/__init__.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       68 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1511 2023-03-29 08:09:02.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/consumer_manager.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1660 2023-03-16 17:49:08.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/heartbeat_manager.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2897 2023-03-16 17:49:08.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/log_manager.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1979 2023-03-16 17:51:07.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/producer_manager.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/options/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       31 2022-04-23 22:07:41.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/options/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     3327 2023-03-16 16:43:04.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/options/test_bed_options.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/services/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-14 11:55:32.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/services/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2065 2023-03-14 12:17:24.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/services/http_server.py
+-drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-29 08:09:31.623338 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       22 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/__init__.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      598 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/helpers.py
+--rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1005 2023-03-16 17:51:41.000000 osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/key.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1064 2022-04-23 22:07:41.000000 osint-python-test-bed-adapter-2.2.1/LICENSE
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1743 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/PKG-INFO
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1316 2023-04-06 23:36:33.000000 osint-python-test-bed-adapter-2.2.1/README.md
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1743 2023-04-06 23:41:41.000000 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/PKG-INFO
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      782 2023-04-06 23:41:41.000000 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/SOURCES.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        1 2023-04-06 23:41:41.000000 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/dependency_links.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       39 2023-04-06 23:41:41.000000 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/requires.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       17 2023-04-06 23:41:41.000000 osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/top_level.txt
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       38 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/setup.cfg
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      758 2023-04-06 23:35:36.000000 osint-python-test-bed-adapter-2.2.1/setup.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1361 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/__init__.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       68 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1709 2023-04-06 23:32:08.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/consumer_manager.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1660 2023-03-16 17:49:08.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/heartbeat_manager.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2897 2023-03-16 17:49:08.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/log_manager.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2122 2023-04-06 23:32:08.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/producer_manager.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/options/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       31 2022-04-23 22:07:41.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/options/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     3327 2023-03-16 16:43:04.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/options/test_bed_options.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/services/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)        0 2023-03-14 11:55:32.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/services/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     2065 2023-03-14 12:17:24.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/services/http_server.py
++drwxr-xr-x   0 mindpetk  (1000) mindpetk  (1000)        0 2023-04-06 23:41:41.367675 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)       22 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/__init__.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)      598 2022-09-07 21:58:21.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/helpers.py
++-rw-r--r--   0 mindpetk  (1000) mindpetk  (1000)     1005 2023-03-16 17:51:41.000000 osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/key.py
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/LICENSE` & `osint-python-test-bed-adapter-2.2.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/PKG-INFO` & `osint-python-test-bed-adapter-2.2.1/PKG-INFO`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: osint-python-test-bed-adapter
+-Version: 2.2.0
++Version: 2.2.1
+ Summary: Python adapter for Kafka
+ Home-page: https://github.com/OSINT-VDU-TNO/python-adapter
+ Author: TimovdK
+ Author-email: timo_kuil@hotmail.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -24,15 +24,15 @@
+   - Heartbeat (topic: system-heartbeat), so you know which clients are online.
+   Each time the test-bed-adapter is executed, it starts a heartbeat process to notify
+   the its activity to other clients.
+ 
+ ## Installation
+ You need to install [Python 3+](https://www.python.org/). 
+ 
+-To run the examples you will need to install the dependencies specified on the file[requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
++To run the examples you will need to install the dependencies specified on the file [requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
+ For that, run
+ ```pip3 install -r requirements.txt```
+ from the project folder.
+ ## Examples and usage
+ - url_producer: creates a message with 4 URLs to RSS feeds on the topic ('system_rss_urls')
+ - rss_producer: listens to url messages ('system_rss_urls') and produces RSS messages ('system_rss_urls')
+ - rss_consumer: listens to RSS messages ('system_rss_urls') and prints them to console.
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/README.md` & `osint-python-test-bed-adapter-2.2.1/README.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+   - Heartbeat (topic: system-heartbeat), so you know which clients are online.
+   Each time the test-bed-adapter is executed, it starts a heartbeat process to notify
+   the its activity to other clients.
+ 
+ ## Installation
+ You need to install [Python 3+](https://www.python.org/). 
+ 
+-To run the examples you will need to install the dependencies specified on the file[requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
++To run the examples you will need to install the dependencies specified on the file [requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
+ For that, run
+ ```pip3 install -r requirements.txt```
+ from the project folder.
+ ## Examples and usage
+ - url_producer: creates a message with 4 URLs to RSS feeds on the topic ('system_rss_urls')
+ - rss_producer: listens to url messages ('system_rss_urls') and produces RSS messages ('system_rss_urls')
+ - rss_consumer: listens to RSS messages ('system_rss_urls') and prints them to console.
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/PKG-INFO` & `osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/PKG-INFO`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: osint-python-test-bed-adapter
+-Version: 2.2.0
++Version: 2.2.1
+ Summary: Python adapter for Kafka
+ Home-page: https://github.com/OSINT-VDU-TNO/python-adapter
+ Author: TimovdK
+ Author-email: timo_kuil@hotmail.com
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -24,15 +24,15 @@
+   - Heartbeat (topic: system-heartbeat), so you know which clients are online.
+   Each time the test-bed-adapter is executed, it starts a heartbeat process to notify
+   the its activity to other clients.
+ 
+ ## Installation
+ You need to install [Python 3+](https://www.python.org/). 
+ 
+-To run the examples you will need to install the dependencies specified on the file[requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
++To run the examples you will need to install the dependencies specified on the file [requirements.txt](https://github.com/DRIVER-EU/python-test-bed-adapter/blob/master/requirements.txt)
+ For that, run
+ ```pip3 install -r requirements.txt```
+ from the project folder.
+ ## Examples and usage
+ - url_producer: creates a message with 4 URLs to RSS feeds on the topic ('system_rss_urls')
+ - rss_producer: listens to url messages ('system_rss_urls') and produces RSS messages ('system_rss_urls')
+ - rss_consumer: listens to RSS messages ('system_rss_urls') and prints them to console.
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/osint_python_test_bed_adapter.egg-info/SOURCES.txt` & `osint-python-test-bed-adapter-2.2.1/osint_python_test_bed_adapter.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/setup.py` & `osint-python-test-bed-adapter-2.2.1/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="osint-python-test-bed-adapter",
+-    version="2.2.0",
++    version="2.2.1",
+     author="TimovdK",
+     author_email="timo_kuil@hotmail.com",
+     description="Python adapter for Kafka",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/OSINT-VDU-TNO/python-adapter",
+     include_package_data=True,
+@@ -19,8 +19,8 @@
+     ],
+     packages=setuptools.find_packages(),
+     classifiers=[
+         "Programming Language :: Python :: 3",
+         "License :: OSI Approved :: MIT License",
+         "Operating System :: OS Independent",
+     ],
+-)
++)
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/__init__.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/consumer_manager.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/consumer_manager.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -9,19 +9,22 @@
+     def __init__(self, options: TestBedOptions, kafka_topic, handle_message, run):
+         self.options = options
+         self.handle_message = handle_message
+         self.run = run
+ 
+         sr_conf = {'url': self.options.schema_registry}
+         schema_registry_client = SchemaRegistryClient(sr_conf)
+-        avro_deserializer = AvroDeserializer(schema_registry_client)
++        self.avro_deserializer = AvroDeserializer(schema_registry_client)
++        self.schema = schema_registry_client.get_latest_version(kafka_topic + "-value")
++        self.schema_str = self.schema.schema.schema_str
++        self.kafka_topic = kafka_topic
+ 
+         consumer_conf = {'bootstrap.servers': self.options.kafka_host,
+-                         'key.deserializer': avro_deserializer,
+-                         'value.deserializer': avro_deserializer,
++                         'key.deserializer': self.avro_deserializer,
++                         'value.deserializer': self.avro_deserializer,
+                          'group.id': self.options.consumer_group,
+                          'message.max.bytes': self.options.message_max_bytes,
+                          'auto.offset.reset': self.options.offset_type}
+ 
+         self.consumer = DeserializingConsumer(consumer_conf)
+         self.consumer.subscribe([kafka_topic])
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/heartbeat_manager.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/heartbeat_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/log_manager.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/log_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/kafka/producer_manager.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/kafka/producer_manager.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -18,15 +18,16 @@
+ 
+         avro_message_serializer = AvroSerializer(
+             schema_registry_client=schema_registry_client,
+             schema_str=schema_registry_client.get_latest_version(str(kafka_topic + '-value')).schema.schema_str)
+         avro_key_serializer = AvroSerializer(
+             schema_registry_client=schema_registry_client,
+             schema_str=schema_registry_client.get_latest_version(str(kafka_topic + '-key')).schema.schema_str)
+-
++        self.schema = schema_registry_client.get_latest_version(kafka_topic + "-value")
++        self.schema_str = self.schema.schema.schema_str
+         producer_conf = {'bootstrap.servers': self.options.kafka_host,
+                          'key.serializer': avro_key_serializer,
+                          'value.serializer': avro_message_serializer,
+                          'partitioner': self.options.partitioner}
+ 
+         self.producer = SerializingProducer(producer_conf)
+```
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/options/test_bed_options.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/options/test_bed_options.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/services/http_server.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/services/http_server.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/helpers.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `osint-python-test-bed-adapter-2.2.0/test_bed_adapter/utils/key.py` & `osint-python-test-bed-adapter-2.2.1/test_bed_adapter/utils/key.py`
+
+ * *Files identical despite different names*
+

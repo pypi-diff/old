@@ -1,0 +1,423 @@
+--- tmp/evofr-0.1.17.tar.gz
++++ tmp/evofr-0.1.18.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "evofr-0.1.17.tar", max compression
+│ +gzip compressed data, was "evofr-0.1.18.tar", max compression
+│   --- evofr-0.1.17.tar
+├── +++ evofr-0.1.18.tar
+│ ├── file list
+│ │ @@ -1,51 +1,51 @@
+│ │ --rw-r--r--   0        0        0    34523 2023-01-10 22:30:08.129997 evofr-0.1.17/LICENSE.txt
+│ │ --rw-r--r--   0        0        0      888 2023-01-25 21:51:20.520616 evofr-0.1.17/evofr/__init__.py
+│ │ --rw-r--r--   0        0        0      296 2022-06-23 22:50:02.937378 evofr-0.1.17/evofr/data/__init__.py
+│ │ --rw-r--r--   0        0        0     1020 2022-09-14 16:20:57.633521 evofr-0.1.17/evofr/data/case_counts.py
+│ │ --rw-r--r--   0        0        0     4419 2022-10-03 18:11:22.276420 evofr-0.1.17/evofr/data/case_frequencies.py
+│ │ --rw-r--r--   0        0        0     5110 2022-10-03 18:22:14.382080 evofr-0.1.17/evofr/data/data_helpers.py
+│ │ --rw-r--r--   0        0        0      471 2022-08-27 00:43:53.017698 evofr-0.1.17/evofr/data/data_spec.py
+│ │ --rw-r--r--   0        0        0     1410 2022-08-27 00:43:53.018135 evofr-0.1.17/evofr/data/hier_cases.py
+│ │ --rw-r--r--   0        0        0     2291 2022-10-03 18:10:38.950987 evofr-0.1.17/evofr/data/hier_frequencies.py
+│ │ --rw-r--r--   0        0        0     3097 2023-02-01 20:10:34.869507 evofr-0.1.17/evofr/data/variant_frequencies.py
+│ │ --rw-r--r--   0        0        0     1194 2023-01-06 07:10:08.312029 evofr-0.1.17/evofr/infer/BJBackendsScrap.py
+│ │ --rw-r--r--   0        0        0     8451 2023-01-25 21:51:20.521303 evofr-0.1.17/evofr/infer/InferBlackJax.py
+│ │ --rw-r--r--   0        0        0     2149 2022-09-15 21:51:48.846733 evofr-0.1.17/evofr/infer/InferMCMC.py
+│ │ --rw-r--r--   0        0        0     3278 2023-01-25 21:51:20.522220 evofr-0.1.17/evofr/infer/InferSVI.py
+│ │ --rw-r--r--   0        0        0     2478 2022-08-27 00:43:53.040621 evofr-0.1.17/evofr/infer/MCMC_handler.py
+│ │ --rw-r--r--   0        0        0     2995 2022-08-27 00:43:53.019730 evofr-0.1.17/evofr/infer/SVI_handler.py
+│ │ --rw-r--r--   0        0        0     1652 2023-01-25 21:51:20.522616 evofr-0.1.17/evofr/infer/SamplePrior.py
+│ │ --rw-r--r--   0        0        0      302 2023-01-25 21:51:20.523080 evofr-0.1.17/evofr/infer/__init__.py
+│ │ --rw-r--r--   0        0        0       78 2023-01-25 21:51:20.523543 evofr-0.1.17/evofr/infer/backends.py
+│ │ --rw-r--r--   0        0        0      289 2022-12-21 20:12:56.042653 evofr-0.1.17/evofr/models/__init__.py
+│ │ --rw-r--r--   0        0        0     4269 2023-02-01 20:10:34.870453 evofr-0.1.17/evofr/models/mlr_hierarchical.py
+│ │ --rw-r--r--   0        0        0     9727 2023-02-01 20:10:34.871076 evofr-0.1.17/evofr/models/mlr_innovation.py
+│ │ --rw-r--r--   0        0        0    11893 2022-11-08 19:03:50.750502 evofr-0.1.17/evofr/models/mlr_nowcast.py
+│ │ --rw-r--r--   0        0        0     2886 2022-09-30 21:23:27.866766 evofr-0.1.17/evofr/models/mlr_spline.py
+│ │ --rw-r--r--   0        0        0      700 2022-08-27 20:30:22.404715 evofr-0.1.17/evofr/models/model_spec.py
+│ │ --rw-r--r--   0        0        0     4553 2023-04-05 18:05:00.919362 evofr-0.1.17/evofr/models/multinomial_logistic_regression.py
+│ │ --rw-r--r--   0        0        0     5778 2023-01-25 21:51:20.524940 evofr-0.1.17/evofr/models/mutational_fitness_mlr.py
+│ │ --rw-r--r--   0        0        0     3333 2022-09-26 17:53:00.939634 evofr-0.1.17/evofr/models/piantham_model.py
+│ │ --rw-r--r--   0        0        0     2243 2022-08-27 01:00:23.614755 evofr-0.1.17/evofr/models/renewal_model/LAS.py
+│ │ --rw-r--r--   0        0        0      257 2022-11-08 19:05:19.255557 evofr-0.1.17/evofr/models/renewal_model/__init__.py
+│ │ --rw-r--r--   0        0        0      149 2022-07-13 00:53:30.188448 evofr-0.1.17/evofr/models/renewal_model/basis_functions/__init__.py
+│ │ --rw-r--r--   0        0        0      198 2022-07-08 20:37:47.686469 evofr-0.1.17/evofr/models/renewal_model/basis_functions/basis_fns.py
+│ │ --rw-r--r--   0        0        0     3391 2022-07-14 20:27:07.660069 evofr-0.1.17/evofr/models/renewal_model/basis_functions/hilbert_space_gaussian_process.py
+│ │ --rw-r--r--   0        0        0     4778 2022-09-30 21:38:46.300190 evofr-0.1.17/evofr/models/renewal_model/basis_functions/splines.py
+│ │ --rw-r--r--   0        0        0     6540 2023-02-01 21:09:24.707876 evofr-0.1.17/evofr/models/renewal_model/model_factories.py
+│ │ --rw-r--r--   0        0        0     2405 2023-01-10 22:30:08.131767 evofr-0.1.17/evofr/models/renewal_model/model_functions.py
+│ │ --rw-r--r--   0        0        0     1366 2023-01-10 22:30:08.132058 evofr-0.1.17/evofr/models/renewal_model/model_helpers.py
+│ │ --rw-r--r--   0        0        0    11999 2023-04-05 18:05:00.920309 evofr-0.1.17/evofr/models/renewal_model/model_options.py
+│ │ --rw-r--r--   0        0        0     1655 2023-02-01 21:09:24.709123 evofr-0.1.17/evofr/models/renewal_model/renewal_model.py
+│ │ --rw-r--r--   0        0        0     4392 2022-09-10 15:55:23.454857 evofr-0.1.17/evofr/models/renewal_model/renewal_regression.py
+│ │ --rw-r--r--   0        0        0     4933 2023-02-01 21:09:24.709494 evofr-0.1.17/evofr/models/renewal_model/renewal_single_variant.py
+│ │ --rw-r--r--   0        0        0      831 2022-07-08 20:51:40.490887 evofr-0.1.17/evofr/models/renewal_model/spline_incidence.py
+│ │ --rw-r--r--   0        0        0       62 2023-01-12 23:49:44.920731 evofr-0.1.17/evofr/plotting/__init__.py
+│ │ --rw-r--r--   0        0        0    11903 2023-01-12 23:49:44.921903 evofr-0.1.17/evofr/plotting/plot_functions.py
+│ │ --rw-r--r--   0        0        0    11557 2023-01-25 21:51:20.525631 evofr-0.1.17/evofr/plotting/plotting_classes.py
+│ │ --rw-r--r--   0        0        0       97 2022-12-22 03:54:22.139076 evofr-0.1.17/evofr/posterior/__init__.py
+│ │ --rw-r--r--   0        0        0     2996 2022-12-22 03:54:22.139787 evofr-0.1.17/evofr/posterior/posterior_handler.py
+│ │ --rw-r--r--   0        0        0    13442 2023-01-10 22:30:08.133670 evofr-0.1.17/evofr/posterior/posterior_helpers.py
+│ │ --rw-r--r--   0        0        0      512 2023-04-05 17:52:49.676961 evofr-0.1.17/pyproject.toml
+│ │ --rw-r--r--   0        0        0      922 1970-01-01 00:00:00.000000 evofr-0.1.17/setup.py
+│ │ --rw-r--r--   0        0        0      715 1970-01-01 00:00:00.000000 evofr-0.1.17/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    34523 2023-01-10 22:30:08.129997 evofr-0.1.18/LICENSE.txt
+│ │ +-rw-r--r--   0        0        0      888 2023-01-25 21:51:20.520616 evofr-0.1.18/evofr/__init__.py
+│ │ +-rw-r--r--   0        0        0      296 2022-06-23 22:50:02.937378 evofr-0.1.18/evofr/data/__init__.py
+│ │ +-rw-r--r--   0        0        0     1020 2022-09-14 16:20:57.633521 evofr-0.1.18/evofr/data/case_counts.py
+│ │ +-rw-r--r--   0        0        0     4419 2022-10-03 18:11:22.276420 evofr-0.1.18/evofr/data/case_frequencies.py
+│ │ +-rw-r--r--   0        0        0     5110 2022-10-03 18:22:14.382080 evofr-0.1.18/evofr/data/data_helpers.py
+│ │ +-rw-r--r--   0        0        0      471 2022-08-27 00:43:53.017698 evofr-0.1.18/evofr/data/data_spec.py
+│ │ +-rw-r--r--   0        0        0     1410 2022-08-27 00:43:53.018135 evofr-0.1.18/evofr/data/hier_cases.py
+│ │ +-rw-r--r--   0        0        0     2291 2022-10-03 18:10:38.950987 evofr-0.1.18/evofr/data/hier_frequencies.py
+│ │ +-rw-r--r--   0        0        0     3097 2023-02-01 20:10:34.869507 evofr-0.1.18/evofr/data/variant_frequencies.py
+│ │ +-rw-r--r--   0        0        0     1194 2023-01-06 07:10:08.312029 evofr-0.1.18/evofr/infer/BJBackendsScrap.py
+│ │ +-rw-r--r--   0        0        0     8451 2023-01-25 21:51:20.521303 evofr-0.1.18/evofr/infer/InferBlackJax.py
+│ │ +-rw-r--r--   0        0        0     2149 2022-09-15 21:51:48.846733 evofr-0.1.18/evofr/infer/InferMCMC.py
+│ │ +-rw-r--r--   0        0        0     3278 2023-01-25 21:51:20.522220 evofr-0.1.18/evofr/infer/InferSVI.py
+│ │ +-rw-r--r--   0        0        0     2478 2022-08-27 00:43:53.040621 evofr-0.1.18/evofr/infer/MCMC_handler.py
+│ │ +-rw-r--r--   0        0        0     2995 2022-08-27 00:43:53.019730 evofr-0.1.18/evofr/infer/SVI_handler.py
+│ │ +-rw-r--r--   0        0        0     1652 2023-01-25 21:51:20.522616 evofr-0.1.18/evofr/infer/SamplePrior.py
+│ │ +-rw-r--r--   0        0        0      302 2023-01-25 21:51:20.523080 evofr-0.1.18/evofr/infer/__init__.py
+│ │ +-rw-r--r--   0        0        0       78 2023-01-25 21:51:20.523543 evofr-0.1.18/evofr/infer/backends.py
+│ │ +-rw-r--r--   0        0        0      289 2022-12-21 20:12:56.042653 evofr-0.1.18/evofr/models/__init__.py
+│ │ +-rw-r--r--   0        0        0     4269 2023-02-01 20:10:34.870453 evofr-0.1.18/evofr/models/mlr_hierarchical.py
+│ │ +-rw-r--r--   0        0        0     9727 2023-02-01 20:10:34.871076 evofr-0.1.18/evofr/models/mlr_innovation.py
+│ │ +-rw-r--r--   0        0        0    11893 2022-11-08 19:03:50.750502 evofr-0.1.18/evofr/models/mlr_nowcast.py
+│ │ +-rw-r--r--   0        0        0     2886 2022-09-30 21:23:27.866766 evofr-0.1.18/evofr/models/mlr_spline.py
+│ │ +-rw-r--r--   0        0        0      700 2022-08-27 20:30:22.404715 evofr-0.1.18/evofr/models/model_spec.py
+│ │ +-rw-r--r--   0        0        0     4553 2023-04-05 18:05:00.919362 evofr-0.1.18/evofr/models/multinomial_logistic_regression.py
+│ │ +-rw-r--r--   0        0        0     5778 2023-01-25 21:51:20.524940 evofr-0.1.18/evofr/models/mutational_fitness_mlr.py
+│ │ +-rw-r--r--   0        0        0     3333 2022-09-26 17:53:00.939634 evofr-0.1.18/evofr/models/piantham_model.py
+│ │ +-rw-r--r--   0        0        0     2243 2022-08-27 01:00:23.614755 evofr-0.1.18/evofr/models/renewal_model/LAS.py
+│ │ +-rw-r--r--   0        0        0      257 2022-11-08 19:05:19.255557 evofr-0.1.18/evofr/models/renewal_model/__init__.py
+│ │ +-rw-r--r--   0        0        0      149 2022-07-13 00:53:30.188448 evofr-0.1.18/evofr/models/renewal_model/basis_functions/__init__.py
+│ │ +-rw-r--r--   0        0        0      198 2022-07-08 20:37:47.686469 evofr-0.1.18/evofr/models/renewal_model/basis_functions/basis_fns.py
+│ │ +-rw-r--r--   0        0        0     3391 2022-07-14 20:27:07.660069 evofr-0.1.18/evofr/models/renewal_model/basis_functions/hilbert_space_gaussian_process.py
+│ │ +-rw-r--r--   0        0        0     4778 2022-09-30 21:38:46.300190 evofr-0.1.18/evofr/models/renewal_model/basis_functions/splines.py
+│ │ +-rw-r--r--   0        0        0     6540 2023-04-06 23:46:59.942673 evofr-0.1.18/evofr/models/renewal_model/model_factories.py
+│ │ +-rw-r--r--   0        0        0     2405 2023-01-10 22:30:08.131767 evofr-0.1.18/evofr/models/renewal_model/model_functions.py
+│ │ +-rw-r--r--   0        0        0     1366 2023-01-10 22:30:08.132058 evofr-0.1.18/evofr/models/renewal_model/model_helpers.py
+│ │ +-rw-r--r--   0        0        0    11999 2023-04-05 18:05:00.920309 evofr-0.1.18/evofr/models/renewal_model/model_options.py
+│ │ +-rw-r--r--   0        0        0     1655 2023-02-01 21:09:24.709123 evofr-0.1.18/evofr/models/renewal_model/renewal_model.py
+│ │ +-rw-r--r--   0        0        0     4392 2022-09-10 15:55:23.454857 evofr-0.1.18/evofr/models/renewal_model/renewal_regression.py
+│ │ +-rw-r--r--   0        0        0     4933 2023-02-01 21:09:24.709494 evofr-0.1.18/evofr/models/renewal_model/renewal_single_variant.py
+│ │ +-rw-r--r--   0        0        0      831 2022-07-08 20:51:40.490887 evofr-0.1.18/evofr/models/renewal_model/spline_incidence.py
+│ │ +-rw-r--r--   0        0        0       62 2023-01-12 23:49:44.920731 evofr-0.1.18/evofr/plotting/__init__.py
+│ │ +-rw-r--r--   0        0        0    11903 2023-01-12 23:49:44.921903 evofr-0.1.18/evofr/plotting/plot_functions.py
+│ │ +-rw-r--r--   0        0        0    11557 2023-01-25 21:51:20.525631 evofr-0.1.18/evofr/plotting/plotting_classes.py
+│ │ +-rw-r--r--   0        0        0       97 2022-12-22 03:54:22.139076 evofr-0.1.18/evofr/posterior/__init__.py
+│ │ +-rw-r--r--   0        0        0     2996 2022-12-22 03:54:22.139787 evofr-0.1.18/evofr/posterior/posterior_handler.py
+│ │ +-rw-r--r--   0        0        0    14113 2023-04-06 23:46:59.943078 evofr-0.1.18/evofr/posterior/posterior_helpers.py
+│ │ +-rw-r--r--   0        0        0      512 2023-04-06 23:47:12.046165 evofr-0.1.18/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      922 1970-01-01 00:00:00.000000 evofr-0.1.18/setup.py
+│ │ +-rw-r--r--   0        0        0      715 1970-01-01 00:00:00.000000 evofr-0.1.18/PKG-INFO
+│ │   --- evofr-0.1.17/LICENSE.txt
+│ ├── +++ evofr-0.1.18/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/__init__.py
+│ ├── +++ evofr-0.1.18/evofr/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/case_counts.py
+│ ├── +++ evofr-0.1.18/evofr/data/case_counts.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/case_frequencies.py
+│ ├── +++ evofr-0.1.18/evofr/data/case_frequencies.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/data_helpers.py
+│ ├── +++ evofr-0.1.18/evofr/data/data_helpers.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/hier_cases.py
+│ ├── +++ evofr-0.1.18/evofr/data/hier_cases.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/hier_frequencies.py
+│ ├── +++ evofr-0.1.18/evofr/data/hier_frequencies.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/data/variant_frequencies.py
+│ ├── +++ evofr-0.1.18/evofr/data/variant_frequencies.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/BJBackendsScrap.py
+│ ├── +++ evofr-0.1.18/evofr/infer/BJBackendsScrap.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/InferBlackJax.py
+│ ├── +++ evofr-0.1.18/evofr/infer/InferBlackJax.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/InferMCMC.py
+│ ├── +++ evofr-0.1.18/evofr/infer/InferMCMC.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/InferSVI.py
+│ ├── +++ evofr-0.1.18/evofr/infer/InferSVI.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/MCMC_handler.py
+│ ├── +++ evofr-0.1.18/evofr/infer/MCMC_handler.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/SVI_handler.py
+│ ├── +++ evofr-0.1.18/evofr/infer/SVI_handler.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/infer/SamplePrior.py
+│ ├── +++ evofr-0.1.18/evofr/infer/SamplePrior.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/mlr_hierarchical.py
+│ ├── +++ evofr-0.1.18/evofr/models/mlr_hierarchical.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/mlr_innovation.py
+│ ├── +++ evofr-0.1.18/evofr/models/mlr_innovation.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/mlr_nowcast.py
+│ ├── +++ evofr-0.1.18/evofr/models/mlr_nowcast.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/mlr_spline.py
+│ ├── +++ evofr-0.1.18/evofr/models/mlr_spline.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/model_spec.py
+│ ├── +++ evofr-0.1.18/evofr/models/model_spec.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/multinomial_logistic_regression.py
+│ ├── +++ evofr-0.1.18/evofr/models/multinomial_logistic_regression.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/mutational_fitness_mlr.py
+│ ├── +++ evofr-0.1.18/evofr/models/mutational_fitness_mlr.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/piantham_model.py
+│ ├── +++ evofr-0.1.18/evofr/models/piantham_model.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/LAS.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/LAS.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/basis_functions/hilbert_space_gaussian_process.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/basis_functions/hilbert_space_gaussian_process.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/basis_functions/splines.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/basis_functions/splines.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/model_factories.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/model_factories.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -35,15 +35,15 @@
+│ │      if g_rev.ndim == 1:
+│ │          gmap_dim = None  # Use same generation time
+│ │      else:
+│ │          gmap_dim = 0  # Use each row
+│ │          # Specifying variant name map to column
+│ │          if gen_v_names is not None:
+│ │              v_idx = [
+│ │ -                var_names.index(s) for s in gen_v_names
+│ │ +                gen_v_names.index(s) for s in var_names
+│ │              ]  # Match names in data to generation times
+│ │              _g_rev = _g_rev[v_idx, :]
+│ │  
+│ │      v_fs_I = jit(
+│ │          vmap(
+│ │              forward_simulate_I,
+│ │              in_axes=(-1, -1, gmap_dim, None, None),
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/model_functions.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/model_functions.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/model_helpers.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/model_helpers.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/model_options.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/model_options.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/renewal_model.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/renewal_model.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/renewal_regression.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/renewal_regression.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/renewal_single_variant.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/renewal_single_variant.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/models/renewal_model/spline_incidence.py
+│ ├── +++ evofr-0.1.18/evofr/models/renewal_model/spline_incidence.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/plotting/plot_functions.py
+│ ├── +++ evofr-0.1.18/evofr/plotting/plot_functions.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/plotting/plotting_classes.py
+│ ├── +++ evofr-0.1.18/evofr/plotting/plotting_classes.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/posterior/posterior_handler.py
+│ ├── +++ evofr-0.1.18/evofr/posterior/posterior_handler.py
+│ │┄ Files identical despite different names
+│ │   --- evofr-0.1.17/evofr/posterior/posterior_helpers.py
+│ ├── +++ evofr-0.1.18/evofr/posterior/posterior_helpers.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,7 +1,8 @@
+│ │ +from functools import partial
+│ │  from typing import Dict, List, Optional
+│ │  import jax.numpy as jnp
+│ │  import json
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  from evofr.data import forecast_dates
+│ │  from evofr.data import DataSpec
+│ │ @@ -288,14 +289,15 @@
+│ │  
+│ │  
+│ │  def get_sites_variants_tidy(
+│ │      samples: Dict,
+│ │      data: DataSpec,
+│ │      sites: List[str],
+│ │      dated: List[bool],
+│ │ +    forecasts: List[bool],
+│ │      ps,
+│ │      name: Optional[str] = None,
+│ │  ):
+│ │      # Save metadata
+│ │      metadata = dict()
+│ │  
+│ │      # Make keys for probability levels
+│ │ @@ -320,27 +322,45 @@
+│ │  
+│ │      add_dataspec_attr(metadata, data, "dates", key="dates")
+│ │      add_dataspec_attr(metadata, data, "var_names", key="variants")
+│ │  
+│ │      # Each data entry will be tidy
+│ │      date_map = data.date_to_index
+│ │  
+│ │ -    def tidy_site_date(site):
+│ │ +    for d, site, forecast in zip(dated, sites, forecasts):
+│ │ +        if forecast and d:
+│ │ +            # Check size of dated forecasts to generate date map
+│ │ +            T = samples[site].shape[1]
+│ │ +            forecasted_dates = forecast_dates(data.dates, T)
+│ │ +            forecast_date_map = {
+│ │ +                d: i for (i, d) in enumerate(forecasted_dates)
+│ │ +            }
+│ │ +            metadata["forecast_dates"] = forecasted_dates
+│ │ +
+│ │ +            break
+│ │ +
+│ │ +    def tidy_site_date(site, forecast):
+│ │          # Loop over entries of median and
+│ │          med, quants = get_quantiles(samples, ps, site)
+│ │          med, quants = np.array(med), np.array(quants)
+│ │  
+│ │          entries = []
+│ │          T, N_variants = med.shape
+│ │  
+│ │ +        # Are we using original or forecast dates?
+│ │ +        if forecast:
+│ │ +            _date_map = forecast_date_map
+│ │ +        else:
+│ │ +            _date_map = date_map
+│ │ +
+│ │          for v, variant in enumerate(metadata["variants"]):
+│ │ -            if v+1 > N_variants:
+│ │ +            if v + 1 > N_variants:
+│ │                  continue
+│ │  
+│ │ -            for date, index in date_map.items():
+│ │ +            for date, index in _date_map.items():
+│ │                  # Make template for entries
+│ │                  entry = {
+│ │                      "location": name,
+│ │                      "site": site,
+│ │                      "variant": variant,
+│ │                      "date": date.strftime("%Y-%m-%d"),
+│ │                  }
+│ │ @@ -379,15 +399,15 @@
+│ │          med, quants = get_quantiles(samples, ps, site)
+│ │          med, quants = np.array(med), np.array(quants)
+│ │  
+│ │          entries = []
+│ │          N_variants = med.shape[0]
+│ │  
+│ │          for v, variant in enumerate(metadata["variants"]):
+│ │ -            if v+1 > N_variants:
+│ │ +            if v + 1 > N_variants:
+│ │                  continue
+│ │  
+│ │              # Make template
+│ │              entry = {
+│ │                  "location": name,
+│ │                  "site": site,
+│ │                  "variant": variant,
+│ │ @@ -403,32 +423,30 @@
+│ │  
+│ │              # Loop over intervals of interest
+│ │              for i, p in enumerate(ps):
+│ │                  entry_lower = entry.copy()
+│ │                  entry_upper = entry.copy()
+│ │  
+│ │                  # Add values from intervals
+│ │ -                entry_lower["value"] = np.around(
+│ │ -                    quants[i][0, v], decimals=3
+│ │ -                )
+│ │ +                entry_lower["value"] = np.around(quants[i][0, v], decimals=3)
+│ │                  entry_lower["ps"] = f"HDI_{round(p * 100)}_lower"
+│ │  
+│ │ -                entry_upper["value"] = np.around(
+│ │ -                    quants[i][1, v], decimals=3
+│ │ -                )
+│ │ +                entry_upper["value"] = np.around(quants[i][1, v], decimals=3)
+│ │                  entry_upper["ps"] = f"HDI_{round(p * 100)}_upper"
+│ │  
+│ │                  # Add upper and lower bounds
+│ │                  entries.append(entry_lower)
+│ │                  entries.append(entry_upper)
+│ │          return entries
+│ │  
+│ │      entries = []
+│ │ -    for d, site in zip(dated, sites):
+│ │ -        tidy_site = tidy_site_date if d else tidy_site_flat
+│ │ +    for d, site, forecast in zip(dated, sites, forecasts):
+│ │ +        tidy_site = (
+│ │ +            partial(tidy_site_date, forecast=forecast) if d else tidy_site_flat
+│ │ +        )
+│ │          entries.extend(tidy_site(site))
+│ │  
+│ │      tidy_dict = {"metadata": metadata, "data": entries}
+│ │      return tidy_dict
+│ │  
+│ │  
+│ │  def combine_sites_tidy(tidy_dicts):
+│ │   --- evofr-0.1.17/pyproject.toml
+│ ├── +++ evofr-0.1.18/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "evofr"
+│ │ -version = "0.1.17"
+│ │ +version = "0.1.18"
+│ │  description = "Tools for evolutionary forecasting."
+│ │  authors = ["marlinfiggins <marlinfiggins@gmail.com>"]
+│ │  license = "AGPL-3.0"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
+│ │  numpy = "^1.22.4"
+│ │   --- evofr-0.1.17/setup.py
+│ ├── +++ evofr-0.1.18/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -20,15 +20,15 @@
+│ │   'jaxlib>=0.3.10,<0.4.0',
+│ │   'numpy>=1.22.4,<2.0.0',
+│ │   'numpyro>=0.9.2,<0.10.0',
+│ │   'pandas>=1.4.2,<2.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'evofr',
+│ │ -    'version': '0.1.17',
+│ │ +    'version': '0.1.18',
+│ │      'description': 'Tools for evolutionary forecasting.',
+│ │      'long_description': 'None',
+│ │      'author': 'marlinfiggins',
+│ │      'author_email': 'marlinfiggins@gmail.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'None',
+│ │   --- evofr-0.1.17/PKG-INFO
+│ ├── +++ evofr-0.1.18/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: evofr
+│ │ -Version: 0.1.17
+│ │ +Version: 0.1.18
+│ │  Summary: Tools for evolutionary forecasting.
+│ │  License: AGPL-3.0
+│ │  Author: marlinfiggins
+│ │  Author-email: marlinfiggins@gmail.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+│ │  Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,1356 @@
+--- tmp/uitk-0.6.6.tar.gz
++++ tmp/uitk-0.6.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "uitk-0.6.6.tar", last modified: Thu Mar 30 12:05:27 2023, max compression
+│ +gzip compressed data, was "uitk-0.6.7.tar", last modified: Thu Apr  6 23:46:30 2023, max compression
+│   --- uitk-0.6.6.tar
+├── +++ uitk-0.6.7.tar
+│ ├── file list
+│ │ @@ -1,34 +1,37 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:05:27.221668 uitk-0.6.6/
+│ │ --rw-rw-rw-   0        0        0       24 2023-03-28 23:38:26.000000 uitk-0.6.6/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     4290 2023-03-30 12:05:27.220668 uitk-0.6.6/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-30 12:05:27.221668 uitk-0.6.6/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     2159 2023-03-28 23:38:26.000000 uitk-0.6.6/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:05:27.185239 uitk-0.6.6/uitk/
+│ │ --rw-rw-rw-   0        0        0     2818 2023-03-30 12:05:25.000000 uitk-0.6.6/uitk/__init__.py
+│ │ --rw-rw-rw-   0        0        0     9117 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/events.py
+│ │ --rw-rw-rw-   0        0        0    41539 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/styleSheet.py
+│ │ --rw-rw-rw-   0        0        0    64135 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/switchboard.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:05:27.219669 uitk-0.6.6/uitk/widgets/
+│ │ --rw-rw-rw-   0        0        0     9484 2023-03-29 15:00:47.000000 uitk-0.6.6/uitk/widgets/MainWindow.py
+│ │ --rw-rw-rw-   0        0        0     3041 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/__init__.py
+│ │ --rw-rw-rw-   0        0        0     8103 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/attributes.py
+│ │ --rw-rw-rw-   0        0        0     3561 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/checkBox.py
+│ │ --rw-rw-rw-   0        0        0     7747 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/comboBox.py
+│ │ --rw-rw-rw-   0        0        0     2283 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/label.py
+│ │ --rw-rw-rw-   0        0        0     3029 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/lineEdit.py
+│ │ --rw-rw-rw-   0        0        0    13571 2023-03-30 10:42:03.000000 uitk-0.6.6/uitk/widgets/listWidget.py
+│ │ --rw-rw-rw-   0        0        0    22185 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/menu.py
+│ │ --rw-rw-rw-   0        0        0     5903 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/messageBox.py
+│ │ --rw-rw-rw-   0        0        0     2953 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/progressBar.py
+│ │ --rw-rw-rw-   0        0        0     3215 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/pushButton.py
+│ │ --rw-rw-rw-   0        0        0     4636 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/pushButtonDraggable.py
+│ │ --rw-rw-rw-   0        0        0     4177 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/pushButton_optionBox.py
+│ │ --rw-rw-rw-   0        0        0     3905 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/region.py
+│ │ --rw-rw-rw-   0        0        0     2956 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/task.py
+│ │ --rw-rw-rw-   0        0        0     9321 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/text.py
+│ │ --rw-rw-rw-   0        0        0     3339 2023-03-28 23:38:26.000000 uitk-0.6.6/uitk/widgets/textEdit.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:05:27.197241 uitk-0.6.6/uitk.egg-info/
+│ │ --rw-rw-rw-   0        0        0     4290 2023-03-30 12:05:27.000000 uitk-0.6.6/uitk.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      672 2023-03-30 12:05:27.000000 uitk-0.6.6/uitk.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-30 12:05:27.000000 uitk-0.6.6/uitk.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        5 2023-03-30 12:05:27.000000 uitk-0.6.6/uitk.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:46:30.349073 uitk-0.6.7/
+│ │ +-rw-rw-rw-   0        0        0       24 2023-03-28 23:38:26.000000 uitk-0.6.7/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     4290 2023-04-06 23:46:30.349073 uitk-0.6.7/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 23:46:30.349073 uitk-0.6.7/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2159 2023-03-28 23:38:26.000000 uitk-0.6.7/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:46:30.308072 uitk-0.6.7/uitk/
+│ │ +-rw-rw-rw-   0        0        0     2818 2023-04-06 23:46:28.000000 uitk-0.6.7/uitk/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     9117 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/events.py
+│ │ +-rw-rw-rw-   0        0        0    41947 2023-04-06 15:59:34.000000 uitk-0.6.7/uitk/styleSheet.py
+│ │ +-rw-rw-rw-   0        0        0    41539 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/styleSheet.py.bak
+│ │ +-rw-rw-rw-   0        0        0    64043 2023-04-06 15:48:07.000000 uitk-0.6.7/uitk/switchboard.py
+│ │ +-rw-rw-rw-   0        0        0    64096 2023-03-31 18:06:18.000000 uitk-0.6.7/uitk/switchboard.py.bak
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:46:30.348071 uitk-0.6.7/uitk/widgets/
+│ │ +-rw-rw-rw-   0        0        0     9928 2023-04-06 11:48:57.000000 uitk-0.6.7/uitk/widgets/MainWindow.py
+│ │ +-rw-rw-rw-   0        0        0     3041 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     8136 2023-04-01 17:04:32.000000 uitk-0.6.7/uitk/widgets/attributes.py
+│ │ +-rw-rw-rw-   0        0        0     3561 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/checkBox.py
+│ │ +-rw-rw-rw-   0        0        0     7746 2023-03-31 18:06:18.000000 uitk-0.6.7/uitk/widgets/comboBox.py
+│ │ +-rw-rw-rw-   0        0        0     4921 2023-04-06 17:27:53.000000 uitk-0.6.7/uitk/widgets/draggable_header.py
+│ │ +-rw-rw-rw-   0        0        0     2283 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/label.py
+│ │ +-rw-rw-rw-   0        0        0     3029 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/lineEdit.py
+│ │ +-rw-rw-rw-   0        0        0    13913 2023-04-06 16:30:30.000000 uitk-0.6.7/uitk/widgets/listWidget.py
+│ │ +-rw-rw-rw-   0        0        0    22182 2023-04-06 18:03:18.000000 uitk-0.6.7/uitk/widgets/menu.py
+│ │ +-rw-rw-rw-   0        0        0     5903 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/messageBox.py
+│ │ +-rw-rw-rw-   0        0        0     2953 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/progressBar.py
+│ │ +-rw-rw-rw-   0        0        0     3215 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/pushButton.py
+│ │ +-rw-rw-rw-   0        0        0     4792 2023-04-06 17:10:28.000000 uitk-0.6.7/uitk/widgets/pushButtonDraggable.py
+│ │ +-rw-rw-rw-   0        0        0     4177 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/pushButton_optionBox.py
+│ │ +-rw-rw-rw-   0        0        0     3905 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/region.py
+│ │ +-rw-rw-rw-   0        0        0     2956 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/task.py
+│ │ +-rw-rw-rw-   0        0        0     9318 2023-03-31 18:05:27.000000 uitk-0.6.7/uitk/widgets/text.py
+│ │ +-rw-rw-rw-   0        0        0     3339 2023-03-28 23:38:26.000000 uitk-0.6.7/uitk/widgets/textEdit.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:46:30.326074 uitk-0.6.7/uitk.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     4290 2023-04-06 23:46:30.000000 uitk-0.6.7/uitk.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      779 2023-04-06 23:46:30.000000 uitk-0.6.7/uitk.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 23:46:30.000000 uitk-0.6.7/uitk.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        5 2023-04-06 23:46:30.000000 uitk-0.6.7/uitk.egg-info/top_level.txt
+│ │   --- uitk-0.6.6/PKG-INFO
+│ ├── +++ uitk-0.6.7/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uitk
+│ │ -Version: 0.6.6
+│ │ +Version: 0.6.7
+│ │  Summary: uitk is a versatile package for managing user interfaces, widgets, and event handling in Python using PySide2. Using naming convention, the switchboard module provides a convenient way to load UI files, register custom widgets, manage slots and styles, and interact with widgets. It aims to simplify the development and management of complex user interfaces.
+│ │  Home-page: https://github.com/m3trik/uitk
+│ │  Author: Ryan Simpson
+│ │  Author-email: m3trik@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │   --- uitk-0.6.6/setup.py
+│ ├── +++ uitk-0.6.7/setup.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/__init__.py
+│ ├── +++ uitk-0.6.7/uitk/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  # coding=utf-8
+│ │  import importlib
+│ │  import pkgutil
+│ │  import inspect
+│ │  
+│ │  
+│ │  __package__ = 'uitk'
+│ │ -__version__ = '0.6.6'
+│ │ +__version__ = '0.6.7'
+│ │  
+│ │  
+│ │  # Define a dictionary to map class names to their respective modules
+│ │  CLASS_TO_MODULE = {}
+│ │  
+│ │  # Build the CLASS_TO_MODULE dictionary by iterating over all submodules of the package
+│ │  for importer, modname, ispkg in \
+│ │   --- uitk-0.6.6/uitk/events.py
+│ ├── +++ uitk-0.6.7/uitk/events.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/styleSheet.py
+│ ├── +++ uitk-0.6.7/uitk/styleSheet.py.bak
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/switchboard.py
+│ ├── +++ uitk-0.6.7/uitk/switchboard.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -24,17 +24,17 @@
+│ │  		sb.<slotsClassName>: Accesses the slots class of the specified class name.
+│ │  
+│ │  	Parameters:
+│ │  		parent (obj): A QtObject derived class.
+│ │  		ui_location (str/obj): Set the directory of the dynamic UI, or give the dynamic UI objects.
+│ │  		widgets (str/obj): Set the directory of any custom widgets, or give the widget objects.
+│ │  		slots (str/obj): Set the directory of where the slot classes will be imported, or give the slot class itself.
+│ │ -		preloadUi (bool): Load all UI immediately. Otherwise UI will be loaded as required.
+│ │ +		preload (bool): Load all UI immediately. Otherwise UI will be loaded as required.
+│ │  		style (str)(dict): Stylesheet color mode. ie. 'standard', 'dark', or a user defined color scheme.
+│ │ -		submenuStyle (str)(dict): The stylesheet color mode for submenus.
+│ │ +		submenu_style (str)(dict): The stylesheet color mode for submenus.
+│ │  
+│ │  	Methods:
+│ │  		loadUi(uiPath): Load the UI file located at uiPath.
+│ │  		loadAllUi(): Load all UI files in the UI directory.
+│ │  		registerWidget(widget): Register the specified widget.
+│ │  		connectSlots(slotClass, ui=None): Connect the slots in the specified slot class to the specified UI.
+│ │  
+│ │ @@ -62,29 +62,29 @@
+│ │  		2. Instantiate the subclass and show the UI.
+│ │  			sb = MyProject_sb()
+│ │  			sb.ui.show()
+│ │  	"""
+│ │  	app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv) #return the existing QApplication object, or create a new one if none exists.
+│ │  
+│ │  	def __init__(self, parent=None, ui_location='', widgets_location='', slots_location='', 
+│ │ -		preloadUi=False, style='standard', submenuStyle='dark'):
+│ │ +		preload=False, style='standard', submenu_style='dark'):
+│ │  		super().__init__(parent)
+│ │  		'''
+│ │  		'''
+│ │  		calling_frame = inspect.currentframe().f_back
+│ │  		calling_file = calling_frame.f_code.co_filename
+│ │  		self.defaultDir = os.path.abspath(os.path.dirname(calling_file)) #the calling modules directory.
+│ │  		self.moduleDir = File.getFilepath(__file__) #the directory of this module.
+│ │  
+│ │  		self.ui_location = ui_location or f'{self.moduleDir}/ui' #use the relative filepath of this module if None is given.
+│ │  		self.widgets_location = widgets_location or f'{self.moduleDir}/widgets'
+│ │  		self.slots_location = slots_location or f'{self.moduleDir}/slots'
+│ │  
+│ │  		self.style = style
+│ │ -		self.submenuStyle = submenuStyle
+│ │ +		self.submenu_style = submenu_style
+│ │  
+│ │  		self._uiHistory = [] #A list of previously loaded ui.
+│ │  		self._wgtHistory = [] #A list of previously used widgets.
+│ │  		self._registeredWidgets = {} #A dict of all registered custom widgets.
+│ │  		self._loadedUi = set() #A set of all loaded ui.
+│ │  		self._synced_pairs = set() #A set of hashed values representing widgets that have synced values.
+│ │  		self._gcProtect = set() #A set of widgets to be protected from garbage collection.
+│ │ @@ -102,15 +102,15 @@
+│ │  			'QRadioButton':'released',
+│ │  			'QLineEdit':['editingFinished'],
+│ │  			'QTextEdit':'textChanged',
+│ │  			'QSlider':'sliderMoved',
+│ │  			'QProgressBar':'valueChanged',
+│ │  		}
+│ │  
+│ │ -		if preloadUi:
+│ │ +		if preload:
+│ │  			self.loadAllUi()
+│ │  
+│ │  
+│ │  	def __getattr__(self, attr_name):
+│ │  		'''If an unknown attribute matches the name of a ui in the current ui directory; load and return it.
+│ │  		Else, if an unknown attribute matches the name of a custom widget in the widgets directory; register and return it.
+│ │  		If no match is found raise an attribute error.
+│ │ @@ -203,15 +203,15 @@
+│ │  
+│ │  
+│ │  	@property
+│ │  	def slots_location(self) -> str:
+│ │  		'''Get the directory where the slot classes will be imported from.
+│ │  
+│ │  		Return:
+│ │ -			(str)(obj) slots class directory path or slots class object.
+│ │ +			(str/obj) slots class directory path or slots class object.
+│ │  		'''
+│ │  		try:
+│ │  			return self._slots_location
+│ │  
+│ │  		except AttributeError as error:
+│ │  			self._slots_location = self.defaultDir
+│ │  			return self._slots_location
+│ │ @@ -290,15 +290,15 @@
+│ │  
+│ │  
+│ │  	def initWidgets(self, ui, widgets, recursive=True, returnAllWidgets=False, **kwargs):
+│ │  		"""Add widgets as attributes of the ui while giving additional attributes to the widgets themselves.
+│ │  
+│ │  		Parameters:
+│ │  			ui (obj): A previously loaded dynamic ui object.
+│ │ -			widgets (obj)(list): A widget or list of widgets to be added.
+│ │ +			widgets (obj/list): A widget or list of widgets to be added.
+│ │  			recursive (bool): Whether to recursively add child widgets (default=True).
+│ │  			kwargs (): Keyword arguments to set additional widget attributes.
+│ │  
+│ │  		Return:
+│ │  			(set) The added widgets.
+│ │  		"""
+│ │  		added_widgets = set()
+│ │ @@ -310,18 +310,18 @@
+│ │  			w.name = w.objectName()
+│ │  			w.type = w.__class__.__name__
+│ │  			w.derivedType = self.getDerivedType(w, name=True)
+│ │  			w.signals = self.getDefaultSignals(w) #default widget signals as list. ie. [<widget.valueChanged>]
+│ │  			w.prefix = self.getprefix(w.name) #returns an string alphanumberic prefix if name startswith a series of alphanumberic charsinst is followed by three integers. ie. 'cmb' from 'cmb015'
+│ │  			w.getSlot = lambda w=w, u=ui: getattr(self.getSlots(u), w.name, None)
+│ │  
+│ │ -			if (ui.isSubmenu or self.getUi(ui, level=2)) and not w.prefix=='i':
+│ │ -				self.setStyle(w, style=self.submenuStyle, alpha=0)
+│ │ +			if w.ui.level>=2 and not w.prefix=='i':
+│ │ +				self.setStyle(w, style=self.submenu_style)
+│ │  			else:
+│ │ -				self.setStyle(w, style=self.style, alpha=0.01)
+│ │ +				self.setStyle(w, style=self.style)
+│ │  
+│ │  			setAttributes(w, **kwargs)
+│ │  			setattr(ui, w.name, w)
+│ │  			added_widgets.add(w)
+│ │  			# print (0, 'initWidgts:', w.ui.name.ljust(26), w.prefix.ljust(25), (w.name or type(w).__name__).ljust(25), w.type.ljust(15), w.derivedType.ljust(15), id(w)) #debug
+│ │  
+│ │  			if recursive:
+│ │ @@ -407,15 +407,15 @@
+│ │  	@staticmethod
+│ │  	def getprefix(widget):
+│ │  		'''Return the prefix of a widget's object name.
+│ │  		A valid prefix is an alphanumeric character sequence at the beginning of the widget's object name,
+│ │  		ending at the first digit.
+│ │  
+│ │  		Parameters:
+│ │ -			widget (str)(obj): The widget or its object name as a string.
+│ │ +			widget (str/obj): The widget or its object name as a string.
+│ │  
+│ │  		Return:
+│ │  			(str) The prefix of the widget's object name as a string.
+│ │  
+│ │  		Example:
+│ │  			getprefix('someName00') #returns: 'someName'
+│ │  			getprefix('someName') #returns: 'someName'
+│ │ @@ -630,19 +630,19 @@
+│ │  
+│ │  
+│ │  	def registerWidgets(self, widgets):
+│ │  		'''Register any custom widgets using the module names.
+│ │  		Registered widgets can be accessed as properties. ex. sb.PushButton()
+│ │  
+│ │  		Parameters:
+│ │ -			widgets (str)(obj)(list): A filepath to a dir containing widgets or to the widget itself. 
+│ │ +			widgets (str/obj/list): A filepath to a dir containing widgets or to the widget itself. 
+│ │  						ie. 'O:/Cloud/Code/_scripts/uitk/uitk/ui/widgets' or the widget(s) themselves. 
+│ │  
+│ │  		Return:
+│ │ -			(obj)(list) list if widgets given as a list.
+│ │ +			(obj/list) list if widgets given as a list.
+│ │  
+│ │  		Example: registerWidgets(<class 'widgets.menu.Menu'>) #register using widget class object.
+│ │  		Example: registerWidgets('O:/Cloud/Code/_scripts/uitk/uitk/ui/widgets/menu.py') #register using path to widget module.
+│ │  		'''
+│ │  		result=[]
+│ │  		for w in Iter.makeList(widgets): #assure widgets is a list.
+│ │  
+│ │ @@ -670,30 +670,30 @@
+│ │  
+│ │  	def loadAllUi(self, path=None, widgets=None):
+│ │  		'''Extends the 'loadUi' method to load all ui from a given path.
+│ │  
+│ │  		Parameters:
+│ │  			path (str): The path to the directory containing the ui files to load.
+│ │  				If no path is given all ui from the default 'ui_location' will be loaded.
+│ │ -			widgets (str)(obj)(list): A filepath to a dir containing widgets or to the widget itself.
+│ │ +			widgets (str/obj/list): A filepath to a dir containing widgets or to the widget itself.
+│ │  						ie. 'O:/Cloud/Code/_scripts/uitk/uitk/ui/widgets' or the widget(s) themselves.
+│ │  
+│ │  		Return:
+│ │  			(list) QMainWindow object(s).
+│ │  		'''
+│ │  		files = glob.iglob('{}/**/*.ui'.format(path or self.ui_location), recursive=True)
+│ │  		return [self.loadUi(f, widgets) for f in files]
+│ │  
+│ │  
+│ │  	def loadUi(self, file, widgets=None):
+│ │  		'''Loads a ui from the given path to the ui file.
+│ │  
+│ │  		Parameters:
+│ │  			file (str): The full file path to the ui file.
+│ │ -			widgets (str)(obj)(list): A filepath to a dir containing widgets or the widget(s) itself.
+│ │ +			widgets (str/obj/list): A filepath to a dir containing widgets or the widget(s) itself.
+│ │  						ie. 'O:/Cloud/Code/_scripts/uitk/uitk/ui/widgets' or the widget(s) themselves.
+│ │  		Return:
+│ │  			(obj) QMainWindow object.
+│ │  		'''
+│ │  		name = File.formatPath(file, 'name')
+│ │  		path = File.formatPath(file, 'path')
+│ │  		level = self._getUiLevelFromDir(file)
+│ │ @@ -721,19 +721,19 @@
+│ │  		return ui
+│ │  
+│ │  
+│ │  	def getUi(self, ui=None, level=None):
+│ │  		'''Get a dynamic ui using its string name, or if no argument is given, return the current ui.
+│ │  
+│ │  		Parameters:
+│ │ -			ui (str)(obj)(list): The ui or name(s) of the ui.
+│ │ -			level (int)(list): Integer(s) representing the level to include.
+│ │ +			ui (str/obj/list): The ui or name(s) of the ui.
+│ │ +			level (int/list): Integer(s) representing the level to include.
+│ │  						ex. 2 for submenu, 3 for main menu, or [2, 3] for both.
+│ │  		Return:
+│ │ -			(str)(list) list if 'level' given as a list.
+│ │ +			(str/list) list if 'level' given as a list.
+│ │  		'''
+│ │  		if not ui:
+│ │  			ui = self.ui
+│ │  
+│ │  		if level:
+│ │  			return self._getUiAtLevel(ui, level)
+│ │  
+│ │ @@ -754,19 +754,19 @@
+│ │  			return ui
+│ │  
+│ │  
+│ │  	def _getUiAtLevel(self, ui, level):
+│ │  		'''Extends `getUi` to get the ui(s) at the given level(s).
+│ │  
+│ │  		Parameters:
+│ │ -			ui (str)(obj)(list): The ui or name(s) of the ui.
+│ │ -			level (int)(list): Integer(s) representing the level to include.
+│ │ +			ui (str/obj/list): The ui or name(s) of the ui.
+│ │ +			level (int/list): Integer(s) representing the level to include.
+│ │  						ex. 2 for submenu, 3 for main menu, or [2, 3] for both.
+│ │  		Return:
+│ │ -			(str)(list) list if 'level' given as a list.
+│ │ +			(str/list) list if 'level' given as a list.
+│ │  		'''
+│ │  		if isinstance(ui, str):
+│ │  			ui, *tags = ui.split('#')
+│ │  
+│ │  			ui1 = self.getUi(ui)
+│ │  			if not ui1 or level==2:
+│ │  				submenu_name = '{}_{}#{}'.format(ui, 'submenu', '#'.join(tags)).rstrip('#') #reformat as submenu w/tags. ie. 'polygons_submenu#edge' from 'polygons'
+│ │ @@ -855,20 +855,20 @@
+│ │  
+│ │  	def getPrevUi(self, allowDuplicates=False, allowCurrent=False, omitLevel=None, asList=False):
+│ │  		'''Get ui from history.
+│ │  		ex. _uiHistory list: ['previousName2', 'previousName1', 'currentName']
+│ │  
+│ │  		Parameters:
+│ │  			allowDuplicates (bool): Applicable when returning asList. Allows for duplicate names in the returned list.
+│ │ -			omitLevel (int)(list): Remove instances of the given ui level(s) from the results. Default is [] which omits nothing.
+│ │ +			omitLevel (int/list): Remove instances of the given ui level(s) from the results. Default is [] which omits nothing.
+│ │  			allowCurrent (bool): Allow the currentName. Default is off.
+│ │  			asList (bool): Returns the full list of previously called names. By default duplicates are removed.
+│ │  
+│ │  		Return:
+│ │ -			(str)(list) if 'asList': returns [list of string names]
+│ │ +			(str/list) if 'asList': returns [list of string names]
+│ │  		'''
+│ │  		self._uiHistory = self._uiHistory[-200:] #keep original list length restricted to last 200 elements
+│ │  		hist = self._uiHistory.copy() #work on a copy of the list, keeping the original intact
+│ │  
+│ │  		if not allowCurrent:
+│ │  			hist = hist[:-1] #remove the last index. (currentName)
+│ │  
+│ │ @@ -889,15 +889,15 @@
+│ │  
+│ │  	@staticmethod
+│ │  	def getDerivedType(widget, name=False, module='QtWidgets', inc=[], exc=[], filterByBaseType=False):
+│ │  		'''Get the base class of a custom widget.
+│ │  		If the type is a standard widget, the derived type will be that widget's type.
+│ │  
+│ │  		Parameters:
+│ │ -			widget (str)(obj): QWidget or it's objectName.
+│ │ +			widget (str/obj): QWidget or it's objectName.
+│ │  			name (bool): Return the class or the class name.
+│ │  			module (str): The name of the base class module to check for.
+│ │  			inc (list): Widget types to include. All other will be omitted. Exclude takes dominance over include. Meaning, if the same attribute is in both lists, it will be excluded.
+│ │  			exc (list): Widget types to exclude. ie. ['QWidget', 'QAction', 'QLabel', 'QPushButton', 'QListWidget']
+│ │  			filterByBaseType (bool): When using `inc`, or `exc`; Filter by base class name, or derived class name. ie. 'QLayout'(base) or 'QGridLayout'(derived)
+│ │  
+│ │  		Return:
+│ │ @@ -912,15 +912,15 @@
+│ │  
+│ │  
+│ │  	def getWidget(self, name, ui=None):
+│ │  		'''Case insensitive. Get the widget object/s from the given ui and name.
+│ │  
+│ │  		Parameters:
+│ │  			name (str): The object name of the widget. ie. 'b000'
+│ │ -			ui (str)(obj): ui, or name of ui. ie. 'polygons'. If no nothing is given, the current ui will be used.
+│ │ +			ui (str/obj): ui, or name of ui. ie. 'polygons'. If no nothing is given, the current ui will be used.
+│ │  							A ui object can be passed into this parameter, which will be used to get it's corresponding name.
+│ │  		Return:
+│ │  			(obj) if name:  widget object with the given name from the current ui.
+│ │  				  if ui and name: widget object with the given name from the given ui name.
+│ │  			(list) if ui: all widgets for the given ui.
+│ │  		'''
+│ │  		if ui is None or isinstance(ui, str):
+│ │ @@ -929,16 +929,16 @@
+│ │  		return next((w for w in ui.widgets if w.name==name), None)
+│ │  
+│ │  
+│ │  	def getWidgetsByType(self, types, ui=None, derivedType=False):
+│ │  		'''Get widgets of the given types.
+│ │  
+│ │  		Parameters:
+│ │ -			types (str)(list): A widget class name, or list of widget class names. ie. 'QPushbutton' or ['QPushbutton', 'QComboBox']
+│ │ -			ui (str)(obj): Parent ui name, or ui object. ie. 'polygons' or <polygons>
+│ │ +			types (str/list): A widget class name, or list of widget class names. ie. 'QPushbutton' or ['QPushbutton', 'QComboBox']
+│ │ +			ui (str/obj): Parent ui name, or ui object. ie. 'polygons' or <polygons>
+│ │  							If no name is given, the current ui will be used.
+│ │  			derivedType (bool): Get by using the parent class of custom widgets.
+│ │  
+│ │  		Return:
+│ │  			(list)
+│ │  		'''
+│ │  		if ui is None or isinstance(ui, str):
+│ │ @@ -950,18 +950,18 @@
+│ │  
+│ │  	def getWidgetName(self, widget=None, ui=None):
+│ │  		'''Get the widget's stored string objectName.
+│ │  
+│ │  		Parameters:
+│ │  			widget (obj): The widget to get the object name of.
+│ │  					If no widget is given, names of all widgets will be returned.
+│ │ -			ui (str)(obj): The parent ui, or ui name. ie. <polygons> or 'polygons'
+│ │ +			ui (str/obj): The parent ui, or ui name. ie. <polygons> or 'polygons'
+│ │  					If no name is given, the current ui will be used.
+│ │  		Return:
+│ │ -			(str)(list)
+│ │ +			(str/list)
+│ │  			if widget: (str) the widget objectName for the given widget.
+│ │  			if ui: the widget objectNames for widgets of the given ui name.
+│ │  			if not ui: the widget objectNames for widgets of the current ui.
+│ │  		'''
+│ │  		if not isinstance(ui, QtWidgets.QMainWindow):
+│ │  			ui = self.getUi(ui)
+│ │  
+│ │ @@ -987,16 +987,16 @@
+│ │  		return next(iter(w for u in self._loadedUi for w in u.widgets if w.getSlot()==method), None)
+│ │  
+│ │  
+│ │  	def getMethod(self, ui, widget=None):
+│ │  		'''Get the method(s) associated with the given ui / widget.
+│ │  
+│ │  		Parameters:
+│ │ -			ui (str)(obj): The ui name, or ui object. ie. 'polygons' or <polygons>
+│ │ -			widget (str)(obj): widget, widget's objectName, or method name.
+│ │ +			ui (str/obj): The ui name, or ui object. ie. 'polygons' or <polygons>
+│ │ +			widget (str/obj): widget, widget's objectName, or method name.
+│ │  
+│ │  		Return:
+│ │  			if widget: corresponding method object to given widget.
+│ │  			else: all of the methods associated to the given ui name as a list.
+│ │  
+│ │  		Example:
+│ │  			sb.getSlot('polygons', <b022>)() #call method <b022> of the 'polygons' class
+│ │ @@ -1016,15 +1016,15 @@
+│ │  		return next(iter(w.getSlot() for w in ui.widgets if w.getSlot()==widget.getSlot()), None)
+│ │  
+│ │  
+│ │  	def getSignals(self, w, d=True, exc=[]):
+│ │  		'''Get all signals for a given widget.
+│ │  
+│ │  		Parameters:
+│ │ -			w (str)(obj): The widget to get signals for.
+│ │ +			w (str/obj): The widget to get signals for.
+│ │  			d (bool): Return signals from all derived classes instead of just the given widget class.
+│ │  				ex. get: QObject, QWidget, QAbstractButton, QPushButton signals from 'QPushButton'
+│ │  			exc (list): Exclude any classes in this list. ex. exc=[QtCore.QObject, 'QWidget']
+│ │  
+│ │  		Return:
+│ │  			(list)
+│ │  
+│ │ @@ -1101,15 +1101,15 @@
+│ │  
+│ │  	def connectSlots(self, ui, widgets=None):
+│ │  		'''Connect signals to slots for the widgets of the given ui.
+│ │  		Works with both single slots or multiple slots given as a list.
+│ │  
+│ │  		Parameters:
+│ │  			ui (obj): A previously loaded dynamic ui object.
+│ │ -			widgets (obj)(list): QWidget(s)
+│ │ +			widgets (obj/list): QWidget(s)
+│ │  		'''
+│ │  		if widgets is None:
+│ │  			if ui.isConnected:
+│ │  				return
+│ │  			widgets = ui.widgets
+│ │  		# print ('connectSlots:', ui.name, [w.objectName() for w in Iter.makeList(widgets)]) #debug
+│ │  
+│ │ @@ -1135,15 +1135,15 @@
+│ │  
+│ │  	def disconnectSlots(self, ui, widgets=None):
+│ │  		'''Disconnect signals from slots for the widgets of the given ui.
+│ │  		Works with both single slots or multiple slots given as a list.
+│ │  
+│ │  		Parameters:
+│ │  			ui (obj): A previously loaded dynamic ui object.
+│ │ -			widgets (obj)(list): QWidget
+│ │ +			widgets (obj/list): QWidget
+│ │  		'''
+│ │  		# print ('disconnectSlots:', ui.name) #debug
+│ │  		if widgets is None:
+│ │  			if not ui.isConnected:
+│ │  				return
+│ │  			widgets = ui.widgets
+│ │  
+│ │ @@ -1165,18 +1165,18 @@
+│ │  		ui.isConnected = False #set ui state as slots disconnected.
+│ │  
+│ │  
+│ │  	def connect(self, widgets, signals, slots, clss=None):
+│ │  		'''Connect multiple signals to multiple slots at once.
+│ │  
+│ │  		Parameters:
+│ │ -			widgets (str)(obj)(list): ie. 'chk000-2' or [tb.ctxMenu.chk000, tb.ctxMenu.chk001]
+│ │ -			signals (str)(list): ie. 'toggled' or ['toggled']
+│ │ -			slots (obj)(list): ie. self.cmb002 or [self.cmb002]
+│ │ -			clss (obj)(list): if the widgets arg is given as a string, then the class it belongs to can be explicitly given. else, the current ui will be used.
+│ │ +			widgets (str/obj/list): ie. 'chk000-2' or [tb.ctxMenu.chk000, tb.ctxMenu.chk001]
+│ │ +			signals (str/list): ie. 'toggled' or ['toggled']
+│ │ +			slots (obj/list): ie. self.cmb002 or [self.cmb002]
+│ │ +			clss (obj/list): if the widgets arg is given as a string, then the class it belongs to can be explicitly given. else, the current ui will be used.
+│ │  
+│ │  		ex call: connect_('chk000-2', 'toggled', self.cmb002, tb.ctxMenu)
+│ │  		*or connect_([tb.ctxMenu.chk000, tb.ctxMenu.chk001], 'toggled', self.cmb002)
+│ │  		*or connect_(tb.ctxMenu.chk015, 'toggled', 
+│ │  				[lambda state: self.rigging.tb004.setText('Unlock Transforms' if state else 'Lock Transforms'), 
+│ │  				lambda state: self.rigging_submenu.tb004.setText('Unlock Transforms' if state else 'Lock Transforms')])
+│ │  		'''
+│ │ @@ -1254,15 +1254,15 @@
+│ │  	def _syncAttributes(self, frm, to, attributes=[]):
+│ │  		'''Sync the given attributes between the two given widgets.
+│ │  		If a widget does not have an attribute it will be silently skipped.
+│ │  
+│ │  		Parameters:
+│ │  			frm (obj): The widget to transfer attribute values from.
+│ │  			to (obj): The widget to transfer attribute values to.
+│ │ -			attributes (str)(list)(dict): The attribute(s) to sync. ie. a setter attribute 'setChecked' or a dict containing getter:setter pairs. ie. {'isChecked':'setChecked'}
+│ │ +			attributes (str/list)(dict): The attribute(s) to sync. ie. a setter attribute 'setChecked' or a dict containing getter:setter pairs. ie. {'isChecked':'setChecked'}
+│ │  		'''
+│ │  		if not attributes:
+│ │  			attributes = self.attributesGetSet
+│ │  
+│ │  		elif not isinstance(attributes, dict):
+│ │  			attributes = {next((k for k,v in self.attributesGetSet.items() if v==i), None):i #construct a gettr setter pair dict using only the given setter values.
+│ │  				 for i in Iter.makeList(attributes)
+│ │ @@ -1449,15 +1449,15 @@
+│ │  				[getattr(w, k)(state) for w in widgets] #set the property state for each widget in the list.
+│ │  
+│ │  
+│ │  	def setAxisForCheckBoxes(self, checkboxes, axis, ui=None):
+│ │  		'''Set the given checkbox's check states to reflect the specified axis.
+│ │  
+│ │  		Parameters:
+│ │ -			checkboxes (str)(list): 3 or 4 (or six with explicit negative values) checkboxes.
+│ │ +			checkboxes (str/list): 3 or 4 (or six with explicit negative values) checkboxes.
+│ │  			axis (str): Axis to set. Valid text: '-','X','Y','Z','-X','-Y','-Z' ('-' indicates a negative axis in a four checkbox setup)
+│ │  
+│ │  		ex call: setAxisForCheckBoxes('chk000-3', '-X') #optional ui arg for the checkboxes
+│ │  		'''
+│ │  		if isinstance(checkboxes, (str)):
+│ │  			if ui is None:
+│ │  				ui = self.getCurrentUi()
+│ │ @@ -1471,15 +1471,15 @@
+│ │  				chk.setChecked(True)
+│ │  
+│ │  
+│ │  	def getAxisFromCheckBoxes(self, checkboxes, ui=None):
+│ │  		'''Get the intended axis value as a string by reading the multiple checkbox's check states.
+│ │  
+│ │  		Parameters:
+│ │ -			checkboxes (str)(list): 3 or 4 (or six with explicit negative values) checkboxes. Valid text: '-','X','Y','Z','-X','-Y','-Z' ('-' indicates a negative axis in a four checkbox setup)
+│ │ +			checkboxes (str/list): 3 or 4 (or six with explicit negative values) checkboxes. Valid text: '-','X','Y','Z','-X','-Y','-Z' ('-' indicates a negative axis in a four checkbox setup)
+│ │  
+│ │  		Return:
+│ │  			(str) axis value. ie. '-X'		
+│ │  
+│ │  		ex call: getAxisFromCheckBoxes('chk000-3')
+│ │  		'''
+│ │  		if isinstance(checkboxes, (str)):
+│ │ @@ -1498,15 +1498,15 @@
+│ │  		return prefix+axis #ie. '-X'
+│ │  
+│ │  
+│ │  	def gcProtect(self, obj=None, clear=False):
+│ │  		'''Protect the given object from garbage collection.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (obj)(list): The obj(s) to add to the protected list.
+│ │ +			obj (obj/list): The obj(s) to add to the protected list.
+│ │  			clear (bool): Clear the set before adding any given object(s).
+│ │  
+│ │  		Return:
+│ │  			(list) protected objects.
+│ │  		'''
+│ │  		if clear:
+│ │  			self._gcProtect.clear()
+│ │ @@ -1540,15 +1540,15 @@
+│ │  		Parameters:
+│ │  			pos (QPoint) = The global position at which to query.
+│ │  			topWidgetOnly (bool): Return only the top-most widget, 
+│ │  				otherwise widgets are returned in the order in which they overlap.
+│ │  				Disabling this option will cause overlapping windows to flash as 
+│ │  				their attribute is changed and restored.
+│ │  		Return:
+│ │ -			(obj)(list) list if not topWidgetOnly.
+│ │ +			(obj/list) list if not topWidgetOnly.
+│ │  
+│ │  		Example: getWidgetAt(QtGui.QCursor.pos())
+│ │  		'''
+│ │  		w = QtWidgets.QApplication.widgetAt(pos)
+│ │  		if topWidgetOnly:
+│ │  			return w
+│ │  
+│ │ @@ -1763,15 +1763,15 @@
+│ │  
+│ │  # def getprefix(widget):
+│ │  # 		'''Query a widgets prefix.
+│ │  # 		A valid prefix is returned when the given widget's objectName startswith an alphanumeric char, 
+│ │  # 		followed by at least three integers. ex. i000 (alphanum,int,int,int)
+│ │  
+│ │  # 		Parameters:
+│ │ -# 			widget (str)(obj): A widget or it's object name.
+│ │ +# 			widget (str/obj): A widget or it's object name.
+│ │  
+│ │  # 		Return:
+│ │  # 			(str)
+│ │  # 		'''
+│ │  # 		prefix=''
+│ │  # 		if not isinstance(widget, (str)):
+│ │  # 			widget = widget.objectName()
+│ │   --- uitk-0.6.6/uitk/widgets/MainWindow.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/MainWindow.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -51,18 +51,19 @@
+│ │  			<UI>.preventHide (bool): While True, the hide method is disabled
+│ │  			<UI>.widgets (list): All the widgets of the UI
+│ │  			<UI>.slots (obj): The slots class instance
+│ │  		'''
+│ │  		super().__init__()
+│ │  
+│ │  		self.sb = switchboard_instance
+│ │ +
+│ │  		self.name = File.formatPath(file, 'name')
+│ │ -		setattr(self.sb, self.name, self)
+│ │ +		setattr(self.sb, self.name, self) #set an attribute using the actual file name.
+│ │  		legal_name = re.sub(r'[^0-9a-zA-Z]', '_', self.name)
+│ │ -		if self.name != legal_name: #if the name contains illegal chars; set an alternate attribute name with legal characters.
+│ │ +		if self.name != legal_name: #if the name contains illegal chars; set an alternate attribute using legal characters.
+│ │  			setattr(self.sb, legal_name, self)
+│ │  
+│ │  		self.path = File.formatPath(file, 'path')
+│ │  		self.level = self.sb._getUiLevelFromDir(file)
+│ │  		self.isSubmenu = self.level==2
+│ │  		self.isInitialized = False
+│ │  		self.isConnected = False
+│ │ @@ -70,17 +71,31 @@
+│ │  		self.connectOnShow = connectOnShow
+│ │  		self.base = next(iter(self.name.split('_')))
+│ │  		self.tags = self.name.split('#')[1:]
+│ │  		self._widgets = set()
+│ │  		self._deferred = {}
+│ │  
+│ │  		ui = self.sb.load(file)
+│ │ -		self.setWindowFlags(ui.windowFlags())
+│ │ +
+│ │ +		if self.level>2:
+│ │ +			self.setParent(self.sb.parent().parent() or self.sb.parent())
+│ │ +		if self.level<3:
+│ │ +			ui.setParent(self.sb.parent())
+│ │ +
+│ │  		self.setCentralWidget(ui.centralWidget())
+│ │  		self.transferProperties(ui, self)
+│ │ +
+│ │ +		flags = QtCore.Qt.CustomizeWindowHint
+│ │ +		flags &= ~QtCore.Qt.WindowTitleHint
+│ │ +		flags &= ~QtCore.Qt.WindowSystemMenuHint
+│ │ +		flags &= ~QtCore.Qt.WindowMinMaxButtonsHint
+│ │ +		flags |= ui.windowFlags()
+│ │ +		self.setWindowFlags(flags)
+│ │ +
+│ │ +		self.setAttribute(QtCore.Qt.WA_NoChildEventsForParent, True)
+│ │  		self.setAttributes(**kwargs)
+│ │  
+│ │  		if self.level>2:
+│ │  			self.sb.setStyle(self, style=self.sb.style)
+│ │  
+│ │  		self.onShow.connect(self._connectOnShow)
+│ │  
+│ │ @@ -104,62 +119,14 @@
+│ │  		if found_widget:
+│ │  			self.sb.initWidgets(self, found_widget)
+│ │  			return found_widget
+│ │  
+│ │  		raise AttributeError(f'{self.__class__.__name__} has no attribute `{attr_name}`')
+│ │  
+│ │  
+│ │ -	def event(self, event):
+│ │ -		"""Handles events that are sent to the widget.
+│ │ -
+│ │ -		Parameters:
+│ │ -			event (QtCore.QEvent): The event that was sent to the widget.
+│ │ -
+│ │ -		Return:
+│ │ -			bool: True if the event was handled, otherwise False.
+│ │ -
+│ │ -		Notes:
+│ │ -			This method is called automatically by Qt when an event is sent to the widget.
+│ │ -			If the event is a `QEvent.ChildPolished` event, it calls the `on_child_polished`
+│ │ -			method with the child widget as an argument. Otherwise, it calls the superclass
+│ │ -			implementation of `event`.
+│ │ -		"""
+│ │ -		if event.type() == QtCore.QEvent.ChildPolished:
+│ │ -			child = event.child()
+│ │ -			self.on_child_polished(child)
+│ │ -		return super().event(event)
+│ │ -
+│ │ -
+│ │ -	def defer(self, func, *args, priority=0):
+│ │ -		"""Defer execution of a function until later. The function is added to a dictionary of deferred 
+│ │ -		methods, with a specified priority. Lower priority values will be executed before higher ones.
+│ │ -		
+│ │ -		Parameters:
+│ │ -			func (function): The function to defer.
+│ │ -			*args: Any arguments to be passed to the function.
+│ │ -			priority (int, optional): The priority of the deferred method. Lower values will be executed 
+│ │ -					first. Defaults to 0.
+│ │ -		"""
+│ │ -		method = partial(func, *args)
+│ │ -		if priority in self._deferred:
+│ │ -			self._deferred[priority] += (method,)
+│ │ -		else:
+│ │ -			self._deferred[priority] = (method,)
+│ │ -
+│ │ -
+│ │ -	def trigger_deferred(self):
+│ │ -		"""Executes all deferred methods, in priority order. Any arguments passed to the deferred functions
+│ │ -		will be applied at this point. Once all deferred methods have executed, the dictionary is cleared.
+│ │ -		"""
+│ │ -		for priority in sorted(self._deferred):
+│ │ -			for method in self._deferred[priority]:
+│ │ -				method()
+│ │ -		self._deferred.clear()
+│ │ -
+│ │ -
+│ │  	@property
+│ │  	def widgets(self):
+│ │  		"""Returns a list of the widgets in the widget's widget dictionary or initializes the widget dictionary and returns all the widgets found in the widget's children.
+│ │  
+│ │  		Return:
+│ │  			set: A set of the widgets in the widget's widget dictionary or all the widgets found in the widget's children.
+│ │  		"""
+│ │ @@ -240,14 +207,62 @@
+│ │  			super().setVisible(True)
+│ │  			self.onShow.emit()
+│ │  			self.isInitialized = True
+│ │  
+│ │  		elif not self.preventHide: #invisible
+│ │  			super().setVisible(False)
+│ │  
+│ │ +
+│ │ +	def trigger_deferred(self):
+│ │ +		"""Executes all deferred methods, in priority order. Any arguments passed to the deferred functions
+│ │ +		will be applied at this point. Once all deferred methods have executed, the dictionary is cleared.
+│ │ +		"""
+│ │ +		for priority in sorted(self._deferred):
+│ │ +			for method in self._deferred[priority]:
+│ │ +				method()
+│ │ +		self._deferred.clear()
+│ │ +
+│ │ +
+│ │ +	def defer(self, func, *args, priority=0):
+│ │ +		"""Defer execution of a function until later. The function is added to a dictionary of deferred 
+│ │ +		methods, with a specified priority. Lower priority values will be executed before higher ones.
+│ │ +		
+│ │ +		Parameters:
+│ │ +			func (function): The function to defer.
+│ │ +			*args: Any arguments to be passed to the function.
+│ │ +			priority (int, optional): The priority of the deferred method. Lower values will be executed 
+│ │ +					first. Defaults to 0.
+│ │ +		"""
+│ │ +		method = partial(func, *args)
+│ │ +		if priority in self._deferred:
+│ │ +			self._deferred[priority] += (method,)
+│ │ +		else:
+│ │ +			self._deferred[priority] = (method,)
+│ │ +
+│ │ +
+│ │ +	def event(self, event):
+│ │ +		"""Handles events that are sent to the widget.
+│ │ +
+│ │ +		Parameters:
+│ │ +			event (QtCore.QEvent): The event that was sent to the widget.
+│ │ +
+│ │ +		Return:
+│ │ +			bool: True if the event was handled, otherwise False.
+│ │ +
+│ │ +		Notes:
+│ │ +			This method is called automatically by Qt when an event is sent to the widget.
+│ │ +			If the event is a `QEvent.ChildPolished` event, it calls the `on_child_polished`
+│ │ +			method with the child widget as an argument. Otherwise, it calls the superclass
+│ │ +			implementation of `event`.
+│ │ +		"""
+│ │ +		if event.type() == QtCore.QEvent.ChildPolished:
+│ │ +			child = event.child()
+│ │ +			self.on_child_polished(child)
+│ │ +		return super().event(event)
+│ │ +
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ @@ -255,15 +270,14 @@
+│ │  
+│ │  
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  if __name__ == "__main__":
+│ │  	import sys
+│ │  
+│ │ -
+│ │  # -----------------------------------------------------------------------------
+│ │  # Notes
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  '''
+│ │  Promoting a widget in designer to use a custom class:
+│ │  >	In Qt Designer, select all the widgets you want to replace,
+│ │   --- uitk-0.6.6/uitk/widgets/__init__.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/attributes.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/attributes.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,11 @@
+│ │  # !/usr/bin/python
+│ │  # coding=utf-8
+│ │  from PySide2 import QtCore, QtGui, QtWidgets
+│ │ +from pythontk import moveDecimalPoint
+│ │  
+│ │  
+│ │  class Attributes(object):
+│ │  	'''Methods for setting widget Attributes.
+│ │  	'''
+│ │  
+│ │  	def setAttributes(self, obj=None, **kwargs):
+│ │ @@ -147,43 +148,21 @@
+│ │  				maximum = 1
+│ │  
+│ │  			self.setAttributes(spinbox, setValue=value, setMinimum=minimum, setMaximum=maximum, 
+│ │  				setSingleStep=step, setButtonSymbols_='NoButtons',)
+│ │  
+│ │  		elif isinstance(value, float):
+│ │  			decimals = str(value)[::-1].find('.') #get decimal places
+│ │ -			step = Attributes.moveDecimalPoint(1, -decimals)
+│ │ +			step = moveDecimalPoint(1, -decimals)
+│ │  
+│ │  			self.setAttributes(spinbox, setValue=value, setMinimum=minimum, setMaximum=maximum, 
+│ │  				setSingleStep=step, setDecimals=decimals, setButtonSymbols_='NoButtons',)
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │ -	def moveDecimalPoint(num, decimal_places):
+│ │ -		'''Move the decimal place in a given number.
+│ │ -
+│ │ -		Parameters:
+│ │ -			decimal_places (int): decimal places to move. (works only with values 0 and below.)
+│ │ -		
+│ │ -		Return:
+│ │ -			(float) the given number with it's decimal place moved by the desired amount.
+│ │ -		
+│ │ -		ex. moveDecimalPoint(11.05, -2) Return: 0.1105
+│ │ -		'''
+│ │ -		for _ in range(abs(decimal_places)):
+│ │ -
+│ │ -			if decimal_places>0:
+│ │ -				num *= 10; #shifts decimal place right
+│ │ -			else:
+│ │ -				num /= 10.; #shifts decimal place left
+│ │ -
+│ │ -		return float(num)
+│ │ -
+│ │ -
+│ │ -	@staticmethod
+│ │  	def transferProperties(source, target):
+│ │  		"""Transfers the properties of a source widget to a target widget.
+│ │  
+│ │  		This function retrieves the meta-object of the source widget and iterates over its properties.
+│ │  		For each property, it gets the corresponding value from the source widget and sets it on the target widget.
+│ │  
+│ │  		Parameters:
+│ │ @@ -231,15 +210,33 @@
+│ │  
+│ │  >	Then click "Add", "Promote", 
+│ │  		and you will see the class change from "QWidget" to "MyWidget" in the Object Inspector pane.
+│ │  '''
+│ │  
+│ │  # depricated ------------------------------------------------------------------------
+│ │  
+│ │ +# def moveDecimalPoint(num, decimal_places):
+│ │ +# 		'''Move the decimal place in a given number.
+│ │ +
+│ │ +# 		Parameters:
+│ │ +# 			decimal_places (int): decimal places to move. (works only with values 0 and below.)
+│ │ +		
+│ │ +# 		Return:
+│ │ +# 			(float) the given number with it's decimal place moved by the desired amount.
+│ │ +		
+│ │ +# 		ex. moveDecimalPoint(11.05, -2) Return: 0.1105
+│ │ +# 		'''
+│ │ +# 		for _ in range(abs(decimal_places)):
+│ │ +
+│ │ +# 			if decimal_places>0:
+│ │ +# 				num *= 10; #shifts decimal place right
+│ │ +# 			else:
+│ │ +# 				num /= 10.; #shifts decimal place left
+│ │  
+│ │ +# 		return float(num)
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  # --------------------------------------------------------------------------------------------
+│ │  # Notes
+│ │   --- uitk-0.6.6/uitk/widgets/checkBox.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/checkBox.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/comboBox.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/comboBox.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -53,15 +53,15 @@
+│ │  
+│ │  
+│ │  	@blockSignals_
+│ │  	def addItems_(self, items, header=None, clear=True, ascending=False):
+│ │  		'''Add items to the combobox's standard modelView without triggering any signals.
+│ │  
+│ │  		Parameters:
+│ │ -			items (str)(list)(dict): A string, list of strings, or dict with 'string':data pairs to fill the comboBox with.
+│ │ +			items (str/list)(dict): A string, list of strings, or dict with 'string':data pairs to fill the comboBox with.
+│ │  			header (str): An optional value for the first index of the comboBox's list.
+│ │  			clear (bool): Clear any previous items before adding new.
+│ │  			ascending (bool): Insert in ascending order. New item(s) will be added to the top of the list.
+│ │  
+│ │  		Return:
+│ │  			(list) comboBox's current item list minus any header.
+│ │   --- uitk-0.6.6/uitk/widgets/label.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/label.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/lineEdit.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/lineEdit.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/listWidget.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/listWidget.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -54,15 +54,15 @@
+│ │  		_hideLists(self, listWidget):
+│ │  			Hides the specified list and all previous lists in its hierarchy.
+│ │  
+│ │  		eventFilter(self, w, event):
+│ │  			Filters events for the specified widget.
+│ │  
+│ │  	"""
+│ │ -	def __init__(self, parent=None, position='right', offset=4, child_height=19, drag_interaction=False, **kwargs):
+│ │ +	def __init__(self, parent=None, position='right', offset=4, child_height=18, max_child_width=400, drag_interaction=False, **kwargs):
+│ │  		"""Initializes a new instance of the ListWidget class.
+│ │  
+│ │  		Parameters:
+│ │  			parent (obj): The parent object.
+│ │  			position (str): The position of the menu relative to the parent widget.
+│ │  					valid values are: 'right', 'left', 'top', 'bottom'
+│ │  			hild_height (int): The height of child widgets.
+│ │ @@ -70,37 +70,20 @@
+│ │  			**kwargs: Additional keyword arguments to pass to the widget.
+│ │  		"""
+│ │  		super().__init__(parent)
+│ │  
+│ │  		self.position = position
+│ │  		self.offset = offset
+│ │  		self.child_height = child_height
+│ │ +		self.child_width = 120
+│ │ +		self.max_child_width = max_child_width
+│ │  		self.drag_interaction = drag_interaction
+│ │  		self.setAttributes(**kwargs)
+│ │  
+│ │  
+│ │ -	def convert(self, items, to='QLabel', **kwargs):
+│ │ -		"""Converts the given items to a specified widget type.
+│ │ -
+│ │ -		Parameters:
+│ │ -			items (list, tuple, set, dict): The items to convert.
+│ │ -			to (str): The widget type to convert the items to.
+│ │ -			**kwargs: Additional keyword arguments to pass to the widget.
+│ │ -
+│ │ -		Example:
+│ │ -			self.convert(self.getItems(), 'QPushButton') #construct the list using the existing contents.
+│ │ -		"""
+│ │ -		lst = lambda x: list(x) if isinstance(x, (list, tuple, set, dict)) else [x] #assure 'x' is a list.
+│ │ -
+│ │ -		for item in lst(items):
+│ │ -			i = self.indexFromItem(item).row() #get the row as an int from the items QModelIndex.
+│ │ -			item = self.takeItem(i)
+│ │ -			self.add(to, setText=item.text(), **kwargs)
+│ │ -
+│ │ -
+│ │  	def getItems(self):
+│ │  		"""Returns a list of items in the list widget.
+│ │  		"""
+│ │  		return [self.item(i) for i in range(self.count())]
+│ │  
+│ │  
+│ │  	def getItemsByText(self, text):
+│ │ @@ -192,14 +175,18 @@
+│ │  		wItem.setSizeHint(w.size())
+│ │  		self.setItemWidget(wItem, w)
+│ │  		self.setData(wItem, data)
+│ │  		wItem.getData = lambda i=wItem: self.getData(i)
+│ │  		w.installEventFilter(self)
+│ │  		super().addItem(wItem)
+│ │  
+│ │ +		widget_width = w.geometry().width()
+│ │ +		if widget_width > self.child_width:
+│ │ +			self.child_width = min(widget_width, self.max_child_width)
+│ │ +
+│ │  		w.__class__.list = property( #add an expandable list to the widget.
+│ │  			lambda w: w.listWidget if hasattr(w, 'listWidget') else self._addList(w)
+│ │  		)
+│ │  
+│ │  		self.setAttributes(w, **kwargs) #set any additional given keyword args for the widget.
+│ │  		self.raise_()
+│ │  
+│ │ @@ -325,18 +312,39 @@
+│ │  
+│ │  		super().leaveEvent(event)
+│ │  
+│ │  
+│ │  	def showEvent(self, event):
+│ │  		'''
+│ │  		'''
+│ │ -		self.resize(self.sizeHint().width(), (self.child_height+2)*self.count())
+│ │ +		# self.resize(self.sizeHint().width(), (self.child_height+2)*self.count())
+│ │ +		new_list_height = (self.child_height + 2) * self.count()
+│ │ +		self.resize(self.child_width, new_list_height)
+│ │  
+│ │  		super().showEvent(event)
+│ │  
+│ │ +
+│ │ +	def convert(self, items, to='QLabel', **kwargs):
+│ │ +		"""Converts the given items to a specified widget type.
+│ │ +
+│ │ +		Parameters:
+│ │ +			items (list, tuple, set, dict): The items to convert.
+│ │ +			to (str): The widget type to convert the items to.
+│ │ +			**kwargs: Additional keyword arguments to pass to the widget.
+│ │ +
+│ │ +		Example:
+│ │ +			self.convert(self.getItems(), 'QPushButton') #construct the list using the existing contents.
+│ │ +		"""
+│ │ +		lst = lambda x: list(x) if isinstance(x, (list, tuple, set, dict)) else [x] #assure 'x' is a list.
+│ │ +
+│ │ +		for item in lst(items):
+│ │ +			i = self.indexFromItem(item).row() #get the row as an int from the items QModelIndex.
+│ │ +			item = self.takeItem(i)
+│ │ +			self.add(to, setText=item.text(), **kwargs)
+│ │ +
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ @@ -361,15 +369,14 @@
+│ │  	# print (lw.getItems())
+│ │  	# print (lw.getItemWidgets())
+│ │  
+│ │  	window.resize(765, 255)
+│ │  	window.show()
+│ │  	sys.exit(app.exec_())
+│ │  
+│ │ -
+│ │  # -----------------------------------------------------------------------------
+│ │  # Notes
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  '''
+│ │  Promoting a widget in designer to use a custom class:
+│ │  >	In Qt Designer, select all the widgets you want to replace,
+│ │   --- uitk-0.6.6/uitk/widgets/menu.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/menu.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -307,15 +307,15 @@
+│ │  		return w
+│ │  
+│ │  
+│ │  	def add(self, widget, label='', checkableLabel=False, **kwargs):
+│ │  		'''Add items to the QMenu.
+│ │  
+│ │  		Parameters:
+│ │ -			widget (str)(obj): The widget to add. ie. 'QLabel', QtWidgets.QLabel, QtWidgets.QLabel()
+│ │ +			widget (str/obj): The widget to add. ie. 'QLabel', QtWidgets.QLabel, QtWidgets.QLabel()
+│ │  			lable (str): Add a label. (which is actually a checkbox. by default it is not checkable)
+│ │  			checkableLabel (bool): The label is checkable.
+│ │  
+│ │  		additional kwargs:
+│ │  			insertSeparator_ (bool): insert a separator before the widget.
+│ │  			setLayoutDirection_ (str): ie. 'LeftToRight'
+│ │  			setAlignment_ (str): ie. 'AlignVCenter'
+│ │ @@ -410,15 +410,15 @@
+│ │  		'''Get the given widget set as last active.
+│ │  		Contains a list of the last 10 active child widgets.
+│ │  
+│ │  		Parameters:
+│ │  			name (bool): Return the last active widgets name as a string.
+│ │  
+│ │  		Return:
+│ │ -			(obj)(str)(list) dependant on flags.
+│ │ +			(obj)(str/list) dependant on flags.
+│ │  
+│ │  		ex. slot connection to the last active child widget:
+│ │  			cmb.returnPressed.connect(lambda m=cmb.ctxMenu.lastActiveChild: getattr(self, m(name=1))()) #connect to the last pressed child widget's corresponding method after return pressed. ie. self.lbl000 if cmb.lbl000 was clicked last.
+│ │  		'''
+│ │  		if not hasattr(self, '_lastActiveChild'):
+│ │  			return None
+│ │  
+│ │ @@ -482,15 +482,15 @@
+│ │  
+│ │  		elif self.parent(): #if parent: map relative to parent.
+│ │  			pos = getattr(self.parent().rect(), self.position if not self.position=='cursorPos' else 'bottomLeft')
+│ │  			pos = self.parent().mapToGlobal(pos())
+│ │  			self.move(pos) # self.move(getCenter(self, pos))
+│ │  
+│ │  			if self.getChildWidgets(inc=['QCheckBox']): #if the menu contains checkboxes:
+│ │ -				self.uncheckAllButton.show()
+│ │ +				self.toggleAllButton.show()
+│ │  
+│ │  		super().showEvent(event)
+│ │  
+│ │  
+│ │  	def setVisible(self, state):
+│ │  		'''Called every time the widget is shown or hidden on screen.
+│ │  		'''
+│ │   --- uitk-0.6.6/uitk/widgets/messageBox.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/messageBox.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/progressBar.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/progressBar.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/pushButton.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/pushButton.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/pushButtonDraggable.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/pushButtonDraggable.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -18,15 +18,15 @@
+│ │  
+│ │  		self.setStyleSheet(parent.styleSheet()) if parent else None
+│ │  
+│ │  		self.setCheckable(True)
+│ │  
+│ │  		self.setStyleSheet('''
+│ │  			QPushButton {
+│ │ -				border: 1px solid transparent;
+│ │ +				border: 1px solid black;
+│ │  				background-color: rgba(127,127,127,2);
+│ │  			}
+│ │  
+│ │  			QPushButton::hover {
+│ │  				background-color: rgba(127,127,127,2);
+│ │  			}
+│ │  
+│ │ @@ -133,33 +133,35 @@
+│ │  		'''
+│ │  		Parameters:
+│ │  			event = <QEvent>
+│ │  		'''
+│ │  
+│ │  		QtWidgets.QPushButton.hideEvent(self, event)
+│ │  
+│ │ +# -----------------------------------------------------------------------------
+│ │ +
+│ │ +
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ +# -----------------------------------------------------------------------------
+│ │  
+│ │  if __name__ == "__main__":
+│ │  	import sys
+│ │  	app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv) #return the existing QApplication object, or create a new one if none exists.
+│ │  		
+│ │  	w = PushButtonDraggable()
+│ │  	w.show()
+│ │  
+│ │  	sys.exit(app.exec_())
+│ │  
+│ │ -
+│ │ -
+│ │  # -----------------------------------------------------------------------------
+│ │  # Notes
+│ │  # -----------------------------------------------------------------------------
+│ │  
+│ │  '''
+│ │  Promoting a widget in designer to use a custom class:
+│ │  >	In Qt Designer, select all the widgets you want to replace,
+│ │   --- uitk-0.6.6/uitk/widgets/pushButton_optionBox.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/pushButton_optionBox.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/region.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/region.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/task.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/task.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk/widgets/text.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/text.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -186,15 +186,15 @@
+│ │  			self._setText(text, index) #set standard widget text
+│ │  
+│ │  
+│ │  	def setAlignment(self, alignment='AlignLeft', index=0):
+│ │  		'''Override setAlignment to accept string alignment arguments as well as QtCore.Qt.AlignmentFlags.
+│ │  
+│ │  		Parameters:
+│ │ -			alignment (str)(obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │ +			alignment (str/obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │  		'''
+│ │  		if isinstance(alignment, str):
+│ │  			alignment = getattr(QtCore.Qt, alignment)
+│ │  
+│ │  		label = self.getRichTextLabel(index)
+│ │  		label.setAlignment(alignment)
+│ │  
+│ │ @@ -247,30 +247,30 @@
+│ │  			Set the rich text label text.
+│ │  			Add whitespace to the actual widget text until it matches the sizeHint of what it would containing the label's text.
+│ │  
+│ │  		Parameters:
+│ │  			text (str): The desired widget's display text.
+│ │  			index (int): For setting text requires an index. ie. comboBox
+│ │  			color (str):  The desired text color.
+│ │ -			alignment (str)(obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │ +			alignment (str/obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │  		'''
+│ │  		self.textOverlayLabel.setText(text)
+│ │  
+│ │  		if color is not None:
+│ │  			self.setTextOverlayColor(color)
+│ │  
+│ │  		if alignment is not None:
+│ │  			self.setTextOverlayAlignment(alignment)
+│ │  
+│ │  
+│ │  	def setTextOverlayAlignment(self, alignment='AlignLeft'):
+│ │  		'''Override setAlignment to accept string alignment arguments as well as QtCore.Qt.AlignmentFlags.
+│ │  
+│ │  		Parameters:
+│ │ -			alignment (str)(obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │ +			alignment (str/obj): Text alignment. valid values are: 'AlignLeft', 'AlignCenter', 'AlignRight' or QtCore.Qt.AlignLeft etc.
+│ │  		'''
+│ │  		if isinstance(alignment, str):
+│ │  			alignment = getattr(QtCore.Qt, alignment)
+│ │  
+│ │  		self.textOverlayLabel.setAlignment(alignment)
+│ │   --- uitk-0.6.6/uitk/widgets/textEdit.py
+│ ├── +++ uitk-0.6.7/uitk/widgets/textEdit.py
+│ │┄ Files identical despite different names
+│ │   --- uitk-0.6.6/uitk.egg-info/PKG-INFO
+│ ├── +++ uitk-0.6.7/uitk.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uitk
+│ │ -Version: 0.6.6
+│ │ +Version: 0.6.7
+│ │  Summary: uitk is a versatile package for managing user interfaces, widgets, and event handling in Python using PySide2. Using naming convention, the switchboard module provides a convenient way to load UI files, register custom widgets, manage slots and styles, and interact with widgets. It aims to simplify the development and management of complex user interfaces.
+│ │  Home-page: https://github.com/m3trik/uitk
+│ │  Author: Ryan Simpson
+│ │  Author-email: m3trik@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │   --- uitk-0.6.6/uitk.egg-info/SOURCES.txt
+│ ├── +++ uitk-0.6.7/uitk.egg-info/SOURCES.txt
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,25 +1,29 @@
+│ │  MANIFEST.in
+│ │  setup.py
+│ │  uitk/__init__.py
+│ │  uitk/events.py
+│ │  uitk/styleSheet.py
+│ │ +uitk/styleSheet.py.bak
+│ │  uitk/switchboard.py
+│ │ +uitk/switchboard.py.bak
+│ │  uitk.egg-info/PKG-INFO
+│ │  uitk.egg-info/SOURCES.txt
+│ │  uitk.egg-info/dependency_links.txt
+│ │  uitk.egg-info/top_level.txt
+│ │  uitk/widgets/MainWindow.py
+│ │  uitk/widgets/__init__.py
+│ │  uitk/widgets/attributes.py
+│ │  uitk/widgets/checkBox.py
+│ │  uitk/widgets/comboBox.py
+│ │ +uitk/widgets/draggable_header.py
+│ │  uitk/widgets/label.py
+│ │  uitk/widgets/lineEdit.py
+│ │  uitk/widgets/listWidget.py
+│ │ +uitk/widgets/mainWindow.py
+│ │  uitk/widgets/menu.py
+│ │  uitk/widgets/messageBox.py
+│ │  uitk/widgets/progressBar.py
+│ │  uitk/widgets/pushButton.py
+│ │  uitk/widgets/pushButtonDraggable.py
+│ │  uitk/widgets/pushButton_optionBox.py
+│ │  uitk/widgets/region.py
