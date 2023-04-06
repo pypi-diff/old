@@ -1,0 +1,360 @@
+# Comparing `tmp/mkdocs_iolanta-0.1.4.tar.gz` & `tmp/mkdocs_iolanta-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mkdocs_iolanta-0.1.4.tar", max compression
++gzip compressed data, was "mkdocs_iolanta-0.1.5.tar", max compression
+```
+
+## Comparing `mkdocs_iolanta-0.1.4.tar` & `mkdocs_iolanta-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,33 +1,36 @@
+--rw-r--r--   0        0        0        0 2023-02-11 14:16:23.494652 mkdocs_iolanta-0.1.4/README.md
+--rw-r--r--   0        0        0       56 2023-03-04 13:58:27.408724 mkdocs_iolanta-0.1.4/mkdocs_iolanta/__init__.py
+--rw-r--r--   0        0        0    73713 2022-04-18 14:16:56.445484 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/foaf/foaf.json
+--rw-r--r--   0        0        0     1777 2022-04-18 14:16:57.465499 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/foaf/named-context.json
+--rw-r--r--   0        0        0       63 2022-03-16 16:07:28.993380 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/iolanta/named-context.json
+--rw-r--r--   0        0        0       21 2022-04-17 16:30:40.516368 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/octa/named-context.json
+--rw-r--r--   0        0        0     2322 2022-04-18 12:18:38.419069 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/owl/named-context.json
+--rw-r--r--   0        0        0    80510 2022-04-18 12:18:32.447038 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/owl/owl.json
+--rw-r--r--   0        0        0      479 2022-04-10 18:15:30.974720 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdf/named-context.json
+--rw-r--r--   0        0        0    17573 2022-04-10 18:15:30.854720 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdf/rdf.json
+--rw-r--r--   0        0        0      522 2022-04-10 17:42:34.623897 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdfs/named-context.json
+--rw-r--r--   0        0        0    11693 2022-04-10 17:42:34.603897 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdfs/rdfs.json
+--rw-r--r--   0        0        0      459 2022-04-12 17:42:43.238139 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/skos/named-context.json
+--rw-r--r--   0        0        0    37125 2022-04-12 17:42:43.214139 mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/skos/skos.json
+--rw-r--r--   0        0        0       40 2023-01-02 21:08:12.691702 mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/__init__.py
+--rw-r--r--   0        0        0      240 2023-01-02 21:08:12.691702 mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/context.py
+--rw-r--r--   0        0        0      649 2023-01-02 21:08:12.695701 mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/main.py
+--rw-r--r--   0        0        0     1441 2023-03-04 13:54:48.299200 mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/show.py
+--rw-r--r--   0        0        0       52 2023-01-02 21:08:12.695701 mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/sparql.py
+--rw-r--r--   0        0        0      710 2022-12-26 16:18:11.976523 mkdocs_iolanta-0.1.4/mkdocs_iolanta/conversions.py
+--rw-r--r--   0        0        0       74 2023-01-25 18:33:36.600951 mkdocs_iolanta-0.1.4/mkdocs_iolanta/data/context.yaml
+--rw-r--r--   0        0        0     2936 2023-01-12 19:24:29.053843 mkdocs_iolanta-0.1.4/mkdocs_iolanta/data/octadocs.yaml
+--rw-r--r--   0        0        0     1197 2022-12-26 16:18:12.524526 mkdocs_iolanta-0.1.4/mkdocs_iolanta/describe_documentation_page.py
+--rw-r--r--   0        0        0      397 2022-12-26 16:18:11.928523 mkdocs_iolanta-0.1.4/mkdocs_iolanta/environment.py
+--rw-r--r--   0        0        0      124 2023-01-28 19:41:01.565102 mkdocs_iolanta-0.1.4/mkdocs_iolanta/iolanta_plugin.py
+--rw-r--r--   0        0        0      219 2022-05-07 18:17:11.544234 mkdocs_iolanta-0.1.4/mkdocs_iolanta/language_from_config.py
+--rw-r--r--   0        0        0     1124 2023-03-02 21:09:44.932579 mkdocs_iolanta-0.1.4/mkdocs_iolanta/plugin.py
+--rw-r--r--   0        0        0      676 2022-03-16 16:07:28.993380 mkdocs_iolanta-0.1.4/mkdocs_iolanta/storage.py
+--rw-r--r--   0        0        0     1701 2022-12-26 16:18:11.880522 mkdocs_iolanta-0.1.4/mkdocs_iolanta/stored_query.py
+--rw-r--r--   0        0        0     2041 2023-02-11 18:28:26.627607 mkdocs_iolanta-0.1.4/mkdocs_iolanta/types.py
+--rw-r--r--   0        0        0      766 2023-03-04 13:58:41.772827 mkdocs_iolanta-0.1.4/pyproject.toml
+--rw-r--r--   0        0        0     1171 1970-01-01 00:00:00.000000 mkdocs_iolanta-0.1.4/setup.py
+--rw-r--r--   0        0        0      616 1970-01-01 00:00:00.000000 mkdocs_iolanta-0.1.4/PKG-INFO
++-rw-r--r--   0        0        0        0 2023-02-11 14:16:23.494652 mkdocs_iolanta-0.1.5/README.md
++-rw-r--r--   0        0        0       56 2023-03-04 13:58:27.408724 mkdocs_iolanta-0.1.5/mkdocs_iolanta/__init__.py
++-rw-r--r--   0        0        0    73713 2022-04-18 14:16:56.445484 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/foaf/foaf.json
++-rw-r--r--   0        0        0     1777 2022-04-18 14:16:57.465499 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/foaf/named-context.json
++-rw-r--r--   0        0        0       63 2022-03-16 16:07:28.993380 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/iolanta/named-context.json
++-rw-r--r--   0        0        0       21 2022-04-17 16:30:40.516368 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/octa/named-context.json
++-rw-r--r--   0        0        0     2322 2022-04-18 12:18:38.419069 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/owl/named-context.json
++-rw-r--r--   0        0        0    80510 2022-04-18 12:18:32.447038 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/owl/owl.json
++-rw-r--r--   0        0        0      479 2022-04-10 18:15:30.974720 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdf/named-context.json
++-rw-r--r--   0        0        0    17573 2022-04-10 18:15:30.854720 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdf/rdf.json
++-rw-r--r--   0        0        0      522 2022-04-10 17:42:34.623897 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdfs/named-context.json
++-rw-r--r--   0        0        0    11693 2022-04-10 17:42:34.603897 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdfs/rdfs.json
++-rw-r--r--   0        0        0      459 2022-04-12 17:42:43.238139 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/skos/named-context.json
++-rw-r--r--   0        0        0    37125 2022-04-12 17:42:43.214139 mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/skos/skos.json
++-rw-r--r--   0        0        0        0 2023-04-06 17:30:14.538918 mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/__init__.py
++-rw-r--r--   0        0        0      240 2023-01-02 21:08:12.691702 mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/context.py
++-rw-r--r--   0        0        0      572 2023-04-06 17:30:48.967161 mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/main.py
++-rw-r--r--   0        0        0     1099 2023-04-06 17:31:30.131446 mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/show.py
++-rw-r--r--   0        0        0       52 2023-01-02 21:08:12.695701 mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/sparql.py
++-rw-r--r--   0        0        0      710 2022-12-26 16:18:11.976523 mkdocs_iolanta-0.1.5/mkdocs_iolanta/conversions.py
++-rw-r--r--   0        0        0      280 2023-04-06 20:11:16.401845 mkdocs_iolanta-0.1.5/mkdocs_iolanta/data/context.yaml
++-rw-r--r--   0        0        0      294 2023-04-06 17:16:48.515576 mkdocs_iolanta-0.1.5/mkdocs_iolanta/data/material.yaml
++-rw-r--r--   0        0        0     2756 2023-04-06 17:16:48.535576 mkdocs_iolanta-0.1.5/mkdocs_iolanta/data/mkdocs.yaml
++-rw-r--r--   0        0        0     1197 2022-12-26 16:18:12.524526 mkdocs_iolanta-0.1.5/mkdocs_iolanta/describe_documentation_page.py
++-rw-r--r--   0        0        0      397 2022-12-26 16:18:11.928523 mkdocs_iolanta-0.1.5/mkdocs_iolanta/environment.py
++-rw-r--r--   0        0        0       58 2023-04-06 17:17:05.331641 mkdocs_iolanta-0.1.5/mkdocs_iolanta/facets/__init__.py
++-rw-r--r--   0        0        0     1049 2023-04-06 20:14:58.483785 mkdocs_iolanta-0.1.5/mkdocs_iolanta/facets/icon.py
++-rw-r--r--   0        0        0      124 2023-01-28 19:41:01.565102 mkdocs_iolanta-0.1.5/mkdocs_iolanta/iolanta_plugin.py
++-rw-r--r--   0        0        0      219 2022-05-07 18:17:11.544234 mkdocs_iolanta-0.1.5/mkdocs_iolanta/language_from_config.py
++-rw-r--r--   0        0        0     1124 2023-03-02 21:09:44.932579 mkdocs_iolanta-0.1.5/mkdocs_iolanta/plugin.py
++-rw-r--r--   0        0        0      676 2022-03-16 16:07:28.993380 mkdocs_iolanta-0.1.5/mkdocs_iolanta/storage.py
++-rw-r--r--   0        0        0     1701 2022-12-26 16:18:11.880522 mkdocs_iolanta-0.1.5/mkdocs_iolanta/stored_query.py
++-rw-r--r--   0        0        0     2041 2023-02-11 18:28:26.627607 mkdocs_iolanta-0.1.5/mkdocs_iolanta/types.py
++-rw-r--r--   0        0        0      867 2023-04-06 20:17:59.261162 mkdocs_iolanta-0.1.5/pyproject.toml
++-rw-r--r--   0        0        0     1286 1970-01-01 00:00:00.000000 mkdocs_iolanta-0.1.5/setup.py
++-rw-r--r--   0        0        0      657 1970-01-01 00:00:00.000000 mkdocs_iolanta-0.1.5/PKG-INFO
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/foaf/foaf.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/foaf/foaf.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/foaf/named-context.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/foaf/named-context.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/owl/named-context.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/owl/named-context.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/owl/owl.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/owl/owl.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdf/rdf.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdf/rdf.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdfs/named-context.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdfs/named-context.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/rdfs/rdfs.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/rdfs/rdfs.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/_data/skos/skos.json` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/_data/skos/skos.json`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/main.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/main.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,13 +1,11 @@
+ from mkdocs.config import load_config
+ from more_itertools import consume
+ from typer import Typer
+ 
+-from mkdocs_iolanta.cli import context, show, sparql
+-
+ 
+ def generate_app() -> Typer:
+     app = Typer()
+ 
+     app.add_typer(sparql.app)
+     app.add_typer(context.app)
+     app.add_typer(show.app)
+@@ -26,10 +24,7 @@
+         map(
+             app.add_typer,
+             typer_instances,
+         ),
+     )
+ 
+     return app
+-
+-
+-app = generate_app()
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/cli/show.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/cli/show.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,18 +1,14 @@
+ from pathlib import Path
+ 
+ from ldflex import LDFlex
+ from typer import Option, Typer
+ 
+-from mkdocs_iolanta.cli.formatters.csv import csv_print
+-from mkdocs_iolanta.cli.formatters.json import print_json
+-from mkdocs_iolanta.cli.formatters.pretty import pretty_print
+ from mkdocs_iolanta.conversions import src_path_to_iri
+ from mkdocs_iolanta.storage import load_graph
+-from mkdocs_iolanta.types import QueryResultsFormat
+ 
+ app = Typer(name='show')
+ 
+ 
+ def find_docs_dir() -> Path:
+     """Find the docs dir of the MkDocs site."""
+     cwd = Path.cwd()
+@@ -24,18 +20,14 @@
+ 
+         cwd = cwd.parent
+ 
+ 
+ @app.command(name='file')
+ def show_file(
+     path: Path,
+-    fmt: QueryResultsFormat = Option(
+-        default=QueryResultsFormat.PRETTY,
+-        metavar='format',
+-    ),
+ ):
+     """Show graph from a file."""
+     docs_dir = find_docs_dir()
+     path = path.absolute().relative_to(docs_dir)
+ 
+     iri = src_path_to_iri(str(path))
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/conversions.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/conversions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/data/octadocs.yaml` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/data/mkdocs.yaml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -95,18 +95,11 @@
+     $id: python://mkdocs_iolanta.facets.bool_literal.BoolLiteral
+     iolanta:supports:
+       $id: iolanta:html
+ 
+ - $id: owl:propertyChainAxiom
+   domain: owl:ObjectProperty
+ 
+-- $id: python://mkdocs_iolanta.facets.DateLiteral
+-
+-- $id: rdfs:Literal
+-  iolanta:instanceFacet:
+-    $id: python://mkdocs_iolanta.facets.Default
+-    iolanta:supports: iolanta:html
+-
+ - $id: mkdocs:url
+   ∘:
+     - mkdocs:subjectOf
+     - mkdocs:url
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/describe_documentation_page.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/describe_documentation_page.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/plugin.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/storage.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/stored_query.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/stored_query.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/mkdocs_iolanta/types.py` & `mkdocs_iolanta-0.1.5/mkdocs_iolanta/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mkdocs_iolanta-0.1.4/pyproject.toml` & `mkdocs_iolanta-0.1.5/pyproject.toml`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,28 +1,32 @@
+ [tool.poetry]
+ name = "mkdocs-iolanta"
+-version = "0.1.4"
++version = "0.1.5"
+ description = "MkDocs plugin to integrate with Iolanta semantic web framework."
+ authors = ["Anatoly Scherbakov <altaisoft@gmail.com>"]
+ license = "MIT"
+ readme = "README.md"
+ packages = [{include = "mkdocs_iolanta"}]
+ 
+ [tool.poetry.dependencies]
+ python = ">=3.10,<4.0"
+ iolanta-jinja2 = "^0.1.2"
+ mkdocs = "^1.4.2"
+ mkdocs-macros-plugin = "^0.7.0"
++iolanta = "^1.0.14"
+ 
+ [tool.poetry.group.dev.dependencies]
+ mkdocs-awesome-pages-plugin = "^2.8.0"
+ mkdocs-material = "^9.0.12"
+ mkdocstrings-python = "^0.8.3"
+ jeeves-yeti-pyproject = "^0.2.11"
+ iolanta-tables = "^0.1.0"
+ 
+ [build-system]
+ requires = ["poetry-core"]
+ build-backend = "poetry.core.masonry.api"
+ 
+ [tool.poetry.plugins."mkdocs.plugins"]
+ iolanta = "mkdocs_iolanta.plugin:IolantaPlugin"
++
++[tool.poetry.plugins."iolanta.plugins"]
++mkdocs = "mkdocs_iolanta:MkdocsIolanta"
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/setup.py` & `mkdocs_iolanta-0.1.5/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,35 +1,37 @@
+ # -*- coding: utf-8 -*-
+ from setuptools import setup
+ 
+ packages = \
+-['mkdocs_iolanta', 'mkdocs_iolanta.cli']
++['mkdocs_iolanta', 'mkdocs_iolanta.cli', 'mkdocs_iolanta.facets']
+ 
+ package_data = \
+ {'': ['*'],
+  'mkdocs_iolanta': ['_data/foaf/*',
+                     '_data/iolanta/*',
+                     '_data/octa/*',
+                     '_data/owl/*',
+                     '_data/rdf/*',
+                     '_data/rdfs/*',
+                     '_data/skos/*',
+                     'data/*']}
+ 
+ install_requires = \
+ ['iolanta-jinja2>=0.1.2,<0.2.0',
++ 'iolanta>=1.0.14,<2.0.0',
+  'mkdocs-macros-plugin>=0.7.0,<0.8.0',
+  'mkdocs>=1.4.2,<2.0.0']
+ 
+ entry_points = \
+-{'mkdocs.plugins': ['iolanta = mkdocs_iolanta.plugin:IolantaPlugin']}
++{'iolanta.plugins': ['mkdocs = mkdocs_iolanta:MkdocsIolanta'],
++ 'mkdocs.plugins': ['iolanta = mkdocs_iolanta.plugin:IolantaPlugin']}
+ 
+ setup_kwargs = {
+     'name': 'mkdocs-iolanta',
+-    'version': '0.1.4',
++    'version': '0.1.5',
+     'description': 'MkDocs plugin to integrate with Iolanta semantic web framework.',
+     'long_description': '',
+     'author': 'Anatoly Scherbakov',
+     'author_email': 'altaisoft@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
+### Comparing `mkdocs_iolanta-0.1.4/PKG-INFO` & `mkdocs_iolanta-0.1.5/PKG-INFO`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,18 +1,19 @@
+ Metadata-Version: 2.1
+ Name: mkdocs-iolanta
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: MkDocs plugin to integrate with Iolanta semantic web framework.
+ License: MIT
+ Author: Anatoly Scherbakov
+ Author-email: altaisoft@gmail.com
+ Requires-Python: >=3.10,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
++Requires-Dist: iolanta (>=1.0.14,<2.0.0)
+ Requires-Dist: iolanta-jinja2 (>=0.1.2,<0.2.0)
+ Requires-Dist: mkdocs (>=1.4.2,<2.0.0)
+ Requires-Dist: mkdocs-macros-plugin (>=0.7.0,<0.8.0)
+ Description-Content-Type: text/markdown
+```
+

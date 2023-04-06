@@ -1,0 +1,287 @@
+--- tmp/strawberry_django_auth-0.374.2.tar.gz
++++ tmp/strawberry_django_auth-0.374.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "strawberry_django_auth-0.374.2.tar", max compression
+│ +gzip compressed data, was "strawberry_django_auth-0.374.3.tar", max compression
+│   --- strawberry_django_auth-0.374.2.tar
+├── +++ strawberry_django_auth-0.374.3.tar
+│ ├── file list
+│ │ @@ -1,53 +1,53 @@
+│ │ --rw-r--r--   0        0        0     1075 2023-03-25 18:14:04.205301 strawberry_django_auth-0.374.2/LICENSE
+│ │ --rw-r--r--   0        0        0     4045 2023-03-25 18:14:04.205301 strawberry_django_auth-0.374.2/README.md
+│ │ --rw-r--r--   0        0        0       24 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/__init__.py
+│ │ --rw-r--r--   0        0        0      168 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/admin.py
+│ │ --rw-r--r--   0        0        0      215 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/apps.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/__init__.py
+│ │ --rw-r--r--   0        0        0     1267 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/captcha_factorty.py
+│ │ --rw-r--r--   0        0        0     6602 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/create.py
+│ │ --rw-r--r--   0        0        0    16724 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/Nehama.ttf
+│ │ --rw-r--r--   0        0        0   221328 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/OpenSans-Semibold.ttf
+│ │ --rw-r--r--   0        0        0    45448 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/pltwide.ttf
+│ │ --rwxr-xr-x   0        0        0    22768 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/stam.ttf
+│ │ --rw-r--r--   0        0        0     3248 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/models.py
+│ │ --rw-r--r--   0        0        0      448 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/captcha/types_.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/__init__.py
+│ │ --rw-r--r--   0        0        0     1995 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/constants.py
+│ │ --rw-r--r--   0        0        0      724 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/directives.py
+│ │ --rw-r--r--   0        0        0     1093 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/exceptions.py
+│ │ --rw-r--r--   0        0        0      231 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/interfaces.py
+│ │ --rw-r--r--   0        0        0     4549 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/middlewares.py
+│ │ --rw-r--r--   0        0        0     1453 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/mixins.py
+│ │ --rw-r--r--   0        0        0     1434 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/scalars.py
+│ │ --rw-r--r--   0        0        0      857 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/types_.py
+│ │ --rw-r--r--   0        0        0     3979 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/core/utils.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/jwt/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/jwt/tools.py
+│ │ --rw-r--r--   0        0        0     7482 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/jwt/types_.py
+│ │ --rw-r--r--   0        0        0     2969 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/migrations/0001_initial.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/migrations/__init__.py
+│ │ --rw-r--r--   0        0        0     7259 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/models.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/py.typed
+│ │ --rw-r--r--   0        0        0      649 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/settings.py
+│ │ --rw-r--r--   0        0        0     9830 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/settings_type.py
+│ │ --rw-r--r--   0        0        0      171 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/templates/email/activation_email.html
+│ │ --rw-r--r--   0        0        0       41 2023-03-25 18:14:04.253302 strawberry_django_auth-0.374.2/gqlauth/templates/email/activation_subject.txt
+│ │ --rw-r--r--   0        0        0   176202 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/images/gd4f267f778b22183ca1ded4dfae871eac04faaac23286dc27d9c228034ff735042cebd167fb684c47ea3bef8803094f5683f08a3728911b4b191f82a7c12de99_1280.jpg
+│ │ --rw-r--r--   0        0        0   100933 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/images/windrader-wind-power-fichtelberg-wind-park.jpg
+│ │ --rw-r--r--   0        0        0      162 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/password_reset_email.html
+│ │ --rw-r--r--   0        0        0       39 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/password_reset_subject.txt
+│ │ --rw-r--r--   0        0        0      160 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/password_set_email.html
+│ │ --rw-r--r--   0        0        0       37 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/templates/email/password_set_subject.txt
+│ │ --rw-r--r--   0        0        0        0 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/__init__.py
+│ │ --rw-r--r--   0        0        0     2177 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/arg_mutations.py
+│ │ --rw-r--r--   0        0        0     1628 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/forms.py
+│ │ --rw-r--r--   0        0        0     1218 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/helpers.py
+│ │ --rw-r--r--   0        0        0     1104 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/queries.py
+│ │ --rw-r--r--   0        0        0     2185 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/relay.py
+│ │ --rw-r--r--   0        0        0    19054 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/resolvers.py
+│ │ --rw-r--r--   0        0        0      450 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/signals.py
+│ │ --rw-r--r--   0        0        0     2005 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/types_.py
+│ │ --rw-r--r--   0        0        0      119 2023-03-25 18:14:04.257302 strawberry_django_auth-0.374.2/gqlauth/user/views.py
+│ │ --rw-r--r--   0        0        0     3332 2023-03-25 18:14:18.957592 strawberry_django_auth-0.374.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0     5558 1970-01-01 00:00:00.000000 strawberry_django_auth-0.374.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1075 2023-04-06 20:13:17.061743 strawberry_django_auth-0.374.3/LICENSE
+│ │ +-rw-r--r--   0        0        0     4043 2023-04-06 20:13:17.061743 strawberry_django_auth-0.374.3/README.md
+│ │ +-rw-r--r--   0        0        0       24 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/__init__.py
+│ │ +-rw-r--r--   0        0        0      168 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/admin.py
+│ │ +-rw-r--r--   0        0        0      215 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/apps.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/__init__.py
+│ │ +-rw-r--r--   0        0        0     1267 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/captcha_factorty.py
+│ │ +-rw-r--r--   0        0        0     6602 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/create.py
+│ │ +-rw-r--r--   0        0        0    16724 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/Nehama.ttf
+│ │ +-rw-r--r--   0        0        0   221328 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/OpenSans-Semibold.ttf
+│ │ +-rw-r--r--   0        0        0    45448 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/pltwide.ttf
+│ │ +-rwxr-xr-x   0        0        0    22768 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/stam.ttf
+│ │ +-rw-r--r--   0        0        0     3248 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/models.py
+│ │ +-rw-r--r--   0        0        0      448 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/captcha/types_.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/__init__.py
+│ │ +-rw-r--r--   0        0        0     1995 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/constants.py
+│ │ +-rw-r--r--   0        0        0      724 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/directives.py
+│ │ +-rw-r--r--   0        0        0     1093 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/exceptions.py
+│ │ +-rw-r--r--   0        0        0      231 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/interfaces.py
+│ │ +-rw-r--r--   0        0        0     4549 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/middlewares.py
+│ │ +-rw-r--r--   0        0        0     1453 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/mixins.py
+│ │ +-rw-r--r--   0        0        0     1434 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/scalars.py
+│ │ +-rw-r--r--   0        0        0      857 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/types_.py
+│ │ +-rw-r--r--   0        0        0     3979 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/core/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/jwt/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/jwt/tools.py
+│ │ +-rw-r--r--   0        0        0     7482 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/jwt/types_.py
+│ │ +-rw-r--r--   0        0        0     2969 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/migrations/0001_initial.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0     7322 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/models.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/py.typed
+│ │ +-rw-r--r--   0        0        0      649 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/settings.py
+│ │ +-rw-r--r--   0        0        0     9830 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/settings_type.py
+│ │ +-rw-r--r--   0        0        0      171 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/templates/email/activation_email.html
+│ │ +-rw-r--r--   0        0        0       41 2023-04-06 20:13:17.109743 strawberry_django_auth-0.374.3/gqlauth/templates/email/activation_subject.txt
+│ │ +-rw-r--r--   0        0        0   176202 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/images/gd4f267f778b22183ca1ded4dfae871eac04faaac23286dc27d9c228034ff735042cebd167fb684c47ea3bef8803094f5683f08a3728911b4b191f82a7c12de99_1280.jpg
+│ │ +-rw-r--r--   0        0        0   100933 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/images/windrader-wind-power-fichtelberg-wind-park.jpg
+│ │ +-rw-r--r--   0        0        0      162 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/password_reset_email.html
+│ │ +-rw-r--r--   0        0        0       39 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/password_reset_subject.txt
+│ │ +-rw-r--r--   0        0        0      160 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/password_set_email.html
+│ │ +-rw-r--r--   0        0        0       37 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/templates/email/password_set_subject.txt
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/__init__.py
+│ │ +-rw-r--r--   0        0        0     2177 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/arg_mutations.py
+│ │ +-rw-r--r--   0        0        0     1628 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/forms.py
+│ │ +-rw-r--r--   0        0        0     1218 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/helpers.py
+│ │ +-rw-r--r--   0        0        0     1104 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/queries.py
+│ │ +-rw-r--r--   0        0        0     2185 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/relay.py
+│ │ +-rw-r--r--   0        0        0    19054 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/resolvers.py
+│ │ +-rw-r--r--   0        0        0      450 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/signals.py
+│ │ +-rw-r--r--   0        0        0     2005 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/types_.py
+│ │ +-rw-r--r--   0        0        0      119 2023-04-06 20:13:17.113743 strawberry_django_auth-0.374.3/gqlauth/user/views.py
+│ │ +-rw-r--r--   0        0        0     3332 2023-04-06 20:13:30.838540 strawberry_django_auth-0.374.3/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     5556 1970-01-01 00:00:00.000000 strawberry_django_auth-0.374.3/PKG-INFO
+│ │   --- strawberry_django_auth-0.374.2/LICENSE
+│ ├── +++ strawberry_django_auth-0.374.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/README.md
+│ ├── +++ strawberry_django_auth-0.374.3/README.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  [![Tests](https://img.shields.io/github/actions/workflow/status/nrbnlulu/strawberry-django-auth/tests.yml?label=Tests&style=for-the-badge)](https://github.com/nrbnlulu/strawberry-django-auth/actions/workflows/tests.yml)
+│ │  [![Codecov](https://img.shields.io/codecov/c/github/nrbnlulu/strawberry-django-auth?style=for-the-badge)](https://app.codecov.io/gh/nrbnlulu/strawberry-django-auth)
+│ │  [![Pypi](https://img.shields.io/pypi/v/strawberry-django-auth.svg?style=for-the-badge&logo=appveyor)](https://pypi.org/project/strawberry-django-auth/)
+│ │ -[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://github.com/nrbnlulu/strawberry-django-auth/blob/master/CONTRIBUTING.md)
+│ │ +[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://github.com/nrbnlulu/strawberry-django-auth/blob/main/CONTRIBUTING.md)
+│ │  [![Pypi downloads](https://img.shields.io/pypi/dm/strawberry-django-auth?style=for-the-badge)](https://pypistats.org/packages/strawberry-django-auth)
+│ │  [![Python versions](https://img.shields.io/pypi/pyversions/strawberry-django-auth?style=social)](https://pypi.org/project/strawberry-django-auth/)
+│ │  
+│ │  # Strawberry-django Auth
+│ │  [Django](https://github.com/django/django) registration and authentication with [Strawberry](https://strawberry.rocks/).
+│ │  
+│ │  ## Demo
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/captcha_factorty.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/captcha_factorty.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/create.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/create.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/Nehama.ttf
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/Nehama.ttf
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/OpenSans-Semibold.ttf
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/OpenSans-Semibold.ttf
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/pltwide.ttf
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/pltwide.ttf
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/fonts/stam.ttf
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/fonts/stam.ttf
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/captcha/models.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/captcha/models.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/constants.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/constants.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/directives.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/directives.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/exceptions.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/middlewares.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/middlewares.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/mixins.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/mixins.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/scalars.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/scalars.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/types_.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/types_.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/core/utils.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/core/utils.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/jwt/types_.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/jwt/types_.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/migrations/0001_initial.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/models.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -26,14 +26,17 @@
+│ │  
+│ │  USER_MODEL = get_user_model()
+│ │  
+│ │  
+│ │  class UserStatus(models.Model):
+│ │      """A helper model that handles user account stuff."""
+│ │  
+│ │ +    class Meta:
+│ │ +        verbose_name_plural = "User statuses"
+│ │ +
+│ │      user = models.OneToOneField(
+│ │          django_settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="status"
+│ │      )
+│ │      verified = models.BooleanField(default=False)
+│ │      archived = models.BooleanField(default=False)
+│ │  
+│ │      def __str__(self):
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/settings.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/settings.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/settings_type.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/settings_type.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/templates/email/images/gd4f267f778b22183ca1ded4dfae871eac04faaac23286dc27d9c228034ff735042cebd167fb684c47ea3bef8803094f5683f08a3728911b4b191f82a7c12de99_1280.jpg
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/templates/email/images/gd4f267f778b22183ca1ded4dfae871eac04faaac23286dc27d9c228034ff735042cebd167fb684c47ea3bef8803094f5683f08a3728911b4b191f82a7c12de99_1280.jpg
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/templates/email/images/windrader-wind-power-fichtelberg-wind-park.jpg
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/templates/email/images/windrader-wind-power-fichtelberg-wind-park.jpg
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/arg_mutations.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/arg_mutations.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/forms.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/forms.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/helpers.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/helpers.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/queries.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/queries.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/relay.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/relay.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/resolvers.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/resolvers.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/gqlauth/user/types_.py
+│ ├── +++ strawberry_django_auth-0.374.3/gqlauth/user/types_.py
+│ │┄ Files identical despite different names
+│ │   --- strawberry_django_auth-0.374.2/pyproject.toml
+│ ├── +++ strawberry_django_auth-0.374.3/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "strawberry-django-auth"
+│ │ -version = "0.374.2"
+│ │ +version = "0.374.3"
+│ │  description = "Graphql authentication system with Strawberry for Django."
+│ │  license = "MIT"
+│ │  authors = ["Nir.J Benlulu <nrbnlulu@gmail.com>"]
+│ │  maintainers = ["Nir.J Benlulu <nrbnlulu@gmail.com>"]
+│ │  readme = "README.md"
+│ │  classifiers = [
+│ │      'Environment :: Web Environment',
+│ │   --- strawberry_django_auth-0.374.2/PKG-INFO
+│ ├── +++ strawberry_django_auth-0.374.3/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: strawberry-django-auth
+│ │ -Version: 0.374.2
+│ │ +Version: 0.374.3
+│ │  Summary: Graphql authentication system with Strawberry for Django.
+│ │  License: MIT
+│ │  Author: Nir.J Benlulu
+│ │  Author-email: nrbnlulu@gmail.com
+│ │  Maintainer: Nir.J Benlulu
+│ │  Maintainer-email: nrbnlulu@gmail.com
+│ │  Requires-Python: >=3.8,<3.12
+│ │ @@ -33,15 +33,15 @@
+│ │  Project-URL: Documentation, https://nrbnlulu.github.io/strawberry-django-auth/
+│ │  Project-URL: Homepage, https://github.com/nrbnlulu/strawberry-django-auth
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  [![Tests](https://img.shields.io/github/actions/workflow/status/nrbnlulu/strawberry-django-auth/tests.yml?label=Tests&style=for-the-badge)](https://github.com/nrbnlulu/strawberry-django-auth/actions/workflows/tests.yml)
+│ │  [![Codecov](https://img.shields.io/codecov/c/github/nrbnlulu/strawberry-django-auth?style=for-the-badge)](https://app.codecov.io/gh/nrbnlulu/strawberry-django-auth)
+│ │  [![Pypi](https://img.shields.io/pypi/v/strawberry-django-auth.svg?style=for-the-badge&logo=appveyor)](https://pypi.org/project/strawberry-django-auth/)
+│ │ -[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://github.com/nrbnlulu/strawberry-django-auth/blob/master/CONTRIBUTING.md)
+│ │ +[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=for-the-badge&logo=appveyor)](https://github.com/nrbnlulu/strawberry-django-auth/blob/main/CONTRIBUTING.md)
+│ │  [![Pypi downloads](https://img.shields.io/pypi/dm/strawberry-django-auth?style=for-the-badge)](https://pypistats.org/packages/strawberry-django-auth)
+│ │  [![Python versions](https://img.shields.io/pypi/pyversions/strawberry-django-auth?style=social)](https://pypi.org/project/strawberry-django-auth/)
+│ │  
+│ │  # Strawberry-django Auth
+│ │  [Django](https://github.com/django/django) registration and authentication with [Strawberry](https://strawberry.rocks/).
+│ │  
+│ │  ## Demo

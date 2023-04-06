@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/muutils-0.3.6.tar.gz tmp/muutils-0.3.7.tar.gz --html versions/m/muutils/0.3.6-0.3.7/index.html --text versions/m/muutils/0.3.6-0.3.7/diff.txt --markdown versions/m/muutils/0.3.6-0.3.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">16.3 KB</span></div>
+  <div><span class="source">tmp/muutils-0.3.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/muutils-0.3.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">182 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;muutils-0.3.<del>6</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;muutils-0.3.<ins>7</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">16.1 KB</span></div>
+    <div><span class="source">muutils-0.3.6.tar</span> vs.</div>
+    <div id="muutils--.-.-.tar"><span class="source">muutils-0.3.7.tar</span>
+      <a class="anchor" href="#muutils--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">8.88 KB</span></div>
+      <div id="muutils--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#muutils--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 41 lines modified</td><td colspan="2">Offset 1, 41 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35823<span class="dp">·</span>2021-01-10<span class="dp">·</span>20:54:08.928022<span class="dp">·</span>muutils-0.3.<del>6</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35823<span class="dp">·</span>2021-01-10<span class="dp">·</span>20:54:08.928022<span class="dp">·</span>muutils-0.3.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>2<del>1</del>:<del>47</del>:<del>49</del>.2<del>7790</del>5<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>2<ins>0</ins>:<ins>16</ins>:<ins>17</ins>.2<ins>1464</ins>5<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3910<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.757321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/dataclass_validator.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3910<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.757321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/dataclass_validator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4652<span class="dp">·</span>2023-02-16<span class="dp">·</span>09:10:54.613167<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/experiments.ipynb</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4652<span class="dp">·</span>2023-02-16<span class="dp">·</span>09:10:54.613167<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/experiments.ipynb</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5835<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.757321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/gptdataset.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5835<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.757321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/gptdataset.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23453<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.758323<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/json_serialize_old.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>23453<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.758323<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/json_serialize_old.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3286<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.758323<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/lazy_externals.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3286<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.758323<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/lazy_externals.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9214<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.759320<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/newargparser.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9214<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.759320<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/newargparser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7414<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.760323<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/_wip/torch_util_old.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7414<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.760323<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/_wip/torch_util_old.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2037<span class="dp">·</span>2023-04-05<span class="dp">·</span>21:4<del>7</del>:<del>49</del>.<del>278906</del><span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/dictmagic.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2037<span class="dp">·</span>2023-04-05<span class="dp">·</span>21:4<ins>9</ins>:<ins>57</ins>.<ins>934337</ins><span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/dictmagic.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1613<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.018548<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/group_equiv.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1613<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.018548<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/group_equiv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>897<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.761326<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/__init__.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>897<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.761326<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6016<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.204722<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/array.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6016<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.204722<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/array.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13391<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.762321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/dataclass_factories.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13391<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.762321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/dataclass_factories.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8906<span class="dp">·</span>2023-04-05<span class="dp">·</span>06:39:57.784877<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/json_serialize.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8906<span class="dp">·</span>2023-04-05<span class="dp">·</span>06:39:57.784877<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/json_serialize.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15588<span class="dp">·</span>2023-04-05<span class="dp">·</span>21:47:49.279906<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/serializable_dataclass.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15588<span class="dp">·</span>2023-04-05<span class="dp">·</span>21:47:49.279906<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/serializable_dataclass.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3764<span class="dp">·</span>2023-03-28<span class="dp">·</span>07:47:43.743882<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/json_serialize/util.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3764<span class="dp">·</span>2023-03-28<span class="dp">·</span>07:47:43.743882<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/json_serialize/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1878<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.764321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/jsonlines.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1878<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.764321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/jsonlines.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>267<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.021547<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>267<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.021547<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1183<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.021547<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/exception_context.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1183<span class="dp">·</span>2023-03-06<span class="dp">·</span>19:25:21.021547<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/exception_context.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1667<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.765321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/headerfuncs.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1667<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.765321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/headerfuncs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.765321<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/log_util.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.765321<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/log_util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10669<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.766326<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/logger.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10669<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.766326<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/logger.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3796<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.767323<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/loggingstream.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3796<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.767323<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/loggingstream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2124<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.768323<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/simplelogger.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2124<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.768323<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/simplelogger.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2488<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.769322<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/logger/timing.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2488<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.769322<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/logger/timing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2231<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.770322<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/misc.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2231<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.770322<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/misc.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-28<span class="dp">·</span>07:47:43.743882<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/py.typed</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-28<span class="dp">·</span>07:47:43.743882<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8778<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.771346<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/statcounter.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8778<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.771346<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/statcounter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6322<span class="dp">·</span>2023-03-30<span class="dp">·</span>07:34:00.609964<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/sysinfo.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6322<span class="dp">·</span>2023-03-30<span class="dp">·</span>07:34:00.609964<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/sysinfo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10013<span class="dp">·</span>2023-04-02<span class="dp">·</span>02:41:11.904089<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/tensor_utils.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10013<span class="dp">·</span>2023-04-02<span class="dp">·</span>02:41:11.904089<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/tensor_utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.773320<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/__init__.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>139<span class="dp">·</span>2023-03-24<span class="dp">·</span>22:25:29.773320<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1469<span class="dp">·</span>2023-03-25<span class="dp">·</span>05:30:53.722117<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/externals.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1469<span class="dp">·</span>2023-03-25<span class="dp">·</span>05:30:53.722117<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/externals.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11113<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.207720<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/loading.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11113<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.207720<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/loading.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4151<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.207720<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/readme.md</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4151<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.207720<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/readme.md</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8121<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.208721<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/serializing.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8121<span class="dp">·</span>2023-03-30<span class="dp">·</span>19:44:39.208721<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/serializing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<del>034</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>06</del>:1<del>4</del>:<del>55</del>.<del>1186</del>3<del>8</del><span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/torchutil.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<ins>681</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>20</ins>:1<ins>5</ins>:<ins>44</ins>.<ins>2841</ins>3<ins>9</ins><span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/torchutil.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7520<span class="dp">·</span>2023-04-04<span class="dp">·</span>06:14:55.119640<span class="dp">·</span>muutils-0.3.<del>6</del>/muutils/zanj/zanj.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7520<span class="dp">·</span>2023-04-04<span class="dp">·</span>06:14:55.119640<span class="dp">·</span>muutils-0.3.<ins>7</ins>/muutils/zanj/zanj.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>967<span class="dp">·</span>2023-04-0<del>5</del><span class="dp">·</span>2<del>1</del>:<del>47</del>:<del>49</del>.<del>280968</del><span class="dp">·</span>muutils-0.3.<del>6</del>/pyproject.toml</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>967<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>2<ins>0</ins>:<ins>16</ins>:<ins>08</ins>.<ins>561376</ins><span class="dp">·</span>muutils-0.3.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1575<span class="dp">·</span>2023-02-16<span class="dp">·</span>09:10:54.612163<span class="dp">·</span>muutils-0.3.<del>6</del>/README.md</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1575<span class="dp">·</span>2023-02-16<span class="dp">·</span>09:10:54.612163<span class="dp">·</span>muutils-0.3.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2405<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>muutils-0.3.<del>6</del>/PKG-INFO</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2405<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>muutils-0.3.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">muutils-0.3.6/LICENSE</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--LICENSE"><span class="source">muutils-0.3.7/LICENSE</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/dataclass_validator.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-dataclass_validator.py"><span class="source">muutils-0.3.7/muutils/_wip/dataclass_validator.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-dataclass_validator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/experiments.ipynb</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-experiments.ipynb"><span class="source">muutils-0.3.7/muutils/_wip/experiments.ipynb</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-experiments.ipynb">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/gptdataset.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-gptdataset.py"><span class="source">muutils-0.3.7/muutils/_wip/gptdataset.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-gptdataset.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/json_serialize_old.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-json_serialize_old.py"><span class="source">muutils-0.3.7/muutils/_wip/json_serialize_old.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-json_serialize_old.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/lazy_externals.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-lazy_externals.py"><span class="source">muutils-0.3.7/muutils/_wip/lazy_externals.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-lazy_externals.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/newargparser.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-newargparser.py"><span class="source">muutils-0.3.7/muutils/_wip/newargparser.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-newargparser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/_wip/torch_util_old.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-_wip-torch_util_old.py"><span class="source">muutils-0.3.7/muutils/_wip/torch_util_old.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-_wip-torch_util_old.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/dictmagic.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-dictmagic.py"><span class="source">muutils-0.3.7/muutils/dictmagic.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-dictmagic.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/group_equiv.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-group_equiv.py"><span class="source">muutils-0.3.7/muutils/group_equiv.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-group_equiv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/__init__.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-__init__.py"><span class="source">muutils-0.3.7/muutils/json_serialize/__init__.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/array.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-array.py"><span class="source">muutils-0.3.7/muutils/json_serialize/array.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-array.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/dataclass_factories.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-dataclass_factories.py"><span class="source">muutils-0.3.7/muutils/json_serialize/dataclass_factories.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-dataclass_factories.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/json_serialize.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-json_serialize.py"><span class="source">muutils-0.3.7/muutils/json_serialize/json_serialize.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-json_serialize.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/serializable_dataclass.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-serializable_dataclass.py"><span class="source">muutils-0.3.7/muutils/json_serialize/serializable_dataclass.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-serializable_dataclass.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/json_serialize/util.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-util.py"><span class="source">muutils-0.3.7/muutils/json_serialize/util.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-json_serialize-util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/jsonlines.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-jsonlines.py"><span class="source">muutils-0.3.7/muutils/jsonlines.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-jsonlines.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/exception_context.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-exception_context.py"><span class="source">muutils-0.3.7/muutils/logger/exception_context.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-exception_context.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/headerfuncs.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-headerfuncs.py"><span class="source">muutils-0.3.7/muutils/logger/headerfuncs.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-headerfuncs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/log_util.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-log_util.py"><span class="source">muutils-0.3.7/muutils/logger/log_util.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-log_util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/logger.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-logger.py"><span class="source">muutils-0.3.7/muutils/logger/logger.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-logger.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/loggingstream.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-loggingstream.py"><span class="source">muutils-0.3.7/muutils/logger/loggingstream.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-loggingstream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/simplelogger.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-simplelogger.py"><span class="source">muutils-0.3.7/muutils/logger/simplelogger.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-simplelogger.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/logger/timing.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-logger-timing.py"><span class="source">muutils-0.3.7/muutils/logger/timing.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-logger-timing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/misc.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-misc.py"><span class="source">muutils-0.3.7/muutils/misc.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-misc.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/statcounter.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-statcounter.py"><span class="source">muutils-0.3.7/muutils/statcounter.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-statcounter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/sysinfo.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-sysinfo.py"><span class="source">muutils-0.3.7/muutils/sysinfo.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-sysinfo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/tensor_utils.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-tensor_utils.py"><span class="source">muutils-0.3.7/muutils/tensor_utils.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-tensor_utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/externals.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-externals.py"><span class="source">muutils-0.3.7/muutils/zanj/externals.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-externals.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/loading.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-loading.py"><span class="source">muutils-0.3.7/muutils/zanj/loading.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-loading.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/readme.md</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-readme.md"><span class="source">muutils-0.3.7/muutils/zanj/readme.md</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-readme.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/serializing.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-serializing.py"><span class="source">muutils-0.3.7/muutils/zanj/serializing.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-serializing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.26 KB</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/torchutil.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-torchutil.py"><span class="source">muutils-0.3.7/muutils/zanj/torchutil.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-torchutil.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 187, 26 lines modified</td><td colspan="2">Offset 187, 45 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>return<span class="dp">·</span>the<span class="dp">·</span>new<span class="dp">·</span>class</td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>return<span class="dp">·</span>the<span class="dp">·</span>new<span class="dp">·</span>class</td></tr>
+<tr class="diffunmodified"><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cls</td><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>cls</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>wrapper</td><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>wrapper</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">190 </td><td class="diffpresent">class<span class="dp">·</span>ConfigMismatchException(ValueError):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">191 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self,<span class="dp">·</span>msg:<span class="dp">·</span>str,<span class="dp">·</span>diff):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">192 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__(msg)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">193 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.diff<span class="dp">·</span>=<span class="dp">·</span>diff</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">194 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__str__(self):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">195 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>f&quot;{super().__str__()}:<span class="dp">·</span>{self.diff}&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">190 </td><td class="diffpresent">def<span class="dp">·</span>assert_model_cfg_equality(model_a:<span class="dp">·</span>ConfiguredModel,<span class="dp">·</span>model_b:<span class="dp">·</span>ConfiguredModel):</td><td class="diffline">196 </td><td class="diffpresent">def<span class="dp">·</span>assert_model_cfg_equality(model_a:<span class="dp">·</span>ConfiguredModel,<span class="dp">·</span>model_b:<span class="dp">·</span>ConfiguredModel):</td></tr>
+<tr class="diffchanged"><td class="diffline">191 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;check<span class="dp">·</span>both<span class="dp">·</span>models<span class="dp">·</span>are<span class="dp">·</span>correct<span class="dp">·</span>instances<span class="dp">·</span>and<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>config<del>&quot;&quot;&quot;</del></td><td class="diffline">197 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;check<span class="dp">·</span>both<span class="dp">·</span>models<span class="dp">·</span>are<span class="dp">·</span>correct<span class="dp">·</span>instances<span class="dp">·</span>and<span class="dp">·</span>have<span class="dp">·</span>the<span class="dp">·</span>same<span class="dp">·</span>config</td></tr>
+<tr class="diffdeleted"><td class="diffline">192 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(model_a,<span class="dp">·</span>ConfiguredModel)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">198 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Raises:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">199 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ConfigMismatchException:<span class="dp">·</span>if<span class="dp">·</span>the<span class="dp">·</span>configs<span class="dp">·</span>don&#x27;t<span class="dp">·</span>match,<span class="dp">·</span>e.diff<span class="dp">·</span>will<span class="dp">·</span>contain<span class="dp">·</span>the<span class="dp">·</span>diff</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">200 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">201 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(model_a,<span class="dp">·</span>ConfiguredModel),<span class="dp">·</span>&quot;model_a<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>ConfiguredModel&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(</td></tr>
+<tr class="diffchanged"><td class="diffline">193 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>assert</del><span class="dp">·</span><del>isinstan</del><del>ce(</del>model_a.zanj_model_config,<span class="dp">·</span>SerializableDataclass<del>)</del></td><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>model_a.zanj_model_config,<span class="dp">·</span>SerializableDataclass</td></tr>
+<tr class="diffchanged"><td class="diffline">194 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>ass</del>e<del>rt</del><span class="dp">·</span><del>i</del>s<del>inst</del>a<del>nce(</del>model_<del>b,<span class="dp">·</span></del><del>C</del>onfig<del>uredModel</del><del>)</del></td><td class="diffline">204 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>),<span class="dp">·</span>&quot;</ins><ins>mod</ins>e<ins>l</ins><ins>_a</ins><span class="dp">·</span><ins>m</ins><ins>u</ins>s<ins>t<span class="dp">·</span>h</ins><ins>ave<span class="dp">·</span></ins>a<ins><span class="dp">·</span>z</ins><ins>anj_</ins>model_<ins>c</ins>onfig<ins>&quot;</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">205 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(model_b,<span class="dp">·</span>ConfiguredModel),<span class="dp">·</span>&quot;model_b<span class="dp">·</span>must<span class="dp">·</span>be<span class="dp">·</span>a<span class="dp">·</span>ConfiguredModel&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>isinstance(</td></tr>
+<tr class="diffchanged"><td class="diffline">195 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>assert</del><span class="dp">·</span><del>isinstan</del><del>ce(</del>model_b.zanj_model_config,<span class="dp">·</span>SerializableDataclass<del>)</del></td><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></ins>model_b.zanj_model_config,<span class="dp">·</span>SerializableDataclass</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),<span class="dp">·</span>&quot;model_b<span class="dp">·</span>must<span class="dp">·</span>have<span class="dp">·</span>a<span class="dp">·</span>zanj_model_config&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">196 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cls_type:<span class="dp">·</span>type<span class="dp">·</span>=<span class="dp">·</span>type(model_a.zanj_model_config)</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>cls_type:<span class="dp">·</span>type<span class="dp">·</span>=<span class="dp">·</span>type(model_a.zanj_model_config)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">197 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert<span class="dp">·</span>(</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">198 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del><span class="dp">·</span><del><span class="dp">·</span></del>model_a.zanj_model_config<span class="dp">·</span>==<span class="dp">·</span>model_b.zanj_model_config</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>if</ins><span class="dp">·</span><ins>no</ins><ins>t</ins><span class="dp">·</span><ins>(</ins>model_a.zanj_model_config<span class="dp">·</span>==<span class="dp">·</span>model_b.zanj_model_config<ins>):</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>ConfigMismatchException(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;configs<span class="dp">·</span>of<span class="dp">·</span>type<span class="dp">·</span>{type(model_a.zanj_model_config)},<span class="dp">·</span>{type(model_b.zanj_model_config)}<span class="dp">·</span>don&#x27;t<span class="dp">·</span>match&quot;,</td></tr>
+<tr class="diffchanged"><td class="diffline">199 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>),</del><span class="dp">·</span><del>f&quot;configs</del><span class="dp">·</span><del>don</del><del>&#x27;t</del><span class="dp">·</span><del>match:<span class="dp">·</span>{</del>cls_type.diff(model_a.zanj_model_config,<span class="dp">·</span>model_b.zanj_model_config)<del>}</del><del>&quot;</del></td><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span></ins><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>diff=</ins>cls_type.diff(model_a.zanj_model_config,<span class="dp">·</span>model_b.zanj_model_config)<ins>,</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">214 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">200 </td><td class="diffpresent">def<span class="dp">·</span>assert_model_exact_equality(model_a:<span class="dp">·</span>ConfiguredModel,<span class="dp">·</span>model_b:<span class="dp">·</span>ConfiguredModel):</td><td class="diffline">215 </td><td class="diffpresent">def<span class="dp">·</span>assert_model_exact_equality(model_a:<span class="dp">·</span>ConfiguredModel,<span class="dp">·</span>model_b:<span class="dp">·</span>ConfiguredModel):</td></tr>
+<tr class="diffunmodified"><td class="diffline">201 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;check<span class="dp">·</span>the<span class="dp">·</span>models<span class="dp">·</span>are<span class="dp">·</span>exactly<span class="dp">·</span>equal,<span class="dp">·</span>including<span class="dp">·</span>state<span class="dp">·</span>dict<span class="dp">·</span>contents&quot;&quot;&quot;</td><td class="diffline">216 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;check<span class="dp">·</span>the<span class="dp">·</span>models<span class="dp">·</span>are<span class="dp">·</span>exactly<span class="dp">·</span>equal,<span class="dp">·</span>including<span class="dp">·</span>state<span class="dp">·</span>dict<span class="dp">·</span>contents&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert_model_cfg_equality(model_a,<span class="dp">·</span>model_b)</td><td class="diffline">217 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>assert_model_cfg_equality(model_a,<span class="dp">·</span>model_b)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>model_a_sd_keys:<span class="dp">·</span>set[str]<span class="dp">·</span>=<span class="dp">·</span>set(model_a.state_dict().keys())</td><td class="diffline">218 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>model_a_sd_keys:<span class="dp">·</span>set[str]<span class="dp">·</span>=<span class="dp">·</span>set(model_a.state_dict().keys())</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">muutils-0.3.6/muutils/zanj/zanj.py</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--muutils-zanj-zanj.py"><span class="source">muutils-0.3.7/muutils/zanj/zanj.py</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--muutils-zanj-zanj.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">474 B</span></div>
+      <div><span class="source">muutils-0.3.6/pyproject.toml</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--pyproject.toml"><span class="source">muutils-0.3.7/pyproject.toml</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;muutils&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;muutils&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>6</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>7</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>collection<span class="dp">·</span>of<span class="dp">·</span>miscellaneous<span class="dp">·</span>python<span class="dp">·</span>utilities&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>collection<span class="dp">·</span>of<span class="dp">·</span>miscellaneous<span class="dp">·</span>python<span class="dp">·</span>utilities&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;GPL-3.0-only&quot;</td><td class="diffline">5 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;GPL-3.0-only&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;mivanit<span class="dp">·</span>&lt;mivanits@umich.edu&gt;&quot;]</td><td class="diffline">6 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;mivanit<span class="dp">·</span>&lt;mivanits@umich.edu&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">classifiers=[</td><td class="diffline">8 </td><td class="diffpresent">classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">85.0 B</span></div>
+      <div><span class="source">muutils-0.3.6/README.md</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--README.md"><span class="source">muutils-0.3.7/README.md</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">458 B</span></div>
+      <div><span class="source">muutils-0.3.6/PKG-INFO</span> vs.</div>
+      <div id="muutils--.-.-.tar---muutils--.-.--PKG-INFO"><span class="source">muutils-0.3.7/PKG-INFO</span>
+        <a class="anchor" href="#muutils--.-.-.tar---muutils--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>muutils</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>muutils</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>collection<span class="dp">·</span>of<span class="dp">·</span>miscellaneous<span class="dp">·</span>python<span class="dp">·</span>utilities</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>collection<span class="dp">·</span>of<span class="dp">·</span>miscellaneous<span class="dp">·</span>python<span class="dp">·</span>utilities</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mivanit/muutils</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mivanit/muutils</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPL-3.0-only</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>GPL-3.0-only</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>mivanit</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>mivanit</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mivanits@umich.edu</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mivanits@umich.edu</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(GPLv3)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

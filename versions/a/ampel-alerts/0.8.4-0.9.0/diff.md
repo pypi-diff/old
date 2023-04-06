@@ -1,0 +1,554 @@
+# Comparing `tmp/ampel_alerts-0.8.4.tar.gz` & `tmp/ampel_alerts-0.9.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "ampel_alerts-0.8.4.tar", max compression
++gzip compressed data, was "ampel_alerts-0.9.0.tar", max compression
+```
+
+## Comparing `ampel_alerts-0.8.4.tar` & `ampel_alerts-0.9.0.tar`
+
+### file list
+
+```diff
+@@ -1,37 +1,37 @@
+--rw-r--r--   0        0        0     1512 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/LICENSE
+--rw-r--r--   0        0        0     3417 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/README.md
+--rwxr-xr-x   0        0        0     1075 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/abstract/AbsAlertFilter.py
+--rwxr-xr-x   0        0        0     1207 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/abstract/AbsAlertLoader.py
+--rw-r--r--   0        0        0     1024 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/abstract/AbsAlertRegister.py
+--rwxr-xr-x   0        0        0     1324 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/abstract/AbsAlertSupplier.py
+--rwxr-xr-x   0        0        0    14619 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/AlertConsumer.py
+--rw-r--r--   0        0        0      532 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/AlertConsumerError.py
+--rw-r--r--   0        0        0     1340 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/AlertConsumerMetrics.py
+--rw-r--r--   0        0        0     2550 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/AlertFileList.py
+--rwxr-xr-x   0        0        0     2957 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/BaseAlertSupplier.py
+--rwxr-xr-x   0        0        0     9978 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/FilterBlock.py
+--rwxr-xr-x   0        0        0     4646 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/FilterBlocksHandler.py
+--rwxr-xr-x   0        0        0     1691 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/FilteringAlertSupplier.py
+--rwxr-xr-x   0        0        0     3434 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/filter/BasicMultiFilter.py
+--rwxr-xr-x   0        0        0     3018 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/DirAlertLoader.py
+--rwxr-xr-x   0        0        0     1417 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/DirFileNamesLoader.py
+--rwxr-xr-x   0        0        0     1518 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/DirTaggedAlertLoader.py
+--rwxr-xr-x   0        0        0     1047 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/FileAlertLoader.py
+--rwxr-xr-x   0        0        0     3371 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/TarAlertLoader.py
+--rw-r--r--   0        0        0     1056 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/load/TarballWalker.py
+--rwxr-xr-x   0        0        0     6946 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/BaseAlertRegister.py
+--rwxr-xr-x   0        0        0     5593 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/DBRejectedLogsHandler.py
+--rwxr-xr-x   0        0        0     1572 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/FullActiveAlertRegister.py
+--rwxr-xr-x   0        0        0     2108 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/FullAlertRegister.py
+--rwxr-xr-x   0        0        0     1585 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/GeneralActiveAlertRegister.py
+--rwxr-xr-x   0        0        0     1150 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/GeneralAlertRegister.py
+--rwxr-xr-x   0        0        0     1258 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/MinimalActiveAlertRegister.py
+--rwxr-xr-x   0        0        0     1962 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/alert/reject/MinimalAlertRegister.py
+--rwxr-xr-x   0        0        0    12488 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/dev/AutoCompleteBenchmark.py
+--rwxr-xr-x   0        0        0     1013 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/dev/UnitTestAlertSupplier.py
+--rwxr-xr-x   0        0        0     2018 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/model/AlertConsumerModel.py
+--rw-r--r--   0        0        0        0 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/py.typed
+--rwxr-xr-x   0        0        0     6204 2023-03-30 16:17:27.469121 ampel_alerts-0.8.4/ampel/template/AbsEasyChannelTemplate.py
+--rw-r--r--   0        0        0      370 2023-03-30 16:17:27.473121 ampel_alerts-0.8.4/conf/ampel-alerts/ampel.yml
+--rw-r--r--   0        0        0     1434 2023-03-30 16:17:27.473121 ampel_alerts-0.8.4/pyproject.toml
+--rw-r--r--   0        0        0     4593 1970-01-01 00:00:00.000000 ampel_alerts-0.8.4/PKG-INFO
++-rw-r--r--   0        0        0     1512 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/LICENSE
++-rw-r--r--   0        0        0     3417 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/README.md
++-rwxr-xr-x   0        0        0     1075 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/ampel/abstract/AbsAlertFilter.py
++-rwxr-xr-x   0        0        0     1207 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/ampel/abstract/AbsAlertLoader.py
++-rw-r--r--   0        0        0     1024 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/ampel/abstract/AbsAlertRegister.py
++-rwxr-xr-x   0        0        0     1324 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/ampel/abstract/AbsAlertSupplier.py
++-rwxr-xr-x   0        0        0    14569 2023-04-06 20:15:05.586679 ampel_alerts-0.9.0/ampel/alert/AlertConsumer.py
++-rw-r--r--   0        0        0      532 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/AlertConsumerError.py
++-rw-r--r--   0        0        0     1340 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/AlertConsumerMetrics.py
++-rw-r--r--   0        0        0     2550 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/AlertFileList.py
++-rwxr-xr-x   0        0        0     2957 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/BaseAlertSupplier.py
++-rwxr-xr-x   0        0        0     9978 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/FilterBlock.py
++-rwxr-xr-x   0        0        0     4646 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/FilterBlocksHandler.py
++-rwxr-xr-x   0        0        0     1691 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/FilteringAlertSupplier.py
++-rwxr-xr-x   0        0        0     3434 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/filter/BasicMultiFilter.py
++-rwxr-xr-x   0        0        0     3018 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/DirAlertLoader.py
++-rwxr-xr-x   0        0        0     1417 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/DirFileNamesLoader.py
++-rwxr-xr-x   0        0        0     1518 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/DirTaggedAlertLoader.py
++-rwxr-xr-x   0        0        0     1047 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/FileAlertLoader.py
++-rwxr-xr-x   0        0        0     3371 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/TarAlertLoader.py
++-rw-r--r--   0        0        0     1056 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/load/TarballWalker.py
++-rwxr-xr-x   0        0        0     6946 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/BaseAlertRegister.py
++-rwxr-xr-x   0        0        0     5593 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/DBRejectedLogsHandler.py
++-rwxr-xr-x   0        0        0     1572 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/FullActiveAlertRegister.py
++-rwxr-xr-x   0        0        0     2108 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/FullAlertRegister.py
++-rwxr-xr-x   0        0        0     1585 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/GeneralActiveAlertRegister.py
++-rwxr-xr-x   0        0        0     1150 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/GeneralAlertRegister.py
++-rwxr-xr-x   0        0        0     1258 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/MinimalActiveAlertRegister.py
++-rwxr-xr-x   0        0        0     1962 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/alert/reject/MinimalAlertRegister.py
++-rwxr-xr-x   0        0        0    12488 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/dev/AutoCompleteBenchmark.py
++-rwxr-xr-x   0        0        0     1013 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/dev/UnitTestAlertSupplier.py
++-rwxr-xr-x   0        0        0     2018 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/model/AlertConsumerModel.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/py.typed
++-rwxr-xr-x   0        0        0     6204 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/ampel/template/AbsEasyChannelTemplate.py
++-rw-r--r--   0        0        0      370 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/conf/ampel-alerts/ampel.yml
++-rw-r--r--   0        0        0     1434 2023-04-06 20:15:05.590679 ampel_alerts-0.9.0/pyproject.toml
++-rw-r--r--   0        0        0     4595 1970-01-01 00:00:00.000000 ampel_alerts-0.9.0/PKG-INFO
+```
+
+### Comparing `ampel_alerts-0.8.4/LICENSE` & `ampel_alerts-0.9.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/README.md` & `ampel_alerts-0.9.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/abstract/AbsAlertFilter.py` & `ampel_alerts-0.9.0/ampel/abstract/AbsAlertFilter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/abstract/AbsAlertLoader.py` & `ampel_alerts-0.9.0/ampel/abstract/AbsAlertLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/abstract/AbsAlertRegister.py` & `ampel_alerts-0.9.0/ampel/abstract/AbsAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/abstract/AbsAlertSupplier.py` & `ampel_alerts-0.9.0/ampel/abstract/AbsAlertSupplier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/AlertConsumer.py` & `ampel_alerts-0.9.0/ampel/alert/AlertConsumer.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,42 +1,43 @@
+ #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ # File:                Ampel-alerts/ampel/alert/AlertConsumer.py
+ # License:             BSD-3-Clause
+ # Author:              valery brinnel <firstname.lastname@gmail.com>
+ # Date:                10.10.2017
+-# Last Modified Date:  30.03.2023
++# Last Modified Date:  05.04.2023
+ # Last Modified By:    valery brinnel <firstname.lastname@gmail.com>
+ 
+ import sys
+-from signal import signal, SIGINT, SIGTERM, default_int_handler
+ from typing import Any
++from typing_extensions import Self
++from collections.abc import Sequence
+ from pymongo.errors import PyMongoError
++from signal import signal, SIGINT, SIGTERM, default_int_handler
+ 
+ from ampel.core.AmpelContext import AmpelContext
+-from ampel.util.mappings import get_by_path, merge_dict
+-from ampel.util.freeze import recursive_unfreeze
+ from ampel.enum.EventCode import EventCode
+ from ampel.model.UnitModel import UnitModel
+ from ampel.core.EventHandler import EventHandler
+-from ampel.dev.DevAmpelContext import DevAmpelContext
+ from ampel.abstract.AbsAlertSupplier import AbsAlertSupplier
+ from ampel.abstract.AbsEventUnit import AbsEventUnit
+ from ampel.base.AuxUnitRegister import AuxUnitRegister
+ from ampel.alert.FilterBlocksHandler import FilterBlocksHandler
+ from ampel.ingest.ChainedIngestionHandler import ChainedIngestionHandler
+ from ampel.mongo.update.DBUpdatesBuffer import DBUpdatesBuffer
+ from ampel.log import AmpelLogger, LogFlag, VERBOSE
+ from ampel.log.utils import report_exception
+ from ampel.log.AmpelLoggingError import AmpelLoggingError
+ from ampel.log.LightLogRecord import LightLogRecord
+ from ampel.alert.AlertConsumerError import AlertConsumerError
+ from ampel.alert.AlertConsumerMetrics import AlertConsumerMetrics, stat_time
+ from ampel.model.ingest.CompilerOptions import CompilerOptions
+ from ampel.model.AlertConsumerModel import AlertConsumerModel
++from ampel.util.mappings import get_by_path, merge_dict
++from ampel.util.freeze import recursive_unfreeze
+ 
+ 
+ class AlertConsumer(AbsEventUnit, AlertConsumerModel):
+ 	"""
+ 	Class handling the processing of alerts (T0 level).
+ 	For each alert, following tasks are performed:
+ 
+@@ -56,27 +57,33 @@
+ 		
+ 		Example::
+ 		    
+ 		  AlertConsumer.from_process(
+ 		      context, process_name="VAL_TEST2/T0/ztf_uw_public", override={'iter_max': 100}
+ 		  )
+ 		"""
+-		args = context.get_config().get( # type: ignore
+-			f"process.{process_name}.processor.config", dict
+-		)
+-
++		args = context.get_config().get(f"process.{process_name}.processor.config", dict)
+ 		if args is None:
+ 			raise ValueError(f"process.{process_name}.processor.config is None")
+ 
+ 		if override:
+ 			args = merge_dict(recursive_unfreeze(args), override) # type: ignore
+ 
+ 		return cls(context=context, **args)
+ 
+ 
++	@classmethod # override (just set defaults for templates)
++	def new(cls,
++		templates: str | Sequence[str] = ('resolve_run_time_aliases', 'hash_t2_config'),
++		**kwargs
++	) -> Self:
++		""" Hashes t2 unit configs on the fly (to use with jupyter for ex.) """
++		return super().new(templates=templates, **kwargs)
++
++
+ 	def __init__(self, **kwargs) -> None:
+ 		"""
+ 		:raises:
+ 			:class:`ValueError` if no process can be loaded or if a process is
+ 			associated with an unknown channel
+ 		"""
+ 
+@@ -99,27 +106,14 @@
+ 
+ 		logger = AmpelLogger.get_logger(
+ 			console=kwargs['context'].config.get(
+ 				f"logging.{self.log_profile}.console", dict
+ 			)
+ 		)
+ 
+-		if isinstance(kwargs['context'], DevAmpelContext):
+-
+-			kwargs['directives'] = [
+-				kwargs['context'].hash_ingest_directive(el, logger=logger)
+-				for el in kwargs['directives']
+-			]
+-
+-			if "debug" in self.log_profile:
+-				from ampel.util.pretty import prettyjson
+-				logger.info("Auto-hashed ingestive directive(s):")
+-				for el in kwargs['directives']:
+-					print(prettyjson(el))
+-
+ 		super().__init__(**kwargs)
+ 
+ 		self._ampel_db = self.context.get_database()
+ 		self.alert_supplier = AuxUnitRegister.new_unit(
+ 			model = self.supplier,
+ 			sub_type = AbsAlertSupplier
+ 		)
+@@ -158,23 +152,23 @@
+ 		"""
+ 		if self._cancel_run == 0:
+ 			self.print_feedback(reason, "after processing of current alert")
+ 			self._cancel_run = reason
+ 
+ 
+ 	def get_ingestion_handler(self,
+-		run_id: int,
++		event_hdlr: EventHandler,
+ 		updates_buffer: DBUpdatesBuffer,
+ 		logger: AmpelLogger
+ 	) -> ChainedIngestionHandler:
+ 
+ 		return ChainedIngestionHandler(
+ 			self.context, self.shaper, self.directives, updates_buffer,
+-			run_id, tier = 0, logger = logger, database = self.database,
+-			trace_id = {'alertconsumer': self._trace_id},
++			event_hdlr.get_run_id(), tier = 0, logger = logger,
++			database = self.database, trace_id = {'alertconsumer': self._trace_id},
+ 			compiler_opts = self.compiler_opts or CompilerOptions()
+ 		)
+ 
+ 
+ 	def process_alerts(self) -> None:
+ 		"""
+ 		Convenience method to process all alerts from a given loader until it dries out
+@@ -227,16 +221,16 @@
+ 			error_callback = self.set_cancel_run,
+ 			catch_signals = False, # we do it ourself
+ 			max_size = self.updates_buffer_size
+ 		)
+ 
+ 		any_filter = any([fb.filter_model for fb in self._fbh.filter_blocks])
+ 
+-		# Sets ingesters up
+-		ing_hdlr = self.get_ingestion_handler(run_id, updates_buffer, logger)
++		# Set ingesters up
++		ing_hdlr = self.get_ingestion_handler(event_hdlr, updates_buffer, logger)
+ 
+ 		# Loop variables
+ 		iter_max = self.iter_max
+ 		if self.iter_max != self._defaults['iter_max']:
+ 			logger.info(f"Using custom iter_max: {self.iter_max}")
+ 
+ 		self._cancel_run = 0
+```
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/AlertConsumerError.py` & `ampel_alerts-0.9.0/ampel/alert/AlertConsumerError.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/AlertConsumerMetrics.py` & `ampel_alerts-0.9.0/ampel/alert/AlertConsumerMetrics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/AlertFileList.py` & `ampel_alerts-0.9.0/ampel/alert/AlertFileList.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/BaseAlertSupplier.py` & `ampel_alerts-0.9.0/ampel/alert/BaseAlertSupplier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/FilterBlock.py` & `ampel_alerts-0.9.0/ampel/alert/FilterBlock.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/FilterBlocksHandler.py` & `ampel_alerts-0.9.0/ampel/alert/FilterBlocksHandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/FilteringAlertSupplier.py` & `ampel_alerts-0.9.0/ampel/alert/FilteringAlertSupplier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/filter/BasicMultiFilter.py` & `ampel_alerts-0.9.0/ampel/alert/filter/BasicMultiFilter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/DirAlertLoader.py` & `ampel_alerts-0.9.0/ampel/alert/load/DirAlertLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/DirFileNamesLoader.py` & `ampel_alerts-0.9.0/ampel/alert/load/DirFileNamesLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/DirTaggedAlertLoader.py` & `ampel_alerts-0.9.0/ampel/alert/load/DirTaggedAlertLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/FileAlertLoader.py` & `ampel_alerts-0.9.0/ampel/alert/load/FileAlertLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/TarAlertLoader.py` & `ampel_alerts-0.9.0/ampel/alert/load/TarAlertLoader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/load/TarballWalker.py` & `ampel_alerts-0.9.0/ampel/alert/load/TarballWalker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/BaseAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/BaseAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/DBRejectedLogsHandler.py` & `ampel_alerts-0.9.0/ampel/alert/reject/DBRejectedLogsHandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/FullActiveAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/FullActiveAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/FullAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/FullAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/GeneralActiveAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/GeneralActiveAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/GeneralAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/GeneralAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/MinimalActiveAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/MinimalActiveAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/alert/reject/MinimalAlertRegister.py` & `ampel_alerts-0.9.0/ampel/alert/reject/MinimalAlertRegister.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/dev/AutoCompleteBenchmark.py` & `ampel_alerts-0.9.0/ampel/dev/AutoCompleteBenchmark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/dev/UnitTestAlertSupplier.py` & `ampel_alerts-0.9.0/ampel/dev/UnitTestAlertSupplier.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/model/AlertConsumerModel.py` & `ampel_alerts-0.9.0/ampel/model/AlertConsumerModel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `ampel_alerts-0.8.4/ampel/template/AbsEasyChannelTemplate.py` & `ampel_alerts-0.9.0/ampel/template/AbsEasyChannelTemplate.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ #!/usr/bin/env python
+ # -*- coding: utf-8 -*-
+ # File:                Ampel-alerts/ampel/template/AbsEasyChannelTemplate.py
+ # License:             BSD-3-Clause
+ # Author:              valery brinnel <firstname.lastname@gmail.com>
+ # Date:                16.10.2019
+-# Last Modified Date:  16.07.2021
++# Last Modified Date:  05.04.2023
+ # Last Modified By:    valery brinnel <firstname.lastname@gmail.com>
+ 
+ import ujson
+ from typing import Any
+ from ampel.types import ChannelId
+ from ampel.log.AmpelLogger import AmpelLogger
+ from ampel.model.ChannelModel import ChannelModel
+@@ -50,15 +50,15 @@
+ 
+ 	# Mandatory implementation
+ 	def get_channel(self, logger: AmpelLogger) -> dict[str, Any]:
+ 		return self.dict(include=ChannelModel.get_model_keys())
+ 
+ 
+ 	def craft_t0_process(self,
+-		config: FirstPassConfig | dict[str, Any],
++		alconf: FirstPassConfig | dict[str, Any],
+ 		controller: str | dict[str, Any],
+ 		supplier: str | dict[str, Any],
+ 		shaper: str | dict[str, Any],
+ 		combiner: str | dict[str, Any],
+ 		muxer: None | str | dict[str, Any] = None,
+ 		compiler_opts: None | str | dict[str, Any] = None
+ 	) -> dict[str, Any]:
+@@ -84,27 +84,27 @@
+ 			"source": self.source,
+ 			"channel": self.channel,
+ 			"name": f"{self.channel}|T0|{self.template}",
+ 			"controller": resolve_shortcut(controller),
+ 			"processor": {
+ 				"unit": "AlertConsumer",
+ 				"config": self.craft_t0_processor_config(
+-					self.channel, config, self.t2_compute, supplier, shaper, combiner,
++					self.channel, alconf, self.t2_compute, supplier, shaper, combiner,
+ 					self.t0_filter.dict(exclude_unset=True) if self.t0_filter else None, muxer, compiler_opts
+ 				)
+ 			}
+ 		}
+ 
+ 		return ret
+ 
+ 
+ 	@classmethod
+ 	def craft_t0_processor_config(cls,
+ 		channel: ChannelId,
+-		config: FirstPassConfig | dict[str, Any],
++		alconf: FirstPassConfig | dict[str, Any],
+ 		t2_compute: list[T2Compute],
+ 		supplier: str | dict[str, Any],
+ 		shaper: str | dict[str, Any],
+ 		combiner: str | dict[str, Any],
+ 		filter_dict: None | dict[str, Any] = None,
+ 		muxer: None | str | dict[str, Any] = None,
+ 		compiler_opts: None | str | dict[str, Any] = None
+@@ -126,20 +126,20 @@
+ 		state_t2s = filter_units(
+ 			t2_compute, [
+ 				"AbsStateT2Unit",
+ 				"AbsCustomStateT2Unit",
+ 				"AbsTiedStateT2Unit",
+ 				"AbsTiedCustomStateT2Unit",
+ 			],
+-			config
++			alconf
+ 		)
+ 
+-		stock_t2s = filter_units(t2_compute, "AbsStockT2Unit", config)
+-		point_t2s = filter_units(t2_compute, "AbsPointT2Unit", config)
+-		check_tied_units(t2_compute, config)
++		stock_t2s = filter_units(t2_compute, "AbsStockT2Unit", alconf)
++		point_t2s = filter_units(t2_compute, "AbsPointT2Unit", alconf)
++		check_tied_units(t2_compute, alconf)
+ 
+ 		ingest: dict[str, Any] = {}
+ 
+ 		# See IngestDirective docstring
+ 		if stock_t2s:
+ 			ingest['stock_t2'] = stock_t2s
+```
+
+### Comparing `ampel_alerts-0.8.4/pyproject.toml` & `ampel_alerts-0.9.0/pyproject.toml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "ampel-alerts"
+-version = "0.8.4"
++version = "0.9.0"
+ description = "Alert support for the Ampel system"
+ authors = ["Valery Brinnel"]
+ maintainers = ["Jakob van Santen <jakob.van.santen@desy.de>"]
+ license = "BSD-3-Clause"
+ readme = "README.md"
+ homepage = "https://ampelproject.github.io"
+ repository = "https://github.com/AmpelProject/Ampel-alerts"
+@@ -26,16 +26,16 @@
+ ]
+ 
+ [tool.poetry.dependencies]
+ python = ">=3.10,<3.12"
+ Sphinx = {version = ">=6.1.2,<6.2.0", optional = true}
+ sphinx-autodoc-typehints = {version = "^1.11.1", optional = true}
+ tomlkit = {version = "^0.11.0", optional=true}
+-ampel-interface = {version = "^0.8.7"}
+-ampel-core = {version = "^0.8.6"}
++ampel-interface = {version = "^0.9.0"}
++ampel-core = {version = "^0.9.0"}
+ 
+ [tool.poetry.dev-dependencies]
+ pytest = "^7.2.2"
+ pytest-cov = "^4.0.0"
+ pytest-mock = "^3.10.0"
+ mongomock = "^4.1.2"
+ mypy = "^1.1.1"
+```
+
+### Comparing `ampel_alerts-0.8.4/PKG-INFO` & `ampel_alerts-0.9.0/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: ampel-alerts
+-Version: 0.8.4
++Version: 0.9.0
+ Summary: Alert support for the Ampel system
+ Home-page: https://ampelproject.github.io
+ License: BSD-3-Clause
+ Author: Valery Brinnel
+ Maintainer: Jakob van Santen
+ Maintainer-email: jakob.van.santen@desy.de
+ Requires-Python: >=3.10,<3.12
+@@ -16,16 +16,16 @@
+ Classifier: Programming Language :: Python :: 3.11
+ Classifier: Topic :: Scientific/Engineering :: Astronomy
+ Classifier: Topic :: Scientific/Engineering :: Information Analysis
+ Classifier: Typing :: Typed
+ Provides-Extra: docs
+ Provides-Extra: server
+ Requires-Dist: Sphinx (>=6.1.2,<6.2.0) ; extra == "docs"
+-Requires-Dist: ampel-core (>=0.8.6,<0.9.0)
+-Requires-Dist: ampel-interface (>=0.8.7,<0.9.0)
++Requires-Dist: ampel-core (>=0.9.0,<0.10.0)
++Requires-Dist: ampel-interface (>=0.9.0,<0.10.0)
+ Requires-Dist: sphinx-autodoc-typehints (>=1.11.1,<2.0.0) ; extra == "docs"
+ Requires-Dist: tomlkit (>=0.11.0,<0.12.0) ; extra == "docs"
+ Project-URL: Repository, https://github.com/AmpelProject/Ampel-alerts
+ Description-Content-Type: text/markdown
+ 
+ <img align="left" src="https://user-images.githubusercontent.com/17532220/213289600-aa1757d2-44ba-4de2-b12d-520ddb5d39ff.png" width="150" height="150"/>  
+ <br>
+```
+

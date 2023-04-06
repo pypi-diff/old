@@ -1,0 +1,290 @@
+# Comparing `tmp/pylibmagic-0.2.2.tar.gz` & `tmp/pylibmagic-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pylibmagic-0.2.2.tar", last modified: Tue Oct 25 16:15:19 2022, max compression
++gzip compressed data, was "pylibmagic-0.3.0.tar", last modified: Thu Apr  6 19:42:10 2023, max compression
+```
+
+## Comparing `pylibmagic-0.2.2.tar` & `pylibmagic-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/
+--rw-r--r--   0 runner    (1001) docker     (121)     1523 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (121)     4366 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)     2996 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/README.rst
+--rw-r--r--   0 runner    (1001) docker     (121)     1591 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (121)     1770 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (121)      445 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/src/
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/src/pylibmagic/
+--rw-r--r--   0 runner    (1001) docker     (121)     3131 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/src/pylibmagic/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (121)      176 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic/_version.py
+--rw-r--r--   0 runner    (1001) docker     (121)      118 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/src/pylibmagic/_version.pyi
+--rw-r--r--   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/src/pylibmagic/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/src/pylibmagic.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (121)     4366 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (121)      413 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (121)        1 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (121)      273 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (121)       11 2022-10-25 16:15:19.000000 pylibmagic-0.2.2/src/pylibmagic.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-10-25 16:15:19.549622 pylibmagic-0.2.2/tests/
+--rw-r--r--   0 runner    (1001) docker     (121)      676 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/tests/test_compiled.py
+--rw-r--r--   0 runner    (1001) docker     (121)      193 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/tests/test_import.py
+--rw-r--r--   0 runner    (1001) docker     (121)      106 2022-10-25 16:15:06.000000 pylibmagic-0.2.2/tests/test_package.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     1523 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     4366 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2996 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)     2360 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)     1655 2023-04-06 19:42:10.631748 pylibmagic-0.3.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      445 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/src/pylibmagic/
++-rw-r--r--   0 runner    (1001) docker     (123)     3144 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/src/pylibmagic/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      160 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic/_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)      118 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/src/pylibmagic/_version.pyi
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/src/pylibmagic/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/src/pylibmagic.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4366 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      413 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      273 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       11 2023-04-06 19:42:10.000000 pylibmagic-0.3.0/src/pylibmagic.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 19:42:10.627747 pylibmagic-0.3.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)      676 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/tests/test_compiled.py
++-rw-r--r--   0 runner    (1001) docker     (123)      195 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/tests/test_import.py
++-rw-r--r--   0 runner    (1001) docker     (123)      106 2023-04-06 19:41:56.000000 pylibmagic-0.3.0/tests/test_package.py
+```
+
+### Comparing `pylibmagic-0.2.2/LICENSE` & `pylibmagic-0.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pylibmagic-0.2.2/PKG-INFO` & `pylibmagic-0.3.0/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pylibmagic
+-Version: 0.2.2
++Version: 0.3.0
+ Summary: scikit-build project with CMake for compiling libmagic
+ Home-page: https://github.com/kratsg/pylibmagic
+ Author: Giordon Stark
+ Author-email: kratsg@gmail.com
+ Maintainer: Giordon Stark
+ Maintainer-email: kratsg@gmail.com
+ License: BSD-3-Clause
+@@ -29,15 +29,15 @@
+ Requires-Python: >=3.7
+ Description-Content-Type: text/x-rst
+ Provides-Extra: dev
+ Provides-Extra: docs
+ Provides-Extra: test
+ License-File: LICENSE
+ 
+-pylibmagic v0.2.2
++pylibmagic v0.3.0
+ =================
+ 
+ A lightweight, minimal python package that ships ``magic`` libraries
+ using automake, CMake, scikit-build, and cibuildwheel.
+ 
+ |Actions Status| |Documentation Status| |Code style: black|
+```
+
+### Comparing `pylibmagic-0.2.2/README.rst` & `pylibmagic-0.3.0/README.rst`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-pylibmagic v0.2.2
++pylibmagic v0.3.0
+ =================
+ 
+ A lightweight, minimal python package that ships ``magic`` libraries
+ using automake, CMake, scikit-build, and cibuildwheel.
+ 
+ |Actions Status| |Documentation Status| |Code style: black|
+```
+
+### Comparing `pylibmagic-0.2.2/pyproject.toml` & `pylibmagic-0.3.0/pyproject.toml`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -48,27 +48,47 @@
+ python_version = "3.7"
+ warn_unused_configs = true
+ strict = true
+ show_error_codes = true
+ enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
+ warn_unreachable = true
+ 
+-[tool.check-manifest]
+-ignore = [
+-    ".github/**",
+-    "docs/**",
+-    ".pre-commit-config.yaml",
+-    ".readthedocs.yml",
+-    "src/*/_version.py",
+-    "noxfile.py",
++[tool.ruff]
++select = [
++  "E", "F", "W", # flake8
++  "B",  "B904",  # flake8-bugbear
++  "I",           # isort
++  "ARG",         # flake8-unused-arguments
++  "C4",          # flake8-comprehensions
++  "EM",          # flake8-errmsg
++  "ICN",         # flake8-import-conventions
++  "ISC",         # flake8-implicit-str-concat
++  "PGH",         # pygrep-hooks
++  "PIE",         # flake8-pie
++  "PL",          # pylint
++  "PT",          # flake8-pytest-style
++  "PTH",         # flake8-use-pathlib
++  "RET",         # flake8-return
++  "RUF",         # Ruff-specific
++  "SIM",         # flake8-simplify
++  "T20",         # flake8-print
++  "UP",          # pyupgrade
++  "YTT",         # flake8-2020
+ ]
++extend-ignore = ["PLR", "E501"]
++target-version = "py37"
++typing-modules = ["mapyde._compat.typing"]
++src = ["src"]
++unfixable = ["T20", "F841"]
++exclude = []
++isort.required-imports = ["from __future__ import annotations"]
+ 
+-[tool.isort]
+-profile = "black"
+-
++[tool.ruff.per-file-ignores]
++"tests/**" = ["T20"]
++"noxfile.py" = ["T20"]
+ 
+ [tool.pylint]
+ master.py-version = "3.7"
+ master.ignore-paths= ["src/pylibmagic/_version.py"]
+ reports.output-format = "colorized"
+ similarities.ignore-imports = "yes"
+ messages_control.disable = [
+```
+
+### Comparing `pylibmagic-0.2.2/setup.cfg` & `pylibmagic-0.3.0/setup.cfg`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -57,18 +57,11 @@
+ 	sphinx-book-theme>=0.1.0
+ 	sphinx-copybutton
+ test = 
+ 	pytest>=6
+ 	pytest-cov>=3
+ 	python-magic
+ 
+-[flake8]
+-extend-ignore = E203, E501, E722, B950
+-extend-select = B9
+-per-file-ignores = 
+-	tests/*: T
+-	noxfile.py: T
+-
+ [egg_info]
+ tag_build = 
+ tag_date = 0
+```
+
+### Comparing `pylibmagic-0.2.2/src/pylibmagic/__init__.py` & `pylibmagic-0.3.0/src/pylibmagic/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -27,15 +27,16 @@
+     keys = ["DYLD_LIBRARY_PATH"]
+ elif sys.platform.startswith("aix"):
+     keys = ["LD_LIBRARY_PATH"]
+ elif os.name == "posix":
+     keys = ["LIBRARY_PATH", "LD_LIBRARY_PATH"]
+ 
+ if not keys:
+-    raise OSError(f"{os.name} / {sys.platform} not supported yet.")
++    msg = f"{os.name} / {sys.platform} not supported yet."
++    raise OSError(msg)
+ 
+ for key in keys:
+     os.environ[key] = f"{data}{os.pathsep}{os.environ.get(key, '')}"
+ 
+ os.environ[
+     "MAGIC"
+ ] = f"{data.joinpath('magic.mgc')}{os.pathsep}{os.environ.get('MAGIC', '')}"
+@@ -44,15 +45,14 @@
+ # and python-magic hard-codes this as well:
+ #   https://github.com/ahupp/python-magic/blob/0fb1922da4a7b27bd19b75a03dca2f51bff4362f/magic/loader.py#L32-L34
+ # But we shouldn't blame python-magic here. We should blame python:
+ #   - https://bugs.python.org/issue18502
+ #   - https://bugs.python.org/issue21042
+ # since reasonable, rational people expect consistency across platforms in python... but ok...
+ if sys.platform == "linux":
+-
+     setattr(ctypes.CDLL, "__init_orig__", ctypes.CDLL.__init__)  # noqa: B010
+ 
+     # for python 3.7
+     if sys.version_info < (3, 8):
+ 
+         def __magic_init__(
+             self: ctypes.CDLL,
+```
+
+### Comparing `pylibmagic-0.2.2/src/pylibmagic.egg-info/PKG-INFO` & `pylibmagic-0.3.0/src/pylibmagic.egg-info/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pylibmagic
+-Version: 0.2.2
++Version: 0.3.0
+ Summary: scikit-build project with CMake for compiling libmagic
+ Home-page: https://github.com/kratsg/pylibmagic
+ Author: Giordon Stark
+ Author-email: kratsg@gmail.com
+ Maintainer: Giordon Stark
+ Maintainer-email: kratsg@gmail.com
+ License: BSD-3-Clause
+@@ -29,15 +29,15 @@
+ Requires-Python: >=3.7
+ Description-Content-Type: text/x-rst
+ Provides-Extra: dev
+ Provides-Extra: docs
+ Provides-Extra: test
+ License-File: LICENSE
+ 
+-pylibmagic v0.2.2
++pylibmagic v0.3.0
+ =================
+ 
+ A lightweight, minimal python package that ships ``magic`` libraries
+ using automake, CMake, scikit-build, and cibuildwheel.
+ 
+ |Actions Status| |Documentation Status| |Code style: black|
+```
+
+### Comparing `pylibmagic-0.2.2/tests/test_compiled.py` & `pylibmagic-0.3.0/tests/test_compiled.py`
+
+ * *Files identical despite different names*
+
