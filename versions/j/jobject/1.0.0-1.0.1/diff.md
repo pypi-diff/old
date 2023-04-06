@@ -1,0 +1,601 @@
+# Comparing `tmp/jobject-1.0.0.tar.gz` & `tmp/jobject-1.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jobject-1.0.0.tar", last modified: Sat Mar 25 12:36:14 2023, max compression
++gzip compressed data, was "jobject-1.0.1.tar", last modified: Thu Apr  6 18:07:57 2023, max compression
+```
+
+## Comparing `jobject-1.0.0.tar` & `jobject-1.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-03-25 12:36:14.205299 jobject-1.0.0/
+--rw-rw-r--   0 bast      (1002) bast      (1002)     1078 2023-03-24 13:45:09.000000 jobject-1.0.0/LICENSE
+--rw-rw-r--   0 bast      (1002) bast      (1002)     1984 2023-03-25 12:36:14.205299 jobject-1.0.0/PKG-INFO
+--rw-rw-r--   0 bast      (1002) bast      (1002)     1371 2023-03-25 12:31:05.000000 jobject-1.0.0/README.md
+-drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-03-25 12:36:14.205299 jobject-1.0.0/jobject/
+--rw-rw-r--   0 bast      (1002) bast      (1002)     2990 2023-03-25 12:13:12.000000 jobject-1.0.0/jobject/__init__.py
+--rw-rw-r--   0 bast      (1002) bast      (1002)     1689 2023-03-25 12:13:07.000000 jobject-1.0.0/jobject/__main__.py
+-drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-03-25 12:36:14.205299 jobject-1.0.0/jobject.egg-info/
+--rw-rw-r--   0 bast      (1002) bast      (1002)     1984 2023-03-25 12:36:13.000000 jobject-1.0.0/jobject.egg-info/PKG-INFO
+--rw-rw-r--   0 bast      (1002) bast      (1002)      226 2023-03-25 12:36:13.000000 jobject-1.0.0/jobject.egg-info/SOURCES.txt
+--rw-rw-r--   0 bast      (1002) bast      (1002)        1 2023-03-25 12:36:13.000000 jobject-1.0.0/jobject.egg-info/dependency_links.txt
+--rw-rw-r--   0 bast      (1002) bast      (1002)        8 2023-03-25 12:36:13.000000 jobject-1.0.0/jobject.egg-info/top_level.txt
+--rw-rw-r--   0 bast      (1002) bast      (1002)        1 2023-03-25 12:36:13.000000 jobject-1.0.0/jobject.egg-info/zip-safe
+--rw-rw-r--   0 bast      (1002) bast      (1002)       79 2023-03-25 12:36:14.205299 jobject-1.0.0/setup.cfg
+--rw-rw-r--   0 bast      (1002) bast      (1002)      794 2023-03-25 12:34:05.000000 jobject-1.0.0/setup.py
++drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-04-06 18:07:57.804400 jobject-1.0.1/
++-rw-rw-r--   0 bast      (1002) bast      (1002)     1078 2023-03-24 13:45:09.000000 jobject-1.0.1/LICENSE
++-rw-rw-r--   0 bast      (1002) bast      (1002)     1984 2023-04-06 18:07:57.804400 jobject-1.0.1/PKG-INFO
++-rw-rw-r--   0 bast      (1002) bast      (1002)     1371 2023-04-06 17:52:21.000000 jobject-1.0.1/README.md
++drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-04-06 18:07:57.800400 jobject-1.0.1/jobject/
++-rw-rw-r--   0 bast      (1002) bast      (1002)     3350 2023-04-06 18:02:23.000000 jobject-1.0.1/jobject/__init__.py
++-rw-rw-r--   0 bast      (1002) bast      (1002)     1874 2023-04-06 18:04:19.000000 jobject-1.0.1/jobject/__main__.py
++drwxrwxr-x   0 bast      (1002) bast      (1002)        0 2023-04-06 18:07:57.800400 jobject-1.0.1/jobject.egg-info/
++-rw-rw-r--   0 bast      (1002) bast      (1002)     1984 2023-04-06 18:07:57.000000 jobject-1.0.1/jobject.egg-info/PKG-INFO
++-rw-rw-r--   0 bast      (1002) bast      (1002)      226 2023-04-06 18:07:57.000000 jobject-1.0.1/jobject.egg-info/SOURCES.txt
++-rw-rw-r--   0 bast      (1002) bast      (1002)        1 2023-04-06 18:07:57.000000 jobject-1.0.1/jobject.egg-info/dependency_links.txt
++-rw-rw-r--   0 bast      (1002) bast      (1002)        8 2023-04-06 18:07:57.000000 jobject-1.0.1/jobject.egg-info/top_level.txt
++-rw-rw-r--   0 bast      (1002) bast      (1002)        1 2023-03-25 12:36:13.000000 jobject-1.0.1/jobject.egg-info/zip-safe
++-rw-rw-r--   0 bast      (1002) bast      (1002)       79 2023-04-06 18:07:57.804400 jobject-1.0.1/setup.cfg
++-rw-rw-r--   0 bast      (1002) bast      (1002)      812 2023-04-06 17:53:25.000000 jobject-1.0.1/setup.py
+```
+
+### Comparing `jobject-1.0.0/LICENSE` & `jobject-1.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `jobject-1.0.0/PKG-INFO` & `jobject-1.0.1/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: jobject
+-Version: 1.0.0
+-Summary: JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
++Version: 1.0.1
++Summary: jobject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
+ Home-page: https://github.com/ouroboroscoding/jobject
+ Author: Chris Nasr - Ouroboros Coding Inc.
+ Author-email: chris@ouroboroscoding.com
+ License: MIT
+ Project-URL: Source, https://github.com/ouroboroscoding/jobject
+ Project-URL: Tracker, https://github.com/ouroboroscoding/jobject/issues
+ Keywords: javascript,object,struct
+@@ -14,72 +14,72 @@
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # jobject
+ 
+ [![pypi version](https://img.shields.io/pypi/v/jobject.svg)](https://pypi.org/project/jobject) ![MIT License](https://img.shields.io/pypi/l/jobject.svg)
+ 
+-JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
++jobject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
+ 
+ ## Installation
+ ```bash
+ pip install jobject
+ ```
+ 
+ ## Import
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({'one': 1, 'two': 2, 'three': 3})
++my_dict = jobject({'one': 1, 'two': 2, 'three': 3})
+ 
+ print(my_dict.three) # prints '3'
+ ```
+ 
+ ## Inheritance
+-Because JObject extends dict it can be dropped into any code that requires
+-dict notation or iteration. Because of this, JObject makes sure any dictionary
+-instances that are passed to it are also converted into JObjects
++Because jobject extends dict it can be dropped into any code that requires
++dict notation or iteration. Because of this, jobject makes sure any dictionary
++instances that are passed to it are also converted into jobjects
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'one': {
+ 		'two': {
+ 			'three': 123
+ 		}
+ 	}
+ })
+ 
+ print(my_dict.one.two.three) # prints '123'
+ ```
+ 
+ It will even follow lists to make sure everything under it is converted to a
+-JObject
++jobject
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'array': [
+ 		{'one': 1},
+ 		{'two': 2},
+ 		{'three': 3}
+ 	]
+ })
+ 
+ print(my_dict[2].three) # prints '3'
+ ```
+ 
+ This even includes data set after the fact
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject()
++my_dict = jobject()
+ 
+ my_dict.test = {
+ 	'one': [
+ 		{'two': 2}
+ 	]
+ }
+```
+
+### Comparing `jobject-1.0.0/README.md` & `jobject-1.0.1/README.md`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,69 +1,69 @@
+ # jobject
+ 
+ [![pypi version](https://img.shields.io/pypi/v/jobject.svg)](https://pypi.org/project/jobject) ![MIT License](https://img.shields.io/pypi/l/jobject.svg)
+ 
+-JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
++jobject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
+ 
+ ## Installation
+ ```bash
+ pip install jobject
+ ```
+ 
+ ## Import
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({'one': 1, 'two': 2, 'three': 3})
++my_dict = jobject({'one': 1, 'two': 2, 'three': 3})
+ 
+ print(my_dict.three) # prints '3'
+ ```
+ 
+ ## Inheritance
+-Because JObject extends dict it can be dropped into any code that requires
+-dict notation or iteration. Because of this, JObject makes sure any dictionary
+-instances that are passed to it are also converted into JObjects
++Because jobject extends dict it can be dropped into any code that requires
++dict notation or iteration. Because of this, jobject makes sure any dictionary
++instances that are passed to it are also converted into jobjects
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'one': {
+ 		'two': {
+ 			'three': 123
+ 		}
+ 	}
+ })
+ 
+ print(my_dict.one.two.three) # prints '123'
+ ```
+ 
+ It will even follow lists to make sure everything under it is converted to a
+-JObject
++jobject
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'array': [
+ 		{'one': 1},
+ 		{'two': 2},
+ 		{'three': 3}
+ 	]
+ })
+ 
+ print(my_dict[2].three) # prints '3'
+ ```
+ 
+ This even includes data set after the fact
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject()
++my_dict = jobject()
+ 
+ my_dict.test = {
+ 	'one': [
+ 		{'two': 2}
+ 	]
+ }
+```
+
+### Comparing `jobject-1.0.0/jobject/__init__.py` & `jobject-1.0.1/jobject/__init__.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,45 +1,60 @@
+ # coding=utf8
+-"""JObject
++"""jobject
+ 
+-JObject: A dictionary replacement that gives additional access to data using C
++jobject: A dictionary replacement that gives additional access to data using C
+ struct notation, just like JavaScript Objects
+ """
+ 
+ __author__		= "Chris Nasr"
+ __copyright__	= "Ouroboros Coding Inc."
+ __email__		= "chris@ouroboroscoding.com"
+ __created__		= "2023-03-24"
+ 
+-class JObject(dict):
+-	"""JObject
++# Python imports
++import warnings
+ 
+-	Class that represents the data, the replacement for dict
++def JObject(*args: list, **kwargs: dict):
++	warnings.simplefilter('always', DeprecationWarning)  # turn off filter
++	warnings.warn(
++		'Call to deprecated function JObject(). use jobject() instead',
++		category = DeprecationWarning,
++		stacklevel = 2)
++	warnings.simplefilter('default', DeprecationWarning)  # reset filter
++	return jobject(*args, **kwargs)
++
++class jobject(dict):
++	"""jobject
++
++	Class that represents the dict
+ 
+ 	Extends:
+ 		dict
+ 	"""
+ 
+ 	def __init__(self, *args: list, **kwargs: dict):
+ 		"""Constructor
+ 
+-		JObject() -> new empty object
+-
+-		JObject(mapping) -> new object initialized from a mapping object's (key,
+-		value) pairs
++		jobject()
++			new empty object
+ 
+-		JObject(iterable) -> new object initialized as if via:
+-			d = {} for k, v in iterable:
+-				d[k] = v
++		jobject(mapping)
++			new object initialized from a mapping object's (key, value) pairs
+ 
+-		JObject(**kwargs) -> new object initialized with the name=value
+-		pairs in the keyword argument list. For example: JObject(one=1, two=2)
++		jobject(iterable)
++			new object initialized as if via:
++				d = {} for k, v in iterable:
++					d[k] = v
++
++		jobject(**kwargs)
++			new object initialized with the name=value pairs in the keyword
++			argument list. For example: jobject(one=1, two=2)
+ 
+ 		Returns:
+-			JObject
++			jobject
+ 		"""
+ 
+ 		# Go through all the args and update the data one at a time
+ 		for arg in args:
+ 			for k in arg:
+ 				arg[k] = self.convert(arg[k])
+ 			self.update(arg)
+@@ -51,31 +66,31 @@
+ 			self.update(kwargs)
+ 
+ 	@classmethod
+ 	def convert(cls, v: any) -> any:
+ 		"""Concert
+ 
+ 		Takes a value and makes sure it, or any children within it, that are
+-		dict instances, are turned into JObject instances instead
++		dict instances, are turned into jobject instances instead
+ 
+ 		Arguments:
+ 			v (any): The value to convert
+ 
+ 		Returns:
+-			JObject | any
++			jobject | any
+ 		"""
+ 
+ 		# Get the type of the object
+ 		t = type(v)
+ 
+-		# If we got a JObject, return it as is
++		# If we got a jobject, return it as is
+ 		if t == cls:
+ 			return v
+ 
+-		# If we got a dict, convert it to a JObject
++		# If we got a dict, convert it to a jobject
+ 		if isinstance(v, dict):
+ 			return cls(v)
+ 
+ 		# If we got a list
+ 		if isinstance(v, list):
+ 
+ 			# Go through each item in the list
+@@ -101,15 +116,15 @@
+ 
+ 		Returns:
+ 			any
+ 		"""
+ 		try:
+ 			return self.__getitem__(name)
+ 		except KeyError:
+-			raise AttributeError(name + ' not in JObject')
++			raise AttributeError(name + ' not in jobject')
+ 
+ 	def __setattr__(self, name: str, value: any) -> None:
+ 		"""Set Attribute
+ 
+ 		Implements Python magic method __setattr__ to give object notation
+ 		access to dictionaries
+ 
+@@ -120,15 +135,15 @@
+ 		self.__setitem__(name, value)
+ 
+ 	def __setitem__(self, key: any, value: any) -> None:
+ 		"""Set Item
+ 
+ 		Implements Python magic method __setitem__ in order to override the
+ 		base setting of items on the instances. We want to make sure anything
+-		passed to this that has a dict is converted to a JObject
++		passed to this that has a dict is converted to a jobject
+ 
+ 		Arguments:
+ 			key (any): The key to store the value under
+ 			value (any): The value to set
+ 
+ 		Returns:
+ 			None
+```
+
+### Comparing `jobject-1.0.0/jobject/__main__.py` & `jobject-1.0.1/jobject/__main__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,35 +1,35 @@
+ print('I compile, but I don\'t necessarily run')
+ 
+-from . import JObject
++from . import jobject, JObject
+ 
+ print('----------------------------------------')
+-print("Testing JObject({'hello': 'there'})")
+-o = JObject({'hello': 'there'})
++print("Testing jobject({'hello': 'there'})")
++o = jobject({'hello': 'there'})
+ print('o is %s' % o)
+ print('o[\'hello\'] is %s' % o['hello'])
+ print('o.hello is %s' % o.hello)
+ 
+ print('----------------------------------------')
+-print("Testing JObject(hello='there')")
+-o = JObject(hello='there')
++print("Testing jobject(hello='there')")
++o = jobject(hello='there')
+ print('o is %s' % o)
+ print('o[\'hello\'] is %s' % o['hello'])
+ print('o.hello is %s' % o.hello)
+ 
+ print('----------------------------------------')
+-print("Testing JObject({'one': {'two': {'three': 123}}})")
+-o = JObject({'one': {'two': {'three': 123}}})
++print("Testing jobject({'one': {'two': {'three': 123}}})")
++o = jobject({'one': {'two': {'three': 123}}})
+ print('o is %s' % o)
+ print('o[\'one\'][\'two\'][\'three\'] is %d' % o['one']['two']['three'])
+ print('o.one.two.three is %d' % o.one.two.three)
+ 
+ print('----------------------------------------')
+-print("Testing JObject({'one': [{'two': 2}, {'three': 3}]})")
+-o = JObject({'one': [{'two': 2}, {'three': 3}]})
++print("Testing jobject({'one': [{'two': 2}, {'three': 3}]})")
++o = jobject({'one': [{'two': 2}, {'three': 3}]})
+ print('o is %s' % o)
+ print('o[\'one\'][0][\'two\'] is %d' % o['one'][0]['two'])
+ print('o.one[0].two is %d' % o.one[0].two)
+ 
+ print('----------------------------------------')
+ print("Testing o.attribute = 'new'")
+ o.attribute = 'new'
+@@ -44,8 +44,13 @@
+ print("Testing o.two = {'hello': 'there'}")
+ o.two = {'hello': 'there'}
+ print('o.two.hello is %s' % o.two.hello)
+ 
+ print('----------------------------------------')
+ print("Testing o.three = [{'point1': 1}, {'point2': 2}]")
+ o.three = [{'point1': 1}, {'point2': 2}]
+-print('o.three[1].point2 is %d' % o.three[1].point2)
++print('o.three[1].point2 is %d' % o.three[1].point2)
++
++print('----------------------------------------')
++print("Testing deprecated JObject({'test':'deprecated'})")
++O = JObject({'test':'deprecated'})
++print('O.test is %s' % O.test)
+```
+
+### Comparing `jobject-1.0.0/jobject.egg-info/PKG-INFO` & `jobject-1.0.1/jobject.egg-info/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: jobject
+-Version: 1.0.0
+-Summary: JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
++Version: 1.0.1
++Summary: jobject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
+ Home-page: https://github.com/ouroboroscoding/jobject
+ Author: Chris Nasr - Ouroboros Coding Inc.
+ Author-email: chris@ouroboroscoding.com
+ License: MIT
+ Project-URL: Source, https://github.com/ouroboroscoding/jobject
+ Project-URL: Tracker, https://github.com/ouroboroscoding/jobject/issues
+ Keywords: javascript,object,struct
+@@ -14,72 +14,72 @@
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # jobject
+ 
+ [![pypi version](https://img.shields.io/pypi/v/jobject.svg)](https://pypi.org/project/jobject) ![MIT License](https://img.shields.io/pypi/l/jobject.svg)
+ 
+-JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
++jobject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects
+ 
+ ## Installation
+ ```bash
+ pip install jobject
+ ```
+ 
+ ## Import
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({'one': 1, 'two': 2, 'three': 3})
++my_dict = jobject({'one': 1, 'two': 2, 'three': 3})
+ 
+ print(my_dict.three) # prints '3'
+ ```
+ 
+ ## Inheritance
+-Because JObject extends dict it can be dropped into any code that requires
+-dict notation or iteration. Because of this, JObject makes sure any dictionary
+-instances that are passed to it are also converted into JObjects
++Because jobject extends dict it can be dropped into any code that requires
++dict notation or iteration. Because of this, jobject makes sure any dictionary
++instances that are passed to it are also converted into jobjects
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'one': {
+ 		'two': {
+ 			'three': 123
+ 		}
+ 	}
+ })
+ 
+ print(my_dict.one.two.three) # prints '123'
+ ```
+ 
+ It will even follow lists to make sure everything under it is converted to a
+-JObject
++jobject
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject({
++my_dict = jobject({
+ 	'array': [
+ 		{'one': 1},
+ 		{'two': 2},
+ 		{'three': 3}
+ 	]
+ })
+ 
+ print(my_dict[2].three) # prints '3'
+ ```
+ 
+ This even includes data set after the fact
+ 
+ ```python
+-from jobject import JObject
++from jobject import jobject
+ 
+-my_dict = JObject()
++my_dict = jobject()
+ 
+ my_dict.test = {
+ 	'one': [
+ 		{'two': 2}
+ 	]
+ }
+```
+
+### Comparing `jobject-1.0.0/setup.py` & `jobject-1.0.1/setup.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,16 +1,18 @@
+ from setuptools import setup
+ 
+ with open('README.md', 'r') as oF:
+ 	long_description=oF.read()
+ 
+ setup(
+ 	name='jobject',
+-	version='1.0.0',
+-	description='JObject: A dictionary replacement that gives additional access to data using C struct notation, just like JavaScript Objects',
++	version='1.0.1',
++	description='jobject: A dictionary replacement that gives additional ' \
++				'access to data using C struct notation, just like ' \
++				'JavaScript Objects',
+ 	long_description=long_description,
+ 	long_description_content_type='text/markdown',
+ 	url='https://github.com/ouroboroscoding/jobject',
+ 	project_urls={
+ 		'Source': 'https://github.com/ouroboroscoding/jobject',
+ 		'Tracker': 'https://github.com/ouroboroscoding/jobject/issues'
+ 	},
+```
+

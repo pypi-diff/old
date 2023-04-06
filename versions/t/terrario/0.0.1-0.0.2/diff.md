@@ -1,0 +1,81 @@
+# Comparing `tmp/terrario-0.0.1.tar.gz` & `tmp/terrario-0.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "terrario-0.0.1.tar", last modified: Thu Apr  6 17:44:54 2023, max compression
++gzip compressed data, was "terrario-0.0.2.tar", last modified: Thu Apr  6 18:16:43 2023, max compression
+```
+
+## Comparing `terrario-0.0.1.tar` & `terrario-0.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-06 17:44:54.698470 terrario-0.0.1/
+--rw-rw-rw-   0        0        0    35823 2023-04-06 17:26:49.000000 terrario-0.0.1/LICENSE
+--rw-rw-rw-   0        0        0      703 2023-04-06 17:44:54.698470 terrario-0.0.1/PKG-INFO
+--rw-rw-rw-   0        0        0      860 2023-04-06 17:26:49.000000 terrario-0.0.1/README.md
+--rw-rw-rw-   0        0        0       42 2023-04-06 17:44:54.699470 terrario-0.0.1/setup.cfg
+--rw-rw-rw-   0        0        0     1009 2023-04-06 17:41:20.000000 terrario-0.0.1/setup.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 17:44:54.692469 terrario-0.0.1/terrario/
+--rw-rw-rw-   0        0        0       27 2023-04-06 17:34:36.000000 terrario-0.0.1/terrario/__init__.py
+--rw-rw-rw-   0        0        0       73 2023-04-06 17:26:49.000000 terrario-0.0.1/terrario/main.py
+-drwxrwxrwx   0        0        0        0 2023-04-06 17:44:54.697469 terrario-0.0.1/terrario.egg-info/
+--rw-rw-rw-   0        0        0      703 2023-04-06 17:44:54.000000 terrario-0.0.1/terrario.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      223 2023-04-06 17:44:54.000000 terrario-0.0.1/terrario.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-06 17:44:54.000000 terrario-0.0.1/terrario.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       19 2023-04-06 17:44:54.000000 terrario-0.0.1/terrario.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-04-06 17:44:54.000000 terrario-0.0.1/terrario.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 18:16:43.398240 terrario-0.0.2/
++-rw-rw-rw-   0        0        0        0 2023-04-06 17:58:29.000000 terrario-0.0.2/LICENSE
++-rw-rw-rw-   0        0        0     1341 2023-04-06 18:16:43.398240 terrario-0.0.2/PKG-INFO
++-rw-rw-rw-   0        0        0      762 2023-04-06 18:04:01.000000 terrario-0.0.2/README.md
++-rw-rw-rw-   0        0        0      152 2023-04-06 18:12:45.000000 terrario-0.0.2/pyproject.toml
++-rw-rw-rw-   0        0        0      716 2023-04-06 18:16:43.399239 terrario-0.0.2/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 18:16:43.387237 terrario-0.0.2/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 18:16:43.393238 terrario-0.0.2/src/terrario/
++-rw-rw-rw-   0        0        0        0 2023-04-06 17:59:17.000000 terrario-0.0.2/src/terrario/__init__.py
++-rw-rw-rw-   0        0        0       71 2023-04-06 18:07:13.000000 terrario-0.0.2/src/terrario/main.py
++drwxrwxrwx   0        0        0        0 2023-04-06 18:16:43.397240 terrario-0.0.2/src/terrario.egg-info/
++-rw-rw-rw-   0        0        0     1341 2023-04-06 18:16:43.000000 terrario-0.0.2/src/terrario.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      232 2023-04-06 18:16:43.000000 terrario-0.0.2/src/terrario.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 18:16:43.000000 terrario-0.0.2/src/terrario.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        9 2023-04-06 18:16:43.000000 terrario-0.0.2/src/terrario.egg-info/top_level.txt
+```
+
+### Comparing `terrario-0.0.1/README.md` & `terrario-0.0.2/README.md`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ <p align="center">
+-  <img src="Images/UI/Logo.png" alt="Terrario 2 Logo" width="50%">
++  <img src="https://raw.githubusercontent.com/MaitreRenard18/Terrario-2/master/Images/UI/Logo.png" alt="Terrario 2 Logo" width="50%">
+ </p>
+ 
+ [![license](https://img.shields.io/github/license/MaitreRenard18/Terrario-2.svg)](https://github.com/MaitreRenard18/Terrario-2/blob/master/LICENSE)
+ 
+ # Présentation du projet :
+ Terrario 2 est la suite du mondialement connu [Terrario](https://github.com/MaitreRenard18/Terrario).
+ 
+@@ -13,13 +13,8 @@
+ Ci-dessous la commande pour installer ces modules :
+ 
+ ```bash
+   $ pip install -r Requirements.txt
+ ```
+ 
+ # Comment jouer ?
+-Pour lancer le jeu, exécuter tout simplement Terrario.pyw.
+-
+-# Captures d’écran :
+-![Forêt](Images/Screenshots/Forest.png)
+-![Desert](Images/Screenshots/Desert.png)
+-![Biome neige](Images/Screenshots/Snowy_biome.png)
++Pour lancer le jeu, exécuter tout simplement Terrario.pyw.
+```
+

@@ -1,0 +1,287 @@
+# Comparing `tmp/topobank-statistics-1.0.1.tar.gz` & `tmp/topobank-statistics-1.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "topobank-statistics-1.0.1.tar", last modified: Thu Apr  6 14:53:27 2023, max compression
++gzip compressed data, was "topobank-statistics-1.0.2.tar", last modified: Thu Apr  6 18:13:07 2023, max compression
+```
+
+## Comparing `topobank-statistics-1.0.1.tar` & `topobank-statistics-1.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,50 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.171808 topobank-statistics-1.0.1/.github/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)     1001 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/.github/workflows/publish.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     1395 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/.github/workflows/test.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     5867 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/.gitignore
+--rw-r--r--   0 runner    (1001) docker     (123)      704 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/CHANGELOG.md
+--rw-r--r--   0 runner    (1001) docker     (123)     1129 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      212 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-06 14:53:27.179808 topobank-statistics-1.0.1/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      634 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/README.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      432 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/conftest.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1340 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/pytest.ini
+--rw-r--r--   0 runner    (1001) docker     (123)      501 2023-04-06 14:53:27.179808 topobank-statistics-1.0.1/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics/
+--rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1334 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/apps.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5135 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/downloads.py
+--rw-r--r--   0 runner    (1001) docker     (123)    33382 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/functions.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics/migrations/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/migrations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/models.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/signals.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.171808 topobank-statistics-1.0.1/topobank_statistics/static/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics/static/images/
+--rw-r--r--   0 runner    (1001) docker     (123)     5067 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/static/images/ce_logo.svg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.171808 topobank-statistics-1.0.1/topobank_statistics/templates/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/
+--rw-r--r--   0 runner    (1001) docker     (123)      165 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/example.html
+--rw-r--r--   0 runner    (1001) docker     (123)     1597 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_datatables.html
+--rw-r--r--   0 runner    (1001) docker     (123)     2525 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_detail.html
+--rw-r--r--   0 runner    (1001) docker     (123)     2479 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_list.html
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    26827 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests/test_functions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1022 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests/test_reentrant.py
+--rw-r--r--   0 runner    (1001) docker     (123)     7789 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests/test_results_view.py
+--rw-r--r--   0 runner    (1001) docker     (123)      545 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests/urls.py
+--rw-r--r--   0 runner    (1001) docker     (123)      964 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/tests.py
+--rw-r--r--   0 runner    (1001) docker     (123)      487 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/urls.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2913 2023-04-06 14:53:16.000000 topobank-statistics-1.0.1/topobank_statistics/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 14:53:27.175808 topobank-statistics-1.0.1/topobank_statistics.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1323 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 14:53:27.000000 topobank-statistics-1.0.1/topobank_statistics.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.692922 topobank-statistics-1.0.2/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.684922 topobank-statistics-1.0.2/.github/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)     1001 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/.github/workflows/publish.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1395 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/.github/workflows/test.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     5867 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)      779 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/CHANGELOG.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1129 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      212 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-06 18:13:07.692922 topobank-statistics-1.0.2/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      634 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      432 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/conftest.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1340 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/pytest.ini
++-rw-r--r--   0 runner    (1001) docker     (123)      501 2023-04-06 18:13:07.692922 topobank-statistics-1.0.2/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/topobank_statistics/
++-rw-r--r--   0 runner    (1001) docker     (123)       30 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1334 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/apps.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5135 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/downloads.py
++-rw-r--r--   0 runner    (1001) docker     (123)    33382 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/functions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/topobank_statistics/migrations/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/migrations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/models.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/signals.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.684922 topobank-statistics-1.0.2/topobank_statistics/static/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/topobank_statistics/static/images/
++-rw-r--r--   0 runner    (1001) docker     (123)     5067 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/static/images/ce_logo.svg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.684922 topobank-statistics-1.0.2/topobank_statistics/templates/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/
++-rw-r--r--   0 runner    (1001) docker     (123)      165 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/example.html
++-rw-r--r--   0 runner    (1001) docker     (123)     1597 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_datatables.html
++-rw-r--r--   0 runner    (1001) docker     (123)     2525 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_detail.html
++-rw-r--r--   0 runner    (1001) docker     (123)     2479 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_list.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.692922 topobank-statistics-1.0.2/topobank_statistics/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    26827 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests/test_functions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1022 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests/test_reentrant.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7789 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests/test_results_view.py
++-rw-r--r--   0 runner    (1001) docker     (123)      545 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)      964 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/tests.py
++-rw-r--r--   0 runner    (1001) docker     (123)      496 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2876 2023-04-06 18:12:56.000000 topobank-statistics-1.0.2/topobank_statistics/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 18:13:07.688922 topobank-statistics-1.0.2/topobank_statistics.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1323 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       80 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       20 2023-04-06 18:13:07.000000 topobank-statistics-1.0.2/topobank_statistics.egg-info/top_level.txt
+```
+
+### Comparing `topobank-statistics-1.0.1/.github/workflows/publish.yml` & `topobank-statistics-1.0.2/.github/workflows/publish.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/.github/workflows/test.yml` & `topobank-statistics-1.0.2/.github/workflows/test.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/.gitignore` & `topobank-statistics-1.0.2/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/CHANGELOG.md` & `topobank-statistics-1.0.2/CHANGELOG.md`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,9 +1,13 @@
+ # Changelog for plugin *topobank-statistics*
+ 
++## 1.0.2 (2023-04-06)
++
++- BUG: Reverted to old contact mechanics card view
++
+ ## 1.0.1 (2023-04-06)
+ 
+ - MAINT: Fixes to version discovery
+ 
+ ## 1.0.0 (2023-01-31)
+ 
+ - MAINT: Version discovery from VCS
+```
+
+### Comparing `topobank-statistics-1.0.1/LICENSE` & `topobank-statistics-1.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/PKG-INFO` & `topobank-statistics-1.0.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: topobank-statistics
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: This is a plugin for "topobank" for statistical analysis of measurements and digital surface twins.
+ Author-email: Michael Röttger <info@michael-roettger.de>, Lars Pastewka <lars.pastewka@imtek.uni-freiburg.de>
+ License: 
+         The MIT License (MIT)
+         Copyright (c) 2018-2019, Simulation Group, IMTEK, University of Freiburg, Germany
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+```
+
+### Comparing `topobank-statistics-1.0.1/README.rst` & `topobank-statistics-1.0.2/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/pyproject.toml` & `topobank-statistics-1.0.2/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/apps.py` & `topobank-statistics-1.0.2/topobank_statistics/apps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/downloads.py` & `topobank-statistics-1.0.2/topobank_statistics/downloads.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/functions.py` & `topobank-statistics-1.0.2/topobank_statistics/functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/static/images/ce_logo.svg` & `topobank-statistics-1.0.2/topobank_statistics/static/images/ce_logo.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_datatables.html` & `topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_datatables.html`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_detail.html` & `topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_detail.html`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_list.html` & `topobank-statistics-1.0.2/topobank_statistics/templates/topobank_statistics/roughnessparameters_card_list.html`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/tests/test_functions.py` & `topobank-statistics-1.0.2/topobank_statistics/tests/test_functions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/tests/test_reentrant.py` & `topobank-statistics-1.0.2/topobank_statistics/tests/test_reentrant.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/tests/test_results_view.py` & `topobank-statistics-1.0.2/topobank_statistics/tests/test_results_view.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/tests/urls.py` & `topobank-statistics-1.0.2/topobank_statistics/tests/urls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/tests.py` & `topobank-statistics-1.0.2/topobank_statistics/tests.py`
+
+ * *Files identical despite different names*
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics/views.py` & `topobank-statistics-1.0.2/topobank_statistics/views.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,24 +1,23 @@
+ import math
+ 
+ from django.views.generic import TemplateView
+ 
+ from topobank.analysis.utils import round_to_significant_digits
+-#from topobank.analysis.views import SimpleCardView
++from topobank.analysis.views import SimpleCardView
+ from topobank.analysis.registry import register_card_view_class
+ 
+ from .functions import ART_ROUGHNESS_PARAMETERS
+ 
+ NUM_SIGNIFICANT_DIGITS_RMS_VALUES = 5
+ 
+ 
+ @register_card_view_class(ART_ROUGHNESS_PARAMETERS)
+-#class RoughnessParametersCardView(SimpleCardView):
++class RoughnessParametersCardView(SimpleCardView):
+ 
+-class RoughnessParametersCardView:
+     template_name_pattern = "topobank_statistics/roughnessparameters_card_{template_flavor}.html"
+ 
+     @staticmethod
+     def _convert_value(v):
+         if v is not None:
+             if math.isnan(v):
+                 v = None  # will be interpreted as null in JS, replace there with NaN!
+```
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics.egg-info/PKG-INFO` & `topobank-statistics-1.0.2/topobank_statistics.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: topobank-statistics
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: This is a plugin for "topobank" for statistical analysis of measurements and digital surface twins.
+ Author-email: Michael Röttger <info@michael-roettger.de>, Lars Pastewka <lars.pastewka@imtek.uni-freiburg.de>
+ License: 
+         The MIT License (MIT)
+         Copyright (c) 2018-2019, Simulation Group, IMTEK, University of Freiburg, Germany
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+```
+
+### Comparing `topobank-statistics-1.0.1/topobank_statistics.egg-info/SOURCES.txt` & `topobank-statistics-1.0.2/topobank_statistics.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+

@@ -1,0 +1,141 @@
+# Comparing `tmp/nomic-1.1.4.tar.gz` & `tmp/nomic-1.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "nomic-1.1.4.tar", last modified: Thu Mar 30 21:14:28 2023, max compression
++gzip compressed data, was "nomic-1.1.5.tar", last modified: Thu Apr  6 18:14:37 2023, max compression
+```
+
+## Comparing `nomic-1.1.4.tar` & `nomic-1.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,30 @@
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.668319 nomic-1.1.4/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-03-30 21:14:28.668319 nomic-1.1.4/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1419 2023-02-27 18:49:28.000000 nomic-1.1.4/README.md
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.664319 nomic-1.1.4/nomic/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      105 2023-03-30 18:41:46.000000 nomic-1.1.4/nomic/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    10110 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/atlas.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     4542 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/cli.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1982 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/data_inference.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     2028 2022-12-15 13:52:38.000000 nomic-1.1.4/nomic/embedders.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.664319 nomic-1.1.4/nomic/gpt4all/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       36 2023-03-30 18:41:46.000000 nomic-1.1.4/nomic/gpt4all/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     8102 2023-03-30 18:48:48.000000 nomic-1.1.4/nomic/gpt4all/gpt4all.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.664319 nomic-1.1.4/nomic/pl_callbacks/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       47 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/pl_callbacks/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     6875 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/pl_callbacks/pl_callback.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)    65960 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/project.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      487 2023-02-23 20:45:27.000000 nomic-1.1.4/nomic/settings.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.664319 nomic-1.1.4/nomic/tests/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        0 2022-12-15 13:52:38.000000 nomic-1.1.4/nomic/tests/__init__.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     9409 2023-03-29 21:17:42.000000 nomic-1.1.4/nomic/tests/test_atlas_client.py
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1284 2023-02-23 20:45:27.000000 nomic-1.1.4/nomic/utils.py
+-drwxrwxr-x   0 ubuntu    (1000) ubuntu    (1000)        0 2023-03-30 21:14:28.664319 nomic-1.1.4/nomic.egg-info/
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      420 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/PKG-INFO
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      506 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/SOURCES.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        1 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/dependency_links.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       41 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/entry_points.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)      438 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/requires.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)        6 2023-03-30 21:14:28.000000 nomic-1.1.4/nomic.egg-info/top_level.txt
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)       38 2023-03-30 21:14:28.668319 nomic-1.1.4/setup.cfg
+--rw-rw-r--   0 ubuntu    (1000) ubuntu    (1000)     1503 2023-03-30 21:02:50.000000 nomic-1.1.4/setup.py
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      420 2023-04-06 18:14:37.989375 nomic-1.1.5/PKG-INFO
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     1419 2023-02-24 20:22:52.000000 nomic-1.1.5/README.md
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/nomic/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      105 2023-03-16 13:10:11.000000 nomic-1.1.5/nomic/__init__.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)    10110 2023-03-23 17:25:32.000000 nomic-1.1.5/nomic/atlas.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     4542 2023-03-23 17:25:32.000000 nomic-1.1.5/nomic/cli.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     1982 2023-03-23 17:25:32.000000 nomic-1.1.5/nomic/data_inference.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     2028 2022-08-15 15:51:51.000000 nomic-1.1.5/nomic/embedders.py
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/nomic/gpt4all/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)       49 2023-04-06 18:14:35.000000 nomic-1.1.5/nomic/gpt4all/__init__.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     8102 2023-04-05 15:49:22.000000 nomic-1.1.5/nomic/gpt4all/gpt4all.py
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/nomic/pl_callbacks/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)       47 2023-03-16 13:10:11.000000 nomic-1.1.5/nomic/pl_callbacks/__init__.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     6875 2023-03-16 20:32:14.000000 nomic-1.1.5/nomic/pl_callbacks/pl_callback.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)    65960 2023-04-06 18:14:30.000000 nomic-1.1.5/nomic/project.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      487 2023-02-08 22:19:27.000000 nomic-1.1.5/nomic/settings.py
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/nomic/tests/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)        0 2022-08-31 16:46:06.000000 nomic-1.1.5/nomic/tests/__init__.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     9409 2023-03-23 18:12:51.000000 nomic-1.1.5/nomic/tests/test_atlas_client.py
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     1284 2023-02-08 22:19:27.000000 nomic-1.1.5/nomic/utils.py
++drwxrwxr-x   0 andriy    (1000) andriy    (1000)        0 2023-04-06 18:14:37.989375 nomic-1.1.5/nomic.egg-info/
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      420 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/PKG-INFO
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      506 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/SOURCES.txt
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)        1 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/dependency_links.txt
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)       41 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/entry_points.txt
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)      466 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/requires.txt
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)        6 2023-04-06 18:14:37.000000 nomic-1.1.5/nomic.egg-info/top_level.txt
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)       38 2023-04-06 18:14:37.989375 nomic-1.1.5/setup.cfg
++-rw-rw-r--   0 andriy    (1000) andriy    (1000)     1503 2023-04-06 18:14:35.000000 nomic-1.1.5/setup.py
+```
+
+### Comparing `nomic-1.1.4/README.md` & `nomic-1.1.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/atlas.py` & `nomic-1.1.5/nomic/atlas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/cli.py` & `nomic-1.1.5/nomic/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/data_inference.py` & `nomic-1.1.5/nomic/data_inference.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/embedders.py` & `nomic-1.1.5/nomic/embedders.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/gpt4all/gpt4all.py` & `nomic-1.1.5/nomic/gpt4all/gpt4all.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/pl_callbacks/pl_callback.py` & `nomic-1.1.5/nomic/pl_callbacks/pl_callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/project.py` & `nomic-1.1.5/nomic/project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/tests/test_atlas_client.py` & `nomic-1.1.5/nomic/tests/test_atlas_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/nomic/utils.py` & `nomic-1.1.5/nomic/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nomic-1.1.4/setup.py` & `nomic-1.1.5/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ '''Setup file for the Atlas Client'''
+ import os
+ from setuptools import setup, find_packages
+ description = 'The offical Nomic python client.'
+ setup(
+     name='nomic',
+-    version='1.1.4',
++    version='1.1.5',
+     url='https://github.com/nomic-ai/nomic',
+     description=description,
+     long_description=description,
+     packages=find_packages(),
+     author_email="support@nomic.ai",
+     author="nomic.ai",
+     classifiers=[
+```
+

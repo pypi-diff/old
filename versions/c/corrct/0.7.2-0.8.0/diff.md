@@ -1,0 +1,725 @@
+# Comparing `tmp/corrct-0.7.2.tar.gz` & `tmp/corrct-0.8.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "corrct-0.7.2.tar", last modified: Fri Feb 17 17:43:53 2023, max compression
++gzip compressed data, was "corrct-0.8.0.tar", last modified: Thu Apr  6 18:04:36 2023, max compression
+```
+
+## Comparing `corrct-0.7.2.tar` & `corrct-0.8.0.tar`
+
+### file list
+
+```diff
+@@ -1,39 +1,40 @@
+-drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-02-17 17:43:53.344947 corrct-0.7.2/
+--rwxr-xr-x   0 vigano    (1000) users      (100)     9301 2023-02-17 17:36:23.000000 corrct-0.7.2/CHANGELOG.md
+--rw-r--r--   0 vigano    (1000) users      (100)     1515 2022-09-15 17:06:44.000000 corrct-0.7.2/LICENSE.md
+--rw-r--r--   0 vigano    (1000) users      (100)       22 2022-09-15 17:06:44.000000 corrct-0.7.2/MANIFEST.in
+--rw-r--r--   0 vigano    (1000) users      (100)    14114 2023-02-17 17:43:53.344947 corrct-0.7.2/PKG-INFO
+--rwxr-xr-x   0 vigano    (1000) users      (100)     3944 2022-10-28 09:49:00.000000 corrct-0.7.2/README.md
+-drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-02-17 17:43:53.340947 corrct-0.7.2/corrct/
+--rwxr-xr-x   0 vigano    (1000) users      (100)        5 2023-02-17 17:29:42.000000 corrct-0.7.2/corrct/VERSION
+--rw-r--r--   0 vigano    (1000) users      (100)     1249 2023-02-17 17:24:27.000000 corrct-0.7.2/corrct/__init__.py
+--rwxr-xr-x   0 vigano    (1000) users      (100)     6386 2022-10-28 09:49:00.000000 corrct-0.7.2/corrct/_corrct.py
+--rw-r--r--   0 vigano    (1000) users      (100)    26095 2022-12-08 14:30:27.000000 corrct-0.7.2/corrct/_projector_backends.py
+--rw-r--r--   0 vigano    (1000) users      (100)    10415 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/attenuation.py
+--rw-r--r--   0 vigano    (1000) users      (100)    18299 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/data_terms.py
+--rw-r--r--   0 vigano    (1000) users      (100)     3825 2023-02-16 15:36:13.000000 corrct-0.7.2/corrct/denoisers.py
+--rw-r--r--   0 vigano    (1000) users      (100)    19249 2023-02-16 15:36:13.000000 corrct-0.7.2/corrct/filters.py
+--rw-r--r--   0 vigano    (1000) users      (100)    10514 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/models.py
+--rwxr-xr-x   0 vigano    (1000) users      (100)    30716 2022-11-09 14:22:27.000000 corrct-0.7.2/corrct/operators.py
+--rw-r--r--   0 vigano    (1000) users      (100)    21272 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/param_tuning.py
+--rw-r--r--   0 vigano    (1000) users      (100)    20668 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/physics.py
+--rwxr-xr-x   0 vigano    (1000) users      (100)    24139 2022-12-08 14:30:27.000000 corrct-0.7.2/corrct/projectors.py
+--rw-r--r--   0 vigano    (1000) users      (100)    45381 2023-02-16 15:32:25.000000 corrct-0.7.2/corrct/regularizers.py
+--rw-r--r--   0 vigano    (1000) users      (100)    35110 2022-12-08 14:30:27.000000 corrct-0.7.2/corrct/solvers.py
+--rw-r--r--   0 vigano    (1000) users      (100)    16010 2023-02-16 15:36:13.000000 corrct-0.7.2/corrct/testing.py
+-drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-02-17 17:43:53.340947 corrct-0.7.2/corrct.egg-info/
+--rw-r--r--   0 vigano    (1000) users      (100)    14114 2023-02-17 17:43:53.000000 corrct-0.7.2/corrct.egg-info/PKG-INFO
+--rw-r--r--   0 vigano    (1000) users      (100)      699 2023-02-17 17:43:53.000000 corrct-0.7.2/corrct.egg-info/SOURCES.txt
+--rw-r--r--   0 vigano    (1000) users      (100)        1 2023-02-17 17:43:53.000000 corrct-0.7.2/corrct.egg-info/dependency_links.txt
+--rw-r--r--   0 vigano    (1000) users      (100)        1 2022-09-15 17:06:44.000000 corrct-0.7.2/corrct.egg-info/not-zip-safe
+--rw-r--r--   0 vigano    (1000) users      (100)       89 2023-02-17 17:43:53.000000 corrct-0.7.2/corrct.egg-info/requires.txt
+--rw-r--r--   0 vigano    (1000) users      (100)        7 2023-02-17 17:43:53.000000 corrct-0.7.2/corrct.egg-info/top_level.txt
+--rw-r--r--   0 vigano    (1000) users      (100)       89 2022-09-15 17:06:44.000000 corrct-0.7.2/pyproject.toml
+--rw-r--r--   0 vigano    (1000) users      (100)     1142 2023-02-17 17:43:53.344947 corrct-0.7.2/setup.cfg
+--rw-r--r--   0 vigano    (1000) users      (100)      141 2022-09-15 17:06:44.000000 corrct-0.7.2/setup.py
+-drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-02-17 17:43:53.344947 corrct-0.7.2/tests/
+--rw-r--r--   0 vigano    (1000) users      (100)      639 2022-09-15 17:06:44.000000 corrct-0.7.2/tests/test_examples.py
+--rwxr-xr-x   0 vigano    (1000) users      (100)     9635 2022-10-28 09:49:00.000000 corrct-0.7.2/tests/test_operators.py
+--rw-r--r--   0 vigano    (1000) users      (100)     3939 2022-10-28 09:49:00.000000 corrct-0.7.2/tests/test_projectors.py
+--rw-r--r--   0 vigano    (1000) users      (100)     5074 2023-02-16 15:29:22.000000 corrct-0.7.2/tests/test_regularizers.py
+--rwxr-xr-x   0 vigano    (1000) users      (100)     6346 2022-10-28 09:49:00.000000 corrct-0.7.2/tests/test_solvers.py
++drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-04-06 18:04:36.434617 corrct-0.8.0/
++-rwxr-xr-x   0 vigano    (1000) users      (100)     9534 2023-04-06 17:26:44.000000 corrct-0.8.0/CHANGELOG.md
++-rw-r--r--   0 vigano    (1000) users      (100)     1515 2022-09-15 17:06:44.000000 corrct-0.8.0/LICENSE.md
++-rw-r--r--   0 vigano    (1000) users      (100)       22 2022-09-15 17:06:44.000000 corrct-0.8.0/MANIFEST.in
++-rw-r--r--   0 vigano    (1000) users      (100)    14347 2023-04-06 18:04:36.434617 corrct-0.8.0/PKG-INFO
++-rwxr-xr-x   0 vigano    (1000) users      (100)     3944 2022-10-28 09:49:00.000000 corrct-0.8.0/README.md
++drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-04-06 18:04:36.434617 corrct-0.8.0/corrct/
++-rwxr-xr-x   0 vigano    (1000) users      (100)        5 2023-04-06 16:21:27.000000 corrct-0.8.0/corrct/VERSION
++-rw-r--r--   0 vigano    (1000) users      (100)     1297 2023-04-06 15:56:41.000000 corrct-0.8.0/corrct/__init__.py
++-rwxr-xr-x   0 vigano    (1000) users      (100)     6386 2022-10-28 09:49:00.000000 corrct-0.8.0/corrct/_corrct.py
++-rw-r--r--   0 vigano    (1000) users      (100)    26095 2022-12-08 14:30:27.000000 corrct-0.8.0/corrct/_projector_backends.py
++-rw-r--r--   0 vigano    (1000) users      (100)    10415 2023-02-16 15:32:25.000000 corrct-0.8.0/corrct/attenuation.py
++-rw-r--r--   0 vigano    (1000) users      (100)    19437 2023-04-06 13:12:03.000000 corrct-0.8.0/corrct/data_terms.py
++-rw-r--r--   0 vigano    (1000) users      (100)     3825 2023-02-28 13:39:27.000000 corrct-0.8.0/corrct/denoisers.py
++-rw-r--r--   0 vigano    (1000) users      (100)    19249 2023-02-28 13:39:27.000000 corrct-0.8.0/corrct/filters.py
++-rw-r--r--   0 vigano    (1000) users      (100)    12338 2023-04-06 16:04:37.000000 corrct-0.8.0/corrct/models.py
++-rwxr-xr-x   0 vigano    (1000) users      (100)    30716 2022-11-09 14:22:27.000000 corrct-0.8.0/corrct/operators.py
++-rw-r--r--   0 vigano    (1000) users      (100)    21272 2023-02-16 15:32:25.000000 corrct-0.8.0/corrct/param_tuning.py
++-rw-r--r--   0 vigano    (1000) users      (100)    20668 2023-02-16 15:32:25.000000 corrct-0.8.0/corrct/physics.py
++-rwxr-xr-x   0 vigano    (1000) users      (100)    24225 2023-04-06 13:12:23.000000 corrct-0.8.0/corrct/projectors.py
++-rw-r--r--   0 vigano    (1000) users      (100)    45381 2023-02-16 15:32:25.000000 corrct-0.8.0/corrct/regularizers.py
++-rw-r--r--   0 vigano    (1000) users      (100)    35110 2022-12-08 14:30:27.000000 corrct-0.8.0/corrct/solvers.py
++-rw-r--r--   0 vigano    (1000) users      (100)    23094 2023-02-28 13:31:26.000000 corrct-0.8.0/corrct/struct_illum.py
++-rw-r--r--   0 vigano    (1000) users      (100)    16010 2023-02-28 13:39:27.000000 corrct-0.8.0/corrct/testing.py
++drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-04-06 18:04:36.434617 corrct-0.8.0/corrct.egg-info/
++-rw-r--r--   0 vigano    (1000) users      (100)    14347 2023-04-06 18:04:36.000000 corrct-0.8.0/corrct.egg-info/PKG-INFO
++-rw-r--r--   0 vigano    (1000) users      (100)      722 2023-04-06 18:04:36.000000 corrct-0.8.0/corrct.egg-info/SOURCES.txt
++-rw-r--r--   0 vigano    (1000) users      (100)        1 2023-04-06 18:04:36.000000 corrct-0.8.0/corrct.egg-info/dependency_links.txt
++-rw-r--r--   0 vigano    (1000) users      (100)        1 2022-09-15 17:06:44.000000 corrct-0.8.0/corrct.egg-info/not-zip-safe
++-rw-r--r--   0 vigano    (1000) users      (100)       89 2023-04-06 18:04:36.000000 corrct-0.8.0/corrct.egg-info/requires.txt
++-rw-r--r--   0 vigano    (1000) users      (100)        7 2023-04-06 18:04:36.000000 corrct-0.8.0/corrct.egg-info/top_level.txt
++-rw-r--r--   0 vigano    (1000) users      (100)       89 2022-09-15 17:06:44.000000 corrct-0.8.0/pyproject.toml
++-rw-r--r--   0 vigano    (1000) users      (100)     1142 2023-04-06 18:04:36.434617 corrct-0.8.0/setup.cfg
++-rw-r--r--   0 vigano    (1000) users      (100)      141 2022-09-15 17:06:44.000000 corrct-0.8.0/setup.py
++drwxr-xr-x   0 vigano    (1000) users      (100)        0 2023-04-06 18:04:36.434617 corrct-0.8.0/tests/
++-rw-r--r--   0 vigano    (1000) users      (100)      639 2022-09-15 17:06:44.000000 corrct-0.8.0/tests/test_examples.py
++-rwxr-xr-x   0 vigano    (1000) users      (100)     9635 2022-10-28 09:49:00.000000 corrct-0.8.0/tests/test_operators.py
++-rw-r--r--   0 vigano    (1000) users      (100)     3939 2022-10-28 09:49:00.000000 corrct-0.8.0/tests/test_projectors.py
++-rw-r--r--   0 vigano    (1000) users      (100)     5074 2023-02-16 15:29:22.000000 corrct-0.8.0/tests/test_regularizers.py
++-rwxr-xr-x   0 vigano    (1000) users      (100)     6346 2022-10-28 09:49:00.000000 corrct-0.8.0/tests/test_solvers.py
+```
+
+### Comparing `corrct-0.7.2/CHANGELOG.md` & `corrct-0.8.0/CHANGELOG.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,22 @@
+ # Changelog
+ All notable changes to this project will be documented in this file.
+ 
+ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ 
+-[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.7.2...develop
++[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.8.0...develop
++
++## 0.8.0 - 2023-04-06
++### Added
++- Ghost imaging support (structured illumination):
++  - Theoretical mask generation (incl. MURA, Half-Gaussian, Bernoulli)
++  - Dedicated projector (CPU based).
++### Fixed
++- Circular mask initialization
+ 
+ ## 0.7.2 - 2023-02-17
+ ### Added
+ - Default VolumeGeometry creation from volume.
+ - Tapering border size support in volume mask.
+ - 1D gradient based regularizer shortcut.
+ - Isotropic undecimented wavelet regularizer support.
+```
+
+### Comparing `corrct-0.7.2/LICENSE.md` & `corrct-0.8.0/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/PKG-INFO` & `corrct-0.8.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: corrct
+-Version: 0.7.2
++Version: 0.8.0
+ Summary: Physically corrected projectors for X-ray induced emission CT.
+ Home-page: https://github.com/cicwi/PyCorrectedEmissionCT
+ Author: Nicola VIGANÒ
+ Author-email: N.R.Vigano@cwi.nl
+ License: BSD license
+ Keywords: corrct,xrf-ct,xrd-ct,self-attenuation,attenuation correction
+ Classifier: Development Status :: 2 - Pre-Alpha
+@@ -125,15 +125,23 @@
+ 
+ # Changelog
+ All notable changes to this project will be documented in this file.
+ 
+ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ 
+-[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.7.2...develop
++[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.8.0...develop
++
++## 0.8.0 - 2023-04-06
++### Added
++- Ghost imaging support (structured illumination):
++  - Theoretical mask generation (incl. MURA, Half-Gaussian, Bernoulli)
++  - Dedicated projector (CPU based).
++### Fixed
++- Circular mask initialization
+ 
+ ## 0.7.2 - 2023-02-17
+ ### Added
+ - Default VolumeGeometry creation from volume.
+ - Tapering border size support in volume mask.
+ - 1D gradient based regularizer shortcut.
+ - Isotropic undecimented wavelet regularizer support.
+```
+
+### Comparing `corrct-0.7.2/README.md` & `corrct-0.8.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/__init__.py` & `corrct-0.8.0/corrct/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -28,14 +28,16 @@
+ from . import regularizers  # noqa: F401, F402
+ from . import solvers  # noqa: F401, F402
+ 
+ from . import param_tuning  # noqa: F401, F402
+ from . import processing  # noqa: F401, F402
+ from . import denoisers  # noqa: F401, F402
+ 
++from . import struct_illum  # noqa: F401, F402
++
+ try:
+     from . import physics  # noqa: F401, F402
+ except ImportError as exc:
+     print(exc)
+     print("WARNING: X-ray physics support not available. Please install xraylib if you need it.")
+ 
+ from . import testing  # noqa: F401, F402
+```
+
+### Comparing `corrct-0.7.2/corrct/_corrct.py` & `corrct-0.8.0/corrct/_corrct.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/_projector_backends.py` & `corrct-0.8.0/corrct/_projector_backends.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/attenuation.py` & `corrct-0.8.0/corrct/attenuation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/data_terms.py` & `corrct-0.8.0/corrct/data_terms.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -5,21 +5,23 @@
+ 
+ @author: Nicola VIGANÒ, Computational Imaging group, CWI, The Netherlands,
+ and ESRF - The European Synchrotron, Grenoble, France
+ """
+ 
+ import numpy as np
+ 
+-from typing import Sequence, Union
++from typing import Sequence, Union, Any
+ from numpy.typing import NDArray
+ 
+ from abc import ABC, abstractmethod
+ 
+ from . import operators
+ 
++from copy import deepcopy
++
+ 
+ eps = np.finfo(np.float32).eps
+ 
+ 
+ NDArrayFloat = NDArray[np.floating]
+ 
+ 
+@@ -54,14 +56,38 @@
+             The data background. The default is None.
+         """
+         self.background = np.array(background) if background is not None else None
+         self.data = None
+         self.sigma = 1.0
+         self.sigma_data = None
+ 
++    def _slice_attr(self, attr: str, ind: Any) -> None:
++        attr_val = self.__getattribute__(attr)
++        if attr_val is not None and isinstance(attr_val, np.ndarray) and attr_val.size > 1:
++            self.__setattr__(attr, attr_val[ind])
++
++    def __getitem__(self, ind: Any) -> "DataFidelityBase":
++        """
++        Slice the norm and all its attributes.
++
++        Parameters
++        ----------
++        ind : Any
++            Slicing indices.
++
++        Returns
++        -------
++        DataFidelityBase
++            The sliced norm.
++        """
++        new_self = deepcopy(self)
++        for attr in self.__dict__.keys():
++            new_self._slice_attr(attr, ind)
++        return new_self
++
+     def info(self) -> str:
+         """
+         Return the data-fidelity info.
+ 
+         Returns
+         -------
+         str
+@@ -271,33 +297,42 @@
+ class DataFidelity_wl2(DataFidelity_l2):
+     """Weighted l2-norm data-fidelity class."""
+ 
+     __data_fidelity_name__ = "wl2"
+ 
+     def __init__(self, weights: Union[float, NDArrayFloat], background: Union[float, NDArrayFloat, None] = None) -> None:
+         super().__init__(background=background)
+-        self.weights = weights
++        self.weights = np.array(weights)
+ 
+     def assign_data(self, data: Union[float, NDArrayFloat, None], sigma: Union[float, NDArrayFloat] = 1.0):
+         super().assign_data(data=data, sigma=sigma)
+-        self.sigma1 = 1 / (1 + sigma / self.weights)
++        if isinstance(self.sigma, np.ndarray):
++            dtype = self.sigma.dtype
++        else:
++            dtype = type(self.sigma)
++        invalid_weights = (self.weights == 0).astype(dtype)
++        self.sigma1 = 1 / (1 + sigma / (self.weights + invalid_weights)) * (1 - invalid_weights)
+ 
+     def compute_residual(self, proj_primal, mask: Union[float, NDArrayFloat, None] = None):
+         if self.background is not None:
+             proj_primal = proj_primal + self.background
+         if self.data is not None:
+             residual = (self.data - proj_primal) * self.weights
+         else:
+             residual = proj_primal * self.weights
+         if mask is not None:
+             residual *= mask
+         return residual
+ 
+     def compute_residual_norm(self, dual: Union[float, NDArrayFloat]) -> float:
+-        return float(np.linalg.norm((dual / np.sqrt(self.weights)).flatten(), ord=2) ** 2)
++        valid_weights = self.weights != 0
++        if isinstance(dual, np.ndarray):
++            dual = dual[valid_weights]
++        weights = self.weights[valid_weights]
++        return float(np.linalg.norm((dual / np.sqrt(weights)).flatten(), ord=2) ** 2)
+ 
+ 
+ class DataFidelity_l2b(DataFidelity_l2):
+     """l2-norm ball data-fidelity class."""
+ 
+     __data_fidelity_name__ = "l2b"
+```
+
+### Comparing `corrct-0.7.2/corrct/denoisers.py` & `corrct-0.8.0/corrct/denoisers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/filters.py` & `corrct-0.8.0/corrct/filters.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/models.py` & `corrct-0.8.0/corrct/models.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -100,36 +100,15 @@
+             Rotation axis direction. It can be either a string or a direction. The default is "clockwise".
+ 
+         Returns
+         -------
+         ProjectionGeometry
+             The default paralle-beam geometry.
+         """
+-        if rot_axis_shift_pix is None:
+-            det_pos_xyz = np.array([0, 0, 0])
+-        else:
+-            rot_axis_shift_pix = np.array(rot_axis_shift_pix, ndmin=1)
+-            det_pos_xyz = np.concatenate([rot_axis_shift_pix[:, None], np.zeros((len(rot_axis_shift_pix), 2))], axis=-1)
+-
+-        if isinstance(rot_axis_dir, str):
+-            if rot_axis_dir.lower() == "clockwise":
+-                rot_axis_dir = np.array([0, 0, -1])
+-            else:
+-                rot_axis_dir = np.array([0, 0, 1])
+-        else:
+-            rot_axis_dir = np.array(rot_axis_dir, ndmin=1)
+-
+-        return ProjectionGeometry(
+-            geom_type="parallel" + geom_type,
+-            src_pos_xyz=np.array([0, -1, 0]),
+-            det_pos_xyz=det_pos_xyz,
+-            det_u_xyz=np.array([1, 0, 0]),
+-            det_v_xyz=np.array([0, 0, 1]),
+-            rot_dir_xyz=rot_axis_dir,
+-        )
++        return get_prj_geom_parallel(geom_type=geom_type, rot_axis_shift_pix=rot_axis_shift_pix, rot_axis_dir=rot_axis_dir)
+ 
+     def set_detector_shifts_vu(self, det_pos_vu: ArrayLike) -> None:
+         """
+         Set the detector position in XYZ, from VU (vertical, horizontal) coordinates.
+ 
+         Parameters
+         ----------
+@@ -273,14 +252,25 @@
+         NDArray
+             Shape of the volume (ZXY).
+         """
+         vol_shape_zyx = np.flip(self._vol_shape_xyz)
+         return np.array([*vol_shape_zyx[:-2], vol_shape_zyx[-1], vol_shape_zyx[-2]], dtype=int)
+ 
+     @property
++    def mask_shape(self) -> NDArray:
++        """Return the XY volume shape for circular masks.
++
++        Returns
++        -------
++        NDArray
++            Shape of the XY volume.
++        """
++        return self.shape_xyz[:2]
++
++    @property
+     def extent(self) -> Sequence[float]:
+         """
+         Return extent of the volume.
+ 
+         Returns
+         -------
+         Sequence[float]
+@@ -313,18 +303,15 @@
+             The ordering and meaning of the dimensions in the data. The deault is "dvwu".
+ 
+         Returns
+         -------
+         VolumeGeometry
+             The default volume geometry.
+         """
+-        dims = dict(u=[], v=[], w=[], d=[])
+-        for ii in range(-len(data.shape), 0):
+-            dims[data_format[ii]] = [data.shape[ii]]
+-        return VolumeGeometry([*(dims["u"] * 2), *dims["v"]])
++        return get_vol_geom_from_data(data=data, data_format=data_format)
+ 
+     @staticmethod
+     def get_default_from_volume(volume: NDArray) -> "VolumeGeometry":
+         """
+         Generate a default volume geometry from the given volume.
+ 
+         Parameters
+@@ -333,13 +320,97 @@
+             The volume.
+ 
+         Returns
+         -------
+         VolumeGeometry
+             The default volume geometry.
+         """
+-        vol_shape_zxy = volume.shape
+-        if len(vol_shape_zxy) < 2:
+-            raise ValueError(
+-                f"The volume should be at least 2-dimensional, but the following shape was passed: {vol_shape_zxy}"
+-            )
+-        return VolumeGeometry([vol_shape_zxy[-2], vol_shape_zxy[-1], *np.flip(vol_shape_zxy[:-2])])
++        return get_vol_geom_from_volume(volume=volume)
++
++
++def get_prj_geom_parallel(
++    *,
++    geom_type: str = "3d",
++    rot_axis_shift_pix: Optional[ArrayLike] = None,
++    rot_axis_dir: Union[str, ArrayLike] = "clockwise",
++) -> ProjectionGeometry:
++    """
++    Generate the default geometry for parallel beam.
++
++    Parameters
++    ----------
++    geom_type : str, optional
++        The geometry type. The default is "parallel3d".
++    rot_axis_shift_pix : Optional[ArrayLike], optional
++        Rotation axis shift in pixels. The default is None.
++    rot_axis_dir : Union[str, ArrayLike], optional
++        Rotation axis direction. It can be either a string or a direction. The default is "clockwise".
++
++    Returns
++    -------
++    ProjectionGeometry
++        The default paralle-beam geometry.
++    """
++    if rot_axis_shift_pix is None:
++        det_pos_xyz = np.array([0, 0, 0])
++    else:
++        rot_axis_shift_pix = np.array(rot_axis_shift_pix, ndmin=1)
++        det_pos_xyz = np.concatenate([rot_axis_shift_pix[:, None], np.zeros((len(rot_axis_shift_pix), 2))], axis=-1)
++
++    if isinstance(rot_axis_dir, str):
++        if rot_axis_dir.lower() == "clockwise":
++            rot_axis_dir = np.array([0, 0, -1])
++        else:
++            rot_axis_dir = np.array([0, 0, 1])
++    else:
++        rot_axis_dir = np.array(rot_axis_dir, ndmin=1)
++
++    return ProjectionGeometry(
++        geom_type="parallel" + geom_type,
++        src_pos_xyz=np.array([0, -1, 0]),
++        det_pos_xyz=det_pos_xyz,
++        det_u_xyz=np.array([1, 0, 0]),
++        det_v_xyz=np.array([0, 0, 1]),
++        rot_dir_xyz=rot_axis_dir,
++    )
++
++
++def get_vol_geom_from_data(data: NDArray, data_format: str = "dvwu") -> VolumeGeometry:
++    """
++    Generate a default volume geometry from the data shape.
++
++    Parameters
++    ----------
++    data : NDArray
++        The data.
++    data_format : str, optional
++        The ordering and meaning of the dimensions in the data. The deault is "dvwu".
++
++    Returns
++    -------
++    VolumeGeometry
++        The default volume geometry.
++    """
++    dims = dict(u=[], v=[], w=[], d=[])
++    for ii in range(-len(data.shape), 0):
++        dims[data_format[ii]] = [data.shape[ii]]
++    return VolumeGeometry([*(dims["u"] * 2), *dims["v"]])
++
++
++def get_vol_geom_from_volume(volume: NDArray) -> VolumeGeometry:
++    """
++    Generate a default volume geometry from the given volume.
++
++    Parameters
++    ----------
++    volume : NDArray
++        The volume.
++
++    Returns
++    -------
++    VolumeGeometry
++        The default volume geometry.
++    """
++    vol_shape_zxy = volume.shape
++    if len(vol_shape_zxy) < 2:
++        raise ValueError(f"The volume should be at least 2-dimensional, but the following shape was passed: {vol_shape_zxy}")
++    return VolumeGeometry([vol_shape_zxy[-2], vol_shape_zxy[-1], *np.flip(vol_shape_zxy[:-2])])
+```
+
+### Comparing `corrct-0.7.2/corrct/operators.py` & `corrct-0.8.0/corrct/operators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/param_tuning.py` & `corrct-0.8.0/corrct/param_tuning.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/physics.py` & `corrct-0.8.0/corrct/physics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/projectors.py` & `corrct-0.8.0/corrct/projectors.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -112,15 +112,15 @@
+     projector_backend: prj_backends.ProjectorBackend
+ 
+     prj_intensities: Union[NDArray[np.floating], None]
+     psf: Union[NDArray[np.floating], float, None]
+ 
+     def __init__(
+         self,
+-        vol_geom: Union[Sequence[int], models.VolumeGeometry],
++        vol_geom: Union[Sequence[int], NDArray[np.integer], models.VolumeGeometry],
+         angles_rot_rad: Union[Sequence[float], NDArray],
+         rot_axis_shift_pix: Union[float, ArrayLike, NDArray, None] = None,
+         *,
+         prj_geom: Optional[models.ProjectionGeometry] = None,
+         prj_intensities: Optional[ArrayLike] = None,
+         psf: Optional[ArrayLike] = None,
+         backend: Union[str, prj_backends.ProjectorBackend] = "astra" if astra_available else "skimage",
+@@ -130,15 +130,15 @@
+ 
+         It implements the forward and back projection of the single lines of a sinogram.
+         It takes care of initializing and disposing the ASTRA projectors when used in a *with* statement.
+         It supports both 2D and 3D geometries.
+ 
+         Parameters
+         ----------
+-        vol_geom : Sequence[int] | models.VolumeGeometry
++        vol_geom : Sequence[int] | NDArray[np.integer] | models.VolumeGeometry
+             The volume shape in Y X and optionally Z.
+         angles_rot_rad : Sequence[float] | NDArray
+             The rotation angles.
+         rot_axis_shift_pix : float | ArrayLike | NDArray, optional
+             The rotation axis shift(s) in pixels, by default None.
+         prj_geom : models.ProjectionGeometry | None, optional
+             The fully specified projection geometry.
+@@ -367,15 +367,15 @@
+     It includes the computation of the attenuation volumes.
+     """
+ 
+     att_vol_angles: NDArray[np.floating]
+ 
+     def __init__(
+         self,
+-        vol_geom: Union[Sequence[int], models.VolumeGeometry],
++        vol_geom: Union[Sequence[int], NDArray[np.integer], models.VolumeGeometry],
+         angles_rot_rad: Union[Sequence[float], NDArray],
+         rot_axis_shift_pix: Union[float, ArrayLike, NDArray, None] = None,
+         *,
+         prj_geom: Optional[models.ProjectionGeometry] = None,
+         prj_intensities: Optional[ArrayLike] = None,
+         backend: Union[str, prj_backends.ProjectorBackend] = "astra" if astra_available else "skimage",
+         att_maps: Optional[NDArray[np.floating]] = None,
+@@ -391,15 +391,15 @@
+         verbose: bool = True,
+     ):
+         """
+         Initialize the (attenuation corrected) XRF dedicated projector.
+ 
+         Parameters
+         ----------
+-        vol_geom : Sequence[int] | models.VolumeGeometry
++        vol_geom : Sequence[int] | NDArray[np.integer] | models.VolumeGeometry
+             The volume shape in X Y and optionally Z.
+         angles_rot_rad : Sequence[float] | NDArray
+             The rotation angles.
+         rot_axis_shift_pix : float | ArrayLike | NDArray | None, optional
+             The rotation axis shift(s) in pixels. The default is None.
+         prj_geom : Optional[models.ProjectionGeometry], optional
+             The fully specified projection geometry.
+```
+
+### Comparing `corrct-0.7.2/corrct/regularizers.py` & `corrct-0.8.0/corrct/regularizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/solvers.py` & `corrct-0.8.0/corrct/solvers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct/testing.py` & `corrct-0.8.0/corrct/testing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/corrct.egg-info/PKG-INFO` & `corrct-0.8.0/corrct.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: corrct
+-Version: 0.7.2
++Version: 0.8.0
+ Summary: Physically corrected projectors for X-ray induced emission CT.
+ Home-page: https://github.com/cicwi/PyCorrectedEmissionCT
+ Author: Nicola VIGANÒ
+ Author-email: N.R.Vigano@cwi.nl
+ License: BSD license
+ Keywords: corrct,xrf-ct,xrd-ct,self-attenuation,attenuation correction
+ Classifier: Development Status :: 2 - Pre-Alpha
+@@ -125,15 +125,23 @@
+ 
+ # Changelog
+ All notable changes to this project will be documented in this file.
+ 
+ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ 
+-[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.7.2...develop
++[Unreleased]: https://www.github.com/cicwi/corrct/compare/v0.8.0...develop
++
++## 0.8.0 - 2023-04-06
++### Added
++- Ghost imaging support (structured illumination):
++  - Theoretical mask generation (incl. MURA, Half-Gaussian, Bernoulli)
++  - Dedicated projector (CPU based).
++### Fixed
++- Circular mask initialization
+ 
+ ## 0.7.2 - 2023-02-17
+ ### Added
+ - Default VolumeGeometry creation from volume.
+ - Tapering border size support in volume mask.
+ - 1D gradient based regularizer shortcut.
+ - Isotropic undecimented wavelet regularizer support.
+```
+
+### Comparing `corrct-0.7.2/corrct.egg-info/SOURCES.txt` & `corrct-0.8.0/corrct.egg-info/SOURCES.txt`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -16,14 +16,15 @@
+ corrct/models.py
+ corrct/operators.py
+ corrct/param_tuning.py
+ corrct/physics.py
+ corrct/projectors.py
+ corrct/regularizers.py
+ corrct/solvers.py
++corrct/struct_illum.py
+ corrct/testing.py
+ corrct.egg-info/PKG-INFO
+ corrct.egg-info/SOURCES.txt
+ corrct.egg-info/dependency_links.txt
+ corrct.egg-info/not-zip-safe
+ corrct.egg-info/requires.txt
+ corrct.egg-info/top_level.txt
+```
+
+### Comparing `corrct-0.7.2/setup.cfg` & `corrct-0.8.0/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/tests/test_examples.py` & `corrct-0.8.0/tests/test_examples.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/tests/test_operators.py` & `corrct-0.8.0/tests/test_operators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/tests/test_projectors.py` & `corrct-0.8.0/tests/test_projectors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/tests/test_regularizers.py` & `corrct-0.8.0/tests/test_regularizers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `corrct-0.7.2/tests/test_solvers.py` & `corrct-0.8.0/tests/test_solvers.py`
+
+ * *Files identical despite different names*
+

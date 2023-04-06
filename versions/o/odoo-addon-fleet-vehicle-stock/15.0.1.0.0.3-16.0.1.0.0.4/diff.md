@@ -1,0 +1,701 @@
+# Comparing `tmp/odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3-py3-none-any.whl.zip` & `tmp/odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,34 +1,34 @@
+-Zip file size: 35061 bytes, number of entries: 32
+--rw-r--r--  2.0 unx     4065 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/README.rst
+--rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/__init__.py
+--rw-r--r--  2.0 unx      891 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/__manifest__.py
+--rw-r--r--  2.0 unx     4051 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/i18n/fleet_vehicle_stock.pot
+--rw-r--r--  2.0 unx     4855 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/i18n/pt_BR.po
+--rw-r--r--  2.0 unx      216 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/__init__.py
+--rw-r--r--  2.0 unx     2086 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/fleet_vehicle.py
+--rw-r--r--  2.0 unx      355 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/fleet_vehicle_model.py
+--rw-r--r--  2.0 unx      362 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/product_product.py
+--rw-r--r--  2.0 unx     2163 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/product_template.py
+--rw-r--r--  2.0 unx     1758 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/stock_move.py
+--rw-r--r--  2.0 unx      466 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/stock_picking_type.py
+--rw-r--r--  2.0 unx      382 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/models/stock_production_lot.py
+--rw-r--r--  2.0 unx      787 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/readme/CONFIGURE.rst
+--rw-r--r--  2.0 unx       53 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/readme/CONTRIBUTORS.rst
+--rw-r--r--  2.0 unx      138 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/readme/CREDITS.rst
+--rw-r--r--  2.0 unx      119 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/readme/DESCRIPTION.rst
+--rw-r--r--  2.0 unx      137 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/readme/USAGE.rst
+--rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/static/description/icon.png
+--rw-r--r--  2.0 unx    13938 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/static/description/index.html
+--rw-r--r--  2.0 unx      184 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/tests/__init__.py
+--rw-r--r--  2.0 unx     3268 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/tests/test_fleet_vehicle.py
+--rw-r--r--  2.0 unx     1745 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/fleet_vehicle.xml
+--rw-r--r--  2.0 unx      825 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/fleet_vehicle_model.xml
+--rw-r--r--  2.0 unx     2057 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/product_product.xml
+--rw-r--r--  2.0 unx     1855 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/product_template.xml
+--rw-r--r--  2.0 unx      689 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/stock_picking_type.xml
+--rw-r--r--  2.0 unx     1088 b- defN 23-Apr-06 04:17 odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml
+--rw-r--r--  2.0 unx     4690 b- defN 23-Apr-06 04:18 odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 04:18 odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/WHEEL
+--rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 04:18 odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3529 b- defN 23-Apr-06 04:18 odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/RECORD
+-32 files, 66325 bytes uncompressed, 29047 bytes compressed:  56.2%
++Zip file size: 35136 bytes, number of entries: 32
++-rw-r--r--  2.0 unx     4112 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/README.rst
++-rw-r--r--  2.0 unx       21 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/__init__.py
++-rw-r--r--  2.0 unx      891 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/__manifest__.py
++-rw-r--r--  2.0 unx     4043 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/i18n/fleet_vehicle_stock.pot
++-rw-r--r--  2.0 unx     4855 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/i18n/pt_BR.po
++-rw-r--r--  2.0 unx      216 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/__init__.py
++-rw-r--r--  2.0 unx     2075 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/fleet_vehicle.py
++-rw-r--r--  2.0 unx      355 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/fleet_vehicle_model.py
++-rw-r--r--  2.0 unx      362 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/product_product.py
++-rw-r--r--  2.0 unx     2163 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/product_template.py
++-rw-r--r--  2.0 unx     1758 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/stock_move.py
++-rw-r--r--  2.0 unx      466 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/stock_picking_type.py
++-rw-r--r--  2.0 unx      371 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/models/stock_production_lot.py
++-rw-r--r--  2.0 unx      787 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/readme/CONFIGURE.rst
++-rw-r--r--  2.0 unx      100 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/readme/CONTRIBUTORS.rst
++-rw-r--r--  2.0 unx      138 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/readme/CREDITS.rst
++-rw-r--r--  2.0 unx      119 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/readme/DESCRIPTION.rst
++-rw-r--r--  2.0 unx      137 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/readme/USAGE.rst
++-rw-r--r--  2.0 unx     9455 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/static/description/icon.png
++-rw-r--r--  2.0 unx    14083 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/static/description/index.html
++-rw-r--r--  2.0 unx      184 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/tests/__init__.py
++-rw-r--r--  2.0 unx     3248 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/tests/test_fleet_vehicle.py
++-rw-r--r--  2.0 unx     1745 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/fleet_vehicle.xml
++-rw-r--r--  2.0 unx      825 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/fleet_vehicle_model.xml
++-rw-r--r--  2.0 unx     2057 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/product_product.xml
++-rw-r--r--  2.0 unx     1786 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/product_template.xml
++-rw-r--r--  2.0 unx      689 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/stock_picking_type.xml
++-rw-r--r--  2.0 unx     1077 b- defN 23-Apr-06 18:12 odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml
++-rw-r--r--  2.0 unx     4738 b- defN 23-Apr-06 18:12 odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 18:12 odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/WHEEL
++-rw-r--r--  2.0 unx        5 b- defN 23-Apr-06 18:12 odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3530 b- defN 23-Apr-06 18:12 odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/RECORD
++32 files, 66483 bytes uncompressed, 29122 bytes compressed:  56.2%
+```
+
+## zipnote {}
+
+```diff
+@@ -78,20 +78,20 @@
+ 
+ Filename: odoo/addons/fleet_vehicle_stock/views/stock_picking_type.xml
+ Comment: 
+ 
+ Filename: odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/METADATA
++Filename: odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/METADATA
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/WHEEL
++Filename: odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/top_level.txt
++Filename: odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/RECORD
++Filename: odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## odoo/addons/fleet_vehicle_stock/README.rst
+
+```diff
+@@ -10,21 +10,21 @@
+ .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+     :target: https://odoo-community.org/page/development-status
+     :alt: Beta
+ .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+     :alt: License: AGPL-3
+ .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github
+-    :target: https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock
++    :target: https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock
+     :alt: OCA/fleet
+ .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
+-    :target: https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_stock
++    :target: https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_stock
+     :alt: Translate me on Weblate
+ .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+-    :target: https://runbot.odoo-community.org/runbot/291/15.0
++    :target: https://runbot.odoo-community.org/runbot/291/16.0
+     :alt: Try me on Runbot
+ 
+ |badge1| |badge2| |badge3| |badge4| |badge5| 
+ 
+ This module is an add-on for the Fleet application in Odoo. It allows you to track your Fleet Vehicles in stock moves.
+ 
+ **Table of contents**
+@@ -66,15 +66,15 @@
+ 
+ Bug Tracker
+ ===========
+ 
+ Bugs are tracked on `GitHub Issues <https://github.com/OCA/fleet/issues>`_.
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
++`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+ 
+ Do not contact contributors directly about support or help with technical issues.
+ 
+ Credits
+ =======
+ 
+ Authors
+@@ -82,14 +82,15 @@
+ 
+ * Escodoo
+ 
+ Contributors
+ ~~~~~~~~~~~~
+ 
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+ 
+ Other credits
+ ~~~~~~~~~~~~~
+ 
+ The development of this module has been financially supported by:
+ 
+ * Escodoo - `https://www.escodoo.com.br <https://www.escodoo.com.br>`_
+@@ -111,10 +112,10 @@
+     :target: https://github.com/marcelsavegnago
+     :alt: marcelsavegnago
+ 
+ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+ 
+ |maintainer-marcelsavegnago| 
+ 
+-This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock>`_ project on GitHub.
++This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock>`_ project on GitHub.
+ 
+ You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+```
+
+## odoo/addons/fleet_vehicle_stock/__manifest__.py
+
+```diff
+@@ -3,15 +3,15 @@
+ 
+ 
+ {
+     "name": "Fleet Vehicle Stock",
+     "summary": """
+         This module is an add-on for the Fleet application in Odoo. It allows
+         you to track your Fleet Vehicles in stock moves.""",
+-    "version": "15.0.1.0.0",
++    "version": "16.0.1.0.0",
+     "license": "AGPL-3",
+     "author": "Escodoo,Odoo Community Association (OCA)",
+     "website": "https://github.com/OCA/fleet",
+     "category": "Human Resources/Fleet",
+     "images": ["static/description/banner.png"],
+     "maintainers": ["marcelsavegnago"],
+     "depends": ["stock", "fleet"],
+```
+
+## odoo/addons/fleet_vehicle_stock/i18n/fleet_vehicle_stock.pot
+
+```diff
+@@ -1,14 +1,14 @@
+ # Translation of Odoo Server.
+ # This file contains the translation of the following modules:
+ # 	* fleet_vehicle_stock
+ #
+ msgid ""
+ msgstr ""
+-"Project-Id-Version: Odoo Server 15.0\n"
++"Project-Id-Version: Odoo Server 16.0\n"
+ "Report-Msgid-Bugs-To: \n"
+ "Last-Translator: \n"
+ "Language-Team: \n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: \n"
+ "Plural-Forms: \n"
+@@ -37,15 +37,15 @@
+ #. module: fleet_vehicle_stock
+ #: model_terms:ir.ui.view,arch_db:fleet_vehicle_stock.product_template_form_view
+ #: model_terms:ir.ui.view,arch_db:fleet_vehicle_stock.product_variant_easy_edit_view
+ msgid "Fleet"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+-#: model:ir.model.fields,field_description:fleet_vehicle_stock.field_stock_production_lot__fleet_vehicle_id
++#: model:ir.model.fields,field_description:fleet_vehicle_stock.field_stock_lot__fleet_vehicle_id
+ msgid "Fleet Vehicle"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+ #: model_terms:ir.ui.view,arch_db:fleet_vehicle_stock.fleet_vehicle_form_view
+ #: model_terms:ir.ui.view,arch_db:fleet_vehicle_stock.fleet_vehicle_model_form_view
+ msgid "Inventory"
+@@ -55,37 +55,37 @@
+ #: model:ir.model.constraint,message:fleet_vehicle_stock.constraint_product_template_non_product_tracking_for_vehicle_model
+ msgid ""
+ "It is mandatory to configure the traceability by serial number in order to "
+ "be able to configure the vehicle model of the fleet in this product."
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+-#: model:ir.model,name:fleet_vehicle_stock.model_stock_production_lot
++#: model:ir.model,name:fleet_vehicle_stock.model_stock_lot
+ msgid "Lot/Serial"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+ #: model:ir.model,name:fleet_vehicle_stock.model_fleet_vehicle_model
+ msgid "Model of a vehicle"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+ #: model:ir.model,name:fleet_vehicle_stock.model_stock_picking_type
+ msgid "Picking Type"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+-#: model:ir.model,name:fleet_vehicle_stock.model_product_product
++#: model:ir.model,name:fleet_vehicle_stock.model_product_template
+ #: model:ir.model.fields,field_description:fleet_vehicle_stock.field_fleet_vehicle__product_id
+ msgid "Product"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+-#: model:ir.model,name:fleet_vehicle_stock.model_product_template
+-msgid "Product Template"
++#: model:ir.model,name:fleet_vehicle_stock.model_product_product
++msgid "Product Variant"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
+ #: model:ir.model.fields,help:fleet_vehicle_stock.field_stock_picking_type__create_fleet_vehicle
+ msgid ""
+ "Products with the \"Creates a Fleet Vehicle\" flagwill automatically be "
+ "converted to an Fleet Vehicle."
+@@ -98,14 +98,15 @@
+ 
+ #. module: fleet_vehicle_stock
+ #: model:ir.model,name:fleet_vehicle_stock.model_stock_move
+ msgid "Stock Move"
+ msgstr ""
+ 
+ #. module: fleet_vehicle_stock
++#. odoo-python
+ #: code:addons/fleet_vehicle_stock/models/stock_move.py:0
+ #, python-format
+ msgid ""
+ "The product '%s' is configure to create a fleet vehicle but vehicle model is"
+ " not configured in the product."
+ msgstr ""
+```
+
+## odoo/addons/fleet_vehicle_stock/models/fleet_vehicle.py
+
+```diff
+@@ -9,15 +9,15 @@
+     _inherit = "fleet.vehicle"
+ 
+     product_id = fields.Many2one(
+         "product.product",
+         string="Product",
+     )
+     lot_id = fields.Many2one(
+-        "stock.production.lot",
++        "stock.lot",
+         string="Serial #",
+     )
+     current_stock_location_id = fields.Many2one(
+         "stock.location",
+         string="Current Inventory Location",
+         compute="_compute_current_stock_loc_id",
+     )
+```
+
+## odoo/addons/fleet_vehicle_stock/models/stock_production_lot.py
+
+```diff
+@@ -2,14 +2,14 @@
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+ 
+ from odoo import fields, models
+ 
+ 
+ class StockProductionLot(models.Model):
+ 
+-    _inherit = "stock.production.lot"
++    _inherit = "stock.lot"
+ 
+     fleet_vehicle_id = fields.Many2one(
+         "fleet.vehicle",
+         string="Fleet Vehicle",
+         readonly=True,
+     )
+```
+
+## odoo/addons/fleet_vehicle_stock/readme/CONTRIBUTORS.rst
+
+```diff
+@@ -1 +1,2 @@
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+```
+
+## odoo/addons/fleet_vehicle_stock/static/description/index.html
+
+### odoo/addons/fleet_vehicle_stock/static/description/index.html
+
+```diff
+@@ -367,21 +367,21 @@
+       <p>
+         <a class="reference external" href="https://odoo-community.org/page/development-status">
+           <img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png"/>
+         </a>
+         <a class="reference external" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html">
+           <img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png"/>
+         </a>
+-        <a class="reference external" href="https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock">
++        <a class="reference external" href="https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock">
+           <img alt="OCA/fleet" src="https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github"/>
+         </a>
+-        <a class="reference external" href="https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_stock">
++        <a class="reference external" href="https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_stock">
+           <img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png"/>
+         </a>
+-        <a class="reference external" href="https://runbot.odoo-community.org/runbot/291/15.0">
++        <a class="reference external" href="https://runbot.odoo-community.org/runbot/291/16.0">
+           <img alt="Try me on Runbot" src="https://img.shields.io/badge/runbot-Try%20me-875A7B.png"/>
+         </a>
+       </p>
+       <p>This module is an add-on for the Fleet application in Odoo. It allows you to track your Fleet Vehicles in stock moves.</p>
+       <p>
+         <strong>Table of contents</strong>
+       </p>
+@@ -455,15 +455,15 @@
+         </h1>
+         <p>
+           Bugs are tracked on
+           <a class="reference external" href="https://github.com/OCA/fleet/issues">GitHub Issues</a>
+           .
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-          <a class="reference external" href="https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>
++          <a class="reference external" href="https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>
+           .
+         </p>
+         <p>Do not contact contributors directly about support or help with technical issues.</p>
+       </div>
+       <div class="section" id="credits">
+         <h1>
+           <a class="toc-backref" href="#id4">Credits</a>
+@@ -482,14 +482,19 @@
+           </h2>
+           <ul class="simple">
+             <li>
+               Marcel Savegnago &lt;
+               <a class="reference external" href="mailto:marcel.savegnago@escodoo.com.br">marcel.savegnago@escodoo.com.br</a>
+               &gt;
+             </li>
++            <li>
++              Kaynnan Lemes &lt;
++              <a class="reference external" href="mailto:kaynnan.lemes@escodoo.com.br">kaynnan.lemes@escodoo.com.br</a>
++              &gt;
++            </li>
+           </ul>
+         </div>
+         <div class="section" id="other-credits">
+           <h2>
+             <a class="toc-backref" href="#id7">Other credits</a>
+           </h2>
+           <p>The development of this module has been financially supported by:</p>
+@@ -519,15 +524,15 @@
+           <p>
+             <a class="reference external" href="https://github.com/marcelsavegnago">
+               <img alt="marcelsavegnago" src="https://github.com/marcelsavegnago.png?size=40px"/>
+             </a>
+           </p>
+           <p>
+             This module is part of the
+-            <a class="reference external" href="https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock">OCA/fleet</a>
++            <a class="reference external" href="https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock">OCA/fleet</a>
+             project on GitHub.
+           </p>
+           <p>
+             You are welcome to contribute. To learn how please visit
+             <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>
+             .
+           </p>
+```
+
+## odoo/addons/fleet_vehicle_stock/tests/test_fleet_vehicle.py
+
+```diff
+@@ -1,52 +1,52 @@
+ # Copyright (C) 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+ 
+-from odoo.tests.common import SavepointCase
++from odoo.tests.common import TransactionCase
+ 
+ 
+-class TestFleetVehicle(SavepointCase):
++class TestFleetVehicle(TransactionCase):
+     @classmethod
+     def setUpClass(cls):
+         super(TestFleetVehicle, cls).setUpClass()
+         cls.brand = cls.env.ref("fleet.brand_opel")
+         cls.stock_location = cls.env.ref("stock.stock_location_customers")
+ 
+         cls.vehicle_model1 = cls.env["fleet.vehicle.model"].create(
+             {"name": "Test Vehicle Model 1", "brand_id": cls.brand.id}
+         )
+         cls.vehicle_model2 = cls.env["fleet.vehicle.model"].create(
+             {"name": "Test Vehicle Model 2", "brand_id": cls.brand.id}
+         )
+ 
+-        cls.product1 = cls.env["product.template"].create(
++        cls.product1 = cls.env["product.product"].create(
+             {
+                 "name": "Product 1",
+                 "type": "product",
+                 "fleet_vehicle_model_id": cls.vehicle_model1.id,
+                 "tracking": "serial",
+             }
+         )
+-        cls.product2 = cls.env["product.template"].create(
++        cls.product2 = cls.env["product.product"].create(
+             {
+                 "name": "Product 2",
+                 "type": "product",
+                 "fleet_vehicle_model_id": cls.vehicle_model1.id,
+                 "tracking": "serial",
+             }
+         )
+ 
+-        cls.lot1 = cls.env["stock.production.lot"].create(
++        cls.lot1 = cls.env["stock.lot"].create(
+             {
+                 "name": "serial1",
+                 "product_id": cls.product1.id,
+                 "company_id": cls.env.user.company_id.id,
+             }
+         )
+-        cls.lot2 = cls.env["stock.production.lot"].create(
++        cls.lot2 = cls.env["stock.lot"].create(
+             {
+                 "name": "serial2",
+                 "product_id": cls.product1.id,
+                 "company_id": cls.env.user.company_id.id,
+             }
+         )
+```
+
+## odoo/addons/fleet_vehicle_stock/views/product_template.xml
+
+### odoo/addons/fleet_vehicle_stock/views/product_template.xml
+
+```diff
+@@ -19,13 +19,13 @@
+     <field name="name">product.template.product.form (in fleet_vehicle_stock)</field>
+     <field name="model">product.template</field>
+     <field name="inherit_id" ref="product.product_template_only_form_view"/>
+     <field name="arch" type="xml">
+       <page name="fleet" position="inside">
+         <field name="product_variant_count" invisible="1"/>
+         <group>
+-          <field name="fleet_vehicle_model_id" attrs="{'invisible': ['|',('product_variant_count', '&gt;', 1),('tracking', '!=', 'serial')], 'required': [('create_fleet_vehicle', '=', True),('product_variant_count', '=', 1)]}"/>
++          <field name="fleet_vehicle_model_id" attrs="{'invisible': [('product_variant_count', '&gt;', 1)], 'required': [('product_variant_count', '=', 1)]}"/>
+         </group>
+       </page>
+     </field>
+   </record>
+ </odoo>
+```
+
+## odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml
+
+### odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml
+
+```diff
+@@ -1,14 +1,14 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <!-- Copyright 2021 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+ <odoo>
+   <record model="ir.ui.view" id="stock_production_lot_form_view">
+     <field name="name">stock.production.lot.form (in fleet_vehicle_stock)</field>
+-    <field name="model">stock.production.lot</field>
++    <field name="model">stock.lot</field>
+     <field name="inherit_id" ref="stock.view_production_lot_form"/>
+     <field name="arch" type="xml">
+       <xpath expr="//group[@name='main_group']/group[1]" position="after" sequence="0">
+         <group>
+           <field name="fleet_vehicle_id"/>
+         </group>
+       </xpath>
+```
+
+## Comparing `odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/METADATA` & `odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/METADATA`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ Metadata-Version: 2.1
+ Name: odoo-addon-fleet-vehicle-stock
+-Version: 15.0.1.0.0.3
++Version: 16.0.1.0.0.4
+ Summary: This module is an add-on for the Fleet application in Odoo. It allows you to track your Fleet Vehicles in stock moves.
+ Home-page: https://github.com/OCA/fleet
+ Author: Escodoo,Odoo Community Association (OCA)
+ Author-email: support@odoo-community.org
+ License: AGPL-3
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python
+ Classifier: Framework :: Odoo
+-Classifier: Framework :: Odoo :: 15.0
++Classifier: Framework :: Odoo :: 16.0
+ Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+-Requires-Python: >=3.8
+-Requires-Dist: odoo (<15.1dev,>=15.0a)
++Requires-Python: >=3.10
++Requires-Dist: odoo (<16.1dev,>=16.0a)
+ 
+ ===================
+ Fleet Vehicle Stock
+ ===================
+ 
+ .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    !! This file is generated by oca-gen-addon-readme !!
+@@ -26,21 +26,21 @@
+ .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+     :target: https://odoo-community.org/page/development-status
+     :alt: Beta
+ .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+     :alt: License: AGPL-3
+ .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github
+-    :target: https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock
++    :target: https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock
+     :alt: OCA/fleet
+ .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
+-    :target: https://translation.odoo-community.org/projects/fleet-15-0/fleet-15-0-fleet_vehicle_stock
++    :target: https://translation.odoo-community.org/projects/fleet-16-0/fleet-16-0-fleet_vehicle_stock
+     :alt: Translate me on Weblate
+ .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+-    :target: https://runbot.odoo-community.org/runbot/291/15.0
++    :target: https://runbot.odoo-community.org/runbot/291/16.0
+     :alt: Try me on Runbot
+ 
+ |badge1| |badge2| |badge3| |badge4| |badge5| 
+ 
+ This module is an add-on for the Fleet application in Odoo. It allows you to track your Fleet Vehicles in stock moves.
+ 
+ **Table of contents**
+@@ -82,15 +82,15 @@
+ 
+ Bug Tracker
+ ===========
+ 
+ Bugs are tracked on `GitHub Issues <https://github.com/OCA/fleet/issues>`_.
+ In case of trouble, please check there if your issue has already been reported.
+ If you spotted it first, help us smashing it by providing a detailed and welcomed
+-`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
++`feedback <https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_stock%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+ 
+ Do not contact contributors directly about support or help with technical issues.
+ 
+ Credits
+ =======
+ 
+ Authors
+@@ -98,14 +98,15 @@
+ 
+ * Escodoo
+ 
+ Contributors
+ ~~~~~~~~~~~~
+ 
+ * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
++* Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+ 
+ Other credits
+ ~~~~~~~~~~~~~
+ 
+ The development of this module has been financially supported by:
+ 
+ * Escodoo - `https://www.escodoo.com.br <https://www.escodoo.com.br>`_
+@@ -127,12 +128,12 @@
+     :target: https://github.com/marcelsavegnago
+     :alt: marcelsavegnago
+ 
+ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+ 
+ |maintainer-marcelsavegnago| 
+ 
+-This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/15.0/fleet_vehicle_stock>`_ project on GitHub.
++This module is part of the `OCA/fleet <https://github.com/OCA/fleet/tree/16.0/fleet_vehicle_stock>`_ project on GitHub.
+ 
+ You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+```
+
+## Comparing `odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/RECORD` & `odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/RECORD`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,32 +1,32 @@
+-odoo/addons/fleet_vehicle_stock/README.rst,sha256=kL2rUlG1OolqXYxy3lU3DFoL0wEHKKFkcpufWwGXmG0,4065
++odoo/addons/fleet_vehicle_stock/README.rst,sha256=DUzmzTi2lp2_7AKWAaEHlTqhPz82ASotazw2lhff3cg,4112
+ odoo/addons/fleet_vehicle_stock/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+-odoo/addons/fleet_vehicle_stock/__manifest__.py,sha256=DZSVpXYZzBEUqBOhRtVOtpCxMcrntvSfsNP-FCuNnfI,891
+-odoo/addons/fleet_vehicle_stock/i18n/fleet_vehicle_stock.pot,sha256=8sLTJdH0wSXS4yLL1rkCBDyuwElh93s9cdG58b0_-1w,4051
++odoo/addons/fleet_vehicle_stock/__manifest__.py,sha256=tejVc37WYxs5w_9iocUnfVHnGCR8ovJqbhiSFY8Fpqs,891
++odoo/addons/fleet_vehicle_stock/i18n/fleet_vehicle_stock.pot,sha256=SmIi8YCkCxPm5h-3Yba1TLeatl7oNDB9EcL-JSwOfqA,4043
+ odoo/addons/fleet_vehicle_stock/i18n/pt_BR.po,sha256=Bn1783zt_f4KZ9DHx2MvIm6cGwEtwUACySgsZnTsOMo,4855
+ odoo/addons/fleet_vehicle_stock/models/__init__.py,sha256=DsWAvEENw5K4e-ws2-41Mg56XVG94FRvfJ-ZHBi3WHk,216
+-odoo/addons/fleet_vehicle_stock/models/fleet_vehicle.py,sha256=I0Po7Cca-d_vZFt3kxBBrG82vuYPdY5h0SRFQDJ4qsA,2086
++odoo/addons/fleet_vehicle_stock/models/fleet_vehicle.py,sha256=gJib5W5T-FNlRcsOf9T7uCb1qEf4pUYWI3Sfc7a6zmk,2075
+ odoo/addons/fleet_vehicle_stock/models/fleet_vehicle_model.py,sha256=g0ICNZYgrhSAJ5JDMe7V5HvduKqZHz0LbbtfdV1EsGY,355
+ odoo/addons/fleet_vehicle_stock/models/product_product.py,sha256=gNdDmzUQzoSMyi2DlvcbiSGJ1sq5FxxNIG6JgsjT_0s,362
+ odoo/addons/fleet_vehicle_stock/models/product_template.py,sha256=L52T5Q6Wv0dl7SfN8TNzM04n4DGggt7MZ2znNSSuB4k,2163
+ odoo/addons/fleet_vehicle_stock/models/stock_move.py,sha256=Zc5hTzw8DiXVS0NpUaiJwYQmU4IhSCZwo035z_edy48,1758
+ odoo/addons/fleet_vehicle_stock/models/stock_picking_type.py,sha256=aCf1y-MafpX9s7uFus7QJnQNVgqKxRtIiufqn3F779o,466
+-odoo/addons/fleet_vehicle_stock/models/stock_production_lot.py,sha256=N4AgR8FCkTktsu_UGm1aewlVnzPgQJnc6JY3qP1fSi8,382
++odoo/addons/fleet_vehicle_stock/models/stock_production_lot.py,sha256=Uz8yLVl3225LqfE7oF8uujXZKY_AnIpmiZtQQpmXSN4,371
+ odoo/addons/fleet_vehicle_stock/readme/CONFIGURE.rst,sha256=adfflJRYF3rfhSHfN4MjjXRDpBQ054T3eCb4i7gxcPw,787
+-odoo/addons/fleet_vehicle_stock/readme/CONTRIBUTORS.rst,sha256=hoRjiPwYOuaiK2la4qIUE7lFzaeVzUQKgD1U5chwTvw,53
++odoo/addons/fleet_vehicle_stock/readme/CONTRIBUTORS.rst,sha256=yu2XFc537lnn-1JOaVoYSckjxsFIXgw90_yjeowSsaQ,100
+ odoo/addons/fleet_vehicle_stock/readme/CREDITS.rst,sha256=thk7jDdbNIP5vEWAeYAryEYOHSukHlmoi07Zk9QMMGs,138
+ odoo/addons/fleet_vehicle_stock/readme/DESCRIPTION.rst,sha256=rnl4jRPnjIbEVUb3aH0-4wJD6Yy9ELfPhoZ2o-r-b3Y,119
+ odoo/addons/fleet_vehicle_stock/readme/USAGE.rst,sha256=XzWT0qUbWbwNEF7tT1x1mR_X0f4ZM9rqiAu5o3eAJgI,137
+ odoo/addons/fleet_vehicle_stock/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+-odoo/addons/fleet_vehicle_stock/static/description/index.html,sha256=_ksVh9SIW4bW7ESNONmpnzIb-ugo9utby1iRJN6Z20Q,13938
++odoo/addons/fleet_vehicle_stock/static/description/index.html,sha256=b99Rz82_w_KxbUtAWg2ANsWnOsXVYnA7oPi0SEN8ltI,14083
+ odoo/addons/fleet_vehicle_stock/tests/__init__.py,sha256=jiEN0nv_iPB_xQINERPNb7rQBOXxkuR2Dqyv8Fritvc,184
+-odoo/addons/fleet_vehicle_stock/tests/test_fleet_vehicle.py,sha256=8isJzn4n5agfsy9R8gNGh-WOIBDa8SJdnNMaet9Zf1A,3268
++odoo/addons/fleet_vehicle_stock/tests/test_fleet_vehicle.py,sha256=dEECr_6sQyW0Zr-lZJHVMHFu_6gffaBUzo7Txz0RKR4,3248
+ odoo/addons/fleet_vehicle_stock/views/fleet_vehicle.xml,sha256=mAY1Ya771BduJpmvzJXW4FwefoEIO6dMCFN7TRKQvNM,1745
+ odoo/addons/fleet_vehicle_stock/views/fleet_vehicle_model.xml,sha256=61Sut0to4Oyfl3_9D31WI4zGauUo2fqo-50KGujDiiU,825
+ odoo/addons/fleet_vehicle_stock/views/product_product.xml,sha256=AeWPmX4lDTFL1feWcJHLwKxq1dXncA4Lg4Sv46_YoOk,2057
+-odoo/addons/fleet_vehicle_stock/views/product_template.xml,sha256=jYcS584KBSqJigDDBOHC4zxFZ6Qa0p55sxFN7pQAkkQ,1855
++odoo/addons/fleet_vehicle_stock/views/product_template.xml,sha256=bgawarzrTzELxseg_Qi65bPCdM0BAKQ5HNcHaw-eyqE,1786
+ odoo/addons/fleet_vehicle_stock/views/stock_picking_type.xml,sha256=u6KgAyk1EV7fWP4Ju0FKce4Sz2PU6FM6zsIzNhoh3NA,689
+-odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml,sha256=P37ETmLgu2Ytu6vEJOnAY64IVWZtmRLKsW7xO9Kv4qg,1088
+-odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/METADATA,sha256=jC0tJPuHDFb3Dzlto3DcKOqqsx_pLZljq8jlTdnedfg,4690
+-odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+-odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+-odoo_addon_fleet_vehicle_stock-15.0.1.0.0.3.dist-info/RECORD,,
++odoo/addons/fleet_vehicle_stock/views/stock_production_lot.xml,sha256=ftbV14aYocXx03DozAKHJDFZ77B74BahRLoCxevCvwU,1077
++odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/METADATA,sha256=vArdppIqMklFx3QV-x9SjKoWuwGFwlPR_vDHAg93N8M,4738
++odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
++odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
++odoo_addon_fleet_vehicle_stock-16.0.1.0.0.4.dist-info/RECORD,,
+```
+

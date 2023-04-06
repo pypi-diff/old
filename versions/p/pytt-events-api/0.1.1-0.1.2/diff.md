@@ -1,0 +1,738 @@
+# Comparing `tmp/pytt_events_api-0.1.1.tar.gz` & `tmp/pytt_events_api-0.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pytt_events_api-0.1.1.tar", last modified: Sat Feb 11 04:40:01 2023, max compression
++gzip compressed data, was "pytt_events_api-0.1.2.tar", last modified: Thu Apr  6 18:09:14 2023, max compression
+```
+
+## Comparing `pytt_events_api-0.1.1.tar` & `pytt_events_api-0.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,25 @@
+-drwxrwxrwx   0        0        0        0 2023-02-11 04:40:01.722753 pytt_events_api-0.1.1/
+--rw-rw-rw-   0        0        0     1090 2023-01-28 12:24:47.000000 pytt_events_api-0.1.1/LICENSE
+--rw-rw-rw-   0        0        0     4540 2023-02-11 04:40:01.720757 pytt_events_api-0.1.1/PKG-INFO
+--rw-rw-rw-   0        0        0     3826 2023-02-03 22:16:32.000000 pytt_events_api-0.1.1/README.md
+-drwxrwxrwx   0        0        0        0 2023-02-11 04:40:01.700751 pytt_events_api-0.1.1/pytt_events/
+--rw-rw-rw-   0        0        0        0 2023-01-28 17:36:58.000000 pytt_events_api-0.1.1/pytt_events/__init__.py
+--rw-rw-rw-   0        0        0      485 2023-02-01 07:06:44.000000 pytt_events_api-0.1.1/pytt_events/auth.py
+--rw-rw-rw-   0        0        0     2782 2023-02-11 04:36:52.000000 pytt_events_api-0.1.1/pytt_events/context.py
+--rw-rw-rw-   0        0        0     1975 2023-02-03 18:31:20.000000 pytt_events_api-0.1.1/pytt_events/event.py
+--rw-rw-rw-   0        0        0     1037 2023-01-30 20:56:13.000000 pytt_events_api-0.1.1/pytt_events/properties.py
+--rw-rw-rw-   0        0        0     1457 2023-01-30 20:47:04.000000 pytt_events_api-0.1.1/pytt_events/supported_events.py
+-drwxrwxrwx   0        0        0        0 2023-02-11 04:40:01.704751 pytt_events_api-0.1.1/pytt_events/tests/
+--rw-rw-rw-   0        0        0        0 2023-01-28 17:54:54.000000 pytt_events_api-0.1.1/pytt_events/tests/__init__.py
+--rw-rw-rw-   0        0        0     1781 2023-02-09 19:20:59.000000 pytt_events_api-0.1.1/pytt_events/tests/conftest.py
+--rw-rw-rw-   0        0        0     1574 2023-02-09 19:21:11.000000 pytt_events_api-0.1.1/pytt_events/tests/test_event.py
+--rw-rw-rw-   0        0        0      882 2023-02-01 07:33:30.000000 pytt_events_api-0.1.1/pytt_events/tests/test_tiktok_events_api.py
+--rw-rw-rw-   0        0        0     2884 2023-02-01 07:34:55.000000 pytt_events_api-0.1.1/pytt_events/tiktok_events_api.py
+-drwxrwxrwx   0        0        0        0 2023-02-11 04:40:01.719752 pytt_events_api-0.1.1/pytt_events_api.egg-info/
+--rw-rw-rw-   0        0        0     4540 2023-02-11 04:40:01.000000 pytt_events_api-0.1.1/pytt_events_api.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      535 2023-02-11 04:40:01.000000 pytt_events_api-0.1.1/pytt_events_api.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-02-11 04:40:01.000000 pytt_events_api-0.1.1/pytt_events_api.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       81 2023-02-11 04:40:01.000000 pytt_events_api-0.1.1/pytt_events_api.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       12 2023-02-11 04:40:01.000000 pytt_events_api-0.1.1/pytt_events_api.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-02-11 04:40:01.722753 pytt_events_api-0.1.1/setup.cfg
+--rw-rw-rw-   0        0        0     1522 2023-02-11 04:39:58.000000 pytt_events_api-0.1.1/setup.py
++drwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-04-06 18:09:14.236175 pytt_events_api-0.1.2/
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1090 2023-01-28 12:24:47.000000 pytt_events_api-0.1.2/LICENSE
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     4607 2023-04-06 18:09:14.234202 pytt_events_api-0.1.2/PKG-INFO
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     4017 2023-03-20 23:22:20.000000 pytt_events_api-0.1.2/README.md
++drwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-04-06 18:09:14.069920 pytt_events_api-0.1.2/pytt_events/
++-rwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-01-28 17:36:58.000000 pytt_events_api-0.1.2/pytt_events/__init__.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)      485 2023-02-01 07:06:44.000000 pytt_events_api-0.1.2/pytt_events/auth.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     2768 2023-02-17 19:07:10.000000 pytt_events_api-0.1.2/pytt_events/context.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1975 2023-02-03 18:31:20.000000 pytt_events_api-0.1.2/pytt_events/event.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1037 2023-01-30 20:56:13.000000 pytt_events_api-0.1.2/pytt_events/properties.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1457 2023-01-30 20:47:04.000000 pytt_events_api-0.1.2/pytt_events/supported_events.py
++drwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-04-06 18:09:14.146959 pytt_events_api-0.1.2/pytt_events/tests/
++-rwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-01-28 17:54:54.000000 pytt_events_api-0.1.2/pytt_events/tests/__init__.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1715 2023-02-17 19:06:00.000000 pytt_events_api-0.1.2/pytt_events/tests/conftest.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1508 2023-02-17 19:05:23.000000 pytt_events_api-0.1.2/pytt_events/tests/test_event.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)      882 2023-02-01 07:33:30.000000 pytt_events_api-0.1.2/pytt_events/tests/test_tiktok_events_api.py
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     2884 2023-02-01 07:34:55.000000 pytt_events_api-0.1.2/pytt_events/tiktok_events_api.py
++drwxrwxrwx   0 valar     (1000) valar     (1000)        0 2023-04-06 18:09:14.217202 pytt_events_api-0.1.2/pytt_events_api.egg-info/
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     4607 2023-04-06 18:09:13.000000 pytt_events_api-0.1.2/pytt_events_api.egg-info/PKG-INFO
++-rwxrwxrwx   0 valar     (1000) valar     (1000)      535 2023-04-06 18:09:13.000000 pytt_events_api-0.1.2/pytt_events_api.egg-info/SOURCES.txt
++-rwxrwxrwx   0 valar     (1000) valar     (1000)        1 2023-04-06 18:09:13.000000 pytt_events_api-0.1.2/pytt_events_api.egg-info/dependency_links.txt
++-rwxrwxrwx   0 valar     (1000) valar     (1000)       81 2023-04-06 18:09:13.000000 pytt_events_api-0.1.2/pytt_events_api.egg-info/requires.txt
++-rwxrwxrwx   0 valar     (1000) valar     (1000)       12 2023-04-06 18:09:13.000000 pytt_events_api-0.1.2/pytt_events_api.egg-info/top_level.txt
++-rwxrwxrwx   0 valar     (1000) valar     (1000)       38 2023-04-06 18:09:14.237177 pytt_events_api-0.1.2/setup.cfg
++-rwxrwxrwx   0 valar     (1000) valar     (1000)     1522 2023-04-06 18:08:47.000000 pytt_events_api-0.1.2/setup.py
+```
+
+### Comparing `pytt_events_api-0.1.1/LICENSE` & `pytt_events_api-0.1.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/PKG-INFO` & `pytt_events_api-0.1.2/README.md`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,124 +1,107 @@
+-Metadata-Version: 2.1
+-Name: pytt_events_api
+-Version: 0.1.1
+-Summary: Python wrapper for the TikTok Events API
+-Author: Victor Valar
+-Author-email: <valar@victorvalar.me>
+-License: LICENSE.txt
+-Keywords: python,tiktok,events,api,tiktok ads,tiktok events api
+-Classifier: Development Status :: 4 - Beta
+-Classifier: Intended Audience :: Developers
+-Classifier: Programming Language :: Python :: 3
+-Classifier: Operating System :: Unix
+-Classifier: Operating System :: MacOS :: MacOS X
+-Classifier: Operating System :: Microsoft :: Windows
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+-
+-# Python TikTok Events API
+-
+-The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
+-
+-This library is an unoffical Python wrapper arround the TikTok Events API, allowing for easy interaction with the API:
+-- Pydantic types are used to validate the data to be sent to TikTok.
+-- Customer identifiable information is hashed using SHA256 before being sent to the TikTok API.
+-- Events can be sent one at a time or in batches.
+-
+-Please reference the TikTok Events API documentation for more information on the API and the data it accepts and requires: https://ads.tiktok.com/marketing_api/docs?id=1741601162187777.
+-
+-## Disclaimer
+-This library is in beta 0.1.0.
+-Feedback and contributions are welcome.
+-
+-## Installing
+-You can install pytt_events_api using pip:
+-``` bash
+-pip install pytt-events-api
+-```
+-
+-## Quick Start Guide
+-Here's a quick guide on how to use the library to send events to TikTok.
+-### Authentication
+-The only thing you need to do to authenticate with TikTok Events API is to set the environment variables listed below.
+-- `TIKTOK_ACESS_TOKEN`: Events API access token - `Required`
+-- `TIKTOK_PIXEL_ID`: The ID of the pixel  - `Required`
+-- `TIKTOK_API_VERSION`:  The API version to use, defaults to `v1.3`.
+-- `TIKTOK_TEST_EVENT_CODE`: Used so events can be tested without affecting the pixel's data. You may find the test event code in the events manager under the "Test Events" tab.
+-
+-You can find the values for these variables in the TikTok Events Manager.
+-
+-The environment variables are loaded when the `TikTokAuth` class is initialized. If the environment variables are not found, the class will raise an exception.
+-### Importing the library and initializing the API
+-``` python
+-from pytt_events.auth import TikTokAuth
+-from pytt_events.tiktok_events_api import TikTokEventsApi
+-from pytt_events.event import Event
+-from pytt_events.properties import Properties
+-from pytt_events.context import Context, Ad, Page, User
+-from pytt_events.properties import ContentType
+-from pytt_events.properties import Content
+-
+-api = TikTokEventsApi()
+-auth = TikTokAuth()
+-```
+-
+-### Creating an event
+-``` python
+-context = Context(
+-    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36',
+-    ip='13.57.97.131',
+-    ad=Ad(callback='E.C.P.v3fQ2RHacdkfKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH' ), # ttclid
+-    page=Page(
+-        url='https://www.example.com',
+-        referrer='https://www.google.com'
+-    ),
+-    user=User(
+-        external_id='123456',
+-        email='test@test.com',
+-        phone_number='+5541998862934',
+-        ttp='94e2a4j9-h3ss-k2h5-98cc-c84a745mk098',
+-    ))
+-properties = Properties(
+-    currency='BRL', # ISO 4217
+-    value=1.00,
+-    description='mock description',
+-    query='mock query',
+-    status='mock status',
+-    contents=[Content(
+-        content_type=ContentType.PRODUCT,
+-        content_id='123456789',
+-        content_name='mock content name',
+-        content_category='mock content category',
+-        price=1.00,
+-        quantity=1
+-    )]
+-)
+-event = Event (
+-    pixel_code=auth.TIKTOK_PIXEL_ID,
+-    test_event_code=auth.TIKTOK_TEST_EVENT_CODE,
+-    event='ViewContent',
+-    event_id='123456789',
+-    timestamp='2023-02-01T00:00:00-03:00', # str or datetime object
+-    context=context,
+-    properties=properties
+-)
+-```
+-
+-### Sending an event
+-``` python
+-response = api.post_event(
+-    event=event,
+-    auth=auth
+-)
+-```
+-
+-### Sending events in bulk
+-``` python
+-events = []
+-response = api.post_events_in_bulk(events=events, auth=auth)
+-```
+-
+-
+-
+-
++# Python TikTok Events API
++
++This library is an unoffical Python wrapper arround the TikTok Events API, allowing for easy interaction with the API:
++- Pydantic types are used to validate the data to be sent to TikTok.
++- Customer identifiable information is hashed using SHA256 before being sent to the TikTok API.
++- Events can be sent one at a time or in batches.
++
++The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
++
++Please reference the TikTok Events API documentation for more information on the API and the data it accepts and requires: https://ads.tiktok.com/marketing_api/docs?id=1741601162187777.
++
++TikTok API uses custom return error codes. Reference [this TikTok Events API documentation](https://ads.tiktok.com/marketing_api/docs?id=1737172488964097) for more information on the error codes.
++## Disclaimer
++This library is in beta.
++Feedback and contributions are welcome.
++
++## Installing
++You can install pytt_events_api using pip:
++``` bash
++pip install pytt-events-api
++```
++
++## Quick Start Guide
++Here's a quick guide on how to use the library to send events to TikTok.
++### Authentication
++The only thing you need to do to authenticate with TikTok Events API is to set the environment variables listed below.
++- `TIKTOK_ACESS_TOKEN`: Events API access token - `Required`
++- `TIKTOK_PIXEL_ID`: The ID of the pixel  - `Required`
++- `TIKTOK_API_VERSION`:  The API version to use, defaults to `v1.3`.
++- `TIKTOK_TEST_EVENT_CODE`: Used so events can be tested without affecting the pixel's data. You may find the test event code in the events manager under the "Test Events" tab.
++
++You can find the values for these variables in the TikTok Events Manager.
++
++The environment variables are loaded when the `TikTokAuth` class is initialized. If the environment variables are not found, the class will raise an exception.
++### Importing the library and initializing the API
++``` python
++from pytt_events.auth import TikTokAuth
++from pytt_events.tiktok_events_api import TikTokEventsApi
++from pytt_events.event import Event
++from pytt_events.properties import Properties
++from pytt_events.context import Context, Ad, Page, User
++from pytt_events.properties import ContentType
++from pytt_events.properties import Content
++
++api = TikTokEventsApi()
++auth = TikTokAuth()
++```
++
++### Creating an event
++``` python
++context = Context(
++    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36',
++    ip='13.57.97.131',
++    ad=Ad(callback='E.C.P.v3fQ2RHacdkfKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH' ), # ttclid
++    page=Page(
++        url='https://www.example.com',
++        referrer='https://www.google.com'
++    ),
++    user=User(
++        external_id='123456',
++        email='test@test.com',
++        phone_number='+5541998862934',
++        ttp='94e2a4j9-h3ss-k2h5-98cc-c84a745mk098',
++    ))
++properties = Properties(
++    currency='BRL', # ISO 4217
++    value=1.00,
++    description='mock description',
++    query='mock query',
++    status='mock status',
++    contents=[Content(
++        content_type=ContentType.PRODUCT,
++        content_id='123456789',
++        content_name='mock content name',
++        content_category='mock content category',
++        price=1.00,
++        quantity=1
++    )]
++)
++event = Event (
++    pixel_code=auth.TIKTOK_PIXEL_ID,
++    test_event_code=auth.TIKTOK_TEST_EVENT_CODE,
++    event='ViewContent',
++    event_id='123456789',
++    timestamp='2023-02-01T00:00:00-03:00', # str or datetime object
++    context=context,
++    properties=properties
++)
++```
++
++### Sending an event
++``` python
++response = api.post_event(
++    event=event,
++    auth=auth
++)
++```
++
++### Sending events in bulk
++``` python
++events = []
++response = api.post_events_in_bulk(events=events, auth=auth)
++```
++
++
++
++
+```
+
+### Comparing `pytt_events_api-0.1.1/README.md` & `pytt_events_api-0.1.2/PKG-INFO`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,20 +1,39 @@
++Metadata-Version: 2.1
++Name: pytt_events_api
++Version: 0.1.2
++Summary: Python wrapper for the TikTok Events API
++Author: Victor Valar
++Author-email: <valar@victorvalar.me>
++License: LICENSE.txt
++Keywords: python,tiktok,events,api,tiktok ads,tiktok events api
++Classifier: Development Status :: 4 - Beta
++Classifier: Intended Audience :: Developers
++Classifier: Programming Language :: Python :: 3
++Classifier: Operating System :: Unix
++Classifier: Operating System :: MacOS :: MacOS X
++Classifier: Operating System :: Microsoft :: Windows
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
++
+ # Python TikTok Events API
+ 
+-The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
+-
+ This library is an unoffical Python wrapper arround the TikTok Events API, allowing for easy interaction with the API:
+ - Pydantic types are used to validate the data to be sent to TikTok.
+ - Customer identifiable information is hashed using SHA256 before being sent to the TikTok API.
+ - Events can be sent one at a time or in batches.
+ 
++The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
++
+ Please reference the TikTok Events API documentation for more information on the API and the data it accepts and requires: https://ads.tiktok.com/marketing_api/docs?id=1741601162187777.
+ 
++TikTok API uses custom return error codes. Reference [this TikTok Events API documentation](https://ads.tiktok.com/marketing_api/docs?id=1737172488964097) for more information on the error codes.
+ ## Disclaimer
+-This library is in beta 0.1.0.
++This library is in beta.
+ Feedback and contributions are welcome.
+ 
+ ## Installing
+ You can install pytt_events_api using pip:
+ ``` bash
+ pip install pytt-events-api
+ ```
+```
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/context.py` & `pytt_events_api-0.1.2/pytt_events/context.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -8,15 +8,15 @@
+         self.value = value
+         self.message = message
+         super().__init__(value, message)
+ 
+ class Ad(BaseModel):
+     # ttclid
+     callback: Optional[constr(
+-        strip_whitespace=True, min_length=1, max_length=501
++        strip_whitespace=True, max_length=501
+     )]
+ 
+     @validator('callback', pre=True)
+     @classmethod
+     def callback_is_valid(cls, value):
+         '''
+         Check if the callbaclk value is a valid ttclid.
+```
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/event.py` & `pytt_events_api-0.1.2/pytt_events/event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/properties.py` & `pytt_events_api-0.1.2/pytt_events/properties.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/supported_events.py` & `pytt_events_api-0.1.2/pytt_events/supported_events.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/tests/conftest.py` & `pytt_events_api-0.1.2/pytt_events/tests/conftest.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -13,15 +13,15 @@
+ def event() -> Event:
+     event_name = "ViewContent"
+     event_id = '123456789'
+     timestamp = "2023-01-29 13:37:26-03:00"
+     context = Context(
+         user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36',
+         ip='13.57.97.131',
+-        ad=Ad(callback='E.C.P.v3fQ2RHacdksKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH' ), # ttclid
++        ad=Ad(callback='' ), # ttclid
+         page=Page(
+             url='https://www.example.com',
+             referrer='https://www.google.com'
+         ),
+         user=User(
+             external_id='123456',
+             email='test@test.com',
+```
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/tests/test_event.py` & `pytt_events_api-0.1.2/pytt_events/tests/test_event.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ from pytt_events.properties import ContentType
+ 
+ def test_valid_event(event):
+ 
+     assert event.pixel_code == 'CFAFTJJC77U9H3ERQ210'
+     assert event.context.user_agent == 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36'
+     assert str(event.context.ip) == '13.57.97.131'
+-    assert event.context.ad.callback == 'E.C.P.v3fQ2RHacdksKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH'
++    assert event.context.ad.callback == ''
+     assert event.context.page.url == 'https://www.example.com'
+     assert event.context.page.referrer == 'https://www.google.com'
+     assert event.context.user.email == 'test@test.com'
+     assert event.properties.currency == 'USD'
+     assert event.properties.value == 1.00
+     assert event.properties.description == 'test description'
+     assert event.properties.contents == [{"content_id": "12345", "quantity": 1, "price": 1.00, "content_type": ContentType.PRODUCT, "content_name": "test content name", "content_category": "test content category"}]
+```
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/tests/test_tiktok_events_api.py` & `pytt_events_api-0.1.2/pytt_events/tests/test_tiktok_events_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/pytt_events/tiktok_events_api.py` & `pytt_events_api-0.1.2/pytt_events/tiktok_events_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/pytt_events_api.egg-info/PKG-INFO` & `pytt_events_api-0.1.2/pytt_events_api.egg-info/PKG-INFO`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,124 +1,125 @@
+-Metadata-Version: 2.1
+-Name: pytt-events-api
+-Version: 0.1.1
+-Summary: Python wrapper for the TikTok Events API
+-Author: Victor Valar
+-Author-email: <valar@victorvalar.me>
+-License: LICENSE.txt
+-Keywords: python,tiktok,events,api,tiktok ads,tiktok events api
+-Classifier: Development Status :: 4 - Beta
+-Classifier: Intended Audience :: Developers
+-Classifier: Programming Language :: Python :: 3
+-Classifier: Operating System :: Unix
+-Classifier: Operating System :: MacOS :: MacOS X
+-Classifier: Operating System :: Microsoft :: Windows
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+-
+-# Python TikTok Events API
+-
+-The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
+-
+-This library is an unoffical Python wrapper arround the TikTok Events API, allowing for easy interaction with the API:
+-- Pydantic types are used to validate the data to be sent to TikTok.
+-- Customer identifiable information is hashed using SHA256 before being sent to the TikTok API.
+-- Events can be sent one at a time or in batches.
+-
+-Please reference the TikTok Events API documentation for more information on the API and the data it accepts and requires: https://ads.tiktok.com/marketing_api/docs?id=1741601162187777.
+-
+-## Disclaimer
+-This library is in beta 0.1.0.
+-Feedback and contributions are welcome.
+-
+-## Installing
+-You can install pytt_events_api using pip:
+-``` bash
+-pip install pytt-events-api
+-```
+-
+-## Quick Start Guide
+-Here's a quick guide on how to use the library to send events to TikTok.
+-### Authentication
+-The only thing you need to do to authenticate with TikTok Events API is to set the environment variables listed below.
+-- `TIKTOK_ACESS_TOKEN`: Events API access token - `Required`
+-- `TIKTOK_PIXEL_ID`: The ID of the pixel  - `Required`
+-- `TIKTOK_API_VERSION`:  The API version to use, defaults to `v1.3`.
+-- `TIKTOK_TEST_EVENT_CODE`: Used so events can be tested without affecting the pixel's data. You may find the test event code in the events manager under the "Test Events" tab.
+-
+-You can find the values for these variables in the TikTok Events Manager.
+-
+-The environment variables are loaded when the `TikTokAuth` class is initialized. If the environment variables are not found, the class will raise an exception.
+-### Importing the library and initializing the API
+-``` python
+-from pytt_events.auth import TikTokAuth
+-from pytt_events.tiktok_events_api import TikTokEventsApi
+-from pytt_events.event import Event
+-from pytt_events.properties import Properties
+-from pytt_events.context import Context, Ad, Page, User
+-from pytt_events.properties import ContentType
+-from pytt_events.properties import Content
+-
+-api = TikTokEventsApi()
+-auth = TikTokAuth()
+-```
+-
+-### Creating an event
+-``` python
+-context = Context(
+-    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36',
+-    ip='13.57.97.131',
+-    ad=Ad(callback='E.C.P.v3fQ2RHacdkfKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH' ), # ttclid
+-    page=Page(
+-        url='https://www.example.com',
+-        referrer='https://www.google.com'
+-    ),
+-    user=User(
+-        external_id='123456',
+-        email='test@test.com',
+-        phone_number='+5541998862934',
+-        ttp='94e2a4j9-h3ss-k2h5-98cc-c84a745mk098',
+-    ))
+-properties = Properties(
+-    currency='BRL', # ISO 4217
+-    value=1.00,
+-    description='mock description',
+-    query='mock query',
+-    status='mock status',
+-    contents=[Content(
+-        content_type=ContentType.PRODUCT,
+-        content_id='123456789',
+-        content_name='mock content name',
+-        content_category='mock content category',
+-        price=1.00,
+-        quantity=1
+-    )]
+-)
+-event = Event (
+-    pixel_code=auth.TIKTOK_PIXEL_ID,
+-    test_event_code=auth.TIKTOK_TEST_EVENT_CODE,
+-    event='ViewContent',
+-    event_id='123456789',
+-    timestamp='2023-02-01T00:00:00-03:00', # str or datetime object
+-    context=context,
+-    properties=properties
+-)
+-```
+-
+-### Sending an event
+-``` python
+-response = api.post_event(
+-    event=event,
+-    auth=auth
+-)
+-```
+-
+-### Sending events in bulk
+-``` python
+-events = []
+-response = api.post_events_in_bulk(events=events, auth=auth)
+-```
+-
+-
+-
+-
++Metadata-Version: 2.1
++Name: pytt-events-api
++Version: 0.1.2
++Summary: Python wrapper for the TikTok Events API
++Author: Victor Valar
++Author-email: <valar@victorvalar.me>
++License: LICENSE.txt
++Keywords: python,tiktok,events,api,tiktok ads,tiktok events api
++Classifier: Development Status :: 4 - Beta
++Classifier: Intended Audience :: Developers
++Classifier: Programming Language :: Python :: 3
++Classifier: Operating System :: Unix
++Classifier: Operating System :: MacOS :: MacOS X
++Classifier: Operating System :: Microsoft :: Windows
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
++
++# Python TikTok Events API
++
++This library is an unoffical Python wrapper arround the TikTok Events API, allowing for easy interaction with the API:
++- Pydantic types are used to validate the data to be sent to TikTok.
++- Customer identifiable information is hashed using SHA256 before being sent to the TikTok API.
++- Events can be sent one at a time or in batches.
++
++The TikTok Events API allows advertisers to share the actions customers take on their websites and offiline directly with TikTok. This allows advertisers to measure the effectiveness of their TikTok campaigns and optimize their ad spend.
++
++Please reference the TikTok Events API documentation for more information on the API and the data it accepts and requires: https://ads.tiktok.com/marketing_api/docs?id=1741601162187777.
++
++TikTok API uses custom return error codes. Reference [this TikTok Events API documentation](https://ads.tiktok.com/marketing_api/docs?id=1737172488964097) for more information on the error codes.
++## Disclaimer
++This library is in beta.
++Feedback and contributions are welcome.
++
++## Installing
++You can install pytt_events_api using pip:
++``` bash
++pip install pytt-events-api
++```
++
++## Quick Start Guide
++Here's a quick guide on how to use the library to send events to TikTok.
++### Authentication
++The only thing you need to do to authenticate with TikTok Events API is to set the environment variables listed below.
++- `TIKTOK_ACESS_TOKEN`: Events API access token - `Required`
++- `TIKTOK_PIXEL_ID`: The ID of the pixel  - `Required`
++- `TIKTOK_API_VERSION`:  The API version to use, defaults to `v1.3`.
++- `TIKTOK_TEST_EVENT_CODE`: Used so events can be tested without affecting the pixel's data. You may find the test event code in the events manager under the "Test Events" tab.
++
++You can find the values for these variables in the TikTok Events Manager.
++
++The environment variables are loaded when the `TikTokAuth` class is initialized. If the environment variables are not found, the class will raise an exception.
++### Importing the library and initializing the API
++``` python
++from pytt_events.auth import TikTokAuth
++from pytt_events.tiktok_events_api import TikTokEventsApi
++from pytt_events.event import Event
++from pytt_events.properties import Properties
++from pytt_events.context import Context, Ad, Page, User
++from pytt_events.properties import ContentType
++from pytt_events.properties import Content
++
++api = TikTokEventsApi()
++auth = TikTokAuth()
++```
++
++### Creating an event
++``` python
++context = Context(
++    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36',
++    ip='13.57.97.131',
++    ad=Ad(callback='E.C.P.v3fQ2RHacdkfKfofPmlyuStIIHJ4Af1tKYxF9zz2c2PLx1Oaw15oHpcfl5AH' ), # ttclid
++    page=Page(
++        url='https://www.example.com',
++        referrer='https://www.google.com'
++    ),
++    user=User(
++        external_id='123456',
++        email='test@test.com',
++        phone_number='+5541998862934',
++        ttp='94e2a4j9-h3ss-k2h5-98cc-c84a745mk098',
++    ))
++properties = Properties(
++    currency='BRL', # ISO 4217
++    value=1.00,
++    description='mock description',
++    query='mock query',
++    status='mock status',
++    contents=[Content(
++        content_type=ContentType.PRODUCT,
++        content_id='123456789',
++        content_name='mock content name',
++        content_category='mock content category',
++        price=1.00,
++        quantity=1
++    )]
++)
++event = Event (
++    pixel_code=auth.TIKTOK_PIXEL_ID,
++    test_event_code=auth.TIKTOK_TEST_EVENT_CODE,
++    event='ViewContent',
++    event_id='123456789',
++    timestamp='2023-02-01T00:00:00-03:00', # str or datetime object
++    context=context,
++    properties=properties
++)
++```
++
++### Sending an event
++``` python
++response = api.post_event(
++    event=event,
++    auth=auth
++)
++```
++
++### Sending events in bulk
++``` python
++events = []
++response = api.post_events_in_bulk(events=events, auth=auth)
++```
++
++
++
++
+```
+
+### Comparing `pytt_events_api-0.1.1/pytt_events_api.egg-info/SOURCES.txt` & `pytt_events_api-0.1.2/pytt_events_api.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `pytt_events_api-0.1.1/setup.py` & `pytt_events_api-0.1.2/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+     long_description = "\n" + fh.read()
+ 
+ with open(requirements_filename) as f:
+     # INSTALL_REQUIRES = [str(line[:-1]) for line in f]
+     INSTALL_REQUIRES = ['requests', 'pytest', 'pydantic', 'phonenumbers', 'email-validator', 'ipaddress', 'pydantic[dotenv]']
+ 
+-VERSION = '0.1.1'
++VERSION = '0.1.2'
+ DESCRIPTION = 'Python wrapper for the TikTok Events API'
+ LONG_DESCRIPTION = long_description
+ PACKAGE_LICENSE = 'LICENSE.txt'
+ 
+ # Setting up
+ setup(
+     name="pytt_events_api",
+```
+

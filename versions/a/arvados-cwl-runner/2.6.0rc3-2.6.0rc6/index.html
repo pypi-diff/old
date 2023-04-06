@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/arvados-cwl-runner-2.6.0rc3.tar.gz tmp/arvados-cwl-runner-2.6.0rc6.tar.gz --html versions/a/arvados-cwl-runner/2.6.0rc3-2.6.0rc6/index.html --text versions/a/arvados-cwl-runner/2.6.0rc3-2.6.0rc6/diff.txt --markdown versions/a/arvados-cwl-runner/2.6.0rc3-2.6.0rc6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">20.5 KB</span></div>
+  <div><span class="source">tmp/arvados-cwl-runner-2.6.0rc3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/arvados-cwl-runner-2.6.0rc6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">318 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;.upload_dist/arvados-cwl-runner-2.6.0rc<del>3</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Tue</del><span class="dp">·</span><del>Ma</del>r<span class="dp">·</span><span class="dp">·</span><del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;.upload_dist/arvados-cwl-runner-2.6.0rc<ins>6</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Wed</ins><span class="dp">·</span><ins>Ap</ins>r<span class="dp">·</span><span class="dp">·</span><ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">20.1 KB</span></div>
+    <div><span class="source">arvados-cwl-runner-2.6.0rc3.tar</span> vs.</div>
+    <div id="arvados-cwl-runner--.-.-rc-.tar"><span class="source">arvados-cwl-runner-2.6.0rc6.tar</span>
+      <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">14.5 KB</span></div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 54 lines modified</td><td colspan="2">Offset 1, 54 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/LICENSE-2.0.txt</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11358<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/LICENSE-2.0.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>168<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>149<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/README.rst</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>149<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/</td><td class="diffline">6 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19885<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19885<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>2</del>9.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/_version.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>1</ins>9.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14343<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arv-cwl-schema-v1.0.yml</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14343<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arv-cwl-schema-v1.0.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12837<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arv-cwl-schema-v1.1.yml</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12837<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arv-cwl-schema-v1.1.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12840<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arv-cwl-schema-v1.2.yml</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12840<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arv-cwl-schema-v1.2.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35160<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arvcontainer.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35160<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arvcontainer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6934<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arvdocker.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6934<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arvdocker.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5438<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arvtool.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5438<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arvtool.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31804<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/arvworkflow.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31804<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/arvworkflow.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2155<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/context.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2155<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/context.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3986<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/done.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3986<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/done.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44286<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/executor.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>44286<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/executor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12495<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/fsaccess.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12495<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/fsaccess.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8005<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/http.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8005<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/http.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17931<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/pathmapper.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17931<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/pathmapper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/perf.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/perf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39024<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/runner.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39024<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/runner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1353<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl/util.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1353<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/</td><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/PKG-INFO</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1174<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/SOURCES.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1174<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/dependency_links.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/entry_points.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/requires.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>177<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/top_level.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2018-09-21<span class="dp">·</span>15:00:40.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_cwl_runner.egg-info/zip-safe</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2018-09-21<span class="dp">·</span>15:00:40.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_cwl_runner.egg-info/zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2174<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/arvados_version.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2174<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/arvados_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/bin/</td><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/bin/</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>217<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/bin/arvados-cwl-runner</td><td class="diffline">35 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>217<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/bin/arvados-cwl-runner</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>217<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/bin/cwl-runner</td><td class="diffline">36 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>217<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/bin/cwl-runner</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/setup.cfg</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/setup.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2072<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>30</del>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/</td><td class="diffline">39 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>19</ins>.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/__init__.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>100<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>158<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/hw.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>158<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/hw.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1049<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/matcher.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1049<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/matcher.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>416<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/mock_discovery.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>416<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/mock_discovery.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73382<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_container.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>73382<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_container.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7275<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_copy_deps.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7275<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_copy_deps.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5236<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_fsaccess.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5236<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_fsaccess.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17280<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_http.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17280<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_http.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7098<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_make_output.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7098<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_make_output.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10597<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_pathmapper.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10597<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_pathmapper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1299<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_set_output_prop.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1299<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_set_output_prop.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87484<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_submit.py</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87484<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_submit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1434<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_tq.py</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1434<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_tq.py</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2503<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_urljoin.py</td><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2503<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_urljoin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2058<span class="dp">·</span>2023-0<del>3</del>-0<del>7</del><span class="dp">·</span><del>19</del>:<del>02</del>:<del>1</del>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<del>3</del>/tests/test_util.py</td><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>jenkins<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2058<span class="dp">·</span>2023-0<ins>4</ins>-0<ins>5</ins><span class="dp">·</span><ins>20</ins>:<ins>17</ins>:<ins>0</ins>8.000000<span class="dp">·</span>arvados-cwl-runner-2.6.0rc<ins>6</ins>/tests/test_util.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/LICENSE-2.0.txt</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--LICENSE--.-.txt"><span class="source">arvados-cwl-runner-2.6.0rc6/LICENSE-2.0.txt</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--LICENSE--.-.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">496 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/PKG-INFO</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--PKG-INFO"><span class="source">arvados-cwl-runner-2.6.0rc6/PKG-INFO</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.2</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>arvados-cwl-runner</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>arvados-cwl-runner</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0rc<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0rc<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Arvados<span class="dp">·</span>Common<span class="dp">·</span>Workflow<span class="dp">·</span>Language<span class="dp">·</span>runner</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Arvados<span class="dp">·</span>Common<span class="dp">·</span>Workflow<span class="dp">·</span>Language<span class="dp">·</span>runner</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://arvados.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://arvados.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Arvados</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Arvados</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@arvados.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@arvados.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/arvados/arvados.git</td><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/arvados/arvados.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>..<span class="dp">·</span>Copyright<span class="dp">·</span>(C)<span class="dp">·</span>The<span class="dp">·</span>Arvados<span class="dp">·</span>Authors.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>..<span class="dp">·</span>Copyright<span class="dp">·</span>(C)<span class="dp">·</span>The<span class="dp">·</span>Arvados<span class="dp">·</span>Authors.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/__init__.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-__init__.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/__init__.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arv-cwl-schema-v1.0.yml</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arv-cwl-schema-v1.0.yml</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arv-cwl-schema-v1.1.yml</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml-1"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arv-cwl-schema-v1.1.yml</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arv-cwl-schema-v1.2.yml</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml-2"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arv-cwl-schema-v1.2.yml</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arv-cwl-schema-v-.-.yml-2">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arvcontainer.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvcontainer.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arvcontainer.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvcontainer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arvdocker.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvdocker.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arvdocker.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvdocker.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arvtool.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvtool.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arvtool.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvtool.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/arvworkflow.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvworkflow.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/arvworkflow.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-arvworkflow.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/context.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-context.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/context.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-context.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/done.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-done.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/done.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-done.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/executor.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-executor.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/executor.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-executor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/fsaccess.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-fsaccess.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/fsaccess.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-fsaccess.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/http.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-http.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/http.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-http.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/pathmapper.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-pathmapper.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/pathmapper.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-pathmapper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/perf.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-perf.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/perf.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-perf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/runner.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-runner.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/runner.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-runner.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl/util.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-util.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl/util.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl-util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">552 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl_runner.egg-info/PKG-INFO</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl_runner.egg-info-PKG-INFO"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl_runner.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl_runner.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.2</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.2</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>arvados-cwl-runner</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>arvados-cwl-runner</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0rc<del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.6.0rc<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Arvados<span class="dp">·</span>Common<span class="dp">·</span>Workflow<span class="dp">·</span>Language<span class="dp">·</span>runner</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Arvados<span class="dp">·</span>Common<span class="dp">·</span>Workflow<span class="dp">·</span>Language<span class="dp">·</span>runner</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://arvados.org</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://arvados.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Arvados</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Arvados</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@arvados.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@arvados.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/arvados/arvados.git</td><td class="diffline">9 </td><td class="diffpresent">Download-URL:<span class="dp">·</span>https://github.com/arvados/arvados.git</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>..<span class="dp">·</span>Copyright<span class="dp">·</span>(C)<span class="dp">·</span>The<span class="dp">·</span>Arvados<span class="dp">·</span>Authors.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td><td class="diffline">10 </td><td class="diffpresent">Description:<span class="dp">·</span>..<span class="dp">·</span>Copyright<span class="dp">·</span>(C)<span class="dp">·</span>The<span class="dp">·</span>Arvados<span class="dp">·</span>Authors.<span class="dp">·</span>All<span class="dp">·</span>rights<span class="dp">·</span>reserved.</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_cwl_runner.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl_runner.egg-info-SOURCES.txt"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_cwl_runner.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_cwl_runner.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/arvados_version.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_version.py"><span class="source">arvados-cwl-runner-2.6.0rc6/arvados_version.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--arvados_version.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/setup.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--setup.py"><span class="source">arvados-cwl-runner-2.6.0rc6/setup.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/matcher.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-matcher.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/matcher.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-matcher.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_container.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_container.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_container.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_container.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_copy_deps.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_copy_deps.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_copy_deps.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_copy_deps.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_fsaccess.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_fsaccess.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_fsaccess.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_fsaccess.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_http.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_http.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_http.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_http.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_make_output.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_make_output.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_make_output.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_make_output.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_pathmapper.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_pathmapper.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_pathmapper.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_pathmapper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_set_output_prop.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_set_output_prop.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_set_output_prop.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_set_output_prop.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_submit.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_submit.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_submit.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_submit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_tq.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_tq.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_tq.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_tq.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_urljoin.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_urljoin.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_urljoin.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_urljoin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">arvados-cwl-runner-2.6.0rc3/tests/test_util.py</span> vs.</div>
+      <div id="arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_util.py"><span class="source">arvados-cwl-runner-2.6.0rc6/tests/test_util.py</span>
+        <a class="anchor" href="#arvados-cwl-runner--.-.-rc-.tar---arvados-cwl-runner--.-.-rc--tests-test_util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

