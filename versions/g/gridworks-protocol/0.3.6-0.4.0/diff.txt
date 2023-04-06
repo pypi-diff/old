@@ -1,0 +1,581 @@
+--- tmp/gridworks_protocol-0.3.6.tar.gz
++++ tmp/gridworks_protocol-0.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gridworks_protocol-0.3.6.tar", max compression
+│ +gzip compressed data, was "gridworks_protocol-0.4.0.tar", max compression
+│   --- gridworks_protocol-0.3.6.tar
+├── +++ gridworks_protocol-0.4.0.tar
+│ ├── file list
+│ │ @@ -1,42 +1,84 @@
+│ │ --rw-r--r--   0        0        0     1070 2023-03-27 02:48:56.761319 gridworks_protocol-0.3.6/LICENSE
+│ │ --rw-r--r--   0        0        0     2552 2023-03-27 02:48:56.761319 gridworks_protocol-0.3.6/README.md
+│ │ --rw-r--r--   0        0        0     2326 2023-03-27 02:49:10.301141 gridworks_protocol-0.3.6/pyproject.toml
+│ │ --rw-r--r--   0        0        0     1443 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/__init__.py
+│ │ --rw-r--r--   0        0        0     3236 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/api_types.py
+│ │ --rw-r--r--   0        0        0    12051 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/decoders.py
+│ │ --rw-r--r--   0        0        0      132 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/enums/__init__.py
+│ │ --rw-r--r--   0        0        0     1925 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/enums/telemetry_name.py
+│ │ --rw-r--r--   0        0        0     2688 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/enums/telemetry_name_map.py
+│ │ --rw-r--r--   0        0        0       89 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/errors.py
+│ │ --rw-r--r--   0        0        0      249 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/__init__.py
+│ │ --rw-r--r--   0        0        0      464 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_dispatch.py
+│ │ --rw-r--r--   0        0        0      800 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_dispatch_base.py
+│ │ --rw-r--r--   0        0        0      678 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_dispatch_maker.py
+│ │ --rw-r--r--   0        0        0      446 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_pwr.py
+│ │ --rw-r--r--   0        0        0      851 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_pwr_base.py
+│ │ --rw-r--r--   0        0        0      609 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/gs/gs_pwr_maker.py
+│ │ --rw-r--r--   0        0        0     3168 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/message.py
+│ │ --rw-r--r--   0        0        0     1432 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/messages/__init__.py
+│ │ --rw-r--r--   0        0        0     3058 2023-03-27 02:49:10.301141 gridworks_protocol-0.3.6/src/gwproto/messages/event.py
+│ │ --rw-r--r--   0        0        0      669 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/messages/misc.py
+│ │ --rw-r--r--   0        0        0     4045 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/property_format.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/py.typed
+│ │ --rw-r--r--   0        0        0     2892 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/topic.py
+│ │ --rw-r--r--   0        0        0     3035 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/__init__.py
+│ │ --rw-r--r--   0        0        0     8452 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_dispatch_boolean.py
+│ │ --rw-r--r--   0        0        0     5799 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_dispatch_boolean_local.py
+│ │ --rw-r--r--   0        0        0     4974 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_driver_booleanactuator_cmd.py
+│ │ --rw-r--r--   0        0        0     5585 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_booleanactuator_cmd_status.py
+│ │ --rw-r--r--   0        0        0     5328 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_cli_atn_cmd.py
+│ │ --rw-r--r--   0        0        0    12792 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_multipurpose_telemetry_status.py
+│ │ --rw-r--r--   0        0        0    11884 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_simple_telemetry_status.py
+│ │ --rw-r--r--   0        0        0    13664 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_status.py
+│ │ --rw-r--r--   0        0        0    12351 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_telemetry_from_multipurpose_sensor.py
+│ │ --rw-r--r--   0        0        0     8390 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/gt_telemetry.py
+│ │ --rw-r--r--   0        0        0     9472 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/heartbeat_b.py
+│ │ --rw-r--r--   0        0        0     2762 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/power_watts.py
+│ │ --rw-r--r--   0        0        0     6008 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/snapshot_spaceheat.py
+│ │ --rw-r--r--   0        0        0    12228 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/types/telemetry_snapshot_spaceheat.py
+│ │ --rw-r--r--   0        0        0     2556 2023-03-27 02:48:56.765319 gridworks_protocol-0.3.6/src/gwproto/utils.py
+│ │ --rw-r--r--   0        0        0     3496 1970-01-01 00:00:00.000000 gridworks_protocol-0.3.6/setup.py
+│ │ --rw-r--r--   0        0        0     3475 1970-01-01 00:00:00.000000 gridworks_protocol-0.3.6/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1070 2023-04-06 16:50:35.854055 gridworks_protocol-0.4.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     2552 2023-04-06 16:50:35.854055 gridworks_protocol-0.4.0/README.md
+│ │ +-rw-r--r--   0        0        0     2287 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     1443 2023-04-06 16:50:35.858054 gridworks_protocol-0.4.0/src/gwproto/__init__.py
+│ │ +-rw-r--r--   0        0        0     6694 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/api_types.py
+│ │ +-rw-r--r--   0        0        0     1152 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/boolean_actuator_cac.py
+│ │ +-rw-r--r--   0        0        0     1339 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/electric_meter_cac.py
+│ │ +-rw-r--r--   0        0        0     1488 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/multipurpose_sensor_cac.py
+│ │ +-rw-r--r--   0        0        0      995 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/pipe_flow_sensor_cac.py
+│ │ +-rw-r--r--   0        0        0     1118 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/resistive_heater_cac.py
+│ │ +-rw-r--r--   0        0        0     1580 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/cacs/simple_temp_sensor_cac.py
+│ │ +-rw-r--r--   0        0        0     1388 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/component.py
+│ │ +-rw-r--r--   0        0        0     1094 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/component_attribute_class.py
+│ │ +-rw-r--r--   0        0        0     1276 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/boolean_actuator_component.py
+│ │ +-rw-r--r--   0        0        0     1659 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/electric_meter_component.py
+│ │ +-rw-r--r--   0        0        0     1479 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/multipurpose_sensor_component.py
+│ │ +-rw-r--r--   0        0        0     1357 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/pipe_flow_sensor_component.py
+│ │ +-rw-r--r--   0        0        0     1465 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/resistive_heater_component.py
+│ │ +-rw-r--r--   0        0        0     1308 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/components/simple_temp_sensor_component.py
+│ │ +-rw-r--r--   0        0        0      165 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/errors.py
+│ │ +-rw-r--r--   0        0        0    14778 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/hardware_layout.py
+│ │ +-rw-r--r--   0        0        0      273 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/mixin.py
+│ │ +-rw-r--r--   0        0        0     1957 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/sh_node.py
+│ │ +-rw-r--r--   0        0        0      362 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/data_classes/telemetry_tuple.py
+│ │ +-rw-r--r--   0        0        0    12051 2023-04-06 16:50:35.858054 gridworks_protocol-0.4.0/src/gwproto/decoders.py
+│ │ +-rw-r--r--   0        0        0      451 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/__init__.py
+│ │ +-rw-r--r--   0        0        0     3462 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/actor_class.py
+│ │ +-rw-r--r--   0        0        0     1119 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/local_comm_interface.py
+│ │ +-rw-r--r--   0        0        0     2657 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/make_model.py
+│ │ +-rw-r--r--   0        0        0     3480 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/role.py
+│ │ +-rw-r--r--   0        0        0     1823 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/telemetry_name.py
+│ │ +-rw-r--r--   0        0        0     1148 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/enums/unit.py
+│ │ +-rw-r--r--   0        0        0       89 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/errors.py
+│ │ +-rw-r--r--   0        0        0      249 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/__init__.py
+│ │ +-rw-r--r--   0        0        0      464 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_dispatch.py
+│ │ +-rw-r--r--   0        0        0      800 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_dispatch_base.py
+│ │ +-rw-r--r--   0        0        0      678 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_dispatch_maker.py
+│ │ +-rw-r--r--   0        0        0      446 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_pwr.py
+│ │ +-rw-r--r--   0        0        0      851 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_pwr_base.py
+│ │ +-rw-r--r--   0        0        0      609 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/gs/gs_pwr_maker.py
+│ │ +-rw-r--r--   0        0        0     3168 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/message.py
+│ │ +-rw-r--r--   0        0        0     1474 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/messages/__init__.py
+│ │ +-rw-r--r--   0        0        0     3058 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/messages/event.py
+│ │ +-rw-r--r--   0        0        0      669 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/messages/misc.py
+│ │ +-rw-r--r--   0        0        0     4045 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/property_format.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/py.typed
+│ │ +-rw-r--r--   0        0        0     2892 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/topic.py
+│ │ +-rw-r--r--   0        0        0     6756 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/__init__.py
+│ │ +-rw-r--r--   0        0        0     5474 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/component_attribute_class_gt.py
+│ │ +-rw-r--r--   0        0        0     6119 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/component_gt.py
+│ │ +-rw-r--r--   0        0        0    10192 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/data_channel.py
+│ │ +-rw-r--r--   0        0        0     3892 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/egauge_io.py
+│ │ +-rw-r--r--   0        0        0     3603 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/egauge_register_config.py
+│ │ +-rw-r--r--   0        0        0    21265 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/electric_meter_cac_gt.py
+│ │ +-rw-r--r--   0        0        0    13413 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/electric_meter_component_gt.py
+│ │ +-rw-r--r--   0        0        0    11376 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_boolean_actuator_cac.py
+│ │ +-rw-r--r--   0        0        0     7187 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_boolean_actuator_component.py
+│ │ +-rw-r--r--   0        0        0     8451 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_dispatch_boolean.py
+│ │ +-rw-r--r--   0        0        0     5798 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_dispatch_boolean_local.py
+│ │ +-rw-r--r--   0        0        0     4973 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_driver_booleanactuator_cmd.py
+│ │ +-rw-r--r--   0        0        0     5584 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_booleanactuator_cmd_status.py
+│ │ +-rw-r--r--   0        0        0     5327 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_cli_atn_cmd.py
+│ │ +-rw-r--r--   0        0        0    12792 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_multipurpose_telemetry_status.py
+│ │ +-rw-r--r--   0        0        0    11884 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_simple_telemetry_status.py
+│ │ +-rw-r--r--   0        0        0    13663 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_status.py
+│ │ +-rw-r--r--   0        0        0    12350 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_telemetry_from_multipurpose_sensor.py
+│ │ +-rw-r--r--   0        0        0     8389 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/gt_telemetry.py
+│ │ +-rw-r--r--   0        0        0     9471 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/heartbeat_b.py
+│ │ +-rw-r--r--   0        0        0    21597 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/multipurpose_sensor_cac_gt.py
+│ │ +-rw-r--r--   0        0        0     9935 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/multipurpose_sensor_component_gt.py
+│ │ +-rw-r--r--   0        0        0    11300 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/pipe_flow_sensor_cac_gt.py
+│ │ +-rw-r--r--   0        0        0     7622 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/pipe_flow_sensor_component_gt.py
+│ │ +-rw-r--r--   0        0        0     2761 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/power_watts.py
+│ │ +-rw-r--r--   0        0        0    11736 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/resistive_heater_cac_gt.py
+│ │ +-rw-r--r--   0        0        0     8096 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/resistive_heater_component_gt.py
+│ │ +-rw-r--r--   0        0        0    20796 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/simple_temp_sensor_cac_gt.py
+│ │ +-rw-r--r--   0        0        0     7280 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/simple_temp_sensor_component_gt.py
+│ │ +-rw-r--r--   0        0        0     6007 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/snapshot_spaceheat.py
+│ │ +-rw-r--r--   0        0        0    18219 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/spaceheat_node_gt.py
+│ │ +-rw-r--r--   0        0        0    14059 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/telemetry_reporting_config.py
+│ │ +-rw-r--r--   0        0        0    12227 2023-04-06 16:50:47.454195 gridworks_protocol-0.4.0/src/gwproto/types/telemetry_snapshot_spaceheat.py
+│ │ +-rw-r--r--   0        0        0     2556 2023-04-06 16:50:35.862054 gridworks_protocol-0.4.0/src/gwproto/utils.py
+│ │ +-rw-r--r--   0        0        0     3591 1970-01-01 00:00:00.000000 gridworks_protocol-0.4.0/setup.py
+│ │ +-rw-r--r--   0        0        0     3475 1970-01-01 00:00:00.000000 gridworks_protocol-0.4.0/PKG-INFO
+│ │   --- gridworks_protocol-0.3.6/LICENSE
+│ ├── +++ gridworks_protocol-0.4.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/README.md
+│ ├── +++ gridworks_protocol-0.4.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/pyproject.toml
+│ ├── +++ gridworks_protocol-0.4.0/pyproject.toml
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "gridworks-protocol"
+│ │ -version = "0.3.6"
+│ │ +version = "0.4.0"
+│ │  description = "Gridworks Protocol"
+│ │  authors = ["Jessica Millar <jmillar@gridworks-consulting.com>"]
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  homepage = "https://github.com/thegridelectric/gridworks-protocol"
+│ │  repository = "https://github.com/thegridelectric/gridworks-protocol"
+│ │  documentation = "https://gridworks-protocol.readthedocs.io"
+│ │ @@ -21,16 +21,14 @@
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.10, <4.0"
+│ │  pydantic = "^1.10.2"
+│ │  pendulum = "^2.1.2"
+│ │  fastapi-utils = "^0.2.1"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │ -jupyter = "^1.0.0"
+│ │ -ipython = ">=8.7.0"
+│ │  Pygments = ">=2.10.0"
+│ │  black = ">=21.10b0"
+│ │  coverage = {extras = ["toml"], version = ">=6.2"}
+│ │  darglint = ">=1.8.1"
+│ │  flake8 = ">=4.0.1"
+│ │  flake8-bandit = ">=2.1.2"
+│ │  flake8-bugbear = ">=21.9.2"
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/__init__.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/decoders.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/decoders.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/enums/telemetry_name.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/enums/telemetry_name.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -1,46 +1,43 @@
+│ │ +""" Enum with TypeName spaceheat.telemetry.name, Version 000, Status Active"""
+│ │  from enum import auto
+│ │  from typing import List
+│ │  
+│ │  from fastapi_utils.enums import StrEnum
+│ │  
+│ │  
+│ │  class TelemetryName(StrEnum):
+│ │      """
+│ │ -    Specifies the name of sensed data reported by a Spaceheat SCADA. [More Info](https://gridworks-protocol.readthedocs.io/en/latest/telemetry-name.html).
+│ │ +    Specifies the name of sensed data reported by a Spaceheat SCADA
+│ │ +    [More Info](https://gridworks-protocol.readthedocs.io/en/latest/telemetry-name.html).
+│ │  
+│ │ -    Choices and descriptions:
+│ │ +    Name (EnumSymbol, Version): description
+│ │      
+│ │ -      * Unknown: Default Value - unknown telemetry name
+│ │ -      * PowerW: Power in Watts
+│ │ -      * RelayState: State of a Relay. 0 means open, 1 means closed
+│ │ -      * WaterTempCTimes1000: Water temperature, in Degrees Celcius multiplied by 1000. So 43200 means 43.2 deg C
+│ │ -      * WaterTempFTimes1000: Water temperature, in Degrees F multiplied by 1000. So 142100 means 142.1 deg F
+│ │ -      * GpmTimes100: Gallons Per Minute multiplied by 100. So 433 means 4.33 gallons per minute.
+│ │ -      * CurrentRmsMicroAmps: Current measurement in Root Mean Square MicroAmps
+│ │ -      * GallonsTimes100: Gallons multipled by 100
+│ │ -      * VoltageRmsMilliVolts: Voltage in Root Mean Square MilliVolts
+│ │ -      * MilliWattHours: Energy in MilliWattHours.
+│ │ -      * FrequencyMicroHz: Frequency in MicroHz
+│ │ -      * AirTempCTimes1000: Air temperature, in Degrees Celsius multiplied by 1000.
+│ │ -      * AirTempFTimes1000: Air temperature, in Degrees F multiplied by 1000.
+│ │ +      * Unknown (00000000, 000): Default Value - unknown telemetry name
+│ │ +      * PowerW (af39eec9, 000): Power in Watts
+│ │ +      * RelayState (5a71d4b3, 000): State of a Relay. 0 means open, 1 means closed
+│ │ +      * WaterTempCTimes1000 (c89d0ba1, 000): Water temperature, in Degrees Celcius multiplied by 1000. So 43200 means 43.2 deg C
+│ │ +      * WaterTempFTimes1000 (793505aa, 000): Water temperature, in Degrees F multiplied by 1000. So 142100 means 142.1 deg F
+│ │ +      * GpmTimes100 (d70cce28, 000): Gallons Per Minute multiplied by 100. So 433 means 4.33 gallons per minute.
+│ │ +      * CurrentRmsMicroAmps (ad19e79c, 000): Current measurement in Root Mean Square MicroAmps
+│ │ +      * GallonsTimes100 (329a68c0, 000): Gallons multipled by 100
+│ │      """
+│ │      Unknown = auto()
+│ │      PowerW = auto()
+│ │ -    MilliWattHours = auto()
+│ │ -    FrequencyMicroHz = auto()
+│ │ -    AirTempCTimes1000 = auto()
+│ │ -    AirTempFTimes1000 = auto()
+│ │      RelayState = auto()
+│ │      WaterTempCTimes1000 = auto()
+│ │      WaterTempFTimes1000 = auto()
+│ │      GpmTimes100 = auto()
+│ │      CurrentRmsMicroAmps = auto()
+│ │      GallonsTimes100 = auto()
+│ │      VoltageRmsMilliVolts = auto()
+│ │ +    MilliWattHours = auto()
+│ │ +    FrequencyMicroHz = auto()
+│ │ +    AirTempCTimes1000 = auto()
+│ │ +    AirTempFTimes1000 = auto()
+│ │      
+│ │      @classmethod
+│ │      def default(cls) -> "TelemetryName":
+│ │          """
+│ │          Returns default value Unknown
+│ │          """
+│ │          return cls.Unknown
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/gs/gs_dispatch_base.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/gs/gs_dispatch_base.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/gs/gs_dispatch_maker.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/gs/gs_dispatch_maker.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/gs/gs_pwr_base.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/gs/gs_pwr_base.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/gs/gs_pwr_maker.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/gs/gs_pwr_maker.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/message.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/message.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/messages/__init__.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/messages/__init__.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -28,14 +28,16 @@
+│ │      "GtShSimpleTelemetryStatus_Maker",
+│ │      "GtShStatus",
+│ │      "GtShStatus_Maker",
+│ │      "GtShTelemetryFromMultipurposeSensor",
+│ │      "GtShTelemetryFromMultipurposeSensor_Maker",
+│ │      "GtTelemetry",
+│ │      "GtTelemetry_Maker",
+│ │ +    "PowerWatts",
+│ │ +    "PowerWatts_Maker",
+│ │      "SnapshotSpaceheat",
+│ │      "SnapshotSpaceheat_Maker",
+│ │      "TelemetrySnapshotSpaceheat",
+│ │      "TelemetrySnapshotSpaceheat_Maker",
+│ │      # event
+│ │      "AnyEvent",
+│ │      "CommEvent",
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/messages/event.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/messages/event.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/messages/misc.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/messages/misc.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/property_format.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/property_format.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/topic.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/topic.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_dispatch_boolean.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_dispatch_boolean.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -191,15 +191,14 @@
+│ │          about_node_name: str,
+│ │          to_g_node_alias: str,
+│ │          from_g_node_alias: str,
+│ │          from_g_node_instance_id: str,
+│ │          relay_state: int,
+│ │          send_time_unix_ms: int,
+│ │      ):
+│ │ -
+│ │          self.tuple = GtDispatchBoolean(
+│ │              AboutNodeName=about_node_name,
+│ │              ToGNodeAlias=to_g_node_alias,
+│ │              FromGNodeAlias=from_g_node_alias,
+│ │              FromGNodeInstanceId=from_g_node_instance_id,
+│ │              RelayState=relay_state,
+│ │              SendTimeUnixMs=send_time_unix_ms,
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_dispatch_boolean_local.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_dispatch_boolean_local.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -126,15 +126,14 @@
+│ │      def __init__(
+│ │          self,
+│ │          relay_state: int,
+│ │          about_node_name: str,
+│ │          from_node_name: str,
+│ │          send_time_unix_ms: int,
+│ │      ):
+│ │ -
+│ │          self.tuple = GtDispatchBooleanLocal(
+│ │              RelayState=relay_state,
+│ │              AboutNodeName=about_node_name,
+│ │              FromNodeName=from_node_name,
+│ │              SendTimeUnixMs=send_time_unix_ms,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_driver_booleanactuator_cmd.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_driver_booleanactuator_cmd.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -104,15 +104,14 @@
+│ │  
+│ │  
+│ │  class GtDriverBooleanactuatorCmd_Maker:
+│ │      type_name = "gt.driver.booleanactuator.cmd"
+│ │      version = "100"
+│ │  
+│ │      def __init__(self, relay_state: int, sh_node_alias: str, command_time_unix_ms: int):
+│ │ -
+│ │          self.tuple = GtDriverBooleanactuatorCmd(
+│ │              RelayState=relay_state,
+│ │              ShNodeAlias=sh_node_alias,
+│ │              CommandTimeUnixMs=command_time_unix_ms,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_booleanactuator_cmd_status.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_booleanactuator_cmd_status.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -114,15 +114,14 @@
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          sh_node_alias: str,
+│ │          relay_state_command_list: List[int],
+│ │          command_time_unix_ms_list: List[int],
+│ │      ):
+│ │ -
+│ │          self.tuple = GtShBooleanactuatorCmdStatus(
+│ │              ShNodeAlias=sh_node_alias,
+│ │              RelayStateCommandList=relay_state_command_list,
+│ │              CommandTimeUnixMsList=command_time_unix_ms_list,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_cli_atn_cmd.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_cli_atn_cmd.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -124,15 +124,14 @@
+│ │  class GtShCliAtnCmd_Maker:
+│ │      type_name = "gt.sh.cli.atn.cmd"
+│ │      version = "110"
+│ │  
+│ │      def __init__(
+│ │          self, from_g_node_alias: str, send_snapshot: bool, from_g_node_id: str
+│ │      ):
+│ │ -
+│ │          self.tuple = GtShCliAtnCmd(
+│ │              FromGNodeAlias=from_g_node_alias,
+│ │              SendSnapshot=send_snapshot,
+│ │              FromGNodeId=from_g_node_id,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_multipurpose_telemetry_status.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_multipurpose_telemetry_status.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_simple_telemetry_status.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_simple_telemetry_status.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_status.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_status.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -261,15 +261,14 @@
+│ │          slot_start_unix_s: int,
+│ │          reporting_period_s: int,
+│ │          simple_telemetry_list: List[GtShSimpleTelemetryStatus],
+│ │          multipurpose_telemetry_list: List[GtShMultipurposeTelemetryStatus],
+│ │          booleanactuator_cmd_list: List[GtShBooleanactuatorCmdStatus],
+│ │          status_uid: str,
+│ │      ):
+│ │ -
+│ │          self.tuple = GtShStatus(
+│ │              FromGNodeAlias=from_g_node_alias,
+│ │              FromGNodeId=from_g_node_id,
+│ │              AboutGNodeAlias=about_g_node_alias,
+│ │              SlotStartUnixS=slot_start_unix_s,
+│ │              ReportingPeriodS=reporting_period_s,
+│ │              SimpleTelemetryList=simple_telemetry_list,
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_sh_telemetry_from_multipurpose_sensor.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_sh_telemetry_from_multipurpose_sensor.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -267,15 +267,14 @@
+│ │      def __init__(
+│ │          self,
+│ │          about_node_alias_list: List[str],
+│ │          value_list: List[int],
+│ │          scada_read_time_unix_ms: int,
+│ │          telemetry_name_list: List[TelemetryName],
+│ │      ):
+│ │ -
+│ │          self.tuple = GtShTelemetryFromMultipurposeSensor(
+│ │              AboutNodeAliasList=about_node_alias_list,
+│ │              ValueList=value_list,
+│ │              ScadaReadTimeUnixMs=scada_read_time_unix_ms,
+│ │              TelemetryNameList=telemetry_name_list,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/gt_telemetry.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/gt_telemetry.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -191,15 +191,14 @@
+│ │      def __init__(
+│ │          self,
+│ │          scada_read_time_unix_ms: int,
+│ │          value: int,
+│ │          name: TelemetryName,
+│ │          exponent: int,
+│ │      ):
+│ │ -
+│ │          self.tuple = GtTelemetry(
+│ │              ScadaReadTimeUnixMs=scada_read_time_unix_ms,
+│ │              Value=value,
+│ │              Name=name,
+│ │              Exponent=exponent,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/heartbeat_b.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/heartbeat_b.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -222,15 +222,14 @@
+│ │          from_g_node_instance_id: str,
+│ │          my_hex: str,
+│ │          your_last_hex: str,
+│ │          last_received_time_unix_ms: int,
+│ │          send_time_unix_ms: int,
+│ │          starting_over: bool,
+│ │      ):
+│ │ -
+│ │          self.tuple = HeartbeatB(
+│ │              FromGNodeAlias=from_g_node_alias,
+│ │              FromGNodeInstanceId=from_g_node_instance_id,
+│ │              MyHex=my_hex,
+│ │              YourLastHex=your_last_hex,
+│ │              LastReceivedTimeUnixMs=last_received_time_unix_ms,
+│ │              SendTimeUnixMs=send_time_unix_ms,
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/power_watts.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/power_watts.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -37,15 +37,14 @@
+│ │  
+│ │  
+│ │  class PowerWatts_Maker:
+│ │      type_name = "power.watts"
+│ │      version = "000"
+│ │  
+│ │      def __init__(self, watts: int):
+│ │ -
+│ │          self.tuple = PowerWatts(
+│ │              Watts=watts,
+│ │              #
+│ │          )
+│ │  
+│ │      @classmethod
+│ │      def tuple_to_type(cls, tuple: PowerWatts) -> str:
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/snapshot_spaceheat.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/snapshot_spaceheat.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -130,15 +130,14 @@
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          from_g_node_alias: str,
+│ │          from_g_node_instance_id: str,
+│ │          snapshot: TelemetrySnapshotSpaceheat,
+│ │      ):
+│ │ -
+│ │          self.tuple = SnapshotSpaceheat(
+│ │              FromGNodeAlias=from_g_node_alias,
+│ │              FromGNodeInstanceId=from_g_node_instance_id,
+│ │              Snapshot=snapshot,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/types/telemetry_snapshot_spaceheat.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/types/telemetry_snapshot_spaceheat.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -265,15 +265,14 @@
+│ │      def __init__(
+│ │          self,
+│ │          report_time_unix_ms: int,
+│ │          about_node_alias_list: List[str],
+│ │          value_list: List[int],
+│ │          telemetry_name_list: List[TelemetryName],
+│ │      ):
+│ │ -
+│ │          self.tuple = TelemetrySnapshotSpaceheat(
+│ │              ReportTimeUnixMs=report_time_unix_ms,
+│ │              AboutNodeAliasList=about_node_alias_list,
+│ │              ValueList=value_list,
+│ │              TelemetryNameList=telemetry_name_list,
+│ │              #
+│ │          )
+│ │   --- gridworks_protocol-0.3.6/src/gwproto/utils.py
+│ ├── +++ gridworks_protocol-0.4.0/src/gwproto/utils.py
+│ │┄ Files identical despite different names
+│ │   --- gridworks_protocol-0.3.6/setup.py
+│ ├── +++ gridworks_protocol-0.4.0/setup.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,27 +1,34 @@
+│ │  # -*- coding: utf-8 -*-
+│ │  from setuptools import setup
+│ │  
+│ │  package_dir = \
+│ │  {'': 'src'}
+│ │  
+│ │  packages = \
+│ │ -['gwproto', 'gwproto.enums', 'gwproto.gs', 'gwproto.messages', 'gwproto.types']
+│ │ +['gwproto',
+│ │ + 'gwproto.data_classes',
+│ │ + 'gwproto.data_classes.cacs',
+│ │ + 'gwproto.data_classes.components',
+│ │ + 'gwproto.enums',
+│ │ + 'gwproto.gs',
+│ │ + 'gwproto.messages',
+│ │ + 'gwproto.types']
+│ │  
+│ │  package_data = \
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │  ['fastapi-utils>=0.2.1,<0.3.0',
+│ │   'pendulum>=2.1.2,<3.0.0',
+│ │   'pydantic>=1.10.2,<2.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'gridworks-protocol',
+│ │ -    'version': '0.3.6',
+│ │ +    'version': '0.4.0',
+│ │      'description': 'Gridworks Protocol',
+│ │      'long_description': "# Gridworks Protocol\n\n[![PyPI](https://img.shields.io/pypi/v/gridworks-protocol.svg)][pypi_]\n[![Status](https://img.shields.io/pypi/status/gridworks-protocol.svg)][status]\n[![Python Version](https://img.shields.io/pypi/pyversions/gridworks-protocol)][python version]\n[![License](https://img.shields.io/pypi/l/gridworks-protocol)][license]\n\n[![Read the documentation at https://gridworks-protocol.readthedocs.io/](https://img.shields.io/readthedocs/gridworks-protocol/latest.svg?label=Read%20the%20Docs)][read the docs]\n[![Tests](https://github.com/thegridelectric/gridworks-protocol/workflows/Tests/badge.svg)][tests]\n[![Codecov](https://codecov.io/gh/thegridelectric/gridworks-protocol/branch/main/graph/badge.svg)][codecov]\n\n[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]\n[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]\n\n[pypi_]: https://pypi.org/project/gridworks-protocol/\n[status]: https://pypi.org/project/gridworks-protocol/\n[python version]: https://pypi.org/project/gridworks-protocol\n[read the docs]: https://gridworks-protocol.readthedocs.io/\n[tests]: https://github.com/thegridelectric/gridworks-protocol/actions?workflow=Tests\n[codecov]: https://app.codecov.io/gh/thegridelectric/gridworks-protocol\n[pre-commit]: https://github.com/pre-commit/pre-commit\n[black]: https://github.com/psf/black\n\n## Features\n\n- TODO\n\n## Requirements\n\n- TODO\n\n## Installation\n\nYou can install _Gridworks Protocol_ via [pip] from [PyPI]:\n\n```console\n$ pip install gridworks-protocol\n```\n\n## Usage\n\nPlease see the [Command-line Reference] for details.\n\n## Contributing\n\nContributions are very welcome.\nTo learn more, see the [Contributor Guide].\n\n## License\n\nDistributed under the terms of the [MIT license][license],\n_Gridworks Protocol_ is free and open source software.\n\n## Issues\n\nIf you encounter any problems,\nplease [file an issue] along with a detailed description.\n\n## Credits\n\nThis project was generated from [@cjolowicz]'s [Hypermodern Python Cookiecutter] template.\n\n[@cjolowicz]: https://github.com/cjolowicz\n[pypi]: https://pypi.org/\n[hypermodern python cookiecutter]: https://github.com/cjolowicz/cookiecutter-hypermodern-python\n[file an issue]: https://github.com/thegridelectric/gridworks-protocol/issues\n[pip]: https://pip.pypa.io/\n\n<!-- github-only -->\n\n[license]: https://github.com/thegridelectric/gridworks-protocol/blob/main/LICENSE\n[contributor guide]: https://github.com/thegridelectric/gridworks-protocol/blob/main/CONTRIBUTING.md\n",
+│ │      'author': 'Jessica Millar',
+│ │      'author_email': 'jmillar@gridworks-consulting.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/thegridelectric/gridworks-protocol',
+│ │   --- gridworks_protocol-0.3.6/PKG-INFO
+│ ├── +++ gridworks_protocol-0.4.0/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: gridworks-protocol
+│ │ -Version: 0.3.6
+│ │ +Version: 0.4.0
+│ │  Summary: Gridworks Protocol
+│ │  Home-page: https://github.com/thegridelectric/gridworks-protocol
+│ │  License: MIT
+│ │  Author: Jessica Millar
+│ │  Author-email: jmillar@gridworks-consulting.com
+│ │  Requires-Python: >=3.10,<4.0
+│ │  Classifier: Development Status :: 2 - Pre-Alpha

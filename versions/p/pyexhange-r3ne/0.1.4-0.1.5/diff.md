@@ -1,0 +1,316 @@
+# Comparing `tmp/pyexhange_r3ne-0.1.4.tar.gz` & `tmp/pyexhange_r3ne-0.1.5.tar.gz`
+
+## Comparing `pyexhange_r3ne-0.1.4.tar` & `pyexhange_r3ne-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,21 +1,21 @@
+--rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/.gitattributes
+--rwxr-xr-x   0        0        0       32 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/Run.bat
+--rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/config.json.example
+--rw-r--r--   0        0        0     2094 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/pyexhange.py
+--rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/requirements.txt
+--rw-r--r--   0        0        0      447 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/test.py
+--rwxr-xr-x   0        0        0       71 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/upload.bat
+--rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/data/placeholder
+--rw-r--r--   0        0        0     1105 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/price.py
+--rw-r--r--   0        0        0     1505 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/send.py
+--rw-r--r--   0        0        0     2803 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/trade.py
+--rw-r--r--   0        0        0      934 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/wallet.py
+--rw-r--r--   0        0        0      800 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/utils/coingecko.py
+--rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/utils/data.py
+--rw-r--r--   0        0        0      891 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/utils/exchanges.py
+--rw-r--r--   0        0        0     1213 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/modules/utils/finhub.py
+--rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/.gitignore
+--rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/LICENCE.rst
+--rw-r--r--   0        0        0      709 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/README.md
+--rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/pyproject.toml
+--rw-r--r--   0        0        0     1284 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.4/PKG-INFO
++-rw-r--r--   0        0        0       66 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/.gitattributes
++-rwxr-xr-x   0        0        0       32 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/Run.bat
++-rw-r--r--   0        0        0       39 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/config.json.example
++-rw-r--r--   0        0        0     2094 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/pyexhange.py
++-rw-r--r--   0        0        0      382 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/requirements.txt
++-rw-r--r--   0        0        0      454 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/test.py
++-rwxr-xr-x   0        0        0       71 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/upload.bat
++-rw-r--r--   0        0        0        5 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/data/placeholder
++-rw-r--r--   0        0        0     1113 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/price.py
++-rw-r--r--   0        0        0     1505 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/send.py
++-rw-r--r--   0        0        0     2854 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/trade.py
++-rw-r--r--   0        0        0     1006 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/wallet.py
++-rw-r--r--   0        0        0      893 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/utils/coingecko.py
++-rw-r--r--   0        0        0     2558 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/utils/data.py
++-rw-r--r--   0        0        0      865 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/utils/exchanges.py
++-rw-r--r--   0        0        0     1149 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/modules/utils/finhub.py
++-rw-r--r--   0        0        0     3102 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/.gitignore
++-rw-r--r--   0        0        0     1069 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/LICENCE.rst
++-rw-r--r--   0        0        0      709 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/README.md
++-rw-r--r--   0        0        0      693 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/pyproject.toml
++-rw-r--r--   0        0        0     1284 2020-02-02 00:00:00.000000 pyexhange_r3ne-0.1.5/PKG-INFO
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/pyexhange.py` & `pyexhange_r3ne-0.1.5/pyexhange.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/price.py` & `pyexhange_r3ne-0.1.5/modules/price.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -18,12 +18,12 @@
+         return {"status": "failed", "error_code": "INVALID_ARGUMENTS", "error": "Invalid arguments. Usage: price system [currency]"}
+     user, currency = args
+     currency = currency.upper()
+ 
+     try:
+         return {
+             "status": "success",
+-            "price": get_price(currency),
++            "price": get_data(currency)['price'],
+             "currency": currency,
+         }
+     except:
+         return {"status": "failed", "error_code": "NO_CURRENCY_FOUND", "error": f"{currency} could not be found from the database."}
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/send.py` & `pyexhange_r3ne-0.1.5/modules/send.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/trade.py` & `pyexhange_r3ne-0.1.5/modules/trade.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -22,15 +22,16 @@
+     currency = currency.upper()
+     try:
+         if float(amount) < 0:
+             # If amount is negative, we are selling, so check if user has enough of the currency
+             walletBal = data.load(user, currency)
+             if walletBal < abs(float(amount)):
+                 return {"status": "failed", "error_code": "INSUFFICIENT_FUNDS", "error": f"Insufficient {currency} funds"}
+-        cost = get_price(currency)
++        cost = get_data(currency)['price']
++        symbol = get_data(currency)['symbol']
+         usdBal = data.load(user, "USD")
+         if cost == None:
+             return {"status": "failed", "error_code": "NO_CURRENCY_FOUND", "error": f"{currency} could not be found from the database."}
+         else:
+             cost *= abs(float(amount))
+     except TypeError:
+         return {"status": "failed", "error_code": "INVALID_AMOUNT", "error": "Invalid input for amount"}
+@@ -38,15 +39,15 @@
+     if float(amount) > 0:
+         # If amount is positive, we are buying
+         if usdBal >= cost:
+             usdBal -= cost
+             walletBal = data.load(user, currency)
+             walletBal += float(amount)
+             data.save(user, "USD", usdBal)
+-            data.save(user, currency, walletBal, "CRYPTO")
++            data.save(user, symbol, walletBal, "CRYPTO")
+             output = {
+                 "status": "success",
+                 "amount": amount,
+                 "currency": currency,
+                 "cost": cost
+             }
+             return output
+@@ -58,15 +59,15 @@
+             }
+             return output
+     else:
+         # If amount is negative, we are selling
+         usdBal += cost
+         walletBal -= abs(float(amount))
+         data.save(user, "USD", usdBal)
+-        data.save(user, currency, walletBal, "CRYPTO")
++        data.save(user, symbol, walletBal, "CRYPTO")
+         output = {
+             "status": "success",
+             "amount": amount,
+             "currency": currency,
+             "cost": cost
+         }
+         return output
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/wallet.py` & `pyexhange_r3ne-0.1.5/modules/wallet.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -6,20 +6,22 @@
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+ from modules.utils.data import *
++from modules.utils.exchanges import *
+ 
+ data = jsonBase("./data")
+ 
+ def wallet_function(*args):
+     if len(args) != 2:
+         return {"status": "failed", "error_code": "INVALID_ARGUMENTS", "error": "Invalid arguments. Usage: wallet [user] [currency]"}
+ 
+     user, currency = args
+     currency = currency.upper()
++    symbol = get_data(currency)
+     amount = data.load(user, currency)
+ 
+     output = {"status": "success", "amount": amount, "currency": currency}
+     return output
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/utils/coingecko.py` & `pyexhange_r3ne-0.1.5/modules/utils/coingecko.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -9,15 +9,17 @@
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+ from pycoingecko import CoinGeckoAPI
+ 
+ cg = CoinGeckoAPI()
+ 
+-def coingecko_get_crypto_price(crypto_name):
++def coingecko_get_data(crypto_name):
+     crypto_name = crypto_name.lower()
+     try:
+         current_price = cg.get_price(ids=crypto_name, vs_currencies='usd')[crypto_name]['usd']
+ 
+-        return current_price
++        symbol = cg.get_coin_by_id(id=crypto_name)['symbol'].upper()
++
++        return {"price": current_price, "symbol": symbol}
+     except:
+         return None
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/utils/data.py` & `pyexhange_r3ne-0.1.5/modules/utils/data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/utils/exchanges.py` & `pyexhange_r3ne-0.1.5/modules/utils/exchanges.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -8,18 +8,18 @@
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ '''
+ 
+ from modules.utils.finhub import *
+ from modules.utils.coingecko import *
+ 
+-def get_price(crypto):
++def get_data(crypto):
+     #Maybe stonks too?!?!
+-    finhub_price = finhub_get_crypto_price(crypto)
+-    coingecko_price = coingecko_get_crypto_price(crypto)
++    finhub_price = finhub_get_data(crypto)
++    coingecko_price = coingecko_get_data(crypto)
+     price = None
+ 
+     if finhub_price == None:
+         price = coingecko_price
+-    elif coingecko_price == None:
++    if coingecko_price == None:
+         price = finhub_price
+-    return float(price)
++    return price
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/modules/utils/finhub.py` & `pyexhange_r3ne-0.1.5/modules/utils/finhub.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -18,20 +18,17 @@
+     config = json.load(f)
+     api_key = config["finhub_key"]
+     finnhub_client = finnhub.Client(api_key=api_key)
+ 
+ # Dictionary to store cached prices
+ cache = {}
+ 
+-def finhub_get_crypto_price(crypto_symbol):
++def finhub_get_data(crypto_symbol):
+     crypto_symbol = crypto_symbol.upper()
+     try:
+         timestamp = int(time.time())
+         candles = finnhub_client.crypto_candles(f"BINANCE:{crypto_symbol}USDT", 'D', timestamp - 86400, timestamp)
+         current_price = candles['c'][-1]
+         
+-        # Store the price in cache
+-        cache[crypto_symbol] = current_price
+-        
+-        return current_price
++        return {"price": current_price, "symbol": crypto_symbol}
+     except:
+         return None
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/.gitignore` & `pyexhange_r3ne-0.1.5/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/LICENCE.rst` & `pyexhange_r3ne-0.1.5/LICENCE.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/README.md` & `pyexhange_r3ne-0.1.5/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyexhange_r3ne-0.1.4/pyproject.toml` & `pyexhange_r3ne-0.1.5/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["hatchling", "finnhub-python"]
+ build-backend = "hatchling.build"
+ 
+ [project]
+ name = "pyexhange_r3ne"
+-version = "0.1.4"
++version = "0.1.5"
+ authors = [
+   { name="R3ne.net", email="mail@r3ne.net" },
+ ]
+ description = "Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+```
+
+### Comparing `pyexhange_r3ne-0.1.4/PKG-INFO` & `pyexhange_r3ne-0.1.5/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyexhange_r3ne
+-Version: 0.1.4
++Version: 0.1.5
+ Summary: Python code that allows users to create and manage their own virtual wallets to get the trading experiense with out real money.
+ Project-URL: Homepage, https://github.com/JAAKKQ/pyexhange
+ Project-URL: Bug Tracker, https://github.com/JAAKKQ/pyexhange/issues
+ Author-email: "R3ne.net" <mail@r3ne.net>
+ License-File: LICENCE.rst
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+

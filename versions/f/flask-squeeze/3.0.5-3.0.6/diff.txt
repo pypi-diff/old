@@ -1,0 +1,148 @@
+--- tmp/flask_squeeze-3.0.5.tar.gz
++++ tmp/flask_squeeze-3.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "flask_squeeze-3.0.5.tar", max compression
+│ +gzip compressed data, was "flask_squeeze-3.0.6.tar", max compression
+│   --- flask_squeeze-3.0.5.tar
+├── +++ flask_squeeze-3.0.6.tar
+│ ├── file list
+│ │ @@ -1,10 +1,10 @@
+│ │ --rw-r--r--   0        0        0     1061 2023-04-04 10:23:19.321417 flask_squeeze-3.0.5/LICENSE
+│ │ --rw-r--r--   0        0        0     3535 2023-04-06 14:07:52.138505 flask_squeeze-3.0.5/README.md
+│ │ --rw-r--r--   0        0        0       49 2023-04-04 12:50:40.490046 flask_squeeze-3.0.5/flask_squeeze/__init__.py
+│ │ --rw-r--r--   0        0        0     1554 2023-04-04 12:57:27.961772 flask_squeeze-3.0.5/flask_squeeze/debug.py
+│ │ --rw-r--r--   0        0        0     8412 2023-04-06 16:38:06.035825 flask_squeeze-3.0.5/flask_squeeze/flask_squeeze.py
+│ │ --rw-r--r--   0        0        0     1760 2023-04-04 12:57:27.956281 flask_squeeze-3.0.5/flask_squeeze/log.py
+│ │ --rw-r--r--   0        0        0     1482 2023-04-04 12:48:01.274755 flask_squeeze-3.0.5/flask_squeeze/minifiers.py
+│ │ --rw-r--r--   0        0        0     1736 2023-04-06 16:03:45.531113 flask_squeeze-3.0.5/flask_squeeze/models.py
+│ │ --rw-r--r--   0        0        0     1347 2023-04-06 16:38:25.677623 flask_squeeze-3.0.5/pyproject.toml
+│ │ --rw-r--r--   0        0        0     4571 1970-01-01 00:00:00.000000 flask_squeeze-3.0.5/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1061 2023-04-04 10:23:19.321417 flask_squeeze-3.0.6/LICENSE
+│ │ +-rw-r--r--   0        0        0     3535 2023-04-06 14:07:52.138505 flask_squeeze-3.0.6/README.md
+│ │ +-rw-r--r--   0        0        0       49 2023-04-04 12:50:40.490046 flask_squeeze-3.0.6/flask_squeeze/__init__.py
+│ │ +-rw-r--r--   0        0        0     1554 2023-04-04 12:57:27.961772 flask_squeeze-3.0.6/flask_squeeze/debug.py
+│ │ +-rw-r--r--   0        0        0     8554 2023-04-06 16:50:00.183505 flask_squeeze-3.0.6/flask_squeeze/flask_squeeze.py
+│ │ +-rw-r--r--   0        0        0     1760 2023-04-04 12:57:27.956281 flask_squeeze-3.0.6/flask_squeeze/log.py
+│ │ +-rw-r--r--   0        0        0     1482 2023-04-04 12:48:01.274755 flask_squeeze-3.0.6/flask_squeeze/minifiers.py
+│ │ +-rw-r--r--   0        0        0     1736 2023-04-06 16:03:45.531113 flask_squeeze-3.0.6/flask_squeeze/models.py
+│ │ +-rw-r--r--   0        0        0     1347 2023-04-06 16:51:12.053170 flask_squeeze-3.0.6/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     4571 1970-01-01 00:00:00.000000 flask_squeeze-3.0.6/PKG-INFO
+│ │   --- flask_squeeze-3.0.5/LICENSE
+│ ├── +++ flask_squeeze-3.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/README.md
+│ ├── +++ flask_squeeze-3.0.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/flask_squeeze/debug.py
+│ ├── +++ flask_squeeze-3.0.6/flask_squeeze/debug.py
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/flask_squeeze/flask_squeeze.py
+│ ├── +++ flask_squeeze-3.0.6/flask_squeeze/flask_squeeze.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  import gzip
+│ │  import random
+│ │  import secrets
+│ │  import time
+│ │  import zlib
+│ │ -from typing import Dict, Union
+│ │ +from typing import Dict, Union, Tuple
+│ │  
+│ │  import brotli
+│ │  from flask import Flask, Response, request
+│ │  
+│ │  from .debug import add_debug_header, ctx_add_debug_header
+│ │  from .log import d_log, log
+│ │  from .minifiers import minify_css, minify_html, minify_js
+│ │ @@ -18,15 +18,15 @@
+│ │  	choose_minification_from_mimetype_and_config,
+│ │  )
+│ │  
+│ │  
+│ │  class Squeeze:
+│ │  
+│ │  	__slots__ = "cache", "app", "encode_choice", "minify_choice", "resource_type"
+│ │ -	cache: Dict[str, bytes]
+│ │ +	cache: Dict[Tuple[str, str], bytes]
+│ │  	app: Flask
+│ │  	encode_choice: Union[Encoding, None]
+│ │  	minify_choice: Union[Minifcation, None]
+│ │  	resource_type: Union[str, None]
+│ │  
+│ │  
+│ │  	def __init__(self, app: Flask = None) -> None:
+│ │ @@ -175,15 +175,16 @@
+│ │  	) -> None:
+│ │  		"""
+│ │  			Compress a static resource.
+│ │  		"""
+│ │  
+│ │  
+│ │  		# Serve from cache if possible
+│ │ -		from_cache = self.cache.get(request.path, None)
+│ │ +		encode_choice_str = self.encode_choice.value if self.encode_choice else "none"
+│ │ +		from_cache = self.cache.get((request.path, encode_choice_str), None)
+│ │  		if from_cache is not None:
+│ │  			log(2, "Found in cache. RETURN")
+│ │  			response.direct_passthrough = False
+│ │  			response.set_data(from_cache)
+│ │  			response.headers["X-Flask-Squeeze-Cache"] = "HIT"
+│ │  			return
+│ │  
+│ │ @@ -192,15 +193,15 @@
+│ │  		if self.minify_choice is not None:
+│ │  			self.execute_minify(response)
+│ │  		if self.encode_choice is not None:
+│ │  			self.execute_compress(response)
+│ │  
+│ │  		# Assert: At least one of minify or compress was run
+│ │  		response.headers["X-Flask-Squeeze-Cache"] = "MISS"
+│ │ -		self.cache[request.path] = response.get_data(as_text=False)
+│ │ +		self.cache[(request.path, encode_choice_str)] = response.get_data(as_text=False)
+│ │  
+│ │  
+│ │  
+│ │  	@d_log(level=1, with_args=[1, 2])
+│ │  	def recompute_headers(
+│ │  		self,
+│ │  		response: Response,
+│ │   --- flask_squeeze-3.0.5/flask_squeeze/log.py
+│ ├── +++ flask_squeeze-3.0.6/flask_squeeze/log.py
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/flask_squeeze/minifiers.py
+│ ├── +++ flask_squeeze-3.0.6/flask_squeeze/minifiers.py
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/flask_squeeze/models.py
+│ ├── +++ flask_squeeze-3.0.6/flask_squeeze/models.py
+│ │┄ Files identical despite different names
+│ │   --- flask_squeeze-3.0.5/pyproject.toml
+│ ├── +++ flask_squeeze-3.0.6/pyproject.toml
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "flask-squeeze"
+│ │ -version = "3.0.5"
+│ │ +version = "3.0.6"
+│ │  repository = "https://github.com/mkrd/Flask-Squeeze"
+│ │  description = "Compress and minify Flask responses!"
+│ │  readme = "README.md"
+│ │  authors = ["Marcel Kröker <kroeker.marcel@gmail.com>"]
+│ │  license = "MIT"
+│ │  classifiers=[
+│ │  	"Programming Language :: Python :: 3",
+│ │   --- flask_squeeze-3.0.5/PKG-INFO
+│ ├── +++ flask_squeeze-3.0.6/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: flask-squeeze
+│ │ -Version: 3.0.5
+│ │ +Version: 3.0.6
+│ │  Summary: Compress and minify Flask responses!
+│ │  Home-page: https://github.com/mkrd/Flask-Squeeze
+│ │  License: MIT
+│ │  Author: Marcel Kröker
+│ │  Author-email: kroeker.marcel@gmail.com
+│ │  Requires-Python: >=3.8,<4.0
+│ │  Classifier: Intended Audience :: Developers

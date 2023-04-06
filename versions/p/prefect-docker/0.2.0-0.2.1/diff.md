@@ -1,0 +1,292 @@
+# Comparing `tmp/prefect-docker-0.2.0.tar.gz` & `tmp/prefect-docker-0.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "/home/runner/work/prefect-docker/prefect-docker/dist/.tmp-1xbtepcy/prefect-docker-0.2.0.tar", last modified: Thu Apr  6 10:45:55 2023, max compression
++gzip compressed data, was "/home/runner/work/prefect-docker/prefect-docker/dist/.tmp-gnqi19rs/prefect-docker-0.2.1.tar", last modified: Thu Apr  6 16:48:14 2023, max compression
+```
+
+## Comparing `prefect-docker-0.2.0.tar` & `prefect-docker-0.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,34 +1,34 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/
+--rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      321 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     5652 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     4754 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker/
+--rw-r--r--   0 runner    (1001) docker     (123)      210 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker/_version.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8023 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/containers.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/credentials.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3857 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/host.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2909 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/images.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker/projects/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/projects/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5360 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/projects/steps.py
+--rw-r--r--   0 runner    (1001) docker     (123)    24258 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/prefect_docker/worker.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     5652 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      697 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       54 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      253 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/prefect_docker.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      211 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/requirements-dev.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      794 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1644 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 10:45:55.000000 prefect-docker-0.2.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)     2942 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/tests/test_containers.py
+--rw-r--r--   0 runner    (1001) docker     (123)      391 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/tests/test_credentials.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2705 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/tests/test_host.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2529 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/tests/test_images.py
+--rw-r--r--   0 runner    (1001) docker     (123)    38685 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/tests/test_worker.py
+--rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-04-06 10:44:28.000000 prefect-docker-0.2.0/versioneer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/
++-rw-r--r--   0 runner    (1001) docker     (123)    11356 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      321 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     5652 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4754 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker/
++-rw-r--r--   0 runner    (1001) docker     (123)      210 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker/_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8023 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/containers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/credentials.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3857 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/host.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2909 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/images.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker/projects/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/projects/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5360 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/projects/steps.py
++-rw-r--r--   0 runner    (1001) docker     (123)    24959 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/prefect_docker/worker.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5652 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      697 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       54 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      253 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       15 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/prefect_docker.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      211 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/requirements-dev.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       29 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      794 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1644 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 16:48:14.000000 prefect-docker-0.2.1/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     2942 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/tests/test_containers.py
++-rw-r--r--   0 runner    (1001) docker     (123)      391 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/tests/test_credentials.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2705 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/tests/test_host.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2529 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/tests/test_images.py
++-rw-r--r--   0 runner    (1001) docker     (123)    39036 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/tests/test_worker.py
++-rw-r--r--   0 runner    (1001) docker     (123)    80049 2023-04-06 16:46:52.000000 prefect-docker-0.2.1/versioneer.py
+```
+
+### Comparing `prefect-docker-0.2.0/LICENSE` & `prefect-docker-0.2.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/PKG-INFO` & `prefect-docker-0.2.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: prefect-docker
+-Version: 0.2.0
++Version: 0.2.1
+ Summary: Prefect integrations for working with Docker
+ Home-page: https://github.com/PrefectHQ/prefect-docker
+ Author: Prefect Technologies, Inc.
+ Author-email: help@prefect.io
+ License: Apache License 2.0
+ Keywords: prefect
+ Classifier: Natural Language :: English
+```
+
+### Comparing `prefect-docker-0.2.0/README.md` & `prefect-docker-0.2.1/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/containers.py` & `prefect-docker-0.2.1/prefect_docker/containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/credentials.py` & `prefect-docker-0.2.1/prefect_docker/credentials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/host.py` & `prefect-docker-0.2.1/prefect_docker/host.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/images.py` & `prefect-docker-0.2.1/prefect_docker/images.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/projects/steps.py` & `prefect-docker-0.2.1/prefect_docker/projects/steps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/prefect_docker/worker.py` & `prefect-docker-0.2.1/prefect_docker/worker.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -14,28 +14,30 @@
+ Replace `my-work-pool` with the name of the work pool you want the worker
+ to poll for flow runs.
+ 
+ For more information about work pools and workers,
+ checkout out the [Prefect docs](https://docs.prefect.io/concepts/work-pools/).
+ """
+ import enum
++import os
+ import re
+ import sys
+ import urllib.parse
+ import warnings
+-from typing import Dict, Generator, List, Optional, Tuple
++from typing import Any, Dict, Generator, List, Optional, Tuple
+ 
+ import anyio.abc
+ import docker
+ import docker.errors
+ import packaging.version
+ import prefect
+ from docker import DockerClient
+ from docker.models.containers import Container
+ from packaging import version
++from prefect.client.orchestration import ServerType, get_client
+ from prefect.client.schemas import FlowRun
+ from prefect.docker import (
+     format_outlier_version_name,
+     get_prefect_image_name,
+     parse_image_tag,
+ )
+ from prefect.server.schemas.core import Flow
+@@ -368,14 +370,31 @@
+ 
+ class DockerWorker(BaseWorker):
+     """Prefect worker that executes flow runs within Docker containers."""
+ 
+     type = "docker"
+     job_configuration = DockerWorkerJobConfiguration
+ 
++    def __init__(self, *args: Any, test_mode: bool = None, **kwargs: Any) -> None:
++        if test_mode is None:
++            self.test_mode = bool(os.getenv("PREFECT_DOCKER_TEST_MODE", False))
++        else:
++            self.test_mode = test_mode
++        super().__init__(*args, **kwargs)
++
++    async def setup(self):
++        if not self.test_mode:
++            self._client = get_client()
++            if self._client.server_type == ServerType.EPHEMERAL:
++                raise RuntimeError(
++                    "Docker worker cannot be used with an ephemeral server."
++                )
++
++        return await super().setup()
++
+     async def run(
+         self,
+         flow_run: "FlowRun",
+         configuration: BaseJobConfiguration,
+         task_status: Optional[anyio.abc.TaskStatus] = None,
+     ) -> BaseWorkerResult:
+         """
+```
+
+### Comparing `prefect-docker-0.2.0/prefect_docker.egg-info/PKG-INFO` & `prefect-docker-0.2.1/prefect_docker.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: prefect-docker
+-Version: 0.2.0
++Version: 0.2.1
+ Summary: Prefect integrations for working with Docker
+ Home-page: https://github.com/PrefectHQ/prefect-docker
+ Author: Prefect Technologies, Inc.
+ Author-email: help@prefect.io
+ License: Apache License 2.0
+ Keywords: prefect
+ Classifier: Natural Language :: English
+```
+
+### Comparing `prefect-docker-0.2.0/prefect_docker.egg-info/SOURCES.txt` & `prefect-docker-0.2.1/prefect_docker.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/setup.cfg` & `prefect-docker-0.2.1/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/setup.py` & `prefect-docker-0.2.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/tests/test_containers.py` & `prefect-docker-0.2.1/tests/test_containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/tests/test_host.py` & `prefect-docker-0.2.1/tests/test_host.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/tests/test_images.py` & `prefect-docker-0.2.1/tests/test_images.py`
+
+ * *Files identical despite different names*
+
+### Comparing `prefect-docker-0.2.0/tests/test_worker.py` & `prefect-docker-0.2.1/tests/test_worker.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -31,14 +31,19 @@
+ def enable_workers():
+     with temporary_settings(
+         {PREFECT_EXPERIMENTAL_ENABLE_WORKERS: 1, PREFECT_EXPERIMENTAL_WARN_WORKERS: 0}
+     ):
+         yield
+ 
+ 
++@pytest.fixture(autouse=True)
++def bypass_api_check(monkeypatch):
++    monkeypatch.setenv("PREFECT_DOCKER_TEST_MODE", True)
++
++
+ @pytest.fixture
+ def mock_docker_client(monkeypatch):
+     mock = MagicMock(name="DockerClient", spec=docker.DockerClient)
+     mock.version.return_value = {"Version": "20.10"}
+ 
+     # Build a fake container object to return
+     fake_container = docker.models.containers.Container()
+@@ -1000,7 +1005,13 @@
+     async with DockerWorker(work_pool_name="test") as worker:
+         await worker.run(
+             flow_run=flow_run, configuration=default_docker_worker_job_configuration
+         )
+ 
+     captured = capsys.readouterr()
+     assert "hello" in captured.out
++
++
++async def test_worker_errors_out_on_ephemeral_apis():
++    with pytest.raises(RuntimeError, match="ephemeral"):
++        async with DockerWorker(work_pool_name="test", test_mode=False) as worker:
++            await worker.run()
+```
+
+### Comparing `prefect-docker-0.2.0/versioneer.py` & `prefect-docker-0.2.1/versioneer.py`
+
+ * *Files identical despite different names*
+

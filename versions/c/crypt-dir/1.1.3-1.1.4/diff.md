@@ -1,0 +1,162 @@
+# Comparing `tmp/crypt-dir-1.1.3.tar.gz` & `tmp/crypt-dir-1.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "crypt-dir-1.1.3.tar", last modified: Thu Apr  6 16:42:15 2023, max compression
++gzip compressed data, was "crypt-dir-1.1.4.tar", last modified: Thu Apr  6 16:51:12 2023, max compression
+```
+
+## Comparing `crypt-dir-1.1.3.tar` & `crypt-dir-1.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:42:15.885440 crypt-dir-1.1.3/
+--rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.1.3/LICENSE
+--rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:42:15.885287 crypt-dir-1.1.3/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)     3506 2023-04-06 16:16:43.000000 crypt-dir-1.1.3/README.md
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:42:15.883893 crypt-dir-1.1.3/crypt_dir/
+--rw-r--r--   0 khanh      (501) staff       (20)      150 2023-04-06 16:16:18.000000 crypt-dir-1.1.3/crypt_dir/__init__.py
+--rw-r--r--   0 khanh      (501) staff       (20)     2511 2023-04-06 16:19:50.000000 crypt-dir-1.1.3/crypt_dir/crypt.py
+--rw-r--r--   0 khanh      (501) staff       (20)     6083 2023-04-06 15:55:36.000000 crypt-dir-1.1.3/crypt_dir/crypt_dir.py
+--rw-r--r--   0 khanh      (501) staff       (20)     4205 2023-04-06 16:42:04.000000 crypt-dir-1.1.3/crypt_dir/crypt_file.py
+--rw-r--r--   0 khanh      (501) staff       (20)      257 2023-04-06 15:59:40.000000 crypt-dir-1.1.3/crypt_dir/serialize.py
+--rw-r--r--   0 khanh      (501) staff       (20)      805 2023-04-06 16:03:15.000000 crypt-dir-1.1.3/crypt_dir/signature.py
+-drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:42:15.885054 crypt-dir-1.1.3/crypt_dir.egg-info/
+--rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:42:15.000000 crypt-dir-1.1.3/crypt_dir.egg-info/PKG-INFO
+--rw-r--r--   0 khanh      (501) staff       (20)      324 2023-04-06 16:42:15.000000 crypt-dir-1.1.3/crypt_dir.egg-info/SOURCES.txt
+--rw-r--r--   0 khanh      (501) staff       (20)        1 2023-04-06 16:42:15.000000 crypt-dir-1.1.3/crypt_dir.egg-info/dependency_links.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       20 2023-04-06 16:42:15.000000 crypt-dir-1.1.3/crypt_dir.egg-info/requires.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       10 2023-04-06 16:42:15.000000 crypt-dir-1.1.3/crypt_dir.egg-info/top_level.txt
+--rw-r--r--   0 khanh      (501) staff       (20)       38 2023-04-06 16:42:15.885494 crypt-dir-1.1.3/setup.cfg
+--rw-r--r--   0 khanh      (501) staff       (20)      586 2023-04-06 16:42:11.000000 crypt-dir-1.1.3/setup.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:51:12.990930 crypt-dir-1.1.4/
++-rw-r--r--   0 khanh      (501) staff       (20)     1069 2023-03-31 12:34:48.000000 crypt-dir-1.1.4/LICENSE
++-rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:51:12.990801 crypt-dir-1.1.4/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)     3506 2023-04-06 16:16:43.000000 crypt-dir-1.1.4/README.md
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:51:12.989961 crypt-dir-1.1.4/crypt_dir/
++-rw-r--r--   0 khanh      (501) staff       (20)      150 2023-04-06 16:16:18.000000 crypt-dir-1.1.4/crypt_dir/__init__.py
++-rw-r--r--   0 khanh      (501) staff       (20)     2511 2023-04-06 16:19:50.000000 crypt-dir-1.1.4/crypt_dir/crypt.py
++-rw-r--r--   0 khanh      (501) staff       (20)     6083 2023-04-06 15:55:36.000000 crypt-dir-1.1.4/crypt_dir/crypt_dir.py
++-rw-r--r--   0 khanh      (501) staff       (20)     4205 2023-04-06 16:50:39.000000 crypt-dir-1.1.4/crypt_dir/crypt_file.py
++-rw-r--r--   0 khanh      (501) staff       (20)      257 2023-04-06 15:59:40.000000 crypt-dir-1.1.4/crypt_dir/serialize.py
++-rw-r--r--   0 khanh      (501) staff       (20)      805 2023-04-06 16:03:15.000000 crypt-dir-1.1.4/crypt_dir/signature.py
++drwxr-xr-x   0 khanh      (501) staff       (20)        0 2023-04-06 16:51:12.990600 crypt-dir-1.1.4/crypt_dir.egg-info/
++-rw-r--r--   0 khanh      (501) staff       (20)     3764 2023-04-06 16:51:12.000000 crypt-dir-1.1.4/crypt_dir.egg-info/PKG-INFO
++-rw-r--r--   0 khanh      (501) staff       (20)      324 2023-04-06 16:51:12.000000 crypt-dir-1.1.4/crypt_dir.egg-info/SOURCES.txt
++-rw-r--r--   0 khanh      (501) staff       (20)        1 2023-04-06 16:51:12.000000 crypt-dir-1.1.4/crypt_dir.egg-info/dependency_links.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       20 2023-04-06 16:51:12.000000 crypt-dir-1.1.4/crypt_dir.egg-info/requires.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       10 2023-04-06 16:51:12.000000 crypt-dir-1.1.4/crypt_dir.egg-info/top_level.txt
++-rw-r--r--   0 khanh      (501) staff       (20)       38 2023-04-06 16:51:12.990977 crypt-dir-1.1.4/setup.cfg
++-rw-r--r--   0 khanh      (501) staff       (20)      586 2023-04-06 16:50:56.000000 crypt-dir-1.1.4/setup.py
+```
+
+### Comparing `crypt-dir-1.1.3/LICENSE` & `crypt-dir-1.1.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.3/PKG-INFO` & `crypt-dir-1.1.4/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: crypt-dir
+-Version: 1.1.3
++Version: 1.1.4
+ Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+ Author: Nguyen Ngoc Khanh
+ Author-email: khanh.nguyen.contact@gmail.com
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `crypt-dir-1.1.3/README.md` & `crypt-dir-1.1.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.3/crypt_dir/crypt.py` & `crypt-dir-1.1.4/crypt_dir/crypt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.3/crypt_dir/crypt_dir.py` & `crypt-dir-1.1.4/crypt_dir/crypt_dir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.3/crypt_dir/crypt_file.py` & `crypt-dir-1.1.4/crypt_dir/crypt_file.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -51,16 +51,16 @@
+     if os.path.exists(encrypted_path):
+         try:
+             with open(encrypted_path, "rb") as f:
+                 header = read_header(f)
+             if key_sig == header.key_sig and file_sig == header.file_sig:
+                 # only skip if both key_sig and file_sig are the same
+                 return False
+-        except Exception as e:
+-            print(f"warning: encrypted file corrupted {encrypted_path}", file=sys.stderr)
++        except AssertionError:
++            print(f"warning: corrupted encrypted file {encrypted_path}", file=sys.stderr)
+ 
+     # encrypted file will be updated regardless its mtime is sooner or later
+     # encrypt
+     init_vec = os.urandom(BLOCK_SIZE)
+     file_size = os.path.getsize(plain_path)
+     with open(plain_path, "rb") as plain_f, open(encrypted_path, "wb") as encrypted_f:
+         write_header(write_io=encrypted_f, header=Header(
+```
+
+### Comparing `crypt-dir-1.1.3/crypt_dir/signature.py` & `crypt-dir-1.1.4/crypt_dir/signature.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crypt-dir-1.1.3/crypt_dir.egg-info/PKG-INFO` & `crypt-dir-1.1.4/crypt_dir.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: crypt-dir
+-Version: 1.1.3
++Version: 1.1.4
+ Home-page: https://github.com/khanh-nguyen-code/crypt-dir
+ Author: Nguyen Ngoc Khanh
+ Author-email: khanh.nguyen.contact@gmail.com
+ License: MIT
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `crypt-dir-1.1.3/setup.py` & `crypt-dir-1.1.4/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ if __name__ == "__main__":
+     with open("README.md") as f:
+         long_description = f.read()
+     setuptools.setup(
+         name="crypt-dir",
+-        version="1.1.3",
++        version="1.1.4",
+         author="Nguyen Ngoc Khanh",
+         author_email="khanh.nguyen.contact@gmail.com",
+         long_description=long_description,
+         long_description_content_type="text/markdown",
+         url="https://github.com/khanh-nguyen-code/crypt-dir",
+         packages=setuptools.find_packages(),
+         license="MIT",
+```
+

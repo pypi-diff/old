@@ -1,0 +1,13284 @@
+# Comparing `tmp/jal-2023.3.1.tar.gz` & `tmp/jal-2023.4.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "jal-2023.3.1.tar", last modified: Thu Mar  9 09:30:26 2023, max compression
++gzip compressed data, was "jal-2023.4.1.tar", last modified: Thu Apr  6 16:45:36 2023, max compression
+```
+
+## Comparing `jal-2023.3.1.tar` & `jal-2023.4.1.tar`
+
+### file list
+
+```diff
+@@ -1,217 +1,218 @@
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.566714 jal-2023.3.1/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      176 2022-01-13 06:08:45.000000 jal-2023.3.1/MANIFEST.in
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-03-09 09:30:26.566714 jal-2023.3.1/PKG-INFO
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.486713 jal-2023.3.1/docs/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6999 2023-03-06 11:34:17.000000 jal-2023.3.1/docs/README.md
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.490047 jal-2023.3.1/jal/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       24 2023-03-09 09:23:18.000000 jal-2023.3.1/jal/__init__.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3788 2023-03-08 16:23:59.000000 jal-2023.3.1/jal/constants.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.490047 jal-2023.3.1/jal/data_export/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2022-01-13 15:45:51.000000 jal-2023.3.1/jal/data_export/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18508 2022-12-08 20:22:37.000000 jal-2023.3.1/jal/data_export/dlsg.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.493380 jal-2023.3.1/jal/data_export/tax_reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/data_export/tax_reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      990 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/tax_reports/portugal.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7089 2023-02-08 10:00:47.000000 jal-2023.3.1/jal/data_export/tax_reports/portugal.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1532 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/tax_reports/russia.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    38361 2023-02-25 20:04:03.000000 jal-2023.3.1/jal/data_export/tax_reports/russia.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6433 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/taxes.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5299 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/taxes_flow.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.500047 jal-2023.3.1/jal/data_export/templates/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-30 08:37:57.000000 jal-2023.3.1/jal/data_export/templates/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1286 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/templates/tax_prt_dividends.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2594 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/data_export/templates/tax_prt_shares.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6163 2022-01-30 08:37:57.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_bonds.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4792 2022-02-13 11:04:18.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_corporate_actions.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4938 2022-04-30 20:05:13.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_crypto.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4948 2022-04-30 20:05:13.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_derivatives.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3249 2022-02-13 11:04:18.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_dividends.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1450 2022-01-30 08:37:57.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_fees.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1133 2022-06-19 17:39:33.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_flow.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1654 2022-07-20 07:00:10.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_interests.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5303 2022-01-30 08:37:57.000000 jal-2023.3.1/jal/data_export/templates/tax_rus_trades.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10842 2023-02-08 13:35:53.000000 jal-2023.3.1/jal/data_export/xlsx.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.503380 jal-2023.3.1/jal/data_import/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/data_import/__init__.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.506713 jal-2023.3.1/jal/data_import/broker_statements/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-22 16:32:16.000000 jal-2023.3.1/jal/data_import/broker_statements/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    60467 2023-03-07 14:58:09.000000 jal-2023.3.1/jal/data_import/broker_statements/ibkr.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    19903 2022-08-21 07:15:06.000000 jal-2023.3.1/jal/data_import/broker_statements/just2trade.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9470 2022-08-21 07:15:06.000000 jal-2023.3.1/jal/data_import/broker_statements/kit.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5857 2023-02-14 12:14:19.000000 jal-2023.3.1/jal/data_import/broker_statements/open_portfolio.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    30709 2023-02-14 12:16:51.000000 jal-2023.3.1/jal/data_import/broker_statements/openbroker.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15460 2022-12-07 21:59:21.000000 jal-2023.3.1/jal/data_import/broker_statements/psb.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    27469 2022-08-21 07:15:06.000000 jal-2023.3.1/jal/data_import/broker_statements/uralsib.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3893 2023-03-05 19:06:08.000000 jal-2023.3.1/jal/data_import/category_recognizer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      543 2021-08-05 15:24:10.000000 jal-2023.3.1/jal/data_import/import_schema.json
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15412 2023-03-06 11:47:10.000000 jal-2023.3.1/jal/data_import/slips.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13093 2023-03-01 17:12:57.000000 jal-2023.3.1/jal/data_import/slips_tax.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    33376 2023-02-23 20:35:40.000000 jal-2023.3.1/jal/data_import/statement.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11314 2023-02-02 08:45:14.000000 jal-2023.3.1/jal/data_import/statement_xls.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6349 2022-08-20 19:04:41.000000 jal-2023.3.1/jal/data_import/statement_xml.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3053 2022-03-27 18:19:42.000000 jal-2023.3.1/jal/data_import/statements.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.513380 jal-2023.3.1/jal/db/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/db/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17607 2023-02-27 16:25:45.000000 jal-2023.3.1/jal/db/account.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21253 2023-02-23 19:25:45.000000 jal-2023.3.1/jal/db/asset.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     6074 2022-12-06 18:30:39.000000 jal-2023.3.1/jal/db/backup_restore.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7360 2023-02-27 17:48:37.000000 jal-2023.3.1/jal/db/balances_model.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4103 2023-02-27 16:03:46.000000 jal-2023.3.1/jal/db/category.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5218 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/db/closed_trade.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2399 2023-03-08 17:11:23.000000 jal-2023.3.1/jal/db/country.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18421 2023-01-27 21:54:10.000000 jal-2023.3.1/jal/db/db.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3941 2023-01-27 21:53:46.000000 jal-2023.3.1/jal/db/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15989 2023-02-21 15:39:37.000000 jal-2023.3.1/jal/db/holdings_model.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    16642 2023-02-23 10:35:04.000000 jal-2023.3.1/jal/db/ledger.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    60405 2023-02-25 19:58:53.000000 jal-2023.3.1/jal/db/operations.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7486 2023-02-28 14:47:51.000000 jal-2023.3.1/jal/db/operations_model.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3379 2023-02-20 16:05:40.000000 jal-2023.3.1/jal/db/peer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15210 2023-02-21 12:19:40.000000 jal-2023.3.1/jal/db/reference_models.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1190 2023-01-06 21:49:49.000000 jal-2023.3.1/jal/db/settings.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      438 2023-02-16 17:12:29.000000 jal-2023.3.1/jal/db/tag.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6761 2023-03-08 18:16:20.000000 jal-2023.3.1/jal/db/tax_estimator.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1458 2023-02-23 19:54:06.000000 jal-2023.3.1/jal/db/view_model.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.520047 jal-2023.3.1/jal/img/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2922 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/accept.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1443 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/add.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2049 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/add_child.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      435 2022-04-25 10:26:48.000000 jal-2023.3.1/jal/img/broom.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4004 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/cancel.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      806 2023-03-08 16:58:09.000000 jal-2023.3.1/jal/img/chart.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      898 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/copy.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2812 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/delete.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      583 2021-03-20 12:52:05.000000 jal-2023.3.1/jal/img/ibkr.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2340 2022-04-29 07:05:21.000000 jal-2023.3.1/jal/img/j2t.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5563 2022-01-13 06:08:45.000000 jal-2023.3.1/jal/img/jal.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1516 2021-03-22 11:20:31.000000 jal-2023.3.1/jal/img/kit.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1163 2022-12-28 10:47:37.000000 jal-2023.3.1/jal/img/list.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      342 2022-04-25 10:26:48.000000 jal-2023.3.1/jal/img/meatballs.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      611 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/new.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1175 2022-07-10 15:39:56.000000 jal-2023.3.1/jal/img/open_portfolio.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15086 2021-08-05 15:24:10.000000 jal-2023.3.1/jal/img/openbroker.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-08-05 15:24:10.000000 jal-2023.3.1/jal/img/psb.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-03-20 12:52:05.000000 jal-2023.3.1/jal/img/quik.ico
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2651 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/reconcile.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      822 2021-05-26 12:51:46.000000 jal-2023.3.1/jal/img/remove.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1874 2023-03-08 16:53:42.000000 jal-2023.3.1/jal/img/tax.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1406 2021-03-20 12:52:05.000000 jal-2023.3.1/jal/img/uralsib.ico
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     1938 2023-01-19 12:05:21.000000 jal-2023.3.1/jal/jal.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    91440 2023-03-08 16:24:23.000000 jal-2023.3.1/jal/jal_init.sql
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.523380 jal-2023.3.1/jal/languages/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      424 2020-12-21 16:23:10.000000 jal-2023.3.1/jal/languages/en.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    32025 2022-01-13 06:08:45.000000 jal-2023.3.1/jal/languages/en.qm
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      287 2022-04-25 10:26:48.000000 jal-2023.3.1/jal/languages/ru.png
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    86398 2023-03-08 17:45:06.000000 jal-2023.3.1/jal/languages/ru.qm
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.523380 jal-2023.3.1/jal/net/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2021-08-17 15:15:47.000000 jal-2023.3.1/jal/net/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    24412 2023-02-22 13:24:02.000000 jal-2023.3.1/jal/net/downloader.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2912 2023-01-27 21:53:46.000000 jal-2023.3.1/jal/net/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2040 2023-03-06 11:34:17.000000 jal-2023.3.1/jal/pypi_description.md
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.526714 jal-2023.3.1/jal/reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2914 2023-02-14 08:22:42.000000 jal-2023.3.1/jal/reports/category.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14324 2023-01-04 13:03:26.000000 jal-2023.3.1/jal/reports/deals.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3868 2023-03-08 18:23:27.000000 jal-2023.3.1/jal/reports/holdings.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14405 2023-02-21 17:34:30.000000 jal-2023.3.1/jal/reports/income_spending.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2802 2023-02-19 13:19:11.000000 jal-2023.3.1/jal/reports/peer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8684 2023-03-02 14:48:40.000000 jal-2023.3.1/jal/reports/profit_loss.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3287 2023-02-16 10:22:14.000000 jal-2023.3.1/jal/reports/reports.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2774 2023-02-16 10:21:05.000000 jal-2023.3.1/jal/reports/tag.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.530047 jal-2023.3.1/jal/ui/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/ui/__init__.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.533380 jal-2023.3.1/jal/ui/reports/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-13 15:45:51.000000 jal-2023.3.1/jal/ui/reports/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5179 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_category_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4099 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_deals_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4159 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_holdings_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3859 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_income_spending_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5382 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_peer_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4687 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_profit_loss_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5353 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_tag_report.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4805 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/reports/ui_tax_estimation.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12742 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_asset_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4056 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_flow_export_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14782 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_login_fns_dlg.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    10279 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_main_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14510 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_operations_widget.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     5707 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_rebuild_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7302 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_reference_data_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2903 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_select_account_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3253 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_select_reference_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16301 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_slip_import_dlg.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9674 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_tax_export_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4023 2023-03-08 17:44:17.000000 jal-2023.3.1/jal/ui/ui_update_quotes_window.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.550047 jal-2023.3.1/jal/updates/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/updates/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5122 2020-12-21 16:23:10.000000 jal-2023.3.1/jal/updates/jal_delta_10.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12870 2021-08-18 12:53:40.000000 jal-2023.3.1/jal/updates/jal_delta_11.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26116 2021-01-13 17:04:46.000000 jal-2023.3.1/jal/updates/jal_delta_12.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16516 2021-01-30 16:01:43.000000 jal-2023.3.1/jal/updates/jal_delta_13.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    34961 2021-02-27 17:35:02.000000 jal-2023.3.1/jal/updates/jal_delta_14.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2250 2021-02-27 17:35:02.000000 jal-2023.3.1/jal/updates/jal_delta_15.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3630 2021-02-27 17:35:02.000000 jal-2023.3.1/jal/updates/jal_delta_16.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    20912 2021-02-27 17:35:02.000000 jal-2023.3.1/jal/updates/jal_delta_17.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      656 2021-03-07 11:58:53.000000 jal-2023.3.1/jal/updates/jal_delta_18.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      686 2021-03-08 13:39:11.000000 jal-2023.3.1/jal/updates/jal_delta_19.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13578 2021-03-12 14:26:01.000000 jal-2023.3.1/jal/updates/jal_delta_20.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1428 2021-03-19 12:24:53.000000 jal-2023.3.1/jal/updates/jal_delta_21.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      949 2021-03-22 11:20:31.000000 jal-2023.3.1/jal/updates/jal_delta_22.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17602 2021-04-08 12:12:36.000000 jal-2023.3.1/jal/updates/jal_delta_23.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      344 2021-04-11 10:57:46.000000 jal-2023.3.1/jal/updates/jal_delta_24.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8270 2021-04-22 04:11:28.000000 jal-2023.3.1/jal/updates/jal_delta_25.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2492 2021-08-12 19:15:12.000000 jal-2023.3.1/jal/updates/jal_delta_26.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26325 2022-01-13 05:57:31.000000 jal-2023.3.1/jal/updates/jal_delta_27.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13276 2022-01-13 06:08:45.000000 jal-2023.3.1/jal/updates/jal_delta_28.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    35370 2022-01-13 15:45:51.000000 jal-2023.3.1/jal/updates/jal_delta_29.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8671 2022-02-13 13:11:58.000000 jal-2023.3.1/jal/updates/jal_delta_30.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11413 2022-02-13 11:04:18.000000 jal-2023.3.1/jal/updates/jal_delta_31.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12545 2022-03-31 14:26:11.000000 jal-2023.3.1/jal/updates/jal_delta_32.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4229 2022-03-31 14:26:11.000000 jal-2023.3.1/jal/updates/jal_delta_33.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2287 2022-04-06 14:47:21.000000 jal-2023.3.1/jal/updates/jal_delta_34.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2858 2022-04-30 20:05:13.000000 jal-2023.3.1/jal/updates/jal_delta_35.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3427 2022-06-19 17:39:33.000000 jal-2023.3.1/jal/updates/jal_delta_36.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3755 2022-07-20 07:00:10.000000 jal-2023.3.1/jal/updates/jal_delta_37.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21913 2022-08-21 07:15:06.000000 jal-2023.3.1/jal/updates/jal_delta_38.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      343 2023-01-04 13:14:35.000000 jal-2023.3.1/jal/updates/jal_delta_39.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3055 2023-01-27 21:53:46.000000 jal-2023.3.1/jal/updates/jal_delta_40.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    48157 2023-02-07 18:26:24.000000 jal-2023.3.1/jal/updates/jal_delta_41.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2085 2023-02-20 14:55:36.000000 jal-2023.3.1/jal/updates/jal_delta_42.sql
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2528 2023-03-08 16:23:30.000000 jal-2023.3.1/jal/updates/jal_delta_43.sql
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.563381 jal-2023.3.1/jal/widgets/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.3.1/jal/widgets/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3918 2023-01-09 20:51:48.000000 jal-2023.3.1/jal/widgets/abstract_operation_details.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6808 2023-02-23 10:22:46.000000 jal-2023.3.1/jal/widgets/account_select.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13988 2023-02-27 15:59:08.000000 jal-2023.3.1/jal/widgets/asset_dialog.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11151 2023-02-23 19:44:39.000000 jal-2023.3.1/jal/widgets/corporate_action_widget.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.563381 jal-2023.3.1/jal/widgets/custom/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-12-24 19:32:40.000000 jal-2023.3.1/jal/widgets/custom/__init__.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4422 2023-02-14 11:55:13.000000 jal-2023.3.1/jal/widgets/custom/date_range_selector.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2016 2023-01-09 21:29:20.000000 jal-2023.3.1/jal/widgets/custom/db_lookup_combobox.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4258 2022-12-02 13:35:44.000000 jal-2023.3.1/jal/widgets/custom/log_viewer.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13627 2023-03-08 16:33:03.000000 jal-2023.3.1/jal/widgets/delegates.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9321 2023-03-08 16:41:32.000000 jal-2023.3.1/jal/widgets/dividend_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8295 2023-03-06 18:56:44.000000 jal-2023.3.1/jal/widgets/helpers.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12298 2023-02-25 18:52:44.000000 jal-2023.3.1/jal/widgets/income_spending_widget.py
+--rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    13211 2023-03-06 11:43:59.000000 jal-2023.3.1/jal/widgets/main_window.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3391 2023-03-08 18:22:55.000000 jal-2023.3.1/jal/widgets/mdi.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2854 2022-12-26 13:26:40.000000 jal-2023.3.1/jal/widgets/operations_tabs.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7010 2023-02-20 13:28:14.000000 jal-2023.3.1/jal/widgets/operations_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5935 2022-08-21 07:15:06.000000 jal-2023.3.1/jal/widgets/price_chart.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6047 2023-03-07 12:32:02.000000 jal-2023.3.1/jal/widgets/qr_scanner.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11082 2023-02-27 16:00:28.000000 jal-2023.3.1/jal/widgets/reference_data.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21662 2023-02-27 15:30:11.000000 jal-2023.3.1/jal/widgets/reference_dialogs.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4863 2023-02-19 18:07:24.000000 jal-2023.3.1/jal/widgets/reference_selector.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)      632 2022-12-26 08:54:07.000000 jal-2023.3.1/jal/widgets/register_designer_plugins.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3462 2023-02-23 10:23:05.000000 jal-2023.3.1/jal/widgets/selection_dialog.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7701 2023-02-08 10:33:24.000000 jal-2023.3.1/jal/widgets/tax_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6922 2022-12-26 10:36:44.000000 jal-2023.3.1/jal/widgets/trade_widget.py
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9728 2022-12-26 10:36:44.000000 jal-2023.3.1/jal/widgets/transfer_widget.py
+-drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-03-09 09:30:26.490047 jal-2023.3.1/jal.egg-info/
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/PKG-INFO
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5563 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/SOURCES.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)        1 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/dependency_links.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       37 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/entry_points.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       67 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/requires.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       10 2023-03-09 09:30:26.000000 jal-2023.3.1/jal.egg-info/top_level.txt
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)       38 2023-03-09 09:30:26.566714 jal-2023.3.1/setup.cfg
+--rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1733 2023-01-19 11:44:27.000000 jal-2023.3.1/setup.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      176 2022-01-13 06:08:45.000000 jal-2023.4.1/MANIFEST.in
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-06 16:45:36.605576 jal-2023.4.1/PKG-INFO
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.515575 jal-2023.4.1/docs/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7570 2023-03-10 16:25:52.000000 jal-2023.4.1/docs/README.md
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.518908 jal-2023.4.1/jal/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       24 2023-04-06 16:42:21.000000 jal-2023.4.1/jal/__init__.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3788 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/constants.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.522242 jal-2023.4.1/jal/data_export/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/data_export/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18508 2022-12-08 20:22:37.000000 jal-2023.4.1/jal/data_export/dlsg.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.522242 jal-2023.4.1/jal/data_export/tax_reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/data_export/tax_reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      990 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/tax_reports/portugal.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7089 2023-02-08 10:00:47.000000 jal-2023.4.1/jal/data_export/tax_reports/portugal.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1532 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/tax_reports/russia.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    38361 2023-02-25 20:04:03.000000 jal-2023.4.1/jal/data_export/tax_reports/russia.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6433 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/taxes.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5299 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/taxes_flow.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.538909 jal-2023.4.1/jal/data_export/templates/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1286 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/templates/tax_prt_dividends.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2594 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/data_export/templates/tax_prt_shares.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6163 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_bonds.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4792 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_corporate_actions.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4938 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_crypto.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4948 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_derivatives.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3249 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_dividends.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1450 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_fees.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1133 2022-06-19 17:39:33.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_flow.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1654 2022-07-20 07:00:10.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_interests.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5303 2022-01-30 08:37:57.000000 jal-2023.4.1/jal/data_export/templates/tax_rus_trades.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10842 2023-02-08 13:35:53.000000 jal-2023.4.1/jal/data_export/xlsx.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.542242 jal-2023.4.1/jal/data_import/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/data_import/__init__.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.542242 jal-2023.4.1/jal/data_import/broker_statements/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-22 16:32:16.000000 jal-2023.4.1/jal/data_import/broker_statements/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    61366 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/data_import/broker_statements/ibkr.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    19903 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/just2trade.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9470 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/kit.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5857 2023-02-14 12:14:19.000000 jal-2023.4.1/jal/data_import/broker_statements/open_portfolio.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    30709 2023-02-14 12:16:51.000000 jal-2023.4.1/jal/data_import/broker_statements/openbroker.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15460 2022-12-07 21:59:21.000000 jal-2023.4.1/jal/data_import/broker_statements/psb.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    27469 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/data_import/broker_statements/uralsib.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     3893 2023-03-05 19:06:08.000000 jal-2023.4.1/jal/data_import/category_recognizer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      543 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/data_import/import_schema.json
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15410 2023-04-02 16:26:35.000000 jal-2023.4.1/jal/data_import/slips.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13093 2023-03-01 17:12:57.000000 jal-2023.4.1/jal/data_import/slips_tax.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    33743 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/data_import/statement.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11314 2023-02-02 08:45:14.000000 jal-2023.4.1/jal/data_import/statement_xls.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6349 2022-08-20 19:04:41.000000 jal-2023.4.1/jal/data_import/statement_xml.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3224 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/data_import/statements.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.552242 jal-2023.4.1/jal/db/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/db/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17607 2023-02-27 16:25:45.000000 jal-2023.4.1/jal/db/account.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21253 2023-02-23 19:25:45.000000 jal-2023.4.1/jal/db/asset.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     6074 2022-12-06 18:30:39.000000 jal-2023.4.1/jal/db/backup_restore.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7360 2023-02-27 17:48:37.000000 jal-2023.4.1/jal/db/balances_model.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4103 2023-02-27 16:03:46.000000 jal-2023.4.1/jal/db/category.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5218 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/db/closed_trade.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2399 2023-03-08 17:11:23.000000 jal-2023.4.1/jal/db/country.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    18460 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/db/db.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3941 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/db/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15989 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/db/holdings_model.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    16642 2023-02-23 10:35:04.000000 jal-2023.4.1/jal/db/ledger.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    60565 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/db/operations.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7486 2023-02-28 14:47:51.000000 jal-2023.4.1/jal/db/operations_model.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3379 2023-02-20 16:05:40.000000 jal-2023.4.1/jal/db/peer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15210 2023-02-21 12:19:40.000000 jal-2023.4.1/jal/db/reference_models.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1190 2023-01-06 21:49:49.000000 jal-2023.4.1/jal/db/settings.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      438 2023-02-16 17:12:29.000000 jal-2023.4.1/jal/db/tag.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6761 2023-03-08 18:16:20.000000 jal-2023.4.1/jal/db/tax_estimator.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1458 2023-02-23 19:54:06.000000 jal-2023.4.1/jal/db/view_model.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.558909 jal-2023.4.1/jal/img/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2922 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/accept.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1443 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/add.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2049 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/add_child.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      435 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/img/broom.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4004 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/cancel.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      806 2023-03-08 16:58:09.000000 jal-2023.4.1/jal/img/chart.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      898 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/copy.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2812 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/delete.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      583 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/ibkr.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2340 2022-04-29 07:05:21.000000 jal-2023.4.1/jal/img/j2t.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5563 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/img/jal.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1516 2021-03-22 11:20:31.000000 jal-2023.4.1/jal/img/kit.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1163 2022-12-28 10:47:37.000000 jal-2023.4.1/jal/img/list.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      342 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/img/meatballs.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      611 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/new.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1175 2022-07-10 15:39:56.000000 jal-2023.4.1/jal/img/open_portfolio.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    15086 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/img/openbroker.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-08-05 15:24:10.000000 jal-2023.4.1/jal/img/psb.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1150 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/quik.ico
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2651 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/reconcile.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      822 2021-05-26 12:51:46.000000 jal-2023.4.1/jal/img/remove.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1874 2023-03-08 16:53:42.000000 jal-2023.4.1/jal/img/tax.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1406 2021-03-20 12:52:05.000000 jal-2023.4.1/jal/img/uralsib.ico
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     1938 2023-01-19 12:05:21.000000 jal-2023.4.1/jal/jal.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    91499 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/jal_init.sql
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.562242 jal-2023.4.1/jal/languages/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      424 2020-12-21 16:23:10.000000 jal-2023.4.1/jal/languages/en.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    32025 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/languages/en.qm
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      287 2022-04-25 10:26:48.000000 jal-2023.4.1/jal/languages/ru.png
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    86346 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/languages/ru.qm
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.565575 jal-2023.4.1/jal/net/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2021-08-17 15:15:47.000000 jal-2023.4.1/jal/net/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    24616 2023-03-22 16:11:44.000000 jal-2023.4.1/jal/net/downloader.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2912 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/net/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2040 2023-03-06 11:34:17.000000 jal-2023.4.1/jal/pypi_description.md
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.568909 jal-2023.4.1/jal/reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2914 2023-02-14 08:22:42.000000 jal-2023.4.1/jal/reports/category.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14324 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/deals.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3868 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/holdings.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14694 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/reports/income_spending.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2802 2023-02-19 13:19:11.000000 jal-2023.4.1/jal/reports/peer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8684 2023-03-02 14:48:40.000000 jal-2023.4.1/jal/reports/profit_loss.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3287 2023-02-16 10:22:14.000000 jal-2023.4.1/jal/reports/reports.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2774 2023-02-16 10:21:05.000000 jal-2023.4.1/jal/reports/tag.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.575575 jal-2023.4.1/jal/ui/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/ui/__init__.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.578909 jal-2023.4.1/jal/ui/reports/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/ui/reports/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5179 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_category_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4099 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/ui/reports/ui_deals_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4159 2023-04-02 15:04:30.000000 jal-2023.4.1/jal/ui/reports/ui_holdings_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4156 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_income_spending_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5382 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_peer_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4687 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_profit_loss_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5353 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_tag_report.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4805 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/reports/ui_tax_estimation.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12742 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_asset_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4056 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_flow_export_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14782 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_login_fns_dlg.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     9324 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_main_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    14510 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_operations_widget.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)     5707 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_rebuild_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7302 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_reference_data_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2903 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_select_account_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3253 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_select_reference_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16301 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_slip_import_dlg.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9674 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_tax_export_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4023 2023-04-02 11:45:41.000000 jal-2023.4.1/jal/ui/ui_update_quotes_window.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.592242 jal-2023.4.1/jal/updates/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/updates/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5122 2020-12-21 16:23:10.000000 jal-2023.4.1/jal/updates/jal_delta_10.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12870 2021-08-18 12:53:40.000000 jal-2023.4.1/jal/updates/jal_delta_11.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26116 2021-01-13 17:04:46.000000 jal-2023.4.1/jal/updates/jal_delta_12.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    16516 2021-01-30 16:01:43.000000 jal-2023.4.1/jal/updates/jal_delta_13.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    34961 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_14.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2250 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_15.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3630 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_16.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    20912 2021-02-27 17:35:02.000000 jal-2023.4.1/jal/updates/jal_delta_17.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      656 2021-03-07 11:58:53.000000 jal-2023.4.1/jal/updates/jal_delta_18.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      686 2021-03-08 13:39:11.000000 jal-2023.4.1/jal/updates/jal_delta_19.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13578 2021-03-12 14:26:01.000000 jal-2023.4.1/jal/updates/jal_delta_20.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1428 2021-03-19 12:24:53.000000 jal-2023.4.1/jal/updates/jal_delta_21.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      949 2021-03-22 11:20:31.000000 jal-2023.4.1/jal/updates/jal_delta_22.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    17602 2021-04-08 12:12:36.000000 jal-2023.4.1/jal/updates/jal_delta_23.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      344 2021-04-11 10:57:46.000000 jal-2023.4.1/jal/updates/jal_delta_24.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8270 2021-04-22 04:11:28.000000 jal-2023.4.1/jal/updates/jal_delta_25.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2492 2021-08-12 19:15:12.000000 jal-2023.4.1/jal/updates/jal_delta_26.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    26325 2022-01-13 05:57:31.000000 jal-2023.4.1/jal/updates/jal_delta_27.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13276 2022-01-13 06:08:45.000000 jal-2023.4.1/jal/updates/jal_delta_28.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    35370 2022-01-13 15:45:51.000000 jal-2023.4.1/jal/updates/jal_delta_29.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8671 2022-02-13 13:11:58.000000 jal-2023.4.1/jal/updates/jal_delta_30.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11413 2022-02-13 11:04:18.000000 jal-2023.4.1/jal/updates/jal_delta_31.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12545 2022-03-31 14:26:11.000000 jal-2023.4.1/jal/updates/jal_delta_32.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4229 2022-03-31 14:26:11.000000 jal-2023.4.1/jal/updates/jal_delta_33.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2287 2022-04-06 14:47:21.000000 jal-2023.4.1/jal/updates/jal_delta_34.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2858 2022-04-30 20:05:13.000000 jal-2023.4.1/jal/updates/jal_delta_35.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3427 2022-06-19 17:39:33.000000 jal-2023.4.1/jal/updates/jal_delta_36.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3755 2022-07-20 07:00:10.000000 jal-2023.4.1/jal/updates/jal_delta_37.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21913 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/updates/jal_delta_38.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      343 2023-01-04 13:14:35.000000 jal-2023.4.1/jal/updates/jal_delta_39.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3055 2023-01-27 21:53:46.000000 jal-2023.4.1/jal/updates/jal_delta_40.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    48157 2023-02-07 18:26:24.000000 jal-2023.4.1/jal/updates/jal_delta_41.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2085 2023-02-20 14:55:36.000000 jal-2023.4.1/jal/updates/jal_delta_42.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2528 2023-03-08 16:23:30.000000 jal-2023.4.1/jal/updates/jal_delta_43.sql
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3020 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/updates/jal_delta_44.sql
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/jal/widgets/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       89 2020-12-23 19:03:58.000000 jal-2023.4.1/jal/widgets/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3918 2023-01-09 20:51:48.000000 jal-2023.4.1/jal/widgets/abstract_operation_details.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6808 2023-02-23 10:22:46.000000 jal-2023.4.1/jal/widgets/account_select.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13988 2023-02-27 15:59:08.000000 jal-2023.4.1/jal/widgets/asset_dialog.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11151 2023-02-23 19:44:39.000000 jal-2023.4.1/jal/widgets/corporate_action_widget.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.605576 jal-2023.4.1/jal/widgets/custom/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        0 2022-12-24 19:32:40.000000 jal-2023.4.1/jal/widgets/custom/__init__.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4422 2023-02-14 11:55:13.000000 jal-2023.4.1/jal/widgets/custom/date_range_selector.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2016 2023-01-09 21:29:20.000000 jal-2023.4.1/jal/widgets/custom/db_lookup_combobox.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4258 2022-12-02 13:35:44.000000 jal-2023.4.1/jal/widgets/custom/log_viewer.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    13738 2023-03-22 16:11:44.000000 jal-2023.4.1/jal/widgets/delegates.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     9321 2023-03-08 16:41:32.000000 jal-2023.4.1/jal/widgets/dividend_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     8393 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/widgets/helpers.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    12298 2023-02-25 18:52:44.000000 jal-2023.4.1/jal/widgets/income_spending_widget.py
++-rwxr-xr-x   0 vtitov    (1000) vtitov    (1000)    13211 2023-03-06 11:43:59.000000 jal-2023.4.1/jal/widgets/main_window.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3391 2023-03-08 18:22:55.000000 jal-2023.4.1/jal/widgets/mdi.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2854 2022-12-26 13:26:40.000000 jal-2023.4.1/jal/widgets/operations_tabs.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7010 2023-02-20 13:28:14.000000 jal-2023.4.1/jal/widgets/operations_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5935 2022-08-21 07:15:06.000000 jal-2023.4.1/jal/widgets/price_chart.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5666 2023-03-31 10:41:38.000000 jal-2023.4.1/jal/widgets/qr_scanner.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    11082 2023-02-27 16:00:28.000000 jal-2023.4.1/jal/widgets/reference_data.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    21662 2023-02-27 15:30:11.000000 jal-2023.4.1/jal/widgets/reference_dialogs.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     4863 2023-02-19 18:07:24.000000 jal-2023.4.1/jal/widgets/reference_selector.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)      632 2022-12-26 08:54:07.000000 jal-2023.4.1/jal/widgets/register_designer_plugins.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     3462 2023-02-23 10:23:05.000000 jal-2023.4.1/jal/widgets/selection_dialog.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     7701 2023-02-08 10:33:24.000000 jal-2023.4.1/jal/widgets/tax_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     6922 2022-12-26 10:36:44.000000 jal-2023.4.1/jal/widgets/trade_widget.py
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)    10120 2023-04-05 22:37:44.000000 jal-2023.4.1/jal/widgets/transfer_widget.py
++drwxr-xr-x   0 vtitov    (1000) vtitov    (1000)        0 2023-04-06 16:45:36.518908 jal-2023.4.1/jal.egg-info/
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     2726 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/PKG-INFO
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     5592 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/SOURCES.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)        1 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/dependency_links.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       37 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/entry_points.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       67 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/requires.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       10 2023-04-06 16:45:36.000000 jal-2023.4.1/jal.egg-info/top_level.txt
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)       38 2023-04-06 16:45:36.605576 jal-2023.4.1/setup.cfg
++-rw-r--r--   0 vtitov    (1000) vtitov    (1000)     1733 2023-01-19 11:44:27.000000 jal-2023.4.1/setup.py
+```
+
+### Comparing `jal-2023.3.1/PKG-INFO` & `jal-2023.4.1/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jal
+-Version: 2023.3.1
++Version: 2023.4.1
+ Summary: Just Another Ledger - project to track personal financial records
+ Home-page: https://github.com/titov-vv/jal
+ Author-email: jal@gmx.ru
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Topic :: Office/Business
+ Classifier: Topic :: Office/Business :: Financial
+ Classifier: Topic :: Office/Business :: Financial :: Accounting
+```
+
+### Comparing `jal-2023.3.1/docs/README.md` & `jal-2023.4.1/docs/README.md`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -53,14 +53,20 @@
+ Database will be initialized automatically with minimal required set of data, and you will be able to start use the program.
+ 
+ <sup>*</sup> - entry point location is platform dependable. E.g. on Linux it might be in `~/.local/run`, on Windows - `Scripts` directory of your python installation or `Appdata/Roaming/Python/.../Scripts/` in user profile path.
+ 
+ ### Upgrades
+ If you installed *jal* via *pip* then you may upgrade it to newer version with help of command `pip install jal -U`
+ 
++### Tax report for investment account
++
++Tax report can be prepared based on data from any broker if operations are present in JAL. Tax reports are supported for Russia and Portugal.    
++You can import operations from broker statement with help of menu *Import->Statement*.  
++Step-by-step example (in russian language) of Russian tax report preparation for Interactive Brokers can be found on [this page](https://github.com/titov-vv/jal/blob/master/docs/ru-tax-3ndfl/taxes.md). 
++Use contacts from beginning of this page if you need support regarding statements or reports.
+ 
+ ### Screenshots
+ Qt have a better look on Linux out of the box. Here is main program window:  
+ ![Main Window on Linux](https://github.com/titov-vv/jal/blob/master/docs/img/main_linux.png?raw=true)
+ 
+ The same window on Windows - the same functions with a bit different look:  
+ ![Main Window on Windows](https://github.com/titov-vv/jal/blob/master/docs/img/main_windows.png?raw=true)
+```
+
+### Comparing `jal-2023.3.1/jal/constants.py` & `jal-2023.4.1/jal/constants.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ from PySide6.QtGui import QColor
+ from PySide6.QtWidgets import QApplication, QComboBox
+ 
+ 
+ class Setup:
+     DB_PATH = "jal.sqlite"
+     DB_CONNECTION = "JAL.DB"
+-    DB_REQUIRED_VERSION = 43
++    DB_REQUIRED_VERSION = 44
+     SQLITE_MIN_VERSION = "3.35"
+     MAIN_WND_NAME = "JAL_MainWindow"
+     INIT_SCRIPT_PATH = 'jal_init.sql'
+     UPDATES_PATH = 'updates'
+     ICONS_PATH = "img"
+     IMPORT_PATH = "data_import"
+     EXPORT_PATH = "data_export"
+```
+
+### Comparing `jal-2023.3.1/jal/data_export/dlsg.py` & `jal-2023.4.1/jal/data_export/dlsg.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/tax_reports/portugal.json` & `jal-2023.4.1/jal/data_export/tax_reports/portugal.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/tax_reports/portugal.py` & `jal-2023.4.1/jal/data_export/tax_reports/portugal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/tax_reports/russia.json` & `jal-2023.4.1/jal/data_export/tax_reports/russia.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/tax_reports/russia.py` & `jal-2023.4.1/jal/data_export/tax_reports/russia.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/taxes.py` & `jal-2023.4.1/jal/data_export/taxes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/taxes_flow.py` & `jal-2023.4.1/jal/data_export/taxes_flow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_prt_dividends.json` & `jal-2023.4.1/jal/data_export/templates/tax_prt_dividends.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_prt_shares.json` & `jal-2023.4.1/jal/data_export/templates/tax_prt_shares.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_bonds.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_bonds.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_corporate_actions.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_corporate_actions.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_crypto.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_crypto.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_derivatives.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_derivatives.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_dividends.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_dividends.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_fees.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_fees.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_flow.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_flow.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_interests.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_interests.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/templates/tax_rus_trades.json` & `jal-2023.4.1/jal/data_export/templates/tax_rus_trades.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_export/xlsx.py` & `jal-2023.4.1/jal/data_export/xlsx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/ibkr.py` & `jal-2023.4.1/jal/data_import/broker_statements/ibkr.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -221,14 +221,15 @@
+                                             ('accountId', 'account', IBKR_Account, None),
+                                             ('symbol', 'asset', IBKR_Asset, 0),
+                                             ('currency', 'currency', IBKR_Currency, None),
+                                             ('dateTime', 'timestamp', datetime, None),
+                                             ('reportDate', 'reported', datetime, None),
+                                             ('amount', 'amount', float, None),
+                                             ('tradeID', 'number', str, ''),
++                                            ('transactionID', 'tid', str, ''),
+                                             ('description', 'description', str, None)],
+                                  'loader': self.load_cash_transactions},
+             'ChangeInDividendAccruals': {'tag': 'ChangeInDividendAccrual',
+                                          'level': 'DETAIL',
+                                          'values': [('code', 'code', str, None),
+                                                     ('accountId', 'account', IBKR_Account, None),
+                                                     ('symbol', 'asset', IBKR_Asset, 0),
+@@ -753,42 +754,46 @@
+             vesting['id'] = asset_payments_base + i
+             vesting['type'] = FOF.PAYMENT_STOCK_VESTING
+             self._data[FOF.ASSET_PAYMENTS].append(vesting)
+             cnt += 1
+         logging.info(self.tr("Stock vestings loaded: ") + f"{cnt} ({len(vestings)})")
+ 
+     def load_cash_transactions(self, cash):
++        drop_fields = lambda x, y: {i: x[i] for i in x if i not in y}  # removes from dict(x) fields listed in [y]
+         cnt = 0
+         dividends = list(filter(lambda tr: tr['type'] in ['Dividends', 'Payment In Lieu Of Dividends'], cash))
++        dividends = [drop_fields(x, ['tid']) for x in dividends]  # remove 'tid' field as not used for dividends
+         dividends = self.aggregate_dividends(dividends)
+         asset_payments_base = max([0] + [x['id'] for x in self._data[FOF.ASSET_PAYMENTS]]) + 1
+         for i, dividend in enumerate(dividends):
+             dividend['id'] = asset_payments_base + i
+             dividend['type'] = FOF.PAYMENT_DIVIDEND
+             self.drop_extra_fields(dividend, ["currency", "reported"])
+             self._data[FOF.ASSET_PAYMENTS].append(dividend)
+             cnt += 1
+         asset_payments_base += cnt
+         bond_interests = list(filter(lambda tr: tr['type'] in ['Bond Interest Paid', 'Bond Interest Received'], cash))
+         for i, bond_interest in enumerate(bond_interests):
+             bond_interest['id'] = asset_payments_base + i
+             bond_interest['type'] = FOF.PAYMENT_INTEREST
+-            self.drop_extra_fields(bond_interest, ["currency", "reported"])
++            self.drop_extra_fields(bond_interest, ["currency", "reported", "tid"])
+             self._data[FOF.ASSET_PAYMENTS].append(bond_interest)
+             cnt += 1
+ 
+         taxes = list(filter(lambda tr: tr['type'] == 'Withholding Tax', cash))
++        taxes = [drop_fields(x, ['tid']) for x in taxes]
+         taxes = self.aggregate_taxes(taxes)
+         for tax in taxes:
+             cnt += self.apply_tax_withheld(tax)
+ 
+         transfer_base = max([0] + [x['id'] for x in self._data[FOF.TRANSFERS]]) + 1
+         transfers = list(filter(lambda tr: tr['type'] == 'Deposits/Withdrawals', cash))
+         for i, transfer in enumerate(transfers):
+             transfer['id'] = transfer_base + i
++            transfer['number'] = transfer.pop('tid')
+             transfer['asset'] = [transfer['currency'], transfer['currency']]
+             if transfer['amount'] >= 0:  # Deposit
+                 transfer['account'] = [0, transfer['account'], 0]
+                 transfer['withdrawal'] = transfer['deposit'] = transfer['amount']
+             else:  # Withdrawal
+                 transfer['account'] = [transfer['account'], 0, 0]
+                 transfer['withdrawal'] = transfer['deposit'] = -transfer['amount']
+@@ -806,24 +811,23 @@
+             fee['id'] = payment_base + i
+             fee['peer'] = 0
+             if fee['type'] == 'Broker Interest Received':
+                 category = -PredefinedCategory.Interest
+             else:
+                 category = -PredefinedCategory.Fees
+             fee['lines'] = [{'amount': fee['amount'], 'category': category, 'description': fee['description']}]
+-            self.drop_extra_fields(fee, ["type", "amount", "description", "asset", "number", "currency", "reported"])
++            self.drop_extra_fields(fee, ["type", "amount", "description", "asset", "number", "currency", "reported", "tid"])
+             self._data[FOF.INCOME_SPENDING].append(fee)
+             cnt += 1
+ 
+         logging.info(self.tr("Cash transactions loaded: ") + f"{cnt} ({len(cash)})")
+ 
+     # Method takes a list of dividend dictionaries and checks for REVERSAL and CANCEL
+     # For such description it looks for matching record (for the same symbol) with opposite amount and the same payment
+     # and report dates. Description may be different!
+-    # FIXME - this algo may be not fully correct for CANCEL as it may cancel older record - Dividend Accruals may probably help
+     def aggregate_dividends(self, dividends: list) -> list:
+         is_reversal = lambda x: self.ReversalSuffix in x or x.startswith(self.CancelPrefix)
+         payments = [x for x in deepcopy(dividends) if not is_reversal(x['description'])]
+         reversals = [x for x in deepcopy(dividends) if is_reversal(x['description'])]
+         # Drop reversals that match payments exactly
+         for reversal in reversals:
+             t_payment = deepcopy(reversal)  # target payment to search for
+@@ -832,17 +836,24 @@
+             t_payment['amount'] = -t_payment['amount']
+             if t_payment not in payments:
+                 no_description = lambda x: {i:x[i] for i in x if i != 'description'}
+                 m_payments = [x for x in payments if no_description(x) == no_description(t_payment)]
+                 if len(m_payments):
+                     payments.remove(m_payments[0])
+                     logging.warning(self.tr("Payment was reversed by approximate description: ") +
+-                             f"{ts2dt(t_payment['timestamp'])}, '{t_payment['description']}': {t_payment['amount']}")
+-                else:
+-                    raise Statement_ImportError(self.tr("Can't find match for reversal: ") + f"{reversal}")
++                                    f"{ts2dt(t_payment['timestamp'])}, '{t_payment['description']}': {t_payment['amount']}")
++                    continue
++                no_reported = lambda x: {i: x[i] for i in x if i != 'reported'}
++                m_payments = [x for x in payments if no_reported(x) == no_reported(t_payment)]
++                if len(m_payments):
++                    payments.remove(m_payments[0])   # FIXME - this branch may lead to non-reversed taxes theoretically
++                    logging.warning(self.tr("Payment was reversed with different reported date: ") +
++                                    f"{ts2dt(t_payment['timestamp'])}, '{t_payment['description']}': {t_payment['amount']}")
++                    continue
++                raise Statement_ImportError(self.tr("Can't find match for reversal: ") + f"{reversal}")
+             else:
+                 payments.remove(t_payment) # Source payment found -> remove it
+                 logging.info(self.tr("Payment was reversed: ") +
+                              f"{ts2dt(t_payment['timestamp'])}, '{t_payment['description']}': {t_payment['amount']}")
+         return payments
+ 
+     # Method takes a list of taxes and checks if we have the same amount added and deducted the same day
+```
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/just2trade.py` & `jal-2023.4.1/jal/data_import/broker_statements/just2trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/kit.py` & `jal-2023.4.1/jal/data_import/broker_statements/kit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/open_portfolio.py` & `jal-2023.4.1/jal/data_import/broker_statements/open_portfolio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/openbroker.py` & `jal-2023.4.1/jal/data_import/broker_statements/openbroker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/psb.py` & `jal-2023.4.1/jal/data_import/broker_statements/psb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/broker_statements/uralsib.py` & `jal-2023.4.1/jal/data_import/broker_statements/uralsib.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/category_recognizer.py` & `jal-2023.4.1/jal/data_import/category_recognizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/import_schema.json` & `jal-2023.4.1/jal/data_import/import_schema.json`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/slips.py` & `jal-2023.4.1/jal/data_import/slips.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -361,15 +361,15 @@
+             JalCategory(row['category']).add_or_update_mapped_name(row['name'])
+         operation = {
+             "timestamp": self.SlipDateTime.dateTime().toSecsSinceEpoch(),
+             "account_id": self.AccountEdit.selected_id,
+             "peer_id": self.PeerEdit.selected_id,
+             "lines": details
+         }
+-        LedgerTransaction().create_new(LedgerTransaction.IncomeSpending, operation)
++        LedgerTransaction.create_new(LedgerTransaction.IncomeSpending, operation)
+         JalPeer(self.PeerEdit.selected_id).add_or_update_mapped_name(self.SlipShopName.text(), )
+         self.clearSlipData()
+ 
+     def clearSlipData(self):
+         self.QR_data = ''
+         self.slip_json = None
+         self.slip_lines = None
+```
+
+### Comparing `jal-2023.3.1/jal/data_import/slips_tax.py` & `jal-2023.4.1/jal/data_import/slips_tax.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/statement.py` & `jal-2023.4.1/jal/data_import/statement.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -202,20 +202,27 @@
+         for symbol in self._data[FOF.SYMBOLS]:
+             if symbol['asset'] < 0:  # already matched
+                 continue
+             asset = self._find_in_list(self._data[FOF.ASSETS], "id", symbol['asset'])
+             search_data = {'symbol': symbol['symbol'], 'type': self._asset_types[asset['type']]}
+             self._uppend_keys_from(search_data, asset, ['isin'])
+             data = self._find_in_list(self._data[FOF.ASSETS_DATA], "asset", symbol['asset'])
++            reg_number = ''
+             if data is not None:
+                 self._uppend_keys_from(search_data, data, ['expiry'])
+-            asset_id = JalAsset(data=search_data, search=True, create=False).id()
+-            if asset_id:
+-                old_id, asset['id'] = asset['id'], -asset_id
+-                self._update_id("asset", old_id, asset_id)
++                reg_number = data['reg_number'] if 'reg_number' in data else ''
++            db_asset = JalAsset(data=search_data, search=True, create=False)
++            db_id = db_asset.id()
++            if db_id:
++                if db_asset.isin() and 'isin' in asset and asset['isin'] and db_asset.isin() != asset['isin']:
++                    continue  # verify that we don't have ISIN mismatch
++                if db_asset.reg_number() and reg_number and db_asset.reg_number() != reg_number:
++                    continue  # verify that we don't have reg.number mismatch
++                old_id, asset['id'] = asset['id'], -db_id
++                self._update_id("asset", old_id, db_id)
+ 
+     # Check and replace IDs for Accounts
+     def _match_account_ids(self):
+         for account in self._data[FOF.ACCOUNTS]:
+             account_data = account.copy()
+             account_data['currency'] = -account['currency']
+             account_id = JalAccount(data=account_data, search=True, create=False).id()
+@@ -372,15 +379,15 @@
+             if action['peer_id'] == 0:
+                 action['peer_id'] = JalAccount(action['account_id']).organization()
+             for line in action['lines']:
+                 if line['category'] >= 0:
+                     raise Statement_ImportError(self.tr("Unmatched category for income/spending: ") + f"{action}")
+                 line['category_id'] = -line.pop('category')
+                 line['note'] = line.pop('description')
+-            LedgerTransaction().create_new(LedgerTransaction.IncomeSpending, action)
++            LedgerTransaction.create_new(LedgerTransaction.IncomeSpending, action)
+     
+     def _import_transfers(self, transfers):
+         for transfer in transfers:
+             for account in transfer['account']:
+                 if account > 0:
+                     raise Statement_ImportError(self.tr("Unmatched account for transfer: ") + f"{transfer}")
+             for asset in transfer['asset']:
+@@ -415,25 +422,23 @@
+                     transfer['account'][1] = -chosen_account
+             if asset_types[0] != PredefinedAsset.Money:
+                 transfer['asset'] = -transfer['asset'][0]
+             else:
+                 transfer.pop('asset')
+             if 'description' in transfer:
+                 transfer['note'] = transfer.pop('description')
+-            if 'number' in transfer:
+-                transfer.pop('number')   # it isn't stored in Jal
+             transfer['withdrawal_timestamp'] = transfer['deposit_timestamp'] = transfer.pop('timestamp')
+             transfer['withdrawal_account'] = -transfer['account'][0]
+             transfer['deposit_account'] = -transfer['account'][1]
+             transfer['fee_account'] = -transfer['account'][2]
+             transfer.pop('account')
+             if abs(transfer['fee']) < 1e-10:  # FIXME  Need to refactor this module for decimal usage
+                 transfer.pop('fee_account')
+                 transfer.pop('fee')
+-            LedgerTransaction().create_new(LedgerTransaction.Transfer, transfer)
++            LedgerTransaction.create_new(LedgerTransaction.Transfer, transfer)
+ 
+     def _import_trades(self, trades):
+         for trade in trades:
+             if trade['account'] > 0:
+                 raise Statement_ImportError(self.tr("Unmatched account for trade: ") + f"{trade}")
+             trade['account_id'] = -trade.pop('account')
+             if trade['asset'] > 0:
+@@ -443,15 +448,15 @@
+             if 'cancelled' in trade and trade['cancelled']:
+                 del trade['cancelled']          # Remove extra data
+                 trade['qty'] = -trade['qty']    # Change side as cancellation is an opposite operation
+                 oid = LedgerTransaction().find_operation(LedgerTransaction.Trade, trade)
+                 if oid:
+                     LedgerTransaction.get_operation(LedgerTransaction.Trade, oid).delete()
+                 continue
+-            LedgerTransaction().create_new(LedgerTransaction.Trade, trade)
++            LedgerTransaction.create_new(LedgerTransaction.Trade, trade)
+ 
+     def _import_asset_payments(self, payments):
+         for payment in payments:
+             if payment['account'] > 0:
+                 raise Statement_ImportError(self.tr("Unmatched account for payment: ") + f"{payment}")
+             payment['account_id'] = -payment.pop('account')
+             if payment['asset'] > 0:
+@@ -461,31 +466,31 @@
+             if 'price' in payment:
+                 JalAsset(payment['asset_id']).set_quotes(
+                     [{'timestamp': payment['timestamp'], 'quote': Decimal(payment.pop('price'))}],
+                     JalAccount(payment['account_id']).currency())
+             if payment['type'] == FOF.PAYMENT_DIVIDEND:
+                 if payment['id'] > 0:  # New dividend
+                     payment['type'] = Dividend.Dividend
+-                    LedgerTransaction().create_new(LedgerTransaction.Dividend, payment)
++                    LedgerTransaction.create_new(LedgerTransaction.Dividend, payment)
+                 else:  # Dividend exists, only tax to be updated
+                     dividend = LedgerTransaction.get_operation(LedgerTransaction.Dividend, -payment['id'])
+                     dividend.update_tax(payment['tax'])
+             elif payment['type'] == FOF.PAYMENT_INTEREST:
+                 payment['type'] = Dividend.BondInterest
+-                LedgerTransaction().create_new(LedgerTransaction.Dividend, payment)
++                LedgerTransaction.create_new(LedgerTransaction.Dividend, payment)
+             elif payment['type'] == FOF.PAYMENT_STOCK_DIVIDEND:
+                 if payment['id'] > 0:  # New dividend
+                     payment['type'] = Dividend.StockDividend
+-                    LedgerTransaction().create_new(LedgerTransaction.Dividend, payment)
++                    LedgerTransaction.create_new(LedgerTransaction.Dividend, payment)
+                 else:  # Dividend exists, only tax to be updated
+                     dividend = LedgerTransaction.get_operation(LedgerTransaction.Dividend, -payment['id'])
+                     dividend.update_tax(payment['tax'])
+             elif payment['type'] == FOF.PAYMENT_STOCK_VESTING:
+                 payment['type'] = Dividend.StockVesting
+-                LedgerTransaction().create_new(LedgerTransaction.Dividend, payment)
++                LedgerTransaction.create_new(LedgerTransaction.Dividend, payment)
+             else:
+                 raise Statement_ImportError(self.tr("Unsupported payment type: ") + f"{payment}")
+ 
+     def _import_corporate_actions(self, actions):
+         for action in actions:
+             if action['account'] > 0:
+                 raise Statement_ImportError(self.tr("Unmatched account for corporate action: ") + f"{action}")
+@@ -501,15 +506,15 @@
+                 item['asset_id'] = -item.pop('asset')
+                 item['qty'] = item.pop('quantity')
+                 item['value_share'] = item.pop('share')
+             try:
+                 action['type'] = self._corp_actions[action.pop('type')]
+             except KeyError:
+                 raise Statement_ImportError(self.tr("Unsupported corporate action: ") + f"{action}")
+-            LedgerTransaction().create_new(LedgerTransaction.CorporateAction, action)
++            LedgerTransaction.create_new(LedgerTransaction.CorporateAction, action)
+ 
+     def select_account(self, text, account_id, recent_account_id=0):
+         if "pytest" in sys.modules:
+             return 1    # Always return 1st account if we are in testing mode
+         dialog = SelectAccountDialog(text, account_id, recent_account=recent_account_id)
+         if dialog.exec() != QDialog.Accepted:
+             return 0
+```
+
+### Comparing `jal-2023.3.1/jal/data_import/statement_xls.py` & `jal-2023.4.1/jal/data_import/statement_xls.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/statement_xml.py` & `jal-2023.4.1/jal/data_import/statement_xml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/data_import/statements.py` & `jal-2023.4.1/jal/data_import/statements.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -23,15 +23,19 @@
+         self.loadStatementsList()
+ 
+     def loadStatementsList(self):
+         statements_folder = get_app_path() + Setup.IMPORT_PATH + os.sep + Setup.STATEMENT_PATH
+         statement_modules = [filename[:-3] for filename in os.listdir(statements_folder) if filename.endswith(".py")]
+         for module_name in statement_modules:
+             logging.debug(f"Trying to load statement module: {module_name}")
+-            module = importlib.import_module(f"jal.data_import.broker_statements.{module_name}")
++            try:
++                module = importlib.import_module(f"jal.data_import.broker_statements.{module_name}")
++            except ImportError:
++                logging.error(self.tr("Statement module can't be imported: ") + module_name)
++                continue
+             try:
+                 statement_class_name = getattr(module, "JAL_STATEMENT_CLASS")
+             except AttributeError:
+                 continue
+             try:
+                 class_instance = getattr(module, statement_class_name)
+             except AttributeError:
+```
+
+### Comparing `jal-2023.3.1/jal/db/account.py` & `jal-2023.4.1/jal/db/account.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/asset.py` & `jal-2023.4.1/jal/db/asset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/backup_restore.py` & `jal-2023.4.1/jal/db/backup_restore.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/balances_model.py` & `jal-2023.4.1/jal/db/balances_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/category.py` & `jal-2023.4.1/jal/db/category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/closed_trade.py` & `jal-2023.4.1/jal/db/closed_trade.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/country.py` & `jal-2023.4.1/jal/db/country.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/db.py` & `jal-2023.4.1/jal/db/db.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -299,17 +299,18 @@
+ 
+     # This method creates a db record in 'table' name that describes relevant operation.
+     # 'data' is a dict that contains operation data and dict 'fields' describes it having
+     # 'mandatory'=True if this piece must be present, 'validation'=True if it is used to check if operation is
+     # present in database already (and 'default' is used for this check if no value provided in 'data')
+     def create_operation(self, table_name, fields, data):
+         self.validate_operation_data(table_name, fields, data)
+-        if self.locate_operation(table_name, fields, data):
+-            logging.info(self.tr("Operation already present in db: ") + f"{table_name}, {data}")
+-            return 0
++        oid = self.locate_operation(table_name, fields, data)
++        if oid:
++            logging.warning(self.tr("Operation already present in db and was skipped: ") + f"{table_name}, {data}")
++            return oid
+         else:
+             oid = self.insert_operation(table_name, fields, data)
+         children = [x for x in fields if 'children' in fields[x] and fields[x]['children']]
+         for child in children:
+             for item in data[child]:
+                 item[fields[child]['child_pid']] = oid
+                 self.create_operation(fields[child]['child_table'], fields[child]['child_fields'], item)
+```
+
+### Comparing `jal-2023.3.1/jal/db/helpers.py` & `jal-2023.4.1/jal/db/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/holdings_model.py` & `jal-2023.4.1/jal/db/holdings_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/ledger.py` & `jal-2023.4.1/jal/db/ledger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/operations.py` & `jal-2023.4.1/jal/db/operations.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -734,14 +734,15 @@
+         "withdrawal_account": {"mandatory": True, "validation": True},
+         "withdrawal": {"mandatory": True, "validation": True,},
+         "deposit_timestamp": {"mandatory": True, "validation": True},
+         "deposit_account": {"mandatory": True, "validation": True},
+         "deposit": {"mandatory": True, "validation": True},
+         "fee_account": {"mandatory": False, "validation": True, "default": None},
+         "fee": {"mandatory": False, "validation": True, "default": None},
++        "number": {"mandatory": False, "validation": True, "default": ''},
+         "asset": {"mandatory": False, "validation": True, "default": None},
+         "note": {"mandatory": False, "validation": False}
+     }
+ 
+     def __init__(self, operation_id=None, display_type=None):
+         labels = {
+             Transfer.Outgoing: ('<', CustomColor.DarkBlue),
+@@ -749,15 +750,16 @@
+             Transfer.Fee: ('=', CustomColor.DarkRed)
+         }
+         super().__init__(operation_id)
+         self._otype = LedgerTransaction.Transfer
+         self._display_type = display_type
+         self._data = self._read("SELECT t.withdrawal_timestamp, t.withdrawal_account, t.withdrawal, "
+                                 "t.deposit_timestamp, t.deposit_account, t.deposit, t.fee_account, t.fee, t.asset, "
+-                                "t.note FROM transfers AS t WHERE t.id=:oid", [(":oid", self._oid)], named=True)
++                                "t.number, t.note FROM transfers AS t WHERE t.id=:oid",
++                                [(":oid", self._oid)], named=True)
+         self._withdrawal_account = jal.db.account.JalAccount(self._data['withdrawal_account'])
+         self._withdrawal_account_name = self._withdrawal_account.name()
+         self._withdrawal_timestamp = self._data['withdrawal_timestamp']
+         self._withdrawal = Decimal(self._data['withdrawal'])
+         self._withdrawal_currency = JalAsset(self._withdrawal_account.currency()).symbol()
+         self._deposit_account = jal.db.account.JalAccount(self._data['deposit_account'])
+         self._deposit_account_name = self._deposit_account.name()
+@@ -769,26 +771,26 @@
+         self._fee_account_name = self._fee_account.name()
+         self._fee = Decimal(self._data['fee']) if self._data['fee'] else Decimal('0')
+         try:
+             self._label, self._label_color = labels[display_type]
+         except KeyError:
+             assert False, "Unknown transfer type"
+         self._asset = JalAsset(self._data['asset'])
++        self._number = self._data['number']
+         self._account = self._withdrawal_account
+         self._note = self._data['note']
+         if self._display_type == Transfer.Outgoing:
+             self._reconciled = self._withdrawal_account.reconciled_at() >= self._withdrawal_timestamp
+         elif self._display_type == Transfer.Incoming:
+             self._reconciled = self._deposit_account.reconciled_at() >= self._deposit_timestamp
+         elif self._display_type == Transfer.Fee:
+             self._reconciled = self._fee_account.reconciled_at() >= self._withdrawal_timestamp
+         else:
+             assert False, "Unknown transfer type"
+ 
+-
+     def timestamp(self):
+         if self._display_type == Transfer.Incoming:
+             return self._deposit_timestamp
+         else:
+             return self._withdrawal_timestamp
+ 
+     # This is required for compatibility with other asset actions, but it will also allow to get finish time of transfer
+```
+
+### Comparing `jal-2023.3.1/jal/db/operations_model.py` & `jal-2023.4.1/jal/db/operations_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/peer.py` & `jal-2023.4.1/jal/db/peer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/reference_models.py` & `jal-2023.4.1/jal/db/reference_models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/settings.py` & `jal-2023.4.1/jal/db/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/tax_estimator.py` & `jal-2023.4.1/jal/db/tax_estimator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/db/view_model.py` & `jal-2023.4.1/jal/db/view_model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/accept.png` & `jal-2023.4.1/jal/img/accept.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/add.png` & `jal-2023.4.1/jal/img/add.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/add_child.png` & `jal-2023.4.1/jal/img/add_child.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/cancel.png` & `jal-2023.4.1/jal/img/cancel.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/chart.png` & `jal-2023.4.1/jal/img/chart.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/copy.png` & `jal-2023.4.1/jal/img/copy.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/delete.png` & `jal-2023.4.1/jal/img/delete.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/ibkr.png` & `jal-2023.4.1/jal/img/ibkr.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/j2t.png` & `jal-2023.4.1/jal/img/j2t.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/jal.png` & `jal-2023.4.1/jal/img/jal.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/kit.png` & `jal-2023.4.1/jal/img/kit.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/list.png` & `jal-2023.4.1/jal/img/list.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/new.png` & `jal-2023.4.1/jal/img/new.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/open_portfolio.png` & `jal-2023.4.1/jal/img/open_portfolio.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/openbroker.ico` & `jal-2023.4.1/jal/img/openbroker.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/psb.ico` & `jal-2023.4.1/jal/img/psb.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/quik.ico` & `jal-2023.4.1/jal/img/quik.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/reconcile.png` & `jal-2023.4.1/jal/img/reconcile.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/remove.png` & `jal-2023.4.1/jal/img/remove.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/tax.png` & `jal-2023.4.1/jal/img/tax.png`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/img/uralsib.ico` & `jal-2023.4.1/jal/img/uralsib.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/jal.py` & `jal-2023.4.1/jal/jal.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/jal_init.sql` & `jal-2023.4.1/jal/jal_init.sql`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -349,19 +349,19 @@
+     withdrawal_account   INTEGER     NOT NULL REFERENCES accounts (id) ON DELETE CASCADE ON UPDATE CASCADE,
+     withdrawal           TEXT        NOT NULL,
+     deposit_timestamp    INTEGER     NOT NULL,
+     deposit_account      INTEGER     NOT NULL REFERENCES accounts (id) ON DELETE CASCADE ON UPDATE CASCADE,
+     deposit              TEXT        NOT NULL,
+     fee_account          INTEGER     REFERENCES accounts (id) ON DELETE CASCADE ON UPDATE CASCADE,
+     fee                  TEXT,
++    number               TEXT        NOT NULL DEFAULT (''),
+     asset                INTEGER     REFERENCES assets (id) ON DELETE CASCADE ON UPDATE CASCADE,
+     note                 TEXT
+ );
+ 
+-
+ -- Index: agents_by_name_idx
+ DROP INDEX IF EXISTS agents_by_name_idx;
+ CREATE INDEX agents_by_name_idx ON agents (name);
+ 
+ 
+ -- View: operation_sequence
+ DROP VIEW IF EXISTS operation_sequence;
+@@ -658,15 +658,15 @@
+ CREATE TRIGGER keep_predefined_categories BEFORE DELETE ON categories FOR EACH ROW WHEN OLD.special = 1
+ BEGIN
+     SELECT RAISE(ABORT, "JAL_SQL_MSG_0002");
+ END;
+ 
+ 
+ -- Initialize default values for settings
+-INSERT INTO settings(id, name, value) VALUES (0, 'SchemaVersion', 43);
++INSERT INTO settings(id, name, value) VALUES (0, 'SchemaVersion', 44);
+ INSERT INTO settings(id, name, value) VALUES (1, 'TriggersEnabled', 1);
+ -- INSERT INTO settings(id, name, value) VALUES (2, 'BaseCurrency', 1); -- Deprecated and ID shouldn't be re-used
+ INSERT INTO settings(id, name, value) VALUES (3, 'Language', 1);
+ INSERT INTO settings(id, name, value) VALUES (4, 'RuTaxClientSecret', 'IyvrAbKt9h/8p6a7QPh8gpkXYQ4=');
+ INSERT INTO settings(id, name, value) VALUES (5, 'RuTaxSessionId', '');
+ INSERT INTO settings(id, name, value) VALUES (6, 'RuTaxRefreshToken', '');
+ INSERT INTO settings(id, name, value) VALUES (7, 'RebuildDB', 0);
+```
+
+### Comparing `jal-2023.3.1/jal/languages/en.qm` & `jal-2023.4.1/jal/languages/en.qm`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/languages/ru.qm` & `jal-2023.4.1/jal/languages/ru.qm`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,5400 +1,5397 @@
+ 00000000: 3cb8 6418 caef 9c95 cd21 1cbf 60a1 bddd  <.d......!..`...
+-00000010: a700 0000 0572 755f 5255 4200 0019 c000  .....ru_RUB.....
++00000010: a700 0000 0572 755f 5255 4200 0019 b800  .....ru_RUB.....
+ 00000020: 0000 2300 001b 5100 0000 2300 002f 3f00  ..#...Q...#../?.
+-00000030: 0000 2300 012c b900 0000 2500 0092 5500  ..#..,....%...U.
++00000030: 0000 2300 012c 8d00 0000 2500 0091 9200  ..#..,....%.....
+ 00000040: 0004 7300 0005 b700 0005 3b00 0008 7800  ..s.......;...x.
+-00000050: 0005 af00 0132 f400 0031 0e00 007d f900  .....2...1...}..
+-00000060: 0031 0e00 0120 8d00 0046 3900 0003 7000  .1... ...F9...p.
+-00000070: 0046 3900 00a2 c000 0047 a400 0044 eb00  .F9......G...D..
+-00000080: 0048 7200 004d 7c00 0048 7200 0092 7c00  .Hr..M|..Hr...|.
+-00000090: 0048 b700 004d b300 0048 b700 0092 d700  .H...M...H......
+-000000a0: 004a 7a00 0046 e900 004a b300 004d ea00  .Jz..F...J...M..
+-000000b0: 004a b300 0093 8500 004b 1a00 0047 1400  .J.......K...G..
+-000000c0: 004b 3a00 0047 3f00 004c b200 004e 2100  .K:..G?..L...N!.
+-000000d0: 004c b200 0093 f100 004c b500 0012 eb00  .L.......L......
+-000000e0: 004c b500 012d bd00 0050 7e00 004e 5800  .L...-...P~..NX.
+-000000f0: 0050 7e00 0094 9a00 0051 3100 001e 0b00  .P~......Q1.....
+-00000100: 0051 3100 0030 b000 0051 bc00 004e 8f00  .Q1..0...Q...N..
+-00000110: 0051 bc00 0094 c700 0051 be00 004e c600  .Q.......Q...N..
+-00000120: 0051 be00 0094 f400 0052 ac00 0096 0200  .Q.......R......
+-00000130: 0052 ac00 0098 5b00 0053 3c00 0014 4f00  .R....[..S<...O.
+-00000140: 0053 3c00 0035 f500 0053 8200 004e fd00  .S<..5...S...N..
+-00000150: 0053 8200 0095 2100 0053 8900 004f 3400  .S....!..S...O4.
+-00000160: 0053 8900 0095 4e00 0055 6600 004f 6b00  .S....N..Uf..Ok.
+-00000170: 0055 6600 0095 a800 0055 a400 004f a200  .Uf......U...O..
+-00000180: 0055 a400 0095 d500 0058 b900 0014 b600  .U.......X......
++00000050: 0005 af00 0132 c800 0031 0e00 007d 3600  .....2...1...}6.
++00000060: 0031 0e00 0120 6100 0046 3900 0003 7000  .1... a..F9...p.
++00000070: 0046 3900 00a1 fd00 0047 a400 0044 eb00  .F9......G...D..
++00000080: 0048 7200 004d 7e00 0048 7200 0091 b900  .Hr..M~..Hr.....
++00000090: 0048 b700 004d b500 0048 b700 0092 1400  .H...M...H......
++000000a0: 004a 7a00 0046 e900 004a b300 004d ec00  .Jz..F...J...M..
++000000b0: 004a b300 0092 c200 004b 1a00 0047 1400  .J.......K...G..
++000000c0: 004b 3a00 0047 3f00 004c b200 004e 2300  .K:..G?..L...N#.
++000000d0: 004c b200 0093 2e00 004c b500 0012 eb00  .L.......L......
++000000e0: 004c b500 012d 9100 0050 7e00 004e 5a00  .L...-...P~..NZ.
++000000f0: 0050 7e00 0093 d700 0051 3100 001e 0b00  .P~......Q1.....
++00000100: 0051 3100 0030 b000 0051 bc00 004e 9100  .Q1..0...Q...N..
++00000110: 0051 bc00 0094 0400 0051 be00 004e c800  .Q.......Q...N..
++00000120: 0051 be00 0094 3100 0052 ac00 0095 3f00  .Q....1..R....?.
++00000130: 0052 ac00 0097 9800 0053 3c00 0014 4f00  .R.......S<...O.
++00000140: 0053 3c00 0035 f500 0053 8200 004e ff00  .S<..5...S...N..
++00000150: 0053 8200 0094 5e00 0053 8900 004f 3600  .S....^..S...O6.
++00000160: 0053 8900 0094 8b00 0055 6600 004f 6d00  .S.......Uf..Om.
++00000170: 0055 6600 0094 e500 0055 a400 004f a400  .Uf......U...O..
++00000180: 0055 a400 0095 1200 0058 b900 0014 b600  .U.......X......
+ 00000190: 0058 b900 001f 8a00 0058 b900 0036 5400  .X.......X...6T.
+-000001a0: 0058 b900 00a9 d200 0058 b900 011c 9500  .X.......X......
+-000001b0: 0058 b900 012e 5100 0059 c000 004f d900  .X....Q..Y...O..
+-000001c0: 0059 c000 0096 f900 005a 7700 002a fb00  .Y.......Zw..*..
+-000001d0: 005a 7700 0089 9800 005a 7700 0116 9800  .Zw......Zw.....
++000001a0: 0058 b900 00a9 0f00 0058 b900 011c 6900  .X.......X....i.
++000001b0: 0058 b900 012e 2500 0059 c000 004f db00  .X....%..Y...O..
++000001c0: 0059 c000 0096 3600 005a 7700 002a fb00  .Y....6..Zw..*..
++000001d0: 005a 7700 0088 d500 005a 7700 0116 6c00  .Zw......Zw...l.
+ 000001e0: 005a 8800 0032 2500 005b 2a00 0026 9700  .Z...2%..[*..&..
+-000001f0: 0070 7c00 005d bc00 047a 6e00 0005 4000  .p|..]...zn...@.
+-00000200: 047a 6e00 0115 7a00 0498 9800 008e e300  .zn...z.........
+-00000210: 04a6 7900 0085 1f00 04a8 a500 000d 3100  ..y...........1.
+-00000220: 04a8 a500 009f e100 04a8 a500 011b e500  ................
+-00000230: 04a8 d300 0091 5400 04cb c300 0094 1e00  ......T.........
+-00000240: 04cf 3a00 0034 ea00 04d9 5d00 0132 9400  ..:..4....]..2..
+-00000250: 04e3 1a00 0075 6d00 04e7 de00 000a 3900  .....um.......9.
+-00000260: 04e7 de00 000b a100 0504 cf00 0078 a000  .............x..
++000001f0: 0070 7c00 005c f900 047a 6e00 0005 4000  .p|..\...zn...@.
++00000200: 047a 6e00 0115 4e00 0498 9800 008e 2000  .zn...N....... .
++00000210: 04a6 7900 0084 5c00 04a8 a500 000d 3100  ..y...\.......1.
++00000220: 04a8 a500 009f 1e00 04a8 a500 011b b900  ................
++00000230: 04a8 d300 0090 9100 04cb c300 0093 5b00  ..............[.
++00000240: 04cf 3a00 0034 ea00 04d9 5d00 0132 6800  ..:..4....]..2h.
++00000250: 04e3 1a00 0074 aa00 04e7 de00 000a 3900  .....t........9.
++00000260: 04e7 de00 000b a100 0504 cf00 0077 dd00  .............w..
+ 00000270: 0528 a400 0035 1a00 0548 3500 0006 1b00  .(...5...H5.....
+ 00000280: 0548 3500 000a 6800 0548 3500 0010 ed00  .H5...h..H5.....
+-00000290: 0548 3500 008e 1900 0556 a500 0013 2400  .H5......V....$.
++00000290: 0548 3500 008d 5600 0556 a500 0013 2400  .H5...V..V....$.
+ 000002a0: 0556 a500 001e 3e00 0556 a500 002a c600  .V....>..V...*..
+-000002b0: 0556 a500 0031 2100 0556 a500 0053 b500  .V...1!..V...S..
+-000002c0: 0556 a500 012d f000 0556 a500 0132 bd00  .V...-...V...2..
++000002b0: 0556 a500 0031 2100 0556 a500 0054 6300  .V...1!..V...Tc.
++000002c0: 0556 a500 012d c400 0556 a500 0132 9100  .V...-...V...2..
+ 000002d0: 0565 c000 0042 f800 0566 be00 0035 bb00  .e...B...f...5..
+-000002e0: 0566 be00 011c 1700 056b c200 0055 6400  .f.......k...Ud.
+-000002f0: 05a3 0000 004b 0300 05a7 aa00 0117 7b00  .....K........{.
+-00000300: 05a7 e300 0119 8b00 05b3 d800 011a b400  ................
++000002e0: 0566 be00 011b eb00 056b c200 0056 1200  .f.......k...V..
++000002f0: 05a3 0000 004b 0300 05a7 aa00 0117 4f00  .....K........O.
++00000300: 05a7 e300 0119 5f00 05b3 d800 011a 8800  ......_.........
+ 00000310: 05c0 6500 0020 cf00 05c0 6500 0032 5500  ..e.. ....e..2U.
+ 00000320: 05db bb00 0026 c600 05fb 8200 0026 fc00  .....&.......&..
+-00000330: 1530 3000 0011 6600 18d1 5000 00ec 9000  .00...f...P.....
+-00000340: 2311 0000 0120 6000 26f2 9100 004b 2f00  #.... `.&....K/.
+-00000350: 2aa8 a100 0057 7200 2acf 0400 0057 f200  *....Wr.*....W..
+-00000360: 2b37 fe00 0058 fc00 2b76 1e00 0085 ee00  +7...X..+v......
+-00000370: 2ba7 e300 005b 6400 2ec7 e000 0044 8a00  +....[d......D..
+-00000380: 3153 c400 0094 5600 3d1a 0e00 005d 1700  1S....V.=....]..
+-00000390: 4182 8900 00fd 8f00 4796 c400 0078 2100  A.......G....x!.
+-000003a0: 47af 8000 009b f000 48a9 c400 0006 db00  G.......H.......
++00000330: 1530 3000 0011 6600 18d1 5000 00eb cd00  .00...f...P.....
++00000340: 2311 0000 0120 3400 26f2 9100 004b 2f00  #.... 4.&....K/.
++00000350: 2aa8 a100 0057 c100 2acf 0400 0057 f700  *....W..*....W..
++00000360: 2b37 fe00 0058 9d00 2b76 1e00 0085 2b00  +7...X..+v....+.
++00000370: 2ba7 e300 005a a100 2ec7 e000 0044 8a00  +....Z.......D..
++00000380: 3153 c400 0093 9300 3d1a 0e00 005c 5400  1S......=....\T.
++00000390: 4182 8900 00fc cc00 4796 c400 0077 5e00  A.......G....w^.
++000003a0: 47af 8000 009b 2d00 48a9 c400 0006 db00  G.....-.H.......
+ 000003b0: 48a9 c400 0011 b600 48a9 c400 001c 0600  H.......H.......
+ 000003c0: 48a9 c400 0028 c000 48a9 c400 002f 9700  H....(..H..../..
+-000003d0: 48a9 c400 009f 7c00 48a9 c400 00a9 a200  H.....|.H.......
+-000003e0: 48a9 c400 012d 0b00 48a9 c400 0131 9c00  H....-..H....1..
+-000003f0: 4964 b300 0090 5000 4988 b300 008e a900  Id....P.I.......
++000003d0: 48a9 c400 009e b900 48a9 c400 00a8 df00  H.......H.......
++000003e0: 48a9 c400 012c df00 48a9 c400 0131 7000  H....,..H....1p.
++000003f0: 4964 b300 008f 8d00 4988 b300 008d e600  Id......I.......
+ 00000400: 4a2b 8200 0045 f300 4a36 9500 0029 6f00  J+...E..J6...)o.
+-00000410: 4a36 9500 0046 2a00 4a36 9500 0074 7900  J6...F*.J6...ty.
++00000410: 4a36 9500 0046 2a00 4a36 9500 0073 b600  J6...F*.J6...s..
+ 00000420: 4a71 ec00 0024 5d00 4ab8 3300 0028 0000  Jq...$].J.3..(..
+-00000430: 4b6b 9000 0102 3200 4d68 c800 0091 8400  Kk....2.Mh......
+-00000440: 4d96 0a00 0025 0b00 4dc4 b300 0091 b900  M....%..M.......
+-00000450: 4e7e 1a00 0008 0a00 522b 5a00 0074 af00  N~......R+Z..t..
+-00000460: 52e9 5500 0014 0500 5308 d400 0096 6500  R.U.....S.....e.
+-00000470: 535d fe00 0075 9c00 5464 c900 0091 ec00  S]...u..Td......
+-00000480: 5464 c900 0095 7b00 5465 a800 0025 3a00  Td....{.Te...%:.
+-00000490: 5483 8a00 0008 3900 556a c300 0083 3d00  T.....9.Uj....=.
++00000430: 4b6b 9000 0101 6f00 4d68 c800 0090 c100  Kk....o.Mh......
++00000440: 4d96 0a00 0025 0b00 4dc4 b300 0090 f600  M....%..M.......
++00000450: 4e7e 1a00 0008 0a00 522b 5a00 0073 ec00  N~......R+Z..s..
++00000460: 52e9 5500 0014 0500 5308 d400 0095 a200  R.U.....S.......
++00000470: 535d fe00 0074 d900 5464 c900 0091 2900  S]...t..Td....).
++00000480: 5464 c900 0094 b800 5465 a800 0025 3a00  Td......Te...%:.
++00000490: 5483 8a00 0008 3900 556a c300 0082 7a00  T.....9.Uj....z.
+ 000004a0: 55da be00 0011 2f00 56bc 5a00 0049 be00  U...../.V.Z..I..
+-000004b0: 56bc 5a00 008d 0800 56bc 9300 008b 2800  V.Z.....V.....(.
+-000004c0: 578f 9500 0031 5800 578f 9500 012e 2400  W....1X.W.....$.
+-000004d0: 57a1 7200 0026 5200 5839 2400 006a e800  W.r..&R.X9$..j..
+-000004e0: 58c6 a500 00a0 1100 5948 5c00 0050 1000  X.......YH\..P..
+-000004f0: 5948 5c00 011a e800 5a73 0400 0019 7600  YH\.....Zs....v.
+-00000500: 5a73 0400 0020 4500 5a79 2700 0119 5500  Zs... E.Zy'...U.
+-00000510: 5a8a e000 011d 0200 5a8b c000 002e 9a00  Z.......Z.......
+-00000520: 5a8e c300 0097 2600 5a8e c300 0129 9e00  Z.....&.Z....)..
+-00000530: 5b6a 7c00 000c 7200 5b6a 7c00 0097 5b00  [j|...r.[j|...[.
++000004b0: 56bc 5a00 008c 4500 56bc 9300 008a 6500  V.Z...E.V.....e.
++000004c0: 578f 9500 0031 5800 578f 9500 012d f800  W....1X.W....-..
++000004d0: 57a1 7200 0026 5200 5839 2400 006a 2500  W.r..&R.X9$..j%.
++000004e0: 58c6 a500 009f 4e00 5948 5c00 0050 1200  X.....N.YH\..P..
++000004f0: 5948 5c00 011a bc00 5a73 0400 0019 7600  YH\.....Zs....v.
++00000500: 5a73 0400 0020 4500 5a79 2700 0119 2900  Zs... E.Zy'...).
++00000510: 5a8a e000 011c d600 5a8b c000 002e 9a00  Z.......Z.......
++00000520: 5a8e c300 0096 6300 5a8e c300 0129 7200  Z.....c.Z....)r.
++00000530: 5b6a 7c00 000c 7200 5b6a 7c00 0096 9800  [j|...r.[j|.....
+ 00000540: 5c06 8a00 004b b900 5c83 b500 0034 1800  \....K..\....4..
+-00000550: 5c83 b500 0036 bd00 5fb8 5a00 0081 1300  \....6.._.Z.....
+-00000560: 5fb8 5a00 012b 0200 602e 0a00 0055 0200  _.Z..+..`....U..
+-00000570: 67f7 0000 00f5 df00 70c5 c000 00c7 2500  g.......p.....%.
+-00000580: 80a8 e500 0048 fa00 81bc 0000 00cd 0e00  .....H..........
+-00000590: 918d 3700 003b 6c00 931f 2000 00d8 7d00  ..7..;l... ...}.
+-000005a0: 9472 3000 0070 2100 9688 5400 00d3 6000  .r0..p!...T...`.
+-000005b0: ab81 4000 0114 2400 af00 f000 00b6 0100  ..@...$.........
+-000005c0: af26 4500 0120 e400 b27d 9f00 0079 3600  .&E.. ...}...y6.
+-000005d0: b4d0 c500 0029 0500 b643 0000 00c1 aa00  .....)...C......
+-000005e0: c9db ba00 0063 1900 cfb0 f400 0030 3d00  .....c.......0=.
++00000550: 5c83 b500 0036 bd00 5fb8 5a00 0080 5000  \....6.._.Z...P.
++00000560: 5fb8 5a00 012a d600 602e 0a00 0055 b000  _.Z..*..`....U..
++00000570: 67f7 0000 00f5 1c00 70c5 c000 00c6 6200  g.......p.....b.
++00000580: 80a8 e500 0048 fa00 81bc 0000 00cc 4b00  .....H........K.
++00000590: 918d 3700 003b 6c00 931f 2000 00d7 ba00  ..7..;l... .....
++000005a0: 9472 3000 006f 5e00 9688 5400 00d2 9d00  .r0..o^...T.....
++000005b0: ab81 4000 0113 6100 af00 f000 00b5 3e00  ..@...a.......>.
++000005c0: af26 4500 0120 b800 b27d 9f00 0078 7300  .&E.. ...}...xs.
++000005d0: b4d0 c500 0029 0500 b643 0000 00c0 e700  .....)...C......
++000005e0: c9db ba00 0062 5600 cfb0 f400 0030 3d00  .....bV......0=.
+ 000005f0: e1f3 f000 0016 b900 e25b 3000 002c 2500  .........[0..,%.
+ 00000600: ed2c 2500 0027 2c00 fbe4 b100 0047 6a00  .,%..',......Gj.
+-00000610: ff6b fe00 00b3 3f01 11c0 6000 0135 2c01  .k....?...`..5,.
+-00000620: 2273 8300 008e 5701 24a2 9700 003c 2301  "s....W.$....<#.
+-00000630: 2bca d000 009e 6501 3502 c000 00c3 7901  +.....e.5.....y.
+-00000640: 473b 2300 0071 1201 5567 7000 00cc 6701  G;#..q..Ugp...g.
++00000610: ff6b fe00 00b2 7c01 11c0 6000 0135 0001  .k....|...`..5..
++00000620: 2273 8300 008d 9401 24a2 9700 003c 2301  "s......$....<#.
++00000630: 2bca d000 009d a201 3502 c000 00c2 b601  +.......5.......
++00000640: 473b 2300 0070 4f01 5567 7000 00cb a401  G;#..pO.Ugp.....
+ 00000650: 59b4 9000 001a 3901 6654 9000 003a 6301  Y.....9.fT...:c.
+-00000660: 7248 d000 0035 5401 776d e000 00d4 8001  rH...5T.wm......
+-00000670: 78c3 f500 0030 dc01 7e51 ea00 0127 5301  x....0..~Q...'S.
+-00000680: 873b 2300 0071 4401 887c d300 005d e801  .;#..qD..|...]..
+-00000690: 9687 c000 0109 1b01 98a7 5300 004b e801  ..........S..K..
+-000006a0: a469 f900 0100 2b01 a885 4000 0130 8d01  .i....+...@..0..
+-000006b0: aff7 3300 0000 0001 bef6 7000 00d1 7e01  ..3.......p...~.
+-000006c0: c26a 9a00 00a2 f501 ce0a 1200 008c 1101  .j..............
+-000006d0: d48e 5000 0042 5401 da69 b000 0112 b301  ..P..BT..i......
+-000006e0: e128 5000 00be b001 e26a 9a00 0004 2801  .(P......j....(.
+-000006f0: f571 7000 00bb bf02 00dd 0100 0043 9602  .qp..........C..
+-00000700: 01b8 4900 0039 b902 01b8 4900 0088 4d02  ..I..9....I...M.
+-00000710: 01b8 4900 00a2 8002 01b8 4900 0134 5402  ..I.......I..4T.
+-00000720: 24d1 2000 00dd 7602 2b24 6500 012a 6002  $. ...v.+$e..*`.
+-00000730: 36c0 e700 006d 2e02 38ab b000 00af d002  6....m..8.......
+-00000740: 488e 8300 0123 9f02 5442 2f00 0021 6902  H....#..TB/..!i.
+-00000750: 6b41 b400 012b 2d02 705b 1000 0060 6602  kA...+-.p[...`f.
+-00000760: 75ac 0500 00d6 cd02 76e6 2500 0043 2902  u.......v.%..C).
+-00000770: 80f4 7400 005b dc02 83cb 1900 00ac d202  ..t..[..........
+-00000780: 84df 6000 000c 3702 86cb d700 00ae 5f02  ..`...7......._.
+-00000790: 960b 0000 0101 5802 9d24 b400 00be 4d02  ......X..$....M.
+-000007a0: a013 f300 00d3 0502 b6bc 9300 0059 7602  .............Yv.
+-000007b0: b827 6100 00a4 bb02 c4de 6000 00c7 b302  .'a.......`.....
+-000007c0: d6b9 7000 00de 5102 d6b9 7000 00ea 3d02  ..p...Q...p...=.
+-000007d0: d6b9 7000 0100 af02 d6b9 7000 010b 7b02  ..p.......p...{.
+-000007e0: da2f f000 00b9 e902 db87 a000 00f0 d002  ./..............
++00000660: 7248 d000 0035 5401 776d e000 00d3 bd01  rH...5T.wm......
++00000670: 78c3 f500 0030 dc01 7e51 ea00 0127 2701  x....0..~Q...''.
++00000680: 873b 2300 0070 8101 887c d300 005d 2501  .;#..p...|...]%.
++00000690: 9687 c000 0108 5801 98a7 5300 004b e801  ......X...S..K..
++000006a0: a469 f900 00ff 6801 a885 4000 0130 6101  .i....h...@..0a.
++000006b0: aff7 3300 0000 0001 bef6 7000 00d0 bb01  ..3.......p.....
++000006c0: c26a 9a00 00a2 3201 ce0a 1200 008b 4e01  .j....2.......N.
++000006d0: d48e 5000 0042 5401 da69 b000 0111 f001  ..P..BT..i......
++000006e0: e128 5000 00bd ed01 e26a 9a00 0004 2801  .(P......j....(.
++000006f0: f571 7000 00ba fc02 00dd 0100 0043 9602  .qp..........C..
++00000700: 01b8 4900 0039 b902 01b8 4900 0087 8a02  ..I..9....I.....
++00000710: 01b8 4900 00a1 bd02 01b8 4900 0134 2802  ..I.......I..4(.
++00000720: 24d1 2000 00dc b302 2b24 6500 012a 3402  $. .....+$e..*4.
++00000730: 36c0 e700 006c 6b02 38ab b000 00af 0d02  6....lk.8.......
++00000740: 488e 8300 0123 7302 5442 2f00 0021 6902  H....#s.TB/..!i.
++00000750: 6b41 b400 012b 0102 705b 1000 005f a302  kA...+..p[..._..
++00000760: 75ac 0500 00d6 0a02 76e6 2500 0043 2902  u.......v.%..C).
++00000770: 80f4 7400 005b 1902 83cb 1900 00ac 0f02  ..t..[..........
++00000780: 84df 6000 000c 3702 86cb d700 00ad 9c02  ..`...7.........
++00000790: 960b 0000 0100 9502 9d24 b400 00bd 8a02  .........$......
++000007a0: a013 f300 00d2 4202 b6bc 9300 0059 1702  ......B......Y..
++000007b0: b827 6100 00a3 f802 c4de 6000 00c6 f002  .'a.......`.....
++000007c0: d6b9 7000 00dd 8e02 d6b9 7000 00e9 7a02  ..p.......p...z.
++000007d0: d6b9 7000 00ff ec02 d6b9 7000 010a b802  ..p.......p.....
++000007e0: da2f f000 00b9 2602 db87 a000 00f0 0d02  ./....&.........
+ 000007f0: ddd8 9000 0017 f302 e4ef 0400 001f c302  ................
+-00000800: e60b 0000 0077 a402 ecb9 d000 006e 2a03  .....w.......n*.
+-00000810: 0055 4a00 0126 bc03 0ae6 8700 0017 5e03  .UJ..&........^.
+-00000820: 0ae6 8700 001c e603 0b8a 5a00 007a b103  ..........Z..z..
+-00000830: 1108 9c00 012d 3403 1638 c400 0096 ad03  .....-4..8......
+-00000840: 1684 be00 001c 3903 2221 4000 00af 4703  ......9."!@...G.
+-00000850: 232f f000 00f2 1703 232f f000 0106 b603  #/......#/......
+-00000860: 3500 5a00 0088 0103 3f3c 8400 010f 2c03  5.Z.....?<....,.
+-00000870: 55cb 1a00 0076 0803 57fa 2e00 0074 f603  U....v..W....t..
+-00000880: 5dae f000 0107 6503 5dce f000 00e1 ea03  ].....e.].......
+-00000890: 6b8b d900 0122 7a03 7321 8300 010e 1003  k...."z.s!......
+-000008a0: 82a1 0000 00de 8203 8a06 2000 00fd ff03  .......... .....
+-000008b0: 8b39 a000 0102 9a03 8b60 e400 003e e403  .9.......`...>..
+-000008c0: 8c34 6500 0025 f903 8f4e c000 0111 ec03  .4e..%...N......
+-000008d0: 9100 d000 005f 6e03 97c9 0000 011e 5703  ....._n.......W.
+-000008e0: cafd 4000 0083 7603 d07e 2400 0069 0a03  ..@...v..~$..i..
++00000800: e60b 0000 0076 e102 ecb9 d000 006d 6703  .....v.......mg.
++00000810: 0055 4a00 0126 9003 0ae6 8700 0017 5e03  .UJ..&........^.
++00000820: 0ae6 8700 001c e603 0b8a 5a00 0079 ee03  ..........Z..y..
++00000830: 1108 9c00 012d 0803 1638 c400 0095 ea03  .....-...8......
++00000840: 1684 be00 001c 3903 2221 4000 00ae 8403  ......9."!@.....
++00000850: 232f f000 00f1 5403 232f f000 0105 f303  #/....T.#/......
++00000860: 3500 5a00 0087 3e03 3f3c 8400 010e 6903  5.Z...>.?<....i.
++00000870: 55cb 1a00 0075 4503 57fa 2e00 0074 3303  U....uE.W....t3.
++00000880: 5dae f000 0106 a203 5dce f000 00e1 2703  ].......].....'.
++00000890: 6b8b d900 0122 4e03 7321 8300 010d 4d03  k...."N.s!....M.
++000008a0: 82a1 0000 00dd bf03 8a06 2000 00fd 3c03  .......... ...<.
++000008b0: 8b39 a000 0101 d703 8b60 e400 003e e403  .9.......`...>..
++000008c0: 8c34 6500 0025 f903 8f4e c000 0111 2903  .4e..%...N....).
++000008d0: 9100 d000 005e ab03 97c9 0000 011e 2b03  .....^........+.
++000008e0: cafd 4000 0082 b303 d07e 2400 0068 4703  ..@......~$..hG.
+ 000008f0: d1c2 7400 0040 be03 d1e5 2200 0005 7103  ..t..@...."...q.
+-00000900: da9c f300 005b 9603 ec0c f700 003c e903  .....[.......<..
+-00000910: f69b 8000 00c5 d304 0029 e000 0121 c504  .........)...!..
+-00000920: 09f4 0a00 00bb 4b04 11d2 4900 000c a304  ......K...I.....
+-00000930: 11d2 a900 0056 8204 1263 4400 00b5 b304  .....V...cD.....
+-00000940: 1564 8e00 0028 8604 15b4 7000 0135 a504  .d...(....p..5..
+-00000950: 2e61 f000 0073 2c04 449a c000 0128 ac04  .a...s,.D....(..
+-00000960: 62c1 c000 00fd 0404 66ac 6500 0133 5604  b.......f.e..3V.
+-00000970: 7914 8000 00d0 1904 7d16 7000 006f 0604  y.......}.p..o..
+-00000980: 846c 5400 002a 5a04 846c 5400 0082 9a04  .lT..*Z..lT.....
+-00000990: 846c 5400 0088 d104 846c 5400 0131 6904  .lT......lT..1i.
+-000009a0: 8a9c b300 0009 4004 8a9c b300 0092 a904  ......@.........
+-000009b0: 8c2d c700 0065 8404 8c2d c700 007c 2f04  .-...e...-...|/.
+-000009c0: 8e23 4000 0000 c004 8e23 4000 001f 0f04  .#@......#@.....
+-000009d0: 8e23 4000 0054 8804 983c 8100 0045 bf04  .#@..T...<...E..
+-000009e0: 9849 bc00 0007 6104 9e16 8200 00ff ec04  .I....a.........
+-000009f0: 9e84 d500 0093 0404 a577 1f00 0067 3704  .........w...g7.
+-00000a00: a5e2 3000 0099 6f04 ac2c a500 0085 b504  ..0...o..,......
+-00000a10: ac2c a500 00a4 7f04 bebd 0000 00a7 fa04  .,..............
+-00000a20: c840 f000 00e7 bb04 c840 f000 00ea f604  .@.......@......
+-00000a30: c840 f000 010c b304 cc5c 9400 0027 7a04  .@.......\...'z.
+-00000a40: cf4d c200 00f6 6604 d7d5 4000 00ca 6804  .M....f...@...h.
+-00000a50: dd34 9000 0014 eb04 ee54 4000 010a 1b04  .4.......T@.....
+-00000a60: f6d3 c900 00d2 9e05 079c 7300 011e e505  ..........s.....
+-00000a70: 161e a000 00b5 3e05 2caa 5000 00b3 9c05  ......>.,.P.....
+-00000a80: 2cde 2300 00a5 1305 304c 6a00 0048 c405  ,.#.....0Lj..H..
+-00000a90: 33ee 2500 0014 7e05 33ee 2500 0036 2005  3.%...~.3.%..6 .
+-00000aa0: 3c8d c200 0017 9d05 3c8d c200 001d b305  <.......<.......
+-00000ab0: 3d7b 7000 00e7 5605 3d7b 7000 00ea 9105  ={p...V.={p.....
+-00000ac0: 3d7b 7000 0101 cd05 3d7b 7000 010b d005  ={p.....={p.....
+-00000ad0: 49ee 8900 0068 7005 4e5b d400 0114 7205  I....hp.N[....r.
+-00000ae0: 5305 de00 0076 5605 5316 ce00 0075 3505  S....vV.S....u5.
+-00000af0: 633f 7000 00e3 4405 6945 5000 00c4 8705  c?p...D.iEP.....
+-00000b00: 6bc4 2700 008a e705 6bcd a500 00b1 6705  k.'.....k.....g.
+-00000b10: 6c90 5400 0096 2f05 6ccc 4300 004a 9e05  l.T.../.l.C..J..
+-00000b20: 6edf f400 008d a305 6fe5 c000 00f1 8205  n.......o.......
+-00000b30: 802f 5e00 00b0 9b05 812d 6000 00ff 8f05  ./^......-`.....
+-00000b40: 88a7 e000 011c ca05 88a8 c000 004c f305  .............L..
+-00000b50: 8c6a c300 009f 3f05 8c6a c300 0116 2405  .j....?..j....$.
+-00000b60: 8cbc 8e00 004a 6805 98ab 6e00 008d e505  .....Jh...n.....
+-00000b70: 9ca9 f100 0038 4505 9dfd c000 00a7 7a05  .....8E.......z.
+-00000b80: 9e88 c300 0092 2105 a7f1 8700 0053 5f05  ......!......S_.
+-00000b90: adfb 2800 00a0 4c05 b039 5c00 000a a705  ..(...L..9\.....
+-00000ba0: b039 5c00 0116 6105 b093 0000 00c6 6105  .9\...a.......a.
+-00000bb0: b247 c400 009b 9605 c068 c000 0008 d305  .G.......h......
+-00000bc0: c1f8 2200 008d 4805 ced0 2500 00d7 4305  .."...H...%...C.
+-00000bd0: d5fa e400 0080 1d05 d5fa e400 0127 0c05  .............'..
+-00000be0: da03 6e00 005d 7705 dce3 0000 00cf 9f05  ..n..]w.........
+-00000bf0: dce3 0000 00ff 1605 dde3 7900 0060 9005  ..........y..`..
+-00000c00: e1ed 8400 00bc ac05 ecff 1900 00e9 cc05  ................
+-00000c10: f264 ba00 0046 5f05 f662 ea00 00ba d605  .d...F_..b......
+-00000c20: facb 8300 0090 8b06 0826 4000 00d5 1c06  .........&@.....
+-00000c30: 08e3 9400 007b 4706 0ab9 9000 00e0 4406  .....{G.......D.
+-00000c40: 129d e000 00dd 0506 148d a400 0021 0306  .............!..
+-00000c50: 1867 1e00 0099 b906 215f 7400 0062 c606  .g......!_t..b..
+-00000c60: 2b00 1300 0037 2906 2b00 1300 0037 b906  +....7).+....7..
+-00000c70: 2b00 1300 0039 3606 34af 4a00 0009 0306  +....96.4.J.....
+-00000c80: 3500 0f00 006b c106 3c17 4000 00da 5d06  5....k..<.@...].
+-00000c90: 3c17 4000 00e6 1906 3c17 4000 00f8 4f06  <.@.....<.@...O.
+-00000ca0: 3c17 4000 0111 9c06 3cee 8400 00ab 8606  <.@.....<.......
+-00000cb0: 468c a000 00b0 3106 4e38 c500 00a0 ed06  F.....1.N8......
+-00000cc0: 4f34 c000 010e 8e06 53a5 f500 004a 3306  O4......S....J3.
+-00000cd0: 580f ce00 0029 aa06 5a60 a900 00f6 b706  X....)..Z`......
+-00000ce0: 6318 9000 00e4 5806 68ee 6400 001b b706  c.....X.h.d.....
+-00000cf0: 69a9 8400 00a3 3e06 69b7 0200 0126 0d06  i.....>.i....&..
+-00000d00: 70e2 d000 006f 5d06 7cd1 c500 0049 4e06  p....o].|....IN.
+-00000d10: 7f33 4700 0031 d906 8786 ea00 00a2 1f06  .3G..1..........
+-00000d20: 88a1 2400 0132 0806 8f30 5000 011b 1806  ..$..2...0P.....
+-00000d30: 9b5a 7700 0116 fa06 9bb8 0c00 0038 0006  .Zw..........8..
+-00000d40: 9c50 2000 00c2 c706 9fb2 5300 00fc 3d06  .P .......S...=.
+-00000d50: a6d5 8300 0129 cd06 a8dd 9c00 0051 8506  .....).......Q..
+-00000d60: aef9 ce00 005a 5506 afe6 3000 0072 5806  .....ZU...0..rX.
+-00000d70: b017 2200 00a1 8e06 b8bb 6000 00a8 7b06  ..".......`...{.
+-00000d80: c10c 6000 00cd 9a06 c215 0a00 0007 1a06  ..`.............
+-00000d90: c227 5a00 0028 3706 c5bd 6a00 0122 4606  .'Z..(7...j.."F.
+-00000da0: ce8a a100 004b 7006 cf70 9900 0024 2206  .....Kp..p...$".
+-00000db0: d08b 2a00 00c8 6506 d81c 2e00 00d7 ae06  ..*...e.........
+-00000dc0: dbaf 2000 00ed f706 e231 4000 0129 2306  .. ......1@..)#.
+-00000dd0: e6c0 4c00 0051 ea07 0120 6600 0020 1307  ..L..Q... f.. ..
+-00000de0: 0140 6600 0019 1007 0923 2000 0061 d307  .@f......# ..a..
+-00000df0: 0ac3 fa00 00a1 e107 0e35 d000 00d9 fd07  .........5......
+-00000e00: 126c 4400 0136 2607 1d24 9000 0103 af07  .lD..6&..$......
+-00000e10: 1db9 0500 0012 a007 3389 e000 00b6 c707  ........3.......
+-00000e20: 3c71 f700 000e 9207 449d 1f00 00bd 1107  <q......D.......
+-00000e30: 47cf 0400 003f e607 4bcf e000 00e6 6907  G....?..K.....i.
+-00000e40: 5cec 7500 00a0 a907 62f5 3500 003f 6d07  \.u.....b.5..?m.
+-00000e50: 65e8 b400 007e cb07 65e8 b400 0125 6b07  e....~..e....%k.
+-00000e60: 6c21 5400 000b 2207 7e9b 0500 00e5 6a07  l!T...".~.....j.
+-00000e70: 9a56 2000 0070 7c07 9a6c 1400 000b d107  .V ..p|..l......
+-00000e80: 9a6c 1400 001b 7e07 9a6c 1400 002f 6507  .l....~..l.../e.
+-00000e90: 9a6c 1400 0051 4d07 9a6c 1400 0082 6707  .l...QM..l....g.
+-00000ea0: 9a6c 1400 012c dc07 9aa9 6000 00cb 0007  .l...,....`.....
+-00000eb0: 9db4 9000 00b8 d007 9db4 9000 00fb c907  ................
+-00000ec0: 9e2e 7300 0133 f307 a121 8000 0022 1607  ..s..3...!..."..
+-00000ed0: a674 8700 00a3 9107 bdfe de00 002c c607  .t...........,..
+-00000ee0: cf9a 7000 00f9 e907 d231 3400 0003 9f07  ..p......14.....
+-00000ef0: daae 0000 0103 4207 dae0 ea00 011a 0907  ......B.........
+-00000f00: e0a9 5000 000d cd07 e0a9 5000 008a 2807  ..P.......P...(.
+-00000f10: e0a9 5000 0118 1107 ebd7 9e00 00aa a907  ..P.............
+-00000f20: ebd7 9e00 00ad 9407 ec42 a500 0009 f107  .........B......
+-00000f30: ed5c 8000 0110 bb07 f3d4 e000 00c9 5a07  .\............Z.
+-00000f40: f714 e400 00f7 3808 0291 0000 0081 4408  ......8.......D.
+-00000f50: 08a7 9000 00c4 0208 1f02 9000 00b6 6708  ..............g.
+-00000f60: 283b 1400 00fc 9408 284d 4300 0084 8b08  (;......(MC.....
+-00000f70: 28e8 e000 00ee ae08 2a45 4a00 00a3 dc08  (.......*EJ.....
+-00000f80: 2fe7 9000 009d ed08 3267 1100 0007 cc08  /.......2g......
+-00000f90: 41da 6e00 0086 4308 46c5 3a00 0045 2008  A.n...C.F.:..E .
+-00000fa0: 4d37 c500 0093 4008 4e6b 2a00 0046 a708  M7....@.Nk*..F..
+-00000fb0: 4ef9 1500 005c e108 6186 7000 0071 7608  N....\..a.p..qv.
+-00000fc0: 6c71 e200 00ad 3508 6f32 c000 00d9 3e08  lq....5.o2....>.
+-00000fd0: 700d f000 00f9 6208 70b2 8b00 0076 e308  p.....b.p....v..
+-00000fe0: 7219 0f00 008a 5f08 7a4a 5000 0079 dd08  r....._.zJP..y..
+-00000ff0: 8284 d500 000c 0208 8284 d500 0082 ce08  ................
+-00001000: 8599 7200 0133 1d08 8958 2900 0128 5308  ..r..3...X)..(S.
+-00001010: 8b87 0000 00d0 d608 8fa4 9300 000f c508  ................
+-00001020: 8fa4 9300 0086 9108 8fa4 9300 008c 8d08  ................
+-00001030: 8fa4 9300 0116 c208 9a98 b400 0019 f408  ................
+-00001040: 9c61 5e00 011a 6408 a1a4 9300 0059 3608  .a^...d......Y6.
+-00001050: a63b 3000 010c 3608 aa82 f400 005b 2708  .;0...6......['.
+-00001060: abe2 0900 002a 8b08 abe2 0900 0089 0608  .....*..........
+-00001070: af11 d500 0063 9e08 b89a 9200 0025 be08  .....c.......%..
+-00001080: bbfe c500 0002 ac08 bbfe c500 0123 5008  .............#P.
+-00001090: bd8a 6000 0114 f008 c000 5000 0098 1608  ..`.......P.....
+-000010a0: c000 5000 0098 d908 c272 0900 0010 0208  ..P......r......
+-000010b0: c76b 0300 005a 9c08 cd7c e400 00aa 3909  .k...Z...|....9.
+-000010c0: 00f9 a400 0003 e009 162e f000 003a f209  .............:..
+-000010d0: 1afc d400 003d a309 1fb9 f500 0076 8809  .....=.......v..
+-000010e0: 2254 0000 011d f809 2e57 df00 00a6 6109  "T.......W....a.
+-000010f0: 35e6 6000 0048 8109 3b85 e000 006c a009  5.`..H..;....l..
+-00001100: 4459 d000 00df b309 4d67 fe00 0115 e409  DY......Mg......
+-00001110: 5962 c900 00e5 a909 5aa4 1000 00b9 3709  Yb......Z.....7.
+-00001120: 5b68 f000 005e f409 5c07 3000 00ed 4809  [h...^..\.0...H.
+-00001130: 5ca2 3000 012e c409 5d03 9000 011c 5509  \.0.....].....U.
+-00001140: 6302 2500 0133 c309 667a 9000 00eb 7f09  c.%..3..fz......
+-00001150: 66cc c900 0033 dd09 700b c500 0011 fb09  f....3..p.......
+-00001160: 7a29 6900 000f 4509 8c00 0a00 0050 4d09  z)i...E......PM.
+-00001170: 8c81 5e00 0039 7709 8c81 5e00 0098 8f09  ..^..9w...^.....
+-00001180: 8d04 b300 008f c209 95cb c400 00d6 6009  ..............`.
+-00001190: a6af c300 0056 0b09 a6c1 0a00 0027 c809  .....V.......'..
+-000011a0: a6c1 0a00 0044 b709 a6c1 0a00 0083 b709  .....D..........
+-000011b0: a6c1 0a00 0097 d909 a6c1 0a00 0120 b409  ............. ..
+-000011c0: a6c1 c300 0004 6f09 a87a 8000 00f8 a609  ......o..z......
+-000011d0: b56b a200 008c c609 b889 ea00 0087 6a09  .k............j.
+-000011e0: b889 ea00 00a5 c709 cf34 f000 00df 1e09  .........4......
+-000011f0: d061 e400 0059 b709 d746 d000 0066 bc09  .a...Y...F...f..
+-00001200: d82d 3f00 0083 ee09 dbbc c400 0058 980a  .-?..........X..
+-00001210: 074b 5000 0072 bf0a 159b 8000 001e 7c0a  .KP..r........|.
+-00001220: 159b 8000 0053 f60a 17d3 5000 00cb be0a  .....S....P.....
+-00001230: 20b0 6000 0078 d70a 20fc 9000 00b4 800a   .`..x.. .......
+-00001240: 22d2 d000 00e3 c30a 2aef e000 00fa 740a  ".......*.....t.
+-00001250: 2e99 7e00 0056 430a 30f6 b500 002a 020a  ..~..VC.0....*..
+-00001260: 338b 1000 00dc 840a 3f0e 9500 0080 cc0a  3.......?.......
+-00001270: 3f0e 9500 0128 120a 4985 3000 0071 e40a  ?....(..I.0..q..
+-00001280: 4cb2 e000 00b7 8b0a 5e50 b000 0109 a40a  L.......^P......
+-00001290: 62cd 3400 0034 960a 64c8 9500 0087 2e0a  b.4..4..d.......
+-000012a0: 65e3 f000 005e 390a 6c11 b300 0005 040a  e....^9.l.......
+-000012b0: 6c5b d900 0009 840a 6c5b d900 000b 6a0a  l[......l[....j.
+-000012c0: 6c89 9300 0133 860a 70ea 0000 0044 1c0a  l....3..p....D..
+-000012d0: 8170 8e00 012f 9b0a 84e6 b500 001c 9f0a  .p.../..........
+-000012e0: 84e6 b500 002f fd0a 84e6 b500 0052 560a  ...../.......RV.
+-000012f0: 84e6 b500 012d 800a 84e6 b500 0131 c80a  .....-.......1..
+-00001300: 89ad 3000 00f4 7d0a 89ad 3000 010a dd0a  ..0...}...0.....
+-00001310: 954c 2000 00da ae0a 9989 6300 0074 270a  .L .......c..t'.
+-00001320: ac8c c000 00f7 d60a ae3e fa00 0075 ce0a  .........>...u..
+-00001330: b4bc 2e00 002e ca0a b5ff 6400 00b1 ff0a  ..........d.....
+-00001340: b6d5 d000 00d1 fe0a ba90 7000 00e6 d70a  ..........p.....
+-00001350: be20 4a00 0010 480a c25d 1400 0041 7f0a  . J...H..]...A..
+-00001360: c945 a000 00b3 f30a ca80 7300 0052 9c0a  .E........s..R..
+-00001370: cf76 b400 0058 260a cfef 4000 0106 220a  .v...X&...@...".
+-00001380: e1b0 da00 00a8 dc0a e1b4 8000 0113 200a  .............. .
+-00001390: e45f d000 00b8 490a eb63 2000 0022 b30a  ._....I..c .."..
+-000013a0: ee50 6000 0081 fc0a f3de 9e00 0085 5c0a  .P`...........\.
+-000013b0: f818 8000 00b7 c40a f818 8000 00fb 370b  ..............7.
+-000013c0: 0396 6300 0008 9e0b 03f9 7300 008f 780b  ..c.......s...x.
+-000013d0: 0476 b400 0058 600b 0ac1 5a00 0127 a80b  .v...X`...Z..'..
+-000013e0: 139f b500 0087 a20b 19b8 d700 008b 660b  ..............f.
+-000013f0: 1b90 b000 0100 df0b 1fcd 0500 00a1 4a0b  ..............J.
+-00001400: 20ce b000 00c2 350b 2371 ce00 0001 3e0b   .....5.#q....>.
+-00001410: 244d 8300 0104 fe0b 296c c900 0073 b80b  $M......)l...s..
+-00001420: 2d80 be00 000e f30b 2d80 be00 008b c30b  -.......-.......
+-00001430: 2d80 be00 0118 980b 2fa8 e400 012e 800b  -......./.......
+-00001440: 4000 a500 0065 010b 440d ae00 005a d50b  @....e..D....Z..
+-00001450: 47ce c400 00e8 b70b 4841 e400 00bc 460b  G.......HA....F.
+-00001460: 4e26 9900 0010 8e0b 543a f400 00e0 e70b  N&......T:......
+-00001470: 5467 9000 002b 290b 6948 d000 00c5 210b  Tg...+).iH....!.
+-00001480: 6b4e 3000 005f d70b 6f1b 4500 0062 3c0b  kN0.._..o.E..b<.
+-00001490: 76dd 9d00 0132 530b 8a1a 2000 00e2 7e0b  v....2S... ...~.
+-000014a0: 8a1a 2000 0110 680b 8c6a e300 005a 170b  .. ...h..j...Z..
+-000014b0: 9253 4000 0002 280b 94b6 5e00 00ce e70b  .S@...(...^.....
+-000014c0: 967b 5400 0031 880b a0c9 de00 0006 5c0b  .{T..1........\.
+-000014d0: a3fc 7000 00f0 560b a4a2 2500 0024 950b  ..p...V...%..$..
+-000014e0: c474 9000 00db 4a0b c4a6 f000 0064 8c0b  .t....J......d..
+-000014f0: c81a a000 00db e90b cbf1 c000 00e2 d10b  ................
+-00001500: cbf1 c000 00e8 440b cbf1 c000 00f2 cc0b  ......D.........
+-00001510: cbf1 c000 0108 a70b db2b b200 0025 6f0b  .........+...%o.
+-00001520: def4 0000 012b c90b e203 8700 000e 4b0b  .....+........K.
+-00001530: e217 6300 000e 080b e4a0 3000 0015 f10b  ..c.......0.....
+-00001540: f39a 4000 0039 fa0b f39a 4000 0081 8d0b  ..@..9....@.....
+-00001550: f39a 4000 00c8 e80b fc32 3300 0045 550c  ..@......23..EU.
+-00001560: 04fe c500 0013 620c 0c17 6300 0057 300c  ......b...c..W0.
+-00001570: 0ce3 2300 008f 220c 0dec 5a00 0080 6a0c  ..#..."...Z...j.
+-00001580: 1cdb 4200 010d 3d0c 1d95 4000 00c0 620c  ..B...=...@...b.
+-00001590: 3834 1400 000d 670c 3834 1400 0089 c60c  84....g.84......
+-000015a0: 3834 1400 0117 af0c 5256 ae00 0033 9f0c  84......RV...3..
+-000015b0: 5bd6 a000 0007 930c 61ce a500 0034 500c  [.......a....4P.
+-000015c0: 63ce a500 000a dc0c 6dca b800 0037 6a0c  c.......m....7j.
+-000015d0: 808a a300 00a5 6d0c 83b7 b000 0036 f00c  ......m......6..
+-000015e0: 8910 0000 0006 9a0c 89ed e500 0049 fb0c  .............I..
+-000015f0: 98c0 0900 0005 e20c 98c0 0900 0009 ba0c  ................
+-00001600: 98c0 0900 000c f30c 98c0 0900 0083 050c  ................
+-00001610: 98c0 0900 0088 900c 98c0 0900 009f a90c  ................
+-00001620: 98c0 0900 0115 ab0c 9fa9 6000 011d 3b0c  ..........`...;.
+-00001630: b106 9a00 0119 ba0c b195 2700 007f 730c  ..........'...s.
+-00001640: b1a8 e500 0030 780c ba9f 2400 010f e90c  .....0x...$.....
+-00001650: c1c5 c300 0091 110c c4e1 d500 0013 ab0c  ................
+-00001660: c5f7 d500 007d 680c c7ee 6000 009c 960c  .....}h...`.....
+-00001670: c8e8 6400 002f c30c c9a0 2e00 007d c70c  ..d../.......}..
+-00001680: cba2 d500 00e9 8c0c db0c 0400 00b4 f00c  ................
+-00001690: dda2 6e00 00b2 6d0c e3ed a900 0090 c60c  ..n...m.........
+-000016a0: e79c a700 004d 280c e79c a700 0050 930c  .....M(......P..
+-000016b0: f3b0 8500 0012 450c fb0f b300 0093 b20d  ......E.........
+-000016c0: 0027 2000 00bf 350d 09a5 6000 011b 700d  .' ...5...`...p.
+-000016d0: 0a66 ed00 0124 df0d 0ad7 7300 004c 430d  .f...$....s..LC.
+-000016e0: 0f91 6000 00ef 380d 0f91 6000 0104 630d  ..`...8...`...c.
+-000016f0: 1201 a400 005c 6a0d 1cec 6700 0118 e60d  .....\j...g.....
+-00001700: 27f5 e400 0057 a80d 2d41 7000 00ae b00d  '....W..-Ap.....
+-00001710: 32db 3000 00eb da0d 35c6 3000 0107 fa0d  2.0.....5.0.....
+-00001720: 3b8c 3900 00ac 300d 48cd 6500 009a 870d  ;.9...0.H.e.....
+-00001730: 51bd f000 00f3 460d 69f6 0000 009d 430d  Q.....F.i.....C.
+-00001740: 7298 e700 00ad ec0d 7c3b 4000 0111 2e0d  r.......|;@.....
+-00001750: 80f6 3400 0097 8e0d 80f6 3400 0099 1e0d  ..4.......4.....
+-00001760: 8344 9300 0090 080d 8c46 7500 0004 a70d  .D.......Fu.....
+-00001770: 8c46 7500 00a6 020d 96e3 5000 00dd fd0d  .Fu.......P.....
+-00001780: 9a05 6e00 0056 d10d 9df1 6500 0019 a90d  ..n..V....e.....
+-00001790: 9df1 6500 0020 7e0d 9ee3 5e00 006c ed0d  ..e.. ~...^..l..
+-000017a0: 9ee3 5e00 0078 5b0d 9ee3 5e00 0084 d40d  ..^..x[...^.....
+-000017b0: 9ee3 5e00 00a4 310d 9ee3 5e00 00b7 470d  ..^...1...^...G.
+-000017c0: aa4e 9000 00e4 e60d c964 7400 00aa ff0d  .N.......dt.....
+-000017d0: d0e8 e000 00c8 270d ded8 9000 001d 2b0d  ......'.......+.
+-000017e0: ded8 9000 0052 d80d eb49 0000 007f ab0d  .....R...I......
+-000017f0: ec49 8400 0047 c10d f086 4a00 0038 e10d  .I...G....J..8..
+-00001800: fcd5 7e00 003e 5c0d fe0b 6000 006f c10e  ..~..>\...`..o..
+-00001810: 00f0 b000 00d4 010e 03af f000 0077 270e  .............w'.
+-00001820: 1bf8 6400 0038 800e 1ddb 6300 0050 ed0e  ..d..8....c..P..
+-00001830: 202b 3a00 007e 260e 202b 3a00 0124 460e   +:..~&. +:..$F.
+-00001840: 20d7 0900 010d 8b0e 2511 7400 0060 da0e   .......%.t..`..
+-00001850: 38a0 f000 0105 830e 5c13 4700 0117 2e0e  8.......\.G.....
+-00001860: 6193 e900 0112 5c0e 61d5 0400 00a9 2b0e  a.....\.a.....+.
+-00001870: 68cb dc00 0055 a50e 6ac2 e300 0024 cc0e  h....U..j....$..
+-00001880: 7617 2000 007b 980e 8347 4400 006a 4e0e  v. ..{...GD..jN.
+-00001890: 887b b500 0036 850e 887b b500 00aa 020e  .{...6...{......
+-000018a0: 9dcc d400 0032 820e a934 c000 0061 590e  .....2...4...aY.
+-000018b0: abf5 1300 0067 fc0e ae34 8000 005e 940e  .....g...4...^..
+-000018c0: b4a5 0a00 0064 270e b5c2 8000 009a e90e  .....d'.........
+-000018d0: b803 9900 006e b10e b82d 1000 00f3 da0e  .....n...-......
+-000018e0: c28b b000 0003 0c0e d945 de00 002d 820e  .........E...-..
+-000018f0: e77d 7000 011f af0e f7f8 4000 00ef d90f  .}p.......@.....
+-00001900: 09fd b000 00d5 c50f 0cc4 c000 00fa e40f  ................
+-00001910: 105e a000 00ba 6b0f 11be 6000 00bf aa0f  .^....k...`.....
+-00001920: 1d28 1000 00fe a60f 201d 8500 0089 450f  .(...... .....E.
+-00001930: 20f1 3000 00d8 050f 4321 f500 0130 320f   .0.....C!...02.
+-00001940: 4a90 4000 00b4 370f 5e00 1000 00c9 e30f  J.@...7.^.......
+-00001950: 8e7b e000 00ce 450f 9222 7c00 00ab f00f  .{....E.."|.....
+-00001960: 9450 0000 0113 990f 9ebd c400 0048 190f  .P...........H..
+-00001970: 9fbc 6000 0134 960f a262 9000 0137 0d0f  ..`..4...b...7..
+-00001980: a44f 0300 0000 5f0f bd5e e700 0118 480f  .O...._..^....H.
+-00001990: cb15 5200 006a 020f cf80 f000 00f5 210f  ..R..j........!.
+-000019a0: d19a 7000 00c1 1b0f dfeb 7000 009e d40f  ..p.......p.....
+-000019b0: e7f7 9000 0136 9b0f ea8a 0900 007e 6b0f  .....6.......~k.
+-000019c0: ea8a 0900 00a7 220f ea8a 0900 0124 850f  ......"......$..
+-000019d0: f87c e000 0023 990f fe37 0300 0086 d069  .|...#...7.....i
+-000019e0: 0001 3788 0300 0000 2404 1e04 4204 3c04  ..7.....$...B.<.
+-000019f0: 3504 3d04 3804 4204 4c00 2004 3804 3704  5.=.8.B.L. .8.7.
+-00001a00: 3c04 3504 3d04 3504 3d04 3804 4f08 0000  <.5.=.5.=.8.O...
+-00001a10: 0000 0600 0000 0e43 616e 6365 6c20 6368  .......Cancel ch
+-00001a20: 616e 6765 7307 0000 0018 4162 7374 7261  anges.....Abstra
+-00001a30: 6374 4f70 6572 6174 696f 6e44 6574 6169  ctOperationDetai
+-00001a40: 6c73 0103 0000 0026 0421 043e 0445 0440  ls.....&.!.>.E.@
+-00001a50: 0430 043d 0438 0442 044c 0020 0438 0437  .0.=.8.B.L. .8.7
+-00001a60: 043c 0435 043d 0435 043d 0438 044f 0800  .<.5.=.5.=.8.O..
+-00001a70: 0000 0006 0000 000e 436f 6d6d 6974 2063  ........Commit c
+-00001a80: 6861 6e67 6573 0700 0000 1841 6273 7472  hanges.....Abstr
+-00001a90: 6163 744f 7065 7261 7469 6f6e 4465 7461  actOperationDeta
+-00001aa0: 696c 7301 0300 0000 3804 1e04 4804 3804  ils.....8...H.8.
+-00001ab0: 3104 3a04 3000 2004 3f04 4004 3800 2004  1.:.0. .?.@.8. .
+-00001ac0: 3704 3004 3f04 3804 4104 3800 2004 3e04  7.0.?.8.A.8. .>.
+-00001ad0: 3f04 3504 4004 3004 4604 3804 3800 3a00  ?.5.@.0.F.8.8.:.
+-00001ae0: 2008 0000 0000 0600 0000 194f 7065 7261   ..........Opera
+-00001af0: 7469 6f6e 2073 7562 6d69 7420 6661 696c  tion submit fail
+-00001b00: 6564 3a20 0700 0000 1841 6273 7472 6163  ed: .....Abstrac
+-00001b10: 744f 7065 7261 7469 6f6e 4465 7461 696c  tOperationDetail
+-00001b20: 7301 0300 0000 8804 1d04 3504 4104 3e04  s.........5.A.>.
+-00001b30: 4504 4004 3004 3d04 5104 3d04 3d04 4b04  E.@.0.=.Q.=.=.K.
+-00001b40: 3500 2004 3804 3704 3c04 3504 3d04 3504  5. .8.7.<.5.=.5.
+-00001b50: 3d04 3804 4f00 2004 3104 4b04 3b04 3800  =.8.O. .1.K.;.8.
+-00001b60: 2004 3e04 4204 3c04 3504 3d04 3504 3d04   .>.B.<.5.=.5.=.
+-00001b70: 4b00 2004 3f04 3504 4004 3504 3400 2004  K. .?.5.@.5.4. .
+-00001b80: 4104 3e04 3704 3404 3004 3d04 3804 3504  A.>.7.4.0.=.8.5.
+-00001b90: 3c00 2004 3d04 3e04 3204 3e04 3900 2004  <. .=.>.2.>.9. .
+-00001ba0: 3e04 3f04 3504 4004 3004 4604 3804 3808  >.?.5.@.0.F.8.8.
+-00001bb0: 0000 0000 0600 0000 3555 6e73 6176 6564  ........5Unsaved
+-00001bc0: 2063 6861 6e67 6573 2077 6572 6520 7265   changes were re
+-00001bd0: 7665 7274 6564 2074 6f20 6372 6561 7465  verted to create
+-00001be0: 206e 6577 206f 7065 7261 7469 6f6e 0700   new operation..
+-00001bf0: 0000 1841 6273 7472 6163 744f 7065 7261  ...AbstractOpera
+-00001c00: 7469 6f6e 4465 7461 696c 7301 0300 0000  tionDetails.....
+-00001c10: 3a04 1d04 3504 3204 3504 4004 3d04 3e04  :...5.2.5.@.=.>.
+-00001c20: 3500 2004 3704 3d04 3004 4704 3504 3d04  5. .7.=.0.G.5.=.
+-00001c30: 3804 3500 2004 3200 2004 4104 4204 3e04  8.5. .2. .A.B.>.
+-00001c40: 3b04 3104 4604 3500 3a00 2008 0000 0000  ;.1.F.5.:. .....
+-00001c50: 0600 0000 1b43 6f6c 756d 6e20 6861 7320  .....Column has 
+-00001c60: 6e6f 2076 616c 6964 2076 616c 7565 3a20  no valid value: 
+-00001c70: 0700 0000 1a41 6273 7472 6163 7452 6566  .....AbstractRef
+-00001c80: 6572 656e 6365 4c69 7374 4d6f 6465 6c01  erenceListModel.
+-00001c90: 0300 0000 1e04 1d04 3504 3f04 3e04 3b04  ........5.?.>.;.
+-00001ca0: 3d04 4b04 3500 2004 3404 3004 3d04 3d04  =.K.5. .4.0.=.=.
+-00001cb0: 4b04 3508 0000 0000 0600 0000 1344 6174  K.5..........Dat
+-00001cc0: 6120 6172 6520 696e 636f 6d70 6c65 7465  a are incomplete
+-00001cd0: 0700 0000 1a41 6273 7472 6163 7452 6566  .....AbstractRef
+-00001ce0: 6572 656e 6365 4c69 7374 4d6f 6465 6c01  erenceListModel.
+-00001cf0: 0300 0000 2604 1e04 4804 3804 3104 3a04  ....&...H.8.1.:.
+-00001d00: 3000 2004 4104 3e04 4504 4004 3004 3d04  0. .A.>.E.@.0.=.
+-00001d10: 3504 3d04 3804 4f00 3a00 2008 0000 0000  5.=.8.O.:. .....
+-00001d20: 0600 0000 0f53 7562 6d69 7420 6661 696c  .....Submit fail
+-00001d30: 6564 3a20 0700 0000 1a41 6273 7472 6163  ed: .....Abstrac
+-00001d40: 7452 6566 6572 656e 6365 4c69 7374 4d6f  tReferenceListMo
+-00001d50: 6465 6c01 0300 0000 0a04 1b04 4e04 3104  del.........N.1.
+-00001d60: 3e04 3908 0000 0000 0600 0000 0341 4e59  >.9..........ANY
+-00001d70: 0700 0000 0d41 6363 6f75 6e74 4275 7474  .....AccountButt
+-00001d80: 6f6e 0103 0000 0014 041b 044e 0431 043e  on.........N.1.>
+-00001d90: 0439 0020 0441 0447 0435 0442 0800 0000  .9. .A.G.5.B....
+-00001da0: 0006 0000 000b 416e 7920 6163 636f 756e  ......Any accoun
+-00001db0: 7407 0000 000d 4163 636f 756e 7442 7574  t.....AccountBut
+-00001dc0: 746f 6e01 0300 0000 1804 1204 4b04 3104  ton.........K.1.
+-00001dd0: 4004 3004 4204 4c00 2004 4104 4704 3504  @.0.B.L. .A.G.5.
+-00001de0: 4208 0000 0000 0600 0000 0e43 686f 6f73  B..........Choos
+-00001df0: 6520 6163 636f 756e 7407 0000 000d 4163  e account.....Ac
+-00001e00: 636f 756e 7442 7574 746f 6e01 0300 0000  countButton.....
+-00001e10: 1404 2204 3804 3f00 2004 4104 4704 3504  ..".8.?. .A.G.5.
+-00001e20: 4204 3000 3a08 0000 0000 0600 0000 0d41  B.0.:..........A
+-00001e30: 6363 6f75 6e74 2074 7970 653a 0700 0000  ccount type:....
+-00001e40: 1141 6363 6f75 6e74 4c69 7374 4469 616c  .AccountListDial
+-00001e50: 6f67 0103 0000 000a 0421 0447 0435 0442  og.......!.G.5.B
+-00001e60: 0430 0800 0000 0006 0000 0008 4163 636f  .0..........Acco
+-00001e70: 756e 7473 0700 0000 1141 6363 6f75 6e74  unts.....Account
+-00001e80: 4c69 7374 4469 616c 6f67 0103 0000 002a  ListDialog.....*
+-00001e90: 041f 043e 043a 0430 0437 044b 0432 0430  ...>.:.0.7.K.2.0
+-00001ea0: 0442 044c 0020 043d 0435 0430 043a 0442  .B.L. .=.5.0.:.B
+-00001eb0: 0438 0432 043d 044b 0435 0800 0000 0006  .8.2.=.K.5......
+-00001ec0: 0000 000d 5368 6f77 2069 6e61 6374 6976  ....Show inactiv
+-00001ed0: 6507 0000 0011 4163 636f 756e 744c 6973  e.....AccountLis
+-00001ee0: 7444 6961 6c6f 6701 0300 0000 0e21 1600  tDialog......!..
+-00001ef0: 2004 4104 4704 3504 4204 3008 0000 0000   .A.G.5.B.0.....
+-00001f00: 0600 0000 0941 6363 6f75 6e74 2023 0700  .....Account #..
+-00001f10: 0000 1041 6363 6f75 6e74 4c69 7374 4d6f  ...AccountListMo
+-00001f20: 6465 6c01 0300 0000 0804 1004 3a04 4200  del.........:.B.
+-00001f30: 2e08 0000 0000 0600 0000 0441 6374 2e07  ...........Act..
+-00001f40: 0000 0010 4163 636f 756e 744c 6973 744d  ....AccountListM
+-00001f50: 6f64 656c 0103 0000 0016 0411 0430 043d  odel.........0.=
+-00001f60: 043a 002f 0411 0440 043e 043a 0435 0440  .:./...@.>.:.5.@
+-00001f70: 0800 0000 0006 0000 000b 4261 6e6b 2f42  ..........Bank/B
+-00001f80: 726f 6b65 7207 0000 0010 4163 636f 756e  roker.....Accoun
+-00001f90: 744c 6973 744d 6f64 656c 0103 0000 0004  tListModel......
+-00001fa0: 041a 0421 0800 0000 0006 0000 0002 4343  ...!..........CC
+-00001fb0: 0700 0000 1041 6363 6f75 6e74 4c69 7374  .....AccountList
+-00001fc0: 4d6f 6465 6c01 0300 0000 0c04 1204 3004  Model.........0.
+-00001fd0: 3b04 4e04 4204 3008 0000 0000 0600 0000  ;.N.B.0.........
+-00001fe0: 0843 7572 7265 6e63 7907 0000 0010 4163  .Currency.....Ac
+-00001ff0: 636f 756e 744c 6973 744d 6f64 656c 0103  countListModel..
+-00002000: 0000 0018 041d 0430 0438 043c 0435 043d  .......0.8.<.5.=
+-00002010: 043e 0432 0430 043d 0438 0435 0800 0000  .>.2.0.=.8.5....
+-00002020: 0006 0000 0004 4e61 6d65 0700 0000 1041  ......Name.....A
+-00002030: 6363 6f75 6e74 4c69 7374 4d6f 6465 6c01  ccountListModel.
+-00002040: 0300 0000 1004 2204 3e04 4704 3d04 3e04  ......".>.G.=.>.
+-00002050: 4104 4204 4c08 0000 0000 0600 0000 0950  A.B.L..........P
+-00002060: 7265 6369 7369 6f6e 0700 0000 1041 6363  recision.....Acc
+-00002070: 6f75 6e74 4c69 7374 4d6f 6465 6c01 0300  ountListModel...
+-00002080: 0000 1004 2104 3204 3504 4004 3504 3d00  ....!.2.5.@.5.=.
+-00002090: 2000 4008 0000 0000 0600 0000 0c52 6563   .@..........Rec
+-000020a0: 6f6e 6369 6c65 6420 4007 0000 0010 4163  onciled @.....Ac
+-000020b0: 636f 756e 744c 6973 744d 6f64 656c 0103  countListModel..
+-000020c0: 0000 001a 0426 0435 043d 043d 0430 044f  .....&.5.=.=.0.O
+-000020d0: 0020 0431 0443 043c 0430 0433 0430 0800  . .1.C.<.0.3.0..
+-000020e0: 0000 0006 0000 0005 4173 7365 7407 0000  ........Asset...
+-000020f0: 000b 4173 7365 7444 6961 6c6f 6701 0300  ..AssetDialog...
+-00002100: 0000 1c04 1104 3004 3704 3e04 3204 4b04  ......0.7.>.2.K.
+-00002110: 3900 2004 3004 3a04 4204 3804 3200 3a08  9. .0.:.B.8.2.:.
+-00002120: 0000 0000 0600 0000 0b42 6173 6520 6173  .........Base as
+-00002130: 7365 743a 0700 0000 0b41 7373 6574 4469  set:.....AssetDi
+-00002140: 616c 6f67 0103 0000 000c 041e 0442 043c  alog.........B.<
+-00002150: 0435 043d 0430 0800 0000 0006 0000 0006  .5.=.0..........
+-00002160: 4361 6e63 656c 0700 0000 0b41 7373 6574  Cancel.....Asset
+-00002170: 4469 616c 6f67 0103 0000 0010 0421 0442  Dialog.......!.B
+-00002180: 0440 0430 043d 0430 003a 0020 0800 0000  .@.0.=.0.:. ....
+-00002190: 0006 0000 0009 436f 756e 7472 793a 2007  ......Country: .
+-000021a0: 0000 000b 4173 7365 7444 6961 6c6f 6701  ....AssetDialog.
+-000021b0: 0300 0000 1404 1404 3e04 3f00 2e04 3404  ........>.?...4.
+-000021c0: 3004 3d04 3d04 4b04 3508 0000 0000 0600  0.=.=.K.5.......
+-000021d0: 0000 0a45 7874 7261 2064 6174 6107 0000  ...Extra data...
+-000021e0: 000b 4173 7365 7444 6961 6c6f 6701 0300  ..AssetDialog...
+-000021f0: 0000 0a00 4900 5300 4900 4e00 3a08 0000  ....I.S.I.N.:...
+-00002200: 0000 0600 0000 0549 5349 4e3a 0700 0000  .......ISIN:....
+-00002210: 0b41 7373 6574 4469 616c 6f67 0103 0000  .AssetDialog....
+-00002220: 001a 041d 0430 0438 043c 0435 043d 043e  .....0.8.<.5.=.>
+-00002230: 0432 0430 043d 0438 0435 003a 0800 0000  .2.0.=.8.5.:....
+-00002240: 0006 0000 0005 4e61 6d65 3a07 0000 000b  ......Name:.....
+-00002250: 4173 7365 7444 6961 6c6f 6701 0300 0000  AssetDialog.....
+-00002260: 0404 1e04 1a08 0000 0000 0600 0000 024f  ...............O
+-00002270: 4b07 0000 000b 4173 7365 7444 6961 6c6f  K.....AssetDialo
+-00002280: 6701 0300 0000 0e04 2104 3804 3c04 3204  g.......!.8.<.2.
+-00002290: 3e04 3b04 4b08 0000 0000 0600 0000 0753  >.;.K..........S
+-000022a0: 796d 626f 6c73 0700 0000 0b41 7373 6574  ymbols.....Asset
+-000022b0: 4469 616c 6f67 0103 0000 000a 0422 0438  Dialog.......".8
+-000022c0: 043f 003a 0020 0800 0000 0006 0000 0006  .?.:. ..........
+-000022d0: 5479 7065 3a20 0700 0000 0b41 7373 6574  Type: .....Asset
+-000022e0: 4469 616c 6f67 0103 0000 000e 0422 0438  Dialog.......".8
+-000022f0: 043f 0020 0426 0411 003a 0800 0000 0006  .?. .&...:......
+-00002300: 0000 000b 4173 7365 7420 7479 7065 3a07  ....Asset type:.
+-00002310: 0000 000f 4173 7365 744c 6973 7444 6961  ....AssetListDia
+-00002320: 6c6f 6701 0300 0000 1a04 2604 3504 3d04  log.......&.5.=.
+-00002330: 3d04 4b04 3500 2004 3104 4304 3c04 3004  =.K.5. .1.C.<.0.
+-00002340: 3304 3808 0000 0000 0600 0000 0641 7373  3.8..........Ass
+-00002350: 6574 7307 0000 000f 4173 7365 744c 6973  ets.....AssetLis
+-00002360: 7444 6961 6c6f 6701 0300 0000 0c04 2104  tDialog.......!.
+-00002370: 4204 4004 3004 3d04 3008 0000 0000 0600  B.@.0.=.0.......
+-00002380: 0000 0743 6f75 6e74 7279 0700 0000 0e41  ...Country.....A
+-00002390: 7373 6574 4c69 7374 4d6f 6465 6c01 0300  ssetListModel...
+-000023a0: 0000 0c04 1204 3004 3b04 4e04 4204 3008  ......0.;.N.B.0.
+-000023b0: 0000 0000 0600 0000 0843 7572 7265 6e63  .........Currenc
+-000023c0: 7907 0000 000e 4173 7365 744c 6973 744d  y.....AssetListM
+-000023d0: 6f64 656c 0103 0000 001a 0418 0441 0442  odel.........A.B
+-000023e0: 002e 043a 043e 0442 0438 0440 043e 0432  ...:.>.B.8.@.>.2
+-000023f0: 043e 043a 0800 0000 0006 0000 000b 4461  .>.:..........Da
+-00002400: 7461 2073 6f75 7263 6507 0000 000e 4173  ta source.....As
+-00002410: 7365 744c 6973 744d 6f64 656c 0103 0000  setListModel....
+-00002420: 0008 0049 0053 0049 004e 0800 0000 0006  ...I.S.I.N......
+-00002430: 0000 0004 4953 494e 0700 0000 0e41 7373  ....ISIN.....Ass
+-00002440: 6574 4c69 7374 4d6f 6465 6c01 0300 0000  etListModel.....
+-00002450: 1804 1d04 3004 3804 3c04 3504 3d04 3e04  ....0.8.<.5.=.>.
+-00002460: 3204 3004 3d04 3804 3508 0000 0000 0600  2.0.=.8.5.......
+-00002470: 0000 044e 616d 6507 0000 000e 4173 7365  ...Name.....Asse
+-00002480: 744c 6973 744d 6f64 656c 0103 0000 000c  tListModel......
+-00002490: 0421 0438 043c 0432 043e 043b 0800 0000  .!.8.<.2.>.;....
+-000024a0: 0006 0000 0006 5379 6d62 6f6c 0700 0000  ......Symbol....
+-000024b0: 0e41 7373 6574 4c69 7374 4d6f 6465 6c01  .AssetListModel.
+-000024c0: 0300 0000 1804 1d04 3004 3804 3c04 3504  ........0.8.<.5.
+-000024d0: 3d04 3e04 3204 3004 3d04 3804 3508 0000  =.>.2.0.=.8.5...
+-000024e0: 0000 0600 0000 0a41 7373 6574 206e 616d  .......Asset nam
+-000024f0: 6507 0000 000f 4173 7365 7473 4c69 7374  e.....AssetsList
+-00002500: 4d6f 6465 6c01 0300 0000 1a04 1104 3004  Model.........0.
+-00002510: 3704 3e04 3204 4b04 3900 2004 3004 3a04  7.>.2.K.9. .0.:.
+-00002520: 4204 3804 3208 0000 0000 0600 0000 0a42  B.8.2..........B
+-00002530: 6173 6520 6173 7365 7407 0000 000f 4173  ase asset.....As
+-00002540: 7365 7473 4c69 7374 4d6f 6465 6c01 0300  setsListModel...
+-00002550: 0000 0c04 2104 4204 4004 3004 3d04 3008  ....!.B.@.0.=.0.
+-00002560: 0000 0000 0600 0000 0743 6f75 6e74 7279  .........Country
+-00002570: 0700 0000 0f41 7373 6574 734c 6973 744d  .....AssetsListM
+-00002580: 6f64 656c 0103 0000 0008 0049 0053 0049  odel.......I.S.I
+-00002590: 004e 0800 0000 0006 0000 0004 4953 494e  .N..........ISIN
+-000025a0: 0700 0000 0f41 7373 6574 734c 6973 744d  .....AssetsListM
+-000025b0: 6f64 656c 0103 0000 0008 0421 0447 0435  odel.......!.G.5
+-000025c0: 0442 0800 0000 0006 0000 0007 4163 636f  .B..........Acco
+-000025d0: 756e 7407 0000 000d 4261 6c61 6e63 6573  unt.....Balances
+-000025e0: 4d6f 6465 6c01 0300 0000 0c04 1104 3004  Model.........0.
+-000025f0: 3b04 3004 3d04 4108 0000 0000 0600 0000  ;.0.=.A.........
+-00002600: 0742 616c 616e 6365 0700 0000 0d42 616c  .Balance.....Bal
+-00002610: 616e 6365 734d 6f64 656c 0103 0000 0010  ancesModel......
+-00002620: 0411 0430 043b 0430 043d 0441 002c 0020  ...0.;.0.=.A.,. 
+-00002630: 0800 0000 0006 0000 0009 4261 6c61 6e63  ..........Balanc
+-00002640: 652c 2007 0000 000d 4261 6c61 6e63 6573  e, .....Balances
+-00002650: 4d6f 6465 6c01 0300 0000 0a04 1804 4204  Model.........B.
+-00002660: 3e04 3304 3e08 0000 0000 0600 0000 0554  >.3.>..........T
+-00002670: 6f74 616c 0700 0000 0d42 616c 616e 6365  otal.....Balance
+-00002680: 734d 6f64 656c 0103 0000 001c 0411 0430  sModel.........0
+-00002690: 0437 043e 0432 0430 044f 0020 0432 0430  .7.>.2.0.O. .2.0
+-000026a0: 043b 044e 0442 0430 0800 0000 0006 0000  .;.N.B.0........
+-000026b0: 000d 4261 7365 2063 7572 7265 6e63 7907  ..Base currency.
+-000026c0: 0000 0012 4261 7365 4375 7272 656e 6379  ....BaseCurrency
+-000026d0: 4469 616c 6f67 0103 0000 000c 0412 0430  Dialog.........0
+-000026e0: 043b 044e 0442 0430 0800 0000 0006 0000  .;.N.B.0........
+-000026f0: 0008 4375 7272 656e 6379 0700 0000 1542  ..Currency.....B
+-00002700: 6173 6543 7572 7265 6e63 794c 6973 744d  aseCurrencyListM
+-00002710: 6f64 656c 0103 0000 0008 0414 0430 0442  odel.........0.B
+-00002720: 0430 0800 0000 0006 0000 0004 4461 7465  .0..........Date
+-00002730: 0700 0000 1542 6173 6543 7572 7265 6e63  .....BaseCurrenc
+-00002740: 794c 6973 744d 6f64 656c 0103 0000 0024  yListModel.....$
+-00002750: 0027 0020 0437 0430 043c 0435 043d 0435  .'. .7.0.<.5.=.5
+-00002760: 043d 0430 0020 0443 0441 043f 0435 0448  .=.0. .C.A.?.5.H
+-00002770: 043d 043e 0800 0000 0006 0000 001b 2720  .=.>..........' 
+-00002780: 7761 7320 7375 6363 6573 7366 756c 6c79  was successfully
+-00002790: 2072 6570 6c61 6365 6407 0000 0012 4361   replaced.....Ca
+-000027a0: 7465 676f 7279 4c69 7374 4469 616c 6f67  tegoryListDialog
+-000027b0: 0103 0000 000c 0027 0020 043d 0430 003a  .......'. .=.0.:
+-000027c0: 0020 0800 0000 0006 0000 0008 2720 7769  . ..........' wi
+-000027d0: 7468 3a20 0700 0000 1243 6174 6567 6f72  th: .....Categor
+-000027e0: 794c 6973 7444 6961 6c6f 6701 0300 0000  yListDialog.....
+-000027f0: 1204 1a04 3004 4204 3504 3304 3e04 4004  ....0.B.5.3.>.@.
+-00002800: 3804 3808 0000 0000 0600 0000 0a43 6174  8.8..........Cat
+-00002810: 6567 6f72 6965 7307 0000 0012 4361 7465  egories.....Cate
+-00002820: 676f 7279 4c69 7374 4469 616c 6f67 0103  goryListDialog..
+-00002830: 0000 0016 041a 0430 0442 0435 0433 043e  .......0.B.5.3.>
+-00002840: 0440 0438 044f 0020 0027 0800 0000 0006  .@.8.O. .'......
+-00002850: 0000 000a 4361 7465 676f 7279 2027 0700  ....Category '..
+-00002860: 0000 1243 6174 6567 6f72 794c 6973 7444  ...CategoryListD
+-00002870: 6961 6c6f 6701 0300 0000 2804 1704 3004  ialog.....(...0.
+-00002880: 3c04 3504 3d04 3804 4204 4c00 2004 3a04  <.5.=.8.B.L. .:.
+-00002890: 3004 4204 3504 3304 3e04 4004 3804 4e00  0.B.5.3.>.@.8.N.
+-000028a0: 2000 2708 0000 0000 0600 0000 1252 6570   .'..........Rep
+-000028b0: 6c61 6365 2063 6174 6567 6f72 7920 2707  lace category '.
+-000028c0: 0000 0012 4361 7465 676f 7279 4c69 7374  ....CategoryList
+-000028d0: 4469 616c 6f67 0103 0000 001c 0417 0430  Dialog.........0
+-000028e0: 043c 0435 043d 0438 0442 044c 0020 043d  .<.5.=.8.B.L. .=
+-000028f0: 0430 002e 002e 002e 0800 0000 0006 0000  .0..............
+-00002900: 000f 5265 706c 6163 6520 7769 7468 2e2e  ..Replace with..
+-00002910: 2e07 0000 0012 4361 7465 676f 7279 4c69  ......CategoryLi
+-00002920: 7374 4469 616c 6f67 0103 0000 003c 041f  stDialog.....<..
+-00002930: 043e 043a 0430 0437 0430 0442 044c 0020  .>.:.0.7.0.B.L. 
+-00002940: 043e 043f 0435 0440 0430 0446 0438 0438  .>.?.5.@.0.F.8.8
+-00002950: 0020 0441 0020 041a 0430 0442 0435 0433  . .A. ...0.B.5.3
+-00002960: 043e 0440 0438 0435 0439 0800 0000 0006  .>.@.8.5.9......
+-00002970: 0000 001d 5368 6f77 206f 7065 7261 7469  ....Show operati
+-00002980: 6f6e 7320 7769 7468 2043 6174 6567 6f72  ons with Categor
+-00002990: 7907 0000 0012 4361 7465 676f 7279 4c69  y.....CategoryLi
+-000029a0: 7374 4469 616c 6f67 0103 0000 0010 041e  stDialog........
+-000029b0: 043f 0435 0440 0430 0446 0438 0438 0800  .?.5.@.0.F.8.8..
+-000029c0: 0000 0006 0000 000a 4f70 6572 6174 696f  ........Operatio
+-000029d0: 6e73 0700 0000 0e43 6174 6567 6f72 7952  ns.....CategoryR
+-000029e0: 6570 6f72 7401 0300 0000 1804 3f04 3e00  eport.......?.>.
+-000029f0: 2004 1a04 3004 4204 3504 3304 3e04 4004   ...0.B.5.3.>.@.
+-00002a00: 3804 3808 0000 0000 0600 0000 0b62 7920  8.8..........by 
+-00002a10: 4361 7465 676f 7279 0700 0000 0e43 6174  Category.....Cat
+-00002a20: 6567 6f72 7952 6570 6f72 7401 0300 0000  egoryReport.....
+-00002a30: 1404 1a04 3004 4204 3504 3304 3e04 4004  ....0.B.5.3.>.@.
+-00002a40: 3804 4f00 3a08 0000 0000 0600 0000 0943  8.O.:..........C
+-00002a50: 6174 6567 6f72 793a 0700 0000 1443 6174  ategory:.....Cat
+-00002a60: 6567 6f72 7952 6570 6f72 7457 6964 6765  egoryReportWidge
+-00002a70: 7401 0300 0000 2404 1e04 4204 4704 5104  t.....$...B.G.Q.
+-00002a80: 4200 2004 3f04 3e00 2004 3a04 3004 4204  B. .?.>. .:.0.B.
+-00002a90: 3504 3304 3e04 4004 3804 3808 0000 0000  5.3.>.@.8.8.....
+-00002aa0: 0600 0000 1252 6570 6f72 7420 6279 2063  .....Report by c
+-00002ab0: 6174 6567 6f72 7907 0000 0014 4361 7465  ategory.....Cate
+-00002ac0: 676f 7279 5265 706f 7274 5769 6467 6574  goryReportWidget
+-00002ad0: 0103 0000 0018 041d 0430 0438 043c 0435  .........0.8.<.5
+-00002ae0: 043d 043e 0432 0430 043d 0438 0435 0800  .=.>.2.0.=.8.5..
+-00002af0: 0000 0006 0000 0004 4e61 6d65 0700 0000  ........Name....
+-00002b00: 1143 6174 6567 6f72 7954 7265 654d 6f64  .CategoryTreeMod
+-00002b10: 656c 0103 0000 000c 0427 0430 0441 0442  el.......'.0.A.B
+-00002b20: 0430 044f 0800 0000 0006 0000 0005 4f66  .0.O..........Of
+-00002b30: 7465 6e07 0000 0011 4361 7465 676f 7279  ten.....Category
+-00002b40: 5472 6565 4d6f 6465 6c01 0300 0000 2004  TreeModel..... .
+-00002b50: 1304 4004 3004 4404 3804 3a00 2004 4604  ..@.0.D.8.:. .F.
+-00002b60: 3504 3d04 4b00 2004 3404 3b04 4f00 2008  5.=.K. .4.;.O. .
+-00002b70: 0000 0000 0600 0000 1050 7269 6365 2063  .........Price c
+-00002b80: 6861 7274 2066 6f72 2007 0000 000b 4368  hart for .....Ch
+-00002b90: 6172 7457 696e 646f 7701 0300 0000 1a04  artWindow.......
+-00002ba0: 2604 3504 3d04 3d04 3004 4f00 2004 3104  &.5.=.=.0.O. .1.
+-00002bb0: 4304 3c04 3004 3304 3008 0000 0000 0600  C.<.0.3.0.......
+-00002bc0: 0000 0541 7373 6574 0700 0000 1143 6c6f  ...Asset.....Clo
+-00002bd0: 7365 6454 7261 6465 734d 6f64 656c 0103  sedTradesModel..
+-00002be0: 0000 001a 0414 0430 0442 0430 0020 0437  .......0.B.0. .7
+-00002bf0: 0430 043a 0440 044b 0442 0438 044f 0800  .0.:.@.K.B.8.O..
+-00002c00: 0000 0006 0000 000a 436c 6f73 6520 4461  ........Close Da
+-00002c10: 7465 0700 0000 1143 6c6f 7365 6454 7261  te.....ClosedTra
+-00002c20: 6465 734d 6f64 656c 0103 0000 0026 0414  desModel.....&..
+-00002c30: 0430 0442 0430 002f 0432 0440 0435 043c  .0.B.0./.2.@.5.<
+-00002c40: 044f 0020 0437 0430 043a 0440 044b 0442  .O. .7.0.:.@.K.B
+-00002c50: 0438 044f 0800 0000 0006 0000 000f 436c  .8.O..........Cl
+-00002c60: 6f73 6520 4461 7465 2f54 696d 6507 0000  ose Date/Time...
+-00002c70: 0011 436c 6f73 6564 5472 6164 6573 4d6f  ..ClosedTradesMo
+-00002c80: 6465 6c01 0300 0000 1a04 2604 3504 3d04  del.......&.5.=.
+-00002c90: 3000 2004 3704 3004 3a04 4004 4b04 4204  0. .7.0.:.@.K.B.
+-00002ca0: 3804 4f08 0000 0000 0600 0000 0b43 6c6f  8.O..........Clo
+-00002cb0: 7365 2050 7269 6365 0700 0000 1143 6c6f  se Price.....Clo
+-00002cc0: 7365 6454 7261 6465 734d 6f64 656c 0103  sedTradesModel..
+-00002cd0: 0000 0010 041a 043e 043c 0438 0441 0441  .......>.<.8.A.A
+-00002ce0: 0438 044f 0800 0000 0006 0000 0003 4665  .8.O..........Fe
+-00002cf0: 6507 0000 0011 436c 6f73 6564 5472 6164  e.....ClosedTrad
+-00002d00: 6573 4d6f 6465 6c01 0300 0000 1404 1f04  esModel.........
+-00002d10: 4004 3804 3c04 3504 4704 3004 3d04 3804  @.8.<.5.G.0.=.8.
+-00002d20: 3508 0000 0000 0600 0000 044e 6f74 6507  5..........Note.
+-00002d30: 0000 0011 436c 6f73 6564 5472 6164 6573  ....ClosedTrades
+-00002d40: 4d6f 6465 6c01 0300 0000 1a04 1404 3004  Model.........0.
+-00002d50: 4204 3000 2004 3e04 4204 3a04 4004 4b04  B.0. .>.B.:.@.K.
+-00002d60: 4204 3804 4f08 0000 0000 0600 0000 094f  B.8.O..........O
+-00002d70: 7065 6e20 4461 7465 0700 0000 1143 6c6f  pen Date.....Clo
+-00002d80: 7365 6454 7261 6465 734d 6f64 656c 0103  sedTradesModel..
+-00002d90: 0000 0026 0414 0430 0442 0430 002f 0412  ...&...0.B.0./..
+-00002da0: 0440 0435 043c 044f 0020 043e 0442 043a  .@.5.<.O. .>.B.:
+-00002db0: 0440 044b 0442 0438 044f 0800 0000 0006  .@.K.B.8.O......
+-00002dc0: 0000 000e 4f70 656e 2044 6174 652f 5469  ....Open Date/Ti
+-00002dd0: 6d65 0700 0000 1143 6c6f 7365 6454 7261  me.....ClosedTra
+-00002de0: 6465 734d 6f64 656c 0103 0000 001a 0426  desModel.......&
+-00002df0: 0435 043d 0430 0020 043e 0442 043a 0440  .5.=.0. .>.B.:.@
+-00002e00: 044b 0442 0438 044f 0800 0000 0006 0000  .K.B.8.O........
+-00002e10: 000a 4f70 656e 2050 7269 6365 0700 0000  ..Open Price....
+-00002e20: 1143 6c6f 7365 6454 7261 6465 734d 6f64  .ClosedTradesMod
+-00002e30: 656c 0103 0000 0006 041f 0438 0423 0800  el.........8.#..
+-00002e40: 0000 0006 0000 0003 502f 4c07 0000 0011  ........P/L.....
+-00002e50: 436c 6f73 6564 5472 6164 6573 4d6f 6465  ClosedTradesMode
+-00002e60: 6c01 0300 0000 0c04 1f04 3804 2300 2c00  l.........8.#.,.
+-00002e70: 2000 2508 0000 0000 0600 0000 0650 2f4c   .%..........P/L
+-00002e80: 2c20 2507 0000 0011 436c 6f73 6564 5472  , %.....ClosedTr
+-00002e90: 6164 6573 4d6f 6465 6c01 0300 0000 0c04  adesModel.......
+-00002ea0: 1a04 3e04 3b00 2d04 3204 3e08 0000 0000  ..>.;.-.2.>.....
+-00002eb0: 0600 0000 0351 7479 0700 0000 1143 6c6f  .....Qty.....Clo
+-00002ec0: 7365 6454 7261 6465 734d 6f64 656c 0103  sedTradesModel..
+-00002ed0: 0000 00a0 041a 043e 043b 0438 0447 0435  .......>.;.8.G.5
+-00002ee0: 0442 0432 043e 0020 0446 0435 043d 043d  .B.2.>. .F.5.=.=
+-00002ef0: 044b 0445 0020 0431 0443 043c 0430 0433  .K.E. .1.C.<.0.3
+-00002f00: 0020 043d 0435 0434 043e 0441 0442 0430  . .=.5.4.>.A.B.0
+-00002f10: 0442 043e 0447 043d 043e 0020 0434 043b  .B.>.G.=.>. .4.;
+-00002f20: 044f 0020 043e 0431 0440 0430 0431 043e  .O. .>.1.@.0.1.>
+-00002f30: 0442 043a 0438 0020 043a 043e 0440 043f  .B.:.8. .:.>.@.?
+-00002f40: 043e 0440 0430 0442 0438 0432 043d 043e  .>.@.0.B.8.2.=.>
+-00002f50: 0433 043e 0020 0441 043e 0431 044b 0442  .3.>. .A.>.1.K.B
+-00002f60: 0438 044f 002e 0020 0414 0430 0442 0430  .8.O... ...0.B.0
+-00002f70: 003a 0020 0800 0000 0006 0000 0042 4173  .:. .........BAs
+-00002f80: 7365 7420 616d 6f75 6e74 2069 7320 6e6f  set amount is no
+-00002f90: 7420 656e 6f75 6768 2066 6f72 2063 6f72  t enough for cor
+-00002fa0: 706f 7261 7465 2061 6374 696f 6e20 7072  porate action pr
+-00002fb0: 6f63 6573 7369 6e67 2e20 4461 7465 3a20  ocessing. Date: 
+-00002fc0: 0700 0000 0f43 6f72 706f 7261 7465 4163  .....CorporateAc
+-00002fd0: 7469 6f6e 0103 0000 0074 0426 0411 0020  tion.....t.&... 
+-00002fe0: 043d 0435 0020 044f 0432 043b 044f 0435  .=.5. .O.2.;.O.5
+-00002ff0: 0442 0441 044f 0020 0447 0430 0441 0442  .B.A.O. .G.0.A.B
+-00003000: 044c 044e 0020 0440 0435 0437 0443 043b  .L.N. .@.5.7.C.;
+-00003010: 044c 0442 0430 0442 043e 0432 0020 043a  .L.B.0.B.>.2. .:
+-00003020: 043e 0440 043f 043e 0440 0430 0442 0438  .>.@.?.>.@.0.B.8
+-00003030: 0432 043d 043e 0433 043e 0020 0441 043e  .2.=.>.3.>. .A.>
+-00003040: 0431 044b 0442 0438 044f 003a 0020 0800  .1.K.B.8.O.:. ..
+-00003050: 0000 0006 0000 0030 4173 7365 7420 6973  .......0Asset is
+-00003060: 6e27 7420 6120 7061 7274 206f 6620 636f  n't a part of co
+-00003070: 7270 6f72 6174 6520 6163 7469 6f6e 2072  rporate action r
+-00003080: 6573 756c 7473 3a20 0700 0000 0f43 6f72  esults: .....Cor
+-00003090: 706f 7261 7465 4163 7469 6f6e 0103 0000  porateAction....
+-000030a0: 0056 041d 0435 0020 0437 0430 0434 0430  .V...5. .7.0.4.0
+-000030b0: 043d 0020 0442 0438 043f 0020 043a 043e  .=. .B.8.?. .:.>
+-000030c0: 0440 043f 043e 0440 0430 0442 0438 0432  .@.?.>.@.0.B.8.2
+-000030d0: 043d 043e 0433 043e 0020 0441 043e 0431  .=.>.3.>. .A.>.1
+-000030e0: 044b 0442 0438 044f 002e 0020 0414 0430  .K.B.8.O... ...0
+-000030f0: 0442 0430 003a 0020 0800 0000 0006 0000  .B.0.:. ........
+-00003100: 002b 436f 7270 6f72 6174 6520 6163 7469  .+Corporate acti
+-00003110: 6f6e 2074 7970 6520 6973 6e27 7420 6465  on type isn't de
+-00003120: 6669 6e65 642e 2044 6174 653a 2007 0000  fined. Date: ...
+-00003130: 000f 436f 7270 6f72 6174 6541 6374 696f  ..CorporateActio
+-00003140: 6e01 0300 0000 1204 1404 3504 3b04 3804  n.........5.;.8.
+-00003150: 4104 4204 3804 3d04 3308 0000 0000 0600  A.B.8.=.3.......
+-00003160: 0000 0944 656c 6973 7469 6e67 0700 0000  ...Delisting....
+-00003170: 0f43 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
+-00003180: 0103 0000 002c 0420 0435 043e 0440 0433  .....,. .5.>.@.3
+-00003190: 0430 043d 0438 0437 0430 0446 0438 044f  .0.=.8.7.0.F.8.O
+-000031a0: 0020 043a 043e 043c 043f 0430 043d 0438  . .:.>.<.?.0.=.8
+-000031b0: 0438 0800 0000 0006 0000 0006 4d65 7267  .8..........Merg
+-000031c0: 6572 0700 0000 0f43 6f72 706f 7261 7465  er.....Corporate
+-000031d0: 4163 7469 6f6e 0103 0000 00ac 0420 0435  Action....... .5
+-000031e0: 0437 0443 043b 044c 0442 0430 0442 044b  .7.C.;.L.B.0.B.K
+-000031f0: 0020 043a 043e 0440 043f 043e 0440 0430  . .:.>.@.?.>.@.0
+-00003200: 0442 0438 0432 043d 043e 0433 043e 0020  .B.8.2.=.>.3.>. 
+-00003210: 0441 043e 0431 044b 0442 0438 044f 0020  .A.>.1.K.B.8.O. 
+-00003220: 043d 0435 0020 0440 0430 0441 043f 0440  .=.5. .@.0.A.?.@
+-00003230: 0435 0434 0435 043b 044f 044e 0442 0020  .5.4.5.;.O.N.B. 
+-00003240: 0031 0030 0030 0025 0020 0441 0442 043e  .1.0.0.%. .A.B.>
+-00003250: 0438 043c 043e 0441 0442 0438 0020 0438  .8.<.>.A.B.8. .8
+-00003260: 0437 043d 0430 0447 0430 043b 044c 043d  .7.=.0.G.0.;.L.=
+-00003270: 043e 0433 043e 0020 0430 043a 0442 0438  .>.3.>. .0.:.B.8
+-00003280: 0432 0430 002e 0020 0800 0000 0006 0000  .2.0... ........
+-00003290: 004d 5265 7375 6c74 7320 7661 6c75 6520  .MResults value 
+-000032a0: 6f66 2063 6f72 706f 7261 7465 2061 6374  of corporate act
+-000032b0: 696f 6e20 646f 6573 6e27 7420 6d61 7463  ion doesn't matc
+-000032c0: 6820 3130 3025 206f 6620 696e 6974 6961  h 100% of initia
+-000032d0: 6c20 6173 7365 7420 7661 6c75 652e 2007  l asset value. .
+-000032e0: 0000 000f 436f 7270 6f72 6174 6541 6374  ....CorporateAct
+-000032f0: 696f 6e01 0300 0000 3a04 1204 4b04 3404  ion.....:...K.4.
+-00003300: 3504 3b04 3504 3d04 3804 3500 2004 3a04  5.;.5.=.8.5. .:.
+-00003310: 3e04 3c04 3f04 3004 3d04 3804 3800 2000  >.<.?.0.=.8.8. .
+-00003320: 2804 4104 3f04 3804 3d00 2d04 3e04 4404  (.A.?.8.=.-.>.D.
+-00003330: 4400 2908 0000 0000 0600 0000 0853 7069  D.)..........Spi
+-00003340: 6e2d 6f66 6607 0000 000f 436f 7270 6f72  n-off.....Corpor
+-00003350: 6174 6541 6374 696f 6e01 0300 0000 0a04  ateAction.......
+-00003360: 2104 3f04 3b04 3804 4208 0000 0000 0600  !.?.;.8.B.......
+-00003370: 0000 0553 706c 6974 0700 0000 0f43 6f72  ...Split.....Cor
+-00003380: 706f 7261 7465 4163 7469 6f6e 0103 0000  porateAction....
+-00003390: 001a 0421 043c 0435 043d 0430 0020 0441  ...!.<.5.=.0. .A
+-000033a0: 0438 043c 0432 043e 043b 0430 0800 0000  .8.<.2.>.;.0....
+-000033b0: 0006 0000 000d 5379 6d62 6f6c 2063 6861  ......Symbol cha
+-000033c0: 6e67 6507 0000 000f 436f 7270 6f72 6174  nge.....Corporat
+-000033d0: 6541 6374 696f 6e01 0300 0000 1804 1d04  eAction.........
+-000033e0: 1504 1e04 1f04 2004 1504 1404 1504 1b04  ...... .........
+-000033f0: 1504 1d04 1e08 0000 0000 0600 0000 0955  ...............U
+-00003400: 4e44 4546 494e 4544 0700 0000 0f43 6f72  NDEFINED.....Cor
+-00003410: 706f 7261 7465 4163 7469 6f6e 0103 0000  porateAction....
+-00003420: 00ae 041d 0435 043f 043e 0434 0435 0440  .....5.?.>.4.5.@
+-00003430: 0436 0438 0432 0430 0435 043c 044b 0439  .6.8.2.0.5.<.K.9
+-00003440: 0020 0441 043b 0443 0447 0430 0439 003a  . .A.;.C.G.0.9.:
+-00003450: 0020 041a 043e 0440 043f 043e 0440 0430  . ...>.@.?.>.@.0
+-00003460: 0442 0438 0432 043d 043e 0435 0020 0441  .B.8.2.=.>.5. .A
+-00003470: 043e 0431 044b 0442 0438 0435 0020 043f  .>.1.K.B.8.5. .?
+-00003480: 043e 043a 0440 044b 0432 0430 0435 0442  .>.:.@.K.2.0.5.B
+-00003490: 0020 043d 0435 0020 0432 0441 044e 0020  . .=.5. .2.A.N. 
+-000034a0: 043e 0442 043a 0440 044b 0442 0443 044e  .>.B.:.@.K.B.C.N
+-000034b0: 0020 043f 043e 0437 0438 0446 0438 044e  . .?.>.7.8.F.8.N
+-000034c0: 002e 0020 0414 0430 0442 0430 003a 0020  ... ...0.B.0.:. 
+-000034d0: 0800 0000 0006 0000 0046 556e 6861 6e64  .........FUnhand
+-000034e0: 6c65 6420 6361 7365 3a20 436f 7270 6f72  led case: Corpor
+-000034f0: 6174 6520 6163 7469 6f6e 2063 6f76 6572  ate action cover
+-00003500: 7320 6e6f 7420 6675 6c6c 206f 7065 6e20  s not full open 
+-00003510: 706f 7369 7469 6f6e 2e20 4461 7465 3a20  position. Date: 
+-00003520: 0700 0000 0f43 6f72 706f 7261 7465 4163  .....CorporateAc
+-00003530: 7469 6f6e 0103 0000 0002 2116 0800 0000  tion......!.....
+-00003540: 0006 0000 0001 2307 0000 0015 436f 7270  ......#.....Corp
+-00003550: 6f72 6174 6541 6374 696f 6e57 6964 6765  orateActionWidge
+-00003560: 7401 0300 0000 0804 2104 4704 3504 4208  t.......!.G.5.B.
+-00003570: 0000 0000 0600 0000 0741 6363 6f75 6e74  .........Account
+-00003580: 0700 0000 1543 6f72 706f 7261 7465 4163  .....CorporateAc
+-00003590: 7469 6f6e 5769 6467 6574 0103 0000 001c  tionWidget......
+-000035a0: 0414 043e 0431 0430 0432 0438 0442 044c  ...>.1.0.2.8.B.L
+-000035b0: 0020 0430 043a 0442 0438 0432 0800 0000  . .0.:.B.8.2....
+-000035c0: 0006 0000 0009 4164 6420 6173 7365 7407  ......Add asset.
+-000035d0: 0000 0015 436f 7270 6f72 6174 6541 6374  ....CorporateAct
+-000035e0: 696f 6e57 6964 6765 7401 0300 0000 0404  ionWidget.......
+-000035f0: 2604 1108 0000 0000 0600 0000 0541 7373  &............Ass
+-00003600: 6574 0700 0000 1543 6f72 706f 7261 7465  et.....Corporate
+-00003610: 4163 7469 6f6e 5769 6467 6574 0103 0000  ActionWidget....
+-00003620: 002c 041a 043e 0440 043f 043e 0440 0430  .,...>.@.?.>.@.0
+-00003630: 0442 0438 0432 043d 043e 0435 0020 0434  .B.8.2.=.>.5. .4
+-00003640: 0435 0439 0441 0442 0432 0438 0435 0800  .5.9.A.B.2.8.5..
+-00003650: 0000 0006 0000 0010 436f 7270 6f72 6174  ........Corporat
+-00003660: 6520 4163 7469 6f6e 0700 0000 1543 6f72  e Action.....Cor
+-00003670: 706f 7261 7465 4163 7469 6f6e 5769 6467  porateActionWidg
+-00003680: 6574 0103 0000 0014 0414 0430 0442 0430  et.........0.B.0
+-00003690: 002f 0412 0440 0435 043c 044f 0800 0000  ./...@.5.<.O....
+-000036a0: 0006 0000 0009 4461 7465 2f54 696d 6507  ......Date/Time.
+-000036b0: 0000 0015 436f 7270 6f72 6174 6541 6374  ....CorporateAct
+-000036c0: 696f 6e57 6964 6765 7401 0300 0000 1204  ionWidget.......
+-000036d0: 1404 3504 3b04 3804 4104 4204 3804 3d04  ..5.;.8.A.B.8.=.
+-000036e0: 3308 0000 0000 0600 0000 0944 656c 6973  3..........Delis
+-000036f0: 7469 6e67 0700 0000 1543 6f72 706f 7261  ting.....Corpora
+-00003700: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
+-00003710: 0000 0044 041d 0435 0432 043e 0437 043c  ...D...5.2.>.7.<
+-00003720: 043e 0436 043d 043e 0020 0434 043e 0431  .>.6.=.>. .4.>.1
+-00003730: 0430 0432 0438 0442 044c 0020 043d 043e  .0.2.8.B.L. .=.>
+-00003740: 0432 0443 044e 0020 0437 0430 043f 0438  .2.C.N. .7.0.?.8
+-00003750: 0441 044c 003a 0020 0800 0000 0006 0000  .A.L.:. ........
+-00003760: 001a 4661 696c 6564 2074 6f20 6164 6420  ..Failed to add 
+-00003770: 6e65 7720 7265 636f 7264 3a20 0700 0000  new record: ....
+-00003780: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
+-00003790: 5769 6467 6574 0103 0000 0028 041e 0431  Widget.....(...1
+-000037a0: 044a 0435 0434 0438 043d 0435 043d 0438  .J.5.4.8.=.5.=.8
+-000037b0: 0435 0020 043a 043e 043c 043f 0430 043d  .5. .:.>.<.?.0.=
+-000037c0: 0438 0438 0800 0000 0006 0000 0006 4d65  .8.8..........Me
+-000037d0: 7267 6572 0700 0000 1543 6f72 706f 7261  rger.....Corpora
+-000037e0: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
+-000037f0: 0000 0006 004e 002f 0041 0800 0000 0006  .....N./.A......
+-00003800: 0000 0003 4e2f 4107 0000 0015 436f 7270  ....N/A.....Corp
+-00003810: 6f72 6174 6541 6374 696f 6e57 6964 6765  orateActionWidge
+-00003820: 7401 0300 0000 1004 1e04 3f04 3804 4104  t.........?.8.A.
+-00003830: 3004 3d04 3804 3508 0000 0000 0600 0000  0.=.8.5.........
+-00003840: 044e 6f74 6507 0000 0015 436f 7270 6f72  .Note.....Corpor
+-00003850: 6174 6541 6374 696f 6e57 6964 6765 7401  ateActionWidget.
+-00003860: 0300 0000 4804 1e04 4804 3804 3104 3a04  ....H...H.8.1.:.
+-00003870: 3000 2004 3f04 4004 3800 2004 3704 3004  0. .?.@.8. .7.0.
+-00003880: 3f04 3804 4104 3800 2004 3404 3504 4204  ?.8.A.8. .4.5.B.
+-00003890: 3004 3b04 3504 3900 2004 3e04 3f04 3504  0.;.5.9. .>.?.5.
+-000038a0: 4004 3004 4604 3804 3800 3a00 2008 0000  @.0.F.8.8.:. ...
+-000038b0: 0000 0600 0000 214f 7065 7261 7469 6f6e  ......!Operation
+-000038c0: 2064 6574 6169 6c73 2073 7562 6d69 7420   details submit 
+-000038d0: 6661 696c 6564 3a20 0700 0000 1543 6f72  failed: .....Cor
+-000038e0: 706f 7261 7465 4163 7469 6f6e 5769 6467  porateActionWidg
+-000038f0: 6574 0103 0000 0038 041e 0448 0438 0431  et.....8...H.8.1
+-00003900: 043a 0430 0020 043f 0440 0438 0020 0437  .:.0. .?.@.8. .7
+-00003910: 0430 043f 0438 0441 0438 0020 043e 043f  .0.?.8.A.8. .>.?
+-00003920: 0435 0440 0430 0446 0438 0438 003a 0020  .5.@.0.F.8.8.:. 
+-00003930: 0800 0000 0006 0000 0019 4f70 6572 6174  ..........Operat
+-00003940: 696f 6e20 7375 626d 6974 2066 6169 6c65  ion submit faile
+-00003950: 643a 2007 0000 0015 436f 7270 6f72 6174  d: .....Corporat
+-00003960: 6541 6374 696f 6e57 6964 6765 7401 0300  eActionWidget...
+-00003970: 0000 0c04 1a04 3e04 3b00 2d04 3204 3e08  ......>.;.-.2.>.
+-00003980: 0000 0000 0600 0000 0351 7479 0700 0000  .........Qty....
+-00003990: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
+-000039a0: 5769 6467 6574 0103 0000 001a 0423 0434  Widget.......#.4
+-000039b0: 0430 043b 0438 0442 044c 0020 0430 043a  .0.;.8.B.L. .0.:
+-000039c0: 0442 0438 0432 0800 0000 0006 0000 000c  .B.8.2..........
+-000039d0: 5265 6d6f 7665 2061 7373 6574 0700 0000  Remove asset....
+-000039e0: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
+-000039f0: 5769 6467 6574 0103 ffff ffff 0800 0000  Widget..........
+-00003a00: 0006 0000 0008 5370 696e 2d4f 6666 0700  ......Spin-Off..
+-00003a10: 0000 1543 6f72 706f 7261 7465 4163 7469  ...CorporateActi
+-00003a20: 6f6e 5769 6467 6574 0103 0000 000a 0421  onWidget.......!
+-00003a30: 043f 043b 0438 0442 0800 0000 0006 0000  .?.;.8.B........
+-00003a40: 0005 5370 6c69 7407 0000 0015 436f 7270  ..Split.....Corp
+-00003a50: 6f72 6174 6541 6374 696f 6e57 6964 6765  orateActionWidge
+-00003a60: 7401 0300 0000 1a04 2104 3c04 3504 3d04  t.......!.<.5.=.
+-00003a70: 3000 2004 4104 3804 3c04 3204 3e04 3b04  0. .A.8.<.2.>.;.
+-00003a80: 3008 0000 0000 0600 0000 0d53 796d 626f  0..........Symbo
+-00003a90: 6c20 6368 616e 6765 0700 0000 1543 6f72  l change.....Cor
+-00003aa0: 706f 7261 7465 4163 7469 6f6e 5769 6467  porateActionWidg
+-00003ab0: 6574 0103 0000 0006 0422 0438 043f 0800  et.......".8.?..
+-00003ac0: 0000 0006 0000 0004 5479 7065 0700 0000  ........Type....
+-00003ad0: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
+-00003ae0: 5769 6467 6574 0103 0000 0034 0424 043e  Widget.....4.$.>
+-00003af0: 0440 043c 0430 0442 0020 0431 0430 0437  .@.<.0.B. .1.0.7
+-00003b00: 044b 0020 0434 0430 043d 043d 044b 0445  .K. .4.0.=.=.K.E
+-00003b10: 0020 0443 0441 0442 0430 0440 0435 043b  . .C.A.B.0.@.5.;
+-00003b20: 0800 0000 0006 0000 001b 4461 7461 6261  ..........Databa
+-00003b30: 7365 2066 6f72 6d61 7420 6973 206f 7574  se format is out
+-00003b40: 6461 7465 6407 0000 0002 4442 0103 0000  dated.....DB....
+-00003b50: 0064 0412 044b 0020 0441 043e 0433 043b  .d...K. .A.>.3.;
+-00003b60: 0430 0441 043d 044b 0020 0441 043a 043e  .0.A.=.K. .A.:.>
+-00003b70: 043d 0432 0435 0440 0442 0438 0440 043e  .=.2.5.@.B.8.@.>
+-00003b80: 0432 0430 0442 044c 0020 0434 0430 043d  .2.0.B.L. .4.0.=
+-00003b90: 043d 044b 0435 0020 0432 0020 043d 043e  .=.K.5. .2. .=.>
+-00003ba0: 0432 044b 0439 0020 0444 043e 0440 043c  .2.K.9. .D.>.@.<
+-00003bb0: 0430 0442 003f 0800 0000 0006 0000 0032  .0.B.?.........2
+-00003bc0: 446f 2079 6f75 2061 6772 6565 2074 6f20  Do you agree to 
+-00003bd0: 7570 6772 6164 6520 796f 7572 2064 6174  upgrade your dat
+-00003be0: 6120 746f 206e 6577 6572 2066 6f72 6d61  a to newer forma
+-00003bf0: 743f 0700 0000 0244 4201 0300 0000 5e04  t?.....DB.....^.
+-00003c00: 2404 3e04 4004 3c04 3000 2000 3300 2d04  $.>.@.<.0. .3.-.
+-00003c10: 1d04 1404 2404 1b00 2004 3404 3b04 4f00  ....$... .4.;.O.
+-00003c20: 2004 4d04 4204 3e04 3304 3e00 2004 3304   .M.B.>.3.>. .3.
+-00003c30: 3e04 3404 3000 2004 3d04 3500 2004 3f04  >.4.0. .=.5. .?.
+-00003c40: 3e04 3404 3404 3504 4004 3604 3804 3204  >.4.4.5.@.6.8.2.
+-00003c50: 3004 3504 4204 4104 4f00 3a00 2008 0000  0.5.B.A.O.:. ...
+-00003c60: 0000 0600 0000 2633 2d4e 4446 4c20 666f  ......&3-NDFL fo
+-00003c70: 726d 2069 736e 2774 2073 7570 6f6f 7274  rm isn't supoort
+-00003c80: 6564 2066 6f72 2079 6561 723a 2007 0000  ed for year: ...
+-00003c90: 0004 444c 5347 0103 0000 0086 0421 0442  ..DLSG.......!.B
+-00003ca0: 0440 0430 043d 0430 0020 0426 0411 0020  .@.0.=.0. .&... 
+-00003cb0: 043d 0435 0020 0437 0430 0434 0430 043d  .=.5. .7.0.4.0.=
+-00003cc0: 0430 002c 0020 0434 0438 0432 0438 0434  .0.,. .4.8.2.8.4
+-00003cd0: 0435 043d 0434 0020 043d 0435 0020 0431  .5.=.4. .=.5. .1
+-00003ce0: 0443 0434 0435 0442 0020 0432 043a 043b  .C.4.5.B. .2.:.;
+-00003cf0: 044e 0447 0451 043d 0020 0432 0020 0434  .N.G.Q.=. .2. .4
+-00003d00: 0435 043a 043b 0430 0440 0430 0446 0438  .5.:.;.0.@.0.F.8
+-00003d10: 044e 0020 0033 002d 041d 0424 0414 041b  .N. .3.-...$....
+-00003d20: 0020 0800 0000 0006 0000 0047 4163 636f  . .........GAcco
+-00003d30: 756e 7420 636f 756e 7472 7920 6973 206e  unt country is n
+-00003d40: 6f74 2073 6574 2066 6f72 2061 7373 6574  ot set for asset
+-00003d50: 2c20 6469 7669 6465 6e64 2069 736e 2774  , dividend isn't
+-00003d60: 2069 6e63 6c75 6465 2069 6e20 332d 4e44   include in 3-ND
+-00003d70: 464c 2007 0000 0004 444c 5347 0103 0000  FL .....DLSG....
+-00003d80: 004a 0412 0430 043b 044e 0442 0430 0020  .J...0.;.N.B.0. 
+-00003d90: 043d 0435 0020 043f 043e 0434 0434 0435  .=.5. .?.>.4.4.5
+-00003da0: 0440 0436 0438 0432 0430 0435 0442 0441  .@.6.8.2.0.5.B.A
+-00003db0: 044f 0020 0434 043b 044f 0020 0033 002d  .O. .4.;.O. .3.-
+-00003dc0: 041d 0414 0424 041b 003a 0020 0800 0000  .....$...:. ....
+-00003dd0: 0006 0000 0026 4375 7272 656e 6379 2069  .....&Currency i
+-00003de0: 7320 6e6f 7420 7375 7070 6f72 7465 6420  s not supported 
+-00003df0: 666f 7220 332d 4e44 464c 3a20 0700 0000  for 3-NDFL: ....
+-00003e00: 0444 4c53 4701 0300 0000 1404 4d04 3a04  .DLSG.......M.:.
+-00003e10: 4104 3f04 3804 4004 3004 4604 3804 4f08  A.?.8.@.0.F.8.O.
+-00003e20: 0000 0000 0600 0000 0665 7870 6972 7907  .........expiry.
+-00003e30: 0000 000c 4461 7461 4465 6c65 6761 7465  ....DataDelegate
+-00003e40: 0103 0000 000e 043d 043e 043c 0438 043d  .......=.>.<.8.=
+-00003e50: 0430 043b 0800 0000 0006 0000 0009 7072  .0.;..........pr
+-00003e60: 696e 6369 7061 6c07 0000 000c 4461 7461  incipal.....Data
+-00003e70: 4465 6c65 6761 7465 0103 0000 000e 0440  Delegate.......@
+-00003e80: 0435 0433 002e 043a 043e 0434 0800 0000  .5.3...:.>.4....
+-00003e90: 0006 0000 0008 7265 672e 636f 6465 0700  ......reg.code..
+-00003ea0: 0000 0c44 6174 6144 656c 6567 6174 6501  ...DataDelegate.
+-00003eb0: 0300 0000 1004 1204 4104 3500 2004 3404  ........A.5. .4.
+-00003ec0: 3004 4204 4b08 0000 0000 0600 0000 0941  0.B.K..........A
+-00003ed0: 6c6c 2064 6174 6573 0700 0000 1144 6174  ll dates.....Dat
+-00003ee0: 6552 616e 6765 5365 6c65 6374 6f72 0103  eRangeSelector..
+-00003ef0: 0000 0004 0421 003a 0800 0000 0006 0000  .....!.:........
+-00003f00: 0005 4672 6f6d 3a07 0000 0011 4461 7465  ..From:.....Date
+-00003f10: 5261 6e67 6553 656c 6563 746f 7201 0300  RangeSelector...
+-00003f20: 0000 0a04 1c04 3504 4104 4f04 4608 0000  ......5.A.O.F...
+-00003f30: 0000 0600 0000 054d 6f6e 7468 0700 0000  .......Month....
+-00003f40: 1144 6174 6552 616e 6765 5365 6c65 6374  .DateRangeSelect
+-00003f50: 6f72 0103 0000 001c 041f 0440 0435 0434  or.........@.5.4
+-00003f60: 044b 0434 0443 0449 0438 0439 0020 0433  .K.4.C.I.8.9. .3
+-00003f70: 043e 0434 0800 0000 0006 0000 000d 5072  .>.4..........Pr
+-00003f80: 6576 696f 7573 2079 6561 7207 0000 0011  evious year.....
+-00003f90: 4461 7465 5261 6e67 6553 656c 6563 746f  DateRangeSelecto
+-00003fa0: 7201 0300 0000 0e04 1a04 3204 3004 4004  r.........2.0.@.
+-00003fb0: 4204 3004 3b08 0000 0000 0600 0000 0751  B.0.;..........Q
+-00003fc0: 7561 7274 6572 0700 0000 1144 6174 6552  uarter.....DateR
+-00003fd0: 616e 6765 5365 6c65 6374 6f72 0103 0000  angeSelector....
+-00003fe0: 0024 0422 0435 043a 0443 0449 0438 0439  .$.".5.:.C.I.8.9
+-00003ff0: 0020 0434 043e 0020 0441 0435 0433 043e  . .4.>. .A.5.3.>
+-00004000: 0434 043d 044f 0800 0000 0006 0000 000f  .4.=.O..........
+-00004010: 5175 6172 7465 7220 746f 2064 6174 6507  Quarter to date.
+-00004020: 0000 0011 4461 7465 5261 6e67 6553 656c  ....DateRangeSel
+-00004030: 6563 746f 7201 0300 0000 1604 2204 3504  ector.......".5.
+-00004040: 3a04 4304 4904 3804 3900 2004 3304 3e04  :.C.I.8.9. .3.>.
+-00004050: 3408 0000 0000 0600 0000 0954 6869 7320  4..........This 
+-00004060: 7965 6172 0700 0000 1144 6174 6552 616e  year.....DateRan
+-00004070: 6765 5365 6c65 6374 6f72 0103 0000 0006  geSelector......
+-00004080: 0414 043e 003a 0800 0000 0006 0000 0003  ...>.:..........
+-00004090: 546f 3a07 0000 0011 4461 7465 5261 6e67  To:.....DateRang
+-000040a0: 6553 656c 6563 746f 7201 0300 0000 0c04  eSelector.......
+-000040b0: 1d04 3504 3404 3504 3b04 4f08 0000 0000  ..5.4.5.;.O.....
+-000040c0: 0600 0000 0457 6565 6b07 0000 0011 4461  .....Week.....Da
+-000040d0: 7465 5261 6e67 6553 656c 6563 746f 7201  teRangeSelector.
+-000040e0: 0300 0000 0604 1304 3e04 3408 0000 0000  ........>.4.....
+-000040f0: 0600 0000 0459 6561 7207 0000 0011 4461  .....Year.....Da
+-00004100: 7465 5261 6e67 6553 656c 6563 746f 7201  teRangeSelector.
+-00004110: 0300 0000 1c04 1304 3e04 3400 2004 3404  ........>.4. .4.
+-00004120: 3e00 2004 4104 3504 3304 3e04 3404 3d04  >. .A.5.3.>.4.=.
+-00004130: 4f08 0000 0000 0600 0000 0c59 6561 7220  O..........Year 
+-00004140: 746f 2064 6174 6507 0000 0011 4461 7465  to date.....Date
+-00004150: 5261 6e67 6553 656c 6563 746f 7201 0300  RangeSelector...
+-00004160: 0000 1e04 2104 3404 3504 3b04 3a04 3800  ....!.4.5.;.:.8.
+-00004170: 2004 3f04 3e00 2004 4104 4704 3504 4204   .?.>. .A.G.5.B.
+-00004180: 4308 0000 0000 0600 0000 1044 6561 6c73  C..........Deals
+-00004190: 2062 7920 4163 636f 756e 7407 0000 000b   by Account.....
+-000041a0: 4465 616c 7352 6570 6f72 7401 0300 0000  DealsReport.....
+-000041b0: 0a04 2104 4704 3504 4200 3a08 0000 0000  ..!.G.5.B.:.....
+-000041c0: 0600 0000 0841 6363 6f75 6e74 3a07 0000  .....Account:...
+-000041d0: 0011 4465 616c 7352 6570 6f72 7457 6964  ..DealsReportWid
+-000041e0: 6765 7401 0300 0000 0c04 2104 3404 3504  get.......!.4.5.
+-000041f0: 3b04 3a04 3808 0000 0000 0600 0000 0544  ;.:.8..........D
+-00004200: 6561 6c73 0700 0000 1144 6561 6c73 5265  eals.....DealsRe
+-00004210: 706f 7274 5769 6467 6574 0103 0000 0020  portWidget..... 
+-00004220: 0413 0440 0443 043f 043f 0438 0440 043e  ...@.C.?.?.8.@.>
+-00004230: 0432 0430 0442 044c 0020 043f 043e 003a  .2.0.B.L. .?.>.:
+-00004240: 0800 0000 0006 0000 0009 4772 6f75 7020  ..........Group 
+-00004250: 6279 3a07 0000 0011 4465 616c 7352 6570  by:.....DealsRep
+-00004260: 6f72 7457 6964 6765 7401 0300 0000 0e00  ortWidget.......
+-00004270: 3c04 1f04 4304 4104 4204 3e00 3e08 0000  <...C.A.B.>.>...
+-00004280: 0000 0600 0000 063c 4e6f 6e65 3e07 0000  .......<None>...
+-00004290: 0011 4465 616c 7352 6570 6f72 7457 696e  ..DealsReportWin
+-000042a0: 646f 7701 0300 0000 1a04 2604 3504 3d04  dow.......&.5.=.
+-000042b0: 3d04 3004 4f00 2004 3104 4304 3c04 3004  =.0.O. .1.C.<.0.
+-000042c0: 3304 3008 0000 0000 0600 0000 0541 7373  3.0..........Ass
+-000042d0: 6574 0700 0000 1144 6561 6c73 5265 706f  et.....DealsRepo
+-000042e0: 7274 5769 6e64 6f77 0103 0000 0030 0426  rtWindow.....0.&
+-000042f0: 0411 0020 002d 0020 041e 0442 043a 0440  ... .-. ...B.:.@
+-00004300: 044b 0442 0438 0435 0020 002d 0020 0417  .K.B.8.5. .-. ..
+-00004310: 0430 043a 0440 044b 0442 0438 0435 0800  .0.:.@.K.B.8.5..
+-00004320: 0000 0006 0000 0014 4173 7365 7420 2d20  ........Asset - 
+-00004330: 4f70 656e 202d 2043 6c6f 7365 0700 0000  Open - Close....
+-00004340: 1144 6561 6c73 5265 706f 7274 5769 6e64  .DealsReportWind
+-00004350: 6f77 0103 0000 0010 0417 0430 043a 0440  ow.........0.:.@
+-00004360: 044b 0442 0438 0435 0800 0000 0006 0000  .K.B.8.5........
+-00004370: 0005 436c 6f73 6507 0000 0011 4465 616c  ..Close.....Deal
+-00004380: 7352 6570 6f72 7457 696e 646f 7701 0300  sReportWindow...
+-00004390: 0000 2604 1704 3004 3a04 4004 4b04 4204  ..&...0.:.@.K.B.
+-000043a0: 3804 3500 2000 2d00 2004 1e04 4204 3a04  8.5. .-. ...B.:.
+-000043b0: 4004 4b04 4204 3804 3508 0000 0000 0600  @.K.B.8.5.......
+-000043c0: 0000 0c43 6c6f 7365 202d 204f 7065 6e07  ...Close - Open.
+-000043d0: 0000 0011 4465 616c 7352 6570 6f72 7457  ....DealsReportW
+-000043e0: 696e 646f 7701 0300 0000 2604 1e04 4204  indow.....&...B.
+-000043f0: 3a04 4004 4b04 4204 3804 3500 2000 2d00  :.@.K.B.8.5. .-.
+-00004400: 2004 1704 3004 3a04 4004 4b04 4204 3804   ...0.:.@.K.B.8.
+-00004410: 3508 0000 0000 0600 0000 0c4f 7065 6e20  5..........Open 
+-00004420: 2d20 436c 6f73 6507 0000 0011 4465 616c  - Close.....Deal
+-00004430: 7352 6570 6f72 7457 696e 646f 7701 0300  sReportWindow...
+-00004440: 0000 0a04 2104 4304 3c04 3c04 3008 0000  ....!.C.<.<.0...
+-00004450: 0000 0600 0000 0641 6d6f 756e 7407 0000  .......Amount...
+-00004460: 000c 4465 7461 696c 734d 6f64 656c 0103  ..DetailsModel..
+-00004470: 0000 0012 041a 0430 0442 0435 0433 043e  .......0.B.5.3.>
+-00004480: 0440 0438 044f 0800 0000 0006 0000 0008  .@.8.O..........
+-00004490: 4361 7465 676f 7279 0700 0000 0c44 6574  Category.....Det
+-000044a0: 6169 6c73 4d6f 6465 6c01 0300 0000 1004  ailsModel.......
+-000044b0: 1e04 3f04 3804 4104 3004 3d04 3804 3508  ..?.8.A.0.=.8.5.
+-000044c0: 0000 0000 0600 0000 044e 6f74 6507 0000  .........Note...
+-000044d0: 000c 4465 7461 696c 734d 6f64 656c 0103  ..DetailsModel..
+-000044e0: 0000 000a 041c 0435 0442 043a 0430 0800  .......5.B.:.0..
+-000044f0: 0000 0006 0000 0003 5461 6707 0000 000c  ........Tag.....
+-00004500: 4465 7461 696c 734d 6f64 656c 0103 0000  DetailsModel....
+-00004510: 009e 041d 0435 0432 043e 0437 043c 043e  .....5.2.>.7.<.>
+-00004520: 0436 043d 043e 0020 043e 0431 0440 0430  .6.=.>. .>.1.@.0
+-00004530: 0431 043e 0442 0430 0442 044c 0020 0434  .1.>.B.0.B.L. .4
+-00004540: 0438 0432 0438 0434 0435 043d 0434 002c  .8.2.8.4.5.=.4.,
+-00004550: 0020 0442 002e 043a 002e 0020 043d 0435  . .B...:... .=.5
+-00004560: 0020 0443 043a 0430 0437 0430 043d 0020  . .C.:.0.7.0.=. 
+-00004570: 0431 0430 043d 043a 0020 0434 043b 044f  .1.0.=.:. .4.;.O
+-00004580: 0020 0438 043d 0432 0435 0441 0442 0438  . .8.=.2.5.A.B.8
+-00004590: 0446 0438 043e 043d 043d 043e 0433 043e  .F.8.>.=.=.>.3.>
+-000045a0: 0020 0441 0447 0451 0442 0430 003a 0020  . .A.G.Q.B.0.:. 
+-000045b0: 0800 0000 0006 0000 0041 4361 6e27 7420  .........ACan't 
+-000045c0: 7072 6f63 6573 7320 6469 7669 6465 6e64  process dividend
+-000045d0: 2061 7320 6261 6e6b 2069 736e 2774 2073   as bank isn't s
+-000045e0: 6574 2066 6f72 2069 6e76 6573 746d 656e  et for investmen
+-000045f0: 7420 6163 636f 756e 743a 2007 0000 0008  t account: .....
+-00004600: 4469 7669 6465 6e64 0103 0000 005a 041d  Dividend.....Z..
+-00004610: 0435 0020 0437 0430 0434 0430 043d 0430  .5. .7.0.4.0.=.0
+-00004620: 0020 0446 0435 043d 0430 0020 0434 043b  . .F.5.=.0. .4.;
+-00004630: 044f 0020 0432 044b 043f 043b 0430 0442  .O. .2.K.?.;.0.B
+-00004640: 044b 0020 0446 0435 043d 043d 044b 043c  .K. .F.5.=.=.K.<
+-00004650: 0438 0020 0431 0443 043c 0430 0433 0430  .8. .1.C.<.0.3.0
+-00004660: 043c 0438 003a 0020 0800 0000 0006 0000  .<.8.:. ........
+-00004670: 002a 4e6f 2070 7269 6365 2064 6174 6120  .*No price data 
+-00004680: 666f 7220 7374 6f63 6b20 6469 7669 6465  for stock divide
+-00004690: 6e64 2f76 6573 7469 6e67 3a20 0700 0000  nd/vesting: ....
+-000046a0: 0844 6976 6964 656e 6401 0300 0000 7204  .Dividend.....r.
+-000046b0: 1d04 3504 4200 2004 3a04 3e04 4204 3804  ..5.B. .:.>.B.8.
+-000046c0: 4004 3e04 3204 3a04 3800 2004 3404 3b04  @.>.2.:.8. .4.;.
+-000046d0: 4f00 2004 3404 3804 3204 3804 3404 3504  O. .4.8.2.8.4.5.
+-000046e0: 3d04 3404 3000 2004 3004 3a04 4604 3804  =.4.0. .0.:.F.8.
+-000046f0: 4f04 3c04 3800 2004 3804 3b04 3800 2004  O.<.8. .8.;.8. .
+-00004700: 3704 3004 4704 3804 4104 3b04 3504 3d04  7.0.G.8.A.;.5.=.
+-00004710: 3804 4f00 2004 3004 3a04 4604 3804 3900  8.O. .0.:.F.8.9.
+-00004720: 2e08 0000 0000 0600 0000 2d4e 6f20 7374  ..........-No st
+-00004730: 6f63 6b20 7175 6f74 6520 666f 7220 7374  ock quote for st
+-00004740: 6f63 6b20 6469 7669 6465 6e64 206f 7220  ock dividend or 
+-00004750: 7665 7374 696e 672e 0700 0000 0844 6976  vesting......Div
+-00004760: 6964 656e 6401 0300 0000 b804 1d04 3504  idend.........5.
+-00004770: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
+-00004780: 3204 3004 3504 3c04 3e04 3500 2004 3404  2.0.5.<.>.5. .4.
+-00004790: 3504 3904 4104 4204 3204 3804 3500 3a00  5.9.A.B.2.8.5.:.
+-000047a0: 2004 3404 3804 3204 3804 3404 3504 3d04   .4.8.2.8.4.5.=.
+-000047b0: 3400 2004 3004 3a04 4604 3804 4f04 3c04  4. .0.:.F.8.O.<.
+-000047c0: 3800 2004 3804 3b04 3800 2004 3704 3004  8. .8.;.8. .7.0.
+-000047d0: 4704 3804 4104 3b04 3504 3d04 3804 3500  G.8.A.;.5.=.8.5.
+-000047e0: 2004 3004 3a04 4604 3804 3900 2004 3704   .0.:.F.8.9. .7.
+-000047f0: 3004 3a04 4004 4b04 3204 3004 3504 4200  0.:.@.K.2.0.5.B.
+-00004800: 2004 3a04 3e04 4004 3e04 4204 3a04 4304   .:.>.@.>.B.:.C.
+-00004810: 4e00 2004 3f04 3e04 3704 3804 4604 3804  N. .?.>.7.8.F.8.
+-00004820: 4e00 2e08 0000 0000 0600 0000 434e 6f74  N...........CNot
+-00004830: 2073 7570 706f 7274 6564 2061 6374 696f   supported actio
+-00004840: 6e3a 2073 746f 636b 2064 6976 6964 656e  n: stock dividen
+-00004850: 6420 6f72 2076 6573 7469 6e67 2063 6c6f  d or vesting clo
+-00004860: 7365 7320 7368 6f72 7420 7472 6164 652e  ses short trade.
+-00004870: 0700 0000 0844 6976 6964 656e 6401 0300  .....Dividend...
+-00004880: 0000 0e04 1d04 3004 3b04 3e04 3300 3a00  ......0.;.>.3.:.
+-00004890: 2008 0000 0000 0600 0000 0554 6178 3a20   ..........Tax: 
+-000048a0: 0700 0000 0844 6976 6964 656e 6401 0300  .....Dividend...
+-000048b0: 0000 3e04 1d04 3504 3f04 3e04 3404 3404  ..>...5.?.>.4.4.
+-000048c0: 3504 4004 3604 3804 3204 3004 3504 3c04  5.@.6.8.2.0.5.<.
+-000048d0: 4b04 3900 2004 4204 3804 3f00 2004 3404  K.9. .B.8.?. .4.
+-000048e0: 3804 3204 3804 3404 3504 3d04 3404 3000  8.2.8.4.5.=.4.0.
+-000048f0: 2e08 0000 0000 0600 0000 1a55 6e73 7570  ...........Unsup
+-00004900: 706f 7274 6564 2064 6976 6964 656e 6420  ported dividend 
+-00004910: 7479 7065 2e07 0000 0008 4469 7669 6465  type......Divide
+-00004920: 6e64 0103 0000 0002 2116 0800 0000 0006  nd......!.......
+-00004930: 0000 0001 2307 0000 000e 4469 7669 6465  ....#.....Divide
+-00004940: 6e64 5769 6467 6574 0103 0000 0008 0421  ndWidget.......!
+-00004950: 0447 0435 0442 0800 0000 0006 0000 0007  .G.5.B..........
+-00004960: 4163 636f 756e 7407 0000 000e 4469 7669  Account.....Divi
+-00004970: 6465 6e64 5769 6467 6574 0103 0000 0004  dendWidget......
+-00004980: 0426 0411 0800 0000 0006 0000 0005 4173  .&............As
+-00004990: 7365 7407 0000 000e 4469 7669 6465 6e64  set.....Dividend
+-000049a0: 5769 6467 6574 0103 0000 000a 041a 0443  Widget.........C
+-000049b0: 043f 043e 043d 0800 0000 0006 0000 000d  .?.>.=..........
+-000049c0: 426f 6e64 2049 6e74 6572 6573 7407 0000  Bond Interest...
+-000049d0: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
+-000049e0: 0103 0000 0014 0414 0430 0442 0430 002f  .........0.B.0./
+-000049f0: 0412 0440 0435 043c 044f 0800 0000 0006  ...@.5.<.O......
+-00004a00: 0000 0009 4461 7465 2f54 696d 6507 0000  ....Date/Time...
+-00004a10: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
+-00004a20: 0103 0000 0010 0414 0438 0432 0438 0434  .........8.2.8.4
+-00004a30: 0435 043d 0434 0800 0000 0006 0000 0008  .5.=.4..........
+-00004a40: 4469 7669 6465 6e64 0700 0000 0e44 6976  Dividend.....Div
+-00004a50: 6964 656e 6457 6964 6765 7401 0300 0000  idendWidget.....
+-00004a60: 0e04 1e04 4204 4104 3504 4704 3a04 3008  ....B.A.5.G.:.0.
+-00004a70: 0000 0000 0600 0000 0745 782d 4461 7465  .........Ex-Date
+-00004a80: 0700 0000 0e44 6976 6964 656e 6457 6964  .....DividendWid
+-00004a90: 6765 7401 0300 0000 0600 4e00 2f00 4108  get.......N./.A.
+-00004aa0: 0000 0000 0600 0000 034e 2f41 0700 0000  .........N/A....
+-00004ab0: 0e44 6976 6964 656e 6457 6964 6765 7401  .DividendWidget.
+-00004ac0: 0300 0000 1a04 1d04 3504 4200 2004 3a04  ........5.B. .:.
+-00004ad0: 3e04 4204 3804 4004 3e04 3204 3a04 3808  >.B.8.@.>.2.:.8.
+-00004ae0: 0000 0000 0600 0000 084e 6f20 7175 6f74  .........No quot
+-00004af0: 6507 0000 000e 4469 7669 6465 6e64 5769  e.....DividendWi
+-00004b00: 6467 6574 0103 0000 0010 041e 043f 0438  dget.........?.8
+-00004b10: 0441 0430 043d 0438 0435 0800 0000 0006  .A.0.=.8.5......
+-00004b20: 0000 0004 4e6f 7465 0700 0000 0e44 6976  ....Note.....Div
+-00004b30: 6964 656e 6457 6964 6765 7401 0300 0000  idendWidget.....
+-00004b40: 0804 2604 3504 3d04 3008 0000 0000 0600  ..&.5.=.0.......
+-00004b50: 0000 0550 7269 6365 0700 0000 0e44 6976  ...Price.....Div
+-00004b60: 6964 656e 6457 6964 6765 7401 0300 0000  idendWidget.....
+-00004b70: 2004 1404 3804 3204 3804 3404 3504 3d04   ...8.2.8.4.5.=.
+-00004b80: 3400 2004 3004 3a04 4604 3804 4f04 3c04  4. .0.:.F.8.O.<.
+-00004b90: 3808 0000 0000 0600 0000 0e53 746f 636b  8..........Stock
+-00004ba0: 2044 6976 6964 656e 6407 0000 000e 4469   Dividend.....Di
+-00004bb0: 7669 6465 6e64 5769 6467 6574 0103 0000  videndWidget....
+-00004bc0: 001c 041f 0435 0440 0435 0434 0430 0447  .....5.@.5.4.0.G
+-00004bd0: 0430 0020 0430 043a 0446 0438 0439 0800  .0. .0.:.F.8.9..
+-00004be0: 0000 0006 0000 000d 5374 6f63 6b20 5665  ........Stock Ve
+-00004bf0: 7374 696e 6707 0000 000e 4469 7669 6465  sting.....Divide
+-00004c00: 6e64 5769 6467 6574 0103 0000 000a 041d  ndWidget........
+-00004c10: 0430 043b 043e 0433 0800 0000 0006 0000  .0.;.>.3........
+-00004c20: 0003 5461 7807 0000 000e 4469 7669 6465  ..Tax.....Divide
+-00004c30: 6e64 5769 6467 6574 0103 0000 0006 0422  ndWidget......."
+-00004c40: 0438 043f 0800 0000 0006 0000 0004 5479  .8.?..........Ty
+-00004c50: 7065 0700 0000 0e44 6976 6964 656e 6457  pe.....DividendW
+-00004c60: 6964 6765 7401 0300 0000 b204 1d04 4304  idget.........C.
+-00004c70: 3604 3d04 3e00 2004 4304 4104 4204 3004  6.=.>. .C.A.B.0.
+-00004c80: 3d04 3e04 3204 3804 4204 4c00 2004 3a04  =.>.2.8.B.L. .:.
+-00004c90: 3e04 4204 3804 4004 3e04 3204 3a04 4300  >.B.8.@.>.2.:.C.
+-00004ca0: 2004 3104 4304 3c04 3004 3304 3800 2004   .1.C.<.0.3.8. .
+-00004cb0: 3404 3b04 4f00 2004 1404 3004 4204 4b00  4.;.O. ...0.B.K.
+-00004cc0: 2f04 1204 4004 3504 3c04 3504 3d04 3800  /...@.5.<.5.=.8.
+-00004cd0: 2004 3404 3804 3204 3804 3404 3504 3d04   .4.8.2.8.4.5.=.
+-00004ce0: 3404 3000 2004 4704 3504 4004 3504 3700  4.0. .G.5.@.5.7.
+-00004cf0: 2004 3c04 3504 3d04 4e00 2004 1404 3004   .<.5.=.N. ...0.
+-00004d00: 3d04 3d04 4b04 3500 2d00 3e04 1a04 3e04  =.=.K.5.-.>...>.
+-00004d10: 4204 3804 4004 3e04 3204 3a04 3808 0000  B.8.@.>.2.:.8...
+-00004d20: 0000 0600 0000 4859 6f75 2073 686f 756c  ......HYou shoul
+-00004d30: 6420 7365 7420 7175 6f74 6520 7669 6120  d set quote via 
+-00004d40: 4461 7461 2d3e 5175 6f74 6573 206d 656e  Data->Quotes men
+-00004d50: 7520 666f 7220 4461 7465 2f54 696d 6520  u for Date/Time 
+-00004d60: 6f66 2074 6865 2064 6976 6964 656e 6407  of the dividend.
+-00004d70: 0000 000e 4469 7669 6465 6e64 5769 6467  ....DividendWidg
+-00004d80: 6574 0103 0000 0014 043d 0435 0438 0437  et.......=.5.8.7
+-00004d90: 0432 0435 0441 0442 043d 043e 0800 0000  .2.5.A.B.=.>....
+-00004da0: 0006 0000 0007 756e 6b6e 6f77 6e07 0000  ......unknown...
+-00004db0: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
+-00004dc0: 0103 0000 0010 0421 0432 043e 0439 0441  .......!.2.>.9.A
+-00004dd0: 0442 0432 043e 0800 0000 0006 0000 0008  .B.2.>..........
+-00004de0: 5072 6f70 6572 7479 0700 0000 0e45 7874  Property.....Ext
+-00004df0: 7261 4461 7461 4d6f 6465 6c01 0300 0000  raDataModel.....
+-00004e00: 1004 1704 3d04 3004 4704 3504 3d04 3804  ....=.0.G.5.=.8.
+-00004e10: 3508 0000 0000 0600 0000 0556 616c 7565  5..........Value
+-00004e20: 0700 0000 0e45 7874 7261 4461 7461 4d6f  .....ExtraDataMo
+-00004e30: 6465 6c01 0300 0000 1a04 2604 3504 3d04  del.......&.5.=.
+-00004e40: 3d04 3004 4f00 2004 3104 4304 3c04 3004  =.0.O. .1.C.<.0.
+-00004e50: 3304 3008 0000 0000 0600 0000 0a41 7373  3.0..........Ass
+-00004e60: 6574 204e 616d 6507 0000 000d 486f 6c64  et Name.....Hold
+-00004e70: 696e 6773 4d6f 6465 6c01 0300 0000 1c04  ingsModel.......
+-00004e80: 1204 3004 3b04 4e04 4204 3000 2f04 2104  ..0.;.N.B.0./.!.
+-00004e90: 4704 5104 4200 2f04 2604 1108 0000 0000  G.Q.B./.&.......
+-00004ea0: 0600 0000 1643 7572 7265 6e63 792f 4163  .....Currency/Ac
+-00004eb0: 636f 756e 742f 4173 7365 7407 0000 000d  count/Asset.....
+-00004ec0: 486f 6c64 696e 6773 4d6f 6465 6c01 0300  HoldingsModel...
+-00004ed0: 0000 0a04 2d04 3a04 4104 3f00 3a08 0000  ....-.:.A.?.:...
+-00004ee0: 0000 0600 0000 0445 7870 3a07 0000 000d  .......Exp:.....
+-00004ef0: 486f 6c64 696e 6773 4d6f 6465 6c01 0300  HoldingsModel...
+-00004f00: 0000 1404 2604 3504 3d04 3000 2004 3704  ....&.5.=.0. .7.
+-00004f10: 3004 3a04 4000 2e08 0000 0000 0600 0000  0.:.@...........
+-00004f20: 044c 6173 7407 0000 000d 486f 6c64 696e  .Last.....Holdin
+-00004f30: 6773 4d6f 6465 6c01 0300 0000 3404 1404  gsModel.....4...
+-00004f40: 3004 4204 3000 2004 3f04 3e04 4104 3b04  0.B.0. .?.>.A.;.
+-00004f50: 3504 3404 3d04 3504 3900 2004 3a04 3e04  5.4.=.5.9. .:.>.
+-00004f60: 4204 3804 4004 3e04 3204 3a04 3800 3a00  B.8.@.>.2.:.8.:.
+-00004f70: 2008 0000 0000 0600 0000 114c 6173 7420   ..........Last 
+-00004f80: 7175 6f74 6520 6461 7465 3a20 0700 0000  quote date: ....
+-00004f90: 0d48 6f6c 6469 6e67 734d 6f64 656c 0103  .HoldingsModel..
+-00004fa0: 0000 0014 0426 0435 043d 0430 0020 043e  .....&.5.=.0. .>
+-00004fb0: 0442 043a 0440 002e 0800 0000 0006 0000  .B.:.@..........
+-00004fc0: 0004 4f70 656e 0700 0000 0d48 6f6c 6469  ..Open.....Holdi
+-00004fd0: 6e67 734d 6f64 656c 0103 0000 0006 041f  ngsModel........
+-00004fe0: 0438 0423 0800 0000 0006 0000 0003 502f  .8.#..........P/
+-00004ff0: 4c07 0000 000d 486f 6c64 696e 6773 4d6f  L.....HoldingsMo
+-00005000: 6465 6c01 0300 0000 0c04 1f04 3804 2300  del.........8.#.
+-00005010: 2c00 2000 2508 0000 0000 0600 0000 0650  ,. .%..........P
+-00005020: 2f4c 2c20 2507 0000 000d 486f 6c64 696e  /L, %.....Holdin
+-00005030: 6773 4d6f 6465 6c01 0300 0000 0c04 1a04  gsModel.........
+-00005040: 3e04 3b00 2d04 3204 3e08 0000 0000 0600  >.;.-.2.>.......
+-00005050: 0000 0351 7479 0700 0000 0d48 6f6c 6469  ...Qty.....Holdi
+-00005060: 6e67 734d 6f64 656c 0103 0000 000e 0414  ngsModel........
+-00005070: 043e 043b 044f 002c 0020 0025 0800 0000  .>.;.O.,. .%....
+-00005080: 0006 0000 0008 5368 6172 652c 2025 0700  ......Share, %..
+-00005090: 0000 0d48 6f6c 6469 6e67 734d 6f64 656c  ...HoldingsModel
+-000050a0: 0103 0000 000c 041e 0446 0435 043d 043a  .........F.5.=.:
+-000050b0: 0430 0800 0000 0006 0000 0005 5661 6c75  .0..........Valu
+-000050c0: 6507 0000 000d 486f 6c64 696e 6773 4d6f  e.....HoldingsMo
+-000050d0: 6465 6c01 0300 0000 1004 1e04 4604 3504  del.........F.5.
+-000050e0: 3d04 3a04 3000 2c00 2008 0000 0000 0600  =.:.0.,. .......
+-000050f0: 0000 0756 616c 7565 2c20 0700 0000 0d48  ...Value, .....H
+-00005100: 6f6c 6469 6e67 734d 6f64 656c 0103 0000  oldingsModel....
+-00005110: 0016 041f 043e 0440 0442 0444 0435 043b  .....>.@.B.D.5.;
+-00005120: 044c 0020 0426 0411 0800 0000 0006 0000  .L. .&..........
+-00005130: 0008 486f 6c64 696e 6773 0700 0000 0e48  ..Holdings.....H
+-00005140: 6f6c 6469 6e67 7352 6570 6f72 7401 0300  oldingsReport...
+-00005150: 0000 1a04 1e04 4604 3504 3d04 3804 4204  ......F.5.=.8.B.
+-00005160: 4c00 2004 3d04 3004 3b04 3e04 3308 0000  L. .=.0.;.>.3...
+-00005170: 0000 0600 0000 0c45 7374 696d 6174 6520  .......Estimate 
+-00005180: 7461 7807 0000 0014 486f 6c64 696e 6773  tax.....Holdings
+-00005190: 5265 706f 7274 5769 6e64 6f77 0103 0000  ReportWindow....
+-000051a0: 0016 041f 043e 0440 0442 0444 0435 043b  .....>.@.B.D.5.;
+-000051b0: 044c 0020 0426 0411 0800 0000 0006 0000  .L. .&..........
+-000051c0: 0008 486f 6c64 696e 6773 0700 0000 1448  ..Holdings.....H
+-000051d0: 6f6c 6469 6e67 7352 6570 6f72 7457 696e  oldingsReportWin
+-000051e0: 646f 7701 0300 0000 1404 1f04 3e04 4004  dow.........>.@.
+-000051f0: 4204 4304 3304 3004 3b04 3804 4f08 0000  B.C.3.0.;.8.O...
+-00005200: 0000 0600 0000 0850 6f72 7475 6761 6c07  .......Portugal.
+-00005210: 0000 0014 486f 6c64 696e 6773 5265 706f  ....HoldingsRepo
+-00005220: 7274 5769 6e64 6f77 0103 0000 000c 0420  rtWindow....... 
+-00005230: 043e 0441 0441 0438 044f 0800 0000 0006  .>.A.A.8.O......
+-00005240: 0000 0006 5275 7373 6961 0700 0000 1448  ....Russia.....H
+-00005250: 6f6c 6469 6e67 7352 6570 6f72 7457 696e  oldingsReportWin
+-00005260: 646f 7701 0300 0000 2804 1f04 3e04 3a04  dow.....(...>.:.
+-00005270: 3004 3704 3004 4204 4c00 2004 3304 4004  0.7.0.B.L. .3.@.
+-00005280: 3004 4404 3804 3a00 2004 4604 3504 3d04  0.D.8.:. .F.5.=.
+-00005290: 4b08 0000 0000 0600 0000 1053 686f 7720  K..........Show 
+-000052a0: 5072 6963 6520 4368 6172 7407 0000 0014  Price Chart.....
+-000052b0: 486f 6c64 696e 6773 5265 706f 7274 5769  HoldingsReportWi
+-000052c0: 6e64 6f77 0103 0000 0022 0412 0430 043b  ndow....."...0.;
+-000052d0: 044e 0442 0430 0020 043f 0435 0440 0435  .N.B.0. .?.5.@.5
+-000052e0: 0441 0447 0451 0442 0430 003a 0800 0000  .A.G.Q.B.0.:....
+-000052f0: 0006 0000 0010 436f 6d6d 6f6e 2063 7572  ......Common cur
+-00005300: 7265 6e63 793a 0700 0000 0e48 6f6c 6469  rency:.....Holdi
+-00005310: 6e67 7357 6964 6765 7401 0300 0000 1604  ngsWidget.......
+-00005320: 1f04 3e04 4004 4204 4404 3504 3b04 4c00  ..>.@.B.D.5.;.L.
+-00005330: 2004 2604 1108 0000 0000 0600 0000 0848   .&............H
+-00005340: 6f6c 6469 6e67 7307 0000 000e 486f 6c64  oldings.....Hold
+-00005350: 696e 6773 5769 6467 6574 0103 0000 0018  ingsWidget......
+-00005360: 0421 043e 0445 0440 0430 043d 0438 0442  .!.>.E.@.0.=.8.B
+-00005370: 044c 002e 002e 002e 0800 0000 0006 0000  .L..............
+-00005380: 0007 5361 7665 2e2e 2e07 0000 000e 486f  ..Save........Ho
+-00005390: 6c64 696e 6773 5769 6467 6574 0103 0000  ldingsWidget....
+-000053a0: 0014 0064 0064 002f 004d 004d 002f 0079  ...d.d./.M.M./.y
+-000053b0: 0079 0079 0079 0800 0000 0006 0000 000a  .y.y.y..........
+-000053c0: 6464 2f4d 4d2f 7979 7979 0700 0000 0e48  dd/MM/yyyy.....H
+-000053d0: 6f6c 6469 6e67 7357 6964 6765 7401 0300  oldingsWidget...
+-000053e0: 0000 3404 2204 3804 3f00 2004 2604 1100  ..4.".8.?. .&...
+-000053f0: 2004 3d04 3500 2004 3f04 3e04 3404 3404   .=.5. .?.>.4.4.
+-00005400: 3504 4004 3604 3804 3204 3004 3504 4204  5.@.6.8.2.0.5.B.
+-00005410: 4104 4f00 3a00 2008 0000 0000 0600 0000  A.O.:. .........
+-00005420: 1c41 7373 6574 2074 7970 6520 6973 6e27  .Asset type isn'
+-00005430: 7420 7375 7070 6f72 7465 643a 2007 0000  t supported: ...
+-00005440: 0004 4942 4b52 0103 0000 0054 041a 043e  ..IBKR.....T...>
+-00005450: 0440 043f 043e 0440 0430 0442 0438 0432  .@.?.>.@.0.B.8.2
+-00005460: 043d 043e 0435 0020 0434 0435 0439 0441  .=.>.5. .4.5.9.A
+-00005470: 0442 0432 0438 0435 0020 043d 0435 0020  .B.2.8.5. .=.5. 
+-00005480: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
+-00005490: 0432 0430 0435 0442 0441 044f 003a 0020  .2.0.5.B.A.O.:. 
+-000054a0: 0800 0000 0006 0000 0022 436f 7270 6f72  ........."Corpor
+-000054b0: 6174 6520 6163 7469 6f6e 2069 736e 2774  ate action isn't
+-000054c0: 2073 7570 706f 7274 6564 3a20 0700 0000   supported: ....
+-000054d0: 0449 424b 5201 0300 0000 4604 1d04 3504  .IBKR.....F...5.
+-000054e0: 3e04 3404 3d04 3e04 3704 3d04 3004 4704  >.4.=.>.7.=.0.G.
+-000054f0: 3d04 3e04 3500 2004 4104 3e04 3204 3f04  =.>.5. .A.>.2.?.
+-00005500: 3004 3404 3504 3d04 3804 3500 2004 4104  0.4.5.=.8.5. .A.
+-00005510: 4704 5104 4204 3000 2004 3404 3b04 4f00  G.Q.B.0. .4.;.O.
+-00005520: 2008 0000 0000 0600 0000 1b4d 756c 7469   ..........Multi
+-00005530: 706c 6520 6163 636f 756e 7420 6d61 7463  ple account matc
+-00005540: 6820 666f 7220 0700 0000 0449 424b 5201  h for .....IBKR.
+-00005550: 0300 0000 6800 4a00 5300 4f00 4e00 2004  ....h.J.S.O.N. .
+-00005560: 4204 4d04 3300 2000 2700 6400 6f00 6300  B.M.3. .'.d.o.c.
+-00005570: 7500 6d00 6500 6e00 7400 2700 2004 3e04  u.m.e.n.t.'. .>.
+-00005580: 4204 4104 4304 4204 4104 4204 3204 4304  B.A.C.B.A.B.2.C.
+-00005590: 3504 4200 2004 3204 3d04 4304 4204 4004  5.B. .2.=.C.B.@.
+-000055a0: 3800 2004 4204 4d04 3304 3000 2000 2700  8. .B.M.3.0. .'.
+-000055b0: 7400 6900 6300 6b00 6500 7400 2708 0000  t.i.c.k.e.t.'...
+-000055c0: 0000 0600 0000 2a43 616e 2774 2066 696e  ......*Can't fin
+-000055d0: 6420 2764 6f63 756d 656e 7427 2074 6167  d 'document' tag
+-000055e0: 2069 6e20 6a73 6f6e 2027 7469 636b 6574   in json 'ticket
+-000055f0: 2707 0000 0010 496d 706f 7274 536c 6970  '.....ImportSlip
+-00005600: 4469 616c 6f67 0103 0000 0072 004a 0053  Dialog.....r.J.S
+-00005610: 004f 004e 0020 0442 044d 0433 0020 0027  .O.N. .B.M.3. .'
+-00005620: 006f 0070 0065 0072 0061 0074 0069 006f  .o.p.e.r.a.t.i.o
+-00005630: 006e 0054 0079 0070 0065 0027 0020 043e  .n.T.y.p.e.'. .>
+-00005640: 0442 0441 0443 0442 0441 0442 0432 0443  .B.A.C.B.A.B.2.C
+-00005650: 0435 0442 0020 0432 043d 0443 0442 0440  .5.B. .2.=.C.B.@
+-00005660: 0438 0020 0442 044d 0433 0430 0020 0027  .8. .B.M.3.0. .'
+-00005670: 0074 0069 0063 006b 0065 0074 0027 0800  .t.i.c.k.e.t.'..
+-00005680: 0000 0006 0000 002f 4361 6e27 7420 6669  ......./Can't fi
+-00005690: 6e64 2027 6f70 6572 6174 696f 6e54 7970  nd 'operationTyp
+-000056a0: 6527 2074 6167 2069 6e20 6a73 6f6e 2027  e' tag in json '
+-000056b0: 7469 636b 6574 2707 0000 0010 496d 706f  ticket'.....Impo
+-000056c0: 7274 536c 6970 4469 616c 6f67 0103 0000  rtSlipDialog....
+-000056d0: 006a 004a 0053 004f 004e 0020 0442 044d  .j.J.S.O.N. .B.M
+-000056e0: 0433 0020 0027 0072 0065 0063 0065 0069  .3. .'.r.e.c.e.i
+-000056f0: 0070 0074 0027 0020 043e 0442 0441 0443  .p.t.'. .>.B.A.C
+-00005700: 0442 0441 0442 0432 0443 0435 0442 0020  .B.A.B.2.C.5.B. 
+-00005710: 0432 043d 0443 0442 0440 0438 0020 0442  .2.=.C.B.@.8. .B
+-00005720: 044d 0433 0430 0020 0027 0064 006f 0063  .M.3.0. .'.d.o.c
+-00005730: 0075 006d 0065 006e 0074 0027 0800 0000  .u.m.e.n.t.'....
+-00005740: 0006 0000 002b 4361 6e27 7420 6669 6e64  .....+Can't find
+-00005750: 2027 7265 6365 6970 7427 2074 6167 2069   'receipt' tag i
+-00005760: 6e20 6a73 6f6e 2027 646f 6375 6d65 6e74  n json 'document
+-00005770: 2707 0000 0010 496d 706f 7274 536c 6970  '.....ImportSlip
+-00005780: 4469 616c 6f67 0103 0000 005e 041a 0430  Dialog.....^...0
+-00005790: 0442 0435 0433 043e 0440 0438 0438 0020  .B.5.3.>.@.8.8. 
+-000057a0: 043d 0435 0020 0440 0430 0441 043f 043e  .=.5. .@.0.A.?.>
+-000057b0: 0437 043d 0430 043d 044b 003a 0020 0054  .7.=.0.=.K.:. .T
+-000057c0: 0065 006e 0073 006f 0072 006c 006f 0077  .e.n.s.o.r.l.o.w
+-000057d0: 0020 043d 0435 0020 043e 0431 043d 0430  . .=.5. .>.1.=.0
+-000057e0: 0440 0443 0436 0435 043d 0800 0000 0006  .@.C.6.5.=......
+-000057f0: 0000 0036 4361 7465 676f 7269 6573 2061  ...6Categories a
+-00005800: 7265 206e 6f74 2072 6563 6f67 6e69 7a65  re not recognize
+-00005810: 643a 2054 656e 736f 7266 6c6f 7720 6973  d: Tensorflow is
+-00005820: 206e 6f74 2066 6f75 6e64 0700 0000 1049   not found.....I
+-00005830: 6d70 6f72 7453 6c69 7044 6961 6c6f 6701  mportSlipDialog.
+-00005840: 0300 0000 4a04 1f04 4004 3504 3204 4b04  ....J...@.5.2.K.
+-00005850: 4804 3504 3d04 3e00 2004 3c04 3004 3a04  H.5.=.>. .<.0.:.
+-00005860: 4104 3804 3c04 3004 3b04 4c04 3d04 3e04  A.8.<.0.;.L.=.>.
+-00005870: 3500 2004 4704 3804 4104 3b04 3e00 2004  5. .G.8.A.;.>. .
+-00005880: 3f04 3e04 3f04 4b04 4204 3e04 3a00 2e08  ?.>.?.K.B.>.:...
+-00005890: 0000 0000 0600 0000 194d 6178 2072 6574  .........Max ret
+-000058a0: 7279 2063 6f75 6e74 2065 7863 6565 6465  ry count exceede
+-000058b0: 642e 0700 0000 1049 6d70 6f72 7453 6c69  d......ImportSli
+-000058c0: 7044 6961 6c6f 6701 0300 0000 4600 5100  pDialog.....F.Q.
+-000058d0: 5200 2004 3a04 3e04 3400 2004 3d04 3500  R. .:.>.4. .=.5.
+-000058e0: 2004 3e04 3104 3d04 3004 4004 4304 3604   .>.1.=.0.@.C.6.
+-000058f0: 3504 3d00 2004 3200 2004 3104 4304 4404  5.=. .2. .1.C.D.
+-00005900: 3504 4004 3500 2004 3e04 3104 3c04 3504  5.@.5. .>.1.<.5.
+-00005910: 3d04 3008 0000 0000 0600 0000 1e4e 6f20  =.0..........No 
+-00005920: 5152 2063 6f64 6573 2066 6f75 6e64 2069  QR codes found i
+-00005930: 6e20 636c 6970 626f 6172 6407 0000 0010  n clipboard.....
+-00005940: 496d 706f 7274 536c 6970 4469 616c 6f67  ImportSlipDialog
+-00005950: 0103 0000 0036 0051 0052 002d 043a 043e  .....6.Q.R.-.:.>
+-00005960: 0434 0020 0432 0020 0444 0430 0439 043b  .4. .2. .D.0.9.;
+-00005970: 0435 0020 043d 0435 0020 043e 0431 043d  .5. .=.5. .>.1.=
+-00005980: 0430 0440 0443 0436 0435 043d 0800 0000  .0.@.C.6.5.=....
+-00005990: 0006 0000 001e 4e6f 2051 5220 636f 6465  ......No QR code
+-000059a0: 7320 7765 7265 2066 6f75 6e64 2069 6e20  s were found in 
+-000059b0: 6669 6c65 0700 0000 1049 6d70 6f72 7453  file.....ImportS
+-000059c0: 6c69 7044 6961 6c6f 6701 0300 0000 7204  lipDialog.....r.
+-000059d0: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
+-000059e0: 3d04 3e00 2004 3404 3e04 3104 3004 3204  =.>. .4.>.1.0.2.
+-000059f0: 3804 4204 4c00 2004 4704 3504 3a00 3a00  8.B.L. .G.5.:.:.
+-00005a00: 2004 3d04 3500 2004 4304 3a04 3004 3704   .=.5. .C.:.0.7.
+-00005a10: 3004 3d00 2004 3a04 3e04 3d04 4204 4004  0.=. .:.>.=.B.@.
+-00005a20: 3004 3304 3504 3d04 4200 2004 3404 3b04  0.3.5.=.B. .4.;.
+-00005a30: 4f00 2004 3804 3c04 3f04 3e04 4004 4204  O. .8.<.?.>.@.B.
+-00005a40: 3008 0000 0000 0600 0000 414e 6f74 2070  0.........ANot p
+-00005a50: 6f73 7369 626c 6520 746f 2069 6d70 6f72  ossible to impor
+-00005a60: 7420 736c 6970 3a20 6361 6e27 7420 696d  t slip: can't im
+-00005a70: 706f 7274 3a20 6e6f 2070 6565 7220 7365  port: no peer se
+-00005a80: 7420 666f 7220 696d 706f 7274 0700 0000  t for import....
+-00005a90: 1049 6d70 6f72 7453 6c69 7044 6961 6c6f  .ImportSlipDialo
+-00005aa0: 6701 0300 0000 6604 1d04 3504 3204 3e04  g.....f...5.2.>.
+-00005ab0: 3704 3c04 3e04 3604 3d04 3e00 2004 3404  7.<.>.6.=.>. .4.
+-00005ac0: 3e04 3104 3004 3204 3804 4204 4c00 2004  >.1.0.2.8.B.L. .
+-00005ad0: 4704 3504 3a00 3a00 2004 3d04 3500 2004  G.5.:.:. .=.5. .
+-00005ae0: 4304 3a04 3004 3704 3004 3d00 2004 4104  C.:.0.7.0.=. .A.
+-00005af0: 4704 3504 4200 2004 3404 3b04 4f00 2004  G.5.B. .4.;.O. .
+-00005b00: 3804 3c04 3f04 3e04 4004 4204 3008 0000  8.<.?.>.@.B.0...
+-00005b10: 0000 0600 0000 364e 6f74 2070 6f73 7369  ......6Not possi
+-00005b20: 626c 6520 746f 2069 6d70 6f72 7420 736c  ble to import sl
+-00005b30: 6970 3a20 6e6f 2061 6363 6f75 6e74 2073  ip: no account s
+-00005b40: 6574 2066 6f72 2069 6d70 6f72 7407 0000  et for import...
+-00005b50: 0010 496d 706f 7274 536c 6970 4469 616c  ..ImportSlipDial
+-00005b60: 6f67 0103 0000 0078 041d 0435 0432 043e  og.....x...5.2.>
+-00005b70: 0437 043c 043e 0436 043d 043e 0020 0434  .7.<.>.6.=.>. .4
+-00005b80: 043e 0431 0430 0432 0438 0442 044c 0020  .>.1.0.2.8.B.L. 
+-00005b90: 0447 0435 043a 003a 0020 043a 0430 0442  .G.5.:.:. .:.0.B
+-00005ba0: 0435 0433 043e 0440 0438 0438 0020 0443  .5.3.>.@.8.8. .C
+-00005bb0: 043a 0430 0437 0430 043d 044b 0020 043d  .:.0.7.0.=.K. .=
+-00005bc0: 0435 0020 0434 043b 044f 0020 0432 0441  .5. .4.;.O. .2.A
+-00005bd0: 0435 0445 0020 0441 0442 0440 043e 043a  .5.E. .A.B.@.>.:
+-00005be0: 0800 0000 0006 0000 0038 4e6f 7420 706f  .........8Not po
+-00005bf0: 7373 6962 6c65 2074 6f20 696d 706f 7274  ssible to import
+-00005c00: 2073 6c69 703a 2073 6f6d 6520 6361 7465   slip: some cate
+-00005c10: 676f 7269 6573 2061 7265 206e 6f74 2073  gories are not s
+-00005c20: 6574 0700 0000 1049 6d70 6f72 7453 6c69  et.....ImportSli
+-00005c30: 7044 6961 6c6f 6701 0300 0000 5404 1d04  pDialog.....T...
+-00005c40: 3504 3204 3e04 3704 3c04 3e04 3604 3d04  5.2.>.7.<.>.6.=.
+-00005c50: 3e00 2004 4004 3004 4104 3f04 3e04 3704  >. .@.0.A.?.>.7.
+-00005c60: 3d04 3004 4204 4c00 2004 3f04 4004 3e04  =.0.B.L. .?.@.>.
+-00005c70: 4704 3804 4204 3004 3d04 3d04 4b04 3900  G.8.B.0.=.=.K.9.
+-00005c80: 2000 5100 5200 2d04 3a04 3e04 3400 3a00   .Q.R.-.:.>.4.:.
+-00005c90: 2008 0000 0000 0600 0000 2b51 5220 6176   .........+QR av
+-00005ca0: 6169 6c61 626c 6520 6275 7420 7061 7474  ailable but patt
+-00005cb0: 6572 6e20 6973 6e27 7420 7265 636f 676e  ern isn't recogn
+-00005cc0: 697a 6564 3a20 0700 0000 1049 6d70 6f72  ized: .....Impor
+-00005cd0: 7453 6c69 7044 6961 6c6f 6701 0300 0000  tSlipDialog.....
+-00005ce0: 0800 5100 5200 3a00 2008 0000 0000 0600  ..Q.R.:. .......
+-00005cf0: 0000 0451 523a 2007 0000 0010 496d 706f  ...QR: .....Impo
+-00005d00: 7274 536c 6970 4469 616c 6f67 0103 0000  rtSlipDialog....
+-00005d10: 0030 0412 044b 0431 0435 0440 0438 0442  .0...K.1.5.@.8.B
+-00005d20: 0435 0020 0444 0430 0439 043b 0020 0441  .5. .D.0.9.;. .A
+-00005d30: 0020 0051 0052 002d 043a 043e 0434 043e  . .Q.R.-.:.>.4.>
+-00005d40: 043c 0800 0000 0006 0000 0018 5365 6c65  .<..........Sele
+-00005d50: 6374 2066 696c 6520 7769 7468 2051 5220  ct file with QR 
+-00005d60: 636f 6465 0700 0000 1049 6d70 6f72 7453  code.....ImportS
+-00005d70: 6c69 7044 6961 6c6f 6701 0300 0000 4204  lipDialog.....B.
+-00005d80: 1204 4b04 3104 3504 4004 3804 4204 3500  ..K.1.5.@.8.B.5.
+-00005d90: 2004 4404 3004 3904 3b00 2004 4100 2000   .D.0.9.;. .A. .
+-00005da0: 4a00 5300 4f00 4e00 2d04 3404 3004 3d04  J.S.O.N.-.4.0.=.
+-00005db0: 3d04 4b04 3c04 3800 2004 4704 3504 3a04  =.K.<.8. .G.5.:.
+-00005dc0: 3008 0000 0000 0600 0000 1f53 656c 6563  0..........Selec
+-00005dd0: 7420 6669 6c65 2077 6974 6820 736c 6970  t file with slip
+-00005de0: 204a 534f 4e20 6461 7461 0700 0000 1049   JSON data.....I
+-00005df0: 6d70 6f72 7453 6c69 7044 6961 6c6f 6701  mportSlipDialog.
+-00005e00: 0300 0000 3204 1d04 3504 3804 3704 3204  ....2...5.8.7.2.
+-00005e10: 3504 4104 4204 3d04 4b04 3900 2004 4204  5.A.B.=.K.9. .B.
+-00005e20: 3804 3f00 2004 3e04 3f04 3504 4004 3004  8.?. .>.?.5.@.0.
+-00005e30: 4604 3804 3800 2008 0000 0000 0600 0000  F.8.8. .........
+-00005e40: 1755 6e6b 6e6f 776e 206f 7065 7261 7469  .Unknown operati
+-00005e50: 6f6e 2074 7970 6520 0700 0000 1049 6d70  on type .....Imp
+-00005e60: 6f72 7453 6c69 7044 6961 6c6f 6701 0300  ortSlipDialog...
+-00005e70: 0000 0600 2027 9c00 2008 0000 0000 0600  .... '.. .......
+-00005e80: 0000 0520 e29e 9c20 0700 0000 0d49 6d70  ... ... .....Imp
+-00005e90: 6f72 7453 6c69 7044 6c67 0103 0000 000a  ortSlipDlg......
+-00005ea0: 0421 0447 0435 0442 003a 0800 0000 0006  .!.G.5.B.:......
+-00005eb0: 0000 0008 4163 636f 756e 743a 0700 0000  ....Account:....
+-00005ec0: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
+-00005ed0: 0000 0010 0414 043e 0431 0430 0432 0438  .......>.1.0.2.8
+-00005ee0: 0442 044c 0800 0000 0006 0000 0003 4164  .B.L..........Ad
+-00005ef0: 6407 0000 000d 496d 706f 7274 536c 6970  d.....ImportSlip
+-00005f00: 446c 6701 0300 0000 0c04 2104 4304 3c04  Dlg.......!.C.<.
+-00005f10: 3c04 3000 3a08 0000 0000 0600 0000 0741  <.0.:..........A
+-00005f20: 6d6f 756e 743a 0700 0000 0d49 6d70 6f72  mount:.....Impor
+-00005f30: 7453 6c69 7044 6c67 0103 0000 0032 0410  tSlipDlg.....2..
+-00005f40: 0432 0442 043e 002d 043d 0430 0437 043d  .2.B.>.-.=.0.7.=
+-00005f50: 0430 0447 0435 043d 0438 0435 0020 043a  .0.G.5.=.8.5. .:
+-00005f60: 0430 0442 0435 0433 043e 0440 0438 0439  .0.B.5.3.>.@.8.9
+-00005f70: 0800 0000 0006 0000 0016 4175 746f 2d61  ..........Auto-a
+-00005f80: 7373 6967 6e20 6361 7465 676f 7269 6573  ssign categories
+-00005f90: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
+-00005fa0: 6c67 0103 0000 000c 041a 0430 043c 0435  lg.........0.<.5
+-00005fb0: 0440 0430 0800 0000 0006 0000 0006 4361  .@.0..........Ca
+-00005fc0: 6d65 7261 0700 0000 0d49 6d70 6f72 7453  mera.....ImportS
+-00005fd0: 6c69 7044 6c67 0103 0000 0010 041e 0447  lipDlg.........G
+-00005fe0: 0438 0441 0442 0438 0442 044c 0800 0000  .8.A.B.8.B.L....
+-00005ff0: 0006 0000 0005 436c 6561 7207 0000 000d  ......Clear.....
+-00006000: 496d 706f 7274 536c 6970 446c 6701 0300  ImportSlipDlg...
+-00006010: 0000 0e04 1704 3004 3a04 4004 4b04 4204  ......0.:.@.K.B.
+-00006020: 4c08 0000 0000 0600 0000 0543 6c6f 7365  L..........Close
+-00006030: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
+-00006040: 6c67 0103 0000 001a 0414 0430 0442 0430  lg.........0.B.0
+-00006050: 0020 002f 0020 0412 0440 0435 043c 044f  . ./. ...@.5.<.O
+-00006060: 003a 0800 0000 0006 0000 000c 4461 7465  .:..........Date
+-00006070: 202f 2054 696d 653a 0700 0000 0d49 6d70   / Time:.....Imp
+-00006080: 6f72 7453 6c69 7044 6c67 0103 0000 0016  ortSlipDlg......
+-00006090: 0414 0430 0442 0430 002f 0412 0440 0435  ...0.B.0./...@.5
+-000060a0: 043c 044f 003a 0800 0000 0006 0000 000a  .<.O.:..........
+-000060b0: 4461 7465 2f54 696d 653a 0700 0000 0d49  Date/Time:.....I
+-000060c0: 6d70 6f72 7453 6c69 7044 6c67 0103 0000  mportSlipDlg....
+-000060d0: 0006 0424 0414 003a 0800 0000 0006 0000  ...$...:........
+-000060e0: 0003 4644 3a07 0000 000d 496d 706f 7274  ..FD:.....Import
+-000060f0: 536c 6970 446c 6701 0300 0000 0604 2404  SlipDlg.......$.
+-00006100: 1d00 3a08 0000 0000 0600 0000 0346 4e3a  ..:..........FN:
+-00006110: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
+-00006120: 6c67 0103 0000 0006 0424 041f 003a 0800  lg.......$...:..
+-00006130: 0000 0006 0000 0003 4650 3a07 0000 000d  ........FP:.....
+-00006140: 496d 706f 7274 536c 6970 446c 6701 0300  ImportSlipDlg...
+-00006150: 0000 2604 2104 3a04 3004 3d04 3804 4004  ..&.!.:.0.=.8.@.
+-00006160: 3e04 3204 3004 4204 4c00 2004 3a04 3004  >.2.0.B.L. .:.0.
+-00006170: 3c04 3504 4004 3e04 3908 0000 0000 0600  <.5.@.>.9.......
+-00006180: 0000 0f47 6574 2066 726f 6d20 6361 6d65  ...Get from came
+-00006190: 7261 0700 0000 0d49 6d70 6f72 7453 6c69  ra.....ImportSli
+-000061a0: 7044 6c67 0103 0000 0024 041f 043e 043b  pDlg.....$...>.;
+-000061b0: 0443 0447 0438 0442 044c 0020 0438 0437  .C.G.8.B.L. .8.7
+-000061c0: 0020 0431 0443 0444 0435 0440 0430 0800  . .1.C.D.5.@.0..
+-000061d0: 0000 0006 0000 0012 4765 7420 6672 6f6d  ........Get from
+-000061e0: 2063 6c69 7062 6f61 7264 0700 0000 0d49   clipboard.....I
+-000061f0: 6d70 6f72 7453 6c69 7044 6c67 0103 0000  mportSlipDlg....
+-00006200: 0030 041f 043e 043b 0443 0447 0438 0442  .0...>.;.C.G.8.B
+-00006210: 044c 0020 0447 0435 043a 0020 0441 0020  .L. .G.5.:. .A. 
+-00006220: 0441 0430 0439 0442 0430 0020 0424 041d  .A.0.9.B.0. .$..
+-00006230: 0421 0800 0000 0006 0000 0016 4765 7420  .!..........Get 
+-00006240: 736c 6970 2066 726f 6d20 696e 7465 726e  slip from intern
+-00006250: 6574 0700 0000 0d49 6d70 6f72 7453 6c69  et.....ImportSli
+-00006260: 7044 6c67 0103 0000 0016 0418 043c 043f  pDlg.........<.?
+-00006270: 043e 0440 0442 0020 0447 0435 043a 0430  .>.@.B. .G.5.:.0
+-00006280: 0800 0000 0006 0000 000b 496d 706f 7274  ..........Import
+-00006290: 2053 6c69 7007 0000 000d 496d 706f 7274   Slip.....Import
+-000062a0: 536c 6970 446c 6701 0300 0000 0e04 2104  SlipDlg.......!.
+-000062b0: 4204 4004 3e04 3a04 3800 3a08 0000 0000  B.@.>.:.8.:.....
+-000062c0: 0600 0000 064c 696e 6573 3a07 0000 000d  .....Lines:.....
+-000062d0: 496d 706f 7274 536c 6970 446c 6701 0300  ImportSlipDlg...
+-000062e0: 0000 2404 1704 3004 3304 4004 4304 3704  ..$...0.3.@.C.7.
+-000062f0: 3804 4204 4c00 2004 3804 3700 2004 4404  8.B.L. .8.7. .D.
+-00006300: 3004 3904 3b04 3008 0000 0000 0600 0000  0.9.;.0.........
+-00006310: 0e4c 6f61 6420 6672 6f6d 2066 696c 6507  .Load from file.
+-00006320: 0000 000d 496d 706f 7274 536c 6970 446c  ....ImportSlipDl
+-00006330: 6701 0300 0000 3604 1704 3004 3304 4304  g.....6...0.3.C.
+-00006340: 3704 3804 4204 4c00 2004 4704 3504 3a04  7.8.B.L. .G.5.:.
+-00006350: 3000 2004 3804 3700 2000 4a00 5300 4f00  0. .8.7. .J.S.O.
+-00006360: 4e00 2d04 4404 3004 3904 3b04 3008 0000  N.-.D.0.9.;.0...
+-00006370: 0000 0600 0000 184c 6f61 6420 736c 6970  .......Load slip
+-00006380: 2066 726f 6d20 4a53 4f4e 2066 696c 6507   from JSON file.
+-00006390: 0000 000d 496d 706f 7274 536c 6970 446c  ....ImportSlipDl
+-000063a0: 6701 0300 0000 1604 1a04 3e04 3d04 4204  g.........>.=.B.
+-000063b0: 4004 3004 3304 3504 3d04 4200 3a08 0000  @.0.3.5.=.B.:...
+-000063c0: 0000 0600 0000 0550 6565 723a 0700 0000  .......Peer:....
+-000063d0: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
+-000063e0: 0000 000e 041f 043e 043a 0443 043f 043a  .......>.:.C.?.:
+-000063f0: 0430 0800 0000 0006 0000 0008 5075 7263  .0..........Purc
+-00006400: 6861 7365 0700 0000 0d49 6d70 6f72 7453  hase.....ImportS
+-00006410: 6c69 7044 6c67 0103 0000 000c 0051 0052  lipDlg.......Q.R
+-00006420: 002d 043a 043e 0434 0800 0000 0006 0000  .-.:.>.4........
+-00006430: 0007 5152 2d63 6f64 6507 0000 000d 496d  ..QR-code.....Im
+-00006440: 706f 7274 536c 6970 446c 6701 0300 0000  portSlipDlg.....
+-00006450: 0e04 1204 3e04 3704 3204 4004 3004 4208  ....>.7.2.@.0.B.
+-00006460: 0000 0000 0600 0000 0652 6574 7572 6e07  .........Return.
+-00006470: 0000 000d 496d 706f 7274 536c 6970 446c  ....ImportSlipDl
+-00006480: 6701 0300 0000 2e04 2304 4104 4204 3004  g.......#.A.B.0.
+-00006490: 3d04 3e04 3204 3804 4204 4c00 2004 4204  =.>.2.8.B.L. .B.
+-000064a0: 4d04 3300 2004 3404 3b04 4f00 2004 3204  M.3. .4.;.O. .2.
+-000064b0: 4104 3504 4508 0000 0000 0600 0000 1553  A.5.E..........S
+-000064c0: 6574 2054 6167 2066 6f72 2061 6c6c 206c  et Tag for all l
+-000064d0: 696e 6573 0700 0000 0d49 6d70 6f72 7453  ines.....ImportS
+-000064e0: 6c69 7044 6c67 0103 0000 0006 0427 0435  lipDlg.......'.5
+-000064f0: 043a 0800 0000 0006 0000 0004 536c 6970  .:..........Slip
+-00006500: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
+-00006510: 6c67 0103 0000 0016 0414 0430 043d 043d  lg.........0.=.=
+-00006520: 044b 0435 0020 0447 0435 043a 0430 0800  .K.5. .G.5.:.0..
+-00006530: 0000 0006 0000 0009 536c 6970 2064 6174  ........Slip dat
+-00006540: 6107 0000 000d 496d 706f 7274 536c 6970  a.....ImportSlip
+-00006550: 446c 6701 0300 0000 1c04 1704 3004 3a04  Dlg.........0.:.
+-00006560: 4004 4b04 4204 4c00 2004 3a04 3004 3c04  @.K.B.L. .:.0.<.
+-00006570: 3504 4004 4308 0000 0000 0600 0000 0b53  5.@.C..........S
+-00006580: 746f 7020 6361 6d65 7261 0700 0000 0d49  top camera.....I
+-00006590: 6d70 6f72 7453 6c69 7044 6c67 0103 0000  mportSlipDlg....
+-000065a0: 0008 0422 0438 043f 003a 0800 0000 0006  ...".8.?.:......
+-000065b0: 0000 0005 5479 7065 3a07 0000 000d 496d  ....Type:.....Im
+-000065c0: 706f 7274 536c 6970 446c 6701 0300 0000  portSlipDlg.....
+-000065d0: 2600 6400 6400 2f00 4d00 4d00 2f00 7900  &.d.d./.M.M./.y.
+-000065e0: 7900 7900 7900 2000 6800 6800 3a00 6d00  y.y.y. .h.h.:.m.
+-000065f0: 6d00 3a00 7300 7308 0000 0000 0600 0000  m.:.s.s.........
+-00006600: 1364 642f 4d4d 2f79 7979 7920 6868 3a6d  .dd/MM/yyyy hh:m
+-00006610: 6d3a 7373 0700 0000 0d49 6d70 6f72 7453  m:ss.....ImportS
+-00006620: 6c69 7044 6c67 0103 0000 0066 041d 0435  lipDlg.....f...5
+-00006630: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
+-00006640: 0020 043e 0431 0440 0430 0431 043e 0442  . .>.1.@.0.1.>.B
+-00006650: 0430 0442 044c 0020 043e 043f 0435 0440  .0.B.L. .>.?.5.@
+-00006660: 0430 0446 0438 044e 0020 0431 0435 0437  .0.F.8.N. .1.5.7
+-00006670: 0020 0434 0435 0442 0430 043b 044c 043d  . .4.5.B.0.;.L.=
+-00006680: 044b 0445 0020 0434 0430 043d 043d 044b  .K.E. .4.0.=.=.K
+-00006690: 0445 0800 0000 0006 0000 0027 4361 6e27  .E.........'Can'
+-000066a0: 7420 7072 6f63 6573 7320 6f70 6572 6174  t process operat
+-000066b0: 696f 6e20 7769 7468 6f75 7420 6465 7461  ion without deta
+-000066c0: 696c 7307 0000 000e 496e 636f 6d65 5370  ils.....IncomeSp
+-000066d0: 656e 6469 6e67 0103 0000 000c 041a 0443  ending.........C
+-000066e0: 0440 0441 003a 0020 0800 0000 0006 0000  .@.A.:. ........
+-000066f0: 0006 5261 7465 3a20 0700 0000 0e49 6e63  ..Rate: .....Inc
+-00006700: 6f6d 6553 7065 6e64 696e 6701 0300 0000  omeSpending.....
+-00006710: 1c04 1404 3e04 4504 3e04 3404 4b00 2f04  ....>.E.>.4.K./.
+-00006720: 2004 3004 4104 4504 3e04 3404 4b08 0000   .0.A.E.>.4.K...
+-00006730: 0000 0600 0000 0f49 6e63 6f6d 652f 5370  .......Income/Sp
+-00006740: 656e 6469 6e67 0700 0000 1449 6e63 6f6d  ending.....Incom
+-00006750: 6553 7065 6e64 696e 6752 6570 6f72 7401  eSpendingReport.
+-00006760: 0300 0000 0604 1004 3f04 4008 0000 0000  ........?.@.....
+-00006770: 0600 0000 0341 7072 0700 0000 1949 6e63  .....Apr.....Inc
+-00006780: 6f6d 6553 7065 6e64 696e 6752 6570 6f72  omeSpendingRepor
+-00006790: 744d 6f64 656c 0103 0000 0006 0410 0432  tModel.........2
+-000067a0: 0433 0800 0000 0006 0000 0003 4175 6707  .3..........Aug.
+-000067b0: 0000 0019 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
+-000067c0: 6e67 5265 706f 7274 4d6f 6465 6c01 0300  ngReportModel...
+-000067d0: 0000 0604 1404 3504 3a08 0000 0000 0600  ......5.:.......
+-000067e0: 0000 0344 6563 0700 0000 1949 6e63 6f6d  ...Dec.....Incom
+-000067f0: 6553 7065 6e64 696e 6752 6570 6f72 744d  eSpendingReportM
+-00006800: 6f64 656c 0103 0000 0006 0424 0435 0432  odel.......$.5.2
+-00006810: 0800 0000 0006 0000 0003 4665 6207 0000  ..........Feb...
+-00006820: 0019 496e 636f 6d65 5370 656e 6469 6e67  ..IncomeSpending
+-00006830: 5265 706f 7274 4d6f 6465 6c01 0300 0000  ReportModel.....
+-00006840: 0604 2f04 3d04 3208 0000 0000 0600 0000  ../.=.2.........
+-00006850: 034a 616e 0700 0000 1949 6e63 6f6d 6553  .Jan.....IncomeS
+-00006860: 7065 6e64 696e 6752 6570 6f72 744d 6f64  pendingReportMod
+-00006870: 656c 0103 0000 0006 0418 044e 043b 0800  el.........N.;..
+-00006880: 0000 0006 0000 0003 4a75 6c07 0000 0019  ........Jul.....
+-00006890: 496e 636f 6d65 5370 656e 6469 6e67 5265  IncomeSpendingRe
+-000068a0: 706f 7274 4d6f 6465 6c01 0300 0000 0604  portModel.......
+-000068b0: 1804 4e04 3d08 0000 0000 0600 0000 034a  ..N.=..........J
+-000068c0: 756e 0700 0000 1949 6e63 6f6d 6553 7065  un.....IncomeSpe
+-000068d0: 6e64 696e 6752 6570 6f72 744d 6f64 656c  ndingReportModel
+-000068e0: 0103 0000 0006 041c 0430 0440 0800 0000  .........0.@....
+-000068f0: 0006 0000 0003 4d61 7207 0000 0019 496e  ......Mar.....In
+-00006900: 636f 6d65 5370 656e 6469 6e67 5265 706f  comeSpendingRepo
+-00006910: 7274 4d6f 6465 6c01 0300 0000 0604 1c04  rtModel.........
+-00006920: 3004 3908 0000 0000 0600 0000 034d 6179  0.9..........May
+-00006930: 0700 0000 1949 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
+-00006940: 696e 6752 6570 6f72 744d 6f64 656c 0103  ingReportModel..
+-00006950: 0000 0006 041d 043e 044f 0800 0000 0006  .......>.O......
+-00006960: 0000 0003 4e6f 7607 0000 0019 496e 636f  ....Nov.....Inco
+-00006970: 6d65 5370 656e 6469 6e67 5265 706f 7274  meSpendingReport
+-00006980: 4d6f 6465 6c01 0300 0000 0604 1e04 3a04  Model.........:.
+-00006990: 4208 0000 0000 0600 0000 034f 6374 0700  B..........Oct..
+-000069a0: 0000 1949 6e63 6f6d 6553 7065 6e64 696e  ...IncomeSpendin
+-000069b0: 6752 6570 6f72 744d 6f64 656c 0103 0000  gReportModel....
+-000069c0: 0006 0421 0435 043d 0800 0000 0006 0000  ...!.5.=........
+-000069d0: 0003 5365 7007 0000 0019 496e 636f 6d65  ..Sep.....Income
+-000069e0: 5370 656e 6469 6e67 5265 706f 7274 4d6f  SpendingReportMo
+-000069f0: 6465 6c01 0300 0000 0a04 1804 2204 1e04  del........."...
+-00006a00: 1304 1e08 0000 0000 0600 0000 0554 4f54  .............TOT
+-00006a10: 414c 0700 0000 1949 6e63 6f6d 6553 7065  AL.....IncomeSpe
+-00006a20: 6e64 696e 6752 6570 6f72 744d 6f64 656c  ndingReportModel
+-00006a30: 0103 0000 000e 0412 0430 043b 044e 0442  .........0.;.N.B
+-00006a40: 0430 003a 0800 0000 0006 0000 0009 4375  .0.:..........Cu
+-00006a50: 7272 656e 6379 3a07 0000 001a 496e 636f  rrency:.....Inco
+-00006a60: 6d65 5370 656e 6469 6e67 5265 706f 7274  meSpendingReport
+-00006a70: 5769 6467 6574 0103 0000 001c 0414 043e  Widget.........>
+-00006a80: 0445 043e 0434 044b 002f 0420 0430 0441  .E.>.4.K./. .0.A
+-00006a90: 0445 043e 0434 044b 0800 0000 0006 0000  .E.>.4.K........
+-00006aa0: 000f 496e 636f 6d65 2f53 7065 6e64 696e  ..Income/Spendin
+-00006ab0: 6707 0000 001a 496e 636f 6d65 5370 656e  g.....IncomeSpen
+-00006ac0: 6469 6e67 5265 706f 7274 5769 6467 6574  dingReportWidget
+-00006ad0: 0103 0000 0022 041f 043e 043a 0430 0437  ....."...>.:.0.7
+-00006ae0: 0430 0442 044c 0020 043e 043f 0435 0440  .0.B.L. .>.?.5.@
+-00006af0: 0430 0446 0438 0438 0800 0000 0006 0000  .0.F.8.8........
+-00006b00: 000f 5368 6f77 206f 7065 7261 7469 6f6e  ..Show operation
+-00006b10: 7307 0000 001a 496e 636f 6d65 5370 656e  s.....IncomeSpen
+-00006b20: 6469 6e67 5265 706f 7274 5769 6e64 6f77  dingReportWindow
+-00006b30: 0103 0000 0008 0421 0447 0435 0442 0800  .......!.G.5.B..
+-00006b40: 0000 0006 0000 0007 4163 636f 756e 7407  ........Account.
+-00006b50: 0000 0014 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
+-00006b60: 6e67 5769 6467 6574 0103 0000 0032 0414  ngWidget.....2..
+-00006b70: 043e 0431 0430 0432 0438 0442 044c 0020  .>.1.0.2.8.B.L. 
+-00006b80: 0434 0435 0442 0430 043b 044c 043d 0443  .4.5.B.0.;.L.=.C
+-00006b90: 044e 0020 0437 0430 043f 0438 0441 044c  .N. .7.0.?.8.A.L
+-00006ba0: 0800 0000 0006 0000 000a 4164 6420 6465  ..........Add de
+-00006bb0: 7461 696c 0700 0000 1449 6e63 6f6d 6553  tail.....IncomeS
+-00006bc0: 7065 6e64 696e 6757 6964 6765 7401 0300  pendingWidget...
+-00006bd0: 0000 3804 2104 3a04 3e04 3f04 3804 4004  ..8.!.:.>.?.8.@.
+-00006be0: 3e04 3204 3004 4204 4c00 2004 3404 3504  >.2.0.B.L. .4.5.
+-00006bf0: 4204 3004 3b04 4c04 3d04 4304 4e00 2004  B.0.;.L.=.C.N. .
+-00006c00: 3704 3004 3f04 3804 4104 4c08 0000 0000  7.0.?.8.A.L.....
+-00006c10: 0600 0000 0b43 6f70 7920 6465 7461 696c  .....Copy detail
+-00006c20: 0700 0000 1449 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
+-00006c30: 696e 6757 6964 6765 7401 0300 0000 1404  ingWidget.......
+-00006c40: 1404 3004 4204 3000 2f04 1204 4004 3504  ..0.B.0./...@.5.
+-00006c50: 3c04 4f08 0000 0000 0600 0000 0944 6174  <.O..........Dat
+-00006c60: 652f 5469 6d65 0700 0000 1449 6e63 6f6d  e/Time.....Incom
+-00006c70: 6553 7065 6e64 696e 6757 6964 6765 7401  eSpendingWidget.
+-00006c80: 0300 0000 0c04 1404 3504 4204 3004 3b04  ........5.B.0.;.
+-00006c90: 3808 0000 0000 0600 0000 0744 6574 6169  8..........Detai
+-00006ca0: 6c73 0700 0000 1449 6e63 6f6d 6553 7065  ls.....IncomeSpe
+-00006cb0: 6e64 696e 6757 6964 6765 7401 0300 0000  ndingWidget.....
+-00006cc0: 4404 1d04 3504 3204 3e04 3704 3c04 3e04  D...5.2.>.7.<.>.
+-00006cd0: 3604 3d04 3e00 2004 3404 3e04 3104 3004  6.=.>. .4.>.1.0.
+-00006ce0: 3204 3804 4204 4c00 2004 3d04 3e04 3204  2.8.B.L. .=.>.2.
+-00006cf0: 4304 4e00 2004 3704 3004 3f04 3804 4104  C.N. .7.0.?.8.A.
+-00006d00: 4c00 3a00 2008 0000 0000 0600 0000 1a46  L.:. ..........F
+-00006d10: 6169 6c65 6420 746f 2061 6464 206e 6577  ailed to add new
+-00006d20: 2072 6563 6f72 643a 2007 0000 0014 496e   record: .....In
+-00006d30: 636f 6d65 5370 656e 6469 6e67 5769 6467  comeSpendingWidg
+-00006d40: 6574 0103 0000 001c 0414 043e 0445 043e  et.........>.E.>
+-00006d50: 0434 0020 002f 0020 0420 0430 0441 0445  .4. ./. . .0.A.E
+-00006d60: 043e 0434 0800 0000 0006 0000 0011 496e  .>.4..........In
+-00006d70: 636f 6d65 202f 2053 7065 6e64 696e 6707  come / Spending.
+-00006d80: 0000 0014 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
+-00006d90: 6e67 5769 6467 6574 0103 0000 0014 041f  ngWidget........
+-00006da0: 0440 0438 043c 0435 0447 0430 043d 0438  .@.8.<.5.G.0.=.8
+-00006db0: 0435 0800 0000 0006 0000 0004 4e6f 7465  .5..........Note
+-00006dc0: 0700 0000 1449 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
+-00006dd0: 696e 6757 6964 6765 7401 0300 0000 4804  ingWidget.....H.
+-00006de0: 1e04 4804 3804 3104 3a04 3000 2004 3f04  ..H.8.1.:.0. .?.
+-00006df0: 4004 3800 2004 3704 3004 3f04 3804 4104  @.8. .7.0.?.8.A.
+-00006e00: 3800 2004 3404 3504 4204 3004 3b04 3504  8. .4.5.B.0.;.5.
+-00006e10: 3900 2004 3e04 3f04 3504 4004 3004 4604  9. .>.?.5.@.0.F.
+-00006e20: 3804 3800 3a00 2008 0000 0000 0600 0000  8.8.:. .........
+-00006e30: 214f 7065 7261 7469 6f6e 2064 6574 6169  !Operation detai
+-00006e40: 6c73 2073 7562 6d69 7420 6661 696c 6564  ls submit failed
+-00006e50: 3a20 0700 0000 1449 6e63 6f6d 6553 7065  : .....IncomeSpe
+-00006e60: 6e64 696e 6757 6964 6765 7401 0300 0000  ndingWidget.....
+-00006e70: 3804 1e04 4804 3804 3104 3a04 3000 2004  8...H.8.1.:.0. .
+-00006e80: 3f04 4004 3800 2004 3704 3004 3f04 3804  ?.@.8. .7.0.?.8.
+-00006e90: 4104 3800 2004 3e04 3f04 3504 4004 3004  A.8. .>.?.5.@.0.
+-00006ea0: 4604 3804 3800 3a00 2008 0000 0000 0600  F.8.8.:. .......
+-00006eb0: 0000 194f 7065 7261 7469 6f6e 2073 7562  ...Operation sub
+-00006ec0: 6d69 7420 6661 696c 6564 3a20 0700 0000  mit failed: ....
+-00006ed0: 1449 6e63 6f6d 6553 7065 6e64 696e 6757  .IncomeSpendingW
+-00006ee0: 6964 6765 7401 0300 0000 2004 1e04 3f04  idget..... ...?.
+-00006ef0: 3b04 3004 4204 3000 2004 3200 2004 3204  ;.0.B.0. .2. .2.
+-00006f00: 3004 3b04 4e04 4204 3500 3a08 0000 0000  0.;.N.B.5.:.....
+-00006f10: 0600 0000 1950 6169 6420 696e 2066 6f72  .....Paid in for
+-00006f20: 6569 676e 2063 7572 7265 6e63 793a 0700  eign currency:..
+-00006f30: 0000 1449 6e63 6f6d 6553 7065 6e64 696e  ...IncomeSpendin
+-00006f40: 6757 6964 6765 7401 0300 0000 1404 1a04  gWidget.........
+-00006f50: 3e04 3d04 4204 4004 3004 3304 3504 3d04  >.=.B.@.0.3.5.=.
+-00006f60: 4208 0000 0000 0600 0000 0450 6565 7207  B..........Peer.
+-00006f70: 0000 0014 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
+-00006f80: 6e67 5769 6467 6574 0103 0000 0030 0423  ngWidget.....0.#
+-00006f90: 0434 0430 043b 0438 0442 044c 0020 0434  .4.0.;.8.B.L. .4
+-00006fa0: 0435 0442 0430 043b 044c 043d 0443 044e  .5.B.0.;.L.=.C.N
+-00006fb0: 0020 0437 0430 043f 0438 0441 044c 0800  . .7.0.?.8.A.L..
+-00006fc0: 0000 0006 0000 000d 5265 6d6f 7665 2064  ........Remove d
+-00006fd0: 6574 6169 6c07 0000 0014 496e 636f 6d65  etail.....Income
+-00006fe0: 5370 656e 6469 6e67 5769 6467 6574 0103  SpendingWidget..
+-00006ff0: 0000 000c 0026 0421 0447 0435 0442 0430  .....&.!.G.5.B.0
+-00007000: 0800 0000 0006 0000 0009 2641 6363 6f75  ..........&Accou
+-00007010: 6e74 7307 0000 000e 4a41 4c5f 4d61 696e  nts.....JAL_Main
+-00007020: 5769 6e64 6f77 0103 0000 0012 0026 0411  Window.......&..
+-00007030: 044d 043a 0430 043f 002e 002e 002e 0800  .M.:.0.?........
+-00007040: 0000 0006 0000 000a 2642 6163 6b75 702e  ........&Backup.
+-00007050: 2e2e 0700 0000 0e4a 414c 5f4d 6169 6e57  .......JAL_MainW
+-00007060: 696e 646f 7701 0300 0000 1e00 2604 1104  indow.......&...
+-00007070: 3004 3704 3e04 3204 3004 4f00 2004 3204  0.7.>.2.0.O. .2.
+-00007080: 3004 3b04 4e04 4204 3008 0000 0000 0600  0.;.N.B.0.......
+-00007090: 0000 0e26 4261 7365 2043 7572 7265 6e63  ...&Base Currenc
+-000070a0: 7907 0000 000e 4a41 4c5f 4d61 696e 5769  y.....JAL_MainWi
+-000070b0: 6e64 6f77 0103 0000 0028 0026 0411 0440  ndow.....(.&...@
+-000070c0: 043e 043a 0435 0440 0441 043a 0438 0439  .>.:.5.@.A.:.8.9
+-000070d0: 0020 043e 0442 0447 0435 0442 002e 002e  . .>.B.G.5.B....
+-000070e0: 002e 0800 0000 0006 0000 0014 2642 726f  ............&Bro
+-000070f0: 6b65 7220 7374 6174 656d 656e 742e 2e2e  ker statement...
+-00007100: 0700 0000 0e4a 414c 5f4d 6169 6e57 696e  .....JAL_MainWin
+-00007110: 646f 7701 0300 0000 1400 2604 1a04 3004  dow.......&...0.
+-00007120: 4204 3504 3304 3e04 4004 3804 3808 0000  B.5.3.>.@.8.8...
+-00007130: 0000 0600 0000 0b26 4361 7465 676f 7269  .......&Categori
+-00007140: 6573 0700 0000 0e4a 414c 5f4d 6169 6e57  es.....JAL_MainW
+-00007150: 696e 646f 7701 0300 0000 0e00 2604 1404  indow.......&...
+-00007160: 3004 3d04 3d04 4b04 3508 0000 0000 0600  0.=.=.K.5.......
+-00007170: 0000 0526 4461 7461 0700 0000 0e4a 414c  ...&Data.....JAL
+-00007180: 5f4d 6169 6e57 696e 646f 7701 0300 0000  _MainWindow.....
+-00007190: 1a04 1e04 4204 4704 3504 4200 2000 2604  ....B.G.5.B. .&.
+-000071a0: 2104 3404 3504 3b04 3a04 3808 0000 0000  !.4.5.;.:.8.....
+-000071b0: 0600 0000 0d26 4465 616c 7320 7265 706f  .....&Deals repo
+-000071c0: 7274 0700 0000 0e4a 414c 5f4d 6169 6e57  rt.....JAL_MainW
+-000071d0: 696e 646f 7701 0300 0000 0c00 2604 1204  indow.......&...
+-000071e0: 4b04 4504 3e04 3408 0000 0000 0600 0000  K.E.>.4.........
+-000071f0: 0526 4578 6974 0700 0000 0e4a 414c 5f4d  .&Exit.....JAL_M
+-00007200: 6169 6e57 696e 646f 7701 0300 0000 1000  ainWindow.......
+-00007210: 2604 2d04 3a04 4104 3f04 3e04 4004 4208  &.-.:.A.?.>.@.B.
+-00007220: 0000 0000 0600 0000 0726 4578 706f 7274  .........&Export
+-00007230: 0700 0000 0e4a 414c 5f4d 6169 6e57 696e  .....JAL_MainWin
+-00007240: 646f 7701 0300 0000 0e00 2604 1804 3c04  dow.......&...<.
+-00007250: 3f04 3e04 4004 4208 0000 0000 0600 0000  ?.>.@.B.........
+-00007260: 0726 496d 706f 7274 0700 0000 0e4a 414c  .&Import.....JAL
+-00007270: 5f4d 6169 6e57 696e 646f 7701 0300 0000  _MainWindow.....
+-00007280: 2a04 1e04 4204 4704 3504 4200 2000 2604  *...B.G.5.B. .&.
+-00007290: 1404 3e04 4504 3e04 3404 4b00 2f04 2004  ..>.E.>.4.K./. .
+-000072a0: 3004 4104 4504 3e04 3404 4b08 0000 0000  0.A.E.>.4.K.....
+-000072b0: 0600 0000 1726 496e 636f 6d65 2f53 7065  .....&Income/Spe
+-000072c0: 6e64 696e 6720 7265 706f 7274 0700 0000  nding report....
+-000072d0: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
+-000072e0: 0300 0000 1200 2604 1e04 4104 3d04 3e04  ......&...A.=.>.
+-000072f0: 3204 3d04 3e04 3508 0000 0000 0600 0000  2.=.>.5.........
+-00007300: 0526 4d61 696e 0700 0000 0e4a 414c 5f4d  .&Main.....JAL_M
+-00007310: 6169 6e57 696e 646f 7701 0300 0000 1200  ainWindow.......
+-00007320: 2604 1e04 3f04 3504 4004 3004 4604 3804  &...?.5.@.0.F.8.
+-00007330: 3808 0000 0000 0600 0000 0b26 4f70 6572  8..........&Oper
+-00007340: 6174 696f 6e73 0700 0000 0e4a 414c 5f4d  ations.....JAL_M
+-00007350: 6169 6e57 696e 646f 7701 0300 0000 1804  ainWindow.......
+-00007360: 1a00 2604 3e04 3d04 4204 4004 3004 3304  ..&.>.=.B.@.0.3.
+-00007370: 3504 3d04 4204 4b08 0000 0000 0600 0000  5.=.B.K.........
+-00007380: 0626 5065 6572 7307 0000 000e 4a41 4c5f  .&Peers.....JAL_
+-00007390: 4d61 696e 5769 6e64 6f77 0103 0000 002a  MainWindow.....*
+-000073a0: 041e 0442 0447 0435 0442 0020 0026 041f  ...B.G.5.B. .&..
+-000073b0: 0440 0438 0431 044b 043b 0438 002f 0423  .@.8.1.K.;.8./.#
+-000073c0: 0431 044b 0442 043a 0438 0800 0000 0006  .1.K.B.:.8......
+-000073d0: 0000 0013 2650 726f 6669 742f 4c6f 7373  ....&Profit/Loss
+-000073e0: 2072 6570 6f72 7407 0000 000e 4a41 4c5f   report.....JAL_
+-000073f0: 4d61 696e 5769 6e64 6f77 0103 0000 0014  MainWindow......
+-00007400: 0026 041a 043e 0442 0438 0440 043e 0432  .&...>.B.8.@.>.2
+-00007410: 043a 0438 0800 0000 0006 0000 0007 2651  .:.8..........&Q
+-00007420: 756f 7465 7307 0000 000e 4a41 4c5f 4d61  uotes.....JAL_Ma
+-00007430: 696e 5769 6e64 6f77 0103 0000 001a 0026  inWindow.......&
+-00007440: 041a 043e 0442 0438 0440 043e 0432 043a  ...>.B.8.@.>.2.:
+-00007450: 0438 002e 002e 002e 0800 0000 0006 0000  .8..............
+-00007460: 000a 2651 756f 7465 732e 2e2e 0700 0000  ..&Quotes.......
+-00007470: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
+-00007480: 0300 0000 0e00 2604 1e04 4204 4704 3504  ......&...B.G.5.
+-00007490: 4204 4b08 0000 0000 0600 0000 0826 5265  B.K..........&Re
+-000074a0: 706f 7274 7307 0000 000e 4a41 4c5f 4d61  ports.....JAL_Ma
+-000074b0: 696e 5769 6e64 6f77 0103 0000 0024 0026  inWindow.....$.&
+-000074c0: 0412 043e 0441 0441 0442 0430 043d 043e  ...>.A.A.B.0.=.>
+-000074d0: 0432 043b 0435 043d 0438 0435 002e 002e  .2.;.5.=.8.5....
+-000074e0: 002e 0800 0000 0006 0000 000b 2652 6573  ............&Res
+-000074f0: 746f 7265 2e2e 2e07 0000 000e 4a41 4c5f  tore........JAL_
+-00007500: 4d61 696e 5769 6e64 6f77 0103 0000 0010  MainWindow......
+-00007510: 0026 0412 044b 043f 0438 0441 043a 0430  .&...K.?.8.A.:.0
+-00007520: 0800 0000 0006 0000 000a 2653 7461 7465  ..........&State
+-00007530: 6d65 6e74 0700 0000 0e4a 414c 5f4d 6169  ment.....JAL_Mai
+-00007540: 6e57 696e 646f 7701 0300 0000 0a00 2604  nWindow.......&.
+-00007550: 2204 4d04 3304 3808 0000 0000 0600 0000  ".M.3.8.........
+-00007560: 0526 5461 6773 0700 0000 0e4a 414c 5f4d  .&Tags.....JAL_M
+-00007570: 6169 6e57 696e 646f 7701 0300 0000 1c00  ainWindow.......
+-00007580: 2604 2604 3504 3d04 3d04 4b04 3500 2004  &.&.5.=.=.K.5. .
+-00007590: 3104 4304 3c04 3004 3304 3808 0000 0000  1.C.<.0.3.8.....
+-000075a0: 0600 0000 0741 2673 7365 7473 0700 0000  .....A&ssets....
+-000075b0: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
+-000075c0: 0300 0000 4e04 1e04 4204 4704 3504 4200  ....N...B.G.5.B.
+-000075d0: 2004 3e00 2000 2604 3404 3204 3804 3604   .>. .&.4.2.8.6.
+-000075e0: 3504 3d04 3804 4f04 4500 2004 3f04 3e00  5.=.8.O.E. .?.>.
+-000075f0: 2004 3704 3004 4004 4304 3104 3504 3604   .7.0.@.C.1.5.6.
+-00007600: 3d04 4b04 3c00 2004 4104 4704 3504 4204  =.K.<. .A.G.5.B.
+-00007610: 3004 3c08 0000 0000 0600 0000 1d46 6f72  0.<..........For
+-00007620: 6569 676e 2061 6363 6f75 6e74 7320 2666  eign accounts &f
+-00007630: 6c6f 7720 7265 706f 7274 0700 0000 0e4a  low report.....J
+-00007640: 414c 5f4d 6169 6e57 696e 646f 7701 0300  AL_MainWindow...
+-00007650: 0000 3e04 1804 3d04 3204 3504 4104 4204  ..>...=.2.5.A.B.
+-00007660: 3804 4604 3804 3e04 3d04 3d04 4b04 3900  8.F.8.>.=.=.K.9.
+-00007670: 2000 2604 3d04 3004 3b04 3e04 3304 3e04   .&.=.0.;.>.3.>.
+-00007680: 3204 4b04 3900 2004 3e04 4204 4704 3504  2.K.9. .>.B.G.5.
+-00007690: 4208 0000 0000 0600 0000 1649 6e76 6573  B..........Inves
+-000076a0: 746d 656e 7420 2674 6178 2072 6570 6f72  tment &tax repor
+-000076b0: 7407 0000 000e 4a41 4c5f 4d61 696e 5769  t.....JAL_MainWi
+-000076c0: 6e64 6f77 0103 0000 000a 0026 042f 0437  ndow.......&./.7
+-000076d0: 044b 043a 0800 0000 0006 0000 0009 4c26  .K.:..........L&
+-000076e0: 616e 6775 6167 6507 0000 000e 4a41 4c5f  anguage.....JAL_
+-000076f0: 4d61 696e 5769 6e64 6f77 0103 0000 002a  MainWindow.....*
+-00007700: 041f 0435 0440 0435 0441 0447 0438 0442  ...5.@.5.A.G.8.B
+-00007710: 0430 0442 044c 0020 0026 0438 0442 043e  .0.B.L. .&.8.B.>
+-00007720: 0433 0438 002e 002e 002e 0800 0000 0006  .3.8............
+-00007730: 0000 0013 5265 2d62 7569 6c64 2026 4c65  ....Re-build &Le
+-00007740: 6467 6572 2e2e 2e07 0000 000e 4a41 4c5f  dger........JAL_
+-00007750: 4d61 696e 5769 6e64 6f77 0103 0000 0016  MainWindow......
+-00007760: 0427 0435 043a 0020 005b 0052 0055 005d  .'.5.:. .[.R.U.]
+-00007770: 002e 002e 002e 0800 0000 0006 0000 000c  ................
+-00007780: 536c 6970 205b 5255 5d2e 2e2e 0700 0000  Slip [RU].......
+-00007790: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
+-000077a0: 0300 0000 0600 6a00 6100 6c08 0000 0000  ......j.a.l.....
+-000077b0: 0600 0000 036a 616c 0700 0000 0e4a 414c  .....jal.....JAL
+-000077c0: 5f4d 6169 6e57 696e 646f 7701 0300 0000  _MainWindow.....
+-000077d0: 2004 1104 3004 3d04 3a00 2004 3404 3b04   ...0.=.:. .4.;.
+-000077e0: 4f00 2004 4104 4704 3504 4204 3000 2021  O. .A.G.5.B.0. !
+-000077f0: 1608 0000 0000 0600 0000 1242 616e 6b20  ...........Bank 
+-00007800: 666f 7220 6163 636f 756e 7420 2307 0000  for account #...
+-00007810: 000a 4a61 6c41 6363 6f75 6e74 0103 0000  ..JalAccount....
+-00007820: 002a 0421 0442 0440 0430 043d 0430 0020  .*.!.B.@.0.=.0. 
+-00007830: 043e 0431 043d 043e 0432 043b 0451 043d  .>.1.=.>.2.;.Q.=
+-00007840: 0430 0020 0434 043b 044f 0020 0800 0000  .0. .4.;.O. ....
+-00007850: 0006 0000 0014 436f 756e 7472 7920 7570  ......Country up
+-00007860: 6461 7465 6420 666f 7220 0700 0000 084a  dated for .....J
+-00007870: 616c 4173 7365 7401 0300 0000 2a04 1a04  alAsset.....*...
+-00007880: 3e04 4204 3804 4004 3e04 3204 3a04 3800  >.B.8.@.>.2.:.8.
+-00007890: 2004 3e04 3104 3d04 3e04 3204 3b04 3504   .>.1.=.>.2.;.5.
+-000078a0: 3d04 4b00 3a00 2008 0000 0000 0600 0000  =.K.:. .........
+-000078b0: 1951 756f 7461 7469 6f6e 7320 7765 7265  .Quotations were
+-000078c0: 2075 7064 6174 6564 3a20 0700 0000 084a   updated: .....J
+-000078d0: 616c 4173 7365 7401 0300 0000 4604 2004  alAsset.....F. .
+-000078e0: 3504 3304 3804 4104 4204 4004 3004 4604  5.3.8.A.B.@.0.F.
+-000078f0: 3804 3e04 3d04 3d04 4b04 3900 2004 3d04  8.>.=.=.K.9. .=.
+-00007900: 3e04 3c04 3504 4000 2004 3e04 3104 3d04  >.<.5.@. .>.1.=.
+-00007910: 3e04 3204 3b04 5104 3d00 2004 3404 3b04  >.2.;.Q.=. .4.;.
+-00007920: 4f00 2008 0000 0000 0600 0000 1752 6567  O. ..........Reg
+-00007930: 2e6e 756d 6265 7220 7570 6461 7465 6420  .number updated 
+-00007940: 666f 7220 0700 0000 084a 616c 4173 7365  for .....JalAsse
+-00007950: 7401 0300 0000 3004 1d04 3504 4200 2004  t.....0...5.B. .
+-00007960: 3a04 3e04 4204 3804 4004 3e04 3204 3a04  :.>.B.8.@.>.2.:.
+-00007970: 3800 2f04 3a04 4304 4004 4104 3000 2004  8./.:.C.@.A.0. .
+-00007980: 3404 3b04 4f00 2008 0000 0000 0600 0000  4.;.O. .........
+-00007990: 1c54 6865 7265 2061 7265 206e 6f20 7175  .There are no qu
+-000079a0: 6f74 652f 7261 7465 2066 6f72 2007 0000  ote/rate for ...
+-000079b0: 0008 4a61 6c41 7373 6574 0103 0000 004c  ..JalAsset.....L
+-000079c0: 041d 0435 043e 0436 0438 0434 0430 043d  ...5.>.6.8.4.0.=
+-000079d0: 043d 0430 044f 0020 043f 043e 043f 044b  .=.0.O. .?.>.?.K
+-000079e0: 0442 043a 0430 0020 043e 0431 043d 043e  .B.:.0. .>.1.=.>
+-000079f0: 0432 0438 0442 044c 0020 0049 0053 0049  .2.8.B.L. .I.S.I
+-00007a00: 004e 0020 0434 043b 044f 0020 0800 0000  .N. .4.;.O. ....
+-00007a10: 0006 0000 0026 556e 6578 7065 6374 6564  .....&Unexpected
+-00007a20: 2061 7474 656d 7074 2074 6f20 7570 6461   attempt to upda
+-00007a30: 7465 2049 5349 4e20 666f 7220 0700 0000  te ISIN for ....
+-00007a40: 084a 616c 4173 7365 7401 0300 0000 0600  .JalAsset.......
+-00007a50: 2004 3200 2008 0000 0000 0600 0000 0620   .2. .......... 
+-00007a60: 696e 746f 2007 0000 0009 4a61 6c42 6163  into .....JalBac
+-00007a70: 6b75 7001 0300 0000 1c04 1004 4004 4504  kup.........@.E.
+-00007a80: 3804 3204 4b00 2000 2800 2a00 2e00 7400  8.2.K. .(.*...t.
+-00007a90: 6700 7a00 2908 0000 0000 0600 0000 1041  g.z.)..........A
+-00007aa0: 7263 6869 7665 7320 282a 2e74 677a 2907  rchives (*.tgz).
+-00007ab0: 0000 0009 4a61 6c42 6163 6b75 7001 0300  ....JalBackup...
+-00007ac0: 0000 4604 1d04 3500 2004 4004 3004 4104  ..F...5. .@.0.A.
+-00007ad0: 3f04 3e04 3704 3d04 3004 3d04 3000 2004  ?.>.7.=.0.=.0. .
+-00007ae0: 3c04 3504 4204 3a04 3000 2004 4004 3504  <.5.B.:.0. .@.5.
+-00007af0: 3704 3504 4004 3204 3d04 3e04 3900 2004  7.5.@.2.=.>.9. .
+-00007b00: 3a04 3e04 3f04 3804 3808 0000 0000 0600  :.>.?.8.8.......
+-00007b10: 0000 1b42 6163 6b75 7020 6c61 6265 6c20  ...Backup label 
+-00007b20: 6e6f 7420 7265 636f 676e 697a 6564 0700  not recognized..
+-00007b30: 0000 094a 616c 4261 636b 7570 0103 0000  ...JalBackup....
+-00007b40: 0046 0420 0435 0437 0435 0440 0432 043d  .F. .5.7.5.@.2.=
+-00007b50: 0430 044f 0020 043a 043e 043f 0438 044f  .0.O. .:.>.?.8.O
+-00007b60: 0020 0432 043e 0441 0441 0442 0430 0432  . .2.>.A.A.B.0.2
+-00007b70: 043d 043e 0432 043b 0435 043d 0430 0020  .=.>.2.;.5.=.0. 
+-00007b80: 0438 0437 003a 0020 0800 0000 0006 0000  .8.7.:. ........
+-00007b90: 0016 4261 636b 7570 2072 6573 746f 7265  ..Backup restore
+-00007ba0: 6420 6672 6f6d 3a20 0700 0000 094a 616c  d from: .....Jal
+-00007bb0: 4261 636b 7570 0103 0000 003a 0420 0435  Backup.....:. .5
+-00007bc0: 0437 0435 0440 0432 043d 0430 044f 0020  .7.5.@.2.=.0.O. 
+-00007bd0: 043a 043e 043f 0438 044f 0020 0441 043e  .:.>.?.8.O. .A.>
+-00007be0: 0445 0440 0430 043d 0451 043d 0430 0020  .E.@.0.=.Q.=.0. 
+-00007bf0: 0432 003a 0020 0800 0000 0006 0000 0011  .2.:. ..........
+-00007c00: 4261 636b 7570 2073 6176 6564 2069 6e3a  Backup saved in:
+-00007c10: 2007 0000 0009 4a61 6c42 6163 6b75 7001   .....JalBackup.
+-00007c20: 0300 0000 5204 1d04 3504 3204 3e04 3704  ....R...5.2.>.7.
+-00007c30: 3c04 3e04 3604 3d04 3e00 2004 3f04 4004  <.>.6.=.>. .?.@.
+-00007c40: 3e04 3204 3504 4004 3804 4204 4c00 2004  >.2.5.@.8.B.L. .
+-00007c50: 3404 3004 4204 4300 2004 4004 3504 3704  4.0.B.C. .@.5.7.
+-00007c60: 3504 4004 3204 3d04 3e04 3900 2004 3a04  5.@.2.=.>.9. .:.
+-00007c70: 3e04 3f04 3804 3808 0000 0000 0600 0000  >.?.8.8.........
+-00007c80: 1a43 616e 2774 2076 616c 6964 6174 6520  .Can't validate 
+-00007c90: 6261 636b 7570 2064 6174 6507 0000 0009  backup date.....
+-00007ca0: 4a61 6c42 6163 6b75 7001 0300 0000 2804  JalBackup.....(.
+-00007cb0: 1404 3004 3d04 3d04 4b04 3500 2004 3204  ..0.=.=.K.5. .2.
+-00007cc0: 3e04 4104 4104 4204 3004 3d04 3e04 3204  >.A.A.B.0.=.>.2.
+-00007cd0: 3b04 3504 3d04 4b08 0000 0000 0600 0000  ;.5.=.K.........
+-00007ce0: 0d44 6174 6120 7265 7374 6f72 6564 0700  .Data restored..
+-00007cf0: 0000 094a 616c 4261 636b 7570 0103 0000  ...JalBackup....
+-00007d00: 0042 0414 0430 043d 043d 044b 0435 0020  .B...0.=.=.K.5. 
+-00007d10: 0431 044b 043b 0438 0020 0437 0430 0433  .1.K.;.8. .7.0.3
+-00007d20: 0440 0443 0436 0435 043d 044b 0020 0438  .@.C.6.5.=.K. .8
+-00007d30: 0437 0020 0431 044d 043a 0430 043f 0430  .7. .1.M.:.0.?.0
+-00007d40: 002e 000a 0800 0000 0006 0000 0025 4461  .............%Da
+-00007d50: 7461 6261 7365 2077 6173 206c 6f61 6465  tabase was loade
+-00007d60: 6420 6672 6f6d 2074 6865 2062 6163 6b75  d from the backu
+-00007d70: 702e 0a07 0000 0009 4a61 6c42 6163 6b75  p.......JalBacku
+-00007d80: 7001 0300 0000 4e04 1d04 3500 2004 4304  p.....N...5. .C.
+-00007d90: 3404 3004 3b04 3e04 4104 4c00 2004 3204  4.0.;.>.A.L. .2.
+-00007da0: 3e04 4104 4104 4204 3004 3d04 3e04 3204  >.A.A.B.0.=.>.2.
+-00007db0: 3804 4204 4c00 2004 4004 3504 3704 3504  8.B.L. .@.5.7.5.
+-00007dc0: 4004 3204 3d04 4304 4e00 2004 3a04 3e04  @.2.=.C.N. .:.>.
+-00007dd0: 3f04 3804 4e08 0000 0000 0600 0000 1d46  ?.8.N..........F
+-00007de0: 6169 6c65 6420 746f 2072 6573 746f 7265  ailed to restore
+-00007df0: 2062 6163 6b75 7020 6669 6c65 0700 0000   backup file....
+-00007e00: 094a 616c 4261 636b 7570 0103 0000 0038  .JalBackup.....8
+-00007e10: 0421 043e 0445 0440 0430 043d 0438 0442  .!.>.E.@.0.=.8.B
+-00007e20: 044c 0020 0440 0435 0437 0435 0440 0432  .L. .@.5.7.5.@.2
+-00007e30: 043d 0443 044e 0020 043a 043e 043f 0438  .=.C.N. .:.>.?.8
+-00007e40: 044e 0020 0432 003a 0800 0000 0006 0000  .N. .2.:........
+-00007e50: 000f 5361 7665 2062 6163 6b75 7020 746f  ..Save backup to
+-00007e60: 3a07 0000 0009 4a61 6c42 6163 6b75 7001  :.....JalBackup.
+-00007e70: 0300 0000 4004 1204 4b04 3104 3504 4004  ....@...K.1.5.@.
+-00007e80: 3804 4204 3500 2004 4404 3004 3904 3b00  8.B.5. .D.0.9.;.
+-00007e90: 2004 4100 2004 4004 3504 3704 3504 4004   .A. .@.5.7.5.@.
+-00007ea0: 3204 3d04 3e04 3900 2004 3a04 3e04 3f04  2.=.>.9. .:.>.?.
+-00007eb0: 3804 3504 3908 0000 0000 0600 0000 1753  8.5.9..........S
+-00007ec0: 656c 6563 7420 6669 6c65 2077 6974 6820  elect file with 
+-00007ed0: 6261 636b 7570 0700 0000 094a 616c 4261  backup.....JalBa
+-00007ee0: 636b 7570 0103 0000 004a 041d 0435 0432  ckup.....J...5.2
+-00007ef0: 0435 0440 043d 044b 0439 0020 0444 043e  .5.@.=.K.9. .D.>
+-00007f00: 0440 043c 0430 0442 0020 0444 0430 0439  .@.<.0.B. .D.0.9
+-00007f10: 043b 0430 0020 0440 0435 0437 0435 0440  .;.0. .@.5.7.5.@
+-00007f20: 0432 043d 043e 0439 0020 043a 043e 043f  .2.=.>.9. .:.>.?
+-00007f30: 0438 0438 0800 0000 0006 0000 001b 5772  .8.8..........Wr
+-00007f40: 6f6e 6720 666f 726d 6174 206f 6620 6261  ong format of ba
+-00007f50: 636b 7570 2066 696c 6507 0000 0009 4a61  ckup file.....Ja
+-00007f60: 6c42 6163 6b75 7001 0300 0000 c804 1204  lBackup.........
+-00007f70: 4b00 2004 3404 3e04 3b04 3604 3d04 4b00  K. .4.>.;.6.=.K.
+-00007f80: 2004 3f04 3504 4004 3504 3704 3004 3f04   .?.5.@.5.7.0.?.
+-00007f90: 4304 4104 4204 3804 4204 4c00 2004 3f04  C.A.B.8.B.L. .?.
+-00007fa0: 4004 3804 3b04 3e04 3604 3504 3d04 3804  @.8.;.>.6.5.=.8.
+-00007fb0: 3500 2c00 2004 4704 4204 3e04 3104 4b00  5.,. .G.B.>.1.K.
+-00007fc0: 2004 3f04 4004 3804 3c04 3504 3d04 3804   .?.@.8.<.5.=.8.
+-00007fd0: 4204 4c00 2004 3804 3704 3c04 3504 3d04  B.L. .8.7.<.5.=.
+-00007fe0: 3504 3d04 3804 4f00 0a04 1f04 4004 3804  5.=.8.O.....@.8.
+-00007ff0: 3b04 3e04 3604 3504 3d04 3804 3500 2004  ;.>.6.5.=.8.5. .
+-00008000: 4104 3504 3904 4704 3004 4100 2004 3704  A.5.9.G.0.A. .7.
+-00008010: 3004 3204 3504 4004 4804 3804 4200 2004  0.2.5.@.H.8.B. .
+-00008020: 4104 3204 3e04 4e00 2004 4004 3004 3104  A.2.>.N. .@.0.1.
+-00008030: 3e04 4204 4308 0000 0000 0600 0000 5259  >.B.C.........RY
+-00008040: 6f75 2073 686f 756c 6420 7265 7374 6172  ou should restar
+-00008050: 7420 6170 706c 6963 6174 696f 6e20 746f  t application to
+-00008060: 2061 7070 6c79 2063 6861 6e67 6573 0a41   apply changes.A
+-00008070: 7070 6c69 6361 7469 6f6e 2077 696c 6c20  pplication will 
+-00008080: 6265 2074 6572 6d69 6e61 7465 6420 6e6f  be terminated no
+-00008090: 7707 0000 0009 4a61 6c42 6163 6b75 7001  w.....JalBackup.
+-000080a0: 0300 0000 4004 2204 4004 3004 3d04 3704  ....@.".@.0.=.7.
+-000080b0: 3004 3a04 4604 3804 4f00 2004 4304 3604  0.:.F.8.O. .C.6.
+-000080c0: 3500 2004 4104 4304 4904 3504 4104 4204  5. .A.C.I.5.A.B.
+-000080d0: 3204 4304 3504 4200 2004 3200 2004 1104  2.C.5.B. .2. ...
+-000080e0: 1400 3a00 2008 0000 0000 0600 0000 214f  ..:. .........!O
+-000080f0: 7065 7261 7469 6f6e 2061 6c72 6561 6479  peration already
+-00008100: 2070 7265 7365 6e74 2069 6e20 6462 3a20   present in db: 
+-00008110: 0700 0000 054a 616c 4442 0103 0000 006e  .....JalDB.....n
+-00008120: 0020 0438 043c 0435 0435 0442 0020 043d  . .8.<.5.5.B. .=
+-00008130: 0435 0441 043e 0445 0440 0430 043d 0451  .5.A.>.E.@.0.=.Q
+-00008140: 043d 043d 044b 0435 0020 0438 0437 043c  .=.=.K.5. .8.7.<
+-00008150: 0435 043d 0435 043d 0438 044f 002c 000a  .5.=.5.=.8.O.,..
+-00008160: 0432 044b 0020 0445 043e 0442 0438 0442  .2.K. .E.>.B.8.B
+-00008170: 0435 0020 0438 0445 0020 0441 043e 0445  .5. .8.E. .A.>.E
+-00008180: 0440 0430 043d 0438 0442 044c 003f 0800  .@.0.=.8.B.L.?..
+-00008190: 0000 0006 0000 0031 2068 6173 2075 6e63  .......1 has unc
+-000081a0: 6f6d 6d69 7474 6564 2063 6861 6e67 6573  ommitted changes
+-000081b0: 2c0a 646f 2079 6f75 2077 616e 7420 746f  ,.do you want to
+-000081c0: 2073 6176 6520 6974 3f07 0000 0011 4a61   save it?.....Ja
+-000081d0: 6c4f 7065 7261 7469 6f6e 7354 6162 7301  lOperationsTabs.
+-000081e0: 0300 0000 3604 1504 4104 4204 4c00 2004  ....6...A.B.L. .
+-000081f0: 3d04 3504 4104 3e04 4504 4004 3004 3d04  =.5.A.>.E.@.0.=.
+-00008200: 5104 3d04 3d04 4b04 3500 2004 3804 3704  Q.=.=.K.5. .8.7.
+-00008210: 3c04 3504 3d04 3d04 3804 4f08 0000 0000  <.5.=.=.8.O.....
+-00008220: 0600 0000 1859 6f75 2068 6176 6520 756e  .....You have un
+-00008230: 7361 7665 6420 6368 616e 6765 7307 0000  saved changes...
+-00008240: 0011 4a61 6c4f 7065 7261 7469 6f6e 7354  ..JalOperationsT
+-00008250: 6162 7301 0300 0000 5a04 1d04 3504 3204  abs.....Z...5.2.
+-00008260: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-00008270: 4304 3404 3004 3b04 3804 4204 4c00 2004  C.4.0.;.8.B.L. .
+-00008280: 3f04 4004 3504 3404 3e04 3f04 4004 3504  ?.@.5.4.>.?.@.5.
+-00008290: 3404 3504 3b04 5104 3d04 3d04 4304 4e00  4.5.;.Q.=.=.C.N.
+-000082a0: 2004 3a04 3004 4204 3504 3304 3e04 4004   .:.0.B.5.3.>.@.
+-000082b0: 3804 4e08 0000 0000 0600 0000 2043 616e  8.N......... Can
+-000082c0: 2774 2064 656c 6574 6520 7072 6564 6566  't delete predef
+-000082d0: 696e 6564 2063 6174 6567 6f72 7907 0000  ined category...
+-000082e0: 000b 4a61 6c53 716c 4572 726f 7201 0300  ..JalSqlError...
+-000082f0: 0000 9e04 2d04 4204 3800 2004 3404 3004  ....-.B.8. .4.0.
+-00008300: 3d04 3d04 4b04 3500 2004 3d04 3500 2004  =.=.K.5. .=.5. .
+-00008310: 3c04 3e04 3304 4304 4200 2004 3104 4b04  <.>.3.C.B. .1.K.
+-00008320: 4204 4c00 2004 3c04 3e04 3404 3804 4404  B.L. .<.>.4.8.D.
+-00008330: 3804 4604 3804 4004 3e04 3204 3004 3d04  8.F.8.@.>.2.0.=.
+-00008340: 4b00 2c00 2004 4200 2e04 3a00 2e00 2004  K.,. .B...:... .
+-00008350: 3d04 3000 2004 3d04 3804 4500 2004 3504  =.0. .=.8.E. .5.
+-00008360: 4104 4204 4c00 2004 4104 4104 4b04 3b04  A.B.L. .A.A.K.;.
+-00008370: 3a04 3000 2004 3200 2004 3404 4004 4304  :.0. .2. .4.@.C.
+-00008380: 3304 3e04 3c00 2004 3c04 3504 4104 4204  3.>.<. .<.5.A.B.
+-00008390: 3508 0000 0000 0600 0000 3a44 6174 6120  5.........:Data 
+-000083a0: 6172 6520 7265 6665 7265 6e63 6564 2069  are referenced i
+-000083b0: 6e20 616e 6f74 6865 7220 706c 6163 6520  n another place 
+-000083c0: 616e 6420 6361 6e27 7420 6265 206d 6f64  and can't be mod
+-000083d0: 6966 6965 6407 0000 000b 4a61 6c53 716c  ified.....JalSql
+-000083e0: 4572 726f 7201 0300 0000 1e04 1e04 4804  Error.........H.
+-000083f0: 3804 3104 3a04 3000 2004 3200 2004 3404  8.1.:.0. .2. .4.
+-00008400: 3004 3d04 3d04 4b04 4508 0000 0000 0600  0.=.=.K.E.......
+-00008410: 0000 0e44 6174 6162 6173 6520 6572 726f  ...Database erro
+-00008420: 7207 0000 000b 4a61 6c53 716c 4572 726f  r.....JalSqlErro
+-00008430: 7201 0300 0000 5004 1d04 3504 3204 3504  r.....P...5.2.5.
+-00008440: 4004 3d04 3e00 2004 3204 4b04 3104 4004  @.=.>. .2.K.1.@.
+-00008450: 3004 3d04 3000 2004 3204 3004 3b04 4e04  0.=.0. .2.0.;.N.
+-00008460: 4204 3000 2004 3404 3b04 4f00 2004 4604  B.0. .4.;.O. .F.
+-00008470: 3504 3d04 3d04 3e04 3900 2004 3104 4304  5.=.=.>.9. .1.C.
+-00008480: 3c04 3004 3304 3808 0000 0000 0600 0000  <.0.3.8.........
+-00008490: 2a49 6e63 6f72 7265 6374 2063 7572 7265  *Incorrect curre
+-000084a0: 6e63 7920 6173 7369 676e 6d65 6e74 2066  ncy assignment f
+-000084b0: 6f72 2061 6e20 6173 7365 7407 0000 000b  or an asset.....
+-000084c0: 4a61 6c53 716c 4572 726f 7201 0300 0000  JalSqlError.....
+-000084d0: 8004 1f04 3e04 3b04 3500 2004 1104 3004  ....>.;.5. ...0.
+-000084e0: 3d04 3a00 2f04 1104 4004 3e04 3a04 3504  =.:./...@.>.:.5.
+-000084f0: 4000 2004 3404 3e04 3b04 3604 3d04 3e00  @. .4.>.;.6.=.>.
+-00008500: 2004 3104 4b04 4204 4c00 2004 3704 3004   .1.K.B.L. .7.0.
+-00008510: 3f04 3e04 3b04 3d04 3504 3d04 3e00 2004  ?.>.;.=.5.=.>. .
+-00008520: 3404 3b04 4f00 2004 3804 3d04 3204 3504  4.;.O. .8.=.2.5.
+-00008530: 4104 4204 3804 4604 3804 3e04 3d04 3d04  A.B.8.F.8.>.=.=.
+-00008540: 3e04 3304 3e00 2004 4104 4704 3504 4204  >.3.>. .A.G.5.B.
+-00008550: 3008 0000 0000 0600 0000 3949 6e76 6573  0.........9Inves
+-00008560: 746d 656e 7420 6163 636f 756e 7420 7368  tment account sh
+-00008570: 6f75 6c64 2068 6176 6520 6173 736f 6369  ould have associ
+-00008580: 6174 6564 2062 726f 6b65 7220 6173 7369  ated broker assi
+-00008590: 676e 6564 0700 0000 0b4a 616c 5371 6c45  gned.....JalSqlE
+-000085a0: 7272 6f72 0103 0000 0088 0020 043e 043f  rror....... .>.?
+-000085b0: 0435 0440 0430 0446 0438 0439 0020 0442  .5.@.0.F.8.9. .B
+-000085c0: 0440 0435 0431 0443 044e 0442 0020 043f  .@.5.1.C.N.B. .?
+-000085d0: 0435 0440 0435 0440 0430 0441 0447 0435  .5.@.5.@.0.A.G.5
+-000085e0: 0442 0430 002e 0020 0412 044b 0020 0445  .B.0... ...K. .E
+-000085f0: 043e 0434 0438 0442 0435 0020 0432 044b  .>.4.8.B.5. .2.K
+-00008600: 043f 043e 043b 043d 0438 0442 044c 0020  .?.>.;.=.8.B.L. 
+-00008610: 0435 0433 043e 0020 043f 0440 044f 043c  .5.3.>. .?.@.O.<
+-00008620: 043e 0020 0441 0435 0439 0447 0430 0441  .>. .A.5.9.G.0.A
+-00008630: 003f 0800 0000 0006 0000 003c 206f 7065  .?.........< ope
+-00008640: 7261 7469 6f6e 7320 7265 7175 6972 6520  rations require 
+-00008650: 7265 6275 696c 642e 2044 6f20 796f 7520  rebuild. Do you 
+-00008660: 7761 6e74 2074 6f20 646f 2069 7420 7269  want to do it ri
+-00008670: 6768 7420 6e6f 773f 0700 0000 064c 6564  ght now?.....Led
+-00008680: 6765 7201 0300 0000 2200 2c00 2004 3d04  ger.....".,. .=.
+-00008690: 3e04 3204 3004 4f00 2004 3304 4004 3004  >.2.0.O. .3.@.0.
+-000086a0: 3d04 3804 4604 3000 3a00 2008 0000 0000  =.8.F.0.:. .....
+-000086b0: 0600 0000 102c 206e 6577 2066 726f 6e74  ....., new front
+-000086c0: 6965 723a 2007 0000 0006 4c65 6467 6572  ier: .....Ledger
+-000086d0: 0103 0000 001a 041f 043e 0434 0442 0432  .........>.4.B.2
+-000086e0: 0435 0440 0436 0434 0435 043d 0438 0435  .5.@.6.4.5.=.8.5
+-000086f0: 0800 0000 0006 0000 000c 436f 6e66 6972  ..........Confir
+-00008700: 6d61 7469 6f6e 0700 0000 064c 6564 6765  mation.....Ledge
+-00008710: 7201 0300 0000 9404 1f04 4004 3e04 3804  r.........@.>.8.
+-00008720: 3704 3e04 4804 3b04 3000 2004 3e04 4804  7.>.H.;.0. .>.H.
+-00008730: 3804 3104 3a04 3000 2e00 2004 2004 3004  8.1.:.0... . .0.
+-00008740: 4104 4704 5104 4200 2004 3804 4204 3e04  A.G.Q.B. .8.B.>.
+-00008750: 3304 3e04 3200 2004 3d04 3500 2004 3e04  3.>.2. .=.5. .>.
+-00008760: 3a04 3e04 3d04 4704 3504 3d00 2e00 2004  :.>.=.G.5.=... .
+-00008770: 1f04 4004 3e04 3204 3504 4004 4c04 4204  ..@.>.2.5.@.L.B.
+-00008780: 3500 2004 4104 3e04 3e04 3104 4904 3504  5. .A.>.>.1.I.5.
+-00008790: 3d04 3804 4f00 2004 3e04 3100 2004 3e04  =.8.O. .>.1. .>.
+-000087a0: 4804 3804 3104 3a04 3004 4508 0000 0000  H.8.1.:.0.E.....
+-000087b0: 0600 0000 4d45 7863 6570 7469 6f6e 2068  ....MException h
+-000087c0: 6170 7065 6e65 642e 204c 6564 6765 7220  appened. Ledger 
+-000087d0: 6973 2069 6e63 6f6d 706c 6574 652e 2050  is incomplete. P
+-000087e0: 6c65 6173 6520 636f 7272 6563 7420 6572  lease correct er
+-000087f0: 726f 7273 206c 6973 7465 6420 696e 206c  rors listed in l
+-00008800: 6f67 0700 0000 064c 6564 6765 7201 0300  og.....Ledger...
+-00008810: 0000 4a04 1804 4204 3e04 3304 3800 2004  ..J...B.>.3.8. .
+-00008820: 4004 3004 4104 4104 4704 3804 4204 3004  @.0.A.A.G.8.B.0.
+-00008830: 3d04 4b00 2e00 2004 1704 3004 4204 4004  =.K... ...0.B.@.
+-00008840: 3004 4704 3504 3d04 3d04 3e04 3500 2004  0.G.5.=.=.>.5. .
+-00008850: 3204 4004 3504 3c04 4f00 3a00 2008 0000  2.@.5.<.O.:. ...
+-00008860: 0000 0600 0000 224c 6564 6765 7220 6973  ......"Ledger is
+-00008870: 2063 6f6d 706c 6574 652e 2045 6c61 7073   complete. Elaps
+-00008880: 6564 2074 696d 653a 2007 0000 0006 4c65  ed time: .....Le
+-00008890: 6467 6572 0103 0000 002c 0422 0440 0430  dger.....,.".@.0
+-000088a0: 043d 0437 0430 043a 0446 0438 0438 0020  .=.7.0.:.F.8.8. 
+-000088b0: 043e 0442 0441 0443 0442 0441 0442 0432  .>.B.A.C.B.A.B.2
+-000088c0: 0443 044e 0442 0800 0000 0006 0000 000e  .C.N.B..........
+-000088d0: 4c65 6765 7220 6973 2065 6d70 7479 0700  Leger is empty..
+-000088e0: 0000 064c 6564 6765 7201 0300 0000 2604  ...Ledger.....&.
+-000088f0: 1d04 3500 2004 4304 3a04 3004 3704 3004  ..5. .C.:.0.7.0.
+-00008900: 3d04 3000 2004 2604 1100 2004 3404 3b04  =.0. .&... .4.;.
+-00008910: 4f00 3a00 2008 0000 0000 0600 0000 164e  O.:. ..........N
+-00008920: 6f20 6173 7365 7420 6465 6669 6e65 6420  o asset defined 
+-00008930: 666f 723a 2007 0000 0006 4c65 6467 6572  for: .....Ledger
+-00008940: 0103 0000 0034 041d 0443 0020 0443 043a  .....4...C. .C.:
+-00008950: 0430 0437 0430 043d 0430 0020 043a 0430  .0.7.0.=.0. .:.0
+-00008960: 0442 0435 0433 043e 0440 0438 044f 0020  .B.5.3.>.@.8.O. 
+-00008970: 0434 043b 044f 003a 0020 0800 0000 0006  .4.;.O.:. ......
+-00008980: 0000 0015 4e6f 2063 6174 6567 6f72 7920  ....No category 
+-00008990: 7365 7420 666f 723a 2007 0000 0006 4c65  set for: .....Le
+-000089a0: 6467 6572 0103 0000 0034 041d 0435 0020  dger.....4...5. 
+-000089b0: 0443 043a 0430 0437 0430 043d 0020 043a  .C.:.0.7.0.=. .:
+-000089c0: 043e 043d 0442 0440 0430 0433 0435 043d  .>.=.B.@.0.3.5.=
+-000089d0: 0442 0020 0434 043b 044f 003a 0020 0800  .B. .4.;.O.:. ..
+-000089e0: 0000 0006 0000 0011 4e6f 2070 6565 7220  ........No peer 
+-000089f0: 7365 7420 666f 723a 2007 0000 0006 4c65  set for: .....Le
+-00008a00: 6467 6572 0103 0000 0026 041f 0435 0440  dger.....&...5.@
+-00008a10: 0435 0441 0447 0451 0442 0020 0438 0442  .5.A.G.Q.B. .8.B
+-00008a20: 043e 0433 043e 0432 0020 0441 003a 0020  .>.3.>.2. .A.:. 
+-00008a30: 0800 0000 0006 0000 001a 5265 2d62 7569  ..........Re-bui
+-00008a40: 6c64 696e 6720 6c65 6467 6572 2073 696e  lding ledger sin
+-00008a50: 6365 3a20 0700 0000 064c 6564 6765 7201  ce: .....Ledger.
+-00008a60: 0300 0000 5804 1d04 3504 3804 3704 3204  ....X...5.8.7.2.
+-00008a70: 3504 4104 4204 3d04 4b04 3900 2004 3f04  5.A.B.=.K.9. .?.
+-00008a80: 3004 4004 3004 3c04 3504 4204 4000 2004  0.@.0.<.5.B.@. .
+-00008a90: 3a04 4004 3804 4204 3804 4704 3d04 3e04  :.@.8.B.8.G.=.>.
+-00008aa0: 4104 4204 3800 2004 4104 3e04 3e04 3104  A.B.8. .A.>.>.1.
+-00008ab0: 4904 3504 3d04 3804 4f00 3a00 2008 0000  I.5.=.8.O.:. ...
+-00008ac0: 0000 0600 0000 2055 6e6b 6e6f 776e 206c  ...... Unknown l
+-00008ad0: 6f67 6769 6e67 206c 6576 656c 2070 726f  ogging level pro
+-00008ae0: 7669 6465 643a 2007 0000 0009 4c6f 6756  vided: .....LogV
+-00008af0: 6965 7765 7201 0300 0000 0c25 b200 2000  iewer......%.. .
+-00008b00: 6c00 6f00 6700 7308 0000 0000 0600 0000  l.o.g.s.........
+-00008b10: 08e2 96b2 206c 6f67 7307 0000 0009 4c6f  .... logs.....Lo
+-00008b20: 6756 6965 7765 7201 0300 0000 0c25 b600  gViewer......%..
+-00008b30: 2000 6c00 6f00 6700 7308 0000 0000 0600   .l.o.g.s.......
+-00008b40: 0000 08e2 96b6 206c 6f67 7307 0000 0009  ...... logs.....
+-00008b50: 4c6f 6756 6965 7765 7201 0300 0000 3e04  LogViewer.....>.
+-00008b60: 1e04 4804 3804 3104 3a04 3000 2004 3b04  ..H.8.1.:.0. .;.
+-00008b70: 3e04 3304 3804 3d04 3000 2004 4704 3504  >.3.8.=.0. .G.5.
+-00008b80: 4004 3504 3700 2004 1304 3e04 4104 4304  @.5.7. ...>.A.C.
+-00008b90: 4104 3b04 4304 3304 3800 3a00 2008 0000  A.;.C.3.8.:. ...
+-00008ba0: 0000 0600 0000 1345 5349 4120 6c6f 6769  .......ESIA logi
+-00008bb0: 6e20 6661 696c 6564 3a20 0700 0000 084c  n failed: .....L
+-00008bc0: 6f67 696e 464e 5301 0300 0000 4004 2304  oginFNS.....@.#.
+-00008bd0: 4104 3f04 3504 4804 3d04 4b04 3900 2004  A.?.5.H.=.K.9. .
+-00008be0: 3b04 3e04 3304 3804 3d00 2004 4704 3504  ;.>.3.8.=. .G.5.
+-00008bf0: 4004 3504 3700 2004 1304 3e04 4104 4304  @.5.7. ...>.A.C.
+-00008c00: 4104 3b04 4304 3304 3800 3a00 2008 0000  A.;.C.3.8.:. ...
+-00008c10: 0000 0600 0000 1745 5349 4120 6c6f 6769  .......ESIA logi
+-00008c20: 6e20 7375 6363 6573 7366 756c 3a20 0700  n successful: ..
+-00008c30: 0000 084c 6f67 696e 464e 5301 0300 0000  ...LoginFNS.....
+-00008c40: 3804 1e04 4804 3804 3104 3a04 3000 2004  8...H.8.1.:.0. .
+-00008c50: 3b04 3e04 3304 3804 3d04 3000 2004 4704  ;.>.3.8.=.0. .G.
+-00008c60: 3504 4004 3504 3700 2004 1b04 1a00 2004  5.@.5.7. ..... .
+-00008c70: 2404 1d04 2100 3a00 2008 0000 0000 0600  $...!.:. .......
+-00008c80: 0000 1246 4e53 206c 6f67 696e 2066 6169  ...FNS login fai
+-00008c90: 6c65 643a 2007 0000 0008 4c6f 6769 6e46  led: .....LoginF
+-00008ca0: 4e53 0103 0000 003a 0423 0441 043f 0435  NS.....:.#.A.?.5
+-00008cb0: 0448 043d 044b 0439 0020 043b 043e 0433  .H.=.K.9. .;.>.3
+-00008cc0: 0438 043d 0020 0447 0435 0440 0435 0437  .8.=. .G.5.@.5.7
+-00008cd0: 0020 041b 041a 0020 0424 041d 0421 003a  . ..... .$...!.:
+-00008ce0: 0020 0800 0000 0006 0000 0016 464e 5320  . ..........FNS 
+-00008cf0: 6c6f 6769 6e20 7375 6363 6573 7366 756c  login successful
+-00008d00: 3a20 0700 0000 084c 6f67 696e 464e 5301  : .....LoginFNS.
+-00008d10: 0300 0000 5a04 1e04 4804 3804 3104 3a04  ....Z...H.8.1.:.
+-00008d20: 3000 2004 3f04 3e04 3b04 4304 4704 3504  0. .?.>.;.C.G.5.
+-00008d30: 3d04 3804 4f00 2000 5500 5200 4c00 2004  =.8.O. .U.R.L. .
+-00008d40: 3b04 3e04 3304 3804 3d04 3000 2004 4704  ;.>.3.8.=.0. .G.
+-00008d50: 3504 4004 3504 3700 2004 1304 3e04 4104  5.@.5.7. ...>.A.
+-00008d60: 4304 4104 3b04 4304 3304 3800 3a00 2008  C.A.;.C.3.8.:. .
+-00008d70: 0000 0000 0600 0000 1547 6574 2045 5349  .........Get ESI
+-00008d80: 4120 5552 4c20 6661 696c 6564 3a20 0700  A URL failed: ..
+-00008d90: 0000 084c 6f67 696e 464e 5301 0300 0000  ...LoginFNS.....
+-00008da0: 3400 5300 4d00 5300 2004 3104 4b04 3b04  4.S.M.S. .1.K.;.
+-00008db0: 3e00 2004 3704 3004 3f04 4004 3e04 4804  >. .7.0.?.@.>.H.
+-00008dc0: 3504 3d04 3e00 2004 4304 4104 3f04 3504  5.=.>. .C.A.?.5.
+-00008dd0: 4804 3d04 3e08 0000 0000 0600 0000 1e53  H.=.>..........S
+-00008de0: 4d53 2077 6173 2072 6571 7565 7374 6564  MS was requested
+-00008df0: 2073 7563 6365 7373 6675 6c6c 7907 0000   successfully...
+-00008e00: 0008 4c6f 6769 6e46 4e53 0103 0000 001e  ..LoginFNS......
+-00008e10: 0410 0432 0442 043e 0440 0438 0437 0430  ...2.B.>.@.8.7.0
+-00008e20: 0446 0438 044f 0020 0424 041d 0421 0800  .F.8.O. .$...!..
+-00008e30: 0000 0006 0000 0011 4175 7468 6f72 697a  ........Authoriz
+-00008e40: 6174 696f 6e20 464e 5307 0000 000e 4c6f  ation FNS.....Lo
+-00008e50: 6769 6e46 4e53 4469 616c 6f67 0103 0000  ginFNSDialog....
+-00008e60: 000e 0417 0430 043a 0440 044b 0442 044c  .....0.:.@.K.B.L
+-00008e70: 0800 0000 0006 0000 0005 436c 6f73 6507  ..........Close.
+-00008e80: 0000 000e 4c6f 6769 6e46 4e53 4469 616c  ....LoginFNSDial
+-00008e90: 6f67 0103 0000 0016 041a 043e 0434 0020  og.........>.4. 
+-00008ea0: 0438 0437 0020 0053 004d 0053 003a 0800  .8.7. .S.M.S.:..
+-00008eb0: 0000 0006 0000 000e 436f 6465 2066 726f  ........Code fro
+-00008ec0: 6d20 534d 533a 0700 0000 0e4c 6f67 696e  m SMS:.....Login
+-00008ed0: 464e 5344 6961 6c6f 6701 0300 0000 1204  FNSDialog.......
+-00008ee0: 1304 3e04 4104 4304 4104 3b04 4304 3304  ..>.A.C.A.;.C.3.
+-00008ef0: 3808 0000 0000 0600 0000 0a45 5349 4120  8..........ESIA 
+-00008f00: 4c6f 6769 6e07 0000 000e 4c6f 6769 6e46  Login.....LoginF
+-00008f10: 4e53 4469 616c 6f67 0103 0000 000c 041b  NSDialog........
+-00008f20: 041a 0020 0424 041d 0421 0800 0000 0006  ... .$...!......
+-00008f30: 0000 0009 464e 5320 4c6f 6769 6e07 0000  ....FNS Login...
+-00008f40: 000e 4c6f 6769 6e46 4e53 4469 616c 6f67  ..LoginFNSDialog
+-00008f50: 0103 0000 0008 0418 041d 041d 003a 0800  .............:..
+-00008f60: 0000 0006 0000 0004 494e 4e3a 0700 0000  ........INN:....
+-00008f70: 0e4c 6f67 696e 464e 5344 6961 6c6f 6701  .LoginFNSDialog.
+-00008f80: 0300 0000 0a04 1b04 3e04 3304 3804 3d08  ........>.3.8.=.
+-00008f90: 0000 0000 0600 0000 054c 6f67 696e 0700  .........Login..
+-00008fa0: 0000 0e4c 6f67 696e 464e 5344 6961 6c6f  ...LoginFNSDialo
+-00008fb0: 6701 0300 0000 0e04 1f04 3004 4004 3e04  g.........0.@.>.
+-00008fc0: 3b04 4c00 3a08 0000 0000 0600 0000 0950  ;.L.:..........P
+-00008fd0: 6173 7377 6f72 643a 0700 0000 0e4c 6f67  assword:.....Log
+-00008fe0: 696e 464e 5344 6961 6c6f 6701 0300 0000  inFNSDialog.....
+-00008ff0: 1e04 1d04 3e04 3c04 3504 4000 2004 4204  ....>.<.5.@. .B.
+-00009000: 3504 3b04 3504 4404 3e04 3d04 3000 3a08  5.;.5.D.>.=.0.:.
+-00009010: 0000 0000 0600 0000 0d50 686f 6e65 206e  .........Phone n
+-00009020: 756d 6265 723a 0700 0000 0e4c 6f67 696e  umber:.....Login
+-00009030: 464e 5344 6961 6c6f 6701 0300 0000 0600  FNSDialog.......
+-00009040: 5300 4d00 5308 0000 0000 0600 0000 0953  S.M.S..........S
+-00009050: 4d53 204c 6f67 696e 0700 0000 0e4c 6f67  MS Login.....Log
+-00009060: 696e 464e 5344 6961 6c6f 6701 0300 0000  inFNSDialog.....
+-00009070: 2604 1204 4b04 4104 3b04 3004 4204 4c00  &...K.A.;.0.B.L.
+-00009080: 2000 5300 4d00 5300 2004 4100 2004 3a04   .S.M.S. .A. .:.
+-00009090: 3e04 3404 3e04 3c08 0000 0000 0600 0000  >.4.>.<.........
+-000090a0: 1253 656e 6420 534d 5320 7769 7468 2063  .Send SMS with c
+-000090b0: 6f64 6507 0000 000e 4c6f 6769 6e46 4e53  ode.....LoginFNS
+-000090c0: 4469 616c 6f67 0103 0000 0016 0061 0062  Dialog.......a.b
+-000090d0: 006f 0075 0074 003a 0062 006c 0061 006e  .o.u.t.:.b.l.a.n
+-000090e0: 006b 0800 0000 0006 0000 000b 6162 6f75  .k..........abou
+-000090f0: 743a 626c 616e 6b07 0000 000e 4c6f 6769  t:blank.....Logi
+-00009100: 6e46 4e53 4469 616c 6f67 0103 0000 0044  nFNSDialog.....D
+-00009110: 041d 0430 0439 0434 0435 043d 043e 0020  ...0.9.4.5.=.>. 
+-00009120: 043d 0435 0441 043a 043e 043b 044c 043a  .=.5.A.:.>.;.L.:
+-00009130: 043e 0020 0426 0411 0020 043d 0430 0020  .>. .&... .=.0. 
+-00009140: 004d 004f 0045 0058 0020 0434 043b 044f  .M.O.E.X. .4.;.O
+-00009150: 003a 0020 0800 0000 0006 0000 0020 4d75  .:. ......... Mu
+-00009160: 6c74 6970 6c65 204d 4f45 5820 6173 7365  ltiple MOEX asse
+-00009170: 7473 2066 6f75 6e64 2066 6f72 3a20 0700  ts found for: ..
+-00009180: 0000 044d 4f45 5801 0300 0000 4404 1d04  ...MOEX.....D...
+-00009190: 3504 3f04 3e04 3404 3404 3504 4004 3604  5.?.>.4.4.5.@.6.
+-000091a0: 3804 3204 3004 3504 3c04 4b04 3900 2004  8.2.0.5.<.K.9. .
+-000091b0: 4204 3804 3f00 2004 2604 1100 2004 1c04  B.8.?. .&... ...
+-000091c0: 3e04 4104 1104 3804 4004 3604 3800 3a00  >.A...8.@.6.8.:.
+-000091d0: 2008 0000 0000 0600 0000 2055 6e73 7570   ......... Unsup
+-000091e0: 706f 7274 6564 204d 4f45 5820 7365 6375  ported MOEX secu
+-000091f0: 7269 7479 2074 7970 653a 2007 0000 0004  rity type: .....
+-00009200: 4d4f 4558 0103 0000 0016 041e 0020 043f  MOEX......... .?
+-00009210: 0440 043e 0433 0440 0430 043c 043c 0435  .@.>.3.@.0.<.<.5
+-00009220: 0800 0000 0006 0000 0005 4162 6f75 7407  ..........About.
+-00009230: 0000 000a 4d61 696e 5769 6e64 6f77 0103  ....MainWindow..
+-00009240: 0000 001a 041f 043e 0434 0442 0432 0435  .......>.4.B.2.5
+-00009250: 0440 0436 0434 0435 043d 0438 0435 0800  .@.6.4.5.=.8.5..
+-00009260: 0000 0006 0000 000c 436f 6e66 6972 6d61  ........Confirma
+-00009270: 7469 6f6e 0700 0000 0a4d 6169 6e57 696e  tion.....MainWin
+-00009280: 646f 7701 0300 0000 1404 1804 3d04 4404  dow.........=.D.
+-00009290: 3e04 4004 3c04 3004 4604 3804 4f08 0000  >.@.<.0.F.8.O...
+-000092a0: 0000 0600 0000 0449 6e66 6f07 0000 000a  .......Info.....
+-000092b0: 4d61 696e 5769 6e64 6f77 0103 0000 0028  MainWindow.....(
+-000092c0: 042f 0437 044b 043a 0020 0431 044b 043b  ./.7.K.:. .1.K.;
+-000092d0: 0020 0438 0437 043c 0435 043d 0451 043d  . .8.7.<.5.=.Q.=
+-000092e0: 0020 043d 0430 0020 0800 0000 0006 0000  . .=.0. ........
+-000092f0: 0018 4c61 6e67 7561 6765 2077 6173 2063  ..Language was c
+-00009300: 6861 6e67 6564 2074 6f20 0700 0000 0a4d  hanged to .....M
+-00009310: 6169 6e57 696e 646f 7701 0300 0000 6204  ainWindow.....b.
+-00009320: 1804 4204 3e04 3304 3800 2004 4204 4004  ..B.>.3.8. .B.@.
+-00009330: 3004 3d04 3704 3004 3a04 4604 3804 3900  0.=.7.0.:.F.8.9.
+-00009340: 2004 3d04 3504 3004 3a04 4204 4304 3004   .=.5.0.:.B.C.0.
+-00009350: 3b04 4c04 3d04 4b00 2e00 2004 1f04 3504  ;.L.=.K... ...5.
+-00009360: 4004 3504 4104 4704 3804 4204 3004 4204  @.5.A.G.8.B.0.B.
+-00009370: 4c00 2004 4104 3504 3904 4704 3004 4100  L. .A.5.9.G.0.A.
+-00009380: 3f08 0000 0000 0600 0000 264c 6564 6765  ?.........&Ledge
+-00009390: 7220 6973 6e27 7420 636f 6d70 6c65 7465  r isn't complete
+-000093a0: 2e20 5265 6275 696c 6420 6974 206e 6f77  . Rebuild it now
+-000093b0: 3f07 0000 000a 4d61 696e 5769 6e64 6f77  ?.....MainWindow
+-000093c0: 0103 0000 0080 0414 043e 043f 043e 043b  .........>.?.>.;
+-000093d0: 043d 0438 0442 0435 043b 044c 043d 0430  .=.8.B.5.;.L.=.0
+-000093e0: 044f 0020 0438 043d 0444 043e 0440 043c  .O. .8.=.D.>.@.<
+-000093f0: 0430 0446 0438 044f 002c 0020 0438 043d  .0.F.8.O.,. .8.=
+-00009400: 0441 0442 0440 0443 043a 0446 0438 0438  .A.B.@.C.:.F.8.8
+-00009410: 002c 0020 0441 043e 043e 0431 0449 0435  .,. .A.>.>.1.I.5
+-00009420: 043d 0438 044f 0020 043e 0020 043f 0440  .=.8.O. .>. .?.@
+-00009430: 043e 0431 043b 0435 043c 0430 0445 0020  .>.1.;.5.<.0.E. 
+-00009440: 043d 0430 0020 0800 0000 0006 0000 0035  .=.0. .........5
+-00009450: 4d6f 7265 2069 6e66 6f72 6d61 7469 6f6e  More information
+-00009460: 2c20 6d61 6e75 616c 7320 616e 6420 7072  , manuals and pr
+-00009470: 6f62 6c65 6d20 7265 706f 7274 7320 6172  oblem reports ar
+-00009480: 6520 6174 2007 0000 000a 4d61 696e 5769  e at .....MainWi
+-00009490: 6e64 6f77 0103 0000 0050 0412 043e 043f  ndow.....P...>.?
+-000094a0: 0440 043e 0441 044b 002c 0020 043a 043e  .@.>.A.K.,. .:.>
+-000094b0: 043c 043c 0435 043d 0442 0430 0440 0438  .<.<.5.=.B.0.@.8
+-000094c0: 0438 002c 0020 043f 043e 043c 043e 0449  .8.,. .?.>.<.>.I
+-000094d0: 044c 0020 0438 043b 0438 0020 0434 043e  .L. .8.;.8. .4.>
+-000094e0: 043d 0430 0442 044b 003a 0800 0000 0006  .=.0.B.K.:......
+-000094f0: 0000 0027 5175 6573 7469 6f6e 732c 2063  ...'Questions, c
+-00009500: 6f6d 6d65 6e74 732c 2068 656c 7020 6f72  omments, help or
+-00009510: 2064 6f6e 6174 696f 6e73 3a07 0000 000a   donations:.....
+-00009520: 4d61 696e 5769 6e64 6f77 0103 0000 0022  MainWindow....."
+-00009530: 0422 0440 0435 0431 0443 0435 0442 0441  .".@.5.1.C.5.B.A
+-00009540: 044f 0020 0440 0435 0441 0442 0430 0440  .O. .@.5.A.B.0.@
+-00009550: 0442 0800 0000 0006 0000 0010 5265 7374  .B..........Rest
+-00009560: 6172 7420 7265 7175 6972 6564 0700 0000  art required....
+-00009570: 0a4d 6169 6e57 696e 646f 7701 0300 0000  .MainWindow.....
+-00009580: 5004 1a04 3e04 3d04 3504 4704 3d04 4b04  P...>.=.5.G.=.K.
+-00009590: 3900 2004 3104 3004 3b04 3004 3d04 4100  9. .1.0.;.0.=.A.
+-000095a0: 2004 3f04 3e00 2004 3e04 4204 4704 5104   .?.>. .>.B.G.Q.
+-000095b0: 4204 4300 2004 3d04 3500 2004 4104 3e04  B.C. .=.5. .A.>.
+-000095c0: 3204 3f04 3004 3404 3004 3504 4200 3a00  2.?.0.4.0.5.B.:.
+-000095d0: 2008 0000 0000 0600 0000 2853 7461 7465   .........(State
+-000095e0: 6d65 6e74 2065 6e64 696e 6720 6261 6c61  ment ending bala
+-000095f0: 6e63 6520 646f 6573 6e27 7420 6d61 7463  nce doesn't matc
+-00009600: 683a 2007 0000 000a 4d61 696e 5769 6e64  h: .....MainWind
+-00009610: 6f77 0103 0000 00c8 0412 044b 0020 0434  ow.........K. .4
+-00009620: 043e 043b 0436 043d 044b 0020 043f 0435  .>.;.6.=.K. .?.5
+-00009630: 0440 0435 0437 0430 043f 0443 0441 0442  .@.5.7.0.?.C.A.B
+-00009640: 0438 0442 044c 0020 043f 0440 0438 043b  .8.B.L. .?.@.8.;
+-00009650: 043e 0436 0435 043d 0438 0435 002c 0020  .>.6.5.=.8.5.,. 
+-00009660: 0447 0442 043e 0431 044b 0020 043f 0440  .G.B.>.1.K. .?.@
+-00009670: 0438 043c 0435 043d 0438 0442 044c 0020  .8.<.5.=.8.B.L. 
+-00009680: 0438 0437 043c 0435 043d 0435 043d 0438  .8.7.<.5.=.5.=.8
+-00009690: 044f 000a 041f 0440 0438 043b 043e 0436  .O.....@.8.;.>.6
+-000096a0: 0435 043d 0438 0435 0020 0441 0435 0439  .5.=.8.5. .A.5.9
+-000096b0: 0447 0430 0441 0020 0437 0430 0432 0435  .G.0.A. .7.0.2.5
+-000096c0: 0440 0448 0438 0442 0020 0441 0432 043e  .@.H.8.B. .A.2.>
+-000096d0: 044e 0020 0440 0430 0431 043e 0442 0443  .N. .@.0.1.>.B.C
+-000096e0: 0800 0000 0006 0000 0052 596f 7520 7368  .........RYou sh
+-000096f0: 6f75 6c64 2072 6573 7461 7274 2061 7070  ould restart app
+-00009700: 6c69 6361 7469 6f6e 2074 6f20 6170 706c  lication to appl
+-00009710: 7920 6368 616e 6765 730a 4170 706c 6963  y changes.Applic
+-00009720: 6174 696f 6e20 7769 6c6c 2062 6520 7465  ation will be te
+-00009730: 726d 696e 6174 6564 206e 6f77 0700 0000  rminated now....
+-00009740: 0a4d 6169 6e57 696e 646f 7701 0300 0000  .MainWindow.....
+-00009750: 3004 3404 3e04 3c04 3004 4804 3d04 3504  0.4.>.<.0.H.=.5.
+-00009760: 3900 2004 4104 4204 4004 3004 3d04 3804  9. .A.B.@.0.=.8.
+-00009770: 4604 3500 2000 6700 6900 7400 6800 7500  F.5. .g.i.t.h.u.
+-00009780: 6208 0000 0000 0600 0000 1067 6974 6875  b..........githu
+-00009790: 6220 686f 6d65 2070 6167 6507 0000 000a  b home page.....
+-000097a0: 4d61 696e 5769 6e64 6f77 0103 0000 000c  MainWindow......
+-000097b0: 0432 0435 0440 0441 0438 044f 0800 0000  .2.5.@.A.8.O....
+-000097c0: 0006 0000 0007 7665 7273 696f 6e07 0000  ......version...
+-000097d0: 000a 4d61 696e 5769 6e64 6f77 0103 0000  ..MainWindow....
+-000097e0: 0006 002e 002e 002e 0800 0000 0006 0000  ................
+-000097f0: 0003 2e2e 2e07 0000 000f 4d6f 6e65 7946  ..........MoneyF
+-00009800: 6c6f 7757 6964 6765 7401 0300 0000 1604  lowWidget.......
+-00009810: 2404 3004 3904 3b00 2000 4500 7800 6300  $.0.9.;. .E.x.c.
+-00009820: 6500 6c00 3a08 0000 0000 0600 0000 0b45  e.l.:..........E
+-00009830: 7863 656c 2066 696c 653a 0700 0000 0f4d  xcel file:.....M
+-00009840: 6f6e 6579 466c 6f77 5769 6467 6574 0103  oneyFlowWidget..
+-00009850: 0000 0028 0424 0430 0439 043b 044b 0020  ...(.$.0.9.;.K. 
+-00009860: 0045 0078 0063 0065 006c 0020 0028 002a  .E.x.c.e.l. .(.*
+-00009870: 002e 0078 0073 006c 0078 0029 0800 0000  ...x.s.l.x.)....
+-00009880: 0006 0000 0014 4578 6365 6c20 6669 6c65  ......Excel file
+-00009890: 7320 282a 2e78 6c73 7829 0700 0000 0f4d  s (*.xlsx).....M
+-000098a0: 6f6e 6579 466c 6f77 5769 6467 6574 0103  oneyFlowWidget..
+-000098b0: 0000 0056 0424 0430 0439 043b 0020 0434  ...V.$.0.9.;. .4
+-000098c0: 043b 044f 0020 0441 043e 0445 0440 0430  .;.O. .A.>.E.@.0
+-000098d0: 043d 0435 043d 0438 044f 0020 0440 0430  .=.5.=.8.O. .@.0
+-000098e0: 0441 0447 0451 0442 0430 0020 0432 0020  .A.G.Q.B.0. .2. 
+-000098f0: 0444 043e 0440 043c 0430 0442 0435 0020  .D.>.@.<.0.B.5. 
+-00009900: 0045 0078 0063 0065 006c 0800 0000 0006  .E.x.c.e.l......
+-00009910: 0000 002e 4669 6c65 2077 6865 7265 2074  ....File where t
+-00009920: 6f20 7374 6f72 6520 7461 7820 7265 706f  o store tax repo
+-00009930: 7274 2069 6e20 4578 6365 6c20 666f 726d  rt in Excel form
+-00009940: 6174 0700 0000 0f4d 6f6e 6579 466c 6f77  at.....MoneyFlow
+-00009950: 5769 6467 6574 0103 0000 000a 041e 043e  Widget.........>
+-00009960: 0414 0414 0421 0800 0000 0006 0000 000a  .....!..........
+-00009970: 4d6f 6e65 7920 466c 6f77 0700 0000 0f4d  Money Flow.....M
+-00009980: 6f6e 6579 466c 6f77 5769 6467 6574 0103  oneyFlowWidget..
+-00009990: 0000 002e 041e 043e 0414 0414 0421 0020  .......>.....!. 
+-000099a0: 0441 043e 0445 0440 0430 043d 0451 043d  .A.>.E.@.0.=.Q.=
+-000099b0: 0020 0432 0020 0444 0430 0439 043b 0435  . .2. .D.0.9.;.5
+-000099c0: 0020 0800 0000 0006 0000 0020 4d6f 6e65  . ......... Mone
+-000099d0: 7920 666c 6f77 2072 6570 6f72 7420 7361  y flow report sa
+-000099e0: 7665 6420 746f 2066 696c 6520 0700 0000  ved to file ....
+-000099f0: 0f4d 6f6e 6579 466c 6f77 5769 6467 6574  .MoneyFlowWidget
+-00009a00: 0103 0000 001e 0421 043e 0445 0440 0430  .......!.>.E.@.0
+-00009a10: 043d 0438 0442 044c 0020 041e 0442 0447  .=.8.B.L. ...B.G
+-00009a20: 0451 0442 0800 0000 0006 0000 000b 5361  .Q.B..........Sa
+-00009a30: 7665 2052 6570 6f72 7407 0000 000f 4d6f  ve Report.....Mo
+-00009a40: 6e65 7946 6c6f 7757 6964 6765 7401 0300  neyFlowWidget...
+-00009a50: 0000 2404 2104 3e04 4504 4004 3004 3d04  ..$.!.>.E.@.0.=.
+-00009a60: 3804 4204 4c00 2004 1e04 3e04 1404 1404  8.B.L. ...>.....
+-00009a70: 2100 2004 3200 3a08 0000 0000 0600 0000  !. .2.:.........
+-00009a80: 1a53 6176 6520 6d6f 6e65 7920 666c 6f77  .Save money flow
+-00009a90: 2072 6570 6f72 7420 746f 3a07 0000 000f   report to:.....
+-00009aa0: 4d6f 6e65 7946 6c6f 7757 6964 6765 7401  MoneyFlowWidget.
+-00009ab0: 0300 0000 1804 1204 4b04 3104 3504 4004  ........K.1.5.@.
+-00009ac0: 3804 4200 2004 4404 3004 3904 3b08 0000  8.B. .D.0.9.;...
+-00009ad0: 0000 0600 0000 0b53 656c 6563 7420 6669  .......Select fi
+-00009ae0: 6c65 0700 0000 0f4d 6f6e 6579 466c 6f77  le.....MoneyFlow
+-00009af0: 5769 6467 6574 0103 0000 0008 0413 043e  Widget.........>
+-00009b00: 0434 003a 0800 0000 0006 0000 0005 5965  .4.:..........Ye
+-00009b10: 6172 3a07 0000 000f 4d6f 6e65 7946 6c6f  ar:.....MoneyFlo
+-00009b20: 7757 6964 6765 7401 0300 0000 2800 2004  wWidget.....(. .
+-00009b30: 3d04 3504 4304 4104 3f04 3504 4804 3d04  =.5.C.A.?.5.H.=.
+-00009b40: 4b04 3900 2004 3704 3004 3f04 4004 3e04  K.9. .7.0.?.@.>.
+-00009b50: 4100 3a00 2008 0000 0000 0600 0000 0920  A.:. .......... 
+-00009b60: 6661 696c 6564 3a20 0700 0000 034e 6574  failed: .....Net
+-00009b70: 0103 0000 0034 0422 0438 043f 0020 0426  .....4.".8.?. .&
+-00009b80: 0411 0020 043d 0435 0020 043f 043e 0434  ... .=.5. .?.>.4
+-00009b90: 0434 0435 0440 0436 0438 0432 0430 0435  .4.5.@.6.8.2.0.5
+-00009ba0: 0442 0441 044f 003a 0020 0800 0000 0006  .B.A.O.:. ......
+-00009bb0: 0000 001c 4173 7365 7420 7479 7065 2069  ....Asset type i
+-00009bc0: 736e 2774 2073 7570 706f 7274 6564 3a20  sn't supported: 
+-00009bd0: 0700 0000 0a4f 7065 6e42 726f 6b65 7201  .....OpenBroker.
+-00009be0: 0300 0000 3204 1104 3804 4004 3604 3000  ....2...8.@.6.0.
+-00009bf0: 2004 3d04 3500 2004 3f04 3e04 3404 3404   .=.5. .?.>.4.4.
+-00009c00: 3504 4004 3604 3804 3204 3004 3504 4204  5.@.6.8.2.0.5.B.
+-00009c10: 4104 4f00 3a00 2008 0000 0000 0600 0000  A.O.:. .........
+-00009c20: 1a45 7863 6861 6e67 6520 6973 6e27 7420  .Exchange isn't 
+-00009c30: 7375 7070 6f72 7465 643a 2007 0000 000a  supported: .....
+-00009c40: 4f70 656e 4272 6f6b 6572 0103 0000 0008  OpenBroker......
+-00009c50: 0421 0447 0435 0442 0800 0000 0006 0000  .!.G.5.B........
+-00009c60: 0007 4163 636f 756e 7407 0000 000f 4f70  ..Account.....Op
+-00009c70: 6572 6174 696f 6e73 4d6f 6465 6c01 0300  erationsModel...
+-00009c80: 0000 0a04 2104 4304 3c04 3c04 3008 0000  ....!.C.<.<.0...
+-00009c90: 0000 0600 0000 0641 6d6f 756e 7407 0000  .......Amount...
+-00009ca0: 000f 4f70 6572 6174 696f 6e73 4d6f 6465  ..OperationsMode
+-00009cb0: 6c01 0300 0000 0c04 1104 3004 3b04 3004  l.........0.;.0.
+-00009cc0: 3d04 4108 0000 0000 0600 0000 0742 616c  =.A..........Bal
+-00009cd0: 616e 6365 0700 0000 0f4f 7065 7261 7469  ance.....Operati
+-00009ce0: 6f6e 734d 6f64 656c 0103 0000 000c 0412  onsModel........
+-00009cf0: 0430 043b 044e 0442 0430 0800 0000 0006  .0.;.N.B.0......
+-00009d00: 0000 0008 4375 7272 656e 6379 0700 0000  ....Currency....
+-00009d10: 0f4f 7065 7261 7469 6f6e 734d 6f64 656c  .OperationsModel
+-00009d20: 0103 0000 0010 041e 043f 0438 0441 0430  .........?.8.A.0
+-00009d30: 043d 0438 0435 0800 0000 0006 0000 0005  .=.8.5..........
+-00009d40: 4e6f 7465 7307 0000 000f 4f70 6572 6174  Notes.....Operat
+-00009d50: 696f 6e73 4d6f 6465 6c01 0300 0000 1404  ionsModel.......
+-00009d60: 1404 3004 4204 3000 2f04 1204 4004 3504  ..0.B.0./...@.5.
+-00009d70: 3c04 4f08 0000 0000 0600 0000 0954 696d  <.O..........Tim
+-00009d80: 6573 7461 6d70 0700 0000 0f4f 7065 7261  estamp.....Opera
+-00009d90: 7469 6f6e 734d 6f64 656c 0103 0000 000a  tionsModel......
+-00009da0: 0421 0447 0435 0442 003a 0800 0000 0006  .!.G.5.B.:......
+-00009db0: 0000 0008 4163 636f 756e 743a 0700 0000  ....Account:....
+-00009dc0: 104f 7065 7261 7469 6f6e 7357 6964 6765  .OperationsWidge
+-00009dd0: 7401 0300 0000 4a04 1204 4b00 2004 4504  t.....J...K. .E.
+-00009de0: 3e04 4204 3804 4204 3500 2004 4304 3404  >.B.8.B.5. .C.4.
+-00009df0: 3004 3b04 3804 4204 4c00 2004 3204 4b04  0.;.8.B.L. .2.K.
+-00009e00: 3104 4004 3004 3d04 3d04 4b04 3500 2004  1.@.0.=.=.K.5. .
+-00009e10: 3e04 3f04 3504 4004 3004 4604 3804 3800  >.?.5.@.0.F.8.8.
+-00009e20: 3f08 0000 0000 0600 0000 2e41 7265 2079  ?..........Are y
+-00009e30: 6f75 2073 7572 6520 746f 2064 656c 6574  ou sure to delet
+-00009e40: 6520 7365 6c65 6374 6564 2074 7261 6e73  e selected trans
+-00009e50: 6163 696f 6e28 7329 3f07 0000 0010 4f70  acion(s)?.....Op
+-00009e60: 6572 6174 696f 6e73 5769 6467 6574 0103  erationsWidget..
+-00009e70: 0000 001c 0411 0430 043b 0430 043d 0441  .......0.;.0.=.A
+-00009e80: 044b 0020 0441 0447 0435 0442 043e 0432  .K. .A.G.5.B.>.2
+-00009e90: 0800 0000 0006 0000 0008 4261 6c61 6e63  ..........Balanc
+-00009ea0: 6573 0700 0000 104f 7065 7261 7469 6f6e  es.....Operation
+-00009eb0: 7357 6964 6765 7401 0300 0000 1a04 1f04  sWidget.........
+-00009ec0: 3e04 3404 4204 3204 3504 4004 3604 3404  >.4.B.2.5.@.6.4.
+-00009ed0: 3504 3d04 3804 3508 0000 0000 0600 0000  5.=.8.5.........
+-00009ee0: 0c43 6f6e 6669 726d 6174 696f 6e07 0000  .Confirmation...
+-00009ef0: 0010 4f70 6572 6174 696f 6e73 5769 6467  ..OperationsWidg
+-00009f00: 6574 0103 0000 0014 041a 043e 043f 0438  et.........>.?.8
+-00009f10: 0440 043e 0432 0430 0442 044c 0800 0000  .@.>.2.0.B.L....
+-00009f20: 0006 0000 0004 436f 7079 0700 0000 104f  ......Copy.....O
+-00009f30: 7065 7261 7469 6f6e 7357 6964 6765 7401  perationsWidget.
+-00009f40: 0300 0000 2604 1a04 3e04 3f04 3804 4004  ....&...>.?.8.@.
+-00009f50: 3e04 3204 3004 4204 4c00 2004 3e04 3f04  >.2.0.B.L. .>.?.
+-00009f60: 3504 4004 3004 4604 3804 4e08 0000 0000  5.@.0.F.8.N.....
+-00009f70: 0600 0000 0e43 6f70 7920 6f70 6572 6174  .....Copy operat
+-00009f80: 696f 6e07 0000 0010 4f70 6572 6174 696f  ion.....Operatio
+-00009f90: 6e73 5769 6467 6574 0103 0000 000e 0423  nsWidget.......#
+-00009fa0: 0434 0430 043b 0438 0442 044c 0800 0000  .4.0.;.8.B.L....
+-00009fb0: 0006 0000 0006 4465 6c65 7465 0700 0000  ......Delete....
+-00009fc0: 104f 7065 7261 7469 6f6e 7357 6964 6765  .OperationsWidge
+-00009fd0: 7401 0300 0000 2004 2304 3404 3004 3b04  t..... .#.4.0.;.
+-00009fe0: 3804 4204 4c00 2004 3e04 3f04 3504 4004  8.B.L. .>.?.5.@.
+-00009ff0: 3004 4604 3804 4e08 0000 0000 0600 0000  0.F.8.N.........
+-0000a000: 1044 656c 6574 6520 6f70 6572 6174 696f  .Delete operatio
+-0000a010: 6e07 0000 0010 4f70 6572 6174 696f 6e73  n.....Operations
+-0000a020: 5769 6467 6574 0103 0000 001c 041d 043e  Widget.........>
+-0000a030: 0432 0430 044f 0020 043e 043f 0435 0440  .2.0.O. .>.?.5.@
+-0000a040: 0430 0446 0438 044f 0800 0000 0006 0000  .0.F.8.O........
+-0000a050: 000d 4e65 7720 6f70 6572 6174 696f 6e07  ..New operation.
+-0000a060: 0000 0010 4f70 6572 6174 696f 6e73 5769  ....OperationsWi
+-0000a070: 6467 6574 0103 0000 0010 041e 043f 0435  dget.........?.5
+-0000a080: 0440 0430 0446 0438 0438 0800 0000 0006  .@.0.F.8.8......
+-0000a090: 0000 000a 4f70 6572 6174 696f 6e73 0700  ....Operations..
+-0000a0a0: 0000 104f 7065 7261 7469 6f6e 7357 6964  ...OperationsWid
+-0000a0b0: 6765 7401 0300 0000 2404 1e04 3f04 3504  get.....$...?.5.
+-0000a0c0: 4004 3004 4604 3804 3800 2004 3800 2004  @.0.F.8.8. .8. .
+-0000a0d0: 1104 3004 3b04 3004 3d04 4104 4b08 0000  ..0.;.0.=.A.K...
+-0000a0e0: 0000 0600 0000 154f 7065 7261 7469 6f6e  .......Operation
+-0000a0f0: 7320 2620 4261 6c61 6e63 6573 0700 0000  s & Balances....
+-0000a100: 104f 7065 7261 7469 6f6e 7357 6964 6765  .OperationsWidge
+-0000a110: 7401 0300 0000 0e04 2104 3204 3504 4004  t.......!.2.5.@.
+-0000a120: 3804 4204 4c08 0000 0000 0600 0000 0952  8.B.L..........R
+-0000a130: 6563 6f6e 6369 6c65 0700 0000 104f 7065  econcile.....Ope
+-0000a140: 7261 7469 6f6e 7357 6964 6765 7401 0300  rationsWidget...
+-0000a150: 0000 0c04 1f04 3e04 3804 4104 3a00 3a08  ......>.8.A.:.:.
+-0000a160: 0000 0000 0600 0000 0753 6561 7263 683a  .........Search:
+-0000a170: 0700 0000 104f 7065 7261 7469 6f6e 7357  .....OperationsW
+-0000a180: 6964 6765 7401 0300 0000 2c04 1f04 3e04  idget.....,...>.
+-0000a190: 3a04 3004 3704 4b04 3204 3004 4204 4c00  :.0.7.K.2.0.B.L.
+-0000a1a0: 2000 2604 3d04 3504 3004 3a04 4204 3804   .&.=.5.0.:.B.8.
+-0000a1b0: 3204 3d04 4b04 3508 0000 0000 0600 0000  2.=.K.5.........
+-0000a1c0: 0e53 686f 7720 2649 6e61 6374 6976 6507  .Show &Inactive.
+-0000a1d0: 0000 0010 4f70 6572 6174 696f 6e73 5769  ....OperationsWi
+-0000a1e0: 6467 6574 0103 0000 001a 0412 0430 043b  dget.........0.;
+-0000a1f0: 044e 0442 0430 0020 0438 0442 043e 0433  .N.B.0. .8.B.>.3
+-0000a200: 043e 003a 0800 0000 0006 0000 000d 5375  .>.:..........Su
+-0000a210: 6d20 4375 7272 656e 6379 3a07 0000 0010  m Currency:.....
+-0000a220: 4f70 6572 6174 696f 6e73 5769 6467 6574  OperationsWidget
+-0000a230: 0103 0000 0014 0064 0064 002f 004d 004d  .......d.d./.M.M
+-0000a240: 002f 0079 0079 0079 0079 0800 0000 0006  ./.y.y.y.y......
+-0000a250: 0000 000a 6464 2f4d 4d2f 7979 7979 0700  ....dd/MM/yyyy..
+-0000a260: 0000 104f 7065 7261 7469 6f6e 7357 6964  ...OperationsWid
+-0000a270: 6765 7401 0300 0000 0c04 1204 3004 3b04  get.........0.;.
+-0000a280: 4e04 4204 3008 0000 0000 0600 0000 0843  N.B.0..........C
+-0000a290: 7572 7265 6e63 7907 0000 0018 4f70 7469  urrency.....Opti
+-0000a2a0: 6f6e 616c 4375 7272 656e 6379 436f 6d62  onalCurrencyComb
+-0000a2b0: 6f42 6f78 0103 0000 000a 0421 0443 043c  oBox.......!.C.<
+-0000a2c0: 043c 0430 0800 0000 0006 0000 0006 416d  .<.0..........Am
+-0000a2d0: 6f75 6e74 0700 0000 1050 616e 6461 734c  ount.....PandasL
+-0000a2e0: 696e 6573 4d6f 6465 6c01 0300 0000 1204  inesModel.......
+-0000a2f0: 1a04 3004 4204 3504 3304 3e04 4004 3804  ..0.B.5.3.>.@.8.
+-0000a300: 4f08 0000 0000 0600 0000 0843 6174 6567  O..........Categ
+-0000a310: 6f72 7907 0000 0010 5061 6e64 6173 4c69  ory.....PandasLi
+-0000a320: 6e65 734d 6f64 656c 0103 0000 0022 041d  nesModel....."..
+-0000a330: 0430 0437 0432 0430 043d 0438 0435 0020  .0.7.2.0.=.8.5. 
+-0000a340: 043f 0440 043e 0434 0443 043a 0442 0430  .?.@.>.4.C.:.B.0
+-0000a350: 0800 0000 0006 0000 000c 5072 6f64 7563  ..........Produc
+-0000a360: 7420 6e61 6d65 0700 0000 1050 616e 6461  t name.....Panda
+-0000a370: 734c 696e 6573 4d6f 6465 6c01 0300 0000  sLinesModel.....
+-0000a380: 0604 2204 4d04 3308 0000 0000 0600 0000  ..".M.3.........
+-0000a390: 0354 6167 0700 0000 1050 616e 6461 734c  .Tag.....PandasL
+-0000a3a0: 696e 6573 4d6f 6465 6c01 0300 0000 2400  inesModel.....$.
+-0000a3b0: 2700 2004 3704 3004 3c04 3504 3d04 3504  '. .7.0.<.5.=.5.
+-0000a3c0: 3d04 3000 2004 4304 4104 3f04 3504 4804  =.0. .C.A.?.5.H.
+-0000a3d0: 3d04 3e08 0000 0000 0600 0000 1b27 2077  =.>..........' w
+-0000a3e0: 6173 2073 7563 6365 7373 6675 6c6c 7920  as successfully 
+-0000a3f0: 7265 706c 6163 6564 0700 0000 0e50 6565  replaced.....Pee
+-0000a400: 724c 6973 7444 6961 6c6f 6701 0300 0000  rListDialog.....
+-0000a410: 0c00 2700 2004 3d04 3000 3a00 2008 0000  ..'. .=.0.:. ...
+-0000a420: 0000 0600 0000 0827 2077 6974 683a 2007  .......' with: .
+-0000a430: 0000 000e 5065 6572 4c69 7374 4469 616c  ....PeerListDial
+-0000a440: 6f67 0103 0000 004e 0421 043e 0445 0440  og.....N.!.>.E.@
+-0000a450: 0430 043d 0438 0442 044c 0020 0441 0442  .0.=.8.B.L. .A.B
+-0000a460: 0430 0440 043e 0435 0020 043d 0430 0437  .0.@.>.5. .=.0.7
+-0000a470: 0432 0430 043d 0438 0435 0020 0432 0020  .2.0.=.8.5. .2. 
+-0000a480: 043f 0440 0438 043c 0435 0447 0430 043d  .?.@.8.<.5.G.0.=
+-0000a490: 0438 0438 003f 0800 0000 0006 0000 0017  .8.8.?..........
+-0000a4a0: 4b65 6570 206f 6c64 206e 616d 6520 696e  Keep old name in
+-0000a4b0: 206e 6f74 6573 3f07 0000 000e 5065 6572   notes?.....Peer
+-0000a4c0: 4c69 7374 4469 616c 6f67 0103 0000 0018  ListDialog......
+-0000a4d0: 041a 043e 043d 0442 0440 0430 0433 0435  ...>.=.B.@.0.3.5
+-0000a4e0: 043d 0442 0020 0027 0800 0000 0006 0000  .=.B. .'........
+-0000a4f0: 0006 5065 6572 2027 0700 0000 0e50 6565  ..Peer '.....Pee
+-0000a500: 724c 6973 7444 6961 6c6f 6701 0300 0000  rListDialog.....
+-0000a510: 1604 1a04 3e04 3d04 4204 4004 3004 3304  ....>.=.B.@.0.3.
+-0000a520: 3504 3d04 4204 4b08 0000 0000 0600 0000  5.=.B.K.........
+-0000a530: 0550 6565 7273 0700 0000 0e50 6565 724c  .Peers.....PeerL
+-0000a540: 6973 7444 6961 6c6f 6701 0300 0000 2c04  istDialog.....,.
+-0000a550: 1704 3004 3c04 3504 3d04 3804 4204 4c00  ..0.<.5.=.8.B.L.
+-0000a560: 2004 3a04 3e04 3d04 4204 4004 3004 3304   .:.>.=.B.@.0.3.
+-0000a570: 3504 3d04 4204 3000 2000 2708 0000 0000  5.=.B.0. .'.....
+-0000a580: 0600 0000 0e52 6570 6c61 6365 2070 6565  .....Replace pee
+-0000a590: 7220 2707 0000 000e 5065 6572 4c69 7374  r '.....PeerList
+-0000a5a0: 4469 616c 6f67 0103 0000 001c 0417 0430  Dialog.........0
+-0000a5b0: 043c 0435 043d 0438 0442 044c 0020 043d  .<.5.=.8.B.L. .=
+-0000a5c0: 0430 002e 002e 002e 0800 0000 0006 0000  .0..............
+-0000a5d0: 000f 5265 706c 6163 6520 7769 7468 2e2e  ..Replace with..
+-0000a5e0: 2e07 0000 000e 5065 6572 4c69 7374 4469  ......PeerListDi
+-0000a5f0: 616c 6f67 0103 0000 0040 041f 043e 043a  alog.....@...>.:
+-0000a600: 0430 0437 0430 0442 044c 0020 043e 043f  .0.7.0.B.L. .>.?
+-0000a610: 0435 0440 0430 0446 0438 0438 0020 0441  .5.@.0.F.8.8. .A
+-0000a620: 0020 041a 043e 043d 0442 0440 0430 0433  . ...>.=.B.@.0.3
+-0000a630: 0435 043d 0442 043e 043c 0800 0000 0006  .5.=.B.>.<......
+-0000a640: 0000 0019 5368 6f77 206f 7065 7261 7469  ....Show operati
+-0000a650: 6f6e 7320 7769 7468 2050 6565 7207 0000  ons with Peer...
+-0000a660: 000e 5065 6572 4c69 7374 4469 616c 6f67  ..PeerListDialog
+-0000a670: 0103 0000 0010 041e 043f 0435 0440 0430  .........?.5.@.0
+-0000a680: 0446 0438 0438 0800 0000 0006 0000 000a  .F.8.8..........
+-0000a690: 4f70 6572 6174 696f 6e73 0700 0000 0a50  Operations.....P
+-0000a6a0: 6565 7252 6570 6f72 7401 0300 0000 1c04  eerReport.......
+-0000a6b0: 3f04 3e00 2004 1a04 3e04 3d04 4204 4004  ?.>. ...>.=.B.@.
+-0000a6c0: 3004 3304 3504 3d04 4204 4308 0000 0000  0.3.5.=.B.C.....
+-0000a6d0: 0600 0000 0762 7920 5065 6572 0700 0000  .....by Peer....
+-0000a6e0: 0a50 6565 7252 6570 6f72 7401 0300 0000  .PeerReport.....
+-0000a6f0: 1604 1a04 3e04 3d04 4204 4004 3004 3304  ....>.=.B.@.0.3.
+-0000a700: 3504 3d04 4200 3a08 0000 0000 0600 0000  5.=.B.:.........
+-0000a710: 0550 6565 723a 0700 0000 1050 6565 7252  .Peer:.....PeerR
+-0000a720: 6570 6f72 7457 6964 6765 7401 0300 0000  eportWidget.....
+-0000a730: 2804 1e04 4204 4704 3504 4200 2004 3f04  (...B.G.5.B. .?.
+-0000a740: 3e00 2004 3a04 3e04 3d04 4204 4004 3004  >. .:.>.=.B.@.0.
+-0000a750: 3304 3504 3d04 4204 4308 0000 0000 0600  3.5.=.B.C.......
+-0000a760: 0000 0e52 6570 6f72 7420 6279 2070 6565  ...Report by pee
+-0000a770: 7207 0000 0010 5065 6572 5265 706f 7274  r.....PeerReport
+-0000a780: 5769 6467 6574 0103 0000 0016 041a 043e  Widget.........>
+-0000a790: 043b 002d 0432 043e 0020 0434 043e 043a  .;.-.2.>. .4.>.:
+-0000a7a0: 002e 0800 0000 0006 0000 000a 446f 6373  ............Docs
+-0000a7b0: 2063 6f75 6e74 0700 0000 0d50 6565 7254   count.....PeerT
+-0000a7c0: 7265 654d 6f64 656c 0103 0000 000a 0410  reeModel........
+-0000a7d0: 0434 0440 0435 0441 0800 0000 0006 0000  .4.@.5.A........
+-0000a7e0: 0008 4c6f 6361 7469 6f6e 0700 0000 0d50  ..Location.....P
+-0000a7f0: 6565 7254 7265 654d 6f64 656c 0103 0000  eerTreeModel....
+-0000a800: 0018 041d 0430 0438 043c 0435 043d 043e  .....0.8.<.5.=.>
+-0000a810: 0432 0430 043d 0438 0435 0800 0000 0006  .2.0.=.8.5......
+-0000a820: 0000 0004 4e61 6d65 0700 0000 0d50 6565  ....Name.....Pee
+-0000a830: 7254 7265 654d 6f64 656c 0103 0000 001a  rTreeModel......
+-0000a840: 0421 0447 0435 0442 0430 0020 0432 0020  .!.G.5.B.0. .2. 
+-0000a850: 0431 0430 043d 043a 0435 0800 0000 0006  .1.0.=.:.5......
+-0000a860: 0000 000d 4261 6e6b 2061 6363 6f75 6e74  ....Bank account
+-0000a870: 7307 0000 0016 5072 6564 6566 696e 6465  s.....Predefinde
+-0000a880: 6441 6363 6f75 6e74 5479 7065 0103 0000  dAccountType....
+-0000a890: 000a 041a 0430 0440 0442 044b 0800 0000  .....0.@.B.K....
+-0000a8a0: 0006 0000 0005 4361 7264 7307 0000 0016  ......Cards.....
+-0000a8b0: 5072 6564 6566 696e 6465 6441 6363 6f75  PredefindedAccou
+-0000a8c0: 6e74 5479 7065 0103 0000 0010 041d 0430  ntType.........0
+-0000a8d0: 043b 0438 0447 043d 044b 0435 0800 0000  .;.8.G.=.K.5....
+-0000a8e0: 0006 0000 0004 4361 7368 0700 0000 1650  ......Cash.....P
+-0000a8f0: 7265 6465 6669 6e64 6564 4163 636f 756e  redefindedAccoun
+-0000a900: 7454 7970 6501 0300 0000 1e04 1a04 4004  tType.........@.
+-0000a910: 3504 3404 3804 4204 4b00 2000 2f00 2004  5.4.8.B.K. ./. .
+-0000a920: 1404 3e04 3b04 3304 3808 0000 0000 0600  ..>.;.3.8.......
+-0000a930: 0000 0d44 6562 7473 202f 204c 6f61 6e73  ...Debts / Loans
+-0000a940: 0700 0000 1650 7265 6465 6669 6e64 6564  .....Predefinded
+-0000a950: 4163 636f 756e 7454 7970 6501 0300 0000  AccountType.....
+-0000a960: 1404 1804 3d04 3204 3504 4104 4204 3804  ....=.2.5.A.B.8.
+-0000a970: 4604 3804 3808 0000 0000 0600 0000 0b49  F.8.8..........I
+-0000a980: 6e76 6573 746d 656e 7473 0700 0000 1650  nvestments.....P
+-0000a990: 7265 6465 6669 6e64 6564 4163 636f 756e  redefindedAccoun
+-0000a9a0: 7454 7970 6501 0300 0000 1404 2104 3104  tType.......!.1.
+-0000a9b0: 3504 4004 3504 3604 3504 3d04 3804 4f08  5.@.5.6.5.=.8.O.
+-0000a9c0: 0000 0000 0600 0000 0753 6176 696e 6773  .........Savings
+-0000a9d0: 0700 0000 1650 7265 6465 6669 6e64 6564  .....Predefinded
+-0000a9e0: 4163 636f 756e 7454 7970 6501 0300 0000  AccountType.....
+-0000a9f0: 1400 6500 2d04 1a04 3e04 4804 3504 3b04  ..e.-...>.H.5.;.
+-0000aa00: 4c04 3a04 3808 0000 0000 0600 0000 0965  L.:.8..........e
+-0000aa10: 2d57 616c 6c65 7473 0700 0000 1650 7265  -Wallets.....Pre
+-0000aa20: 6465 6669 6e64 6564 4163 636f 756e 7454  defindedAccountT
+-0000aa30: 7970 6501 0300 0000 1204 1e04 3104 3b04  ype.........1.;.
+-0000aa40: 3804 3304 3004 4604 3804 3808 0000 0000  8.3.0.F.8.8.....
+-0000aa50: 0600 0000 0542 6f6e 6473 0700 0000 0f50  .....Bonds.....P
+-0000aa60: 7265 6465 6669 6e65 6441 7373 6574 0103  redefinedAsset..
+-0000aa70: 0000 000c 0422 043e 0432 0430 0440 044b  .....".>.2.0.@.K
+-0000aa80: 0800 0000 0006 0000 000b 436f 6d6d 6f64  ..........Commod
+-0000aa90: 6974 6965 7307 0000 000f 5072 6564 6566  ities.....Predef
+-0000aaa0: 696e 6564 4173 7365 7401 0300 0000 1804  inedAsset.......
+-0000aab0: 1a04 4004 3804 3f04 4204 3e04 3204 3004  ..@.8.?.B.>.2.0.
+-0000aac0: 3b04 4e04 4204 4b08 0000 0000 0600 0000  ;.N.B.K.........
+-0000aad0: 0f43 7279 7074 6f2d 6375 7272 656e 6379  .Crypto-currency
+-0000aae0: 0700 0000 0f50 7265 6465 6669 6e65 6441  .....PredefinedA
+-0000aaf0: 7373 6574 0103 0000 0014 0414 0435 0440  sset.........5.@
+-0000ab00: 0438 0432 0430 0442 0438 0432 044b 0800  .8.2.0.B.8.2.K..
+-0000ab10: 0000 0006 0000 000b 4465 7269 7661 7469  ........Derivati
+-0000ab20: 7665 7307 0000 000f 5072 6564 6566 696e  ves.....Predefin
+-0000ab30: 6564 4173 7365 7401 0300 0000 0804 1104  edAsset.........
+-0000ab40: 1f04 1804 2408 0000 0000 0600 0000 0445  ....$..........E
+-0000ab50: 5446 7307 0000 000f 5072 6564 6566 696e  TFs.....Predefin
+-0000ab60: 6564 4173 7365 7401 0300 0000 0c04 2404  edAsset.......$.
+-0000ab70: 3e04 4004 3504 3a04 4108 0000 0000 0600  >.@.5.:.A.......
+-0000ab80: 0000 0546 6f72 6578 0700 0000 0f50 7265  ...Forex.....Pre
+-0000ab90: 6465 6669 6e65 6441 7373 6574 0103 0000  definedAsset....
+-0000aba0: 000a 0424 043e 043d 0434 044b 0800 0000  ...$.>.=.4.K....
+-0000abb0: 0006 0000 0005 4675 6e64 7307 0000 000f  ......Funds.....
+-0000abc0: 5072 6564 6566 696e 6564 4173 7365 7401  PredefinedAsset.
+-0000abd0: 0300 0000 0c04 1204 3004 3b04 4e04 4204  ........0.;.N.B.
+-0000abe0: 4b08 0000 0000 0600 0000 054d 6f6e 6579  K..........Money
+-0000abf0: 0700 0000 0f50 7265 6465 6669 6e65 6441  .....PredefinedA
+-0000ac00: 7373 6574 0103 0000 000a 0410 043a 0446  sset.........:.F
+-0000ac10: 0438 0438 0800 0000 0006 0000 0006 5368  .8.8..........Sh
+-0000ac20: 6172 6573 0700 0000 0f50 7265 6465 6669  ares.....Predefi
+-0000ac30: 6e65 6441 7373 6574 0103 0000 0002 0025  nedAsset.......%
+-0000ac40: 0800 0000 0006 0000 0001 2507 0000 000f  ..........%.....
+-0000ac50: 5072 6f66 6974 4c6f 7373 4d6f 6465 6c01  ProfitLossModel.
+-0000ac60: 0300 0000 0604 1004 3f04 4008 0000 0000  ........?.@.....
+-0000ac70: 0600 0000 0341 7072 0700 0000 0f50 726f  .....Apr.....Pro
+-0000ac80: 6669 744c 6f73 734d 6f64 656c 0103 0000  fitLossModel....
+-0000ac90: 0004 0426 0411 0800 0000 0006 0000 0006  ...&............
+-0000aca0: 4173 7365 7473 0700 0000 0f50 726f 6669  Assets.....Profi
+-0000acb0: 744c 6f73 734d 6f64 656c 0103 0000 0006  tLossModel......
+-0000acc0: 0410 0432 0433 0800 0000 0006 0000 0003  ...2.3..........
+-0000acd0: 4175 6707 0000 000f 5072 6f66 6974 4c6f  Aug.....ProfitLo
+-0000ace0: 7373 4d6f 6465 6c01 0300 0000 1204 1804  ssModel.........
+-0000acf0: 3704 3c04 3504 3d04 3504 3d04 3804 3508  7.<.5.=.5.=.8.5.
+-0000ad00: 0000 0000 0600 0000 0643 6861 6e67 6507  .........Change.
+-0000ad10: 0000 000f 5072 6f66 6974 4c6f 7373 4d6f  ....ProfitLossMo
+-0000ad20: 6465 6c01 0300 0000 1804 1804 3704 3c04  del.........7.<.
+-0000ad30: 3504 3d04 3504 3d04 3804 3500 2c00 2000  5.=.5.=.8.5.,. .
+-0000ad40: 2508 0000 0000 0600 0000 0943 6861 6e67  %..........Chang
+-0000ad50: 652c 2025 0700 0000 0f50 726f 6669 744c  e, %.....ProfitL
+-0000ad60: 6f73 734d 6f64 656c 0103 0000 0006 0414  ossModel........
+-0000ad70: 0435 043a 0800 0000 0006 0000 0003 4465  .5.:..........De
+-0000ad80: 6307 0000 000f 5072 6f66 6974 4c6f 7373  c.....ProfitLoss
+-0000ad90: 4d6f 6465 6c01 0300 0000 1204 1404 3804  Model.........8.
+-0000ada0: 3204 3804 3404 3504 3d04 3404 4b08 0000  2.8.4.5.=.4.K...
+-0000adb0: 0000 0600 0000 0944 6976 6964 656e 6473  .......Dividends
+-0000adc0: 0700 0000 0f50 726f 6669 744c 6f73 734d  .....ProfitLossM
+-0000add0: 6f64 656c 0103 0000 0006 0424 0435 0432  odel.......$.5.2
+-0000ade0: 0800 0000 0006 0000 0003 4665 6207 0000  ..........Feb...
+-0000adf0: 000f 5072 6f66 6974 4c6f 7373 4d6f 6465  ..ProfitLossMode
+-0000ae00: 6c01 0300 0000 1004 1a04 3e04 3c04 3804  l.........>.<.8.
+-0000ae10: 4104 4104 3804 3808 0000 0000 0600 0000  A.A.8.8.........
+-0000ae20: 0446 6565 7307 0000 000f 5072 6f66 6974  .Fees.....Profit
+-0000ae30: 4c6f 7373 4d6f 6465 6c01 0300 0000 1804  LossModel.......
+-0000ae40: 1204 3204 3e04 3400 2000 2f00 2004 1204  ..2.>.4. ./. ...
+-0000ae50: 4b04 3204 3e04 3408 0000 0000 0600 0000  K.2.>.4.........
+-0000ae60: 0849 6e20 2f20 4f75 7407 0000 000f 5072  .In / Out.....Pr
+-0000ae70: 6f66 6974 4c6f 7373 4d6f 6465 6c01 0300  ofitLossModel...
+-0000ae80: 0000 0604 2f04 3d04 3208 0000 0000 0600  ..../.=.2.......
+-0000ae90: 0000 034a 616e 0700 0000 0f50 726f 6669  ...Jan.....Profi
+-0000aea0: 744c 6f73 734d 6f64 656c 0103 0000 0006  tLossModel......
+-0000aeb0: 0418 044e 043b 0800 0000 0006 0000 0003  ...N.;..........
+-0000aec0: 4a75 6c07 0000 000f 5072 6f66 6974 4c6f  Jul.....ProfitLo
+-0000aed0: 7373 4d6f 6465 6c01 0300 0000 0604 1804  ssModel.........
+-0000aee0: 4e04 3d08 0000 0000 0600 0000 034a 756e  N.=..........Jun
+-0000aef0: 0700 0000 0f50 726f 6669 744c 6f73 734d  .....ProfitLossM
+-0000af00: 6f64 656c 0103 0000 0006 041c 0430 0440  odel.........0.@
+-0000af10: 0800 0000 0006 0000 0003 4d61 7207 0000  ..........Mar...
+-0000af20: 000f 5072 6f66 6974 4c6f 7373 4d6f 6465  ..ProfitLossMode
+-0000af30: 6c01 0300 0000 0604 1c04 3004 3908 0000  l.........0.9...
+-0000af40: 0000 0600 0000 034d 6179 0700 0000 0f50  .......May.....P
+-0000af50: 726f 6669 744c 6f73 734d 6f64 656c 0103  rofitLossModel..
+-0000af60: 0000 0004 0414 0421 0800 0000 0006 0000  .......!........
+-0000af70: 0005 4d6f 6e65 7907 0000 000f 5072 6f66  ..Money.....Prof
+-0000af80: 6974 4c6f 7373 4d6f 6465 6c01 0300 0000  itLossModel.....
+-0000af90: 0604 1d04 3e04 4f08 0000 0000 0600 0000  ....>.O.........
+-0000afa0: 034e 6f76 0700 0000 0f50 726f 6669 744c  .Nov.....ProfitL
+-0000afb0: 6f73 734d 6f64 656c 0103 0000 0006 041e  ossModel........
+-0000afc0: 043a 0442 0800 0000 0006 0000 0003 4f63  .:.B..........Oc
+-0000afd0: 7407 0000 000f 5072 6f66 6974 4c6f 7373  t.....ProfitLoss
+-0000afe0: 4d6f 6465 6c01 0300 0000 0604 1f04 3804  Model.........8.
+-0000aff0: 2308 0000 0000 0600 0000 0350 264c 0700  #..........P&L..
+-0000b000: 0000 0f50 726f 6669 744c 6f73 734d 6f64  ...ProfitLossMod
+-0000b010: 656c 0103 0000 000c 041f 0435 0440 0438  el.........5.@.8
+-0000b020: 043e 0434 0800 0000 0006 0000 0006 5065  .>.4..........Pe
+-0000b030: 7269 6f64 0700 0000 0f50 726f 6669 744c  riod.....ProfitL
+-0000b040: 6f73 734d 6f64 656c 0103 0000 001a 041a  ossModel........
+-0000b050: 043e 043d 0435 0446 0020 043f 0435 0440  .>.=.5.F. .?.5.@
+-0000b060: 0438 043e 0434 0430 0800 0000 0006 0000  .8.>.4.0........
+-0000b070: 000a 5065 7269 6f64 2065 6e64 0700 0000  ..Period end....
+-0000b080: 0f50 726f 6669 744c 6f73 734d 6f64 656c  .ProfitLossModel
+-0000b090: 0103 0000 001c 041d 0430 0447 0430 043b  .........0.G.0.;
+-0000b0a0: 043e 0020 043f 0435 0440 0438 043e 0434  .>. .?.5.@.8.>.4
+-0000b0b0: 0430 0800 0000 0006 0000 000c 5065 7269  .0..........Peri
+-0000b0c0: 6f64 2073 7461 7274 0700 0000 0f50 726f  od start.....Pro
+-0000b0d0: 6669 744c 6f73 734d 6f64 656c 0103 0000  fitLossModel....
+-0000b0e0: 0006 0421 0435 043d 0800 0000 0006 0000  ...!.5.=........
+-0000b0f0: 0003 5365 7007 0000 000f 5072 6f66 6974  ..Sep.....Profit
+-0000b100: 4c6f 7373 4d6f 6465 6c01 0300 0000 0c04  LossModel.......
+-0000b110: 1d04 3004 3b04 3e04 3304 3808 0000 0000  ..0.;.>.3.8.....
+-0000b120: 0600 0000 0554 6178 6573 0700 0000 0f50  .....Taxes.....P
+-0000b130: 726f 6669 744c 6f73 734d 6f64 656c 0103  rofitLossModel..
+-0000b140: 0000 000a 0418 0442 043e 0433 043e 0800  .......B.>.3.>..
+-0000b150: 0000 0006 0000 0005 546f 7461 6c07 0000  ........Total...
+-0000b160: 000f 5072 6f66 6974 4c6f 7373 4d6f 6465  ..ProfitLossMode
+-0000b170: 6c01 0300 0000 1804 1f04 3804 2300 2004  l.........8.#. .
+-0000b180: 3f04 3e00 2004 4104 4704 5104 4204 4308  ?.>. .A.G.Q.B.C.
+-0000b190: 0000 0000 0600 0000 0e50 264c 2062 7920  .........P&L by 
+-0000b1a0: 4163 636f 756e 7407 0000 0010 5072 6f66  Account.....Prof
+-0000b1b0: 6974 4c6f 7373 5265 706f 7274 0103 0000  itLossReport....
+-0000b1c0: 000a 0421 0447 0435 0442 003a 0800 0000  ...!.G.5.B.:....
+-0000b1d0: 0006 0000 0008 4163 636f 756e 743a 0700  ......Account:..
+-0000b1e0: 0000 1650 726f 6669 744c 6f73 7352 6570  ...ProfitLossRep
+-0000b1f0: 6f72 7457 6964 6765 7401 0300 0000 1004  ortWidget.......
+-0000b200: 1204 3004 3b04 4e04 4204 3000 3a00 2008  ..0.;.N.B.0.:. .
+-0000b210: 0000 0000 0600 0000 0a43 7572 7265 6e63  .........Currenc
+-0000b220: 793a 2007 0000 0016 5072 6f66 6974 4c6f  y: .....ProfitLo
+-0000b230: 7373 5265 706f 7274 5769 6467 6574 0103  ssReportWidget..
+-0000b240: 0000 0006 041f 0438 0423 0800 0000 0006  .......8.#......
+-0000b250: 0000 0003 5026 4c07 0000 0016 5072 6f66  ....P&L.....Prof
+-0000b260: 6974 4c6f 7373 5265 706f 7274 5769 6467  itLossReportWidg
+-0000b270: 6574 0103 0000 0018 0421 043e 0445 0440  et.......!.>.E.@
+-0000b280: 0430 043d 0438 0442 044c 002e 002e 002e  .0.=.8.B.L......
+-0000b290: 0800 0000 0006 0000 0007 5361 7665 2e2e  ..........Save..
+-0000b2a0: 2e07 0000 0016 5072 6f66 6974 4c6f 7373  ......ProfitLoss
+-0000b2b0: 5265 706f 7274 5769 6467 6574 0103 0000  ReportWidget....
+-0000b2c0: 0010 0412 0430 043b 044e 0442 0430 003a  .....0.;.N.B.0.:
+-0000b2d0: 0020 0800 0000 0006 0000 000a 4375 7272  . ..........Curr
+-0000b2e0: 656e 6379 3a20 0700 0000 1650 726f 6669  ency: .....Profi
+-0000b2f0: 744c 6f73 7352 6570 6f72 7457 696e 646f  tLossReportWindo
+-0000b300: 7701 0300 0000 1804 1f04 3804 2300 2004  w.........8.#. .
+-0000b310: 3f04 3e00 2004 4104 4704 5104 4204 4308  ?.>. .A.G.Q.B.C.
+-0000b320: 0000 0000 0600 0000 0e50 264c 2062 7920  .........P&L by 
+-0000b330: 4163 636f 756e 7407 0000 0016 5072 6f66  Account.....Prof
+-0000b340: 6974 4c6f 7373 5265 706f 7274 5769 6e64  itLossReportWind
+-0000b350: 6f77 0103 0000 001e 041e 0448 0438 0431  ow.........H.8.1
+-0000b360: 043a 0430 0020 043a 0430 043c 0435 0440  .:.0. .:.0.<.5.@
+-0000b370: 044b 003a 0020 0800 0000 0006 0000 000e  .K.:. ..........
+-0000b380: 4361 6d65 7261 2065 7272 6f72 3a20 0700  Camera error: ..
+-0000b390: 0000 0951 5253 6361 6e6e 6572 0103 0000  ...QRScanner....
+-0000b3a0: 0084 041d 0435 0020 043e 0431 043d 0430  .....5. .>.1.=.0
+-0000b3b0: 0440 0443 0436 0435 043d 0020 043f 0430  .@.C.6.5.=. .?.0
+-0000b3c0: 043a 0435 0442 0020 0070 0079 007a 0062  .:.5.B. .p.y.z.b
+-0000b3d0: 0061 0072 002c 0020 043d 0435 043e 0431  .a.r.,. .=.5.>.1
+-0000b3e0: 0445 043e 0434 0438 043c 044b 0439 0020  .E.>.4.8.<.K.9. 
+-0000b3f0: 0434 043b 044f 0020 0440 0430 0441 043f  .4.;.O. .@.0.A.?
+-0000b400: 043e 0437 043d 0430 0432 0430 043d 0438  .>.7.=.0.2.0.=.8
+-0000b410: 044f 0020 0051 0052 0020 043a 043e 0434  .O. .Q.R. .:.>.4
+-0000b420: 043e 0432 002e 0800 0000 0006 0000 002c  .>.2...........,
+-0000b430: 5061 636b 6167 6520 7079 7a62 6172 206e  Package pyzbar n
+-0000b440: 6f74 2066 6f75 6e64 2066 6f72 2051 5220  ot found for QR 
+-0000b450: 7265 636f 676e 6974 696f 6e2e 0700 0000  recognition.....
+-0000b460: 0951 5253 6361 6e6e 6572 0103 0000 0026  .QRScanner.....&
+-0000b470: 041d 0435 0442 0020 0434 043e 0441 0442  ...5.B. .4.>.A.B
+-0000b480: 0443 043f 043d 044b 0445 0020 043a 0430  .C.?.=.K.E. .:.0
+-0000b490: 043c 0435 0440 0800 0000 0006 0000 001e  .<.5.@..........
+-0000b4a0: 5468 6572 6520 6172 6520 6e6f 2063 616d  There are no cam
+-0000b4b0: 6572 6173 2061 7661 696c 6162 6c65 0700  eras available..
+-0000b4c0: 0000 0951 5253 6361 6e6e 6572 0103 0000  ...QRScanner....
+-0000b4d0: 0068 041d 0435 0432 043e 0437 043c 043e  .h...5.2.>.7.<.>
+-0000b4e0: 0436 043d 043e 0020 043e 0431 0440 0430  .6.=.>. .>.1.@.0
+-0000b4f0: 0431 043e 0442 0430 0442 044c 0020 0434  .1.>.B.0.B.L. .4
+-0000b500: 0430 043d 043d 044b 0435 0020 043a 043e  .0.=.=.K.5. .:.>
+-0000b510: 0442 0438 0440 043e 0432 043e 043a 0020  .B.8.@.>.2.>.:. 
+-0000b520: 0441 0020 0431 0438 0440 0436 0438 0020  .A. .1.8.@.6.8. 
+-0000b530: 0054 0053 0058 003a 0020 0800 0000 0006  .T.S.X.:. ......
+-0000b540: 0000 0021 4361 6e27 7420 7061 7273 6520  ...!Can't parse 
+-0000b550: 6461 7461 2066 6f72 2054 5358 2071 756f  data for TSX quo
+-0000b560: 7465 733a 2007 0000 000f 5175 6f74 6544  tes: .....QuoteD
+-0000b570: 6f77 6e6c 6f61 6465 7201 0300 0000 2404  ownloader.....$.
+-0000b580: 1704 3004 3304 4004 4304 3704 3a04 3000  ..0.3.@.C.7.:.0.
+-0000b590: 2004 3704 3004 3204 3504 4004 4804 3504   .7.0.2.5.@.H.5.
+-0000b5a0: 3d04 3008 0000 0000 0600 0000 1244 6f77  =.0..........Dow
+-0000b5b0: 6e6c 6f61 6420 636f 6d70 6c65 7465 6407  nload completed.
+-0000b5c0: 0000 000f 5175 6f74 6544 6f77 6e6c 6f61  ....QuoteDownloa
+-0000b5d0: 6465 7201 0300 0000 6000 4900 5300 4900  der.....`.I.S.I.
+-0000b5e0: 4e00 2004 3200 2004 3804 4104 4204 3e04  N. .2. .8.A.B.>.
+-0000b5f0: 4004 3804 3800 2004 3a04 3e04 4204 3804  @.8.8. .:.>.B.8.
+-0000b600: 4004 3e04 3204 3e04 3a00 2000 4500 7500  @.>.2.>.:. .E.u.
+-0000b610: 7200 6f00 6e00 6500 7800 7400 2004 3d04  r.o.n.e.x.t. .=.
+-0000b620: 3500 2004 4104 3e04 3204 3f04 3004 3404  5. .A.>.2.?.0.4.
+-0000b630: 3004 3504 4200 3a00 2008 0000 0000 0600  0.5.B.:. .......
+-0000b640: 0000 2245 7572 6f6e 6578 7420 7175 6f74  .."Euronext quot
+-0000b650: 6573 2049 5349 4e20 6d69 736d 6174 6368  es ISIN mismatch
+-0000b660: 2069 6e3a 2007 0000 000f 5175 6f74 6544   in: .....QuoteD
+-0000b670: 6f77 6e6c 6f61 6465 7201 0300 0000 6404  ownloader.....d.
+-0000b680: 1704 3004 3304 3e04 3b04 3e04 3204 3e04  ..0.3.>.;.>.2.>.
+-0000b690: 3a00 2004 3804 4104 4204 3e04 4004 3804  :. .8.A.B.>.@.8.
+-0000b6a0: 3800 2004 3a04 3e04 4204 3804 4004 3e04  8. .:.>.B.8.@.>.
+-0000b6b0: 3204 3e04 3a00 2000 4500 7500 7200 6f00  2.>.:. .E.u.r.o.
+-0000b6c0: 6e00 6500 7800 7400 2004 3d04 3500 2004  n.e.x.t. .=.5. .
+-0000b6d0: 3d04 3004 3904 3404 3504 3d00 2004 3200  =.0.9.4.5.=. .2.
+-0000b6e0: 3a00 2008 0000 0000 0600 0000 2545 7572  :. .........%Eur
+-0000b6f0: 6f6e 6578 7420 7175 6f74 6573 2068 6561  onext quotes hea
+-0000b700: 6465 7220 6e6f 7420 666f 756e 6420 696e  der not found in
+-0000b710: 3a20 0700 0000 0f51 756f 7465 446f 776e  : .....QuoteDown
+-0000b720: 6c6f 6164 6572 0103 0000 005a 0418 0441  loader.....Z...A
+-0000b730: 0442 043e 0440 0438 044f 0020 043a 043e  .B.>.@.8.O. .:.>
+-0000b740: 0442 0438 0440 043e 0432 043e 043a 0020  .B.8.@.>.2.>.:. 
+-0000b750: 0045 0075 0072 006f 006e 0065 0078 0074  .E.u.r.o.n.e.x.t
+-0000b760: 0020 0441 043b 0438 0448 043a 043e 043c  . .A.;.8.H.:.>.<
+-0000b770: 0020 043a 043e 0440 043e 0442 043a 0430  . .:.>.@.>.B.:.0
+-0000b780: 044f 003a 0020 0800 0000 0006 0000 002c  .O.:. .........,
+-0000b790: 4575 726f 6e65 7874 2071 756f 7465 7320  Euronext quotes 
+-0000b7a0: 6869 7374 6f72 7920 7265 706c 7920 6973  history reply is
+-0000b7b0: 2074 6f6f 2073 686f 7274 3a20 0700 0000   too short: ....
+-0000b7c0: 0f51 756f 7465 446f 776e 6c6f 6164 6572  .QuoteDownloader
+-0000b7d0: 0103 0000 0036 041d 0435 0020 0437 0430  .....6...5. .7.0
+-0000b7e0: 0433 0440 0443 0436 0435 043d 044b 0020  .3.@.C.6.5.=.K. 
+-0000b7f0: 043a 043e 0442 0438 0440 043e 0432 043a  .:.>.B.8.@.>.2.:
+-0000b800: 0438 0020 0434 043b 044f 0020 0800 0000  .8. .4.;.O. ....
+-0000b810: 0006 0000 001e 4e6f 2071 756f 7465 7320  ......No quotes 
+-0000b820: 7765 7265 2064 6f77 6e6c 6f61 6465 6420  were downloaded 
+-0000b830: 666f 7220 0700 0000 0f51 756f 7465 446f  for .....QuoteDo
+-0000b840: 776e 6c6f 6164 6572 0103 0000 002e 041d  wnloader........
+-0000b850: 0435 0020 0437 0430 0433 0440 0443 0436  .5. .7.0.3.@.C.6
+-0000b860: 0435 043d 044b 0020 043a 0443 0440 0441  .5.=.K. .:.C.@.A
+-0000b870: 044b 0020 0434 043b 044f 0020 0800 0000  .K. .4.;.O. ....
+-0000b880: 0006 0000 001d 4e6f 2072 6174 6573 2077  ......No rates w
+-0000b890: 6572 6520 646f 776e 6c6f 6164 6564 2066  ere downloaded f
+-0000b8a0: 6f72 2007 0000 000f 5175 6f74 6544 6f77  or .....QuoteDow
+-0000b8b0: 6e6c 6f61 6465 7201 0300 0000 2c04 1d04  nloader.....,...
+-0000b8c0: 3504 4200 2004 3404 3004 3d04 3d04 4b04  5.B. .4.0.=.=.K.
+-0000b8d0: 4500 2004 2604 1100 2004 2004 2400 2004  E. .&... . .$. .
+-0000b8e0: 3404 3b04 4f00 3a00 2008 0000 0000 0600  4.;.O.:. .......
+-0000b8f0: 0000 1b54 6865 7265 2061 7265 206e 6f20  ...There are no 
+-0000b900: 4342 5220 6461 7461 2066 6f72 3a20 0700  CBR data for: ..
+-0000b910: 0000 0f51 756f 7465 446f 776e 6c6f 6164  ...QuoteDownload
+-0000b920: 6572 0103 0000 0012 041a 043e 0442 0438  er.........>.B.8
+-0000b930: 0440 043e 0432 043a 0438 0800 0000 0006  .@.>.2.:.8......
+-0000b940: 0000 0006 5175 6f74 6573 0700 0000 1051  ....Quotes.....Q
+-0000b950: 756f 7465 734c 6973 7444 6961 6c6f 6701  uotesListDialog.
+-0000b960: 0300 0000 0404 2604 1108 0000 0000 0600  ......&.........
+-0000b970: 0000 0541 7373 6574 0700 0000 0f51 756f  ...Asset.....Quo
+-0000b980: 7465 734c 6973 744d 6f64 656c 0103 0000  tesListModel....
+-0000b990: 000c 0412 0430 043b 044e 0442 0430 0800  .....0.;.N.B.0..
+-0000b9a0: 0000 0006 0000 0008 4375 7272 656e 6379  ........Currency
+-0000b9b0: 0700 0000 0f51 756f 7465 734c 6973 744d  .....QuotesListM
+-0000b9c0: 6f64 656c 0103 0000 0008 0414 0430 0442  odel.........0.B
+-0000b9d0: 0430 0800 0000 0006 0000 0004 4461 7465  .0..........Date
+-0000b9e0: 0700 0000 0f51 756f 7465 734c 6973 744d  .....QuotesListM
+-0000b9f0: 6f64 656c 0103 0000 0012 041a 043e 0442  odel.........>.B
+-0000ba00: 0438 0440 043e 0432 043a 0430 0800 0000  .8.@.>.2.:.0....
+-0000ba10: 0006 0000 0005 5175 6f74 6507 0000 000f  ......Quote.....
+-0000ba20: 5175 6f74 6573 4c69 7374 4d6f 6465 6c01  QuotesListModel.
+-0000ba30: 0300 0000 2800 2604 1f04 3e04 3b04 3d04  ....(.&...>.;.=.
+-0000ba40: 3e04 4104 4204 4c04 4e00 2c00 2004 4100  >.A.B.L.N.,. .A.
+-0000ba50: 2004 3d04 3004 4704 3004 3b04 3008 0000   .=.0.G.0.;.0...
+-0000ba60: 0000 0600 0000 1326 4675 6c6c 2c20 6672  .......&Full, fr
+-0000ba70: 6f6d 2073 6372 6174 6368 0700 0000 0d52  om scratch.....R
+-0000ba80: 6542 7569 6c64 4469 616c 6f67 0103 0000  eBuildDialog....
+-0000ba90: 0018 0418 043d 0442 0435 0440 0432 0430  .....=.B.5.@.2.0
+-0000baa0: 043b 0020 0434 0430 0442 0800 0000 0006  .;. .4.0.B......
+-0000bab0: 0000 000a 4461 7465 2052 616e 6765 0700  ....Date Range..
+-0000bac0: 0000 0d52 6542 7569 6c64 4469 616c 6f67  ...ReBuildDialog
+-0000bad0: 0103 0000 002a 0026 0411 044b 0441 0442  .....*.&...K.A.B
+-0000bae0: 0440 043e 002c 0020 043d 043e 0020 043d  .@.>.,. .=.>. .=
+-0000baf0: 0435 043d 0430 0434 0451 0436 043d 043e  .5.=.0.4.Q.6.=.>
+-0000bb00: 0800 0000 0006 0000 0011 4661 7374 2c20  ..........Fast, 
+-0000bb10: 2675 6e72 656c 6961 626c 6507 0000 000d  &unreliable.....
+-0000bb20: 5265 4275 696c 6444 6961 6c6f 6701 0300  ReBuildDialog...
+-0000bb30: 0000 1604 1404 3004 4204 3004 1304 4004  ......0.B.0...@.
+-0000bb40: 3004 3d04 3804 4604 4b08 0000 0000 0600  0.=.8.F.K.......
+-0000bb50: 0000 0c46 726f 6e74 6965 7244 6174 6507  ...FrontierDate.
+-0000bb60: 0000 000d 5265 4275 696c 6444 6961 6c6f  ....ReBuildDialo
+-0000bb70: 6701 0300 0000 2204 1f04 3504 4004 3504  g....."...5.@.5.
+-0000bb80: 4104 4704 3804 4204 3004 4204 4c00 2004  A.G.8.B.0.B.L. .
+-0000bb90: 3804 4204 3e04 3304 3808 0000 0000 0600  8.B.>.3.8.......
+-0000bba0: 0000 0f52 652d 4275 696c 6420 4c65 6467  ...Re-Build Ledg
+-0000bbb0: 6572 0700 0000 0d52 6542 7569 6c64 4469  er.....ReBuildDi
+-0000bbc0: 616c 6f67 0103 0000 0010 0421 0020 0026  alog.......!. .&
+-0000bbd0: 0414 0430 0442 044b 003a 0800 0000 0006  ...0.B.K.:......
+-0000bbe0: 0000 000c 5369 6e63 6520 2644 6174 653a  ....Since &Date:
+-0000bbf0: 0700 0000 0d52 6542 7569 6c64 4469 616c  .....ReBuildDial
+-0000bc00: 6f67 0103 0000 002c 0421 0020 043a 0440  og.....,.!. .:.@
+-0000bc10: 0430 0439 043d 0435 0439 0020 0026 0430  .0.9.=.5.9. .&.0
+-0000bc20: 043a 0442 0443 0430 043b 044c 043d 043e  .:.B.C.0.;.L.=.>
+-0000bc30: 0439 003a 0800 0000 0006 0000 0013 5369  .9.:..........Si
+-0000bc40: 6e63 6520 264c 6173 7420 6163 7475 616c  nce &Last actual
+-0000bc50: 3a07 0000 000d 5265 4275 696c 6444 6961  :.....ReBuildDia
+-0000bc60: 6c6f 6701 0300 0000 1400 6400 6400 2f00  log.......d.d./.
+-0000bc70: 4d00 4d00 2f00 7900 7900 7900 7908 0000  M.M./.y.y.y.y...
+-0000bc80: 0000 0600 0000 0a64 642f 4d4d 2f79 7979  .......dd/MM/yyy
+-0000bc90: 7907 0000 000d 5265 4275 696c 6444 6961  y.....ReBuildDia
+-0000bca0: 6c6f 6701 0300 0000 0a04 1b04 4e04 3104  log.........N.1.
+-0000bcb0: 3e04 3908 0000 0000 0600 0000 0341 4e59  >.9..........ANY
+-0000bcc0: 0700 0000 1352 6566 6572 656e 6365 4461  .....ReferenceDa
+-0000bcd0: 7461 4469 616c 6f67 0103 0000 0014 0422  taDialog......."
+-0000bce0: 0438 043f 0020 0441 0447 0435 0442 0430  .8.?. .A.G.5.B.0
+-0000bcf0: 003a 0800 0000 0006 0000 000d 4163 636f  .:..........Acco
+-0000bd00: 756e 7420 5479 7065 3a07 0000 0013 5265  unt Type:.....Re
+-0000bd10: 6665 7265 6e63 6544 6174 6144 6961 6c6f  ferenceDataDialo
+-0000bd20: 6701 0300 0000 2204 1404 3e04 3104 3004  g....."...>.1.0.
+-0000bd30: 3204 3804 4204 4c00 2004 3404 3e04 4704  2.8.B.L. .4.>.G.
+-0000bd40: 3504 4004 3d04 3804 3908 0000 0000 0600  5.@.=.8.9.......
+-0000bd50: 0000 0941 6464 2063 6869 6c64 0700 0000  ...Add child....
+-0000bd60: 1352 6566 6572 656e 6365 4461 7461 4469  .ReferenceDataDi
+-0000bd70: 616c 6f67 0103 0000 001c 0414 043e 0431  alog.........>.1
+-0000bd80: 0430 0432 0438 0442 044c 0020 043d 043e  .0.2.8.B.L. .=.>
+-0000bd90: 0432 044b 0439 0800 0000 0006 0000 0007  .2.K.9..........
+-0000bda0: 4164 6420 6e65 7707 0000 0013 5265 6665  Add new.....Refe
+-0000bdb0: 7265 6e63 6544 6174 6144 6961 6c6f 6701  renceDataDialog.
+-0000bdc0: 0300 0000 1e04 2104 3c04 3504 3d04 3804  ......!.<.5.=.8.
+-0000bdd0: 4204 4c00 2004 4204 3804 3f00 2004 3d04  B.L. .B.8.?. .=.
+-0000bde0: 3000 3a08 0000 0000 0600 0000 0f43 6861  0.:..........Cha
+-0000bdf0: 6e67 6520 7479 7065 2074 6f3a 0700 0000  nge type to:....
+-0000be00: 1352 6566 6572 656e 6365 4461 7461 4469  .ReferenceDataDi
+-0000be10: 616c 6f67 0103 0000 001a 041f 043e 0434  alog.........>.4
+-0000be20: 0442 0432 0435 0440 0436 0434 0435 043d  .B.2.5.@.6.4.5.=
+-0000be30: 0438 0435 0800 0000 0006 0000 000c 436f  .8.5..........Co
+-0000be40: 6e66 6972 6d61 7469 6f6e 0700 0000 1352  nfirmation.....R
+-0000be50: 6566 6572 656e 6365 4461 7461 4469 616c  eferenceDataDial
+-0000be60: 6f67 0103 0000 000e 0423 0434 0430 043b  og.......#.4.0.;
+-0000be70: 0438 0442 044c 0800 0000 0006 0000 0006  .8.B.L..........
+-0000be80: 4465 6c65 7465 0700 0000 1352 6566 6572  Delete.....Refer
+-0000be90: 656e 6365 4461 7461 4469 616c 6f67 0103  enceDataDialog..
+-0000bea0: 0000 0022 0421 043f 0440 0430 0432 043e  ...".!.?.@.0.2.>
+-0000beb0: 0447 043d 044b 0435 0020 0434 0430 043d  .G.=.K.5. .4.0.=
+-0000bec0: 043d 044b 0435 0800 0000 0006 0000 000e  .=.K.5..........
+-0000bed0: 5265 6665 7265 6e63 6520 4461 7461 0700  Reference Data..
+-0000bee0: 0000 1352 6566 6572 656e 6365 4461 7461  ...ReferenceData
+-0000bef0: 4469 616c 6f67 0103 0000 0024 041e 0442  Dialog.....$...B
+-0000bf00: 043c 0435 043d 0438 0442 044c 0020 0438  .<.5.=.8.B.L. .8
+-0000bf10: 0437 043c 0435 043d 0435 043d 0438 044f  .7.<.5.=.5.=.8.O
+-0000bf20: 0800 0000 0006 0000 000e 5265 7665 7274  ..........Revert
+-0000bf30: 2063 6861 6e67 6573 0700 0000 1352 6566   changes.....Ref
+-0000bf40: 6572 656e 6365 4461 7461 4469 616c 6f67  erenceDataDialog
+-0000bf50: 0103 0000 0026 0421 043e 0445 0440 0430  .....&.!.>.E.@.0
+-0000bf60: 043d 0438 0442 044c 0020 0438 0437 043c  .=.8.B.L. .8.7.<
+-0000bf70: 0435 043d 0435 043d 0438 044f 0800 0000  .5.=.5.=.8.O....
+-0000bf80: 0006 0000 000c 5361 7665 2063 6861 6e67  ......Save chang
+-0000bf90: 6573 0700 0000 1352 6566 6572 656e 6365  es.....Reference
+-0000bfa0: 4461 7461 4469 616c 6f67 0103 0000 000c  DataDialog......
+-0000bfb0: 041f 043e 0438 0441 043a 003a 0800 0000  ...>.8.A.:.:....
+-0000bfc0: 0006 0000 0007 5365 6172 6368 3a07 0000  ......Search:...
+-0000bfd0: 0013 5265 6665 7265 6e63 6544 6174 6144  ..ReferenceDataD
+-0000bfe0: 6961 6c6f 6701 0300 0000 2a04 1f04 3e04  ialog.....*...>.
+-0000bff0: 3a04 3004 3704 4b04 3204 3004 4204 4c00  :.0.7.K.2.0.B.L.
+-0000c000: 2004 3d04 3504 3004 3a04 4204 3804 3204   .=.5.0.:.B.8.2.
+-0000c010: 3d04 4b04 3508 0000 0000 0600 0000 0d53  =.K.5..........S
+-0000c020: 686f 7720 696e 6163 7469 7665 0700 0000  how inactive....
+-0000c030: 1352 6566 6572 656e 6365 4461 7461 4469  .ReferenceDataDi
+-0000c040: 616c 6f67 0103 0000 0066 0423 0020 0432  alog.....f.#. .2
+-0000c050: 0430 0441 0020 0435 0441 0442 044c 0020  .0.A. .5.A.B.L. 
+-0000c060: 043d 0435 0441 043e 0445 0440 0430 043d  .=.5.A.>.E.@.0.=
+-0000c070: 0451 043d 043d 044b 0435 0020 0434 0430  .Q.=.=.K.5. .4.0
+-0000c080: 043d 043d 044b 0435 002e 0020 0412 0441  .=.=.K.5... ...A
+-0000c090: 0451 0020 0440 0430 0432 043d 043e 0020  .Q. .@.0.2.=.>. 
+-0000c0a0: 0437 0430 043a 0440 044b 0442 044c 003f  .7.0.:.@.K.B.L.?
+-0000c0b0: 0800 0000 0006 0000 0033 596f 7520 6861  .........3You ha
+-0000c0c0: 7665 2075 6e63 6f6d 6d69 7474 6564 2063  ve uncommitted c
+-0000c0d0: 6861 6e67 6573 2e20 446f 2079 6f75 2077  hanges. Do you w
+-0000c0e0: 616e 7420 746f 2063 6c6f 7365 3f07 0000  ant to close?...
+-0000c0f0: 0013 5265 6665 7265 6e63 6544 6174 6144  ..ReferenceDataD
+-0000c100: 6961 6c6f 6701 0300 0000 2804 2404 3004  ialog.....(.$.0.
+-0000c110: 3904 3b04 4b00 2000 4500 7800 6300 6500  9.;.K. .E.x.c.e.
+-0000c120: 6c00 2000 2800 2a00 2e00 7800 7300 6c00  l. .(.*...x.s.l.
+-0000c130: 7800 2908 0000 0000 0600 0000 1445 7863  x.)..........Exc
+-0000c140: 656c 2066 696c 6573 2028 2a2e 786c 7378  el files (*.xlsx
+-0000c150: 2907 0000 0007 5265 706f 7274 7301 0300  ).....Reports...
+-0000c160: 0000 4604 1d04 3504 3204 3e04 3704 3c04  ..F...5.2.>.7.<.
+-0000c170: 3e04 3604 3d04 3e00 2004 3704 3004 3304  >.6.=.>. .7.0.3.
+-0000c180: 4004 4304 3704 3804 4204 4c00 2004 3a04  @.C.7.8.B.L. .:.
+-0000c190: 3b04 3004 4104 4100 2004 3e04 4204 4704  ;.0.A.A. .>.B.G.
+-0000c1a0: 5104 4204 3000 3a00 2008 0000 0000 0600  Q.B.0.:. .......
+-0000c1b0: 0000 1e52 6570 6f72 7420 636c 6173 7320  ...Report class 
+-0000c1c0: 6361 6e27 7420 6265 206c 6f61 6465 643a  can't be loaded:
+-0000c1d0: 2007 0000 0007 5265 706f 7274 7301 0300   .....Reports...
+-0000c1e0: 0000 4204 1e04 4204 4704 3504 4200 2004  ..B...B.G.5.B. .
+-0000c1f0: 3d04 3500 2004 3d04 3004 3904 3404 3504  =.5. .=.0.9.4.5.
+-0000c200: 3d00 2004 3404 3b04 4f00 2004 3a04 3b04  =. .4.;.O. .:.;.
+-0000c210: 3004 4104 4104 3000 2004 3e04 3a04 3d04  0.A.A.0. .>.:.=.
+-0000c220: 3000 3a00 2008 0000 0000 0600 0000 2352  0.:. .........#R
+-0000c230: 6570 6f72 7420 6e6f 7420 666f 756e 6420  eport not found 
+-0000c240: 666f 7220 7769 6e64 6f77 2063 6c61 7373  for window class
+-0000c250: 3a20 0700 0000 0752 6570 6f72 7473 0103  : .....Reports..
+-0000c260: 0000 002c 041e 0442 0447 0435 0442 0020  ...,...B.G.5.B. 
+-0000c270: 0441 043e 0445 0440 0430 043d 0451 043d  .A.>.E.@.0.=.Q.=
+-0000c280: 0020 0432 0020 0444 0430 0439 043b 0020  . .2. .D.0.9.;. 
+-0000c290: 0800 0000 0006 0000 0019 5265 706f 7274  ..........Report
+-0000c2a0: 2077 6173 2073 6176 6564 2074 6f20 6669   was saved to fi
+-0000c2b0: 6c65 2007 0000 0007 5265 706f 7274 7301  le .....Reports.
+-0000c2c0: 0300 0000 2404 2104 3e04 4504 4004 3004  ....$.!.>.E.@.0.
+-0000c2d0: 3d04 3804 4204 4c00 2004 3e04 4204 4704  =.8.B.L. .>.B.G.
+-0000c2e0: 3504 4200 2004 3200 3a08 0000 0000 0600  5.B. .2.:.......
+-0000c2f0: 0000 0f53 6176 6520 7265 706f 7274 2074  ...Save report t
+-0000c300: 6f3a 0700 0000 0752 6570 6f72 7473 0103  o:.....Reports..
+-0000c310: 0000 003c 041b 043e 0433 0438 043d 0020  ...<...>.3.8.=. 
+-0000c320: 0447 0435 0440 0435 0437 0020 0413 043e  .G.5.@.5.7. ...>
+-0000c330: 0441 0443 0441 043b 0443 0433 0438 0020  .A.C.A.;.C.3.8. 
+-0000c340: 0437 0430 0432 0435 0440 0448 0451 043d  .7.0.2.5.@.H.Q.=
+-0000c350: 0800 0000 0006 0000 0014 4553 4941 206c  ..........ESIA l
+-0000c360: 6f67 696e 2063 6f6d 706c 6574 6564 0700  ogin completed..
+-0000c370: 0000 1252 6571 7565 7374 496e 7465 7263  ...RequestInterc
+-0000c380: 6570 746f 7201 0300 0000 0a04 1004 3a04  eptor.........:.
+-0000c390: 4204 3804 3208 0000 0000 0600 0000 0541  B.8.2..........A
+-0000c3a0: 7373 6574 0700 0000 0c52 6573 756c 7473  sset.....Results
+-0000c3b0: 4d6f 6465 6c01 0300 0000 0c04 1a04 3e04  Model.........>.
+-0000c3c0: 3b00 2d04 3204 3e08 0000 0000 0600 0000  ;.-.2.>.........
+-0000c3d0: 0351 7479 0700 0000 0c52 6573 756c 7473  .Qty.....Results
+-0000c3e0: 4d6f 6465 6c01 0300 0000 0e04 1404 3e04  Model.........>.
+-0000c3f0: 3b04 4f00 2c00 2000 2508 0000 0000 0600  ;.O.,. .%.......
+-0000c400: 0000 0853 6861 7265 2c20 2507 0000 000c  ...Share, %.....
+-0000c410: 5265 7375 6c74 734d 6f64 656c 0103 0000  ResultsModel....
+-0000c420: 0030 0412 044b 0431 0440 0430 043d 0020  .0...K.1.@.0.=. 
+-0000c430: 043d 0435 043a 043e 0440 0440 0435 043a  .=.5.:.>.@.@.5.:
+-0000c440: 0442 043d 044b 0439 0020 0441 0447 0451  .B.=.K.9. .A.G.Q
+-0000c450: 0442 0800 0000 0006 0000 0018 496e 7661  .B..........Inva
+-0000c460: 6c69 6420 6163 636f 756e 7420 7365 6c65  lid account sele
+-0000c470: 6374 6564 0700 0000 1353 656c 6563 7441  cted.....SelectA
+-0000c480: 6363 6f75 6e74 4469 616c 6f67 0103 0000  ccountDialog....
+-0000c490: 0022 041d 0438 0447 0435 0433 043e 0020  ."...8.G.5.3.>. 
+-0000c4a0: 043d 0435 0020 0432 044b 0431 0440 0430  .=.5. .2.K.1.@.0
+-0000c4b0: 043d 043e 0800 0000 0006 0000 000c 4e6f  .=.>..........No
+-0000c4c0: 2073 656c 6563 7469 6f6e 0700 0000 1353   selection.....S
+-0000c4d0: 656c 6563 7441 6363 6f75 6e74 4469 616c  electAccountDial
+-0000c4e0: 6f67 0103 0000 0040 041f 043e 0436 0430  og.....@...>.6.0
+-0000c4f0: 043b 0443 0439 0441 0442 0430 002c 0020  .;.C.9.A.B.0.,. 
+-0000c500: 0432 044b 0431 0435 0440 0438 0442 0435  .2.K.1.5.@.8.B.5
+-0000c510: 0020 0434 0440 0443 0433 043e 0439 0020  . .4.@.C.3.>.9. 
+-0000c520: 0441 0447 0451 0442 0800 0000 0006 0000  .A.G.Q.B........
+-0000c530: 001f 506c 6561 7365 2073 656c 6563 7420  ..Please select 
+-0000c540: 6469 6666 6572 656e 7420 6163 636f 756e  different accoun
+-0000c550: 7407 0000 0013 5365 6c65 6374 4163 636f  t.....SelectAcco
+-0000c560: 756e 7444 6961 6c6f 6701 0300 0000 3004  untDialog.....0.
+-0000c570: 1f04 3e04 3604 3004 3b04 4304 3904 4104  ..>.6.0.;.C.9.A.
+-0000c580: 4204 3000 2004 3204 4b04 3104 3504 4004  B.0. .2.K.1.5.@.
+-0000c590: 3804 4204 3500 2004 4104 4704 5104 4208  8.B.5. .A.G.Q.B.
+-0000c5a0: 0000 0000 0600 0000 1550 6c65 6173 6520  .........Please 
+-0000c5b0: 7365 6c65 6374 2061 6363 6f75 6e74 0700  select account..
+-0000c5c0: 0000 1053 656c 6563 7441 6363 6f75 6e74  ...SelectAccount
+-0000c5d0: 446c 6701 0300 0000 1204 2104 3e04 3e04  Dlg.......!.>.>.
+-0000c5e0: 3104 4904 3504 3d04 3804 3508 0000 0000  1.I.5.=.8.5.....
+-0000c5f0: 0600 0000 0954 6578 744c 6162 656c 0700  .....TextLabel..
+-0000c600: 0000 1053 656c 6563 7441 6363 6f75 6e74  ...SelectAccount
+-0000c610: 446c 6701 0300 0000 5604 1804 4104 3f04  Dlg.....V...A.?.
+-0000c620: 3e04 3b04 4c04 3704 3e04 3204 3004 4204  >.;.L.7.>.2.0.B.
+-0000c630: 4c00 2004 4d04 4204 3e04 4200 2004 3604  L. .M.B.>.B. .6.
+-0000c640: 3500 2004 4104 4704 5104 4200 2004 3404  5. .A.G.Q.B. .4.
+-0000c650: 3b04 4f00 2004 3404 3004 3d04 3d04 3e04  ;.O. .4.0.=.=.>.
+-0000c660: 3900 2004 3204 3004 3b04 4e04 4204 4b08  9. .2.0.;.N.B.K.
+-0000c670: 0000 0000 0600 0000 2755 7365 2074 6865  ........'Use the
+-0000c680: 2073 616d 6520 6163 636f 756e 7420 666f   same account fo
+-0000c690: 7220 6769 7665 6e20 6375 7272 656e 6379  r given currency
+-0000c6a0: 0700 0000 1053 656c 6563 7441 6363 6f75  .....SelectAccou
+-0000c6b0: 6e74 446c 6701 0300 0000 2404 1204 4b04  ntDlg.....$...K.
+-0000c6c0: 3104 3504 4004 3804 4204 3500 2004 3a04  1.5.@.8.B.5. .:.
+-0000c6d0: 3004 4204 3504 3304 3e04 4004 3804 4e08  0.B.5.3.>.@.8.N.
+-0000c6e0: 0000 0000 0600 0000 1650 6c65 6173 6520  .........Please 
+-0000c6f0: 7365 6c65 6374 2063 6174 6567 6f72 7907  select category.
+-0000c700: 0000 0014 5365 6c65 6374 4361 7465 676f  ....SelectCatego
+-0000c710: 7279 4469 616c 6f67 0103 0000 0028 0412  ryDialog.....(..
+-0000c720: 044b 0431 0435 0440 0438 0442 0435 0020  .K.1.5.@.8.B.5. 
+-0000c730: 043a 043e 043d 0442 0440 0430 0433 0435  .:.>.=.B.@.0.3.5
+-0000c740: 043d 0442 0430 0800 0000 0006 0000 0012  .=.B.0..........
+-0000c750: 506c 6561 7365 2073 656c 6563 7420 7065  Please select pe
+-0000c760: 6572 0700 0000 1053 656c 6563 7450 6565  er.....SelectPee
+-0000c770: 7244 6961 6c6f 6701 0300 0000 2204 1d04  rDialog....."...
+-0000c780: 3804 4704 3504 3304 3e00 2004 3d04 3500  8.G.5.3.>. .=.5.
+-0000c790: 2004 3204 4b04 3104 4004 3004 3d04 3e08   .2.K.1.@.0.=.>.
+-0000c7a0: 0000 0000 0600 0000 0c4e 6f20 7365 6c65  .........No sele
+-0000c7b0: 6374 696f 6e07 0000 0015 5365 6c65 6374  ction.....Select
+-0000c7c0: 5265 6665 7265 6e63 6544 6961 6c6f 6701  ReferenceDialog.
+-0000c7d0: 0300 0000 2e04 1204 4b00 2004 3404 3e04  ........K. .4.>.
+-0000c7e0: 3b04 3604 3d04 4b00 2004 4104 3404 3504  ;.6.=.K. .A.4.5.
+-0000c7f0: 3b04 3004 4204 4c00 2004 3204 4b04 3104  ;.0.B.L. .2.K.1.
+-0000c800: 3e04 4008 0000 0000 0600 0000 1b59 6f75  >.@..........You
+-0000c810: 2073 686f 756c 6420 7365 6c65 6374 2073   should select s
+-0000c820: 6f6d 6574 6869 6e67 0700 0000 1553 656c  omething.....Sel
+-0000c830: 6563 7452 6566 6572 656e 6365 4469 616c  ectReferenceDial
+-0000c840: 6f67 0103 0000 001c 0412 044b 0431 0435  og.........K.1.5
+-0000c850: 0440 0438 0442 0435 0020 043c 0435 0442  .@.8.B.5. .<.5.B
+-0000c860: 043a 0443 0800 0000 0006 0000 0011 506c  .:.C..........Pl
+-0000c870: 6561 7365 2073 656c 6563 7420 7461 6707  ease select tag.
+-0000c880: 0000 000f 5365 6c65 6374 5461 6744 6961  ....SelectTagDia
+-0000c890: 6c6f 6701 0300 0000 5a04 1d04 3500 2004  log.....Z...5. .
+-0000c8a0: 4304 3404 3004 3b04 3e04 4104 4c00 2004  C.4.0.;.>.A.L. .
+-0000c8b0: 3f04 3e04 3b04 4304 4704 3804 4204 4c00  ?.>.;.C.G.8.B.L.
+-0000c8c0: 2004 3d04 3004 3704 3204 3004 3d04 3804   .=.0.7.2.0.=.8.
+-0000c8d0: 3500 2004 3e04 3304 4004 3004 3d04 3804  5. .>.3.@.0.=.8.
+-0000c8e0: 3704 3004 4604 3804 3800 2004 3804 3700  7.0.F.8.8. .8.7.
+-0000c8f0: 3a00 2008 0000 0000 0600 0000 1d43 616e  :. ..........Can
+-0000c900: 2774 2067 6574 2063 6f6d 7061 6e79 206e  't get company n
+-0000c910: 616d 6520 6672 6f6d 3a20 0700 0000 0b53  ame from: .....S
+-0000c920: 6c69 7073 5461 7841 5049 0103 0000 0048  lipsTaxAPI.....H
+-0000c930: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000c940: 043d 043e 0020 043e 0431 0432 043d 043e  .=.>. .>.1.2.=.>
+-0000c950: 0432 0438 0442 044c 0020 0441 0435 0441  .2.8.B.L. .A.5.A
+-0000c960: 0441 0438 044e 002c 0020 043e 0442 0432  .A.8.N.,. .>.B.2
+-0000c970: 0435 0442 003a 0020 0800 0000 0006 0000  .5.B.:. ........
+-0000c980: 0021 4361 6e27 7420 7265 6672 6573 6820  .!Can't refresh 
+-0000c990: 7365 7373 696f 6e2c 2072 6573 706f 6e73  session, respons
+-0000c9a0: 653a 2007 0000 000b 536c 6970 7354 6178  e: .....SlipsTax
+-0000c9b0: 4150 4901 0300 0000 2e04 1e04 4804 3804  API.........H.8.
+-0000c9c0: 3104 3a04 3000 2004 3f04 3e04 3b04 4304  1.:.0. .?.>.;.C.
+-0000c9d0: 4704 3504 3d04 3804 4f00 2004 4704 3504  G.5.=.8.O. .G.5.
+-0000c9e0: 3a04 3000 3a00 2008 0000 0000 0600 0000  :.0.:. .........
+-0000c9f0: 1347 6574 2074 6963 6b65 7420 6661 696c  .Get ticket fail
+-0000ca00: 6564 3a20 0700 0000 0b53 6c69 7073 5461  ed: .....SlipsTa
+-0000ca10: 7841 5049 0103 0000 0034 041e 0448 0438  xAPI.....4...H.8
+-0000ca20: 0431 043a 0430 0020 043f 043e 043b 0443  .1.:.0. .?.>.;.C
+-0000ca30: 0447 0435 043d 0438 044f 0020 0069 0064  .G.5.=.8.O. .i.d
+-0000ca40: 0020 0447 0435 043a 0430 003a 0020 0800  . .G.5.:.0.:. ..
+-0000ca50: 0000 0006 0000 0016 4765 7420 7469 636b  ........Get tick
+-0000ca60: 6574 2069 6420 6661 696c 6564 3a20 0700  et id failed: ..
+-0000ca70: 0000 0b53 6c69 7073 5461 7841 5049 0103  ...SlipsTaxAPI..
+-0000ca80: 0000 007c 041d 0435 0432 0435 0440 043d  ...|...5.2.5.@.=
+-0000ca90: 0430 044f 0020 0434 043b 0438 043d 0430  .0.O. .4.;.8.=.0
+-0000caa0: 0020 0418 041d 041d 002e 0020 041d 0435  . ......... ...5
+-0000cab0: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
+-0000cac0: 0020 043f 043e 043b 0443 0447 0438 0442  . .?.>.;.C.G.8.B
+-0000cad0: 044c 0020 043d 0430 0438 043c 0435 043d  .L. .=.0.8.<.5.=
+-0000cae0: 043e 0432 0430 043d 0438 0435 0020 043a  .>.2.0.=.8.5. .:
+-0000caf0: 043e 043c 043f 0430 043d 0438 0438 002e  .>.<.?.0.=.8.8..
+-0000cb00: 0800 0000 0006 0000 0030 496e 636f 7272  .........0Incorr
+-0000cb10: 6563 7420 6c65 6e67 7468 206f 6620 494e  ect length of IN
+-0000cb20: 4e2e 2043 616e 2774 2067 6574 2063 6f6d  N. Can't get com
+-0000cb30: 7061 6e79 206e 616d 652e 0700 0000 0b53  pany name......S
+-0000cb40: 6c69 7073 5461 7841 5049 0103 0000 0056  lipsTaxAPI.....V
+-0000cb50: 041d 0435 0442 0020 0053 0065 0073 0073  ...5.B. .S.e.s.s
+-0000cb60: 0069 006f 006e 0049 0064 0020 0434 043b  .i.o.n.I.d. .4.;
+-0000cb70: 044f 0020 0437 0430 0433 0440 0443 0437  .O. .7.0.3.@.C.7
+-0000cb80: 043a 0438 0020 0447 0435 043a 0430 0020  .:.8. .G.5.:.0. 
+-0000cb90: 0441 0020 0441 0430 0439 0442 0430 0020  .A. .A.0.9.B.0. 
+-0000cba0: 0424 041d 0421 0800 0000 0006 0000 0022  .$...!........."
+-0000cbb0: 4e6f 2052 7573 7369 616e 2054 6178 2053  No Russian Tax S
+-0000cbc0: 6573 7369 6f6e 4964 2061 7661 696c 6162  essionId availab
+-0000cbd0: 6c65 0700 0000 0b53 6c69 7073 5461 7841  le.....SlipsTaxA
+-0000cbe0: 5049 0103 0000 0036 041d 0435 0442 0020  PI.....6...5.B. 
+-0000cbf0: 0430 043a 0442 0438 0432 043d 043e 0439  .0.:.B.8.2.=.>.9
+-0000cc00: 0020 0441 0435 0441 0441 0438 0438 0020  . .A.5.A.A.8.8. 
+-0000cc10: 0434 043b 044f 0020 0424 041d 0421 0800  .4.;.O. .$...!..
+-0000cc20: 0000 0006 0000 0018 4e6f 2076 616c 6964  ........No valid
+-0000cc30: 2073 6573 7369 6f6e 2070 7265 7365 6e74   session present
+-0000cc40: 0700 0000 0b53 6c69 7073 5461 7841 5049  .....SlipsTaxAPI
+-0000cc50: 0103 0000 007a 041e 043f 0435 0440 0430  .....z...?.5.@.0
+-0000cc60: 0446 0438 044f 0020 043e 0431 0440 0430  .F.8.O. .>.1.@.0
+-0000cc70: 0431 0430 0442 044b 0432 0430 0435 0442  .1.0.B.K.2.0.5.B
+-0000cc80: 0441 044f 0020 043d 0430 0020 0441 0442  .A.O. .=.0. .A.B
+-0000cc90: 043e 0440 043e 043d 0435 0020 0441 0435  .>.@.>.=.5. .A.5
+-0000cca0: 0440 0432 0435 0440 0430 002e 0020 041f  .@.2.5.@.0... ..
+-0000ccb0: 043e 0432 0442 043e 0440 044f 044e 0020  .>.2.B.>.@.O.N. 
+-0000ccc0: 0435 0449 0451 0020 0440 0430 0437 002e  .5.I.Q. .@.0.7..
+-0000ccd0: 0800 0000 0006 0000 0038 4f70 6572 6174  .........8Operat
+-0000cce0: 696f 6e20 6d69 6768 7420 6265 2070 656e  ion might be pen
+-0000ccf0: 6469 6e67 206f 6e20 7365 7276 6572 2073  ding on server s
+-0000cd00: 6964 652e 2054 7279 696e 6720 6167 6169  ide. Trying agai
+-0000cd10: 6e2e 0700 0000 0b53 6c69 7073 5461 7841  n......SlipsTaxA
+-0000cd20: 5049 0103 0000 0028 041e 0431 043d 043e  PI.....(...1.=.>
+-0000cd30: 0432 043b 0435 043d 0438 0435 0020 0441  .2.;.5.=.8.5. .A
+-0000cd40: 0435 0441 0441 0438 0438 002e 002e 002e  .5.A.A.8.8......
+-0000cd50: 0800 0000 0006 0000 0015 5265 6672 6573  ..........Refres
+-0000cd60: 6869 6e67 2073 6573 7369 6f6e 2e2e 2e07  hing session....
+-0000cd70: 0000 000b 536c 6970 7354 6178 4150 4901  ....SlipsTaxAPI.
+-0000cd80: 0300 0000 2404 2104 3504 4104 4104 3804  ....$.!.5.A.A.8.
+-0000cd90: 4f00 2004 3e04 3104 3d04 3e04 3204 3b04  O. .>.1.=.>.2.;.
+-0000cda0: 3504 3d04 3000 3a00 2008 0000 0000 0600  5.=.0.:. .......
+-0000cdb0: 0000 1353 6573 7369 6f6e 2072 6566 7265  ...Session refre
+-0000cdc0: 7368 6564 3a20 0700 0000 0b53 6c69 7073  shed: .....Slips
+-0000cdd0: 5461 7841 5049 0103 0000 0018 0427 0435  TaxAPI.......'.5
+-0000cde0: 043a 0020 043d 0430 0439 0434 0435 043d  .:. .=.0.9.4.5.=
+-0000cdf0: 003a 0020 0800 0000 0006 0000 000c 536c  .:. ..........Sl
+-0000ce00: 6970 2066 6f75 6e64 3a20 0700 0000 0b53  ip found: .....S
+-0000ce10: 6c69 7073 5461 7841 5049 0103 0000 001c  lipsTaxAPI......
+-0000ce20: 0427 0435 043a 0020 0437 0430 0433 0440  .'.5.:. .7.0.3.@
+-0000ce30: 0443 0436 0435 043d 003a 0020 0800 0000  .C.6.5.=.:. ....
+-0000ce40: 0006 0000 000d 536c 6970 206c 6f61 6465  ......Slip loade
+-0000ce50: 643a 2007 0000 000b 536c 6970 7354 6178  d: .....SlipsTax
+-0000ce60: 4150 4901 0300 0000 3604 1d04 3504 3004  API.....6...5.0.
+-0000ce70: 3204 4204 3e04 4004 3804 3704 3e04 3204  2.B.>.@.8.7.>.2.
+-0000ce80: 3004 3d04 3e00 2004 3f04 3e00 2004 3f04  0.=.>. .?.>. .?.
+-0000ce90: 4004 3804 4704 3804 3d04 3500 3a00 2008  @.8.G.8.=.5.:. .
+-0000cea0: 0000 0000 0600 0000 1a55 6e61 7574 686f  .........Unautho
+-0000ceb0: 7269 7a65 6420 7769 7468 2072 6561 736f  rized with reaso
+-0000cec0: 6e3a 2007 0000 000b 536c 6970 7354 6178  n: .....SlipsTax
+-0000ced0: 4150 4901 0300 0000 1c04 2104 4704 5104  API.......!.G.Q.
+-0000cee0: 4200 2004 3d04 3500 2004 3204 4b04 3104  B. .=.5. .2.K.1.
+-0000cef0: 4004 3004 3d08 0000 0000 0600 0000 1441  @.0.=..........A
+-0000cf00: 6363 6f75 6e74 206e 6f74 2073 656c 6563  ccount not selec
+-0000cf10: 7465 6407 0000 0009 5374 6174 656d 656e  ted.....Statemen
+-0000cf20: 7401 0300 0000 3404 1404 3004 3d04 3d04  t.....4...0.=.=.
+-0000cf30: 4b04 3500 2004 3d04 3500 2004 3f04 4004  K.5. .=.5. .?.@.
+-0000cf40: 3804 3204 4f04 3704 3004 3d04 4b00 2004  8.2.O.7.0.=.K. .
+-0000cf50: 3a00 2004 2604 1100 3a00 2008 0000 0000  :. .&...:. .....
+-0000cf60: 0600 0000 2341 7373 6574 2064 6174 6120  ....#Asset data 
+-0000cf70: 6172 656e 2774 206c 696e 6b65 6420 746f  aren't linked to
+-0000cf80: 2061 7373 6574 3a20 0700 0000 0953 7461   asset: .....Sta
+-0000cf90: 7465 6d65 6e74 0103 0000 001e 0426 0411  tement.......&..
+-0000cfa0: 0020 0069 0064 0020 043d 0435 0020 043d  . .i.d. .=.5. .=
+-0000cfb0: 0430 0439 0434 0435 043d 0800 0000 0006  .0.9.4.5.=......
+-0000cfc0: 0000 0012 4173 7365 7420 6964 206e 6f74  ....Asset id not
+-0000cfd0: 2066 6f75 6e64 0700 0000 0953 7461 7465   found.....State
+-0000cfe0: 6d65 6e74 0103 0000 0032 041d 0435 0432  ment.....2...5.2
+-0000cff0: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
+-0000d000: 0441 043e 0437 0434 0430 0442 044c 0020  .A.>.7.4.0.B.L. 
+-0000d010: 0441 0447 0451 0442 003a 0020 0800 0000  .A.G.Q.B.:. ....
+-0000d020: 0006 0000 0016 4361 6e27 7420 6372 6561  ......Can't crea
+-0000d030: 7465 2061 6363 6f75 6e74 3a20 0700 0000  te account: ....
+-0000d040: 0953 7461 7465 6d65 6e74 0103 0000 002e  .Statement......
+-0000d050: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000d060: 043d 043e 0020 0441 043e 0437 0434 0430  .=.>. .A.>.7.4.0
+-0000d070: 0442 044c 0020 0426 0411 003a 0020 0800  .B.L. .&...:. ..
+-0000d080: 0000 0006 0000 0014 4361 6e27 7420 6372  ........Can't cr
+-0000d090: 6561 7465 2061 7373 6574 3a20 0700 0000  eate asset: ....
+-0000d0a0: 0953 7461 7465 6d65 6e74 0103 0000 003c  .Statement.....<
+-0000d0b0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000d0c0: 043d 043e 0020 043d 0430 0439 0442 0435  .=.>. .=.0.9.B.5
+-0000d0d0: 0020 0426 0411 0020 0432 0020 043e 0442  . .&... .2. .>.B
+-0000d0e0: 0447 0451 0442 0435 003a 0020 0800 0000  .G.Q.B.5.:. ....
+-0000d0f0: 0006 0000 0026 4361 6e27 7420 6c6f 6361  .....&Can't loca
+-0000d100: 7465 2061 7373 6574 2069 6e20 7374 6174  te asset in stat
+-0000d110: 656d 656e 7420 6461 7461 3a20 0700 0000  ement data: ....
+-0000d120: 0953 7461 7465 6d65 6e74 0103 0000 001a  .Statement......
+-0000d130: 041f 043e 0434 0442 0432 0435 0440 0436  ...>.4.B.2.5.@.6
+-0000d140: 0434 0435 043d 0438 0435 0800 0000 0006  .4.5.=.8.5......
+-0000d150: 0000 000c 436f 6e66 6972 6d61 7469 6f6e  ....Confirmation
+-0000d160: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
+-0000d170: 0000 0010 0414 0435 043f 043e 0437 0438  .......5.?.>.7.8
+-0000d180: 0442 0020 0800 0000 0006 0000 000b 4465  .B. ..........De
+-0000d190: 706f 7369 7420 6f66 2007 0000 0009 5374  posit of .....St
+-0000d1a0: 6174 656d 656e 7401 0300 0000 4804 1d04  atement.....H...
+-0000d1b0: 3504 3204 3e04 3704 3c04 3e04 3604 3d04  5.2.>.7.<.>.6.=.
+-0000d1c0: 3e00 2004 3f04 4004 3e04 4704 3804 4204  >. .?.@.>.G.8.B.
+-0000d1d0: 3004 4204 4c00 2000 4a00 5300 4f00 4e00  0.B.L. .J.S.O.N.
+-0000d1e0: 2004 3804 3700 2004 4404 3004 3904 3b04   .8.7. .D.0.9.;.
+-0000d1f0: 3000 3a00 2008 0000 0000 0600 0000 1f46  0.:. ..........F
+-0000d200: 6169 6c65 6420 746f 2072 6561 6420 4a53  ailed to read JS
+-0000d210: 4f4e 2066 726f 6d20 6669 6c65 3a20 0700  ON from file: ..
+-0000d220: 0000 0953 7461 7465 6d65 6e74 0103 0000  ...Statement....
+-0000d230: 0048 041d 0435 0020 0443 0434 0430 043b  .H...5. .C.4.0.;
+-0000d240: 043e 0441 044c 0020 043f 0440 043e 0447  .>.A.L. .?.@.>.G
+-0000d250: 0438 0442 0430 0442 044c 0020 0441 0445  .8.B.0.B.L. .A.E
+-0000d260: 0435 043c 0443 0020 004a 0053 004f 004e  .5.<.C. .J.S.O.N
+-0000d270: 0020 0438 0437 003a 0020 0800 0000 0006  . .8.7.:. ......
+-0000d280: 0000 0021 4661 696c 6564 2074 6f20 7265  ...!Failed to re
+-0000d290: 6164 204a 534f 4e20 7363 6865 6d61 2066  ad JSON schema f
+-0000d2a0: 726f 6d3a 2007 0000 0009 5374 6174 656d  rom: .....Statem
+-0000d2b0: 656e 7401 0300 0000 3404 1d04 3504 3204  ent.....4...5.2.
+-0000d2c0: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-0000d2d0: 3f04 4004 3e04 4704 3504 4104 4204 4c00  ?.@.>.G.5.A.B.L.
+-0000d2e0: 2004 4404 3004 3904 3b00 3a00 2008 0000   .D.0.9.;.:. ...
+-0000d2f0: 0000 0600 0000 1546 6169 6c65 6420 746f  .......Failed to
+-0000d300: 2072 6561 6420 6669 6c65 3a20 0700 0000   read file: ....
+-0000d310: 0953 7461 7465 6d65 6e74 0103 0000 0066  .Statement.....f
+-0000d320: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000d330: 043d 043e 0020 043a 043e 043d 0442 0432  .=.>. .:.>.=.B.2
+-0000d340: 0435 0440 0442 0438 0440 043e 0432 0430  .5.@.B.8.@.>.2.0
+-0000d350: 0442 044c 0020 0442 0438 043f 0020 0430  .B.L. .B.8.?. .0
+-0000d360: 043a 0442 0438 0432 0430 0020 0432 0020  .:.B.8.2.0. .2. 
+-0000d370: 0442 0440 0430 043d 0441 0444 0435 0440  .B.@.0.=.A.D.5.@
+-0000d380: 0435 003a 0020 0800 0000 0006 0000 002e  .5.:. ..........
+-0000d390: 496d 706f 7373 6962 6c65 2074 6f20 636f  Impossible to co
+-0000d3a0: 6e76 6572 7420 6173 7365 7420 7479 7065  nvert asset type
+-0000d3b0: 2069 6e20 7472 616e 7366 6572 3a20 0700   in transfer: ..
+-0000d3c0: 0000 0953 7461 7465 6d65 6e74 0103 0000  ...Statement....
+-0000d3d0: 0048 041d 0435 043e 0434 043d 043e 0437  .H...5.>.4.=.>.7
+-0000d3e0: 043d 0430 0447 043d 043e 0435 0020 0441  .=.0.G.=.>.5. .A
+-0000d3f0: 043e 0432 043f 0430 0434 0435 043d 0438  .>.2.?.0.4.5.=.8
+-0000d400: 0435 0020 0432 0430 043b 044e 0442 044b  .5. .2.0.;.N.B.K
+-0000d410: 0020 0434 043b 044f 0020 0800 0000 0006  . .4.;.O. ......
+-0000d420: 0000 001c 4d75 6c74 6970 6c65 2063 7572  ....Multiple cur
+-0000d430: 7265 6e63 7920 6d61 7463 6820 666f 7220  rency match for 
+-0000d440: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
+-0000d450: 0000 003a 041d 0435 043e 0434 043d 043e  ...:...5.>.4.=.>
+-0000d460: 0437 043d 0430 0447 043d 043e 0435 0020  .7.=.0.G.=.>.5. 
+-0000d470: 0441 043e 0432 043f 0430 0434 0435 043d  .A.>.2.?.0.4.5.=
+-0000d480: 0438 0435 0020 0434 043b 044f 0020 0800  .8.5. .4.;.O. ..
+-0000d490: 0000 0006 0000 0013 4d75 6c74 6970 6c65  ........Multiple
+-0000d4a0: 206d 6174 6368 2066 6f72 2007 0000 0009   match for .....
+-0000d4b0: 5374 6174 656d 656e 7401 0300 0000 3a04  Statement.....:.
+-0000d4c0: 1204 4b04 3104 3504 4004 3804 4204 3500  ..K.1.5.@.8.B.5.
+-0000d4d0: 2004 4104 4704 5104 4200 2004 3404 3b04   .A.G.Q.B. .4.;.
+-0000d4e0: 4f00 2004 3704 3004 4704 3804 4104 3b04  O. .7.0.G.8.A.;.
+-0000d4f0: 3504 3d04 3804 4f00 3a08 0000 0000 0600  5.=.8.O.:.......
+-0000d500: 0000 1d53 656c 6563 7420 6163 636f 756e  ...Select accoun
+-0000d510: 7420 746f 2064 6570 6f73 6974 2074 6f3a  t to deposit to:
+-0000d520: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
+-0000d530: 0000 0036 0412 044b 0431 0435 0440 0438  ...6...K.1.5.@.8
+-0000d540: 0442 0435 0020 0441 0447 0451 0442 0020  .B.5. .A.G.Q.B. 
+-0000d550: 0434 043b 044f 0020 0441 043f 0438 0441  .4.;.O. .A.?.8.A
+-0000d560: 0430 043d 0438 044f 003a 0800 0000 0006  .0.=.8.O.:......
+-0000d570: 0000 0020 5365 6c65 6374 2061 6363 6f75  ... Select accou
+-0000d580: 6e74 2074 6f20 7769 7468 6472 6177 2066  nt to withdraw f
+-0000d590: 726f 6d3a 0700 0000 0953 7461 7465 6d65  rom:.....Stateme
+-0000d5a0: 6e74 0103 0000 0048 041d 0435 043a 043e  nt.....H...5.:.>
+-0000d5b0: 0442 043e 0440 044b 0435 0020 0441 0435  .B.>.@.K.5. .A.5
+-0000d5c0: 043a 0446 0438 0438 0020 043d 0435 0020  .:.F.8.8. .=.5. 
+-0000d5d0: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
+-0000d5e0: 0432 0430 044e 0442 0441 044f 003a 0020  .2.0.N.B.A.O.:. 
+-0000d5f0: 0800 0000 0006 0000 0021 536f 6d65 2073  .........!Some s
+-0000d600: 6563 7469 6f6e 7320 6172 6520 6e6f 7420  ections are not 
+-0000d610: 7375 7070 6f72 7465 643a 2007 0000 0009  supported: .....
+-0000d620: 5374 6174 656d 656e 7401 0300 0000 2a04  Statement.....*.
+-0000d630: 1804 3c04 3f04 3e04 4004 4200 2004 3e04  ..<.?.>.@.B. .>.
+-0000d640: 4204 4704 5104 4204 3000 2004 3f04 4004  B.G.Q.B.0. .?.@.
+-0000d650: 3504 4004 3204 3004 3d08 0000 0000 0600  5.@.2.0.=.......
+-0000d660: 0000 1e53 7461 7465 6d65 6e74 2069 6d70  ...Statement imp
+-0000d670: 6f72 7420 7761 7320 6361 6e63 656c 6c65  ort was cancelle
+-0000d680: 6407 0000 0009 5374 6174 656d 656e 7401  d.....Statement.
+-0000d690: 0300 0000 2c04 1d04 3504 3204 3504 4004  ....,...5.2.5.@.
+-0000d6a0: 3d04 4b04 3900 2004 3f04 3504 4004 3804  =.K.9. .?.5.@.8.
+-0000d6b0: 3e04 3400 2004 3e04 4204 4704 5104 4204  >.4. .>.B.G.Q.B.
+-0000d6c0: 3008 0000 0000 0600 0000 1b53 7461 7465  0..........State
+-0000d6d0: 6d65 6e74 2070 6572 696f 6420 6973 2069  ment period is i
+-0000d6e0: 6e76 616c 6964 0700 0000 0953 7461 7465  nvalid.....State
+-0000d6f0: 6d65 6e74 0103 0000 00c6 041f 0435 0440  ment.........5.@
+-0000d700: 0438 043e 0434 0020 043e 0442 0447 0451  .8.>.4. .>.B.G.Q
+-0000d710: 0442 0430 0020 043d 0430 0447 0438 043d  .B.0. .=.0.G.8.=
+-0000d720: 0430 0435 0442 0441 044f 0020 0440 0430  .0.5.B.A.O. .@.0
+-0000d730: 043d 0435 0435 0020 043f 043e 0441 043b  .=.5.5. .?.>.A.;
+-0000d740: 0435 0434 043d 0435 0439 0020 043e 043f  .5.4.=.5.9. .>.?
+-0000d750: 0435 0440 0430 0446 0438 0438 0020 0434  .5.@.0.F.8.8. .4
+-0000d760: 043b 044f 0020 0441 0447 0451 0442 0430  .;.O. .A.G.Q.B.0
+-0000d770: 0020 0028 043f 043e 0432 0442 043e 0440  . .(.?.>.2.B.>.@
+-0000d780: 043d 044b 0439 0020 0438 043c 043f 043e  .=.K.9. .8.<.?.>
+-0000d790: 0440 0442 003f 0029 002e 0020 041f 0440  .@.B.?.)... ...@
+-0000d7a0: 043e 0434 043e 043b 0436 0438 0442 044c  .>.4.>.;.6.8.B.L
+-0000d7b0: 0020 0438 043c 043f 043e 0440 0442 003f  . .8.<.?.>.@.B.?
+-0000d7c0: 0800 0000 0006 0000 0058 5374 6174 656d  .........XStatem
+-0000d7d0: 656e 7420 7065 7269 6f64 2073 7461 7274  ent period start
+-0000d7e0: 7320 6265 666f 7265 206c 6173 7420 7265  s before last re
+-0000d7f0: 636f 7264 6564 206f 7065 7261 7469 6f6e  corded operation
+-0000d800: 2066 6f72 2074 6865 2061 6363 6f75 6e74   for the account
+-0000d810: 2e20 436f 6e74 696e 7565 2069 6d70 6f72  . Continue impor
+-0000d820: 743f 0700 0000 0953 7461 7465 6d65 6e74  t?.....Statement
+-0000d830: 0103 0000 002a 041e 0442 0447 0451 0442  .....*...B.G.Q.B
+-0000d840: 0020 0441 043e 0434 0435 0440 0436 0438  . .A.>.4.5.@.6.8
+-0000d850: 0442 0020 043e 0448 0438 0431 043a 0438  .B. .>.H.8.1.:.8
+-0000d860: 0800 0000 0006 0000 001b 5374 6174 656d  ..........Statem
+-0000d870: 656e 7420 7661 6c69 6461 7469 6f6e 2066  ent validation f
+-0000d880: 6169 6c65 6407 0000 0009 5374 6174 656d  ailed.....Statem
+-0000d890: 656e 7401 0300 0000 4004 2104 3804 3c04  ent.....@.!.8.<.
+-0000d8a0: 3204 3e04 3b00 2004 3204 3004 3b04 4e04  2.>.;. .2.0.;.N.
+-0000d8b0: 4204 4b00 2004 3d04 3500 2004 3f04 4004  B.K. .=.5. .?.@.
+-0000d8c0: 3804 3204 4f04 3704 3004 3d00 2004 3a00  8.2.O.7.0.=. .:.
+-0000d8d0: 2004 2604 1100 3a00 2008 0000 0000 0600   .&...:. .......
+-0000d8e0: 0000 2753 796d 626f 6c20 6375 7272 656e  ..'Symbol curren
+-0000d8f0: 6379 2069 736e 2774 206c 696e 6b65 6420  cy isn't linked 
+-0000d900: 746f 2061 7373 6574 3a20 0700 0000 0953  to asset: .....S
+-0000d910: 7461 7465 6d65 6e74 0103 0000 0032 0421  tatement.....2.!
+-0000d920: 0438 043c 0432 043e 043b 0020 043d 0435  .8.<.2.>.;. .=.5
+-0000d930: 0020 043f 0440 0438 0432 044f 0437 0430  . .?.@.8.2.O.7.0
+-0000d940: 043d 0020 043a 0020 0426 0411 003a 0020  .=. .:. .&...:. 
+-0000d950: 0800 0000 0006 0000 0025 5379 6d62 6f6c  .........%Symbol
+-0000d960: 2074 6963 6b65 7220 6973 6e27 7420 6c69   ticker isn't li
+-0000d970: 6e6b 6564 2074 6f20 6173 7365 743a 2007  nked to asset: .
+-0000d980: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
+-0000d990: 0000 7204 1d04 3504 3204 3e04 3704 3c04  ..r...5.2.>.7.<.
+-0000d9a0: 3e04 3604 3d04 3e00 2004 4104 3e04 3f04  >.6.=.>. .A.>.?.
+-0000d9b0: 3e04 4104 4204 3004 3204 3804 4204 4c00  >.A.B.0.2.8.B.L.
+-0000d9c0: 2004 4104 4704 5104 4200 2004 3404 3b04   .A.G.Q.B. .4.;.
+-0000d9d0: 4f00 2004 3a04 3e04 4004 3f04 3e04 4004  O. .:.>.@.?.>.@.
+-0000d9e0: 3004 4204 3804 3204 3d04 3e04 3304 3e00  0.B.8.2.=.>.3.>.
+-0000d9f0: 2004 3404 3504 3904 4104 4204 3204 3804   .4.5.9.A.B.2.8.
+-0000da00: 4f00 3a00 2008 0000 0000 0600 0000 2855  O.:. .........(U
+-0000da10: 6e6d 6174 6368 6564 2061 6363 6f75 6e74  nmatched account
+-0000da20: 2066 6f72 2063 6f72 706f 7261 7465 2061   for corporate a
+-0000da30: 6374 696f 6e3a 2007 0000 0009 5374 6174  ction: .....Stat
+-0000da40: 656d 656e 7401 0300 0000 7404 1d04 3504  ement.....t...5.
+-0000da50: 3204 3e04 3704 3c04 3e04 3604 3d04 3e00  2.>.7.<.>.6.=.>.
+-0000da60: 2004 4104 3e04 3f04 3e04 4104 4204 3004   .A.>.?.>.A.B.0.
+-0000da70: 3204 3804 4204 4c00 2004 4104 4704 5104  2.8.B.L. .A.G.Q.
+-0000da80: 4200 2004 3404 3b04 4f00 2004 3e04 3f04  B. .4.;.O. .>.?.
+-0000da90: 3504 4004 3004 4604 3804 3800 2004 3f04  5.@.0.F.8.8. .?.
+-0000daa0: 4004 3804 4504 3e04 3404 3000 2f04 4004  @.8.E.>.4.0./.@.
+-0000dab0: 3004 4104 4504 3e04 3404 3000 3a00 2008  0.A.E.>.4.0.:. .
+-0000dac0: 0000 0000 0600 0000 2755 6e6d 6174 6368  ........'Unmatch
+-0000dad0: 6564 2061 6363 6f75 6e74 2066 6f72 2069  ed account for i
+-0000dae0: 6e63 6f6d 652f 7370 656e 6469 6e67 3a20  ncome/spending: 
+-0000daf0: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
+-0000db00: 0000 0052 041d 0435 0432 043e 0437 043c  ...R...5.2.>.7.<
+-0000db10: 043e 0436 043d 043e 0020 0441 043e 043f  .>.6.=.>. .A.>.?
+-0000db20: 043e 0441 0442 0430 0432 0438 0442 044c  .>.A.B.0.2.8.B.L
+-0000db30: 0020 0441 0447 0451 0442 0020 0434 043b  . .A.G.Q.B. .4.;
+-0000db40: 044f 0020 0432 044b 043f 043b 0430 0442  .O. .2.K.?.;.0.B
+-0000db50: 044b 003a 0020 0800 0000 0006 0000 001f  .K.:. ..........
+-0000db60: 556e 6d61 7463 6865 6420 6163 636f 756e  Unmatched accoun
+-0000db70: 7420 666f 7220 7061 796d 656e 743a 2007  t for payment: .
+-0000db80: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
+-0000db90: 0000 5004 1d04 3504 3204 3e04 3704 3c04  ..P...5.2.>.7.<.
+-0000dba0: 3e04 3604 3d04 3e00 2004 4104 3e04 3f04  >.6.=.>. .A.>.?.
+-0000dbb0: 3e04 4104 4204 3004 3204 3804 4204 4c00  >.A.B.0.2.8.B.L.
+-0000dbc0: 2004 4104 4704 5104 4200 2004 3404 3b04   .A.G.Q.B. .4.;.
+-0000dbd0: 4f00 2004 4104 3404 3504 3b04 3a04 3800  O. .A.4.5.;.:.8.
+-0000dbe0: 3a00 2008 0000 0000 0600 0000 1d55 6e6d  :. ..........Unm
+-0000dbf0: 6174 6368 6564 2061 6363 6f75 6e74 2066  atched account f
+-0000dc00: 6f72 2074 7261 6465 3a20 0700 0000 0953  or trade: .....S
+-0000dc10: 7461 7465 6d65 6e74 0103 0000 0054 041d  tatement.....T..
+-0000dc20: 0435 0432 0437 043e 043c 043e 0436 043d  .5.2.7.>.<.>.6.=
+-0000dc30: 043e 0020 0441 043e 043f 043e 0441 0442  .>. .A.>.?.>.A.B
+-0000dc40: 0430 0432 0438 0442 044c 0020 0441 0447  .0.2.8.B.L. .A.G
+-0000dc50: 0451 0442 0020 0434 043b 044f 0020 043f  .Q.B. .4.;.O. .?
+-0000dc60: 0435 0440 0435 0432 043e 0434 0430 003a  .5.@.5.2.>.4.0.:
+-0000dc70: 0020 0800 0000 0006 0000 0020 556e 6d61  . ......... Unma
+-0000dc80: 7463 6865 6420 6163 636f 756e 7420 666f  tched account fo
+-0000dc90: 7220 7472 616e 7366 6572 3a20 0700 0000  r transfer: ....
+-0000dca0: 0953 7461 7465 6d65 6e74 0103 0000 006e  .Statement.....n
+-0000dcb0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000dcc0: 043d 043e 0020 0441 043e 043f 043e 0441  .=.>. .A.>.?.>.A
+-0000dcd0: 0442 0430 0432 0438 0442 044c 0020 0426  .B.0.2.8.B.L. .&
+-0000dce0: 0411 0020 0434 043b 044f 0020 043a 043e  ... .4.;.O. .:.>
+-0000dcf0: 0440 043f 043e 0440 0430 0442 0438 0432  .@.?.>.@.0.B.8.2
+-0000dd00: 043d 043e 0433 043e 0020 0434 0435 0439  .=.>.3.>. .4.5.9
+-0000dd10: 0441 0442 0432 0438 044f 003a 0020 0800  .A.B.2.8.O.:. ..
+-0000dd20: 0000 0006 0000 0026 556e 6d61 7463 6865  .......&Unmatche
+-0000dd30: 6420 6173 7365 7420 666f 7220 636f 7270  d asset for corp
+-0000dd40: 6f72 6174 6520 6163 7469 6f6e 3a20 0700  orate action: ..
+-0000dd50: 0000 0953 7461 7465 6d65 6e74 0103 0000  ...Statement....
+-0000dd60: 004e 041d 0435 0432 043e 0437 043c 043e  .N...5.2.>.7.<.>
+-0000dd70: 0436 043d 043e 0020 0441 043e 043f 043e  .6.=.>. .A.>.?.>
+-0000dd80: 0441 0442 0430 0432 0438 0442 044c 0020  .A.B.0.2.8.B.L. 
+-0000dd90: 0426 0411 0020 0434 043b 044f 0020 0432  .&... .4.;.O. .2
+-0000dda0: 044b 043f 043b 0430 0442 044b 003a 0020  .K.?.;.0.B.K.:. 
+-0000ddb0: 0800 0000 0006 0000 001d 556e 6d61 7463  ..........Unmatc
+-0000ddc0: 6865 6420 6173 7365 7420 666f 7220 7061  hed asset for pa
+-0000ddd0: 796d 656e 743a 2007 0000 0009 5374 6174  yment: .....Stat
+-0000dde0: 656d 656e 7401 0300 0000 4c04 1d04 3504  ement.....L...5.
+-0000ddf0: 3204 3e04 3704 3c04 3e04 3604 3d04 3e00  2.>.7.<.>.6.=.>.
+-0000de00: 2004 4104 3e04 3f04 3e04 4104 4204 3004   .A.>.?.>.A.B.0.
+-0000de10: 3204 3804 4204 4c00 2004 2604 1100 2004  2.8.B.L. .&... .
+-0000de20: 3404 3b04 4f00 2004 4104 3404 3504 3b04  4.;.O. .A.4.5.;.
+-0000de30: 3a04 3800 3a00 2008 0000 0000 0600 0000  :.8.:. .........
+-0000de40: 1b55 6e6d 6174 6368 6564 2061 7373 6574  .Unmatched asset
+-0000de50: 2066 6f72 2074 7261 6465 3a20 0700 0000   for trade: ....
+-0000de60: 0953 7461 7465 6d65 6e74 0103 0000 005e  .Statement.....^
+-0000de70: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000de80: 043d 043e 0020 0441 043e 043f 043e 0441  .=.>. .A.>.?.>.A
+-0000de90: 0442 0430 0432 0438 0442 044c 0020 0426  .B.0.2.8.B.L. .&
+-0000dea0: 0411 002f 0432 0430 043b 044e 0442 0443  .../.2.0.;.N.B.C
+-0000deb0: 0020 0434 043b 044f 0020 043f 0435 0440  . .4.;.O. .?.5.@
+-0000dec0: 0435 0432 043e 0434 0430 003a 0020 0800  .5.2.>.4.0.:. ..
+-0000ded0: 0000 0006 0000 001e 556e 6d61 7463 6865  ........Unmatche
+-0000dee0: 6420 6173 7365 7420 666f 7220 7472 616e  d asset for tran
+-0000def0: 7366 6572 3a20 0700 0000 0953 7461 7465  sfer: .....State
+-0000df00: 6d65 6e74 0103 0000 006c 041d 0435 0432  ment.....l...5.2
+-0000df10: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
+-0000df20: 0441 043e 043f 043e 0441 0442 0430 0432  .A.>.?.>.A.B.0.2
+-0000df30: 0438 0442 044c 0020 043a 0430 0442 0435  .8.B.L. .:.0.B.5
+-0000df40: 0433 043e 0440 0438 044e 0020 0434 043b  .3.>.@.8.N. .4.;
+-0000df50: 044f 0020 043f 0440 0438 0445 043e 0434  .O. .?.@.8.E.>.4
+-0000df60: 0430 002f 0440 0430 0441 0445 043e 0434  .0./.@.0.A.E.>.4
+-0000df70: 0430 003a 0020 0800 0000 0006 0000 0028  .0.:. .........(
+-0000df80: 556e 6d61 7463 6865 6420 6361 7465 676f  Unmatched catego
+-0000df90: 7279 2066 6f72 2069 6e63 6f6d 652f 7370  ry for income/sp
+-0000dfa0: 656e 6469 6e67 3a20 0700 0000 0953 7461  ending: .....Sta
+-0000dfb0: 7465 6d65 6e74 0103 0000 0050 041d 0435  tement.....P...5
+-0000dfc0: 0432 043e 0437 043c 043e 043d 043e 0020  .2.>.7.<.>.=.>. 
+-0000dfd0: 0441 043e 043f 043e 0441 0442 0430 0432  .A.>.?.>.A.B.0.2
+-0000dfe0: 0438 0442 044c 0020 0432 0430 043b 044e  .8.B.L. .2.0.;.N
+-0000dff0: 0442 0443 0020 0434 043b 044f 0020 0441  .B.C. .4.;.O. .A
+-0000e000: 0447 0451 0442 0430 003a 0020 0800 0000  .G.Q.B.0.:. ....
+-0000e010: 0006 0000 0020 556e 6d61 7463 6865 6420  ..... Unmatched 
+-0000e020: 6375 7272 656e 6379 2066 6f72 2061 6363  currency for acc
+-0000e030: 6f75 6e74 3a20 0700 0000 0953 7461 7465  ount: .....State
+-0000e040: 6d65 6e74 0103 0000 0082 041d 0435 0432  ment.........5.2
+-0000e050: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
+-0000e060: 0441 043e 043f 043e 0441 0442 0430 0432  .A.>.?.>.A.B.0.2
+-0000e070: 0438 0442 044c 0020 043a 043e 043d 0442  .8.B.L. .:.>.=.B
+-0000e080: 0440 0430 0433 0435 043d 0442 0430 0020  .@.0.3.5.=.B.0. 
+-0000e090: 0434 043b 044f 0020 043e 043f 0435 0440  .4.;.O. .>.?.5.@
+-0000e0a0: 0430 0446 0438 0438 0020 043f 0440 0438  .0.F.8.8. .?.@.8
+-0000e0b0: 0445 043e 0434 0430 002f 0440 0430 0441  .E.>.4.0./.@.0.A
+-0000e0c0: 0445 043e 0434 0430 003a 0020 0800 0000  .E.>.4.0.:. ....
+-0000e0d0: 0006 0000 0024 556e 6d61 7463 6865 6420  .....$Unmatched 
+-0000e0e0: 7065 6572 2066 6f72 2069 6e63 6f6d 652f  peer for income/
+-0000e0f0: 7370 656e 6469 6e67 3a20 0700 0000 0953  spending: .....S
+-0000e100: 7461 7465 6d65 6e74 0103 0000 0052 041d  tatement.....R..
+-0000e110: 0435 043f 043e 0434 0434 0435 0440 0436  .5.?.>.4.4.5.@.6
+-0000e120: 0438 0432 0430 0435 043c 043e 0435 0020  .8.2.0.5.<.>.5. 
+-0000e130: 043a 043e 0440 043f 043e 0440 0430 0442  .:.>.@.?.>.@.0.B
+-0000e140: 0438 0432 043d 043e 0435 0020 0434 0435  .8.2.=.>.5. .4.5
+-0000e150: 0439 0441 0442 0432 0438 0435 003a 0020  .9.A.B.2.8.5.:. 
+-0000e160: 0800 0000 0006 0000 001e 556e 7375 7070  ..........Unsupp
+-0000e170: 6f72 7465 6420 636f 7270 6f72 6174 6520  orted corporate 
+-0000e180: 6163 7469 6f6e 3a20 0700 0000 0953 7461  action: .....Sta
+-0000e190: 7465 6d65 6e74 0103 0000 003c 041d 0435  tement.....<...5
+-0000e1a0: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
+-0000e1b0: 0432 0430 0435 043c 044b 0439 0020 0442  .2.0.5.<.K.9. .B
+-0000e1c0: 0438 043f 0020 0432 044b 043f 043b 0430  .8.?. .2.K.?.;.0
+-0000e1d0: 0442 044b 003a 0020 0800 0000 0006 0000  .B.K.:. ........
+-0000e1e0: 001a 556e 7375 7070 6f72 7465 6420 7061  ..Unsupported pa
+-0000e1f0: 796d 656e 7420 7479 7065 3a20 0700 0000  yment type: ....
+-0000e200: 0953 7461 7465 6d65 6e74 0103 0000 0012  .Statement......
+-0000e210: 0421 043f 0438 0441 0430 043d 0438 0435  .!.?.8.A.0.=.8.5
+-0000e220: 0020 0800 0000 0006 0000 000e 5769 7468  . ..........With
+-0000e230: 6472 6177 616c 206f 6620 0700 0000 0953  drawal of .....S
+-0000e240: 7461 7465 6d65 6e74 0103 0000 0044 002a  tatement.....D.*
+-0000e250: 002a 002a 0020 041d 0415 041e 0411 0425  .*.*. .........%
+-0000e260: 041e 0414 0418 041c 0410 0020 0420 0423  ........... . .#
+-0000e270: 0427 041d 0410 042f 0020 041f 0420 041e  .'...../. ... ..
+-0000e280: 0412 0415 0420 041a 0410 0020 002a 002a  ..... ..... .*.*
+-0000e290: 002a 0800 0000 0006 0000 001d 2a2a 2a20  .*..........*** 
+-0000e2a0: 4d41 4e55 414c 2045 4e54 5259 2052 4551  MANUAL ENTRY REQ
+-0000e2b0: 5549 5245 4420 2a2a 2a07 0000 000d 5374  UIRED ***.....St
+-0000e2c0: 6174 656d 656e 7449 424b 5201 0300 0000  atementIBKR.....
+-0000e2d0: 3404 2204 3804 3f00 2004 2604 1100 2004  4.".8.?. .&... .
+-0000e2e0: 3d04 3500 2004 3f04 3e04 3404 3404 3504  =.5. .?.>.4.4.5.
+-0000e2f0: 4004 3604 3804 3204 3004 3504 4204 4104  @.6.8.2.0.5.B.A.
+-0000e300: 4f00 3a00 2008 0000 0000 0600 0000 1c41  O.:. ..........A
+-0000e310: 7373 6574 2074 7970 6520 6973 6e27 7420  sset type isn't 
+-0000e320: 7375 7070 6f72 7465 643a 2007 0000 000d  supported: .....
+-0000e330: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
+-0000e340: 0000 4804 1d04 3504 3204 3e04 3704 3c04  ..H...5.2.>.7.<.
+-0000e350: 3e04 3604 3d04 3e00 2004 3d04 3004 3904  >.6.=.>. .=.0.9.
+-0000e360: 4204 3800 2004 3f04 3b04 3004 4204 5104  B.8. .?.;.0.B.Q.
+-0000e370: 3600 2004 3404 3b04 4f00 2004 3e04 4204  6. .4.;.O. .>.B.
+-0000e380: 3c04 3504 3d04 4b00 3a00 2008 0000 0000  <.5.=.K.:. .....
+-0000e390: 0600 0000 1f43 616e 2774 2066 696e 6420  .....Can't find 
+-0000e3a0: 6d61 7463 6820 666f 7220 7265 7665 7273  match for revers
+-0000e3b0: 616c 3a20 0700 0000 0d53 7461 7465 6d65  al: .....Stateme
+-0000e3c0: 6e74 4942 4b52 0103 0000 0046 041d 0435  ntIBKR.....F...5
+-0000e3d0: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
+-0000e3e0: 0020 043d 0430 0439 0442 0438 0020 043f  . .=.0.9.B.8. .?
+-0000e3f0: 0430 0440 043d 0443 044e 0020 0437 0430  .0.@.=.C.N. .7.0
+-0000e400: 043f 0438 0441 044c 0020 0434 043b 044f  .?.8.A.L. .4.;.O
+-0000e410: 0020 0800 0000 0006 0000 001d 4361 6e27  . ..........Can'
+-0000e420: 7420 6669 6e64 2070 6169 7265 6420 7265  t find paired re
+-0000e430: 636f 7264 2066 6f72 2007 0000 000d 5374  cord for .....St
+-0000e440: 6174 656d 656e 7449 424b 5201 0300 0000  atementIBKR.....
+-0000e450: 4e04 1d04 3504 3204 3e04 3c04 3e04 3604  N...5.2.>.<.>.6.
+-0000e460: 3d04 3e00 2004 3e04 3f04 4004 3504 3404  =.>. .>.?.@.5.4.
+-0000e470: 3504 3b04 3804 4204 4c00 2004 3204 3004  5.;.8.B.L. .2.0.
+-0000e480: 3b04 4e04 4204 4300 2004 3404 3b04 4f00  ;.N.B.C. .4.;.O.
+-0000e490: 2004 4104 4704 5104 4204 3000 3a00 2008   .A.G.Q.B.0.:. .
+-0000e4a0: 0000 0000 0600 0000 2843 616e 2774 2067  ........(Can't g
+-0000e4b0: 6574 2061 6363 6f75 6e74 2063 7572 7265  et account curre
+-0000e4c0: 6e63 7920 666f 7220 6163 636f 756e 743a  ncy for account:
+-0000e4d0: 2007 0000 000d 5374 6174 656d 656e 7449   .....StatementI
+-0000e4e0: 424b 5201 0300 0000 7004 1d04 3504 3204  BKR.....p...5.2.
+-0000e4f0: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-0000e500: 3e04 3f04 4004 3504 3404 3504 3b04 3804  >.?.@.5.4.5.;.8.
+-0000e510: 4204 4c00 2004 3204 3004 3b04 4e04 4204  B.L. .2.0.;.N.B.
+-0000e520: 4b00 2004 3404 3b04 4f00 2004 3e04 3f04  K. .4.;.O. .>.?.
+-0000e530: 3504 4004 3004 4604 3804 3800 2004 3e04  5.@.0.F.8.8. .>.
+-0000e540: 3104 3c04 3504 3d04 3000 2004 3204 3004  1.<.5.=.0. .2.0.
+-0000e550: 3b04 4e04 4200 3a00 2008 0000 0000 0600  ;.N.B.:. .......
+-0000e560: 0000 2c43 616e 2774 2067 6574 2063 7572  ..,Can't get cur
+-0000e570: 7265 6e63 6965 7320 666f 7220 6375 7272  rencies for curr
+-0000e580: 656e 6379 2065 7863 6861 6e67 653a 2007  ency exchange: .
+-0000e590: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000e5a0: 5201 0300 0000 6804 1d04 3504 3204 3e04  R.....h...5.2.>.
+-0000e5b0: 3704 3c04 3e04 3604 3d04 3e00 2004 4004  7.<.>.6.=.>. .@.
+-0000e5c0: 3004 4104 3f04 3e04 3704 3d04 3004 4204  0.A.?.>.7.=.0.B.
+-0000e5d0: 4c00 2004 3e04 3f04 3804 4104 3004 3d04  L. .>.?.8.A.0.=.
+-0000e5e0: 3804 3500 2004 1e04 3104 4a04 3504 3404  8.5. ...1.J.5.4.
+-0000e5f0: 3804 3d04 3504 3d04 3804 4f00 2004 3a04  8.=.5.=.8.O. .:.
+-0000e600: 3e04 3c04 3f04 3004 3d04 3804 3900 2008  >.<.?.0.=.8.9. .
+-0000e610: 0000 0000 0600 0000 1f43 616e 2774 2070  .........Can't p
+-0000e620: 6172 7365 204d 6572 6765 7220 6465 7363  arse Merger desc
+-0000e630: 7269 7074 696f 6e20 0700 0000 0d53 7461  ription .....Sta
+-0000e640: 7465 6d65 6e74 4942 4b52 0103 0000 0064  tementIBKR.....d
+-0000e650: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000e660: 043d 043e 0020 0440 0430 0441 043f 043e  .=.>. .@.0.A.?.>
+-0000e670: 0437 043d 0430 0442 044c 0020 043e 043f  .7.=.0.B.L. .>.?
+-0000e680: 0438 0441 0430 043d 0438 0435 0020 0412  .8.A.0.=.8.5. ..
+-0000e690: 044b 0434 0435 043b 0435 043d 0438 044f  .K.4.5.;.5.=.8.O
+-0000e6a0: 0020 043a 043e 043c 043f 0430 043d 0438  . .:.>.<.?.0.=.8
+-0000e6b0: 0438 0020 0800 0000 0006 0000 0021 4361  .8. .........!Ca
+-0000e6c0: 6e27 7420 7061 7273 6520 5370 696e 2d6f  n't parse Spin-o
+-0000e6d0: 6666 2064 6573 6372 6970 7469 6f6e 2007  ff description .
+-0000e6e0: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000e6f0: 5201 0300 0000 4c04 1d04 3504 3204 3e04  R.....L...5.2.>.
+-0000e700: 3704 3c04 3e04 3604 3d04 3e00 2004 4004  7.<.>.6.=.>. .@.
+-0000e710: 3004 4104 3f04 3e04 3704 3d04 3004 4204  0.A.?.>.7.=.0.B.
+-0000e720: 4c00 2004 3e04 3f04 3804 4104 3004 3d04  L. .>.?.8.A.0.=.
+-0000e730: 3804 3500 2004 2104 3f04 3b04 3804 4204  8.5. .!.?.;.8.B.
+-0000e740: 3000 2008 0000 0000 0600 0000 1e43 616e  0. ..........Can
+-0000e750: 2774 2070 6172 7365 2053 706c 6974 2064  't parse Split d
+-0000e760: 6573 6372 6970 7469 6f6e 2007 0000 000d  escription .....
+-0000e770: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
+-0000e780: 0000 6204 1d04 3504 3204 3e04 3704 3c04  ..b...5.2.>.7.<.
+-0000e790: 3e04 3604 3d04 3e00 2004 4004 3004 4104  >.6.=.>. .@.0.A.
+-0000e7a0: 3f04 3e04 3704 3d04 3004 4204 4c00 2004  ?.>.7.=.0.B.L. .
+-0000e7b0: 3e04 3f04 3804 4104 3004 3d04 3804 3500  >.?.8.A.0.=.8.5.
+-0000e7c0: 2004 1404 3804 3204 3804 3404 3504 3d04   ...8.2.8.4.5.=.
+-0000e7d0: 3404 3000 2004 3004 3a04 4604 3804 4f04  4.0. .0.:.F.8.O.
+-0000e7e0: 3c04 3800 2008 0000 0000 0600 0000 2743  <.8. .........'C
+-0000e7f0: 616e 2774 2070 6172 7365 2053 746f 636b  an't parse Stock
+-0000e800: 2044 6976 6964 656e 6420 6465 7363 7269   Dividend descri
+-0000e810: 7074 696f 6e20 0700 0000 0d53 7461 7465  ption .....State
+-0000e820: 6d65 6e74 4942 4b52 0103 0000 005a 041d  mentIBKR.....Z..
+-0000e830: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
+-0000e840: 043e 0020 0440 0430 0441 043f 043e 0437  .>. .@.0.A.?.>.7
+-0000e850: 043d 0430 0442 044c 0020 043e 043f 0438  .=.0.B.L. .>.?.8
+-0000e860: 0441 0430 043d 0438 0435 0020 0421 043c  .A.0.=.8.5. .!.<
+-0000e870: 0435 043d 044b 0020 0441 0438 043c 0432  .5.=.K. .A.8.<.2
+-0000e880: 043e 043b 0430 0020 0800 0000 0006 0000  .>.;.0. ........
+-0000e890: 0026 4361 6e27 7420 7061 7273 6520 5379  .&Can't parse Sy
+-0000e8a0: 6d62 6f6c 2043 6861 6e67 6520 6465 7363  mbol Change desc
+-0000e8b0: 7269 7074 696f 6e20 0700 0000 0d53 7461  ription .....Sta
+-0000e8c0: 7465 6d65 6e74 4942 4b52 0103 0000 006e  tementIBKR.....n
+-0000e8d0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-0000e8e0: 043d 043e 0020 043e 0431 0440 0430 0431  .=.>. .>.1.@.0.1
+-0000e8f0: 043e 0442 0430 0442 044c 0020 043e 0442  .>.B.0.B.L. .>.B
+-0000e900: 043c 0435 043d 0451 043d 043d 043e 0435  .<.5.=.Q.=.=.>.5
+-0000e910: 0020 043a 043e 0440 043f 043e 0440 0430  . .:.>.@.?.>.@.0
+-0000e920: 0442 0438 0432 043d 043e 0435 0020 0434  .B.8.2.=.>.5. .4
+-0000e930: 0435 0439 0441 0442 0432 0438 0435 0800  .5.9.A.B.2.8.5..
+-0000e940: 0000 0006 0000 0028 4361 6e27 7420 7072  .......(Can't pr
+-0000e950: 6f63 6573 7320 6361 6e63 656c 6c65 6420  ocess cancelled 
+-0000e960: 636f 7270 6f72 6174 6520 6163 7469 6f6e  corporate action
+-0000e970: 0700 0000 0d53 7461 7465 6d65 6e74 4942  .....StatementIB
+-0000e980: 4b52 0103 0000 003e 0414 0435 043d 0435  KR.....>...5.=.5
+-0000e990: 0436 043d 044b 0435 0020 0442 0440 0430  .6.=.K.5. .B.@.0
+-0000e9a0: 043d 0437 0430 043a 0446 0438 0438 0020  .=.7.0.:.F.8.8. 
+-0000e9b0: 0437 0430 0433 0440 0443 0436 0435 043d  .7.0.3.@.C.6.5.=
+-0000e9c0: 044b 003a 0020 0800 0000 0006 0000 001a  .K.:. ..........
+-0000e9d0: 4361 7368 2074 7261 6e73 6163 7469 6f6e  Cash transaction
+-0000e9e0: 7320 6c6f 6164 6564 3a20 0700 0000 0d53  s loaded: .....S
+-0000e9f0: 7461 7465 6d65 6e74 4942 4b52 0103 0000  tatementIBKR....
+-0000ea00: 006a 041a 043e 0440 043f 043e 0440 0430  .j...>.@.?.>.@.0
+-0000ea10: 0442 0438 0432 043d 043e 0435 0020 0441  .B.8.2.=.>.5. .A
+-0000ea20: 043e 0431 044b 0442 0438 0435 0020 043d  .>.1.K.B.8.5. .=
+-0000ea30: 0435 0020 043f 043e 0434 0434 0435 0440  .5. .?.>.4.4.5.@
+-0000ea40: 0436 0438 0432 0430 0435 0442 0441 044f  .6.8.2.0.5.B.A.O
+-0000ea50: 0020 0434 043b 044f 0020 0442 0438 043f  . .4.;.O. .B.8.?
+-0000ea60: 0430 0020 0426 0411 003a 0020 0800 0000  .0. .&...:. ....
+-0000ea70: 0006 0000 0031 436f 7270 6f72 6174 6520  .....1Corporate 
+-0000ea80: 6163 7469 6f6e 2069 736e 2774 2073 7570  action isn't sup
+-0000ea90: 706f 7274 6564 2066 6f72 2061 7373 6574  ported for asset
+-0000eaa0: 2074 7970 653a 2007 0000 000d 5374 6174   type: .....Stat
+-0000eab0: 656d 656e 7449 424b 5201 0300 0000 5e04  ementIBKR.....^.
+-0000eac0: 2204 3804 3f00 2004 3a04 3e04 4004 3f04  ".8.?. .:.>.@.?.
+-0000ead0: 3e04 4004 3004 4204 3804 3204 3d04 3e04  >.@.0.B.8.2.=.>.
+-0000eae0: 3304 3e00 2004 3404 3504 3904 4104 4204  3.>. .4.5.9.A.B.
+-0000eaf0: 3204 3804 4f00 2004 3d04 3500 2004 3f04  2.8.O. .=.5. .?.
+-0000eb00: 3e04 3404 3404 3504 4004 3604 3804 3204  >.4.4.5.@.6.8.2.
+-0000eb10: 3004 3504 4204 4104 4f00 3a00 2008 0000  0.5.B.A.O.:. ...
+-0000eb20: 0000 0600 0000 2843 6f72 706f 7261 7465  ......(Corporate
+-0000eb30: 2061 6374 696f 6e20 7479 7065 2069 7320   action type is 
+-0000eb40: 6e6f 7420 7375 7070 6f72 7465 643a 2007  not supported: .
+-0000eb50: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000eb60: 5201 0300 0000 4404 1a04 3e04 4004 3f04  R.....D...>.@.?.
+-0000eb70: 3e04 4004 3004 4204 3804 3204 3d04 4b04  >.@.0.B.8.2.=.K.
+-0000eb80: 3500 2004 3404 3504 3904 4104 4204 3204  5. .4.5.9.A.B.2.
+-0000eb90: 3804 4f00 2004 3704 3004 3304 4004 4304  8.O. .7.0.3.@.C.
+-0000eba0: 3604 3504 3d04 4b00 3a00 2008 0000 0000  6.5.=.K.:. .....
+-0000ebb0: 0600 0000 1a43 6f72 706f 7261 7465 2061  .....Corporate a
+-0000ebc0: 6374 696f 6e73 206c 6f61 6465 643a 2007  ctions loaded: .
+-0000ebd0: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000ebe0: 5201 0300 0000 5604 1404 3804 3204 3804  R.....V...8.2.8.
+-0000ebf0: 3404 3504 3d04 3400 2004 3d04 3500 2004  4.5.=.4. .=.5. .
+-0000ec00: 3d04 3004 3904 3404 3504 3d00 2004 3404  =.0.9.4.5.=. .4.
+-0000ec10: 3b04 4f00 2004 4304 3404 3504 4004 3604  ;.O. .C.4.5.@.6.
+-0000ec20: 3004 3d04 3d04 3e04 3304 3e00 2004 3d04  0.=.=.>.3.>. .=.
+-0000ec30: 3004 3b04 3e04 3304 3000 3a00 2008 0000  0.;.>.3.0.:. ...
+-0000ec40: 0000 0600 0000 2844 6976 6964 656e 6420  ......(Dividend 
+-0000ec50: 6e6f 7420 666f 756e 6420 666f 7220 7769  not found for wi
+-0000ec60: 7468 686f 6c64 696e 6720 7461 783a 2007  thholding tax: .
+-0000ec70: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000ec80: 5201 0300 0000 2e00 4900 4200 4b00 5200  R.......I.B.K.R.
+-0000ec90: 2000 6600 6c00 6500 7800 2d04 3e04 4204   .f.l.e.x.-.>.B.
+-0000eca0: 4704 5104 4200 2000 2800 2a00 2e00 7800  G.Q.B. .(.*...x.
+-0000ecb0: 6d00 6c00 2908 0000 0000 0600 0000 1749  m.l.)..........I
+-0000ecc0: 424b 5220 666c 6578 2d71 7565 7279 2028  BKR flex-query (
+-0000ecd0: 2a2e 786d 6c29 0700 0000 0d53 7461 7465  *.xml).....State
+-0000ece0: 6d65 6e74 4942 4b52 0103 0000 0026 0049  mentIBKR.....&.I
+-0000ecf0: 006e 0074 0065 0072 0061 0063 0074 0069  .n.t.e.r.a.c.t.i
+-0000ed00: 0076 0065 0020 0042 0072 006f 006b 0065  .v.e. .B.r.o.k.e
+-0000ed10: 0072 0073 0800 0000 0006 0000 0013 496e  .r.s..........In
+-0000ed20: 7465 7261 6374 6976 6520 4272 6f6b 6572  teractive Broker
+-0000ed30: 7307 0000 000d 5374 6174 656d 656e 7449  s.....StatementI
+-0000ed40: 424b 5201 0300 0000 5604 2204 3804 3f00  BKR.....V.".8.?.
+-0000ed50: 2004 3e04 4204 4704 5104 4204 3000 2000   .>.B.G.Q.B.0. .
+-0000ed60: 4900 6e00 7400 6500 7200 6100 6300 7400  I.n.t.e.r.a.c.t.
+-0000ed70: 6900 7600 6500 2000 4200 7200 6f00 6b00  i.v.e. .B.r.o.k.
+-0000ed80: 6500 7200 7300 2004 3d04 3500 2004 3e04  e.r.s. .=.5. .>.
+-0000ed90: 3f04 4004 3504 3404 3504 3b04 5104 3d08  ?.@.5.4.5.;.Q.=.
+-0000eda0: 0000 0000 0600 0000 2949 6e74 6572 6163  ........)Interac
+-0000edb0: 7469 7665 2042 726f 6b65 7273 2072 6570  tive Brokers rep
+-0000edc0: 6f72 7420 7479 7065 206e 6f74 2066 6f75  ort type not fou
+-0000edd0: 6e64 0700 0000 0d53 7461 7465 6d65 6e74  nd.....Statement
+-0000ede0: 4942 4b52 0103 0000 003a 0417 0430 0433  IBKR.....:...0.3
+-0000edf0: 0440 0443 0437 043a 0430 0020 043e 0442  .@.C.7.:.0. .>.B
+-0000ee00: 0447 0451 0442 0430 0020 0049 0042 0020  .G.Q.B.0. .I.B. 
+-0000ee10: 0434 043b 044f 0020 0441 0447 0451 0442  .4.;.O. .A.G.Q.B
+-0000ee20: 0430 0020 0800 0000 0006 0000 0023 4c6f  .0. .........#Lo
+-0000ee30: 6164 2049 4220 466c 6578 2d73 7461 7465  ad IB Flex-state
+-0000ee40: 6d65 6e74 2066 6f72 2061 6363 6f75 6e74  ment for account
+-0000ee50: 2007 0000 000d 5374 6174 656d 656e 7449   .....StatementI
+-0000ee60: 424b 5201 0300 0000 5804 1d04 3504 3404  BKR.....X...5.4.
+-0000ee70: 3e04 4104 4204 3004 4204 3e04 4704 3d04  >.A.B.0.B.>.G.=.
+-0000ee80: 3e00 2004 3404 3004 3d04 3d04 4b04 4500  >. .4.0.=.=.K.E.
+-0000ee90: 2004 3e04 3100 2004 1e04 3104 4a04 3504   .>.1. ...1.J.5.
+-0000eea0: 3404 3804 3d04 3504 3d04 3804 3800 2004  4.8.=.5.=.8.8. .
+-0000eeb0: 3a04 3e04 3c04 3f04 3004 3d04 3804 3900  :.>.<.?.0.=.8.9.
+-0000eec0: 2008 0000 0000 0600 0000 224d 6572 6765   ........."Merge
+-0000eed0: 7220 6465 7363 7269 7074 696f 6e20 6d69  r description mi
+-0000eee0: 7373 2073 6f6d 6520 6461 7461 2007 0000  ss some data ...
+-0000eef0: 000d 5374 6174 656d 656e 7449 424b 5201  ..StatementIBKR.
+-0000ef00: 0300 0000 5e04 1d04 3504 3e04 3404 3d04  ....^...5.>.4.=.
+-0000ef10: 3e04 3704 3d04 3004 4704 3d04 3e04 3500  >.7.=.0.G.=.>.5.
+-0000ef20: 2004 4104 3e04 3204 3f04 3004 3404 3504   .A.>.2.?.0.4.5.
+-0000ef30: 3d04 3804 3500 2004 4104 3e04 3104 4b04  =.8.5. .A.>.1.K.
+-0000ef40: 4204 3804 3900 2004 4004 3504 3e04 4004  B.8.9. .@.5.>.@.
+-0000ef50: 3304 3004 3d04 3804 3704 3004 4604 3804  3.0.=.8.7.0.F.8.
+-0000ef60: 3800 2008 0000 0000 0600 0000 294d 756c  8. .........)Mul
+-0000ef70: 7469 706c 6520 6d65 7267 6572 2072 6563  tiple merger rec
+-0000ef80: 6f72 6473 2061 6c72 6561 6479 2065 7869  ords already exi
+-0000ef90: 7374 2061 7420 0700 0000 0d53 7461 7465  st at .....State
+-0000efa0: 6d65 6e74 4942 4b52 0103 0000 0052 0414  mentIBKR.....R..
+-0000efb0: 0435 0439 0441 0442 0432 0438 0435 0020  .5.9.A.B.2.8.5. 
+-0000efc0: 043d 0435 0020 043f 043e 0434 0434 0435  .=.5. .?.>.4.4.5
+-0000efd0: 0440 0436 0438 0432 0430 0435 0442 0441  .@.6.8.2.0.5.B.A
+-0000efe0: 044f 0020 0434 043b 044f 0020 043e 043f  .O. .4.;.O. .>.?
+-0000eff0: 0446 0438 043e 043d 043e 0432 003a 0020  .F.8.>.=.>.2.:. 
+-0000f000: 0800 0000 0006 0000 0027 4f70 7469 6f6e  .........'Option
+-0000f010: 2045 2641 2645 2061 6374 696f 6e20 6973   E&A&E action is
+-0000f020: 6e27 7420 696d 706c 656d 656e 7465 643a  n't implemented:
+-0000f030: 2007 0000 000d 5374 6174 656d 656e 7449   .....StatementI
+-0000f040: 424b 5201 0300 0000 3a04 1804 4104 3f04  BKR.....:...A.?.
+-0000f050: 3e04 3b04 3d04 3504 3d04 3804 3500 2004  >.;.=.5.=.8.5. .
+-0000f060: 3f04 4004 3e04 3404 3004 3d04 3d04 3e04  ?.@.>.4.0.=.=.>.
+-0000f070: 3304 3e00 2004 3e04 3f04 4604 3804 3e04  3.>. .>.?.F.8.>.
+-0000f080: 3d04 3008 0000 0000 0600 0000 114f 7074  =.0..........Opt
+-0000f090: 696f 6e20 6173 7369 676e 6d65 6e74 0700  ion assignment..
+-0000f0a0: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
+-0000f0b0: 0103 0000 003a 0418 0441 043f 043e 043b  .....:...A.?.>.;
+-0000f0c0: 043d 0435 043d 0438 0435 002f 044d 043a  .=.5.=.8.5./.M.:
++00000900: da9c f300 005a d303 ec0c f700 003c e903  .....Z.......<..
++00000910: f69b 8000 00c5 1004 0029 e000 0121 9904  .........)...!..
++00000920: 09f4 0a00 00ba 8804 11d2 4900 000c a304  ..........I.....
++00000930: 11d2 a900 0057 3004 1263 4400 00b4 f004  .....W0..cD.....
++00000940: 1564 8e00 0028 8604 15b4 7000 0135 7904  .d...(....p..5y.
++00000950: 195c b000 0114 b704 2e61 f000 0072 6904  .\.......a...ri.
++00000960: 449a c000 0128 8004 62c1 c000 00fc 4104  D....(..b.....A.
++00000970: 66ac 6500 0133 2a04 7914 8000 00cf 5604  f.e..3*.y.....V.
++00000980: 7d16 7000 006e 4304 846c 5400 002a 5a04  }.p..nC..lT..*Z.
++00000990: 846c 5400 0081 d704 846c 5400 0088 0e04  .lT......lT.....
++000009a0: 846c 5400 0131 3d04 8a9c b300 0009 4004  .lT..1=.......@.
++000009b0: 8a9c b300 0091 e604 8c2d c700 0064 c104  .........-...d..
++000009c0: 8c2d c700 007b 6c04 8e23 4000 0000 c004  .-...{l..#@.....
++000009d0: 8e23 4000 001f 0f04 8e23 4000 0055 3604  .#@......#@..U6.
++000009e0: 983c 8100 0045 bf04 9849 bc00 0007 6104  .<...E...I....a.
++000009f0: 9e16 8200 00ff 2904 9e84 d500 0092 4104  ......).......A.
++00000a00: a577 1f00 0066 7404 a5e2 3000 0098 ac04  .w...ft...0.....
++00000a10: ac2c a500 0084 f204 ac2c a500 00a3 bc04  .,.......,......
++00000a20: bebd 0000 00a7 3704 c840 f000 00e6 f804  ......7..@......
++00000a30: c840 f000 00ea 3304 c840 f000 010b f004  .@....3..@......
++00000a40: cc5c 9400 0027 7a04 cf4d c200 00f5 a304  .\...'z..M......
++00000a50: d7d5 4000 00c9 a504 dd34 9000 0014 eb04  ..@......4......
++00000a60: ee54 4000 0109 5804 f6d3 c900 00d1 db05  .T@...X.........
++00000a70: 079c 7300 011e b905 161e a000 00b4 7b05  ..s...........{.
++00000a80: 2caa 5000 00b2 d905 2cde 2300 00a4 5005  ,.P.....,.#...P.
++00000a90: 304c 6a00 0048 c405 33ee 2500 0014 7e05  0Lj..H..3.%...~.
++00000aa0: 33ee 2500 0036 2005 3c8d c200 0017 9d05  3.%..6 .<.......
++00000ab0: 3c8d c200 001d b305 3d7b 7000 00e6 9305  <.......={p.....
++00000ac0: 3d7b 7000 00e9 ce05 3d7b 7000 0101 0a05  ={p.....={p.....
++00000ad0: 3d7b 7000 010b 0d05 49ee 8900 0067 ad05  ={p.....I....g..
++00000ae0: 4e5b d400 0113 af05 5305 de00 0075 9305  N[......S....u..
++00000af0: 5316 ce00 0074 7205 633f 7000 00e2 8105  S....tr.c?p.....
++00000b00: 6945 5000 00c3 c405 6bc4 2700 008a 2405  iEP.....k.'...$.
++00000b10: 6bcd a500 00b0 a405 6c90 5400 0095 6c05  k.......l.T...l.
++00000b20: 6ccc 4300 004a 9e05 6edf f400 008c e005  l.C..J..n.......
++00000b30: 6fe5 c000 00f0 bf05 802f 5e00 00af d805  o......../^.....
++00000b40: 812d 6000 00fe cc05 88a7 e000 011c 9e05  .-`.............
++00000b50: 88a8 c000 004c f305 8c6a c300 009e 7c05  .....L...j....|.
++00000b60: 8c6a c300 0115 f805 8cbc 8e00 004a 6805  .j...........Jh.
++00000b70: 98ab 6e00 008d 2205 9ca9 f100 0038 4505  ..n..."......8E.
++00000b80: 9dfd c000 00a6 b705 9e88 c300 0091 5e05  ..............^.
++00000b90: a661 8700 004d 2805 a661 8700 0050 9505  .a...M(..a...P..
++00000ba0: a661 8700 0051 3f05 a7f1 8700 0054 0d05  .a...Q?......T..
++00000bb0: adfb 2800 009f 8905 b039 5c00 000a a705  ..(......9\.....
++00000bc0: b039 5c00 0116 3505 b093 0000 00c5 9e05  .9\...5.........
++00000bd0: b247 c400 009a d305 c068 c000 0008 d305  .G.......h......
++00000be0: c1f8 2200 008c 8505 ced0 2500 00d6 8005  ..".......%.....
++00000bf0: d5fa e400 007f 5a05 d5fa e400 0126 e005  ......Z......&..
++00000c00: da03 6e00 005c b405 dce3 0000 00ce dc05  ..n..\..........
++00000c10: dce3 0000 00fe 5305 dde3 7900 005f cd05  ......S...y.._..
++00000c20: e1ed 8400 00bb e905 ecff 1900 00e9 0905  ................
++00000c30: f264 ba00 0046 5f05 f662 ea00 00ba 1305  .d...F_..b......
++00000c40: facb 8300 008f c806 0826 4000 00d4 5906  .........&@...Y.
++00000c50: 08e3 9400 007a 8406 0ab9 9000 00df 8106  .....z..........
++00000c60: 129d e000 00dc 4206 148d a400 0021 0306  ......B......!..
++00000c70: 1867 1e00 0098 f606 215f 7400 0062 0306  .g......!_t..b..
++00000c80: 2b00 1300 0037 2906 2b00 1300 0037 b906  +....7).+....7..
++00000c90: 2b00 1300 0039 3606 34af 4a00 0009 0306  +....96.4.J.....
++00000ca0: 3500 0f00 006a fe06 3c17 4000 00d9 9a06  5....j..<.@.....
++00000cb0: 3c17 4000 00e5 5606 3c17 4000 00f7 8c06  <.@...V.<.@.....
++00000cc0: 3c17 4000 0110 d906 3cee 8400 00aa c306  <.@.....<.......
++00000cd0: 468c a000 00af 6e06 4e38 c500 00a0 2a06  F.....n.N8....*.
++00000ce0: 4f34 c000 010d cb06 53a5 f500 004a 3306  O4......S....J3.
++00000cf0: 580f ce00 0029 aa06 5a60 a900 00f5 f406  X....)..Z`......
++00000d00: 6318 9000 00e3 9506 68ee 6400 001b b706  c.......h.d.....
++00000d10: 69a9 8400 00a2 7b06 69b7 0200 0125 e106  i.....{.i....%..
++00000d20: 70e2 d000 006e 9a06 7cd1 c500 0049 4e06  p....n..|....IN.
++00000d30: 7f33 4700 0031 d906 8786 ea00 00a1 5c06  .3G..1........\.
++00000d40: 88a1 2400 0131 dc06 8f30 5000 011a ec06  ..$..1...0P.....
++00000d50: 9b5a 7700 0116 ce06 9bb8 0c00 0038 0006  .Zw..........8..
++00000d60: 9c50 2000 00c2 0406 9fb2 5300 00fb 7a06  .P .......S...z.
++00000d70: a6d5 8300 0129 a106 a8dd 9c00 0052 3306  .....).......R3.
++00000d80: aef9 ce00 0059 9606 afe6 3000 0071 9506  .....Y....0..q..
++00000d90: b017 2200 00a0 cb06 b8bb 6000 00a7 b806  ..".......`.....
++00000da0: c10c 6000 00cc d706 c215 0a00 0007 1a06  ..`.............
++00000db0: c227 5a00 0028 3706 c5bd 6a00 0122 1a06  .'Z..(7...j.."..
++00000dc0: ce8a a100 004b 7006 cf70 9900 0024 2206  .....Kp..p...$".
++00000dd0: d08b 2a00 00c7 a206 d81c 2e00 00d6 eb06  ..*.............
++00000de0: dbaf 2000 00ed 3406 e231 4000 0128 f706  .. ...4..1@..(..
++00000df0: e6c0 4c00 0052 9807 0120 6600 0020 1307  ..L..R... f.. ..
++00000e00: 0140 6600 0019 1007 0923 2000 0061 1007  .@f......# ..a..
++00000e10: 0ac3 fa00 00a1 1e07 0e35 d000 00d9 3a07  .........5....:.
++00000e20: 126c 4400 0135 fa07 1d24 9000 0102 ec07  .lD..5...$......
++00000e30: 1db9 0500 0012 a007 3389 e000 00b6 0407  ........3.......
++00000e40: 3c71 f700 000e 9207 449d 1f00 00bc 4e07  <q......D.....N.
++00000e50: 47cf 0400 003f e607 4bcf e000 00e5 a607  G....?..K.......
++00000e60: 5cec 7500 009f e607 62f5 3500 003f 6d07  \.u.....b.5..?m.
++00000e70: 65e8 b400 007e 0807 65e8 b400 0125 3f07  e....~..e....%?.
++00000e80: 6c21 5400 000b 2207 7e9b 0500 00e4 a707  l!T...".~.......
++00000e90: 9a56 2000 006f b907 9a6c 1400 000b d107  .V ..o...l......
++00000ea0: 9a6c 1400 001b 7e07 9a6c 1400 002f 6507  .l....~..l.../e.
++00000eb0: 9a6c 1400 0051 fb07 9a6c 1400 0081 a407  .l...Q...l......
++00000ec0: 9a6c 1400 012c b007 9aa9 6000 00ca 3d07  .l...,....`...=.
++00000ed0: 9db4 9000 00b8 0d07 9db4 9000 00fb 0607  ................
++00000ee0: 9e2e 7300 0133 c707 a121 8000 0022 1607  ..s..3...!..."..
++00000ef0: a674 8700 00a2 ce07 bdfe de00 002c c607  .t...........,..
++00000f00: cf9a 7000 00f9 2607 d231 3400 0003 9f07  ..p...&..14.....
++00000f10: daae 0000 0102 7f07 dae0 ea00 0119 dd07  ................
++00000f20: e0a9 5000 000d cd07 e0a9 5000 0089 6507  ..P.......P...e.
++00000f30: e0a9 5000 0117 e507 ebd7 9e00 00a9 e607  ..P.............
++00000f40: ebd7 9e00 00ac d107 ec42 a500 0009 f107  .........B......
++00000f50: ed5c 8000 010f f807 f3d4 e000 00c8 9707  .\..............
++00000f60: f714 e400 00f6 7508 0291 0000 0080 8108  ......u.........
++00000f70: 08a7 9000 00c3 3f08 1f02 9000 00b5 a408  ......?.........
++00000f80: 283b 1400 00fb d108 284d 4300 0083 c808  (;......(MC.....
++00000f90: 28e8 e000 00ed eb08 2a45 4a00 00a3 1908  (.......*EJ.....
++00000fa0: 2fe7 9000 009d 2a08 3267 1100 0007 cc08  /.....*.2g......
++00000fb0: 41da 6e00 0085 8008 46c5 3a00 0045 2008  A.n.....F.:..E .
++00000fc0: 4d37 c500 0092 7d08 4e6b 2a00 0046 a708  M7....}.Nk*..F..
++00000fd0: 4ef9 1500 005c 1e08 6186 7000 0070 b308  N....\..a.p..p..
++00000fe0: 6c71 e200 00ac 7208 6f32 c000 00d8 7b08  lq....r.o2....{.
++00000ff0: 700d f000 00f8 9f08 70b2 8b00 0076 2008  p.......p....v .
++00001000: 7219 0f00 0089 9c08 7a4a 5000 0079 1a08  r.......zJP..y..
++00001010: 8284 d500 000c 0208 8284 d500 0082 0b08  ................
++00001020: 8599 7200 0132 f108 8958 2900 0128 2708  ..r..2...X)..('.
++00001030: 8b87 0000 00d0 1308 8fa4 9300 000f c508  ................
++00001040: 8fa4 9300 0085 ce08 8fa4 9300 008b ca08  ................
++00001050: 8fa4 9300 0116 9608 9a98 b400 0019 f408  ................
++00001060: 9c61 5e00 011a 3808 a1a4 9300 0058 d708  .a^...8......X..
++00001070: a63b 3000 010b 7308 aa82 f400 005a 6808  .;0...s......Zh.
++00001080: abe2 0900 002a 8b08 abe2 0900 0088 4308  .....*........C.
++00001090: af11 d500 0062 db08 b89a 9200 0025 be08  .....b.......%..
++000010a0: bbfe c500 0002 ac08 bbfe c500 0123 2408  .............#$.
++000010b0: bd8a 6000 0114 2d08 c000 5000 0097 5308  ..`...-...P...S.
++000010c0: c000 5000 0098 1608 c272 0900 0010 0208  ..P......r......
++000010d0: c76b 0300 0059 dd08 cd7c e400 00a9 7609  .k...Y...|....v.
++000010e0: 00f9 a400 0003 e009 162e f000 003a f209  .............:..
++000010f0: 1afc d400 003d a309 1fb9 f500 0075 c509  .....=.......u..
++00001100: 2254 0000 011d cc09 2e57 df00 00a5 9e09  "T.......W......
++00001110: 35e6 6000 0048 8109 3b85 e000 006b dd09  5.`..H..;....k..
++00001120: 4459 d000 00de f009 4d67 fe00 0115 b809  DY......Mg......
++00001130: 5962 c900 00e4 e609 5aa4 1000 00b8 7409  Yb......Z.....t.
++00001140: 5b68 f000 005e 3109 5c07 3000 00ec 8509  [h...^1.\.0.....
++00001150: 5ca2 3000 012e 9809 5d03 9000 011c 2909  \.0.....].....).
++00001160: 6302 2500 0133 9709 667a 9000 00ea bc09  c.%..3..fz......
++00001170: 66cc c900 0033 dd09 700b c500 0011 fb09  f....3..p.......
++00001180: 7a29 6900 000f 4509 8c00 0a00 0050 4f09  z)i...E......PO.
++00001190: 8c81 5e00 0039 7709 8c81 5e00 0050 f109  ..^..9w...^..P..
++000011a0: 8c81 5e00 0097 cc09 8d04 b300 008e ff09  ..^.............
++000011b0: 95cb c400 00d5 9d09 a6af c300 0056 b909  .............V..
++000011c0: a6c1 0a00 0027 c809 a6c1 0a00 0044 b709  .....'.......D..
++000011d0: a6c1 0a00 0082 f409 a6c1 0a00 0097 1609  ................
++000011e0: a6c1 0a00 0120 8809 a6c1 c300 0004 6f09  ..... ........o.
++000011f0: a87a 8000 00f7 e309 b56b a200 008c 0309  .z.......k......
++00001200: b889 ea00 0086 a709 b889 ea00 00a5 0409  ................
++00001210: cf34 f000 00de 5b09 d746 d000 0065 f909  .4....[..F...e..
++00001220: d82d 3f00 0083 2b0a 074b 5000 0071 fc0a  .-?...+..KP..q..
++00001230: 159b 8000 001e 7c0a 159b 8000 0054 a40a  ......|......T..
++00001240: 17d3 5000 00ca fb0a 20b0 6000 0078 140a  ..P..... .`..x..
++00001250: 20fc 9000 00b3 bd0a 22d2 d000 00e3 000a   .......".......
++00001260: 2aef e000 00f9 b10a 2e99 7e00 0056 f10a  *.........~..V..
++00001270: 30f6 b500 002a 020a 338b 1000 00db c10a  0....*..3.......
++00001280: 3f0e 9500 0080 090a 3f0e 9500 0127 e60a  ?.......?....'..
++00001290: 4985 3000 0071 210a 4cb2 e000 00b6 c80a  I.0..q!.L.......
++000012a0: 5e50 b000 0108 e10a 62cd 3400 0034 960a  ^P......b.4..4..
++000012b0: 64c8 9500 0086 6b0a 65e3 f000 005d 760a  d.....k.e....]v.
++000012c0: 6c11 b300 0005 040a 6c5b d900 0009 840a  l.......l[......
++000012d0: 6c5b d900 000b 6a0a 6c89 9300 0133 5a0a  l[....j.l....3Z.
++000012e0: 70ea 0000 0044 1c0a 8170 8e00 012f 6f0a  p....D...p.../o.
++000012f0: 84e6 b500 001c 9f0a 84e6 b500 002f fd0a  ............./..
++00001300: 84e6 b500 0053 040a 84e6 b500 012d 540a  .....S.......-T.
++00001310: 84e6 b500 0131 9c0a 89ad 3000 00f3 ba0a  .....1....0.....
++00001320: 89ad 3000 010a 1a0a 954c 2000 00d9 eb0a  ..0......L .....
++00001330: 9989 6300 0073 640a ac8c c000 00f7 130a  ..c..sd.........
++00001340: ae3e fa00 0075 0b0a b4bc 2e00 002e ca0a  .>...u..........
++00001350: b5ff 6400 00b1 3c0a b6d5 d000 00d1 3b0a  ..d...<.......;.
++00001360: ba90 7000 00e6 140a be20 4a00 0010 480a  ..p...... J...H.
++00001370: c25d 1400 0041 7f0a c945 a000 00b3 300a  .]...A...E....0.
++00001380: ca80 7300 0053 4a0a cf76 b400 0058 2b0a  ..s..SJ..v...X+.
++00001390: cfef 4000 0105 5f0a e1b0 da00 00a8 190a  ..@..._.........
++000013a0: e1b4 8000 0112 5d0a e45f d000 00b7 860a  ......].._......
++000013b0: eb63 2000 0022 b30a ee50 6000 0081 390a  .c .."...P`...9.
++000013c0: f3de 9e00 0084 990a f818 8000 00b7 010a  ................
++000013d0: f818 8000 00fa 740b 0396 6300 0008 9e0b  ......t...c.....
++000013e0: 03f9 7300 008e b50b 0476 b400 0058 650b  ..s......v...Xe.
++000013f0: 0ac1 5a00 0127 7c0b 139f b500 0086 df0b  ..Z..'|.........
++00001400: 19b8 d700 008a a30b 1b90 b000 0100 1c0b  ................
++00001410: 1fcd 0500 00a0 870b 20ce b000 00c1 720b  ........ .....r.
++00001420: 2371 ce00 0001 3e0b 244d 8300 0104 3b0b  #q....>.$M....;.
++00001430: 296c c900 0072 f50b 2d80 be00 000e f30b  )l...r..-.......
++00001440: 2d80 be00 008b 000b 2d80 be00 0118 6c0b  -.......-.....l.
++00001450: 2fa8 e400 012e 540b 4000 a500 0064 3e0b  /.....T.@....d>.
++00001460: 440d ae00 005a 160b 47ce c400 00e7 f40b  D....Z..G.......
++00001470: 4841 e400 00bb 830b 4e26 9900 0010 8e0b  HA......N&......
++00001480: 543a f400 00e0 240b 5467 9000 002b 290b  T:....$.Tg...+).
++00001490: 6948 d000 00c4 5e0b 6b4e 3000 005f 140b  iH....^.kN0.._..
++000014a0: 6f1b 4500 0061 790b 76dd 9d00 0132 270b  o.E..ay.v....2'.
++000014b0: 8a1a 2000 00e1 bb0b 8a1a 2000 010f a50b  .. ....... .....
++000014c0: 8c6a e300 0059 580b 9253 4000 0002 280b  .j...YX..S@...(.
++000014d0: 94b6 5e00 00ce 240b 967b 5400 0031 880b  ..^...$..{T..1..
++000014e0: a0c9 de00 0006 5c0b a3fc 7000 00ef 930b  ......\...p.....
++000014f0: a4a2 2500 0024 950b c474 9000 00da 870b  ..%..$...t......
++00001500: c4a6 f000 0063 c90b c81a a000 00db 260b  .....c........&.
++00001510: cbf1 c000 00e2 0e0b cbf1 c000 00e7 810b  ................
++00001520: cbf1 c000 00f2 090b cbf1 c000 0107 e40b  ................
++00001530: db2b b200 0025 6f0b def4 0000 012b 9d0b  .+...%o......+..
++00001540: e203 8700 000e 4b0b e217 6300 000e 080b  ......K...c.....
++00001550: e4a0 3000 0015 f10b f39a 4000 0039 fa0b  ..0.......@..9..
++00001560: f39a 4000 0080 ca0b f39a 4000 00c8 250b  ..@.......@...%.
++00001570: fc32 3300 0045 550c 04fe c500 0013 620c  .23..EU.......b.
++00001580: 0c17 6300 0057 7f0c 0ce3 2300 008e 5f0c  ..c..W....#..._.
++00001590: 0dec 5a00 007f a70c 1cdb 4200 010c 7a0c  ..Z.......B...z.
++000015a0: 1d95 4000 00bf 9f0c 3834 1400 000d 670c  ..@.....84....g.
++000015b0: 3834 1400 0089 030c 3834 1400 0117 830c  84......84......
++000015c0: 5256 ae00 0033 9f0c 5bd6 a000 0007 930c  RV...3..[.......
++000015d0: 61ce a500 0034 500c 63ce a500 000a dc0c  a....4P.c.......
++000015e0: 6dca b800 0037 6a0c 808a a300 00a4 aa0c  m....7j.........
++000015f0: 83b7 b000 0036 f00c 8910 0000 0006 9a0c  .....6..........
++00001600: 89ed e500 0049 fb0c 98c0 0900 0005 e20c  .....I..........
++00001610: 98c0 0900 0009 ba0c 98c0 0900 000c f30c  ................
++00001620: 98c0 0900 0082 420c 98c0 0900 0087 cd0c  ......B.........
++00001630: 98c0 0900 009e e60c 98c0 0900 0115 7f0c  ................
++00001640: 9fa9 6000 011d 0f0c b106 9a00 0119 8e0c  ..`.............
++00001650: b195 2700 007e b00c b1a8 e500 0030 780c  ..'..~.......0x.
++00001660: ba9f 2400 010f 260c c1c5 c300 0090 4e0c  ..$...&.......N.
++00001670: c4e1 d500 0013 ab0c c5f7 d500 007c a50c  .............|..
++00001680: c7ee 6000 009b d30c c8e8 6400 002f c30c  ..`.......d../..
++00001690: c9a0 2e00 007d 040c cba2 d500 00e8 c90c  .....}..........
++000016a0: db0c 0400 00b4 2d0c dda2 6e00 00b1 aa0c  ......-...n.....
++000016b0: e3ed a900 0090 030c f3b0 8500 0012 450c  ..............E.
++000016c0: fb0f b300 0092 ef0d 0027 2000 00be 720d  .........' ...r.
++000016d0: 09a5 6000 011b 440d 0a66 ed00 0124 b30d  ..`...D..f...$..
++000016e0: 0ad7 7300 004c 430d 0f91 6000 00ee 750d  ..s..LC...`...u.
++000016f0: 0f91 6000 0103 a00d 1201 a400 005b a70d  ..`..........[..
++00001700: 1cec 6700 0118 ba0d 2d41 7000 00ad ed0d  ..g.....-Ap.....
++00001710: 32db 3000 00eb 170d 35c6 3000 0107 370d  2.0.....5.0...7.
++00001720: 3b8c 3900 00ab 6d0d 48cd 6500 0099 c40d  ;.9...m.H.e.....
++00001730: 51bd f000 00f2 830d 69f6 0000 009c 800d  Q.......i.......
++00001740: 7298 e700 00ad 290d 7c3b 4000 0110 6b0d  r.....).|;@...k.
++00001750: 80f6 3400 0096 cb0d 80f6 3400 0098 5b0d  ..4.......4...[.
++00001760: 8344 9300 008f 450d 8c46 7500 0004 a70d  .D....E..Fu.....
++00001770: 8c46 7500 00a5 3f0d 96e3 5000 00dd 3a0d  .Fu...?...P...:.
++00001780: 9df1 6500 0019 a90d 9df1 6500 0020 7e0d  ..e.......e.. ~.
++00001790: 9ee3 5e00 006c 2a0d 9ee3 5e00 0077 980d  ..^..l*...^..w..
++000017a0: 9ee3 5e00 0084 110d 9ee3 5e00 00a3 6e0d  ..^.......^...n.
++000017b0: 9ee3 5e00 00b6 840d aa4e 9000 00e4 230d  ..^......N....#.
++000017c0: c964 7400 00aa 3c0d d0e8 e000 00c7 640d  .dt...<.......d.
++000017d0: ded8 9000 001d 2b0d ded8 9000 0053 860d  ......+......S..
++000017e0: eb49 0000 007e e80d ec49 8400 0047 c10d  .I...~...I...G..
++000017f0: f086 4a00 0038 e10d fcd5 7e00 003e 5c0d  ..J..8....~..>\.
++00001800: fe0b 6000 006e fe0e 00f0 b000 00d3 3e0e  ..`..n........>.
++00001810: 03af f000 0076 640e 1bf8 6400 0038 800e  .....vd...d..8..
++00001820: 1ddb 6300 0051 9b0e 202b 3a00 007d 630e  ..c..Q.. +:..}c.
++00001830: 202b 3a00 0124 1a0e 20d7 0900 010c c80e   +:..$.. .......
++00001840: 2511 7400 0060 170e 38a0 f000 0104 c00e  %.t..`..8.......
++00001850: 5c13 4700 0117 020e 6193 e900 0111 990e  \.G.....a.......
++00001860: 61d5 0400 00a8 680e 68cb dc00 0056 530e  a.....h.h....VS.
++00001870: 6ac2 e300 0024 cc0e 7617 2000 007a d50e  j....$..v. ..z..
++00001880: 8347 4400 0069 8b0e 887b b500 0036 850e  .GD..i...{...6..
++00001890: 887b b500 00a9 3f0e 9dcc d400 0032 820e  .{....?......2..
++000018a0: a934 c000 0060 960e abf5 1300 0067 390e  .4...`.......g9.
++000018b0: ae34 8000 005d d10e b4a5 0a00 0063 640e  .4...].......cd.
++000018c0: b5c2 8000 009a 260e b803 9900 006d ee0e  ......&......m..
++000018d0: b82d 1000 00f3 170e c28b b000 0003 0c0e  .-..............
++000018e0: d945 de00 002d 820e e77d 7000 011f 830e  .E...-...}p.....
++000018f0: f7f8 4000 00ef 160f 09fd b000 00d5 020f  ..@.............
++00001900: 0cc4 c000 00fa 210f 105e a000 00b9 a80f  ......!..^......
++00001910: 11be 6000 00be e70f 1d28 1000 00fd e30f  ..`......(......
++00001920: 201d 8500 0088 820f 20f1 3000 00d7 420f   ....... .0...B.
++00001930: 4321 f500 0130 060f 4a90 4000 00b3 740f  C!...0..J.@...t.
++00001940: 5e00 1000 00c9 200f 8e7b e000 00cd 820f  ^..... ..{......
++00001950: 9222 7c00 00ab 2d0f 9450 0000 0112 d60f  ."|...-..P......
++00001960: 9ebd c400 0048 190f 9fbc 6000 0134 6a0f  .....H....`..4j.
++00001970: a262 9000 0136 e10f a44f 0300 0000 5f0f  .b...6...O...._.
++00001980: bd5e e700 0118 1c0f cb15 5200 0069 3f0f  .^........R..i?.
++00001990: cf80 f000 00f4 5e0f d19a 7000 00c0 580f  ......^...p...X.
++000019a0: dfeb 7000 009e 110f e7f7 9000 0136 6f0f  ..p..........6o.
++000019b0: ea8a 0900 007d a80f ea8a 0900 00a6 5f0f  .....}........_.
++000019c0: ea8a 0900 0124 590f f87c e000 0023 990f  .....$Y..|...#..
++000019d0: fe37 0300 0086 0d69 0001 375c 0300 0000  .7.....i..7\....
++000019e0: 2404 1e04 4204 3c04 3504 3d04 3804 4204  $...B.<.5.=.8.B.
++000019f0: 4c00 2004 3804 3704 3c04 3504 3d04 3504  L. .8.7.<.5.=.5.
++00001a00: 3d04 3804 4f08 0000 0000 0600 0000 0e43  =.8.O..........C
++00001a10: 616e 6365 6c20 6368 616e 6765 7307 0000  ancel changes...
++00001a20: 0018 4162 7374 7261 6374 4f70 6572 6174  ..AbstractOperat
++00001a30: 696f 6e44 6574 6169 6c73 0103 0000 0026  ionDetails.....&
++00001a40: 0421 043e 0445 0440 0430 043d 0438 0442  .!.>.E.@.0.=.8.B
++00001a50: 044c 0020 0438 0437 043c 0435 043d 0435  .L. .8.7.<.5.=.5
++00001a60: 043d 0438 044f 0800 0000 0006 0000 000e  .=.8.O..........
++00001a70: 436f 6d6d 6974 2063 6861 6e67 6573 0700  Commit changes..
++00001a80: 0000 1841 6273 7472 6163 744f 7065 7261  ...AbstractOpera
++00001a90: 7469 6f6e 4465 7461 696c 7301 0300 0000  tionDetails.....
++00001aa0: 3804 1e04 4804 3804 3104 3a04 3000 2004  8...H.8.1.:.0. .
++00001ab0: 3f04 4004 3800 2004 3704 3004 3f04 3804  ?.@.8. .7.0.?.8.
++00001ac0: 4104 3800 2004 3e04 3f04 3504 4004 3004  A.8. .>.?.5.@.0.
++00001ad0: 4604 3804 3800 3a00 2008 0000 0000 0600  F.8.8.:. .......
++00001ae0: 0000 194f 7065 7261 7469 6f6e 2073 7562  ...Operation sub
++00001af0: 6d69 7420 6661 696c 6564 3a20 0700 0000  mit failed: ....
++00001b00: 1841 6273 7472 6163 744f 7065 7261 7469  .AbstractOperati
++00001b10: 6f6e 4465 7461 696c 7301 0300 0000 8804  onDetails.......
++00001b20: 1d04 3504 4104 3e04 4504 4004 3004 3d04  ..5.A.>.E.@.0.=.
++00001b30: 5104 3d04 3d04 4b04 3500 2004 3804 3704  Q.=.=.K.5. .8.7.
++00001b40: 3c04 3504 3d04 3504 3d04 3804 4f00 2004  <.5.=.5.=.8.O. .
++00001b50: 3104 4b04 3b04 3800 2004 3e04 4204 3c04  1.K.;.8. .>.B.<.
++00001b60: 3504 3d04 3504 3d04 4b00 2004 3f04 3504  5.=.5.=.K. .?.5.
++00001b70: 4004 3504 3400 2004 4104 3e04 3704 3404  @.5.4. .A.>.7.4.
++00001b80: 3004 3d04 3804 3504 3c00 2004 3d04 3e04  0.=.8.5.<. .=.>.
++00001b90: 3204 3e04 3900 2004 3e04 3f04 3504 4004  2.>.9. .>.?.5.@.
++00001ba0: 3004 4604 3804 3808 0000 0000 0600 0000  0.F.8.8.........
++00001bb0: 3555 6e73 6176 6564 2063 6861 6e67 6573  5Unsaved changes
++00001bc0: 2077 6572 6520 7265 7665 7274 6564 2074   were reverted t
++00001bd0: 6f20 6372 6561 7465 206e 6577 206f 7065  o create new ope
++00001be0: 7261 7469 6f6e 0700 0000 1841 6273 7472  ration.....Abstr
++00001bf0: 6163 744f 7065 7261 7469 6f6e 4465 7461  actOperationDeta
++00001c00: 696c 7301 0300 0000 3a04 1d04 3504 3204  ils.....:...5.2.
++00001c10: 3504 4004 3d04 3e04 3500 2004 3704 3d04  5.@.=.>.5. .7.=.
++00001c20: 3004 4704 3504 3d04 3804 3500 2004 3200  0.G.5.=.8.5. .2.
++00001c30: 2004 4104 4204 3e04 3b04 3104 4604 3500   .A.B.>.;.1.F.5.
++00001c40: 3a00 2008 0000 0000 0600 0000 1b43 6f6c  :. ..........Col
++00001c50: 756d 6e20 6861 7320 6e6f 2076 616c 6964  umn has no valid
++00001c60: 2076 616c 7565 3a20 0700 0000 1a41 6273   value: .....Abs
++00001c70: 7472 6163 7452 6566 6572 656e 6365 4c69  tractReferenceLi
++00001c80: 7374 4d6f 6465 6c01 0300 0000 1e04 1d04  stModel.........
++00001c90: 3504 3f04 3e04 3b04 3d04 4b04 3500 2004  5.?.>.;.=.K.5. .
++00001ca0: 3404 3004 3d04 3d04 4b04 3508 0000 0000  4.0.=.=.K.5.....
++00001cb0: 0600 0000 1344 6174 6120 6172 6520 696e  .....Data are in
++00001cc0: 636f 6d70 6c65 7465 0700 0000 1a41 6273  complete.....Abs
++00001cd0: 7472 6163 7452 6566 6572 656e 6365 4c69  tractReferenceLi
++00001ce0: 7374 4d6f 6465 6c01 0300 0000 2604 1e04  stModel.....&...
++00001cf0: 4804 3804 3104 3a04 3000 2004 4104 3e04  H.8.1.:.0. .A.>.
++00001d00: 4504 4004 3004 3d04 3504 3d04 3804 4f00  E.@.0.=.5.=.8.O.
++00001d10: 3a00 2008 0000 0000 0600 0000 0f53 7562  :. ..........Sub
++00001d20: 6d69 7420 6661 696c 6564 3a20 0700 0000  mit failed: ....
++00001d30: 1a41 6273 7472 6163 7452 6566 6572 656e  .AbstractReferen
++00001d40: 6365 4c69 7374 4d6f 6465 6c01 0300 0000  ceListModel.....
++00001d50: 0a04 1b04 4e04 3104 3e04 3908 0000 0000  ....N.1.>.9.....
++00001d60: 0600 0000 0341 4e59 0700 0000 0d41 6363  .....ANY.....Acc
++00001d70: 6f75 6e74 4275 7474 6f6e 0103 0000 0014  ountButton......
++00001d80: 041b 044e 0431 043e 0439 0020 0441 0447  ...N.1.>.9. .A.G
++00001d90: 0435 0442 0800 0000 0006 0000 000b 416e  .5.B..........An
++00001da0: 7920 6163 636f 756e 7407 0000 000d 4163  y account.....Ac
++00001db0: 636f 756e 7442 7574 746f 6e01 0300 0000  countButton.....
++00001dc0: 1804 1204 4b04 3104 4004 3004 4204 4c00  ....K.1.@.0.B.L.
++00001dd0: 2004 4104 4704 3504 4208 0000 0000 0600   .A.G.5.B.......
++00001de0: 0000 0e43 686f 6f73 6520 6163 636f 756e  ...Choose accoun
++00001df0: 7407 0000 000d 4163 636f 756e 7442 7574  t.....AccountBut
++00001e00: 746f 6e01 0300 0000 1404 2204 3804 3f00  ton.......".8.?.
++00001e10: 2004 4104 4704 3504 4204 3000 3a08 0000   .A.G.5.B.0.:...
++00001e20: 0000 0600 0000 0d41 6363 6f75 6e74 2074  .......Account t
++00001e30: 7970 653a 0700 0000 1141 6363 6f75 6e74  ype:.....Account
++00001e40: 4c69 7374 4469 616c 6f67 0103 0000 000a  ListDialog......
++00001e50: 0421 0447 0435 0442 0430 0800 0000 0006  .!.G.5.B.0......
++00001e60: 0000 0008 4163 636f 756e 7473 0700 0000  ....Accounts....
++00001e70: 1141 6363 6f75 6e74 4c69 7374 4469 616c  .AccountListDial
++00001e80: 6f67 0103 0000 002a 041f 043e 043a 0430  og.....*...>.:.0
++00001e90: 0437 044b 0432 0430 0442 044c 0020 043d  .7.K.2.0.B.L. .=
++00001ea0: 0435 0430 043a 0442 0438 0432 043d 044b  .5.0.:.B.8.2.=.K
++00001eb0: 0435 0800 0000 0006 0000 000d 5368 6f77  .5..........Show
++00001ec0: 2069 6e61 6374 6976 6507 0000 0011 4163   inactive.....Ac
++00001ed0: 636f 756e 744c 6973 7444 6961 6c6f 6701  countListDialog.
++00001ee0: 0300 0000 0e21 1600 2004 4104 4704 3504  .....!.. .A.G.5.
++00001ef0: 4204 3008 0000 0000 0600 0000 0941 6363  B.0..........Acc
++00001f00: 6f75 6e74 2023 0700 0000 1041 6363 6f75  ount #.....Accou
++00001f10: 6e74 4c69 7374 4d6f 6465 6c01 0300 0000  ntListModel.....
++00001f20: 0804 1004 3a04 4200 2e08 0000 0000 0600  ....:.B.........
++00001f30: 0000 0441 6374 2e07 0000 0010 4163 636f  ...Act......Acco
++00001f40: 756e 744c 6973 744d 6f64 656c 0103 0000  untListModel....
++00001f50: 0016 0411 0430 043d 043a 002f 0411 0440  .....0.=.:./...@
++00001f60: 043e 043a 0435 0440 0800 0000 0006 0000  .>.:.5.@........
++00001f70: 000b 4261 6e6b 2f42 726f 6b65 7207 0000  ..Bank/Broker...
++00001f80: 0010 4163 636f 756e 744c 6973 744d 6f64  ..AccountListMod
++00001f90: 656c 0103 0000 0004 041a 0421 0800 0000  el.........!....
++00001fa0: 0006 0000 0002 4343 0700 0000 1041 6363  ......CC.....Acc
++00001fb0: 6f75 6e74 4c69 7374 4d6f 6465 6c01 0300  ountListModel...
++00001fc0: 0000 0c04 1204 3004 3b04 4e04 4204 3008  ......0.;.N.B.0.
++00001fd0: 0000 0000 0600 0000 0843 7572 7265 6e63  .........Currenc
++00001fe0: 7907 0000 0010 4163 636f 756e 744c 6973  y.....AccountLis
++00001ff0: 744d 6f64 656c 0103 0000 0018 041d 0430  tModel.........0
++00002000: 0438 043c 0435 043d 043e 0432 0430 043d  .8.<.5.=.>.2.0.=
++00002010: 0438 0435 0800 0000 0006 0000 0004 4e61  .8.5..........Na
++00002020: 6d65 0700 0000 1041 6363 6f75 6e74 4c69  me.....AccountLi
++00002030: 7374 4d6f 6465 6c01 0300 0000 1004 2204  stModel.......".
++00002040: 3e04 4704 3d04 3e04 4104 4204 4c08 0000  >.G.=.>.A.B.L...
++00002050: 0000 0600 0000 0950 7265 6369 7369 6f6e  .......Precision
++00002060: 0700 0000 1041 6363 6f75 6e74 4c69 7374  .....AccountList
++00002070: 4d6f 6465 6c01 0300 0000 1004 2104 3204  Model.......!.2.
++00002080: 3504 4004 3504 3d00 2000 4008 0000 0000  5.@.5.=. .@.....
++00002090: 0600 0000 0c52 6563 6f6e 6369 6c65 6420  .....Reconciled 
++000020a0: 4007 0000 0010 4163 636f 756e 744c 6973  @.....AccountLis
++000020b0: 744d 6f64 656c 0103 0000 001a 0426 0435  tModel.......&.5
++000020c0: 043d 043d 0430 044f 0020 0431 0443 043c  .=.=.0.O. .1.C.<
++000020d0: 0430 0433 0430 0800 0000 0006 0000 0005  .0.3.0..........
++000020e0: 4173 7365 7407 0000 000b 4173 7365 7444  Asset.....AssetD
++000020f0: 6961 6c6f 6701 0300 0000 1c04 1104 3004  ialog.........0.
++00002100: 3704 3e04 3204 4b04 3900 2004 3004 3a04  7.>.2.K.9. .0.:.
++00002110: 4204 3804 3200 3a08 0000 0000 0600 0000  B.8.2.:.........
++00002120: 0b42 6173 6520 6173 7365 743a 0700 0000  .Base asset:....
++00002130: 0b41 7373 6574 4469 616c 6f67 0103 0000  .AssetDialog....
++00002140: 000c 041e 0442 043c 0435 043d 0430 0800  .....B.<.5.=.0..
++00002150: 0000 0006 0000 0006 4361 6e63 656c 0700  ........Cancel..
++00002160: 0000 0b41 7373 6574 4469 616c 6f67 0103  ...AssetDialog..
++00002170: 0000 0010 0421 0442 0440 0430 043d 0430  .....!.B.@.0.=.0
++00002180: 003a 0020 0800 0000 0006 0000 0009 436f  .:. ..........Co
++00002190: 756e 7472 793a 2007 0000 000b 4173 7365  untry: .....Asse
++000021a0: 7444 6961 6c6f 6701 0300 0000 1404 1404  tDialog.........
++000021b0: 3e04 3f00 2e04 3404 3004 3d04 3d04 4b04  >.?...4.0.=.=.K.
++000021c0: 3508 0000 0000 0600 0000 0a45 7874 7261  5..........Extra
++000021d0: 2064 6174 6107 0000 000b 4173 7365 7444   data.....AssetD
++000021e0: 6961 6c6f 6701 0300 0000 0a00 4900 5300  ialog.......I.S.
++000021f0: 4900 4e00 3a08 0000 0000 0600 0000 0549  I.N.:..........I
++00002200: 5349 4e3a 0700 0000 0b41 7373 6574 4469  SIN:.....AssetDi
++00002210: 616c 6f67 0103 0000 001a 041d 0430 0438  alog.........0.8
++00002220: 043c 0435 043d 043e 0432 0430 043d 0438  .<.5.=.>.2.0.=.8
++00002230: 0435 003a 0800 0000 0006 0000 0005 4e61  .5.:..........Na
++00002240: 6d65 3a07 0000 000b 4173 7365 7444 6961  me:.....AssetDia
++00002250: 6c6f 6701 0300 0000 0404 1e04 1a08 0000  log.............
++00002260: 0000 0600 0000 024f 4b07 0000 000b 4173  .......OK.....As
++00002270: 7365 7444 6961 6c6f 6701 0300 0000 0e04  setDialog.......
++00002280: 2104 3804 3c04 3204 3e04 3b04 4b08 0000  !.8.<.2.>.;.K...
++00002290: 0000 0600 0000 0753 796d 626f 6c73 0700  .......Symbols..
++000022a0: 0000 0b41 7373 6574 4469 616c 6f67 0103  ...AssetDialog..
++000022b0: 0000 000a 0422 0438 043f 003a 0020 0800  .....".8.?.:. ..
++000022c0: 0000 0006 0000 0006 5479 7065 3a20 0700  ........Type: ..
++000022d0: 0000 0b41 7373 6574 4469 616c 6f67 0103  ...AssetDialog..
++000022e0: 0000 000e 0422 0438 043f 0020 0426 0411  .....".8.?. .&..
++000022f0: 003a 0800 0000 0006 0000 000b 4173 7365  .:..........Asse
++00002300: 7420 7479 7065 3a07 0000 000f 4173 7365  t type:.....Asse
++00002310: 744c 6973 7444 6961 6c6f 6701 0300 0000  tListDialog.....
++00002320: 1a04 2604 3504 3d04 3d04 4b04 3500 2004  ..&.5.=.=.K.5. .
++00002330: 3104 4304 3c04 3004 3304 3808 0000 0000  1.C.<.0.3.8.....
++00002340: 0600 0000 0641 7373 6574 7307 0000 000f  .....Assets.....
++00002350: 4173 7365 744c 6973 7444 6961 6c6f 6701  AssetListDialog.
++00002360: 0300 0000 0c04 2104 4204 4004 3004 3d04  ......!.B.@.0.=.
++00002370: 3008 0000 0000 0600 0000 0743 6f75 6e74  0..........Count
++00002380: 7279 0700 0000 0e41 7373 6574 4c69 7374  ry.....AssetList
++00002390: 4d6f 6465 6c01 0300 0000 0c04 1204 3004  Model.........0.
++000023a0: 3b04 4e04 4204 3008 0000 0000 0600 0000  ;.N.B.0.........
++000023b0: 0843 7572 7265 6e63 7907 0000 000e 4173  .Currency.....As
++000023c0: 7365 744c 6973 744d 6f64 656c 0103 0000  setListModel....
++000023d0: 001a 0418 0441 0442 002e 043a 043e 0442  .....A.B...:.>.B
++000023e0: 0438 0440 043e 0432 043e 043a 0800 0000  .8.@.>.2.>.:....
++000023f0: 0006 0000 000b 4461 7461 2073 6f75 7263  ......Data sourc
++00002400: 6507 0000 000e 4173 7365 744c 6973 744d  e.....AssetListM
++00002410: 6f64 656c 0103 0000 0008 0049 0053 0049  odel.......I.S.I
++00002420: 004e 0800 0000 0006 0000 0004 4953 494e  .N..........ISIN
++00002430: 0700 0000 0e41 7373 6574 4c69 7374 4d6f  .....AssetListMo
++00002440: 6465 6c01 0300 0000 1804 1d04 3004 3804  del.........0.8.
++00002450: 3c04 3504 3d04 3e04 3204 3004 3d04 3804  <.5.=.>.2.0.=.8.
++00002460: 3508 0000 0000 0600 0000 044e 616d 6507  5..........Name.
++00002470: 0000 000e 4173 7365 744c 6973 744d 6f64  ....AssetListMod
++00002480: 656c 0103 0000 000c 0421 0438 043c 0432  el.......!.8.<.2
++00002490: 043e 043b 0800 0000 0006 0000 0006 5379  .>.;..........Sy
++000024a0: 6d62 6f6c 0700 0000 0e41 7373 6574 4c69  mbol.....AssetLi
++000024b0: 7374 4d6f 6465 6c01 0300 0000 1804 1d04  stModel.........
++000024c0: 3004 3804 3c04 3504 3d04 3e04 3204 3004  0.8.<.5.=.>.2.0.
++000024d0: 3d04 3804 3508 0000 0000 0600 0000 0a41  =.8.5..........A
++000024e0: 7373 6574 206e 616d 6507 0000 000f 4173  sset name.....As
++000024f0: 7365 7473 4c69 7374 4d6f 6465 6c01 0300  setsListModel...
++00002500: 0000 1a04 1104 3004 3704 3e04 3204 4b04  ......0.7.>.2.K.
++00002510: 3900 2004 3004 3a04 4204 3804 3208 0000  9. .0.:.B.8.2...
++00002520: 0000 0600 0000 0a42 6173 6520 6173 7365  .......Base asse
++00002530: 7407 0000 000f 4173 7365 7473 4c69 7374  t.....AssetsList
++00002540: 4d6f 6465 6c01 0300 0000 0c04 2104 4204  Model.......!.B.
++00002550: 4004 3004 3d04 3008 0000 0000 0600 0000  @.0.=.0.........
++00002560: 0743 6f75 6e74 7279 0700 0000 0f41 7373  .Country.....Ass
++00002570: 6574 734c 6973 744d 6f64 656c 0103 0000  etsListModel....
++00002580: 0008 0049 0053 0049 004e 0800 0000 0006  ...I.S.I.N......
++00002590: 0000 0004 4953 494e 0700 0000 0f41 7373  ....ISIN.....Ass
++000025a0: 6574 734c 6973 744d 6f64 656c 0103 0000  etsListModel....
++000025b0: 0008 0421 0447 0435 0442 0800 0000 0006  ...!.G.5.B......
++000025c0: 0000 0007 4163 636f 756e 7407 0000 000d  ....Account.....
++000025d0: 4261 6c61 6e63 6573 4d6f 6465 6c01 0300  BalancesModel...
++000025e0: 0000 0c04 1104 3004 3b04 3004 3d04 4108  ......0.;.0.=.A.
++000025f0: 0000 0000 0600 0000 0742 616c 616e 6365  .........Balance
++00002600: 0700 0000 0d42 616c 616e 6365 734d 6f64  .....BalancesMod
++00002610: 656c 0103 0000 0010 0411 0430 043b 0430  el.........0.;.0
++00002620: 043d 0441 002c 0020 0800 0000 0006 0000  .=.A.,. ........
++00002630: 0009 4261 6c61 6e63 652c 2007 0000 000d  ..Balance, .....
++00002640: 4261 6c61 6e63 6573 4d6f 6465 6c01 0300  BalancesModel...
++00002650: 0000 0a04 1804 4204 3e04 3304 3e08 0000  ......B.>.3.>...
++00002660: 0000 0600 0000 0554 6f74 616c 0700 0000  .......Total....
++00002670: 0d42 616c 616e 6365 734d 6f64 656c 0103  .BalancesModel..
++00002680: 0000 001c 0411 0430 0437 043e 0432 0430  .......0.7.>.2.0
++00002690: 044f 0020 0432 0430 043b 044e 0442 0430  .O. .2.0.;.N.B.0
++000026a0: 0800 0000 0006 0000 000d 4261 7365 2063  ..........Base c
++000026b0: 7572 7265 6e63 7907 0000 0012 4261 7365  urrency.....Base
++000026c0: 4375 7272 656e 6379 4469 616c 6f67 0103  CurrencyDialog..
++000026d0: 0000 000c 0412 0430 043b 044e 0442 0430  .......0.;.N.B.0
++000026e0: 0800 0000 0006 0000 0008 4375 7272 656e  ..........Curren
++000026f0: 6379 0700 0000 1542 6173 6543 7572 7265  cy.....BaseCurre
++00002700: 6e63 794c 6973 744d 6f64 656c 0103 0000  ncyListModel....
++00002710: 0008 0414 0430 0442 0430 0800 0000 0006  .....0.B.0......
++00002720: 0000 0004 4461 7465 0700 0000 1542 6173  ....Date.....Bas
++00002730: 6543 7572 7265 6e63 794c 6973 744d 6f64  eCurrencyListMod
++00002740: 656c 0103 0000 0024 0027 0020 0437 0430  el.....$.'. .7.0
++00002750: 043c 0435 043d 0435 043d 0430 0020 0443  .<.5.=.5.=.0. .C
++00002760: 0441 043f 0435 0448 043d 043e 0800 0000  .A.?.5.H.=.>....
++00002770: 0006 0000 001b 2720 7761 7320 7375 6363  ......' was succ
++00002780: 6573 7366 756c 6c79 2072 6570 6c61 6365  essfully replace
++00002790: 6407 0000 0012 4361 7465 676f 7279 4c69  d.....CategoryLi
++000027a0: 7374 4469 616c 6f67 0103 0000 000c 0027  stDialog.......'
++000027b0: 0020 043d 0430 003a 0020 0800 0000 0006  . .=.0.:. ......
++000027c0: 0000 0008 2720 7769 7468 3a20 0700 0000  ....' with: ....
++000027d0: 1243 6174 6567 6f72 794c 6973 7444 6961  .CategoryListDia
++000027e0: 6c6f 6701 0300 0000 1204 1a04 3004 4204  log.........0.B.
++000027f0: 3504 3304 3e04 4004 3804 3808 0000 0000  5.3.>.@.8.8.....
++00002800: 0600 0000 0a43 6174 6567 6f72 6965 7307  .....Categories.
++00002810: 0000 0012 4361 7465 676f 7279 4c69 7374  ....CategoryList
++00002820: 4469 616c 6f67 0103 0000 0016 041a 0430  Dialog.........0
++00002830: 0442 0435 0433 043e 0440 0438 044f 0020  .B.5.3.>.@.8.O. 
++00002840: 0027 0800 0000 0006 0000 000a 4361 7465  .'..........Cate
++00002850: 676f 7279 2027 0700 0000 1243 6174 6567  gory '.....Categ
++00002860: 6f72 794c 6973 7444 6961 6c6f 6701 0300  oryListDialog...
++00002870: 0000 2804 1704 3004 3c04 3504 3d04 3804  ..(...0.<.5.=.8.
++00002880: 4204 4c00 2004 3a04 3004 4204 3504 3304  B.L. .:.0.B.5.3.
++00002890: 3e04 4004 3804 4e00 2000 2708 0000 0000  >.@.8.N. .'.....
++000028a0: 0600 0000 1252 6570 6c61 6365 2063 6174  .....Replace cat
++000028b0: 6567 6f72 7920 2707 0000 0012 4361 7465  egory '.....Cate
++000028c0: 676f 7279 4c69 7374 4469 616c 6f67 0103  goryListDialog..
++000028d0: 0000 001c 0417 0430 043c 0435 043d 0438  .......0.<.5.=.8
++000028e0: 0442 044c 0020 043d 0430 002e 002e 002e  .B.L. .=.0......
++000028f0: 0800 0000 0006 0000 000f 5265 706c 6163  ..........Replac
++00002900: 6520 7769 7468 2e2e 2e07 0000 0012 4361  e with........Ca
++00002910: 7465 676f 7279 4c69 7374 4469 616c 6f67  tegoryListDialog
++00002920: 0103 0000 003c 041f 043e 043a 0430 0437  .....<...>.:.0.7
++00002930: 0430 0442 044c 0020 043e 043f 0435 0440  .0.B.L. .>.?.5.@
++00002940: 0430 0446 0438 0438 0020 0441 0020 041a  .0.F.8.8. .A. ..
++00002950: 0430 0442 0435 0433 043e 0440 0438 0435  .0.B.5.3.>.@.8.5
++00002960: 0439 0800 0000 0006 0000 001d 5368 6f77  .9..........Show
++00002970: 206f 7065 7261 7469 6f6e 7320 7769 7468   operations with
++00002980: 2043 6174 6567 6f72 7907 0000 0012 4361   Category.....Ca
++00002990: 7465 676f 7279 4c69 7374 4469 616c 6f67  tegoryListDialog
++000029a0: 0103 0000 0010 041e 043f 0435 0440 0430  .........?.5.@.0
++000029b0: 0446 0438 0438 0800 0000 0006 0000 000a  .F.8.8..........
++000029c0: 4f70 6572 6174 696f 6e73 0700 0000 0e43  Operations.....C
++000029d0: 6174 6567 6f72 7952 6570 6f72 7401 0300  ategoryReport...
++000029e0: 0000 1804 3f04 3e00 2004 1a04 3004 4204  ....?.>. ...0.B.
++000029f0: 3504 3304 3e04 4004 3804 3808 0000 0000  5.3.>.@.8.8.....
++00002a00: 0600 0000 0b62 7920 4361 7465 676f 7279  .....by Category
++00002a10: 0700 0000 0e43 6174 6567 6f72 7952 6570  .....CategoryRep
++00002a20: 6f72 7401 0300 0000 1404 1a04 3004 4204  ort.........0.B.
++00002a30: 3504 3304 3e04 4004 3804 4f00 3a08 0000  5.3.>.@.8.O.:...
++00002a40: 0000 0600 0000 0943 6174 6567 6f72 793a  .......Category:
++00002a50: 0700 0000 1443 6174 6567 6f72 7952 6570  .....CategoryRep
++00002a60: 6f72 7457 6964 6765 7401 0300 0000 2404  ortWidget.....$.
++00002a70: 1e04 4204 4704 5104 4200 2004 3f04 3e00  ..B.G.Q.B. .?.>.
++00002a80: 2004 3a04 3004 4204 3504 3304 3e04 4004   .:.0.B.5.3.>.@.
++00002a90: 3804 3808 0000 0000 0600 0000 1252 6570  8.8..........Rep
++00002aa0: 6f72 7420 6279 2063 6174 6567 6f72 7907  ort by category.
++00002ab0: 0000 0014 4361 7465 676f 7279 5265 706f  ....CategoryRepo
++00002ac0: 7274 5769 6467 6574 0103 0000 0018 041d  rtWidget........
++00002ad0: 0430 0438 043c 0435 043d 043e 0432 0430  .0.8.<.5.=.>.2.0
++00002ae0: 043d 0438 0435 0800 0000 0006 0000 0004  .=.8.5..........
++00002af0: 4e61 6d65 0700 0000 1143 6174 6567 6f72  Name.....Categor
++00002b00: 7954 7265 654d 6f64 656c 0103 0000 000c  yTreeModel......
++00002b10: 0427 0430 0441 0442 0430 044f 0800 0000  .'.0.A.B.0.O....
++00002b20: 0006 0000 0005 4f66 7465 6e07 0000 0011  ......Often.....
++00002b30: 4361 7465 676f 7279 5472 6565 4d6f 6465  CategoryTreeMode
++00002b40: 6c01 0300 0000 2004 1304 4004 3004 4404  l..... ...@.0.D.
++00002b50: 3804 3a00 2004 4604 3504 3d04 4b00 2004  8.:. .F.5.=.K. .
++00002b60: 3404 3b04 4f00 2008 0000 0000 0600 0000  4.;.O. .........
++00002b70: 1050 7269 6365 2063 6861 7274 2066 6f72  .Price chart for
++00002b80: 2007 0000 000b 4368 6172 7457 696e 646f   .....ChartWindo
++00002b90: 7701 0300 0000 1a04 2604 3504 3d04 3d04  w.......&.5.=.=.
++00002ba0: 3004 4f00 2004 3104 4304 3c04 3004 3304  0.O. .1.C.<.0.3.
++00002bb0: 3008 0000 0000 0600 0000 0541 7373 6574  0..........Asset
++00002bc0: 0700 0000 1143 6c6f 7365 6454 7261 6465  .....ClosedTrade
++00002bd0: 734d 6f64 656c 0103 0000 001a 0414 0430  sModel.........0
++00002be0: 0442 0430 0020 0437 0430 043a 0440 044b  .B.0. .7.0.:.@.K
++00002bf0: 0442 0438 044f 0800 0000 0006 0000 000a  .B.8.O..........
++00002c00: 436c 6f73 6520 4461 7465 0700 0000 1143  Close Date.....C
++00002c10: 6c6f 7365 6454 7261 6465 734d 6f64 656c  losedTradesModel
++00002c20: 0103 0000 0026 0414 0430 0442 0430 002f  .....&...0.B.0./
++00002c30: 0432 0440 0435 043c 044f 0020 0437 0430  .2.@.5.<.O. .7.0
++00002c40: 043a 0440 044b 0442 0438 044f 0800 0000  .:.@.K.B.8.O....
++00002c50: 0006 0000 000f 436c 6f73 6520 4461 7465  ......Close Date
++00002c60: 2f54 696d 6507 0000 0011 436c 6f73 6564  /Time.....Closed
++00002c70: 5472 6164 6573 4d6f 6465 6c01 0300 0000  TradesModel.....
++00002c80: 1a04 2604 3504 3d04 3000 2004 3704 3004  ..&.5.=.0. .7.0.
++00002c90: 3a04 4004 4b04 4204 3804 4f08 0000 0000  :.@.K.B.8.O.....
++00002ca0: 0600 0000 0b43 6c6f 7365 2050 7269 6365  .....Close Price
++00002cb0: 0700 0000 1143 6c6f 7365 6454 7261 6465  .....ClosedTrade
++00002cc0: 734d 6f64 656c 0103 0000 0010 041a 043e  sModel.........>
++00002cd0: 043c 0438 0441 0441 0438 044f 0800 0000  .<.8.A.A.8.O....
++00002ce0: 0006 0000 0003 4665 6507 0000 0011 436c  ......Fee.....Cl
++00002cf0: 6f73 6564 5472 6164 6573 4d6f 6465 6c01  osedTradesModel.
++00002d00: 0300 0000 1404 1f04 4004 3804 3c04 3504  ........@.8.<.5.
++00002d10: 4704 3004 3d04 3804 3508 0000 0000 0600  G.0.=.8.5.......
++00002d20: 0000 044e 6f74 6507 0000 0011 436c 6f73  ...Note.....Clos
++00002d30: 6564 5472 6164 6573 4d6f 6465 6c01 0300  edTradesModel...
++00002d40: 0000 1a04 1404 3004 4204 3000 2004 3e04  ......0.B.0. .>.
++00002d50: 4204 3a04 4004 4b04 4204 3804 4f08 0000  B.:.@.K.B.8.O...
++00002d60: 0000 0600 0000 094f 7065 6e20 4461 7465  .......Open Date
++00002d70: 0700 0000 1143 6c6f 7365 6454 7261 6465  .....ClosedTrade
++00002d80: 734d 6f64 656c 0103 0000 0026 0414 0430  sModel.....&...0
++00002d90: 0442 0430 002f 0412 0440 0435 043c 044f  .B.0./...@.5.<.O
++00002da0: 0020 043e 0442 043a 0440 044b 0442 0438  . .>.B.:.@.K.B.8
++00002db0: 044f 0800 0000 0006 0000 000e 4f70 656e  .O..........Open
++00002dc0: 2044 6174 652f 5469 6d65 0700 0000 1143   Date/Time.....C
++00002dd0: 6c6f 7365 6454 7261 6465 734d 6f64 656c  losedTradesModel
++00002de0: 0103 0000 001a 0426 0435 043d 0430 0020  .......&.5.=.0. 
++00002df0: 043e 0442 043a 0440 044b 0442 0438 044f  .>.B.:.@.K.B.8.O
++00002e00: 0800 0000 0006 0000 000a 4f70 656e 2050  ..........Open P
++00002e10: 7269 6365 0700 0000 1143 6c6f 7365 6454  rice.....ClosedT
++00002e20: 7261 6465 734d 6f64 656c 0103 0000 0006  radesModel......
++00002e30: 041f 0438 0423 0800 0000 0006 0000 0003  ...8.#..........
++00002e40: 502f 4c07 0000 0011 436c 6f73 6564 5472  P/L.....ClosedTr
++00002e50: 6164 6573 4d6f 6465 6c01 0300 0000 0c04  adesModel.......
++00002e60: 1f04 3804 2300 2c00 2000 2508 0000 0000  ..8.#.,. .%.....
++00002e70: 0600 0000 0650 2f4c 2c20 2507 0000 0011  .....P/L, %.....
++00002e80: 436c 6f73 6564 5472 6164 6573 4d6f 6465  ClosedTradesMode
++00002e90: 6c01 0300 0000 0c04 1a04 3e04 3b00 2d04  l.........>.;.-.
++00002ea0: 3204 3e08 0000 0000 0600 0000 0351 7479  2.>..........Qty
++00002eb0: 0700 0000 1143 6c6f 7365 6454 7261 6465  .....ClosedTrade
++00002ec0: 734d 6f64 656c 0103 0000 00a0 041a 043e  sModel.........>
++00002ed0: 043b 0438 0447 0435 0442 0432 043e 0020  .;.8.G.5.B.2.>. 
++00002ee0: 0446 0435 043d 043d 044b 0445 0020 0431  .F.5.=.=.K.E. .1
++00002ef0: 0443 043c 0430 0433 0020 043d 0435 0434  .C.<.0.3. .=.5.4
++00002f00: 043e 0441 0442 0430 0442 043e 0447 043d  .>.A.B.0.B.>.G.=
++00002f10: 043e 0020 0434 043b 044f 0020 043e 0431  .>. .4.;.O. .>.1
++00002f20: 0440 0430 0431 043e 0442 043a 0438 0020  .@.0.1.>.B.:.8. 
++00002f30: 043a 043e 0440 043f 043e 0440 0430 0442  .:.>.@.?.>.@.0.B
++00002f40: 0438 0432 043d 043e 0433 043e 0020 0441  .8.2.=.>.3.>. .A
++00002f50: 043e 0431 044b 0442 0438 044f 002e 0020  .>.1.K.B.8.O... 
++00002f60: 0414 0430 0442 0430 003a 0020 0800 0000  ...0.B.0.:. ....
++00002f70: 0006 0000 0042 4173 7365 7420 616d 6f75  .....BAsset amou
++00002f80: 6e74 2069 7320 6e6f 7420 656e 6f75 6768  nt is not enough
++00002f90: 2066 6f72 2063 6f72 706f 7261 7465 2061   for corporate a
++00002fa0: 6374 696f 6e20 7072 6f63 6573 7369 6e67  ction processing
++00002fb0: 2e20 4461 7465 3a20 0700 0000 0f43 6f72  . Date: .....Cor
++00002fc0: 706f 7261 7465 4163 7469 6f6e 0103 0000  porateAction....
++00002fd0: 0074 0426 0411 0020 043d 0435 0020 044f  .t.&... .=.5. .O
++00002fe0: 0432 043b 044f 0435 0442 0441 044f 0020  .2.;.O.5.B.A.O. 
++00002ff0: 0447 0430 0441 0442 044c 044e 0020 0440  .G.0.A.B.L.N. .@
++00003000: 0435 0437 0443 043b 044c 0442 0430 0442  .5.7.C.;.L.B.0.B
++00003010: 043e 0432 0020 043a 043e 0440 043f 043e  .>.2. .:.>.@.?.>
++00003020: 0440 0430 0442 0438 0432 043d 043e 0433  .@.0.B.8.2.=.>.3
++00003030: 043e 0020 0441 043e 0431 044b 0442 0438  .>. .A.>.1.K.B.8
++00003040: 044f 003a 0020 0800 0000 0006 0000 0030  .O.:. .........0
++00003050: 4173 7365 7420 6973 6e27 7420 6120 7061  Asset isn't a pa
++00003060: 7274 206f 6620 636f 7270 6f72 6174 6520  rt of corporate 
++00003070: 6163 7469 6f6e 2072 6573 756c 7473 3a20  action results: 
++00003080: 0700 0000 0f43 6f72 706f 7261 7465 4163  .....CorporateAc
++00003090: 7469 6f6e 0103 0000 0056 041d 0435 0020  tion.....V...5. 
++000030a0: 0437 0430 0434 0430 043d 0020 0442 0438  .7.0.4.0.=. .B.8
++000030b0: 043f 0020 043a 043e 0440 043f 043e 0440  .?. .:.>.@.?.>.@
++000030c0: 0430 0442 0438 0432 043d 043e 0433 043e  .0.B.8.2.=.>.3.>
++000030d0: 0020 0441 043e 0431 044b 0442 0438 044f  . .A.>.1.K.B.8.O
++000030e0: 002e 0020 0414 0430 0442 0430 003a 0020  ... ...0.B.0.:. 
++000030f0: 0800 0000 0006 0000 002b 436f 7270 6f72  .........+Corpor
++00003100: 6174 6520 6163 7469 6f6e 2074 7970 6520  ate action type 
++00003110: 6973 6e27 7420 6465 6669 6e65 642e 2044  isn't defined. D
++00003120: 6174 653a 2007 0000 000f 436f 7270 6f72  ate: .....Corpor
++00003130: 6174 6541 6374 696f 6e01 0300 0000 1204  ateAction.......
++00003140: 1404 3504 3b04 3804 4104 4204 3804 3d04  ..5.;.8.A.B.8.=.
++00003150: 3308 0000 0000 0600 0000 0944 656c 6973  3..........Delis
++00003160: 7469 6e67 0700 0000 0f43 6f72 706f 7261  ting.....Corpora
++00003170: 7465 4163 7469 6f6e 0103 0000 002c 0420  teAction.....,. 
++00003180: 0435 043e 0440 0433 0430 043d 0438 0437  .5.>.@.3.0.=.8.7
++00003190: 0430 0446 0438 044f 0020 043a 043e 043c  .0.F.8.O. .:.>.<
++000031a0: 043f 0430 043d 0438 0438 0800 0000 0006  .?.0.=.8.8......
++000031b0: 0000 0006 4d65 7267 6572 0700 0000 0f43  ....Merger.....C
++000031c0: 6f72 706f 7261 7465 4163 7469 6f6e 0103  orporateAction..
++000031d0: 0000 00ac 0420 0435 0437 0443 043b 044c  ..... .5.7.C.;.L
++000031e0: 0442 0430 0442 044b 0020 043a 043e 0440  .B.0.B.K. .:.>.@
++000031f0: 043f 043e 0440 0430 0442 0438 0432 043d  .?.>.@.0.B.8.2.=
++00003200: 043e 0433 043e 0020 0441 043e 0431 044b  .>.3.>. .A.>.1.K
++00003210: 0442 0438 044f 0020 043d 0435 0020 0440  .B.8.O. .=.5. .@
++00003220: 0430 0441 043f 0440 0435 0434 0435 043b  .0.A.?.@.5.4.5.;
++00003230: 044f 044e 0442 0020 0031 0030 0030 0025  .O.N.B. .1.0.0.%
++00003240: 0020 0441 0442 043e 0438 043c 043e 0441  . .A.B.>.8.<.>.A
++00003250: 0442 0438 0020 0438 0437 043d 0430 0447  .B.8. .8.7.=.0.G
++00003260: 0430 043b 044c 043d 043e 0433 043e 0020  .0.;.L.=.>.3.>. 
++00003270: 0430 043a 0442 0438 0432 0430 002e 0020  .0.:.B.8.2.0... 
++00003280: 0800 0000 0006 0000 004d 5265 7375 6c74  .........MResult
++00003290: 7320 7661 6c75 6520 6f66 2063 6f72 706f  s value of corpo
++000032a0: 7261 7465 2061 6374 696f 6e20 646f 6573  rate action does
++000032b0: 6e27 7420 6d61 7463 6820 3130 3025 206f  n't match 100% o
++000032c0: 6620 696e 6974 6961 6c20 6173 7365 7420  f initial asset 
++000032d0: 7661 6c75 652e 2007 0000 000f 436f 7270  value. .....Corp
++000032e0: 6f72 6174 6541 6374 696f 6e01 0300 0000  orateAction.....
++000032f0: 3a04 1204 4b04 3404 3504 3b04 3504 3d04  :...K.4.5.;.5.=.
++00003300: 3804 3500 2004 3a04 3e04 3c04 3f04 3004  8.5. .:.>.<.?.0.
++00003310: 3d04 3804 3800 2000 2804 4104 3f04 3804  =.8.8. .(.A.?.8.
++00003320: 3d00 2d04 3e04 4404 4400 2908 0000 0000  =.-.>.D.D.).....
++00003330: 0600 0000 0853 7069 6e2d 6f66 6607 0000  .....Spin-off...
++00003340: 000f 436f 7270 6f72 6174 6541 6374 696f  ..CorporateActio
++00003350: 6e01 0300 0000 0a04 2104 3f04 3b04 3804  n.......!.?.;.8.
++00003360: 4208 0000 0000 0600 0000 0553 706c 6974  B..........Split
++00003370: 0700 0000 0f43 6f72 706f 7261 7465 4163  .....CorporateAc
++00003380: 7469 6f6e 0103 0000 001a 0421 043c 0435  tion.......!.<.5
++00003390: 043d 0430 0020 0441 0438 043c 0432 043e  .=.0. .A.8.<.2.>
++000033a0: 043b 0430 0800 0000 0006 0000 000d 5379  .;.0..........Sy
++000033b0: 6d62 6f6c 2063 6861 6e67 6507 0000 000f  mbol change.....
++000033c0: 436f 7270 6f72 6174 6541 6374 696f 6e01  CorporateAction.
++000033d0: 0300 0000 1804 1d04 1504 1e04 1f04 2004  .............. .
++000033e0: 1504 1404 1504 1b04 1504 1d04 1e08 0000  ................
++000033f0: 0000 0600 0000 0955 4e44 4546 494e 4544  .......UNDEFINED
++00003400: 0700 0000 0f43 6f72 706f 7261 7465 4163  .....CorporateAc
++00003410: 7469 6f6e 0103 0000 00ae 041d 0435 043f  tion.........5.?
++00003420: 043e 0434 0435 0440 0436 0438 0432 0430  .>.4.5.@.6.8.2.0
++00003430: 0435 043c 044b 0439 0020 0441 043b 0443  .5.<.K.9. .A.;.C
++00003440: 0447 0430 0439 003a 0020 041a 043e 0440  .G.0.9.:. ...>.@
++00003450: 043f 043e 0440 0430 0442 0438 0432 043d  .?.>.@.0.B.8.2.=
++00003460: 043e 0435 0020 0441 043e 0431 044b 0442  .>.5. .A.>.1.K.B
++00003470: 0438 0435 0020 043f 043e 043a 0440 044b  .8.5. .?.>.:.@.K
++00003480: 0432 0430 0435 0442 0020 043d 0435 0020  .2.0.5.B. .=.5. 
++00003490: 0432 0441 044e 0020 043e 0442 043a 0440  .2.A.N. .>.B.:.@
++000034a0: 044b 0442 0443 044e 0020 043f 043e 0437  .K.B.C.N. .?.>.7
++000034b0: 0438 0446 0438 044e 002e 0020 0414 0430  .8.F.8.N... ...0
++000034c0: 0442 0430 003a 0020 0800 0000 0006 0000  .B.0.:. ........
++000034d0: 0046 556e 6861 6e64 6c65 6420 6361 7365  .FUnhandled case
++000034e0: 3a20 436f 7270 6f72 6174 6520 6163 7469  : Corporate acti
++000034f0: 6f6e 2063 6f76 6572 7320 6e6f 7420 6675  on covers not fu
++00003500: 6c6c 206f 7065 6e20 706f 7369 7469 6f6e  ll open position
++00003510: 2e20 4461 7465 3a20 0700 0000 0f43 6f72  . Date: .....Cor
++00003520: 706f 7261 7465 4163 7469 6f6e 0103 0000  porateAction....
++00003530: 0002 2116 0800 0000 0006 0000 0001 2307  ..!...........#.
++00003540: 0000 0015 436f 7270 6f72 6174 6541 6374  ....CorporateAct
++00003550: 696f 6e57 6964 6765 7401 0300 0000 0804  ionWidget.......
++00003560: 2104 4704 3504 4208 0000 0000 0600 0000  !.G.5.B.........
++00003570: 0741 6363 6f75 6e74 0700 0000 1543 6f72  .Account.....Cor
++00003580: 706f 7261 7465 4163 7469 6f6e 5769 6467  porateActionWidg
++00003590: 6574 0103 0000 001c 0414 043e 0431 0430  et.........>.1.0
++000035a0: 0432 0438 0442 044c 0020 0430 043a 0442  .2.8.B.L. .0.:.B
++000035b0: 0438 0432 0800 0000 0006 0000 0009 4164  .8.2..........Ad
++000035c0: 6420 6173 7365 7407 0000 0015 436f 7270  d asset.....Corp
++000035d0: 6f72 6174 6541 6374 696f 6e57 6964 6765  orateActionWidge
++000035e0: 7401 0300 0000 0404 2604 1108 0000 0000  t.......&.......
++000035f0: 0600 0000 0541 7373 6574 0700 0000 1543  .....Asset.....C
++00003600: 6f72 706f 7261 7465 4163 7469 6f6e 5769  orporateActionWi
++00003610: 6467 6574 0103 0000 002c 041a 043e 0440  dget.....,...>.@
++00003620: 043f 043e 0440 0430 0442 0438 0432 043d  .?.>.@.0.B.8.2.=
++00003630: 043e 0435 0020 0434 0435 0439 0441 0442  .>.5. .4.5.9.A.B
++00003640: 0432 0438 0435 0800 0000 0006 0000 0010  .2.8.5..........
++00003650: 436f 7270 6f72 6174 6520 4163 7469 6f6e  Corporate Action
++00003660: 0700 0000 1543 6f72 706f 7261 7465 4163  .....CorporateAc
++00003670: 7469 6f6e 5769 6467 6574 0103 0000 0014  tionWidget......
++00003680: 0414 0430 0442 0430 002f 0412 0440 0435  ...0.B.0./...@.5
++00003690: 043c 044f 0800 0000 0006 0000 0009 4461  .<.O..........Da
++000036a0: 7465 2f54 696d 6507 0000 0015 436f 7270  te/Time.....Corp
++000036b0: 6f72 6174 6541 6374 696f 6e57 6964 6765  orateActionWidge
++000036c0: 7401 0300 0000 1204 1404 3504 3b04 3804  t.........5.;.8.
++000036d0: 4104 4204 3804 3d04 3308 0000 0000 0600  A.B.8.=.3.......
++000036e0: 0000 0944 656c 6973 7469 6e67 0700 0000  ...Delisting....
++000036f0: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
++00003700: 5769 6467 6574 0103 0000 0044 041d 0435  Widget.....D...5
++00003710: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
++00003720: 0020 0434 043e 0431 0430 0432 0438 0442  . .4.>.1.0.2.8.B
++00003730: 044c 0020 043d 043e 0432 0443 044e 0020  .L. .=.>.2.C.N. 
++00003740: 0437 0430 043f 0438 0441 044c 003a 0020  .7.0.?.8.A.L.:. 
++00003750: 0800 0000 0006 0000 001a 4661 696c 6564  ..........Failed
++00003760: 2074 6f20 6164 6420 6e65 7720 7265 636f   to add new reco
++00003770: 7264 3a20 0700 0000 1543 6f72 706f 7261  rd: .....Corpora
++00003780: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
++00003790: 0000 0028 041e 0431 044a 0435 0434 0438  ...(...1.J.5.4.8
++000037a0: 043d 0435 043d 0438 0435 0020 043a 043e  .=.5.=.8.5. .:.>
++000037b0: 043c 043f 0430 043d 0438 0438 0800 0000  .<.?.0.=.8.8....
++000037c0: 0006 0000 0006 4d65 7267 6572 0700 0000  ......Merger....
++000037d0: 1543 6f72 706f 7261 7465 4163 7469 6f6e  .CorporateAction
++000037e0: 5769 6467 6574 0103 0000 0006 004e 002f  Widget.......N./
++000037f0: 0041 0800 0000 0006 0000 0003 4e2f 4107  .A..........N/A.
++00003800: 0000 0015 436f 7270 6f72 6174 6541 6374  ....CorporateAct
++00003810: 696f 6e57 6964 6765 7401 0300 0000 1004  ionWidget.......
++00003820: 1e04 3f04 3804 4104 3004 3d04 3804 3508  ..?.8.A.0.=.8.5.
++00003830: 0000 0000 0600 0000 044e 6f74 6507 0000  .........Note...
++00003840: 0015 436f 7270 6f72 6174 6541 6374 696f  ..CorporateActio
++00003850: 6e57 6964 6765 7401 0300 0000 4804 1e04  nWidget.....H...
++00003860: 4804 3804 3104 3a04 3000 2004 3f04 4004  H.8.1.:.0. .?.@.
++00003870: 3800 2004 3704 3004 3f04 3804 4104 3800  8. .7.0.?.8.A.8.
++00003880: 2004 3404 3504 4204 3004 3b04 3504 3900   .4.5.B.0.;.5.9.
++00003890: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
++000038a0: 3800 3a00 2008 0000 0000 0600 0000 214f  8.:. .........!O
++000038b0: 7065 7261 7469 6f6e 2064 6574 6169 6c73  peration details
++000038c0: 2073 7562 6d69 7420 6661 696c 6564 3a20   submit failed: 
++000038d0: 0700 0000 1543 6f72 706f 7261 7465 4163  .....CorporateAc
++000038e0: 7469 6f6e 5769 6467 6574 0103 0000 0038  tionWidget.....8
++000038f0: 041e 0448 0438 0431 043a 0430 0020 043f  ...H.8.1.:.0. .?
++00003900: 0440 0438 0020 0437 0430 043f 0438 0441  .@.8. .7.0.?.8.A
++00003910: 0438 0020 043e 043f 0435 0440 0430 0446  .8. .>.?.5.@.0.F
++00003920: 0438 0438 003a 0020 0800 0000 0006 0000  .8.8.:. ........
++00003930: 0019 4f70 6572 6174 696f 6e20 7375 626d  ..Operation subm
++00003940: 6974 2066 6169 6c65 643a 2007 0000 0015  it failed: .....
++00003950: 436f 7270 6f72 6174 6541 6374 696f 6e57  CorporateActionW
++00003960: 6964 6765 7401 0300 0000 0c04 1a04 3e04  idget.........>.
++00003970: 3b00 2d04 3204 3e08 0000 0000 0600 0000  ;.-.2.>.........
++00003980: 0351 7479 0700 0000 1543 6f72 706f 7261  .Qty.....Corpora
++00003990: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
++000039a0: 0000 001a 0423 0434 0430 043b 0438 0442  .....#.4.0.;.8.B
++000039b0: 044c 0020 0430 043a 0442 0438 0432 0800  .L. .0.:.B.8.2..
++000039c0: 0000 0006 0000 000c 5265 6d6f 7665 2061  ........Remove a
++000039d0: 7373 6574 0700 0000 1543 6f72 706f 7261  sset.....Corpora
++000039e0: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
++000039f0: ffff ffff 0800 0000 0006 0000 0008 5370  ..............Sp
++00003a00: 696e 2d4f 6666 0700 0000 1543 6f72 706f  in-Off.....Corpo
++00003a10: 7261 7465 4163 7469 6f6e 5769 6467 6574  rateActionWidget
++00003a20: 0103 0000 000a 0421 043f 043b 0438 0442  .......!.?.;.8.B
++00003a30: 0800 0000 0006 0000 0005 5370 6c69 7407  ..........Split.
++00003a40: 0000 0015 436f 7270 6f72 6174 6541 6374  ....CorporateAct
++00003a50: 696f 6e57 6964 6765 7401 0300 0000 1a04  ionWidget.......
++00003a60: 2104 3c04 3504 3d04 3000 2004 4104 3804  !.<.5.=.0. .A.8.
++00003a70: 3c04 3204 3e04 3b04 3008 0000 0000 0600  <.2.>.;.0.......
++00003a80: 0000 0d53 796d 626f 6c20 6368 616e 6765  ...Symbol change
++00003a90: 0700 0000 1543 6f72 706f 7261 7465 4163  .....CorporateAc
++00003aa0: 7469 6f6e 5769 6467 6574 0103 0000 0006  tionWidget......
++00003ab0: 0422 0438 043f 0800 0000 0006 0000 0004  .".8.?..........
++00003ac0: 5479 7065 0700 0000 1543 6f72 706f 7261  Type.....Corpora
++00003ad0: 7465 4163 7469 6f6e 5769 6467 6574 0103  teActionWidget..
++00003ae0: 0000 0034 0424 043e 0440 043c 0430 0442  ...4.$.>.@.<.0.B
++00003af0: 0020 0431 0430 0437 044b 0020 0434 0430  . .1.0.7.K. .4.0
++00003b00: 043d 043d 044b 0445 0020 0443 0441 0442  .=.=.K.E. .C.A.B
++00003b10: 0430 0440 0435 043b 0800 0000 0006 0000  .0.@.5.;........
++00003b20: 001b 4461 7461 6261 7365 2066 6f72 6d61  ..Database forma
++00003b30: 7420 6973 206f 7574 6461 7465 6407 0000  t is outdated...
++00003b40: 0002 4442 0103 0000 0064 0412 044b 0020  ..DB.....d...K. 
++00003b50: 0441 043e 0433 043b 0430 0441 043d 044b  .A.>.3.;.0.A.=.K
++00003b60: 0020 0441 043a 043e 043d 0432 0435 0440  . .A.:.>.=.2.5.@
++00003b70: 0442 0438 0440 043e 0432 0430 0442 044c  .B.8.@.>.2.0.B.L
++00003b80: 0020 0434 0430 043d 043d 044b 0435 0020  . .4.0.=.=.K.5. 
++00003b90: 0432 0020 043d 043e 0432 044b 0439 0020  .2. .=.>.2.K.9. 
++00003ba0: 0444 043e 0440 043c 0430 0442 003f 0800  .D.>.@.<.0.B.?..
++00003bb0: 0000 0006 0000 0032 446f 2079 6f75 2061  .......2Do you a
++00003bc0: 6772 6565 2074 6f20 7570 6772 6164 6520  gree to upgrade 
++00003bd0: 796f 7572 2064 6174 6120 746f 206e 6577  your data to new
++00003be0: 6572 2066 6f72 6d61 743f 0700 0000 0244  er format?.....D
++00003bf0: 4201 0300 0000 5e04 2404 3e04 4004 3c04  B.....^.$.>.@.<.
++00003c00: 3000 2000 3300 2d04 1d04 1404 2404 1b00  0. .3.-.....$...
++00003c10: 2004 3404 3b04 4f00 2004 4d04 4204 3e04   .4.;.O. .M.B.>.
++00003c20: 3304 3e00 2004 3304 3e04 3404 3000 2004  3.>. .3.>.4.0. .
++00003c30: 3d04 3500 2004 3f04 3e04 3404 3404 3504  =.5. .?.>.4.4.5.
++00003c40: 4004 3604 3804 3204 3004 3504 4204 4104  @.6.8.2.0.5.B.A.
++00003c50: 4f00 3a00 2008 0000 0000 0600 0000 2633  O.:. .........&3
++00003c60: 2d4e 4446 4c20 666f 726d 2069 736e 2774  -NDFL form isn't
++00003c70: 2073 7570 6f6f 7274 6564 2066 6f72 2079   supoorted for y
++00003c80: 6561 723a 2007 0000 0004 444c 5347 0103  ear: .....DLSG..
++00003c90: 0000 0086 0421 0442 0440 0430 043d 0430  .....!.B.@.0.=.0
++00003ca0: 0020 0426 0411 0020 043d 0435 0020 0437  . .&... .=.5. .7
++00003cb0: 0430 0434 0430 043d 0430 002c 0020 0434  .0.4.0.=.0.,. .4
++00003cc0: 0438 0432 0438 0434 0435 043d 0434 0020  .8.2.8.4.5.=.4. 
++00003cd0: 043d 0435 0020 0431 0443 0434 0435 0442  .=.5. .1.C.4.5.B
++00003ce0: 0020 0432 043a 043b 044e 0447 0451 043d  . .2.:.;.N.G.Q.=
++00003cf0: 0020 0432 0020 0434 0435 043a 043b 0430  . .2. .4.5.:.;.0
++00003d00: 0440 0430 0446 0438 044e 0020 0033 002d  .@.0.F.8.N. .3.-
++00003d10: 041d 0424 0414 041b 0020 0800 0000 0006  ...$..... ......
++00003d20: 0000 0047 4163 636f 756e 7420 636f 756e  ...GAccount coun
++00003d30: 7472 7920 6973 206e 6f74 2073 6574 2066  try is not set f
++00003d40: 6f72 2061 7373 6574 2c20 6469 7669 6465  or asset, divide
++00003d50: 6e64 2069 736e 2774 2069 6e63 6c75 6465  nd isn't include
++00003d60: 2069 6e20 332d 4e44 464c 2007 0000 0004   in 3-NDFL .....
++00003d70: 444c 5347 0103 0000 004a 0412 0430 043b  DLSG.....J...0.;
++00003d80: 044e 0442 0430 0020 043d 0435 0020 043f  .N.B.0. .=.5. .?
++00003d90: 043e 0434 0434 0435 0440 0436 0438 0432  .>.4.4.5.@.6.8.2
++00003da0: 0430 0435 0442 0441 044f 0020 0434 043b  .0.5.B.A.O. .4.;
++00003db0: 044f 0020 0033 002d 041d 0414 0424 041b  .O. .3.-.....$..
++00003dc0: 003a 0020 0800 0000 0006 0000 0026 4375  .:. .........&Cu
++00003dd0: 7272 656e 6379 2069 7320 6e6f 7420 7375  rrency is not su
++00003de0: 7070 6f72 7465 6420 666f 7220 332d 4e44  pported for 3-ND
++00003df0: 464c 3a20 0700 0000 0444 4c53 4701 0300  FL: .....DLSG...
++00003e00: 0000 1404 4d04 3a04 4104 3f04 3804 4004  ....M.:.A.?.8.@.
++00003e10: 3004 4604 3804 4f08 0000 0000 0600 0000  0.F.8.O.........
++00003e20: 0665 7870 6972 7907 0000 000c 4461 7461  .expiry.....Data
++00003e30: 4465 6c65 6761 7465 0103 0000 000e 043d  Delegate.......=
++00003e40: 043e 043c 0438 043d 0430 043b 0800 0000  .>.<.8.=.0.;....
++00003e50: 0006 0000 0009 7072 696e 6369 7061 6c07  ......principal.
++00003e60: 0000 000c 4461 7461 4465 6c65 6761 7465  ....DataDelegate
++00003e70: 0103 0000 000e 0440 0435 0433 002e 043a  .......@.5.3...:
++00003e80: 043e 0434 0800 0000 0006 0000 0008 7265  .>.4..........re
++00003e90: 672e 636f 6465 0700 0000 0c44 6174 6144  g.code.....DataD
++00003ea0: 656c 6567 6174 6501 0300 0000 1004 1204  elegate.........
++00003eb0: 4104 3500 2004 3404 3004 4204 4b08 0000  A.5. .4.0.B.K...
++00003ec0: 0000 0600 0000 0941 6c6c 2064 6174 6573  .......All dates
++00003ed0: 0700 0000 1144 6174 6552 616e 6765 5365  .....DateRangeSe
++00003ee0: 6c65 6374 6f72 0103 0000 0004 0421 003a  lector.......!.:
++00003ef0: 0800 0000 0006 0000 0005 4672 6f6d 3a07  ..........From:.
++00003f00: 0000 0011 4461 7465 5261 6e67 6553 656c  ....DateRangeSel
++00003f10: 6563 746f 7201 0300 0000 0a04 1c04 3504  ector.........5.
++00003f20: 4104 4f04 4608 0000 0000 0600 0000 054d  A.O.F..........M
++00003f30: 6f6e 7468 0700 0000 1144 6174 6552 616e  onth.....DateRan
++00003f40: 6765 5365 6c65 6374 6f72 0103 0000 001c  geSelector......
++00003f50: 041f 0440 0435 0434 044b 0434 0443 0449  ...@.5.4.K.4.C.I
++00003f60: 0438 0439 0020 0433 043e 0434 0800 0000  .8.9. .3.>.4....
++00003f70: 0006 0000 000d 5072 6576 696f 7573 2079  ......Previous y
++00003f80: 6561 7207 0000 0011 4461 7465 5261 6e67  ear.....DateRang
++00003f90: 6553 656c 6563 746f 7201 0300 0000 0e04  eSelector.......
++00003fa0: 1a04 3204 3004 4004 4204 3004 3b08 0000  ..2.0.@.B.0.;...
++00003fb0: 0000 0600 0000 0751 7561 7274 6572 0700  .......Quarter..
++00003fc0: 0000 1144 6174 6552 616e 6765 5365 6c65  ...DateRangeSele
++00003fd0: 6374 6f72 0103 0000 0024 0422 0435 043a  ctor.....$.".5.:
++00003fe0: 0443 0449 0438 0439 0020 0434 043e 0020  .C.I.8.9. .4.>. 
++00003ff0: 0441 0435 0433 043e 0434 043d 044f 0800  .A.5.3.>.4.=.O..
++00004000: 0000 0006 0000 000f 5175 6172 7465 7220  ........Quarter 
++00004010: 746f 2064 6174 6507 0000 0011 4461 7465  to date.....Date
++00004020: 5261 6e67 6553 656c 6563 746f 7201 0300  RangeSelector...
++00004030: 0000 1604 2204 3504 3a04 4304 4904 3804  ....".5.:.C.I.8.
++00004040: 3900 2004 3304 3e04 3408 0000 0000 0600  9. .3.>.4.......
++00004050: 0000 0954 6869 7320 7965 6172 0700 0000  ...This year....
++00004060: 1144 6174 6552 616e 6765 5365 6c65 6374  .DateRangeSelect
++00004070: 6f72 0103 0000 0006 0414 043e 003a 0800  or.........>.:..
++00004080: 0000 0006 0000 0003 546f 3a07 0000 0011  ........To:.....
++00004090: 4461 7465 5261 6e67 6553 656c 6563 746f  DateRangeSelecto
++000040a0: 7201 0300 0000 0c04 1d04 3504 3404 3504  r.........5.4.5.
++000040b0: 3b04 4f08 0000 0000 0600 0000 0457 6565  ;.O..........Wee
++000040c0: 6b07 0000 0011 4461 7465 5261 6e67 6553  k.....DateRangeS
++000040d0: 656c 6563 746f 7201 0300 0000 0604 1304  elector.........
++000040e0: 3e04 3408 0000 0000 0600 0000 0459 6561  >.4..........Yea
++000040f0: 7207 0000 0011 4461 7465 5261 6e67 6553  r.....DateRangeS
++00004100: 656c 6563 746f 7201 0300 0000 1c04 1304  elector.........
++00004110: 3e04 3400 2004 3404 3e00 2004 4104 3504  >.4. .4.>. .A.5.
++00004120: 3304 3e04 3404 3d04 4f08 0000 0000 0600  3.>.4.=.O.......
++00004130: 0000 0c59 6561 7220 746f 2064 6174 6507  ...Year to date.
++00004140: 0000 0011 4461 7465 5261 6e67 6553 656c  ....DateRangeSel
++00004150: 6563 746f 7201 0300 0000 1e04 2104 3404  ector.......!.4.
++00004160: 3504 3b04 3a04 3800 2004 3f04 3e00 2004  5.;.:.8. .?.>. .
++00004170: 4104 4704 3504 4204 4308 0000 0000 0600  A.G.5.B.C.......
++00004180: 0000 1044 6561 6c73 2062 7920 4163 636f  ...Deals by Acco
++00004190: 756e 7407 0000 000b 4465 616c 7352 6570  unt.....DealsRep
++000041a0: 6f72 7401 0300 0000 0a04 2104 4704 3504  ort.......!.G.5.
++000041b0: 4200 3a08 0000 0000 0600 0000 0841 6363  B.:..........Acc
++000041c0: 6f75 6e74 3a07 0000 0011 4465 616c 7352  ount:.....DealsR
++000041d0: 6570 6f72 7457 6964 6765 7401 0300 0000  eportWidget.....
++000041e0: 0c04 2104 3404 3504 3b04 3a04 3808 0000  ..!.4.5.;.:.8...
++000041f0: 0000 0600 0000 0544 6561 6c73 0700 0000  .......Deals....
++00004200: 1144 6561 6c73 5265 706f 7274 5769 6467  .DealsReportWidg
++00004210: 6574 0103 0000 0020 0413 0440 0443 043f  et..... ...@.C.?
++00004220: 043f 0438 0440 043e 0432 0430 0442 044c  .?.8.@.>.2.0.B.L
++00004230: 0020 043f 043e 003a 0800 0000 0006 0000  . .?.>.:........
++00004240: 0009 4772 6f75 7020 6279 3a07 0000 0011  ..Group by:.....
++00004250: 4465 616c 7352 6570 6f72 7457 6964 6765  DealsReportWidge
++00004260: 7401 0300 0000 0e00 3c04 1f04 4304 4104  t.......<...C.A.
++00004270: 4204 3e00 3e08 0000 0000 0600 0000 063c  B.>.>..........<
++00004280: 4e6f 6e65 3e07 0000 0011 4465 616c 7352  None>.....DealsR
++00004290: 6570 6f72 7457 696e 646f 7701 0300 0000  eportWindow.....
++000042a0: 1a04 2604 3504 3d04 3d04 3004 4f00 2004  ..&.5.=.=.0.O. .
++000042b0: 3104 4304 3c04 3004 3304 3008 0000 0000  1.C.<.0.3.0.....
++000042c0: 0600 0000 0541 7373 6574 0700 0000 1144  .....Asset.....D
++000042d0: 6561 6c73 5265 706f 7274 5769 6e64 6f77  ealsReportWindow
++000042e0: 0103 0000 0030 0426 0411 0020 002d 0020  .....0.&... .-. 
++000042f0: 041e 0442 043a 0440 044b 0442 0438 0435  ...B.:.@.K.B.8.5
++00004300: 0020 002d 0020 0417 0430 043a 0440 044b  . .-. ...0.:.@.K
++00004310: 0442 0438 0435 0800 0000 0006 0000 0014  .B.8.5..........
++00004320: 4173 7365 7420 2d20 4f70 656e 202d 2043  Asset - Open - C
++00004330: 6c6f 7365 0700 0000 1144 6561 6c73 5265  lose.....DealsRe
++00004340: 706f 7274 5769 6e64 6f77 0103 0000 0010  portWindow......
++00004350: 0417 0430 043a 0440 044b 0442 0438 0435  ...0.:.@.K.B.8.5
++00004360: 0800 0000 0006 0000 0005 436c 6f73 6507  ..........Close.
++00004370: 0000 0011 4465 616c 7352 6570 6f72 7457  ....DealsReportW
++00004380: 696e 646f 7701 0300 0000 2604 1704 3004  indow.....&...0.
++00004390: 3a04 4004 4b04 4204 3804 3500 2000 2d00  :.@.K.B.8.5. .-.
++000043a0: 2004 1e04 4204 3a04 4004 4b04 4204 3804   ...B.:.@.K.B.8.
++000043b0: 3508 0000 0000 0600 0000 0c43 6c6f 7365  5..........Close
++000043c0: 202d 204f 7065 6e07 0000 0011 4465 616c   - Open.....Deal
++000043d0: 7352 6570 6f72 7457 696e 646f 7701 0300  sReportWindow...
++000043e0: 0000 2604 1e04 4204 3a04 4004 4b04 4204  ..&...B.:.@.K.B.
++000043f0: 3804 3500 2000 2d00 2004 1704 3004 3a04  8.5. .-. ...0.:.
++00004400: 4004 4b04 4204 3804 3508 0000 0000 0600  @.K.B.8.5.......
++00004410: 0000 0c4f 7065 6e20 2d20 436c 6f73 6507  ...Open - Close.
++00004420: 0000 0011 4465 616c 7352 6570 6f72 7457  ....DealsReportW
++00004430: 696e 646f 7701 0300 0000 0a04 2104 4304  indow.......!.C.
++00004440: 3c04 3c04 3008 0000 0000 0600 0000 0641  <.<.0..........A
++00004450: 6d6f 756e 7407 0000 000c 4465 7461 696c  mount.....Detail
++00004460: 734d 6f64 656c 0103 0000 0012 041a 0430  sModel.........0
++00004470: 0442 0435 0433 043e 0440 0438 044f 0800  .B.5.3.>.@.8.O..
++00004480: 0000 0006 0000 0008 4361 7465 676f 7279  ........Category
++00004490: 0700 0000 0c44 6574 6169 6c73 4d6f 6465  .....DetailsMode
++000044a0: 6c01 0300 0000 1004 1e04 3f04 3804 4104  l.........?.8.A.
++000044b0: 3004 3d04 3804 3508 0000 0000 0600 0000  0.=.8.5.........
++000044c0: 044e 6f74 6507 0000 000c 4465 7461 696c  .Note.....Detail
++000044d0: 734d 6f64 656c 0103 0000 000a 041c 0435  sModel.........5
++000044e0: 0442 043a 0430 0800 0000 0006 0000 0003  .B.:.0..........
++000044f0: 5461 6707 0000 000c 4465 7461 696c 734d  Tag.....DetailsM
++00004500: 6f64 656c 0103 0000 009e 041d 0435 0432  odel.........5.2
++00004510: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
++00004520: 043e 0431 0440 0430 0431 043e 0442 0430  .>.1.@.0.1.>.B.0
++00004530: 0442 044c 0020 0434 0438 0432 0438 0434  .B.L. .4.8.2.8.4
++00004540: 0435 043d 0434 002c 0020 0442 002e 043a  .5.=.4.,. .B...:
++00004550: 002e 0020 043d 0435 0020 0443 043a 0430  ... .=.5. .C.:.0
++00004560: 0437 0430 043d 0020 0431 0430 043d 043a  .7.0.=. .1.0.=.:
++00004570: 0020 0434 043b 044f 0020 0438 043d 0432  . .4.;.O. .8.=.2
++00004580: 0435 0441 0442 0438 0446 0438 043e 043d  .5.A.B.8.F.8.>.=
++00004590: 043d 043e 0433 043e 0020 0441 0447 0451  .=.>.3.>. .A.G.Q
++000045a0: 0442 0430 003a 0020 0800 0000 0006 0000  .B.0.:. ........
++000045b0: 0041 4361 6e27 7420 7072 6f63 6573 7320  .ACan't process 
++000045c0: 6469 7669 6465 6e64 2061 7320 6261 6e6b  dividend as bank
++000045d0: 2069 736e 2774 2073 6574 2066 6f72 2069   isn't set for i
++000045e0: 6e76 6573 746d 656e 7420 6163 636f 756e  nvestment accoun
++000045f0: 743a 2007 0000 0008 4469 7669 6465 6e64  t: .....Dividend
++00004600: 0103 0000 005a 041d 0435 0020 0437 0430  .....Z...5. .7.0
++00004610: 0434 0430 043d 0430 0020 0446 0435 043d  .4.0.=.0. .F.5.=
++00004620: 0430 0020 0434 043b 044f 0020 0432 044b  .0. .4.;.O. .2.K
++00004630: 043f 043b 0430 0442 044b 0020 0446 0435  .?.;.0.B.K. .F.5
++00004640: 043d 043d 044b 043c 0438 0020 0431 0443  .=.=.K.<.8. .1.C
++00004650: 043c 0430 0433 0430 043c 0438 003a 0020  .<.0.3.0.<.8.:. 
++00004660: 0800 0000 0006 0000 002a 4e6f 2070 7269  .........*No pri
++00004670: 6365 2064 6174 6120 666f 7220 7374 6f63  ce data for stoc
++00004680: 6b20 6469 7669 6465 6e64 2f76 6573 7469  k dividend/vesti
++00004690: 6e67 3a20 0700 0000 0844 6976 6964 656e  ng: .....Dividen
++000046a0: 6401 0300 0000 7204 1d04 3504 4200 2004  d.....r...5.B. .
++000046b0: 3a04 3e04 4204 3804 4004 3e04 3204 3a04  :.>.B.8.@.>.2.:.
++000046c0: 3800 2004 3404 3b04 4f00 2004 3404 3804  8. .4.;.O. .4.8.
++000046d0: 3204 3804 3404 3504 3d04 3404 3000 2004  2.8.4.5.=.4.0. .
++000046e0: 3004 3a04 4604 3804 4f04 3c04 3800 2004  0.:.F.8.O.<.8. .
++000046f0: 3804 3b04 3800 2004 3704 3004 4704 3804  8.;.8. .7.0.G.8.
++00004700: 4104 3b04 3504 3d04 3804 4f00 2004 3004  A.;.5.=.8.O. .0.
++00004710: 3a04 4604 3804 3900 2e08 0000 0000 0600  :.F.8.9.........
++00004720: 0000 2d4e 6f20 7374 6f63 6b20 7175 6f74  ..-No stock quot
++00004730: 6520 666f 7220 7374 6f63 6b20 6469 7669  e for stock divi
++00004740: 6465 6e64 206f 7220 7665 7374 696e 672e  dend or vesting.
++00004750: 0700 0000 0844 6976 6964 656e 6401 0300  .....Dividend...
++00004760: 0000 b804 1d04 3504 3f04 3e04 3404 3404  ......5.?.>.4.4.
++00004770: 3504 4004 3604 3804 3204 3004 3504 3c04  5.@.6.8.2.0.5.<.
++00004780: 3e04 3500 2004 3404 3504 3904 4104 4204  >.5. .4.5.9.A.B.
++00004790: 3204 3804 3500 3a00 2004 3404 3804 3204  2.8.5.:. .4.8.2.
++000047a0: 3804 3404 3504 3d04 3400 2004 3004 3a04  8.4.5.=.4. .0.:.
++000047b0: 4604 3804 4f04 3c04 3800 2004 3804 3b04  F.8.O.<.8. .8.;.
++000047c0: 3800 2004 3704 3004 4704 3804 4104 3b04  8. .7.0.G.8.A.;.
++000047d0: 3504 3d04 3804 3500 2004 3004 3a04 4604  5.=.8.5. .0.:.F.
++000047e0: 3804 3900 2004 3704 3004 3a04 4004 4b04  8.9. .7.0.:.@.K.
++000047f0: 3204 3004 3504 4200 2004 3a04 3e04 4004  2.0.5.B. .:.>.@.
++00004800: 3e04 4204 3a04 4304 4e00 2004 3f04 3e04  >.B.:.C.N. .?.>.
++00004810: 3704 3804 4604 3804 4e00 2e08 0000 0000  7.8.F.8.N.......
++00004820: 0600 0000 434e 6f74 2073 7570 706f 7274  ....CNot support
++00004830: 6564 2061 6374 696f 6e3a 2073 746f 636b  ed action: stock
++00004840: 2064 6976 6964 656e 6420 6f72 2076 6573   dividend or ves
++00004850: 7469 6e67 2063 6c6f 7365 7320 7368 6f72  ting closes shor
++00004860: 7420 7472 6164 652e 0700 0000 0844 6976  t trade......Div
++00004870: 6964 656e 6401 0300 0000 0e04 1d04 3004  idend.........0.
++00004880: 3b04 3e04 3300 3a00 2008 0000 0000 0600  ;.>.3.:. .......
++00004890: 0000 0554 6178 3a20 0700 0000 0844 6976  ...Tax: .....Div
++000048a0: 6964 656e 6401 0300 0000 3e04 1d04 3504  idend.....>...5.
++000048b0: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
++000048c0: 3204 3004 3504 3c04 4b04 3900 2004 4204  2.0.5.<.K.9. .B.
++000048d0: 3804 3f00 2004 3404 3804 3204 3804 3404  8.?. .4.8.2.8.4.
++000048e0: 3504 3d04 3404 3000 2e08 0000 0000 0600  5.=.4.0.........
++000048f0: 0000 1a55 6e73 7570 706f 7274 6564 2064  ...Unsupported d
++00004900: 6976 6964 656e 6420 7479 7065 2e07 0000  ividend type....
++00004910: 0008 4469 7669 6465 6e64 0103 0000 0002  ..Dividend......
++00004920: 2116 0800 0000 0006 0000 0001 2307 0000  !...........#...
++00004930: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
++00004940: 0103 0000 0008 0421 0447 0435 0442 0800  .......!.G.5.B..
++00004950: 0000 0006 0000 0007 4163 636f 756e 7407  ........Account.
++00004960: 0000 000e 4469 7669 6465 6e64 5769 6467  ....DividendWidg
++00004970: 6574 0103 0000 0004 0426 0411 0800 0000  et.......&......
++00004980: 0006 0000 0005 4173 7365 7407 0000 000e  ......Asset.....
++00004990: 4469 7669 6465 6e64 5769 6467 6574 0103  DividendWidget..
++000049a0: 0000 000a 041a 0443 043f 043e 043d 0800  .......C.?.>.=..
++000049b0: 0000 0006 0000 000d 426f 6e64 2049 6e74  ........Bond Int
++000049c0: 6572 6573 7407 0000 000e 4469 7669 6465  erest.....Divide
++000049d0: 6e64 5769 6467 6574 0103 0000 0014 0414  ndWidget........
++000049e0: 0430 0442 0430 002f 0412 0440 0435 043c  .0.B.0./...@.5.<
++000049f0: 044f 0800 0000 0006 0000 0009 4461 7465  .O..........Date
++00004a00: 2f54 696d 6507 0000 000e 4469 7669 6465  /Time.....Divide
++00004a10: 6e64 5769 6467 6574 0103 0000 0010 0414  ndWidget........
++00004a20: 0438 0432 0438 0434 0435 043d 0434 0800  .8.2.8.4.5.=.4..
++00004a30: 0000 0006 0000 0008 4469 7669 6465 6e64  ........Dividend
++00004a40: 0700 0000 0e44 6976 6964 656e 6457 6964  .....DividendWid
++00004a50: 6765 7401 0300 0000 0e04 1e04 4204 4104  get.........B.A.
++00004a60: 3504 4704 3a04 3008 0000 0000 0600 0000  5.G.:.0.........
++00004a70: 0745 782d 4461 7465 0700 0000 0e44 6976  .Ex-Date.....Div
++00004a80: 6964 656e 6457 6964 6765 7401 0300 0000  idendWidget.....
++00004a90: 0600 4e00 2f00 4108 0000 0000 0600 0000  ..N./.A.........
++00004aa0: 034e 2f41 0700 0000 0e44 6976 6964 656e  .N/A.....Dividen
++00004ab0: 6457 6964 6765 7401 0300 0000 1a04 1d04  dWidget.........
++00004ac0: 3504 4200 2004 3a04 3e04 4204 3804 4004  5.B. .:.>.B.8.@.
++00004ad0: 3e04 3204 3a04 3808 0000 0000 0600 0000  >.2.:.8.........
++00004ae0: 084e 6f20 7175 6f74 6507 0000 000e 4469  .No quote.....Di
++00004af0: 7669 6465 6e64 5769 6467 6574 0103 0000  videndWidget....
++00004b00: 0010 041e 043f 0438 0441 0430 043d 0438  .....?.8.A.0.=.8
++00004b10: 0435 0800 0000 0006 0000 0004 4e6f 7465  .5..........Note
++00004b20: 0700 0000 0e44 6976 6964 656e 6457 6964  .....DividendWid
++00004b30: 6765 7401 0300 0000 0804 2604 3504 3d04  get.......&.5.=.
++00004b40: 3008 0000 0000 0600 0000 0550 7269 6365  0..........Price
++00004b50: 0700 0000 0e44 6976 6964 656e 6457 6964  .....DividendWid
++00004b60: 6765 7401 0300 0000 2004 1404 3804 3204  get..... ...8.2.
++00004b70: 3804 3404 3504 3d04 3400 2004 3004 3a04  8.4.5.=.4. .0.:.
++00004b80: 4604 3804 4f04 3c04 3808 0000 0000 0600  F.8.O.<.8.......
++00004b90: 0000 0e53 746f 636b 2044 6976 6964 656e  ...Stock Dividen
++00004ba0: 6407 0000 000e 4469 7669 6465 6e64 5769  d.....DividendWi
++00004bb0: 6467 6574 0103 0000 001c 041f 0435 0440  dget.........5.@
++00004bc0: 0435 0434 0430 0447 0430 0020 0430 043a  .5.4.0.G.0. .0.:
++00004bd0: 0446 0438 0439 0800 0000 0006 0000 000d  .F.8.9..........
++00004be0: 5374 6f63 6b20 5665 7374 696e 6707 0000  Stock Vesting...
++00004bf0: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
++00004c00: 0103 0000 000a 041d 0430 043b 043e 0433  .........0.;.>.3
++00004c10: 0800 0000 0006 0000 0003 5461 7807 0000  ..........Tax...
++00004c20: 000e 4469 7669 6465 6e64 5769 6467 6574  ..DividendWidget
++00004c30: 0103 0000 0006 0422 0438 043f 0800 0000  .......".8.?....
++00004c40: 0006 0000 0004 5479 7065 0700 0000 0e44  ......Type.....D
++00004c50: 6976 6964 656e 6457 6964 6765 7401 0300  ividendWidget...
++00004c60: 0000 b204 1d04 4304 3604 3d04 3e00 2004  ......C.6.=.>. .
++00004c70: 4304 4104 4204 3004 3d04 3e04 3204 3804  C.A.B.0.=.>.2.8.
++00004c80: 4204 4c00 2004 3a04 3e04 4204 3804 4004  B.L. .:.>.B.8.@.
++00004c90: 3e04 3204 3a04 4300 2004 3104 4304 3c04  >.2.:.C. .1.C.<.
++00004ca0: 3004 3304 3800 2004 3404 3b04 4f00 2004  0.3.8. .4.;.O. .
++00004cb0: 1404 3004 4204 4b00 2f04 1204 4004 3504  ..0.B.K./...@.5.
++00004cc0: 3c04 3504 3d04 3800 2004 3404 3804 3204  <.5.=.8. .4.8.2.
++00004cd0: 3804 3404 3504 3d04 3404 3000 2004 4704  8.4.5.=.4.0. .G.
++00004ce0: 3504 4004 3504 3700 2004 3c04 3504 3d04  5.@.5.7. .<.5.=.
++00004cf0: 4e00 2004 1404 3004 3d04 3d04 4b04 3500  N. ...0.=.=.K.5.
++00004d00: 2d00 3e04 1a04 3e04 4204 3804 4004 3e04  -.>...>.B.8.@.>.
++00004d10: 3204 3a04 3808 0000 0000 0600 0000 4859  2.:.8.........HY
++00004d20: 6f75 2073 686f 756c 6420 7365 7420 7175  ou should set qu
++00004d30: 6f74 6520 7669 6120 4461 7461 2d3e 5175  ote via Data->Qu
++00004d40: 6f74 6573 206d 656e 7520 666f 7220 4461  otes menu for Da
++00004d50: 7465 2f54 696d 6520 6f66 2074 6865 2064  te/Time of the d
++00004d60: 6976 6964 656e 6407 0000 000e 4469 7669  ividend.....Divi
++00004d70: 6465 6e64 5769 6467 6574 0103 0000 0014  dendWidget......
++00004d80: 043d 0435 0438 0437 0432 0435 0441 0442  .=.5.8.7.2.5.A.B
++00004d90: 043d 043e 0800 0000 0006 0000 0007 756e  .=.>..........un
++00004da0: 6b6e 6f77 6e07 0000 000e 4469 7669 6465  known.....Divide
++00004db0: 6e64 5769 6467 6574 0103 0000 0010 0421  ndWidget.......!
++00004dc0: 0432 043e 0439 0441 0442 0432 043e 0800  .2.>.9.A.B.2.>..
++00004dd0: 0000 0006 0000 0008 5072 6f70 6572 7479  ........Property
++00004de0: 0700 0000 0e45 7874 7261 4461 7461 4d6f  .....ExtraDataMo
++00004df0: 6465 6c01 0300 0000 1004 1704 3d04 3004  del.........=.0.
++00004e00: 4704 3504 3d04 3804 3508 0000 0000 0600  G.5.=.8.5.......
++00004e10: 0000 0556 616c 7565 0700 0000 0e45 7874  ...Value.....Ext
++00004e20: 7261 4461 7461 4d6f 6465 6c01 0300 0000  raDataModel.....
++00004e30: 1a04 2604 3504 3d04 3d04 3004 4f00 2004  ..&.5.=.=.0.O. .
++00004e40: 3104 4304 3c04 3004 3304 3008 0000 0000  1.C.<.0.3.0.....
++00004e50: 0600 0000 0a41 7373 6574 204e 616d 6507  .....Asset Name.
++00004e60: 0000 000d 486f 6c64 696e 6773 4d6f 6465  ....HoldingsMode
++00004e70: 6c01 0300 0000 1c04 1204 3004 3b04 4e04  l.........0.;.N.
++00004e80: 4204 3000 2f04 2104 4704 5104 4200 2f04  B.0./.!.G.Q.B./.
++00004e90: 2604 1108 0000 0000 0600 0000 1643 7572  &............Cur
++00004ea0: 7265 6e63 792f 4163 636f 756e 742f 4173  rency/Account/As
++00004eb0: 7365 7407 0000 000d 486f 6c64 696e 6773  set.....Holdings
++00004ec0: 4d6f 6465 6c01 0300 0000 0a04 2d04 3a04  Model.......-.:.
++00004ed0: 4104 3f00 3a08 0000 0000 0600 0000 0445  A.?.:..........E
++00004ee0: 7870 3a07 0000 000d 486f 6c64 696e 6773  xp:.....Holdings
++00004ef0: 4d6f 6465 6c01 0300 0000 1404 2604 3504  Model.......&.5.
++00004f00: 3d04 3000 2004 3704 3004 3a04 4000 2e08  =.0. .7.0.:.@...
++00004f10: 0000 0000 0600 0000 044c 6173 7407 0000  .........Last...
++00004f20: 000d 486f 6c64 696e 6773 4d6f 6465 6c01  ..HoldingsModel.
++00004f30: 0300 0000 3404 1404 3004 4204 3000 2004  ....4...0.B.0. .
++00004f40: 3f04 3e04 4104 3b04 3504 3404 3d04 3504  ?.>.A.;.5.4.=.5.
++00004f50: 3900 2004 3a04 3e04 4204 3804 4004 3e04  9. .:.>.B.8.@.>.
++00004f60: 3204 3a04 3800 3a00 2008 0000 0000 0600  2.:.8.:. .......
++00004f70: 0000 114c 6173 7420 7175 6f74 6520 6461  ...Last quote da
++00004f80: 7465 3a20 0700 0000 0d48 6f6c 6469 6e67  te: .....Holding
++00004f90: 734d 6f64 656c 0103 0000 0014 0426 0435  sModel.......&.5
++00004fa0: 043d 0430 0020 043e 0442 043a 0440 002e  .=.0. .>.B.:.@..
++00004fb0: 0800 0000 0006 0000 0004 4f70 656e 0700  ..........Open..
++00004fc0: 0000 0d48 6f6c 6469 6e67 734d 6f64 656c  ...HoldingsModel
++00004fd0: 0103 0000 0006 041f 0438 0423 0800 0000  .........8.#....
++00004fe0: 0006 0000 0003 502f 4c07 0000 000d 486f  ......P/L.....Ho
++00004ff0: 6c64 696e 6773 4d6f 6465 6c01 0300 0000  ldingsModel.....
++00005000: 0c04 1f04 3804 2300 2c00 2000 2508 0000  ....8.#.,. .%...
++00005010: 0000 0600 0000 0650 2f4c 2c20 2507 0000  .......P/L, %...
++00005020: 000d 486f 6c64 696e 6773 4d6f 6465 6c01  ..HoldingsModel.
++00005030: 0300 0000 0c04 1a04 3e04 3b00 2d04 3204  ........>.;.-.2.
++00005040: 3e08 0000 0000 0600 0000 0351 7479 0700  >..........Qty..
++00005050: 0000 0d48 6f6c 6469 6e67 734d 6f64 656c  ...HoldingsModel
++00005060: 0103 0000 000e 0414 043e 043b 044f 002c  .........>.;.O.,
++00005070: 0020 0025 0800 0000 0006 0000 0008 5368  . .%..........Sh
++00005080: 6172 652c 2025 0700 0000 0d48 6f6c 6469  are, %.....Holdi
++00005090: 6e67 734d 6f64 656c 0103 0000 000c 041e  ngsModel........
++000050a0: 0446 0435 043d 043a 0430 0800 0000 0006  .F.5.=.:.0......
++000050b0: 0000 0005 5661 6c75 6507 0000 000d 486f  ....Value.....Ho
++000050c0: 6c64 696e 6773 4d6f 6465 6c01 0300 0000  ldingsModel.....
++000050d0: 1004 1e04 4604 3504 3d04 3a04 3000 2c00  ....F.5.=.:.0.,.
++000050e0: 2008 0000 0000 0600 0000 0756 616c 7565   ..........Value
++000050f0: 2c20 0700 0000 0d48 6f6c 6469 6e67 734d  , .....HoldingsM
++00005100: 6f64 656c 0103 0000 0016 041f 043e 0440  odel.........>.@
++00005110: 0442 0444 0435 043b 044c 0020 0426 0411  .B.D.5.;.L. .&..
++00005120: 0800 0000 0006 0000 0008 486f 6c64 696e  ..........Holdin
++00005130: 6773 0700 0000 0e48 6f6c 6469 6e67 7352  gs.....HoldingsR
++00005140: 6570 6f72 7401 0300 0000 1a04 1e04 4604  eport.........F.
++00005150: 3504 3d04 3804 4204 4c00 2004 3d04 3004  5.=.8.B.L. .=.0.
++00005160: 3b04 3e04 3308 0000 0000 0600 0000 0c45  ;.>.3..........E
++00005170: 7374 696d 6174 6520 7461 7807 0000 0014  stimate tax.....
++00005180: 486f 6c64 696e 6773 5265 706f 7274 5769  HoldingsReportWi
++00005190: 6e64 6f77 0103 0000 0016 041f 043e 0440  ndow.........>.@
++000051a0: 0442 0444 0435 043b 044c 0020 0426 0411  .B.D.5.;.L. .&..
++000051b0: 0800 0000 0006 0000 0008 486f 6c64 696e  ..........Holdin
++000051c0: 6773 0700 0000 1448 6f6c 6469 6e67 7352  gs.....HoldingsR
++000051d0: 6570 6f72 7457 696e 646f 7701 0300 0000  eportWindow.....
++000051e0: 1404 1f04 3e04 4004 4204 4304 3304 3004  ....>.@.B.C.3.0.
++000051f0: 3b04 3804 4f08 0000 0000 0600 0000 0850  ;.8.O..........P
++00005200: 6f72 7475 6761 6c07 0000 0014 486f 6c64  ortugal.....Hold
++00005210: 696e 6773 5265 706f 7274 5769 6e64 6f77  ingsReportWindow
++00005220: 0103 0000 000c 0420 043e 0441 0441 0438  ....... .>.A.A.8
++00005230: 044f 0800 0000 0006 0000 0006 5275 7373  .O..........Russ
++00005240: 6961 0700 0000 1448 6f6c 6469 6e67 7352  ia.....HoldingsR
++00005250: 6570 6f72 7457 696e 646f 7701 0300 0000  eportWindow.....
++00005260: 2804 1f04 3e04 3a04 3004 3704 3004 4204  (...>.:.0.7.0.B.
++00005270: 4c00 2004 3304 4004 3004 4404 3804 3a00  L. .3.@.0.D.8.:.
++00005280: 2004 4604 3504 3d04 4b08 0000 0000 0600   .F.5.=.K.......
++00005290: 0000 1053 686f 7720 5072 6963 6520 4368  ...Show Price Ch
++000052a0: 6172 7407 0000 0014 486f 6c64 696e 6773  art.....Holdings
++000052b0: 5265 706f 7274 5769 6e64 6f77 0103 0000  ReportWindow....
++000052c0: 0022 0412 0430 043b 044e 0442 0430 0020  ."...0.;.N.B.0. 
++000052d0: 043f 0435 0440 0435 0441 0447 0451 0442  .?.5.@.5.A.G.Q.B
++000052e0: 0430 003a 0800 0000 0006 0000 0010 436f  .0.:..........Co
++000052f0: 6d6d 6f6e 2063 7572 7265 6e63 793a 0700  mmon currency:..
++00005300: 0000 0e48 6f6c 6469 6e67 7357 6964 6765  ...HoldingsWidge
++00005310: 7401 0300 0000 1604 1f04 3e04 4004 4204  t.........>.@.B.
++00005320: 4404 3504 3b04 4c00 2004 2604 1108 0000  D.5.;.L. .&.....
++00005330: 0000 0600 0000 0848 6f6c 6469 6e67 7307  .......Holdings.
++00005340: 0000 000e 486f 6c64 696e 6773 5769 6467  ....HoldingsWidg
++00005350: 6574 0103 0000 0018 0421 043e 0445 0440  et.......!.>.E.@
++00005360: 0430 043d 0438 0442 044c 002e 002e 002e  .0.=.8.B.L......
++00005370: 0800 0000 0006 0000 0007 5361 7665 2e2e  ..........Save..
++00005380: 2e07 0000 000e 486f 6c64 696e 6773 5769  ......HoldingsWi
++00005390: 6467 6574 0103 0000 0014 0064 0064 002f  dget.......d.d./
++000053a0: 004d 004d 002f 0079 0079 0079 0079 0800  .M.M./.y.y.y.y..
++000053b0: 0000 0006 0000 000a 6464 2f4d 4d2f 7979  ........dd/MM/yy
++000053c0: 7979 0700 0000 0e48 6f6c 6469 6e67 7357  yy.....HoldingsW
++000053d0: 6964 6765 7401 0300 0000 3404 2204 3804  idget.....4.".8.
++000053e0: 3f00 2004 2604 1100 2004 3d04 3500 2004  ?. .&... .=.5. .
++000053f0: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
++00005400: 3204 3004 3504 4204 4104 4f00 3a00 2008  2.0.5.B.A.O.:. .
++00005410: 0000 0000 0600 0000 1c41 7373 6574 2074  .........Asset t
++00005420: 7970 6520 6973 6e27 7420 7375 7070 6f72  ype isn't suppor
++00005430: 7465 643a 2007 0000 0004 4942 4b52 0103  ted: .....IBKR..
++00005440: 0000 0054 041a 043e 0440 043f 043e 0440  ...T...>.@.?.>.@
++00005450: 0430 0442 0438 0432 043d 043e 0435 0020  .0.B.8.2.=.>.5. 
++00005460: 0434 0435 0439 0441 0442 0432 0438 0435  .4.5.9.A.B.2.8.5
++00005470: 0020 043d 0435 0020 043f 043e 0434 0434  . .=.5. .?.>.4.4
++00005480: 0435 0440 0436 0438 0432 0430 0435 0442  .5.@.6.8.2.0.5.B
++00005490: 0441 044f 003a 0020 0800 0000 0006 0000  .A.O.:. ........
++000054a0: 0022 436f 7270 6f72 6174 6520 6163 7469  ."Corporate acti
++000054b0: 6f6e 2069 736e 2774 2073 7570 706f 7274  on isn't support
++000054c0: 6564 3a20 0700 0000 0449 424b 5201 0300  ed: .....IBKR...
++000054d0: 0000 4604 1d04 3504 3e04 3404 3d04 3e04  ..F...5.>.4.=.>.
++000054e0: 3704 3d04 3004 4704 3d04 3e04 3500 2004  7.=.0.G.=.>.5. .
++000054f0: 4104 3e04 3204 3f04 3004 3404 3504 3d04  A.>.2.?.0.4.5.=.
++00005500: 3804 3500 2004 4104 4704 5104 4204 3000  8.5. .A.G.Q.B.0.
++00005510: 2004 3404 3b04 4f00 2008 0000 0000 0600   .4.;.O. .......
++00005520: 0000 1b4d 756c 7469 706c 6520 6163 636f  ...Multiple acco
++00005530: 756e 7420 6d61 7463 6820 666f 7220 0700  unt match for ..
++00005540: 0000 0449 424b 5201 0300 0000 6800 4a00  ...IBKR.....h.J.
++00005550: 5300 4f00 4e00 2004 4204 4d04 3300 2000  S.O.N. .B.M.3. .
++00005560: 2700 6400 6f00 6300 7500 6d00 6500 6e00  '.d.o.c.u.m.e.n.
++00005570: 7400 2700 2004 3e04 4204 4104 4304 4204  t.'. .>.B.A.C.B.
++00005580: 4104 4204 3204 4304 3504 4200 2004 3204  A.B.2.C.5.B. .2.
++00005590: 3d04 4304 4204 4004 3800 2004 4204 4d04  =.C.B.@.8. .B.M.
++000055a0: 3304 3000 2000 2700 7400 6900 6300 6b00  3.0. .'.t.i.c.k.
++000055b0: 6500 7400 2708 0000 0000 0600 0000 2a43  e.t.'.........*C
++000055c0: 616e 2774 2066 696e 6420 2764 6f63 756d  an't find 'docum
++000055d0: 656e 7427 2074 6167 2069 6e20 6a73 6f6e  ent' tag in json
++000055e0: 2027 7469 636b 6574 2707 0000 0010 496d   'ticket'.....Im
++000055f0: 706f 7274 536c 6970 4469 616c 6f67 0103  portSlipDialog..
++00005600: 0000 0072 004a 0053 004f 004e 0020 0442  ...r.J.S.O.N. .B
++00005610: 044d 0433 0020 0027 006f 0070 0065 0072  .M.3. .'.o.p.e.r
++00005620: 0061 0074 0069 006f 006e 0054 0079 0070  .a.t.i.o.n.T.y.p
++00005630: 0065 0027 0020 043e 0442 0441 0443 0442  .e.'. .>.B.A.C.B
++00005640: 0441 0442 0432 0443 0435 0442 0020 0432  .A.B.2.C.5.B. .2
++00005650: 043d 0443 0442 0440 0438 0020 0442 044d  .=.C.B.@.8. .B.M
++00005660: 0433 0430 0020 0027 0074 0069 0063 006b  .3.0. .'.t.i.c.k
++00005670: 0065 0074 0027 0800 0000 0006 0000 002f  .e.t.'........./
++00005680: 4361 6e27 7420 6669 6e64 2027 6f70 6572  Can't find 'oper
++00005690: 6174 696f 6e54 7970 6527 2074 6167 2069  ationType' tag i
++000056a0: 6e20 6a73 6f6e 2027 7469 636b 6574 2707  n json 'ticket'.
++000056b0: 0000 0010 496d 706f 7274 536c 6970 4469  ....ImportSlipDi
++000056c0: 616c 6f67 0103 0000 006a 004a 0053 004f  alog.....j.J.S.O
++000056d0: 004e 0020 0442 044d 0433 0020 0027 0072  .N. .B.M.3. .'.r
++000056e0: 0065 0063 0065 0069 0070 0074 0027 0020  .e.c.e.i.p.t.'. 
++000056f0: 043e 0442 0441 0443 0442 0441 0442 0432  .>.B.A.C.B.A.B.2
++00005700: 0443 0435 0442 0020 0432 043d 0443 0442  .C.5.B. .2.=.C.B
++00005710: 0440 0438 0020 0442 044d 0433 0430 0020  .@.8. .B.M.3.0. 
++00005720: 0027 0064 006f 0063 0075 006d 0065 006e  .'.d.o.c.u.m.e.n
++00005730: 0074 0027 0800 0000 0006 0000 002b 4361  .t.'.........+Ca
++00005740: 6e27 7420 6669 6e64 2027 7265 6365 6970  n't find 'receip
++00005750: 7427 2074 6167 2069 6e20 6a73 6f6e 2027  t' tag in json '
++00005760: 646f 6375 6d65 6e74 2707 0000 0010 496d  document'.....Im
++00005770: 706f 7274 536c 6970 4469 616c 6f67 0103  portSlipDialog..
++00005780: 0000 005e 041a 0430 0442 0435 0433 043e  ...^...0.B.5.3.>
++00005790: 0440 0438 0438 0020 043d 0435 0020 0440  .@.8.8. .=.5. .@
++000057a0: 0430 0441 043f 043e 0437 043d 0430 043d  .0.A.?.>.7.=.0.=
++000057b0: 044b 003a 0020 0054 0065 006e 0073 006f  .K.:. .T.e.n.s.o
++000057c0: 0072 006c 006f 0077 0020 043d 0435 0020  .r.l.o.w. .=.5. 
++000057d0: 043e 0431 043d 0430 0440 0443 0436 0435  .>.1.=.0.@.C.6.5
++000057e0: 043d 0800 0000 0006 0000 0036 4361 7465  .=.........6Cate
++000057f0: 676f 7269 6573 2061 7265 206e 6f74 2072  gories are not r
++00005800: 6563 6f67 6e69 7a65 643a 2054 656e 736f  ecognized: Tenso
++00005810: 7266 6c6f 7720 6973 206e 6f74 2066 6f75  rflow is not fou
++00005820: 6e64 0700 0000 1049 6d70 6f72 7453 6c69  nd.....ImportSli
++00005830: 7044 6961 6c6f 6701 0300 0000 4a04 1f04  pDialog.....J...
++00005840: 4004 3504 3204 4b04 4804 3504 3d04 3e00  @.5.2.K.H.5.=.>.
++00005850: 2004 3c04 3004 3a04 4104 3804 3c04 3004   .<.0.:.A.8.<.0.
++00005860: 3b04 4c04 3d04 3e04 3500 2004 4704 3804  ;.L.=.>.5. .G.8.
++00005870: 4104 3b04 3e00 2004 3f04 3e04 3f04 4b04  A.;.>. .?.>.?.K.
++00005880: 4204 3e04 3a00 2e08 0000 0000 0600 0000  B.>.:...........
++00005890: 194d 6178 2072 6574 7279 2063 6f75 6e74  .Max retry count
++000058a0: 2065 7863 6565 6465 642e 0700 0000 1049   exceeded......I
++000058b0: 6d70 6f72 7453 6c69 7044 6961 6c6f 6701  mportSlipDialog.
++000058c0: 0300 0000 4600 5100 5200 2004 3a04 3e04  ....F.Q.R. .:.>.
++000058d0: 3400 2004 3d04 3500 2004 3e04 3104 3d04  4. .=.5. .>.1.=.
++000058e0: 3004 4004 4304 3604 3504 3d00 2004 3200  0.@.C.6.5.=. .2.
++000058f0: 2004 3104 4304 4404 3504 4004 3500 2004   .1.C.D.5.@.5. .
++00005900: 3e04 3104 3c04 3504 3d04 3008 0000 0000  >.1.<.5.=.0.....
++00005910: 0600 0000 1e4e 6f20 5152 2063 6f64 6573  .....No QR codes
++00005920: 2066 6f75 6e64 2069 6e20 636c 6970 626f   found in clipbo
++00005930: 6172 6407 0000 0010 496d 706f 7274 536c  ard.....ImportSl
++00005940: 6970 4469 616c 6f67 0103 0000 0036 0051  ipDialog.....6.Q
++00005950: 0052 002d 043a 043e 0434 0020 0432 0020  .R.-.:.>.4. .2. 
++00005960: 0444 0430 0439 043b 0435 0020 043d 0435  .D.0.9.;.5. .=.5
++00005970: 0020 043e 0431 043d 0430 0440 0443 0436  . .>.1.=.0.@.C.6
++00005980: 0435 043d 0800 0000 0006 0000 001e 4e6f  .5.=..........No
++00005990: 2051 5220 636f 6465 7320 7765 7265 2066   QR codes were f
++000059a0: 6f75 6e64 2069 6e20 6669 6c65 0700 0000  ound in file....
++000059b0: 1049 6d70 6f72 7453 6c69 7044 6961 6c6f  .ImportSlipDialo
++000059c0: 6701 0300 0000 7204 1d04 3504 3204 3e04  g.....r...5.2.>.
++000059d0: 3704 3c04 3e04 3604 3d04 3e00 2004 3404  7.<.>.6.=.>. .4.
++000059e0: 3e04 3104 3004 3204 3804 4204 4c00 2004  >.1.0.2.8.B.L. .
++000059f0: 4704 3504 3a00 3a00 2004 3d04 3500 2004  G.5.:.:. .=.5. .
++00005a00: 4304 3a04 3004 3704 3004 3d00 2004 3a04  C.:.0.7.0.=. .:.
++00005a10: 3e04 3d04 4204 4004 3004 3304 3504 3d04  >.=.B.@.0.3.5.=.
++00005a20: 4200 2004 3404 3b04 4f00 2004 3804 3c04  B. .4.;.O. .8.<.
++00005a30: 3f04 3e04 4004 4204 3008 0000 0000 0600  ?.>.@.B.0.......
++00005a40: 0000 414e 6f74 2070 6f73 7369 626c 6520  ..ANot possible 
++00005a50: 746f 2069 6d70 6f72 7420 736c 6970 3a20  to import slip: 
++00005a60: 6361 6e27 7420 696d 706f 7274 3a20 6e6f  can't import: no
++00005a70: 2070 6565 7220 7365 7420 666f 7220 696d   peer set for im
++00005a80: 706f 7274 0700 0000 1049 6d70 6f72 7453  port.....ImportS
++00005a90: 6c69 7044 6961 6c6f 6701 0300 0000 6604  lipDialog.....f.
++00005aa0: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
++00005ab0: 3d04 3e00 2004 3404 3e04 3104 3004 3204  =.>. .4.>.1.0.2.
++00005ac0: 3804 4204 4c00 2004 4704 3504 3a00 3a00  8.B.L. .G.5.:.:.
++00005ad0: 2004 3d04 3500 2004 4304 3a04 3004 3704   .=.5. .C.:.0.7.
++00005ae0: 3004 3d00 2004 4104 4704 3504 4200 2004  0.=. .A.G.5.B. .
++00005af0: 3404 3b04 4f00 2004 3804 3c04 3f04 3e04  4.;.O. .8.<.?.>.
++00005b00: 4004 4204 3008 0000 0000 0600 0000 364e  @.B.0.........6N
++00005b10: 6f74 2070 6f73 7369 626c 6520 746f 2069  ot possible to i
++00005b20: 6d70 6f72 7420 736c 6970 3a20 6e6f 2061  mport slip: no a
++00005b30: 6363 6f75 6e74 2073 6574 2066 6f72 2069  ccount set for i
++00005b40: 6d70 6f72 7407 0000 0010 496d 706f 7274  mport.....Import
++00005b50: 536c 6970 4469 616c 6f67 0103 0000 0078  SlipDialog.....x
++00005b60: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++00005b70: 043d 043e 0020 0434 043e 0431 0430 0432  .=.>. .4.>.1.0.2
++00005b80: 0438 0442 044c 0020 0447 0435 043a 003a  .8.B.L. .G.5.:.:
++00005b90: 0020 043a 0430 0442 0435 0433 043e 0440  . .:.0.B.5.3.>.@
++00005ba0: 0438 0438 0020 0443 043a 0430 0437 0430  .8.8. .C.:.0.7.0
++00005bb0: 043d 044b 0020 043d 0435 0020 0434 043b  .=.K. .=.5. .4.;
++00005bc0: 044f 0020 0432 0441 0435 0445 0020 0441  .O. .2.A.5.E. .A
++00005bd0: 0442 0440 043e 043a 0800 0000 0006 0000  .B.@.>.:........
++00005be0: 0038 4e6f 7420 706f 7373 6962 6c65 2074  .8Not possible t
++00005bf0: 6f20 696d 706f 7274 2073 6c69 703a 2073  o import slip: s
++00005c00: 6f6d 6520 6361 7465 676f 7269 6573 2061  ome categories a
++00005c10: 7265 206e 6f74 2073 6574 0700 0000 1049  re not set.....I
++00005c20: 6d70 6f72 7453 6c69 7044 6961 6c6f 6701  mportSlipDialog.
++00005c30: 0300 0000 5404 1d04 3504 3204 3e04 3704  ....T...5.2.>.7.
++00005c40: 3c04 3e04 3604 3d04 3e00 2004 4004 3004  <.>.6.=.>. .@.0.
++00005c50: 4104 3f04 3e04 3704 3d04 3004 4204 4c00  A.?.>.7.=.0.B.L.
++00005c60: 2004 3f04 4004 3e04 4704 3804 4204 3004   .?.@.>.G.8.B.0.
++00005c70: 3d04 3d04 4b04 3900 2000 5100 5200 2d04  =.=.K.9. .Q.R.-.
++00005c80: 3a04 3e04 3400 3a00 2008 0000 0000 0600  :.>.4.:. .......
++00005c90: 0000 2b51 5220 6176 6169 6c61 626c 6520  ..+QR available 
++00005ca0: 6275 7420 7061 7474 6572 6e20 6973 6e27  but pattern isn'
++00005cb0: 7420 7265 636f 676e 697a 6564 3a20 0700  t recognized: ..
++00005cc0: 0000 1049 6d70 6f72 7453 6c69 7044 6961  ...ImportSlipDia
++00005cd0: 6c6f 6701 0300 0000 0800 5100 5200 3a00  log.......Q.R.:.
++00005ce0: 2008 0000 0000 0600 0000 0451 523a 2007   ..........QR: .
++00005cf0: 0000 0010 496d 706f 7274 536c 6970 4469  ....ImportSlipDi
++00005d00: 616c 6f67 0103 0000 0030 0412 044b 0431  alog.....0...K.1
++00005d10: 0435 0440 0438 0442 0435 0020 0444 0430  .5.@.8.B.5. .D.0
++00005d20: 0439 043b 0020 0441 0020 0051 0052 002d  .9.;. .A. .Q.R.-
++00005d30: 043a 043e 0434 043e 043c 0800 0000 0006  .:.>.4.>.<......
++00005d40: 0000 0018 5365 6c65 6374 2066 696c 6520  ....Select file 
++00005d50: 7769 7468 2051 5220 636f 6465 0700 0000  with QR code....
++00005d60: 1049 6d70 6f72 7453 6c69 7044 6961 6c6f  .ImportSlipDialo
++00005d70: 6701 0300 0000 4204 1204 4b04 3104 3504  g.....B...K.1.5.
++00005d80: 4004 3804 4204 3500 2004 4404 3004 3904  @.8.B.5. .D.0.9.
++00005d90: 3b00 2004 4100 2000 4a00 5300 4f00 4e00  ;. .A. .J.S.O.N.
++00005da0: 2d04 3404 3004 3d04 3d04 4b04 3c04 3800  -.4.0.=.=.K.<.8.
++00005db0: 2004 4704 3504 3a04 3008 0000 0000 0600   .G.5.:.0.......
++00005dc0: 0000 1f53 656c 6563 7420 6669 6c65 2077  ...Select file w
++00005dd0: 6974 6820 736c 6970 204a 534f 4e20 6461  ith slip JSON da
++00005de0: 7461 0700 0000 1049 6d70 6f72 7453 6c69  ta.....ImportSli
++00005df0: 7044 6961 6c6f 6701 0300 0000 3204 1d04  pDialog.....2...
++00005e00: 3504 3804 3704 3204 3504 4104 4204 3d04  5.8.7.2.5.A.B.=.
++00005e10: 4b04 3900 2004 4204 3804 3f00 2004 3e04  K.9. .B.8.?. .>.
++00005e20: 3f04 3504 4004 3004 4604 3804 3800 2008  ?.5.@.0.F.8.8. .
++00005e30: 0000 0000 0600 0000 1755 6e6b 6e6f 776e  .........Unknown
++00005e40: 206f 7065 7261 7469 6f6e 2074 7970 6520   operation type 
++00005e50: 0700 0000 1049 6d70 6f72 7453 6c69 7044  .....ImportSlipD
++00005e60: 6961 6c6f 6701 0300 0000 0600 2027 9c00  ialog....... '..
++00005e70: 2008 0000 0000 0600 0000 0520 e29e 9c20   .......... ... 
++00005e80: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
++00005e90: 6c67 0103 0000 000a 0421 0447 0435 0442  lg.......!.G.5.B
++00005ea0: 003a 0800 0000 0006 0000 0008 4163 636f  .:..........Acco
++00005eb0: 756e 743a 0700 0000 0d49 6d70 6f72 7453  unt:.....ImportS
++00005ec0: 6c69 7044 6c67 0103 0000 0010 0414 043e  lipDlg.........>
++00005ed0: 0431 0430 0432 0438 0442 044c 0800 0000  .1.0.2.8.B.L....
++00005ee0: 0006 0000 0003 4164 6407 0000 000d 496d  ......Add.....Im
++00005ef0: 706f 7274 536c 6970 446c 6701 0300 0000  portSlipDlg.....
++00005f00: 0c04 2104 4304 3c04 3c04 3000 3a08 0000  ..!.C.<.<.0.:...
++00005f10: 0000 0600 0000 0741 6d6f 756e 743a 0700  .......Amount:..
++00005f20: 0000 0d49 6d70 6f72 7453 6c69 7044 6c67  ...ImportSlipDlg
++00005f30: 0103 0000 0032 0410 0432 0442 043e 002d  .....2...2.B.>.-
++00005f40: 043d 0430 0437 043d 0430 0447 0435 043d  .=.0.7.=.0.G.5.=
++00005f50: 0438 0435 0020 043a 0430 0442 0435 0433  .8.5. .:.0.B.5.3
++00005f60: 043e 0440 0438 0439 0800 0000 0006 0000  .>.@.8.9........
++00005f70: 0016 4175 746f 2d61 7373 6967 6e20 6361  ..Auto-assign ca
++00005f80: 7465 676f 7269 6573 0700 0000 0d49 6d70  tegories.....Imp
++00005f90: 6f72 7453 6c69 7044 6c67 0103 0000 000c  ortSlipDlg......
++00005fa0: 041a 0430 043c 0435 0440 0430 0800 0000  ...0.<.5.@.0....
++00005fb0: 0006 0000 0006 4361 6d65 7261 0700 0000  ......Camera....
++00005fc0: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
++00005fd0: 0000 0010 041e 0447 0438 0441 0442 0438  .......G.8.A.B.8
++00005fe0: 0442 044c 0800 0000 0006 0000 0005 436c  .B.L..........Cl
++00005ff0: 6561 7207 0000 000d 496d 706f 7274 536c  ear.....ImportSl
++00006000: 6970 446c 6701 0300 0000 0e04 1704 3004  ipDlg.........0.
++00006010: 3a04 4004 4b04 4204 4c08 0000 0000 0600  :.@.K.B.L.......
++00006020: 0000 0543 6c6f 7365 0700 0000 0d49 6d70  ...Close.....Imp
++00006030: 6f72 7453 6c69 7044 6c67 0103 0000 001a  ortSlipDlg......
++00006040: 0414 0430 0442 0430 0020 002f 0020 0412  ...0.B.0. ./. ..
++00006050: 0440 0435 043c 044f 003a 0800 0000 0006  .@.5.<.O.:......
++00006060: 0000 000c 4461 7465 202f 2054 696d 653a  ....Date / Time:
++00006070: 0700 0000 0d49 6d70 6f72 7453 6c69 7044  .....ImportSlipD
++00006080: 6c67 0103 0000 0016 0414 0430 0442 0430  lg.........0.B.0
++00006090: 002f 0412 0440 0435 043c 044f 003a 0800  ./...@.5.<.O.:..
++000060a0: 0000 0006 0000 000a 4461 7465 2f54 696d  ........Date/Tim
++000060b0: 653a 0700 0000 0d49 6d70 6f72 7453 6c69  e:.....ImportSli
++000060c0: 7044 6c67 0103 0000 0006 0424 0414 003a  pDlg.......$...:
++000060d0: 0800 0000 0006 0000 0003 4644 3a07 0000  ..........FD:...
++000060e0: 000d 496d 706f 7274 536c 6970 446c 6701  ..ImportSlipDlg.
++000060f0: 0300 0000 0604 2404 1d00 3a08 0000 0000  ......$...:.....
++00006100: 0600 0000 0346 4e3a 0700 0000 0d49 6d70  .....FN:.....Imp
++00006110: 6f72 7453 6c69 7044 6c67 0103 0000 0006  ortSlipDlg......
++00006120: 0424 041f 003a 0800 0000 0006 0000 0003  .$...:..........
++00006130: 4650 3a07 0000 000d 496d 706f 7274 536c  FP:.....ImportSl
++00006140: 6970 446c 6701 0300 0000 2604 2104 3a04  ipDlg.....&.!.:.
++00006150: 3004 3d04 3804 4004 3e04 3204 3004 4204  0.=.8.@.>.2.0.B.
++00006160: 4c00 2004 3a04 3004 3c04 3504 4004 3e04  L. .:.0.<.5.@.>.
++00006170: 3908 0000 0000 0600 0000 0f47 6574 2066  9..........Get f
++00006180: 726f 6d20 6361 6d65 7261 0700 0000 0d49  rom camera.....I
++00006190: 6d70 6f72 7453 6c69 7044 6c67 0103 0000  mportSlipDlg....
++000061a0: 0024 041f 043e 043b 0443 0447 0438 0442  .$...>.;.C.G.8.B
++000061b0: 044c 0020 0438 0437 0020 0431 0443 0444  .L. .8.7. .1.C.D
++000061c0: 0435 0440 0430 0800 0000 0006 0000 0012  .5.@.0..........
++000061d0: 4765 7420 6672 6f6d 2063 6c69 7062 6f61  Get from clipboa
++000061e0: 7264 0700 0000 0d49 6d70 6f72 7453 6c69  rd.....ImportSli
++000061f0: 7044 6c67 0103 0000 0030 041f 043e 043b  pDlg.....0...>.;
++00006200: 0443 0447 0438 0442 044c 0020 0447 0435  .C.G.8.B.L. .G.5
++00006210: 043a 0020 0441 0020 0441 0430 0439 0442  .:. .A. .A.0.9.B
++00006220: 0430 0020 0424 041d 0421 0800 0000 0006  .0. .$...!......
++00006230: 0000 0016 4765 7420 736c 6970 2066 726f  ....Get slip fro
++00006240: 6d20 696e 7465 726e 6574 0700 0000 0d49  m internet.....I
++00006250: 6d70 6f72 7453 6c69 7044 6c67 0103 0000  mportSlipDlg....
++00006260: 0016 0418 043c 043f 043e 0440 0442 0020  .....<.?.>.@.B. 
++00006270: 0447 0435 043a 0430 0800 0000 0006 0000  .G.5.:.0........
++00006280: 000b 496d 706f 7274 2053 6c69 7007 0000  ..Import Slip...
++00006290: 000d 496d 706f 7274 536c 6970 446c 6701  ..ImportSlipDlg.
++000062a0: 0300 0000 0e04 2104 4204 4004 3e04 3a04  ......!.B.@.>.:.
++000062b0: 3800 3a08 0000 0000 0600 0000 064c 696e  8.:..........Lin
++000062c0: 6573 3a07 0000 000d 496d 706f 7274 536c  es:.....ImportSl
++000062d0: 6970 446c 6701 0300 0000 2404 1704 3004  ipDlg.....$...0.
++000062e0: 3304 4004 4304 3704 3804 4204 4c00 2004  3.@.C.7.8.B.L. .
++000062f0: 3804 3700 2004 4404 3004 3904 3b04 3008  8.7. .D.0.9.;.0.
++00006300: 0000 0000 0600 0000 0e4c 6f61 6420 6672  .........Load fr
++00006310: 6f6d 2066 696c 6507 0000 000d 496d 706f  om file.....Impo
++00006320: 7274 536c 6970 446c 6701 0300 0000 3604  rtSlipDlg.....6.
++00006330: 1704 3004 3304 4304 3704 3804 4204 4c00  ..0.3.C.7.8.B.L.
++00006340: 2004 4704 3504 3a04 3000 2004 3804 3700   .G.5.:.0. .8.7.
++00006350: 2000 4a00 5300 4f00 4e00 2d04 4404 3004   .J.S.O.N.-.D.0.
++00006360: 3904 3b04 3008 0000 0000 0600 0000 184c  9.;.0..........L
++00006370: 6f61 6420 736c 6970 2066 726f 6d20 4a53  oad slip from JS
++00006380: 4f4e 2066 696c 6507 0000 000d 496d 706f  ON file.....Impo
++00006390: 7274 536c 6970 446c 6701 0300 0000 1604  rtSlipDlg.......
++000063a0: 1a04 3e04 3d04 4204 4004 3004 3304 3504  ..>.=.B.@.0.3.5.
++000063b0: 3d04 4200 3a08 0000 0000 0600 0000 0550  =.B.:..........P
++000063c0: 6565 723a 0700 0000 0d49 6d70 6f72 7453  eer:.....ImportS
++000063d0: 6c69 7044 6c67 0103 0000 000e 041f 043e  lipDlg.........>
++000063e0: 043a 0443 043f 043a 0430 0800 0000 0006  .:.C.?.:.0......
++000063f0: 0000 0008 5075 7263 6861 7365 0700 0000  ....Purchase....
++00006400: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
++00006410: 0000 000c 0051 0052 002d 043a 043e 0434  .....Q.R.-.:.>.4
++00006420: 0800 0000 0006 0000 0007 5152 2d63 6f64  ..........QR-cod
++00006430: 6507 0000 000d 496d 706f 7274 536c 6970  e.....ImportSlip
++00006440: 446c 6701 0300 0000 0e04 1204 3e04 3704  Dlg.........>.7.
++00006450: 3204 4004 3004 4208 0000 0000 0600 0000  2.@.0.B.........
++00006460: 0652 6574 7572 6e07 0000 000d 496d 706f  .Return.....Impo
++00006470: 7274 536c 6970 446c 6701 0300 0000 2e04  rtSlipDlg.......
++00006480: 2304 4104 4204 3004 3d04 3e04 3204 3804  #.A.B.0.=.>.2.8.
++00006490: 4204 4c00 2004 4204 4d04 3300 2004 3404  B.L. .B.M.3. .4.
++000064a0: 3b04 4f00 2004 3204 4104 3504 4508 0000  ;.O. .2.A.5.E...
++000064b0: 0000 0600 0000 1553 6574 2054 6167 2066  .......Set Tag f
++000064c0: 6f72 2061 6c6c 206c 696e 6573 0700 0000  or all lines....
++000064d0: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
++000064e0: 0000 0006 0427 0435 043a 0800 0000 0006  .....'.5.:......
++000064f0: 0000 0004 536c 6970 0700 0000 0d49 6d70  ....Slip.....Imp
++00006500: 6f72 7453 6c69 7044 6c67 0103 0000 0016  ortSlipDlg......
++00006510: 0414 0430 043d 043d 044b 0435 0020 0447  ...0.=.=.K.5. .G
++00006520: 0435 043a 0430 0800 0000 0006 0000 0009  .5.:.0..........
++00006530: 536c 6970 2064 6174 6107 0000 000d 496d  Slip data.....Im
++00006540: 706f 7274 536c 6970 446c 6701 0300 0000  portSlipDlg.....
++00006550: 1c04 1704 3004 3a04 4004 4b04 4204 4c00  ....0.:.@.K.B.L.
++00006560: 2004 3a04 3004 3c04 3504 4004 4308 0000   .:.0.<.5.@.C...
++00006570: 0000 0600 0000 0b53 746f 7020 6361 6d65  .......Stop came
++00006580: 7261 0700 0000 0d49 6d70 6f72 7453 6c69  ra.....ImportSli
++00006590: 7044 6c67 0103 0000 0008 0422 0438 043f  pDlg.......".8.?
++000065a0: 003a 0800 0000 0006 0000 0005 5479 7065  .:..........Type
++000065b0: 3a07 0000 000d 496d 706f 7274 536c 6970  :.....ImportSlip
++000065c0: 446c 6701 0300 0000 2600 6400 6400 2f00  Dlg.....&.d.d./.
++000065d0: 4d00 4d00 2f00 7900 7900 7900 7900 2000  M.M./.y.y.y.y. .
++000065e0: 6800 6800 3a00 6d00 6d00 3a00 7300 7308  h.h.:.m.m.:.s.s.
++000065f0: 0000 0000 0600 0000 1364 642f 4d4d 2f79  .........dd/MM/y
++00006600: 7979 7920 6868 3a6d 6d3a 7373 0700 0000  yyy hh:mm:ss....
++00006610: 0d49 6d70 6f72 7453 6c69 7044 6c67 0103  .ImportSlipDlg..
++00006620: 0000 0066 041d 0435 0432 043e 0437 043c  ...f...5.2.>.7.<
++00006630: 043e 0436 043d 043e 0020 043e 0431 0440  .>.6.=.>. .>.1.@
++00006640: 0430 0431 043e 0442 0430 0442 044c 0020  .0.1.>.B.0.B.L. 
++00006650: 043e 043f 0435 0440 0430 0446 0438 044e  .>.?.5.@.0.F.8.N
++00006660: 0020 0431 0435 0437 0020 0434 0435 0442  . .1.5.7. .4.5.B
++00006670: 0430 043b 044c 043d 044b 0445 0020 0434  .0.;.L.=.K.E. .4
++00006680: 0430 043d 043d 044b 0445 0800 0000 0006  .0.=.=.K.E......
++00006690: 0000 0027 4361 6e27 7420 7072 6f63 6573  ...'Can't proces
++000066a0: 7320 6f70 6572 6174 696f 6e20 7769 7468  s operation with
++000066b0: 6f75 7420 6465 7461 696c 7307 0000 000e  out details.....
++000066c0: 496e 636f 6d65 5370 656e 6469 6e67 0103  IncomeSpending..
++000066d0: 0000 000c 041a 0443 0440 0441 003a 0020  .......C.@.A.:. 
++000066e0: 0800 0000 0006 0000 0006 5261 7465 3a20  ..........Rate: 
++000066f0: 0700 0000 0e49 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
++00006700: 696e 6701 0300 0000 1c04 1404 3e04 4504  ing.........>.E.
++00006710: 3e04 3404 4b00 2004 3800 2004 2204 4004  >.4.K. .8. .".@.
++00006720: 3004 4204 4b08 0000 0000 0600 0000 1149  0.B.K..........I
++00006730: 6e63 6f6d 6520 2620 5370 656e 6469 6e67  ncome & Spending
++00006740: 0700 0000 1449 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
++00006750: 696e 6752 6570 6f72 7401 0300 0000 0604  ingReport.......
++00006760: 1004 3f04 4008 0000 0000 0600 0000 0341  ..?.@..........A
++00006770: 7072 0700 0000 1949 6e63 6f6d 6553 7065  pr.....IncomeSpe
++00006780: 6e64 696e 6752 6570 6f72 744d 6f64 656c  ndingReportModel
++00006790: 0103 0000 0006 0410 0432 0433 0800 0000  .........2.3....
++000067a0: 0006 0000 0003 4175 6707 0000 0019 496e  ......Aug.....In
++000067b0: 636f 6d65 5370 656e 6469 6e67 5265 706f  comeSpendingRepo
++000067c0: 7274 4d6f 6465 6c01 0300 0000 0604 1404  rtModel.........
++000067d0: 3504 3a08 0000 0000 0600 0000 0344 6563  5.:..........Dec
++000067e0: 0700 0000 1949 6e63 6f6d 6553 7065 6e64  .....IncomeSpend
++000067f0: 696e 6752 6570 6f72 744d 6f64 656c 0103  ingReportModel..
++00006800: 0000 0006 0424 0435 0432 0800 0000 0006  .....$.5.2......
++00006810: 0000 0003 4665 6207 0000 0019 496e 636f  ....Feb.....Inco
++00006820: 6d65 5370 656e 6469 6e67 5265 706f 7274  meSpendingReport
++00006830: 4d6f 6465 6c01 0300 0000 0604 2f04 3d04  Model......./.=.
++00006840: 3208 0000 0000 0600 0000 034a 616e 0700  2..........Jan..
++00006850: 0000 1949 6e63 6f6d 6553 7065 6e64 696e  ...IncomeSpendin
++00006860: 6752 6570 6f72 744d 6f64 656c 0103 0000  gReportModel....
++00006870: 0006 0418 044e 043b 0800 0000 0006 0000  .....N.;........
++00006880: 0003 4a75 6c07 0000 0019 496e 636f 6d65  ..Jul.....Income
++00006890: 5370 656e 6469 6e67 5265 706f 7274 4d6f  SpendingReportMo
++000068a0: 6465 6c01 0300 0000 0604 1804 4e04 3d08  del.........N.=.
++000068b0: 0000 0000 0600 0000 034a 756e 0700 0000  .........Jun....
++000068c0: 1949 6e63 6f6d 6553 7065 6e64 696e 6752  .IncomeSpendingR
++000068d0: 6570 6f72 744d 6f64 656c 0103 0000 0006  eportModel......
++000068e0: 041c 0430 0440 0800 0000 0006 0000 0003  ...0.@..........
++000068f0: 4d61 7207 0000 0019 496e 636f 6d65 5370  Mar.....IncomeSp
++00006900: 656e 6469 6e67 5265 706f 7274 4d6f 6465  endingReportMode
++00006910: 6c01 0300 0000 0604 1c04 3004 3908 0000  l.........0.9...
++00006920: 0000 0600 0000 034d 6179 0700 0000 1949  .......May.....I
++00006930: 6e63 6f6d 6553 7065 6e64 696e 6752 6570  ncomeSpendingRep
++00006940: 6f72 744d 6f64 656c 0103 0000 0006 041d  ortModel........
++00006950: 043e 044f 0800 0000 0006 0000 0003 4e6f  .>.O..........No
++00006960: 7607 0000 0019 496e 636f 6d65 5370 656e  v.....IncomeSpen
++00006970: 6469 6e67 5265 706f 7274 4d6f 6465 6c01  dingReportModel.
++00006980: 0300 0000 0604 1e04 3a04 4208 0000 0000  ........:.B.....
++00006990: 0600 0000 034f 6374 0700 0000 1949 6e63  .....Oct.....Inc
++000069a0: 6f6d 6553 7065 6e64 696e 6752 6570 6f72  omeSpendingRepor
++000069b0: 744d 6f64 656c 0103 0000 0006 0421 0435  tModel.......!.5
++000069c0: 043d 0800 0000 0006 0000 0003 5365 7007  .=..........Sep.
++000069d0: 0000 0019 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
++000069e0: 6e67 5265 706f 7274 4d6f 6465 6c01 0300  ngReportModel...
++000069f0: 0000 0a04 1804 2204 1e04 1304 1e08 0000  ......".........
++00006a00: 0000 0600 0000 0554 4f54 414c 0700 0000  .......TOTAL....
++00006a10: 1949 6e63 6f6d 6553 7065 6e64 696e 6752  .IncomeSpendingR
++00006a20: 6570 6f72 744d 6f64 656c 0103 0000 000e  eportModel......
++00006a30: 0412 0430 043b 044e 0442 0430 003a 0800  ...0.;.N.B.0.:..
++00006a40: 0000 0006 0000 0009 4375 7272 656e 6379  ........Currency
++00006a50: 3a07 0000 001a 496e 636f 6d65 5370 656e  :.....IncomeSpen
++00006a60: 6469 6e67 5265 706f 7274 5769 6467 6574  dingReportWidget
++00006a70: 0103 0000 001c 0414 043e 0445 043e 0434  .........>.E.>.4
++00006a80: 044b 0020 0438 0020 0422 0440 0430 0442  .K. .8. .".@.0.B
++00006a90: 044b 0800 0000 0006 0000 0011 496e 636f  .K..........Inco
++00006aa0: 6d65 2026 2053 7065 6e64 696e 6707 0000  me & Spending...
++00006ab0: 001a 496e 636f 6d65 5370 656e 6469 6e67  ..IncomeSpending
++00006ac0: 5265 706f 7274 5769 6467 6574 0103 0000  ReportWidget....
++00006ad0: 0018 0421 043e 0445 0440 0430 043d 0438  ...!.>.E.@.0.=.8
++00006ae0: 0442 044c 002e 002e 002e 0800 0000 0006  .B.L............
++00006af0: 0000 0007 5361 7665 2e2e 2e07 0000 001a  ....Save........
++00006b00: 496e 636f 6d65 5370 656e 6469 6e67 5265  IncomeSpendingRe
++00006b10: 706f 7274 5769 6467 6574 0103 0000 001c  portWidget......
++00006b20: 0414 043e 0445 043e 0434 044b 0020 0438  ...>.E.>.4.K. .8
++00006b30: 0020 0422 0440 0430 0442 044b 0800 0000  . .".@.0.B.K....
++00006b40: 0006 0000 0011 496e 636f 6d65 2026 2053  ......Income & S
++00006b50: 7065 6e64 696e 6707 0000 001a 496e 636f  pending.....Inco
++00006b60: 6d65 5370 656e 6469 6e67 5265 706f 7274  meSpendingReport
++00006b70: 5769 6e64 6f77 0103 0000 0022 041f 043e  Window....."...>
++00006b80: 043a 0430 0437 0430 0442 044c 0020 043e  .:.0.7.0.B.L. .>
++00006b90: 043f 0435 0440 0430 0446 0438 0438 0800  .?.5.@.0.F.8.8..
++00006ba0: 0000 0006 0000 000f 5368 6f77 206f 7065  ........Show ope
++00006bb0: 7261 7469 6f6e 7307 0000 001a 496e 636f  rations.....Inco
++00006bc0: 6d65 5370 656e 6469 6e67 5265 706f 7274  meSpendingReport
++00006bd0: 5769 6e64 6f77 0103 0000 0008 0421 0447  Window.......!.G
++00006be0: 0435 0442 0800 0000 0006 0000 0007 4163  .5.B..........Ac
++00006bf0: 636f 756e 7407 0000 0014 496e 636f 6d65  count.....Income
++00006c00: 5370 656e 6469 6e67 5769 6467 6574 0103  SpendingWidget..
++00006c10: 0000 0032 0414 043e 0431 0430 0432 0438  ...2...>.1.0.2.8
++00006c20: 0442 044c 0020 0434 0435 0442 0430 043b  .B.L. .4.5.B.0.;
++00006c30: 044c 043d 0443 044e 0020 0437 0430 043f  .L.=.C.N. .7.0.?
++00006c40: 0438 0441 044c 0800 0000 0006 0000 000a  .8.A.L..........
++00006c50: 4164 6420 6465 7461 696c 0700 0000 1449  Add detail.....I
++00006c60: 6e63 6f6d 6553 7065 6e64 696e 6757 6964  ncomeSpendingWid
++00006c70: 6765 7401 0300 0000 3804 2104 3a04 3e04  get.....8.!.:.>.
++00006c80: 3f04 3804 4004 3e04 3204 3004 4204 4c00  ?.8.@.>.2.0.B.L.
++00006c90: 2004 3404 3504 4204 3004 3b04 4c04 3d04   .4.5.B.0.;.L.=.
++00006ca0: 4304 4e00 2004 3704 3004 3f04 3804 4104  C.N. .7.0.?.8.A.
++00006cb0: 4c08 0000 0000 0600 0000 0b43 6f70 7920  L..........Copy 
++00006cc0: 6465 7461 696c 0700 0000 1449 6e63 6f6d  detail.....Incom
++00006cd0: 6553 7065 6e64 696e 6757 6964 6765 7401  eSpendingWidget.
++00006ce0: 0300 0000 1404 1404 3004 4204 3000 2f04  ........0.B.0./.
++00006cf0: 1204 4004 3504 3c04 4f08 0000 0000 0600  ..@.5.<.O.......
++00006d00: 0000 0944 6174 652f 5469 6d65 0700 0000  ...Date/Time....
++00006d10: 1449 6e63 6f6d 6553 7065 6e64 696e 6757  .IncomeSpendingW
++00006d20: 6964 6765 7401 0300 0000 0c04 1404 3504  idget.........5.
++00006d30: 4204 3004 3b04 3808 0000 0000 0600 0000  B.0.;.8.........
++00006d40: 0744 6574 6169 6c73 0700 0000 1449 6e63  .Details.....Inc
++00006d50: 6f6d 6553 7065 6e64 696e 6757 6964 6765  omeSpendingWidge
++00006d60: 7401 0300 0000 4404 1d04 3504 3204 3e04  t.....D...5.2.>.
++00006d70: 3704 3c04 3e04 3604 3d04 3e00 2004 3404  7.<.>.6.=.>. .4.
++00006d80: 3e04 3104 3004 3204 3804 4204 4c00 2004  >.1.0.2.8.B.L. .
++00006d90: 3d04 3e04 3204 4304 4e00 2004 3704 3004  =.>.2.C.N. .7.0.
++00006da0: 3f04 3804 4104 4c00 3a00 2008 0000 0000  ?.8.A.L.:. .....
++00006db0: 0600 0000 1a46 6169 6c65 6420 746f 2061  .....Failed to a
++00006dc0: 6464 206e 6577 2072 6563 6f72 643a 2007  dd new record: .
++00006dd0: 0000 0014 496e 636f 6d65 5370 656e 6469  ....IncomeSpendi
++00006de0: 6e67 5769 6467 6574 0103 0000 001c 0414  ngWidget........
++00006df0: 043e 0445 043e 0434 0020 002f 0020 0420  .>.E.>.4. ./. . 
++00006e00: 0430 0441 0445 043e 0434 0800 0000 0006  .0.A.E.>.4......
++00006e10: 0000 0011 496e 636f 6d65 202f 2053 7065  ....Income / Spe
++00006e20: 6e64 696e 6707 0000 0014 496e 636f 6d65  nding.....Income
++00006e30: 5370 656e 6469 6e67 5769 6467 6574 0103  SpendingWidget..
++00006e40: 0000 0014 041f 0440 0438 043c 0435 0447  .......@.8.<.5.G
++00006e50: 0430 043d 0438 0435 0800 0000 0006 0000  .0.=.8.5........
++00006e60: 0004 4e6f 7465 0700 0000 1449 6e63 6f6d  ..Note.....Incom
++00006e70: 6553 7065 6e64 696e 6757 6964 6765 7401  eSpendingWidget.
++00006e80: 0300 0000 4804 1e04 4804 3804 3104 3a04  ....H...H.8.1.:.
++00006e90: 3000 2004 3f04 4004 3800 2004 3704 3004  0. .?.@.8. .7.0.
++00006ea0: 3f04 3804 4104 3800 2004 3404 3504 4204  ?.8.A.8. .4.5.B.
++00006eb0: 3004 3b04 3504 3900 2004 3e04 3f04 3504  0.;.5.9. .>.?.5.
++00006ec0: 4004 3004 4604 3804 3800 3a00 2008 0000  @.0.F.8.8.:. ...
++00006ed0: 0000 0600 0000 214f 7065 7261 7469 6f6e  ......!Operation
++00006ee0: 2064 6574 6169 6c73 2073 7562 6d69 7420   details submit 
++00006ef0: 6661 696c 6564 3a20 0700 0000 1449 6e63  failed: .....Inc
++00006f00: 6f6d 6553 7065 6e64 696e 6757 6964 6765  omeSpendingWidge
++00006f10: 7401 0300 0000 3804 1e04 4804 3804 3104  t.....8...H.8.1.
++00006f20: 3a04 3000 2004 3f04 4004 3800 2004 3704  :.0. .?.@.8. .7.
++00006f30: 3004 3f04 3804 4104 3800 2004 3e04 3f04  0.?.8.A.8. .>.?.
++00006f40: 3504 4004 3004 4604 3804 3800 3a00 2008  5.@.0.F.8.8.:. .
++00006f50: 0000 0000 0600 0000 194f 7065 7261 7469  .........Operati
++00006f60: 6f6e 2073 7562 6d69 7420 6661 696c 6564  on submit failed
++00006f70: 3a20 0700 0000 1449 6e63 6f6d 6553 7065  : .....IncomeSpe
++00006f80: 6e64 696e 6757 6964 6765 7401 0300 0000  ndingWidget.....
++00006f90: 2004 1e04 3f04 3b04 3004 4204 3000 2004   ...?.;.0.B.0. .
++00006fa0: 3200 2004 3204 3004 3b04 4e04 4204 3500  2. .2.0.;.N.B.5.
++00006fb0: 3a08 0000 0000 0600 0000 1950 6169 6420  :..........Paid 
++00006fc0: 696e 2066 6f72 6569 676e 2063 7572 7265  in foreign curre
++00006fd0: 6e63 793a 0700 0000 1449 6e63 6f6d 6553  ncy:.....IncomeS
++00006fe0: 7065 6e64 696e 6757 6964 6765 7401 0300  pendingWidget...
++00006ff0: 0000 1404 1a04 3e04 3d04 4204 4004 3004  ......>.=.B.@.0.
++00007000: 3304 3504 3d04 4208 0000 0000 0600 0000  3.5.=.B.........
++00007010: 0450 6565 7207 0000 0014 496e 636f 6d65  .Peer.....Income
++00007020: 5370 656e 6469 6e67 5769 6467 6574 0103  SpendingWidget..
++00007030: 0000 0030 0423 0434 0430 043b 0438 0442  ...0.#.4.0.;.8.B
++00007040: 044c 0020 0434 0435 0442 0430 043b 044c  .L. .4.5.B.0.;.L
++00007050: 043d 0443 044e 0020 0437 0430 043f 0438  .=.C.N. .7.0.?.8
++00007060: 0441 044c 0800 0000 0006 0000 000d 5265  .A.L..........Re
++00007070: 6d6f 7665 2064 6574 6169 6c07 0000 0014  move detail.....
++00007080: 496e 636f 6d65 5370 656e 6469 6e67 5769  IncomeSpendingWi
++00007090: 6467 6574 0103 0000 000c 0026 0421 0447  dget.......&.!.G
++000070a0: 0435 0442 0430 0800 0000 0006 0000 0009  .5.B.0..........
++000070b0: 2641 6363 6f75 6e74 7307 0000 000e 4a41  &Accounts.....JA
++000070c0: 4c5f 4d61 696e 5769 6e64 6f77 0103 0000  L_MainWindow....
++000070d0: 0012 0026 0411 044d 043a 0430 043f 002e  ...&...M.:.0.?..
++000070e0: 002e 002e 0800 0000 0006 0000 000a 2642  ..............&B
++000070f0: 6163 6b75 702e 2e2e 0700 0000 0e4a 414c  ackup........JAL
++00007100: 5f4d 6169 6e57 696e 646f 7701 0300 0000  _MainWindow.....
++00007110: 1e00 2604 1104 3004 3704 3e04 3204 3004  ..&...0.7.>.2.0.
++00007120: 4f00 2004 3204 3004 3b04 4e04 4204 3008  O. .2.0.;.N.B.0.
++00007130: 0000 0000 0600 0000 0e26 4261 7365 2043  .........&Base C
++00007140: 7572 7265 6e63 7907 0000 000e 4a41 4c5f  urrency.....JAL_
++00007150: 4d61 696e 5769 6e64 6f77 0103 0000 0014  MainWindow......
++00007160: 0026 041a 0430 0442 0435 0433 043e 0440  .&...0.B.5.3.>.@
++00007170: 0438 0438 0800 0000 0006 0000 000b 2643  .8.8..........&C
++00007180: 6174 6567 6f72 6965 7307 0000 000e 4a41  ategories.....JA
++00007190: 4c5f 4d61 696e 5769 6e64 6f77 0103 0000  L_MainWindow....
++000071a0: 000e 0026 0414 0430 043d 043d 044b 0435  ...&...0.=.=.K.5
++000071b0: 0800 0000 0006 0000 0005 2644 6174 6107  ..........&Data.
++000071c0: 0000 000e 4a41 4c5f 4d61 696e 5769 6e64  ....JAL_MainWind
++000071d0: 6f77 0103 0000 000c 0026 0412 044b 0445  ow.......&...K.E
++000071e0: 043e 0434 0800 0000 0006 0000 0005 2645  .>.4..........&E
++000071f0: 7869 7407 0000 000e 4a41 4c5f 4d61 696e  xit.....JAL_Main
++00007200: 5769 6e64 6f77 0103 0000 0010 0026 042d  Window.......&.-
++00007210: 043a 0441 043f 043e 0440 0442 0800 0000  .:.A.?.>.@.B....
++00007220: 0006 0000 0007 2645 7870 6f72 7407 0000  ......&Export...
++00007230: 000e 4a41 4c5f 4d61 696e 5769 6e64 6f77  ..JAL_MainWindow
++00007240: 0103 0000 000e 0026 0418 043c 043f 043e  .......&...<.?.>
++00007250: 0440 0442 0800 0000 0006 0000 0007 2649  .@.B..........&I
++00007260: 6d70 6f72 7407 0000 000e 4a41 4c5f 4d61  mport.....JAL_Ma
++00007270: 696e 5769 6e64 6f77 0103 0000 0012 0026  inWindow.......&
++00007280: 041e 0441 043d 043e 0432 043d 043e 0435  ...A.=.>.2.=.>.5
++00007290: 0800 0000 0006 0000 0005 264d 6169 6e07  ..........&Main.
++000072a0: 0000 000e 4a41 4c5f 4d61 696e 5769 6e64  ....JAL_MainWind
++000072b0: 6f77 0103 0000 0012 0026 041e 043f 0435  ow.......&...?.5
++000072c0: 0440 0430 0446 0438 0438 0800 0000 0006  .@.0.F.8.8......
++000072d0: 0000 000b 264f 7065 7261 7469 6f6e 7307  ....&Operations.
++000072e0: 0000 000e 4a41 4c5f 4d61 696e 5769 6e64  ....JAL_MainWind
++000072f0: 6f77 0103 0000 0018 041a 0026 043e 043d  ow.........&.>.=
++00007300: 0442 0440 0430 0433 0435 043d 0442 044b  .B.@.0.3.5.=.B.K
++00007310: 0800 0000 0006 0000 0006 2650 6565 7273  ..........&Peers
++00007320: 0700 0000 0e4a 414c 5f4d 6169 6e57 696e  .....JAL_MainWin
++00007330: 646f 7701 0300 0000 1400 2604 1a04 3e04  dow.......&...>.
++00007340: 4204 3804 4004 3e04 3204 3a04 3808 0000  B.8.@.>.2.:.8...
++00007350: 0000 0600 0000 0726 5175 6f74 6573 0700  .......&Quotes..
++00007360: 0000 0e4a 414c 5f4d 6169 6e57 696e 646f  ...JAL_MainWindo
++00007370: 7701 0300 0000 1a00 2604 1a04 3e04 4204  w.......&...>.B.
++00007380: 3804 4004 3e04 3204 3a04 3800 2e00 2e00  8.@.>.2.:.8.....
++00007390: 2e08 0000 0000 0600 0000 0a26 5175 6f74  ...........&Quot
++000073a0: 6573 2e2e 2e07 0000 000e 4a41 4c5f 4d61  es........JAL_Ma
++000073b0: 696e 5769 6e64 6f77 0103 0000 000e 0026  inWindow.......&
++000073c0: 041e 0442 0447 0435 0442 044b 0800 0000  ...B.G.5.B.K....
++000073d0: 0006 0000 0008 2652 6570 6f72 7473 0700  ......&Reports..
++000073e0: 0000 0e4a 414c 5f4d 6169 6e57 696e 646f  ...JAL_MainWindo
++000073f0: 7701 0300 0000 2400 2604 1204 3e04 4104  w.....$.&...>.A.
++00007400: 4104 4204 3004 3d04 3e04 3204 3b04 3504  A.B.0.=.>.2.;.5.
++00007410: 3d04 3804 3500 2e00 2e00 2e08 0000 0000  =.8.5...........
++00007420: 0600 0000 0b26 5265 7374 6f72 652e 2e2e  .....&Restore...
++00007430: 0700 0000 0e4a 414c 5f4d 6169 6e57 696e  .....JAL_MainWin
++00007440: 646f 7701 0300 0000 0c00 2604 1e04 4204  dow.......&...B.
++00007450: 4704 5104 4208 0000 0000 0600 0000 0a26  G.Q.B..........&
++00007460: 5374 6174 656d 656e 7407 0000 000e 4a41  Statement.....JA
++00007470: 4c5f 4d61 696e 5769 6e64 6f77 0103 0000  L_MainWindow....
++00007480: 000a 0026 0422 044d 0433 0438 0800 0000  ...&.".M.3.8....
++00007490: 0006 0000 0005 2654 6167 7307 0000 000e  ......&Tags.....
++000074a0: 4a41 4c5f 4d61 696e 5769 6e64 6f77 0103  JAL_MainWindow..
++000074b0: 0000 001c 0026 0426 0435 043d 043d 044b  .....&.&.5.=.=.K
++000074c0: 0435 0020 0431 0443 043c 0430 0433 0438  .5. .1.C.<.0.3.8
++000074d0: 0800 0000 0006 0000 0007 4126 7373 6574  ..........A&sset
++000074e0: 7307 0000 000e 4a41 4c5f 4d61 696e 5769  s.....JAL_MainWi
++000074f0: 6e64 6f77 0103 0000 004e 041e 0442 0447  ndow.....N...B.G
++00007500: 0435 0442 0020 043e 0020 0026 0434 0432  .5.B. .>. .&.4.2
++00007510: 0438 0436 0435 043d 0438 044f 0445 0020  .8.6.5.=.8.O.E. 
++00007520: 043f 043e 0020 0437 0430 0440 0443 0431  .?.>. .7.0.@.C.1
++00007530: 0435 0436 043d 044b 043c 0020 0441 0447  .5.6.=.K.<. .A.G
++00007540: 0435 0442 0430 043c 0800 0000 0006 0000  .5.B.0.<........
++00007550: 001d 466f 7265 6967 6e20 6163 636f 756e  ..Foreign accoun
++00007560: 7473 2026 666c 6f77 2072 6570 6f72 7407  ts &flow report.
++00007570: 0000 000e 4a41 4c5f 4d61 696e 5769 6e64  ....JAL_MainWind
++00007580: 6f77 0103 0000 003e 0418 043d 0432 0435  ow.....>...=.2.5
++00007590: 0441 0442 0438 0446 0438 043e 043d 043d  .A.B.8.F.8.>.=.=
++000075a0: 044b 0439 0020 0026 043d 0430 043b 043e  .K.9. .&.=.0.;.>
++000075b0: 0433 043e 0432 044b 0439 0020 043e 0442  .3.>.2.K.9. .>.B
++000075c0: 0447 0435 0442 0800 0000 0006 0000 0016  .G.5.B..........
++000075d0: 496e 7665 7374 6d65 6e74 2026 7461 7820  Investment &tax 
++000075e0: 7265 706f 7274 0700 0000 0e4a 414c 5f4d  report.....JAL_M
++000075f0: 6169 6e57 696e 646f 7701 0300 0000 0a00  ainWindow.......
++00007600: 2604 2f04 3704 4b04 3a08 0000 0000 0600  &./.7.K.:.......
++00007610: 0000 094c 2661 6e67 7561 6765 0700 0000  ...L&anguage....
++00007620: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
++00007630: 0300 0000 2a04 1f04 3504 4004 3504 4104  ....*...5.@.5.A.
++00007640: 4704 3804 4204 3004 4204 4c00 2000 2604  G.8.B.0.B.L. .&.
++00007650: 3804 4204 3e04 3304 3800 2e00 2e00 2e08  8.B.>.3.8.......
++00007660: 0000 0000 0600 0000 1352 652d 6275 696c  .........Re-buil
++00007670: 6420 264c 6564 6765 722e 2e2e 0700 0000  d &Ledger.......
++00007680: 0e4a 414c 5f4d 6169 6e57 696e 646f 7701  .JAL_MainWindow.
++00007690: 0300 0000 1604 2704 3504 3a00 2000 5b00  ......'.5.:. .[.
++000076a0: 5200 5500 5d00 2e00 2e00 2e08 0000 0000  R.U.]...........
++000076b0: 0600 0000 0c53 6c69 7020 5b52 555d 2e2e  .....Slip [RU]..
++000076c0: 2e07 0000 000e 4a41 4c5f 4d61 696e 5769  ......JAL_MainWi
++000076d0: 6e64 6f77 0103 0000 0006 006a 0061 006c  ndow.......j.a.l
++000076e0: 0800 0000 0006 0000 0003 6a61 6c07 0000  ..........jal...
++000076f0: 000e 4a41 4c5f 4d61 696e 5769 6e64 6f77  ..JAL_MainWindow
++00007700: 0103 0000 0020 0411 0430 043d 043a 0020  ..... ...0.=.:. 
++00007710: 0434 043b 044f 0020 0441 0447 0435 0442  .4.;.O. .A.G.5.B
++00007720: 0430 0020 2116 0800 0000 0006 0000 0012  .0. !...........
++00007730: 4261 6e6b 2066 6f72 2061 6363 6f75 6e74  Bank for account
++00007740: 2023 0700 0000 0a4a 616c 4163 636f 756e   #.....JalAccoun
++00007750: 7401 0300 0000 2a04 2104 4204 4004 3004  t.....*.!.B.@.0.
++00007760: 3d04 3000 2004 3e04 3104 3d04 3e04 3204  =.0. .>.1.=.>.2.
++00007770: 3b04 5104 3d04 3000 2004 3404 3b04 4f00  ;.Q.=.0. .4.;.O.
++00007780: 2008 0000 0000 0600 0000 1443 6f75 6e74   ..........Count
++00007790: 7279 2075 7064 6174 6564 2066 6f72 2007  ry updated for .
++000077a0: 0000 0008 4a61 6c41 7373 6574 0103 0000  ....JalAsset....
++000077b0: 002a 041a 043e 0442 0438 0440 043e 0432  .*...>.B.8.@.>.2
++000077c0: 043a 0438 0020 043e 0431 043d 043e 0432  .:.8. .>.1.=.>.2
++000077d0: 043b 0435 043d 044b 003a 0020 0800 0000  .;.5.=.K.:. ....
++000077e0: 0006 0000 0019 5175 6f74 6174 696f 6e73  ......Quotations
++000077f0: 2077 6572 6520 7570 6461 7465 643a 2007   were updated: .
++00007800: 0000 0008 4a61 6c41 7373 6574 0103 0000  ....JalAsset....
++00007810: 0046 0420 0435 0433 0438 0441 0442 0440  .F. .5.3.8.A.B.@
++00007820: 0430 0446 0438 043e 043d 043d 044b 0439  .0.F.8.>.=.=.K.9
++00007830: 0020 043d 043e 043c 0435 0440 0020 043e  . .=.>.<.5.@. .>
++00007840: 0431 043d 043e 0432 043b 0451 043d 0020  .1.=.>.2.;.Q.=. 
++00007850: 0434 043b 044f 0020 0800 0000 0006 0000  .4.;.O. ........
++00007860: 0017 5265 672e 6e75 6d62 6572 2075 7064  ..Reg.number upd
++00007870: 6174 6564 2066 6f72 2007 0000 0008 4a61  ated for .....Ja
++00007880: 6c41 7373 6574 0103 0000 0030 041d 0435  lAsset.....0...5
++00007890: 0442 0020 043a 043e 0442 0438 0440 043e  .B. .:.>.B.8.@.>
++000078a0: 0432 043a 0438 002f 043a 0443 0440 0441  .2.:.8./.:.C.@.A
++000078b0: 0430 0020 0434 043b 044f 0020 0800 0000  .0. .4.;.O. ....
++000078c0: 0006 0000 001c 5468 6572 6520 6172 6520  ......There are 
++000078d0: 6e6f 2071 756f 7465 2f72 6174 6520 666f  no quote/rate fo
++000078e0: 7220 0700 0000 084a 616c 4173 7365 7401  r .....JalAsset.
++000078f0: 0300 0000 4c04 1d04 3504 3e04 3604 3804  ....L...5.>.6.8.
++00007900: 3404 3004 3d04 3d04 3004 4f00 2004 3f04  4.0.=.=.0.O. .?.
++00007910: 3e04 3f04 4b04 4204 3a04 3000 2004 3e04  >.?.K.B.:.0. .>.
++00007920: 3104 3d04 3e04 3204 3804 4204 4c00 2000  1.=.>.2.8.B.L. .
++00007930: 4900 5300 4900 4e00 2004 3404 3b04 4f00  I.S.I.N. .4.;.O.
++00007940: 2008 0000 0000 0600 0000 2655 6e65 7870   .........&Unexp
++00007950: 6563 7465 6420 6174 7465 6d70 7420 746f  ected attempt to
++00007960: 2075 7064 6174 6520 4953 494e 2066 6f72   update ISIN for
++00007970: 2007 0000 0008 4a61 6c41 7373 6574 0103   .....JalAsset..
++00007980: 0000 0006 0020 0432 0020 0800 0000 0006  ..... .2. ......
++00007990: 0000 0006 2069 6e74 6f20 0700 0000 094a  .... into .....J
++000079a0: 616c 4261 636b 7570 0103 0000 001c 0410  alBackup........
++000079b0: 0440 0445 0438 0432 044b 0020 0028 002a  .@.E.8.2.K. .(.*
++000079c0: 002e 0074 0067 007a 0029 0800 0000 0006  ...t.g.z.)......
++000079d0: 0000 0010 4172 6368 6976 6573 2028 2a2e  ....Archives (*.
++000079e0: 7467 7a29 0700 0000 094a 616c 4261 636b  tgz).....JalBack
++000079f0: 7570 0103 0000 0046 041d 0435 0020 0440  up.....F...5. .@
++00007a00: 0430 0441 043f 043e 0437 043d 0430 043d  .0.A.?.>.7.=.0.=
++00007a10: 0430 0020 043c 0435 0442 043a 0430 0020  .0. .<.5.B.:.0. 
++00007a20: 0440 0435 0437 0435 0440 0432 043d 043e  .@.5.7.5.@.2.=.>
++00007a30: 0439 0020 043a 043e 043f 0438 0438 0800  .9. .:.>.?.8.8..
++00007a40: 0000 0006 0000 001b 4261 636b 7570 206c  ........Backup l
++00007a50: 6162 656c 206e 6f74 2072 6563 6f67 6e69  abel not recogni
++00007a60: 7a65 6407 0000 0009 4a61 6c42 6163 6b75  zed.....JalBacku
++00007a70: 7001 0300 0000 4604 2004 3504 3704 3504  p.....F. .5.7.5.
++00007a80: 4004 3204 3d04 3004 4f00 2004 3a04 3e04  @.2.=.0.O. .:.>.
++00007a90: 3f04 3804 4f00 2004 3204 3e04 4104 4104  ?.8.O. .2.>.A.A.
++00007aa0: 4204 3004 3204 3d04 3e04 3204 3b04 3504  B.0.2.=.>.2.;.5.
++00007ab0: 3d04 3000 2004 3804 3700 3a00 2008 0000  =.0. .8.7.:. ...
++00007ac0: 0000 0600 0000 1642 6163 6b75 7020 7265  .......Backup re
++00007ad0: 7374 6f72 6564 2066 726f 6d3a 2007 0000  stored from: ...
++00007ae0: 0009 4a61 6c42 6163 6b75 7001 0300 0000  ..JalBackup.....
++00007af0: 3a04 2004 3504 3704 3504 4004 3204 3d04  :. .5.7.5.@.2.=.
++00007b00: 3004 4f00 2004 3a04 3e04 3f04 3804 4f00  0.O. .:.>.?.8.O.
++00007b10: 2004 4104 3e04 4504 4004 3004 3d04 5104   .A.>.E.@.0.=.Q.
++00007b20: 3d04 3000 2004 3200 3a00 2008 0000 0000  =.0. .2.:. .....
++00007b30: 0600 0000 1142 6163 6b75 7020 7361 7665  .....Backup save
++00007b40: 6420 696e 3a20 0700 0000 094a 616c 4261  d in: .....JalBa
++00007b50: 636b 7570 0103 0000 0052 041d 0435 0432  ckup.....R...5.2
++00007b60: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
++00007b70: 043f 0440 043e 0432 0435 0440 0438 0442  .?.@.>.2.5.@.8.B
++00007b80: 044c 0020 0434 0430 0442 0443 0020 0440  .L. .4.0.B.C. .@
++00007b90: 0435 0437 0435 0440 0432 043d 043e 0439  .5.7.5.@.2.=.>.9
++00007ba0: 0020 043a 043e 043f 0438 0438 0800 0000  . .:.>.?.8.8....
++00007bb0: 0006 0000 001a 4361 6e27 7420 7661 6c69  ......Can't vali
++00007bc0: 6461 7465 2062 6163 6b75 7020 6461 7465  date backup date
++00007bd0: 0700 0000 094a 616c 4261 636b 7570 0103  .....JalBackup..
++00007be0: 0000 0028 0414 0430 043d 043d 044b 0435  ...(...0.=.=.K.5
++00007bf0: 0020 0432 043e 0441 0441 0442 0430 043d  . .2.>.A.A.B.0.=
++00007c00: 043e 0432 043b 0435 043d 044b 0800 0000  .>.2.;.5.=.K....
++00007c10: 0006 0000 000d 4461 7461 2072 6573 746f  ......Data resto
++00007c20: 7265 6407 0000 0009 4a61 6c42 6163 6b75  red.....JalBacku
++00007c30: 7001 0300 0000 4204 1404 3004 3d04 3d04  p.....B...0.=.=.
++00007c40: 4b04 3500 2004 3104 4b04 3b04 3800 2004  K.5. .1.K.;.8. .
++00007c50: 3704 3004 3304 4004 4304 3604 3504 3d04  7.0.3.@.C.6.5.=.
++00007c60: 4b00 2004 3804 3700 2004 3104 4d04 3a04  K. .8.7. .1.M.:.
++00007c70: 3004 3f04 3000 2e00 0a08 0000 0000 0600  0.?.0...........
++00007c80: 0000 2544 6174 6162 6173 6520 7761 7320  ..%Database was 
++00007c90: 6c6f 6164 6564 2066 726f 6d20 7468 6520  loaded from the 
++00007ca0: 6261 636b 7570 2e0a 0700 0000 094a 616c  backup.......Jal
++00007cb0: 4261 636b 7570 0103 0000 004e 041d 0435  Backup.....N...5
++00007cc0: 0020 0443 0434 0430 043b 043e 0441 044c  . .C.4.0.;.>.A.L
++00007cd0: 0020 0432 043e 0441 0441 0442 0430 043d  . .2.>.A.A.B.0.=
++00007ce0: 043e 0432 0438 0442 044c 0020 0440 0435  .>.2.8.B.L. .@.5
++00007cf0: 0437 0435 0440 0432 043d 0443 044e 0020  .7.5.@.2.=.C.N. 
++00007d00: 043a 043e 043f 0438 044e 0800 0000 0006  .:.>.?.8.N......
++00007d10: 0000 001d 4661 696c 6564 2074 6f20 7265  ....Failed to re
++00007d20: 7374 6f72 6520 6261 636b 7570 2066 696c  store backup fil
++00007d30: 6507 0000 0009 4a61 6c42 6163 6b75 7001  e.....JalBackup.
++00007d40: 0300 0000 3804 2104 3e04 4504 4004 3004  ....8.!.>.E.@.0.
++00007d50: 3d04 3804 4204 4c00 2004 4004 3504 3704  =.8.B.L. .@.5.7.
++00007d60: 3504 4004 3204 3d04 4304 4e00 2004 3a04  5.@.2.=.C.N. .:.
++00007d70: 3e04 3f04 3804 4e00 2004 3200 3a08 0000  >.?.8.N. .2.:...
++00007d80: 0000 0600 0000 0f53 6176 6520 6261 636b  .......Save back
++00007d90: 7570 2074 6f3a 0700 0000 094a 616c 4261  up to:.....JalBa
++00007da0: 636b 7570 0103 0000 0040 0412 044b 0431  ckup.....@...K.1
++00007db0: 0435 0440 0438 0442 0435 0020 0444 0430  .5.@.8.B.5. .D.0
++00007dc0: 0439 043b 0020 0441 0020 0440 0435 0437  .9.;. .A. .@.5.7
++00007dd0: 0435 0440 0432 043d 043e 0439 0020 043a  .5.@.2.=.>.9. .:
++00007de0: 043e 043f 0438 0435 0439 0800 0000 0006  .>.?.8.5.9......
++00007df0: 0000 0017 5365 6c65 6374 2066 696c 6520  ....Select file 
++00007e00: 7769 7468 2062 6163 6b75 7007 0000 0009  with backup.....
++00007e10: 4a61 6c42 6163 6b75 7001 0300 0000 4a04  JalBackup.....J.
++00007e20: 1d04 3504 3204 3504 4004 3d04 4b04 3900  ..5.2.5.@.=.K.9.
++00007e30: 2004 4404 3e04 4004 3c04 3004 4200 2004   .D.>.@.<.0.B. .
++00007e40: 4404 3004 3904 3b04 3000 2004 4004 3504  D.0.9.;.0. .@.5.
++00007e50: 3704 3504 4004 3204 3d04 3e04 3900 2004  7.5.@.2.=.>.9. .
++00007e60: 3a04 3e04 3f04 3804 3808 0000 0000 0600  :.>.?.8.8.......
++00007e70: 0000 1b57 726f 6e67 2066 6f72 6d61 7420  ...Wrong format 
++00007e80: 6f66 2062 6163 6b75 7020 6669 6c65 0700  of backup file..
++00007e90: 0000 094a 616c 4261 636b 7570 0103 0000  ...JalBackup....
++00007ea0: 00c8 0412 044b 0020 0434 043e 043b 0436  .....K. .4.>.;.6
++00007eb0: 043d 044b 0020 043f 0435 0440 0435 0437  .=.K. .?.5.@.5.7
++00007ec0: 0430 043f 0443 0441 0442 0438 0442 044c  .0.?.C.A.B.8.B.L
++00007ed0: 0020 043f 0440 0438 043b 043e 0436 0435  . .?.@.8.;.>.6.5
++00007ee0: 043d 0438 0435 002c 0020 0447 0442 043e  .=.8.5.,. .G.B.>
++00007ef0: 0431 044b 0020 043f 0440 0438 043c 0435  .1.K. .?.@.8.<.5
++00007f00: 043d 0438 0442 044c 0020 0438 0437 043c  .=.8.B.L. .8.7.<
++00007f10: 0435 043d 0435 043d 0438 044f 000a 041f  .5.=.5.=.8.O....
++00007f20: 0440 0438 043b 043e 0436 0435 043d 0438  .@.8.;.>.6.5.=.8
++00007f30: 0435 0020 0441 0435 0439 0447 0430 0441  .5. .A.5.9.G.0.A
++00007f40: 0020 0437 0430 0432 0435 0440 0448 0438  . .7.0.2.5.@.H.8
++00007f50: 0442 0020 0441 0432 043e 044e 0020 0440  .B. .A.2.>.N. .@
++00007f60: 0430 0431 043e 0442 0443 0800 0000 0006  .0.1.>.B.C......
++00007f70: 0000 0052 596f 7520 7368 6f75 6c64 2072  ...RYou should r
++00007f80: 6573 7461 7274 2061 7070 6c69 6361 7469  estart applicati
++00007f90: 6f6e 2074 6f20 6170 706c 7920 6368 616e  on to apply chan
++00007fa0: 6765 730a 4170 706c 6963 6174 696f 6e20  ges.Application 
++00007fb0: 7769 6c6c 2062 6520 7465 726d 696e 6174  will be terminat
++00007fc0: 6564 206e 6f77 0700 0000 094a 616c 4261  ed now.....JalBa
++00007fd0: 636b 7570 0103 0000 0040 0422 0440 0430  ckup.....@.".@.0
++00007fe0: 043d 0437 0430 043a 0446 0438 044f 0020  .=.7.0.:.F.8.O. 
++00007ff0: 0443 0436 0435 0020 0441 0443 0449 0435  .C.6.5. .A.C.I.5
++00008000: 0441 0442 0432 0443 0435 0442 0020 0432  .A.B.2.C.5.B. .2
++00008010: 0020 0411 0414 003a 0020 0800 0000 0006  . .....:. ......
++00008020: 0000 0021 4f70 6572 6174 696f 6e20 616c  ...!Operation al
++00008030: 7265 6164 7920 7072 6573 656e 7420 696e  ready present in
++00008040: 2064 623a 2007 0000 0005 4a61 6c44 4201   db: .....JalDB.
++00008050: 0300 0000 6e00 2004 3804 3c04 3504 3504  ....n. .8.<.5.5.
++00008060: 4200 2004 3d04 3504 4104 3e04 4504 4004  B. .=.5.A.>.E.@.
++00008070: 3004 3d04 5104 3d04 3d04 4b04 3500 2004  0.=.Q.=.=.K.5. .
++00008080: 3804 3704 3c04 3504 3d04 3504 3d04 3804  8.7.<.5.=.5.=.8.
++00008090: 4f00 2c00 0a04 3204 4b00 2004 4504 3e04  O.,...2.K. .E.>.
++000080a0: 4204 3804 4204 3500 2004 3804 4500 2004  B.8.B.5. .8.E. .
++000080b0: 4104 3e04 4504 4004 3004 3d04 3804 4204  A.>.E.@.0.=.8.B.
++000080c0: 4c00 3f08 0000 0000 0600 0000 3120 6861  L.?.........1 ha
++000080d0: 7320 756e 636f 6d6d 6974 7465 6420 6368  s uncommitted ch
++000080e0: 616e 6765 732c 0a64 6f20 796f 7520 7761  anges,.do you wa
++000080f0: 6e74 2074 6f20 7361 7665 2069 743f 0700  nt to save it?..
++00008100: 0000 114a 616c 4f70 6572 6174 696f 6e73  ...JalOperations
++00008110: 5461 6273 0103 0000 0036 0415 0441 0442  Tabs.....6...A.B
++00008120: 044c 0020 043d 0435 0441 043e 0445 0440  .L. .=.5.A.>.E.@
++00008130: 0430 043d 0451 043d 043d 044b 0435 0020  .0.=.Q.=.=.K.5. 
++00008140: 0438 0437 043c 0435 043d 043d 0438 044f  .8.7.<.5.=.=.8.O
++00008150: 0800 0000 0006 0000 0018 596f 7520 6861  ..........You ha
++00008160: 7665 2075 6e73 6176 6564 2063 6861 6e67  ve unsaved chang
++00008170: 6573 0700 0000 114a 616c 4f70 6572 6174  es.....JalOperat
++00008180: 696f 6e73 5461 6273 0103 0000 005a 041d  ionsTabs.....Z..
++00008190: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++000081a0: 043e 0020 0443 0434 0430 043b 0438 0442  .>. .C.4.0.;.8.B
++000081b0: 044c 0020 043f 0440 0435 0434 043e 043f  .L. .?.@.5.4.>.?
++000081c0: 0440 0435 0434 0435 043b 0451 043d 043d  .@.5.4.5.;.Q.=.=
++000081d0: 0443 044e 0020 043a 0430 0442 0435 0433  .C.N. .:.0.B.5.3
++000081e0: 043e 0440 0438 044e 0800 0000 0006 0000  .>.@.8.N........
++000081f0: 0020 4361 6e27 7420 6465 6c65 7465 2070  . Can't delete p
++00008200: 7265 6465 6669 6e65 6420 6361 7465 676f  redefined catego
++00008210: 7279 0700 0000 0b4a 616c 5371 6c45 7272  ry.....JalSqlErr
++00008220: 6f72 0103 0000 009e 042d 0442 0438 0020  or.......-.B.8. 
++00008230: 0434 0430 043d 043d 044b 0435 0020 043d  .4.0.=.=.K.5. .=
++00008240: 0435 0020 043c 043e 0433 0443 0442 0020  .5. .<.>.3.C.B. 
++00008250: 0431 044b 0442 044c 0020 043c 043e 0434  .1.K.B.L. .<.>.4
++00008260: 0438 0444 0438 0446 0438 0440 043e 0432  .8.D.8.F.8.@.>.2
++00008270: 0430 043d 044b 002c 0020 0442 002e 043a  .0.=.K.,. .B...:
++00008280: 002e 0020 043d 0430 0020 043d 0438 0445  ... .=.0. .=.8.E
++00008290: 0020 0435 0441 0442 044c 0020 0441 0441  . .5.A.B.L. .A.A
++000082a0: 044b 043b 043a 0430 0020 0432 0020 0434  .K.;.:.0. .2. .4
++000082b0: 0440 0443 0433 043e 043c 0020 043c 0435  .@.C.3.>.<. .<.5
++000082c0: 0441 0442 0435 0800 0000 0006 0000 003a  .A.B.5.........:
++000082d0: 4461 7461 2061 7265 2072 6566 6572 656e  Data are referen
++000082e0: 6365 6420 696e 2061 6e6f 7468 6572 2070  ced in another p
++000082f0: 6c61 6365 2061 6e64 2063 616e 2774 2062  lace and can't b
++00008300: 6520 6d6f 6469 6669 6564 0700 0000 0b4a  e modified.....J
++00008310: 616c 5371 6c45 7272 6f72 0103 0000 001e  alSqlError......
++00008320: 041e 0448 0438 0431 043a 0430 0020 0432  ...H.8.1.:.0. .2
++00008330: 0020 0434 0430 043d 043d 044b 0445 0800  . .4.0.=.=.K.E..
++00008340: 0000 0006 0000 000e 4461 7461 6261 7365  ........Database
++00008350: 2065 7272 6f72 0700 0000 0b4a 616c 5371   error.....JalSq
++00008360: 6c45 7272 6f72 0103 0000 0050 041d 0435  lError.....P...5
++00008370: 0432 0435 0440 043d 043e 0020 0432 044b  .2.5.@.=.>. .2.K
++00008380: 0431 0440 0430 043d 0430 0020 0432 0430  .1.@.0.=.0. .2.0
++00008390: 043b 044e 0442 0430 0020 0434 043b 044f  .;.N.B.0. .4.;.O
++000083a0: 0020 0446 0435 043d 043d 043e 0439 0020  . .F.5.=.=.>.9. 
++000083b0: 0431 0443 043c 0430 0433 0438 0800 0000  .1.C.<.0.3.8....
++000083c0: 0006 0000 002a 496e 636f 7272 6563 7420  .....*Incorrect 
++000083d0: 6375 7272 656e 6379 2061 7373 6967 6e6d  currency assignm
++000083e0: 656e 7420 666f 7220 616e 2061 7373 6574  ent for an asset
++000083f0: 0700 0000 0b4a 616c 5371 6c45 7272 6f72  .....JalSqlError
++00008400: 0103 0000 0080 041f 043e 043b 0435 0020  .........>.;.5. 
++00008410: 0411 0430 043d 043a 002f 0411 0440 043e  ...0.=.:./...@.>
++00008420: 043a 0435 0440 0020 0434 043e 043b 0436  .:.5.@. .4.>.;.6
++00008430: 043d 043e 0020 0431 044b 0442 044c 0020  .=.>. .1.K.B.L. 
++00008440: 0437 0430 043f 043e 043b 043d 0435 043d  .7.0.?.>.;.=.5.=
++00008450: 043e 0020 0434 043b 044f 0020 0438 043d  .>. .4.;.O. .8.=
++00008460: 0432 0435 0441 0442 0438 0446 0438 043e  .2.5.A.B.8.F.8.>
++00008470: 043d 043d 043e 0433 043e 0020 0441 0447  .=.=.>.3.>. .A.G
++00008480: 0435 0442 0430 0800 0000 0006 0000 0039  .5.B.0.........9
++00008490: 496e 7665 7374 6d65 6e74 2061 6363 6f75  Investment accou
++000084a0: 6e74 2073 686f 756c 6420 6861 7665 2061  nt should have a
++000084b0: 7373 6f63 6961 7465 6420 6272 6f6b 6572  ssociated broker
++000084c0: 2061 7373 6967 6e65 6407 0000 000b 4a61   assigned.....Ja
++000084d0: 6c53 716c 4572 726f 7201 0300 0000 8800  lSqlError.......
++000084e0: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
++000084f0: 3900 2004 4204 4004 3504 3104 4304 4e04  9. .B.@.5.1.C.N.
++00008500: 4200 2004 3f04 3504 4004 3504 4004 3004  B. .?.5.@.5.@.0.
++00008510: 4104 4704 3504 4204 3000 2e00 2004 1204  A.G.5.B.0... ...
++00008520: 4b00 2004 4504 3e04 3404 3804 4204 3500  K. .E.>.4.8.B.5.
++00008530: 2004 3204 4b04 3f04 3e04 3b04 3d04 3804   .2.K.?.>.;.=.8.
++00008540: 4204 4c00 2004 3504 3304 3e00 2004 3f04  B.L. .5.3.>. .?.
++00008550: 4004 4f04 3c04 3e00 2004 4104 3504 3904  @.O.<.>. .A.5.9.
++00008560: 4704 3004 4100 3f08 0000 0000 0600 0000  G.0.A.?.........
++00008570: 3c20 6f70 6572 6174 696f 6e73 2072 6571  < operations req
++00008580: 7569 7265 2072 6562 7569 6c64 2e20 446f  uire rebuild. Do
++00008590: 2079 6f75 2077 616e 7420 746f 2064 6f20   you want to do 
++000085a0: 6974 2072 6967 6874 206e 6f77 3f07 0000  it right now?...
++000085b0: 0006 4c65 6467 6572 0103 0000 0022 002c  ..Ledger.....".,
++000085c0: 0020 043d 043e 0432 0430 044f 0020 0433  . .=.>.2.0.O. .3
++000085d0: 0440 0430 043d 0438 0446 0430 003a 0020  .@.0.=.8.F.0.:. 
++000085e0: 0800 0000 0006 0000 0010 2c20 6e65 7720  .........., new 
++000085f0: 6672 6f6e 7469 6572 3a20 0700 0000 064c  frontier: .....L
++00008600: 6564 6765 7201 0300 0000 1a04 1f04 3e04  edger.........>.
++00008610: 3404 4204 3204 3504 4004 3604 3404 3504  4.B.2.5.@.6.4.5.
++00008620: 3d04 3804 3508 0000 0000 0600 0000 0c43  =.8.5..........C
++00008630: 6f6e 6669 726d 6174 696f 6e07 0000 0006  onfirmation.....
++00008640: 4c65 6467 6572 0103 0000 0094 041f 0440  Ledger.........@
++00008650: 043e 0438 0437 043e 0448 043b 0430 0020  .>.8.7.>.H.;.0. 
++00008660: 043e 0448 0438 0431 043a 0430 002e 0020  .>.H.8.1.:.0... 
++00008670: 0420 0430 0441 0447 0451 0442 0020 0438  . .0.A.G.Q.B. .8
++00008680: 0442 043e 0433 043e 0432 0020 043d 0435  .B.>.3.>.2. .=.5
++00008690: 0020 043e 043a 043e 043d 0447 0435 043d  . .>.:.>.=.G.5.=
++000086a0: 002e 0020 041f 0440 043e 0432 0435 0440  ... ...@.>.2.5.@
++000086b0: 044c 0442 0435 0020 0441 043e 043e 0431  .L.B.5. .A.>.>.1
++000086c0: 0449 0435 043d 0438 044f 0020 043e 0431  .I.5.=.8.O. .>.1
++000086d0: 0020 043e 0448 0438 0431 043a 0430 0445  . .>.H.8.1.:.0.E
++000086e0: 0800 0000 0006 0000 004d 4578 6365 7074  .........MExcept
++000086f0: 696f 6e20 6861 7070 656e 6564 2e20 4c65  ion happened. Le
++00008700: 6467 6572 2069 7320 696e 636f 6d70 6c65  dger is incomple
++00008710: 7465 2e20 506c 6561 7365 2063 6f72 7265  te. Please corre
++00008720: 6374 2065 7272 6f72 7320 6c69 7374 6564  ct errors listed
++00008730: 2069 6e20 6c6f 6707 0000 0006 4c65 6467   in log.....Ledg
++00008740: 6572 0103 0000 004a 0418 0442 043e 0433  er.....J...B.>.3
++00008750: 0438 0020 0440 0430 0441 0441 0447 0438  .8. .@.0.A.A.G.8
++00008760: 0442 0430 043d 044b 002e 0020 0417 0430  .B.0.=.K... ...0
++00008770: 0442 0440 0430 0447 0435 043d 043d 043e  .B.@.0.G.5.=.=.>
++00008780: 0435 0020 0432 0440 0435 043c 044f 003a  .5. .2.@.5.<.O.:
++00008790: 0020 0800 0000 0006 0000 0022 4c65 6467  . ........."Ledg
++000087a0: 6572 2069 7320 636f 6d70 6c65 7465 2e20  er is complete. 
++000087b0: 456c 6170 7365 6420 7469 6d65 3a20 0700  Elapsed time: ..
++000087c0: 0000 064c 6564 6765 7201 0300 0000 2c04  ...Ledger.....,.
++000087d0: 2204 4004 3004 3d04 3704 3004 3a04 4604  ".@.0.=.7.0.:.F.
++000087e0: 3804 3800 2004 3e04 4204 4104 4304 4204  8.8. .>.B.A.C.B.
++000087f0: 4104 4204 3204 4304 4e04 4208 0000 0000  A.B.2.C.N.B.....
++00008800: 0600 0000 0e4c 6567 6572 2069 7320 656d  .....Leger is em
++00008810: 7074 7907 0000 0006 4c65 6467 6572 0103  pty.....Ledger..
++00008820: 0000 0026 041d 0435 0020 0443 043a 0430  ...&...5. .C.:.0
++00008830: 0437 0430 043d 0430 0020 0426 0411 0020  .7.0.=.0. .&... 
++00008840: 0434 043b 044f 003a 0020 0800 0000 0006  .4.;.O.:. ......
++00008850: 0000 0016 4e6f 2061 7373 6574 2064 6566  ....No asset def
++00008860: 696e 6564 2066 6f72 3a20 0700 0000 064c  ined for: .....L
++00008870: 6564 6765 7201 0300 0000 3404 1d04 4300  edger.....4...C.
++00008880: 2004 4304 3a04 3004 3704 3004 3d04 3000   .C.:.0.7.0.=.0.
++00008890: 2004 3a04 3004 4204 3504 3304 3e04 4004   .:.0.B.5.3.>.@.
++000088a0: 3804 4f00 2004 3404 3b04 4f00 3a00 2008  8.O. .4.;.O.:. .
++000088b0: 0000 0000 0600 0000 154e 6f20 6361 7465  .........No cate
++000088c0: 676f 7279 2073 6574 2066 6f72 3a20 0700  gory set for: ..
++000088d0: 0000 064c 6564 6765 7201 0300 0000 3404  ...Ledger.....4.
++000088e0: 1d04 3500 2004 4304 3a04 3004 3704 3004  ..5. .C.:.0.7.0.
++000088f0: 3d00 2004 3a04 3e04 3d04 4204 4004 3004  =. .:.>.=.B.@.0.
++00008900: 3304 3504 3d04 4200 2004 3404 3b04 4f00  3.5.=.B. .4.;.O.
++00008910: 3a00 2008 0000 0000 0600 0000 114e 6f20  :. ..........No 
++00008920: 7065 6572 2073 6574 2066 6f72 3a20 0700  peer set for: ..
++00008930: 0000 064c 6564 6765 7201 0300 0000 2604  ...Ledger.....&.
++00008940: 1f04 3504 4004 3504 4104 4704 5104 4200  ..5.@.5.A.G.Q.B.
++00008950: 2004 3804 4204 3e04 3304 3e04 3200 2004   .8.B.>.3.>.2. .
++00008960: 4100 3a00 2008 0000 0000 0600 0000 1a52  A.:. ..........R
++00008970: 652d 6275 696c 6469 6e67 206c 6564 6765  e-building ledge
++00008980: 7220 7369 6e63 653a 2007 0000 0006 4c65  r since: .....Le
++00008990: 6467 6572 0103 0000 0058 041d 0435 0438  dger.....X...5.8
++000089a0: 0437 0432 0435 0441 0442 043d 044b 0439  .7.2.5.A.B.=.K.9
++000089b0: 0020 043f 0430 0440 0430 043c 0435 0442  . .?.0.@.0.<.5.B
++000089c0: 0440 0020 043a 0440 0438 0442 0438 0447  .@. .:.@.8.B.8.G
++000089d0: 043d 043e 0441 0442 0438 0020 0441 043e  .=.>.A.B.8. .A.>
++000089e0: 043e 0431 0449 0435 043d 0438 044f 003a  .>.1.I.5.=.8.O.:
++000089f0: 0020 0800 0000 0006 0000 0020 556e 6b6e  . ......... Unkn
++00008a00: 6f77 6e20 6c6f 6767 696e 6720 6c65 7665  own logging leve
++00008a10: 6c20 7072 6f76 6964 6564 3a20 0700 0000  l provided: ....
++00008a20: 094c 6f67 5669 6577 6572 0103 0000 000c  .LogViewer......
++00008a30: 25b2 0020 006c 006f 0067 0073 0800 0000  %.. .l.o.g.s....
++00008a40: 0006 0000 0008 e296 b220 6c6f 6773 0700  ......... logs..
++00008a50: 0000 094c 6f67 5669 6577 6572 0103 0000  ...LogViewer....
++00008a60: 000c 25b6 0020 006c 006f 0067 0073 0800  ..%.. .l.o.g.s..
++00008a70: 0000 0006 0000 0008 e296 b620 6c6f 6773  ........... logs
++00008a80: 0700 0000 094c 6f67 5669 6577 6572 0103  .....LogViewer..
++00008a90: 0000 003e 041e 0448 0438 0431 043a 0430  ...>...H.8.1.:.0
++00008aa0: 0020 043b 043e 0433 0438 043d 0430 0020  . .;.>.3.8.=.0. 
++00008ab0: 0447 0435 0440 0435 0437 0020 0413 043e  .G.5.@.5.7. ...>
++00008ac0: 0441 0443 0441 043b 0443 0433 0438 003a  .A.C.A.;.C.3.8.:
++00008ad0: 0020 0800 0000 0006 0000 0013 4553 4941  . ..........ESIA
++00008ae0: 206c 6f67 696e 2066 6169 6c65 643a 2007   login failed: .
++00008af0: 0000 0008 4c6f 6769 6e46 4e53 0103 0000  ....LoginFNS....
++00008b00: 0040 0423 0441 043f 0435 0448 043d 044b  .@.#.A.?.5.H.=.K
++00008b10: 0439 0020 043b 043e 0433 0438 043d 0020  .9. .;.>.3.8.=. 
++00008b20: 0447 0435 0440 0435 0437 0020 0413 043e  .G.5.@.5.7. ...>
++00008b30: 0441 0443 0441 043b 0443 0433 0438 003a  .A.C.A.;.C.3.8.:
++00008b40: 0020 0800 0000 0006 0000 0017 4553 4941  . ..........ESIA
++00008b50: 206c 6f67 696e 2073 7563 6365 7373 6675   login successfu
++00008b60: 6c3a 2007 0000 0008 4c6f 6769 6e46 4e53  l: .....LoginFNS
++00008b70: 0103 0000 0038 041e 0448 0438 0431 043a  .....8...H.8.1.:
++00008b80: 0430 0020 043b 043e 0433 0438 043d 0430  .0. .;.>.3.8.=.0
++00008b90: 0020 0447 0435 0440 0435 0437 0020 041b  . .G.5.@.5.7. ..
++00008ba0: 041a 0020 0424 041d 0421 003a 0020 0800  ... .$...!.:. ..
++00008bb0: 0000 0006 0000 0012 464e 5320 6c6f 6769  ........FNS logi
++00008bc0: 6e20 6661 696c 6564 3a20 0700 0000 084c  n failed: .....L
++00008bd0: 6f67 696e 464e 5301 0300 0000 3a04 2304  oginFNS.....:.#.
++00008be0: 4104 3f04 3504 4804 3d04 4b04 3900 2004  A.?.5.H.=.K.9. .
++00008bf0: 3b04 3e04 3304 3804 3d00 2004 4704 3504  ;.>.3.8.=. .G.5.
++00008c00: 4004 3504 3700 2004 1b04 1a00 2004 2404  @.5.7. ..... .$.
++00008c10: 1d04 2100 3a00 2008 0000 0000 0600 0000  ..!.:. .........
++00008c20: 1646 4e53 206c 6f67 696e 2073 7563 6365  .FNS login succe
++00008c30: 7373 6675 6c3a 2007 0000 0008 4c6f 6769  ssful: .....Logi
++00008c40: 6e46 4e53 0103 0000 005a 041e 0448 0438  nFNS.....Z...H.8
++00008c50: 0431 043a 0430 0020 043f 043e 043b 0443  .1.:.0. .?.>.;.C
++00008c60: 0447 0435 043d 0438 044f 0020 0055 0052  .G.5.=.8.O. .U.R
++00008c70: 004c 0020 043b 043e 0433 0438 043d 0430  .L. .;.>.3.8.=.0
++00008c80: 0020 0447 0435 0440 0435 0437 0020 0413  . .G.5.@.5.7. ..
++00008c90: 043e 0441 0443 0441 043b 0443 0433 0438  .>.A.C.A.;.C.3.8
++00008ca0: 003a 0020 0800 0000 0006 0000 0015 4765  .:. ..........Ge
++00008cb0: 7420 4553 4941 2055 524c 2066 6169 6c65  t ESIA URL faile
++00008cc0: 643a 2007 0000 0008 4c6f 6769 6e46 4e53  d: .....LoginFNS
++00008cd0: 0103 0000 0034 0053 004d 0053 0020 0431  .....4.S.M.S. .1
++00008ce0: 044b 043b 043e 0020 0437 0430 043f 0440  .K.;.>. .7.0.?.@
++00008cf0: 043e 0448 0435 043d 043e 0020 0443 0441  .>.H.5.=.>. .C.A
++00008d00: 043f 0435 0448 043d 043e 0800 0000 0006  .?.5.H.=.>......
++00008d10: 0000 001e 534d 5320 7761 7320 7265 7175  ....SMS was requ
++00008d20: 6573 7465 6420 7375 6363 6573 7366 756c  ested successful
++00008d30: 6c79 0700 0000 084c 6f67 696e 464e 5301  ly.....LoginFNS.
++00008d40: 0300 0000 1e04 1004 3204 4204 3e04 4004  ........2.B.>.@.
++00008d50: 3804 3704 3004 4604 3804 4f00 2004 2404  8.7.0.F.8.O. .$.
++00008d60: 1d04 2108 0000 0000 0600 0000 1141 7574  ..!..........Aut
++00008d70: 686f 7269 7a61 7469 6f6e 2046 4e53 0700  horization FNS..
++00008d80: 0000 0e4c 6f67 696e 464e 5344 6961 6c6f  ...LoginFNSDialo
++00008d90: 6701 0300 0000 0e04 1704 3004 3a04 4004  g.........0.:.@.
++00008da0: 4b04 4204 4c08 0000 0000 0600 0000 0543  K.B.L..........C
++00008db0: 6c6f 7365 0700 0000 0e4c 6f67 696e 464e  lose.....LoginFN
++00008dc0: 5344 6961 6c6f 6701 0300 0000 1604 1a04  SDialog.........
++00008dd0: 3e04 3400 2004 3804 3700 2000 5300 4d00  >.4. .8.7. .S.M.
++00008de0: 5300 3a08 0000 0000 0600 0000 0e43 6f64  S.:..........Cod
++00008df0: 6520 6672 6f6d 2053 4d53 3a07 0000 000e  e from SMS:.....
++00008e00: 4c6f 6769 6e46 4e53 4469 616c 6f67 0103  LoginFNSDialog..
++00008e10: 0000 0012 0413 043e 0441 0443 0441 043b  .......>.A.C.A.;
++00008e20: 0443 0433 0438 0800 0000 0006 0000 000a  .C.3.8..........
++00008e30: 4553 4941 204c 6f67 696e 0700 0000 0e4c  ESIA Login.....L
++00008e40: 6f67 696e 464e 5344 6961 6c6f 6701 0300  oginFNSDialog...
++00008e50: 0000 0c04 1b04 1a00 2004 2404 1d04 2108  ........ .$...!.
++00008e60: 0000 0000 0600 0000 0946 4e53 204c 6f67  .........FNS Log
++00008e70: 696e 0700 0000 0e4c 6f67 696e 464e 5344  in.....LoginFNSD
++00008e80: 6961 6c6f 6701 0300 0000 0804 1804 1d04  ialog...........
++00008e90: 1d00 3a08 0000 0000 0600 0000 0449 4e4e  ..:..........INN
++00008ea0: 3a07 0000 000e 4c6f 6769 6e46 4e53 4469  :.....LoginFNSDi
++00008eb0: 616c 6f67 0103 0000 000a 041b 043e 0433  alog.........>.3
++00008ec0: 0438 043d 0800 0000 0006 0000 0005 4c6f  .8.=..........Lo
++00008ed0: 6769 6e07 0000 000e 4c6f 6769 6e46 4e53  gin.....LoginFNS
++00008ee0: 4469 616c 6f67 0103 0000 000e 041f 0430  Dialog.........0
++00008ef0: 0440 043e 043b 044c 003a 0800 0000 0006  .@.>.;.L.:......
++00008f00: 0000 0009 5061 7373 776f 7264 3a07 0000  ....Password:...
++00008f10: 000e 4c6f 6769 6e46 4e53 4469 616c 6f67  ..LoginFNSDialog
++00008f20: 0103 0000 001e 041d 043e 043c 0435 0440  .........>.<.5.@
++00008f30: 0020 0442 0435 043b 0435 0444 043e 043d  . .B.5.;.5.D.>.=
++00008f40: 0430 003a 0800 0000 0006 0000 000d 5068  .0.:..........Ph
++00008f50: 6f6e 6520 6e75 6d62 6572 3a07 0000 000e  one number:.....
++00008f60: 4c6f 6769 6e46 4e53 4469 616c 6f67 0103  LoginFNSDialog..
++00008f70: 0000 0006 0053 004d 0053 0800 0000 0006  .....S.M.S......
++00008f80: 0000 0009 534d 5320 4c6f 6769 6e07 0000  ....SMS Login...
++00008f90: 000e 4c6f 6769 6e46 4e53 4469 616c 6f67  ..LoginFNSDialog
++00008fa0: 0103 0000 0026 0412 044b 0441 043b 0430  .....&...K.A.;.0
++00008fb0: 0442 044c 0020 0053 004d 0053 0020 0441  .B.L. .S.M.S. .A
++00008fc0: 0020 043a 043e 0434 043e 043c 0800 0000  . .:.>.4.>.<....
++00008fd0: 0006 0000 0012 5365 6e64 2053 4d53 2077  ......Send SMS w
++00008fe0: 6974 6820 636f 6465 0700 0000 0e4c 6f67  ith code.....Log
++00008ff0: 696e 464e 5344 6961 6c6f 6701 0300 0000  inFNSDialog.....
++00009000: 1600 6100 6200 6f00 7500 7400 3a00 6200  ..a.b.o.u.t.:.b.
++00009010: 6c00 6100 6e00 6b08 0000 0000 0600 0000  l.a.n.k.........
++00009020: 0b61 626f 7574 3a62 6c61 6e6b 0700 0000  .about:blank....
++00009030: 0e4c 6f67 696e 464e 5344 6961 6c6f 6701  .LoginFNSDialog.
++00009040: 0300 0000 4404 1d04 3004 3904 3404 3504  ....D...0.9.4.5.
++00009050: 3d04 3e00 2004 3d04 3504 4104 3a04 3e04  =.>. .=.5.A.:.>.
++00009060: 3b04 4c04 3a04 3e00 2004 2604 1100 2004  ;.L.:.>. .&... .
++00009070: 3d04 3000 2000 4d00 4f00 4500 5800 2004  =.0. .M.O.E.X. .
++00009080: 3404 3b04 4f00 3a00 2008 0000 0000 0600  4.;.O.:. .......
++00009090: 0000 204d 756c 7469 706c 6520 4d4f 4558  .. Multiple MOEX
++000090a0: 2061 7373 6574 7320 666f 756e 6420 666f   assets found fo
++000090b0: 723a 2007 0000 0004 4d4f 4558 0103 0000  r: .....MOEX....
++000090c0: 0044 041d 0435 043f 043e 0434 0434 0435  .D...5.?.>.4.4.5
++000090d0: 0440 0436 0438 0432 0430 0435 043c 044b  .@.6.8.2.0.5.<.K
++000090e0: 0439 0020 0442 0438 043f 0020 0426 0411  .9. .B.8.?. .&..
++000090f0: 0020 041c 043e 0441 0411 0438 0440 0436  . ...>.A...8.@.6
++00009100: 0438 003a 0020 0800 0000 0006 0000 0020  .8.:. ......... 
++00009110: 556e 7375 7070 6f72 7465 6420 4d4f 4558  Unsupported MOEX
++00009120: 2073 6563 7572 6974 7920 7479 7065 3a20   security type: 
++00009130: 0700 0000 044d 4f45 5801 0300 0000 1604  .....MOEX.......
++00009140: 1e00 2004 3f04 4004 3e04 3304 4004 3004  .. .?.@.>.3.@.0.
++00009150: 3c04 3c04 3508 0000 0000 0600 0000 0541  <.<.5..........A
++00009160: 626f 7574 0700 0000 0a4d 6169 6e57 696e  bout.....MainWin
++00009170: 646f 7701 0300 0000 1a04 1f04 3e04 3404  dow.........>.4.
++00009180: 4204 3204 3504 4004 3604 3404 3504 3d04  B.2.5.@.6.4.5.=.
++00009190: 3804 3508 0000 0000 0600 0000 0c43 6f6e  8.5..........Con
++000091a0: 6669 726d 6174 696f 6e07 0000 000a 4d61  firmation.....Ma
++000091b0: 696e 5769 6e64 6f77 0103 0000 0014 0418  inWindow........
++000091c0: 043d 0444 043e 0440 043c 0430 0446 0438  .=.D.>.@.<.0.F.8
++000091d0: 044f 0800 0000 0006 0000 0004 496e 666f  .O..........Info
++000091e0: 0700 0000 0a4d 6169 6e57 696e 646f 7701  .....MainWindow.
++000091f0: 0300 0000 2804 2f04 3704 4b04 3a00 2004  ....(./.7.K.:. .
++00009200: 3104 4b04 3b00 2004 3804 3704 3c04 3504  1.K.;. .8.7.<.5.
++00009210: 3d04 5104 3d00 2004 3d04 3000 2008 0000  =.Q.=. .=.0. ...
++00009220: 0000 0600 0000 184c 616e 6775 6167 6520  .......Language 
++00009230: 7761 7320 6368 616e 6765 6420 746f 2007  was changed to .
++00009240: 0000 000a 4d61 696e 5769 6e64 6f77 0103  ....MainWindow..
++00009250: 0000 0062 0418 0442 043e 0433 0438 0020  ...b...B.>.3.8. 
++00009260: 0442 0440 0430 043d 0437 0430 043a 0446  .B.@.0.=.7.0.:.F
++00009270: 0438 0439 0020 043d 0435 0430 043a 0442  .8.9. .=.5.0.:.B
++00009280: 0443 0430 043b 044c 043d 044b 002e 0020  .C.0.;.L.=.K... 
++00009290: 041f 0435 0440 0435 0441 0447 0438 0442  ...5.@.5.A.G.8.B
++000092a0: 0430 0442 044c 0020 0441 0435 0439 0447  .0.B.L. .A.5.9.G
++000092b0: 0430 0441 003f 0800 0000 0006 0000 0026  .0.A.?.........&
++000092c0: 4c65 6467 6572 2069 736e 2774 2063 6f6d  Ledger isn't com
++000092d0: 706c 6574 652e 2052 6562 7569 6c64 2069  plete. Rebuild i
++000092e0: 7420 6e6f 773f 0700 0000 0a4d 6169 6e57  t now?.....MainW
++000092f0: 696e 646f 7701 0300 0000 8004 1404 3e04  indow.........>.
++00009300: 3f04 3e04 3b04 3d04 3804 4204 3504 3b04  ?.>.;.=.8.B.5.;.
++00009310: 4c04 3d04 3004 4f00 2004 3804 3d04 4404  L.=.0.O. .8.=.D.
++00009320: 3e04 4004 3c04 3004 4604 3804 4f00 2c00  >.@.<.0.F.8.O.,.
++00009330: 2004 3804 3d04 4104 4204 4004 4304 3a04   .8.=.A.B.@.C.:.
++00009340: 4604 3804 3800 2c00 2004 4104 3e04 3e04  F.8.8.,. .A.>.>.
++00009350: 3104 4904 3504 3d04 3804 4f00 2004 3e00  1.I.5.=.8.O. .>.
++00009360: 2004 3f04 4004 3e04 3104 3b04 3504 3c04   .?.@.>.1.;.5.<.
++00009370: 3004 4500 2004 3d04 3000 2008 0000 0000  0.E. .=.0. .....
++00009380: 0600 0000 354d 6f72 6520 696e 666f 726d  ....5More inform
++00009390: 6174 696f 6e2c 206d 616e 7561 6c73 2061  ation, manuals a
++000093a0: 6e64 2070 726f 626c 656d 2072 6570 6f72  nd problem repor
++000093b0: 7473 2061 7265 2061 7420 0700 0000 0a4d  ts are at .....M
++000093c0: 6169 6e57 696e 646f 7701 0300 0000 5004  ainWindow.....P.
++000093d0: 1204 3e04 3f04 4004 3e04 4104 4b00 2c00  ..>.?.@.>.A.K.,.
++000093e0: 2004 3a04 3e04 3c04 3c04 3504 3d04 4204   .:.>.<.<.5.=.B.
++000093f0: 3004 4004 3804 3800 2c00 2004 3f04 3e04  0.@.8.8.,. .?.>.
++00009400: 3c04 3e04 4904 4c00 2004 3804 3b04 3800  <.>.I.L. .8.;.8.
++00009410: 2004 3404 3e04 3d04 3004 4204 4b00 3a08   .4.>.=.0.B.K.:.
++00009420: 0000 0000 0600 0000 2751 7565 7374 696f  ........'Questio
++00009430: 6e73 2c20 636f 6d6d 656e 7473 2c20 6865  ns, comments, he
++00009440: 6c70 206f 7220 646f 6e61 7469 6f6e 733a  lp or donations:
++00009450: 0700 0000 0a4d 6169 6e57 696e 646f 7701  .....MainWindow.
++00009460: 0300 0000 2204 2204 4004 3504 3104 4304  ....".".@.5.1.C.
++00009470: 3504 4204 4104 4f00 2004 4004 3504 4104  5.B.A.O. .@.5.A.
++00009480: 4204 3004 4004 4208 0000 0000 0600 0000  B.0.@.B.........
++00009490: 1052 6573 7461 7274 2072 6571 7569 7265  .Restart require
++000094a0: 6407 0000 000a 4d61 696e 5769 6e64 6f77  d.....MainWindow
++000094b0: 0103 0000 0050 041a 043e 043d 0435 0447  .....P...>.=.5.G
++000094c0: 043d 044b 0439 0020 0431 0430 043b 0430  .=.K.9. .1.0.;.0
++000094d0: 043d 0441 0020 043f 043e 0020 043e 0442  .=.A. .?.>. .>.B
++000094e0: 0447 0451 0442 0443 0020 043d 0435 0020  .G.Q.B.C. .=.5. 
++000094f0: 0441 043e 0432 043f 0430 0434 0430 0435  .A.>.2.?.0.4.0.5
++00009500: 0442 003a 0020 0800 0000 0006 0000 0028  .B.:. .........(
++00009510: 5374 6174 656d 656e 7420 656e 6469 6e67  Statement ending
++00009520: 2062 616c 616e 6365 2064 6f65 736e 2774   balance doesn't
++00009530: 206d 6174 6368 3a20 0700 0000 0a4d 6169   match: .....Mai
++00009540: 6e57 696e 646f 7701 0300 0000 c804 1204  nWindow.........
++00009550: 4b00 2004 3404 3e04 3b04 3604 3d04 4b00  K. .4.>.;.6.=.K.
++00009560: 2004 3f04 3504 4004 3504 3704 3004 3f04   .?.5.@.5.7.0.?.
++00009570: 4304 4104 4204 3804 4204 4c00 2004 3f04  C.A.B.8.B.L. .?.
++00009580: 4004 3804 3b04 3e04 3604 3504 3d04 3804  @.8.;.>.6.5.=.8.
++00009590: 3500 2c00 2004 4704 4204 3e04 3104 4b00  5.,. .G.B.>.1.K.
++000095a0: 2004 3f04 4004 3804 3c04 3504 3d04 3804   .?.@.8.<.5.=.8.
++000095b0: 4204 4c00 2004 3804 3704 3c04 3504 3d04  B.L. .8.7.<.5.=.
++000095c0: 3504 3d04 3804 4f00 0a04 1f04 4004 3804  5.=.8.O.....@.8.
++000095d0: 3b04 3e04 3604 3504 3d04 3804 3500 2004  ;.>.6.5.=.8.5. .
++000095e0: 4104 3504 3904 4704 3004 4100 2004 3704  A.5.9.G.0.A. .7.
++000095f0: 3004 3204 3504 4004 4804 3804 4200 2004  0.2.5.@.H.8.B. .
++00009600: 4104 3204 3e04 4e00 2004 4004 3004 3104  A.2.>.N. .@.0.1.
++00009610: 3e04 4204 4308 0000 0000 0600 0000 5259  >.B.C.........RY
++00009620: 6f75 2073 686f 756c 6420 7265 7374 6172  ou should restar
++00009630: 7420 6170 706c 6963 6174 696f 6e20 746f  t application to
++00009640: 2061 7070 6c79 2063 6861 6e67 6573 0a41   apply changes.A
++00009650: 7070 6c69 6361 7469 6f6e 2077 696c 6c20  pplication will 
++00009660: 6265 2074 6572 6d69 6e61 7465 6420 6e6f  be terminated no
++00009670: 7707 0000 000a 4d61 696e 5769 6e64 6f77  w.....MainWindow
++00009680: 0103 0000 0030 0434 043e 043c 0430 0448  .....0.4.>.<.0.H
++00009690: 043d 0435 0439 0020 0441 0442 0440 0430  .=.5.9. .A.B.@.0
++000096a0: 043d 0438 0446 0435 0020 0067 0069 0074  .=.8.F.5. .g.i.t
++000096b0: 0068 0075 0062 0800 0000 0006 0000 0010  .h.u.b..........
++000096c0: 6769 7468 7562 2068 6f6d 6520 7061 6765  github home page
++000096d0: 0700 0000 0a4d 6169 6e57 696e 646f 7701  .....MainWindow.
++000096e0: 0300 0000 0c04 3204 3504 4004 4104 3804  ......2.5.@.A.8.
++000096f0: 4f08 0000 0000 0600 0000 0776 6572 7369  O..........versi
++00009700: 6f6e 0700 0000 0a4d 6169 6e57 696e 646f  on.....MainWindo
++00009710: 7701 0300 0000 0600 2e00 2e00 2e08 0000  w...............
++00009720: 0000 0600 0000 032e 2e2e 0700 0000 0f4d  ...............M
++00009730: 6f6e 6579 466c 6f77 5769 6467 6574 0103  oneyFlowWidget..
++00009740: 0000 0016 0424 0430 0439 043b 0020 0045  .....$.0.9.;. .E
++00009750: 0078 0063 0065 006c 003a 0800 0000 0006  .x.c.e.l.:......
++00009760: 0000 000b 4578 6365 6c20 6669 6c65 3a07  ....Excel file:.
++00009770: 0000 000f 4d6f 6e65 7946 6c6f 7757 6964  ....MoneyFlowWid
++00009780: 6765 7401 0300 0000 2804 2404 3004 3904  get.....(.$.0.9.
++00009790: 3b04 4b00 2000 4500 7800 6300 6500 6c00  ;.K. .E.x.c.e.l.
++000097a0: 2000 2800 2a00 2e00 7800 7300 6c00 7800   .(.*...x.s.l.x.
++000097b0: 2908 0000 0000 0600 0000 1445 7863 656c  )..........Excel
++000097c0: 2066 696c 6573 2028 2a2e 786c 7378 2907   files (*.xlsx).
++000097d0: 0000 000f 4d6f 6e65 7946 6c6f 7757 6964  ....MoneyFlowWid
++000097e0: 6765 7401 0300 0000 5604 2404 3004 3904  get.....V.$.0.9.
++000097f0: 3b00 2004 3404 3b04 4f00 2004 4104 3e04  ;. .4.;.O. .A.>.
++00009800: 4504 4004 3004 3d04 3504 3d04 3804 4f00  E.@.0.=.5.=.8.O.
++00009810: 2004 4004 3004 4104 4704 5104 4204 3000   .@.0.A.G.Q.B.0.
++00009820: 2004 3200 2004 4404 3e04 4004 3c04 3004   .2. .D.>.@.<.0.
++00009830: 4204 3500 2000 4500 7800 6300 6500 6c08  B.5. .E.x.c.e.l.
++00009840: 0000 0000 0600 0000 2e46 696c 6520 7768  .........File wh
++00009850: 6572 6520 746f 2073 746f 7265 2074 6178  ere to store tax
++00009860: 2072 6570 6f72 7420 696e 2045 7863 656c   report in Excel
++00009870: 2066 6f72 6d61 7407 0000 000f 4d6f 6e65   format.....Mone
++00009880: 7946 6c6f 7757 6964 6765 7401 0300 0000  yFlowWidget.....
++00009890: 0a04 1e04 3e04 1404 1404 2108 0000 0000  ....>.....!.....
++000098a0: 0600 0000 0a4d 6f6e 6579 2046 6c6f 7707  .....Money Flow.
++000098b0: 0000 000f 4d6f 6e65 7946 6c6f 7757 6964  ....MoneyFlowWid
++000098c0: 6765 7401 0300 0000 2e04 1e04 3e04 1404  get.........>...
++000098d0: 1404 2100 2004 4104 3e04 4504 4004 3004  ..!. .A.>.E.@.0.
++000098e0: 3d04 5104 3d00 2004 3200 2004 4404 3004  =.Q.=. .2. .D.0.
++000098f0: 3904 3b04 3500 2008 0000 0000 0600 0000  9.;.5. .........
++00009900: 204d 6f6e 6579 2066 6c6f 7720 7265 706f   Money flow repo
++00009910: 7274 2073 6176 6564 2074 6f20 6669 6c65  rt saved to file
++00009920: 2007 0000 000f 4d6f 6e65 7946 6c6f 7757   .....MoneyFlowW
++00009930: 6964 6765 7401 0300 0000 1e04 2104 3e04  idget.......!.>.
++00009940: 4504 4004 3004 3d04 3804 4204 4c00 2004  E.@.0.=.8.B.L. .
++00009950: 1e04 4204 4704 5104 4208 0000 0000 0600  ..B.G.Q.B.......
++00009960: 0000 0b53 6176 6520 5265 706f 7274 0700  ...Save Report..
++00009970: 0000 0f4d 6f6e 6579 466c 6f77 5769 6467  ...MoneyFlowWidg
++00009980: 6574 0103 0000 0024 0421 043e 0445 0440  et.....$.!.>.E.@
++00009990: 0430 043d 0438 0442 044c 0020 041e 043e  .0.=.8.B.L. ...>
++000099a0: 0414 0414 0421 0020 0432 003a 0800 0000  .....!. .2.:....
++000099b0: 0006 0000 001a 5361 7665 206d 6f6e 6579  ......Save money
++000099c0: 2066 6c6f 7720 7265 706f 7274 2074 6f3a   flow report to:
++000099d0: 0700 0000 0f4d 6f6e 6579 466c 6f77 5769  .....MoneyFlowWi
++000099e0: 6467 6574 0103 0000 0018 0412 044b 0431  dget.........K.1
++000099f0: 0435 0440 0438 0442 0020 0444 0430 0439  .5.@.8.B. .D.0.9
++00009a00: 043b 0800 0000 0006 0000 000b 5365 6c65  .;..........Sele
++00009a10: 6374 2066 696c 6507 0000 000f 4d6f 6e65  ct file.....Mone
++00009a20: 7946 6c6f 7757 6964 6765 7401 0300 0000  yFlowWidget.....
++00009a30: 0804 1304 3e04 3400 3a08 0000 0000 0600  ....>.4.:.......
++00009a40: 0000 0559 6561 723a 0700 0000 0f4d 6f6e  ...Year:.....Mon
++00009a50: 6579 466c 6f77 5769 6467 6574 0103 0000  eyFlowWidget....
++00009a60: 0028 0020 043d 0435 0443 0441 043f 0435  .(. .=.5.C.A.?.5
++00009a70: 0448 043d 044b 0439 0020 0437 0430 043f  .H.=.K.9. .7.0.?
++00009a80: 0440 043e 0441 003a 0020 0800 0000 0006  .@.>.A.:. ......
++00009a90: 0000 0009 2066 6169 6c65 643a 2007 0000  .... failed: ...
++00009aa0: 0003 4e65 7401 0300 0000 3404 2204 3804  ..Net.....4.".8.
++00009ab0: 3f00 2004 2604 1100 2004 3d04 3500 2004  ?. .&... .=.5. .
++00009ac0: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
++00009ad0: 3204 3004 3504 4204 4104 4f00 3a00 2008  2.0.5.B.A.O.:. .
++00009ae0: 0000 0000 0600 0000 1c41 7373 6574 2074  .........Asset t
++00009af0: 7970 6520 6973 6e27 7420 7375 7070 6f72  ype isn't suppor
++00009b00: 7465 643a 2007 0000 000a 4f70 656e 4272  ted: .....OpenBr
++00009b10: 6f6b 6572 0103 0000 0032 0411 0438 0440  oker.....2...8.@
++00009b20: 0436 0430 0020 043d 0435 0020 043f 043e  .6.0. .=.5. .?.>
++00009b30: 0434 0434 0435 0440 0436 0438 0432 0430  .4.4.5.@.6.8.2.0
++00009b40: 0435 0442 0441 044f 003a 0020 0800 0000  .5.B.A.O.:. ....
++00009b50: 0006 0000 001a 4578 6368 616e 6765 2069  ......Exchange i
++00009b60: 736e 2774 2073 7570 706f 7274 6564 3a20  sn't supported: 
++00009b70: 0700 0000 0a4f 7065 6e42 726f 6b65 7201  .....OpenBroker.
++00009b80: 0300 0000 0804 2104 4704 3504 4208 0000  ......!.G.5.B...
++00009b90: 0000 0600 0000 0741 6363 6f75 6e74 0700  .......Account..
++00009ba0: 0000 0f4f 7065 7261 7469 6f6e 734d 6f64  ...OperationsMod
++00009bb0: 656c 0103 0000 000a 0421 0443 043c 043c  el.......!.C.<.<
++00009bc0: 0430 0800 0000 0006 0000 0006 416d 6f75  .0..........Amou
++00009bd0: 6e74 0700 0000 0f4f 7065 7261 7469 6f6e  nt.....Operation
++00009be0: 734d 6f64 656c 0103 0000 000c 0411 0430  sModel.........0
++00009bf0: 043b 0430 043d 0441 0800 0000 0006 0000  .;.0.=.A........
++00009c00: 0007 4261 6c61 6e63 6507 0000 000f 4f70  ..Balance.....Op
++00009c10: 6572 6174 696f 6e73 4d6f 6465 6c01 0300  erationsModel...
++00009c20: 0000 0c04 1204 3004 3b04 4e04 4204 3008  ......0.;.N.B.0.
++00009c30: 0000 0000 0600 0000 0843 7572 7265 6e63  .........Currenc
++00009c40: 7907 0000 000f 4f70 6572 6174 696f 6e73  y.....Operations
++00009c50: 4d6f 6465 6c01 0300 0000 1004 1e04 3f04  Model.........?.
++00009c60: 3804 4104 3004 3d04 3804 3508 0000 0000  8.A.0.=.8.5.....
++00009c70: 0600 0000 054e 6f74 6573 0700 0000 0f4f  .....Notes.....O
++00009c80: 7065 7261 7469 6f6e 734d 6f64 656c 0103  perationsModel..
++00009c90: 0000 0014 0414 0430 0442 0430 002f 0412  .......0.B.0./..
++00009ca0: 0440 0435 043c 044f 0800 0000 0006 0000  .@.5.<.O........
++00009cb0: 0009 5469 6d65 7374 616d 7007 0000 000f  ..Timestamp.....
++00009cc0: 4f70 6572 6174 696f 6e73 4d6f 6465 6c01  OperationsModel.
++00009cd0: 0300 0000 0a04 2104 4704 3504 4200 3a08  ......!.G.5.B.:.
++00009ce0: 0000 0000 0600 0000 0841 6363 6f75 6e74  .........Account
++00009cf0: 3a07 0000 0010 4f70 6572 6174 696f 6e73  :.....Operations
++00009d00: 5769 6467 6574 0103 0000 004a 0412 044b  Widget.....J...K
++00009d10: 0020 0445 043e 0442 0438 0442 0435 0020  . .E.>.B.8.B.5. 
++00009d20: 0443 0434 0430 043b 0438 0442 044c 0020  .C.4.0.;.8.B.L. 
++00009d30: 0432 044b 0431 0440 0430 043d 043d 044b  .2.K.1.@.0.=.=.K
++00009d40: 0435 0020 043e 043f 0435 0440 0430 0446  .5. .>.?.5.@.0.F
++00009d50: 0438 0438 003f 0800 0000 0006 0000 002e  .8.8.?..........
++00009d60: 4172 6520 796f 7520 7375 7265 2074 6f20  Are you sure to 
++00009d70: 6465 6c65 7465 2073 656c 6563 7465 6420  delete selected 
++00009d80: 7472 616e 7361 6369 6f6e 2873 293f 0700  transacion(s)?..
++00009d90: 0000 104f 7065 7261 7469 6f6e 7357 6964  ...OperationsWid
++00009da0: 6765 7401 0300 0000 1c04 1104 3004 3b04  get.........0.;.
++00009db0: 3004 3d04 4104 4b00 2004 4104 4704 3504  0.=.A.K. .A.G.5.
++00009dc0: 4204 3e04 3208 0000 0000 0600 0000 0842  B.>.2..........B
++00009dd0: 616c 616e 6365 7307 0000 0010 4f70 6572  alances.....Oper
++00009de0: 6174 696f 6e73 5769 6467 6574 0103 0000  ationsWidget....
++00009df0: 001a 041f 043e 0434 0442 0432 0435 0440  .....>.4.B.2.5.@
++00009e00: 0436 0434 0435 043d 0438 0435 0800 0000  .6.4.5.=.8.5....
++00009e10: 0006 0000 000c 436f 6e66 6972 6d61 7469  ......Confirmati
++00009e20: 6f6e 0700 0000 104f 7065 7261 7469 6f6e  on.....Operation
++00009e30: 7357 6964 6765 7401 0300 0000 1404 1a04  sWidget.........
++00009e40: 3e04 3f04 3804 4004 3e04 3204 3004 4204  >.?.8.@.>.2.0.B.
++00009e50: 4c08 0000 0000 0600 0000 0443 6f70 7907  L..........Copy.
++00009e60: 0000 0010 4f70 6572 6174 696f 6e73 5769  ....OperationsWi
++00009e70: 6467 6574 0103 0000 0026 041a 043e 043f  dget.....&...>.?
++00009e80: 0438 0440 043e 0432 0430 0442 044c 0020  .8.@.>.2.0.B.L. 
++00009e90: 043e 043f 0435 0440 0430 0446 0438 044e  .>.?.5.@.0.F.8.N
++00009ea0: 0800 0000 0006 0000 000e 436f 7079 206f  ..........Copy o
++00009eb0: 7065 7261 7469 6f6e 0700 0000 104f 7065  peration.....Ope
++00009ec0: 7261 7469 6f6e 7357 6964 6765 7401 0300  rationsWidget...
++00009ed0: 0000 0e04 2304 3404 3004 3b04 3804 4204  ....#.4.0.;.8.B.
++00009ee0: 4c08 0000 0000 0600 0000 0644 656c 6574  L..........Delet
++00009ef0: 6507 0000 0010 4f70 6572 6174 696f 6e73  e.....Operations
++00009f00: 5769 6467 6574 0103 0000 0020 0423 0434  Widget..... .#.4
++00009f10: 0430 043b 0438 0442 044c 0020 043e 043f  .0.;.8.B.L. .>.?
++00009f20: 0435 0440 0430 0446 0438 044e 0800 0000  .5.@.0.F.8.N....
++00009f30: 0006 0000 0010 4465 6c65 7465 206f 7065  ......Delete ope
++00009f40: 7261 7469 6f6e 0700 0000 104f 7065 7261  ration.....Opera
++00009f50: 7469 6f6e 7357 6964 6765 7401 0300 0000  tionsWidget.....
++00009f60: 1c04 1d04 3e04 3204 3004 4f00 2004 3e04  ....>.2.0.O. .>.
++00009f70: 3f04 3504 4004 3004 4604 3804 4f08 0000  ?.5.@.0.F.8.O...
++00009f80: 0000 0600 0000 0d4e 6577 206f 7065 7261  .......New opera
++00009f90: 7469 6f6e 0700 0000 104f 7065 7261 7469  tion.....Operati
++00009fa0: 6f6e 7357 6964 6765 7401 0300 0000 1004  onsWidget.......
++00009fb0: 1e04 3f04 3504 4004 3004 4604 3804 3808  ..?.5.@.0.F.8.8.
++00009fc0: 0000 0000 0600 0000 0a4f 7065 7261 7469  .........Operati
++00009fd0: 6f6e 7307 0000 0010 4f70 6572 6174 696f  ons.....Operatio
++00009fe0: 6e73 5769 6467 6574 0103 0000 0024 041e  nsWidget.....$..
++00009ff0: 043f 0435 0440 0430 0446 0438 0438 0020  .?.5.@.0.F.8.8. 
++0000a000: 0438 0020 0411 0430 043b 0430 043d 0441  .8. ...0.;.0.=.A
++0000a010: 044b 0800 0000 0006 0000 0015 4f70 6572  .K..........Oper
++0000a020: 6174 696f 6e73 2026 2042 616c 616e 6365  ations & Balance
++0000a030: 7307 0000 0010 4f70 6572 6174 696f 6e73  s.....Operations
++0000a040: 5769 6467 6574 0103 0000 000e 0421 0432  Widget.......!.2
++0000a050: 0435 0440 0438 0442 044c 0800 0000 0006  .5.@.8.B.L......
++0000a060: 0000 0009 5265 636f 6e63 696c 6507 0000  ....Reconcile...
++0000a070: 0010 4f70 6572 6174 696f 6e73 5769 6467  ..OperationsWidg
++0000a080: 6574 0103 0000 000c 041f 043e 0438 0441  et.........>.8.A
++0000a090: 043a 003a 0800 0000 0006 0000 0007 5365  .:.:..........Se
++0000a0a0: 6172 6368 3a07 0000 0010 4f70 6572 6174  arch:.....Operat
++0000a0b0: 696f 6e73 5769 6467 6574 0103 0000 002c  ionsWidget.....,
++0000a0c0: 041f 043e 043a 0430 0437 044b 0432 0430  ...>.:.0.7.K.2.0
++0000a0d0: 0442 044c 0020 0026 043d 0435 0430 043a  .B.L. .&.=.5.0.:
++0000a0e0: 0442 0438 0432 043d 044b 0435 0800 0000  .B.8.2.=.K.5....
++0000a0f0: 0006 0000 000e 5368 6f77 2026 496e 6163  ......Show &Inac
++0000a100: 7469 7665 0700 0000 104f 7065 7261 7469  tive.....Operati
++0000a110: 6f6e 7357 6964 6765 7401 0300 0000 1a04  onsWidget.......
++0000a120: 1204 3004 3b04 4e04 4204 3000 2004 3804  ..0.;.N.B.0. .8.
++0000a130: 4204 3e04 3304 3e00 3a08 0000 0000 0600  B.>.3.>.:.......
++0000a140: 0000 0d53 756d 2043 7572 7265 6e63 793a  ...Sum Currency:
++0000a150: 0700 0000 104f 7065 7261 7469 6f6e 7357  .....OperationsW
++0000a160: 6964 6765 7401 0300 0000 1400 6400 6400  idget.......d.d.
++0000a170: 2f00 4d00 4d00 2f00 7900 7900 7900 7908  /.M.M./.y.y.y.y.
++0000a180: 0000 0000 0600 0000 0a64 642f 4d4d 2f79  .........dd/MM/y
++0000a190: 7979 7907 0000 0010 4f70 6572 6174 696f  yyy.....Operatio
++0000a1a0: 6e73 5769 6467 6574 0103 0000 000c 0412  nsWidget........
++0000a1b0: 0430 043b 044e 0442 0430 0800 0000 0006  .0.;.N.B.0......
++0000a1c0: 0000 0008 4375 7272 656e 6379 0700 0000  ....Currency....
++0000a1d0: 184f 7074 696f 6e61 6c43 7572 7265 6e63  .OptionalCurrenc
++0000a1e0: 7943 6f6d 626f 426f 7801 0300 0000 0a04  yComboBox.......
++0000a1f0: 2104 4304 3c04 3c04 3008 0000 0000 0600  !.C.<.<.0.......
++0000a200: 0000 0641 6d6f 756e 7407 0000 0010 5061  ...Amount.....Pa
++0000a210: 6e64 6173 4c69 6e65 734d 6f64 656c 0103  ndasLinesModel..
++0000a220: 0000 0012 041a 0430 0442 0435 0433 043e  .......0.B.5.3.>
++0000a230: 0440 0438 044f 0800 0000 0006 0000 0008  .@.8.O..........
++0000a240: 4361 7465 676f 7279 0700 0000 1050 616e  Category.....Pan
++0000a250: 6461 734c 696e 6573 4d6f 6465 6c01 0300  dasLinesModel...
++0000a260: 0000 2204 1d04 3004 3704 3204 3004 3d04  .."...0.7.2.0.=.
++0000a270: 3804 3500 2004 3f04 4004 3e04 3404 4304  8.5. .?.@.>.4.C.
++0000a280: 3a04 4204 3008 0000 0000 0600 0000 0c50  :.B.0..........P
++0000a290: 726f 6475 6374 206e 616d 6507 0000 0010  roduct name.....
++0000a2a0: 5061 6e64 6173 4c69 6e65 734d 6f64 656c  PandasLinesModel
++0000a2b0: 0103 0000 0006 0422 044d 0433 0800 0000  .......".M.3....
++0000a2c0: 0006 0000 0003 5461 6707 0000 0010 5061  ......Tag.....Pa
++0000a2d0: 6e64 6173 4c69 6e65 734d 6f64 656c 0103  ndasLinesModel..
++0000a2e0: 0000 0024 0027 0020 0437 0430 043c 0435  ...$.'. .7.0.<.5
++0000a2f0: 043d 0435 043d 0430 0020 0443 0441 043f  .=.5.=.0. .C.A.?
++0000a300: 0435 0448 043d 043e 0800 0000 0006 0000  .5.H.=.>........
++0000a310: 001b 2720 7761 7320 7375 6363 6573 7366  ..' was successf
++0000a320: 756c 6c79 2072 6570 6c61 6365 6407 0000  ully replaced...
++0000a330: 000e 5065 6572 4c69 7374 4469 616c 6f67  ..PeerListDialog
++0000a340: 0103 0000 000c 0027 0020 043d 0430 003a  .......'. .=.0.:
++0000a350: 0020 0800 0000 0006 0000 0008 2720 7769  . ..........' wi
++0000a360: 7468 3a20 0700 0000 0e50 6565 724c 6973  th: .....PeerLis
++0000a370: 7444 6961 6c6f 6701 0300 0000 4e04 2104  tDialog.....N.!.
++0000a380: 3e04 4504 4004 3004 3d04 3804 4204 4c00  >.E.@.0.=.8.B.L.
++0000a390: 2004 4104 4204 3004 4004 3e04 3500 2004   .A.B.0.@.>.5. .
++0000a3a0: 3d04 3004 3704 3204 3004 3d04 3804 3500  =.0.7.2.0.=.8.5.
++0000a3b0: 2004 3200 2004 3f04 4004 3804 3c04 3504   .2. .?.@.8.<.5.
++0000a3c0: 4704 3004 3d04 3804 3800 3f08 0000 0000  G.0.=.8.8.?.....
++0000a3d0: 0600 0000 174b 6565 7020 6f6c 6420 6e61  .....Keep old na
++0000a3e0: 6d65 2069 6e20 6e6f 7465 733f 0700 0000  me in notes?....
++0000a3f0: 0e50 6565 724c 6973 7444 6961 6c6f 6701  .PeerListDialog.
++0000a400: 0300 0000 1804 1a04 3e04 3d04 4204 4004  ........>.=.B.@.
++0000a410: 3004 3304 3504 3d04 4200 2000 2708 0000  0.3.5.=.B. .'...
++0000a420: 0000 0600 0000 0650 6565 7220 2707 0000  .......Peer '...
++0000a430: 000e 5065 6572 4c69 7374 4469 616c 6f67  ..PeerListDialog
++0000a440: 0103 0000 0016 041a 043e 043d 0442 0440  .........>.=.B.@
++0000a450: 0430 0433 0435 043d 0442 044b 0800 0000  .0.3.5.=.B.K....
++0000a460: 0006 0000 0005 5065 6572 7307 0000 000e  ......Peers.....
++0000a470: 5065 6572 4c69 7374 4469 616c 6f67 0103  PeerListDialog..
++0000a480: 0000 002c 0417 0430 043c 0435 043d 0438  ...,...0.<.5.=.8
++0000a490: 0442 044c 0020 043a 043e 043d 0442 0440  .B.L. .:.>.=.B.@
++0000a4a0: 0430 0433 0435 043d 0442 0430 0020 0027  .0.3.5.=.B.0. .'
++0000a4b0: 0800 0000 0006 0000 000e 5265 706c 6163  ..........Replac
++0000a4c0: 6520 7065 6572 2027 0700 0000 0e50 6565  e peer '.....Pee
++0000a4d0: 724c 6973 7444 6961 6c6f 6701 0300 0000  rListDialog.....
++0000a4e0: 1c04 1704 3004 3c04 3504 3d04 3804 4204  ....0.<.5.=.8.B.
++0000a4f0: 4c00 2004 3d04 3000 2e00 2e00 2e08 0000  L. .=.0.........
++0000a500: 0000 0600 0000 0f52 6570 6c61 6365 2077  .......Replace w
++0000a510: 6974 682e 2e2e 0700 0000 0e50 6565 724c  ith........PeerL
++0000a520: 6973 7444 6961 6c6f 6701 0300 0000 4004  istDialog.....@.
++0000a530: 1f04 3e04 3a04 3004 3704 3004 4204 4c00  ..>.:.0.7.0.B.L.
++0000a540: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
++0000a550: 3800 2004 4100 2004 1a04 3e04 3d04 4204  8. .A. ...>.=.B.
++0000a560: 4004 3004 3304 3504 3d04 4204 3e04 3c08  @.0.3.5.=.B.>.<.
++0000a570: 0000 0000 0600 0000 1953 686f 7720 6f70  .........Show op
++0000a580: 6572 6174 696f 6e73 2077 6974 6820 5065  erations with Pe
++0000a590: 6572 0700 0000 0e50 6565 724c 6973 7444  er.....PeerListD
++0000a5a0: 6961 6c6f 6701 0300 0000 1004 1e04 3f04  ialog.........?.
++0000a5b0: 3504 4004 3004 4604 3804 3808 0000 0000  5.@.0.F.8.8.....
++0000a5c0: 0600 0000 0a4f 7065 7261 7469 6f6e 7307  .....Operations.
++0000a5d0: 0000 000a 5065 6572 5265 706f 7274 0103  ....PeerReport..
++0000a5e0: 0000 001c 043f 043e 0020 041a 043e 043d  .....?.>. ...>.=
++0000a5f0: 0442 0440 0430 0433 0435 043d 0442 0443  .B.@.0.3.5.=.B.C
++0000a600: 0800 0000 0006 0000 0007 6279 2050 6565  ..........by Pee
++0000a610: 7207 0000 000a 5065 6572 5265 706f 7274  r.....PeerReport
++0000a620: 0103 0000 0016 041a 043e 043d 0442 0440  .........>.=.B.@
++0000a630: 0430 0433 0435 043d 0442 003a 0800 0000  .0.3.5.=.B.:....
++0000a640: 0006 0000 0005 5065 6572 3a07 0000 0010  ......Peer:.....
++0000a650: 5065 6572 5265 706f 7274 5769 6467 6574  PeerReportWidget
++0000a660: 0103 0000 0028 041e 0442 0447 0435 0442  .....(...B.G.5.B
++0000a670: 0020 043f 043e 0020 043a 043e 043d 0442  . .?.>. .:.>.=.B
++0000a680: 0440 0430 0433 0435 043d 0442 0443 0800  .@.0.3.5.=.B.C..
++0000a690: 0000 0006 0000 000e 5265 706f 7274 2062  ........Report b
++0000a6a0: 7920 7065 6572 0700 0000 1050 6565 7252  y peer.....PeerR
++0000a6b0: 6570 6f72 7457 6964 6765 7401 0300 0000  eportWidget.....
++0000a6c0: 1604 1a04 3e04 3b00 2d04 3204 3e00 2004  ....>.;.-.2.>. .
++0000a6d0: 3404 3e04 3a00 2e08 0000 0000 0600 0000  4.>.:...........
++0000a6e0: 0a44 6f63 7320 636f 756e 7407 0000 000d  .Docs count.....
++0000a6f0: 5065 6572 5472 6565 4d6f 6465 6c01 0300  PeerTreeModel...
++0000a700: 0000 0a04 1004 3404 4004 3504 4108 0000  ......4.@.5.A...
++0000a710: 0000 0600 0000 084c 6f63 6174 696f 6e07  .......Location.
++0000a720: 0000 000d 5065 6572 5472 6565 4d6f 6465  ....PeerTreeMode
++0000a730: 6c01 0300 0000 1804 1d04 3004 3804 3c04  l.........0.8.<.
++0000a740: 3504 3d04 3e04 3204 3004 3d04 3804 3508  5.=.>.2.0.=.8.5.
++0000a750: 0000 0000 0600 0000 044e 616d 6507 0000  .........Name...
++0000a760: 000d 5065 6572 5472 6565 4d6f 6465 6c01  ..PeerTreeModel.
++0000a770: 0300 0000 1a04 2104 4704 3504 4204 3000  ......!.G.5.B.0.
++0000a780: 2004 3200 2004 3104 3004 3d04 3a04 3508   .2. .1.0.=.:.5.
++0000a790: 0000 0000 0600 0000 0d42 616e 6b20 6163  .........Bank ac
++0000a7a0: 636f 756e 7473 0700 0000 1650 7265 6465  counts.....Prede
++0000a7b0: 6669 6e64 6564 4163 636f 756e 7454 7970  findedAccountTyp
++0000a7c0: 6501 0300 0000 0a04 1a04 3004 4004 4204  e.........0.@.B.
++0000a7d0: 4b08 0000 0000 0600 0000 0543 6172 6473  K..........Cards
++0000a7e0: 0700 0000 1650 7265 6465 6669 6e64 6564  .....Predefinded
++0000a7f0: 4163 636f 756e 7454 7970 6501 0300 0000  AccountType.....
++0000a800: 1004 1d04 3004 3b04 3804 4704 3d04 4b04  ....0.;.8.G.=.K.
++0000a810: 3508 0000 0000 0600 0000 0443 6173 6807  5..........Cash.
++0000a820: 0000 0016 5072 6564 6566 696e 6465 6441  ....PredefindedA
++0000a830: 6363 6f75 6e74 5479 7065 0103 0000 001e  ccountType......
++0000a840: 041a 0440 0435 0434 0438 0442 044b 0020  ...@.5.4.8.B.K. 
++0000a850: 002f 0020 0414 043e 043b 0433 0438 0800  ./. ...>.;.3.8..
++0000a860: 0000 0006 0000 000d 4465 6274 7320 2f20  ........Debts / 
++0000a870: 4c6f 616e 7307 0000 0016 5072 6564 6566  Loans.....Predef
++0000a880: 696e 6465 6441 6363 6f75 6e74 5479 7065  indedAccountType
++0000a890: 0103 0000 0014 0418 043d 0432 0435 0441  .........=.2.5.A
++0000a8a0: 0442 0438 0446 0438 0438 0800 0000 0006  .B.8.F.8.8......
++0000a8b0: 0000 000b 496e 7665 7374 6d65 6e74 7307  ....Investments.
++0000a8c0: 0000 0016 5072 6564 6566 696e 6465 6441  ....PredefindedA
++0000a8d0: 6363 6f75 6e74 5479 7065 0103 0000 0014  ccountType......
++0000a8e0: 0421 0431 0435 0440 0435 0436 0435 043d  .!.1.5.@.5.6.5.=
++0000a8f0: 0438 044f 0800 0000 0006 0000 0007 5361  .8.O..........Sa
++0000a900: 7669 6e67 7307 0000 0016 5072 6564 6566  vings.....Predef
++0000a910: 696e 6465 6441 6363 6f75 6e74 5479 7065  indedAccountType
++0000a920: 0103 0000 0014 0065 002d 041a 043e 0448  .......e.-...>.H
++0000a930: 0435 043b 044c 043a 0438 0800 0000 0006  .5.;.L.:.8......
++0000a940: 0000 0009 652d 5761 6c6c 6574 7307 0000  ....e-Wallets...
++0000a950: 0016 5072 6564 6566 696e 6465 6441 6363  ..PredefindedAcc
++0000a960: 6f75 6e74 5479 7065 0103 0000 0012 041e  ountType........
++0000a970: 0431 043b 0438 0433 0430 0446 0438 0438  .1.;.8.3.0.F.8.8
++0000a980: 0800 0000 0006 0000 0005 426f 6e64 7307  ..........Bonds.
++0000a990: 0000 000f 5072 6564 6566 696e 6564 4173  ....PredefinedAs
++0000a9a0: 7365 7401 0300 0000 0c04 2204 3e04 3204  set.......".>.2.
++0000a9b0: 3004 4004 4b08 0000 0000 0600 0000 0b43  0.@.K..........C
++0000a9c0: 6f6d 6d6f 6469 7469 6573 0700 0000 0f50  ommodities.....P
++0000a9d0: 7265 6465 6669 6e65 6441 7373 6574 0103  redefinedAsset..
++0000a9e0: 0000 0018 041a 0440 0438 043f 0442 043e  .......@.8.?.B.>
++0000a9f0: 0432 0430 043b 044e 0442 044b 0800 0000  .2.0.;.N.B.K....
++0000aa00: 0006 0000 000f 4372 7970 746f 2d63 7572  ......Crypto-cur
++0000aa10: 7265 6e63 7907 0000 000f 5072 6564 6566  rency.....Predef
++0000aa20: 696e 6564 4173 7365 7401 0300 0000 1404  inedAsset.......
++0000aa30: 1404 3504 4004 3804 3204 3004 4204 3804  ..5.@.8.2.0.B.8.
++0000aa40: 3204 4b08 0000 0000 0600 0000 0b44 6572  2.K..........Der
++0000aa50: 6976 6174 6976 6573 0700 0000 0f50 7265  ivatives.....Pre
++0000aa60: 6465 6669 6e65 6441 7373 6574 0103 0000  definedAsset....
++0000aa70: 0008 0411 041f 0418 0424 0800 0000 0006  .........$......
++0000aa80: 0000 0004 4554 4673 0700 0000 0f50 7265  ....ETFs.....Pre
++0000aa90: 6465 6669 6e65 6441 7373 6574 0103 0000  definedAsset....
++0000aaa0: 000c 0424 043e 0440 0435 043a 0441 0800  ...$.>.@.5.:.A..
++0000aab0: 0000 0006 0000 0005 466f 7265 7807 0000  ........Forex...
++0000aac0: 000f 5072 6564 6566 696e 6564 4173 7365  ..PredefinedAsse
++0000aad0: 7401 0300 0000 0a04 2404 3e04 3d04 3404  t.......$.>.=.4.
++0000aae0: 4b08 0000 0000 0600 0000 0546 756e 6473  K..........Funds
++0000aaf0: 0700 0000 0f50 7265 6465 6669 6e65 6441  .....PredefinedA
++0000ab00: 7373 6574 0103 0000 000c 0412 0430 043b  sset.........0.;
++0000ab10: 044e 0442 044b 0800 0000 0006 0000 0005  .N.B.K..........
++0000ab20: 4d6f 6e65 7907 0000 000f 5072 6564 6566  Money.....Predef
++0000ab30: 696e 6564 4173 7365 7401 0300 0000 0a04  inedAsset.......
++0000ab40: 1004 3a04 4604 3804 3808 0000 0000 0600  ..:.F.8.8.......
++0000ab50: 0000 0653 6861 7265 7307 0000 000f 5072  ...Shares.....Pr
++0000ab60: 6564 6566 696e 6564 4173 7365 7401 0300  edefinedAsset...
++0000ab70: 0000 0200 2508 0000 0000 0600 0000 0125  ....%..........%
++0000ab80: 0700 0000 0f50 726f 6669 744c 6f73 734d  .....ProfitLossM
++0000ab90: 6f64 656c 0103 0000 0006 0410 043f 0440  odel.........?.@
++0000aba0: 0800 0000 0006 0000 0003 4170 7207 0000  ..........Apr...
++0000abb0: 000f 5072 6f66 6974 4c6f 7373 4d6f 6465  ..ProfitLossMode
++0000abc0: 6c01 0300 0000 0404 2604 1108 0000 0000  l.......&.......
++0000abd0: 0600 0000 0641 7373 6574 7307 0000 000f  .....Assets.....
++0000abe0: 5072 6f66 6974 4c6f 7373 4d6f 6465 6c01  ProfitLossModel.
++0000abf0: 0300 0000 0604 1004 3204 3308 0000 0000  ........2.3.....
++0000ac00: 0600 0000 0341 7567 0700 0000 0f50 726f  .....Aug.....Pro
++0000ac10: 6669 744c 6f73 734d 6f64 656c 0103 0000  fitLossModel....
++0000ac20: 0012 0418 0437 043c 0435 043d 0435 043d  .....7.<.5.=.5.=
++0000ac30: 0438 0435 0800 0000 0006 0000 0006 4368  .8.5..........Ch
++0000ac40: 616e 6765 0700 0000 0f50 726f 6669 744c  ange.....ProfitL
++0000ac50: 6f73 734d 6f64 656c 0103 0000 0018 0418  ossModel........
++0000ac60: 0437 043c 0435 043d 0435 043d 0438 0435  .7.<.5.=.5.=.8.5
++0000ac70: 002c 0020 0025 0800 0000 0006 0000 0009  .,. .%..........
++0000ac80: 4368 616e 6765 2c20 2507 0000 000f 5072  Change, %.....Pr
++0000ac90: 6f66 6974 4c6f 7373 4d6f 6465 6c01 0300  ofitLossModel...
++0000aca0: 0000 0604 1404 3504 3a08 0000 0000 0600  ......5.:.......
++0000acb0: 0000 0344 6563 0700 0000 0f50 726f 6669  ...Dec.....Profi
++0000acc0: 744c 6f73 734d 6f64 656c 0103 0000 0012  tLossModel......
++0000acd0: 0414 0438 0432 0438 0434 0435 043d 0434  ...8.2.8.4.5.=.4
++0000ace0: 044b 0800 0000 0006 0000 0009 4469 7669  .K..........Divi
++0000acf0: 6465 6e64 7307 0000 000f 5072 6f66 6974  dends.....Profit
++0000ad00: 4c6f 7373 4d6f 6465 6c01 0300 0000 0604  LossModel.......
++0000ad10: 2404 3504 3208 0000 0000 0600 0000 0346  $.5.2..........F
++0000ad20: 6562 0700 0000 0f50 726f 6669 744c 6f73  eb.....ProfitLos
++0000ad30: 734d 6f64 656c 0103 0000 0010 041a 043e  sModel.........>
++0000ad40: 043c 0438 0441 0441 0438 0438 0800 0000  .<.8.A.A.8.8....
++0000ad50: 0006 0000 0004 4665 6573 0700 0000 0f50  ......Fees.....P
++0000ad60: 726f 6669 744c 6f73 734d 6f64 656c 0103  rofitLossModel..
++0000ad70: 0000 0018 0412 0432 043e 0434 0020 002f  .......2.>.4. ./
++0000ad80: 0020 0412 044b 0432 043e 0434 0800 0000  . ...K.2.>.4....
++0000ad90: 0006 0000 0008 496e 202f 204f 7574 0700  ......In / Out..
++0000ada0: 0000 0f50 726f 6669 744c 6f73 734d 6f64  ...ProfitLossMod
++0000adb0: 656c 0103 0000 0006 042f 043d 0432 0800  el......./.=.2..
++0000adc0: 0000 0006 0000 0003 4a61 6e07 0000 000f  ........Jan.....
++0000add0: 5072 6f66 6974 4c6f 7373 4d6f 6465 6c01  ProfitLossModel.
++0000ade0: 0300 0000 0604 1804 4e04 3b08 0000 0000  ........N.;.....
++0000adf0: 0600 0000 034a 756c 0700 0000 0f50 726f  .....Jul.....Pro
++0000ae00: 6669 744c 6f73 734d 6f64 656c 0103 0000  fitLossModel....
++0000ae10: 0006 0418 044e 043d 0800 0000 0006 0000  .....N.=........
++0000ae20: 0003 4a75 6e07 0000 000f 5072 6f66 6974  ..Jun.....Profit
++0000ae30: 4c6f 7373 4d6f 6465 6c01 0300 0000 0604  LossModel.......
++0000ae40: 1c04 3004 4008 0000 0000 0600 0000 034d  ..0.@..........M
++0000ae50: 6172 0700 0000 0f50 726f 6669 744c 6f73  ar.....ProfitLos
++0000ae60: 734d 6f64 656c 0103 0000 0006 041c 0430  sModel.........0
++0000ae70: 0439 0800 0000 0006 0000 0003 4d61 7907  .9..........May.
++0000ae80: 0000 000f 5072 6f66 6974 4c6f 7373 4d6f  ....ProfitLossMo
++0000ae90: 6465 6c01 0300 0000 0404 1404 2108 0000  del.........!...
++0000aea0: 0000 0600 0000 054d 6f6e 6579 0700 0000  .......Money....
++0000aeb0: 0f50 726f 6669 744c 6f73 734d 6f64 656c  .ProfitLossModel
++0000aec0: 0103 0000 0006 041d 043e 044f 0800 0000  .........>.O....
++0000aed0: 0006 0000 0003 4e6f 7607 0000 000f 5072  ......Nov.....Pr
++0000aee0: 6f66 6974 4c6f 7373 4d6f 6465 6c01 0300  ofitLossModel...
++0000aef0: 0000 0604 1e04 3a04 4208 0000 0000 0600  ......:.B.......
++0000af00: 0000 034f 6374 0700 0000 0f50 726f 6669  ...Oct.....Profi
++0000af10: 744c 6f73 734d 6f64 656c 0103 0000 0006  tLossModel......
++0000af20: 041f 0438 0423 0800 0000 0006 0000 0003  ...8.#..........
++0000af30: 5026 4c07 0000 000f 5072 6f66 6974 4c6f  P&L.....ProfitLo
++0000af40: 7373 4d6f 6465 6c01 0300 0000 0c04 1f04  ssModel.........
++0000af50: 3504 4004 3804 3e04 3408 0000 0000 0600  5.@.8.>.4.......
++0000af60: 0000 0650 6572 696f 6407 0000 000f 5072  ...Period.....Pr
++0000af70: 6f66 6974 4c6f 7373 4d6f 6465 6c01 0300  ofitLossModel...
++0000af80: 0000 1a04 1a04 3e04 3d04 3504 4600 2004  ......>.=.5.F. .
++0000af90: 3f04 3504 4004 3804 3e04 3404 3008 0000  ?.5.@.8.>.4.0...
++0000afa0: 0000 0600 0000 0a50 6572 696f 6420 656e  .......Period en
++0000afb0: 6407 0000 000f 5072 6f66 6974 4c6f 7373  d.....ProfitLoss
++0000afc0: 4d6f 6465 6c01 0300 0000 1c04 1d04 3004  Model.........0.
++0000afd0: 4704 3004 3b04 3e00 2004 3f04 3504 4004  G.0.;.>. .?.5.@.
++0000afe0: 3804 3e04 3404 3008 0000 0000 0600 0000  8.>.4.0.........
++0000aff0: 0c50 6572 696f 6420 7374 6172 7407 0000  .Period start...
++0000b000: 000f 5072 6f66 6974 4c6f 7373 4d6f 6465  ..ProfitLossMode
++0000b010: 6c01 0300 0000 0604 2104 3504 3d08 0000  l.......!.5.=...
++0000b020: 0000 0600 0000 0353 6570 0700 0000 0f50  .......Sep.....P
++0000b030: 726f 6669 744c 6f73 734d 6f64 656c 0103  rofitLossModel..
++0000b040: 0000 000c 041d 0430 043b 043e 0433 0438  .......0.;.>.3.8
++0000b050: 0800 0000 0006 0000 0005 5461 7865 7307  ..........Taxes.
++0000b060: 0000 000f 5072 6f66 6974 4c6f 7373 4d6f  ....ProfitLossMo
++0000b070: 6465 6c01 0300 0000 0a04 1804 4204 3e04  del.........B.>.
++0000b080: 3304 3e08 0000 0000 0600 0000 0554 6f74  3.>..........Tot
++0000b090: 616c 0700 0000 0f50 726f 6669 744c 6f73  al.....ProfitLos
++0000b0a0: 734d 6f64 656c 0103 0000 0018 041f 0438  sModel.........8
++0000b0b0: 0423 0020 043f 043e 0020 0441 0447 0451  .#. .?.>. .A.G.Q
++0000b0c0: 0442 0443 0800 0000 0006 0000 000e 5026  .B.C..........P&
++0000b0d0: 4c20 6279 2041 6363 6f75 6e74 0700 0000  L by Account....
++0000b0e0: 1050 726f 6669 744c 6f73 7352 6570 6f72  .ProfitLossRepor
++0000b0f0: 7401 0300 0000 0a04 2104 4704 3504 4200  t.......!.G.5.B.
++0000b100: 3a08 0000 0000 0600 0000 0841 6363 6f75  :..........Accou
++0000b110: 6e74 3a07 0000 0016 5072 6f66 6974 4c6f  nt:.....ProfitLo
++0000b120: 7373 5265 706f 7274 5769 6467 6574 0103  ssReportWidget..
++0000b130: 0000 0010 0412 0430 043b 044e 0442 0430  .......0.;.N.B.0
++0000b140: 003a 0020 0800 0000 0006 0000 000a 4375  .:. ..........Cu
++0000b150: 7272 656e 6379 3a20 0700 0000 1650 726f  rrency: .....Pro
++0000b160: 6669 744c 6f73 7352 6570 6f72 7457 6964  fitLossReportWid
++0000b170: 6765 7401 0300 0000 0604 1f04 3804 2308  get.........8.#.
++0000b180: 0000 0000 0600 0000 0350 264c 0700 0000  .........P&L....
++0000b190: 1650 726f 6669 744c 6f73 7352 6570 6f72  .ProfitLossRepor
++0000b1a0: 7457 6964 6765 7401 0300 0000 1804 2104  tWidget.......!.
++0000b1b0: 3e04 4504 4004 3004 3d04 3804 4204 4c00  >.E.@.0.=.8.B.L.
++0000b1c0: 2e00 2e00 2e08 0000 0000 0600 0000 0753  ...............S
++0000b1d0: 6176 652e 2e2e 0700 0000 1650 726f 6669  ave........Profi
++0000b1e0: 744c 6f73 7352 6570 6f72 7457 6964 6765  tLossReportWidge
++0000b1f0: 7401 0300 0000 1004 1204 3004 3b04 4e04  t.........0.;.N.
++0000b200: 4204 3000 3a00 2008 0000 0000 0600 0000  B.0.:. .........
++0000b210: 0a43 7572 7265 6e63 793a 2007 0000 0016  .Currency: .....
++0000b220: 5072 6f66 6974 4c6f 7373 5265 706f 7274  ProfitLossReport
++0000b230: 5769 6e64 6f77 0103 0000 0018 041f 0438  Window.........8
++0000b240: 0423 0020 043f 043e 0020 0441 0447 0451  .#. .?.>. .A.G.Q
++0000b250: 0442 0443 0800 0000 0006 0000 000e 5026  .B.C..........P&
++0000b260: 4c20 6279 2041 6363 6f75 6e74 0700 0000  L by Account....
++0000b270: 1650 726f 6669 744c 6f73 7352 6570 6f72  .ProfitLossRepor
++0000b280: 7457 696e 646f 7701 0300 0000 1e04 1e04  tWindow.........
++0000b290: 4804 3804 3104 3a04 3000 2004 3a04 3004  H.8.1.:.0. .:.0.
++0000b2a0: 3c04 3504 4004 4b00 3a00 2008 0000 0000  <.5.@.K.:. .....
++0000b2b0: 0600 0000 0e43 616d 6572 6120 6572 726f  .....Camera erro
++0000b2c0: 723a 2007 0000 0009 5152 5363 616e 6e65  r: .....QRScanne
++0000b2d0: 7201 0300 0000 8404 1d04 3500 2004 3e04  r.........5. .>.
++0000b2e0: 3104 3d04 3004 4004 4304 3604 3504 3d00  1.=.0.@.C.6.5.=.
++0000b2f0: 2004 3f04 3004 3a04 3504 4200 2000 7000   .?.0.:.5.B. .p.
++0000b300: 7900 7a00 6200 6100 7200 2c00 2004 3d04  y.z.b.a.r.,. .=.
++0000b310: 3504 3e04 3104 4504 3e04 3404 3804 3c04  5.>.1.E.>.4.8.<.
++0000b320: 4b04 3900 2004 3404 3b04 4f00 2004 4004  K.9. .4.;.O. .@.
++0000b330: 3004 4104 3f04 3e04 3704 3d04 3004 3204  0.A.?.>.7.=.0.2.
++0000b340: 3004 3d04 3804 4f00 2000 5100 5200 2004  0.=.8.O. .Q.R. .
++0000b350: 3a04 3e04 3404 3e04 3200 2e08 0000 0000  :.>.4.>.2.......
++0000b360: 0600 0000 2c50 6163 6b61 6765 2070 797a  ....,Package pyz
++0000b370: 6261 7220 6e6f 7420 666f 756e 6420 666f  bar not found fo
++0000b380: 7220 5152 2072 6563 6f67 6e69 7469 6f6e  r QR recognition
++0000b390: 2e07 0000 0009 5152 5363 616e 6e65 7201  ......QRScanner.
++0000b3a0: 0300 0000 2604 1d04 3504 4200 2004 3404  ....&...5.B. .4.
++0000b3b0: 3e04 4104 4204 4304 3f04 3d04 4b04 4500  >.A.B.C.?.=.K.E.
++0000b3c0: 2004 3a04 3004 3c04 3504 4008 0000 0000   .:.0.<.5.@.....
++0000b3d0: 0600 0000 1e54 6865 7265 2061 7265 206e  .....There are n
++0000b3e0: 6f20 6361 6d65 7261 7320 6176 6169 6c61  o cameras availa
++0000b3f0: 626c 6507 0000 0009 5152 5363 616e 6e65  ble.....QRScanne
++0000b400: 7201 0300 0000 6804 1d04 3504 3204 3e04  r.....h...5.2.>.
++0000b410: 3704 3c04 3e04 3604 3d04 3e00 2004 3e04  7.<.>.6.=.>. .>.
++0000b420: 3104 4004 3004 3104 3e04 4204 3004 4204  1.@.0.1.>.B.0.B.
++0000b430: 4c00 2004 3404 3004 3d04 3d04 4b04 3500  L. .4.0.=.=.K.5.
++0000b440: 2004 3a04 3e04 4204 3804 4004 3e04 3204   .:.>.B.8.@.>.2.
++0000b450: 3e04 3a00 2004 4100 2004 3104 3804 4004  >.:. .A. .1.8.@.
++0000b460: 3604 3800 2000 5400 5300 5800 3a00 2008  6.8. .T.S.X.:. .
++0000b470: 0000 0000 0600 0000 2143 616e 2774 2070  ........!Can't p
++0000b480: 6172 7365 2064 6174 6120 666f 7220 5453  arse data for TS
++0000b490: 5820 7175 6f74 6573 3a20 0700 0000 0f51  X quotes: .....Q
++0000b4a0: 756f 7465 446f 776e 6c6f 6164 6572 0103  uoteDownloader..
++0000b4b0: 0000 0024 0417 0430 0433 0440 0443 0437  ...$...0.3.@.C.7
++0000b4c0: 043a 0430 0020 0437 0430 0432 0435 0440  .:.0. .7.0.2.5.@
++0000b4d0: 0448 0435 043d 0430 0800 0000 0006 0000  .H.5.=.0........
++0000b4e0: 0012 446f 776e 6c6f 6164 2063 6f6d 706c  ..Download compl
++0000b4f0: 6574 6564 0700 0000 0f51 756f 7465 446f  eted.....QuoteDo
++0000b500: 776e 6c6f 6164 6572 0103 0000 0060 0049  wnloader.....`.I
++0000b510: 0053 0049 004e 0020 0432 0020 0438 0441  .S.I.N. .2. .8.A
++0000b520: 0442 043e 0440 0438 0438 0020 043a 043e  .B.>.@.8.8. .:.>
++0000b530: 0442 0438 0440 043e 0432 043e 043a 0020  .B.8.@.>.2.>.:. 
++0000b540: 0045 0075 0072 006f 006e 0065 0078 0074  .E.u.r.o.n.e.x.t
++0000b550: 0020 043d 0435 0020 0441 043e 0432 043f  . .=.5. .A.>.2.?
++0000b560: 0430 0434 0430 0435 0442 003a 0020 0800  .0.4.0.5.B.:. ..
++0000b570: 0000 0006 0000 0022 4575 726f 6e65 7874  ......."Euronext
++0000b580: 2071 756f 7465 7320 4953 494e 206d 6973   quotes ISIN mis
++0000b590: 6d61 7463 6820 696e 3a20 0700 0000 0f51  match in: .....Q
++0000b5a0: 756f 7465 446f 776e 6c6f 6164 6572 0103  uoteDownloader..
++0000b5b0: 0000 0064 0417 0430 0433 043e 043b 043e  ...d...0.3.>.;.>
++0000b5c0: 0432 043e 043a 0020 0438 0441 0442 043e  .2.>.:. .8.A.B.>
++0000b5d0: 0440 0438 0438 0020 043a 043e 0442 0438  .@.8.8. .:.>.B.8
++0000b5e0: 0440 043e 0432 043e 043a 0020 0045 0075  .@.>.2.>.:. .E.u
++0000b5f0: 0072 006f 006e 0065 0078 0074 0020 043d  .r.o.n.e.x.t. .=
++0000b600: 0435 0020 043d 0430 0439 0434 0435 043d  .5. .=.0.9.4.5.=
++0000b610: 0020 0432 003a 0020 0800 0000 0006 0000  . .2.:. ........
++0000b620: 0025 4575 726f 6e65 7874 2071 756f 7465  .%Euronext quote
++0000b630: 7320 6865 6164 6572 206e 6f74 2066 6f75  s header not fou
++0000b640: 6e64 2069 6e3a 2007 0000 000f 5175 6f74  nd in: .....Quot
++0000b650: 6544 6f77 6e6c 6f61 6465 7201 0300 0000  eDownloader.....
++0000b660: 5a04 1804 4104 4204 3e04 4004 3804 4f00  Z...A.B.>.@.8.O.
++0000b670: 2004 3a04 3e04 4204 3804 4004 3e04 3204   .:.>.B.8.@.>.2.
++0000b680: 3e04 3a00 2000 4500 7500 7200 6f00 6e00  >.:. .E.u.r.o.n.
++0000b690: 6500 7800 7400 2004 4104 3b04 3804 4804  e.x.t. .A.;.8.H.
++0000b6a0: 3a04 3e04 3c00 2004 3a04 3e04 4004 3e04  :.>.<. .:.>.@.>.
++0000b6b0: 4204 3a04 3004 4f00 3a00 2008 0000 0000  B.:.0.O.:. .....
++0000b6c0: 0600 0000 2c45 7572 6f6e 6578 7420 7175  ....,Euronext qu
++0000b6d0: 6f74 6573 2068 6973 746f 7279 2072 6570  otes history rep
++0000b6e0: 6c79 2069 7320 746f 6f20 7368 6f72 743a  ly is too short:
++0000b6f0: 2007 0000 000f 5175 6f74 6544 6f77 6e6c   .....QuoteDownl
++0000b700: 6f61 6465 7201 0300 0000 3604 1d04 3500  oader.....6...5.
++0000b710: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
++0000b720: 3d04 4b00 2004 3a04 3e04 4204 3804 4004  =.K. .:.>.B.8.@.
++0000b730: 3e04 3204 3a04 3800 2004 3404 3b04 4f00  >.2.:.8. .4.;.O.
++0000b740: 2008 0000 0000 0600 0000 1e4e 6f20 7175   ..........No qu
++0000b750: 6f74 6573 2077 6572 6520 646f 776e 6c6f  otes were downlo
++0000b760: 6164 6564 2066 6f72 2007 0000 000f 5175  aded for .....Qu
++0000b770: 6f74 6544 6f77 6e6c 6f61 6465 7201 0300  oteDownloader...
++0000b780: 0000 2e04 1d04 3500 2004 3704 3004 3304  ......5. .7.0.3.
++0000b790: 4004 4304 3604 3504 3d04 4b00 2004 3a04  @.C.6.5.=.K. .:.
++0000b7a0: 4304 4004 4104 4b00 2004 3404 3b04 4f00  C.@.A.K. .4.;.O.
++0000b7b0: 2008 0000 0000 0600 0000 1d4e 6f20 7261   ..........No ra
++0000b7c0: 7465 7320 7765 7265 2064 6f77 6e6c 6f61  tes were downloa
++0000b7d0: 6465 6420 666f 7220 0700 0000 0f51 756f  ded for .....Quo
++0000b7e0: 7465 446f 776e 6c6f 6164 6572 0103 0000  teDownloader....
++0000b7f0: 002c 041d 0435 0442 0020 0434 0430 043d  .,...5.B. .4.0.=
++0000b800: 043d 044b 0445 0020 0426 0411 0020 0420  .=.K.E. .&... . 
++0000b810: 0424 0020 0434 043b 044f 003a 0020 0800  .$. .4.;.O.:. ..
++0000b820: 0000 0006 0000 001b 5468 6572 6520 6172  ........There ar
++0000b830: 6520 6e6f 2043 4252 2064 6174 6120 666f  e no CBR data fo
++0000b840: 723a 2007 0000 000f 5175 6f74 6544 6f77  r: .....QuoteDow
++0000b850: 6e6c 6f61 6465 7201 0300 0000 1204 1a04  nloader.........
++0000b860: 3e04 4204 3804 4004 3e04 3204 3a04 3808  >.B.8.@.>.2.:.8.
++0000b870: 0000 0000 0600 0000 0651 756f 7465 7307  .........Quotes.
++0000b880: 0000 0010 5175 6f74 6573 4c69 7374 4469  ....QuotesListDi
++0000b890: 616c 6f67 0103 0000 0004 0426 0411 0800  alog.......&....
++0000b8a0: 0000 0006 0000 0005 4173 7365 7407 0000  ........Asset...
++0000b8b0: 000f 5175 6f74 6573 4c69 7374 4d6f 6465  ..QuotesListMode
++0000b8c0: 6c01 0300 0000 0c04 1204 3004 3b04 4e04  l.........0.;.N.
++0000b8d0: 4204 3008 0000 0000 0600 0000 0843 7572  B.0..........Cur
++0000b8e0: 7265 6e63 7907 0000 000f 5175 6f74 6573  rency.....Quotes
++0000b8f0: 4c69 7374 4d6f 6465 6c01 0300 0000 0804  ListModel.......
++0000b900: 1404 3004 4204 3008 0000 0000 0600 0000  ..0.B.0.........
++0000b910: 0444 6174 6507 0000 000f 5175 6f74 6573  .Date.....Quotes
++0000b920: 4c69 7374 4d6f 6465 6c01 0300 0000 1204  ListModel.......
++0000b930: 1a04 3e04 4204 3804 4004 3e04 3204 3a04  ..>.B.8.@.>.2.:.
++0000b940: 3008 0000 0000 0600 0000 0551 756f 7465  0..........Quote
++0000b950: 0700 0000 0f51 756f 7465 734c 6973 744d  .....QuotesListM
++0000b960: 6f64 656c 0103 0000 0028 0026 041f 043e  odel.....(.&...>
++0000b970: 043b 043d 043e 0441 0442 044c 044e 002c  .;.=.>.A.B.L.N.,
++0000b980: 0020 0441 0020 043d 0430 0447 0430 043b  . .A. .=.0.G.0.;
++0000b990: 0430 0800 0000 0006 0000 0013 2646 756c  .0..........&Ful
++0000b9a0: 6c2c 2066 726f 6d20 7363 7261 7463 6807  l, from scratch.
++0000b9b0: 0000 000d 5265 4275 696c 6444 6961 6c6f  ....ReBuildDialo
++0000b9c0: 6701 0300 0000 1804 1804 3d04 4204 3504  g.........=.B.5.
++0000b9d0: 4004 3204 3004 3b00 2004 3404 3004 4208  @.2.0.;. .4.0.B.
++0000b9e0: 0000 0000 0600 0000 0a44 6174 6520 5261  .........Date Ra
++0000b9f0: 6e67 6507 0000 000d 5265 4275 696c 6444  nge.....ReBuildD
++0000ba00: 6961 6c6f 6701 0300 0000 2a00 2604 1104  ialog.....*.&...
++0000ba10: 4b04 4104 4204 4004 3e00 2c00 2004 3d04  K.A.B.@.>.,. .=.
++0000ba20: 3e00 2004 3d04 3504 3d04 3004 3404 5104  >. .=.5.=.0.4.Q.
++0000ba30: 3604 3d04 3e08 0000 0000 0600 0000 1146  6.=.>..........F
++0000ba40: 6173 742c 2026 756e 7265 6c69 6162 6c65  ast, &unreliable
++0000ba50: 0700 0000 0d52 6542 7569 6c64 4469 616c  .....ReBuildDial
++0000ba60: 6f67 0103 0000 0016 0414 0430 0442 0430  og.........0.B.0
++0000ba70: 0413 0440 0430 043d 0438 0446 044b 0800  ...@.0.=.8.F.K..
++0000ba80: 0000 0006 0000 000c 4672 6f6e 7469 6572  ........Frontier
++0000ba90: 4461 7465 0700 0000 0d52 6542 7569 6c64  Date.....ReBuild
++0000baa0: 4469 616c 6f67 0103 0000 0022 041f 0435  Dialog....."...5
++0000bab0: 0440 0435 0441 0447 0438 0442 0430 0442  .@.5.A.G.8.B.0.B
++0000bac0: 044c 0020 0438 0442 043e 0433 0438 0800  .L. .8.B.>.3.8..
++0000bad0: 0000 0006 0000 000f 5265 2d42 7569 6c64  ........Re-Build
++0000bae0: 204c 6564 6765 7207 0000 000d 5265 4275   Ledger.....ReBu
++0000baf0: 696c 6444 6961 6c6f 6701 0300 0000 1004  ildDialog.......
++0000bb00: 2100 2000 2604 1404 3004 4204 4b00 3a08  !. .&...0.B.K.:.
++0000bb10: 0000 0000 0600 0000 0c53 696e 6365 2026  .........Since &
++0000bb20: 4461 7465 3a07 0000 000d 5265 4275 696c  Date:.....ReBuil
++0000bb30: 6444 6961 6c6f 6701 0300 0000 2c04 2100  dDialog.....,.!.
++0000bb40: 2004 3a04 4004 3004 3904 3d04 3504 3900   .:.@.0.9.=.5.9.
++0000bb50: 2000 2604 3004 3a04 4204 4304 3004 3b04   .&.0.:.B.C.0.;.
++0000bb60: 4c04 3d04 3e04 3900 3a08 0000 0000 0600  L.=.>.9.:.......
++0000bb70: 0000 1353 696e 6365 2026 4c61 7374 2061  ...Since &Last a
++0000bb80: 6374 7561 6c3a 0700 0000 0d52 6542 7569  ctual:.....ReBui
++0000bb90: 6c64 4469 616c 6f67 0103 0000 0014 0064  ldDialog.......d
++0000bba0: 0064 002f 004d 004d 002f 0079 0079 0079  .d./.M.M./.y.y.y
++0000bbb0: 0079 0800 0000 0006 0000 000a 6464 2f4d  .y..........dd/M
++0000bbc0: 4d2f 7979 7979 0700 0000 0d52 6542 7569  M/yyyy.....ReBui
++0000bbd0: 6c64 4469 616c 6f67 0103 0000 000a 041b  ldDialog........
++0000bbe0: 044e 0431 043e 0439 0800 0000 0006 0000  .N.1.>.9........
++0000bbf0: 0003 414e 5907 0000 0013 5265 6665 7265  ..ANY.....Refere
++0000bc00: 6e63 6544 6174 6144 6961 6c6f 6701 0300  nceDataDialog...
++0000bc10: 0000 1404 2204 3804 3f00 2004 4104 4704  ....".8.?. .A.G.
++0000bc20: 3504 4204 3000 3a08 0000 0000 0600 0000  5.B.0.:.........
++0000bc30: 0d41 6363 6f75 6e74 2054 7970 653a 0700  .Account Type:..
++0000bc40: 0000 1352 6566 6572 656e 6365 4461 7461  ...ReferenceData
++0000bc50: 4469 616c 6f67 0103 0000 0022 0414 043e  Dialog....."...>
++0000bc60: 0431 0430 0432 0438 0442 044c 0020 0434  .1.0.2.8.B.L. .4
++0000bc70: 043e 0447 0435 0440 043d 0438 0439 0800  .>.G.5.@.=.8.9..
++0000bc80: 0000 0006 0000 0009 4164 6420 6368 696c  ........Add chil
++0000bc90: 6407 0000 0013 5265 6665 7265 6e63 6544  d.....ReferenceD
++0000bca0: 6174 6144 6961 6c6f 6701 0300 0000 1c04  ataDialog.......
++0000bcb0: 1404 3e04 3104 3004 3204 3804 4204 4c00  ..>.1.0.2.8.B.L.
++0000bcc0: 2004 3d04 3e04 3204 4b04 3908 0000 0000   .=.>.2.K.9.....
++0000bcd0: 0600 0000 0741 6464 206e 6577 0700 0000  .....Add new....
++0000bce0: 1352 6566 6572 656e 6365 4461 7461 4469  .ReferenceDataDi
++0000bcf0: 616c 6f67 0103 0000 001e 0421 043c 0435  alog.......!.<.5
++0000bd00: 043d 0438 0442 044c 0020 0442 0438 043f  .=.8.B.L. .B.8.?
++0000bd10: 0020 043d 0430 003a 0800 0000 0006 0000  . .=.0.:........
++0000bd20: 000f 4368 616e 6765 2074 7970 6520 746f  ..Change type to
++0000bd30: 3a07 0000 0013 5265 6665 7265 6e63 6544  :.....ReferenceD
++0000bd40: 6174 6144 6961 6c6f 6701 0300 0000 1a04  ataDialog.......
++0000bd50: 1f04 3e04 3404 4204 3204 3504 4004 3604  ..>.4.B.2.5.@.6.
++0000bd60: 3404 3504 3d04 3804 3508 0000 0000 0600  4.5.=.8.5.......
++0000bd70: 0000 0c43 6f6e 6669 726d 6174 696f 6e07  ...Confirmation.
++0000bd80: 0000 0013 5265 6665 7265 6e63 6544 6174  ....ReferenceDat
++0000bd90: 6144 6961 6c6f 6701 0300 0000 0e04 2304  aDialog.......#.
++0000bda0: 3404 3004 3b04 3804 4204 4c08 0000 0000  4.0.;.8.B.L.....
++0000bdb0: 0600 0000 0644 656c 6574 6507 0000 0013  .....Delete.....
++0000bdc0: 5265 6665 7265 6e63 6544 6174 6144 6961  ReferenceDataDia
++0000bdd0: 6c6f 6701 0300 0000 2204 2104 3f04 4004  log.....".!.?.@.
++0000bde0: 3004 3204 3e04 4704 3d04 4b04 3500 2004  0.2.>.G.=.K.5. .
++0000bdf0: 3404 3004 3d04 3d04 4b04 3508 0000 0000  4.0.=.=.K.5.....
++0000be00: 0600 0000 0e52 6566 6572 656e 6365 2044  .....Reference D
++0000be10: 6174 6107 0000 0013 5265 6665 7265 6e63  ata.....Referenc
++0000be20: 6544 6174 6144 6961 6c6f 6701 0300 0000  eDataDialog.....
++0000be30: 2404 1e04 4204 3c04 3504 3d04 3804 4204  $...B.<.5.=.8.B.
++0000be40: 4c00 2004 3804 3704 3c04 3504 3d04 3504  L. .8.7.<.5.=.5.
++0000be50: 3d04 3804 4f08 0000 0000 0600 0000 0e52  =.8.O..........R
++0000be60: 6576 6572 7420 6368 616e 6765 7307 0000  evert changes...
++0000be70: 0013 5265 6665 7265 6e63 6544 6174 6144  ..ReferenceDataD
++0000be80: 6961 6c6f 6701 0300 0000 2604 2104 3e04  ialog.....&.!.>.
++0000be90: 4504 4004 3004 3d04 3804 4204 4c00 2004  E.@.0.=.8.B.L. .
++0000bea0: 3804 3704 3c04 3504 3d04 3504 3d04 3804  8.7.<.5.=.5.=.8.
++0000beb0: 4f08 0000 0000 0600 0000 0c53 6176 6520  O..........Save 
++0000bec0: 6368 616e 6765 7307 0000 0013 5265 6665  changes.....Refe
++0000bed0: 7265 6e63 6544 6174 6144 6961 6c6f 6701  renceDataDialog.
++0000bee0: 0300 0000 0c04 1f04 3e04 3804 4104 3a00  ........>.8.A.:.
++0000bef0: 3a08 0000 0000 0600 0000 0753 6561 7263  :..........Searc
++0000bf00: 683a 0700 0000 1352 6566 6572 656e 6365  h:.....Reference
++0000bf10: 4461 7461 4469 616c 6f67 0103 0000 002a  DataDialog.....*
++0000bf20: 041f 043e 043a 0430 0437 044b 0432 0430  ...>.:.0.7.K.2.0
++0000bf30: 0442 044c 0020 043d 0435 0430 043a 0442  .B.L. .=.5.0.:.B
++0000bf40: 0438 0432 043d 044b 0435 0800 0000 0006  .8.2.=.K.5......
++0000bf50: 0000 000d 5368 6f77 2069 6e61 6374 6976  ....Show inactiv
++0000bf60: 6507 0000 0013 5265 6665 7265 6e63 6544  e.....ReferenceD
++0000bf70: 6174 6144 6961 6c6f 6701 0300 0000 6604  ataDialog.....f.
++0000bf80: 2300 2004 3204 3004 4100 2004 3504 4104  #. .2.0.A. .5.A.
++0000bf90: 4204 4c00 2004 3d04 3504 4104 3e04 4504  B.L. .=.5.A.>.E.
++0000bfa0: 4004 3004 3d04 5104 3d04 3d04 4b04 3500  @.0.=.Q.=.=.K.5.
++0000bfb0: 2004 3404 3004 3d04 3d04 4b04 3500 2e00   .4.0.=.=.K.5...
++0000bfc0: 2004 1204 4104 5100 2004 4004 3004 3204   ...A.Q. .@.0.2.
++0000bfd0: 3d04 3e00 2004 3704 3004 3a04 4004 4b04  =.>. .7.0.:.@.K.
++0000bfe0: 4204 4c00 3f08 0000 0000 0600 0000 3359  B.L.?.........3Y
++0000bff0: 6f75 2068 6176 6520 756e 636f 6d6d 6974  ou have uncommit
++0000c000: 7465 6420 6368 616e 6765 732e 2044 6f20  ted changes. Do 
++0000c010: 796f 7520 7761 6e74 2074 6f20 636c 6f73  you want to clos
++0000c020: 653f 0700 0000 1352 6566 6572 656e 6365  e?.....Reference
++0000c030: 4461 7461 4469 616c 6f67 0103 0000 0028  DataDialog.....(
++0000c040: 0424 0430 0439 043b 044b 0020 0045 0078  .$.0.9.;.K. .E.x
++0000c050: 0063 0065 006c 0020 0028 002a 002e 0078  .c.e.l. .(.*...x
++0000c060: 0073 006c 0078 0029 0800 0000 0006 0000  .s.l.x.)........
++0000c070: 0014 4578 6365 6c20 6669 6c65 7320 282a  ..Excel files (*
++0000c080: 2e78 6c73 7829 0700 0000 0752 6570 6f72  .xlsx).....Repor
++0000c090: 7473 0103 0000 0046 041d 0435 0432 043e  ts.....F...5.2.>
++0000c0a0: 0437 043c 043e 0436 043d 043e 0020 0437  .7.<.>.6.=.>. .7
++0000c0b0: 0430 0433 0440 0443 0437 0438 0442 044c  .0.3.@.C.7.8.B.L
++0000c0c0: 0020 043a 043b 0430 0441 0441 0020 043e  . .:.;.0.A.A. .>
++0000c0d0: 0442 0447 0451 0442 0430 003a 0020 0800  .B.G.Q.B.0.:. ..
++0000c0e0: 0000 0006 0000 001e 5265 706f 7274 2063  ........Report c
++0000c0f0: 6c61 7373 2063 616e 2774 2062 6520 6c6f  lass can't be lo
++0000c100: 6164 6564 3a20 0700 0000 0752 6570 6f72  aded: .....Repor
++0000c110: 7473 0103 0000 0042 041e 0442 0447 0435  ts.....B...B.G.5
++0000c120: 0442 0020 043d 0435 0020 043d 0430 0439  .B. .=.5. .=.0.9
++0000c130: 0434 0435 043d 0020 0434 043b 044f 0020  .4.5.=. .4.;.O. 
++0000c140: 043a 043b 0430 0441 0441 0430 0020 043e  .:.;.0.A.A.0. .>
++0000c150: 043a 043d 0430 003a 0020 0800 0000 0006  .:.=.0.:. ......
++0000c160: 0000 0023 5265 706f 7274 206e 6f74 2066  ...#Report not f
++0000c170: 6f75 6e64 2066 6f72 2077 696e 646f 7720  ound for window 
++0000c180: 636c 6173 733a 2007 0000 0007 5265 706f  class: .....Repo
++0000c190: 7274 7301 0300 0000 2c04 1e04 4204 4704  rts.....,...B.G.
++0000c1a0: 3504 4200 2004 4104 3e04 4504 4004 3004  5.B. .A.>.E.@.0.
++0000c1b0: 3d04 5104 3d00 2004 3200 2004 4404 3004  =.Q.=. .2. .D.0.
++0000c1c0: 3904 3b00 2008 0000 0000 0600 0000 1952  9.;. ..........R
++0000c1d0: 6570 6f72 7420 7761 7320 7361 7665 6420  eport was saved 
++0000c1e0: 746f 2066 696c 6520 0700 0000 0752 6570  to file .....Rep
++0000c1f0: 6f72 7473 0103 0000 0024 0421 043e 0445  orts.....$.!.>.E
++0000c200: 0440 0430 043d 0438 0442 044c 0020 043e  .@.0.=.8.B.L. .>
++0000c210: 0442 0447 0435 0442 0020 0432 003a 0800  .B.G.5.B. .2.:..
++0000c220: 0000 0006 0000 000f 5361 7665 2072 6570  ........Save rep
++0000c230: 6f72 7420 746f 3a07 0000 0007 5265 706f  ort to:.....Repo
++0000c240: 7274 7301 0300 0000 3c04 1b04 3e04 3304  rts.....<...>.3.
++0000c250: 3804 3d00 2004 4704 3504 4004 3504 3700  8.=. .G.5.@.5.7.
++0000c260: 2004 1304 3e04 4104 4304 4104 3b04 4304   ...>.A.C.A.;.C.
++0000c270: 3304 3800 2004 3704 3004 3204 3504 4004  3.8. .7.0.2.5.@.
++0000c280: 4804 5104 3d08 0000 0000 0600 0000 1445  H.Q.=..........E
++0000c290: 5349 4120 6c6f 6769 6e20 636f 6d70 6c65  SIA login comple
++0000c2a0: 7465 6407 0000 0012 5265 7175 6573 7449  ted.....RequestI
++0000c2b0: 6e74 6572 6365 7074 6f72 0103 0000 000a  nterceptor......
++0000c2c0: 0410 043a 0442 0438 0432 0800 0000 0006  ...:.B.8.2......
++0000c2d0: 0000 0005 4173 7365 7407 0000 000c 5265  ....Asset.....Re
++0000c2e0: 7375 6c74 734d 6f64 656c 0103 0000 000c  sultsModel......
++0000c2f0: 041a 043e 043b 002d 0432 043e 0800 0000  ...>.;.-.2.>....
++0000c300: 0006 0000 0003 5174 7907 0000 000c 5265  ......Qty.....Re
++0000c310: 7375 6c74 734d 6f64 656c 0103 0000 000e  sultsModel......
++0000c320: 0414 043e 043b 044f 002c 0020 0025 0800  ...>.;.O.,. .%..
++0000c330: 0000 0006 0000 0008 5368 6172 652c 2025  ........Share, %
++0000c340: 0700 0000 0c52 6573 756c 7473 4d6f 6465  .....ResultsMode
++0000c350: 6c01 0300 0000 3004 1204 4b04 3104 4004  l.....0...K.1.@.
++0000c360: 3004 3d00 2004 3d04 3504 3a04 3e04 4004  0.=. .=.5.:.>.@.
++0000c370: 4004 3504 3a04 4204 3d04 4b04 3900 2004  @.5.:.B.=.K.9. .
++0000c380: 4104 4704 5104 4208 0000 0000 0600 0000  A.G.Q.B.........
++0000c390: 1849 6e76 616c 6964 2061 6363 6f75 6e74  .Invalid account
++0000c3a0: 2073 656c 6563 7465 6407 0000 0013 5365   selected.....Se
++0000c3b0: 6c65 6374 4163 636f 756e 7444 6961 6c6f  lectAccountDialo
++0000c3c0: 6701 0300 0000 2204 1d04 3804 4704 3504  g....."...8.G.5.
++0000c3d0: 3304 3e00 2004 3d04 3500 2004 3204 4b04  3.>. .=.5. .2.K.
++0000c3e0: 3104 4004 3004 3d04 3e08 0000 0000 0600  1.@.0.=.>.......
++0000c3f0: 0000 0c4e 6f20 7365 6c65 6374 696f 6e07  ...No selection.
++0000c400: 0000 0013 5365 6c65 6374 4163 636f 756e  ....SelectAccoun
++0000c410: 7444 6961 6c6f 6701 0300 0000 4004 1f04  tDialog.....@...
++0000c420: 3e04 3604 3004 3b04 4304 3904 4104 4204  >.6.0.;.C.9.A.B.
++0000c430: 3000 2c00 2004 3204 4b04 3104 3504 4004  0.,. .2.K.1.5.@.
++0000c440: 3804 4204 3500 2004 3404 4004 4304 3304  8.B.5. .4.@.C.3.
++0000c450: 3e04 3900 2004 4104 4704 5104 4208 0000  >.9. .A.G.Q.B...
++0000c460: 0000 0600 0000 1f50 6c65 6173 6520 7365  .......Please se
++0000c470: 6c65 6374 2064 6966 6665 7265 6e74 2061  lect different a
++0000c480: 6363 6f75 6e74 0700 0000 1353 656c 6563  ccount.....Selec
++0000c490: 7441 6363 6f75 6e74 4469 616c 6f67 0103  tAccountDialog..
++0000c4a0: 0000 0030 041f 043e 0436 0430 043b 0443  ...0...>.6.0.;.C
++0000c4b0: 0439 0441 0442 0430 0020 0432 044b 0431  .9.A.B.0. .2.K.1
++0000c4c0: 0435 0440 0438 0442 0435 0020 0441 0447  .5.@.8.B.5. .A.G
++0000c4d0: 0451 0442 0800 0000 0006 0000 0015 506c  .Q.B..........Pl
++0000c4e0: 6561 7365 2073 656c 6563 7420 6163 636f  ease select acco
++0000c4f0: 756e 7407 0000 0010 5365 6c65 6374 4163  unt.....SelectAc
++0000c500: 636f 756e 7444 6c67 0103 0000 0012 0421  countDlg.......!
++0000c510: 043e 043e 0431 0449 0435 043d 0438 0435  .>.>.1.I.5.=.8.5
++0000c520: 0800 0000 0006 0000 0009 5465 7874 4c61  ..........TextLa
++0000c530: 6265 6c07 0000 0010 5365 6c65 6374 4163  bel.....SelectAc
++0000c540: 636f 756e 7444 6c67 0103 0000 0056 0418  countDlg.....V..
++0000c550: 0441 043f 043e 043b 044c 0437 043e 0432  .A.?.>.;.L.7.>.2
++0000c560: 0430 0442 044c 0020 044d 0442 043e 0442  .0.B.L. .M.B.>.B
++0000c570: 0020 0436 0435 0020 0441 0447 0451 0442  . .6.5. .A.G.Q.B
++0000c580: 0020 0434 043b 044f 0020 0434 0430 043d  . .4.;.O. .4.0.=
++0000c590: 043d 043e 0439 0020 0432 0430 043b 044e  .=.>.9. .2.0.;.N
++0000c5a0: 0442 044b 0800 0000 0006 0000 0027 5573  .B.K.........'Us
++0000c5b0: 6520 7468 6520 7361 6d65 2061 6363 6f75  e the same accou
++0000c5c0: 6e74 2066 6f72 2067 6976 656e 2063 7572  nt for given cur
++0000c5d0: 7265 6e63 7907 0000 0010 5365 6c65 6374  rency.....Select
++0000c5e0: 4163 636f 756e 7444 6c67 0103 0000 0024  AccountDlg.....$
++0000c5f0: 0412 044b 0431 0435 0440 0438 0442 0435  ...K.1.5.@.8.B.5
++0000c600: 0020 043a 0430 0442 0435 0433 043e 0440  . .:.0.B.5.3.>.@
++0000c610: 0438 044e 0800 0000 0006 0000 0016 506c  .8.N..........Pl
++0000c620: 6561 7365 2073 656c 6563 7420 6361 7465  ease select cate
++0000c630: 676f 7279 0700 0000 1453 656c 6563 7443  gory.....SelectC
++0000c640: 6174 6567 6f72 7944 6961 6c6f 6701 0300  ategoryDialog...
++0000c650: 0000 2804 1204 4b04 3104 3504 4004 3804  ..(...K.1.5.@.8.
++0000c660: 4204 3500 2004 3a04 3e04 3d04 4204 4004  B.5. .:.>.=.B.@.
++0000c670: 3004 3304 3504 3d04 4204 3008 0000 0000  0.3.5.=.B.0.....
++0000c680: 0600 0000 1250 6c65 6173 6520 7365 6c65  .....Please sele
++0000c690: 6374 2070 6565 7207 0000 0010 5365 6c65  ct peer.....Sele
++0000c6a0: 6374 5065 6572 4469 616c 6f67 0103 0000  ctPeerDialog....
++0000c6b0: 0022 041d 0438 0447 0435 0433 043e 0020  ."...8.G.5.3.>. 
++0000c6c0: 043d 0435 0020 0432 044b 0431 0440 0430  .=.5. .2.K.1.@.0
++0000c6d0: 043d 043e 0800 0000 0006 0000 000c 4e6f  .=.>..........No
++0000c6e0: 2073 656c 6563 7469 6f6e 0700 0000 1553   selection.....S
++0000c6f0: 656c 6563 7452 6566 6572 656e 6365 4469  electReferenceDi
++0000c700: 616c 6f67 0103 0000 002e 0412 044b 0020  alog.........K. 
++0000c710: 0434 043e 043b 0436 043d 044b 0020 0441  .4.>.;.6.=.K. .A
++0000c720: 0434 0435 043b 0430 0442 044c 0020 0432  .4.5.;.0.B.L. .2
++0000c730: 044b 0431 043e 0440 0800 0000 0006 0000  .K.1.>.@........
++0000c740: 001b 596f 7520 7368 6f75 6c64 2073 656c  ..You should sel
++0000c750: 6563 7420 736f 6d65 7468 696e 6707 0000  ect something...
++0000c760: 0015 5365 6c65 6374 5265 6665 7265 6e63  ..SelectReferenc
++0000c770: 6544 6961 6c6f 6701 0300 0000 1c04 1204  eDialog.........
++0000c780: 4b04 3104 3504 4004 3804 4204 3500 2004  K.1.5.@.8.B.5. .
++0000c790: 3c04 3504 4204 3a04 4308 0000 0000 0600  <.5.B.:.C.......
++0000c7a0: 0000 1150 6c65 6173 6520 7365 6c65 6374  ...Please select
++0000c7b0: 2074 6167 0700 0000 0f53 656c 6563 7454   tag.....SelectT
++0000c7c0: 6167 4469 616c 6f67 0103 0000 005a 041d  agDialog.....Z..
++0000c7d0: 0435 0020 0443 0434 0430 043b 043e 0441  .5. .C.4.0.;.>.A
++0000c7e0: 044c 0020 043f 043e 043b 0443 0447 0438  .L. .?.>.;.C.G.8
++0000c7f0: 0442 044c 0020 043d 0430 0437 0432 0430  .B.L. .=.0.7.2.0
++0000c800: 043d 0438 0435 0020 043e 0433 0440 0430  .=.8.5. .>.3.@.0
++0000c810: 043d 0438 0437 0430 0446 0438 0438 0020  .=.8.7.0.F.8.8. 
++0000c820: 0438 0437 003a 0020 0800 0000 0006 0000  .8.7.:. ........
++0000c830: 001d 4361 6e27 7420 6765 7420 636f 6d70  ..Can't get comp
++0000c840: 616e 7920 6e61 6d65 2066 726f 6d3a 2007  any name from: .
++0000c850: 0000 000b 536c 6970 7354 6178 4150 4901  ....SlipsTaxAPI.
++0000c860: 0300 0000 4804 1d04 3504 3204 3e04 3704  ....H...5.2.>.7.
++0000c870: 3c04 3e04 3604 3d04 3e00 2004 3e04 3104  <.>.6.=.>. .>.1.
++0000c880: 3204 3d04 3e04 3204 3804 4204 4c00 2004  2.=.>.2.8.B.L. .
++0000c890: 4104 3504 4104 4104 3804 4e00 2c00 2004  A.5.A.A.8.N.,. .
++0000c8a0: 3e04 4204 3204 3504 4200 3a00 2008 0000  >.B.2.5.B.:. ...
++0000c8b0: 0000 0600 0000 2143 616e 2774 2072 6566  ......!Can't ref
++0000c8c0: 7265 7368 2073 6573 7369 6f6e 2c20 7265  resh session, re
++0000c8d0: 7370 6f6e 7365 3a20 0700 0000 0b53 6c69  sponse: .....Sli
++0000c8e0: 7073 5461 7841 5049 0103 0000 002e 041e  psTaxAPI........
++0000c8f0: 0448 0438 0431 043a 0430 0020 043f 043e  .H.8.1.:.0. .?.>
++0000c900: 043b 0443 0447 0435 043d 0438 044f 0020  .;.C.G.5.=.8.O. 
++0000c910: 0447 0435 043a 0430 003a 0020 0800 0000  .G.5.:.0.:. ....
++0000c920: 0006 0000 0013 4765 7420 7469 636b 6574  ......Get ticket
++0000c930: 2066 6169 6c65 643a 2007 0000 000b 536c   failed: .....Sl
++0000c940: 6970 7354 6178 4150 4901 0300 0000 3404  ipsTaxAPI.....4.
++0000c950: 1e04 4804 3804 3104 3a04 3000 2004 3f04  ..H.8.1.:.0. .?.
++0000c960: 3e04 3b04 4304 4704 3504 3d04 3804 4f00  >.;.C.G.5.=.8.O.
++0000c970: 2000 6900 6400 2004 4704 3504 3a04 3000   .i.d. .G.5.:.0.
++0000c980: 3a00 2008 0000 0000 0600 0000 1647 6574  :. ..........Get
++0000c990: 2074 6963 6b65 7420 6964 2066 6169 6c65   ticket id faile
++0000c9a0: 643a 2007 0000 000b 536c 6970 7354 6178  d: .....SlipsTax
++0000c9b0: 4150 4901 0300 0000 7c04 1d04 3504 3204  API.....|...5.2.
++0000c9c0: 3504 4004 3d04 3004 4f00 2004 3404 3b04  5.@.=.0.O. .4.;.
++0000c9d0: 3804 3d04 3000 2004 1804 1d04 1d00 2e00  8.=.0. .........
++0000c9e0: 2004 1d04 3504 3204 3e04 3704 3c04 3e04   ...5.2.>.7.<.>.
++0000c9f0: 3604 3d04 3e00 2004 3f04 3e04 3b04 4304  6.=.>. .?.>.;.C.
++0000ca00: 4704 3804 4204 4c00 2004 3d04 3004 3804  G.8.B.L. .=.0.8.
++0000ca10: 3c04 3504 3d04 3e04 3204 3004 3d04 3804  <.5.=.>.2.0.=.8.
++0000ca20: 3500 2004 3a04 3e04 3c04 3f04 3004 3d04  5. .:.>.<.?.0.=.
++0000ca30: 3804 3800 2e08 0000 0000 0600 0000 3049  8.8...........0I
++0000ca40: 6e63 6f72 7265 6374 206c 656e 6774 6820  ncorrect length 
++0000ca50: 6f66 2049 4e4e 2e20 4361 6e27 7420 6765  of INN. Can't ge
++0000ca60: 7420 636f 6d70 616e 7920 6e61 6d65 2e07  t company name..
++0000ca70: 0000 000b 536c 6970 7354 6178 4150 4901  ....SlipsTaxAPI.
++0000ca80: 0300 0000 5604 1d04 3504 4200 2000 5300  ....V...5.B. .S.
++0000ca90: 6500 7300 7300 6900 6f00 6e00 4900 6400  e.s.s.i.o.n.I.d.
++0000caa0: 2004 3404 3b04 4f00 2004 3704 3004 3304   .4.;.O. .7.0.3.
++0000cab0: 4004 4304 3704 3a04 3800 2004 4704 3504  @.C.7.:.8. .G.5.
++0000cac0: 3a04 3000 2004 4100 2004 4104 3004 3904  :.0. .A. .A.0.9.
++0000cad0: 4204 3000 2004 2404 1d04 2108 0000 0000  B.0. .$...!.....
++0000cae0: 0600 0000 224e 6f20 5275 7373 6961 6e20  ...."No Russian 
++0000caf0: 5461 7820 5365 7373 696f 6e49 6420 6176  Tax SessionId av
++0000cb00: 6169 6c61 626c 6507 0000 000b 536c 6970  ailable.....Slip
++0000cb10: 7354 6178 4150 4901 0300 0000 3604 1d04  sTaxAPI.....6...
++0000cb20: 3504 4200 2004 3004 3a04 4204 3804 3204  5.B. .0.:.B.8.2.
++0000cb30: 3d04 3e04 3900 2004 4104 3504 4104 4104  =.>.9. .A.5.A.A.
++0000cb40: 3804 3800 2004 3404 3b04 4f00 2004 2404  8.8. .4.;.O. .$.
++0000cb50: 1d04 2108 0000 0000 0600 0000 184e 6f20  ..!..........No 
++0000cb60: 7661 6c69 6420 7365 7373 696f 6e20 7072  valid session pr
++0000cb70: 6573 656e 7407 0000 000b 536c 6970 7354  esent.....SlipsT
++0000cb80: 6178 4150 4901 0300 0000 7a04 1e04 3f04  axAPI.....z...?.
++0000cb90: 3504 4004 3004 4604 3804 4f00 2004 3e04  5.@.0.F.8.O. .>.
++0000cba0: 3104 4004 3004 3104 3004 4204 4b04 3204  1.@.0.1.0.B.K.2.
++0000cbb0: 3004 3504 4204 4104 4f00 2004 3d04 3000  0.5.B.A.O. .=.0.
++0000cbc0: 2004 4104 4204 3e04 4004 3e04 3d04 3500   .A.B.>.@.>.=.5.
++0000cbd0: 2004 4104 3504 4004 3204 3504 4004 3000   .A.5.@.2.5.@.0.
++0000cbe0: 2e00 2004 1f04 3e04 3204 4204 3e04 4004  .. ...>.2.B.>.@.
++0000cbf0: 4f04 4e00 2004 3504 4904 5100 2004 4004  O.N. .5.I.Q. .@.
++0000cc00: 3004 3700 2e08 0000 0000 0600 0000 384f  0.7...........8O
++0000cc10: 7065 7261 7469 6f6e 206d 6967 6874 2062  peration might b
++0000cc20: 6520 7065 6e64 696e 6720 6f6e 2073 6572  e pending on ser
++0000cc30: 7665 7220 7369 6465 2e20 5472 7969 6e67  ver side. Trying
++0000cc40: 2061 6761 696e 2e07 0000 000b 536c 6970   again......Slip
++0000cc50: 7354 6178 4150 4901 0300 0000 2804 1e04  sTaxAPI.....(...
++0000cc60: 3104 3d04 3e04 3204 3b04 3504 3d04 3804  1.=.>.2.;.5.=.8.
++0000cc70: 3500 2004 4104 3504 4104 4104 3804 3800  5. .A.5.A.A.8.8.
++0000cc80: 2e00 2e00 2e08 0000 0000 0600 0000 1552  ...............R
++0000cc90: 6566 7265 7368 696e 6720 7365 7373 696f  efreshing sessio
++0000cca0: 6e2e 2e2e 0700 0000 0b53 6c69 7073 5461  n........SlipsTa
++0000ccb0: 7841 5049 0103 0000 0024 0421 0435 0441  xAPI.....$.!.5.A
++0000ccc0: 0441 0438 044f 0020 043e 0431 043d 043e  .A.8.O. .>.1.=.>
++0000ccd0: 0432 043b 0435 043d 0430 003a 0020 0800  .2.;.5.=.0.:. ..
++0000cce0: 0000 0006 0000 0013 5365 7373 696f 6e20  ........Session 
++0000ccf0: 7265 6672 6573 6865 643a 2007 0000 000b  refreshed: .....
++0000cd00: 536c 6970 7354 6178 4150 4901 0300 0000  SlipsTaxAPI.....
++0000cd10: 1804 2704 3504 3a00 2004 3d04 3004 3904  ..'.5.:. .=.0.9.
++0000cd20: 3404 3504 3d00 3a00 2008 0000 0000 0600  4.5.=.:. .......
++0000cd30: 0000 0c53 6c69 7020 666f 756e 643a 2007  ...Slip found: .
++0000cd40: 0000 000b 536c 6970 7354 6178 4150 4901  ....SlipsTaxAPI.
++0000cd50: 0300 0000 1c04 2704 3504 3a00 2004 3704  ......'.5.:. .7.
++0000cd60: 3004 3304 4004 4304 3604 3504 3d00 3a00  0.3.@.C.6.5.=.:.
++0000cd70: 2008 0000 0000 0600 0000 0d53 6c69 7020   ..........Slip 
++0000cd80: 6c6f 6164 6564 3a20 0700 0000 0b53 6c69  loaded: .....Sli
++0000cd90: 7073 5461 7841 5049 0103 0000 0036 041d  psTaxAPI.....6..
++0000cda0: 0435 0430 0432 0442 043e 0440 0438 0437  .5.0.2.B.>.@.8.7
++0000cdb0: 043e 0432 0430 043d 043e 0020 043f 043e  .>.2.0.=.>. .?.>
++0000cdc0: 0020 043f 0440 0438 0447 0438 043d 0435  . .?.@.8.G.8.=.5
++0000cdd0: 003a 0020 0800 0000 0006 0000 001a 556e  .:. ..........Un
++0000cde0: 6175 7468 6f72 697a 6564 2077 6974 6820  authorized with 
++0000cdf0: 7265 6173 6f6e 3a20 0700 0000 0b53 6c69  reason: .....Sli
++0000ce00: 7073 5461 7841 5049 0103 0000 001c 0421  psTaxAPI.......!
++0000ce10: 0447 0451 0442 0020 043d 0435 0020 0432  .G.Q.B. .=.5. .2
++0000ce20: 044b 0431 0440 0430 043d 0800 0000 0006  .K.1.@.0.=......
++0000ce30: 0000 0014 4163 636f 756e 7420 6e6f 7420  ....Account not 
++0000ce40: 7365 6c65 6374 6564 0700 0000 0953 7461  selected.....Sta
++0000ce50: 7465 6d65 6e74 0103 0000 0034 0414 0430  tement.....4...0
++0000ce60: 043d 043d 044b 0435 0020 043d 0435 0020  .=.=.K.5. .=.5. 
++0000ce70: 043f 0440 0438 0432 044f 0437 0430 043d  .?.@.8.2.O.7.0.=
++0000ce80: 044b 0020 043a 0020 0426 0411 003a 0020  .K. .:. .&...:. 
++0000ce90: 0800 0000 0006 0000 0023 4173 7365 7420  .........#Asset 
++0000cea0: 6461 7461 2061 7265 6e27 7420 6c69 6e6b  data aren't link
++0000ceb0: 6564 2074 6f20 6173 7365 743a 2007 0000  ed to asset: ...
++0000cec0: 0009 5374 6174 656d 656e 7401 0300 0000  ..Statement.....
++0000ced0: 1e04 2604 1100 2000 6900 6400 2004 3d04  ..&... .i.d. .=.
++0000cee0: 3500 2004 3d04 3004 3904 3404 3504 3d08  5. .=.0.9.4.5.=.
++0000cef0: 0000 0000 0600 0000 1241 7373 6574 2069  .........Asset i
++0000cf00: 6420 6e6f 7420 666f 756e 6407 0000 0009  d not found.....
++0000cf10: 5374 6174 656d 656e 7401 0300 0000 3204  Statement.....2.
++0000cf20: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
++0000cf30: 3d04 3e00 2004 4104 3e04 3704 3404 3004  =.>. .A.>.7.4.0.
++0000cf40: 4204 4c00 2004 4104 4704 5104 4200 3a00  B.L. .A.G.Q.B.:.
++0000cf50: 2008 0000 0000 0600 0000 1643 616e 2774   ..........Can't
++0000cf60: 2063 7265 6174 6520 6163 636f 756e 743a   create account:
++0000cf70: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000cf80: 0300 0000 2e04 1d04 3504 3204 3e04 3704  ........5.2.>.7.
++0000cf90: 3c04 3e04 3604 3d04 3e00 2004 4104 3e04  <.>.6.=.>. .A.>.
++0000cfa0: 3704 3404 3004 4204 4c00 2004 2604 1100  7.4.0.B.L. .&...
++0000cfb0: 3a00 2008 0000 0000 0600 0000 1443 616e  :. ..........Can
++0000cfc0: 2774 2063 7265 6174 6520 6173 7365 743a  't create asset:
++0000cfd0: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000cfe0: 0300 0000 3c04 1d04 3504 3204 3e04 3704  ....<...5.2.>.7.
++0000cff0: 3c04 3e04 3604 3d04 3e00 2004 3d04 3004  <.>.6.=.>. .=.0.
++0000d000: 3904 4204 3500 2004 2604 1100 2004 3200  9.B.5. .&... .2.
++0000d010: 2004 3e04 4204 4704 5104 4204 3500 3a00   .>.B.G.Q.B.5.:.
++0000d020: 2008 0000 0000 0600 0000 2643 616e 2774   .........&Can't
++0000d030: 206c 6f63 6174 6520 6173 7365 7420 696e   locate asset in
++0000d040: 2073 7461 7465 6d65 6e74 2064 6174 613a   statement data:
++0000d050: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000d060: 0300 0000 1a04 1f04 3e04 3404 4204 3204  ........>.4.B.2.
++0000d070: 3504 4004 3604 3404 3504 3d04 3804 3508  5.@.6.4.5.=.8.5.
++0000d080: 0000 0000 0600 0000 0c43 6f6e 6669 726d  .........Confirm
++0000d090: 6174 696f 6e07 0000 0009 5374 6174 656d  ation.....Statem
++0000d0a0: 656e 7401 0300 0000 1004 1404 3504 3f04  ent.........5.?.
++0000d0b0: 3e04 3704 3804 4200 2008 0000 0000 0600  >.7.8.B. .......
++0000d0c0: 0000 0b44 6570 6f73 6974 206f 6620 0700  ...Deposit of ..
++0000d0d0: 0000 0953 7461 7465 6d65 6e74 0103 0000  ...Statement....
++0000d0e0: 0048 041d 0435 0432 043e 0437 043c 043e  .H...5.2.>.7.<.>
++0000d0f0: 0436 043d 043e 0020 043f 0440 043e 0447  .6.=.>. .?.@.>.G
++0000d100: 0438 0442 0430 0442 044c 0020 004a 0053  .8.B.0.B.L. .J.S
++0000d110: 004f 004e 0020 0438 0437 0020 0444 0430  .O.N. .8.7. .D.0
++0000d120: 0439 043b 0430 003a 0020 0800 0000 0006  .9.;.0.:. ......
++0000d130: 0000 001f 4661 696c 6564 2074 6f20 7265  ....Failed to re
++0000d140: 6164 204a 534f 4e20 6672 6f6d 2066 696c  ad JSON from fil
++0000d150: 653a 2007 0000 0009 5374 6174 656d 656e  e: .....Statemen
++0000d160: 7401 0300 0000 4804 1d04 3500 2004 4304  t.....H...5. .C.
++0000d170: 3404 3004 3b04 3e04 4104 4c00 2004 3f04  4.0.;.>.A.L. .?.
++0000d180: 4004 3e04 4704 3804 4204 3004 4204 4c00  @.>.G.8.B.0.B.L.
++0000d190: 2004 4104 4504 3504 3c04 4300 2000 4a00   .A.E.5.<.C. .J.
++0000d1a0: 5300 4f00 4e00 2004 3804 3700 3a00 2008  S.O.N. .8.7.:. .
++0000d1b0: 0000 0000 0600 0000 2146 6169 6c65 6420  ........!Failed 
++0000d1c0: 746f 2072 6561 6420 4a53 4f4e 2073 6368  to read JSON sch
++0000d1d0: 656d 6120 6672 6f6d 3a20 0700 0000 0953  ema from: .....S
++0000d1e0: 7461 7465 6d65 6e74 0103 0000 0034 041d  tatement.....4..
++0000d1f0: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++0000d200: 043e 0020 043f 0440 043e 0447 0435 0441  .>. .?.@.>.G.5.A
++0000d210: 0442 044c 0020 0444 0430 0439 043b 003a  .B.L. .D.0.9.;.:
++0000d220: 0020 0800 0000 0006 0000 0015 4661 696c  . ..........Fail
++0000d230: 6564 2074 6f20 7265 6164 2066 696c 653a  ed to read file:
++0000d240: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000d250: 0300 0000 6604 1d04 3504 3204 3e04 3704  ....f...5.2.>.7.
++0000d260: 3c04 3e04 3604 3d04 3e00 2004 3a04 3e04  <.>.6.=.>. .:.>.
++0000d270: 3d04 4204 3204 3504 4004 4204 3804 4004  =.B.2.5.@.B.8.@.
++0000d280: 3e04 3204 3004 4204 4c00 2004 4204 3804  >.2.0.B.L. .B.8.
++0000d290: 3f00 2004 3004 3a04 4204 3804 3204 3000  ?. .0.:.B.8.2.0.
++0000d2a0: 2004 3200 2004 4204 4004 3004 3d04 4104   .2. .B.@.0.=.A.
++0000d2b0: 4404 3504 4004 3500 3a00 2008 0000 0000  D.5.@.5.:. .....
++0000d2c0: 0600 0000 2e49 6d70 6f73 7369 626c 6520  .....Impossible 
++0000d2d0: 746f 2063 6f6e 7665 7274 2061 7373 6574  to convert asset
++0000d2e0: 2074 7970 6520 696e 2074 7261 6e73 6665   type in transfe
++0000d2f0: 723a 2007 0000 0009 5374 6174 656d 656e  r: .....Statemen
++0000d300: 7401 0300 0000 4804 1d04 3504 3e04 3404  t.....H...5.>.4.
++0000d310: 3d04 3e04 3704 3d04 3004 4704 3d04 3e04  =.>.7.=.0.G.=.>.
++0000d320: 3500 2004 4104 3e04 3204 3f04 3004 3404  5. .A.>.2.?.0.4.
++0000d330: 3504 3d04 3804 3500 2004 3204 3004 3b04  5.=.8.5. .2.0.;.
++0000d340: 4e04 4204 4b00 2004 3404 3b04 4f00 2008  N.B.K. .4.;.O. .
++0000d350: 0000 0000 0600 0000 1c4d 756c 7469 706c  .........Multipl
++0000d360: 6520 6375 7272 656e 6379 206d 6174 6368  e currency match
++0000d370: 2066 6f72 2007 0000 0009 5374 6174 656d   for .....Statem
++0000d380: 656e 7401 0300 0000 3a04 1d04 3504 3e04  ent.....:...5.>.
++0000d390: 3404 3d04 3e04 3704 3d04 3004 4704 3d04  4.=.>.7.=.0.G.=.
++0000d3a0: 3e04 3500 2004 4104 3e04 3204 3f04 3004  >.5. .A.>.2.?.0.
++0000d3b0: 3404 3504 3d04 3804 3500 2004 3404 3b04  4.5.=.8.5. .4.;.
++0000d3c0: 4f00 2008 0000 0000 0600 0000 134d 756c  O. ..........Mul
++0000d3d0: 7469 706c 6520 6d61 7463 6820 666f 7220  tiple match for 
++0000d3e0: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
++0000d3f0: 0000 003a 0412 044b 0431 0435 0440 0438  ...:...K.1.5.@.8
++0000d400: 0442 0435 0020 0441 0447 0451 0442 0020  .B.5. .A.G.Q.B. 
++0000d410: 0434 043b 044f 0020 0437 0430 0447 0438  .4.;.O. .7.0.G.8
++0000d420: 0441 043b 0435 043d 0438 044f 003a 0800  .A.;.5.=.8.O.:..
++0000d430: 0000 0006 0000 001d 5365 6c65 6374 2061  ........Select a
++0000d440: 6363 6f75 6e74 2074 6f20 6465 706f 7369  ccount to deposi
++0000d450: 7420 746f 3a07 0000 0009 5374 6174 656d  t to:.....Statem
++0000d460: 656e 7401 0300 0000 3604 1204 4b04 3104  ent.....6...K.1.
++0000d470: 3504 4004 3804 4204 3500 2004 4104 4704  5.@.8.B.5. .A.G.
++0000d480: 5104 4200 2004 3404 3b04 4f00 2004 4104  Q.B. .4.;.O. .A.
++0000d490: 3f04 3804 4104 3004 3d04 3804 4f00 3a08  ?.8.A.0.=.8.O.:.
++0000d4a0: 0000 0000 0600 0000 2053 656c 6563 7420  ........ Select 
++0000d4b0: 6163 636f 756e 7420 746f 2077 6974 6864  account to withd
++0000d4c0: 7261 7720 6672 6f6d 3a07 0000 0009 5374  raw from:.....St
++0000d4d0: 6174 656d 656e 7401 0300 0000 4804 1d04  atement.....H...
++0000d4e0: 3504 3a04 3e04 4204 3e04 4004 4b04 3500  5.:.>.B.>.@.K.5.
++0000d4f0: 2004 4104 3504 3a04 4604 3804 3800 2004   .A.5.:.F.8.8. .
++0000d500: 3d04 3500 2004 3f04 3e04 3404 3404 3504  =.5. .?.>.4.4.5.
++0000d510: 4004 3604 3804 3204 3004 4e04 4204 4104  @.6.8.2.0.N.B.A.
++0000d520: 4f00 3a00 2008 0000 0000 0600 0000 2153  O.:. .........!S
++0000d530: 6f6d 6520 7365 6374 696f 6e73 2061 7265  ome sections are
++0000d540: 206e 6f74 2073 7570 706f 7274 6564 3a20   not supported: 
++0000d550: 0700 0000 0953 7461 7465 6d65 6e74 0103  .....Statement..
++0000d560: 0000 002a 0418 043c 043f 043e 0440 0442  ...*...<.?.>.@.B
++0000d570: 0020 043e 0442 0447 0451 0442 0430 0020  . .>.B.G.Q.B.0. 
++0000d580: 043f 0440 0435 0440 0432 0430 043d 0800  .?.@.5.@.2.0.=..
++0000d590: 0000 0006 0000 001e 5374 6174 656d 656e  ........Statemen
++0000d5a0: 7420 696d 706f 7274 2077 6173 2063 616e  t import was can
++0000d5b0: 6365 6c6c 6564 0700 0000 0953 7461 7465  celled.....State
++0000d5c0: 6d65 6e74 0103 0000 002c 041d 0435 0432  ment.....,...5.2
++0000d5d0: 0435 0440 043d 044b 0439 0020 043f 0435  .5.@.=.K.9. .?.5
++0000d5e0: 0440 0438 043e 0434 0020 043e 0442 0447  .@.8.>.4. .>.B.G
++0000d5f0: 0451 0442 0430 0800 0000 0006 0000 001b  .Q.B.0..........
++0000d600: 5374 6174 656d 656e 7420 7065 7269 6f64  Statement period
++0000d610: 2069 7320 696e 7661 6c69 6407 0000 0009   is invalid.....
++0000d620: 5374 6174 656d 656e 7401 0300 0000 c604  Statement.......
++0000d630: 1f04 3504 4004 3804 3e04 3400 2004 3e04  ..5.@.8.>.4. .>.
++0000d640: 4204 4704 5104 4204 3000 2004 3d04 3004  B.G.Q.B.0. .=.0.
++0000d650: 4704 3804 3d04 3004 3504 4204 4104 4f00  G.8.=.0.5.B.A.O.
++0000d660: 2004 4004 3004 3d04 3504 3500 2004 3f04   .@.0.=.5.5. .?.
++0000d670: 3e04 4104 3b04 3504 3404 3d04 3504 3900  >.A.;.5.4.=.5.9.
++0000d680: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
++0000d690: 3800 2004 3404 3b04 4f00 2004 4104 4704  8. .4.;.O. .A.G.
++0000d6a0: 5104 4204 3000 2000 2804 3f04 3e04 3204  Q.B.0. .(.?.>.2.
++0000d6b0: 4204 3e04 4004 3d04 4b04 3900 2004 3804  B.>.@.=.K.9. .8.
++0000d6c0: 3c04 3f04 3e04 4004 4200 3f00 2900 2e00  <.?.>.@.B.?.)...
++0000d6d0: 2004 1f04 4004 3e04 3404 3e04 3b04 3604   ...@.>.4.>.;.6.
++0000d6e0: 3804 4204 4c00 2004 3804 3c04 3f04 3e04  8.B.L. .8.<.?.>.
++0000d6f0: 4004 4200 3f08 0000 0000 0600 0000 5853  @.B.?.........XS
++0000d700: 7461 7465 6d65 6e74 2070 6572 696f 6420  tatement period 
++0000d710: 7374 6172 7473 2062 6566 6f72 6520 6c61  starts before la
++0000d720: 7374 2072 6563 6f72 6465 6420 6f70 6572  st recorded oper
++0000d730: 6174 696f 6e20 666f 7220 7468 6520 6163  ation for the ac
++0000d740: 636f 756e 742e 2043 6f6e 7469 6e75 6520  count. Continue 
++0000d750: 696d 706f 7274 3f07 0000 0009 5374 6174  import?.....Stat
++0000d760: 656d 656e 7401 0300 0000 2a04 1e04 4204  ement.....*...B.
++0000d770: 4704 5104 4200 2004 4104 3e04 3404 3504  G.Q.B. .A.>.4.5.
++0000d780: 4004 3604 3804 4200 2004 3e04 4804 3804  @.6.8.B. .>.H.8.
++0000d790: 3104 3a04 3808 0000 0000 0600 0000 1b53  1.:.8..........S
++0000d7a0: 7461 7465 6d65 6e74 2076 616c 6964 6174  tatement validat
++0000d7b0: 696f 6e20 6661 696c 6564 0700 0000 0953  ion failed.....S
++0000d7c0: 7461 7465 6d65 6e74 0103 0000 0040 0421  tatement.....@.!
++0000d7d0: 0438 043c 0432 043e 043b 0020 0432 0430  .8.<.2.>.;. .2.0
++0000d7e0: 043b 044e 0442 044b 0020 043d 0435 0020  .;.N.B.K. .=.5. 
++0000d7f0: 043f 0440 0438 0432 044f 0437 0430 043d  .?.@.8.2.O.7.0.=
++0000d800: 0020 043a 0020 0426 0411 003a 0020 0800  . .:. .&...:. ..
++0000d810: 0000 0006 0000 0027 5379 6d62 6f6c 2063  .......'Symbol c
++0000d820: 7572 7265 6e63 7920 6973 6e27 7420 6c69  urrency isn't li
++0000d830: 6e6b 6564 2074 6f20 6173 7365 743a 2007  nked to asset: .
++0000d840: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
++0000d850: 0000 3204 2104 3804 3c04 3204 3e04 3b00  ..2.!.8.<.2.>.;.
++0000d860: 2004 3d04 3500 2004 3f04 4004 3804 3204   .=.5. .?.@.8.2.
++0000d870: 4f04 3704 3004 3d00 2004 3a00 2004 2604  O.7.0.=. .:. .&.
++0000d880: 1100 3a00 2008 0000 0000 0600 0000 2553  ..:. .........%S
++0000d890: 796d 626f 6c20 7469 636b 6572 2069 736e  ymbol ticker isn
++0000d8a0: 2774 206c 696e 6b65 6420 746f 2061 7373  't linked to ass
++0000d8b0: 6574 3a20 0700 0000 0953 7461 7465 6d65  et: .....Stateme
++0000d8c0: 6e74 0103 0000 0072 041d 0435 0432 043e  nt.....r...5.2.>
++0000d8d0: 0437 043c 043e 0436 043d 043e 0020 0441  .7.<.>.6.=.>. .A
++0000d8e0: 043e 043f 043e 0441 0442 0430 0432 0438  .>.?.>.A.B.0.2.8
++0000d8f0: 0442 044c 0020 0441 0447 0451 0442 0020  .B.L. .A.G.Q.B. 
++0000d900: 0434 043b 044f 0020 043a 043e 0440 043f  .4.;.O. .:.>.@.?
++0000d910: 043e 0440 0430 0442 0438 0432 043d 043e  .>.@.0.B.8.2.=.>
++0000d920: 0433 043e 0020 0434 0435 0439 0441 0442  .3.>. .4.5.9.A.B
++0000d930: 0432 0438 044f 003a 0020 0800 0000 0006  .2.8.O.:. ......
++0000d940: 0000 0028 556e 6d61 7463 6865 6420 6163  ...(Unmatched ac
++0000d950: 636f 756e 7420 666f 7220 636f 7270 6f72  count for corpor
++0000d960: 6174 6520 6163 7469 6f6e 3a20 0700 0000  ate action: ....
++0000d970: 0953 7461 7465 6d65 6e74 0103 0000 0074  .Statement.....t
++0000d980: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++0000d990: 043d 043e 0020 0441 043e 043f 043e 0441  .=.>. .A.>.?.>.A
++0000d9a0: 0442 0430 0432 0438 0442 044c 0020 0441  .B.0.2.8.B.L. .A
++0000d9b0: 0447 0451 0442 0020 0434 043b 044f 0020  .G.Q.B. .4.;.O. 
++0000d9c0: 043e 043f 0435 0440 0430 0446 0438 0438  .>.?.5.@.0.F.8.8
++0000d9d0: 0020 043f 0440 0438 0445 043e 0434 0430  . .?.@.8.E.>.4.0
++0000d9e0: 002f 0440 0430 0441 0445 043e 0434 0430  ./.@.0.A.E.>.4.0
++0000d9f0: 003a 0020 0800 0000 0006 0000 0027 556e  .:. .........'Un
++0000da00: 6d61 7463 6865 6420 6163 636f 756e 7420  matched account 
++0000da10: 666f 7220 696e 636f 6d65 2f73 7065 6e64  for income/spend
++0000da20: 696e 673a 2007 0000 0009 5374 6174 656d  ing: .....Statem
++0000da30: 656e 7401 0300 0000 5204 1d04 3504 3204  ent.....R...5.2.
++0000da40: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
++0000da50: 4104 3e04 3f04 3e04 4104 4204 3004 3204  A.>.?.>.A.B.0.2.
++0000da60: 3804 4204 4c00 2004 4104 4704 5104 4200  8.B.L. .A.G.Q.B.
++0000da70: 2004 3404 3b04 4f00 2004 3204 4b04 3f04   .4.;.O. .2.K.?.
++0000da80: 3b04 3004 4204 4b00 3a00 2008 0000 0000  ;.0.B.K.:. .....
++0000da90: 0600 0000 1f55 6e6d 6174 6368 6564 2061  .....Unmatched a
++0000daa0: 6363 6f75 6e74 2066 6f72 2070 6179 6d65  ccount for payme
++0000dab0: 6e74 3a20 0700 0000 0953 7461 7465 6d65  nt: .....Stateme
++0000dac0: 6e74 0103 0000 0050 041d 0435 0432 043e  nt.....P...5.2.>
++0000dad0: 0437 043c 043e 0436 043d 043e 0020 0441  .7.<.>.6.=.>. .A
++0000dae0: 043e 043f 043e 0441 0442 0430 0432 0438  .>.?.>.A.B.0.2.8
++0000daf0: 0442 044c 0020 0441 0447 0451 0442 0020  .B.L. .A.G.Q.B. 
++0000db00: 0434 043b 044f 0020 0441 0434 0435 043b  .4.;.O. .A.4.5.;
++0000db10: 043a 0438 003a 0020 0800 0000 0006 0000  .:.8.:. ........
++0000db20: 001d 556e 6d61 7463 6865 6420 6163 636f  ..Unmatched acco
++0000db30: 756e 7420 666f 7220 7472 6164 653a 2007  unt for trade: .
++0000db40: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
++0000db50: 0000 5404 1d04 3504 3204 3704 3e04 3c04  ..T...5.2.7.>.<.
++0000db60: 3e04 3604 3d04 3e00 2004 4104 3e04 3f04  >.6.=.>. .A.>.?.
++0000db70: 3e04 4104 4204 3004 3204 3804 4204 4c00  >.A.B.0.2.8.B.L.
++0000db80: 2004 4104 4704 5104 4200 2004 3404 3b04   .A.G.Q.B. .4.;.
++0000db90: 4f00 2004 3f04 3504 4004 3504 3204 3e04  O. .?.5.@.5.2.>.
++0000dba0: 3404 3000 3a00 2008 0000 0000 0600 0000  4.0.:. .........
++0000dbb0: 2055 6e6d 6174 6368 6564 2061 6363 6f75   Unmatched accou
++0000dbc0: 6e74 2066 6f72 2074 7261 6e73 6665 723a  nt for transfer:
++0000dbd0: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000dbe0: 0300 0000 6e04 1d04 3504 3204 3e04 3704  ....n...5.2.>.7.
++0000dbf0: 3c04 3e04 3604 3d04 3e00 2004 4104 3e04  <.>.6.=.>. .A.>.
++0000dc00: 3f04 3e04 4104 4204 3004 3204 3804 4204  ?.>.A.B.0.2.8.B.
++0000dc10: 4c00 2004 2604 1100 2004 3404 3b04 4f00  L. .&... .4.;.O.
++0000dc20: 2004 3a04 3e04 4004 3f04 3e04 4004 3004   .:.>.@.?.>.@.0.
++0000dc30: 4204 3804 3204 3d04 3e04 3304 3e00 2004  B.8.2.=.>.3.>. .
++0000dc40: 3404 3504 3904 4104 4204 3204 3804 4f00  4.5.9.A.B.2.8.O.
++0000dc50: 3a00 2008 0000 0000 0600 0000 2655 6e6d  :. .........&Unm
++0000dc60: 6174 6368 6564 2061 7373 6574 2066 6f72  atched asset for
++0000dc70: 2063 6f72 706f 7261 7465 2061 6374 696f   corporate actio
++0000dc80: 6e3a 2007 0000 0009 5374 6174 656d 656e  n: .....Statemen
++0000dc90: 7401 0300 0000 4e04 1d04 3504 3204 3e04  t.....N...5.2.>.
++0000dca0: 3704 3c04 3e04 3604 3d04 3e00 2004 4104  7.<.>.6.=.>. .A.
++0000dcb0: 3e04 3f04 3e04 4104 4204 3004 3204 3804  >.?.>.A.B.0.2.8.
++0000dcc0: 4204 4c00 2004 2604 1100 2004 3404 3b04  B.L. .&... .4.;.
++0000dcd0: 4f00 2004 3204 4b04 3f04 3b04 3004 4204  O. .2.K.?.;.0.B.
++0000dce0: 4b00 3a00 2008 0000 0000 0600 0000 1d55  K.:. ..........U
++0000dcf0: 6e6d 6174 6368 6564 2061 7373 6574 2066  nmatched asset f
++0000dd00: 6f72 2070 6179 6d65 6e74 3a20 0700 0000  or payment: ....
++0000dd10: 0953 7461 7465 6d65 6e74 0103 0000 004c  .Statement.....L
++0000dd20: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++0000dd30: 043d 043e 0020 0441 043e 043f 043e 0441  .=.>. .A.>.?.>.A
++0000dd40: 0442 0430 0432 0438 0442 044c 0020 0426  .B.0.2.8.B.L. .&
++0000dd50: 0411 0020 0434 043b 044f 0020 0441 0434  ... .4.;.O. .A.4
++0000dd60: 0435 043b 043a 0438 003a 0020 0800 0000  .5.;.:.8.:. ....
++0000dd70: 0006 0000 001b 556e 6d61 7463 6865 6420  ......Unmatched 
++0000dd80: 6173 7365 7420 666f 7220 7472 6164 653a  asset for trade:
++0000dd90: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000dda0: 0300 0000 5e04 1d04 3504 3204 3e04 3704  ....^...5.2.>.7.
++0000ddb0: 3c04 3e04 3604 3d04 3e00 2004 4104 3e04  <.>.6.=.>. .A.>.
++0000ddc0: 3f04 3e04 4104 4204 3004 3204 3804 4204  ?.>.A.B.0.2.8.B.
++0000ddd0: 4c00 2004 2604 1100 2f04 3204 3004 3b04  L. .&.../.2.0.;.
++0000dde0: 4e04 4204 4300 2004 3404 3b04 4f00 2004  N.B.C. .4.;.O. .
++0000ddf0: 3f04 3504 4004 3504 3204 3e04 3404 3000  ?.5.@.5.2.>.4.0.
++0000de00: 3a00 2008 0000 0000 0600 0000 1e55 6e6d  :. ..........Unm
++0000de10: 6174 6368 6564 2061 7373 6574 2066 6f72  atched asset for
++0000de20: 2074 7261 6e73 6665 723a 2007 0000 0009   transfer: .....
++0000de30: 5374 6174 656d 656e 7401 0300 0000 6c04  Statement.....l.
++0000de40: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
++0000de50: 3d04 3e00 2004 4104 3e04 3f04 3e04 4104  =.>. .A.>.?.>.A.
++0000de60: 4204 3004 3204 3804 4204 4c00 2004 3a04  B.0.2.8.B.L. .:.
++0000de70: 3004 4204 3504 3304 3e04 4004 3804 4e00  0.B.5.3.>.@.8.N.
++0000de80: 2004 3404 3b04 4f00 2004 3f04 4004 3804   .4.;.O. .?.@.8.
++0000de90: 4504 3e04 3404 3000 2f04 4004 3004 4104  E.>.4.0./.@.0.A.
++0000dea0: 4504 3e04 3404 3000 3a00 2008 0000 0000  E.>.4.0.:. .....
++0000deb0: 0600 0000 2855 6e6d 6174 6368 6564 2063  ....(Unmatched c
++0000dec0: 6174 6567 6f72 7920 666f 7220 696e 636f  ategory for inco
++0000ded0: 6d65 2f73 7065 6e64 696e 673a 2007 0000  me/spending: ...
++0000dee0: 0009 5374 6174 656d 656e 7401 0300 0000  ..Statement.....
++0000def0: 5004 1d04 3504 3204 3e04 3704 3c04 3e04  P...5.2.>.7.<.>.
++0000df00: 3d04 3e00 2004 4104 3e04 3f04 3e04 4104  =.>. .A.>.?.>.A.
++0000df10: 4204 3004 3204 3804 4204 4c00 2004 3204  B.0.2.8.B.L. .2.
++0000df20: 3004 3b04 4e04 4204 4300 2004 3404 3b04  0.;.N.B.C. .4.;.
++0000df30: 4f00 2004 4104 4704 5104 4204 3000 3a00  O. .A.G.Q.B.0.:.
++0000df40: 2008 0000 0000 0600 0000 2055 6e6d 6174   ......... Unmat
++0000df50: 6368 6564 2063 7572 7265 6e63 7920 666f  ched currency fo
++0000df60: 7220 6163 636f 756e 743a 2007 0000 0009  r account: .....
++0000df70: 5374 6174 656d 656e 7401 0300 0000 8204  Statement.......
++0000df80: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
++0000df90: 3d04 3e00 2004 4104 3e04 3f04 3e04 4104  =.>. .A.>.?.>.A.
++0000dfa0: 4204 3004 3204 3804 4204 4c00 2004 3a04  B.0.2.8.B.L. .:.
++0000dfb0: 3e04 3d04 4204 4004 3004 3304 3504 3d04  >.=.B.@.0.3.5.=.
++0000dfc0: 4204 3000 2004 3404 3b04 4f00 2004 3e04  B.0. .4.;.O. .>.
++0000dfd0: 3f04 3504 4004 3004 4604 3804 3800 2004  ?.5.@.0.F.8.8. .
++0000dfe0: 3f04 4004 3804 4504 3e04 3404 3000 2f04  ?.@.8.E.>.4.0./.
++0000dff0: 4004 3004 4104 4504 3e04 3404 3000 3a00  @.0.A.E.>.4.0.:.
++0000e000: 2008 0000 0000 0600 0000 2455 6e6d 6174   .........$Unmat
++0000e010: 6368 6564 2070 6565 7220 666f 7220 696e  ched peer for in
++0000e020: 636f 6d65 2f73 7065 6e64 696e 673a 2007  come/spending: .
++0000e030: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
++0000e040: 0000 5204 1d04 3504 3f04 3e04 3404 3404  ..R...5.?.>.4.4.
++0000e050: 3504 4004 3604 3804 3204 3004 3504 3c04  5.@.6.8.2.0.5.<.
++0000e060: 3e04 3500 2004 3a04 3e04 4004 3f04 3e04  >.5. .:.>.@.?.>.
++0000e070: 4004 3004 4204 3804 3204 3d04 3e04 3500  @.0.B.8.2.=.>.5.
++0000e080: 2004 3404 3504 3904 4104 4204 3204 3804   .4.5.9.A.B.2.8.
++0000e090: 3500 3a00 2008 0000 0000 0600 0000 1e55  5.:. ..........U
++0000e0a0: 6e73 7570 706f 7274 6564 2063 6f72 706f  nsupported corpo
++0000e0b0: 7261 7465 2061 6374 696f 6e3a 2007 0000  rate action: ...
++0000e0c0: 0009 5374 6174 656d 656e 7401 0300 0000  ..Statement.....
++0000e0d0: 3c04 1d04 3504 3f04 3e04 3404 3404 3504  <...5.?.>.4.4.5.
++0000e0e0: 4004 3604 3804 3204 3004 3504 3c04 4b04  @.6.8.2.0.5.<.K.
++0000e0f0: 3900 2004 4204 3804 3f00 2004 3204 4b04  9. .B.8.?. .2.K.
++0000e100: 3f04 3b04 3004 4204 4b00 3a00 2008 0000  ?.;.0.B.K.:. ...
++0000e110: 0000 0600 0000 1a55 6e73 7570 706f 7274  .......Unsupport
++0000e120: 6564 2070 6179 6d65 6e74 2074 7970 653a  ed payment type:
++0000e130: 2007 0000 0009 5374 6174 656d 656e 7401   .....Statement.
++0000e140: 0300 0000 1204 2104 3f04 3804 4104 3004  ......!.?.8.A.0.
++0000e150: 3d04 3804 3500 2008 0000 0000 0600 0000  =.8.5. .........
++0000e160: 0e57 6974 6864 7261 7761 6c20 6f66 2007  .Withdrawal of .
++0000e170: 0000 0009 5374 6174 656d 656e 7401 0300  ....Statement...
++0000e180: 0000 4400 2a00 2a00 2a00 2004 1d04 1504  ..D.*.*.*. .....
++0000e190: 1e04 1104 2504 1e04 1404 1804 1c04 1000  ....%...........
++0000e1a0: 2004 2004 2304 2704 1d04 1004 2f00 2004   . .#.'...../. .
++0000e1b0: 1f04 2004 1e04 1204 1504 2004 1a04 1000  .. ....... .....
++0000e1c0: 2000 2a00 2a00 2a08 0000 0000 0600 0000   .*.*.*.........
++0000e1d0: 1d2a 2a2a 204d 414e 5541 4c20 454e 5452  .*** MANUAL ENTR
++0000e1e0: 5920 5245 5155 4952 4544 202a 2a2a 0700  Y REQUIRED ***..
++0000e1f0: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
++0000e200: 0103 0000 0034 0422 0438 043f 0020 0426  .....4.".8.?. .&
++0000e210: 0411 0020 043d 0435 0020 043f 043e 0434  ... .=.5. .?.>.4
++0000e220: 0434 0435 0440 0436 0438 0432 0430 0435  .4.5.@.6.8.2.0.5
++0000e230: 0442 0441 044f 003a 0020 0800 0000 0006  .B.A.O.:. ......
++0000e240: 0000 001c 4173 7365 7420 7479 7065 2069  ....Asset type i
++0000e250: 736e 2774 2073 7570 706f 7274 6564 3a20  sn't supported: 
++0000e260: 0700 0000 0d53 7461 7465 6d65 6e74 4942  .....StatementIB
++0000e270: 4b52 0103 0000 0048 041d 0435 0432 043e  KR.....H...5.2.>
++0000e280: 0437 043c 043e 0436 043d 043e 0020 043d  .7.<.>.6.=.>. .=
++0000e290: 0430 0439 0442 0438 0020 043f 043b 0430  .0.9.B.8. .?.;.0
++0000e2a0: 0442 0451 0436 0020 0434 043b 044f 0020  .B.Q.6. .4.;.O. 
++0000e2b0: 043e 0442 043c 0435 043d 044b 003a 0020  .>.B.<.5.=.K.:. 
++0000e2c0: 0800 0000 0006 0000 001f 4361 6e27 7420  ..........Can't 
++0000e2d0: 6669 6e64 206d 6174 6368 2066 6f72 2072  find match for r
++0000e2e0: 6576 6572 7361 6c3a 2007 0000 000d 5374  eversal: .....St
++0000e2f0: 6174 656d 656e 7449 424b 5201 0300 0000  atementIBKR.....
++0000e300: 4604 1d04 3504 3204 3e04 3704 3c04 3e04  F...5.2.>.7.<.>.
++0000e310: 3604 3d04 3e00 2004 3d04 3004 3904 4204  6.=.>. .=.0.9.B.
++0000e320: 3800 2004 3f04 3004 4004 3d04 4304 4e00  8. .?.0.@.=.C.N.
++0000e330: 2004 3704 3004 3f04 3804 4104 4c00 2004   .7.0.?.8.A.L. .
++0000e340: 3404 3b04 4f00 2008 0000 0000 0600 0000  4.;.O. .........
++0000e350: 1d43 616e 2774 2066 696e 6420 7061 6972  .Can't find pair
++0000e360: 6564 2072 6563 6f72 6420 666f 7220 0700  ed record for ..
++0000e370: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
++0000e380: 0103 0000 004e 041d 0435 0432 043e 043c  .....N...5.2.>.<
++0000e390: 043e 0436 043d 043e 0020 043e 043f 0440  .>.6.=.>. .>.?.@
++0000e3a0: 0435 0434 0435 043b 0438 0442 044c 0020  .5.4.5.;.8.B.L. 
++0000e3b0: 0432 0430 043b 044e 0442 0443 0020 0434  .2.0.;.N.B.C. .4
++0000e3c0: 043b 044f 0020 0441 0447 0451 0442 0430  .;.O. .A.G.Q.B.0
++0000e3d0: 003a 0020 0800 0000 0006 0000 0028 4361  .:. .........(Ca
++0000e3e0: 6e27 7420 6765 7420 6163 636f 756e 7420  n't get account 
++0000e3f0: 6375 7272 656e 6379 2066 6f72 2061 6363  currency for acc
++0000e400: 6f75 6e74 3a20 0700 0000 0d53 7461 7465  ount: .....State
++0000e410: 6d65 6e74 4942 4b52 0103 0000 0070 041d  mentIBKR.....p..
++0000e420: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++0000e430: 043e 0020 043e 043f 0440 0435 0434 0435  .>. .>.?.@.5.4.5
++0000e440: 043b 0438 0442 044c 0020 0432 0430 043b  .;.8.B.L. .2.0.;
++0000e450: 044e 0442 044b 0020 0434 043b 044f 0020  .N.B.K. .4.;.O. 
++0000e460: 043e 043f 0435 0440 0430 0446 0438 0438  .>.?.5.@.0.F.8.8
++0000e470: 0020 043e 0431 043c 0435 043d 0430 0020  . .>.1.<.5.=.0. 
++0000e480: 0432 0430 043b 044e 0442 003a 0020 0800  .2.0.;.N.B.:. ..
++0000e490: 0000 0006 0000 002c 4361 6e27 7420 6765  .......,Can't ge
++0000e4a0: 7420 6375 7272 656e 6369 6573 2066 6f72  t currencies for
++0000e4b0: 2063 7572 7265 6e63 7920 6578 6368 616e   currency exchan
++0000e4c0: 6765 3a20 0700 0000 0d53 7461 7465 6d65  ge: .....Stateme
++0000e4d0: 6e74 4942 4b52 0103 0000 0068 041d 0435  ntIBKR.....h...5
++0000e4e0: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
++0000e4f0: 0020 0440 0430 0441 043f 043e 0437 043d  . .@.0.A.?.>.7.=
++0000e500: 0430 0442 044c 0020 043e 043f 0438 0441  .0.B.L. .>.?.8.A
++0000e510: 0430 043d 0438 0435 0020 041e 0431 044a  .0.=.8.5. ...1.J
++0000e520: 0435 0434 0438 043d 0435 043d 0438 044f  .5.4.8.=.5.=.8.O
++0000e530: 0020 043a 043e 043c 043f 0430 043d 0438  . .:.>.<.?.0.=.8
++0000e540: 0439 0020 0800 0000 0006 0000 001f 4361  .9. ..........Ca
++0000e550: 6e27 7420 7061 7273 6520 4d65 7267 6572  n't parse Merger
++0000e560: 2064 6573 6372 6970 7469 6f6e 2007 0000   description ...
++0000e570: 000d 5374 6174 656d 656e 7449 424b 5201  ..StatementIBKR.
++0000e580: 0300 0000 6404 1d04 3504 3204 3e04 3704  ....d...5.2.>.7.
++0000e590: 3c04 3e04 3604 3d04 3e00 2004 4004 3004  <.>.6.=.>. .@.0.
++0000e5a0: 4104 3f04 3e04 3704 3d04 3004 4204 4c00  A.?.>.7.=.0.B.L.
++0000e5b0: 2004 3e04 3f04 3804 4104 3004 3d04 3804   .>.?.8.A.0.=.8.
++0000e5c0: 3500 2004 1204 4b04 3404 3504 3b04 3504  5. ...K.4.5.;.5.
++0000e5d0: 3d04 3804 4f00 2004 3a04 3e04 3c04 3f04  =.8.O. .:.>.<.?.
++0000e5e0: 3004 3d04 3804 3800 2008 0000 0000 0600  0.=.8.8. .......
++0000e5f0: 0000 2143 616e 2774 2070 6172 7365 2053  ..!Can't parse S
++0000e600: 7069 6e2d 6f66 6620 6465 7363 7269 7074  pin-off descript
++0000e610: 696f 6e20 0700 0000 0d53 7461 7465 6d65  ion .....Stateme
++0000e620: 6e74 4942 4b52 0103 0000 004c 041d 0435  ntIBKR.....L...5
++0000e630: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
++0000e640: 0020 0440 0430 0441 043f 043e 0437 043d  . .@.0.A.?.>.7.=
++0000e650: 0430 0442 044c 0020 043e 043f 0438 0441  .0.B.L. .>.?.8.A
++0000e660: 0430 043d 0438 0435 0020 0421 043f 043b  .0.=.8.5. .!.?.;
++0000e670: 0438 0442 0430 0020 0800 0000 0006 0000  .8.B.0. ........
++0000e680: 001e 4361 6e27 7420 7061 7273 6520 5370  ..Can't parse Sp
++0000e690: 6c69 7420 6465 7363 7269 7074 696f 6e20  lit description 
++0000e6a0: 0700 0000 0d53 7461 7465 6d65 6e74 4942  .....StatementIB
++0000e6b0: 4b52 0103 0000 0062 041d 0435 0432 043e  KR.....b...5.2.>
++0000e6c0: 0437 043c 043e 0436 043d 043e 0020 0440  .7.<.>.6.=.>. .@
++0000e6d0: 0430 0441 043f 043e 0437 043d 0430 0442  .0.A.?.>.7.=.0.B
++0000e6e0: 044c 0020 043e 043f 0438 0441 0430 043d  .L. .>.?.8.A.0.=
++0000e6f0: 0438 0435 0020 0414 0438 0432 0438 0434  .8.5. ...8.2.8.4
++0000e700: 0435 043d 0434 0430 0020 0430 043a 0446  .5.=.4.0. .0.:.F
++0000e710: 0438 044f 043c 0438 0020 0800 0000 0006  .8.O.<.8. ......
++0000e720: 0000 0027 4361 6e27 7420 7061 7273 6520  ...'Can't parse 
++0000e730: 5374 6f63 6b20 4469 7669 6465 6e64 2064  Stock Dividend d
++0000e740: 6573 6372 6970 7469 6f6e 2007 0000 000d  escription .....
++0000e750: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
++0000e760: 0000 5a04 1d04 3504 3204 3e04 3704 3c04  ..Z...5.2.>.7.<.
++0000e770: 3e04 3604 3d04 3e00 2004 4004 3004 4104  >.6.=.>. .@.0.A.
++0000e780: 3f04 3e04 3704 3d04 3004 4204 4c00 2004  ?.>.7.=.0.B.L. .
++0000e790: 3e04 3f04 3804 4104 3004 3d04 3804 3500  >.?.8.A.0.=.8.5.
++0000e7a0: 2004 2104 3c04 3504 3d04 4b00 2004 4104   .!.<.5.=.K. .A.
++0000e7b0: 3804 3c04 3204 3e04 3b04 3000 2008 0000  8.<.2.>.;.0. ...
++0000e7c0: 0000 0600 0000 2643 616e 2774 2070 6172  ......&Can't par
++0000e7d0: 7365 2053 796d 626f 6c20 4368 616e 6765  se Symbol Change
++0000e7e0: 2064 6573 6372 6970 7469 6f6e 2007 0000   description ...
++0000e7f0: 000d 5374 6174 656d 656e 7449 424b 5201  ..StatementIBKR.
++0000e800: 0300 0000 6e04 1d04 3504 3204 3e04 3704  ....n...5.2.>.7.
++0000e810: 3c04 3e04 3604 3d04 3e00 2004 3e04 3104  <.>.6.=.>. .>.1.
++0000e820: 4004 3004 3104 3e04 4204 3004 4204 4c00  @.0.1.>.B.0.B.L.
++0000e830: 2004 3e04 4204 3c04 3504 3d04 5104 3d04   .>.B.<.5.=.Q.=.
++0000e840: 3d04 3e04 3500 2004 3a04 3e04 4004 3f04  =.>.5. .:.>.@.?.
++0000e850: 3e04 4004 3004 4204 3804 3204 3d04 3e04  >.@.0.B.8.2.=.>.
++0000e860: 3500 2004 3404 3504 3904 4104 4204 3204  5. .4.5.9.A.B.2.
++0000e870: 3804 3508 0000 0000 0600 0000 2843 616e  8.5.........(Can
++0000e880: 2774 2070 726f 6365 7373 2063 616e 6365  't process cance
++0000e890: 6c6c 6564 2063 6f72 706f 7261 7465 2061  lled corporate a
++0000e8a0: 6374 696f 6e07 0000 000d 5374 6174 656d  ction.....Statem
++0000e8b0: 656e 7449 424b 5201 0300 0000 3e04 1404  entIBKR.....>...
++0000e8c0: 3504 3d04 3504 3604 3d04 4b04 3500 2004  5.=.5.6.=.K.5. .
++0000e8d0: 4204 4004 3004 3d04 3704 3004 3a04 4604  B.@.0.=.7.0.:.F.
++0000e8e0: 3804 3800 2004 3704 3004 3304 4004 4304  8.8. .7.0.3.@.C.
++0000e8f0: 3604 3504 3d04 4b00 3a00 2008 0000 0000  6.5.=.K.:. .....
++0000e900: 0600 0000 1a43 6173 6820 7472 616e 7361  .....Cash transa
++0000e910: 6374 696f 6e73 206c 6f61 6465 643a 2007  ctions loaded: .
++0000e920: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
++0000e930: 5201 0300 0000 6a04 1a04 3e04 4004 3f04  R.....j...>.@.?.
++0000e940: 3e04 4004 3004 4204 3804 3204 3d04 3e04  >.@.0.B.8.2.=.>.
++0000e950: 3500 2004 4104 3e04 3104 4b04 4204 3804  5. .A.>.1.K.B.8.
++0000e960: 3500 2004 3d04 3500 2004 3f04 3e04 3404  5. .=.5. .?.>.4.
++0000e970: 3404 3504 4004 3604 3804 3204 3004 3504  4.5.@.6.8.2.0.5.
++0000e980: 4204 4104 4f00 2004 3404 3b04 4f00 2004  B.A.O. .4.;.O. .
++0000e990: 4204 3804 3f04 3000 2004 2604 1100 3a00  B.8.?.0. .&...:.
++0000e9a0: 2008 0000 0000 0600 0000 3143 6f72 706f   .........1Corpo
++0000e9b0: 7261 7465 2061 6374 696f 6e20 6973 6e27  rate action isn'
++0000e9c0: 7420 7375 7070 6f72 7465 6420 666f 7220  t supported for 
++0000e9d0: 6173 7365 7420 7479 7065 3a20 0700 0000  asset type: ....
++0000e9e0: 0d53 7461 7465 6d65 6e74 4942 4b52 0103  .StatementIBKR..
++0000e9f0: 0000 005e 0422 0438 043f 0020 043a 043e  ...^.".8.?. .:.>
++0000ea00: 0440 043f 043e 0440 0430 0442 0438 0432  .@.?.>.@.0.B.8.2
++0000ea10: 043d 043e 0433 043e 0020 0434 0435 0439  .=.>.3.>. .4.5.9
++0000ea20: 0441 0442 0432 0438 044f 0020 043d 0435  .A.B.2.8.O. .=.5
++0000ea30: 0020 043f 043e 0434 0434 0435 0440 0436  . .?.>.4.4.5.@.6
++0000ea40: 0438 0432 0430 0435 0442 0441 044f 003a  .8.2.0.5.B.A.O.:
++0000ea50: 0020 0800 0000 0006 0000 0028 436f 7270  . .........(Corp
++0000ea60: 6f72 6174 6520 6163 7469 6f6e 2074 7970  orate action typ
++0000ea70: 6520 6973 206e 6f74 2073 7570 706f 7274  e is not support
++0000ea80: 6564 3a20 0700 0000 0d53 7461 7465 6d65  ed: .....Stateme
++0000ea90: 6e74 4942 4b52 0103 0000 0044 041a 043e  ntIBKR.....D...>
++0000eaa0: 0440 043f 043e 0440 0430 0442 0438 0432  .@.?.>.@.0.B.8.2
++0000eab0: 043d 044b 0435 0020 0434 0435 0439 0441  .=.K.5. .4.5.9.A
++0000eac0: 0442 0432 0438 044f 0020 0437 0430 0433  .B.2.8.O. .7.0.3
++0000ead0: 0440 0443 0436 0435 043d 044b 003a 0020  .@.C.6.5.=.K.:. 
++0000eae0: 0800 0000 0006 0000 001a 436f 7270 6f72  ..........Corpor
++0000eaf0: 6174 6520 6163 7469 6f6e 7320 6c6f 6164  ate actions load
++0000eb00: 6564 3a20 0700 0000 0d53 7461 7465 6d65  ed: .....Stateme
++0000eb10: 6e74 4942 4b52 0103 0000 0056 0414 0438  ntIBKR.....V...8
++0000eb20: 0432 0438 0434 0435 043d 0434 0020 043d  .2.8.4.5.=.4. .=
++0000eb30: 0435 0020 043d 0430 0439 0434 0435 043d  .5. .=.0.9.4.5.=
++0000eb40: 0020 0434 043b 044f 0020 0443 0434 0435  . .4.;.O. .C.4.5
++0000eb50: 0440 0436 0430 043d 043d 043e 0433 043e  .@.6.0.=.=.>.3.>
++0000eb60: 0020 043d 0430 043b 043e 0433 0430 003a  . .=.0.;.>.3.0.:
++0000eb70: 0020 0800 0000 0006 0000 0028 4469 7669  . .........(Divi
++0000eb80: 6465 6e64 206e 6f74 2066 6f75 6e64 2066  dend not found f
++0000eb90: 6f72 2077 6974 6868 6f6c 6469 6e67 2074  or withholding t
++0000eba0: 6178 3a20 0700 0000 0d53 7461 7465 6d65  ax: .....Stateme
++0000ebb0: 6e74 4942 4b52 0103 0000 002e 0049 0042  ntIBKR.......I.B
++0000ebc0: 004b 0052 0020 0066 006c 0065 0078 002d  .K.R. .f.l.e.x.-
++0000ebd0: 043e 0442 0447 0451 0442 0020 0028 002a  .>.B.G.Q.B. .(.*
++0000ebe0: 002e 0078 006d 006c 0029 0800 0000 0006  ...x.m.l.)......
++0000ebf0: 0000 0017 4942 4b52 2066 6c65 782d 7175  ....IBKR flex-qu
++0000ec00: 6572 7920 282a 2e78 6d6c 2907 0000 000d  ery (*.xml).....
++0000ec10: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
++0000ec20: 0000 2600 4900 6e00 7400 6500 7200 6100  ..&.I.n.t.e.r.a.
++0000ec30: 6300 7400 6900 7600 6500 2000 4200 7200  c.t.i.v.e. .B.r.
++0000ec40: 6f00 6b00 6500 7200 7308 0000 0000 0600  o.k.e.r.s.......
++0000ec50: 0000 1349 6e74 6572 6163 7469 7665 2042  ...Interactive B
++0000ec60: 726f 6b65 7273 0700 0000 0d53 7461 7465  rokers.....State
++0000ec70: 6d65 6e74 4942 4b52 0103 0000 0056 0422  mentIBKR.....V."
++0000ec80: 0438 043f 0020 043e 0442 0447 0451 0442  .8.?. .>.B.G.Q.B
++0000ec90: 0430 0020 0049 006e 0074 0065 0072 0061  .0. .I.n.t.e.r.a
++0000eca0: 0063 0074 0069 0076 0065 0020 0042 0072  .c.t.i.v.e. .B.r
++0000ecb0: 006f 006b 0065 0072 0073 0020 043d 0435  .o.k.e.r.s. .=.5
++0000ecc0: 0020 043e 043f 0440 0435 0434 0435 043b  . .>.?.@.5.4.5.;
++0000ecd0: 0451 043d 0800 0000 0006 0000 0029 496e  .Q.=.........)In
++0000ece0: 7465 7261 6374 6976 6520 4272 6f6b 6572  teractive Broker
++0000ecf0: 7320 7265 706f 7274 2074 7970 6520 6e6f  s report type no
++0000ed00: 7420 666f 756e 6407 0000 000d 5374 6174  t found.....Stat
++0000ed10: 656d 656e 7449 424b 5201 0300 0000 3a04  ementIBKR.....:.
++0000ed20: 1704 3004 3304 4004 4304 3704 3a04 3000  ..0.3.@.C.7.:.0.
++0000ed30: 2004 3e04 4204 4704 5104 4204 3000 2000   .>.B.G.Q.B.0. .
++0000ed40: 4900 4200 2004 3404 3b04 4f00 2004 4104  I.B. .4.;.O. .A.
++0000ed50: 4704 5104 4204 3000 2008 0000 0000 0600  G.Q.B.0. .......
++0000ed60: 0000 234c 6f61 6420 4942 2046 6c65 782d  ..#Load IB Flex-
++0000ed70: 7374 6174 656d 656e 7420 666f 7220 6163  statement for ac
++0000ed80: 636f 756e 7420 0700 0000 0d53 7461 7465  count .....State
++0000ed90: 6d65 6e74 4942 4b52 0103 0000 0058 041d  mentIBKR.....X..
++0000eda0: 0435 0434 043e 0441 0442 0430 0442 043e  .5.4.>.A.B.0.B.>
++0000edb0: 0447 043d 043e 0020 0434 0430 043d 043d  .G.=.>. .4.0.=.=
++0000edc0: 044b 0445 0020 043e 0431 0020 041e 0431  .K.E. .>.1. ...1
++0000edd0: 044a 0435 0434 0438 043d 0435 043d 0438  .J.5.4.8.=.5.=.8
++0000ede0: 0438 0020 043a 043e 043c 043f 0430 043d  .8. .:.>.<.?.0.=
++0000edf0: 0438 0439 0020 0800 0000 0006 0000 0022  .8.9. ........."
++0000ee00: 4d65 7267 6572 2064 6573 6372 6970 7469  Merger descripti
++0000ee10: 6f6e 206d 6973 7320 736f 6d65 2064 6174  on miss some dat
++0000ee20: 6120 0700 0000 0d53 7461 7465 6d65 6e74  a .....Statement
++0000ee30: 4942 4b52 0103 0000 005e 041d 0435 043e  IBKR.....^...5.>
++0000ee40: 0434 043d 043e 0437 043d 0430 0447 043d  .4.=.>.7.=.0.G.=
++0000ee50: 043e 0435 0020 0441 043e 0432 043f 0430  .>.5. .A.>.2.?.0
++0000ee60: 0434 0435 043d 0438 0435 0020 0441 043e  .4.5.=.8.5. .A.>
++0000ee70: 0431 044b 0442 0438 0439 0020 0440 0435  .1.K.B.8.9. .@.5
++0000ee80: 043e 0440 0433 0430 043d 0438 0437 0430  .>.@.3.0.=.8.7.0
++0000ee90: 0446 0438 0438 0020 0800 0000 0006 0000  .F.8.8. ........
++0000eea0: 0029 4d75 6c74 6970 6c65 206d 6572 6765  .)Multiple merge
++0000eeb0: 7220 7265 636f 7264 7320 616c 7265 6164  r records alread
++0000eec0: 7920 6578 6973 7420 6174 2007 0000 000d  y exist at .....
++0000eed0: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
++0000eee0: 0000 5204 1404 3504 3904 4104 4204 3204  ..R...5.9.A.B.2.
++0000eef0: 3804 3500 2004 3d04 3500 2004 3f04 3e04  8.5. .=.5. .?.>.
++0000ef00: 3404 3404 3504 4004 3604 3804 3204 3004  4.4.5.@.6.8.2.0.
++0000ef10: 3504 4204 4104 4f00 2004 3404 3b04 4f00  5.B.A.O. .4.;.O.
++0000ef20: 2004 3e04 3f04 4604 3804 3e04 3d04 3e04   .>.?.F.8.>.=.>.
++0000ef30: 3200 3a00 2008 0000 0000 0600 0000 274f  2.:. .........'O
++0000ef40: 7074 696f 6e20 4526 4126 4520 6163 7469  ption E&A&E acti
++0000ef50: 6f6e 2069 736e 2774 2069 6d70 6c65 6d65  on isn't impleme
++0000ef60: 6e74 6564 3a20 0700 0000 0d53 7461 7465  nted: .....State
++0000ef70: 6d65 6e74 4942 4b52 0103 0000 003a 0418  mentIBKR.....:..
++0000ef80: 0441 043f 043e 043b 043d 0435 043d 0438  .A.?.>.;.=.5.=.8
++0000ef90: 0435 0020 043f 0440 043e 0434 0430 043d  .5. .?.@.>.4.0.=
++0000efa0: 043d 043e 0433 043e 0020 043e 043f 0446  .=.>.3.>. .>.?.F
++0000efb0: 0438 043e 043d 0430 0800 0000 0006 0000  .8.>.=.0........
++0000efc0: 0011 4f70 7469 6f6e 2061 7373 6967 6e6d  ..Option assignm
++0000efd0: 656e 7407 0000 000d 5374 6174 656d 656e  ent.....Statemen
++0000efe0: 7449 424b 5201 0300 0000 3a04 1804 4104  tIBKR.....:...A.
++0000eff0: 3f04 3e04 3b04 3d04 3504 3d04 3804 3500  ?.>.;.=.5.=.8.5.
++0000f000: 2f04 4d04 3a04 4104 3f04 3804 4004 3004  /.M.:.A.?.8.@.0.
++0000f010: 4604 3804 4f00 2004 3e04 3f04 4604 3804  F.8.O. .>.?.F.8.
++0000f020: 3e04 3d04 3008 0000 0000 0600 0000 1a4f  >.=.0..........O
++0000f030: 7074 696f 6e20 6173 7369 676e 6d65 6e74  ption assignment
++0000f040: 2f65 7865 7263 6973 6507 0000 000d 5374  /exercise.....St
++0000f050: 6174 656d 656e 7449 424b 5201 0300 0000  atementIBKR.....
++0000f060: 3a04 1804 4104 3f04 3e04 3b04 3d04 3504  :...A.?.>.;.=.5.
++0000f070: 3d04 3804 3500 2004 3a04 4304 3f04 3b04  =.8.5. .:.C.?.;.
++0000f080: 3504 3d04 3d04 3e04 3304 3e00 2004 3e04  5.=.=.>.3.>. .>.
++0000f090: 3f04 4604 3804 3e04 3d04 3008 0000 0000  ?.F.8.>.=.0.....
++0000f0a0: 0600 0000 0f4f 7074 696f 6e20 6578 6572  .....Option exer
++0000f0b0: 6369 7365 0700 0000 0d53 7461 7465 6d65  cise.....Stateme
++0000f0c0: 6e74 4942 4b52 0103 0000 0024 042d 043a  ntIBKR.....$.-.:
+ 0000f0d0: 0441 043f 0438 0440 0430 0446 0438 044f  .A.?.8.@.0.F.8.O
+ 0000f0e0: 0020 043e 043f 0446 0438 043e 043d 0430  . .>.?.F.8.>.=.0
+-0000f0f0: 0800 0000 0006 0000 001a 4f70 7469 6f6e  ..........Option
+-0000f100: 2061 7373 6967 6e6d 656e 742f 6578 6572   assignment/exer
+-0000f110: 6369 7365 0700 0000 0d53 7461 7465 6d65  cise.....Stateme
+-0000f120: 6e74 4942 4b52 0103 0000 003a 0418 0441  ntIBKR.....:...A
+-0000f130: 043f 043e 043b 043d 0435 043d 0438 0435  .?.>.;.=.5.=.8.5
+-0000f140: 0020 043a 0443 043f 043b 0435 043d 043d  . .:.C.?.;.5.=.=
+-0000f150: 043e 0433 043e 0020 043e 043f 0446 0438  .>.3.>. .>.?.F.8
+-0000f160: 043e 043d 0430 0800 0000 0006 0000 000f  .>.=.0..........
+-0000f170: 4f70 7469 6f6e 2065 7865 7263 6973 6507  Option exercise.
+-0000f180: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000f190: 5201 0300 0000 2404 2d04 3a04 4104 3f04  R.....$.-.:.A.?.
+-0000f1a0: 3804 4004 3004 4604 3804 4f00 2004 3e04  8.@.0.F.8.O. .>.
+-0000f1b0: 3f04 4604 3804 3e04 3d04 3008 0000 0000  ?.F.8.>.=.0.....
+-0000f1c0: 0600 0000 114f 7074 696f 6e20 6578 7069  .....Option expi
+-0000f1d0: 7261 7469 6f6e 0700 0000 0d53 7461 7465  ration.....State
+-0000f1e0: 6d65 6e74 4942 4b52 0103 0000 0040 0414  mentIBKR.....@..
+-0000f1f0: 0435 0439 0441 0442 0432 0438 044f 0020  .5.9.A.B.2.8.O. 
+-0000f200: 0441 0020 043e 043f 0446 0438 043e 043d  .A. .>.?.F.8.>.=
+-0000f210: 0430 043c 0438 0020 0437 0430 0433 0440  .0.<.8. .7.0.3.@
+-0000f220: 0443 0436 0435 043d 044b 003a 0020 0800  .C.6.5.=.K.:. ..
+-0000f230: 0000 0006 0000 0016 4f70 7469 6f6e 7320  ........Options 
+-0000f240: 4526 4126 4520 6c6f 6164 6564 3a20 0700  E&A&E loaded: ..
+-0000f250: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
+-0000f260: 0103 0000 006a 041d 0435 0020 043d 0430  .....j...5. .=.0
+-0000f270: 0439 0434 0435 043d 0430 0020 0441 0434  .9.4.5.=.0. .A.4
+-0000f280: 0435 043b 043a 0430 0020 0434 043b 044f  .5.;.:.0. .4.;.O
+-0000f290: 0020 0438 0441 043f 043e 043b 043d 0435  . .8.A.?.>.;.=.5
+-0000f2a0: 043d 0438 044f 002f 044d 043a 0441 043f  .=.8.O./.M.:.A.?
+-0000f2b0: 0438 0440 0430 0446 0438 0438 0020 043e  .8.@.0.F.8.8. .>
+-0000f2c0: 043f 0446 0438 043e 043d 0430 003a 0020  .?.F.8.>.=.0.:. 
+-0000f2d0: 0800 0000 0006 0000 0035 4f72 6967 696e  .........5Origin
+-0000f2e0: 616c 2074 7261 6465 206e 6f74 2066 6f75  al trade not fou
+-0000f2f0: 6e64 2066 6f72 204f 7074 696f 6e20 4526  nd for Option E&
+-0000f300: 4126 4520 6f70 6572 6174 696f 6e3a 2007  A&E operation: .
+-0000f310: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000f320: 5201 0300 0000 6c04 1f04 3b04 3004 4204  R.....l...;.0.B.
+-0000f330: 5104 3600 2004 3104 4b04 3b00 2004 3e04  Q.6. .1.K.;. .>.
+-0000f340: 4204 3c04 3504 3d04 5104 3d00 2004 3f04  B.<.5.=.Q.=. .?.
+-0000f350: 3e00 2004 3f04 4004 3804 3c04 3504 4004  >. .?.@.8.<.5.@.
+-0000f360: 3d04 3e04 3c04 4300 2004 4104 3e04 3204  =.>.<.C. .A.>.2.
+-0000f370: 3f04 3004 3404 3504 3d04 3804 4e00 2004  ?.0.4.5.=.8.N. .
+-0000f380: 3e04 3f04 3804 4104 3004 3d04 3804 4f00  >.?.8.A.0.=.8.O.
+-0000f390: 3a00 2008 0000 0000 0600 0000 3150 6179  :. .........1Pay
+-0000f3a0: 6d65 6e74 2077 6173 2072 6576 6572 7365  ment was reverse
+-0000f3b0: 6420 6279 2061 7070 726f 7869 6d61 7465  d by approximate
+-0000f3c0: 2064 6573 6372 6970 7469 6f6e 3a20 0700   description: ..
+-0000f3d0: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
+-0000f3e0: 0103 0000 0028 041f 043b 0430 0442 0451  .....(...;.0.B.Q
+-0000f3f0: 0436 0020 0431 044b 043b 0020 043e 0442  .6. .1.K.;. .>.B
+-0000f400: 043c 0435 043d 0451 043d 003a 0020 0800  .<.5.=.Q.=.:. ..
+-0000f410: 0000 0006 0000 0016 5061 796d 656e 7420  ........Payment 
+-0000f420: 7761 7320 7265 7665 7273 6564 3a20 0700  was reversed: ..
+-0000f430: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
+-0000f440: 0103 0000 001c 0426 0411 0020 0437 0430  .......&... .7.0
+-0000f450: 0433 0440 0443 0436 0435 043d 044b 003a  .3.@.C.6.5.=.K.:
+-0000f460: 0020 0800 0000 0006 0000 0013 5365 6375  . ..........Secu
+-0000f470: 7269 7469 6573 206c 6f61 6465 643a 2007  rities loaded: .
+-0000f480: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000f490: 5201 0300 0000 5604 1d04 3504 3404 3e04  R.....V...5.4.>.
+-0000f4a0: 4104 4204 3004 4204 3e04 4704 3d04 3e00  A.B.0.B.>.G.=.>.
+-0000f4b0: 2004 3404 3004 3d04 3d04 4b04 4500 2004   .4.0.=.=.K.E. .
+-0000f4c0: 3404 3b04 4f00 2004 1204 4b04 3404 3504  4.;.O. ...K.4.5.
+-0000f4d0: 3b04 3504 3d04 3804 4f00 2004 3a04 3e04  ;.5.=.8.O. .:.>.
+-0000f4e0: 3c04 3f04 3004 3d04 3804 3800 2008 0000  <.?.0.=.8.8. ...
+-0000f4f0: 0000 0600 0000 2453 7069 6e2d 6f66 6620  ......$Spin-off 
+-0000f500: 6465 7363 7269 7074 696f 6e20 6d69 7373  description miss
+-0000f510: 2073 6f6d 6520 6461 7461 2007 0000 000d   some data .....
+-0000f520: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
+-0000f530: 0000 5c04 1804 4104 4504 3e04 3404 3d04  ..\...A.E.>.4.=.
+-0000f540: 3004 4f00 2004 2604 1100 2004 3404 3b04  0.O. .&... .4.;.
+-0000f550: 4f00 2004 3204 4b04 3404 3504 3b04 3504  O. .2.K.4.5.;.5.
+-0000f560: 3d04 3804 4f00 2004 3a04 3e04 3c04 3f04  =.8.O. .:.>.<.?.
+-0000f570: 3004 3d04 3804 3800 2004 3d04 3500 2004  0.=.8.8. .=.5. .
+-0000f580: 3d04 3004 3904 3404 3504 3d04 3000 2008  =.0.9.4.5.=.0. .
+-0000f590: 0000 0000 0600 0000 2153 7069 6e2d 6f66  ........!Spin-of
+-0000f5a0: 6620 696e 6974 6961 6c20 6173 7365 7420  f initial asset 
+-0000f5b0: 6e6f 7420 666f 756e 6420 0700 0000 0d53  not found .....S
+-0000f5c0: 7461 7465 6d65 6e74 4942 4b52 0103 0000  tatementIBKR....
+-0000f5d0: 0056 041e 0448 0438 0431 043a 0430 0020  .V...H.8.1.:.0. 
+-0000f5e0: 043e 043a 0440 0443 0433 043b 0435 043d  .>.:.@.C.3.;.5.=
+-0000f5f0: 0438 044f 0020 0053 0070 0069 006e 002d  .8.O. .S.p.i.n.-
+-0000f600: 006f 0066 0066 0020 0441 043b 0438 0448  .o.f.f. .A.;.8.H
+-0000f610: 043a 043e 043c 0020 0431 043e 043b 044c  .:.>.<. .1.>.;.L
+-0000f620: 0448 0430 044f 0020 0800 0000 0006 0000  .H.0.O. ........
+-0000f630: 0023 5370 696e 2d6f 6666 2072 6f75 6e64  .#Spin-off round
+-0000f640: 696e 6720 6572 726f 7220 6973 2074 6f6f  ing error is too
+-0000f650: 2062 6967 2007 0000 000d 5374 6174 656d   big .....Statem
+-0000f660: 656e 7449 424b 5201 0300 0000 3e04 1d04  entIBKR.....>...
+-0000f670: 3504 3404 3e04 4104 4204 3004 4204 3e04  5.4.>.A.B.0.B.>.
+-0000f680: 4704 3d04 3e00 2004 3404 3004 3d04 3d04  G.=.>. .4.0.=.=.
+-0000f690: 4b04 4500 2004 3404 3b04 4f00 2004 2104  K.E. .4.;.O. .!.
+-0000f6a0: 3f04 3b04 3804 4204 3000 2008 0000 0000  ?.;.8.B.0. .....
+-0000f6b0: 0600 0000 2153 706c 6974 2064 6573 6372  ....!Split descr
+-0000f6c0: 6970 7469 6f6e 206d 6973 7320 736f 6d65  iption miss some
+-0000f6d0: 2064 6174 6120 0700 0000 0d53 7461 7465   data .....State
+-0000f6e0: 6d65 6e74 4942 4b52 0103 0000 0038 0417  mentIBKR.....8..
+-0000f6f0: 0430 0447 0438 0441 043b 0435 043d 0438  .0.G.8.A.;.5.=.8
+-0000f700: 0435 0020 0430 043a 0446 0438 0439 0020  .5. .0.:.F.8.9. 
+-0000f710: 0437 0430 0433 0440 0443 0436 0435 043d  .7.0.3.@.C.6.5.=
+-0000f720: 043e 003a 0020 0800 0000 0006 0000 0017  .>.:. ..........
+-0000f730: 5374 6f63 6b20 7665 7374 696e 6773 206c  Stock vestings l
+-0000f740: 6f61 6465 643a 2007 0000 000d 5374 6174  oaded: .....Stat
+-0000f750: 656d 656e 7449 424b 5201 0300 0000 4804  ementIBKR.....H.
+-0000f760: 1a04 3e04 4004 4004 3504 3a04 4204 3804  ..>.@.@.5.:.B.8.
+-0000f770: 4004 3e04 3204 3a04 3000 2004 3d04 3004  @.>.2.:.0. .=.0.
+-0000f780: 3b04 3e04 3304 3000 2004 3404 3b04 4f00  ;.>.3.0. .4.;.O.
+-0000f790: 2004 3404 3804 3204 3804 3404 3504 3d04   .4.8.2.8.4.5.=.
+-0000f7a0: 3404 3000 3a00 2008 0000 0000 0600 0000  4.0.:. .........
+-0000f7b0: 1d54 6178 2061 646a 7573 746d 656e 7420  .Tax adjustment 
+-0000f7c0: 666f 7220 6469 7669 6465 6e64 3a20 0700  for dividend: ..
+-0000f7d0: 0000 0d53 7461 7465 6d65 6e74 4942 4b52  ...StatementIBKR
+-0000f7e0: 0103 0000 0024 041d 0430 043b 043e 0433  .....$...0.;.>.3
+-0000f7f0: 0438 0020 0437 0430 0433 0440 0443 0436  .8. .7.0.3.@.C.6
+-0000f800: 0435 043d 044b 003a 0020 0800 0000 0006  .5.=.K.:. ......
+-0000f810: 0000 000e 5461 7865 7320 6c6f 6164 6564  ....Taxes loaded
+-0000f820: 3a20 0700 0000 0d53 7461 7465 6d65 6e74  : .....Statement
+-0000f830: 4942 4b52 0103 ffff ffff 0800 0000 0006  IBKR............
+-0000f840: 0000 000f 5472 6164 6573 206c 6f61 6465  ....Trades loade
+-0000f850: 643a 2007 0000 000d 5374 6174 656d 656e  d: .....Statemen
+-0000f860: 7449 424b 5201 0300 0000 5804 1d04 3504  tIBKR.....X...5.
+-0000f870: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
+-0000f880: 3204 3004 3504 3c04 4b04 3900 2004 4404  2.0.5.<.K.9. .D.
+-0000f890: 3e04 4004 3c04 3004 4200 2004 3e04 3f04  >.@.<.0.B. .>.?.
+-0000f8a0: 3804 4104 3004 3d04 3804 4f00 2004 3404  8.A.0.=.8.O. .4.
+-0000f8b0: 3804 3204 3804 3404 3504 3d04 3404 3000  8.2.8.4.5.=.4.0.
+-0000f8c0: 3a00 2008 0000 0000 0600 0000 2255 6e68  :. ........."Unh
+-0000f8d0: 616e 646c 6564 2064 6976 6964 656e 6420  andled dividend 
+-0000f8e0: 7061 7474 6572 6e20 666f 756e 643a 2007  pattern found: .
+-0000f8f0: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
+-0000f900: 5201 0300 0000 4e04 1d04 3504 3f04 3e04  R.....N...5.?.>.
+-0000f910: 3404 3404 3504 4004 3604 3804 3204 3004  4.4.5.@.6.8.2.0.
+-0000f920: 3504 3c04 4b04 3900 2004 4404 3e04 4004  5.<.K.9. .D.>.@.
+-0000f930: 3c04 3004 4200 2004 4104 4204 4004 3004  <.0.B. .A.B.@.0.
+-0000f940: 3d04 4b00 2004 3d04 3004 3b04 3e04 3304  =.K. .=.0.;.>.3.
+-0000f950: 3000 3a00 2008 0000 0000 0600 0000 2555  0.:. .........%U
+-0000f960: 6e68 616e 646c 6564 2074 6178 2063 6f75  nhandled tax cou
+-0000f970: 6e74 7279 2070 6174 7465 726e 2066 6f75  ntry pattern fou
+-0000f980: 6e64 3a20 0700 0000 0d53 7461 7465 6d65  nd: .....Stateme
+-0000f990: 6e74 4942 4b52 0103 0000 0052 041d 0435  ntIBKR.....R...5
+-0000f9a0: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
+-0000f9b0: 0432 0430 0435 043c 044b 0439 0020 0444  .2.0.5.<.K.9. .D
+-0000f9c0: 043e 0440 043c 0430 0442 0020 043e 043f  .>.@.<.0.B. .>.?
+-0000f9d0: 0438 0441 0430 043d 0438 044f 0020 043d  .8.A.0.=.8.O. .=
+-0000f9e0: 0430 043b 043e 0433 0430 003a 0020 0800  .0.;.>.3.0.:. ..
+-0000f9f0: 0000 0006 0000 001d 556e 6861 6e64 6c65  ........Unhandle
+-0000fa00: 6420 7461 7820 7061 7474 6572 6e20 666f  d tax pattern fo
+-0000fa10: 756e 643a 2007 0000 000d 5374 6174 656d  und: .....Statem
+-0000fa20: 656e 7449 424b 5201 0300 0000 5804 1d04  entIBKR.....X...
+-0000fa30: 3504 3804 3704 3204 3504 4104 4204 3d04  5.8.7.2.5.A.B.=.
+-0000fa40: 4b04 3900 2004 4204 3804 3f00 2004 3e04  K.9. .B.8.?. .>.
+-0000fa50: 4204 4704 5104 4204 3000 2000 4900 6e00  B.G.Q.B.0. .I.n.
+-0000fa60: 7400 6500 7200 6100 6300 7400 6900 7600  t.e.r.a.c.t.i.v.
+-0000fa70: 6500 2000 4200 7200 6f00 6b00 6500 7200  e. .B.r.o.k.e.r.
+-0000fa80: 7300 3a00 2008 0000 0000 0600 0000 2955  s.:. .........)U
+-0000fa90: 6e6b 6e6f 776e 2049 6e74 6572 6163 7469  nknown Interacti
+-0000faa0: 7665 2042 726f 6b65 7273 2072 6570 6f72  ve Brokers repor
+-0000fab0: 7420 7479 7065 3a20 0700 0000 0d53 7461  t type: .....Sta
+-0000fac0: 7465 6d65 6e74 4942 4b52 0103 0000 00a2  tementIBKR......
+-0000fad0: 0412 044b 0020 043f 044b 0442 0430 0435  ...K. .?.K.B.0.5
+-0000fae0: 0442 0435 0441 044c 0020 0437 0430 0433  .B.5.A.L. .7.0.3
+-0000faf0: 0440 0443 0437 0438 0442 044c 0020 043e  .@.C.7.8.B.L. .>
+-0000fb00: 0442 0447 0451 0442 0020 043e 0020 043f  .B.G.Q.B. .>. .?
+-0000fb10: 043e 0434 0442 0432 0435 0440 0436 0434  .>.4.B.2.5.@.6.4
+-0000fb20: 0451 043d 043d 044b 0445 0020 0441 0434  .Q.=.=.K.E. .A.4
+-0000fb30: 0435 043b 043a 0430 0445 0020 0432 043c  .5.;.:.0.E. .2.<
+-0000fb40: 0435 0441 0442 043e 0020 043e 0442 0447  .5.A.B.>. .>.B.G
+-0000fb50: 0451 0442 0430 0020 043f 043e 0020 0410  .Q.B.0. .?.>. ..
+-0000fb60: 043a 0442 0438 0432 043d 043e 0441 0442  .:.B.8.2.=.>.A.B
+-0000fb70: 0438 0800 0000 0006 0000 003f 596f 7520  .8.........?You 
+-0000fb80: 7472 7920 746f 2069 6d70 6f72 7420 5472  try to import Tr
+-0000fb90: 6164 6520 636f 6e66 696d 6174 696f 6e20  ade confimation 
+-0000fba0: 7265 706f 7274 2c20 6e6f 7420 4163 7469  report, not Acti
+-0000fbb0: 7669 7479 2072 6570 6f72 7407 0000 000d  vity report.....
+-0000fbc0: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
+-0000fbd0: 0000 5204 1d04 3504 3204 3e04 3704 3c04  ..R...5.2.>.7.<.
+-0000fbe0: 3e04 3604 3d04 3e00 2004 4004 3004 4104  >.6.=.>. .@.0.A.
+-0000fbf0: 3f04 3e04 3704 3d04 3004 4204 4c00 2004  ?.>.7.=.0.B.L. .
+-0000fc00: 3e04 3f04 3804 4104 3004 3d04 3804 3500  >.?.8.A.0.=.8.5.
+-0000fc10: 2004 3404 3804 3204 3804 3404 3504 3d04   .4.8.2.8.4.5.=.
+-0000fc20: 3404 3000 2008 0000 0000 0600 0000 2143  4.0. .........!C
+-0000fc30: 616e 2774 2070 6172 7365 2044 6976 6964  an't parse Divid
+-0000fc40: 656e 6420 6465 7363 7269 7074 696f 6e20  end description 
+-0000fc50: 0700 0000 0c53 7461 7465 6d65 6e74 4a32  .....StatementJ2
+-0000fc60: 5401 0300 0000 1c04 1404 2100 2004 3704  T.........!. .7.
+-0000fc70: 3004 3304 4004 4304 3604 3504 3d04 4b00  0.3.@.C.6.5.=.K.
+-0000fc80: 3a00 2008 0000 0000 0600 0000 1643 6173  :. ..........Cas
+-0000fc90: 6820 6261 6c61 6e63 6573 206c 6f61 6465  h balances loade
+-0000fca0: 643a 2007 0000 000c 5374 6174 656d 656e  d: .....Statemen
+-0000fcb0: 744a 3254 0103 0000 003a 0414 0435 043d  tJ2T.....:...5.=
+-0000fcc0: 0435 0436 043d 044b 0445 0020 043e 043f  .5.6.=.K.E. .>.?
+-0000fcd0: 0435 0440 0430 0446 0438 0439 0020 0437  .5.@.0.F.8.9. .7
+-0000fce0: 0430 0433 0440 0443 0436 0435 043d 043e  .0.3.@.C.6.5.=.>
+-0000fcf0: 003a 0020 0800 0000 0006 0000 0018 4361  .:. ..........Ca
+-0000fd00: 7368 206f 7065 7261 7469 6f6e 7320 6c6f  sh operations lo
+-0000fd10: 6164 6564 3a20 0700 0000 0c53 7461 7465  aded: .....State
+-0000fd20: 6d65 6e74 4a32 5401 0300 0000 4804 2104  mentJ2T.....H.!.
+-0000fd30: 3404 3504 3b04 3a04 3800 2004 4100 2004  4.5.;.:.8. .A. .
+-0000fd40: 3a04 4004 3804 3f04 4204 3e00 2d04 3204  :.@.8.?.B.>.-.2.
+-0000fd50: 3004 3b04 4e04 4204 3004 3c04 3800 2004  0.;.N.B.0.<.8. .
+-0000fd60: 3704 3004 3304 4004 4304 3604 3504 3d04  7.0.3.@.C.6.5.=.
+-0000fd70: 4b00 3a00 2008 0000 0000 0600 0000 1643  K.:. ..........C
+-0000fd80: 7279 7074 6f20 7472 6164 6573 206c 6f61  rypto trades loa
+-0000fd90: 6465 643a 2007 0000 000c 5374 6174 656d  ded: .....Statem
+-0000fda0: 656e 744a 3254 0103 0000 0050 0412 0020  entJ2T.....P... 
+-0000fdb0: 043e 043f 0438 0441 0430 043d 0438 0438  .>.?.8.A.0.=.8.8
+-0000fdc0: 0020 0434 0438 0432 0438 0434 0435 043d  . .4.8.2.8.4.5.=
+-0000fdd0: 0434 0430 0020 043e 0442 0441 0443 0442  .4.0. .>.B.A.C.B
+-0000fde0: 0441 0442 0432 0443 044e 0442 0020 0434  .A.B.2.C.N.B. .4
+-0000fdf0: 0430 043d 043d 044b 0435 0020 0800 0000  .0.=.=.K.5. ....
+-0000fe00: 0006 0000 0024 4469 7669 6465 6e64 2064  .....$Dividend d
+-0000fe10: 6573 6372 6970 7469 6f6e 206d 6973 7320  escription miss 
+-0000fe20: 736f 6d65 2064 6174 6120 0700 0000 0c53  some data .....S
+-0000fe30: 7461 7465 6d65 6e74 4a32 5401 0300 0000  tatementJ2T.....
+-0000fe40: 4e04 1404 3804 3204 3804 3404 3504 3d04  N...8.2.8.4.5.=.
+-0000fe50: 3400 2004 3d04 3500 2004 3d04 3004 3904  4. .=.5. .=.0.9.
+-0000fe60: 3404 3504 3d00 2004 3404 3b04 4f00 2004  4.5.=. .4.;.O. .
+-0000fe70: 4104 3f04 3804 4104 3004 3d04 3804 4f00  A.?.8.A.0.=.8.O.
+-0000fe80: 2004 3d04 3004 3b04 3e04 3304 3000 2008   .=.0.;.>.3.0. .
+-0000fe90: 0000 0000 0600 0000 1f44 6976 6964 656e  .........Dividen
+-0000fea0: 6420 666f 7220 7461 7820 7761 7320 6e6f  d for tax was no
+-0000feb0: 7420 666f 756e 6420 0700 0000 0c53 7461  t found .....Sta
+-0000fec0: 7465 6d65 6e74 4a32 5401 0300 0000 4404  tementJ2T.....D.
+-0000fed0: 2204 4004 3004 3d04 3704 3004 3a04 4604  ".@.0.=.7.0.:.F.
+-0000fee0: 3804 4f00 2004 3f04 4004 3e04 3f04 4304  8.O. .?.@.>.?.C.
+-0000fef0: 4904 3504 3d04 3000 2004 3f04 4004 3800  I.5.=.0. .?.@.8.
+-0000ff00: 2004 3804 3c04 3f04 3e04 4004 4204 3500   .8.<.?.>.@.B.5.
+-0000ff10: 3a00 2008 0000 0000 0600 0000 1f49 6d70  :. ..........Imp
+-0000ff20: 6f72 7420 736b 6970 7065 6420 6f66 2074  ort skipped of t
+-0000ff30: 7261 6e73 6163 7469 6f6e 3a20 0700 0000  ransaction: ....
+-0000ff40: 0c53 7461 7465 6d65 6e74 4a32 5401 0300  .StatementJ2T...
+-0000ff50: 0000 1400 4a00 7500 7300 7400 3200 5400  ....J.u.s.t.2.T.
+-0000ff60: 7200 6100 6400 6508 0000 0000 0600 0000  r.a.d.e.........
+-0000ff70: 0a4a 7573 7432 5472 6164 6507 0000 000c  .Just2Trade.....
+-0000ff80: 5374 6174 656d 656e 744a 3254 0103 0000  StatementJ2T....
+-0000ff90: 0032 041e 0442 0447 0451 0442 0020 004a  .2...B.G.Q.B. .J
+-0000ffa0: 0075 0073 0074 0032 0054 0072 0061 0064  .u.s.t.2.T.r.a.d
+-0000ffb0: 0065 0020 0028 002a 002e 0078 006c 0073  .e. .(.*...x.l.s
+-0000ffc0: 0078 0029 0800 0000 0006 0000 001d 4a75  .x.)..........Ju
+-0000ffd0: 7374 3254 7261 6465 2073 7461 7465 6d65  st2Trade stateme
+-0000ffe0: 6e74 2028 2a2e 786c 7378 2907 0000 000c  nt (*.xlsx).....
+-0000fff0: 5374 6174 656d 656e 744a 3254 0103 0000  StatementJ2T....
+-00010000: 001c 0426 0411 0020 0437 0430 0433 0440  ...&... .7.0.3.@
+-00010010: 0443 0436 0435 043d 044b 003a 0020 0800  .C.6.5.=.K.:. ..
+-00010020: 0000 0006 0000 0013 5365 6375 7269 7469  ........Securiti
+-00010030: 6573 206c 6f61 6465 643a 2007 0000 000c  es loaded: .....
+-00010040: 5374 6174 656d 656e 744a 3254 0103 0000  StatementJ2T....
+-00010050: 0038 0421 0434 0435 043b 043a 0438 0020  .8.!.4.5.;.:.8. 
+-00010060: 0441 0020 0430 043a 0446 0438 044f 043c  .A. .0.:.F.8.O.<
+-00010070: 0438 0020 0437 0430 0433 0440 0443 0436  .8. .7.0.3.@.C.6
+-00010080: 0435 043d 044b 003a 0020 0800 0000 0006  .5.=.K.:. ......
+-00010090: 0000 0015 5374 6f63 6b20 7472 6164 6573  ....Stock trades
+-000100a0: 206c 6f61 6465 643a 2007 0000 000c 5374   loaded: .....St
+-000100b0: 6174 656d 656e 744a 3254 0103 0000 0040  atementJ2T.....@
+-000100c0: 041d 0435 0438 0437 0432 0435 0441 0442  ...5.8.7.2.5.A.B
+-000100d0: 043d 0430 044f 0020 0434 0435 043d 0435  .=.0.O. .4.5.=.5
+-000100e0: 0436 043d 0430 044f 0020 0442 0440 0430  .6.=.0.O. .B.@.0
+-000100f0: 043d 0437 0430 043a 0446 0438 044f 0020  .=.7.0.:.F.8.O. 
+-00010100: 0800 0000 0006 0000 001e 556e 6b6e 6f77  ..........Unknow
+-00010110: 6e20 6361 7368 2074 7261 6e73 6163 7469  n cash transacti
+-00010120: 6f6e 2074 7970 6520 0700 0000 0c53 7461  on type .....Sta
+-00010130: 7465 6d65 6e74 4a32 5401 0300 0000 3004  tementJ2T.....0.
+-00010140: 1d04 3504 3804 3704 3204 3504 4104 4204  ..5.8.7.2.5.A.B.
+-00010150: 3d04 4b04 3900 2004 4204 3804 3f00 2004  =.K.9. .B.8.?. .
+-00010160: 4104 3404 3504 3b04 3a04 3800 3a00 2008  A.4.5.;.:.8.:. .
+-00010170: 0000 0000 0600 0000 1455 6e6b 6e6f 776e  .........Unknown
+-00010180: 2074 7261 6465 2074 7970 653a 2007 0000   trade type: ...
+-00010190: 000c 5374 6174 656d 656e 744a 3254 0103  ..StatementJ2T..
+-000101a0: 0000 004a 041d 0435 043f 043e 0434 0434  ...J...5.?.>.4.4
+-000101b0: 0435 0440 0436 0438 0432 0430 0435 043c  .5.@.6.8.2.0.5.<
+-000101c0: 0430 044f 0020 0434 0435 043d 0435 0436  .0.O. .4.5.=.5.6
+-000101d0: 043d 0430 044f 0020 0442 0440 0430 043d  .=.0.O. .B.@.0.=
+-000101e0: 0437 0430 043a 0446 0438 044f 0020 0800  .7.0.:.F.8.O. ..
+-000101f0: 0000 0006 0000 001e 556e 7375 7070 706f  ........Unsupppo
+-00010200: 7274 6564 2063 6173 6820 7472 616e 7361  rted cash transa
+-00010210: 6374 696f 6e20 0700 0000 0c53 7461 7465  ction .....State
+-00010220: 6d65 6e74 4a32 5401 0300 0000 3a04 1404  mentJ2T.....:...
+-00010230: 3504 3d04 3504 3604 3d04 4b04 4500 2004  5.=.5.6.=.K.E. .
+-00010240: 3e04 3f04 3504 4004 3004 4604 3804 3900  >.?.5.@.0.F.8.9.
+-00010250: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
+-00010260: 3d04 3e00 3a00 2008 0000 0000 0600 0000  =.>.:. .........
+-00010270: 1843 6173 6820 6f70 6572 6174 696f 6e73  .Cash operations
+-00010280: 206c 6f61 6465 643a 2007 0000 000c 5374   loaded: .....St
+-00010290: 6174 656d 656e 744b 4954 0103 0000 0076  atementKIT.....v
+-000102a0: 041d 0430 043b 043e 0433 0020 043d 0430  ...0.;.>.3. .=.0
+-000102b0: 0020 0434 0438 0432 0438 0434 0435 043d  . .4.8.2.8.4.5.=
+-000102c0: 0434 044b 0020 043d 0435 0020 043f 043e  .4.K. .=.5. .?.>
+-000102d0: 0434 0434 0435 0440 0436 0438 0432 0430  .4.4.5.@.6.8.2.0
+-000102e0: 0435 0442 0441 044f 0020 0434 043b 044f  .5.B.A.O. .4.;.O
+-000102f0: 0020 0431 0440 043e 043a 0435 0440 0430  . .1.@.>.:.5.@.0
+-00010300: 0020 041a 0418 0422 002d 0444 0438 043d  . .....".-.D.8.=
+-00010310: 0430 043d 0441 0800 0000 0006 0000 003e  .0.=.A.........>
+-00010320: 4469 7669 6465 6e64 2074 6178 6573 2061  Dividend taxes a
+-00010330: 7265 206e 6f74 2073 7570 706f 7274 6564  re not supported
+-00010340: 2066 6f72 204b 4954 2062 726f 6b65 7220   for KIT broker 
+-00010350: 7374 6174 656d 656e 7473 2079 6574 0700  statements yet..
+-00010360: 0000 0c53 7461 7465 6d65 6e74 4b49 5401  ...StatementKIT.
+-00010370: 0300 0000 1404 1a04 1804 2200 2004 2404  ..........". .$.
+-00010380: 3804 3d04 3004 3d04 4108 0000 0000 0600  8.=.0.=.A.......
+-00010390: 0000 0b4b 4954 2046 696e 616e 6365 0700  ...KIT Finance..
+-000103a0: 0000 0c53 7461 7465 6d65 6e74 4b49 5401  ...StatementKIT.
+-000103b0: 0300 0000 3204 1e04 4204 4704 5104 4200  ....2...B.G.Q.B.
+-000103c0: 2004 1a04 1804 2200 2004 2404 3804 3d04   .....". .$.8.=.
+-000103d0: 3004 3d04 4100 2000 2800 2a00 2e00 7800  0.=.A. .(.*...x.
+-000103e0: 6c00 7300 7800 2908 0000 0000 0600 0000  l.s.x.).........
+-000103f0: 1e4b 4954 2046 696e 616e 6365 2073 7461  .KIT Finance sta
+-00010400: 7465 6d65 6e74 2028 2a2e 786c 7378 2907  tement (*.xlsx).
+-00010410: 0000 000c 5374 6174 656d 656e 744b 4954  ....StatementKIT
+-00010420: 0103 0000 0024 0421 0434 0435 043b 043a  .....$.!.4.5.;.:
+-00010430: 0438 0020 0437 0430 0433 0440 0443 0436  .8. .7.0.3.@.C.6
+-00010440: 0435 043d 044b 003a 0020 0800 0000 0006  .5.=.K.:. ......
+-00010450: 0000 000f 5472 6164 6573 206c 6f61 6465  ....Trades loade
+-00010460: 643a 2007 0000 000c 5374 6174 656d 656e  d: .....Statemen
+-00010470: 744b 4954 0103 0000 0030 041d 0435 0438  tKIT.....0...5.8
+-00010480: 0437 0432 0435 0441 0442 043d 044b 0439  .7.2.5.A.B.=.K.9
+-00010490: 0020 0442 0438 043f 0020 0441 0434 0435  . .B.8.?. .A.4.5
+-000104a0: 043b 043a 0438 003a 0020 0800 0000 0006  .;.:.8.:. ......
+-000104b0: 0000 0014 556e 6b6e 6f77 6e20 7472 6164  ....Unknown trad
+-000104c0: 6520 7479 7065 3a20 0700 0000 0c53 7461  e type: .....Sta
+-000104d0: 7465 6d65 6e74 4b49 5401 0300 0000 4a04  tementKIT.....J.
+-000104e0: 1d04 3504 3f04 3e04 3404 3404 3504 4004  ..5.?.>.4.4.5.@.
+-000104f0: 3604 3804 3204 3004 3504 3c04 3004 4f00  6.8.2.0.5.<.0.O.
+-00010500: 2004 3404 3504 3d04 3504 3604 3d04 3004   .4.5.=.5.6.=.0.
+-00010510: 4f00 2004 4204 4004 3004 3d04 3704 3004  O. .B.@.0.=.7.0.
+-00010520: 3a04 4604 3804 4f00 2008 0000 0000 0600  :.F.8.O. .......
+-00010530: 0000 1e55 6e73 7570 7070 6f72 7465 6420  ...Unsuppported 
+-00010540: 6361 7368 2074 7261 6e73 6163 7469 6f6e  cash transaction
+-00010550: 2007 0000 000c 5374 6174 656d 656e 744b   .....StatementK
+-00010560: 4954 0103 0000 0022 0421 0447 0435 0442  IT.....".!.G.5.B
+-00010570: 0430 0020 0437 0430 0433 0440 0443 0436  .0. .7.0.3.@.C.6
+-00010580: 0435 043d 044b 003a 0020 0800 0000 0006  .5.=.K.:. ......
+-00010590: 0000 0011 4163 636f 756e 7473 206c 6f61  ....Accounts loa
+-000105a0: 6465 643a 2007 0000 0013 5374 6174 656d  ded: .....Statem
+-000105b0: 656e 744f 7065 6e42 726f 6b65 7201 0300  entOpenBroker...
+-000105c0: 0000 6404 1e04 4204 4104 4304 4204 4104  ..d...B.A.C.B.A.
+-000105d0: 4204 3204 4304 4e04 4200 2004 3404 3004  B.2.C.N.B. .4.0.
+-000105e0: 3d04 3d04 4b04 3500 2004 3200 2004 3e04  =.=.K.5. .2. .>.
+-000105f0: 3f04 3804 4104 3004 3d04 3804 3800 2004  ?.8.A.0.=.8.8. .
+-00010600: 3f04 3e04 3304 3004 4804 3504 3d04 3804  ?.>.3.0.H.5.=.8.
+-00010610: 4f00 2004 3e04 3104 3b04 3804 3304 3004  O. .>.1.;.8.3.0.
+-00010620: 4604 3804 3800 2008 0000 0000 0600 0000  F.8.8. .........
+-00010630: 2a42 6f6e 6420 7265 7061 796d 656e 7420  *Bond repayment 
+-00010640: 6465 7363 7269 7074 696f 6e20 6d69 7373  description miss
+-00010650: 2073 6f6d 6520 6461 7461 2007 0000 0013   some data .....
+-00010660: 5374 6174 656d 656e 744f 7065 6e42 726f  StatementOpenBro
+-00010670: 6b65 7201 0300 0000 6804 1d04 3504 3204  ker.....h...5.2.
+-00010680: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-00010690: 4004 3004 4104 3f04 3e04 3704 3d04 3004  @.0.A.?.>.7.=.0.
+-000106a0: 4204 4c00 2004 3d04 3004 3704 3204 3004  B.L. .=.0.7.2.0.
+-000106b0: 3d04 3804 3500 2004 3e04 3104 3b04 3804  =.8.5. .>.1.;.8.
+-000106c0: 3304 3004 4604 3804 3800 2004 3200 2004  3.0.F.8.8. .2. .
+-000106d0: 3e04 3f04 3804 4104 3004 3d04 3804 3800  >.?.8.A.0.=.8.8.
+-000106e0: 2008 0000 0000 0600 0000 2843 616e 2774   .........(Can't
+-000106f0: 2064 6574 6563 7420 626f 6e64 206e 616d   detect bond nam
+-00010700: 6520 6672 6f6d 2064 6573 6372 6970 7469  e from descripti
+-00010710: 6f6e 2007 0000 0013 5374 6174 656d 656e  on .....Statemen
+-00010720: 744f 7065 6e42 726f 6b65 7201 0300 0000  tOpenBroker.....
+-00010730: 6204 1d04 3504 3204 3e04 3704 3c04 3e04  b...5.2.>.7.<.>.
+-00010740: 3604 3d04 3e00 2004 3e04 3f04 4004 3504  6.=.>. .>.?.@.5.
+-00010750: 3404 3504 3b04 3804 4204 4c00 2004 4204  4.5.;.8.B.L. .B.
+-00010760: 3804 3f00 2f04 3a04 3e04 3b04 3804 4704  8.?./.:.>.;.8.G.
+-00010770: 3504 4104 4204 3204 3e00 2004 3404 3b04  5.A.B.2.>. .4.;.
+-00010780: 4f00 2004 4104 3404 3504 3b04 3a04 3800  O. .A.4.5.;.:.8.
+-00010790: 3a00 2008 0000 0000 0600 0000 2543 616e  :. .........%Can
+-000107a0: 2774 2064 6574 6572 6d69 6e65 2074 7261  't determine tra
+-000107b0: 6465 2074 7970 652f 7175 616e 7469 7479  de type/quantity
+-000107c0: 3a20 0700 0000 1353 7461 7465 6d65 6e74  : .....Statement
+-000107d0: 4f70 656e 4272 6f6b 6572 0103 0000 0068  OpenBroker.....h
+-000107e0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-000107f0: 043d 043e 0020 043e 043f 0440 0435 0434  .=.>. .>.?.@.5.4
+-00010800: 0435 043b 0438 0442 044c 0020 0441 0447  .5.;.8.B.L. .A.G
+-00010810: 0451 0442 0020 0434 043b 044f 0020 0434  .Q.B. .4.;.O. .4
+-00010820: 0435 043d 0435 0436 043d 043e 0439 0020  .5.=.5.6.=.>.9. 
+-00010830: 0442 0440 0430 043d 0437 0430 043a 0446  .B.@.0.=.7.0.:.F
+-00010840: 0438 0438 003a 0020 0800 0000 0006 0000  .8.8.:. ........
+-00010850: 0027 4361 6e27 7420 6669 6e64 2061 6363  .'Can't find acc
+-00010860: 6f75 6e74 2066 6f72 2063 6173 6820 6f70  ount for cash op
+-00010870: 6572 6174 696f 6e3a 2007 0000 0013 5374  eration: .....St
+-00010880: 6174 656d 656e 744f 7065 6e42 726f 6b65  atementOpenBroke
+-00010890: 7201 0300 0000 4404 1d04 3504 3204 3e04  r.....D...5.2.>.
+-000108a0: 3704 3c04 3e04 3604 3d04 3e00 2004 3d04  7.<.>.6.=.>. .=.
+-000108b0: 3004 3904 4204 3800 2004 4104 4704 5104  0.9.B.8. .A.G.Q.
+-000108c0: 4200 2004 3404 3b04 4f00 2004 4104 3404  B. .4.;.O. .A.4.
+-000108d0: 3504 3b04 3a04 3800 3a00 2008 0000 0000  5.;.:.8.:. .....
+-000108e0: 0600 0000 1e43 616e 2774 2066 696e 6420  .....Can't find 
+-000108f0: 6163 636f 756e 7420 666f 7220 7472 6164  account for trad
+-00010900: 653a 2007 0000 0013 5374 6174 656d 656e  e: .....Statemen
+-00010910: 744f 7065 6e42 726f 6b65 7201 0300 0000  tOpenBroker.....
+-00010920: 5004 1d04 3504 3204 3e04 3704 3c04 3e04  P...5.2.>.7.<.>.
+-00010930: 3604 3d04 3e00 2004 3d04 3004 3904 4204  6.=.>. .=.0.9.B.
+-00010940: 3800 2004 3704 3004 3f04 3804 4104 4c00  8. .7.0.?.8.A.L.
+-00010950: 2004 4104 3f04 3804 4104 3004 3d04 3804   .A.?.8.A.0.=.8.
+-00010960: 4f00 2004 2604 1100 2004 3404 3b04 4f00  O. .&... .4.;.O.
+-00010970: 2008 0000 0000 0600 0000 2943 616e 2774   .........)Can't
+-00010980: 2066 696e 6420 6173 7365 7420 6361 6e63   find asset canc
+-00010990: 656c 6c61 7469 6f6e 2072 6563 6f72 6420  ellation record 
+-000109a0: 666f 7220 0700 0000 1353 7461 7465 6d65  for .....Stateme
+-000109b0: 6e74 4f70 656e 4272 6f6b 6572 0103 0000  ntOpenBroker....
+-000109c0: 0032 041d 0435 0020 043d 0430 0439 0434  .2...5. .=.0.9.4
+-000109d0: 0435 043d 0430 0020 0426 0411 0020 0434  .5.=.0. .&... .4
+-000109e0: 043b 044f 0020 043a 0443 043f 043e 043d  .;.O. .:.C.?.>.=
+-000109f0: 0430 0020 0800 0000 0006 0000 0023 4361  .0. .........#Ca
+-00010a00: 6e27 7420 6669 6e64 2061 7373 6574 2066  n't find asset f
+-00010a10: 6f72 2062 6f6e 6420 696e 7465 7265 7374  or bond interest
+-00010a20: 2007 0000 0013 5374 6174 656d 656e 744f   .....StatementO
+-00010a30: 7065 6e42 726f 6b65 7201 0300 0000 3c04  penBroker.....<.
+-00010a40: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
+-00010a50: 3d04 3e00 2004 4104 3e04 3f04 3e04 4104  =.>. .A.>.?.>.A.
+-00010a60: 4204 3004 3204 3804 4204 4c00 2004 2604  B.0.2.8.B.L. .&.
+-00010a70: 1100 2004 3404 3b04 4f00 2008 0000 0000  .. .4.;.O. .....
+-00010a80: 0600 0000 1643 616e 2774 206d 6174 6368  .....Can't match
+-00010a90: 2061 7373 6574 2066 6f72 2007 0000 0013   asset for .....
+-00010aa0: 5374 6174 656d 656e 744f 7065 6e42 726f  StatementOpenBro
+-00010ab0: 6b65 7201 0300 0000 6604 1d04 3504 3204  ker.....f...5.2.
+-00010ac0: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-00010ad0: 4004 3004 4104 3f04 3e04 3704 3d04 3004  @.0.A.?.>.7.=.0.
+-00010ae0: 4204 4c00 2004 3e04 3f04 3804 4104 3004  B.L. .>.?.8.A.0.
+-00010af0: 3d04 3804 3500 2004 3f04 3e04 3304 3004  =.8.5. .?.>.3.0.
+-00010b00: 4804 3504 3d04 3804 4f00 2004 3e04 3104  H.5.=.8.O. .>.1.
+-00010b10: 3b04 3804 3304 3004 4604 3804 3800 2008  ;.8.3.0.F.8.8. .
+-00010b20: 0000 0000 0600 0000 2443 616e 2774 2070  ........$Can't p
+-00010b30: 6172 7365 2042 6f6e 6420 4d61 7475 7265  arse Bond Mature
+-00010b40: 2064 6573 6372 6970 7469 6f6e 2007 0000   description ...
+-00010b50: 0013 5374 6174 656d 656e 744f 7065 6e42  ..StatementOpenB
+-00010b60: 726f 6b65 7201 0300 0000 4c04 1d04 3504  roker.....L...5.
+-00010b70: 3204 3e04 3704 3c04 3e04 3604 3d04 3e00  2.>.7.<.>.6.=.>.
+-00010b80: 2004 4004 3004 4104 3f04 3e04 3704 3d04   .@.0.A.?.>.7.=.
+-00010b90: 3004 4204 4c00 2004 3e04 3f04 3804 4104  0.B.L. .>.?.8.A.
+-00010ba0: 3004 3d04 3804 3500 2004 3a04 4304 3f04  0.=.8.5. .:.C.?.
+-00010bb0: 3e04 3d04 3000 2008 0000 0000 0600 0000  >.=.0. .........
+-00010bc0: 2143 616e 2774 2070 6172 7365 2049 6e74  !Can't parse Int
+-00010bd0: 6572 6573 7420 6465 7363 7269 7074 696f  erest descriptio
+-00010be0: 6e20 0700 0000 1353 7461 7465 6d65 6e74  n .....Statement
+-00010bf0: 4f70 656e 4272 6f6b 6572 0103 0000 0066  OpenBroker.....f
+-00010c00: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-00010c10: 043d 043e 0020 0440 0430 0441 043f 043e  .=.>. .@.0.A.?.>
+-00010c20: 0437 043d 0430 0442 044c 0020 043e 043f  .7.=.0.B.L. .>.?
+-00010c30: 0438 0441 0430 043d 0438 0435 0020 043f  .8.A.0.=.8.5. .?
+-00010c40: 043e 0433 0430 0448 0435 043d 0438 044f  .>.3.0.H.5.=.8.O
+-00010c50: 0020 043e 0431 043b 0438 0433 0430 0446  . .>.1.;.8.3.0.F
+-00010c60: 0438 0438 0020 0800 0000 0006 0000 0027  .8.8. .........'
+-00010c70: 4361 6e27 7420 7061 7273 6520 626f 6e64  Can't parse bond
+-00010c80: 2072 6570 6179 6d65 6e74 2064 6573 6372   repayment descr
+-00010c90: 6970 7469 6f6e 2007 0000 0013 5374 6174  iption .....Stat
+-00010ca0: 656d 656e 744f 7065 6e42 726f 6b65 7201  ementOpenBroker.
+-00010cb0: 0300 0000 3a04 1404 3504 3d04 3504 3604  ....:...5.=.5.6.
+-00010cc0: 3d04 4b04 4500 2004 3e04 3f04 3504 4004  =.K.E. .>.?.5.@.
+-00010cd0: 3004 4604 3804 3900 2004 3704 3004 3304  0.F.8.9. .7.0.3.
+-00010ce0: 4004 4304 3604 3504 3d04 3e00 3a00 2008  @.C.6.5.=.>.:. .
+-00010cf0: 0000 0000 0600 0000 1843 6173 6820 6f70  .........Cash op
+-00010d00: 6572 6174 696f 6e73 206c 6f61 6465 643a  erations loaded:
+-00010d10: 2007 0000 0013 5374 6174 656d 656e 744f   .....StatementO
+-00010d20: 7065 6e42 726f 6b65 7201 0300 0000 4804  penBroker.....H.
+-00010d30: 1e04 4204 4104 4304 4204 4104 4204 3204  ..B.A.C.B.A.B.2.
+-00010d40: 4304 4e04 4200 2004 3404 3004 3d04 3d04  C.N.B. .4.0.=.=.
+-00010d50: 4b04 3500 2004 3200 2004 3e04 3f04 3804  K.5. .2. .>.?.8.
+-00010d60: 4104 3004 3d04 3800 2004 3a04 4304 3f04  A.0.=.8. .:.C.?.
+-00010d70: 3e04 3d04 3000 2008 0000 0000 0600 0000  >.=.0. .........
+-00010d80: 2449 6e74 6572 6573 7420 6465 7363 7269  $Interest descri
+-00010d90: 7074 696f 6e20 6d69 7373 2073 6f6d 6520  ption miss some 
+-00010da0: 6461 7461 2007 0000 0013 5374 6174 656d  data .....Statem
+-00010db0: 656e 744f 7065 6e42 726f 6b65 7201 0300  entOpenBroker...
+-00010dc0: 0000 5404 1704 3004 3304 4004 4304 3704  ..T...0.3.@.C.7.
+-00010dd0: 3a04 3000 2004 3e04 4204 4704 5104 4204  :.0. .>.B.G.Q.B.
+-00010de0: 3000 2004 1e04 4204 3a04 4004 4b04 4204  0. ...B.:.@.K.B.
+-00010df0: 3804 3500 2004 3104 4004 3e04 3a04 3504  8.5. .1.@.>.:.5.
+-00010e00: 4000 2004 3404 3b04 4f00 2004 4104 4704  @. .4.;.O. .A.G.
+-00010e10: 5104 4204 3000 2008 0000 0000 0600 0000  Q.B.0. .........
+-00010e20: 274c 6f61 6420 4f70 656e 2042 726f 6b65  'Load Open Broke
+-00010e30: 7220 7374 6174 656d 656e 7420 666f 7220  r statement for 
+-00010e40: 6163 636f 756e 7420 0700 0000 1353 7461  account .....Sta
+-00010e50: 7465 6d65 6e74 4f70 656e 4272 6f6b 6572  tementOpenBroker
+-00010e60: 0103 0000 0056 041d 0430 0439 0434 0435  .....V...0.9.4.5
+-00010e70: 043d 044b 0020 043d 0435 0441 043a 043e  .=.K. .=.5.A.:.>
+-00010e80: 043b 044c 043a 043e 0020 0437 0430 043f  .;.L.:.>. .7.0.?
+-00010e90: 0438 0441 0435 0439 0020 043f 043e 0433  .8.A.5.9. .?.>.3
+-00010ea0: 0430 0448 0435 043d 0438 044f 0020 0426  .0.H.5.=.8.O. .&
+-00010eb0: 0411 0020 0434 043b 044f 0020 0800 0000  ... .4.;.O. ....
+-00010ec0: 0006 0000 0026 4d75 6c74 6970 6c65 2061  .....&Multiple a
+-00010ed0: 7373 6574 2063 616e 6365 6c6c 6174 696f  sset cancellatio
+-00010ee0: 6e20 6d61 7463 6820 666f 7220 0700 0000  n match for ....
+-00010ef0: 1353 7461 7465 6d65 6e74 4f70 656e 4272  .StatementOpenBr
+-00010f00: 6f6b 6572 0103 0000 0074 041d 0435 0441  oker.....t...5.A
+-00010f10: 043a 043e 043b 044c 043a 043e 0020 0441  .:.>.;.L.:.>. .A
+-00010f20: 043e 0432 043f 0430 0434 0435 043d 0438  .>.2.?.0.4.5.=.8
+-00010f30: 0439 0020 0434 043b 044f 0020 0441 0438  .9. .4.;.O. .A.8
+-00010f40: 043c 0432 043e 043b 0430 002c 0020 0438  .<.2.>.;.0.,. .8
+-00010f50: 0441 043f 043e 043b 044c 0437 0443 0435  .A.?.>.;.L.7.C.5
+-00010f60: 043c 043e 0433 043e 0020 0431 0440 043e  .<.>.3.>. .1.@.>
+-00010f70: 043a 0435 0440 043e 043c 003a 0020 0800  .:.5.@.>.<.:. ..
+-00010f80: 0000 0006 0000 0022 4d75 6c74 6970 6c65  ......."Multiple
+-00010f90: 206d 6174 6368 2066 6f72 2062 726f 6b65   match for broke
+-00010fa0: 7220 7379 6d62 6f6c 3a20 0700 0000 1353  r symbol: .....S
+-00010fb0: 7461 7465 6d65 6e74 4f70 656e 4272 6f6b  tatementOpenBrok
+-00010fc0: 6572 0103 0000 0044 041d 0435 0441 043a  er.....D...5.A.:
+-00010fd0: 043e 043b 044c 043a 043e 0020 0441 043e  .>.;.L.:.>. .A.>
+-00010fe0: 0432 043f 0430 0434 0435 043d 0438 0439  .2.?.0.4.5.=.8.9
+-00010ff0: 0020 0434 043b 044f 0020 0441 0438 043c  . .4.;.O. .A.8.<
+-00011000: 0432 043e 043b 0430 003a 0020 0800 0000  .2.>.;.0.:. ....
+-00011010: 0006 0000 001b 4d75 6c74 6970 6c65 206d  ......Multiple m
+-00011020: 6174 6368 2066 6f72 2073 796d 626f 6c3a  atch for symbol:
+-00011030: 2007 0000 0013 5374 6174 656d 656e 744f   .....StatementO
+-00011040: 7065 6e42 726f 6b65 7201 0300 0000 1e04  penBroker.......
+-00011050: 1e04 4204 3a04 4004 4b04 4204 3804 3500  ..B.:.@.K.B.8.5.
+-00011060: 2004 3104 4004 3e04 3a04 3504 4008 0000   .1.@.>.:.5.@...
+-00011070: 0000 0600 0000 0b4f 7065 6e20 4272 6f6b  .......Open Brok
+-00011080: 6572 0700 0000 1353 7461 7465 6d65 6e74  er.....Statement
+-00011090: 4f70 656e 4272 6f6b 6572 0103 0000 003c  OpenBroker.....<
+-000110a0: 041e 0442 0447 0451 0442 0020 0431 0440  ...B.G.Q.B. .1.@
+-000110b0: 043e 043a 0435 0440 0430 0020 041e 0442  .>.:.5.@.0. ...B
+-000110c0: 043a 0440 044b 0442 0438 0435 0020 0028  .:.@.K.B.8.5. .(
+-000110d0: 002a 002e 0078 006d 006c 0029 0800 0000  .*...x.m.l.)....
+-000110e0: 0006 0000 001d 4f70 656e 2042 726f 6b65  ......Open Broke
+-000110f0: 7220 7374 6174 656d 656e 7420 282a 2e78  r statement (*.x
+-00011100: 6d6c 2907 0000 0013 5374 6174 656d 656e  ml).....Statemen
+-00011110: 744f 7065 6e42 726f 6b65 7201 0300 0000  tOpenBroker.....
+-00011120: 5404 1704 3004 3304 3e04 3b04 3e04 3204  T...0.3.>.;.>.2.
+-00011130: 3e04 3a00 2004 3e04 4204 4704 5104 4204  >.:. .>.B.G.Q.B.
+-00011140: 3000 2004 1e04 4204 3a04 4004 4b04 4204  0. ...B.:.@.K.B.
+-00011150: 3804 3500 2004 3104 4004 3e04 3a04 3504  8.5. .1.@.>.:.5.
+-00011160: 4000 2004 3d04 3500 2004 3d04 3004 3904  @. .=.5. .=.0.9.
+-00011170: 3404 3504 3d08 0000 0000 0600 0000 224f  4.5.=........."O
+-00011180: 7065 6e20 6272 6f6b 6572 2072 6570 6f72  pen broker repor
+-00011190: 7420 7469 746c 6520 6e6f 7420 666f 756e  t title not foun
+-000111a0: 6407 0000 0013 5374 6174 656d 656e 744f  d.....StatementO
+-000111b0: 7065 6e42 726f 6b65 7201 0300 0000 3804  penBroker.....8.
+-000111c0: 1e04 3f04 3504 4004 3004 4604 3804 4f00  ..?.5.@.0.F.8.O.
+-000111d0: 2004 3d04 3500 2004 3f04 3e04 3404 3404   .=.5. .?.>.4.4.
+-000111e0: 3504 4004 3604 3804 3204 3004 3504 4204  5.@.6.8.2.0.5.B.
+-000111f0: 4104 4f00 3a00 2008 0000 0000 0600 0000  A.O.:. .........
+-00011200: 194f 7065 7261 7469 6f6e 206e 6f74 2073  .Operation not s
+-00011210: 7570 706f 7274 6564 3a20 0700 0000 1353  upported: .....S
+-00011220: 7461 7465 6d65 6e74 4f70 656e 4272 6f6b  tatementOpenBrok
+-00011230: 6572 0103 0000 001c 0426 0411 0020 0437  er.......&... .7
+-00011240: 0430 0433 0440 0443 0436 0435 043d 044b  .0.3.@.C.6.5.=.K
+-00011250: 003a 0020 0800 0000 0006 0000 0013 5365  .:. ..........Se
+-00011260: 6375 7269 7469 6573 206c 6f61 6465 643a  curities loaded:
+-00011270: 2007 0000 0013 5374 6174 656d 656e 744f   .....StatementO
+-00011280: 7065 6e42 726f 6b65 7201 0300 0000 6e04  penBroker.....n.
+-00011290: 1d04 3504 3f04 3e04 3404 3404 3504 4004  ..5.?.>.4.4.5.@.
+-000112a0: 3604 3804 3204 3004 3504 3c04 4b04 3900  6.8.2.0.5.<.K.9.
+-000112b0: 2004 3704 3004 3304 3e04 3b04 3e04 3204   .7.0.3.>.;.>.2.
+-000112c0: 3e04 3a00 2004 3e04 4204 4704 5104 4204  >.:. .>.B.G.Q.B.
+-000112d0: 3000 2004 3404 3b04 4f00 2004 1e04 4204  0. .4.;.O. ...B.
+-000112e0: 3a04 4004 4b04 4204 3804 3500 2004 3104  :.@.K.B.8.5. .1.
+-000112f0: 4004 3e04 3a04 3504 4000 3a00 2008 0000  @.>.:.5.@.:. ...
+-00011300: 0000 0600 0000 2655 6e65 7870 6563 7465  ......&Unexpecte
+-00011310: 6420 4f70 656e 2062 726f 6b65 7220 7265  d Open broker re
+-00011320: 706f 7274 2068 6561 6465 723a 2007 0000  port header: ...
+-00011330: 0013 5374 6174 656d 656e 744f 7065 6e42  ..StatementOpenB
+-00011340: 726f 6b65 7201 0300 0000 4204 1d04 3504  roker.....B...5.
+-00011350: 3804 3704 3204 3504 4104 4204 3d04 3004  8.7.2.5.A.B.=.0.
+-00011360: 4f00 2004 3d04 3504 4204 3e04 4004 3304  O. .=.5.B.>.@.3.
+-00011370: 3e04 3204 3004 4f00 2004 3e04 3f04 3504  >.2.0.O. .>.?.5.
+-00011380: 4004 3004 4604 3804 4f00 3a00 2008 0000  @.0.F.8.O.:. ...
+-00011390: 0000 0600 0000 1d55 6e6b 6e6f 776e 206e  .......Unknown n
+-000113a0: 6f6e 2d74 7261 6465 206f 7065 7261 7469  on-trade operati
+-000113b0: 6f6e 3a20 0700 0000 1353 7461 7465 6d65  on: .....Stateme
+-000113c0: 6e74 4f70 656e 4272 6f6b 6572 0103 0000  ntOpenBroker....
+-000113d0: 0046 041d 0435 043f 043e 0434 0434 0435  .F...5.?.>.4.4.5
+-000113e0: 0440 0436 0438 0432 0430 0435 043c 043e  .@.6.8.2.0.5.<.>
+-000113f0: 0435 0020 043e 043f 0438 0441 0430 043d  .5. .>.?.8.A.0.=
+-00011400: 0438 0435 0020 043f 043b 0430 0442 0435  .8.5. .?.;.0.B.5
+-00011410: 0436 0430 003a 0020 0800 0000 0006 0000  .6.0.:. ........
+-00011420: 001d 556e 6b6e 6f77 6e20 7061 796d 656e  ..Unknown paymen
+-00011430: 7420 6465 7363 7269 7074 696f 6e3a 2007  t description: .
+-00011440: 0000 0013 5374 6174 656d 656e 744f 7065  ....StatementOpe
+-00011450: 6e42 726f 6b65 7201 0300 0000 3204 1d04  nBroker.....2...
+-00011460: 3504 3804 3704 3204 3504 4104 4204 3d04  5.8.7.2.5.A.B.=.
+-00011470: 4b04 3900 2004 4204 3804 3f00 2004 3f04  K.9. .B.8.?. .?.
+-00011480: 3b04 3004 4204 3504 3604 3000 3a00 2008  ;.0.B.5.6.0.:. .
+-00011490: 0000 0000 0600 0000 1655 6e6b 6e6f 776e  .........Unknown
+-000114a0: 2070 6179 6d65 6e74 2074 7970 653a 2007   payment type: .
+-000114b0: 0000 0013 5374 6174 656d 656e 744f 7065  ....StatementOpe
+-000114c0: 6e42 726f 6b65 7201 0300 0000 1604 2604  nBroker.......&.
+-000114d0: 1100 2004 3104 3504 3700 2000 6900 6400  .. .1.5.7. .i.d.
+-000114e0: 3a00 2008 0000 0000 0600 0000 1241 7373  :. ..........Ass
+-000114f0: 6574 2077 6974 686f 7574 2069 643a 2007  et without id: .
+-00011500: 0000 0016 5374 6174 656d 656e 744f 7065  ....StatementOpe
+-00011510: 6e50 6f72 7466 6f6c 696f 0103 0000 0048  nPortfolio.....H
+-00011520: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
+-00011530: 043d 043e 0020 043f 0440 043e 0447 0438  .=.>. .?.@.>.G.8
+-00011540: 0442 0430 0442 044c 0020 004a 0053 004f  .B.0.B.L. .J.S.O
+-00011550: 004e 0020 0438 0437 0020 0444 0430 0439  .N. .8.7. .D.0.9
+-00011560: 043b 0430 003a 0020 0800 0000 0006 0000  .;.0.:. ........
+-00011570: 001f 4661 696c 6564 2074 6f20 7265 6164  ..Failed to read
+-00011580: 204a 534f 4e20 6672 6f6d 2066 696c 653a   JSON from file:
+-00011590: 2007 0000 0016 5374 6174 656d 656e 744f   .....StatementO
++0000f0f0: 0800 0000 0006 0000 0011 4f70 7469 6f6e  ..........Option
++0000f100: 2065 7870 6972 6174 696f 6e07 0000 000d   expiration.....
++0000f110: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
++0000f120: 0000 4004 1404 3504 3904 4104 4204 3204  ..@...5.9.A.B.2.
++0000f130: 3804 4f00 2004 4100 2004 3e04 3f04 4604  8.O. .A. .>.?.F.
++0000f140: 3804 3e04 3d04 3004 3c04 3800 2004 3704  8.>.=.0.<.8. .7.
++0000f150: 3004 3304 4004 4304 3604 3504 3d04 4b00  0.3.@.C.6.5.=.K.
++0000f160: 3a00 2008 0000 0000 0600 0000 164f 7074  :. ..........Opt
++0000f170: 696f 6e73 2045 2641 2645 206c 6f61 6465  ions E&A&E loade
++0000f180: 643a 2007 0000 000d 5374 6174 656d 656e  d: .....Statemen
++0000f190: 7449 424b 5201 0300 0000 6a04 1d04 3500  tIBKR.....j...5.
++0000f1a0: 2004 3d04 3004 3904 3404 3504 3d04 3000   .=.0.9.4.5.=.0.
++0000f1b0: 2004 4104 3404 3504 3b04 3a04 3000 2004   .A.4.5.;.:.0. .
++0000f1c0: 3404 3b04 4f00 2004 3804 4104 3f04 3e04  4.;.O. .8.A.?.>.
++0000f1d0: 3b04 3d04 3504 3d04 3804 4f00 2f04 4d04  ;.=.5.=.8.O./.M.
++0000f1e0: 3a04 4104 3f04 3804 4004 3004 4604 3804  :.A.?.8.@.0.F.8.
++0000f1f0: 3800 2004 3e04 3f04 4604 3804 3e04 3d04  8. .>.?.F.8.>.=.
++0000f200: 3000 3a00 2008 0000 0000 0600 0000 354f  0.:. .........5O
++0000f210: 7269 6769 6e61 6c20 7472 6164 6520 6e6f  riginal trade no
++0000f220: 7420 666f 756e 6420 666f 7220 4f70 7469  t found for Opti
++0000f230: 6f6e 2045 2641 2645 206f 7065 7261 7469  on E&A&E operati
++0000f240: 6f6e 3a20 0700 0000 0d53 7461 7465 6d65  on: .....Stateme
++0000f250: 6e74 4942 4b52 0103 0000 006c 041f 043b  ntIBKR.....l...;
++0000f260: 0430 0442 0451 0436 0020 0431 044b 043b  .0.B.Q.6. .1.K.;
++0000f270: 0020 043e 0442 043c 0435 043d 0451 043d  . .>.B.<.5.=.Q.=
++0000f280: 0020 043f 043e 0020 043f 0440 0438 043c  . .?.>. .?.@.8.<
++0000f290: 0435 0440 043d 043e 043c 0443 0020 0441  .5.@.=.>.<.C. .A
++0000f2a0: 043e 0432 043f 0430 0434 0435 043d 0438  .>.2.?.0.4.5.=.8
++0000f2b0: 044e 0020 043e 043f 0438 0441 0430 043d  .N. .>.?.8.A.0.=
++0000f2c0: 0438 044f 003a 0020 0800 0000 0006 0000  .8.O.:. ........
++0000f2d0: 0031 5061 796d 656e 7420 7761 7320 7265  .1Payment was re
++0000f2e0: 7665 7273 6564 2062 7920 6170 7072 6f78  versed by approx
++0000f2f0: 696d 6174 6520 6465 7363 7269 7074 696f  imate descriptio
++0000f300: 6e3a 2007 0000 000d 5374 6174 656d 656e  n: .....Statemen
++0000f310: 7449 424b 5201 0300 0000 2804 1f04 3b04  tIBKR.....(...;.
++0000f320: 3004 4204 5104 3600 2004 3104 4b04 3b00  0.B.Q.6. .1.K.;.
++0000f330: 2004 3e04 4204 3c04 3504 3d04 5104 3d00   .>.B.<.5.=.Q.=.
++0000f340: 3a00 2008 0000 0000 0600 0000 1650 6179  :. ..........Pay
++0000f350: 6d65 6e74 2077 6173 2072 6576 6572 7365  ment was reverse
++0000f360: 643a 2007 0000 000d 5374 6174 656d 656e  d: .....Statemen
++0000f370: 7449 424b 5201 0300 0000 1c04 2604 1100  tIBKR.......&...
++0000f380: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
++0000f390: 3d04 4b00 3a00 2008 0000 0000 0600 0000  =.K.:. .........
++0000f3a0: 1353 6563 7572 6974 6965 7320 6c6f 6164  .Securities load
++0000f3b0: 6564 3a20 0700 0000 0d53 7461 7465 6d65  ed: .....Stateme
++0000f3c0: 6e74 4942 4b52 0103 0000 0056 041d 0435  ntIBKR.....V...5
++0000f3d0: 0434 043e 0441 0442 0430 0442 043e 0447  .4.>.A.B.0.B.>.G
++0000f3e0: 043d 043e 0020 0434 0430 043d 043d 044b  .=.>. .4.0.=.=.K
++0000f3f0: 0445 0020 0434 043b 044f 0020 0412 044b  .E. .4.;.O. ...K
++0000f400: 0434 0435 043b 0435 043d 0438 044f 0020  .4.5.;.5.=.8.O. 
++0000f410: 043a 043e 043c 043f 0430 043d 0438 0438  .:.>.<.?.0.=.8.8
++0000f420: 0020 0800 0000 0006 0000 0024 5370 696e  . .........$Spin
++0000f430: 2d6f 6666 2064 6573 6372 6970 7469 6f6e  -off description
++0000f440: 206d 6973 7320 736f 6d65 2064 6174 6120   miss some data 
++0000f450: 0700 0000 0d53 7461 7465 6d65 6e74 4942  .....StatementIB
++0000f460: 4b52 0103 0000 005c 0418 0441 0445 043e  KR.....\...A.E.>
++0000f470: 0434 043d 0430 044f 0020 0426 0411 0020  .4.=.0.O. .&... 
++0000f480: 0434 043b 044f 0020 0432 044b 0434 0435  .4.;.O. .2.K.4.5
++0000f490: 043b 0435 043d 0438 044f 0020 043a 043e  .;.5.=.8.O. .:.>
++0000f4a0: 043c 043f 0430 043d 0438 0438 0020 043d  .<.?.0.=.8.8. .=
++0000f4b0: 0435 0020 043d 0430 0439 0434 0435 043d  .5. .=.0.9.4.5.=
++0000f4c0: 0430 0020 0800 0000 0006 0000 0021 5370  .0. .........!Sp
++0000f4d0: 696e 2d6f 6666 2069 6e69 7469 616c 2061  in-off initial a
++0000f4e0: 7373 6574 206e 6f74 2066 6f75 6e64 2007  sset not found .
++0000f4f0: 0000 000d 5374 6174 656d 656e 7449 424b  ....StatementIBK
++0000f500: 5201 0300 0000 5604 1e04 4804 3804 3104  R.....V...H.8.1.
++0000f510: 3a04 3000 2004 3e04 3a04 4004 4304 3304  :.0. .>.:.@.C.3.
++0000f520: 3b04 3504 3d04 3804 4f00 2000 5300 7000  ;.5.=.8.O. .S.p.
++0000f530: 6900 6e00 2d00 6f00 6600 6600 2004 4104  i.n.-.o.f.f. .A.
++0000f540: 3b04 3804 4804 3a04 3e04 3c00 2004 3104  ;.8.H.:.>.<. .1.
++0000f550: 3e04 3b04 4c04 4804 3004 4f00 2008 0000  >.;.L.H.0.O. ...
++0000f560: 0000 0600 0000 2353 7069 6e2d 6f66 6620  ......#Spin-off 
++0000f570: 726f 756e 6469 6e67 2065 7272 6f72 2069  rounding error i
++0000f580: 7320 746f 6f20 6269 6720 0700 0000 0d53  s too big .....S
++0000f590: 7461 7465 6d65 6e74 4942 4b52 0103 0000  tatementIBKR....
++0000f5a0: 003e 041d 0435 0434 043e 0441 0442 0430  .>...5.4.>.A.B.0
++0000f5b0: 0442 043e 0447 043d 043e 0020 0434 0430  .B.>.G.=.>. .4.0
++0000f5c0: 043d 043d 044b 0445 0020 0434 043b 044f  .=.=.K.E. .4.;.O
++0000f5d0: 0020 0421 043f 043b 0438 0442 0430 0020  . .!.?.;.8.B.0. 
++0000f5e0: 0800 0000 0006 0000 0021 5370 6c69 7420  .........!Split 
++0000f5f0: 6465 7363 7269 7074 696f 6e20 6d69 7373  description miss
++0000f600: 2073 6f6d 6520 6461 7461 2007 0000 000d   some data .....
++0000f610: 5374 6174 656d 656e 7449 424b 5201 0300  StatementIBKR...
++0000f620: 0000 3804 1704 3004 4704 3804 4104 3b04  ..8...0.G.8.A.;.
++0000f630: 3504 3d04 3804 3500 2004 3004 3a04 4604  5.=.8.5. .0.:.F.
++0000f640: 3804 3900 2004 3704 3004 3304 4004 4304  8.9. .7.0.3.@.C.
++0000f650: 3604 3504 3d04 3e00 3a00 2008 0000 0000  6.5.=.>.:. .....
++0000f660: 0600 0000 1753 746f 636b 2076 6573 7469  .....Stock vesti
++0000f670: 6e67 7320 6c6f 6164 6564 3a20 0700 0000  ngs loaded: ....
++0000f680: 0d53 7461 7465 6d65 6e74 4942 4b52 0103  .StatementIBKR..
++0000f690: 0000 0048 041a 043e 0440 0440 0435 043a  ...H...>.@.@.5.:
++0000f6a0: 0442 0438 0440 043e 0432 043a 0430 0020  .B.8.@.>.2.:.0. 
++0000f6b0: 043d 0430 043b 043e 0433 0430 0020 0434  .=.0.;.>.3.0. .4
++0000f6c0: 043b 044f 0020 0434 0438 0432 0438 0434  .;.O. .4.8.2.8.4
++0000f6d0: 0435 043d 0434 0430 003a 0020 0800 0000  .5.=.4.0.:. ....
++0000f6e0: 0006 0000 001d 5461 7820 6164 6a75 7374  ......Tax adjust
++0000f6f0: 6d65 6e74 2066 6f72 2064 6976 6964 656e  ment for dividen
++0000f700: 643a 2007 0000 000d 5374 6174 656d 656e  d: .....Statemen
++0000f710: 7449 424b 5201 0300 0000 2404 1d04 3004  tIBKR.....$...0.
++0000f720: 3b04 3e04 3304 3800 2004 3704 3004 3304  ;.>.3.8. .7.0.3.
++0000f730: 4004 4304 3604 3504 3d04 4b00 3a00 2008  @.C.6.5.=.K.:. .
++0000f740: 0000 0000 0600 0000 0e54 6178 6573 206c  .........Taxes l
++0000f750: 6f61 6465 643a 2007 0000 000d 5374 6174  oaded: .....Stat
++0000f760: 656d 656e 7449 424b 5201 03ff ffff ff08  ementIBKR.......
++0000f770: 0000 0000 0600 0000 0f54 7261 6465 7320  .........Trades 
++0000f780: 6c6f 6164 6564 3a20 0700 0000 0d53 7461  loaded: .....Sta
++0000f790: 7465 6d65 6e74 4942 4b52 0103 0000 0058  tementIBKR.....X
++0000f7a0: 041d 0435 043f 043e 0434 0434 0435 0440  ...5.?.>.4.4.5.@
++0000f7b0: 0436 0438 0432 0430 0435 043c 044b 0439  .6.8.2.0.5.<.K.9
++0000f7c0: 0020 0444 043e 0440 043c 0430 0442 0020  . .D.>.@.<.0.B. 
++0000f7d0: 043e 043f 0438 0441 0430 043d 0438 044f  .>.?.8.A.0.=.8.O
++0000f7e0: 0020 0434 0438 0432 0438 0434 0435 043d  . .4.8.2.8.4.5.=
++0000f7f0: 0434 0430 003a 0020 0800 0000 0006 0000  .4.0.:. ........
++0000f800: 0022 556e 6861 6e64 6c65 6420 6469 7669  ."Unhandled divi
++0000f810: 6465 6e64 2070 6174 7465 726e 2066 6f75  dend pattern fou
++0000f820: 6e64 3a20 0700 0000 0d53 7461 7465 6d65  nd: .....Stateme
++0000f830: 6e74 4942 4b52 0103 0000 004e 041d 0435  ntIBKR.....N...5
++0000f840: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
++0000f850: 0432 0430 0435 043c 044b 0439 0020 0444  .2.0.5.<.K.9. .D
++0000f860: 043e 0440 043c 0430 0442 0020 0441 0442  .>.@.<.0.B. .A.B
++0000f870: 0440 0430 043d 044b 0020 043d 0430 043b  .@.0.=.K. .=.0.;
++0000f880: 043e 0433 0430 003a 0020 0800 0000 0006  .>.3.0.:. ......
++0000f890: 0000 0025 556e 6861 6e64 6c65 6420 7461  ...%Unhandled ta
++0000f8a0: 7820 636f 756e 7472 7920 7061 7474 6572  x country patter
++0000f8b0: 6e20 666f 756e 643a 2007 0000 000d 5374  n found: .....St
++0000f8c0: 6174 656d 656e 7449 424b 5201 0300 0000  atementIBKR.....
++0000f8d0: 5204 1d04 3504 3f04 3e04 3404 3404 3504  R...5.?.>.4.4.5.
++0000f8e0: 4004 3604 3804 3204 3004 3504 3c04 4b04  @.6.8.2.0.5.<.K.
++0000f8f0: 3900 2004 4404 3e04 4004 3c04 3004 4200  9. .D.>.@.<.0.B.
++0000f900: 2004 3e04 3f04 3804 4104 3004 3d04 3804   .>.?.8.A.0.=.8.
++0000f910: 4f00 2004 3d04 3004 3b04 3e04 3304 3000  O. .=.0.;.>.3.0.
++0000f920: 3a00 2008 0000 0000 0600 0000 1d55 6e68  :. ..........Unh
++0000f930: 616e 646c 6564 2074 6178 2070 6174 7465  andled tax patte
++0000f940: 726e 2066 6f75 6e64 3a20 0700 0000 0d53  rn found: .....S
++0000f950: 7461 7465 6d65 6e74 4942 4b52 0103 0000  tatementIBKR....
++0000f960: 0058 041d 0435 0438 0437 0432 0435 0441  .X...5.8.7.2.5.A
++0000f970: 0442 043d 044b 0439 0020 0442 0438 043f  .B.=.K.9. .B.8.?
++0000f980: 0020 043e 0442 0447 0451 0442 0430 0020  . .>.B.G.Q.B.0. 
++0000f990: 0049 006e 0074 0065 0072 0061 0063 0074  .I.n.t.e.r.a.c.t
++0000f9a0: 0069 0076 0065 0020 0042 0072 006f 006b  .i.v.e. .B.r.o.k
++0000f9b0: 0065 0072 0073 003a 0020 0800 0000 0006  .e.r.s.:. ......
++0000f9c0: 0000 0029 556e 6b6e 6f77 6e20 496e 7465  ...)Unknown Inte
++0000f9d0: 7261 6374 6976 6520 4272 6f6b 6572 7320  ractive Brokers 
++0000f9e0: 7265 706f 7274 2074 7970 653a 2007 0000  report type: ...
++0000f9f0: 000d 5374 6174 656d 656e 7449 424b 5201  ..StatementIBKR.
++0000fa00: 0300 0000 a204 1204 4b00 2004 3f04 4b04  ........K. .?.K.
++0000fa10: 4204 3004 3504 4204 3504 4104 4c00 2004  B.0.5.B.5.A.L. .
++0000fa20: 3704 3004 3304 4004 4304 3704 3804 4204  7.0.3.@.C.7.8.B.
++0000fa30: 4c00 2004 3e04 4204 4704 5104 4200 2004  L. .>.B.G.Q.B. .
++0000fa40: 3e00 2004 3f04 3e04 3404 4204 3204 3504  >. .?.>.4.B.2.5.
++0000fa50: 4004 3604 3404 5104 3d04 3d04 4b04 4500  @.6.4.Q.=.=.K.E.
++0000fa60: 2004 4104 3404 3504 3b04 3a04 3004 4500   .A.4.5.;.:.0.E.
++0000fa70: 2004 3204 3c04 3504 4104 4204 3e00 2004   .2.<.5.A.B.>. .
++0000fa80: 3e04 4204 4704 5104 4204 3000 2004 3f04  >.B.G.Q.B.0. .?.
++0000fa90: 3e00 2004 1004 3a04 4204 3804 3204 3d04  >. ...:.B.8.2.=.
++0000faa0: 3e04 4104 4204 3808 0000 0000 0600 0000  >.A.B.8.........
++0000fab0: 3f59 6f75 2074 7279 2074 6f20 696d 706f  ?You try to impo
++0000fac0: 7274 2054 7261 6465 2063 6f6e 6669 6d61  rt Trade confima
++0000fad0: 7469 6f6e 2072 6570 6f72 742c 206e 6f74  tion report, not
++0000fae0: 2041 6374 6976 6974 7920 7265 706f 7274   Activity report
++0000faf0: 0700 0000 0d53 7461 7465 6d65 6e74 4942  .....StatementIB
++0000fb00: 4b52 0103 0000 0052 041d 0435 0432 043e  KR.....R...5.2.>
++0000fb10: 0437 043c 043e 0436 043d 043e 0020 0440  .7.<.>.6.=.>. .@
++0000fb20: 0430 0441 043f 043e 0437 043d 0430 0442  .0.A.?.>.7.=.0.B
++0000fb30: 044c 0020 043e 043f 0438 0441 0430 043d  .L. .>.?.8.A.0.=
++0000fb40: 0438 0435 0020 0434 0438 0432 0438 0434  .8.5. .4.8.2.8.4
++0000fb50: 0435 043d 0434 0430 0020 0800 0000 0006  .5.=.4.0. ......
++0000fb60: 0000 0021 4361 6e27 7420 7061 7273 6520  ...!Can't parse 
++0000fb70: 4469 7669 6465 6e64 2064 6573 6372 6970  Dividend descrip
++0000fb80: 7469 6f6e 2007 0000 000c 5374 6174 656d  tion .....Statem
++0000fb90: 656e 744a 3254 0103 0000 001c 0414 0421  entJ2T.........!
++0000fba0: 0020 0437 0430 0433 0440 0443 0436 0435  . .7.0.3.@.C.6.5
++0000fbb0: 043d 044b 003a 0020 0800 0000 0006 0000  .=.K.:. ........
++0000fbc0: 0016 4361 7368 2062 616c 616e 6365 7320  ..Cash balances 
++0000fbd0: 6c6f 6164 6564 3a20 0700 0000 0c53 7461  loaded: .....Sta
++0000fbe0: 7465 6d65 6e74 4a32 5401 0300 0000 3a04  tementJ2T.....:.
++0000fbf0: 1404 3504 3d04 3504 3604 3d04 4b04 4500  ..5.=.5.6.=.K.E.
++0000fc00: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
++0000fc10: 3900 2004 3704 3004 3304 4004 4304 3604  9. .7.0.3.@.C.6.
++0000fc20: 3504 3d04 3e00 3a00 2008 0000 0000 0600  5.=.>.:. .......
++0000fc30: 0000 1843 6173 6820 6f70 6572 6174 696f  ...Cash operatio
++0000fc40: 6e73 206c 6f61 6465 643a 2007 0000 000c  ns loaded: .....
++0000fc50: 5374 6174 656d 656e 744a 3254 0103 0000  StatementJ2T....
++0000fc60: 0048 0421 0434 0435 043b 043a 0438 0020  .H.!.4.5.;.:.8. 
++0000fc70: 0441 0020 043a 0440 0438 043f 0442 043e  .A. .:.@.8.?.B.>
++0000fc80: 002d 0432 0430 043b 044e 0442 0430 043c  .-.2.0.;.N.B.0.<
++0000fc90: 0438 0020 0437 0430 0433 0440 0443 0436  .8. .7.0.3.@.C.6
++0000fca0: 0435 043d 044b 003a 0020 0800 0000 0006  .5.=.K.:. ......
++0000fcb0: 0000 0016 4372 7970 746f 2074 7261 6465  ....Crypto trade
++0000fcc0: 7320 6c6f 6164 6564 3a20 0700 0000 0c53  s loaded: .....S
++0000fcd0: 7461 7465 6d65 6e74 4a32 5401 0300 0000  tatementJ2T.....
++0000fce0: 5004 1200 2004 3e04 3f04 3804 4104 3004  P... .>.?.8.A.0.
++0000fcf0: 3d04 3804 3800 2004 3404 3804 3204 3804  =.8.8. .4.8.2.8.
++0000fd00: 3404 3504 3d04 3404 3000 2004 3e04 4204  4.5.=.4.0. .>.B.
++0000fd10: 4104 4304 4204 4104 4204 3204 4304 4e04  A.C.B.A.B.2.C.N.
++0000fd20: 4200 2004 3404 3004 3d04 3d04 4b04 3500  B. .4.0.=.=.K.5.
++0000fd30: 2008 0000 0000 0600 0000 2444 6976 6964   .........$Divid
++0000fd40: 656e 6420 6465 7363 7269 7074 696f 6e20  end description 
++0000fd50: 6d69 7373 2073 6f6d 6520 6461 7461 2007  miss some data .
++0000fd60: 0000 000c 5374 6174 656d 656e 744a 3254  ....StatementJ2T
++0000fd70: 0103 0000 004e 0414 0438 0432 0438 0434  .....N...8.2.8.4
++0000fd80: 0435 043d 0434 0020 043d 0435 0020 043d  .5.=.4. .=.5. .=
++0000fd90: 0430 0439 0434 0435 043d 0020 0434 043b  .0.9.4.5.=. .4.;
++0000fda0: 044f 0020 0441 043f 0438 0441 0430 043d  .O. .A.?.8.A.0.=
++0000fdb0: 0438 044f 0020 043d 0430 043b 043e 0433  .8.O. .=.0.;.>.3
++0000fdc0: 0430 0020 0800 0000 0006 0000 001f 4469  .0. ..........Di
++0000fdd0: 7669 6465 6e64 2066 6f72 2074 6178 2077  vidend for tax w
++0000fde0: 6173 206e 6f74 2066 6f75 6e64 2007 0000  as not found ...
++0000fdf0: 000c 5374 6174 656d 656e 744a 3254 0103  ..StatementJ2T..
++0000fe00: 0000 0044 0422 0440 0430 043d 0437 0430  ...D.".@.0.=.7.0
++0000fe10: 043a 0446 0438 044f 0020 043f 0440 043e  .:.F.8.O. .?.@.>
++0000fe20: 043f 0443 0449 0435 043d 0430 0020 043f  .?.C.I.5.=.0. .?
++0000fe30: 0440 0438 0020 0438 043c 043f 043e 0440  .@.8. .8.<.?.>.@
++0000fe40: 0442 0435 003a 0020 0800 0000 0006 0000  .B.5.:. ........
++0000fe50: 001f 496d 706f 7274 2073 6b69 7070 6564  ..Import skipped
++0000fe60: 206f 6620 7472 616e 7361 6374 696f 6e3a   of transaction:
++0000fe70: 2007 0000 000c 5374 6174 656d 656e 744a   .....StatementJ
++0000fe80: 3254 0103 0000 0014 004a 0075 0073 0074  2T.......J.u.s.t
++0000fe90: 0032 0054 0072 0061 0064 0065 0800 0000  .2.T.r.a.d.e....
++0000fea0: 0006 0000 000a 4a75 7374 3254 7261 6465  ......Just2Trade
++0000feb0: 0700 0000 0c53 7461 7465 6d65 6e74 4a32  .....StatementJ2
++0000fec0: 5401 0300 0000 3204 1e04 4204 4704 5104  T.....2...B.G.Q.
++0000fed0: 4200 2000 4a00 7500 7300 7400 3200 5400  B. .J.u.s.t.2.T.
++0000fee0: 7200 6100 6400 6500 2000 2800 2a00 2e00  r.a.d.e. .(.*...
++0000fef0: 7800 6c00 7300 7800 2908 0000 0000 0600  x.l.s.x.).......
++0000ff00: 0000 1d4a 7573 7432 5472 6164 6520 7374  ...Just2Trade st
++0000ff10: 6174 656d 656e 7420 282a 2e78 6c73 7829  atement (*.xlsx)
++0000ff20: 0700 0000 0c53 7461 7465 6d65 6e74 4a32  .....StatementJ2
++0000ff30: 5401 0300 0000 1c04 2604 1100 2004 3704  T.......&... .7.
++0000ff40: 3004 3304 4004 4304 3604 3504 3d04 4b00  0.3.@.C.6.5.=.K.
++0000ff50: 3a00 2008 0000 0000 0600 0000 1353 6563  :. ..........Sec
++0000ff60: 7572 6974 6965 7320 6c6f 6164 6564 3a20  urities loaded: 
++0000ff70: 0700 0000 0c53 7461 7465 6d65 6e74 4a32  .....StatementJ2
++0000ff80: 5401 0300 0000 3804 2104 3404 3504 3b04  T.....8.!.4.5.;.
++0000ff90: 3a04 3800 2004 4100 2004 3004 3a04 4604  :.8. .A. .0.:.F.
++0000ffa0: 3804 4f04 3c04 3800 2004 3704 3004 3304  8.O.<.8. .7.0.3.
++0000ffb0: 4004 4304 3604 3504 3d04 4b00 3a00 2008  @.C.6.5.=.K.:. .
++0000ffc0: 0000 0000 0600 0000 1553 746f 636b 2074  .........Stock t
++0000ffd0: 7261 6465 7320 6c6f 6164 6564 3a20 0700  rades loaded: ..
++0000ffe0: 0000 0c53 7461 7465 6d65 6e74 4a32 5401  ...StatementJ2T.
++0000fff0: 0300 0000 4004 1d04 3504 3804 3704 3204  ....@...5.8.7.2.
++00010000: 3504 4104 4204 3d04 3004 4f00 2004 3404  5.A.B.=.0.O. .4.
++00010010: 3504 3d04 3504 3604 3d04 3004 4f00 2004  5.=.5.6.=.0.O. .
++00010020: 4204 4004 3004 3d04 3704 3004 3a04 4604  B.@.0.=.7.0.:.F.
++00010030: 3804 4f00 2008 0000 0000 0600 0000 1e55  8.O. ..........U
++00010040: 6e6b 6e6f 776e 2063 6173 6820 7472 616e  nknown cash tran
++00010050: 7361 6374 696f 6e20 7479 7065 2007 0000  saction type ...
++00010060: 000c 5374 6174 656d 656e 744a 3254 0103  ..StatementJ2T..
++00010070: 0000 0030 041d 0435 0438 0437 0432 0435  ...0...5.8.7.2.5
++00010080: 0441 0442 043d 044b 0439 0020 0442 0438  .A.B.=.K.9. .B.8
++00010090: 043f 0020 0441 0434 0435 043b 043a 0438  .?. .A.4.5.;.:.8
++000100a0: 003a 0020 0800 0000 0006 0000 0014 556e  .:. ..........Un
++000100b0: 6b6e 6f77 6e20 7472 6164 6520 7479 7065  known trade type
++000100c0: 3a20 0700 0000 0c53 7461 7465 6d65 6e74  : .....Statement
++000100d0: 4a32 5401 0300 0000 4a04 1d04 3504 3f04  J2T.....J...5.?.
++000100e0: 3e04 3404 3404 3504 4004 3604 3804 3204  >.4.4.5.@.6.8.2.
++000100f0: 3004 3504 3c04 3004 4f00 2004 3404 3504  0.5.<.0.O. .4.5.
++00010100: 3d04 3504 3604 3d04 3004 4f00 2004 4204  =.5.6.=.0.O. .B.
++00010110: 4004 3004 3d04 3704 3004 3a04 4604 3804  @.0.=.7.0.:.F.8.
++00010120: 4f00 2008 0000 0000 0600 0000 1e55 6e73  O. ..........Uns
++00010130: 7570 7070 6f72 7465 6420 6361 7368 2074  uppported cash t
++00010140: 7261 6e73 6163 7469 6f6e 2007 0000 000c  ransaction .....
++00010150: 5374 6174 656d 656e 744a 3254 0103 0000  StatementJ2T....
++00010160: 003a 0414 0435 043d 0435 0436 043d 044b  .:...5.=.5.6.=.K
++00010170: 0445 0020 043e 043f 0435 0440 0430 0446  .E. .>.?.5.@.0.F
++00010180: 0438 0439 0020 0437 0430 0433 0440 0443  .8.9. .7.0.3.@.C
++00010190: 0436 0435 043d 043e 003a 0020 0800 0000  .6.5.=.>.:. ....
++000101a0: 0006 0000 0018 4361 7368 206f 7065 7261  ......Cash opera
++000101b0: 7469 6f6e 7320 6c6f 6164 6564 3a20 0700  tions loaded: ..
++000101c0: 0000 0c53 7461 7465 6d65 6e74 4b49 5401  ...StatementKIT.
++000101d0: 0300 0000 7604 1d04 3004 3b04 3e04 3300  ....v...0.;.>.3.
++000101e0: 2004 3d04 3000 2004 3404 3804 3204 3804   .=.0. .4.8.2.8.
++000101f0: 3404 3504 3d04 3404 4b00 2004 3d04 3500  4.5.=.4.K. .=.5.
++00010200: 2004 3f04 3e04 3404 3404 3504 4004 3604   .?.>.4.4.5.@.6.
++00010210: 3804 3204 3004 3504 4204 4104 4f00 2004  8.2.0.5.B.A.O. .
++00010220: 3404 3b04 4f00 2004 3104 4004 3e04 3a04  4.;.O. .1.@.>.:.
++00010230: 3504 4004 3000 2004 1a04 1804 2200 2d04  5.@.0. .....".-.
++00010240: 4404 3804 3d04 3004 3d04 4108 0000 0000  D.8.=.0.=.A.....
++00010250: 0600 0000 3e44 6976 6964 656e 6420 7461  ....>Dividend ta
++00010260: 7865 7320 6172 6520 6e6f 7420 7375 7070  xes are not supp
++00010270: 6f72 7465 6420 666f 7220 4b49 5420 6272  orted for KIT br
++00010280: 6f6b 6572 2073 7461 7465 6d65 6e74 7320  oker statements 
++00010290: 7965 7407 0000 000c 5374 6174 656d 656e  yet.....Statemen
++000102a0: 744b 4954 0103 0000 0014 041a 0418 0422  tKIT..........."
++000102b0: 0020 0424 0438 043d 0430 043d 0441 0800  . .$.8.=.0.=.A..
++000102c0: 0000 0006 0000 000b 4b49 5420 4669 6e61  ........KIT Fina
++000102d0: 6e63 6507 0000 000c 5374 6174 656d 656e  nce.....Statemen
++000102e0: 744b 4954 0103 0000 0032 041e 0442 0447  tKIT.....2...B.G
++000102f0: 0451 0442 0020 041a 0418 0422 0020 0424  .Q.B. .....". .$
++00010300: 0438 043d 0430 043d 0441 0020 0028 002a  .8.=.0.=.A. .(.*
++00010310: 002e 0078 006c 0073 0078 0029 0800 0000  ...x.l.s.x.)....
++00010320: 0006 0000 001e 4b49 5420 4669 6e61 6e63  ......KIT Financ
++00010330: 6520 7374 6174 656d 656e 7420 282a 2e78  e statement (*.x
++00010340: 6c73 7829 0700 0000 0c53 7461 7465 6d65  lsx).....Stateme
++00010350: 6e74 4b49 5401 0300 0000 2404 2104 3404  ntKIT.....$.!.4.
++00010360: 3504 3b04 3a04 3800 2004 3704 3004 3304  5.;.:.8. .7.0.3.
++00010370: 4004 4304 3604 3504 3d04 4b00 3a00 2008  @.C.6.5.=.K.:. .
++00010380: 0000 0000 0600 0000 0f54 7261 6465 7320  .........Trades 
++00010390: 6c6f 6164 6564 3a20 0700 0000 0c53 7461  loaded: .....Sta
++000103a0: 7465 6d65 6e74 4b49 5401 0300 0000 3004  tementKIT.....0.
++000103b0: 1d04 3504 3804 3704 3204 3504 4104 4204  ..5.8.7.2.5.A.B.
++000103c0: 3d04 4b04 3900 2004 4204 3804 3f00 2004  =.K.9. .B.8.?. .
++000103d0: 4104 3404 3504 3b04 3a04 3800 3a00 2008  A.4.5.;.:.8.:. .
++000103e0: 0000 0000 0600 0000 1455 6e6b 6e6f 776e  .........Unknown
++000103f0: 2074 7261 6465 2074 7970 653a 2007 0000   trade type: ...
++00010400: 000c 5374 6174 656d 656e 744b 4954 0103  ..StatementKIT..
++00010410: 0000 004a 041d 0435 043f 043e 0434 0434  ...J...5.?.>.4.4
++00010420: 0435 0440 0436 0438 0432 0430 0435 043c  .5.@.6.8.2.0.5.<
++00010430: 0430 044f 0020 0434 0435 043d 0435 0436  .0.O. .4.5.=.5.6
++00010440: 043d 0430 044f 0020 0442 0440 0430 043d  .=.0.O. .B.@.0.=
++00010450: 0437 0430 043a 0446 0438 044f 0020 0800  .7.0.:.F.8.O. ..
++00010460: 0000 0006 0000 001e 556e 7375 7070 706f  ........Unsupppo
++00010470: 7274 6564 2063 6173 6820 7472 616e 7361  rted cash transa
++00010480: 6374 696f 6e20 0700 0000 0c53 7461 7465  ction .....State
++00010490: 6d65 6e74 4b49 5401 0300 0000 2204 2104  mentKIT.....".!.
++000104a0: 4704 3504 4204 3000 2004 3704 3004 3304  G.5.B.0. .7.0.3.
++000104b0: 4004 4304 3604 3504 3d04 4b00 3a00 2008  @.C.6.5.=.K.:. .
++000104c0: 0000 0000 0600 0000 1141 6363 6f75 6e74  .........Account
++000104d0: 7320 6c6f 6164 6564 3a20 0700 0000 1353  s loaded: .....S
++000104e0: 7461 7465 6d65 6e74 4f70 656e 4272 6f6b  tatementOpenBrok
++000104f0: 6572 0103 0000 0064 041e 0442 0441 0443  er.....d...B.A.C
++00010500: 0442 0441 0442 0432 0443 044e 0442 0020  .B.A.B.2.C.N.B. 
++00010510: 0434 0430 043d 043d 044b 0435 0020 0432  .4.0.=.=.K.5. .2
++00010520: 0020 043e 043f 0438 0441 0430 043d 0438  . .>.?.8.A.0.=.8
++00010530: 0438 0020 043f 043e 0433 0430 0448 0435  .8. .?.>.3.0.H.5
++00010540: 043d 0438 044f 0020 043e 0431 043b 0438  .=.8.O. .>.1.;.8
++00010550: 0433 0430 0446 0438 0438 0020 0800 0000  .3.0.F.8.8. ....
++00010560: 0006 0000 002a 426f 6e64 2072 6570 6179  .....*Bond repay
++00010570: 6d65 6e74 2064 6573 6372 6970 7469 6f6e  ment description
++00010580: 206d 6973 7320 736f 6d65 2064 6174 6120   miss some data 
++00010590: 0700 0000 1353 7461 7465 6d65 6e74 4f70  .....StatementOp
++000105a0: 656e 4272 6f6b 6572 0103 0000 0068 041d  enBroker.....h..
++000105b0: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++000105c0: 043e 0020 0440 0430 0441 043f 043e 0437  .>. .@.0.A.?.>.7
++000105d0: 043d 0430 0442 044c 0020 043d 0430 0437  .=.0.B.L. .=.0.7
++000105e0: 0432 0430 043d 0438 0435 0020 043e 0431  .2.0.=.8.5. .>.1
++000105f0: 043b 0438 0433 0430 0446 0438 0438 0020  .;.8.3.0.F.8.8. 
++00010600: 0432 0020 043e 043f 0438 0441 0430 043d  .2. .>.?.8.A.0.=
++00010610: 0438 0438 0020 0800 0000 0006 0000 0028  .8.8. .........(
++00010620: 4361 6e27 7420 6465 7465 6374 2062 6f6e  Can't detect bon
++00010630: 6420 6e61 6d65 2066 726f 6d20 6465 7363  d name from desc
++00010640: 7269 7074 696f 6e20 0700 0000 1353 7461  ription .....Sta
++00010650: 7465 6d65 6e74 4f70 656e 4272 6f6b 6572  tementOpenBroker
++00010660: 0103 0000 0062 041d 0435 0432 043e 0437  .....b...5.2.>.7
++00010670: 043c 043e 0436 043d 043e 0020 043e 043f  .<.>.6.=.>. .>.?
++00010680: 0440 0435 0434 0435 043b 0438 0442 044c  .@.5.4.5.;.8.B.L
++00010690: 0020 0442 0438 043f 002f 043a 043e 043b  . .B.8.?./.:.>.;
++000106a0: 0438 0447 0435 0441 0442 0432 043e 0020  .8.G.5.A.B.2.>. 
++000106b0: 0434 043b 044f 0020 0441 0434 0435 043b  .4.;.O. .A.4.5.;
++000106c0: 043a 0438 003a 0020 0800 0000 0006 0000  .:.8.:. ........
++000106d0: 0025 4361 6e27 7420 6465 7465 726d 696e  .%Can't determin
++000106e0: 6520 7472 6164 6520 7479 7065 2f71 7561  e trade type/qua
++000106f0: 6e74 6974 793a 2007 0000 0013 5374 6174  ntity: .....Stat
++00010700: 656d 656e 744f 7065 6e42 726f 6b65 7201  ementOpenBroker.
++00010710: 0300 0000 6804 1d04 3504 3204 3e04 3704  ....h...5.2.>.7.
++00010720: 3c04 3e04 3604 3d04 3e00 2004 3e04 3f04  <.>.6.=.>. .>.?.
++00010730: 4004 3504 3404 3504 3b04 3804 4204 4c00  @.5.4.5.;.8.B.L.
++00010740: 2004 4104 4704 5104 4200 2004 3404 3b04   .A.G.Q.B. .4.;.
++00010750: 4f00 2004 3404 3504 3d04 3504 3604 3d04  O. .4.5.=.5.6.=.
++00010760: 3e04 3900 2004 4204 4004 3004 3d04 3704  >.9. .B.@.0.=.7.
++00010770: 3004 3a04 4604 3804 3800 3a00 2008 0000  0.:.F.8.8.:. ...
++00010780: 0000 0600 0000 2743 616e 2774 2066 696e  ......'Can't fin
++00010790: 6420 6163 636f 756e 7420 666f 7220 6361  d account for ca
++000107a0: 7368 206f 7065 7261 7469 6f6e 3a20 0700  sh operation: ..
++000107b0: 0000 1353 7461 7465 6d65 6e74 4f70 656e  ...StatementOpen
++000107c0: 4272 6f6b 6572 0103 0000 0044 041d 0435  Broker.....D...5
++000107d0: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
++000107e0: 0020 043d 0430 0439 0442 0438 0020 0441  . .=.0.9.B.8. .A
++000107f0: 0447 0451 0442 0020 0434 043b 044f 0020  .G.Q.B. .4.;.O. 
++00010800: 0441 0434 0435 043b 043a 0438 003a 0020  .A.4.5.;.:.8.:. 
++00010810: 0800 0000 0006 0000 001e 4361 6e27 7420  ..........Can't 
++00010820: 6669 6e64 2061 6363 6f75 6e74 2066 6f72  find account for
++00010830: 2074 7261 6465 3a20 0700 0000 1353 7461   trade: .....Sta
++00010840: 7465 6d65 6e74 4f70 656e 4272 6f6b 6572  tementOpenBroker
++00010850: 0103 0000 0050 041d 0435 0432 043e 0437  .....P...5.2.>.7
++00010860: 043c 043e 0436 043d 043e 0020 043d 0430  .<.>.6.=.>. .=.0
++00010870: 0439 0442 0438 0020 0437 0430 043f 0438  .9.B.8. .7.0.?.8
++00010880: 0441 044c 0020 0441 043f 0438 0441 0430  .A.L. .A.?.8.A.0
++00010890: 043d 0438 044f 0020 0426 0411 0020 0434  .=.8.O. .&... .4
++000108a0: 043b 044f 0020 0800 0000 0006 0000 0029  .;.O. .........)
++000108b0: 4361 6e27 7420 6669 6e64 2061 7373 6574  Can't find asset
++000108c0: 2063 616e 6365 6c6c 6174 696f 6e20 7265   cancellation re
++000108d0: 636f 7264 2066 6f72 2007 0000 0013 5374  cord for .....St
++000108e0: 6174 656d 656e 744f 7065 6e42 726f 6b65  atementOpenBroke
++000108f0: 7201 0300 0000 3204 1d04 3500 2004 3d04  r.....2...5. .=.
++00010900: 3004 3904 3404 3504 3d04 3000 2004 2604  0.9.4.5.=.0. .&.
++00010910: 1100 2004 3404 3b04 4f00 2004 3a04 4304  .. .4.;.O. .:.C.
++00010920: 3f04 3e04 3d04 3000 2008 0000 0000 0600  ?.>.=.0. .......
++00010930: 0000 2343 616e 2774 2066 696e 6420 6173  ..#Can't find as
++00010940: 7365 7420 666f 7220 626f 6e64 2069 6e74  set for bond int
++00010950: 6572 6573 7420 0700 0000 1353 7461 7465  erest .....State
++00010960: 6d65 6e74 4f70 656e 4272 6f6b 6572 0103  mentOpenBroker..
++00010970: 0000 003c 041d 0435 0432 043e 0437 043c  ...<...5.2.>.7.<
++00010980: 043e 0436 043d 043e 0020 0441 043e 043f  .>.6.=.>. .A.>.?
++00010990: 043e 0441 0442 0430 0432 0438 0442 044c  .>.A.B.0.2.8.B.L
++000109a0: 0020 0426 0411 0020 0434 043b 044f 0020  . .&... .4.;.O. 
++000109b0: 0800 0000 0006 0000 0016 4361 6e27 7420  ..........Can't 
++000109c0: 6d61 7463 6820 6173 7365 7420 666f 7220  match asset for 
++000109d0: 0700 0000 1353 7461 7465 6d65 6e74 4f70  .....StatementOp
++000109e0: 656e 4272 6f6b 6572 0103 0000 0066 041d  enBroker.....f..
++000109f0: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++00010a00: 043e 0020 0440 0430 0441 043f 043e 0437  .>. .@.0.A.?.>.7
++00010a10: 043d 0430 0442 044c 0020 043e 043f 0438  .=.0.B.L. .>.?.8
++00010a20: 0441 0430 043d 0438 0435 0020 043f 043e  .A.0.=.8.5. .?.>
++00010a30: 0433 0430 0448 0435 043d 0438 044f 0020  .3.0.H.5.=.8.O. 
++00010a40: 043e 0431 043b 0438 0433 0430 0446 0438  .>.1.;.8.3.0.F.8
++00010a50: 0438 0020 0800 0000 0006 0000 0024 4361  .8. .........$Ca
++00010a60: 6e27 7420 7061 7273 6520 426f 6e64 204d  n't parse Bond M
++00010a70: 6174 7572 6520 6465 7363 7269 7074 696f  ature descriptio
++00010a80: 6e20 0700 0000 1353 7461 7465 6d65 6e74  n .....Statement
++00010a90: 4f70 656e 4272 6f6b 6572 0103 0000 004c  OpenBroker.....L
++00010aa0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++00010ab0: 043d 043e 0020 0440 0430 0441 043f 043e  .=.>. .@.0.A.?.>
++00010ac0: 0437 043d 0430 0442 044c 0020 043e 043f  .7.=.0.B.L. .>.?
++00010ad0: 0438 0441 0430 043d 0438 0435 0020 043a  .8.A.0.=.8.5. .:
++00010ae0: 0443 043f 043e 043d 0430 0020 0800 0000  .C.?.>.=.0. ....
++00010af0: 0006 0000 0021 4361 6e27 7420 7061 7273  .....!Can't pars
++00010b00: 6520 496e 7465 7265 7374 2064 6573 6372  e Interest descr
++00010b10: 6970 7469 6f6e 2007 0000 0013 5374 6174  iption .....Stat
++00010b20: 656d 656e 744f 7065 6e42 726f 6b65 7201  ementOpenBroker.
++00010b30: 0300 0000 6604 1d04 3504 3204 3e04 3704  ....f...5.2.>.7.
++00010b40: 3c04 3e04 3604 3d04 3e00 2004 4004 3004  <.>.6.=.>. .@.0.
++00010b50: 4104 3f04 3e04 3704 3d04 3004 4204 4c00  A.?.>.7.=.0.B.L.
++00010b60: 2004 3e04 3f04 3804 4104 3004 3d04 3804   .>.?.8.A.0.=.8.
++00010b70: 3500 2004 3f04 3e04 3304 3004 4804 3504  5. .?.>.3.0.H.5.
++00010b80: 3d04 3804 4f00 2004 3e04 3104 3b04 3804  =.8.O. .>.1.;.8.
++00010b90: 3304 3004 4604 3804 3800 2008 0000 0000  3.0.F.8.8. .....
++00010ba0: 0600 0000 2743 616e 2774 2070 6172 7365  ....'Can't parse
++00010bb0: 2062 6f6e 6420 7265 7061 796d 656e 7420   bond repayment 
++00010bc0: 6465 7363 7269 7074 696f 6e20 0700 0000  description ....
++00010bd0: 1353 7461 7465 6d65 6e74 4f70 656e 4272  .StatementOpenBr
++00010be0: 6f6b 6572 0103 0000 003a 0414 0435 043d  oker.....:...5.=
++00010bf0: 0435 0436 043d 044b 0445 0020 043e 043f  .5.6.=.K.E. .>.?
++00010c00: 0435 0440 0430 0446 0438 0439 0020 0437  .5.@.0.F.8.9. .7
++00010c10: 0430 0433 0440 0443 0436 0435 043d 043e  .0.3.@.C.6.5.=.>
++00010c20: 003a 0020 0800 0000 0006 0000 0018 4361  .:. ..........Ca
++00010c30: 7368 206f 7065 7261 7469 6f6e 7320 6c6f  sh operations lo
++00010c40: 6164 6564 3a20 0700 0000 1353 7461 7465  aded: .....State
++00010c50: 6d65 6e74 4f70 656e 4272 6f6b 6572 0103  mentOpenBroker..
++00010c60: 0000 0048 041e 0442 0441 0443 0442 0441  ...H...B.A.C.B.A
++00010c70: 0442 0432 0443 044e 0442 0020 0434 0430  .B.2.C.N.B. .4.0
++00010c80: 043d 043d 044b 0435 0020 0432 0020 043e  .=.=.K.5. .2. .>
++00010c90: 043f 0438 0441 0430 043d 0438 0020 043a  .?.8.A.0.=.8. .:
++00010ca0: 0443 043f 043e 043d 0430 0020 0800 0000  .C.?.>.=.0. ....
++00010cb0: 0006 0000 0024 496e 7465 7265 7374 2064  .....$Interest d
++00010cc0: 6573 6372 6970 7469 6f6e 206d 6973 7320  escription miss 
++00010cd0: 736f 6d65 2064 6174 6120 0700 0000 1353  some data .....S
++00010ce0: 7461 7465 6d65 6e74 4f70 656e 4272 6f6b  tatementOpenBrok
++00010cf0: 6572 0103 0000 0054 0417 0430 0433 0440  er.....T...0.3.@
++00010d00: 0443 0437 043a 0430 0020 043e 0442 0447  .C.7.:.0. .>.B.G
++00010d10: 0451 0442 0430 0020 041e 0442 043a 0440  .Q.B.0. ...B.:.@
++00010d20: 044b 0442 0438 0435 0020 0431 0440 043e  .K.B.8.5. .1.@.>
++00010d30: 043a 0435 0440 0020 0434 043b 044f 0020  .:.5.@. .4.;.O. 
++00010d40: 0441 0447 0451 0442 0430 0020 0800 0000  .A.G.Q.B.0. ....
++00010d50: 0006 0000 0027 4c6f 6164 204f 7065 6e20  .....'Load Open 
++00010d60: 4272 6f6b 6572 2073 7461 7465 6d65 6e74  Broker statement
++00010d70: 2066 6f72 2061 6363 6f75 6e74 2007 0000   for account ...
++00010d80: 0013 5374 6174 656d 656e 744f 7065 6e42  ..StatementOpenB
++00010d90: 726f 6b65 7201 0300 0000 5604 1d04 3004  roker.....V...0.
++00010da0: 3904 3404 3504 3d04 4b00 2004 3d04 3504  9.4.5.=.K. .=.5.
++00010db0: 4104 3a04 3e04 3b04 4c04 3a04 3e00 2004  A.:.>.;.L.:.>. .
++00010dc0: 3704 3004 3f04 3804 4104 3504 3900 2004  7.0.?.8.A.5.9. .
++00010dd0: 3f04 3e04 3304 3004 4804 3504 3d04 3804  ?.>.3.0.H.5.=.8.
++00010de0: 4f00 2004 2604 1100 2004 3404 3b04 4f00  O. .&... .4.;.O.
++00010df0: 2008 0000 0000 0600 0000 264d 756c 7469   .........&Multi
++00010e00: 706c 6520 6173 7365 7420 6361 6e63 656c  ple asset cancel
++00010e10: 6c61 7469 6f6e 206d 6174 6368 2066 6f72  lation match for
++00010e20: 2007 0000 0013 5374 6174 656d 656e 744f   .....StatementO
++00010e30: 7065 6e42 726f 6b65 7201 0300 0000 7404  penBroker.....t.
++00010e40: 1d04 3504 4104 3a04 3e04 3b04 4c04 3a04  ..5.A.:.>.;.L.:.
++00010e50: 3e00 2004 4104 3e04 3204 3f04 3004 3404  >. .A.>.2.?.0.4.
++00010e60: 3504 3d04 3804 3900 2004 3404 3b04 4f00  5.=.8.9. .4.;.O.
++00010e70: 2004 4104 3804 3c04 3204 3e04 3b04 3000   .A.8.<.2.>.;.0.
++00010e80: 2c00 2004 3804 4104 3f04 3e04 3b04 4c04  ,. .8.A.?.>.;.L.
++00010e90: 3704 4304 3504 3c04 3e04 3304 3e00 2004  7.C.5.<.>.3.>. .
++00010ea0: 3104 4004 3e04 3a04 3504 4004 3e04 3c00  1.@.>.:.5.@.>.<.
++00010eb0: 3a00 2008 0000 0000 0600 0000 224d 756c  :. ........."Mul
++00010ec0: 7469 706c 6520 6d61 7463 6820 666f 7220  tiple match for 
++00010ed0: 6272 6f6b 6572 2073 796d 626f 6c3a 2007  broker symbol: .
++00010ee0: 0000 0013 5374 6174 656d 656e 744f 7065  ....StatementOpe
++00010ef0: 6e42 726f 6b65 7201 0300 0000 4404 1d04  nBroker.....D...
++00010f00: 3504 4104 3a04 3e04 3b04 4c04 3a04 3e00  5.A.:.>.;.L.:.>.
++00010f10: 2004 4104 3e04 3204 3f04 3004 3404 3504   .A.>.2.?.0.4.5.
++00010f20: 3d04 3804 3900 2004 3404 3b04 4f00 2004  =.8.9. .4.;.O. .
++00010f30: 4104 3804 3c04 3204 3e04 3b04 3000 3a00  A.8.<.2.>.;.0.:.
++00010f40: 2008 0000 0000 0600 0000 1b4d 756c 7469   ..........Multi
++00010f50: 706c 6520 6d61 7463 6820 666f 7220 7379  ple match for sy
++00010f60: 6d62 6f6c 3a20 0700 0000 1353 7461 7465  mbol: .....State
++00010f70: 6d65 6e74 4f70 656e 4272 6f6b 6572 0103  mentOpenBroker..
++00010f80: 0000 001e 041e 0442 043a 0440 044b 0442  .......B.:.@.K.B
++00010f90: 0438 0435 0020 0431 0440 043e 043a 0435  .8.5. .1.@.>.:.5
++00010fa0: 0440 0800 0000 0006 0000 000b 4f70 656e  .@..........Open
++00010fb0: 2042 726f 6b65 7207 0000 0013 5374 6174   Broker.....Stat
++00010fc0: 656d 656e 744f 7065 6e42 726f 6b65 7201  ementOpenBroker.
++00010fd0: 0300 0000 3c04 1e04 4204 4704 5104 4200  ....<...B.G.Q.B.
++00010fe0: 2004 3104 4004 3e04 3a04 3504 4004 3000   .1.@.>.:.5.@.0.
++00010ff0: 2004 1e04 4204 3a04 4004 4b04 4204 3804   ...B.:.@.K.B.8.
++00011000: 3500 2000 2800 2a00 2e00 7800 6d00 6c00  5. .(.*...x.m.l.
++00011010: 2908 0000 0000 0600 0000 1d4f 7065 6e20  )..........Open 
++00011020: 4272 6f6b 6572 2073 7461 7465 6d65 6e74  Broker statement
++00011030: 2028 2a2e 786d 6c29 0700 0000 1353 7461   (*.xml).....Sta
++00011040: 7465 6d65 6e74 4f70 656e 4272 6f6b 6572  tementOpenBroker
++00011050: 0103 0000 0054 0417 0430 0433 043e 043b  .....T...0.3.>.;
++00011060: 043e 0432 043e 043a 0020 043e 0442 0447  .>.2.>.:. .>.B.G
++00011070: 0451 0442 0430 0020 041e 0442 043a 0440  .Q.B.0. ...B.:.@
++00011080: 044b 0442 0438 0435 0020 0431 0440 043e  .K.B.8.5. .1.@.>
++00011090: 043a 0435 0440 0020 043d 0435 0020 043d  .:.5.@. .=.5. .=
++000110a0: 0430 0439 0434 0435 043d 0800 0000 0006  .0.9.4.5.=......
++000110b0: 0000 0022 4f70 656e 2062 726f 6b65 7220  ..."Open broker 
++000110c0: 7265 706f 7274 2074 6974 6c65 206e 6f74  report title not
++000110d0: 2066 6f75 6e64 0700 0000 1353 7461 7465   found.....State
++000110e0: 6d65 6e74 4f70 656e 4272 6f6b 6572 0103  mentOpenBroker..
++000110f0: 0000 0038 041e 043f 0435 0440 0430 0446  ...8...?.5.@.0.F
++00011100: 0438 044f 0020 043d 0435 0020 043f 043e  .8.O. .=.5. .?.>
++00011110: 0434 0434 0435 0440 0436 0438 0432 0430  .4.4.5.@.6.8.2.0
++00011120: 0435 0442 0441 044f 003a 0020 0800 0000  .5.B.A.O.:. ....
++00011130: 0006 0000 0019 4f70 6572 6174 696f 6e20  ......Operation 
++00011140: 6e6f 7420 7375 7070 6f72 7465 643a 2007  not supported: .
++00011150: 0000 0013 5374 6174 656d 656e 744f 7065  ....StatementOpe
++00011160: 6e42 726f 6b65 7201 0300 0000 1c04 2604  nBroker.......&.
++00011170: 1100 2004 3704 3004 3304 4004 4304 3604  .. .7.0.3.@.C.6.
++00011180: 3504 3d04 4b00 3a00 2008 0000 0000 0600  5.=.K.:. .......
++00011190: 0000 1353 6563 7572 6974 6965 7320 6c6f  ...Securities lo
++000111a0: 6164 6564 3a20 0700 0000 1353 7461 7465  aded: .....State
++000111b0: 6d65 6e74 4f70 656e 4272 6f6b 6572 0103  mentOpenBroker..
++000111c0: 0000 006e 041d 0435 043f 043e 0434 0434  ...n...5.?.>.4.4
++000111d0: 0435 0440 0436 0438 0432 0430 0435 043c  .5.@.6.8.2.0.5.<
++000111e0: 044b 0439 0020 0437 0430 0433 043e 043b  .K.9. .7.0.3.>.;
++000111f0: 043e 0432 043e 043a 0020 043e 0442 0447  .>.2.>.:. .>.B.G
++00011200: 0451 0442 0430 0020 0434 043b 044f 0020  .Q.B.0. .4.;.O. 
++00011210: 041e 0442 043a 0440 044b 0442 0438 0435  ...B.:.@.K.B.8.5
++00011220: 0020 0431 0440 043e 043a 0435 0440 003a  . .1.@.>.:.5.@.:
++00011230: 0020 0800 0000 0006 0000 0026 556e 6578  . .........&Unex
++00011240: 7065 6374 6564 204f 7065 6e20 6272 6f6b  pected Open brok
++00011250: 6572 2072 6570 6f72 7420 6865 6164 6572  er report header
++00011260: 3a20 0700 0000 1353 7461 7465 6d65 6e74  : .....Statement
++00011270: 4f70 656e 4272 6f6b 6572 0103 0000 0042  OpenBroker.....B
++00011280: 041d 0435 0438 0437 0432 0435 0441 0442  ...5.8.7.2.5.A.B
++00011290: 043d 0430 044f 0020 043d 0435 0442 043e  .=.0.O. .=.5.B.>
++000112a0: 0440 0433 043e 0432 0430 044f 0020 043e  .@.3.>.2.0.O. .>
++000112b0: 043f 0435 0440 0430 0446 0438 044f 003a  .?.5.@.0.F.8.O.:
++000112c0: 0020 0800 0000 0006 0000 001d 556e 6b6e  . ..........Unkn
++000112d0: 6f77 6e20 6e6f 6e2d 7472 6164 6520 6f70  own non-trade op
++000112e0: 6572 6174 696f 6e3a 2007 0000 0013 5374  eration: .....St
++000112f0: 6174 656d 656e 744f 7065 6e42 726f 6b65  atementOpenBroke
++00011300: 7201 0300 0000 4604 1d04 3504 3f04 3e04  r.....F...5.?.>.
++00011310: 3404 3404 3504 4004 3604 3804 3204 3004  4.4.5.@.6.8.2.0.
++00011320: 3504 3c04 3e04 3500 2004 3e04 3f04 3804  5.<.>.5. .>.?.8.
++00011330: 4104 3004 3d04 3804 3500 2004 3f04 3b04  A.0.=.8.5. .?.;.
++00011340: 3004 4204 3504 3604 3000 3a00 2008 0000  0.B.5.6.0.:. ...
++00011350: 0000 0600 0000 1d55 6e6b 6e6f 776e 2070  .......Unknown p
++00011360: 6179 6d65 6e74 2064 6573 6372 6970 7469  ayment descripti
++00011370: 6f6e 3a20 0700 0000 1353 7461 7465 6d65  on: .....Stateme
++00011380: 6e74 4f70 656e 4272 6f6b 6572 0103 0000  ntOpenBroker....
++00011390: 0032 041d 0435 0438 0437 0432 0435 0441  .2...5.8.7.2.5.A
++000113a0: 0442 043d 044b 0439 0020 0442 0438 043f  .B.=.K.9. .B.8.?
++000113b0: 0020 043f 043b 0430 0442 0435 0436 0430  . .?.;.0.B.5.6.0
++000113c0: 003a 0020 0800 0000 0006 0000 0016 556e  .:. ..........Un
++000113d0: 6b6e 6f77 6e20 7061 796d 656e 7420 7479  known payment ty
++000113e0: 7065 3a20 0700 0000 1353 7461 7465 6d65  pe: .....Stateme
++000113f0: 6e74 4f70 656e 4272 6f6b 6572 0103 0000  ntOpenBroker....
++00011400: 0016 0426 0411 0020 0431 0435 0437 0020  ...&... .1.5.7. 
++00011410: 0069 0064 003a 0020 0800 0000 0006 0000  .i.d.:. ........
++00011420: 0012 4173 7365 7420 7769 7468 6f75 7420  ..Asset without 
++00011430: 6964 3a20 0700 0000 1653 7461 7465 6d65  id: .....Stateme
++00011440: 6e74 4f70 656e 506f 7274 666f 6c69 6f01  ntOpenPortfolio.
++00011450: 0300 0000 4804 1d04 3504 3204 3e04 3704  ....H...5.2.>.7.
++00011460: 3c04 3e04 3604 3d04 3e00 2004 3f04 4004  <.>.6.=.>. .?.@.
++00011470: 3e04 4704 3804 4204 3004 4204 4c00 2000  >.G.8.B.0.B.L. .
++00011480: 4a00 5300 4f00 4e00 2004 3804 3700 2004  J.S.O.N. .8.7. .
++00011490: 4404 3004 3904 3b04 3000 3a00 2008 0000  D.0.9.;.0.:. ...
++000114a0: 0000 0600 0000 1f46 6169 6c65 6420 746f  .......Failed to
++000114b0: 2072 6561 6420 4a53 4f4e 2066 726f 6d20   read JSON from 
++000114c0: 6669 6c65 3a20 0700 0000 1653 7461 7465  file: .....State
++000114d0: 6d65 6e74 4f70 656e 506f 7274 666f 6c69  mentOpenPortfoli
++000114e0: 6f01 0300 0000 3404 1d04 3504 3204 3e04  o.....4...5.2.>.
++000114f0: 3704 3c04 3e04 3604 3d04 3e00 2004 3f04  7.<.>.6.=.>. .?.
++00011500: 4004 3e04 4704 3504 4104 4204 4c00 2004  @.>.G.5.A.B.L. .
++00011510: 4404 3004 3904 3b00 3a00 2008 0000 0000  D.0.9.;.:. .....
++00011520: 0600 0000 1546 6169 6c65 6420 746f 2072  .....Failed to r
++00011530: 6561 6420 6669 6c65 3a20 0700 0000 1653  ead file: .....S
++00011540: 7461 7465 6d65 6e74 4f70 656e 506f 7274  tatementOpenPort
++00011550: 666f 6c69 6f01 0300 0000 2204 1804 3c04  folio....."...<.
++00011560: 3f04 3e04 4004 4204 3804 4004 3e04 3204  ?.>.@.B.8.@.>.2.
++00011570: 3004 3d04 3d04 4b04 3900 2021 1608 0000  0.=.=.K.9. !....
++00011580: 0000 0600 0000 0a49 6d70 6f72 7465 6420  .......Imported 
++00011590: 2307 0000 0016 5374 6174 656d 656e 744f  #.....StatementO
+ 000115a0: 7065 6e50 6f72 7466 6f6c 696f 0103 0000  penPortfolio....
+-000115b0: 0034 041d 0435 0432 043e 0437 043c 043e  .4...5.2.>.7.<.>
+-000115c0: 0436 043d 043e 0020 043f 0440 043e 0447  .6.=.>. .?.@.>.G
+-000115d0: 0435 0441 0442 044c 0020 0444 0430 0439  .5.A.B.L. .D.0.9
+-000115e0: 043b 003a 0020 0800 0000 0006 0000 0015  .;.:. ..........
+-000115f0: 4661 696c 6564 2074 6f20 7265 6164 2066  Failed to read f
+-00011600: 696c 653a 2007 0000 0016 5374 6174 656d  ile: .....Statem
+-00011610: 656e 744f 7065 6e50 6f72 7466 6f6c 696f  entOpenPortfolio
+-00011620: 0103 0000 0022 0418 043c 043f 043e 0440  ....."...<.?.>.@
+-00011630: 0442 0438 0440 043e 0432 0430 043d 043d  .B.8.@.>.2.0.=.=
+-00011640: 044b 0439 0020 2116 0800 0000 0006 0000  .K.9. !.........
+-00011650: 000a 496d 706f 7274 6564 2023 0700 0000  ..Imported #....
+-00011660: 1653 7461 7465 6d65 6e74 4f70 656e 506f  .StatementOpenPo
+-00011670: 7274 666f 6c69 6f01 0300 0000 2e00 4900  rtfolio.......I.
+-00011680: 6e00 7600 6500 7300 7400 6200 6f00 6f00  n.v.e.s.t.b.o.o.
+-00011690: 6b00 2000 2f00 2000 4900 5a00 4900 2d00  k. ./. .I.Z.I.-.
+-000116a0: 6900 6e00 7600 6500 7300 7408 0000 0000  i.n.v.e.s.t.....
+-000116b0: 0600 0000 1749 6e76 6573 7462 6f6f 6b20  .....Investbook 
+-000116c0: 2f20 495a 492d 496e 7665 7374 0700 0000  / IZI-Invest....
+-000116d0: 1653 7461 7465 6d65 6e74 4f70 656e 506f  .StatementOpenPo
+-000116e0: 7274 666f 6c69 6f01 0300 0000 4204 1e04  rtfolio.....B...
+-000116f0: 3104 4f04 3704 3004 4204 3504 3b04 4c04  1.O.7.0.B.5.;.L.
+-00011700: 3d04 3004 4f00 2004 4104 3504 3a04 4604  =.0.O. .A.5.:.F.
+-00011710: 3804 4f00 2004 3e04 4204 4104 4304 4204  8.O. .>.B.A.C.B.
+-00011720: 4104 4204 3204 4304 3504 4200 3a00 2008  A.B.2.C.5.B.:. .
+-00011730: 0000 0000 0600 0000 1e4d 616e 6461 746f  .........Mandato
+-00011740: 7279 2073 6563 7469 6f6e 2069 7320 6d69  ry section is mi
+-00011750: 7373 696e 673a 2007 0000 0016 5374 6174  ssing: .....Stat
+-00011760: 656d 656e 744f 7065 6e50 6f72 7466 6f6c  ementOpenPortfol
+-00011770: 696f 0103 0000 002e 004f 0070 0065 006e  io.......O.p.e.n
+-00011780: 0020 0070 006f 0072 0074 0066 006f 006c  . .p.o.r.t.f.o.l
+-00011790: 0069 006f 0020 0028 002a 002e 006a 0073  .i.o. .(.*...j.s
+-000117a0: 006f 006e 0029 0800 0000 0006 0000 0017  .o.n.)..........
+-000117b0: 4f70 656e 2070 6f72 7466 6f6c 696f 2028  Open portfolio (
+-000117c0: 2a2e 6a73 6f6e 2907 0000 0016 5374 6174  *.json).....Stat
+-000117d0: 656d 656e 744f 7065 6e50 6f72 7466 6f6c  ementOpenPortfol
+-000117e0: 696f 0103 0000 004e 041d 0435 043f 043e  io.....N...5.?.>
+-000117f0: 0434 0434 0435 0440 0436 0438 0432 0430  .4.4.5.@.6.8.2.0
+-00011800: 0435 043c 0430 044f 0020 0432 0435 0440  .5.<.0.O. .2.5.@
+-00011810: 0441 0438 044f 0020 0444 043e 0440 043c  .A.8.O. .D.>.@.<
+-00011820: 0430 0442 0430 0020 0444 0430 0439 043b  .0.B.0. .D.0.9.;
+-00011830: 0430 003a 0020 0800 0000 0006 0000 002e  .0.:. ..........
+-00011840: 556e 7375 7070 6f72 7465 6420 7665 7273  Unsupported vers
+-00011850: 696f 6e20 6f66 206f 7065 6e20 706f 7274  ion of open port
+-00011860: 666f 6c69 6f20 666f 726d 6174 3a20 0700  folio format: ..
+-00011870: 0000 1653 7461 7465 6d65 6e74 4f70 656e  ...StatementOpen
+-00011880: 506f 7274 666f 6c69 6f01 0300 0000 3804  Portfolio.....8.
+-00011890: 1a04 4304 3f04 3e04 3d04 4b00 2004 3e04  ..C.?.>.=.K. .>.
+-000118a0: 3104 3b04 3804 3304 3004 4604 3804 3900  1.;.8.3.0.F.8.9.
+-000118b0: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
+-000118c0: 3d04 4b00 3a00 2008 0000 0000 0600 0000  =.K.:. .........
+-000118d0: 1742 6f6e 6420 696e 7465 7265 7374 7320  .Bond interests 
+-000118e0: 6c6f 6164 6564 3a20 0700 0000 0c53 7461  loaded: .....Sta
+-000118f0: 7465 6d65 6e74 5053 4201 0300 0000 3e04  tementPSB.....>.
+-00011900: 1404 3504 3d04 3504 3604 3d04 4b04 3500  ..5.=.5.6.=.K.5.
+-00011910: 2004 4204 4004 3004 3d04 3704 3004 3a04   .B.@.0.=.7.0.:.
+-00011920: 4604 3804 3800 2004 3704 3004 3304 4004  F.8.8. .7.0.3.@.
+-00011930: 4304 3604 3504 3d04 4b00 3a00 2008 0000  C.6.5.=.K.:. ...
+-00011940: 0000 0600 0000 1a43 6173 6820 7472 616e  .......Cash tran
+-00011950: 7361 6374 696f 6e73 206c 6f61 6465 643a  sactions loaded:
+-00011960: 2007 0000 000c 5374 6174 656d 656e 7450   .....StatementP
+-00011970: 5342 0103 0000 002a 0414 0438 0432 0438  SB.....*...8.2.8
+-00011980: 0434 0435 043d 0434 044b 0020 0437 0430  .4.5.=.4.K. .7.0
+-00011990: 0433 0440 0443 0436 0435 043d 044b 003a  .3.@.C.6.5.=.K.:
+-000119a0: 0020 0800 0000 0006 0000 0012 4469 7669  . ..........Divi
+-000119b0: 6465 6e64 7320 6c6f 6164 6564 3a20 0700  dends loaded: ..
+-000119c0: 0000 0c53 7461 7465 6d65 6e74 5053 4201  ...StatementPSB.
+-000119d0: 0300 0000 1404 1f04 2104 1100 2d04 3104  ........!...-.1.
+-000119e0: 4004 3e04 3a04 3504 4008 0000 0000 0600  @.>.:.5.@.......
+-000119f0: 0000 0a50 5342 2042 726f 6b65 7207 0000  ...PSB Broker...
+-00011a00: 000c 5374 6174 656d 656e 7450 5342 0103  ..StatementPSB..
+-00011a10: 0000 0040 041e 0442 0447 0451 0442 0020  ...@...B.G.Q.B. 
+-00011a20: 0431 0440 043e 043a 0435 0440 0430 0020  .1.@.>.:.5.@.0. 
+-00011a30: 041f 0421 0411 0020 0028 002a 002e 0078  ...!... .(.*...x
+-00011a40: 006c 0073 0078 0020 002a 002e 0078 006c  .l.s.x. .*...x.l
+-00011a50: 0073 0029 0800 0000 0006 0000 0023 5053  .s.).........#PS
+-00011a60: 4220 6272 6f6b 6572 2073 7461 7465 6d65  B broker stateme
+-00011a70: 6e74 2028 2a2e 786c 7378 202a 2e78 6c73  nt (*.xlsx *.xls
+-00011a80: 2907 0000 000c 5374 6174 656d 656e 7450  ).....StatementP
+-00011a90: 5342 0103 ffff ffff 0800 0000 0006 0000  SB..............
+-00011aa0: 000f 5472 6164 6573 206c 6f61 6465 643a  ..Trades loaded:
+-00011ab0: 2007 0000 000c 5374 6174 656d 656e 7450   .....StatementP
+-00011ac0: 5342 0103 0000 0040 041d 0435 043f 043e  SB.....@...5.?.>
+-00011ad0: 0434 0434 0435 0440 0436 0438 0432 0430  .4.4.5.@.6.8.2.0
+-00011ae0: 0435 043c 0430 044f 0020 043e 043f 0435  .5.<.0.O. .>.?.5
+-00011af0: 0440 0430 0446 0438 044f 0020 0441 0020  .@.0.F.8.O. .A. 
+-00011b00: 0414 0421 003a 0020 0800 0000 0006 0000  ...!.:. ........
+-00011b10: 0018 556e 6b6e 6f77 6e20 6361 7368 206f  ..Unknown cash o
+-00011b20: 7065 7261 7469 6f6e 3a20 0700 0000 0c53  peration: .....S
+-00011b30: 7461 7465 6d65 6e74 5053 4201 0300 0000  tatementPSB.....
+-00011b40: 3a04 1d04 3504 3804 3704 3204 3504 4104  :...5.8.7.2.5.A.
+-00011b50: 4204 3d04 4b04 3900 2004 4204 3804 3f00  B.=.K.9. .B.8.?.
+-00011b60: 2004 3404 3204 3804 3604 3504 3d04 3804   .4.2.8.6.5.=.8.
+-00011b70: 4f00 2004 1404 2100 3a00 2008 0000 0000  O. ...!.:. .....
+-00011b80: 0600 0000 1a55 6e6b 6e6f 776e 2063 6173  .....Unknown cas
+-00011b90: 6820 7472 616e 7361 6374 696f 6e3a 2007  h transaction: .
+-00011ba0: 0000 000c 5374 6174 656d 656e 7450 5342  ....StatementPSB
+-00011bb0: 0103 0000 0030 041d 0435 0438 0437 0432  .....0...5.8.7.2
+-00011bc0: 0435 0441 0442 043d 044b 0439 0020 0442  .5.A.B.=.K.9. .B
+-00011bd0: 0438 043f 0020 0441 0434 0435 043b 043a  .8.?. .A.4.5.;.:
+-00011be0: 0438 003a 0020 0800 0000 0006 0000 0014  .8.:. ..........
+-00011bf0: 556e 6b6e 6f77 6e20 7472 6164 6520 7479  Unknown trade ty
+-00011c00: 7065 3a20 0700 0000 0c53 7461 7465 6d65  pe: .....Stateme
+-00011c10: 6e74 5053 4201 0300 0000 3204 1d04 3504  ntPSB.....2...5.
+-00011c20: 3f04 3e04 3404 3404 3504 4004 3604 3804  ?.>.4.4.5.@.6.8.
+-00011c30: 3204 3004 3504 3c04 4b04 3900 2004 3f04  2.0.5.<.K.9. .?.
+-00011c40: 3b04 3004 4204 5104 3600 3a00 2008 0000  ;.0.B.Q.6.:. ...
+-00011c50: 0000 0600 0000 1555 6e73 7570 706f 7274  .......Unsupport
+-00011c60: 6564 2070 6179 6d65 6e74 3a20 0700 0000  ed payment: ....
+-00011c70: 0c53 7461 7465 6d65 6e74 5053 4201 0300  .StatementPSB...
+-00011c80: 0000 5a04 2104 3404 3504 3b04 3a04 3000  ..Z.!.4.5.;.:.0.
+-00011c90: 2004 4100 2004 4004 3004 3704 3d04 4b04   .A. .@.0.7.=.K.
+-00011ca0: 3c04 3800 2004 3204 3004 3b04 4e04 4204  <.8. .2.0.;.N.B.
+-00011cb0: 3004 3c04 3800 2004 3d04 3500 2004 3f04  0.<.8. .=.5. .?.
+-00011cc0: 3e04 3404 3404 3504 4004 3604 3804 3204  >.4.4.5.@.6.8.2.
+-00011cd0: 3004 3504 4204 4104 4f00 3a00 2008 0000  0.5.B.A.O.:. ...
+-00011ce0: 0000 0600 0000 2d55 6e73 7570 706f 7274  ......-Unsupport
+-00011cf0: 6564 2074 7261 6465 2077 6974 6820 6469  ed trade with di
+-00011d00: 6666 6572 656e 7420 6375 7272 656e 6369  fferent currenci
+-00011d10: 6573 3a20 0700 0000 0c53 7461 7465 6d65  es: .....Stateme
+-00011d20: 6e74 5053 4201 0300 0000 3204 1e04 3f04  ntPSB.....2...?.
+-00011d30: 3504 4004 3004 4604 3804 3800 2004 4100  5.@.0.F.8.8. .A.
+-00011d40: 2004 2604 1100 2004 3704 3004 3304 4004   .&... .7.0.3.@.
+-00011d50: 4304 3604 3504 3d04 4b00 3a00 2008 0000  C.6.5.=.K.:. ...
+-00011d60: 0000 0600 0000 1941 7373 6574 206f 7065  .......Asset ope
+-00011d70: 7261 7469 6f6e 7320 6c6f 6164 6564 3a20  rations loaded: 
+-00011d80: 0700 0000 0d53 7461 7465 6d65 6e74 554b  .....StatementUK
+-00011d90: 4655 0103 0000 0068 041e 0442 0441 0443  FU.....h...B.A.C
+-00011da0: 0442 0441 0442 0432 0443 044e 0442 0020  .B.A.B.2.C.N.B. 
+-00011db0: 043e 0436 0438 0434 0430 0435 043c 044b  .>.6.8.4.0.5.<.K
+-00011dc0: 0435 0020 0434 0430 043d 043d 044b 0435  .5. .4.0.=.=.K.5
+-00011dd0: 0020 0432 0020 043e 043f 0438 0441 0430  . .2. .>.?.8.A.0
+-00011de0: 043d 0438 0438 0020 043f 0435 0440 0435  .=.8.8. .?.5.@.5
+-00011df0: 0432 043e 0434 0430 0020 0426 0411 0020  .2.>.4.0. .&... 
+-00011e00: 0800 0000 0006 0000 002a 4173 7365 7420  .........*Asset 
+-00011e10: 7472 616e 7366 6572 2064 6573 6372 6970  transfer descrip
+-00011e20: 7469 6f6e 206d 6973 7320 736f 6d65 2064  tion miss some d
+-00011e30: 6174 6120 0700 0000 0d53 7461 7465 6d65  ata .....Stateme
+-00011e40: 6e74 554b 4655 0103 0000 0050 041d 0435  ntUKFU.....P...5
+-00011e50: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
+-00011e60: 0020 043d 0430 0439 0442 0438 0020 0437  . .=.0.9.B.8. .7
+-00011e70: 0430 043f 0438 0441 044c 0020 0441 043f  .0.?.8.A.L. .A.?
+-00011e80: 0438 0441 0430 043d 0438 044f 0020 0426  .8.A.0.=.8.O. .&
+-00011e90: 0411 0020 0434 043b 044f 0020 0800 0000  ... .4.;.O. ....
+-00011ea0: 0006 0000 0029 4361 6e27 7420 6669 6e64  .....)Can't find
+-00011eb0: 2061 7373 6574 2063 616e 6365 6c6c 6174   asset cancellat
+-00011ec0: 696f 6e20 7265 636f 7264 2066 6f72 2007  ion record for .
+-00011ed0: 0000 000d 5374 6174 656d 656e 7455 4b46  ....StatementUKF
+-00011ee0: 5501 0300 0000 4604 1d04 3504 3204 3e04  U.....F...5.2.>.
+-00011ef0: 3704 3c04 3e04 3604 3d04 3e00 2004 3d04  7.<.>.6.=.>. .=.
+-00011f00: 3004 3904 4204 3800 2004 3704 3004 3304  0.9.B.8. .7.0.3.
+-00011f10: 3e04 3b04 3e04 3204 3e04 3a00 2004 3a04  >.;.>.2.>.:. .:.
+-00011f20: 3e04 3c04 3804 4104 4104 3804 3908 0000  >.<.8.A.A.8.9...
+-00011f30: 0000 0600 0000 1d43 616e 2774 2067 6574  .......Can't get
+-00011f40: 2068 6561 6465 7220 746f 2066 696e 6420   header to find 
+-00011f50: 6665 6573 0700 0000 0d53 7461 7465 6d65  fees.....Stateme
+-00011f60: 6e74 554b 4655 0103 0000 0056 041d 0435  ntUKFU.....V...5
+-00011f70: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
+-00011f80: 0020 0440 0430 0441 043f 043e 0437 043d  . .@.0.A.?.>.7.=
+-00011f90: 0430 0442 044c 0020 043e 043f 0438 0441  .0.B.L. .>.?.8.A
+-00011fa0: 0430 043d 0438 0435 0020 043f 0435 0440  .0.=.8.5. .?.5.@
+-00011fb0: 0435 0432 043e 0434 0430 0020 0426 0411  .5.2.>.4.0. .&..
+-00011fc0: 0020 0800 0000 0006 0000 0027 4361 6e27  . .........'Can'
+-00011fd0: 7420 7061 7273 6520 6173 7365 7420 7472  t parse asset tr
+-00011fe0: 616e 7366 6572 2064 6573 6372 6970 7469  ansfer descripti
+-00011ff0: 6f6e 2007 0000 000d 5374 6174 656d 656e  on .....Statemen
+-00012000: 7455 4b46 5501 0300 0000 4c04 1d04 3504  tUKFU.....L...5.
+-00012010: 3204 3e04 3704 3c04 3e04 3604 3d04 3e00  2.>.7.<.>.6.=.>.
+-00012020: 2004 4004 3004 4104 3f04 3e04 3704 3d04   .@.0.A.?.>.7.=.
+-00012030: 3004 4204 4c00 2004 3e04 3f04 3804 4104  0.B.L. .>.?.8.A.
+-00012040: 3004 3d04 3804 3500 2004 3a04 4304 3f04  0.=.8.5. .:.C.?.
+-00012050: 3e04 3d04 3000 2008 0000 0000 0600 0000  >.=.0. .........
+-00012060: 2643 616e 2774 2070 6172 7365 2062 6f6e  &Can't parse bon
+-00012070: 6420 696e 7465 7265 7374 2064 6573 6372  d interest descr
+-00012080: 6970 7469 6f6e 2007 0000 000d 5374 6174  iption .....Stat
+-00012090: 656d 656e 7455 4b46 5501 0300 0000 6604  ementUKFU.....f.
+-000120a0: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
+-000120b0: 3d04 3e00 2004 4004 3004 4104 3f04 3e04  =.>. .@.0.A.?.>.
+-000120c0: 3704 3d04 3004 4204 4c00 2004 3e04 3f04  7.=.0.B.L. .>.?.
+-000120d0: 3804 4104 3004 3d04 3804 3500 2004 3f04  8.A.0.=.8.5. .?.
+-000120e0: 3e04 3304 3004 4804 3504 3d04 3804 4f00  >.3.0.H.5.=.8.O.
+-000120f0: 2004 3e04 3104 3b04 3804 3304 3004 4604   .>.1.;.8.3.0.F.
+-00012100: 3804 3800 2008 0000 0000 0600 0000 2743  8.8. .........'C
+-00012110: 616e 2774 2070 6172 7365 2062 6f6e 6420  an't parse bond 
+-00012120: 7265 7061 796d 656e 7420 6465 7363 7269  repayment descri
+-00012130: 7074 696f 6e20 0700 0000 0d53 7461 7465  ption .....State
+-00012140: 6d65 6e74 554b 4655 0103 0000 0052 041d  mentUKFU.....R..
+-00012150: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
+-00012160: 043e 0020 0440 0430 0441 043f 043e 0437  .>. .@.0.A.?.>.7
+-00012170: 043d 0430 0442 044c 0020 043e 043f 0438  .=.0.B.L. .>.?.8
+-00012180: 0441 0430 043d 0438 0435 0020 0434 0438  .A.0.=.8.5. .4.8
+-00012190: 0432 0438 0434 0435 043d 0434 0430 0020  .2.8.4.5.=.4.0. 
+-000121a0: 0800 0000 0006 0000 0021 4361 6e27 7420  .........!Can't 
+-000121b0: 7061 7273 6520 6469 7669 6465 6e64 2064  parse dividend d
+-000121c0: 6573 6372 6970 7469 6f6e 2007 0000 000d  escription .....
+-000121d0: 5374 6174 656d 656e 7455 4b46 5501 0300  StatementUKFU...
+-000121e0: 0000 6404 1d04 3504 3204 3e04 3704 3c04  ..d...5.2.>.7.<.
+-000121f0: 3e04 3604 3d04 3e00 2004 4004 3004 4104  >.6.=.>. .@.0.A.
+-00012200: 3f04 3e04 3704 3d04 3004 4204 4c00 2004  ?.>.7.=.0.B.L. .
+-00012210: 3e04 3f04 3804 4104 3004 3d04 3804 3500  >.?.8.A.0.=.8.5.
+-00012220: 2004 3404 3504 3d04 3504 3604 3d04 3e04   .4.5.=.5.6.=.>.
+-00012230: 3304 3e00 2004 3f04 3504 4004 3504 3204  3.>. .?.5.@.5.2.
+-00012240: 3e04 3404 3000 2008 0000 0000 0600 0000  >.4.0. .........
+-00012250: 2743 616e 2774 2070 6172 7365 206d 6f6e  'Can't parse mon
+-00012260: 6579 2074 7261 6e73 6665 7220 6465 7363  ey transfer desc
+-00012270: 7269 7074 696f 6e20 0700 0000 0d53 7461  ription .....Sta
+-00012280: 7465 6d65 6e74 554b 4655 0103 0000 003a  tementUKFU.....:
+-00012290: 0414 0435 043d 0435 0436 043d 044b 0445  ...5.=.5.6.=.K.E
+-000122a0: 0020 043e 043f 0435 0440 0430 0446 0438  . .>.?.5.@.0.F.8
+-000122b0: 0439 0020 0437 0430 0433 0440 0443 0436  .9. .7.0.3.@.C.6
+-000122c0: 0435 043d 043e 003a 0020 0800 0000 0006  .5.=.>.:. ......
+-000122d0: 0000 0018 4361 7368 206f 7065 7261 7469  ....Cash operati
+-000122e0: 6f6e 7320 6c6f 6164 6564 3a20 0700 0000  ons loaded: ....
+-000122f0: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
+-00012300: 0000 0048 041e 0448 0438 0431 043a 0430  ...H...H.8.1.:.0
+-00012310: 0020 043f 0440 0438 0020 043a 043e 043d  . .?.@.8. .:.>.=
+-00012320: 0432 0435 0440 0442 0430 0446 0438 0438  .2.5.@.B.0.F.8.8
+-00012330: 0020 0441 0443 043c 043c 044b 0020 043d  . .A.C.<.<.K. .=
+-00012340: 0430 043b 043e 0433 0430 0020 0800 0000  .0.;.>.3.0. ....
+-00012350: 0006 0000 001f 4661 696c 6564 2074 6f20  ......Failed to 
+-00012360: 636f 6e76 6572 7420 6469 7669 6465 6e64  convert dividend
+-00012370: 2074 6178 2007 0000 000d 5374 6174 656d   tax .....Statem
+-00012380: 656e 7455 4b46 5501 0300 0000 3e04 2104  entUKFU.....>.!.
+-00012390: 3404 3504 3b04 3e04 3a00 2004 4100 2004  4.5.;.>.:. .A. .
+-000123a0: 4404 4c04 4e04 4704 3504 4004 4104 3004  D.L.N.G.5.@.A.0.
+-000123b0: 3c04 3800 2004 3704 3004 3304 4004 4304  <.8. .7.0.3.@.C.
+-000123c0: 3604 3504 3d04 3e00 3a00 2008 0000 0000  6.5.=.>.:. .....
+-000123d0: 0600 0000 1746 7574 7572 6573 2074 7261  .....Futures tra
+-000123e0: 6465 7320 6c6f 6164 6564 3a20 0700 0000  des loaded: ....
+-000123f0: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
+-00012400: 0000 0076 041e 0442 0441 0443 0442 0441  ...v...B.A.C.B.A
+-00012410: 0442 0432 0443 044e 0442 0020 043e 0436  .B.2.C.N.B. .>.6
+-00012420: 0438 0434 0430 0435 043c 044b 0435 0020  .8.4.0.5.<.K.5. 
+-00012430: 0434 0430 043d 043d 044b 0435 0020 0432  .4.0.=.=.K.5. .2
+-00012440: 0020 043e 043f 0438 0441 0430 043d 0438  . .>.?.8.A.0.=.8
+-00012450: 0438 0020 0434 0435 043d 0435 0436 043d  .8. .4.5.=.5.6.=
+-00012460: 043e 0433 043e 0020 043f 0435 0440 0435  .>.3.>. .?.5.@.5
+-00012470: 0432 043e 0434 0430 0020 0800 0000 0006  .2.>.4.0. ......
+-00012480: 0000 002a 4d6f 6e65 7920 7472 616e 7366  ...*Money transf
+-00012490: 6572 2064 6573 6372 6970 7469 6f6e 206d  er description m
+-000124a0: 6973 7320 736f 6d65 2064 6174 6120 0700  iss some data ..
+-000124b0: 0000 0d53 7461 7465 6d65 6e74 554b 4655  ...StatementUKFU
+-000124c0: 0103 0000 0056 041d 0430 0439 0434 0435  .....V...0.9.4.5
+-000124d0: 043d 044b 0020 043d 0435 0441 043a 043e  .=.K. .=.5.A.:.>
+-000124e0: 043b 044c 043a 043e 0020 0437 0430 043f  .;.L.:.>. .7.0.?
+-000124f0: 0438 0441 0435 0439 0020 043f 043e 0433  .8.A.5.9. .?.>.3
+-00012500: 0430 0448 0435 043d 0438 044f 0020 0426  .0.H.5.=.8.O. .&
+-00012510: 0411 0020 0434 043b 044f 0020 0800 0000  ... .4.;.O. ....
+-00012520: 0006 0000 0026 4d75 6c74 6970 6c65 2061  .....&Multiple a
+-00012530: 7373 6574 2063 616e 6365 6c6c 6174 696f  sset cancellatio
+-00012540: 6e20 6d61 7463 6820 666f 7220 0700 0000  n match for ....
+-00012550: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
+-00012560: 0000 0024 0421 0434 0435 043b 043e 043a  ...$.!.4.5.;.>.:
+-00012570: 0020 0437 0430 0433 0440 0443 0436 0435  . .7.0.3.@.C.6.5
+-00012580: 043d 043e 003a 0020 0800 0000 0006 0000  .=.>.:. ........
+-00012590: 000f 5472 6164 6573 206c 6f61 6465 643a  ..Trades loaded:
+-000125a0: 2007 0000 000d 5374 6174 656d 656e 7455   .....StatementU
+-000125b0: 4b46 5501 0300 0000 3004 1d04 3504 3804  KFU.....0...5.8.
+-000125c0: 3704 3204 3504 4104 4204 3d04 4b04 3900  7.2.5.A.B.=.K.9.
+-000125d0: 2004 4204 3804 3f00 2004 4104 3404 3504   .B.8.?. .A.4.5.
+-000125e0: 3b04 3a04 3800 3a00 2008 0000 0000 0600  ;.:.8.:. .......
+-000125f0: 0000 1455 6e6b 6e6f 776e 2074 7261 6465  ...Unknown trade
+-00012600: 2074 7970 653a 2007 0000 000d 5374 6174   type: .....Stat
+-00012610: 656d 656e 7455 4b46 5501 0300 0000 3e04  ementUKFU.....>.
+-00012620: 1d04 3504 3f04 3e04 3404 3404 3504 4004  ..5.?.>.4.4.5.@.
+-00012630: 3604 3804 3204 3004 3504 3c04 3004 4f00  6.8.2.0.5.<.0.O.
+-00012640: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
+-00012650: 4f00 2004 4100 2004 2604 1100 2008 0000  O. .A. .&... ...
+-00012660: 0000 0600 0000 1d55 6e73 7570 7070 6f72  .......Unsupppor
+-00012670: 7465 6420 6173 7365 7420 6f70 6572 6174  ted asset operat
+-00012680: 696f 6e20 0700 0000 0d53 7461 7465 6d65  ion .....Stateme
+-00012690: 6e74 554b 4655 0103 0000 004a 041d 0435  ntUKFU.....J...5
+-000126a0: 043f 043e 0434 0434 0435 0440 0436 0438  .?.>.4.4.5.@.6.8
+-000126b0: 0432 0430 0435 043c 0430 044f 0020 0434  .2.0.5.<.0.O. .4
+-000126c0: 0435 043d 0435 0436 043d 0430 044f 0020  .5.=.5.6.=.0.O. 
+-000126d0: 0442 0440 0430 043d 0437 0430 043a 0446  .B.@.0.=.7.0.:.F
+-000126e0: 0438 044f 0020 0800 0000 0006 0000 001e  .8.O. ..........
+-000126f0: 556e 7375 7070 706f 7274 6564 2063 6173  Unsuppported cas
+-00012700: 6820 7472 616e 7361 6374 696f 6e20 0700  h transaction ..
+-00012710: 0000 0d53 7461 7465 6d65 6e74 554b 4655  ...StatementUKFU
+-00012720: 0103 0000 001e 0423 0440 0430 043b 0441  .......#.@.0.;.A
+-00012730: 0438 0431 0020 041a 044d 043f 0438 0442  .8.1. ...M.?.8.B
+-00012740: 0430 043b 0800 0000 0006 0000 000e 5572  .0.;..........Ur
+-00012750: 616c 7369 6220 4272 6f6b 6572 0700 0000  alsib Broker....
+-00012760: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
+-00012770: 0000 004a 041e 0442 0447 0451 0442 0020  ...J...B.G.Q.B. 
+-00012780: 0431 0440 043e 043a 0435 0440 0430 0020  .1.@.>.:.5.@.0. 
+-00012790: 0423 0440 0430 043b 0441 0438 0431 0020  .#.@.0.;.A.8.1. 
+-000127a0: 041a 044d 043f 0438 0442 0430 043b 0020  ...M.?.8.B.0.;. 
+-000127b0: 0028 002a 002e 007a 0069 0070 0029 0800  .(.*...z.i.p.)..
+-000127c0: 0000 0006 0000 0019 5572 616c 7369 6220  ........Uralsib 
+-000127d0: 7374 6174 656d 656e 7420 282a 2e7a 6970  statement (*.zip
+-000127e0: 2907 0000 000d 5374 6174 656d 656e 7455  ).....StatementU
+-000127f0: 4b46 5501 0300 0000 3e04 1004 4004 4504  KFU.....>...@.E.
+-00012800: 3804 3200 2004 4104 3e04 3404 3504 4004  8.2. .A.>.4.5.@.
+-00012810: 3604 3804 4200 2004 3d04 3504 4104 3a04  6.8.B. .=.5.A.:.
+-00012820: 3e04 3b04 4c04 3a04 3e00 2004 4404 3004  >.;.L.:.>. .D.0.
+-00012830: 3904 3b04 3e04 3208 0000 0000 0600 0000  9.;.>.2.........
+-00012840: 1f41 7263 6869 7665 2063 6f6e 7461 696e  .Archive contain
+-00012850: 7320 6d75 6c74 6970 6c65 2066 696c 6573  s multiple files
+-00012860: 0700 0000 0c53 7461 7465 6d65 6e74 584c  .....StatementXL
+-00012870: 5301 0300 0000 5a04 1d04 3500 2004 4304  S.....Z...5. .C.
+-00012880: 3404 3004 3b04 3e04 4104 4c00 2004 3d04  4.0.;.>.A.L. .=.
+-00012890: 3004 3904 4204 3800 2004 3e04 3604 3804  0.9.B.8. .>.6.8.
+-000128a0: 3404 3004 3504 3c04 4b04 3900 2004 3704  4.0.5.<.K.9. .7.
+-000128b0: 3004 3304 3e04 3b04 3e04 3204 3e04 3a00  0.3.>.;.>.2.>.:.
+-000128c0: 2004 3e04 4204 4704 5104 4204 3000 3a00   .>.B.G.Q.B.0.:.
+-000128d0: 2008 0000 0000 0600 0000 2343 616e 2774   .........#Can't
+-000128e0: 2066 696e 6420 6578 7065 6374 6564 2072   find expected r
+-000128f0: 6570 6f72 7420 6865 6164 6572 3a20 0700  eport header: ..
+-00012900: 0000 0c53 7461 7465 6d65 6e74 584c 5301  ...StatementXLS.
+-00012910: 0300 0000 6604 1d04 3500 2004 4304 3404  ....f...5. .C.4.
+-00012920: 3004 3b04 3e04 4104 4c00 2004 3e04 3f04  0.;.>.A.L. .>.?.
+-00012930: 4004 3504 3404 3504 3b04 3804 4204 4c00  @.5.4.5.;.8.B.L.
+-00012940: 2004 3204 3004 3b04 4e04 4204 4b00 2004   .2.0.;.N.B.K. .
+-00012950: 3804 3700 2004 3e04 3104 4904 3504 3900  8.7. .>.1.I.5.9.
+-00012960: 2004 4104 3504 3a04 4604 3804 3800 2004   .A.5.:.F.8.8. .
+-00012970: 3e04 4204 4704 5104 4204 3008 0000 0000  >.B.G.Q.B.0.....
+-00012980: 0600 0000 3643 616e 2774 2067 6574 2063  ....6Can't get c
+-00012990: 7572 7265 6e63 6965 7320 6672 6f6d 2073  urrencies from s
+-000129a0: 756d 6d61 7279 2073 6563 7469 6f6e 206f  ummary section o
+-000129b0: 6620 7374 6174 656d 656e 7407 0000 000c  f statement.....
+-000129c0: 5374 6174 656d 656e 7458 4c53 0103 0000  StatementXLS....
+-000129d0: 0046 041d 0435 0432 043e 0437 043c 043e  .F...5.2.>.7.<.>
+-000129e0: 0436 043d 043e 0020 043e 043f 0440 0435  .6.=.>. .>.?.@.5
+-000129f0: 0434 0435 043b 0438 0442 044c 0020 043f  .4.5.;.8.B.L. .?
+-00012a00: 0435 0440 0438 043e 0434 0020 043e 0442  .5.@.8.>.4. .>.B
+-00012a10: 0447 0451 0442 0430 0800 0000 0006 0000  .G.Q.B.0........
+-00012a20: 0018 4361 6e27 7420 7265 6164 2072 6570  ..Can't read rep
+-00012a30: 6f72 7420 7065 7269 6f64 0700 0000 0c53  ort period.....S
+-00012a40: 7461 7465 6d65 6e74 584c 5301 0300 0000  tatementXLS.....
+-00012a50: 1c04 1404 2100 2004 3704 3004 3304 4004  ....!. .7.0.3.@.
+-00012a60: 4304 3604 3504 3d04 4b00 3a00 2008 0000  C.6.5.=.K.:. ...
+-00012a70: 0000 0600 0000 1643 6173 6820 6261 6c61  .......Cash bala
+-00012a80: 6e63 6573 206c 6f61 6465 643a 2007 0000  nces loaded: ...
+-00012a90: 000c 5374 6174 656d 656e 7458 4c53 0103  ..StatementXLS..
+-00012aa0: 0000 0036 0421 0442 043e 043b 0431 0435  ...6.!.B.>.;.1.5
+-00012ab0: 0446 0020 043d 0435 0020 043d 0430 0439  .F. .=.5. .=.0.9
+-00012ac0: 0434 0435 043d 0020 0432 0020 0441 0435  .4.5.=. .2. .A.5
+-00012ad0: 043a 0446 0438 0438 0020 0800 0000 0006  .:.F.8.8. ......
+-00012ae0: 0000 001c 436f 6c75 6d6e 206e 6f74 2066  ....Column not f
+-00012af0: 6f75 6e64 2069 6e20 7365 6374 696f 6e20  ound in section 
+-00012b00: 0700 0000 0c53 7461 7465 6d65 6e74 584c  .....StatementXL
+-00012b10: 5301 0300 0000 3404 1d04 3504 4104 3a04  S.....4...5.A.:.
+-00012b20: 3e04 3b04 4c04 3a04 3e00 2004 4104 4704  >.;.L.:.>. .A.G.
+-00012b30: 3504 4204 3e04 3200 2004 3d04 3004 3904  5.B.>.2. .=.0.9.
+-00012b40: 3404 3504 3d04 3e00 3a00 2008 0000 0000  4.5.=.>.:. .....
+-00012b50: 0600 0000 194d 756c 7469 706c 6520 6163  .....Multiple ac
+-00012b60: 636f 756e 7473 2066 6f75 6e64 3a20 0700  counts found: ..
+-00012b70: 0000 0c53 7461 7465 6d65 6e74 584c 5301  ...StatementXLS.
+-00012b80: 0300 0000 1c04 2604 1100 2004 3704 3004  ......&... .7.0.
+-00012b90: 3304 4004 4304 3604 3504 3d04 4b00 3a00  3.@.C.6.5.=.K.:.
+-00012ba0: 2008 0000 0000 0600 0000 1353 6563 7572   ..........Secur
+-00012bb0: 6974 6965 7320 6c6f 6164 6564 3a20 0700  ities loaded: ..
+-00012bc0: 0000 0c53 7461 7465 6d65 6e74 584c 5301  ...StatementXLS.
+-00012bd0: 0300 0000 3004 1e04 4204 4704 5104 4200  ....0...B.G.Q.B.
+-00012be0: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
+-00012bf0: 3d00 2004 4304 4104 3f04 3504 4804 3d04  =. .C.A.?.5.H.=.
+-00012c00: 3e00 3a00 2008 0000 0000 0600 0000 1f53  >.:. ..........S
+-00012c10: 7461 7465 6d65 6e74 206c 6f61 6465 6420  tatement loaded 
+-00012c20: 7375 6363 6573 7366 756c 6c79 3a20 0700  successfully: ..
+-00012c30: 0000 0c53 7461 7465 6d65 6e74 584c 5301  ...StatementXLS.
+-00012c40: 0300 0000 2200 2004 3704 3004 3304 4004  ....". .7.0.3.@.
+-00012c50: 4304 3604 3504 3d00 2004 4304 4104 3f04  C.6.5.=. .C.A.?.
+-00012c60: 3504 4804 3d04 3e08 0000 0000 0600 0000  5.H.=.>.........
+-00012c70: 1420 6c6f 6164 6564 2073 7563 6365 7373  . loaded success
+-00012c80: 6675 6c6c 7907 0000 000c 5374 6174 656d  fully.....Statem
+-00012c90: 656e 7458 4d4c 0103 0000 0036 041d 0435  entXML.....6...5
+-00012ca0: 0432 0435 0440 043d 044b 0439 0020 0444  .2.5.@.=.K.9. .D
+-00012cb0: 043e 0440 043c 0430 0442 0020 0058 004d  .>.@.<.0.B. .X.M
+-00012cc0: 004c 0020 0444 0430 0439 043b 0430 003a  .L. .D.0.9.;.0.:
+-00012cd0: 0020 0800 0000 0006 0000 0016 4361 6e27  . ..........Can'
+-00012ce0: 7420 7061 7273 6520 584d 4c20 6669 6c65  t parse XML file
+-00012cf0: 3a20 0700 0000 0c53 7461 7465 6d65 6e74  : .....Statement
+-00012d00: 584d 4c01 0300 0000 3e04 1d04 3504 3204  XML.....>...5.2.
+-00012d10: 3e04 3704 3c04 3e04 3604 3d04 3e00 2004  >.7.<.>.6.=.>. .
+-00012d20: 3704 3004 3304 4004 4304 3704 3804 4204  7.0.3.@.C.7.8.B.
+-00012d30: 4c00 2004 3004 4204 4204 4004 3804 3104  L. .0.B.B.@.8.1.
+-00012d40: 4304 4200 3a00 2008 0000 0000 0600 0000  C.B.:. .........
+-00012d50: 1a46 6169 6c65 6420 746f 206c 6f61 6420  .Failed to load 
+-00012d60: 6174 7472 6962 7574 653a 2007 0000 000c  attribute: .....
+-00012d70: 5374 6174 656d 656e 7458 4d4c 0103 0000  StatementXML....
+-00012d80: 004c 041d 0435 043f 043e 0434 0434 0435  .L...5.?.>.4.4.5
+-00012d90: 0440 0436 0438 0432 0430 0435 043c 044b  .@.6.8.2.0.5.<.K
+-00012da0: 0439 0020 0444 043e 0440 043c 0430 0442  .9. .D.>.@.<.0.B
+-00012db0: 0020 0434 0430 0442 044b 002f 0432 0440  . .4.0.B.K./.2.@
+-00012dc0: 0435 043c 0435 043d 0438 003a 0020 0800  .5.<.5.=.8.:. ..
+-00012dd0: 0000 0006 0000 001e 556e 7375 7070 6f72  ........Unsuppor
+-00012de0: 7465 6420 6461 7465 2f74 696d 6520 666f  ted date/time fo
+-00012df0: 726d 6174 3a20 0700 0000 0c53 7461 7465  rmat: .....State
+-00012e00: 6d65 6e74 584d 4c01 0300 0000 2004 1e04  mentXML..... ...
+-00012e10: 4804 3804 3104 3a04 3000 2004 3804 3c04  H.8.1.:.0. .8.<.
+-00012e20: 3f04 3e04 4004 4204 3000 3a00 2008 0000  ?.>.@.B.0.:. ...
+-00012e30: 0000 0600 0000 0f49 6d70 6f72 7420 6661  .......Import fa
+-00012e40: 696c 6564 3a20 0700 0000 0a53 7461 7465  iled: .....State
+-00012e50: 6d65 6e74 7301 0300 0000 4004 1204 4b04  ments.....@...K.
+-00012e60: 3104 3504 4004 3804 4204 3500 2004 4404  1.5.@.8.B.5. .D.
+-00012e70: 3004 3904 3b00 2004 3e04 4204 4704 3504  0.9.;. .>.B.G.5.
+-00012e80: 4204 3000 2004 3404 3b04 4f00 2004 3804  B.0. .4.;.O. .8.
+-00012e90: 3c04 3f04 3e04 4004 4204 3008 0000 0000  <.?.>.@.B.0.....
+-00012ea0: 0600 0000 1f53 656c 6563 7420 7374 6174  .....Select stat
+-00012eb0: 656d 656e 7420 6669 6c65 2074 6f20 696d  ement file to im
+-00012ec0: 706f 7274 0700 0000 0a53 7461 7465 6d65  port.....Stateme
+-00012ed0: 6e74 7301 0300 0000 4a04 1a04 3b04 3004  nts.....J...;.0.
+-00012ee0: 4104 4100 2004 3e04 4204 4704 5104 4204  A.A. .>.B.G.Q.B.
+-00012ef0: 3000 2004 3d04 3500 2004 3c04 3e04 3604  0. .=.5. .<.>.6.
+-00012f00: 3504 4200 2004 3104 4b04 4204 4c00 2004  5.B. .1.K.B.L. .
+-00012f10: 3704 3004 3304 4004 4304 3604 3504 3d00  7.0.3.@.C.6.5.=.
+-00012f20: 3a00 2008 0000 0000 0600 0000 2153 7461  :. .........!Sta
+-00012f30: 7465 6d65 6e74 2063 6c61 7373 2063 616e  tement class can
+-00012f40: 2774 2062 6520 6c6f 6164 6564 3a20 0700  't be loaded: ..
+-00012f50: 0000 0a53 7461 7465 6d65 6e74 7301 0300  ...Statements...
+-00012f60: 0000 0804 1004 3a04 4200 2e08 0000 0000  ......:.B.......
+-00012f70: 0600 0000 0441 6374 2e07 0000 0010 5379  .....Act......Sy
+-00012f80: 6d62 6f6c 734c 6973 744d 6f64 656c 0103  mbolsListModel..
+-00012f90: 0000 000c 0412 0430 043b 044e 0442 0430  .......0.;.N.B.0
+-00012fa0: 0800 0000 0006 0000 0008 4375 7272 656e  ..........Curren
+-00012fb0: 6379 0700 0000 1053 796d 626f 6c73 4c69  cy.....SymbolsLi
+-00012fc0: 7374 4d6f 6465 6c01 0300 0000 1004 1e04  stModel.........
+-00012fd0: 3f04 3804 4104 3004 3d04 3804 3508 0000  ?.8.A.0.=.8.5...
+-00012fe0: 0000 0600 0000 0b44 6573 6372 6970 7469  .......Descripti
+-00012ff0: 6f6e 0700 0000 1053 796d 626f 6c73 4c69  on.....SymbolsLi
+-00013000: 7374 4d6f 6465 6c01 0300 0000 1204 1a04  stModel.........
+-00013010: 3e04 4204 3804 4004 3e04 3204 3a04 3808  >.B.8.@.>.2.:.8.
+-00013020: 0000 0000 0600 0000 0651 756f 7465 7307  .........Quotes.
+-00013030: 0000 0010 5379 6d62 6f6c 734c 6973 744d  ....SymbolsListM
+-00013040: 6f64 656c 0103 0000 000c 0421 0438 043c  odel.......!.8.<
+-00013050: 0432 043e 043b 0800 0000 0006 0000 0006  .2.>.;..........
+-00013060: 5379 6d62 6f6c 0700 0000 1053 796d 626f  Symbol.....Symbo
+-00013070: 6c73 4c69 7374 4d6f 6465 6c01 0300 0000  lsListModel.....
+-00013080: 0604 2204 4d04 3308 0000 0000 0600 0000  ..".M.3.........
+-00013090: 0354 6167 0700 0000 0c54 6167 4c69 7374  .Tag.....TagList
+-000130a0: 4d6f 6465 6c01 0300 0000 1004 1e04 3f04  Model.........?.
+-000130b0: 3504 4004 3004 4604 3804 3808 0000 0000  5.@.0.F.8.8.....
+-000130c0: 0600 0000 0a4f 7065 7261 7469 6f6e 7307  .....Operations.
++000115b0: 002e 0049 006e 0076 0065 0073 0074 0062  ...I.n.v.e.s.t.b
++000115c0: 006f 006f 006b 0020 002f 0020 0049 005a  .o.o.k. ./. .I.Z
++000115d0: 0049 002d 0069 006e 0076 0065 0073 0074  .I.-.i.n.v.e.s.t
++000115e0: 0800 0000 0006 0000 0017 496e 7665 7374  ..........Invest
++000115f0: 626f 6f6b 202f 2049 5a49 2d49 6e76 6573  book / IZI-Inves
++00011600: 7407 0000 0016 5374 6174 656d 656e 744f  t.....StatementO
++00011610: 7065 6e50 6f72 7466 6f6c 696f 0103 0000  penPortfolio....
++00011620: 0042 041e 0431 044f 0437 0430 0442 0435  .B...1.O.7.0.B.5
++00011630: 043b 044c 043d 0430 044f 0020 0441 0435  .;.L.=.0.O. .A.5
++00011640: 043a 0446 0438 044f 0020 043e 0442 0441  .:.F.8.O. .>.B.A
++00011650: 0443 0442 0441 0442 0432 0443 0435 0442  .C.B.A.B.2.C.5.B
++00011660: 003a 0020 0800 0000 0006 0000 001e 4d61  .:. ..........Ma
++00011670: 6e64 6174 6f72 7920 7365 6374 696f 6e20  ndatory section 
++00011680: 6973 206d 6973 7369 6e67 3a20 0700 0000  is missing: ....
++00011690: 1653 7461 7465 6d65 6e74 4f70 656e 506f  .StatementOpenPo
++000116a0: 7274 666f 6c69 6f01 0300 0000 2e00 4f00  rtfolio.......O.
++000116b0: 7000 6500 6e00 2000 7000 6f00 7200 7400  p.e.n. .p.o.r.t.
++000116c0: 6600 6f00 6c00 6900 6f00 2000 2800 2a00  f.o.l.i.o. .(.*.
++000116d0: 2e00 6a00 7300 6f00 6e00 2908 0000 0000  ..j.s.o.n.).....
++000116e0: 0600 0000 174f 7065 6e20 706f 7274 666f  .....Open portfo
++000116f0: 6c69 6f20 282a 2e6a 736f 6e29 0700 0000  lio (*.json)....
++00011700: 1653 7461 7465 6d65 6e74 4f70 656e 506f  .StatementOpenPo
++00011710: 7274 666f 6c69 6f01 0300 0000 4e04 1d04  rtfolio.....N...
++00011720: 3504 3f04 3e04 3404 3404 3504 4004 3604  5.?.>.4.4.5.@.6.
++00011730: 3804 3204 3004 3504 3c04 3004 4f00 2004  8.2.0.5.<.0.O. .
++00011740: 3204 3504 4004 4104 3804 4f00 2004 4404  2.5.@.A.8.O. .D.
++00011750: 3e04 4004 3c04 3004 4204 3000 2004 4404  >.@.<.0.B.0. .D.
++00011760: 3004 3904 3b04 3000 3a00 2008 0000 0000  0.9.;.0.:. .....
++00011770: 0600 0000 2e55 6e73 7570 706f 7274 6564  .....Unsupported
++00011780: 2076 6572 7369 6f6e 206f 6620 6f70 656e   version of open
++00011790: 2070 6f72 7466 6f6c 696f 2066 6f72 6d61   portfolio forma
++000117a0: 743a 2007 0000 0016 5374 6174 656d 656e  t: .....Statemen
++000117b0: 744f 7065 6e50 6f72 7466 6f6c 696f 0103  tOpenPortfolio..
++000117c0: 0000 0038 041a 0443 043f 043e 043d 044b  ...8...C.?.>.=.K
++000117d0: 0020 043e 0431 043b 0438 0433 0430 0446  . .>.1.;.8.3.0.F
++000117e0: 0438 0439 0020 0437 0430 0433 0440 0443  .8.9. .7.0.3.@.C
++000117f0: 0436 0435 043d 044b 003a 0020 0800 0000  .6.5.=.K.:. ....
++00011800: 0006 0000 0017 426f 6e64 2069 6e74 6572  ......Bond inter
++00011810: 6573 7473 206c 6f61 6465 643a 2007 0000  ests loaded: ...
++00011820: 000c 5374 6174 656d 656e 7450 5342 0103  ..StatementPSB..
++00011830: 0000 003e 0414 0435 043d 0435 0436 043d  ...>...5.=.5.6.=
++00011840: 044b 0435 0020 0442 0440 0430 043d 0437  .K.5. .B.@.0.=.7
++00011850: 0430 043a 0446 0438 0438 0020 0437 0430  .0.:.F.8.8. .7.0
++00011860: 0433 0440 0443 0436 0435 043d 044b 003a  .3.@.C.6.5.=.K.:
++00011870: 0020 0800 0000 0006 0000 001a 4361 7368  . ..........Cash
++00011880: 2074 7261 6e73 6163 7469 6f6e 7320 6c6f   transactions lo
++00011890: 6164 6564 3a20 0700 0000 0c53 7461 7465  aded: .....State
++000118a0: 6d65 6e74 5053 4201 0300 0000 2a04 1404  mentPSB.....*...
++000118b0: 3804 3204 3804 3404 3504 3d04 3404 4b00  8.2.8.4.5.=.4.K.
++000118c0: 2004 3704 3004 3304 4004 4304 3604 3504   .7.0.3.@.C.6.5.
++000118d0: 3d04 4b00 3a00 2008 0000 0000 0600 0000  =.K.:. .........
++000118e0: 1244 6976 6964 656e 6473 206c 6f61 6465  .Dividends loade
++000118f0: 643a 2007 0000 000c 5374 6174 656d 656e  d: .....Statemen
++00011900: 7450 5342 0103 0000 0014 041f 0421 0411  tPSB.........!..
++00011910: 002d 0431 0440 043e 043a 0435 0440 0800  .-.1.@.>.:.5.@..
++00011920: 0000 0006 0000 000a 5053 4220 4272 6f6b  ........PSB Brok
++00011930: 6572 0700 0000 0c53 7461 7465 6d65 6e74  er.....Statement
++00011940: 5053 4201 0300 0000 4004 1e04 4204 4704  PSB.....@...B.G.
++00011950: 5104 4200 2004 3104 4004 3e04 3a04 3504  Q.B. .1.@.>.:.5.
++00011960: 4004 3000 2004 1f04 2104 1100 2000 2800  @.0. ...!... .(.
++00011970: 2a00 2e00 7800 6c00 7300 7800 2000 2a00  *...x.l.s.x. .*.
++00011980: 2e00 7800 6c00 7300 2908 0000 0000 0600  ..x.l.s.).......
++00011990: 0000 2350 5342 2062 726f 6b65 7220 7374  ..#PSB broker st
++000119a0: 6174 656d 656e 7420 282a 2e78 6c73 7820  atement (*.xlsx 
++000119b0: 2a2e 786c 7329 0700 0000 0c53 7461 7465  *.xls).....State
++000119c0: 6d65 6e74 5053 4201 03ff ffff ff08 0000  mentPSB.........
++000119d0: 0000 0600 0000 0f54 7261 6465 7320 6c6f  .......Trades lo
++000119e0: 6164 6564 3a20 0700 0000 0c53 7461 7465  aded: .....State
++000119f0: 6d65 6e74 5053 4201 0300 0000 4004 1d04  mentPSB.....@...
++00011a00: 3504 3f04 3e04 3404 3404 3504 4004 3604  5.?.>.4.4.5.@.6.
++00011a10: 3804 3204 3004 3504 3c04 3004 4f00 2004  8.2.0.5.<.0.O. .
++00011a20: 3e04 3f04 3504 4004 3004 4604 3804 4f00  >.?.5.@.0.F.8.O.
++00011a30: 2004 4100 2004 1404 2100 3a00 2008 0000   .A. ...!.:. ...
++00011a40: 0000 0600 0000 1855 6e6b 6e6f 776e 2063  .......Unknown c
++00011a50: 6173 6820 6f70 6572 6174 696f 6e3a 2007  ash operation: .
++00011a60: 0000 000c 5374 6174 656d 656e 7450 5342  ....StatementPSB
++00011a70: 0103 0000 003a 041d 0435 0438 0437 0432  .....:...5.8.7.2
++00011a80: 0435 0441 0442 043d 044b 0439 0020 0442  .5.A.B.=.K.9. .B
++00011a90: 0438 043f 0020 0434 0432 0438 0436 0435  .8.?. .4.2.8.6.5
++00011aa0: 043d 0438 044f 0020 0414 0421 003a 0020  .=.8.O. ...!.:. 
++00011ab0: 0800 0000 0006 0000 001a 556e 6b6e 6f77  ..........Unknow
++00011ac0: 6e20 6361 7368 2074 7261 6e73 6163 7469  n cash transacti
++00011ad0: 6f6e 3a20 0700 0000 0c53 7461 7465 6d65  on: .....Stateme
++00011ae0: 6e74 5053 4201 0300 0000 3004 1d04 3504  ntPSB.....0...5.
++00011af0: 3804 3704 3204 3504 4104 4204 3d04 4b04  8.7.2.5.A.B.=.K.
++00011b00: 3900 2004 4204 3804 3f00 2004 4104 3404  9. .B.8.?. .A.4.
++00011b10: 3504 3b04 3a04 3800 3a00 2008 0000 0000  5.;.:.8.:. .....
++00011b20: 0600 0000 1455 6e6b 6e6f 776e 2074 7261  .....Unknown tra
++00011b30: 6465 2074 7970 653a 2007 0000 000c 5374  de type: .....St
++00011b40: 6174 656d 656e 7450 5342 0103 0000 0032  atementPSB.....2
++00011b50: 041d 0435 043f 043e 0434 0434 0435 0440  ...5.?.>.4.4.5.@
++00011b60: 0436 0438 0432 0430 0435 043c 044b 0439  .6.8.2.0.5.<.K.9
++00011b70: 0020 043f 043b 0430 0442 0451 0436 003a  . .?.;.0.B.Q.6.:
++00011b80: 0020 0800 0000 0006 0000 0015 556e 7375  . ..........Unsu
++00011b90: 7070 6f72 7465 6420 7061 796d 656e 743a  pported payment:
++00011ba0: 2007 0000 000c 5374 6174 656d 656e 7450   .....StatementP
++00011bb0: 5342 0103 0000 005a 0421 0434 0435 043b  SB.....Z.!.4.5.;
++00011bc0: 043a 0430 0020 0441 0020 0440 0430 0437  .:.0. .A. .@.0.7
++00011bd0: 043d 044b 043c 0438 0020 0432 0430 043b  .=.K.<.8. .2.0.;
++00011be0: 044e 0442 0430 043c 0438 0020 043d 0435  .N.B.0.<.8. .=.5
++00011bf0: 0020 043f 043e 0434 0434 0435 0440 0436  . .?.>.4.4.5.@.6
++00011c00: 0438 0432 0430 0435 0442 0441 044f 003a  .8.2.0.5.B.A.O.:
++00011c10: 0020 0800 0000 0006 0000 002d 556e 7375  . .........-Unsu
++00011c20: 7070 6f72 7465 6420 7472 6164 6520 7769  pported trade wi
++00011c30: 7468 2064 6966 6665 7265 6e74 2063 7572  th different cur
++00011c40: 7265 6e63 6965 733a 2007 0000 000c 5374  rencies: .....St
++00011c50: 6174 656d 656e 7450 5342 0103 0000 0032  atementPSB.....2
++00011c60: 041e 043f 0435 0440 0430 0446 0438 0438  ...?.5.@.0.F.8.8
++00011c70: 0020 0441 0020 0426 0411 0020 0437 0430  . .A. .&... .7.0
++00011c80: 0433 0440 0443 0436 0435 043d 044b 003a  .3.@.C.6.5.=.K.:
++00011c90: 0020 0800 0000 0006 0000 0019 4173 7365  . ..........Asse
++00011ca0: 7420 6f70 6572 6174 696f 6e73 206c 6f61  t operations loa
++00011cb0: 6465 643a 2007 0000 000d 5374 6174 656d  ded: .....Statem
++00011cc0: 656e 7455 4b46 5501 0300 0000 6804 1e04  entUKFU.....h...
++00011cd0: 4204 4104 4304 4204 4104 4204 3204 4304  B.A.C.B.A.B.2.C.
++00011ce0: 4e04 4200 2004 3e04 3604 3804 3404 3004  N.B. .>.6.8.4.0.
++00011cf0: 3504 3c04 4b04 3500 2004 3404 3004 3d04  5.<.K.5. .4.0.=.
++00011d00: 3d04 4b04 3500 2004 3200 2004 3e04 3f04  =.K.5. .2. .>.?.
++00011d10: 3804 4104 3004 3d04 3804 3800 2004 3f04  8.A.0.=.8.8. .?.
++00011d20: 3504 4004 3504 3204 3e04 3404 3000 2004  5.@.5.2.>.4.0. .
++00011d30: 2604 1100 2008 0000 0000 0600 0000 2a41  &... .........*A
++00011d40: 7373 6574 2074 7261 6e73 6665 7220 6465  sset transfer de
++00011d50: 7363 7269 7074 696f 6e20 6d69 7373 2073  scription miss s
++00011d60: 6f6d 6520 6461 7461 2007 0000 000d 5374  ome data .....St
++00011d70: 6174 656d 656e 7455 4b46 5501 0300 0000  atementUKFU.....
++00011d80: 5004 1d04 3504 3204 3e04 3704 3c04 3e04  P...5.2.>.7.<.>.
++00011d90: 3604 3d04 3e00 2004 3d04 3004 3904 4204  6.=.>. .=.0.9.B.
++00011da0: 3800 2004 3704 3004 3f04 3804 4104 4c00  8. .7.0.?.8.A.L.
++00011db0: 2004 4104 3f04 3804 4104 3004 3d04 3804   .A.?.8.A.0.=.8.
++00011dc0: 4f00 2004 2604 1100 2004 3404 3b04 4f00  O. .&... .4.;.O.
++00011dd0: 2008 0000 0000 0600 0000 2943 616e 2774   .........)Can't
++00011de0: 2066 696e 6420 6173 7365 7420 6361 6e63   find asset canc
++00011df0: 656c 6c61 7469 6f6e 2072 6563 6f72 6420  ellation record 
++00011e00: 666f 7220 0700 0000 0d53 7461 7465 6d65  for .....Stateme
++00011e10: 6e74 554b 4655 0103 0000 0046 041d 0435  ntUKFU.....F...5
++00011e20: 0432 043e 0437 043c 043e 0436 043d 043e  .2.>.7.<.>.6.=.>
++00011e30: 0020 043d 0430 0439 0442 0438 0020 0437  . .=.0.9.B.8. .7
++00011e40: 0430 0433 043e 043b 043e 0432 043e 043a  .0.3.>.;.>.2.>.:
++00011e50: 0020 043a 043e 043c 0438 0441 0441 0438  . .:.>.<.8.A.A.8
++00011e60: 0439 0800 0000 0006 0000 001d 4361 6e27  .9..........Can'
++00011e70: 7420 6765 7420 6865 6164 6572 2074 6f20  t get header to 
++00011e80: 6669 6e64 2066 6565 7307 0000 000d 5374  find fees.....St
++00011e90: 6174 656d 656e 7455 4b46 5501 0300 0000  atementUKFU.....
++00011ea0: 5604 1d04 3504 3204 3e04 3704 3c04 3e04  V...5.2.>.7.<.>.
++00011eb0: 3604 3d04 3e00 2004 4004 3004 4104 3f04  6.=.>. .@.0.A.?.
++00011ec0: 3e04 3704 3d04 3004 4204 4c00 2004 3e04  >.7.=.0.B.L. .>.
++00011ed0: 3f04 3804 4104 3004 3d04 3804 3500 2004  ?.8.A.0.=.8.5. .
++00011ee0: 3f04 3504 4004 3504 3204 3e04 3404 3000  ?.5.@.5.2.>.4.0.
++00011ef0: 2004 2604 1100 2008 0000 0000 0600 0000   .&... .........
++00011f00: 2743 616e 2774 2070 6172 7365 2061 7373  'Can't parse ass
++00011f10: 6574 2074 7261 6e73 6665 7220 6465 7363  et transfer desc
++00011f20: 7269 7074 696f 6e20 0700 0000 0d53 7461  ription .....Sta
++00011f30: 7465 6d65 6e74 554b 4655 0103 0000 004c  tementUKFU.....L
++00011f40: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++00011f50: 043d 043e 0020 0440 0430 0441 043f 043e  .=.>. .@.0.A.?.>
++00011f60: 0437 043d 0430 0442 044c 0020 043e 043f  .7.=.0.B.L. .>.?
++00011f70: 0438 0441 0430 043d 0438 0435 0020 043a  .8.A.0.=.8.5. .:
++00011f80: 0443 043f 043e 043d 0430 0020 0800 0000  .C.?.>.=.0. ....
++00011f90: 0006 0000 0026 4361 6e27 7420 7061 7273  .....&Can't pars
++00011fa0: 6520 626f 6e64 2069 6e74 6572 6573 7420  e bond interest 
++00011fb0: 6465 7363 7269 7074 696f 6e20 0700 0000  description ....
++00011fc0: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
++00011fd0: 0000 0066 041d 0435 0432 043e 0437 043c  ...f...5.2.>.7.<
++00011fe0: 043e 0436 043d 043e 0020 0440 0430 0441  .>.6.=.>. .@.0.A
++00011ff0: 043f 043e 0437 043d 0430 0442 044c 0020  .?.>.7.=.0.B.L. 
++00012000: 043e 043f 0438 0441 0430 043d 0438 0435  .>.?.8.A.0.=.8.5
++00012010: 0020 043f 043e 0433 0430 0448 0435 043d  . .?.>.3.0.H.5.=
++00012020: 0438 044f 0020 043e 0431 043b 0438 0433  .8.O. .>.1.;.8.3
++00012030: 0430 0446 0438 0438 0020 0800 0000 0006  .0.F.8.8. ......
++00012040: 0000 0027 4361 6e27 7420 7061 7273 6520  ...'Can't parse 
++00012050: 626f 6e64 2072 6570 6179 6d65 6e74 2064  bond repayment d
++00012060: 6573 6372 6970 7469 6f6e 2007 0000 000d  escription .....
++00012070: 5374 6174 656d 656e 7455 4b46 5501 0300  StatementUKFU...
++00012080: 0000 5204 1d04 3504 3204 3e04 3704 3c04  ..R...5.2.>.7.<.
++00012090: 3e04 3604 3d04 3e00 2004 4004 3004 4104  >.6.=.>. .@.0.A.
++000120a0: 3f04 3e04 3704 3d04 3004 4204 4c00 2004  ?.>.7.=.0.B.L. .
++000120b0: 3e04 3f04 3804 4104 3004 3d04 3804 3500  >.?.8.A.0.=.8.5.
++000120c0: 2004 3404 3804 3204 3804 3404 3504 3d04   .4.8.2.8.4.5.=.
++000120d0: 3404 3000 2008 0000 0000 0600 0000 2143  4.0. .........!C
++000120e0: 616e 2774 2070 6172 7365 2064 6976 6964  an't parse divid
++000120f0: 656e 6420 6465 7363 7269 7074 696f 6e20  end description 
++00012100: 0700 0000 0d53 7461 7465 6d65 6e74 554b  .....StatementUK
++00012110: 4655 0103 0000 0064 041d 0435 0432 043e  FU.....d...5.2.>
++00012120: 0437 043c 043e 0436 043d 043e 0020 0440  .7.<.>.6.=.>. .@
++00012130: 0430 0441 043f 043e 0437 043d 0430 0442  .0.A.?.>.7.=.0.B
++00012140: 044c 0020 043e 043f 0438 0441 0430 043d  .L. .>.?.8.A.0.=
++00012150: 0438 0435 0020 0434 0435 043d 0435 0436  .8.5. .4.5.=.5.6
++00012160: 043d 043e 0433 043e 0020 043f 0435 0440  .=.>.3.>. .?.5.@
++00012170: 0435 0432 043e 0434 0430 0020 0800 0000  .5.2.>.4.0. ....
++00012180: 0006 0000 0027 4361 6e27 7420 7061 7273  .....'Can't pars
++00012190: 6520 6d6f 6e65 7920 7472 616e 7366 6572  e money transfer
++000121a0: 2064 6573 6372 6970 7469 6f6e 2007 0000   description ...
++000121b0: 000d 5374 6174 656d 656e 7455 4b46 5501  ..StatementUKFU.
++000121c0: 0300 0000 3a04 1404 3504 3d04 3504 3604  ....:...5.=.5.6.
++000121d0: 3d04 4b04 4500 2004 3e04 3f04 3504 4004  =.K.E. .>.?.5.@.
++000121e0: 3004 4604 3804 3900 2004 3704 3004 3304  0.F.8.9. .7.0.3.
++000121f0: 4004 4304 3604 3504 3d04 3e00 3a00 2008  @.C.6.5.=.>.:. .
++00012200: 0000 0000 0600 0000 1843 6173 6820 6f70  .........Cash op
++00012210: 6572 6174 696f 6e73 206c 6f61 6465 643a  erations loaded:
++00012220: 2007 0000 000d 5374 6174 656d 656e 7455   .....StatementU
++00012230: 4b46 5501 0300 0000 4804 1e04 4804 3804  KFU.....H...H.8.
++00012240: 3104 3a04 3000 2004 3f04 4004 3800 2004  1.:.0. .?.@.8. .
++00012250: 3a04 3e04 3d04 3204 3504 4004 4204 3004  :.>.=.2.5.@.B.0.
++00012260: 4604 3804 3800 2004 4104 4304 3c04 3c04  F.8.8. .A.C.<.<.
++00012270: 4b00 2004 3d04 3004 3b04 3e04 3304 3000  K. .=.0.;.>.3.0.
++00012280: 2008 0000 0000 0600 0000 1f46 6169 6c65   ..........Faile
++00012290: 6420 746f 2063 6f6e 7665 7274 2064 6976  d to convert div
++000122a0: 6964 656e 6420 7461 7820 0700 0000 0d53  idend tax .....S
++000122b0: 7461 7465 6d65 6e74 554b 4655 0103 0000  tatementUKFU....
++000122c0: 003e 0421 0434 0435 043b 043e 043a 0020  .>.!.4.5.;.>.:. 
++000122d0: 0441 0020 0444 044c 044e 0447 0435 0440  .A. .D.L.N.G.5.@
++000122e0: 0441 0430 043c 0438 0020 0437 0430 0433  .A.0.<.8. .7.0.3
++000122f0: 0440 0443 0436 0435 043d 043e 003a 0020  .@.C.6.5.=.>.:. 
++00012300: 0800 0000 0006 0000 0017 4675 7475 7265  ..........Future
++00012310: 7320 7472 6164 6573 206c 6f61 6465 643a  s trades loaded:
++00012320: 2007 0000 000d 5374 6174 656d 656e 7455   .....StatementU
++00012330: 4b46 5501 0300 0000 7604 1e04 4204 4104  KFU.....v...B.A.
++00012340: 4304 4204 4104 4204 3204 4304 4e04 4200  C.B.A.B.2.C.N.B.
++00012350: 2004 3e04 3604 3804 3404 3004 3504 3c04   .>.6.8.4.0.5.<.
++00012360: 4b04 3500 2004 3404 3004 3d04 3d04 4b04  K.5. .4.0.=.=.K.
++00012370: 3500 2004 3200 2004 3e04 3f04 3804 4104  5. .2. .>.?.8.A.
++00012380: 3004 3d04 3804 3800 2004 3404 3504 3d04  0.=.8.8. .4.5.=.
++00012390: 3504 3604 3d04 3e04 3304 3e00 2004 3f04  5.6.=.>.3.>. .?.
++000123a0: 3504 4004 3504 3204 3e04 3404 3000 2008  5.@.5.2.>.4.0. .
++000123b0: 0000 0000 0600 0000 2a4d 6f6e 6579 2074  ........*Money t
++000123c0: 7261 6e73 6665 7220 6465 7363 7269 7074  ransfer descript
++000123d0: 696f 6e20 6d69 7373 2073 6f6d 6520 6461  ion miss some da
++000123e0: 7461 2007 0000 000d 5374 6174 656d 656e  ta .....Statemen
++000123f0: 7455 4b46 5501 0300 0000 5604 1d04 3004  tUKFU.....V...0.
++00012400: 3904 3404 3504 3d04 4b00 2004 3d04 3504  9.4.5.=.K. .=.5.
++00012410: 4104 3a04 3e04 3b04 4c04 3a04 3e00 2004  A.:.>.;.L.:.>. .
++00012420: 3704 3004 3f04 3804 4104 3504 3900 2004  7.0.?.8.A.5.9. .
++00012430: 3f04 3e04 3304 3004 4804 3504 3d04 3804  ?.>.3.0.H.5.=.8.
++00012440: 4f00 2004 2604 1100 2004 3404 3b04 4f00  O. .&... .4.;.O.
++00012450: 2008 0000 0000 0600 0000 264d 756c 7469   .........&Multi
++00012460: 706c 6520 6173 7365 7420 6361 6e63 656c  ple asset cancel
++00012470: 6c61 7469 6f6e 206d 6174 6368 2066 6f72  lation match for
++00012480: 2007 0000 000d 5374 6174 656d 656e 7455   .....StatementU
++00012490: 4b46 5501 0300 0000 2404 2104 3404 3504  KFU.....$.!.4.5.
++000124a0: 3b04 3e04 3a00 2004 3704 3004 3304 4004  ;.>.:. .7.0.3.@.
++000124b0: 4304 3604 3504 3d04 3e00 3a00 2008 0000  C.6.5.=.>.:. ...
++000124c0: 0000 0600 0000 0f54 7261 6465 7320 6c6f  .......Trades lo
++000124d0: 6164 6564 3a20 0700 0000 0d53 7461 7465  aded: .....State
++000124e0: 6d65 6e74 554b 4655 0103 0000 0030 041d  mentUKFU.....0..
++000124f0: 0435 0438 0437 0432 0435 0441 0442 043d  .5.8.7.2.5.A.B.=
++00012500: 044b 0439 0020 0442 0438 043f 0020 0441  .K.9. .B.8.?. .A
++00012510: 0434 0435 043b 043a 0438 003a 0020 0800  .4.5.;.:.8.:. ..
++00012520: 0000 0006 0000 0014 556e 6b6e 6f77 6e20  ........Unknown 
++00012530: 7472 6164 6520 7479 7065 3a20 0700 0000  trade type: ....
++00012540: 0d53 7461 7465 6d65 6e74 554b 4655 0103  .StatementUKFU..
++00012550: 0000 003e 041d 0435 043f 043e 0434 0434  ...>...5.?.>.4.4
++00012560: 0435 0440 0436 0438 0432 0430 0435 043c  .5.@.6.8.2.0.5.<
++00012570: 0430 044f 0020 043e 043f 0435 0440 0430  .0.O. .>.?.5.@.0
++00012580: 0446 0438 044f 0020 0441 0020 0426 0411  .F.8.O. .A. .&..
++00012590: 0020 0800 0000 0006 0000 001d 556e 7375  . ..........Unsu
++000125a0: 7070 706f 7274 6564 2061 7373 6574 206f  ppported asset o
++000125b0: 7065 7261 7469 6f6e 2007 0000 000d 5374  peration .....St
++000125c0: 6174 656d 656e 7455 4b46 5501 0300 0000  atementUKFU.....
++000125d0: 4a04 1d04 3504 3f04 3e04 3404 3404 3504  J...5.?.>.4.4.5.
++000125e0: 4004 3604 3804 3204 3004 3504 3c04 3004  @.6.8.2.0.5.<.0.
++000125f0: 4f00 2004 3404 3504 3d04 3504 3604 3d04  O. .4.5.=.5.6.=.
++00012600: 3004 4f00 2004 4204 4004 3004 3d04 3704  0.O. .B.@.0.=.7.
++00012610: 3004 3a04 4604 3804 4f00 2008 0000 0000  0.:.F.8.O. .....
++00012620: 0600 0000 1e55 6e73 7570 7070 6f72 7465  .....Unsuppporte
++00012630: 6420 6361 7368 2074 7261 6e73 6163 7469  d cash transacti
++00012640: 6f6e 2007 0000 000d 5374 6174 656d 656e  on .....Statemen
++00012650: 7455 4b46 5501 0300 0000 1e04 2304 4004  tUKFU.......#.@.
++00012660: 3004 3b04 4104 3804 3100 2004 1a04 4d04  0.;.A.8.1. ...M.
++00012670: 3f04 3804 4204 3004 3b08 0000 0000 0600  ?.8.B.0.;.......
++00012680: 0000 0e55 7261 6c73 6962 2042 726f 6b65  ...Uralsib Broke
++00012690: 7207 0000 000d 5374 6174 656d 656e 7455  r.....StatementU
++000126a0: 4b46 5501 0300 0000 4a04 1e04 4204 4704  KFU.....J...B.G.
++000126b0: 5104 4200 2004 3104 4004 3e04 3a04 3504  Q.B. .1.@.>.:.5.
++000126c0: 4004 3000 2004 2304 4004 3004 3b04 4104  @.0. .#.@.0.;.A.
++000126d0: 3804 3100 2004 1a04 4d04 3f04 3804 4204  8.1. ...M.?.8.B.
++000126e0: 3004 3b00 2000 2800 2a00 2e00 7a00 6900  0.;. .(.*...z.i.
++000126f0: 7000 2908 0000 0000 0600 0000 1955 7261  p.)..........Ura
++00012700: 6c73 6962 2073 7461 7465 6d65 6e74 2028  lsib statement (
++00012710: 2a2e 7a69 7029 0700 0000 0d53 7461 7465  *.zip).....State
++00012720: 6d65 6e74 554b 4655 0103 0000 003e 0410  mentUKFU.....>..
++00012730: 0440 0445 0438 0432 0020 0441 043e 0434  .@.E.8.2. .A.>.4
++00012740: 0435 0440 0436 0438 0442 0020 043d 0435  .5.@.6.8.B. .=.5
++00012750: 0441 043a 043e 043b 044c 043a 043e 0020  .A.:.>.;.L.:.>. 
++00012760: 0444 0430 0439 043b 043e 0432 0800 0000  .D.0.9.;.>.2....
++00012770: 0006 0000 001f 4172 6368 6976 6520 636f  ......Archive co
++00012780: 6e74 6169 6e73 206d 756c 7469 706c 6520  ntains multiple 
++00012790: 6669 6c65 7307 0000 000c 5374 6174 656d  files.....Statem
++000127a0: 656e 7458 4c53 0103 0000 005a 041d 0435  entXLS.....Z...5
++000127b0: 0020 0443 0434 0430 043b 043e 0441 044c  . .C.4.0.;.>.A.L
++000127c0: 0020 043d 0430 0439 0442 0438 0020 043e  . .=.0.9.B.8. .>
++000127d0: 0436 0438 0434 0430 0435 043c 044b 0439  .6.8.4.0.5.<.K.9
++000127e0: 0020 0437 0430 0433 043e 043b 043e 0432  . .7.0.3.>.;.>.2
++000127f0: 043e 043a 0020 043e 0442 0447 0451 0442  .>.:. .>.B.G.Q.B
++00012800: 0430 003a 0020 0800 0000 0006 0000 0023  .0.:. .........#
++00012810: 4361 6e27 7420 6669 6e64 2065 7870 6563  Can't find expec
++00012820: 7465 6420 7265 706f 7274 2068 6561 6465  ted report heade
++00012830: 723a 2007 0000 000c 5374 6174 656d 656e  r: .....Statemen
++00012840: 7458 4c53 0103 0000 0066 041d 0435 0020  tXLS.....f...5. 
++00012850: 0443 0434 0430 043b 043e 0441 044c 0020  .C.4.0.;.>.A.L. 
++00012860: 043e 043f 0440 0435 0434 0435 043b 0438  .>.?.@.5.4.5.;.8
++00012870: 0442 044c 0020 0432 0430 043b 044e 0442  .B.L. .2.0.;.N.B
++00012880: 044b 0020 0438 0437 0020 043e 0431 0449  .K. .8.7. .>.1.I
++00012890: 0435 0439 0020 0441 0435 043a 0446 0438  .5.9. .A.5.:.F.8
++000128a0: 0438 0020 043e 0442 0447 0451 0442 0430  .8. .>.B.G.Q.B.0
++000128b0: 0800 0000 0006 0000 0036 4361 6e27 7420  .........6Can't 
++000128c0: 6765 7420 6375 7272 656e 6369 6573 2066  get currencies f
++000128d0: 726f 6d20 7375 6d6d 6172 7920 7365 6374  rom summary sect
++000128e0: 696f 6e20 6f66 2073 7461 7465 6d65 6e74  ion of statement
++000128f0: 0700 0000 0c53 7461 7465 6d65 6e74 584c  .....StatementXL
++00012900: 5301 0300 0000 4604 1d04 3504 3204 3e04  S.....F...5.2.>.
++00012910: 3704 3c04 3e04 3604 3d04 3e00 2004 3e04  7.<.>.6.=.>. .>.
++00012920: 3f04 4004 3504 3404 3504 3b04 3804 4204  ?.@.5.4.5.;.8.B.
++00012930: 4c00 2004 3f04 3504 4004 3804 3e04 3400  L. .?.5.@.8.>.4.
++00012940: 2004 3e04 4204 4704 5104 4204 3008 0000   .>.B.G.Q.B.0...
++00012950: 0000 0600 0000 1843 616e 2774 2072 6561  .......Can't rea
++00012960: 6420 7265 706f 7274 2070 6572 696f 6407  d report period.
++00012970: 0000 000c 5374 6174 656d 656e 7458 4c53  ....StatementXLS
++00012980: 0103 0000 001c 0414 0421 0020 0437 0430  .........!. .7.0
++00012990: 0433 0440 0443 0436 0435 043d 044b 003a  .3.@.C.6.5.=.K.:
++000129a0: 0020 0800 0000 0006 0000 0016 4361 7368  . ..........Cash
++000129b0: 2062 616c 616e 6365 7320 6c6f 6164 6564   balances loaded
++000129c0: 3a20 0700 0000 0c53 7461 7465 6d65 6e74  : .....Statement
++000129d0: 584c 5301 0300 0000 3604 2104 4204 3e04  XLS.....6.!.B.>.
++000129e0: 3b04 3104 3504 4600 2004 3d04 3500 2004  ;.1.5.F. .=.5. .
++000129f0: 3d04 3004 3904 3404 3504 3d00 2004 3200  =.0.9.4.5.=. .2.
++00012a00: 2004 4104 3504 3a04 4604 3804 3800 2008   .A.5.:.F.8.8. .
++00012a10: 0000 0000 0600 0000 1c43 6f6c 756d 6e20  .........Column 
++00012a20: 6e6f 7420 666f 756e 6420 696e 2073 6563  not found in sec
++00012a30: 7469 6f6e 2007 0000 000c 5374 6174 656d  tion .....Statem
++00012a40: 656e 7458 4c53 0103 0000 0034 041d 0435  entXLS.....4...5
++00012a50: 0441 043a 043e 043b 044c 043a 043e 0020  .A.:.>.;.L.:.>. 
++00012a60: 0441 0447 0435 0442 043e 0432 0020 043d  .A.G.5.B.>.2. .=
++00012a70: 0430 0439 0434 0435 043d 043e 003a 0020  .0.9.4.5.=.>.:. 
++00012a80: 0800 0000 0006 0000 0019 4d75 6c74 6970  ..........Multip
++00012a90: 6c65 2061 6363 6f75 6e74 7320 666f 756e  le accounts foun
++00012aa0: 643a 2007 0000 000c 5374 6174 656d 656e  d: .....Statemen
++00012ab0: 7458 4c53 0103 0000 001c 0426 0411 0020  tXLS.......&... 
++00012ac0: 0437 0430 0433 0440 0443 0436 0435 043d  .7.0.3.@.C.6.5.=
++00012ad0: 044b 003a 0020 0800 0000 0006 0000 0013  .K.:. ..........
++00012ae0: 5365 6375 7269 7469 6573 206c 6f61 6465  Securities loade
++00012af0: 643a 2007 0000 000c 5374 6174 656d 656e  d: .....Statemen
++00012b00: 7458 4c53 0103 0000 0030 041e 0442 0447  tXLS.....0...B.G
++00012b10: 0451 0442 0020 0437 0430 0433 0440 0443  .Q.B. .7.0.3.@.C
++00012b20: 0436 0435 043d 0020 0443 0441 043f 0435  .6.5.=. .C.A.?.5
++00012b30: 0448 043d 043e 003a 0020 0800 0000 0006  .H.=.>.:. ......
++00012b40: 0000 001f 5374 6174 656d 656e 7420 6c6f  ....Statement lo
++00012b50: 6164 6564 2073 7563 6365 7373 6675 6c6c  aded successfull
++00012b60: 793a 2007 0000 000c 5374 6174 656d 656e  y: .....Statemen
++00012b70: 7458 4c53 0103 0000 0022 0020 0437 0430  tXLS.....". .7.0
++00012b80: 0433 0440 0443 0436 0435 043d 0020 0443  .3.@.C.6.5.=. .C
++00012b90: 0441 043f 0435 0448 043d 043e 0800 0000  .A.?.5.H.=.>....
++00012ba0: 0006 0000 0014 206c 6f61 6465 6420 7375  ...... loaded su
++00012bb0: 6363 6573 7366 756c 6c79 0700 0000 0c53  ccessfully.....S
++00012bc0: 7461 7465 6d65 6e74 584d 4c01 0300 0000  tatementXML.....
++00012bd0: 3604 1d04 3504 3204 3504 4004 3d04 4b04  6...5.2.5.@.=.K.
++00012be0: 3900 2004 4404 3e04 4004 3c04 3004 4200  9. .D.>.@.<.0.B.
++00012bf0: 2000 5800 4d00 4c00 2004 4404 3004 3904   .X.M.L. .D.0.9.
++00012c00: 3b04 3000 3a00 2008 0000 0000 0600 0000  ;.0.:. .........
++00012c10: 1643 616e 2774 2070 6172 7365 2058 4d4c  .Can't parse XML
++00012c20: 2066 696c 653a 2007 0000 000c 5374 6174   file: .....Stat
++00012c30: 656d 656e 7458 4d4c 0103 0000 003e 041d  ementXML.....>..
++00012c40: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++00012c50: 043e 0020 0437 0430 0433 0440 0443 0437  .>. .7.0.3.@.C.7
++00012c60: 0438 0442 044c 0020 0430 0442 0442 0440  .8.B.L. .0.B.B.@
++00012c70: 0438 0431 0443 0442 003a 0020 0800 0000  .8.1.C.B.:. ....
++00012c80: 0006 0000 001a 4661 696c 6564 2074 6f20  ......Failed to 
++00012c90: 6c6f 6164 2061 7474 7269 6275 7465 3a20  load attribute: 
++00012ca0: 0700 0000 0c53 7461 7465 6d65 6e74 584d  .....StatementXM
++00012cb0: 4c01 0300 0000 4c04 1d04 3504 3f04 3e04  L.....L...5.?.>.
++00012cc0: 3404 3404 3504 4004 3604 3804 3204 3004  4.4.5.@.6.8.2.0.
++00012cd0: 3504 3c04 4b04 3900 2004 4404 3e04 4004  5.<.K.9. .D.>.@.
++00012ce0: 3c04 3004 4200 2004 3404 3004 4204 4b00  <.0.B. .4.0.B.K.
++00012cf0: 2f04 3204 4004 3504 3c04 3504 3d04 3800  /.2.@.5.<.5.=.8.
++00012d00: 3a00 2008 0000 0000 0600 0000 1e55 6e73  :. ..........Uns
++00012d10: 7570 706f 7274 6564 2064 6174 652f 7469  upported date/ti
++00012d20: 6d65 2066 6f72 6d61 743a 2007 0000 000c  me format: .....
++00012d30: 5374 6174 656d 656e 7458 4d4c 0103 0000  StatementXML....
++00012d40: 0020 041e 0448 0438 0431 043a 0430 0020  . ...H.8.1.:.0. 
++00012d50: 0438 043c 043f 043e 0440 0442 0430 003a  .8.<.?.>.@.B.0.:
++00012d60: 0020 0800 0000 0006 0000 000f 496d 706f  . ..........Impo
++00012d70: 7274 2066 6169 6c65 643a 2007 0000 000a  rt failed: .....
++00012d80: 5374 6174 656d 656e 7473 0103 0000 0040  Statements.....@
++00012d90: 0412 044b 0431 0435 0440 0438 0442 0435  ...K.1.5.@.8.B.5
++00012da0: 0020 0444 0430 0439 043b 0020 043e 0442  . .D.0.9.;. .>.B
++00012db0: 0447 0435 0442 0430 0020 0434 043b 044f  .G.5.B.0. .4.;.O
++00012dc0: 0020 0438 043c 043f 043e 0440 0442 0430  . .8.<.?.>.@.B.0
++00012dd0: 0800 0000 0006 0000 001f 5365 6c65 6374  ..........Select
++00012de0: 2073 7461 7465 6d65 6e74 2066 696c 6520   statement file 
++00012df0: 746f 2069 6d70 6f72 7407 0000 000a 5374  to import.....St
++00012e00: 6174 656d 656e 7473 0103 0000 004a 041a  atements.....J..
++00012e10: 043b 0430 0441 0441 0020 043e 0442 0447  .;.0.A.A. .>.B.G
++00012e20: 0451 0442 0430 0020 043d 0435 0020 043c  .Q.B.0. .=.5. .<
++00012e30: 043e 0436 0435 0442 0020 0431 044b 0442  .>.6.5.B. .1.K.B
++00012e40: 044c 0020 0437 0430 0433 0440 0443 0436  .L. .7.0.3.@.C.6
++00012e50: 0435 043d 003a 0020 0800 0000 0006 0000  .5.=.:. ........
++00012e60: 0021 5374 6174 656d 656e 7420 636c 6173  .!Statement clas
++00012e70: 7320 6361 6e27 7420 6265 206c 6f61 6465  s can't be loade
++00012e80: 643a 2007 0000 000a 5374 6174 656d 656e  d: .....Statemen
++00012e90: 7473 0103 0000 0054 041c 043e 0434 0443  ts.....T...>.4.C
++00012ea0: 043b 044c 0020 043e 0442 0447 0451 0442  .;.L. .>.B.G.Q.B
++00012eb0: 0430 0020 043d 0435 0020 043c 043e 0436  .0. .=.5. .<.>.6
++00012ec0: 0435 0442 0020 0431 044b 0442 044c 0020  .5.B. .1.K.B.L. 
++00012ed0: 0438 043c 043f 043e 0440 0442 0438 0440  .8.<.?.>.@.B.8.@
++00012ee0: 043e 0432 0430 043d 003a 0020 0800 0000  .>.2.0.=.:. ....
++00012ef0: 0006 0000 0024 5374 6174 656d 656e 7420  .....$Statement 
++00012f00: 6d6f 6475 6c65 2063 616e 2774 2062 6520  module can't be 
++00012f10: 696d 706f 7274 6564 3a20 0700 0000 0a53  imported: .....S
++00012f20: 7461 7465 6d65 6e74 7301 0300 0000 0804  tatements.......
++00012f30: 1004 3a04 4200 2e08 0000 0000 0600 0000  ..:.B...........
++00012f40: 0441 6374 2e07 0000 0010 5379 6d62 6f6c  .Act......Symbol
++00012f50: 734c 6973 744d 6f64 656c 0103 0000 000c  sListModel......
++00012f60: 0412 0430 043b 044e 0442 0430 0800 0000  ...0.;.N.B.0....
++00012f70: 0006 0000 0008 4375 7272 656e 6379 0700  ......Currency..
++00012f80: 0000 1053 796d 626f 6c73 4c69 7374 4d6f  ...SymbolsListMo
++00012f90: 6465 6c01 0300 0000 1004 1e04 3f04 3804  del.........?.8.
++00012fa0: 4104 3004 3d04 3804 3508 0000 0000 0600  A.0.=.8.5.......
++00012fb0: 0000 0b44 6573 6372 6970 7469 6f6e 0700  ...Description..
++00012fc0: 0000 1053 796d 626f 6c73 4c69 7374 4d6f  ...SymbolsListMo
++00012fd0: 6465 6c01 0300 0000 1204 1a04 3e04 4204  del.........>.B.
++00012fe0: 3804 4004 3e04 3204 3a04 3808 0000 0000  8.@.>.2.:.8.....
++00012ff0: 0600 0000 0651 756f 7465 7307 0000 0010  .....Quotes.....
++00013000: 5379 6d62 6f6c 734c 6973 744d 6f64 656c  SymbolsListModel
++00013010: 0103 0000 000c 0421 0438 043c 0432 043e  .......!.8.<.2.>
++00013020: 043b 0800 0000 0006 0000 0006 5379 6d62  .;..........Symb
++00013030: 6f6c 0700 0000 1053 796d 626f 6c73 4c69  ol.....SymbolsLi
++00013040: 7374 4d6f 6465 6c01 0300 0000 0604 2204  stModel.......".
++00013050: 4d04 3308 0000 0000 0600 0000 0354 6167  M.3..........Tag
++00013060: 0700 0000 0c54 6167 4c69 7374 4d6f 6465  .....TagListMode
++00013070: 6c01 0300 0000 1004 1e04 3f04 3504 4004  l.........?.5.@.
++00013080: 3004 4604 3804 3808 0000 0000 0600 0000  0.F.8.8.........
++00013090: 0a4f 7065 7261 7469 6f6e 7307 0000 0009  .Operations.....
++000130a0: 5461 6752 6570 6f72 7401 0300 0000 1004  TagReport.......
++000130b0: 3f04 3e00 2004 1c04 3504 4204 3a04 3508  ?.>. ...5.B.:.5.
++000130c0: 0000 0000 0600 0000 0662 7920 5461 6707  .........by Tag.
+ 000130d0: 0000 0009 5461 6752 6570 6f72 7401 0300  ....TagReport...
+-000130e0: 0000 1004 3f04 3e00 2004 1c04 3504 4204  ....?.>. ...5.B.
+-000130f0: 3a04 3508 0000 0000 0600 0000 0662 7920  :.5..........by 
+-00013100: 5461 6707 0000 0009 5461 6752 6570 6f72  Tag.....TagRepor
+-00013110: 7401 0300 0000 1c04 1e04 4204 4704 3504  t.........B.G.5.
+-00013120: 4200 2004 3f04 3e00 2004 3c04 3504 4204  B. .?.>. .<.5.B.
+-00013130: 3a04 3508 0000 0000 0600 0000 0d52 6570  :.5..........Rep
+-00013140: 6f72 7420 6279 2074 6167 0700 0000 0f54  ort by tag.....T
++000130e0: 0000 1c04 1e04 4204 4704 3504 4200 2004  ......B.G.5.B. .
++000130f0: 3f04 3e00 2004 3c04 3504 4204 3a04 3508  ?.>. .<.5.B.:.5.
++00013100: 0000 0000 0600 0000 0d52 6570 6f72 7420  .........Report 
++00013110: 6279 2074 6167 0700 0000 0f54 6167 5265  by tag.....TagRe
++00013120: 706f 7274 5769 6467 6574 0103 0000 000c  portWidget......
++00013130: 041c 0435 0442 043a 0430 003a 0800 0000  ...5.B.:.0.:....
++00013140: 0006 0000 0004 5461 673a 0700 0000 0f54  ......Tag:.....T
+ 00013150: 6167 5265 706f 7274 5769 6467 6574 0103  agReportWidget..
+-00013160: 0000 000c 041c 0435 0442 043a 0430 003a  .......5.B.:.0.:
+-00013170: 0800 0000 0006 0000 0004 5461 673a 0700  ..........Tag:..
+-00013180: 0000 0f54 6167 5265 706f 7274 5769 6467  ...TagReportWidg
+-00013190: 6574 0103 0000 0024 0027 0020 0437 0430  et.....$.'. .7.0
+-000131a0: 043c 0435 043d 0435 043d 0430 0020 0443  .<.5.=.5.=.0. .C
+-000131b0: 0441 043f 0435 0448 043d 043e 0800 0000  .A.?.5.H.=.>....
+-000131c0: 0006 0000 001b 2720 7761 7320 7375 6363  ......' was succ
+-000131d0: 6573 7366 756c 6c79 2072 6570 6c61 6365  essfully replace
+-000131e0: 6407 0000 000e 5461 6773 4c69 7374 4469  d.....TagsListDi
+-000131f0: 616c 6f67 0103 0000 000c 0027 0020 043d  alog.......'. .=
+-00013200: 0430 003a 0020 0800 0000 0006 0000 0008  .0.:. ..........
+-00013210: 2720 7769 7468 3a20 0700 0000 0e54 6167  ' with: .....Tag
+-00013220: 734c 6973 7444 6961 6c6f 6701 0300 0000  sListDialog.....
+-00013230: 2004 1704 3004 3c04 3504 3d04 3804 4204   ...0.<.5.=.8.B.
+-00013240: 4c00 2004 3c04 3504 4204 3a04 4300 2000  L. .<.5.B.:.C. .
+-00013250: 2708 0000 0000 0600 0000 0d52 6570 6c61  '..........Repla
+-00013260: 6365 2074 6167 2027 0700 0000 0e54 6167  ce tag '.....Tag
+-00013270: 734c 6973 7444 6961 6c6f 6701 0300 0000  sListDialog.....
+-00013280: 1c04 1704 3004 3c04 3504 3d04 3804 4204  ....0.<.5.=.8.B.
+-00013290: 4c00 2004 3d04 3000 2e00 2e00 2e08 0000  L. .=.0.........
+-000132a0: 0000 0600 0000 0f52 6570 6c61 6365 2077  .......Replace w
+-000132b0: 6974 682e 2e2e 0700 0000 0e54 6167 734c  ith........TagsL
+-000132c0: 6973 7444 6961 6c6f 6701 0300 0000 3404  istDialog.....4.
+-000132d0: 1f04 3e04 3a04 3004 3704 3004 4204 4c00  ..>.:.0.7.0.B.L.
+-000132e0: 2004 3e04 3f04 3504 4004 3004 4604 3804   .>.?.5.@.0.F.8.
+-000132f0: 3800 2004 4100 2004 1c04 3504 4204 3a04  8. .A. ...5.B.:.
+-00013300: 3e04 3908 0000 0000 0600 0000 1853 686f  >.9..........Sho
+-00013310: 7720 6f70 6572 6174 696f 6e73 2077 6974  w operations wit
+-00013320: 6820 5461 6707 0000 000e 5461 6773 4c69  h Tag.....TagsLi
+-00013330: 7374 4469 616c 6f67 0103 0000 000e 041c  stDialog........
+-00013340: 0435 0442 043a 0430 0020 0027 0800 0000  .5.B.:.0. .'....
+-00013350: 0006 0000 0005 5461 6720 2707 0000 000e  ......Tag '.....
+-00013360: 5461 6773 4c69 7374 4469 616c 6f67 0103  TagsListDialog..
+-00013370: 0000 0008 0422 044d 0433 0438 0800 0000  .....".M.3.8....
+-00013380: 0006 0000 0004 5461 6773 0700 0000 0e54  ......Tags.....T
+-00013390: 6167 734c 6973 7444 6961 6c6f 6701 0300  agsListDialog...
+-000133a0: 0000 1a04 2204 3504 3a04 4304 4904 3804  ....".5.:.C.I.8.
+-000133b0: 3900 2004 3a04 4304 4004 4100 3a08 0000  9. .:.C.@.A.:...
+-000133c0: 0000 0600 0000 0d43 7572 7265 6e74 2072  .......Current r
+-000133d0: 6174 653a 0700 0000 1354 6178 4573 7469  ate:.....TaxEsti
+-000133e0: 6d61 7469 6f6e 4469 616c 6f67 0103 0000  mationDialog....
+-000133f0: 0028 041f 043e 0441 043b 0435 0434 043d  .(...>.A.;.5.4.=
+-00013400: 044f 044f 0020 043a 043e 0442 0438 0440  .O.O. .:.>.B.8.@
+-00013410: 043e 0432 043a 0430 003a 0800 0000 0006  .>.2.:.0.:......
+-00013420: 0000 000b 4c61 7374 2071 756f 7465 3a07  ....Last quote:.
+-00013430: 0000 0013 5461 7845 7374 696d 6174 696f  ....TaxEstimatio
+-00013440: 6e44 6961 6c6f 6701 0300 0000 1a04 1e04  nDialog.........
+-00013450: 4604 3504 3d04 3a04 3000 2004 3d04 3004  F.5.=.:.0. .=.0.
+-00013460: 3b04 3e04 3304 3008 0000 0000 0600 0000  ;.>.3.0.........
+-00013470: 0e54 6178 2045 7374 696d 6174 696f 6e07  .Tax Estimation.
++00013160: 0000 0024 0027 0020 0437 0430 043c 0435  ...$.'. .7.0.<.5
++00013170: 043d 0435 043d 0430 0020 0443 0441 043f  .=.5.=.0. .C.A.?
++00013180: 0435 0448 043d 043e 0800 0000 0006 0000  .5.H.=.>........
++00013190: 001b 2720 7761 7320 7375 6363 6573 7366  ..' was successf
++000131a0: 756c 6c79 2072 6570 6c61 6365 6407 0000  ully replaced...
++000131b0: 000e 5461 6773 4c69 7374 4469 616c 6f67  ..TagsListDialog
++000131c0: 0103 0000 000c 0027 0020 043d 0430 003a  .......'. .=.0.:
++000131d0: 0020 0800 0000 0006 0000 0008 2720 7769  . ..........' wi
++000131e0: 7468 3a20 0700 0000 0e54 6167 734c 6973  th: .....TagsLis
++000131f0: 7444 6961 6c6f 6701 0300 0000 2004 1704  tDialog..... ...
++00013200: 3004 3c04 3504 3d04 3804 4204 4c00 2004  0.<.5.=.8.B.L. .
++00013210: 3c04 3504 4204 3a04 4300 2000 2708 0000  <.5.B.:.C. .'...
++00013220: 0000 0600 0000 0d52 6570 6c61 6365 2074  .......Replace t
++00013230: 6167 2027 0700 0000 0e54 6167 734c 6973  ag '.....TagsLis
++00013240: 7444 6961 6c6f 6701 0300 0000 1c04 1704  tDialog.........
++00013250: 3004 3c04 3504 3d04 3804 4204 4c00 2004  0.<.5.=.8.B.L. .
++00013260: 3d04 3000 2e00 2e00 2e08 0000 0000 0600  =.0.............
++00013270: 0000 0f52 6570 6c61 6365 2077 6974 682e  ...Replace with.
++00013280: 2e2e 0700 0000 0e54 6167 734c 6973 7444  .......TagsListD
++00013290: 6961 6c6f 6701 0300 0000 3404 1f04 3e04  ialog.....4...>.
++000132a0: 3a04 3004 3704 3004 4204 4c00 2004 3e04  :.0.7.0.B.L. .>.
++000132b0: 3f04 3504 4004 3004 4604 3804 3800 2004  ?.5.@.0.F.8.8. .
++000132c0: 4100 2004 1c04 3504 4204 3a04 3e04 3908  A. ...5.B.:.>.9.
++000132d0: 0000 0000 0600 0000 1853 686f 7720 6f70  .........Show op
++000132e0: 6572 6174 696f 6e73 2077 6974 6820 5461  erations with Ta
++000132f0: 6707 0000 000e 5461 6773 4c69 7374 4469  g.....TagsListDi
++00013300: 616c 6f67 0103 0000 000e 041c 0435 0442  alog.........5.B
++00013310: 043a 0430 0020 0027 0800 0000 0006 0000  .:.0. .'........
++00013320: 0005 5461 6720 2707 0000 000e 5461 6773  ..Tag '.....Tags
++00013330: 4c69 7374 4469 616c 6f67 0103 0000 0008  ListDialog......
++00013340: 0422 044d 0433 0438 0800 0000 0006 0000  .".M.3.8........
++00013350: 0004 5461 6773 0700 0000 0e54 6167 734c  ..Tags.....TagsL
++00013360: 6973 7444 6961 6c6f 6701 0300 0000 1a04  istDialog.......
++00013370: 2204 3504 3a04 4304 4904 3804 3900 2004  ".5.:.C.I.8.9. .
++00013380: 3a04 4304 4004 4100 3a08 0000 0000 0600  :.C.@.A.:.......
++00013390: 0000 0d43 7572 7265 6e74 2072 6174 653a  ...Current rate:
++000133a0: 0700 0000 1354 6178 4573 7469 6d61 7469  .....TaxEstimati
++000133b0: 6f6e 4469 616c 6f67 0103 0000 0028 041f  onDialog.....(..
++000133c0: 043e 0441 043b 0435 0434 043d 044f 044f  .>.A.;.5.4.=.O.O
++000133d0: 0020 043a 043e 0442 0438 0440 043e 0432  . .:.>.B.8.@.>.2
++000133e0: 043a 0430 003a 0800 0000 0006 0000 000b  .:.0.:..........
++000133f0: 4c61 7374 2071 756f 7465 3a07 0000 0013  Last quote:.....
++00013400: 5461 7845 7374 696d 6174 696f 6e44 6961  TaxEstimationDia
++00013410: 6c6f 6701 0300 0000 1a04 1e04 4604 3504  log.........F.5.
++00013420: 3d04 3a04 3000 2004 3d04 3004 3b04 3e04  =.:.0. .=.0.;.>.
++00013430: 3304 3008 0000 0000 0600 0000 0e54 6178  3.0..........Tax
++00013440: 2045 7374 696d 6174 696f 6e07 0000 0013   Estimation.....
++00013450: 5461 7845 7374 696d 6174 696f 6e44 6961  TaxEstimationDia
++00013460: 6c6f 6701 0300 0000 0800 5800 2e00 5800  log.......X...X.
++00013470: 5808 0000 0000 0600 0000 0458 2e58 5807  X..........X.XX.
+ 00013480: 0000 0013 5461 7845 7374 696d 6174 696f  ....TaxEstimatio
+-00013490: 6e44 6961 6c6f 6701 0300 0000 0800 5800  nDialog.......X.
+-000134a0: 2e00 5800 5808 0000 0000 0600 0000 0458  ..X.X..........X
+-000134b0: 2e58 5807 0000 0013 5461 7845 7374 696d  .XX.....TaxEstim
+-000134c0: 6174 696f 6e44 6961 6c6f 6701 0300 0000  ationDialog.....
+-000134d0: 0a04 1804 2204 1e04 1304 1e08 0000 0000  ...."...........
+-000134e0: 0600 0000 0554 4f54 414c 0700 0000 0c54  .....TOTAL.....T
+-000134f0: 6178 4573 7469 6d61 746f 7201 0300 0000  axEstimator.....
+-00013500: 2404 1e04 4604 3504 3d04 3a04 3000 2004  $...F.5.=.:.0. .
+-00013510: 3d04 3004 3b04 3e04 3304 3000 2004 3404  =.0.;.>.3.0. .4.
+-00013520: 3b04 4f00 2008 0000 0000 0600 0000 1354  ;.O. ..........T
+-00013530: 6178 2065 7374 696d 6174 696f 6e20 666f  ax estimation fo
+-00013540: 7220 0700 0000 0c54 6178 4573 7469 6d61  r .....TaxEstima
+-00013550: 746f 7201 0300 0000 3c04 2104 4204 3004  tor.....<.!.B.0.
+-00013560: 3204 3a04 3000 2004 3d04 3004 3b04 3e04  2.:.0. .=.0.;.>.
+-00013570: 3304 3000 2004 3d04 3500 2004 3d04 3004  3.0. .=.5. .=.0.
+-00013580: 3904 3404 3504 3d04 3000 2004 3404 3b04  9.4.5.=.0. .4.;.
+-00013590: 4f00 3a00 2008 0000 0000 0600 0000 1854  O.:. ..........T
+-000135a0: 6178 2072 6174 6520 6e6f 7420 666f 756e  ax rate not foun
+-000135b0: 6420 666f 723a 2007 0000 000c 5461 7845  d for: .....TaxE
+-000135c0: 7374 696d 6174 6f72 0103 0000 0008 0414  stimator........
+-000135d0: 0430 0442 0430 0800 0000 0006 0000 0004  .0.B.0..........
+-000135e0: 4461 7465 0700 0000 1154 6178 4573 7469  Date.....TaxEsti
+-000135f0: 6d61 746f 724d 6f64 656c 0103 0000 0014  matorModel......
+-00013600: 0426 0435 043d 0430 0020 043e 0442 043a  .&.5.=.0. .>.B.:
+-00013610: 0440 002e 0800 0000 0006 0000 0004 4f70  .@............Op
+-00013620: 656e 0700 0000 1154 6178 4573 7469 6d61  en.....TaxEstima
+-00013630: 746f 724d 6f64 656c 0103 0000 0012 041f  torModel........
+-00013640: 0440 0438 0431 044b 043b 044c 002c 0020  .@.8.1.K.;.L.,. 
+-00013650: 0800 0000 0006 0000 0008 5072 6f66 6974  ..........Profit
+-00013660: 2c20 0700 0000 1154 6178 4573 7469 6d61  , .....TaxEstima
+-00013670: 746f 724d 6f64 656c 0103 0000 000c 041a  torModel........
+-00013680: 043e 043b 002d 0432 043e 0800 0000 0006  .>.;.-.2.>......
+-00013690: 0000 0003 5174 7907 0000 0011 5461 7845  ....Qty.....TaxE
+-000136a0: 7374 696d 6174 6f72 4d6f 6465 6c01 0300  stimatorModel...
+-000136b0: 0000 0c04 1a04 4304 4004 4100 2c00 2008  ......C.@.A.,. .
+-000136c0: 0000 0000 0600 0000 0652 6174 652c 2007  .........Rate, .
+-000136d0: 0000 0011 5461 7845 7374 696d 6174 6f72  ....TaxEstimator
+-000136e0: 4d6f 6465 6c01 0300 0000 0e04 1d04 3004  Model.........0.
+-000136f0: 3b04 3e04 3300 2c00 2008 0000 0000 0600  ;.>.3.,. .......
+-00013700: 0000 0554 6178 2c20 0700 0000 1154 6178  ...Tax, .....Tax
+-00013710: 4573 7469 6d61 746f 724d 6f64 656c 0103  EstimatorModel..
+-00013720: 0000 0074 041d 0435 0432 043e 0437 043c  ...t...5.2.>.7.<
+-00013730: 043e 0436 043d 043e 0020 0437 0430 0433  .>.6.=.>. .7.0.3
+-00013740: 0440 0443 0437 0438 0442 044c 0020 043f  .@.C.7.8.B.L. .?
+-00013750: 0430 0440 0430 043c 0435 0442 0440 044b  .0.@.0.<.5.B.@.K
+-00013760: 0020 043d 0430 043b 043e 0433 043e 0432  . .=.0.;.>.3.>.2
+-00013770: 043e 0433 043e 0020 043e 0442 0447 0451  .>.3.>. .>.B.G.Q
+-00013780: 0442 0430 0020 0438 0437 0020 0444 0430  .B.0. .8.7. .D.0
+-00013790: 0439 043b 0430 0020 0800 0000 0006 0000  .9.;.0. ........
+-000137a0: 002b 4361 6e27 7420 6c6f 6164 2074 6178  .+Can't load tax
+-000137b0: 2072 6570 6f72 7420 7061 7261 6d65 7465   report paramete
+-000137c0: 7273 2066 726f 6d20 6669 6c65 2007 0000  rs from file ...
+-000137d0: 0009 5461 7852 6570 6f72 7401 0300 0000  ..TaxReport.....
+-000137e0: 2804 1d04 3504 3804 3704 3204 3504 4104  (...5.8.7.2.5.A.
+-000137f0: 4204 3d04 3004 4f00 2004 3204 3004 3b04  B.=.0.O. .2.0.;.
+-00013800: 4e04 4204 3000 3a00 2008 0000 0000 0600  N.B.0.:. .......
+-00013810: 0000 1943 7572 7265 6e63 7920 6973 206e  ...Currency is n
+-00013820: 6f74 2064 6566 696e 6564 3a20 0700 0000  ot defined: ....
+-00013830: 0954 6178 5265 706f 7274 0103 0000 004a  .TaxReport.....J
+-00013840: 041d 0435 0020 0443 043a 0430 0437 0430  ...5. .C.:.0.7.0
+-00013850: 043d 0020 0448 0430 0431 043b 043e 043d  .=. .H.0.1.;.>.=
+-00013860: 0020 043e 0442 0447 0435 0442 0430 0020  . .>.B.G.5.B.0. 
+-00013870: 0434 043b 044f 0020 0440 0430 0437 0434  .4.;.O. .@.0.7.4
+-00013880: 0435 043b 0430 003a 0020 0800 0000 0006  .5.;.0.:. ......
+-00013890: 0000 0026 4e6f 2072 6570 6f72 7420 7465  ...&No report te
+-000138a0: 6d70 6c61 7465 2066 6f75 6e64 2066 6f72  mplate found for
+-000138b0: 2073 6563 7469 6f6e 3a20 0700 0000 0954   section: .....T
+-000138c0: 6178 5265 706f 7274 0103 0000 006a 041d  axReport.....j..
+-000138d0: 0435 0442 0020 0438 043d 0444 043e 0440  .5.B. .8.=.D.>.@
+-000138e0: 043c 0430 0446 0438 0438 0020 043e 0020  .<.0.F.8.8. .>. 
+-000138f0: 0421 043e 0418 0414 041d 0020 0432 0020  .!.>....... .2. 
+-00013900: 043f 0430 0440 0430 043c 0435 0442 0440  .?.0.@.0.<.5.B.@
+-00013910: 0430 0445 0020 043d 0430 043b 043e 0433  .0.E. .=.0.;.>.3
+-00013920: 043e 0432 043e 0433 043e 0020 043e 0442  .>.2.>.3.>. .>.B
+-00013930: 0447 0451 0442 0430 0800 0000 0006 0000  .G.Q.B.0........
+-00013940: 0042 5468 6572 6520 6172 6520 6e6f 2069  .BThere are no i
+-00013950: 6e66 6f72 6d61 7469 6f6e 2061 626f 7574  nformation about
+-00013960: 2074 6178 2074 7265 6174 7920 696e 2074   tax treaty in t
+-00013970: 6178 2072 6570 6f72 7420 7061 7261 6d65  ax report parame
+-00013980: 7465 7273 0700 0000 0954 6178 5265 706f  ters.....TaxRepo
+-00013990: 7274 0103 0000 0060 041d 0435 0020 0437  rt.....`...5. .7
+-000139a0: 0430 0434 0430 043d 044b 0020 043f 0430  .0.4.0.=.K. .?.0
+-000139b0: 0440 0430 043c 0435 0442 0440 044b 0020  .@.0.<.5.B.@.K. 
+-000139c0: 043d 0430 043b 043e 0433 043e 0432 043e  .=.0.;.>.3.>.2.>
+-000139d0: 0433 043e 0020 043e 0442 0447 0451 0442  .3.>. .>.B.G.Q.B
+-000139e0: 0430 0020 0434 043b 044f 0020 0433 043e  .0. .4.;.O. .3.>
+-000139f0: 0434 0430 003a 0020 0800 0000 0006 0000  .4.0.:. ........
+-00013a00: 0033 5468 6572 6520 6172 6520 6e6f 2070  .3There are no p
+-00013a10: 6172 616d 6574 6572 7320 666f 756e 6420  arameters found 
+-00013a20: 666f 7220 7461 7820 7265 706f 7274 2079  for tax report y
+-00013a30: 6561 723a 2007 0000 0009 5461 7852 6570  ear: .....TaxRep
+-00013a40: 6f72 7401 0300 0000 0a00 2000 2e00 2e00  ort....... .....
+-00013a50: 2e00 2008 0000 0000 0600 0000 0520 2e2e  .. .......... ..
+-00013a60: 2e20 0700 0000 0954 6178 5769 6467 6574  . .....TaxWidget
+-00013a70: 0103 0000 0006 002e 002e 002e 0800 0000  ................
+-00013a80: 0006 0000 0003 2e2e 2e07 0000 0009 5461  ..............Ta
+-00013a90: 7857 6964 6765 7401 0300 0000 0a04 2104  xWidget.......!.
+-00013aa0: 4704 3504 4200 3a08 0000 0000 0600 0000  G.5.B.:.........
+-00013ab0: 0841 6363 6f75 6e74 3a07 0000 0009 5461  .Account:.....Ta
+-00013ac0: 7857 6964 6765 7401 0300 0000 9004 1d04  xWidget.........
+-00013ad0: 3804 3604 3500 2004 4004 3004 4104 3f04  8.6.5. .@.0.A.?.
+-00013ae0: 3e04 3b04 3e04 3604 3504 3d04 4b00 2004  >.;.>.6.5.=.K. .
+-00013af0: 4d04 3a04 4104 3f04 3504 4004 3804 3c04  M.:.A.?.5.@.8.<.
+-00013b00: 3504 3d04 4204 3004 3b04 4c04 3d04 4b04  5.=.B.0.;.L.=.K.
+-00013b10: 3500 2004 4404 4304 3d04 3a04 4604 3804  5. .D.C.=.:.F.8.
+-00013b20: 3800 2000 2d00 2004 3804 4104 3f04 3e04  8. .-. .8.A.?.>.
+-00013b30: 3b04 4c04 3704 4304 3904 4204 3500 2004  ;.L.7.C.9.B.5. .
+-00013b40: 4100 2004 3e04 4104 4204 3e04 4004 3e04  A. .>.A.B.>.@.>.
+-00013b50: 3604 3d04 3e04 4104 4204 4c04 4e08 0000  6.=.>.A.B.L.N...
+-00013b60: 0000 0600 0000 3342 656c 6f77 2066 756e  ......3Below fun
+-00013b70: 6374 696f 6e73 2061 7265 2065 7870 6572  ctions are exper
+-00013b80: 696d 656e 7461 6c20 2d20 7573 6520 6974  imental - use it
+-00013b90: 2077 6974 6820 6361 7265 0700 0000 0954   with care.....T
+-00013ba0: 6178 5769 6467 6574 0103 0000 0044 041d  axWidget.....D..
+-00013bb0: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
+-00013bc0: 043e 0020 0437 0430 043f 0438 0441 0430  .>. .7.0.?.8.A.0
+-00013bd0: 0442 044c 0020 0033 002d 041d 0414 0424  .B.L. .3.-.....$
+-00013be0: 041b 0020 0432 0020 0444 0430 0439 043b  ... .2. .D.0.9.;
+-00013bf0: 0020 0800 0000 0006 0000 001f 4361 6e27  . ..........Can'
+-00013c00: 7420 7772 6974 6520 7461 7820 666f 726d  t write tax form
+-00013c10: 2069 6e74 6f20 6669 6c65 2007 0000 0009   into file .....
+-00013c20: 5461 7857 6964 6765 7401 0300 0000 0e04  TaxWidget.......
+-00013c30: 2104 4204 4004 3004 3d04 3000 3a08 0000  !.B.@.0.=.0.:...
+-00013c40: 0000 0600 0000 0843 6f75 6e74 7279 3a07  .......Country:.
+-00013c50: 0000 0009 5461 7857 6964 6765 7401 0300  ....TaxWidget...
+-00013c60: 0000 7804 2104 3e04 3704 3404 3004 4204  ..x.!.>.7.4.0.B.
+-00013c70: 4c00 2004 4404 3004 3904 3b00 2000 3300  L. .D.0.9.;. .3.
+-00013c80: 2d04 1d04 2404 1404 1b00 2004 3200 2004  -...$..... .2. .
+-00013c90: 4404 3e04 4004 3c04 3004 4204 3500 2004  D.>.@.<.0.B.5. .
+-00013ca0: 3f04 4004 3e04 3304 4004 3004 3c04 3c04  ?.@.>.3.@.0.<.<.
+-00013cb0: 4b00 2000 2204 1404 3504 3a04 3b04 3004  K. ."...5.:.;.0.
+-00013cc0: 4004 3004 4604 3804 4f00 2200 2000 2800  @.0.F.8.O.". .(.
+-00013cd0: 2a00 2e00 6400 6300 5800 2908 0000 0000  *...d.c.X.).....
+-00013ce0: 0600 0000 4043 7265 6174 6520 7461 7820  ....@Create tax 
+-00013cf0: 666f 726d 2069 6e20 22d0 94d0 b5d0 bad0  form in ".......
+-00013d00: bbd0 b0d1 80d0 b0d1 86d0 b8d1 8f22 2070  ............." p
+-00013d10: 726f 6772 616d 2066 6f72 6d61 7420 282a  rogram format (*
+-00013d20: 2e64 6358 2907 0000 0009 5461 7857 6964  .dcX).....TaxWid
+-00013d30: 6765 7401 0300 0000 1e04 1404 3004 3d04  get.........0.=.
+-00013d40: 3d04 4b04 3500 2004 3d04 3504 3f04 3e04  =.K.5. .=.5.?.>.
+-00013d50: 3b04 3d04 4b04 3508 0000 0000 0600 0000  ;.=.K.5.........
+-00013d60: 1344 6174 6120 6172 6520 696e 636f 6d70  .Data are incomp
+-00013d70: 6c65 7465 0700 0000 0954 6178 5769 6467  lete.....TaxWidg
+-00013d80: 6574 0103 0000 005c 041d 0435 0020 0438  et.....\...5. .8
+-00013d90: 0441 043f 043e 043b 044c 0437 043e 0432  .A.?.>.;.L.7.>.2
+-00013da0: 0430 0442 044c 0020 0434 0430 0442 0443  .0.B.L. .4.0.B.C
+-00013db0: 0020 043f 043e 0441 0442 0430 0432 043a  . .?.>.A.B.0.2.:
+-00013dc0: 0438 0020 0434 043b 044f 0020 043a 0443  .8. .4.;.O. .:.C
+-00013dd0: 0440 0441 043e 0432 0020 0432 0430 043b  .@.A.>.2. .2.0.;
+-00013de0: 044e 0442 0800 0000 0006 0000 002d 446f  .N.B.........-Do
+-00013df0: 206e 6f74 2075 7365 2073 6574 746c 656d   not use settlem
+-00013e00: 656e 7420 6461 7465 2066 6f72 2063 7572  ent date for cur
+-00013e10: 7265 6e63 7920 7261 7465 7307 0000 0009  rency rates.....
+-00013e20: 5461 7857 6964 6765 7401 0300 0000 1604  TaxWidget.......
+-00013e30: 2404 3004 3904 3b00 2000 4500 7800 6300  $.0.9.;. .E.x.c.
+-00013e40: 6500 6c00 3a08 0000 0000 0600 0000 0b45  e.l.:..........E
+-00013e50: 7863 656c 2066 696c 653a 0700 0000 0954  xcel file:.....T
+-00013e60: 6178 5769 6467 6574 0103 0000 0028 0424  axWidget.....(.$
+-00013e70: 0430 0439 043b 044b 0020 0045 0078 0063  .0.9.;.K. .E.x.c
+-00013e80: 0065 006c 0020 0028 002a 002e 0078 0073  .e.l. .(.*...x.s
+-00013e90: 006c 0078 0029 0800 0000 0006 0000 0014  .l.x.)..........
+-00013ea0: 4578 6365 6c20 6669 6c65 7320 282a 2e78  Excel files (*.x
+-00013eb0: 6c73 7829 0700 0000 0954 6178 5769 6467  lsx).....TaxWidg
+-00013ec0: 6574 0103 0000 004a 0424 0430 0439 043b  et.....J.$.0.9.;
+-00013ed0: 0020 0434 043b 044f 0020 0441 043e 0445  . .4.;.O. .A.>.E
+-00013ee0: 0440 0430 043d 0435 043d 0438 044f 0020  .@.0.=.5.=.8.O. 
+-00013ef0: 0434 0435 043a 043b 0430 0440 0430 0446  .4.5.:.;.0.@.0.F
+-00013f00: 0438 0438 0020 0033 002d 041d 0414 0424  .8.8. .3.-.....$
+-00013f10: 041b 0800 0000 0006 0000 0024 4669 6c65  ...........$File
+-00013f20: 2077 6865 7265 2074 6f20 7374 6f72 6520   where to store 
+-00013f30: 7275 7373 6961 6e20 7461 7820 666f 726d  russian tax form
+-00013f40: 0700 0000 0954 6178 5769 6467 6574 0103  .....TaxWidget..
+-00013f50: 0000 0056 0424 0430 0439 043b 0020 0434  ...V.$.0.9.;. .4
+-00013f60: 043b 044f 0020 0441 043e 0445 0440 0430  .;.O. .A.>.E.@.0
+-00013f70: 043d 0435 043d 0438 044f 0020 0440 0430  .=.5.=.8.O. .@.0
+-00013f80: 0441 0447 0451 0442 0430 0020 0432 0020  .A.G.Q.B.0. .2. 
+-00013f90: 0444 043e 0440 043c 0430 0442 0435 0020  .D.>.@.<.0.B.5. 
+-00013fa0: 0045 0078 0063 0065 006c 0800 0000 0006  .E.x.c.e.l......
+-00013fb0: 0000 002e 4669 6c65 2077 6865 7265 2074  ....File where t
+-00013fc0: 6f20 7374 6f72 6520 7461 7820 7265 706f  o store tax repo
+-00013fd0: 7274 2069 6e20 4578 6365 6c20 666f 726d  rt in Excel form
+-00013fe0: 6174 0700 0000 0954 6178 5769 6467 6574  at.....TaxWidget
+-00013ff0: 0103 0000 0068 0417 0430 0440 0443 0431  .....h...0.@.C.1
+-00014000: 0435 0436 043d 044b 0439 0020 0441 0447  .5.6.=.K.9. .A.G
+-00014010: 0451 0442 0020 0434 043b 044f 0020 043a  .Q.B. .4.;.O. .:
+-00014020: 043e 0442 043e 0440 043e 0433 043e 0020  .>.B.>.@.>.3.>. 
+-00014030: 043d 0443 0436 043d 043e 0020 043f 043e  .=.C.6.=.>. .?.>
+-00014040: 0434 0433 043e 0442 043e 0432 0438 0442  .4.3.>.B.>.2.8.B
+-00014050: 044c 0020 043e 0442 0447 0451 0442 0800  .L. .>.B.G.Q.B..
+-00014060: 0000 0006 0000 0029 466f 7265 6967 6e20  .......)Foreign 
+-00014070: 6163 636f 756e 7420 746f 2070 7265 7061  account to prepa
+-00014080: 7265 2074 6178 2072 6570 6f72 7420 666f  re tax report fo
+-00014090: 7207 0000 0009 5461 7857 6964 6765 7401  r.....TaxWidget.
+-000140a0: 0300 0000 2604 2404 3004 3904 3b00 2004  ....&.$.0.9.;. .
+-000140b0: 4100 2004 4004 3504 3704 4304 3b04 4c04  A. .@.5.7.C.;.L.
+-000140c0: 4204 3004 4204 3e04 3c00 3a08 0000 0000  B.0.B.>.<.:.....
+-000140d0: 0600 0000 0c4f 7574 7075 7420 6669 6c65  .....Output file
+-000140e0: 3a07 0000 0009 5461 7857 6964 6765 7401  :.....TaxWidget.
+-000140f0: 0300 0000 1e04 2104 3e04 4504 4004 3004  ......!.>.E.@.0.
+-00014100: 3d04 3804 4204 4c00 2004 1e04 4204 4704  =.8.B.L. ...B.G.
+-00014110: 5104 4208 0000 0000 0600 0000 0b53 6176  Q.B..........Sav
+-00014120: 6520 5265 706f 7274 0700 0000 0954 6178  e Report.....Tax
+-00014130: 5769 6467 6574 0103 0000 0026 0421 043e  Widget.....&.!.>
+-00014140: 0445 0440 0430 043d 0438 0442 044c 0020  .E.@.0.=.8.B.L. 
+-00014150: 0033 002d 041d 0414 0424 041b 0020 0432  .3.-.....$... .2
+-00014160: 003a 0800 0000 0006 0000 0011 5361 7665  .:..........Save
+-00014170: 2074 6178 2066 6f72 6d20 746f 3a07 0000   tax form to:...
+-00014180: 0009 5461 7857 6964 6765 7401 0300 0000  ..TaxWidget.....
+-00014190: 3804 2104 3e04 4504 4004 3004 3d04 3804  8.!.>.E.@.0.=.8.
+-000141a0: 4204 4c00 2004 3d04 3004 3b04 3e04 3304  B.L. .=.0.;.>.3.
+-000141b0: 3e04 3204 4b04 3900 2004 3e04 4204 4704  >.2.K.9. .>.B.G.
+-000141c0: 5104 4200 2004 3200 3a08 0000 0000 0600  Q.B. .2.:.......
+-000141d0: 0000 1453 6176 6520 7461 7820 7265 706f  ...Save tax repo
+-000141e0: 7274 7320 746f 3a07 0000 0009 5461 7857  rts to:.....TaxW
+-000141f0: 6964 6765 7401 0300 0000 1804 1204 4b04  idget.........K.
+-00014200: 3104 3504 4004 3804 4200 2004 4404 3004  1.5.@.8.B. .D.0.
+-00014210: 3904 3b08 0000 0000 0600 0000 0b53 656c  9.;..........Sel
+-00014220: 6563 7420 6669 6c65 0700 0000 0954 6178  ect file.....Tax
+-00014230: 5769 6467 6574 0103 0000 0028 041d 0430  Widget.....(...0
+-00014240: 043b 043e 0433 043e 0432 044b 0439 0020  .;.>.3.>.2.K.9. 
+-00014250: 043e 0442 0447 0451 0442 0020 043f 0443  .>.B.G.Q.B. .?.C
+-00014260: 0441 0442 0800 0000 0006 0000 0013 5461  .A.B..........Ta
+-00014270: 7820 7265 706f 7274 2069 7320 656d 7074  x report is empt
+-00014280: 7907 0000 0009 5461 7857 6964 6765 7401  y.....TaxWidget.
+-00014290: 0300 0000 4004 1d04 3004 3b04 3e04 3304  ....@...0.;.>.3.
+-000142a0: 3e04 3204 4b04 3900 2004 3e04 4204 4704  >.2.K.9. .>.B.G.
+-000142b0: 5104 4200 2004 4104 3e04 4504 4004 3004  Q.B. .A.>.E.@.0.
+-000142c0: 3d04 5104 3d00 2004 3200 2004 4404 3004  =.Q.=. .2. .D.0.
+-000142d0: 3904 3b00 2008 0000 0000 0600 0000 1954  9.;. ..........T
+-000142e0: 6178 2072 6570 6f72 7420 7361 7665 6420  ax report saved 
+-000142f0: 746f 2066 696c 6520 0700 0000 0954 6178  to file .....Tax
+-00014300: 5769 6467 6574 0103 0000 0040 041d 0430  Widget.....@...0
+-00014310: 043b 043e 0433 043e 0432 044b 0439 0020  .;.>.3.>.2.K.9. 
+-00014320: 043e 0442 0447 0451 0442 0020 0441 043e  .>.B.G.Q.B. .A.>
+-00014330: 0445 0440 0430 043d 0451 043d 0020 0432  .E.@.0.=.Q.=. .2
+-00014340: 0020 0444 0430 0439 043b 0020 0800 0000  . .D.0.9.;. ....
+-00014350: 0006 0000 001d 5461 7820 7265 706f 7274  ......Tax report
+-00014360: 2077 6173 2073 6176 6564 2074 6f20 6669   was saved to fi
+-00014370: 6c65 2007 0000 0009 5461 7857 6964 6765  le .....TaxWidge
+-00014380: 7401 0300 0000 0c04 1d04 3004 3b04 3e04  t.........0.;.>.
+-00014390: 3304 3808 0000 0000 0600 0000 0554 6178  3.8..........Tax
+-000143a0: 6573 0700 0000 0954 6178 5769 6467 6574  es.....TaxWidget
+-000143b0: 0103 0000 004e 041e 0431 043d 043e 0432  .....N...1.=.>.2
+-000143c0: 0438 0442 044c 0020 0442 043e 043b 044c  .8.B.L. .B.>.;.L
+-000143d0: 043a 043e 0020 0438 043d 0444 043e 0440  .:.>. .8.=.D.>.@
+-000143e0: 043c 0430 0446 0438 044e 0020 043e 0020  .<.0.F.8.N. .>. 
+-000143f0: 0434 0438 0432 0438 0434 0435 043d 0434  .4.8.2.8.4.5.=.4
+-00014400: 0430 0445 0800 0000 0006 0000 0027 5570  .0.E.........'Up
+-00014410: 6461 7465 206f 6e6c 7920 696e 666f 726d  date only inform
+-00014420: 6174 696f 6e20 6162 6f75 7420 6469 7669  ation about divi
+-00014430: 6465 6e64 7307 0000 0009 5461 7857 6964  dends.....TaxWid
+-00014440: 6765 7401 0300 0000 6404 1804 4104 3f04  get.....d...A.?.
+-00014450: 3e04 3b04 4c04 3704 3e04 3204 3004 4204  >.;.L.7.>.2.0.B.
+-00014460: 4c00 2004 3d04 3004 3704 3204 3004 3d04  L. .=.0.7.2.0.=.
+-00014470: 3804 3500 2004 3104 4004 3e04 3a04 3504  8.5. .1.@.>.:.5.
+-00014480: 4004 3000 2004 3a04 3004 3a00 2004 3804  @.0. .:.0.:. .8.
+-00014490: 4104 4204 3e04 4704 3d04 3804 3a00 2004  A.B.>.G.=.8.:. .
+-000144a0: 3204 4b04 3f04 3b04 3004 4204 4b08 0000  2.K.?.;.0.B.K...
+-000144b0: 0000 0600 0000 2055 7365 2062 726f 6b65  ...... Use broke
+-000144c0: 7220 6e61 6d65 2061 7320 696e 636f 6d65  r name as income
+-000144d0: 2073 6f75 7263 6507 0000 0009 5461 7857   source.....TaxW
+-000144e0: 6964 6765 7401 0300 0000 0804 1304 3e04  idget.........>.
+-000144f0: 3400 3a08 0000 0000 0600 0000 0559 6561  4.:..........Yea
+-00014500: 723a 0700 0000 0954 6178 5769 6467 6574  r:.....TaxWidget
+-00014510: 0103 0000 0050 0412 044b 0020 043d 0435  .....P...K. .=.5
+-00014520: 0020 0432 044b 0431 0440 0430 043b 0438  . .2.K.1.@.0.;.8
+-00014530: 0020 0441 0447 0451 0442 0020 0434 043b  . .A.G.Q.B. .4.;
+-00014540: 044f 0020 043d 0430 043b 043e 0433 043e  .O. .=.0.;.>.3.>
+-00014550: 0432 043e 0433 043e 0020 043e 0442 0447  .2.>.3.>. .>.B.G
+-00014560: 0451 0442 0430 0800 0000 0006 0000 002e  .Q.B.0..........
+-00014570: 596f 7520 6861 7665 6e27 7420 7365 6c65  You haven't sele
+-00014580: 6374 6564 2061 6e20 6163 636f 756e 7420  cted an account 
+-00014590: 666f 7220 7461 7820 7265 706f 7274 0700  for tax report..
+-000145a0: 0000 0954 6178 5769 6467 6574 0103 0000  ...TaxWidget....
+-000145b0: 0098 041d 0435 0432 043e 0437 043c 043e  .....5.2.>.7.<.>
+-000145c0: 0436 043d 043e 0020 043e 0431 0440 0430  .6.=.>. .>.1.@.0
+-000145d0: 0431 043e 0442 0430 0442 044c 0020 0441  .1.>.B.0.B.L. .A
+-000145e0: 0434 0435 043b 043a 0443 002c 0020 0442  .4.5.;.:.C.,. .B
+-000145f0: 002e 043a 002e 0020 043d 0435 0020 0437  ...:... .=.5. .7
+-00014600: 0430 0434 0430 043d 0020 0431 0430 043d  .0.4.0.=. .1.0.=
+-00014610: 043a 0020 0434 043b 044f 0020 0438 043d  .:. .4.;.O. .8.=
+-00014620: 0432 0435 0441 0442 0438 0446 0438 043e  .2.5.A.B.8.F.8.>
+-00014630: 043d 043d 043e 0433 043e 0020 0441 0447  .=.=.>.3.>. .A.G
+-00014640: 0451 0442 0430 003a 0020 0800 0000 0006  .Q.B.0.:. ......
+-00014650: 0000 003e 4361 6e27 7420 7072 6f63 6573  ...>Can't proces
+-00014660: 7320 7472 6164 6520 6173 2062 616e 6b20  s trade as bank 
+-00014670: 6973 6e27 7420 7365 7420 666f 7220 696e  isn't set for in
+-00014680: 7665 7374 6d65 6e74 2061 6363 6f75 6e74  vestment account
+-00014690: 3a20 0700 0000 0554 7261 6465 0103 0000  : .....Trade....
+-000146a0: 0002 2116 0800 0000 0006 0000 0001 2307  ..!...........#.
+-000146b0: 0000 000b 5472 6164 6557 6964 6765 7401  ....TradeWidget.
+-000146c0: 0300 0000 0804 2104 4704 3504 4208 0000  ......!.G.5.B...
+-000146d0: 0000 0600 0000 0741 6363 6f75 6e74 0700  .......Account..
+-000146e0: 0000 0b54 7261 6465 5769 6467 6574 0103  ...TradeWidget..
+-000146f0: 0000 0004 0426 0411 0800 0000 0006 0000  .....&..........
+-00014700: 0005 4173 7365 7407 0000 000b 5472 6164  ..Asset.....Trad
+-00014710: 6557 6964 6765 7401 0300 0000 2204 1f04  eWidget....."...
+-00014720: 3e04 3a04 4304 3f04 3a04 3000 2000 2f00  >.:.C.?.:.0. ./.
+-00014730: 2004 1f04 4004 3e04 3404 3004 3604 3008   ...@.>.4.0.6.0.
+-00014740: 0000 0000 0600 0000 0a42 7579 202f 2053  .........Buy / S
+-00014750: 656c 6c07 0000 000b 5472 6164 6557 6964  ell.....TradeWid
+-00014760: 6765 7401 0300 0000 1404 1404 3004 4204  get.........0.B.
+-00014770: 3000 2f04 1204 4004 3504 3c04 4f08 0000  0./...@.5.<.O...
+-00014780: 0000 0600 0000 0944 6174 652f 5469 6d65  .......Date/Time
+-00014790: 0700 0000 0b54 7261 6465 5769 6467 6574  .....TradeWidget
+-000147a0: 0103 0000 0010 041a 043e 043c 0438 0441  .........>.<.8.A
+-000147b0: 0441 0438 044f 0800 0000 0006 0000 0003  .A.8.O..........
+-000147c0: 4665 6507 0000 000b 5472 6164 6557 6964  Fee.....TradeWid
+-000147d0: 6765 7401 0300 0000 1004 1e04 3f04 3804  get.........?.8.
+-000147e0: 4104 3004 3d04 3804 3508 0000 0000 0600  A.0.=.8.5.......
+-000147f0: 0000 044e 6f74 6507 0000 000b 5472 6164  ...Note.....Trad
+-00014800: 6557 6964 6765 7401 0300 0000 0804 2604  eWidget.......&.
+-00014810: 3504 3d04 3008 0000 0000 0600 0000 0550  5.=.0..........P
+-00014820: 7269 6365 0700 0000 0b54 7261 6465 5769  rice.....TradeWi
+-00014830: 6467 6574 0103 0000 000c 041a 043e 043b  dget.........>.;
+-00014840: 002d 0432 043e 0800 0000 0006 0000 0003  .-.2.>..........
+-00014850: 5174 7907 0000 000b 5472 6164 6557 6964  Qty.....TradeWid
+-00014860: 6765 7401 0300 0000 1a04 1404 3004 4204  get.........0.B.
+-00014870: 3000 2004 4004 3004 4104 4704 3504 4204  0. .@.0.A.G.5.B.
+-00014880: 3e04 3208 0000 0000 0600 0000 0a53 6574  >.2..........Set
+-00014890: 746c 656d 656e 7407 0000 000b 5472 6164  tlement.....Trad
+-000148a0: 6557 6964 6765 7401 0300 0000 7a04 1a04  eWidget.....z...
+-000148b0: 3e04 3b04 3804 4704 3504 4104 4204 3204  >.;.8.G.5.A.B.2.
+-000148c0: 3e00 2004 3004 3a04 4204 3804 3204 3000  >. .0.:.B.8.2.0.
+-000148d0: 2004 3d04 3504 3404 3e04 4104 4204 3004   .=.5.4.>.A.B.0.
+-000148e0: 4204 3e04 4704 3d04 3e00 2004 3404 3b04  B.>.G.=.>. .4.;.
+-000148f0: 4f00 2004 3e04 3104 4004 3004 3104 3e04  O. .>.1.@.0.1.>.
+-00014900: 4204 3a04 3800 2004 3f04 3504 4004 3504  B.:.8. .?.5.@.5.
+-00014910: 3204 3e04 3404 3000 2e00 2004 1404 3004  2.>.4.0... ...0.
+-00014920: 4204 3000 3a00 2008 0000 0000 0600 0000  B.0.:. .........
+-00014930: 4041 7373 6574 2061 6d6f 756e 7420 6973  @Asset amount is
+-00014940: 206e 6f74 2065 6e6f 7567 6820 666f 7220   not enough for 
+-00014950: 6173 7365 7420 7472 616e 7366 6572 2070  asset transfer p
+-00014960: 726f 6365 7373 696e 672e 2044 6174 653a  rocessing. Date:
+-00014970: 2007 0000 0008 5472 616e 7366 6572 0103   .....Transfer..
+-00014980: 0000 0052 0421 043f 0438 0441 0430 043d  ...R.!.?.8.A.0.=
+-00014990: 0438 0435 0020 0430 043a 0442 0438 0432  .8.5. .0.:.B.8.2
+-000149a0: 0430 0020 043d 0435 0020 043d 0430 0439  .0. .=.5. .=.0.9
+-000149b0: 0434 0435 043d 043e 0020 0434 043b 044f  .4.5.=.>. .4.;.O
+-000149c0: 0020 0442 0440 0430 043d 0441 0444 0435  . .B.@.0.=.A.D.5
+-000149d0: 0440 0430 002e 0800 0000 0006 0000 0028  .@.0...........(
+-000149e0: 4173 7365 7420 7769 7468 6472 6177 616c  Asset withdrawal
+-000149f0: 206e 6f74 2066 6f75 6e64 2066 6f72 2074   not found for t
+-00014a00: 7261 6e73 6665 722e 0700 0000 0854 7261  ransfer......Tra
+-00014a10: 6e73 6665 7201 0300 0000 2e04 1e04 4804  nsfer.........H.
+-00014a20: 3804 3104 3a04 3000 2e00 2004 1a04 4304  8.1.:.0... ...C.
+-00014a30: 4004 4100 2004 4004 3004 3204 3504 3d00  @.A. .@.0.2.5.=.
+-00014a40: 2004 3d04 4304 3b04 4e08 0000 0000 0600   .=.C.;.N.......
+-00014a50: 0000 1045 7272 6f72 2e20 5a65 726f 2072  ...Error. Zero r
+-00014a60: 6174 6507 0000 0008 5472 616e 7366 6572  ate.....Transfer
+-00014a70: 0103 0000 0084 041e 0431 0440 0430 0431  .........1.@.0.1
+-00014a80: 043e 0442 0430 043d 043d 043e 0435 0020  .>.B.0.=.=.>.5. 
+-00014a90: 043a 043e 043b 0438 0447 0435 0441 0442  .:.>.;.8.G.5.A.B
+-00014aa0: 0432 043e 0020 043c 0435 043d 044c 0448  .2.>. .<.5.=.L.H
+-00014ab0: 0435 002c 0020 0447 0435 043c 0020 043a  .5.,. .G.5.<. .:
+-00014ac0: 043e 043b 0438 0447 0435 0441 0442 0432  .>.;.8.G.5.A.B.2
+-00014ad0: 043e 0020 0432 0020 0442 0440 0430 043d  .>. .2. .B.@.0.=
+-00014ae0: 0441 0444 0435 0440 0435 002e 0020 0414  .A.D.5.@.5... ..
+-00014af0: 0430 0442 0430 003a 0020 0800 0000 0006  .0.B.0.:. ......
+-00014b00: 0000 003b 5072 6f63 6573 7365 6420 6173  ...;Processed as
+-00014b10: 7365 7420 616d 6f75 6e74 2069 7320 6c65  set amount is le
+-00014b20: 7373 2074 6861 6e20 7472 616e 7366 6572  ss than transfer
+-00014b30: 2061 6d6f 756e 742e 2044 6174 653a 2007   amount. Date: .
+-00014b40: 0000 0008 5472 616e 7366 6572 0103 0000  ....Transfer....
+-00014b50: 000a 0421 0443 043c 043c 0430 0800 0000  ...!.C.<.<.0....
+-00014b60: 0006 0000 0006 416d 6f75 6e74 0700 0000  ......Amount....
+-00014b70: 0e54 7261 6e73 6665 7257 6964 6765 7401  .TransferWidget.
+-00014b80: 0300 0000 0404 2604 1108 0000 0000 0600  ......&.........
+-00014b90: 0000 0541 7373 6574 0700 0000 0e54 7261  ...Asset.....Tra
+-00014ba0: 6e73 6665 7257 6964 6765 7401 0300 0000  nsferWidget.....
+-00014bb0: 1404 1404 3004 4204 3000 2f04 1204 4004  ....0.B.0./...@.
+-00014bc0: 3504 3c04 4f08 0000 0000 0600 0000 0944  5.<.O..........D
+-00014bd0: 6174 652f 5469 6d65 0700 0000 0e54 7261  ate/Time.....Tra
+-00014be0: 6e73 6665 7257 6964 6765 7401 0300 0000  nsferWidget.....
+-00014bf0: 1e04 2004 3004 3704 3c04 3504 4000 2004  .. .0.7.<.5.@. .
+-00014c00: 3a04 3e04 3c04 3804 4104 4104 3804 3808  :.>.<.8.A.A.8.8.
+-00014c10: 0000 0000 0600 0000 0a46 6565 2061 6d6f  .........Fee amo
+-00014c20: 756e 7407 0000 000e 5472 616e 7366 6572  unt.....Transfer
+-00014c30: 5769 6467 6574 0103 0000 0016 041a 043e  Widget.........>
+-00014c40: 043c 043c 0438 0441 0441 0438 044f 0020  .<.<.8.A.A.8.O. 
+-00014c50: 0441 0800 0000 0006 0000 0008 4665 6520  .A..........Fee 
+-00014c60: 6672 6f6d 0700 0000 0e54 7261 6e73 6665  from.....Transfe
+-00014c70: 7257 6964 6765 7401 0300 0000 0204 2108  rWidget.......!.
+-00014c80: 0000 0000 0600 0000 0446 726f 6d07 0000  .........From...
+-00014c90: 000e 5472 616e 7366 6572 5769 6467 6574  ..TransferWidget
+-00014ca0: 0103 0000 0010 041e 043f 0438 0441 0430  .........?.8.A.0
+-00014cb0: 043d 0438 0435 0800 0000 0006 0000 0004  .=.8.5..........
+-00014cc0: 4e6f 7465 0700 0000 0e54 7261 6e73 6665  Note.....Transfe
+-00014cd0: 7257 6964 6765 7401 0300 0000 0404 1d04  rWidget.........
+-00014ce0: 3008 0000 0000 0600 0000 0254 6f07 0000  0..........To...
+-00014cf0: 000e 5472 616e 7366 6572 5769 6467 6574  ..TransferWidget
+-00014d00: 0103 0000 000e 041f 0435 0440 0435 0432  .........5.@.5.2
+-00014d10: 043e 0434 0800 0000 0006 0000 0008 5472  .>.4..........Tr
+-00014d20: 616e 7366 6572 0700 0000 0e54 7261 6e73  ansfer.....Trans
+-00014d30: 6665 7257 6964 6765 7401 0300 0000 0404  ferWidget.......
+-00014d40: 1f04 3e08 0000 0000 0600 0000 0845 6e64  ..>..........End
+-00014d50: 2064 6174 6507 0000 000f 5570 6461 7465   date.....Update
+-00014d60: 5175 6f74 6573 446c 6701 0300 0000 1204  QuotesDlg.......
+-00014d70: 1804 4104 4204 3e04 4704 3d04 3804 3a04  ..A.B.>.G.=.8.:.
+-00014d80: 3808 0000 0000 0600 0000 0753 6f75 7263  8..........Sourc
+-00014d90: 6573 0700 0000 0f55 7064 6174 6551 756f  es.....UpdateQuo
+-00014da0: 7465 7344 6c67 0103 0000 0002 0421 0800  tesDlg.......!..
+-00014db0: 0000 0006 0000 000a 5374 6172 7420 6461  ........Start da
+-00014dc0: 7465 0700 0000 0f55 7064 6174 6551 756f  te.....UpdateQuo
+-00014dd0: 7465 7344 6c67 0103 0000 0028 041e 0431  tesDlg.....(...1
+-00014de0: 043d 043e 0432 043b 0435 043d 0438 0435  .=.>.2.;.5.=.8.5
+-00014df0: 0020 043a 043e 0442 0438 0440 043e 0432  . .:.>.B.8.@.>.2
+-00014e00: 043e 043a 0800 0000 0006 0000 0015 5570  .>.:..........Up
+-00014e10: 6461 7465 2061 7373 6574 2773 2071 756f  date asset's quo
+-00014e20: 7465 7307 0000 000f 5570 6461 7465 5175  tes.....UpdateQu
+-00014e30: 6f74 6573 446c 6701 0300 0000 1400 6400  otesDlg.......d.
+-00014e40: 6400 2f00 4d00 4d00 2f00 7900 7900 7900  d./.M.M./.y.y.y.
+-00014e50: 7908 0000 0000 0600 0000 0a64 642f 4d4d  y..........dd/MM
+-00014e60: 2f79 7979 7907 0000 000f 5570 6461 7465  /yyyy.....Update
+-00014e70: 5175 6f74 6573 446c 6701 0300 0000 5804  QuotesDlg.....X.
+-00014e80: 1d04 3504 3204 3e04 3704 3c04 3e04 3604  ..5.2.>.7.<.>.6.
+-00014e90: 3d04 3e00 2004 3f04 4004 3e04 4704 3804  =.>. .?.@.>.G.8.
+-00014ea0: 4204 3004 4204 4c00 2004 4804 3004 3104  B.0.B.L. .H.0.1.
+-00014eb0: 3b04 3e04 3d00 2004 3e04 4204 4704 5104  ;.>.=. .>.B.G.Q.
+-00014ec0: 4204 3000 2004 3804 3700 2004 4404 3004  B.0. .8.7. .D.0.
+-00014ed0: 3904 3b04 3000 2008 0000 0000 0600 0000  9.;.0. .........
+-00014ee0: 2543 616e 2774 206c 6f61 6420 7265 706f  %Can't load repo
+-00014ef0: 7274 2074 656d 706c 6174 6520 6672 6f6d  rt template from
+-00014f00: 2066 696c 6520 0700 0000 0458 4c53 5801   file .....XLSX.
+-00014f10: 0300 0000 4404 1d04 3504 3204 3e04 3704  ....D...5.2.>.7.
+-00014f20: 3c04 3e04 3604 3d04 3e00 2004 4104 3e04  <.>.6.=.>. .A.>.
+-00014f30: 4504 4004 3004 3d04 3804 4204 4c00 2004  E.@.0.=.8.B.L. .
+-00014f40: 3e04 4204 4704 5104 4200 2004 3200 2004  >.B.G.Q.B. .2. .
+-00014f50: 4404 3004 3904 3b00 2008 0000 0000 0600  D.0.9.;. .......
+-00014f60: 0000 1c43 616e 2774 2073 6176 6520 7265  ...Can't save re
+-00014f70: 706f 7274 2069 6e74 6f20 6669 6c65 2007  port into file .
+-00014f80: 0000 0004 584c 5358 0103 0000 0044 041d  ....XLSX.....D..
+-00014f90: 0435 0020 0443 043a 0430 0437 0430 043d  .5. .C.:.0.7.0.=
+-00014fa0: 0020 0444 043e 0440 043c 0430 0442 0020  . .D.>.@.<.0.B. 
+-00014fb0: 0434 043b 044f 0020 043f 043e 043b 044f  .4.;.O. .?.>.;.O
+-00014fc0: 0020 043e 0442 0447 0451 0442 0430 003a  . .>.B.G.Q.B.0.:
+-00014fd0: 0020 0800 0000 0006 0000 0024 466f 726d  . .........$Form
+-00014fe0: 6174 2069 7320 6d69 7373 696e 6720 666f  at is missing fo
+-00014ff0: 7220 7265 706f 7274 2066 6965 6c64 3a20  r report field: 
+-00015000: 0700 0000 0458 4c53 5801 0300 0000 4204  .....XLSX.....B.
+-00015010: 1d04 3500 2004 3704 3004 3404 3004 3d00  ..5. .7.0.4.0.=.
+-00015020: 2004 4804 3004 3104 3b04 3e04 3d00 2004   .H.0.1.;.>.=. .
+-00015030: 3404 3b04 4f00 2004 3404 3004 3d04 3d04  4.;.O. .4.0.=.=.
+-00015040: 4b04 4500 2004 3e04 4204 4704 5104 4204  K.E. .>.B.G.Q.B.
+-00015050: 3008 0000 0000 0600 0000 1a4e 6f20 7265  0..........No re
+-00015060: 706f 7274 2072 6f77 2074 656d 706c 6174  port row templat
+-00015070: 6520 7365 7407 0000 0004 584c 5358 0103  e set.....XLSX..
+-00015080: 0000 003a 0428 0430 0431 043b 043e 043d  ...:.(.0.1.;.>.=
+-00015090: 0020 0434 043b 044f 0020 0434 0430 043d  . .4.;.O. .4.0.=
+-000150a0: 043d 044b 0445 0020 043d 0435 0020 043d  .=.K.E. .=.5. .=
+-000150b0: 0430 0439 0434 0435 043d 003a 0020 0800  .0.9.4.5.=.:. ..
+-000150c0: 0000 0006 0000 001f 5265 706f 7274 2072  ........Report r
+-000150d0: 6f77 2074 656d 706c 6174 6520 6e6f 7420  ow template not 
+-000150e0: 666f 756e 643a 2007 0000 0004 584c 5358  found: .....XLSX
+-000150f0: 0103 0000 0046 041d 0435 0438 0437 0432  .....F...5.8.7.2
+-00015100: 0435 0441 0442 043d 0430 044f 0020 0441  .5.A.B.=.0.O. .A
+-00015110: 0442 0440 043e 043a 0430 0020 0444 043e  .B.@.>.:.0. .D.>
+-00015120: 0440 043c 0430 0442 0438 0440 043e 0432  .@.<.0.B.8.@.>.2
+-00015130: 0430 043d 0438 044f 003a 0020 0800 0000  .0.=.8.O.:. ....
+-00015140: 0006 0000 001c 556e 7265 636f 676e 697a  ......Unrecogniz
+-00015150: 6564 2066 6f72 6d61 7420 7374 7269 6e67  ed format string
+-00015160: 3a20 0700 0000 0458 4c53 5801 8800 0000  : .....XLSX.....
+-00015170: 0d11 01fd 290b ff14 0204 fd2c 0a13       ....)......,..
++00013490: 6e44 6961 6c6f 6701 0300 0000 0a04 1804  nDialog.........
++000134a0: 2204 1e04 1304 1e08 0000 0000 0600 0000  "...............
++000134b0: 0554 4f54 414c 0700 0000 0c54 6178 4573  .TOTAL.....TaxEs
++000134c0: 7469 6d61 746f 7201 0300 0000 2404 1e04  timator.....$...
++000134d0: 4604 3504 3d04 3a04 3000 2004 3d04 3004  F.5.=.:.0. .=.0.
++000134e0: 3b04 3e04 3304 3000 2004 3404 3b04 4f00  ;.>.3.0. .4.;.O.
++000134f0: 2008 0000 0000 0600 0000 1354 6178 2065   ..........Tax e
++00013500: 7374 696d 6174 696f 6e20 666f 7220 0700  stimation for ..
++00013510: 0000 0c54 6178 4573 7469 6d61 746f 7201  ...TaxEstimator.
++00013520: 0300 0000 3c04 2104 4204 3004 3204 3a04  ....<.!.B.0.2.:.
++00013530: 3000 2004 3d04 3004 3b04 3e04 3304 3000  0. .=.0.;.>.3.0.
++00013540: 2004 3d04 3500 2004 3d04 3004 3904 3404   .=.5. .=.0.9.4.
++00013550: 3504 3d04 3000 2004 3404 3b04 4f00 3a00  5.=.0. .4.;.O.:.
++00013560: 2008 0000 0000 0600 0000 1854 6178 2072   ..........Tax r
++00013570: 6174 6520 6e6f 7420 666f 756e 6420 666f  ate not found fo
++00013580: 723a 2007 0000 000c 5461 7845 7374 696d  r: .....TaxEstim
++00013590: 6174 6f72 0103 0000 0008 0414 0430 0442  ator.........0.B
++000135a0: 0430 0800 0000 0006 0000 0004 4461 7465  .0..........Date
++000135b0: 0700 0000 1154 6178 4573 7469 6d61 746f  .....TaxEstimato
++000135c0: 724d 6f64 656c 0103 0000 0014 0426 0435  rModel.......&.5
++000135d0: 043d 0430 0020 043e 0442 043a 0440 002e  .=.0. .>.B.:.@..
++000135e0: 0800 0000 0006 0000 0004 4f70 656e 0700  ..........Open..
++000135f0: 0000 1154 6178 4573 7469 6d61 746f 724d  ...TaxEstimatorM
++00013600: 6f64 656c 0103 0000 0012 041f 0440 0438  odel.........@.8
++00013610: 0431 044b 043b 044c 002c 0020 0800 0000  .1.K.;.L.,. ....
++00013620: 0006 0000 0008 5072 6f66 6974 2c20 0700  ......Profit, ..
++00013630: 0000 1154 6178 4573 7469 6d61 746f 724d  ...TaxEstimatorM
++00013640: 6f64 656c 0103 0000 000c 041a 043e 043b  odel.........>.;
++00013650: 002d 0432 043e 0800 0000 0006 0000 0003  .-.2.>..........
++00013660: 5174 7907 0000 0011 5461 7845 7374 696d  Qty.....TaxEstim
++00013670: 6174 6f72 4d6f 6465 6c01 0300 0000 0c04  atorModel.......
++00013680: 1a04 4304 4004 4100 2c00 2008 0000 0000  ..C.@.A.,. .....
++00013690: 0600 0000 0652 6174 652c 2007 0000 0011  .....Rate, .....
++000136a0: 5461 7845 7374 696d 6174 6f72 4d6f 6465  TaxEstimatorMode
++000136b0: 6c01 0300 0000 0e04 1d04 3004 3b04 3e04  l.........0.;.>.
++000136c0: 3300 2c00 2008 0000 0000 0600 0000 0554  3.,. ..........T
++000136d0: 6178 2c20 0700 0000 1154 6178 4573 7469  ax, .....TaxEsti
++000136e0: 6d61 746f 724d 6f64 656c 0103 0000 0074  matorModel.....t
++000136f0: 041d 0435 0432 043e 0437 043c 043e 0436  ...5.2.>.7.<.>.6
++00013700: 043d 043e 0020 0437 0430 0433 0440 0443  .=.>. .7.0.3.@.C
++00013710: 0437 0438 0442 044c 0020 043f 0430 0440  .7.8.B.L. .?.0.@
++00013720: 0430 043c 0435 0442 0440 044b 0020 043d  .0.<.5.B.@.K. .=
++00013730: 0430 043b 043e 0433 043e 0432 043e 0433  .0.;.>.3.>.2.>.3
++00013740: 043e 0020 043e 0442 0447 0451 0442 0430  .>. .>.B.G.Q.B.0
++00013750: 0020 0438 0437 0020 0444 0430 0439 043b  . .8.7. .D.0.9.;
++00013760: 0430 0020 0800 0000 0006 0000 002b 4361  .0. .........+Ca
++00013770: 6e27 7420 6c6f 6164 2074 6178 2072 6570  n't load tax rep
++00013780: 6f72 7420 7061 7261 6d65 7465 7273 2066  ort parameters f
++00013790: 726f 6d20 6669 6c65 2007 0000 0009 5461  rom file .....Ta
++000137a0: 7852 6570 6f72 7401 0300 0000 2804 1d04  xReport.....(...
++000137b0: 3504 3804 3704 3204 3504 4104 4204 3d04  5.8.7.2.5.A.B.=.
++000137c0: 3004 4f00 2004 3204 3004 3b04 4e04 4204  0.O. .2.0.;.N.B.
++000137d0: 3000 3a00 2008 0000 0000 0600 0000 1943  0.:. ..........C
++000137e0: 7572 7265 6e63 7920 6973 206e 6f74 2064  urrency is not d
++000137f0: 6566 696e 6564 3a20 0700 0000 0954 6178  efined: .....Tax
++00013800: 5265 706f 7274 0103 0000 004a 041d 0435  Report.....J...5
++00013810: 0020 0443 043a 0430 0437 0430 043d 0020  . .C.:.0.7.0.=. 
++00013820: 0448 0430 0431 043b 043e 043d 0020 043e  .H.0.1.;.>.=. .>
++00013830: 0442 0447 0435 0442 0430 0020 0434 043b  .B.G.5.B.0. .4.;
++00013840: 044f 0020 0440 0430 0437 0434 0435 043b  .O. .@.0.7.4.5.;
++00013850: 0430 003a 0020 0800 0000 0006 0000 0026  .0.:. .........&
++00013860: 4e6f 2072 6570 6f72 7420 7465 6d70 6c61  No report templa
++00013870: 7465 2066 6f75 6e64 2066 6f72 2073 6563  te found for sec
++00013880: 7469 6f6e 3a20 0700 0000 0954 6178 5265  tion: .....TaxRe
++00013890: 706f 7274 0103 0000 006a 041d 0435 0442  port.....j...5.B
++000138a0: 0020 0438 043d 0444 043e 0440 043c 0430  . .8.=.D.>.@.<.0
++000138b0: 0446 0438 0438 0020 043e 0020 0421 043e  .F.8.8. .>. .!.>
++000138c0: 0418 0414 041d 0020 0432 0020 043f 0430  ....... .2. .?.0
++000138d0: 0440 0430 043c 0435 0442 0440 0430 0445  .@.0.<.5.B.@.0.E
++000138e0: 0020 043d 0430 043b 043e 0433 043e 0432  . .=.0.;.>.3.>.2
++000138f0: 043e 0433 043e 0020 043e 0442 0447 0451  .>.3.>. .>.B.G.Q
++00013900: 0442 0430 0800 0000 0006 0000 0042 5468  .B.0.........BTh
++00013910: 6572 6520 6172 6520 6e6f 2069 6e66 6f72  ere are no infor
++00013920: 6d61 7469 6f6e 2061 626f 7574 2074 6178  mation about tax
++00013930: 2074 7265 6174 7920 696e 2074 6178 2072   treaty in tax r
++00013940: 6570 6f72 7420 7061 7261 6d65 7465 7273  eport parameters
++00013950: 0700 0000 0954 6178 5265 706f 7274 0103  .....TaxReport..
++00013960: 0000 0060 041d 0435 0020 0437 0430 0434  ...`...5. .7.0.4
++00013970: 0430 043d 044b 0020 043f 0430 0440 0430  .0.=.K. .?.0.@.0
++00013980: 043c 0435 0442 0440 044b 0020 043d 0430  .<.5.B.@.K. .=.0
++00013990: 043b 043e 0433 043e 0432 043e 0433 043e  .;.>.3.>.2.>.3.>
++000139a0: 0020 043e 0442 0447 0451 0442 0430 0020  . .>.B.G.Q.B.0. 
++000139b0: 0434 043b 044f 0020 0433 043e 0434 0430  .4.;.O. .3.>.4.0
++000139c0: 003a 0020 0800 0000 0006 0000 0033 5468  .:. .........3Th
++000139d0: 6572 6520 6172 6520 6e6f 2070 6172 616d  ere are no param
++000139e0: 6574 6572 7320 666f 756e 6420 666f 7220  eters found for 
++000139f0: 7461 7820 7265 706f 7274 2079 6561 723a  tax report year:
++00013a00: 2007 0000 0009 5461 7852 6570 6f72 7401   .....TaxReport.
++00013a10: 0300 0000 0a00 2000 2e00 2e00 2e00 2008  ...... ....... .
++00013a20: 0000 0000 0600 0000 0520 2e2e 2e20 0700  ......... ... ..
++00013a30: 0000 0954 6178 5769 6467 6574 0103 0000  ...TaxWidget....
++00013a40: 0006 002e 002e 002e 0800 0000 0006 0000  ................
++00013a50: 0003 2e2e 2e07 0000 0009 5461 7857 6964  ..........TaxWid
++00013a60: 6765 7401 0300 0000 0a04 2104 4704 3504  get.......!.G.5.
++00013a70: 4200 3a08 0000 0000 0600 0000 0841 6363  B.:..........Acc
++00013a80: 6f75 6e74 3a07 0000 0009 5461 7857 6964  ount:.....TaxWid
++00013a90: 6765 7401 0300 0000 9004 1d04 3804 3604  get.........8.6.
++00013aa0: 3500 2004 4004 3004 4104 3f04 3e04 3b04  5. .@.0.A.?.>.;.
++00013ab0: 3e04 3604 3504 3d04 4b00 2004 4d04 3a04  >.6.5.=.K. .M.:.
++00013ac0: 4104 3f04 3504 4004 3804 3c04 3504 3d04  A.?.5.@.8.<.5.=.
++00013ad0: 4204 3004 3b04 4c04 3d04 4b04 3500 2004  B.0.;.L.=.K.5. .
++00013ae0: 4404 4304 3d04 3a04 4604 3804 3800 2000  D.C.=.:.F.8.8. .
++00013af0: 2d00 2004 3804 4104 3f04 3e04 3b04 4c04  -. .8.A.?.>.;.L.
++00013b00: 3704 4304 3904 4204 3500 2004 4100 2004  7.C.9.B.5. .A. .
++00013b10: 3e04 4104 4204 3e04 4004 3e04 3604 3d04  >.A.B.>.@.>.6.=.
++00013b20: 3e04 4104 4204 4c04 4e08 0000 0000 0600  >.A.B.L.N.......
++00013b30: 0000 3342 656c 6f77 2066 756e 6374 696f  ..3Below functio
++00013b40: 6e73 2061 7265 2065 7870 6572 696d 656e  ns are experimen
++00013b50: 7461 6c20 2d20 7573 6520 6974 2077 6974  tal - use it wit
++00013b60: 6820 6361 7265 0700 0000 0954 6178 5769  h care.....TaxWi
++00013b70: 6467 6574 0103 0000 0044 041d 0435 0432  dget.....D...5.2
++00013b80: 043e 0437 043c 043e 0436 043d 043e 0020  .>.7.<.>.6.=.>. 
++00013b90: 0437 0430 043f 0438 0441 0430 0442 044c  .7.0.?.8.A.0.B.L
++00013ba0: 0020 0033 002d 041d 0414 0424 041b 0020  . .3.-.....$... 
++00013bb0: 0432 0020 0444 0430 0439 043b 0020 0800  .2. .D.0.9.;. ..
++00013bc0: 0000 0006 0000 001f 4361 6e27 7420 7772  ........Can't wr
++00013bd0: 6974 6520 7461 7820 666f 726d 2069 6e74  ite tax form int
++00013be0: 6f20 6669 6c65 2007 0000 0009 5461 7857  o file .....TaxW
++00013bf0: 6964 6765 7401 0300 0000 0e04 2104 4204  idget.......!.B.
++00013c00: 4004 3004 3d04 3000 3a08 0000 0000 0600  @.0.=.0.:.......
++00013c10: 0000 0843 6f75 6e74 7279 3a07 0000 0009  ...Country:.....
++00013c20: 5461 7857 6964 6765 7401 0300 0000 7804  TaxWidget.....x.
++00013c30: 2104 3e04 3704 3404 3004 4204 4c00 2004  !.>.7.4.0.B.L. .
++00013c40: 4404 3004 3904 3b00 2000 3300 2d04 1d04  D.0.9.;. .3.-...
++00013c50: 2404 1404 1b00 2004 3200 2004 4404 3e04  $..... .2. .D.>.
++00013c60: 4004 3c04 3004 4204 3500 2004 3f04 4004  @.<.0.B.5. .?.@.
++00013c70: 3e04 3304 4004 3004 3c04 3c04 4b00 2000  >.3.@.0.<.<.K. .
++00013c80: 2204 1404 3504 3a04 3b04 3004 4004 3004  "...5.:.;.0.@.0.
++00013c90: 4604 3804 4f00 2200 2000 2800 2a00 2e00  F.8.O.". .(.*...
++00013ca0: 6400 6300 5800 2908 0000 0000 0600 0000  d.c.X.).........
++00013cb0: 4043 7265 6174 6520 7461 7820 666f 726d  @Create tax form
++00013cc0: 2069 6e20 22d0 94d0 b5d0 bad0 bbd0 b0d1   in "...........
++00013cd0: 80d0 b0d1 86d0 b8d1 8f22 2070 726f 6772  ........." progr
++00013ce0: 616d 2066 6f72 6d61 7420 282a 2e64 6358  am format (*.dcX
++00013cf0: 2907 0000 0009 5461 7857 6964 6765 7401  ).....TaxWidget.
++00013d00: 0300 0000 1e04 1404 3004 3d04 3d04 4b04  ........0.=.=.K.
++00013d10: 3500 2004 3d04 3504 3f04 3e04 3b04 3d04  5. .=.5.?.>.;.=.
++00013d20: 4b04 3508 0000 0000 0600 0000 1344 6174  K.5..........Dat
++00013d30: 6120 6172 6520 696e 636f 6d70 6c65 7465  a are incomplete
++00013d40: 0700 0000 0954 6178 5769 6467 6574 0103  .....TaxWidget..
++00013d50: 0000 005c 041d 0435 0020 0438 0441 043f  ...\...5. .8.A.?
++00013d60: 043e 043b 044c 0437 043e 0432 0430 0442  .>.;.L.7.>.2.0.B
++00013d70: 044c 0020 0434 0430 0442 0443 0020 043f  .L. .4.0.B.C. .?
++00013d80: 043e 0441 0442 0430 0432 043a 0438 0020  .>.A.B.0.2.:.8. 
++00013d90: 0434 043b 044f 0020 043a 0443 0440 0441  .4.;.O. .:.C.@.A
++00013da0: 043e 0432 0020 0432 0430 043b 044e 0442  .>.2. .2.0.;.N.B
++00013db0: 0800 0000 0006 0000 002d 446f 206e 6f74  .........-Do not
++00013dc0: 2075 7365 2073 6574 746c 656d 656e 7420   use settlement 
++00013dd0: 6461 7465 2066 6f72 2063 7572 7265 6e63  date for currenc
++00013de0: 7920 7261 7465 7307 0000 0009 5461 7857  y rates.....TaxW
++00013df0: 6964 6765 7401 0300 0000 1604 2404 3004  idget.......$.0.
++00013e00: 3904 3b00 2000 4500 7800 6300 6500 6c00  9.;. .E.x.c.e.l.
++00013e10: 3a08 0000 0000 0600 0000 0b45 7863 656c  :..........Excel
++00013e20: 2066 696c 653a 0700 0000 0954 6178 5769   file:.....TaxWi
++00013e30: 6467 6574 0103 0000 0028 0424 0430 0439  dget.....(.$.0.9
++00013e40: 043b 044b 0020 0045 0078 0063 0065 006c  .;.K. .E.x.c.e.l
++00013e50: 0020 0028 002a 002e 0078 0073 006c 0078  . .(.*...x.s.l.x
++00013e60: 0029 0800 0000 0006 0000 0014 4578 6365  .)..........Exce
++00013e70: 6c20 6669 6c65 7320 282a 2e78 6c73 7829  l files (*.xlsx)
++00013e80: 0700 0000 0954 6178 5769 6467 6574 0103  .....TaxWidget..
++00013e90: 0000 004a 0424 0430 0439 043b 0020 0434  ...J.$.0.9.;. .4
++00013ea0: 043b 044f 0020 0441 043e 0445 0440 0430  .;.O. .A.>.E.@.0
++00013eb0: 043d 0435 043d 0438 044f 0020 0434 0435  .=.5.=.8.O. .4.5
++00013ec0: 043a 043b 0430 0440 0430 0446 0438 0438  .:.;.0.@.0.F.8.8
++00013ed0: 0020 0033 002d 041d 0414 0424 041b 0800  . .3.-.....$....
++00013ee0: 0000 0006 0000 0024 4669 6c65 2077 6865  .......$File whe
++00013ef0: 7265 2074 6f20 7374 6f72 6520 7275 7373  re to store russ
++00013f00: 6961 6e20 7461 7820 666f 726d 0700 0000  ian tax form....
++00013f10: 0954 6178 5769 6467 6574 0103 0000 0056  .TaxWidget.....V
++00013f20: 0424 0430 0439 043b 0020 0434 043b 044f  .$.0.9.;. .4.;.O
++00013f30: 0020 0441 043e 0445 0440 0430 043d 0435  . .A.>.E.@.0.=.5
++00013f40: 043d 0438 044f 0020 0440 0430 0441 0447  .=.8.O. .@.0.A.G
++00013f50: 0451 0442 0430 0020 0432 0020 0444 043e  .Q.B.0. .2. .D.>
++00013f60: 0440 043c 0430 0442 0435 0020 0045 0078  .@.<.0.B.5. .E.x
++00013f70: 0063 0065 006c 0800 0000 0006 0000 002e  .c.e.l..........
++00013f80: 4669 6c65 2077 6865 7265 2074 6f20 7374  File where to st
++00013f90: 6f72 6520 7461 7820 7265 706f 7274 2069  ore tax report i
++00013fa0: 6e20 4578 6365 6c20 666f 726d 6174 0700  n Excel format..
++00013fb0: 0000 0954 6178 5769 6467 6574 0103 0000  ...TaxWidget....
++00013fc0: 0068 0417 0430 0440 0443 0431 0435 0436  .h...0.@.C.1.5.6
++00013fd0: 043d 044b 0439 0020 0441 0447 0451 0442  .=.K.9. .A.G.Q.B
++00013fe0: 0020 0434 043b 044f 0020 043a 043e 0442  . .4.;.O. .:.>.B
++00013ff0: 043e 0440 043e 0433 043e 0020 043d 0443  .>.@.>.3.>. .=.C
++00014000: 0436 043d 043e 0020 043f 043e 0434 0433  .6.=.>. .?.>.4.3
++00014010: 043e 0442 043e 0432 0438 0442 044c 0020  .>.B.>.2.8.B.L. 
++00014020: 043e 0442 0447 0451 0442 0800 0000 0006  .>.B.G.Q.B......
++00014030: 0000 0029 466f 7265 6967 6e20 6163 636f  ...)Foreign acco
++00014040: 756e 7420 746f 2070 7265 7061 7265 2074  unt to prepare t
++00014050: 6178 2072 6570 6f72 7420 666f 7207 0000  ax report for...
++00014060: 0009 5461 7857 6964 6765 7401 0300 0000  ..TaxWidget.....
++00014070: 2604 2404 3004 3904 3b00 2004 4100 2004  &.$.0.9.;. .A. .
++00014080: 4004 3504 3704 4304 3b04 4c04 4204 3004  @.5.7.C.;.L.B.0.
++00014090: 4204 3e04 3c00 3a08 0000 0000 0600 0000  B.>.<.:.........
++000140a0: 0c4f 7574 7075 7420 6669 6c65 3a07 0000  .Output file:...
++000140b0: 0009 5461 7857 6964 6765 7401 0300 0000  ..TaxWidget.....
++000140c0: 1e04 2104 3e04 4504 4004 3004 3d04 3804  ..!.>.E.@.0.=.8.
++000140d0: 4204 4c00 2004 1e04 4204 4704 5104 4208  B.L. ...B.G.Q.B.
++000140e0: 0000 0000 0600 0000 0b53 6176 6520 5265  .........Save Re
++000140f0: 706f 7274 0700 0000 0954 6178 5769 6467  port.....TaxWidg
++00014100: 6574 0103 0000 0026 0421 043e 0445 0440  et.....&.!.>.E.@
++00014110: 0430 043d 0438 0442 044c 0020 0033 002d  .0.=.8.B.L. .3.-
++00014120: 041d 0414 0424 041b 0020 0432 003a 0800  .....$... .2.:..
++00014130: 0000 0006 0000 0011 5361 7665 2074 6178  ........Save tax
++00014140: 2066 6f72 6d20 746f 3a07 0000 0009 5461   form to:.....Ta
++00014150: 7857 6964 6765 7401 0300 0000 3804 2104  xWidget.....8.!.
++00014160: 3e04 4504 4004 3004 3d04 3804 4204 4c00  >.E.@.0.=.8.B.L.
++00014170: 2004 3d04 3004 3b04 3e04 3304 3e04 3204   .=.0.;.>.3.>.2.
++00014180: 4b04 3900 2004 3e04 4204 4704 5104 4200  K.9. .>.B.G.Q.B.
++00014190: 2004 3200 3a08 0000 0000 0600 0000 1453   .2.:..........S
++000141a0: 6176 6520 7461 7820 7265 706f 7274 7320  ave tax reports 
++000141b0: 746f 3a07 0000 0009 5461 7857 6964 6765  to:.....TaxWidge
++000141c0: 7401 0300 0000 1804 1204 4b04 3104 3504  t.........K.1.5.
++000141d0: 4004 3804 4200 2004 4404 3004 3904 3b08  @.8.B. .D.0.9.;.
++000141e0: 0000 0000 0600 0000 0b53 656c 6563 7420  .........Select 
++000141f0: 6669 6c65 0700 0000 0954 6178 5769 6467  file.....TaxWidg
++00014200: 6574 0103 0000 0028 041d 0430 043b 043e  et.....(...0.;.>
++00014210: 0433 043e 0432 044b 0439 0020 043e 0442  .3.>.2.K.9. .>.B
++00014220: 0447 0451 0442 0020 043f 0443 0441 0442  .G.Q.B. .?.C.A.B
++00014230: 0800 0000 0006 0000 0013 5461 7820 7265  ..........Tax re
++00014240: 706f 7274 2069 7320 656d 7074 7907 0000  port is empty...
++00014250: 0009 5461 7857 6964 6765 7401 0300 0000  ..TaxWidget.....
++00014260: 4004 1d04 3004 3b04 3e04 3304 3e04 3204  @...0.;.>.3.>.2.
++00014270: 4b04 3900 2004 3e04 4204 4704 5104 4200  K.9. .>.B.G.Q.B.
++00014280: 2004 4104 3e04 4504 4004 3004 3d04 5104   .A.>.E.@.0.=.Q.
++00014290: 3d00 2004 3200 2004 4404 3004 3904 3b00  =. .2. .D.0.9.;.
++000142a0: 2008 0000 0000 0600 0000 1954 6178 2072   ..........Tax r
++000142b0: 6570 6f72 7420 7361 7665 6420 746f 2066  eport saved to f
++000142c0: 696c 6520 0700 0000 0954 6178 5769 6467  ile .....TaxWidg
++000142d0: 6574 0103 0000 0040 041d 0430 043b 043e  et.....@...0.;.>
++000142e0: 0433 043e 0432 044b 0439 0020 043e 0442  .3.>.2.K.9. .>.B
++000142f0: 0447 0451 0442 0020 0441 043e 0445 0440  .G.Q.B. .A.>.E.@
++00014300: 0430 043d 0451 043d 0020 0432 0020 0444  .0.=.Q.=. .2. .D
++00014310: 0430 0439 043b 0020 0800 0000 0006 0000  .0.9.;. ........
++00014320: 001d 5461 7820 7265 706f 7274 2077 6173  ..Tax report was
++00014330: 2073 6176 6564 2074 6f20 6669 6c65 2007   saved to file .
++00014340: 0000 0009 5461 7857 6964 6765 7401 0300  ....TaxWidget...
++00014350: 0000 0c04 1d04 3004 3b04 3e04 3304 3808  ......0.;.>.3.8.
++00014360: 0000 0000 0600 0000 0554 6178 6573 0700  .........Taxes..
++00014370: 0000 0954 6178 5769 6467 6574 0103 0000  ...TaxWidget....
++00014380: 004e 041e 0431 043d 043e 0432 0438 0442  .N...1.=.>.2.8.B
++00014390: 044c 0020 0442 043e 043b 044c 043a 043e  .L. .B.>.;.L.:.>
++000143a0: 0020 0438 043d 0444 043e 0440 043c 0430  . .8.=.D.>.@.<.0
++000143b0: 0446 0438 044e 0020 043e 0020 0434 0438  .F.8.N. .>. .4.8
++000143c0: 0432 0438 0434 0435 043d 0434 0430 0445  .2.8.4.5.=.4.0.E
++000143d0: 0800 0000 0006 0000 0027 5570 6461 7465  .........'Update
++000143e0: 206f 6e6c 7920 696e 666f 726d 6174 696f   only informatio
++000143f0: 6e20 6162 6f75 7420 6469 7669 6465 6e64  n about dividend
++00014400: 7307 0000 0009 5461 7857 6964 6765 7401  s.....TaxWidget.
++00014410: 0300 0000 6404 1804 4104 3f04 3e04 3b04  ....d...A.?.>.;.
++00014420: 4c04 3704 3e04 3204 3004 4204 4c00 2004  L.7.>.2.0.B.L. .
++00014430: 3d04 3004 3704 3204 3004 3d04 3804 3500  =.0.7.2.0.=.8.5.
++00014440: 2004 3104 4004 3e04 3a04 3504 4004 3000   .1.@.>.:.5.@.0.
++00014450: 2004 3a04 3004 3a00 2004 3804 4104 4204   .:.0.:. .8.A.B.
++00014460: 3e04 4704 3d04 3804 3a00 2004 3204 4b04  >.G.=.8.:. .2.K.
++00014470: 3f04 3b04 3004 4204 4b08 0000 0000 0600  ?.;.0.B.K.......
++00014480: 0000 2055 7365 2062 726f 6b65 7220 6e61  .. Use broker na
++00014490: 6d65 2061 7320 696e 636f 6d65 2073 6f75  me as income sou
++000144a0: 7263 6507 0000 0009 5461 7857 6964 6765  rce.....TaxWidge
++000144b0: 7401 0300 0000 0804 1304 3e04 3400 3a08  t.........>.4.:.
++000144c0: 0000 0000 0600 0000 0559 6561 723a 0700  .........Year:..
++000144d0: 0000 0954 6178 5769 6467 6574 0103 0000  ...TaxWidget....
++000144e0: 0050 0412 044b 0020 043d 0435 0020 0432  .P...K. .=.5. .2
++000144f0: 044b 0431 0440 0430 043b 0438 0020 0441  .K.1.@.0.;.8. .A
++00014500: 0447 0451 0442 0020 0434 043b 044f 0020  .G.Q.B. .4.;.O. 
++00014510: 043d 0430 043b 043e 0433 043e 0432 043e  .=.0.;.>.3.>.2.>
++00014520: 0433 043e 0020 043e 0442 0447 0451 0442  .3.>. .>.B.G.Q.B
++00014530: 0430 0800 0000 0006 0000 002e 596f 7520  .0..........You 
++00014540: 6861 7665 6e27 7420 7365 6c65 6374 6564  haven't selected
++00014550: 2061 6e20 6163 636f 756e 7420 666f 7220   an account for 
++00014560: 7461 7820 7265 706f 7274 0700 0000 0954  tax report.....T
++00014570: 6178 5769 6467 6574 0103 0000 0098 041d  axWidget........
++00014580: 0435 0432 043e 0437 043c 043e 0436 043d  .5.2.>.7.<.>.6.=
++00014590: 043e 0020 043e 0431 0440 0430 0431 043e  .>. .>.1.@.0.1.>
++000145a0: 0442 0430 0442 044c 0020 0441 0434 0435  .B.0.B.L. .A.4.5
++000145b0: 043b 043a 0443 002c 0020 0442 002e 043a  .;.:.C.,. .B...:
++000145c0: 002e 0020 043d 0435 0020 0437 0430 0434  ... .=.5. .7.0.4
++000145d0: 0430 043d 0020 0431 0430 043d 043a 0020  .0.=. .1.0.=.:. 
++000145e0: 0434 043b 044f 0020 0438 043d 0432 0435  .4.;.O. .8.=.2.5
++000145f0: 0441 0442 0438 0446 0438 043e 043d 043d  .A.B.8.F.8.>.=.=
++00014600: 043e 0433 043e 0020 0441 0447 0451 0442  .>.3.>. .A.G.Q.B
++00014610: 0430 003a 0020 0800 0000 0006 0000 003e  .0.:. .........>
++00014620: 4361 6e27 7420 7072 6f63 6573 7320 7472  Can't process tr
++00014630: 6164 6520 6173 2062 616e 6b20 6973 6e27  ade as bank isn'
++00014640: 7420 7365 7420 666f 7220 696e 7665 7374  t set for invest
++00014650: 6d65 6e74 2061 6363 6f75 6e74 3a20 0700  ment account: ..
++00014660: 0000 0554 7261 6465 0103 0000 0002 2116  ...Trade......!.
++00014670: 0800 0000 0006 0000 0001 2307 0000 000b  ..........#.....
++00014680: 5472 6164 6557 6964 6765 7401 0300 0000  TradeWidget.....
++00014690: 0804 2104 4704 3504 4208 0000 0000 0600  ..!.G.5.B.......
++000146a0: 0000 0741 6363 6f75 6e74 0700 0000 0b54  ...Account.....T
++000146b0: 7261 6465 5769 6467 6574 0103 0000 0004  radeWidget......
++000146c0: 0426 0411 0800 0000 0006 0000 0005 4173  .&............As
++000146d0: 7365 7407 0000 000b 5472 6164 6557 6964  set.....TradeWid
++000146e0: 6765 7401 0300 0000 2204 1f04 3e04 3a04  get....."...>.:.
++000146f0: 4304 3f04 3a04 3000 2000 2f00 2004 1f04  C.?.:.0. ./. ...
++00014700: 4004 3e04 3404 3004 3604 3008 0000 0000  @.>.4.0.6.0.....
++00014710: 0600 0000 0a42 7579 202f 2053 656c 6c07  .....Buy / Sell.
++00014720: 0000 000b 5472 6164 6557 6964 6765 7401  ....TradeWidget.
++00014730: 0300 0000 1404 1404 3004 4204 3000 2f04  ........0.B.0./.
++00014740: 1204 4004 3504 3c04 4f08 0000 0000 0600  ..@.5.<.O.......
++00014750: 0000 0944 6174 652f 5469 6d65 0700 0000  ...Date/Time....
++00014760: 0b54 7261 6465 5769 6467 6574 0103 0000  .TradeWidget....
++00014770: 0010 041a 043e 043c 0438 0441 0441 0438  .....>.<.8.A.A.8
++00014780: 044f 0800 0000 0006 0000 0003 4665 6507  .O..........Fee.
++00014790: 0000 000b 5472 6164 6557 6964 6765 7401  ....TradeWidget.
++000147a0: 0300 0000 1004 1e04 3f04 3804 4104 3004  ........?.8.A.0.
++000147b0: 3d04 3804 3508 0000 0000 0600 0000 044e  =.8.5..........N
++000147c0: 6f74 6507 0000 000b 5472 6164 6557 6964  ote.....TradeWid
++000147d0: 6765 7401 0300 0000 0804 2604 3504 3d04  get.......&.5.=.
++000147e0: 3008 0000 0000 0600 0000 0550 7269 6365  0..........Price
++000147f0: 0700 0000 0b54 7261 6465 5769 6467 6574  .....TradeWidget
++00014800: 0103 0000 000c 041a 043e 043b 002d 0432  .........>.;.-.2
++00014810: 043e 0800 0000 0006 0000 0003 5174 7907  .>..........Qty.
++00014820: 0000 000b 5472 6164 6557 6964 6765 7401  ....TradeWidget.
++00014830: 0300 0000 1a04 1404 3004 4204 3000 2004  ........0.B.0. .
++00014840: 4004 3004 4104 4704 3504 4204 3e04 3208  @.0.A.G.5.B.>.2.
++00014850: 0000 0000 0600 0000 0a53 6574 746c 656d  .........Settlem
++00014860: 656e 7407 0000 000b 5472 6164 6557 6964  ent.....TradeWid
++00014870: 6765 7401 0300 0000 7a04 1a04 3e04 3b04  get.....z...>.;.
++00014880: 3804 4704 3504 4104 4204 3204 3e00 2004  8.G.5.A.B.2.>. .
++00014890: 3004 3a04 4204 3804 3204 3000 2004 3d04  0.:.B.8.2.0. .=.
++000148a0: 3504 3404 3e04 4104 4204 3004 4204 3e04  5.4.>.A.B.0.B.>.
++000148b0: 4704 3d04 3e00 2004 3404 3b04 4f00 2004  G.=.>. .4.;.O. .
++000148c0: 3e04 3104 4004 3004 3104 3e04 4204 3a04  >.1.@.0.1.>.B.:.
++000148d0: 3800 2004 3f04 3504 4004 3504 3204 3e04  8. .?.5.@.5.2.>.
++000148e0: 3404 3000 2e00 2004 1404 3004 4204 3000  4.0... ...0.B.0.
++000148f0: 3a00 2008 0000 0000 0600 0000 4041 7373  :. .........@Ass
++00014900: 6574 2061 6d6f 756e 7420 6973 206e 6f74  et amount is not
++00014910: 2065 6e6f 7567 6820 666f 7220 6173 7365   enough for asse
++00014920: 7420 7472 616e 7366 6572 2070 726f 6365  t transfer proce
++00014930: 7373 696e 672e 2044 6174 653a 2007 0000  ssing. Date: ...
++00014940: 0008 5472 616e 7366 6572 0103 0000 0052  ..Transfer.....R
++00014950: 0421 043f 0438 0441 0430 043d 0438 0435  .!.?.8.A.0.=.8.5
++00014960: 0020 0430 043a 0442 0438 0432 0430 0020  . .0.:.B.8.2.0. 
++00014970: 043d 0435 0020 043d 0430 0439 0434 0435  .=.5. .=.0.9.4.5
++00014980: 043d 043e 0020 0434 043b 044f 0020 0442  .=.>. .4.;.O. .B
++00014990: 0440 0430 043d 0441 0444 0435 0440 0430  .@.0.=.A.D.5.@.0
++000149a0: 002e 0800 0000 0006 0000 0028 4173 7365  ...........(Asse
++000149b0: 7420 7769 7468 6472 6177 616c 206e 6f74  t withdrawal not
++000149c0: 2066 6f75 6e64 2066 6f72 2074 7261 6e73   found for trans
++000149d0: 6665 722e 0700 0000 0854 7261 6e73 6665  fer......Transfe
++000149e0: 7201 0300 0000 2e04 1e04 4804 3804 3104  r.........H.8.1.
++000149f0: 3a04 3000 2e00 2004 1a04 4304 4004 4100  :.0... ...C.@.A.
++00014a00: 2004 4004 3004 3204 3504 3d00 2004 3d04   .@.0.2.5.=. .=.
++00014a10: 4304 3b04 4e08 0000 0000 0600 0000 1045  C.;.N..........E
++00014a20: 7272 6f72 2e20 5a65 726f 2072 6174 6507  rror. Zero rate.
++00014a30: 0000 0008 5472 616e 7366 6572 0103 0000  ....Transfer....
++00014a40: 0084 041e 0431 0440 0430 0431 043e 0442  .....1.@.0.1.>.B
++00014a50: 0430 043d 043d 043e 0435 0020 043a 043e  .0.=.=.>.5. .:.>
++00014a60: 043b 0438 0447 0435 0441 0442 0432 043e  .;.8.G.5.A.B.2.>
++00014a70: 0020 043c 0435 043d 044c 0448 0435 002c  . .<.5.=.L.H.5.,
++00014a80: 0020 0447 0435 043c 0020 043a 043e 043b  . .G.5.<. .:.>.;
++00014a90: 0438 0447 0435 0441 0442 0432 043e 0020  .8.G.5.A.B.2.>. 
++00014aa0: 0432 0020 0442 0440 0430 043d 0441 0444  .2. .B.@.0.=.A.D
++00014ab0: 0435 0440 0435 002e 0020 0414 0430 0442  .5.@.5... ...0.B
++00014ac0: 0430 003a 0020 0800 0000 0006 0000 003b  .0.:. .........;
++00014ad0: 5072 6f63 6573 7365 6420 6173 7365 7420  Processed asset 
++00014ae0: 616d 6f75 6e74 2069 7320 6c65 7373 2074  amount is less t
++00014af0: 6861 6e20 7472 616e 7366 6572 2061 6d6f  han transfer amo
++00014b00: 756e 742e 2044 6174 653a 2007 0000 0008  unt. Date: .....
++00014b10: 5472 616e 7366 6572 0103 0000 000a 0421  Transfer.......!
++00014b20: 0443 043c 043c 0430 0800 0000 0006 0000  .C.<.<.0........
++00014b30: 0006 416d 6f75 6e74 0700 0000 0e54 7261  ..Amount.....Tra
++00014b40: 6e73 6665 7257 6964 6765 7401 0300 0000  nsferWidget.....
++00014b50: 0404 2604 1108 0000 0000 0600 0000 0541  ..&............A
++00014b60: 7373 6574 0700 0000 0e54 7261 6e73 6665  sset.....Transfe
++00014b70: 7257 6964 6765 7401 0300 0000 1404 1404  rWidget.........
++00014b80: 3004 4204 3000 2f04 1204 4004 3504 3c04  0.B.0./...@.5.<.
++00014b90: 4f08 0000 0000 0600 0000 0944 6174 652f  O..........Date/
++00014ba0: 5469 6d65 0700 0000 0e54 7261 6e73 6665  Time.....Transfe
++00014bb0: 7257 6964 6765 7401 0300 0000 1e04 2004  rWidget....... .
++00014bc0: 3004 3704 3c04 3504 4000 2004 3a04 3e04  0.7.<.5.@. .:.>.
++00014bd0: 3c04 3804 4104 4104 3804 3808 0000 0000  <.8.A.A.8.8.....
++00014be0: 0600 0000 0a46 6565 2061 6d6f 756e 7407  .....Fee amount.
++00014bf0: 0000 000e 5472 616e 7366 6572 5769 6467  ....TransferWidg
++00014c00: 6574 0103 0000 0016 041a 043e 043c 043c  et.........>.<.<
++00014c10: 0438 0441 0441 0438 044f 0020 0441 0800  .8.A.A.8.O. .A..
++00014c20: 0000 0006 0000 0008 4665 6520 6672 6f6d  ........Fee from
++00014c30: 0700 0000 0e54 7261 6e73 6665 7257 6964  .....TransferWid
++00014c40: 6765 7401 0300 0000 0204 2108 0000 0000  get.......!.....
++00014c50: 0600 0000 0446 726f 6d07 0000 000e 5472  .....From.....Tr
++00014c60: 616e 7366 6572 5769 6467 6574 0103 0000  ansferWidget....
++00014c70: 0010 041e 043f 0438 0441 0430 043d 0438  .....?.8.A.0.=.8
++00014c80: 0435 0800 0000 0006 0000 0004 4e6f 7465  .5..........Note
++00014c90: 0700 0000 0e54 7261 6e73 6665 7257 6964  .....TransferWid
++00014ca0: 6765 7401 0300 0000 0404 1d04 3008 0000  get.........0...
++00014cb0: 0000 0600 0000 0254 6f07 0000 000e 5472  .......To.....Tr
++00014cc0: 616e 7366 6572 5769 6467 6574 0103 0000  ansferWidget....
++00014cd0: 000e 041f 0435 0440 0435 0432 043e 0434  .....5.@.5.2.>.4
++00014ce0: 0800 0000 0006 0000 0008 5472 616e 7366  ..........Transf
++00014cf0: 6572 0700 0000 0e54 7261 6e73 6665 7257  er.....TransferW
++00014d00: 6964 6765 7401 0300 0000 0404 1f04 3e08  idget.........>.
++00014d10: 0000 0000 0600 0000 0845 6e64 2064 6174  .........End dat
++00014d20: 6507 0000 000f 5570 6461 7465 5175 6f74  e.....UpdateQuot
++00014d30: 6573 446c 6701 0300 0000 1204 1804 4104  esDlg.........A.
++00014d40: 4204 3e04 4704 3d04 3804 3a04 3808 0000  B.>.G.=.8.:.8...
++00014d50: 0000 0600 0000 0753 6f75 7263 6573 0700  .......Sources..
++00014d60: 0000 0f55 7064 6174 6551 756f 7465 7344  ...UpdateQuotesD
++00014d70: 6c67 0103 0000 0002 0421 0800 0000 0006  lg.......!......
++00014d80: 0000 000a 5374 6172 7420 6461 7465 0700  ....Start date..
++00014d90: 0000 0f55 7064 6174 6551 756f 7465 7344  ...UpdateQuotesD
++00014da0: 6c67 0103 0000 0028 041e 0431 043d 043e  lg.....(...1.=.>
++00014db0: 0432 043b 0435 043d 0438 0435 0020 043a  .2.;.5.=.8.5. .:
++00014dc0: 043e 0442 0438 0440 043e 0432 043e 043a  .>.B.8.@.>.2.>.:
++00014dd0: 0800 0000 0006 0000 0015 5570 6461 7465  ..........Update
++00014de0: 2061 7373 6574 2773 2071 756f 7465 7307   asset's quotes.
++00014df0: 0000 000f 5570 6461 7465 5175 6f74 6573  ....UpdateQuotes
++00014e00: 446c 6701 0300 0000 1400 6400 6400 2f00  Dlg.......d.d./.
++00014e10: 4d00 4d00 2f00 7900 7900 7900 7908 0000  M.M./.y.y.y.y...
++00014e20: 0000 0600 0000 0a64 642f 4d4d 2f79 7979  .......dd/MM/yyy
++00014e30: 7907 0000 000f 5570 6461 7465 5175 6f74  y.....UpdateQuot
++00014e40: 6573 446c 6701 0300 0000 5804 1d04 3504  esDlg.....X...5.
++00014e50: 3204 3e04 3704 3c04 3e04 3604 3d04 3e00  2.>.7.<.>.6.=.>.
++00014e60: 2004 3f04 4004 3e04 4704 3804 4204 3004   .?.@.>.G.8.B.0.
++00014e70: 4204 4c00 2004 4804 3004 3104 3b04 3e04  B.L. .H.0.1.;.>.
++00014e80: 3d00 2004 3e04 4204 4704 5104 4204 3000  =. .>.B.G.Q.B.0.
++00014e90: 2004 3804 3700 2004 4404 3004 3904 3b04   .8.7. .D.0.9.;.
++00014ea0: 3000 2008 0000 0000 0600 0000 2543 616e  0. .........%Can
++00014eb0: 2774 206c 6f61 6420 7265 706f 7274 2074  't load report t
++00014ec0: 656d 706c 6174 6520 6672 6f6d 2066 696c  emplate from fil
++00014ed0: 6520 0700 0000 0458 4c53 5801 0300 0000  e .....XLSX.....
++00014ee0: 4404 1d04 3504 3204 3e04 3704 3c04 3e04  D...5.2.>.7.<.>.
++00014ef0: 3604 3d04 3e00 2004 4104 3e04 4504 4004  6.=.>. .A.>.E.@.
++00014f00: 3004 3d04 3804 4204 4c00 2004 3e04 4204  0.=.8.B.L. .>.B.
++00014f10: 4704 5104 4200 2004 3200 2004 4404 3004  G.Q.B. .2. .D.0.
++00014f20: 3904 3b00 2008 0000 0000 0600 0000 1c43  9.;. ..........C
++00014f30: 616e 2774 2073 6176 6520 7265 706f 7274  an't save report
++00014f40: 2069 6e74 6f20 6669 6c65 2007 0000 0004   into file .....
++00014f50: 584c 5358 0103 0000 0044 041d 0435 0020  XLSX.....D...5. 
++00014f60: 0443 043a 0430 0437 0430 043d 0020 0444  .C.:.0.7.0.=. .D
++00014f70: 043e 0440 043c 0430 0442 0020 0434 043b  .>.@.<.0.B. .4.;
++00014f80: 044f 0020 043f 043e 043b 044f 0020 043e  .O. .?.>.;.O. .>
++00014f90: 0442 0447 0451 0442 0430 003a 0020 0800  .B.G.Q.B.0.:. ..
++00014fa0: 0000 0006 0000 0024 466f 726d 6174 2069  .......$Format i
++00014fb0: 7320 6d69 7373 696e 6720 666f 7220 7265  s missing for re
++00014fc0: 706f 7274 2066 6965 6c64 3a20 0700 0000  port field: ....
++00014fd0: 0458 4c53 5801 0300 0000 4204 1d04 3500  .XLSX.....B...5.
++00014fe0: 2004 3704 3004 3404 3004 3d00 2004 4804   .7.0.4.0.=. .H.
++00014ff0: 3004 3104 3b04 3e04 3d00 2004 3404 3b04  0.1.;.>.=. .4.;.
++00015000: 4f00 2004 3404 3004 3d04 3d04 4b04 4500  O. .4.0.=.=.K.E.
++00015010: 2004 3e04 4204 4704 5104 4204 3008 0000   .>.B.G.Q.B.0...
++00015020: 0000 0600 0000 1a4e 6f20 7265 706f 7274  .......No report
++00015030: 2072 6f77 2074 656d 706c 6174 6520 7365   row template se
++00015040: 7407 0000 0004 584c 5358 0103 0000 003a  t.....XLSX.....:
++00015050: 0428 0430 0431 043b 043e 043d 0020 0434  .(.0.1.;.>.=. .4
++00015060: 043b 044f 0020 0434 0430 043d 043d 044b  .;.O. .4.0.=.=.K
++00015070: 0445 0020 043d 0435 0020 043d 0430 0439  .E. .=.5. .=.0.9
++00015080: 0434 0435 043d 003a 0020 0800 0000 0006  .4.5.=.:. ......
++00015090: 0000 001f 5265 706f 7274 2072 6f77 2074  ....Report row t
++000150a0: 656d 706c 6174 6520 6e6f 7420 666f 756e  emplate not foun
++000150b0: 643a 2007 0000 0004 584c 5358 0103 0000  d: .....XLSX....
++000150c0: 0046 041d 0435 0438 0437 0432 0435 0441  .F...5.8.7.2.5.A
++000150d0: 0442 043d 0430 044f 0020 0441 0442 0440  .B.=.0.O. .A.B.@
++000150e0: 043e 043a 0430 0020 0444 043e 0440 043c  .>.:.0. .D.>.@.<
++000150f0: 0430 0442 0438 0440 043e 0432 0430 043d  .0.B.8.@.>.2.0.=
++00015100: 0438 044f 003a 0020 0800 0000 0006 0000  .8.O.:. ........
++00015110: 001c 556e 7265 636f 676e 697a 6564 2066  ..Unrecognized f
++00015120: 6f72 6d61 7420 7374 7269 6e67 3a20 0700  ormat string: ..
++00015130: 0000 0458 4c53 5801 8800 0000 0d11 01fd  ...XLSX.........
++00015140: 290b ff14 0204 fd2c 0a13                 )......,..
+```
+
+### Comparing `jal-2023.3.1/jal/net/downloader.py` & `jal-2023.4.1/jal/net/downloader.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -178,14 +178,15 @@
+         data = pd.DataFrame(rows, columns=["Date", "Rate", "Multiplier"])
+         data['Date'] = pd.to_datetime(data['Date'], format="%d.%m.%Y")
+         data['Rate'] = [x.replace(',', '.') for x in data['Rate']]
+         data['Rate'] = data['Rate'].apply(Decimal)
+         data['Multiplier'] = data['Multiplier'].apply(Decimal)
+         data['Rate'] = data['Rate'] / data['Multiplier']
+         data.drop('Multiplier', axis=1, inplace=True)
++        data.dropna(inplace=True)
+         rates = data.set_index("Date")
+         return rates
+ 
+     def ECB_DataReader(self, currency, start_timestamp, end_timestamp):
+         date1 = datetime.utcfromtimestamp(start_timestamp).strftime('%Y-%m-%d')
+         date2 = datetime.utcfromtimestamp(end_timestamp).strftime('%Y-%m-%d')
+         url = f"https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.{currency.symbol()}.EUR.SP00.A?startPeriod={date1}&endPeriod={date2}"
+@@ -196,14 +197,15 @@
+             return None
+         data.rename(columns={'TIME_PERIOD': 'Date', 'OBS_VALUE': 'Rate'}, inplace=True)
+         data = data[['Date', 'Rate']]  # Keep only required columns
+         data['Date'] = pd.to_datetime(data['Date'], format="%Y-%m-%d")
+         data['Rate'] = data['Rate'].apply(Decimal)   # Convert from str to Decimal
+         data['Rate'] = Decimal('1') / data['Rate']
+         data['Rate'] = data['Rate'].apply(round, args=(10, ))
++        data.dropna(inplace=True)
+         rates = data.set_index("Date")
+         return rates
+ 
+     # Get asset data from http://www.moex.com
+     # Accepts parameters:
+     #     symbol, isin, reg_number - to identify asset
+     #     special - if 'engine', 'market' and 'board' should be returned as part of result
+@@ -367,14 +369,15 @@
+                     price = Decimal(row.attrib['CLOSE']) * Decimal(row.attrib['FACEVALUE']) / Decimal('100')
+                     quotes.append({"Date": row.attrib['TRADEDATE'], "Close": str(price)})
+                 else:
+                     quotes.append({"Date": row.attrib['TRADEDATE'], "Close": row.attrib['CLOSE']})
+         data = pd.DataFrame(quotes, columns=["Date", "Close"])
+         data['Date'] = pd.to_datetime(data['Date'], format="%Y-%m-%d")
+         data['Close'] = data['Close'].apply(Decimal)
++        data.dropna(inplace=True)
+         close = data.set_index("Date")
+         return close
+ 
+     # noinspection PyMethodMayBeStatic
+     def Yahoo_Downloader(self, asset, _currency_id, start_timestamp, end_timestamp, suffix=''):
+         url = f"https://query1.finance.yahoo.com/v7/finance/download/{asset.symbol()+suffix}?" \
+               f"period1={start_timestamp}&period2={end_timestamp}&interval=1d&events=history"
+@@ -382,14 +385,15 @@
+         try:
+             data = pd.read_csv(file, dtype={'Date': str, 'Close': str})
+         except ParserError:
+             return None
+         data['Date'] = pd.to_datetime(data['Date'], format="%Y-%m-%d")
+         data['Close'] = data['Close'].apply(Decimal)
+         data = data.drop(columns=['Open', 'High', 'Low', 'Adj Close', 'Volume'])
++        data.dropna(inplace=True)
+         close = data.set_index("Date")
+         return close
+ 
+     # The same as Yahoo_Downloader but it adds ".L" suffix to asset_code and returns prices in GBP
+     def YahooLSE_Downloader(self, asset, currency_id, start_timestamp, end_timestamp):
+         return self.Yahoo_Downloader(asset, currency_id, start_timestamp, end_timestamp, suffix='.L')
+ 
+@@ -419,14 +423,15 @@
+             data = pd.read_csv(file, header=3, sep=';', dtype={'Date': str, 'Close': str})
+         except ParserError:
+             return None
+         data['Date'] = pd.to_datetime(data['Date'], format="%d/%m/%Y")
+         data['Close'] = data['Close'].apply(Decimal)
+         data = data.drop(columns=['Open', 'High', 'Low', 'Number of Shares', 'Number of Trades',
+                                   'Turnover', 'Number of Trades', 'vwap'])
++        data.dropna(inplace=True)
+         close = data.set_index("Date")
+         close.sort_index(inplace=True)
+         return close
+ 
+     # noinspection PyMethodMayBeStatic
+     def TMX_Downloader(self, asset, _currency_id, start_timestamp, end_timestamp):
+         url = 'https://app-money.tmx.com/graphql'
+@@ -453,10 +458,11 @@
+             logging.warning(self.tr("Can't parse data for TSX quotes: ") + json_content)
+             return None
+         data = pd.DataFrame(price_array)
+         data.rename(columns={'datetime': 'Date', 'closePrice': 'Close'}, inplace=True)
+         data['Date'] = pd.to_datetime(data['Date'], format="%Y-%m-%d")
+         data['Close'] = data['Close'].apply(str)   # Convert from float to str
+         data['Close'] = data['Close'].apply(Decimal)   # Convert from str to Decimal
++        data.dropna(inplace=True)
+         close = data.set_index("Date")
+         close.sort_index(inplace=True)
+         return close
+```
+
+### Comparing `jal-2023.3.1/jal/net/helpers.py` & `jal-2023.4.1/jal/net/helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/pypi_description.md` & `jal-2023.4.1/jal/pypi_description.md`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/category.py` & `jal-2023.4.1/jal/reports/category.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/deals.py` & `jal-2023.4.1/jal/reports/deals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/holdings.py` & `jal-2023.4.1/jal/reports/holdings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/income_spending.py` & `jal-2023.4.1/jal/reports/income_spending.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,7 +1,8 @@
++from functools import partial
+ from datetime import datetime
+ from PySide6.QtCore import Qt, Slot, QObject, QAbstractItemModel, QModelIndex
+ from PySide6.QtGui import QAction, QBrush
+ from PySide6.QtWidgets import QMenu
+ from jal.reports.reports import Reports
+ from jal.db.asset import JalAsset
+ from jal.ui.reports.ui_income_spending_report import Ui_IncomeSpendingReportWidget
+@@ -193,14 +194,17 @@
+                     else:
+                         col_name = self.month_name[month-1]
+                 return col_name
+             if role == Qt.TextAlignmentRole:
+                 return int(Qt.AlignCenter)
+         return None
+ 
++    def headerWidth(self, section):
++        return self._view.header().sectionSize(section)
++
+     def index(self, row, column, parent=None):
+         if not parent.isValid():
+             parent = self._root
+         else:
+             parent = parent.internalPointer()
+         child = parent.getChild(row)
+         if child:
+@@ -314,24 +318,25 @@
+             self._load_child_amounts(category)
+ 
+ 
+ # ----------------------------------------------------------------------------------------------------------------------
+ class IncomeSpendingReport(QObject):
+     def __init__(self):
+         super().__init__()
+-        self.name = self.tr("Income/Spending")
++        self.name = self.tr("Income & Spending")
+         self.window_class = "IncomeSpendingReportWindow"
+ 
+ 
+ # ----------------------------------------------------------------------------------------------------------------------
+ class IncomeSpendingReportWindow(MdiWidget, Ui_IncomeSpendingReportWidget):
+     def __init__(self, parent: Reports, settings: dict = None):
+         MdiWidget.__init__(self, parent.mdi_area())
+         self.setupUi(self)
+         self._parent = parent
++        self.name = self.tr("Income & Spending")
+         self.current_index = None  # this is used in onOperationContextMenu() to track item for menu
+ 
+         self.income_spending_model = IncomeSpendingReportModel(self.ReportTreeView)
+         self.ReportTreeView.setModel(self.income_spending_model)
+         self.ReportTreeView.setContextMenuPolicy(Qt.CustomContextMenu)
+ 
+         # Operations view context menu
+@@ -348,14 +353,15 @@
+         self.CurrencyCombo.setIndex(settings['currency_id'])
+ 
+     def connect_signals_and_slots(self):
+         self.ReportRange.changed.connect(self.ReportTreeView.model().setDatesRange)
+         self.CurrencyCombo.changed.connect(self.ReportTreeView.model().setCurrency)
+         self.ReportTreeView.customContextMenuRequested.connect(self.onCellContextMenu)
+         self.actionDetails.triggered.connect(self.showDetailsReport)
++        self.SaveButton.pressed.connect(partial(self._parent.save_report, self.name, self.ReportTreeView.model()))
+ 
+     @Slot()
+     def onCellContextMenu(self, position):
+         self.current_index = self.ReportTreeView.indexAt(position)
+         if self.current_index.isValid() and self.current_index.column() != 0:
+             self.contextMenu.popup(self.ReportTreeView.viewport().mapToGlobal(position))
+```
+
+### Comparing `jal-2023.3.1/jal/reports/peer.py` & `jal-2023.4.1/jal/reports/peer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/profit_loss.py` & `jal-2023.4.1/jal/reports/profit_loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/reports.py` & `jal-2023.4.1/jal/reports/reports.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/reports/tag.py` & `jal-2023.4.1/jal/reports/tag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_category_report.py` & `jal-2023.4.1/jal/ui/reports/ui_category_report.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'category_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_deals_report.py` & `jal-2023.4.1/jal/ui/reports/ui_deals_report.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'deals_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_holdings_report.py` & `jal-2023.4.1/jal/ui/reports/ui_holdings_report.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'holdings_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_income_spending_report.py` & `jal-2023.4.1/jal/ui/reports/ui_income_spending_report.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,27 +1,27 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'income_spending_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+     QFont, QFontDatabase, QGradient, QIcon,
+     QImage, QKeySequence, QLinearGradient, QPainter,
+     QPalette, QPixmap, QRadialGradient, QTransform)
+ from PySide6.QtWidgets import (QAbstractItemView, QApplication, QFrame, QHBoxLayout,
+-    QHeaderView, QLabel, QSizePolicy, QSpacerItem,
+-    QTreeView, QVBoxLayout, QWidget)
++    QHeaderView, QLabel, QPushButton, QSizePolicy,
++    QSpacerItem, QTreeView, QVBoxLayout, QWidget)
+ 
+ from jal.widgets.account_select import CurrencyComboBox
+ from jal.widgets.custom.date_range_selector import DateRangeSelector
+ 
+ class Ui_IncomeSpendingReportWidget(object):
+     def setupUi(self, IncomeSpendingReportWidget):
+         if not IncomeSpendingReportWidget.objectName():
+@@ -55,14 +55,19 @@
+ 
+         self.horizontalLayout.addWidget(self.CurrencyCombo)
+ 
+         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+ 
+         self.horizontalLayout.addItem(self.horizontalSpacer)
+ 
++        self.SaveButton = QPushButton(self.ReportParamsFrame)
++        self.SaveButton.setObjectName(u"SaveButton")
++
++        self.horizontalLayout.addWidget(self.SaveButton)
++
+ 
+         self.verticalLayout.addWidget(self.ReportParamsFrame)
+ 
+         self.ReportTreeView = QTreeView(IncomeSpendingReportWidget)
+         self.ReportTreeView.setObjectName(u"ReportTreeView")
+         self.ReportTreeView.setEditTriggers(QAbstractItemView.NoEditTriggers)
+         self.ReportTreeView.setAlternatingRowColors(True)
+@@ -74,11 +79,12 @@
+ 
+         self.retranslateUi(IncomeSpendingReportWidget)
+ 
+         QMetaObject.connectSlotsByName(IncomeSpendingReportWidget)
+     # setupUi
+ 
+     def retranslateUi(self, IncomeSpendingReportWidget):
+-        IncomeSpendingReportWidget.setWindowTitle(QCoreApplication.translate("IncomeSpendingReportWidget", u"Income/Spending", None))
++        IncomeSpendingReportWidget.setWindowTitle(QCoreApplication.translate("IncomeSpendingReportWidget", u"Income & Spending", None))
+         self.CurrencyLbl.setText(QCoreApplication.translate("IncomeSpendingReportWidget", u"Currency:", None))
++        self.SaveButton.setText(QCoreApplication.translate("IncomeSpendingReportWidget", u"Save...", None))
+     # retranslateUi
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_peer_report.py` & `jal-2023.4.1/jal/ui/reports/ui_peer_report.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'peer_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_profit_loss_report.py` & `jal-2023.4.1/jal/ui/reports/ui_profit_loss_report.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'profit_loss_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_tag_report.py` & `jal-2023.4.1/jal/ui/reports/ui_tag_report.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'tag_report.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/reports/ui_tax_estimation.py` & `jal-2023.4.1/jal/ui/reports/ui_tax_estimation.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'tax_estimation.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_asset_dlg.py` & `jal-2023.4.1/jal/ui/ui_asset_dlg.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'asset_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_flow_export_widget.py` & `jal-2023.4.1/jal/ui/ui_flow_export_widget.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'flow_export_widget.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_login_fns_dlg.py` & `jal-2023.4.1/jal/ui/ui_login_fns_dlg.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'login_fns_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_main_window.py` & `jal-2023.4.1/jal/ui/ui_main_window.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'main_window.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+@@ -32,38 +32,30 @@
+         self.actionExit = QAction(JAL_MainWindow)
+         self.actionExit.setObjectName(u"actionExit")
+         self.actionExit.setMenuRole(QAction.QuitRole)
+         self.action_Re_build_Ledger = QAction(JAL_MainWindow)
+         self.action_Re_build_Ledger.setObjectName(u"action_Re_build_Ledger")
+         self.action_LoadQuotes = QAction(JAL_MainWindow)
+         self.action_LoadQuotes.setObjectName(u"action_LoadQuotes")
+-        self.actionImportStatement = QAction(JAL_MainWindow)
+-        self.actionImportStatement.setObjectName(u"actionImportStatement")
+         self.actionAccounts = QAction(JAL_MainWindow)
+         self.actionAccounts.setObjectName(u"actionAccounts")
+         self.actionAssets = QAction(JAL_MainWindow)
+         self.actionAssets.setObjectName(u"actionAssets")
+         self.actionPeers = QAction(JAL_MainWindow)
+         self.actionPeers.setObjectName(u"actionPeers")
+         self.actionCategories = QAction(JAL_MainWindow)
+         self.actionCategories.setObjectName(u"actionCategories")
+         self.actionBackup = QAction(JAL_MainWindow)
+         self.actionBackup.setObjectName(u"actionBackup")
+         self.actionRestore = QAction(JAL_MainWindow)
+         self.actionRestore.setObjectName(u"actionRestore")
+         self.PrepareTaxForms = QAction(JAL_MainWindow)
+         self.PrepareTaxForms.setObjectName(u"PrepareTaxForms")
+-        self.MakeDealsReport = QAction(JAL_MainWindow)
+-        self.MakeDealsReport.setObjectName(u"MakeDealsReport")
+         self.actionTags = QAction(JAL_MainWindow)
+         self.actionTags.setObjectName(u"actionTags")
+-        self.MakePLReport = QAction(JAL_MainWindow)
+-        self.MakePLReport.setObjectName(u"MakePLReport")
+-        self.MakeCategoriesReport = QAction(JAL_MainWindow)
+-        self.MakeCategoriesReport.setObjectName(u"MakeCategoriesReport")
+         self.actionImportSlipRU = QAction(JAL_MainWindow)
+         self.actionImportSlipRU.setObjectName(u"actionImportSlipRU")
+         self.actionQuotes = QAction(JAL_MainWindow)
+         self.actionQuotes.setObjectName(u"actionQuotes")
+         self.actionOperations = QAction(JAL_MainWindow)
+         self.actionOperations.setObjectName(u"actionOperations")
+         self.PrepareFlowReport = QAction(JAL_MainWindow)
+@@ -146,26 +138,22 @@
+     # setupUi
+ 
+     def retranslateUi(self, JAL_MainWindow):
+         JAL_MainWindow.setWindowTitle(QCoreApplication.translate("JAL_MainWindow", u"jal", None))
+         self.actionExit.setText(QCoreApplication.translate("JAL_MainWindow", u"&Exit", None))
+         self.action_Re_build_Ledger.setText(QCoreApplication.translate("JAL_MainWindow", u"Re-build &Ledger...", None))
+         self.action_LoadQuotes.setText(QCoreApplication.translate("JAL_MainWindow", u"&Quotes...", None))
+-        self.actionImportStatement.setText(QCoreApplication.translate("JAL_MainWindow", u"&Broker statement...", None))
+         self.actionAccounts.setText(QCoreApplication.translate("JAL_MainWindow", u"&Accounts", None))
+         self.actionAssets.setText(QCoreApplication.translate("JAL_MainWindow", u"A&ssets", None))
+         self.actionPeers.setText(QCoreApplication.translate("JAL_MainWindow", u"&Peers", None))
+         self.actionCategories.setText(QCoreApplication.translate("JAL_MainWindow", u"&Categories", None))
+         self.actionBackup.setText(QCoreApplication.translate("JAL_MainWindow", u"&Backup...", None))
+         self.actionRestore.setText(QCoreApplication.translate("JAL_MainWindow", u"&Restore...", None))
+         self.PrepareTaxForms.setText(QCoreApplication.translate("JAL_MainWindow", u"Investment &tax report", None))
+-        self.MakeDealsReport.setText(QCoreApplication.translate("JAL_MainWindow", u"&Deals report", None))
+         self.actionTags.setText(QCoreApplication.translate("JAL_MainWindow", u"&Tags", None))
+-        self.MakePLReport.setText(QCoreApplication.translate("JAL_MainWindow", u"&Profit/Loss report", None))
+-        self.MakeCategoriesReport.setText(QCoreApplication.translate("JAL_MainWindow", u"&Income/Spending report", None))
+         self.actionImportSlipRU.setText(QCoreApplication.translate("JAL_MainWindow", u"Slip [RU]...", None))
+         self.actionQuotes.setText(QCoreApplication.translate("JAL_MainWindow", u"&Quotes", None))
+         self.actionOperations.setText(QCoreApplication.translate("JAL_MainWindow", u"&Operations", None))
+         self.PrepareFlowReport.setText(QCoreApplication.translate("JAL_MainWindow", u"Foreign accounts &flow report", None))
+         self.actionBaseCurrency.setText(QCoreApplication.translate("JAL_MainWindow", u"&Base Currency", None))
+         self.menuMain.setTitle(QCoreApplication.translate("JAL_MainWindow", u"&Main", None))
+         self.menu_Data.setTitle(QCoreApplication.translate("JAL_MainWindow", u"&Data", None))
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_operations_widget.py` & `jal-2023.4.1/jal/ui/ui_operations_widget.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'operations_widget.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_rebuild_window.py` & `jal-2023.4.1/jal/ui/ui_rebuild_window.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'rebuild_window.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_reference_data_dlg.py` & `jal-2023.4.1/jal/ui/ui_reference_data_dlg.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'reference_data_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_select_account_dlg.py` & `jal-2023.4.1/jal/ui/ui_select_account_dlg.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'select_account_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_select_reference_dlg.py` & `jal-2023.4.1/jal/ui/ui_select_reference_dlg.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'select_reference_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_slip_import_dlg.py` & `jal-2023.4.1/jal/ui/ui_slip_import_dlg.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'slip_import_dlg.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_tax_export_widget.py` & `jal-2023.4.1/jal/ui/ui_tax_export_widget.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'tax_export_widget.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/ui/ui_update_quotes_window.py` & `jal-2023.4.1/jal/ui/ui_update_quotes_window.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ # -*- coding: utf-8 -*-
+ 
+ ################################################################################
+ ## Form generated from reading UI file 'quotes_update.ui'
+ ##
+-## Created by: Qt User Interface Compiler version 6.4.2
++## Created by: Qt User Interface Compiler version 6.4.3
+ ##
+ ## WARNING! All changes made in this file will be lost when recompiling UI file!
+ ################################################################################
+ 
+ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+     QMetaObject, QObject, QPoint, QRect,
+     QSize, QTime, QUrl, Qt)
+```
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_10.sql` & `jal-2023.4.1/jal/updates/jal_delta_10.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_11.sql` & `jal-2023.4.1/jal/updates/jal_delta_11.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_12.sql` & `jal-2023.4.1/jal/updates/jal_delta_12.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_13.sql` & `jal-2023.4.1/jal/updates/jal_delta_13.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_14.sql` & `jal-2023.4.1/jal/updates/jal_delta_14.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_15.sql` & `jal-2023.4.1/jal/updates/jal_delta_15.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_16.sql` & `jal-2023.4.1/jal/updates/jal_delta_16.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_17.sql` & `jal-2023.4.1/jal/updates/jal_delta_17.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_18.sql` & `jal-2023.4.1/jal/updates/jal_delta_18.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_19.sql` & `jal-2023.4.1/jal/updates/jal_delta_19.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_20.sql` & `jal-2023.4.1/jal/updates/jal_delta_20.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_21.sql` & `jal-2023.4.1/jal/updates/jal_delta_21.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_22.sql` & `jal-2023.4.1/jal/updates/jal_delta_22.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_23.sql` & `jal-2023.4.1/jal/updates/jal_delta_23.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_25.sql` & `jal-2023.4.1/jal/updates/jal_delta_25.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_26.sql` & `jal-2023.4.1/jal/updates/jal_delta_26.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_27.sql` & `jal-2023.4.1/jal/updates/jal_delta_27.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_28.sql` & `jal-2023.4.1/jal/updates/jal_delta_28.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_29.sql` & `jal-2023.4.1/jal/updates/jal_delta_29.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_30.sql` & `jal-2023.4.1/jal/updates/jal_delta_30.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_31.sql` & `jal-2023.4.1/jal/updates/jal_delta_31.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_32.sql` & `jal-2023.4.1/jal/updates/jal_delta_32.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_33.sql` & `jal-2023.4.1/jal/updates/jal_delta_33.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_34.sql` & `jal-2023.4.1/jal/updates/jal_delta_34.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_35.sql` & `jal-2023.4.1/jal/updates/jal_delta_35.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_36.sql` & `jal-2023.4.1/jal/updates/jal_delta_36.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_37.sql` & `jal-2023.4.1/jal/updates/jal_delta_37.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_38.sql` & `jal-2023.4.1/jal/updates/jal_delta_38.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_40.sql` & `jal-2023.4.1/jal/updates/jal_delta_40.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_41.sql` & `jal-2023.4.1/jal/updates/jal_delta_41.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_42.sql` & `jal-2023.4.1/jal/updates/jal_delta_42.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/updates/jal_delta_43.sql` & `jal-2023.4.1/jal/updates/jal_delta_43.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/abstract_operation_details.py` & `jal-2023.4.1/jal/widgets/abstract_operation_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/account_select.py` & `jal-2023.4.1/jal/widgets/account_select.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/asset_dialog.py` & `jal-2023.4.1/jal/widgets/asset_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/corporate_action_widget.py` & `jal-2023.4.1/jal/widgets/corporate_action_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/custom/date_range_selector.py` & `jal-2023.4.1/jal/widgets/custom/date_range_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/custom/db_lookup_combobox.py` & `jal-2023.4.1/jal/widgets/custom/db_lookup_combobox.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/custom/log_viewer.py` & `jal-2023.4.1/jal/widgets/custom/log_viewer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/delegates.py` & `jal-2023.4.1/jal/widgets/delegates.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -136,14 +136,15 @@
+         self._validator.setLocale(QLocale().system())
+ 
+     def displayText(self, value, locale):
+         try:
+             amount = Decimal(value)
+         except ValueError:
+             amount = Decimal('0')
++        amount = Decimal('0') if amount.is_nan() else amount  # Protection against occasional NaNs in database
+         if self._percent:
+             amount *= Decimal('100')
+         if amount > Decimal('0'):
+             self._color = CustomColor.LightGreen
+         elif amount < Decimal('0'):
+             self._color = CustomColor.LightRed
+         else:
+```
+
+### Comparing `jal-2023.3.1/jal/widgets/dividend_widget.py` & `jal-2023.4.1/jal/widgets/dividend_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/helpers.py` & `jal-2023.4.1/jal/widgets/helpers.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -88,15 +88,16 @@
+ # ----------------------------------------------------------------------------------------------------------------------
+ # Function takes an image and searches for QR in it. Content of first found QR is returned. Otherwise - empty string.
+ def decodeQR(qr_image: QImage) -> str:
+     if not dependency_present(['pyzbar']):
+         logging.warning("Package pyzbar not found for QR recognition.")
+         return ''
+     qr_image.convertTo(QImage.Format_Grayscale8)
+-    data = (qr_image.bits().tobytes(), qr_image.width(), qr_image.height())
++    # bytesPerXXX is more accurate than width and height
++    data = (qr_image.bits().tobytes(), qr_image.bytesPerLine(), int(qr_image.sizeInBytes()/qr_image.bytesPerLine()))
+     barcodes = pyzbar.decode(data, symbols=[pyzbar.ZBarSymbol.QRCODE])
+     if barcodes:
+         return barcodes[0].data.decode('utf-8')
+     return ''
+ 
+ 
+ # -----------------------------------------------------------------------------------------------------------------------
+```
+
+### Comparing `jal-2023.3.1/jal/widgets/income_spending_widget.py` & `jal-2023.4.1/jal/widgets/income_spending_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/main_window.py` & `jal-2023.4.1/jal/widgets/main_window.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/mdi.py` & `jal-2023.4.1/jal/widgets/mdi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/operations_tabs.py` & `jal-2023.4.1/jal/widgets/operations_tabs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/operations_widget.py` & `jal-2023.4.1/jal/widgets/operations_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/price_chart.py` & `jal-2023.4.1/jal/widgets/price_chart.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/qr_scanner.py` & `jal-2023.4.1/jal/widgets/qr_scanner.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ import logging
+ from PySide6.QtCore import Qt, Signal, QRectF, QTimer
+ from PySide6.QtGui import QImage, QPen, QBrush
+ from PySide6.QtWidgets import QWidget, QVBoxLayout, QGraphicsScene, QGraphicsView
+-from jal.widgets.helpers import dependency_present
++from jal.widgets.helpers import dependency_present, decodeQR
+ try:
+     from pyzbar import pyzbar
+ except ImportError:
+     pass  # pyzbar import will be checked separately
+ try:
+     from PySide6.QtMultimedia import QMediaDevices, QCamera, QMediaCaptureSession, QImageCapture
+     from PySide6.QtMultimediaWidgets import QGraphicsVideoItem
+@@ -132,18 +132,11 @@
+             self.processing = True
+ 
+     def onImageCaptured(self, _id: int, img: QImage):
+         self.decodeQR(img)
+         self.processing = False
+ 
+     def decodeQR(self, qr_image: QImage):
+-        # cropped = qr_image.copy(self.calculate_center_square(qr_image).toRect())
+-        # crop works but somehow bytes array size differs from the cropped image size and code breaks
+-        qr_image.convertTo(QImage.Format_Grayscale8)
+-        data = (qr_image.bits().tobytes(), qr_image.width(), qr_image.height())
+-        barcodes = pyzbar.decode(data, symbols=[pyzbar.ZBarSymbol.QRCODE])
+-        if barcodes:
+-            qr_text = barcodes[0].data.decode('utf-8')
+-        else:
+-            qr_text = ''
++        cropped = qr_image.copy(self.calculate_center_square(qr_image).toRect())
++        qr_text = decodeQR(cropped)
+         if qr_text:
+             self.decodedQR.emit(qr_text)
+```
+
+### Comparing `jal-2023.3.1/jal/widgets/reference_data.py` & `jal-2023.4.1/jal/widgets/reference_data.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/reference_dialogs.py` & `jal-2023.4.1/jal/widgets/reference_dialogs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/reference_selector.py` & `jal-2023.4.1/jal/widgets/reference_selector.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/register_designer_plugins.py` & `jal-2023.4.1/jal/widgets/register_designer_plugins.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/selection_dialog.py` & `jal-2023.4.1/jal/widgets/selection_dialog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/tax_widget.py` & `jal-2023.4.1/jal/widgets/tax_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/trade_widget.py` & `jal-2023.4.1/jal/widgets/trade_widget.py`
+
+ * *Files identical despite different names*
+
+### Comparing `jal-2023.3.1/jal/widgets/transfer_widget.py` & `jal-2023.4.1/jal/widgets/transfer_widget.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -34,14 +34,15 @@
+         self.to_date_label = QLabel(self)
+         self.to_account_label = QLabel(self)
+         self.to_amount_label = QLabel(self)
+         self.fee_account_label = QLabel(self)
+         self.fee_amount_label = QLabel(self)
+         self.comment_label = QLabel(self)
+         self.asset_label = QLabel(self)
++        self.number_label = QLabel(self)
+         self.arrow_account = QLabel(self)
+         self.copy_date_btn = QPushButton(self)
+         self.copy_amount_btn = QPushButton(self)
+ 
+         self.main_label.setText(self.name)
+         self.from_date_label.setText(self.tr("Date/Time"))
+         self.from_account_label.setText(self.tr("From"))
+@@ -49,14 +50,15 @@
+         self.to_date_label.setText(self.tr("Date/Time"))
+         self.to_account_label.setText(self.tr("To"))
+         self.to_amount_label.setText(self.tr("Amount"))
+         self.fee_account_label.setText(self.tr("Fee from"))
+         self.fee_amount_label.setText(self.tr("Fee amount"))
+         self.comment_label.setText(self.tr("Note"))
+         self.asset_label.setText(self.tr("Asset"))
++        self.number_label.setText(self.tr("#"))
+         self.arrow_account.setText(" ➜ ")
+         self.copy_date_btn.setText("➜")
+         self.copy_date_btn.setFixedWidth(self.copy_date_btn.fontMetrics().horizontalAdvance("XXXX"))
+         self.copy_amount_btn.setText("➜")
+         self.copy_amount_btn.setFixedWidth(self.copy_amount_btn.fontMetrics().horizontalAdvance("XXXX"))
+ 
+         self.withdrawal_timestamp = QDateTimeEdit(self)
+@@ -75,43 +77,46 @@
+         self.withdrawal = QLineEdit(self)
+         self.withdrawal.setAlignment(Qt.AlignRight)
+         self.deposit = QLineEdit(self)
+         self.deposit.setAlignment(Qt.AlignRight)
+         self.fee = QLineEdit(self)
+         self.fee.setAlignment(Qt.AlignRight)
+         self.asset_widget = AssetSelector(self)
++        self.number = QLineEdit(self)
+         self.comment = QLineEdit(self)
+ 
+         self.layout.addWidget(self.from_date_label, 1, 0, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.from_account_label, 2, 0, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.from_amount_label, 3, 0, 1, 1, Qt.AlignLeft)
+-        self.layout.addWidget(self.asset_label, 5, 0, 1, 1, Qt.AlignLeft)
++        self.layout.addWidget(self.number_label, 5, 0, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.comment_label, 6, 0, 1, 1, Qt.AlignLeft)
+         
+         self.layout.addWidget(self.withdrawal_timestamp, 1, 1, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.from_account_widget, 2, 1, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.withdrawal, 3, 1, 1, 1, Qt.AlignLeft)
+-        self.layout.addWidget(self.asset_widget, 5, 1, 1, 4)
++        self.layout.addWidget(self.number, 5, 1, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.comment, 6, 1, 1, 4)
+ 
+         self.layout.addWidget(self.copy_date_btn, 1, 2, 1, 1)
+         self.layout.addWidget(self.arrow_account, 2, 2, 1, 1, Qt.AlignCenter)
+         self.layout.addWidget(self.copy_amount_btn, 3, 2, 1, 1)
+ 
+         self.layout.addWidget(self.to_date_label, 1, 3, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.to_account_label, 2, 3, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.to_amount_label, 3, 3, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.fee_account_label, 4, 0, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.fee_amount_label, 4, 3, 1, 1, Qt.AlignLeft)
++        self.layout.addWidget(self.asset_label, 5, 3, 1, 1, Qt.AlignLeft)
+ 
+         self.layout.addWidget(self.deposit_timestamp, 1, 4, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.to_account_widget, 2, 4, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.deposit, 3, 4, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.fee_account_widget, 4, 1, 1, 1, Qt.AlignLeft)
+         self.layout.addWidget(self.fee, 4, 4, 1, 1, Qt.AlignLeft)
++        self.layout.addWidget(self.asset_widget, 5, 4, 1, 1)
+ 
+         self.layout.addWidget(self.commit_button, 0, 6, 1, 1)
+         self.layout.addWidget(self.revert_button, 0, 7, 1, 1)
+ 
+         self.layout.addItem(self.verticalSpacer, 7, 0, 1, 1)
+         self.layout.addItem(self.horizontalSpacer, 1, 5, 1, 1)
+ 
+@@ -131,14 +136,15 @@
+         self.mapper.addMapping(self.withdrawal, self.model.fieldIndex("withdrawal"))
+         self.mapper.addMapping(self.deposit_timestamp, self.model.fieldIndex("deposit_timestamp"))
+         self.mapper.addMapping(self.to_account_widget, self.model.fieldIndex("deposit_account"))
+         self.mapper.addMapping(self.deposit, self.model.fieldIndex("deposit"))
+         self.mapper.addMapping(self.fee_account_widget, self.model.fieldIndex("fee_account"))
+         self.mapper.addMapping(self.fee, self.model.fieldIndex("fee"))
+         self.mapper.addMapping(self.asset_widget, self.model.fieldIndex("asset"))
++        self.mapper.addMapping(self.number, self.model.fieldIndex("number"))
+         self.mapper.addMapping(self.comment, self.model.fieldIndex("note"))
+ 
+         self.model.select()
+ 
+     @Slot()
+     def saveChanges(self):
+         record = self.model.record(0)
+@@ -158,14 +164,15 @@
+         new_record.setValue("withdrawal", '0')
+         new_record.setValue("deposit_timestamp", int(datetime.now().replace(tzinfo=tz.tzutc()).timestamp()))
+         new_record.setValue("deposit_account", 0)
+         new_record.setValue("deposit", '0')
+         new_record.setValue("fee_account", 0)
+         new_record.setValue("fee", '0')
+         new_record.setValue("asset", None)
++        new_record.setValue("number", None)
+         new_record.setValue("note", None)
+         return new_record
+ 
+     def copyToNew(self, row):
+         new_record = self.model.record(row)
+         new_record.setNull("id")
+         new_record.setValue("withdrawal_timestamp", int(datetime.now().replace(tzinfo=tz.tzutc()).timestamp()))
+```
+
+### Comparing `jal-2023.3.1/jal.egg-info/PKG-INFO` & `jal-2023.4.1/jal.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: jal
+-Version: 2023.3.1
++Version: 2023.4.1
+ Summary: Just Another Ledger - project to track personal financial records
+ Home-page: https://github.com/titov-vv/jal
+ Author-email: jal@gmx.ru
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Topic :: Office/Business
+ Classifier: Topic :: Office/Business :: Financial
+ Classifier: Topic :: Office/Business :: Financial :: Accounting
+```
+
+### Comparing `jal-2023.3.1/jal.egg-info/SOURCES.txt` & `jal-2023.4.1/jal.egg-info/SOURCES.txt`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -163,14 +163,15 @@
+ jal/updates/jal_delta_37.sql
+ jal/updates/jal_delta_38.sql
+ jal/updates/jal_delta_39.sql
+ jal/updates/jal_delta_40.sql
+ jal/updates/jal_delta_41.sql
+ jal/updates/jal_delta_42.sql
+ jal/updates/jal_delta_43.sql
++jal/updates/jal_delta_44.sql
+ jal/widgets/__init__.py
+ jal/widgets/abstract_operation_details.py
+ jal/widgets/account_select.py
+ jal/widgets/asset_dialog.py
+ jal/widgets/corporate_action_widget.py
+ jal/widgets/delegates.py
+ jal/widgets/dividend_widget.py
+```
+
+### Comparing `jal-2023.3.1/setup.py` & `jal-2023.4.1/setup.py`
+
+ * *Files identical despite different names*
+

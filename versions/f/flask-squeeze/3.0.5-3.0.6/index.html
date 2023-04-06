@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/flask_squeeze-3.0.5.tar.gz tmp/flask_squeeze-3.0.6.tar.gz --html versions/f/flask-squeeze/3.0.5-3.0.6/index.html --text versions/f/flask-squeeze/3.0.5-3.0.6/diff.txt --markdown versions/f/flask-squeeze/3.0.5-3.0.6/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.95 KB</span></div>
+  <div><span class="source">tmp/flask_squeeze-3.0.5.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/flask_squeeze-3.0.6.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">194 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;flask_squeeze-3.0.<del>5</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;flask_squeeze-3.0.<ins>6</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">5.71 KB</span></div>
+    <div><span class="source">flask_squeeze-3.0.5.tar</span> vs.</div>
+    <div id="flask_squeeze--.-.-.tar"><span class="source">flask_squeeze-3.0.6.tar</span>
+      <a class="anchor" href="#flask_squeeze--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.17 KB</span></div>
+      <div id="flask_squeeze--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-04-04<span class="dp">·</span>10:23:19.321417<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-04-04<span class="dp">·</span>10:23:19.321417<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3535<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:07:52.138505<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3535<span class="dp">·</span>2023-04-06<span class="dp">·</span>14:07:52.138505<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:50:40.490046<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:50:40.490046<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1554<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:27.961772<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/debug.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1554<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:27.961772<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/debug.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<del>412</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<del>38</del>:0<del>6</del>.<del>0</del>35<del>8</del><del>2</del>5<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/flask_squeeze.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<ins>554</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<ins>50</ins>:0<ins>0</ins>.<ins>1</ins><ins>8</ins>35<ins>0</ins>5<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/flask_squeeze.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1760<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:27.956281<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/log.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1760<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:57:27.956281<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/log.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1482<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:48:01.274755<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/minifiers.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1482<span class="dp">·</span>2023-04-04<span class="dp">·</span>12:48:01.274755<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/minifiers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1736<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:03:45.531113<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/flask_squeeze/models.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1736<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:03:45.531113<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/flask_squeeze/models.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1347<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<del>38</del>:<del>25</del>.<del>677623</del><span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/pyproject.toml</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1347<span class="dp">·</span>2023-04-06<span class="dp">·</span>16:<ins>51</ins>:<ins>12</ins>.<ins>053170</ins><span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4571<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>flask_squeeze-3.0.<del>5</del>/PKG-INFO</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4571<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>flask_squeeze-3.0.<ins>6</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/LICENSE</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--LICENSE"><span class="source">flask_squeeze-3.0.6/LICENSE</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/README.md</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--README.md"><span class="source">flask_squeeze-3.0.6/README.md</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/flask_squeeze/debug.py</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-debug.py"><span class="source">flask_squeeze-3.0.6/flask_squeeze/debug.py</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-debug.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.94 KB</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/flask_squeeze/flask_squeeze.py</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-flask_squeeze.py"><span class="source">flask_squeeze-3.0.6/flask_squeeze/flask_squeeze.py</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-flask_squeeze.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>gzip</td><td class="diffline">1 </td><td class="diffpresent">import<span class="dp">·</span>gzip</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>random</td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>random</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>secrets</td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>secrets</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>time</td><td class="diffline">4 </td><td class="diffpresent">import<span class="dp">·</span>time</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">import<span class="dp">·</span>zlib</td><td class="diffline">5 </td><td class="diffpresent">import<span class="dp">·</span>zlib</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Dict,<span class="dp">·</span>Union</td><td class="diffline">6 </td><td class="diffpresent">from<span class="dp">·</span>typing<span class="dp">·</span>import<span class="dp">·</span>Dict,<span class="dp">·</span>Union<ins>,<span class="dp">·</span>Tuple</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>brotli</td><td class="diffline">7 </td><td class="diffpresent">import<span class="dp">·</span>brotli</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>flask<span class="dp">·</span>import<span class="dp">·</span>Flask,<span class="dp">·</span>Response,<span class="dp">·</span>request</td><td class="diffline">8 </td><td class="diffpresent">from<span class="dp">·</span>flask<span class="dp">·</span>import<span class="dp">·</span>Flask,<span class="dp">·</span>Response,<span class="dp">·</span>request</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.debug<span class="dp">·</span>import<span class="dp">·</span>add_debug_header,<span class="dp">·</span>ctx_add_debug_header</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>.debug<span class="dp">·</span>import<span class="dp">·</span>add_debug_header,<span class="dp">·</span>ctx_add_debug_header</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>.log<span class="dp">·</span>import<span class="dp">·</span>d_log,<span class="dp">·</span>log</td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>.log<span class="dp">·</span>import<span class="dp">·</span>d_log,<span class="dp">·</span>log</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>.minifiers<span class="dp">·</span>import<span class="dp">·</span>minify_css,<span class="dp">·</span>minify_html,<span class="dp">·</span>minify_js</td><td class="diffline">11 </td><td class="diffpresent">from<span class="dp">·</span>.minifiers<span class="dp">·</span>import<span class="dp">·</span>minify_css,<span class="dp">·</span>minify_html,<span class="dp">·</span>minify_js</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 18, 15 lines modified</td><td colspan="2">Offset 18, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">»</span>       choose_minification_from_mimetype_and_config,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">»</span>       choose_minification_from_mimetype_and_config,</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">)</td><td class="diffline">19 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">class<span class="dp">·</span>Squeeze:</td><td class="diffline">20 </td><td class="diffpresent">class<span class="dp">·</span>Squeeze:</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       __slots__<span class="dp">·</span>=<span class="dp">·</span>&quot;cache&quot;,<span class="dp">·</span>&quot;app&quot;,<span class="dp">·</span>&quot;encode_choice&quot;,<span class="dp">·</span>&quot;minify_choice&quot;,<span class="dp">·</span>&quot;resource_type&quot;</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       __slots__<span class="dp">·</span>=<span class="dp">·</span>&quot;cache&quot;,<span class="dp">·</span>&quot;app&quot;,<span class="dp">·</span>&quot;encode_choice&quot;,<span class="dp">·</span>&quot;minify_choice&quot;,<span class="dp">·</span>&quot;resource_type&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">»</span>       cache:<span class="dp">·</span>Dict[str,<span class="dp">·</span>bytes]</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">»</span>       cache:<span class="dp">·</span>Dict[<ins>Tuple[str,<span class="dp">·</span></ins>str<ins>]</ins>,<span class="dp">·</span>bytes]</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       app:<span class="dp">·</span>Flask</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       app:<span class="dp">·</span>Flask</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       encode_choice:<span class="dp">·</span>Union[Encoding,<span class="dp">·</span>None]</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       encode_choice:<span class="dp">·</span>Union[Encoding,<span class="dp">·</span>None]</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">»</span>       minify_choice:<span class="dp">·</span>Union[Minifcation,<span class="dp">·</span>None]</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">»</span>       minify_choice:<span class="dp">·</span>Union[Minifcation,<span class="dp">·</span>None]</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">»</span>       resource_type:<span class="dp">·</span>Union[str,<span class="dp">·</span>None]</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">»</span>       resource_type:<span class="dp">·</span>Union[str,<span class="dp">·</span>None]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__init__(self,<span class="dp">·</span>app:<span class="dp">·</span>Flask<span class="dp">·</span>=<span class="dp">·</span>None)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>__init__(self,<span class="dp">·</span>app:<span class="dp">·</span>Flask<span class="dp">·</span>=<span class="dp">·</span>None)<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 175, 15 lines modified</td><td colspan="2">Offset 175, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">175 </td><td class="diffpresent"><span class="dp">»</span>       )<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td><td class="diffline">175 </td><td class="diffpresent"><span class="dp">»</span>       )<span class="dp">·</span>-&gt;<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">176 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">176 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">177 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       Compress<span class="dp">·</span>a<span class="dp">·</span>static<span class="dp">·</span>resource.</td><td class="diffline">177 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       Compress<span class="dp">·</span>a<span class="dp">·</span>static<span class="dp">·</span>resource.</td></tr>
+<tr class="diffunmodified"><td class="diffline">178 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">178 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">179 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       #<span class="dp">·</span>Serve<span class="dp">·</span>from<span class="dp">·</span>cache<span class="dp">·</span>if<span class="dp">·</span>possible</td><td class="diffline">179 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       #<span class="dp">·</span>Serve<span class="dp">·</span>from<span class="dp">·</span>cache<span class="dp">·</span>if<span class="dp">·</span>possible</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">180 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       encode_choice_str<span class="dp">·</span>=<span class="dp">·</span>self.encode_choice.value<span class="dp">·</span>if<span class="dp">·</span>self.encode_choice<span class="dp">·</span>else<span class="dp">·</span>&quot;none&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">180 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       from_cache<span class="dp">·</span>=<span class="dp">·</span>self.cache.get(request.path,<span class="dp">·</span>None)</td><td class="diffline">181 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       from_cache<span class="dp">·</span>=<span class="dp">·</span>self.cache.get(<ins>(</ins>request.pat<ins>h,<span class="dp">·</span>encode_c</ins>h<ins>oice_str)</ins>,<span class="dp">·</span>None)</td></tr>
+<tr class="diffunmodified"><td class="diffline">181 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>from_cache<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">182 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>from_cache<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">182 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       log(2,<span class="dp">·</span>&quot;Found<span class="dp">·</span>in<span class="dp">·</span>cache.<span class="dp">·</span>RETURN&quot;)</td><td class="diffline">183 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       log(2,<span class="dp">·</span>&quot;Found<span class="dp">·</span>in<span class="dp">·</span>cache.<span class="dp">·</span>RETURN&quot;)</td></tr>
+<tr class="diffunmodified"><td class="diffline">183 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.direct_passthrough<span class="dp">·</span>=<span class="dp">·</span>False</td><td class="diffline">184 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.direct_passthrough<span class="dp">·</span>=<span class="dp">·</span>False</td></tr>
+<tr class="diffunmodified"><td class="diffline">184 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.set_data(from_cache)</td><td class="diffline">185 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.set_data(from_cache)</td></tr>
+<tr class="diffunmodified"><td class="diffline">185 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.headers[&quot;X-Flask-Squeeze-Cache&quot;]<span class="dp">·</span>=<span class="dp">·</span>&quot;HIT&quot;</td><td class="diffline">186 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       response.headers[&quot;X-Flask-Squeeze-Cache&quot;]<span class="dp">·</span>=<span class="dp">·</span>&quot;HIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">186 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return</td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 192, 15 lines modified</td><td colspan="2">Offset 193, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">192 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>self.minify_choice<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">193 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>self.minify_choice<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">193 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.execute_minify(response)</td><td class="diffline">194 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.execute_minify(response)</td></tr>
+<tr class="diffunmodified"><td class="diffline">194 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>self.encode_choice<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td><td class="diffline">195 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>self.encode_choice<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">195 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.execute_compress(response)</td><td class="diffline">196 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self.execute_compress(response)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">196 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       #<span class="dp">·</span>Assert:<span class="dp">·</span>At<span class="dp">·</span>least<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>minify<span class="dp">·</span>or<span class="dp">·</span>compress<span class="dp">·</span>was<span class="dp">·</span>run</td><td class="diffline">197 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       #<span class="dp">·</span>Assert:<span class="dp">·</span>At<span class="dp">·</span>least<span class="dp">·</span>one<span class="dp">·</span>of<span class="dp">·</span>minify<span class="dp">·</span>or<span class="dp">·</span>compress<span class="dp">·</span>was<span class="dp">·</span>run</td></tr>
+<tr class="diffunmodified"><td class="diffline">197 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       response.headers[&quot;X-Flask-Squeeze-Cache&quot;]<span class="dp">·</span>=<span class="dp">·</span>&quot;MISS&quot;</td><td class="diffline">198 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       response.headers[&quot;X-Flask-Squeeze-Cache&quot;]<span class="dp">·</span>=<span class="dp">·</span>&quot;MISS&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">198 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.cache[request.path]<span class="dp">·</span>=<span class="dp">·</span>response.get_data(as_text=False)</td><td class="diffline">199 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self.cache[<ins>(</ins>request.pat<ins>h,<span class="dp">·</span>encode_c</ins>h<ins>oice_str)</ins>]<span class="dp">·</span>=<span class="dp">·</span>response.get_data(as_text=False)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">199 </td><td class="diffpresent"><span class="dp">»</span>       @d_log(level=1,<span class="dp">·</span>with_args=[1,<span class="dp">·</span>2])</td><td class="diffline">200 </td><td class="diffpresent"><span class="dp">»</span>       @d_log(level=1,<span class="dp">·</span>with_args=[1,<span class="dp">·</span>2])</td></tr>
+<tr class="diffunmodified"><td class="diffline">200 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>recompute_headers(</td><td class="diffline">201 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>recompute_headers(</td></tr>
+<tr class="diffunmodified"><td class="diffline">201 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self,</td><td class="diffline">202 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       self,</td></tr>
+<tr class="diffunmodified"><td class="diffline">202 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       response:<span class="dp">·</span>Response,</td><td class="diffline">203 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       response:<span class="dp">·</span>Response,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/flask_squeeze/log.py</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-log.py"><span class="source">flask_squeeze-3.0.6/flask_squeeze/log.py</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-log.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/flask_squeeze/minifiers.py</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-minifiers.py"><span class="source">flask_squeeze-3.0.6/flask_squeeze/minifiers.py</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-minifiers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/flask_squeeze/models.py</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-models.py"><span class="source">flask_squeeze-3.0.6/flask_squeeze/models.py</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--flask_squeeze-models.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">462 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/pyproject.toml</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--pyproject.toml"><span class="source">flask_squeeze-3.0.6/pyproject.toml</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;flask-squeeze&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;flask-squeeze&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;3.0.<del>5</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;3.0.<ins>6</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/mkrd/Flask-Squeeze&quot;</td><td class="diffline">4 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/mkrd/Flask-Squeeze&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Compress<span class="dp">·</span>and<span class="dp">·</span>minify<span class="dp">·</span>Flask<span class="dp">·</span>responses!&quot;</td><td class="diffline">5 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Compress<span class="dp">·</span>and<span class="dp">·</span>minify<span class="dp">·</span>Flask<span class="dp">·</span>responses!&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Marcel<span class="dp">·</span>Kröker<span class="dp">·</span>&lt;kroeker.marcel@gmail.com&gt;&quot;]</td><td class="diffline">7 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Marcel<span class="dp">·</span>Kröker<span class="dp">·</span>&lt;kroeker.marcel@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td><td class="diffline">8 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MIT&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">classifiers=[</td><td class="diffline">9 </td><td class="diffpresent">classifiers=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       &quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">»</span>       &quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">438 B</span></div>
+      <div><span class="source">flask_squeeze-3.0.5/PKG-INFO</span> vs.</div>
+      <div id="flask_squeeze--.-.-.tar---flask_squeeze--.-.--PKG-INFO"><span class="source">flask_squeeze-3.0.6/PKG-INFO</span>
+        <a class="anchor" href="#flask_squeeze--.-.-.tar---flask_squeeze--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>flask-squeeze</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>flask-squeeze</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.0.<del>5</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.0.<ins>6</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Compress<span class="dp">·</span>and<span class="dp">·</span>minify<span class="dp">·</span>Flask<span class="dp">·</span>responses!</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Compress<span class="dp">·</span>and<span class="dp">·</span>minify<span class="dp">·</span>Flask<span class="dp">·</span>responses!</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mkrd/Flask-Squeeze</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mkrd/Flask-Squeeze</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Marcel<span class="dp">·</span>Kröker</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Marcel<span class="dp">·</span>Kröker</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kroeker.marcel@gmail.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kroeker.marcel@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
