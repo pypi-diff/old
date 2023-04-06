@@ -1,0 +1,510 @@
+# Comparing `tmp/zero_3rdparty-0.0.6-py3-none-any.whl.zip` & `tmp/zero_3rdparty-0.0.7-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,30 +1,30 @@
+-Zip file size: 34667 bytes, number of entries: 28
+--rw-r--r--  2.0 unx       46 b- defN 23-Apr-06 19:59 zero_lib/__init__.py
+--rw-r--r--  2.0 unx     2200 b- defN 23-Apr-06 19:59 zero_lib/cache_ttl.py
+--rw-r--r--  2.0 unx     1029 b- defN 23-Apr-06 19:59 zero_lib/dataclass_utils.py
+--rw-r--r--  2.0 unx     6243 b- defN 23-Apr-06 19:59 zero_lib/datetime_utils.py
+--rw-r--r--  2.0 unx      783 b- defN 23-Apr-06 19:59 zero_lib/decorator_globals.py
+--rw-r--r--  2.0 unx     4287 b- defN 23-Apr-06 19:59 zero_lib/dependency.py
+--rw-r--r--  2.0 unx     7212 b- defN 23-Apr-06 19:59 zero_lib/dict_nested.py
+--rw-r--r--  2.0 unx     5979 b- defN 23-Apr-06 19:59 zero_lib/dict_utils.py
+--rw-r--r--  2.0 unx      366 b- defN 23-Apr-06 19:59 zero_lib/enum_utils.py
+--rw-r--r--  2.0 unx     1756 b- defN 23-Apr-06 19:59 zero_lib/env_reader.py
+--rw-r--r--  2.0 unx     1365 b- defN 23-Apr-06 19:59 zero_lib/env_temp.py
+--rw-r--r--  2.0 unx     5792 b- defN 23-Apr-06 19:59 zero_lib/error.py
+--rw-r--r--  2.0 unx     6131 b- defN 23-Apr-06 19:59 zero_lib/file_utils.py
+--rw-r--r--  2.0 unx     4689 b- defN 23-Apr-06 19:59 zero_lib/id_creator.py
+--rw-r--r--  2.0 unx     9228 b- defN 23-Apr-06 19:59 zero_lib/iter_utils.py
+--rw-r--r--  2.0 unx     6810 b- defN 23-Apr-06 19:59 zero_lib/logging_api2.py
+--rw-r--r--  2.0 unx     3011 b- defN 23-Apr-06 19:59 zero_lib/logging_utils.py
+--rw-r--r--  2.0 unx      461 b- defN 23-Apr-06 19:59 zero_lib/md_utils.py
+--rw-r--r--  2.0 unx     7009 b- defN 23-Apr-06 19:59 zero_lib/object_name.py
+--rw-r--r--  2.0 unx     1257 b- defN 23-Apr-06 19:59 zero_lib/run_env.py
+--rw-r--r--  2.0 unx     5863 b- defN 23-Apr-06 19:59 zero_lib/signal_utils.py
+--rw-r--r--  2.0 unx     9697 b- defN 23-Apr-06 19:59 zero_lib/str_utils.py
+--rw-r--r--  2.0 unx     1699 b- defN 23-Apr-06 19:59 zero_lib/type_dict.py
+--rw-r--r--  2.0 unx      211 b- defN 23-Apr-06 19:59 zero_3rdparty-0.0.6.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 19:59 zero_3rdparty-0.0.6.dist-info/WHEEL
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 19:59 zero_3rdparty-0.0.6.dist-info/namespace_packages.txt
+--rw-r--r--  2.0 unx        9 b- defN 23-Apr-06 19:59 zero_3rdparty-0.0.6.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     2246 b- defN 23-Apr-06 19:59 zero_3rdparty-0.0.6.dist-info/RECORD
+-28 files, 95472 bytes uncompressed, 31081 bytes compressed:  67.4%
++Zip file size: 34965 bytes, number of entries: 28
++-rw-r--r--  2.0 unx       46 b- defN 23-Apr-06 20:05 zero_3rdparty/__init__.py
++-rw-r--r--  2.0 unx     2200 b- defN 23-Apr-06 20:05 zero_3rdparty/cache_ttl.py
++-rw-r--r--  2.0 unx     1029 b- defN 23-Apr-06 20:05 zero_3rdparty/dataclass_utils.py
++-rw-r--r--  2.0 unx     6243 b- defN 23-Apr-06 20:05 zero_3rdparty/datetime_utils.py
++-rw-r--r--  2.0 unx      788 b- defN 23-Apr-06 20:05 zero_3rdparty/decorator_globals.py
++-rw-r--r--  2.0 unx     4302 b- defN 23-Apr-06 20:05 zero_3rdparty/dependency.py
++-rw-r--r--  2.0 unx     7212 b- defN 23-Apr-06 20:05 zero_3rdparty/dict_nested.py
++-rw-r--r--  2.0 unx     5989 b- defN 23-Apr-06 20:05 zero_3rdparty/dict_utils.py
++-rw-r--r--  2.0 unx      366 b- defN 23-Apr-06 20:05 zero_3rdparty/enum_utils.py
++-rw-r--r--  2.0 unx     1766 b- defN 23-Apr-06 20:05 zero_3rdparty/env_reader.py
++-rw-r--r--  2.0 unx     1365 b- defN 23-Apr-06 20:05 zero_3rdparty/env_temp.py
++-rw-r--r--  2.0 unx     5797 b- defN 23-Apr-06 20:05 zero_3rdparty/error.py
++-rw-r--r--  2.0 unx     6136 b- defN 23-Apr-06 20:05 zero_3rdparty/file_utils.py
++-rw-r--r--  2.0 unx     4689 b- defN 23-Apr-06 20:05 zero_3rdparty/id_creator.py
++-rw-r--r--  2.0 unx     9228 b- defN 23-Apr-06 20:05 zero_3rdparty/iter_utils.py
++-rw-r--r--  2.0 unx     6820 b- defN 23-Apr-06 20:05 zero_3rdparty/logging_api2.py
++-rw-r--r--  2.0 unx     3021 b- defN 23-Apr-06 20:05 zero_3rdparty/logging_utils.py
++-rw-r--r--  2.0 unx      466 b- defN 23-Apr-06 20:05 zero_3rdparty/md_utils.py
++-rw-r--r--  2.0 unx     7014 b- defN 23-Apr-06 20:05 zero_3rdparty/object_name.py
++-rw-r--r--  2.0 unx     1257 b- defN 23-Apr-06 20:05 zero_3rdparty/run_env.py
++-rw-r--r--  2.0 unx     5873 b- defN 23-Apr-06 20:05 zero_3rdparty/signal_utils.py
++-rw-r--r--  2.0 unx     9702 b- defN 23-Apr-06 20:05 zero_3rdparty/str_utils.py
++-rw-r--r--  2.0 unx     1704 b- defN 23-Apr-06 20:05 zero_3rdparty/type_dict.py
++-rw-r--r--  2.0 unx      211 b- defN 23-Apr-06 20:05 zero_3rdparty-0.0.7.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 20:05 zero_3rdparty-0.0.7.dist-info/WHEEL
++-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 20:05 zero_3rdparty-0.0.7.dist-info/namespace_packages.txt
++-rw-r--r--  2.0 unx       14 b- defN 23-Apr-06 20:05 zero_3rdparty-0.0.7.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     2362 b- defN 23-Apr-06 20:05 zero_3rdparty-0.0.7.dist-info/RECORD
++28 files, 95693 bytes uncompressed, 31149 bytes compressed:  67.4%
+```
+
+## zipnote {}
+
+```diff
+@@ -1,85 +1,85 @@
+-Filename: zero_lib/__init__.py
++Filename: zero_3rdparty/__init__.py
+ Comment: 
+ 
+-Filename: zero_lib/cache_ttl.py
++Filename: zero_3rdparty/cache_ttl.py
+ Comment: 
+ 
+-Filename: zero_lib/dataclass_utils.py
++Filename: zero_3rdparty/dataclass_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/datetime_utils.py
++Filename: zero_3rdparty/datetime_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/decorator_globals.py
++Filename: zero_3rdparty/decorator_globals.py
+ Comment: 
+ 
+-Filename: zero_lib/dependency.py
++Filename: zero_3rdparty/dependency.py
+ Comment: 
+ 
+-Filename: zero_lib/dict_nested.py
++Filename: zero_3rdparty/dict_nested.py
+ Comment: 
+ 
+-Filename: zero_lib/dict_utils.py
++Filename: zero_3rdparty/dict_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/enum_utils.py
++Filename: zero_3rdparty/enum_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/env_reader.py
++Filename: zero_3rdparty/env_reader.py
+ Comment: 
+ 
+-Filename: zero_lib/env_temp.py
++Filename: zero_3rdparty/env_temp.py
+ Comment: 
+ 
+-Filename: zero_lib/error.py
++Filename: zero_3rdparty/error.py
+ Comment: 
+ 
+-Filename: zero_lib/file_utils.py
++Filename: zero_3rdparty/file_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/id_creator.py
++Filename: zero_3rdparty/id_creator.py
+ Comment: 
+ 
+-Filename: zero_lib/iter_utils.py
++Filename: zero_3rdparty/iter_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/logging_api2.py
++Filename: zero_3rdparty/logging_api2.py
+ Comment: 
+ 
+-Filename: zero_lib/logging_utils.py
++Filename: zero_3rdparty/logging_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/md_utils.py
++Filename: zero_3rdparty/md_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/object_name.py
++Filename: zero_3rdparty/object_name.py
+ Comment: 
+ 
+-Filename: zero_lib/run_env.py
++Filename: zero_3rdparty/run_env.py
+ Comment: 
+ 
+-Filename: zero_lib/signal_utils.py
++Filename: zero_3rdparty/signal_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/str_utils.py
++Filename: zero_3rdparty/str_utils.py
+ Comment: 
+ 
+-Filename: zero_lib/type_dict.py
++Filename: zero_3rdparty/type_dict.py
+ Comment: 
+ 
+-Filename: zero_3rdparty-0.0.6.dist-info/METADATA
++Filename: zero_3rdparty-0.0.7.dist-info/METADATA
+ Comment: 
+ 
+-Filename: zero_3rdparty-0.0.6.dist-info/WHEEL
++Filename: zero_3rdparty-0.0.7.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: zero_3rdparty-0.0.6.dist-info/namespace_packages.txt
++Filename: zero_3rdparty-0.0.7.dist-info/namespace_packages.txt
+ Comment: 
+ 
+-Filename: zero_3rdparty-0.0.6.dist-info/top_level.txt
++Filename: zero_3rdparty-0.0.7.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: zero_3rdparty-0.0.6.dist-info/RECORD
++Filename: zero_3rdparty-0.0.7.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## Comparing `zero_lib/cache_ttl.py` & `zero_3rdparty/cache_ttl.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/dataclass_utils.py` & `zero_3rdparty/dataclass_utils.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/datetime_utils.py` & `zero_3rdparty/datetime_utils.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/decorator_globals.py` & `zero_3rdparty/decorator_globals.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ """Context: store a global dictionary for decorators and use it for checking
+ if a function is decorated or not.
+ Can be used to skip decorating by using mark_as_decorator
+ And in the decorator itself use the is_decorator? return func else decorate(func)
+ """
+ from typing import TypeVar
+ 
+-from zero_lib.object_name import as_name
++from zero_3rdparty.object_name import as_name
+ 
+ T = TypeVar("T")
+ 
+ 
+ def mark_as_decorated(decorator, func):
+     decorator_name = as_name(decorator)
+     func_name = as_name(func)
+```
+
+## Comparing `zero_lib/dependency.py` & `zero_3rdparty/dependency.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -2,17 +2,17 @@
+ choosing to simplify by providing a smaller set of methods."""
+ import logging
+ from collections import defaultdict
+ from contextlib import suppress
+ from dataclasses import dataclass
+ from typing import Any, Callable, Generic, Type, TypeVar, overload
+ 
+-from zero_lib.error import BaseError
+-from zero_lib.iter_utils import first_or_none, public_dict
+-from zero_lib.object_name import as_name
++from zero_3rdparty.error import BaseError
++from zero_3rdparty.iter_utils import first_or_none, public_dict
++from zero_3rdparty.object_name import as_name
+ 
+ logger = logging.getLogger(__name__)
+ T = TypeVar("T")
+ 
+ 
+ @dataclass
+ class Provider(Generic[T]):
+```
+
+## Comparing `zero_lib/dict_nested.py` & `zero_3rdparty/dict_nested.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/dict_utils.py` & `zero_3rdparty/dict_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from __future__ import annotations
+ 
+ import logging
+ from typing import Any, Dict, List, Mapping, Optional, Type, TypeVar
+ 
+-from zero_lib.error import BaseError
+-from zero_lib.id_creator import simple_id
++from zero_3rdparty.error import BaseError
++from zero_3rdparty.id_creator import simple_id
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ def update_no_overwrite(source: Dict[str, object], updates: Dict[str, object]) -> None:
+     """
+     Warning:
+```
+
+## Comparing `zero_lib/env_reader.py` & `zero_3rdparty/env_reader.py`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from __future__ import annotations
+ 
+ from os import getenv
+ from typing import Iterable, TypeVar
+ 
+-from zero_lib.run_env import in_test_env
+-from zero_lib.str_utils import want_bool
++from zero_3rdparty.run_env import in_test_env
++from zero_3rdparty.str_utils import want_bool
+ 
+ ENV_LOG_MAX_MSG_LENGTH = "log_max_msg_length"
+ ENV_THREAD_POOL_MAX_WORKERS = "thread_pool_max_workers"
+ ENV_PROCESS_SHUTDOWN_TIMEOUT = "process_shutdown_timeout"
+ ENV_POOL_STATE_CHECK_INTERVAL = "pool_state_check_interval"
+ ENV_LOG_FORMAT_CONSOLE = "log_format_console"
+```
+
+## Comparing `zero_lib/env_temp.py` & `zero_3rdparty/env_temp.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/error.py` & `zero_3rdparty/error.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -45,15 +45,15 @@
+ import traceback
+ from asyncio import TimeoutError as AsyncTimeoutError
+ from concurrent.futures import TimeoutError as ConcTimeoutError
+ from functools import partial, singledispatch
+ from types import TracebackType
+ from typing import TYPE_CHECKING, Type, TypeAlias
+ 
+-from zero_lib.enum_utils import StrEnum
++from zero_3rdparty.enum_utils import StrEnum
+ 
+ logger = logging.getLogger(__name__)
+ ExcInfo: TypeAlias = tuple[Type[BaseException], BaseException, TracebackType]
+ 
+ 
+ class KwargsError(Exception):
+     """Used when you want you do not want to define an init for the error."""
+```
+
+## Comparing `zero_lib/file_utils.py` & `zero_3rdparty/file_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ import os
+ import shutil
+ from io import StringIO
+ from logging import Logger
+ from pathlib import Path
+ from typing import Callable, Iterable, List, Union
+ 
+-from zero_lib.run_env import running_in_container_environment
++from zero_3rdparty.run_env import running_in_container_environment
+ 
+ logger = logging.getLogger(__name__)
+ PathLike = Union[str, Path]
+ 
+ 
+ def replace_between_lines(
+     file_path: PathLike = "Dockerfile",
+```
+
+## Comparing `zero_lib/id_creator.py` & `zero_3rdparty/id_creator.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/iter_utils.py` & `zero_3rdparty/iter_utils.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/logging_api2.py` & `zero_3rdparty/logging_api2.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ import logging
+ import reprlib
+ from dataclasses import dataclass
+ from functools import wraps
+ from threading import Lock
+ from typing import Any, Callable, ContextManager, Optional, Protocol, TypeVar
+ 
+-from zero_lib.decorator_globals import is_decorated
+-from zero_lib.object_name import as_name, func_arg_names, func_arg_types
++from zero_3rdparty.decorator_globals import is_decorated
++from zero_3rdparty.object_name import as_name, func_arg_names, func_arg_types
+ 
+ global_logger = logging.getLogger(__name__)
+ 
+ 
+ class LogExtra(Protocol):
+     def __call__(self, logger: logging.Logger | None = None, **kwargs) -> Any:
+         ...
+```
+
+## Comparing `zero_lib/logging_utils.py` & `zero_3rdparty/logging_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from __future__ import annotations
+ 
+ import logging
+ from logging import config
+ 
+-from zero_lib.env_reader import log_format_console, log_max_msg_length
+-from zero_lib.run_env import running_in_container_environment
++from zero_3rdparty.env_reader import log_format_console, log_max_msg_length
++from zero_3rdparty.run_env import running_in_container_environment
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ class ReplaceLineBreaks(logging.Filter):
+     def filter(self, record):
+         if (msg := getattr(record, "msg", None)) and isinstance(msg, str):
+```
+
+## Comparing `zero_lib/object_name.py` & `zero_3rdparty/object_name.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ from collections.abc import Awaitable as ColAwaitable
+ from functools import lru_cache, partial
+ from inspect import Parameter, currentframe, isclass, signature
+ from pathlib import Path
+ from types import FrameType
+ from typing import Callable, Iterable, Type, TypeVar, Union, cast, get_type_hints
+ 
+-from zero_lib.iter_utils import first
++from zero_3rdparty.iter_utils import first
+ 
+ logger = logging.getLogger(__name__)
+ 
+ 
+ def _name(obj: Union[Type[object], object]) -> str:
+     """Get object qualified name."""
+     if not hasattr(obj, "__name__") and hasattr(obj, "__class__"):
+```
+
+## Comparing `zero_lib/run_env.py` & `zero_3rdparty/run_env.py`
+
+ * *Files identical despite different names*
+
+## Comparing `zero_lib/signal_utils.py` & `zero_3rdparty/signal_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,16 +3,16 @@
+ import os
+ import signal
+ import sys
+ from concurrent.futures.thread import ThreadPoolExecutor
+ from threading import Lock
+ from typing import Callable, Optional
+ 
+-from zero_lib.env_reader import process_shutdown_timeout
+-from zero_lib.object_name import as_name
++from zero_3rdparty.env_reader import process_shutdown_timeout
++from zero_3rdparty.object_name import as_name
+ 
+ logger = logging.getLogger(__name__)
+ #: Normal callbacks for cleaning up on system exit
+ _callbacks = []
+ #: Late callbacks for stopping thread pools or other late finishers
+ _late_callbacks = []
+ #: Main thread callbacks
+```
+
+## Comparing `zero_lib/str_utils.py` & `zero_3rdparty/str_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import os
+ import re
+ import reprlib
+ import sys
+ from functools import singledispatch
+ from typing import Any, AnyStr, Callable, Iterable, List, Pattern, Set, TextIO
+ 
+-from zero_lib.iter_utils import key_values, select_attrs
++from zero_3rdparty.iter_utils import key_values, select_attrs
+ 
+ 
+ def words_to_list(s: str, split_char: str = " ") -> List[str]:
+     return list(s.split(split_char))
+ 
+ 
+ def words_to_set(s: str, split_char: str = " ") -> Set[str]:
+```
+
+## Comparing `zero_lib/type_dict.py` & `zero_3rdparty/type_dict.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ from inspect import isclass
+ from typing import Dict, Iterable, Optional, Type, TypeVar
+ 
+-from zero_lib.iter_utils import first_or_none
++from zero_3rdparty.iter_utils import first_or_none
+ 
+ V = TypeVar("V")
+ 
+ 
+ class TypeDict(Dict[Type, Iterable[V]]):
+     """Stores a list of Iterable[Tuple[V, bool]] But when the value is get, the
+     iterator of the __getitem__ is returned."""
+```
+

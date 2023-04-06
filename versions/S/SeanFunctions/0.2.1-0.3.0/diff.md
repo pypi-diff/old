@@ -1,0 +1,217 @@
+# Comparing `tmp/SeanFunctions-0.2.1.tar.gz` & `tmp/SeanFunctions-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "SeanFunctions-0.2.1.tar", last modified: Fri Dec 23 22:25:47 2022, max compression
++gzip compressed data, was "SeanFunctions-0.3.0.tar", last modified: Thu Apr  6 19:50:57 2023, max compression
+```
+
+## Comparing `SeanFunctions-0.2.1.tar` & `SeanFunctions-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,24 @@
+-drwxrwxrwx   0        0        0        0 2022-12-23 22:25:47.042012 SeanFunctions-0.2.1/
+--rw-rw-rw-   0        0        0      274 2022-12-23 21:21:19.000000 SeanFunctions-0.2.1/.gitignore
+--rw-rw-rw-   0        0        0     1087 2022-12-10 20:47:50.000000 SeanFunctions-0.2.1/LICENSE
+--rw-rw-rw-   0        0        0       36 2022-12-23 17:02:46.000000 SeanFunctions-0.2.1/MANIFEST.in
+--rw-rw-rw-   0        0        0      686 2022-12-23 22:25:47.041516 SeanFunctions-0.2.1/PKG-INFO
+--rw-rw-rw-   0        0        0      144 2022-12-10 20:41:39.000000 SeanFunctions-0.2.1/README.md
+--rw-rw-rw-   0        0        0     1093 2022-12-23 22:24:52.000000 SeanFunctions-0.2.1/pyproject.toml
+--rw-rw-rw-   0        0        0       42 2022-12-23 22:25:47.042012 SeanFunctions-0.2.1/setup.cfg
+-drwxrwxrwx   0        0        0        0 2022-12-23 22:25:47.007788 SeanFunctions-0.2.1/src/
+-drwxrwxrwx   0        0        0        0 2022-12-23 22:25:47.022668 SeanFunctions-0.2.1/src/SeanFunctions/
+-drwxrwxrwx   0        0        0        0 2022-12-23 22:25:47.040524 SeanFunctions-0.2.1/src/SeanFunctions/Data/
+--rw-rw-rw-   0        0        0    19820 2022-12-23 19:43:28.000000 SeanFunctions-0.2.1/src/SeanFunctions/Data/AtomicFormFactorConstants.csv
+--rw-rw-rw-   0        0        0    14993 2022-12-23 20:13:17.000000 SeanFunctions-0.2.1/src/SeanFunctions/Data/NeutronScatteringLengths.csv
+--rw-rw-rw-   0        0        0    15625 2022-12-23 21:07:44.000000 SeanFunctions-0.2.1/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv
+--rw-rw-rw-   0        0        0       39 2022-12-23 17:31:09.000000 SeanFunctions-0.2.1/src/SeanFunctions/__init__.py
+--rw-rw-rw-   0        0        0      198 2022-12-23 22:25:46.000000 SeanFunctions-0.2.1/src/SeanFunctions/_version.py
+--rw-rw-rw-   0        0        0     3170 2022-12-23 22:23:42.000000 SeanFunctions-0.2.1/src/SeanFunctions/fitting.py
+--rw-rw-rw-   0        0        0     4043 2022-12-23 22:23:04.000000 SeanFunctions-0.2.1/src/SeanFunctions/math.py
+--rw-rw-rw-   0        0        0     4281 2022-12-23 21:15:23.000000 SeanFunctions-0.2.1/src/SeanFunctions/scattering.py
+--rw-rw-rw-   0        0        0      220 2022-12-23 21:18:09.000000 SeanFunctions-0.2.1/src/SeanFunctions/version.py
+-drwxrwxrwx   0        0        0        0 2022-12-23 22:25:47.037548 SeanFunctions-0.2.1/src/SeanFunctions.egg-info/
+--rw-rw-rw-   0        0        0      686 2022-12-23 22:25:46.000000 SeanFunctions-0.2.1/src/SeanFunctions.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      562 2022-12-23 22:25:47.000000 SeanFunctions-0.2.1/src/SeanFunctions.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2022-12-23 22:25:46.000000 SeanFunctions-0.2.1/src/SeanFunctions.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       14 2022-12-23 22:25:46.000000 SeanFunctions-0.2.1/src/SeanFunctions.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.617850 SeanFunctions-0.3.0/
++-rw-rw-rw-   0        0        0      274 2022-12-23 21:21:19.000000 SeanFunctions-0.3.0/.gitignore
++-rw-rw-rw-   0        0        0     1087 2022-12-10 20:47:50.000000 SeanFunctions-0.3.0/LICENSE
++-rw-rw-rw-   0        0        0       36 2022-12-23 17:02:46.000000 SeanFunctions-0.3.0/MANIFEST.in
++-rw-rw-rw-   0        0        0      686 2023-04-06 19:50:57.617354 SeanFunctions-0.3.0/PKG-INFO
++-rw-rw-rw-   0        0        0      144 2022-12-10 20:41:39.000000 SeanFunctions-0.3.0/README.md
++-rw-rw-rw-   0        0        0     1147 2023-04-06 19:50:36.000000 SeanFunctions-0.3.0/pyproject.toml
++-rw-rw-rw-   0        0        0       42 2023-04-06 19:50:57.617850 SeanFunctions-0.3.0/setup.cfg
++drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.584528 SeanFunctions-0.3.0/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.597467 SeanFunctions-0.3.0/src/SeanFunctions/
++drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.615865 SeanFunctions-0.3.0/src/SeanFunctions/Data/
++-rw-rw-rw-   0        0        0    19820 2022-12-23 19:43:28.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv
++-rw-rw-rw-   0        0        0    14993 2022-12-23 20:13:17.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv
++-rw-rw-rw-   0        0        0    15625 2022-12-23 21:07:44.000000 SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv
++-rw-rw-rw-   0        0        0       39 2022-12-23 17:31:09.000000 SeanFunctions-0.3.0/src/SeanFunctions/__init__.py
++-rw-rw-rw-   0        0        0     3170 2022-12-23 22:23:42.000000 SeanFunctions-0.3.0/src/SeanFunctions/fitting.py
++-rw-rw-rw-   0        0        0     6527 2023-04-06 19:40:10.000000 SeanFunctions-0.3.0/src/SeanFunctions/math.py
++-rw-rw-rw-   0        0        0     4281 2022-12-23 21:15:23.000000 SeanFunctions-0.3.0/src/SeanFunctions/scattering.py
++-rw-rw-rw-   0        0        0      218 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions/version.py
++drwxrwxrwx   0        0        0        0 2023-04-06 19:50:57.612890 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/
++-rw-rw-rw-   0        0        0      686 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      532 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       14 2023-04-06 19:50:57.000000 SeanFunctions-0.3.0/src/SeanFunctions.egg-info/top_level.txt
+```
+
+### Comparing `SeanFunctions-0.2.1/LICENSE` & `SeanFunctions-0.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/PKG-INFO` & `SeanFunctions-0.3.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SeanFunctions
+-Version: 0.2.1
++Version: 0.3.0
+ Summary: Collection of useful python functions
+ Author-email: Sean Fayfar <sfayfar@gmail.com>
+ Project-URL: Homepage, https://github.mit.edu/sfayfar/SeanFunctions
+ Project-URL: Bug Tracker, https://github.mit.edu/sfayfar/SeanFunctions/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `SeanFunctions-0.2.1/pyproject.toml` & `SeanFunctions-0.3.0/pyproject.toml`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [project]
+ name = "SeanFunctions"
+-version = "0.2.1"
++version = "0.3.0"
+ # dynamic = ["version"]
+ authors = [
+   { name="Sean Fayfar", email="sfayfar@gmail.com" },
+ ]
+ description = "Collection of useful python functions"
+ readme = "README.md"
+ requires-python = ">=3.7"
+@@ -16,32 +16,36 @@
+ 
+ [project.urls]
+ Homepage = "https://github.mit.edu/sfayfar/SeanFunctions"
+ "Bug Tracker" = "https://github.mit.edu/sfayfar/SeanFunctions/issues"
+ 
+ 
+ [options]
+-# packages = find:
+-# python_requires = >=3.7
+-# setup_requires = setuptools_scm
++packages = "find:"
++python_requires = ">=3.7"
++setup_requires = "setuptools_scm"
+ package_dir = "src"
+-# include_package_data = "True"
++include_package_data = "True"
++install_requires = [
++    "numpy",
++    "scipy",
++    "pathlib",
++    "lmfit",
++    "uncertainties"
++]
+ 
+ # [tool.setuptools.packages.find]
+ # where = ["src"]
+ 
+-# [tool.setuptools.package-data]
+-# "SeanFunctions.Data" = ["*.csv"]
++[tool.setuptools.package-data]
++"SeanFunctions.Data" = ["*.csv"]
+ 
+ [build-system]
+ requires = [
+     "setuptools>=61.0",
+     "wheel",
+     "setuptools_scm[toml]>=6.2",
+-    "numpy",
+-    "scipy",
+-    "pathlib"
+ ]
+ build-backend = "setuptools.build_meta"
+ 
+ [tool.setuptools_scm]
+-write_to = "src/SeanFunctions/_version.py"
++write_to = "src/SeanFunctions/version.py"
+```
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions/Data/AtomicFormFactorConstants.csv` & `SeanFunctions-0.3.0/src/SeanFunctions/Data/AtomicFormFactorConstants.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions/Data/NeutronScatteringLengths.csv` & `SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv` & `SeanFunctions-0.3.0/src/SeanFunctions/Data/NeutronScatteringLengths_Corrected.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions/fitting.py` & `SeanFunctions-0.3.0/src/SeanFunctions/fitting.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions/scattering.py` & `SeanFunctions-0.3.0/src/SeanFunctions/scattering.py`
+
+ * *Files identical despite different names*
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions.egg-info/PKG-INFO` & `SeanFunctions-0.3.0/src/SeanFunctions.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: SeanFunctions
+-Version: 0.2.1
++Version: 0.3.0
+ Summary: Collection of useful python functions
+ Author-email: Sean Fayfar <sfayfar@gmail.com>
+ Project-URL: Homepage, https://github.mit.edu/sfayfar/SeanFunctions
+ Project-URL: Bug Tracker, https://github.mit.edu/sfayfar/SeanFunctions/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+```
+
+### Comparing `SeanFunctions-0.2.1/src/SeanFunctions.egg-info/SOURCES.txt` & `SeanFunctions-0.3.0/src/SeanFunctions.egg-info/SOURCES.txt`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,14 +1,13 @@
+ .gitignore
+ LICENSE
+ MANIFEST.in
+ README.md
+ pyproject.toml
+ src/SeanFunctions/__init__.py
+-src/SeanFunctions/_version.py
+ src/SeanFunctions/fitting.py
+ src/SeanFunctions/math.py
+ src/SeanFunctions/scattering.py
+ src/SeanFunctions/version.py
+ src/SeanFunctions.egg-info/PKG-INFO
+ src/SeanFunctions.egg-info/SOURCES.txt
+ src/SeanFunctions.egg-info/dependency_links.txt
+```
+

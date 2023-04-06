@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/casagui-0.2.8.tar.gz tmp/casagui-0.2.9.tar.gz --html versions/c/casagui/0.2.8-0.2.9/index.html --text versions/c/casagui/0.2.8-0.2.9/diff.txt --markdown versions/c/casagui/0.2.8-0.2.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">27.2 KB</span></div>
+  <div><span class="source">tmp/casagui-0.2.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/casagui-0.2.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">264 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;casagui-0.2.<del>8</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Aug<span class="dp">·</span>25<span class="dp">·</span>1<del>5</del>:<del>52</del>:<del>13</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;casagui-0.2.<ins>9</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Aug<span class="dp">·</span>25<span class="dp">·</span>1<ins>6</ins>:<ins>33</ins>:<ins>08</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">26.9 KB</span></div>
+    <div><span class="source">casagui-0.2.8.tar</span> vs.</div>
+    <div id="casagui--.-.-.tar"><span class="source">casagui-0.2.9.tar</span>
+      <a class="anchor" href="#casagui--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">16.8 KB</span></div>
+      <div id="casagui--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#casagui--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 63 lines modified</td><td colspan="2">Offset 1, 63 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26526<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>537205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26526<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>805089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26371<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/LICENSE.rst</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26371<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/LICENSE.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>604<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/README.rst</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>604<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/README.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1755<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1755<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1542<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1542<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53786<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/_interactiveclean.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53786<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/_interactiveclean.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5937<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/_makemask.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5937<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/_makemask.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10835<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/_plotants.py</td><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10835<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/_plotants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4152<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>56</del>5<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/_plotants_logpos.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4152<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>82</ins>5<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/_plotants_logpos.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/apps/_plotbandpass.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/apps/_plotbandpass.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1371<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1371<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18657<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/CustomIcon.ts</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18657<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/CustomIcon.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/__init__.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1468<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>687<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/_button_group.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>687<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/_button_group.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/_iclean_button.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/_iclean_button.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/_iclean_slider.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/_iclean_slider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>619<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/_svg_icon.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>619<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/_svg_icon.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1270<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/button_group.ts</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1270<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/button_group.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1279<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/iclean_button.ts</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1279<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/iclean_button.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1279<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/iclean_slider.ts</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1279<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/iclean_slider.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3579<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/components/svg_icon.ts</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3579<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/components/svg_icon.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1525<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/__init__.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1525<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11063<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/_data_pipe.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11063<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/_data_pipe.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2639<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/_image_data_source.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2639<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/_image_data_source.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10858<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/_image_pipe.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10858<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/_image_pipe.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2135<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/_spectra_data_source.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2135<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/_spectra_data_source.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6338<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/data_pipe.ts</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6338<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/data_pipe.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2576<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/image_data_source.ts</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2576<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/image_data_source.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6837<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/image_pipe.ts</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6837<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/image_pipe.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1632<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/sources/spectra_data_source.ts</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1632<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/sources/spectra_data_source.ts</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1504<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/__init__.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1504<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10227<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/_initialize.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10227<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/_initialize.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1761<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>565205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/_session.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1761<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>829089</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/_session.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>799179<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>3<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/bokeh-2.4.1.min.js</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>799179<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>3<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/bokeh-2.4.1.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185643<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>3<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/bokeh-gl-2.4.1.min.js</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>185643<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>3<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/bokeh-gl-2.4.1.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>292438<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>3<del>205</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/bokeh-tables-2.4.1.min.js</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>292438<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>3<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/bokeh-tables-2.4.1.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251390<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/bokeh-widgets-2.4.1.min.js</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251390<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/bokeh-widgets-2.4.1.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8432<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/casaguijs-v0.0.4.0-b2.4.min.js</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8432<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/casaguijs-v0.0.4.0-b2.4.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8587<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/casaguijs-v0.0.5.0-b2.4.min.js</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8587<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/casaguijs-v0.0.5.0-b2.4.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8981<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/casaguijs-v0.0.6.0-b2.4.min.js</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8981<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/casaguijs-v0.0.6.0-b2.4.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>384<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/state/js/casalib-v0.0.1.min.js</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>384<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/state/js/casalib-v0.0.1.min.js</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1479<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/utils/__init__.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1479<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3168<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/utils/_axes_labels.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3168<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/utils/_axes_labels.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2184<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/utils/_conversion.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2184<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/utils/_conversion.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12509<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/bokeh/utils/_serialization.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12509<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/bokeh/utils/_serialization.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1349<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/toolbox/__init__.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1349<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/toolbox/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>85239<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/toolbox/_cube.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>85239<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/toolbox/_cube.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3410<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/utils/_ResourceManager.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3410<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/utils/_ResourceManager.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22581<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/utils/__init__.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22581<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2348<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.<del>57</del>7<del>206</del><span class="dp">·</span>casagui-0.2.<del>8</del>/casagui/utils/_logging.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2348<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>83</ins>7<ins>090</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/casagui/utils/_logging.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/pyproject.toml</td><td class="diffline">51 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5960<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/readme.rst</td><td class="diffline">52 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5960<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/readme.rst</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>940<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/cubemask-demo/image-slider-spectra-done-stats.py</td><td class="diffline">53 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>940<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/cubemask-demo/image-slider-spectra-done-stats.py</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>878<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/cubemask-demo/image-slider-spectra-done.py</td><td class="diffline">54 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>878<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/cubemask-demo/image-slider-spectra-done.py</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>649<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/cubemask-demo/image-slider-spectra.py</td><td class="diffline">55 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>649<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/cubemask-demo/image-slider-spectra.py</td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>605<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/cubemask-demo/image-slider.py</td><td class="diffline">56 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>605<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/cubemask-demo/image-slider.py</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/cubemask-demo/image.py</td><td class="diffline">57 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>560<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/cubemask-demo/image.py</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2851<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/iclean-demo/m100_interactive.py</td><td class="diffline">58 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2851<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/iclean-demo/m100_interactive.py</td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1043<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/iclean-demo/run-gclean.py</td><td class="diffline">59 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1043<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/iclean-demo/run-gclean.py</td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2242<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/iclean-demo/run-iclean.py</td><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2242<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/iclean-demo/run-iclean.py</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>653<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/makemask-demo/run-makemask.py</td><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>653<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/makemask-demo/run-makemask.py</td></tr>
+<tr class="diffchanged"><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>51</del>:5<del>1</del>.6<del>132</del>0<del>6</del><span class="dp">·</span>casagui-0.2.<del>8</del>/tests/manual/svg-test.py</td><td class="diffline">62 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>508<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>32</ins>:5<ins>0</ins>.<ins>8</ins>6<ins>909</ins>0<span class="dp">·</span>casagui-0.2.<ins>9</ins>/tests/manual/svg-test.py</td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent">-rw-------<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6285<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<del>5</del>:<del>52</del>:<del>13</del>.<del>20</del>3<del>001</del><span class="dp">·</span>casagui-0.2.<del>8</del>/PKG-INFO</td><td class="diffline">63 </td><td class="diffpresent">-rw-------<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(121)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6285<span class="dp">·</span>2022-08-25<span class="dp">·</span>1<ins>6</ins>:<ins>33</ins>:<ins>08</ins>.<ins>59</ins>3<ins>272</ins><span class="dp">·</span>casagui-0.2.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">81.0 B</span></div>
+      <div><span class="source">casagui-0.2.8/LICENSE</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--LICENSE"><span class="source">casagui-0.2.9/LICENSE</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/LICENSE.rst</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-LICENSE.rst"><span class="source">casagui-0.2.9/casagui/LICENSE.rst</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-LICENSE.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/README.rst</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-README.rst"><span class="source">casagui-0.2.9/casagui/README.rst</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-README.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">105 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-__init__.py"><span class="source">casagui-0.2.9/casagui/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/apps/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-apps-__init__.py"><span class="source">casagui-0.2.9/casagui/apps/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-apps-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.46 KB</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/apps/_interactiveclean.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-apps-_interactiveclean.py"><span class="source">casagui-0.2.9/casagui/apps/_interactiveclean.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-apps-_interactiveclean.py">¶</a>
+      </div>
+      </div>
+      <div class="comment multiline">Ordering differences only
+Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 145, 14 lines modified</td><td colspan="2">Offset 145, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>width=&#x27;&#x27;,<span class="dp">·</span>interpolation=&#x27;linear&#x27;,<span class="dp">·</span>gridder=&#x27;standard&#x27;,<span class="dp">·</span>pblimit=0.2,<span class="dp">·</span>deconvolver=&#x27;hogbom&#x27;,<span class="dp">·</span>niter=0,</td><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>width=&#x27;&#x27;,<span class="dp">·</span>interpolation=&#x27;linear&#x27;,<span class="dp">·</span>gridder=&#x27;standard&#x27;,<span class="dp">·</span>pblimit=0.2,<span class="dp">·</span>deconvolver=&#x27;hogbom&#x27;,<span class="dp">·</span>niter=0,</td></tr>
+<tr class="diffunmodified"><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>threshold=&#x27;0.1Jy&#x27;,<span class="dp">·</span>cycleniter=-1,<span class="dp">·</span>cyclefactor=1.0,<span class="dp">·</span>scales=[],<span class="dp">·</span>weighting=&#x27;natural&#x27;,<span class="dp">·</span>robust=float(0.5)<span class="dp">·</span>):</td><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>threshold=&#x27;0.1Jy&#x27;,<span class="dp">·</span>cycleniter=-1,<span class="dp">·</span>cyclefactor=1.0,<span class="dp">·</span>scales=[],<span class="dp">·</span>weighting=&#x27;natural&#x27;,<span class="dp">·</span>robust=float(0.5)<span class="dp">·</span>):</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>used<span class="dp">·</span>by<span class="dp">·</span>data<span class="dp">·</span>pipe<span class="dp">·</span>(websocket)<span class="dp">·</span>initialization<span class="dp">·</span>function</td><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>used<span class="dp">·</span>by<span class="dp">·</span>data<span class="dp">·</span>pipe<span class="dp">·</span>(websocket)<span class="dp">·</span>initialization<span class="dp">·</span>function</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+<tr class="diffunmodified"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.__pipes_initialized<span class="dp">·</span>=<span class="dp">·</span>False</td><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.__pipes_initialized<span class="dp">·</span>=<span class="dp">·</span>False</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._mask_history<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>color<span class="dp">·</span>specs</td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>color<span class="dp">·</span>specs</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._color<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&#x27;residual&#x27;:<span class="dp">·</span>&#x27;black&#x27;,</td><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._color<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&#x27;residual&#x27;:<span class="dp">·</span>&#x27;black&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;flux&#x27;:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;forestgreen&#x27;<span class="dp">·</span>}</td><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;flux&#x27;:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;forestgreen&#x27;<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 202, 15 lines modified</td><td colspan="2">Offset 203, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">202 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._imagename<span class="dp">·</span>=<span class="dp">·</span>imagename</td><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._imagename<span class="dp">·</span>=<span class="dp">·</span>imagename</td></tr>
+<tr class="diffunmodified"><td class="diffline">203 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._residual_path<span class="dp">·</span>=<span class="dp">·</span>(&quot;%s.residual&quot;<span class="dp">·</span>%<span class="dp">·</span>imagename)<span class="dp">·</span>if<span class="dp">·</span>self._clean.has_next()<span class="dp">·</span>else<span class="dp">·</span>(self._clean.finalize()[&#x27;image&#x27;])</td><td class="diffline">204 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._residual_path<span class="dp">·</span>=<span class="dp">·</span>(&quot;%s.residual&quot;<span class="dp">·</span>%<span class="dp">·</span>imagename)<span class="dp">·</span>if<span class="dp">·</span>self._clean.has_next()<span class="dp">·</span>else<span class="dp">·</span>(self._clean.finalize()[&#x27;image&#x27;])</td></tr>
+<tr class="diffunmodified"><td class="diffline">204 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._pipe<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&#x27;control&#x27;:<span class="dp">·</span>None,<span class="dp">·</span>&#x27;converge&#x27;:<span class="dp">·</span>None<span class="dp">·</span>}</td><td class="diffline">205 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._pipe<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>&#x27;control&#x27;:<span class="dp">·</span>None,<span class="dp">·</span>&#x27;converge&#x27;:<span class="dp">·</span>None<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">205 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._control<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._control<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">206 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._cb<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._cb<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">207 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._ids<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._ids<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">208 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._last_mask_breadcrumbs<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;</td><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._last_mask_breadcrumbs<span class="dp">·</span>=<span class="dp">·</span>&#x27;&#x27;</td></tr>
+<tr class="diffdeleted"><td class="diffline">209 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self._mask_history<span class="dp">·</span>=<span class="dp">·</span>[<span class="dp">·</span>]</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">210 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+<tr class="diffunmodified"><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>The<span class="dp">·</span>tclean<span class="dp">·</span>convergence<span class="dp">·</span>data<span class="dp">·</span>is<span class="dp">·</span>automatically<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>tclean<span class="dp">·</span>and<span class="dp">·</span>it</td><td class="diffline">211 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>The<span class="dp">·</span>tclean<span class="dp">·</span>convergence<span class="dp">·</span>data<span class="dp">·</span>is<span class="dp">·</span>automatically<span class="dp">·</span>generated<span class="dp">·</span>by<span class="dp">·</span>tclean<span class="dp">·</span>and<span class="dp">·</span>it</td></tr>
+<tr class="diffunmodified"><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>accumulates<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>object.<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>data<span class="dp">·</span>becomes<span class="dp">·</span>bigger<span class="dp">·</span>than<span class="dp">·</span>these</td><td class="diffline">212 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>accumulates<span class="dp">·</span>in<span class="dp">·</span>this<span class="dp">·</span>object.<span class="dp">·</span>If<span class="dp">·</span>the<span class="dp">·</span>data<span class="dp">·</span>becomes<span class="dp">·</span>bigger<span class="dp">·</span>than<span class="dp">·</span>these</td></tr>
+<tr class="diffunmodified"><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>thresholds,<span class="dp">·</span>the<span class="dp">·</span>implementation<span class="dp">·</span>switches<span class="dp">·</span>to<span class="dp">·</span>fetching<span class="dp">·</span>threshold<span class="dp">·</span>data</td><td class="diffline">213 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>thresholds,<span class="dp">·</span>the<span class="dp">·</span>implementation<span class="dp">·</span>switches<span class="dp">·</span>to<span class="dp">·</span>fetching<span class="dp">·</span>threshold<span class="dp">·</span>data</td></tr>
+<tr class="diffunmodified"><td class="diffline">214 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>from<span class="dp">·</span>python<span class="dp">·</span>for<span class="dp">·</span>each<span class="dp">·</span>channel<span class="dp">·</span>selected<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>GUI<span class="dp">·</span>within<span class="dp">·</span>the<span class="dp">·</span>browser.</td><td class="diffline">214 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###<span class="dp">·</span>from<span class="dp">·</span>python<span class="dp">·</span>for<span class="dp">·</span>each<span class="dp">·</span>channel<span class="dp">·</span>selected<span class="dp">·</span>in<span class="dp">·</span>the<span class="dp">·</span>GUI<span class="dp">·</span>within<span class="dp">·</span>the<span class="dp">·</span>browser.</td></tr>
+<tr class="diffunmodified"><td class="diffline">215 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td><td class="diffline">215 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>###</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/apps/_makemask.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-apps-_makemask.py"><span class="source">casagui-0.2.9/casagui/apps/_makemask.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-apps-_makemask.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/apps/_plotants.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-apps-_plotants.py"><span class="source">casagui-0.2.9/casagui/apps/_plotants.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-apps-_plotants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/apps/_plotants_logpos.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-apps-_plotants_logpos.py"><span class="source">casagui-0.2.9/casagui/apps/_plotants_logpos.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-apps-_plotants_logpos.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-__init__.py"><span class="source">casagui-0.2.9/casagui/bokeh/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/CustomIcon.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-CustomIcon.ts"><span class="source">casagui-0.2.9/casagui/bokeh/components/CustomIcon.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-CustomIcon.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-__init__.py"><span class="source">casagui-0.2.9/casagui/bokeh/components/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/_button_group.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_button_group.py"><span class="source">casagui-0.2.9/casagui/bokeh/components/_button_group.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_button_group.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/_iclean_button.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_iclean_button.py"><span class="source">casagui-0.2.9/casagui/bokeh/components/_iclean_button.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_iclean_button.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/_iclean_slider.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_iclean_slider.py"><span class="source">casagui-0.2.9/casagui/bokeh/components/_iclean_slider.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_iclean_slider.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/_svg_icon.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_svg_icon.py"><span class="source">casagui-0.2.9/casagui/bokeh/components/_svg_icon.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-_svg_icon.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/button_group.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-button_group.ts"><span class="source">casagui-0.2.9/casagui/bokeh/components/button_group.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-button_group.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/iclean_button.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-iclean_button.ts"><span class="source">casagui-0.2.9/casagui/bokeh/components/iclean_button.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-iclean_button.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/iclean_slider.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-iclean_slider.ts"><span class="source">casagui-0.2.9/casagui/bokeh/components/iclean_slider.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-iclean_slider.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/components/svg_icon.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-svg_icon.ts"><span class="source">casagui-0.2.9/casagui/bokeh/components/svg_icon.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-components-svg_icon.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-__init__.py"><span class="source">casagui-0.2.9/casagui/bokeh/sources/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/_data_pipe.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_data_pipe.py"><span class="source">casagui-0.2.9/casagui/bokeh/sources/_data_pipe.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_data_pipe.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/_image_data_source.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_image_data_source.py"><span class="source">casagui-0.2.9/casagui/bokeh/sources/_image_data_source.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_image_data_source.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/_image_pipe.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_image_pipe.py"><span class="source">casagui-0.2.9/casagui/bokeh/sources/_image_pipe.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_image_pipe.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/_spectra_data_source.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_spectra_data_source.py"><span class="source">casagui-0.2.9/casagui/bokeh/sources/_spectra_data_source.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-_spectra_data_source.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/data_pipe.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-data_pipe.ts"><span class="source">casagui-0.2.9/casagui/bokeh/sources/data_pipe.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-data_pipe.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/image_data_source.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-image_data_source.ts"><span class="source">casagui-0.2.9/casagui/bokeh/sources/image_data_source.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-image_data_source.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/image_pipe.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-image_pipe.ts"><span class="source">casagui-0.2.9/casagui/bokeh/sources/image_pipe.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-image_pipe.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/sources/spectra_data_source.ts</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-spectra_data_source.ts"><span class="source">casagui-0.2.9/casagui/bokeh/sources/spectra_data_source.ts</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-sources-spectra_data_source.ts">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-__init__.py"><span class="source">casagui-0.2.9/casagui/bokeh/state/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/_initialize.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-_initialize.py"><span class="source">casagui-0.2.9/casagui/bokeh/state/_initialize.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-_initialize.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/_session.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-_session.py"><span class="source">casagui-0.2.9/casagui/bokeh/state/_session.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-_session.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/bokeh-2.4.1.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh--.-.-.min.js"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/bokeh-2.4.1.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh--.-.-.min.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/bokeh-gl-2.4.1.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-gl--.-.-.min.js"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/bokeh-gl-2.4.1.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-gl--.-.-.min.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/bokeh-tables-2.4.1.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-tables--.-.-.min.js"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/bokeh-tables-2.4.1.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-tables--.-.-.min.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/bokeh-widgets-2.4.1.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-widgets--.-.-.min.js"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/bokeh-widgets-2.4.1.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-bokeh-widgets--.-.-.min.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/casaguijs-v0.0.4.0-b2.4.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/casaguijs-v0.0.4.0-b2.4.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/casaguijs-v0.0.5.0-b2.4.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js-1"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/casaguijs-v0.0.5.0-b2.4.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/state/js/casaguijs-v0.0.6.0-b2.4.min.js</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js-2"><span class="source">casagui-0.2.9/casagui/bokeh/state/js/casaguijs-v0.0.6.0-b2.4.min.js</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-state-js-casaguijs-v-.-.-.--b-.-.min.js-2">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/utils/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-__init__.py"><span class="source">casagui-0.2.9/casagui/bokeh/utils/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/utils/_axes_labels.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_axes_labels.py"><span class="source">casagui-0.2.9/casagui/bokeh/utils/_axes_labels.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_axes_labels.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/utils/_conversion.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_conversion.py"><span class="source">casagui-0.2.9/casagui/bokeh/utils/_conversion.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_conversion.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/bokeh/utils/_serialization.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_serialization.py"><span class="source">casagui-0.2.9/casagui/bokeh/utils/_serialization.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-bokeh-utils-_serialization.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/toolbox/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-toolbox-__init__.py"><span class="source">casagui-0.2.9/casagui/toolbox/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-toolbox-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/toolbox/_cube.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-toolbox-_cube.py"><span class="source">casagui-0.2.9/casagui/toolbox/_cube.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-toolbox-_cube.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/utils/_ResourceManager.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-utils-_ResourceManager.py"><span class="source">casagui-0.2.9/casagui/utils/_ResourceManager.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-utils-_ResourceManager.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/utils/__init__.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-utils-__init__.py"><span class="source">casagui-0.2.9/casagui/utils/__init__.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-utils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">casagui-0.2.8/casagui/utils/_logging.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--casagui-utils-_logging.py"><span class="source">casagui-0.2.9/casagui/utils/_logging.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--casagui-utils-_logging.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">373 B</span></div>
+      <div><span class="source">casagui-0.2.8/pyproject.toml</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--pyproject.toml"><span class="source">casagui-0.2.9/pyproject.toml</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 12, 15 lines modified</td><td colspan="2">Offset 12, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;bokeh&gt;=2.4.0&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;bokeh&gt;=2.4.0&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;astropy&gt;=5.1&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;astropy&gt;=5.1&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;regions&gt;=0.6&quot;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;regions&gt;=0.6&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;websockets&gt;=10.3&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;websockets&gt;=10.3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">]</td><td class="diffline">16 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td><td class="diffline">17 </td><td class="diffpresent">requires-python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.8&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;readme.rst&quot;</td><td class="diffline">18 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;readme.rst&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2.<del>8</del>&quot;</td><td class="diffline">19 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.2.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">[project.license]</td><td class="diffline">20 </td><td class="diffpresent">[project.license]</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">text<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL&quot;</td><td class="diffline">21 </td><td class="diffpresent">text<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">[tool.pdm.build]</td><td class="diffline">22 </td><td class="diffpresent">[tool.pdm.build]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">[tool.pdm.version]</td><td class="diffline">23 </td><td class="diffpresent">[tool.pdm.version]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">casagui-0.2.8/readme.rst</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--readme.rst"><span class="source">casagui-0.2.9/readme.rst</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--readme.rst">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/cubemask-demo/image-slider-spectra-done-stats.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra-done-stats.py"><span class="source">casagui-0.2.9/tests/manual/cubemask-demo/image-slider-spectra-done-stats.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra-done-stats.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/cubemask-demo/image-slider-spectra-done.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra-done.py"><span class="source">casagui-0.2.9/tests/manual/cubemask-demo/image-slider-spectra-done.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra-done.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/cubemask-demo/image-slider-spectra.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra.py"><span class="source">casagui-0.2.9/tests/manual/cubemask-demo/image-slider-spectra.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider-spectra.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/cubemask-demo/image-slider.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider.py"><span class="source">casagui-0.2.9/tests/manual/cubemask-demo/image-slider.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image-slider.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/cubemask-demo/image.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image.py"><span class="source">casagui-0.2.9/tests/manual/cubemask-demo/image.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-cubemask-demo-image.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/iclean-demo/m100_interactive.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-m---_interactive.py"><span class="source">casagui-0.2.9/tests/manual/iclean-demo/m100_interactive.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-m---_interactive.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/iclean-demo/run-gclean.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-run-gclean.py"><span class="source">casagui-0.2.9/tests/manual/iclean-demo/run-gclean.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-run-gclean.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/iclean-demo/run-iclean.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-run-iclean.py"><span class="source">casagui-0.2.9/tests/manual/iclean-demo/run-iclean.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-iclean-demo-run-iclean.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">casagui-0.2.8/tests/manual/makemask-demo/run-makemask.py</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--tests-manual-makemask-demo-run-makemask.py"><span class="source">casagui-0.2.9/tests/manual/makemask-demo/run-makemask.py</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--tests-manual-makemask-demo-run-makemask.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">508 B</span></div>
+      <div><span class="source">casagui-0.2.8/PKG-INFO</span> vs.</div>
+      <div id="casagui--.-.-.tar---casagui--.-.--PKG-INFO"><span class="source">casagui-0.2.9/PKG-INFO</span>
+        <a class="anchor" href="#casagui--.-.-.tar---casagui--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>casagui</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>casagui</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>visualization<span class="dp">·</span>toolkit<span class="dp">·</span>and<span class="dp">·</span>apps<span class="dp">·</span>for<span class="dp">·</span>casa</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>visualization<span class="dp">·</span>toolkit<span class="dp">·</span>and<span class="dp">·</span>apps<span class="dp">·</span>for<span class="dp">·</span>casa</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Darrell<span class="dp">·</span>Schiebel<span class="dp">·</span>&lt;darrell@schiebel.us&gt;,Joshua<span class="dp">·</span>Hoskins<span class="dp">·</span>&lt;jhoskins@nrao.edu&gt;,Jorge<span class="dp">·</span>Lopez<span class="dp">·</span>&lt;jalopez@nrao.edu&gt;,Pam<span class="dp">·</span>Harris<span class="dp">·</span>&lt;pharris@nrao.edu&gt;</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>Darrell<span class="dp">·</span>Schiebel<span class="dp">·</span>&lt;darrell@schiebel.us&gt;,Joshua<span class="dp">·</span>Hoskins<span class="dp">·</span>&lt;jhoskins@nrao.edu&gt;,Jorge<span class="dp">·</span>Lopez<span class="dp">·</span>&lt;jalopez@nrao.edu&gt;,Pam<span class="dp">·</span>Harris<span class="dp">·</span>&lt;pharris@nrao.edu&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td><td class="diffline">8 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/x-rst</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">casagui<span class="dp">·</span>-<span class="dp">·</span>visualization<span class="dp">·</span>tools<span class="dp">·</span>and<span class="dp">·</span>applications<span class="dp">·</span>for<span class="dp">·</span>CASA</td><td class="diffline">9 </td><td class="diffpresent">casagui<span class="dp">·</span>-<span class="dp">·</span>visualization<span class="dp">·</span>tools<span class="dp">·</span>and<span class="dp">·</span>applications<span class="dp">·</span>for<span class="dp">·</span>CASA</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/ampel_photometry-0.8.3a3.tar.gz tmp/ampel_photometry-0.9.0.tar.gz --html versions/a/ampel-photometry/0.8.3a3-0.9.0/index.html --text versions/a/ampel-photometry/0.8.3a3-0.9.0/diff.txt --markdown versions/a/ampel-photometry/0.8.3a3-0.9.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.1 KB</span></div>
+  <div><span class="source">tmp/ampel_photometry-0.8.3a3.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/ampel_photometry-0.9.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">202 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;ampel_photometry-0.<ins>9</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.9 KB</span></div>
+    <div><span class="source">ampel_photometry-0.8.3a3.tar</span> vs.</div>
+    <div id="ampel_photometry--.-.-a-.tar"><span class="source">ampel_photometry-0.9.0.tar</span>
+      <a class="anchor" href="#ampel_photometry--.-.-a-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.28 KB</span></div>
+      <div id="ampel_photometry--.-.-a-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 21 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>886<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/abstract/AbsLightCurveT2Unit.py</td><td class="diffline">1 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>886<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/abstract/AbsLightCurveT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>706</del><span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/abstract/AbsPhotoT3Unit.py</td><td class="diffline">2 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>688</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/abstract/AbsPhotoT3Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1265<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/abstract/AbsT2Tabulator.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1265<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/abstract/AbsT2Tabulator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3361<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/abstract/AbsTabulatedT2Unit.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3361<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/abstract/AbsTabulatedT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2292<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/abstract/AbsTiedLightCurveT2Unit.py</td><td class="diffline">5 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2292<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/abstract/AbsTiedLightCurveT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>613<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/aux/PPSFilter.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>613<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/aux/PPSFilter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>613<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/aux/ULSFilter.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>613<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/aux/ULSFilter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>841596</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoEvery3PhotoPointT2Unit.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoEvery3PhotoPointT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoEvery4PhotoPointT2Unit.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>919<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoEvery4PhotoPointT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>907<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoFirstPhotoPointT2Unit.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>907<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoFirstPhotoPointT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>907<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoFirstUpperLimitT2Unit.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>907<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoFirstUpperLimitT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>857<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoLightCurveT2Unit.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>857<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoLightCurveT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>871<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoPhotoPointT2Unit.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>871<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoPhotoPointT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1080<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/demo/DemoTiedLightCurveT2Unit.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1080<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/demo/DemoTiedLightCurveT2Unit.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/py.typed</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1184<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/t1/T1PhotoRetroCombiner.py</td><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1184<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/t1/T1PhotoRetroCombiner.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6959<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/view/LightCurve.py</td><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6959<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/view/LightCurve.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2154<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/ampel/view/TransientView.py</td><td class="diffline">18 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2154<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/ampel/view/TransientView.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>543<span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/conf/ampel-photometry/ampel.yaml</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>543<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>167689</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/conf/ampel-photometry/ampel.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<del>54</del><span class="dp">·</span>2023-0<del>1</del>-<del>18</del><span class="dp">·</span><del>15</del>:<del>44</del>:<del>21</del>.<del>845595</del><span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/pyproject.toml</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<ins>36</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>20</ins>:<ins>02</ins>:<ins>42</ins>.<ins>171687</ins><span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffdeleted"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>956<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>ampel_photometry-0.8.3a3/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<del>39</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>ampel_photometry-0.<del>8</del>.<del>3a</del><del>3</del>/PKG-INFO</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7<ins>23</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>ampel_photometry-0.<ins>9</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/abstract/AbsLightCurveT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsLightCurveT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/abstract/AbsLightCurveT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsLightCurveT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">960 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/abstract/AbsPhotoT3Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsPhotoT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/abstract/AbsPhotoT3Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsPhotoT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 18 lines modified</td><td colspan="2">Offset 3, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">#<span class="dp">·</span>File:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ampel-photometry/ampel/abstract/AbsPhotoT3Unit.py</td><td class="diffline">3 </td><td class="diffpresent">#<span class="dp">·</span>File:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Ampel-photometry/ampel/abstract/AbsPhotoT3Unit.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">#<span class="dp">·</span>License:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>BSD-3-Clause</td><td class="diffline">4 </td><td class="diffpresent">#<span class="dp">·</span>License:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>BSD-3-Clause</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">#<span class="dp">·</span>Author:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>valery<span class="dp">·</span>brinnel<span class="dp">·</span>&lt;firstname.lastname@gmail.com&gt;</td><td class="diffline">5 </td><td class="diffpresent">#<span class="dp">·</span>Author:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>valery<span class="dp">·</span>brinnel<span class="dp">·</span>&lt;firstname.lastname@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">#<span class="dp">·</span>Date:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>01.06.2020</td><td class="diffline">6 </td><td class="diffpresent">#<span class="dp">·</span>Date:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>01.06.2020</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">#<span class="dp">·</span>Last<span class="dp">·</span>Modified<span class="dp">·</span>Date:<span class="dp">·</span><span class="dp">·</span>19.04.2021</td><td class="diffline">7 </td><td class="diffpresent">#<span class="dp">·</span>Last<span class="dp">·</span>Modified<span class="dp">·</span>Date:<span class="dp">·</span><span class="dp">·</span>19.04.2021</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">#<span class="dp">·</span>Last<span class="dp">·</span>Modified<span class="dp">·</span>By:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>valery<span class="dp">·</span>brinnel<span class="dp">·</span>&lt;firstname.lastname@gmail.com&gt;</td><td class="diffline">8 </td><td class="diffpresent">#<span class="dp">·</span>Last<span class="dp">·</span>Modified<span class="dp">·</span>By:<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>valery<span class="dp">·</span>brinnel<span class="dp">·</span>&lt;firstname.lastname@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>ampel.abstract.AbsT3<del>Review</del>Unit<span class="dp">·</span>import<span class="dp">·</span>AbsT3<del>Review</del>Unit</td><td class="diffline">9 </td><td class="diffpresent">from<span class="dp">·</span>ampel.abstract.AbsT3Unit<span class="dp">·</span>import<span class="dp">·</span>AbsT3Unit</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>ampel.view.TransientView<span class="dp">·</span>import<span class="dp">·</span>TransientView</td><td class="diffline">10 </td><td class="diffpresent">from<span class="dp">·</span>ampel.view.TransientView<span class="dp">·</span>import<span class="dp">·</span>TransientView</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">class<span class="dp">·</span>AbsPhotoT3Unit(AbsT3<del>Review</del>Unit[TransientView],<span class="dp">·</span>abstract=True):</td><td class="diffline">11 </td><td class="diffpresent">class<span class="dp">·</span>AbsPhotoT3Unit(AbsT3Unit[TransientView],<span class="dp">·</span>abstract=True):</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">»</span>       Parametrized<span class="dp">·</span>abstract<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>T3<span class="dp">·</span>units<span class="dp">·</span>receiving<span class="dp">·</span>TransientView<span class="dp">·</span>instances</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">»</span>       Parametrized<span class="dp">·</span>abstract<span class="dp">·</span>class<span class="dp">·</span>for<span class="dp">·</span>T3<span class="dp">·</span>units<span class="dp">·</span>receiving<span class="dp">·</span>TransientView<span class="dp">·</span>instances</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">»</span>       (and<span class="dp">·</span>potentially<span class="dp">·</span>LightCurve<span class="dp">·</span>instances<span class="dp">·</span>as<span class="dp">·</span>well)</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">»</span>       (and<span class="dp">·</span>potentially<span class="dp">·</span>LightCurve<span class="dp">·</span>instances<span class="dp">·</span>as<span class="dp">·</span>well)</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">»</span>       &quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">»</span>       _View<span class="dp">·</span>=<span class="dp">·</span>TransientView</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">»</span>       _View<span class="dp">·</span>=<span class="dp">·</span>TransientView</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">»</span>       pass</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">»</span>       pass</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/abstract/AbsT2Tabulator.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsT-Tabulator.py"><span class="source">ampel_photometry-0.9.0/ampel/abstract/AbsT2Tabulator.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsT-Tabulator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/abstract/AbsTabulatedT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsTabulatedT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/abstract/AbsTabulatedT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsTabulatedT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/abstract/AbsTiedLightCurveT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsTiedLightCurveT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/abstract/AbsTiedLightCurveT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-abstract-AbsTiedLightCurveT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/aux/PPSFilter.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-aux-PPSFilter.py"><span class="source">ampel_photometry-0.9.0/ampel/aux/PPSFilter.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-aux-PPSFilter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/aux/ULSFilter.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-aux-ULSFilter.py"><span class="source">ampel_photometry-0.9.0/ampel/aux/ULSFilter.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-aux-ULSFilter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoEvery3PhotoPointT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoEvery-PhotoPointT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoEvery3PhotoPointT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoEvery-PhotoPointT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoEvery4PhotoPointT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoEvery-PhotoPointT-Unit.py-1"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoEvery4PhotoPointT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoEvery-PhotoPointT-Unit.py-1">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoFirstPhotoPointT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoFirstPhotoPointT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoFirstPhotoPointT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoFirstPhotoPointT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoFirstUpperLimitT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoFirstUpperLimitT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoFirstUpperLimitT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoFirstUpperLimitT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoLightCurveT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoLightCurveT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoLightCurveT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoLightCurveT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoPhotoPointT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoPhotoPointT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoPhotoPointT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoPhotoPointT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/demo/DemoTiedLightCurveT2Unit.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoTiedLightCurveT-Unit.py"><span class="source">ampel_photometry-0.9.0/ampel/demo/DemoTiedLightCurveT2Unit.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-demo-DemoTiedLightCurveT-Unit.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/t1/T1PhotoRetroCombiner.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-t--T-PhotoRetroCombiner.py"><span class="source">ampel_photometry-0.9.0/ampel/t1/T1PhotoRetroCombiner.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-t--T-PhotoRetroCombiner.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/view/LightCurve.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-view-LightCurve.py"><span class="source">ampel_photometry-0.9.0/ampel/view/LightCurve.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-view-LightCurve.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/ampel/view/TransientView.py</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-view-TransientView.py"><span class="source">ampel_photometry-0.9.0/ampel/view/TransientView.py</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--ampel-view-TransientView.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/conf/ampel-photometry/ampel.yaml</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--conf-ampel-photometry-ampel.yaml"><span class="source">ampel_photometry-0.9.0/conf/ampel-photometry/ampel.yaml</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--conf-ampel-photometry-ampel.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.09 KB</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/pyproject.toml</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--pyproject.toml"><span class="source">ampel_photometry-0.9.0/pyproject.toml</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ampel-photometry&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;ampel-photometry&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<del>8</del>.<del>3a</del><del>3</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.<ins>9</ins>.<ins>0</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Photometry<span class="dp">·</span>add-on<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Ampel<span class="dp">·</span>system&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Photometry<span class="dp">·</span>add-on<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Ampel<span class="dp">·</span>system&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Valery<span class="dp">·</span>Brinnel&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Valery<span class="dp">·</span>Brinnel&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD-3-Clause&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;BSD-3-Clause&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;ampel&quot;}</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;ampel&quot;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">]</td><td class="diffline">9 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">include<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">10 </td><td class="diffpresent">include<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 21 lines modified</td><td colspan="2">Offset 21, 21 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>&quot;https://test.pypi.org/simple&quot;</td><td class="diffline">21 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>&quot;https://test.pypi.org/simple&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">22 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10,&lt;3.12&quot;</td><td class="diffline">23 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.10,&lt;3.12&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Sphinx<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=6.1.3,&lt;6.2.0&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true}</td><td class="diffline">24 </td><td class="diffpresent">Sphinx<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=6.1.3,&lt;6.2.0&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true}</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">sphinx-autodoc-typehints<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.11.1&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true}</td><td class="diffline">25 </td><td class="diffpresent">sphinx-autodoc-typehints<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.11.1&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true}</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">tomlkit<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.11.0&quot;}</td><td class="diffline">26 </td><td class="diffpresent">tomlkit<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.11.0&quot;}</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">ampel-interface<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<del>8.3-bet</del><del>a</del>.<del>1</del><del>4</del>&quot;}</td><td class="diffline">27 </td><td class="diffpresent">ampel-interface<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<ins>9</ins>.<ins>0</ins>&quot;}</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">ampel-core<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<del>8.3-bet</del><del>a</del>.<del>2</del><del>1</del>&quot;}</td><td class="diffline">28 </td><td class="diffpresent">ampel-core<span class="dp">·</span>=<span class="dp">·</span>{version<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.<ins>9</ins>.<ins>0</ins>&quot;}</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">astropy<span class="dp">·</span>=<span class="dp">·</span>&quot;^5&quot;</td><td class="diffline">29 </td><td class="diffpresent">astropy<span class="dp">·</span>=<span class="dp">·</span>&quot;^5&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td><td class="diffline">30 </td><td class="diffpresent">[tool.poetry.dev-dependencies]</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.<del>1</del>&quot;</td><td class="diffline">31 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.2.<ins>2</ins>&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">mypy<span class="dp">·</span>=<span class="dp">·</span>&quot;^<del>0</del>.<del>99</del>1&quot;</td><td class="diffline">32 </td><td class="diffpresent">mypy<span class="dp">·</span>=<span class="dp">·</span>&quot;^<ins>1</ins>.<ins>1.</ins>1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">pytest-cov<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.0.0&quot;</td><td class="diffline">33 </td><td class="diffpresent">pytest-cov<span class="dp">·</span>=<span class="dp">·</span>&quot;^4.0.0&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">[tool.poetry.extras]</td><td class="diffline">34 </td><td class="diffpresent">[tool.poetry.extras]</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">docs<span class="dp">·</span>=<span class="dp">·</span>[&quot;Sphinx&quot;,<span class="dp">·</span>&quot;sphinx-press-theme&quot;,<span class="dp">·</span>&quot;sphinx-autodoc-typehints&quot;,<span class="dp">·</span>&quot;tomlkit&quot;]</td><td class="diffline">35 </td><td class="diffpresent">docs<span class="dp">·</span>=<span class="dp">·</span>[&quot;Sphinx&quot;,<span class="dp">·</span>&quot;sphinx-press-theme&quot;,<span class="dp">·</span>&quot;sphinx-autodoc-typehints&quot;,<span class="dp">·</span>&quot;tomlkit&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">[build-system]</td><td class="diffline">36 </td><td class="diffpresent">[build-system]</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry-core&gt;=1.0.0&quot;]</td><td class="diffline">37 </td><td class="diffpresent">requires<span class="dp">·</span>=<span class="dp">·</span>[&quot;poetry-core&gt;=1.0.0&quot;]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">991 B</span></div>
+      <div><span class="source">ampel_photometry-0.8.3a3/PKG-INFO</span> vs.</div>
+      <div id="ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--PKG-INFO"><span class="source">ampel_photometry-0.9.0/PKG-INFO</span>
+        <a class="anchor" href="#ampel_photometry--.-.-a-.tar---ampel_photometry--.-.-a--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ampel-photometry</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>ampel-photometry</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>8</del>.<del>3a</del><del>3</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>9</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Photometry<span class="dp">·</span>add-on<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Ampel<span class="dp">·</span>system</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Photometry<span class="dp">·</span>add-on<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Ampel<span class="dp">·</span>system</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>BSD-3-Clause</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>BSD-3-Clause</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Valery<span class="dp">·</span>Brinnel</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Valery<span class="dp">·</span>Brinnel</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;3.12</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.10,&lt;3.12</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>BSD<span class="dp">·</span>License</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>BSD<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>docs</td><td class="diffline">12 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>docs</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>Sphinx<span class="dp">·</span>(&gt;=6.1.3,&lt;6.2.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td><td class="diffline">13 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>Sphinx<span class="dp">·</span>(&gt;=6.1.3,&lt;6.2.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ampel-core<span class="dp">·</span>(&gt;=0.<del>8.3-bet</del><del>a</del>.<del>2</del><del>1</del>,&lt;0.<del>9</del>.0)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ampel-core<span class="dp">·</span>(&gt;=0.<ins>9</ins>.<ins>0</ins>,&lt;0.<ins>1</ins><ins>0</ins>.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ampel-interface<span class="dp">·</span>(&gt;=0.<del>8.3-bet</del><del>a</del>.<del>1</del><del>4</del>,&lt;0.<del>9</del>.0)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>ampel-interface<span class="dp">·</span>(&gt;=0.<ins>9</ins>.<ins>0</ins>,&lt;0.<ins>1</ins><ins>0</ins>.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>astropy<span class="dp">·</span>(&gt;=5,&lt;6)</td><td class="diffline">16 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>astropy<span class="dp">·</span>(&gt;=5,&lt;6)</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>sphinx-autodoc-typehints<span class="dp">·</span>(&gt;=1.11.1,&lt;2.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td><td class="diffline">17 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>sphinx-autodoc-typehints<span class="dp">·</span>(&gt;=1.11.1,&lt;2.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>tomlkit<span class="dp">·</span>(&gt;=0.11.0,&lt;0.12.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td><td class="diffline">18 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>tomlkit<span class="dp">·</span>(&gt;=0.11.0,&lt;0.12.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;docs&quot;</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
