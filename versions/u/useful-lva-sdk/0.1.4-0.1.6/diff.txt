@@ -1,0 +1,445 @@
+--- tmp/useful-lva-sdk-0.1.4.tar.gz
++++ tmp/useful-lva-sdk-0.1.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "useful-lva-sdk-0.1.4.tar", last modified: Thu Apr  6 06:21:17 2023, max compression
+│ +gzip compressed data, was "useful-lva-sdk-0.1.6.tar", last modified: Thu Apr  6 16:25:35 2023, max compression
+│   --- useful-lva-sdk-0.1.4.tar
+├── +++ useful-lva-sdk-0.1.6.tar
+│ ├── file list
+│ │ @@ -1,33 +1,32 @@
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.521278 useful-lva-sdk-0.1.4/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)    11357 2023-04-05 04:28:21.000000 useful-lva-sdk-0.1.4/LICENSE
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1622 2023-04-06 06:21:17.521147 useful-lva-sdk-0.1.4/PKG-INFO
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)      947 2023-04-06 06:15:28.000000 useful-lva-sdk-0.1.4/README.md
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)       38 2023-04-06 06:21:17.521321 useful-lva-sdk-0.1.4/setup.cfg
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1181 2023-04-06 06:21:15.000000 useful-lva-sdk-0.1.4/setup.py
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.515897 useful-lva-sdk-0.1.4/src/
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.516891 useful-lva-sdk-0.1.4/src/useful_lva_sdk/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 05:41:00.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/__init__.py
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.517845 useful-lva-sdk-0.1.4/src/useful_lva_sdk/client/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 01:46:08.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/client/__init__.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3502 2023-04-06 06:15:28.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/client/lva_client.py
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.520007 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-05 23:38:14.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/__init__.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3673 2023-04-06 04:22:01.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_pb2.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)      159 2023-04-06 04:22:01.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_pb2_grpc.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3970 2023-04-06 05:42:12.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_resources_pb2.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)      159 2023-04-06 04:22:01.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_resources_pb2_grpc.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     8778 2023-04-06 05:42:12.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_service_pb2.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)    10611 2023-04-06 06:15:28.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_service_pb2_grpc.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     6071 2023-04-06 03:31:22.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/operations_pb2.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)    13642 2023-04-06 03:31:22.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/operations_pb2_grpc.py
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.520846 useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-05 05:17:30.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/__init__.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3222 2023-04-06 06:15:28.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/lva_graph.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1923 2023-04-06 06:15:28.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/lva_graph_builder.py
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)      979 2023-04-05 20:30:35.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/operator.py
+│ │ -drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:21:17.517574 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1622 2023-04-06 06:21:17.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)      902 2023-04-06 06:21:17.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)        1 2023-04-06 06:21:17.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)       69 2023-04-06 06:21:17.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/requires.txt
+│ │ --rw-r--r--   0 yxyan    (659675) primarygroup (89939)       15 2023-04-06 06:21:17.000000 useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.483817 useful-lva-sdk-0.1.6/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)    11357 2023-04-05 04:28:21.000000 useful-lva-sdk-0.1.6/LICENSE
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1626 2023-04-06 16:25:35.483663 useful-lva-sdk-0.1.6/PKG-INFO
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)      951 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/README.md
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)       38 2023-04-06 16:25:35.483865 useful-lva-sdk-0.1.6/setup.cfg
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1141 2023-04-06 16:25:03.000000 useful-lva-sdk-0.1.6/setup.py
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.480780 useful-lva-sdk-0.1.6/useful_lva_sdk/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:40:42.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/__init__.py
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.481695 useful-lva-sdk-0.1.6/useful_lva_sdk/client/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/client/__init__.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3651 2023-04-06 16:16:25.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/client/lva_client.py
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.482883 useful-lva-sdk-0.1.6/useful_lva_sdk/common/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/__init__.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3673 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_pb2.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)      159 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_pb2_grpc.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     4309 2023-04-06 06:43:26.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_resources_pb2.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)      159 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_resources_pb2_grpc.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     9379 2023-04-06 16:16:43.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_service_pb2.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)    10603 2023-04-06 16:16:36.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_service_pb2_grpc.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     6071 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/operations_pb2.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)    13642 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/common/operations_pb2_grpc.py
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.483399 useful-lva-sdk-0.1.6/useful_lva_sdk/core/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/core/__init__.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     3240 2023-04-06 06:43:19.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/core/lva_graph.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1915 2023-04-06 06:43:11.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/core/lva_graph_builder.py
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)      979 2023-04-06 06:40:03.000000 useful-lva-sdk-0.1.6/useful_lva_sdk/core/operator.py
+│ │ +drwxr-xr-x   0 yxyan    (659675) primarygroup (89939)        0 2023-04-06 16:25:35.481438 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)     1626 2023-04-06 16:25:35.000000 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)      818 2023-04-06 16:25:35.000000 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)        1 2023-04-06 16:25:35.000000 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)       69 2023-04-06 16:25:35.000000 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/requires.txt
+│ │ +-rw-r--r--   0 yxyan    (659675) primarygroup (89939)       15 2023-04-06 16:25:35.000000 useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/top_level.txt
+│ │   --- useful-lva-sdk-0.1.4/LICENSE
+│ ├── +++ useful-lva-sdk-0.1.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- useful-lva-sdk-0.1.4/PKG-INFO
+│ ├── +++ useful-lva-sdk-0.1.6/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: useful-lva-sdk
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.6
+│ │  Summary: Unofficial Vision AI Live Video Analytics SDK
+│ │  Author: Yan Xue
+│ │  Author-email: xueyan.sjtu@gmail.com
+│ │  License: MIT
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -13,44 +13,44 @@
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ -# Vertex AI Vision Live Video Analytics SDK 
+│ │ -*Unofficial Vertex AI Vision SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │ +# Vision AI Live Video Analytics SDK 
+│ │ +*Unofficial Vision AI SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```commandline
+│ │  pip install useful-lva-sdk
+│ │  ```
+│ │  
+│ │  ## Get started
+│ │  
+│ │  Create an LVA program with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.core import LvaGraphBuilder
+│ │ -from src.useful_lva_sdk.core.operator import *
+│ │ +from useful_lva_sdk.core.lva_graph_builder import LvaGraphBuilder
+│ │ +from useful_lva_sdk.core.operator import *
+│ │  
+│ │ -graph = LvaGraphBuilder("test-analysis")
+│ │ -    .add_analyzer(GcsVideoSource(), "gcs_source")
+│ │ -    .add_analyzer(GcsProtoSink(), "gcs_sink")
+│ │ -    .add_analyzer(OccupancyCounting(), "oc")
+│ │ -    .connect("oc", "gcs_sink")
+│ │ -    .connect("gcs_source", "oc")
+│ │ +graph = LvaGraphBuilder("test-analysis") \
+│ │ +    .add_analyzer(GcsVideoSource(), "gcs_source") \
+│ │ +    .add_analyzer(GcsProtoSink(), "gcs_sink") \
+│ │ +    .add_analyzer(OccupancyCounting(), "oc") \
+│ │ +    .connect("oc", "gcs_sink") \
+│ │ +    .connect("gcs_source", "oc") \
+│ │      .build()
+│ │  ```
+│ │  
+│ │  Create an analysis with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.client.lva_client import LVAClient
+│ │ +from useful_lva_sdk.client.lva_client import LVAClient
+│ │  
+│ │  analysis = graph.analysis()
+│ │  client = LVAClient(
+│ │      project="PROJECT_ID",
+│ │      location="LOCATION_ID",
+│ │      cluster="CLUSTER_ID",
+│ │  )
+│ │   --- useful-lva-sdk-0.1.4/README.md
+│ ├── +++ useful-lva-sdk-0.1.6/README.md
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,37 +1,37 @@
+│ │ -# Vertex AI Vision Live Video Analytics SDK 
+│ │ -*Unofficial Vertex AI Vision SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │ +# Vision AI Live Video Analytics SDK 
+│ │ +*Unofficial Vision AI SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```commandline
+│ │  pip install useful-lva-sdk
+│ │  ```
+│ │  
+│ │  ## Get started
+│ │  
+│ │  Create an LVA program with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.core import LvaGraphBuilder
+│ │ -from src.useful_lva_sdk.core.operator import *
+│ │ +from useful_lva_sdk.core.lva_graph_builder import LvaGraphBuilder
+│ │ +from useful_lva_sdk.core.operator import *
+│ │  
+│ │ -graph = LvaGraphBuilder("test-analysis")
+│ │ -    .add_analyzer(GcsVideoSource(), "gcs_source")
+│ │ -    .add_analyzer(GcsProtoSink(), "gcs_sink")
+│ │ -    .add_analyzer(OccupancyCounting(), "oc")
+│ │ -    .connect("oc", "gcs_sink")
+│ │ -    .connect("gcs_source", "oc")
+│ │ +graph = LvaGraphBuilder("test-analysis") \
+│ │ +    .add_analyzer(GcsVideoSource(), "gcs_source") \
+│ │ +    .add_analyzer(GcsProtoSink(), "gcs_sink") \
+│ │ +    .add_analyzer(OccupancyCounting(), "oc") \
+│ │ +    .connect("oc", "gcs_sink") \
+│ │ +    .connect("gcs_source", "oc") \
+│ │      .build()
+│ │  ```
+│ │  
+│ │  Create an analysis with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.client.lva_client import LVAClient
+│ │ +from useful_lva_sdk.client.lva_client import LVAClient
+│ │  
+│ │  analysis = graph.analysis()
+│ │  client = LVAClient(
+│ │      project="PROJECT_ID",
+│ │      location="LOCATION_ID",
+│ │      cluster="CLUSTER_ID",
+│ │  )
+│ │   --- useful-lva-sdk-0.1.4/setup.py
+│ ├── +++ useful-lva-sdk-0.1.6/setup.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │  HERE = path.abspath(path.dirname(__file__))
+│ │  
+│ │  with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name="useful-lva-sdk",
+│ │ -    version="0.1.4",
+│ │ +    version="0.1.6",
+│ │      description="Unofficial Vision AI Live Video Analytics SDK",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      author="Yan Xue",
+│ │      author_email="xueyan.sjtu@gmail.com",
+│ │      license="MIT",
+│ │      classifiers=[
+│ │ @@ -23,12 +23,11 @@
+│ │          "Programming Language :: Python :: 3",
+│ │          "Programming Language :: Python :: 3.6",
+│ │          "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",
+│ │          "Programming Language :: Python :: 3.9",
+│ │          "Operating System :: OS Independent"
+│ │      ],
+│ │ -    packages=find_packages(where='src'),
+│ │ -    package_dir={"": "src"},
+│ │ +    packages=find_packages(),
+│ │      include_package_data=True,
+│ │      install_requires=["google-api-core", "google-auth", "googleapis-common-protos", "grpcio", "protobuf"]
+│ │  )
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/client/lva_client.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/client/lva_client.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,14 +1,17 @@
+│ │  import time
+│ │  
+│ │  from google import auth as google_auth
+│ │  from google.auth.transport import requests as google_auth_transport_requests
+│ │  from google.auth.transport import grpc as google_auth_transport_grpc
+│ │ -from src.useful_lva_sdk.common.lva_service_pb2_grpc import LiveVideoAnalyticsStub
+│ │ -from src.useful_lva_sdk.common.operations_pb2_grpc import OperationsStub
+│ │ +from useful_lva_sdk.common.lva_service_pb2_grpc import LiveVideoAnalyticsStub
+│ │ +from useful_lva_sdk.common.operations_pb2_grpc import OperationsStub
+│ │ +from useful_lva_sdk.common.lva_service_pb2 import *
+│ │ +from useful_lva_sdk.common.lva_resources_pb2 import *
+│ │ +from useful_lva_sdk.common.operations_pb2 import *
+│ │  
+│ │  
+│ │  def get_endpoint(env: str) -> str:
+│ │      if env == 'autopush':
+│ │          return 'autopush-visionai.sandbox.googleapis.com'
+│ │      if env == 'staging':
+│ │          return 'staging-visionai.sandbox.googleapis.com'
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_pb2.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_pb2.py
+│ │┄ Files identical despite different names
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_resources_pb2.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_resources_pb2.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -6,14 +6,21 @@
+│ │  from google.protobuf import descriptor as _descriptor
+│ │  from google.protobuf import descriptor_pool as _descriptor_pool
+│ │  from google.protobuf import symbol_database as _symbol_database
+│ │  # @@protoc_insertion_point(imports)
+│ │  
+│ │  _sym_db = _symbol_database.Default()
+│ │  
+│ │ +
+│ │ +from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+│ │ +from google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+│ │ +from useful_lva_sdk.common import lva_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__pb2
+│ │ +from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+│ │ +
+│ │ +
+│ │  DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n,google/cloud/visionai/v1/lva_resources.proto\x12\x18google.cloud.visionai.v1\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\"google/cloud/visionai/v1/lva.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x85\x06\n\x08\x41nalysis\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x34\n\x0b\x63reate_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12\x34\n\x0bupdate_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x03\xe0\x41\x03\x12>\n\x06labels\x18\x04 \x03(\x0b\x32..google.cloud.visionai.v1.Analysis.LabelsEntry\x12I\n\x13\x61nalysis_definition\x18\x05 \x01(\x0b\x32,.google.cloud.visionai.v1.AnalysisDefinition\x12Z\n\x15input_streams_mapping\x18\x06 \x03(\x0b\x32;.google.cloud.visionai.v1.Analysis.InputStreamsMappingEntry\x12\\\n\x16output_streams_mapping\x18\x07 \x03(\x0b\x32<.google.cloud.visionai.v1.Analysis.OutputStreamsMappingEntry\x12\x1b\n\x13\x64isable_event_watch\x18\x08 \x01(\x08\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a:\n\x18InputStreamsMappingEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a;\n\x19OutputStreamsMappingEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01:u\xea\x41r\n visionai.googleapis.com/Analysis\x12Nprojects/{project}/locations/{location}/clusters/{cluster}/analyses/{analysis}B\xc1\x01\n\x1c\x63om.google.cloud.visionai.v1B\x11LvaResourcesProtoP\x01Z8cloud.google.com/go/visionai/apiv1/visionaipb;visionaipb\xaa\x02\x18Google.Cloud.VisionAI.V1\xca\x02\x18Google\\Cloud\\VisionAI\\V1\xea\x02\x1bGoogle::Cloud::VisionAI::V1b\x06proto3')
+│ │  
+│ │  _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
+│ │  _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.visionai.v1.lva_resources_pb2', globals())
+│ │  if _descriptor._USE_C_DESCRIPTORS == False:
+│ │  
+│ │    DESCRIPTOR._options = None
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_service_pb2.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_service_pb2.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -6,14 +6,24 @@
+│ │  from google.protobuf import descriptor as _descriptor
+│ │  from google.protobuf import descriptor_pool as _descriptor_pool
+│ │  from google.protobuf import symbol_database as _symbol_database
+│ │  # @@protoc_insertion_point(imports)
+│ │  
+│ │  _sym_db = _symbol_database.Default()
+│ │  
+│ │ +
+│ │ +from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+│ │ +from google.api import client_pb2 as google_dot_api_dot_client__pb2
+│ │ +from google.api import field_behavior_pb2 as google_dot_api_dot_field__behavior__pb2
+│ │ +from google.api import resource_pb2 as google_dot_api_dot_resource__pb2
+│ │ +from useful_lva_sdk.common import lva_resources_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__resources__pb2
+│ │ +from google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+│ │ +from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
+│ │ +
+│ │ +
+│ │  DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n*google/cloud/visionai/v1/lva_service.proto\x12\x18google.cloud.visionai.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a,google/cloud/visionai/v1/lva_resources.proto\x1a#google/longrunning/operations.proto\x1a google/protobuf/field_mask.proto\"\x97\x01\n\x13ListAnalysesRequest\x12\x37\n\x06parent\x18\x01 \x01(\tB\'\xe0\x41\x02\xfa\x41!\n\x1fvisionai.googleapis.com/Cluster\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\x12\x0e\n\x06\x66ilter\x18\x04 \x01(\t\x12\x10\n\x08order_by\x18\x05 \x01(\t\"z\n\x14ListAnalysesResponse\x12\x34\n\x08\x61nalyses\x18\x01 \x03(\x0b\x32\".google.cloud.visionai.v1.Analysis\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\x12\x13\n\x0bunreachable\x18\x03 \x03(\t\"L\n\x12GetAnalysisRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xe0\x41\x02\xfa\x41\"\n visionai.googleapis.com/Analysis\"\xbe\x01\n\x15\x43reateAnalysisRequest\x12\x37\n\x06parent\x18\x01 \x01(\tB\'\xe0\x41\x02\xfa\x41!\n\x1fvisionai.googleapis.com/Cluster\x12\x18\n\x0b\x61nalysis_id\x18\x02 \x01(\tB\x03\xe0\x41\x02\x12\x39\n\x08\x61nalysis\x18\x03 \x01(\x0b\x32\".google.cloud.visionai.v1.AnalysisB\x03\xe0\x41\x02\x12\x17\n\nrequest_id\x18\x04 \x01(\tB\x03\xe0\x41\x01\"\xa1\x01\n\x15UpdateAnalysisRequest\x12\x34\n\x0bupdate_mask\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.FieldMaskB\x03\xe0\x41\x02\x12\x39\n\x08\x61nalysis\x18\x02 \x01(\x0b\x32\".google.cloud.visionai.v1.AnalysisB\x03\xe0\x41\x02\x12\x17\n\nrequest_id\x18\x03 \x01(\tB\x03\xe0\x41\x01\"h\n\x15\x44\x65leteAnalysisRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xe0\x41\x02\xfa\x41\"\n visionai.googleapis.com/Analysis\x12\x17\n\nrequest_id\x18\x02 \x01(\tB\x03\xe0\x41\x01\x32\xf9\x08\n\x12LiveVideoAnalytics\x12\xb7\x01\n\x0cListAnalyses\x12-.google.cloud.visionai.v1.ListAnalysesRequest\x1a..google.cloud.visionai.v1.ListAnalysesResponse\"H\x82\xd3\xe4\x93\x02\x39\x12\x37/v1/{parent=projects/*/locations/*/clusters/*}/analyses\xda\x41\x06parent\x12\xa7\x01\n\x0bGetAnalysis\x12,.google.cloud.visionai.v1.GetAnalysisRequest\x1a\".google.cloud.visionai.v1.Analysis\"F\x82\xd3\xe4\x93\x02\x39\x12\x37/v1/{name=projects/*/locations/*/clusters/*/analyses/*}\xda\x41\x04name\x12\xea\x01\n\x0e\x43reateAnalysis\x12/.google.cloud.visionai.v1.CreateAnalysisRequest\x1a\x1d.google.longrunning.Operation\"\x87\x01\x82\xd3\xe4\x93\x02\x43\"7/v1/{parent=projects/*/locations/*/clusters/*}/analyses:\x08\x61nalysis\xda\x41\x1bparent,analysis,analysis_id\xca\x41\x1d\n\x08\x41nalysis\x12\x11OperationMetadata\x12\xec\x01\n\x0eUpdateAnalysis\x12/.google.cloud.visionai.v1.UpdateAnalysisRequest\x1a\x1d.google.longrunning.Operation\"\x89\x01\x82\xd3\xe4\x93\x02L2@/v1/{analysis.name=projects/*/locations/*/clusters/*/analyses/*}:\x08\x61nalysis\xda\x41\x14\x61nalysis,update_mask\xca\x41\x1d\n\x08\x41nalysis\x12\x11OperationMetadata\x12\xd5\x01\n\x0e\x44\x65leteAnalysis\x12/.google.cloud.visionai.v1.DeleteAnalysisRequest\x1a\x1d.google.longrunning.Operation\"s\x82\xd3\xe4\x93\x02\x39*7/v1/{name=projects/*/locations/*/clusters/*/analyses/*}\xda\x41\x04name\xca\x41*\n\x15google.protobuf.Empty\x12\x11OperationMetadata\x1aK\xca\x41\x17visionai.googleapis.com\xd2\x41.https://www.googleapis.com/auth/cloud-platformB\xbf\x01\n\x1c\x63om.google.cloud.visionai.v1B\x0fLvaServiceProtoP\x01Z8cloud.google.com/go/visionai/apiv1/visionaipb;visionaipb\xaa\x02\x18Google.Cloud.VisionAI.V1\xca\x02\x18Google\\Cloud\\VisionAI\\V1\xea\x02\x1bGoogle::Cloud::VisionAI::V1b\x06proto3')
+│ │  
+│ │  _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
+│ │  _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'google.cloud.visionai.v1.lva_service_pb2', globals())
+│ │  if _descriptor._USE_C_DESCRIPTORS == False:
+│ │  
+│ │    DESCRIPTOR._options = None
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/lva_service_pb2_grpc.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/lva_service_pb2_grpc.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │  # Generated by the gRPC Python protocol compiler plugin. DO NOT EDIT!
+│ │  """Client and server classes corresponding to protobuf-defined services."""
+│ │  import grpc
+│ │  
+│ │ -from src.useful_lva_sdk.common import lva_resources_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__resources__pb2
+│ │ -from src.useful_lva_sdk.common import lva_service_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__service__pb2
+│ │ +from useful_lva_sdk.common import lva_resources_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__resources__pb2
+│ │ +from useful_lva_sdk.common import lva_service_pb2 as google_dot_cloud_dot_visionai_dot_v1_dot_lva__service__pb2
+│ │  from google.longrunning import operations_pb2 as google_dot_longrunning_dot_operations__pb2
+│ │  
+│ │  
+│ │  class LiveVideoAnalyticsStub(object):
+│ │      """Service describing handlers for resources. The service enables clients to run
+│ │      Live Video Analytics (LVA) on the streaming inputs.
+│ │      """
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/operations_pb2.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/operations_pb2.py
+│ │┄ Files identical despite different names
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/common/operations_pb2_grpc.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/common/operations_pb2_grpc.py
+│ │┄ Files identical despite different names
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/lva_graph.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/core/lva_graph.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  import queue
+│ │  
+│ │ -from src.useful_lva_sdk.common import Analysis
+│ │ -from src.useful_lva_sdk.common import AnalysisDefinition, AnalyzerDefinition
+│ │ +from useful_lva_sdk.common.lva_resources_pb2 import Analysis
+│ │ +from useful_lva_sdk.common.lva_pb2 import AnalysisDefinition, AnalyzerDefinition
+│ │  
+│ │  
+│ │  class Vertex:
+│ │      """Vertex in the LVA graph."""
+│ │  
+│ │      """
+│ │      Instantiate a Vertex.
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/lva_graph_builder.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/core/lva_graph_builder.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │ -from src.useful_lva_sdk.core.lva_graph import LvaGraph
+│ │ -from src.useful_lva_sdk.core.operator import Operator
+│ │ +from useful_lva_sdk.core.lva_graph import LvaGraph
+│ │ +from useful_lva_sdk.core.operator import Operator
+│ │  
+│ │  
+│ │  class LvaGraphBuilder:
+│ │      """
+│ │      Instantiate an LVA graph builder.
+│ │      """
+│ │      def __init__(self, name):
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk/core/operator.py
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk/core/operator.py
+│ │┄ Files identical despite different names
+│ │   --- useful-lva-sdk-0.1.4/src/useful_lva_sdk.egg-info/PKG-INFO
+│ ├── +++ useful-lva-sdk-0.1.6/useful_lva_sdk.egg-info/PKG-INFO
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: useful-lva-sdk
+│ │ -Version: 0.1.4
+│ │ +Version: 0.1.6
+│ │  Summary: Unofficial Vision AI Live Video Analytics SDK
+│ │  Author: Yan Xue
+│ │  Author-email: xueyan.sjtu@gmail.com
+│ │  License: MIT
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │ @@ -13,44 +13,44 @@
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ -# Vertex AI Vision Live Video Analytics SDK 
+│ │ -*Unofficial Vertex AI Vision SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │ +# Vision AI Live Video Analytics SDK 
+│ │ +*Unofficial Vision AI SDK in Python.* It's for building Live Video Analytics (LVA) program and CRUD LVA resources. 
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```commandline
+│ │  pip install useful-lva-sdk
+│ │  ```
+│ │  
+│ │  ## Get started
+│ │  
+│ │  Create an LVA program with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.core import LvaGraphBuilder
+│ │ -from src.useful_lva_sdk.core.operator import *
+│ │ +from useful_lva_sdk.core.lva_graph_builder import LvaGraphBuilder
+│ │ +from useful_lva_sdk.core.operator import *
+│ │  
+│ │ -graph = LvaGraphBuilder("test-analysis")
+│ │ -    .add_analyzer(GcsVideoSource(), "gcs_source")
+│ │ -    .add_analyzer(GcsProtoSink(), "gcs_sink")
+│ │ -    .add_analyzer(OccupancyCounting(), "oc")
+│ │ -    .connect("oc", "gcs_sink")
+│ │ -    .connect("gcs_source", "oc")
+│ │ +graph = LvaGraphBuilder("test-analysis") \
+│ │ +    .add_analyzer(GcsVideoSource(), "gcs_source") \
+│ │ +    .add_analyzer(GcsProtoSink(), "gcs_sink") \
+│ │ +    .add_analyzer(OccupancyCounting(), "oc") \
+│ │ +    .connect("oc", "gcs_sink") \
+│ │ +    .connect("gcs_source", "oc") \
+│ │      .build()
+│ │  ```
+│ │  
+│ │  Create an analysis with this lib:
+│ │  
+│ │  ```python
+│ │ -from src.useful_lva_sdk.client.lva_client import LVAClient
+│ │ +from useful_lva_sdk.client.lva_client import LVAClient
+│ │  
+│ │  analysis = graph.analysis()
+│ │  client = LVAClient(
+│ │      project="PROJECT_ID",
+│ │      location="LOCATION_ID",
+│ │      cluster="CLUSTER_ID",
+│ │  )

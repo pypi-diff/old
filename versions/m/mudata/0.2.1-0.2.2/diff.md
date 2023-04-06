@@ -1,0 +1,290 @@
+# Comparing `tmp/mudata-0.2.1.tar.gz` & `tmp/mudata-0.2.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "mudata-0.2.1.tar", last modified: Fri Nov  4 19:54:13 2022, max compression
++gzip compressed data, was "mudata-0.2.2.tar", last modified: Thu Apr  6 16:29:08 2023, max compression
+```
+
+## Comparing `mudata-0.2.1.tar` & `mudata-0.2.2.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,11 @@
+--rw-r--r--   0        0        0     2694 2022-11-04 19:52:22.862864 mudata-0.2.1/README.md
+--rw-r--r--   0        0        0      243 2022-11-04 19:52:22.871424 mudata-0.2.1/mudata/__init__.py
+--rw-r--r--   0        0        0        0 2022-11-04 19:52:22.871585 mudata-0.2.1/mudata/_core/__init__.py
+--rw-r--r--   0        0        0     1598 2022-11-04 19:52:22.871753 mudata-0.2.1/mudata/_core/config.py
+--rw-r--r--   0        0        0     3561 2022-11-04 19:52:22.871910 mudata-0.2.1/mudata/_core/file_backing.py
+--rw-r--r--   0        0        0    19473 2022-11-04 19:52:22.872130 mudata-0.2.1/mudata/_core/io.py
+--rw-r--r--   0        0        0    51789 2022-11-04 19:52:22.872564 mudata-0.2.1/mudata/_core/mudata.py
+--rw-r--r--   0        0        0     8343 2022-11-04 19:52:22.872892 mudata-0.2.1/mudata/_core/repr.py
+--rw-r--r--   0        0        0      662 2022-11-04 19:52:22.873192 mudata-0.2.1/mudata/_core/utils.py
+--rw-r--r--   0        0        0     1053 2022-11-04 19:52:22.873445 mudata-0.2.1/pyproject.toml
+--rw-r--r--   0        0        0     3757 1970-01-01 00:00:00.000000 mudata-0.2.1/PKG-INFO
++-rw-r--r--   0        0        0     2694 2022-11-04 19:52:22.862864 mudata-0.2.2/README.md
++-rw-r--r--   0        0        0      243 2023-04-06 16:24:48.986123 mudata-0.2.2/mudata/__init__.py
++-rw-r--r--   0        0        0        0 2022-11-04 19:52:22.871585 mudata-0.2.2/mudata/_core/__init__.py
++-rw-r--r--   0        0        0     1598 2022-11-04 19:52:22.871753 mudata-0.2.2/mudata/_core/config.py
++-rw-r--r--   0        0        0     3540 2023-04-06 16:24:48.986840 mudata-0.2.2/mudata/_core/file_backing.py
++-rw-r--r--   0        0        0    19483 2023-04-06 16:24:48.987829 mudata-0.2.2/mudata/_core/io.py
++-rw-r--r--   0        0        0    51789 2023-04-06 16:24:48.988971 mudata-0.2.2/mudata/_core/mudata.py
++-rw-r--r--   0        0        0     8343 2022-11-04 19:52:22.872892 mudata-0.2.2/mudata/_core/repr.py
++-rw-r--r--   0        0        0      662 2022-11-04 19:52:22.873192 mudata-0.2.2/mudata/_core/utils.py
++-rw-r--r--   0        0        0     1094 2023-04-06 16:24:48.990836 mudata-0.2.2/pyproject.toml
++-rw-r--r--   0        0        0     3824 1970-01-01 00:00:00.000000 mudata-0.2.2/PKG-INFO
+```
+
+### Comparing `mudata-0.2.1/README.md` & `mudata-0.2.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `mudata-0.2.1/mudata/_core/config.py` & `mudata-0.2.2/mudata/_core/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mudata-0.2.1/mudata/_core/file_backing.py` & `mudata-0.2.2/mudata/_core/file_backing.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,35 +1,35 @@
+ from pathlib import Path
+ from os import PathLike
+ from os.path import abspath
+-from typing import Optional, Iterator
++from typing import Optional, Iterator, Literal
+ from collections import defaultdict
+ from weakref import WeakSet
+ 
+ import anndata as ad
+ from anndata._core.file_backing import AnnDataFileManager
+ import h5py
+ 
+ 
+ class MuDataFileManager(AnnDataFileManager):
+     def __init__(
+         self,
+         filename: Optional[PathLike] = None,
+-        filemode: Optional[ad.compat.Literal["r", "r+"]] = None,
++        filemode: Optional[Literal["r", "r+"]] = None,
+     ):
+         self._counter = 0
+         self._children = WeakSet()
+         if filename is not None:
+             filename = Path(filename)
+         super().__init__(None, filename, filemode)
+ 
+     def open(
+         self,
+         filename: Optional[PathLike] = None,
+-        filemode: Optional[ad.compat.Literal["r", "r+"]] = None,
++        filemode: Optional[Literal["r", "r+"]] = None,
+         add_ref=False,
+     ) -> bool:
+         if self.is_open and (
+             filename is None
+             and filemode is None
+             or filename == self.filename
+             and filemode == self._filemode
+@@ -95,15 +95,15 @@
+ 
+         if parent.is_open:
+             self._set_file()
+ 
+     def open(
+         self,
+         filename: Optional[PathLike] = None,
+-        filemode: Optional[ad.compat.Literal["r", "r+"]] = None,
++        filemode: Optional[Literal["r", "r+"]] = None,
+     ):
+         if not self._parent.open(filename, filemode, add_ref=True):
+             self._set_file()
+ 
+     def _set_file(self):
+         if self._parent.is_open:
+             self._file = self._parent._file["mod"][self._mod]
+```
+
+### Comparing `mudata-0.2.1/mudata/_core/io.py` & `mudata-0.2.2/mudata/_core/io.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -302,15 +302,15 @@
+         ), "Can only save MuData object to .h5mu file"
+ 
+         write_h5mu(filename, data)
+ 
+     else:
+         assert isinstance(data, AnnData), "Only MuData and AnnData objects are accepted"
+ 
+-        m = re.search("^(.+)\.(h5mu)[/]?([A-Za-z]*)[/]?([/A-Za-z]*)$", filename)
++        m = re.search("^(.+)\.(h5mu)[/]?([A-Za-z]*)[/]?([/A-Za-z]*)$", str(filename))
+         if m is not None:
+             m = m.groups()
+         else:
+             raise ValueError("Expected non-empty .h5ad or .h5mu file name")
+ 
+         filepath = ".".join([m[0], m[1]])
+ 
+@@ -578,15 +578,15 @@
+       - FILE.h5mu
+       - FILE.h5mu/MODALITY
+       - FILE.h5mu/mod/MODALITY
+       - FILE.h5ad
+     """
+     import re
+ 
+-    m = re.search("^(.+)\.(h5mu)[/]?([A-Za-z]*)[/]?([/A-Za-z]*)$", filename)
++    m = re.search("^(.+)\.(h5mu)[/]?([A-Za-z]*)[/]?([/A-Za-z]*)$", str(filename))
+     if m is not None:
+         m = m.groups()
+     else:
+         if filename.endswith(".h5ad"):
+             m = [filename[:-5], "h5ad", "", ""]
+         else:
+             raise ValueError("Expected non-empty .h5ad or .h5mu file name")
+```
+
+### Comparing `mudata-0.2.1/mudata/_core/mudata.py` & `mudata-0.2.2/mudata/_core/mudata.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-from typing import List, Tuple, Union, Optional, Mapping, Iterable, Sequence, Any
++from typing import List, Tuple, Union, Optional, Mapping, Iterable, Sequence, Any, Literal
+ from numbers import Integral
+ from collections import abc
+ from collections.abc import MutableMapping
+ from functools import reduce
+ from itertools import chain, combinations
+ import warnings
+ from copy import deepcopy
+@@ -240,17 +240,16 @@
+         uns: Optional[Mapping[str, Any]] = None,
+         obsm: Optional[Union[np.ndarray, Mapping[str, Sequence[Any]]]] = None,
+         varm: Optional[Union[np.ndarray, Mapping[str, Sequence[Any]]]] = None,
+         obsp: Optional[Union[np.ndarray, Mapping[str, Sequence[Any]]]] = None,
+         varp: Optional[Union[np.ndarray, Mapping[str, Sequence[Any]]]] = None,
+         obsmap: Optional[Mapping[str, Sequence[int]]] = None,
+         varmap: Optional[Mapping[str, Sequence[int]]] = None,
+-        axis: anndata.compat.Literal[0, 1] = 0,
++        axis: Literal[0, 1] = 0,
+     ):
+-
+         return cls(
+             data={k: (v if isinstance(v, AnnData) else AnnData(**v)) for k, v in mod.items()},
+             obs=obs,
+             var=var,
+             uns=uns,
+             obsm=obsm,
+             varm=varm,
+@@ -1196,15 +1195,15 @@
+ 
+         write_zarr(store, self, **kwargs)
+ 
+     def _gen_repr(self, n_obs, n_vars, extensive: bool = False) -> str:
+         backed_at = f" backed at {str(self.filename)!r}" if self.isbacked else ""
+         view_of = "View of " if self.is_view else ""
+         descr = f"{view_of}MuData object with n_obs × n_vars = {n_obs} × {n_vars}{backed_at}"
+-        for attr in ["obs", "var", "obsm", "varm", "obsp", "varp"]:
++        for attr in ["obs", "var", "uns", "obsm", "varm", "obsp", "varp"]:
+             if hasattr(self, attr) and getattr(self, attr) is not None:
+                 keys = list(getattr(self, attr).keys())
+                 if len(keys) > 0:
+                     mod_sep = ":" if isinstance(getattr(self, attr), pd.DataFrame) else ""
+                     global_keys = list(
+                         map(
+                             all,
+```
+
+### Comparing `mudata-0.2.1/mudata/_core/repr.py` & `mudata-0.2.2/mudata/_core/repr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mudata-0.2.1/mudata/_core/utils.py` & `mudata-0.2.2/mudata/_core/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `mudata-0.2.1/pyproject.toml` & `mudata-0.2.2/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -12,26 +12,27 @@
+     "Programming Language :: Python :: 3",
+     "License :: OSI Approved :: BSD License",
+     "Operating System :: OS Independent",
+     "Development Status :: 3 - Alpha",
+     "Topic :: Scientific/Engineering :: Bio-Informatics",
+     "Intended Audience :: Science/Research"
+ ]
+-requires-python = ">= 3.6"
++requires-python = ">= 3.8"
+ requires = [
+     "numpy",
+     "pandas",
+     "h5py",
+     "anndata >= 0.8",
+ ]
+ 
+ [tool.flit.metadata.requires-extra]
+ docs = [
+     "sphinx >= 4.0",
+-    "sphinx-book-theme",
++    "sphinx-book-theme==0.3.3",
++    "pydata-sphinx-theme==0.8.1",
+     "readthedocs-sphinx-search",
+     "nbsphinx",
+     "sphinx_automodapi"
+ ]
+ test = [
+     "zarr"
+ ]
+```
+
+### Comparing `mudata-0.2.1/PKG-INFO` & `mudata-0.2.2/PKG-INFO`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,28 +1,29 @@
+ Metadata-Version: 2.1
+ Name: mudata
+-Version: 0.2.1
++Version: 0.2.2
+ Summary: Multimodal omics analysis framework
+ Home-page: https://github.com/scverse/mudata
+ Author: Danila Bredikhin
+ Author-email: danila.bredikhin@embl.de
+-Requires-Python: >= 3.6
++Requires-Python: >= 3.8
+ Description-Content-Type: text/markdown
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: BSD License
+ Classifier: Operating System :: OS Independent
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+ Classifier: Intended Audience :: Science/Research
+ Requires-Dist: numpy
+ Requires-Dist: pandas
+ Requires-Dist: h5py
+ Requires-Dist: anndata >= 0.8
+ Requires-Dist: sphinx >= 4.0 ; extra == "docs"
+-Requires-Dist: sphinx-book-theme ; extra == "docs"
++Requires-Dist: sphinx-book-theme==0.3.3 ; extra == "docs"
++Requires-Dist: pydata-sphinx-theme==0.8.1 ; extra == "docs"
+ Requires-Dist: readthedocs-sphinx-search ; extra == "docs"
+ Requires-Dist: nbsphinx ; extra == "docs"
+ Requires-Dist: sphinx_automodapi ; extra == "docs"
+ Requires-Dist: zarr ; extra == "test"
+ Project-URL: Documentation, https://muon.readthedocs.io/en/latest/
+ Provides-Extra: docs
+ Provides-Extra: test
+```
+

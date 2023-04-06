@@ -1,0 +1,190 @@
+# Comparing `tmp/flashquiz-0rc1.tar.gz` & `tmp/flashquiz-0rc3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "flashquiz-0rc1.tar", last modified: Thu Mar  2 22:18:10 2023, max compression
++gzip compressed data, was "flashquiz-0rc3.tar", last modified: Wed Mar  8 14:41:15 2023, max compression
+```
+
+## Comparing `flashquiz-0rc1.tar` & `flashquiz-0rc3.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,32 @@
+-drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-02 22:18:10.600730 flashquiz-0rc1/
+--rw-r--r--   0 michaelfelix   (501) staff       (20)     1099 2023-02-24 14:19:07.000000 flashquiz-0rc1/LICENSE
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      522 2023-03-02 22:18:10.600614 flashquiz-0rc1/PKG-INFO
+--rw-r--r--   0 michaelfelix   (501) staff       (20)        0 2023-02-24 14:19:07.000000 flashquiz-0rc1/README.md
+-drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-02 22:18:10.597698 flashquiz-0rc1/flashquiz/
+--rw-r--r--   0 michaelfelix   (501) staff       (20)        0 2023-02-27 00:05:54.000000 flashquiz-0rc1/flashquiz/__init__.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)     1939 2023-03-02 18:30:30.000000 flashquiz-0rc1/flashquiz/args.py
+-drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-02 22:18:10.599423 flashquiz-0rc1/flashquiz/flashcards/
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       75 2023-02-25 23:59:33.000000 flashquiz-0rc1/flashquiz/flashcards/__init__.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)     1771 2023-03-02 18:38:55.000000 flashquiz-0rc1/flashquiz/flashcards/card.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)     2269 2023-03-02 17:28:39.000000 flashquiz-0rc1/flashquiz/flashcards/deck.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      458 2023-02-25 23:59:30.000000 flashquiz-0rc1/flashquiz/flashcards/parser.py
+-drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-02 22:18:10.600352 flashquiz-0rc1/flashquiz/gui/
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       44 2023-03-02 18:00:33.000000 flashquiz-0rc1/flashquiz/gui/__init__.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      104 2023-02-27 00:05:54.000000 flashquiz-0rc1/flashquiz/gui/constants.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)     1701 2023-03-02 17:24:44.000000 flashquiz-0rc1/flashquiz/gui/gui.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      394 2023-03-02 17:57:19.000000 flashquiz-0rc1/flashquiz/gui/text.py
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      580 2023-03-02 18:26:23.000000 flashquiz-0rc1/flashquiz/quizzer.py
+-drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-02 22:18:10.598672 flashquiz-0rc1/flashquiz.egg-info/
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      522 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/PKG-INFO
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      520 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/SOURCES.txt
+--rw-r--r--   0 michaelfelix   (501) staff       (20)        1 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/dependency_links.txt
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       53 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/entry_points.txt
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       16 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/requires.txt
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       10 2023-03-02 22:18:10.000000 flashquiz-0rc1/flashquiz.egg-info/top_level.txt
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      479 2023-03-02 19:20:12.000000 flashquiz-0rc1/pyproject.toml
+--rw-r--r--   0 michaelfelix   (501) staff       (20)       38 2023-03-02 22:18:10.600762 flashquiz-0rc1/setup.cfg
+--rw-r--r--   0 michaelfelix   (501) staff       (20)      406 2023-03-02 22:15:59.000000 flashquiz-0rc1/setup.py
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.454478 flashquiz-0rc3/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     1099 2023-02-24 14:19:07.000000 flashquiz-0rc3/LICENSE
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      522 2023-03-08 14:41:15.454289 flashquiz-0rc3/PKG-INFO
++-rw-r--r--   0 michaelfelix   (501) staff       (20)        0 2023-02-24 14:19:07.000000 flashquiz-0rc3/README.md
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.449550 flashquiz-0rc3/flashquiz/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)        0 2023-02-27 00:05:54.000000 flashquiz-0rc3/flashquiz/__init__.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     2069 2023-03-02 22:45:53.000000 flashquiz-0rc3/flashquiz/args.py
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.451218 flashquiz-0rc3/flashquiz/assets/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     5318 2023-03-01 17:37:30.000000 flashquiz-0rc3/flashquiz/assets/card_back.jpg
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     6537 2023-03-01 17:30:54.000000 flashquiz-0rc3/flashquiz/assets/card_front.jpg
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      996 2023-03-07 17:41:15.000000 flashquiz-0rc3/flashquiz/default.csv
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.452627 flashquiz-0rc3/flashquiz/flashcards/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       75 2023-02-25 23:59:33.000000 flashquiz-0rc3/flashquiz/flashcards/__init__.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     5033 2023-03-07 18:30:50.000000 flashquiz-0rc3/flashquiz/flashcards/card.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     3087 2023-03-07 18:16:04.000000 flashquiz-0rc3/flashquiz/flashcards/deck.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      458 2023-02-25 23:59:30.000000 flashquiz-0rc3/flashquiz/flashcards/parser.py
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.453832 flashquiz-0rc3/flashquiz/gui/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       44 2023-03-02 18:00:33.000000 flashquiz-0rc3/flashquiz/gui/__init__.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      104 2023-02-27 00:05:54.000000 flashquiz-0rc3/flashquiz/gui/constants.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)     1708 2023-03-03 15:35:25.000000 flashquiz-0rc3/flashquiz/gui/gui.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      803 2023-03-07 17:54:06.000000 flashquiz-0rc3/flashquiz/gui/text.py
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      711 2023-03-07 18:16:43.000000 flashquiz-0rc3/flashquiz/quizzer.py
++drwxr-xr-x   0 michaelfelix   (501) staff       (20)        0 2023-03-08 14:41:15.450709 flashquiz-0rc3/flashquiz.egg-info/
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      522 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/PKG-INFO
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      605 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/SOURCES.txt
++-rw-r--r--   0 michaelfelix   (501) staff       (20)        1 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/dependency_links.txt
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       53 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/entry_points.txt
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       16 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/requires.txt
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       10 2023-03-08 14:41:15.000000 flashquiz-0rc3/flashquiz.egg-info/top_level.txt
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      479 2023-03-08 14:38:14.000000 flashquiz-0rc3/pyproject.toml
++-rw-r--r--   0 michaelfelix   (501) staff       (20)       38 2023-03-08 14:41:15.454536 flashquiz-0rc3/setup.cfg
++-rw-r--r--   0 michaelfelix   (501) staff       (20)      481 2023-03-08 14:38:14.000000 flashquiz-0rc3/setup.py
+```
+
+### Comparing `flashquiz-0rc1/LICENSE` & `flashquiz-0rc3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `flashquiz-0rc1/PKG-INFO` & `flashquiz-0rc3/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: flashquiz
+-Version: 0rc1
++Version: 0rc3
+ Summary: Practice your flashcards using python
+ Author: mike-fmh
+ Author-email: Michael MH <mikemh@uri.edu>
+ License: MIT
+ Project-URL: Source, https://github.com/mike-fmh/flashquiz
+ Project-URL: Homepage, https://mike-fmh.github.io/flashquiz/
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `flashquiz-0rc1/flashquiz/gui/gui.py` & `flashquiz-0rc3/flashquiz/gui/gui.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -20,29 +20,28 @@
+         pygame.display.set_caption(self.window_name)
+         return self
+ 
+     def handle_events(self, deck: Deck):
+         for event in pygame.event.get():
+             keys = pygame.key.get_pressed()
+             if event.type == pygame.MOUSEBUTTONDOWN:
+-                deck.cards.sprites()[0].flip()
++                deck.cards.sprites()[0].flip()  # first card of the deck is the only one in view
+             if keys[pygame.K_RIGHT]:
+                 deck.move_first_to_back()
+             if keys[pygame.K_LEFT]:
+                 deck.move_last_to_front()
+             if keys[pygame.K_ESCAPE] or event.type == pygame.QUIT:
+                 return False, deck
+         return True, deck
+ 
+     def render(self, group: SpriteGroup):
+         self.clock.tick(self.FPS)
+         for card in group:
+             card.update()
+-            sprite, rect = card.render_text()
+-            self.screen.blit(sprite, rect)
++            card.render_textwrap(self.screen)
+         pygame.display.update()
+ 
+     def render_card(self, card: Card):
+         self.clock.tick(self.FPS)
+         card.update()
+         sprite, rect = card.render_text()
+         self.screen.blit(sprite, rect)
+```
+
+### Comparing `flashquiz-0rc1/flashquiz.egg-info/PKG-INFO` & `flashquiz-0rc3/flashquiz.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: flashquiz
+-Version: 0rc1
++Version: 0rc3
+ Summary: Practice your flashcards using python
+ Author: mike-fmh
+ Author-email: Michael MH <mikemh@uri.edu>
+ License: MIT
+ Project-URL: Source, https://github.com/mike-fmh/flashquiz
+ Project-URL: Homepage, https://mike-fmh.github.io/flashquiz/
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `flashquiz-0rc1/flashquiz.egg-info/SOURCES.txt` & `flashquiz-0rc3/flashquiz.egg-info/SOURCES.txt`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,20 +1,23 @@
+ LICENSE
+ README.md
+ pyproject.toml
+ setup.py
+ flashquiz/__init__.py
+ flashquiz/args.py
++flashquiz/default.csv
+ flashquiz/quizzer.py
+ flashquiz.egg-info/PKG-INFO
+ flashquiz.egg-info/SOURCES.txt
+ flashquiz.egg-info/dependency_links.txt
+ flashquiz.egg-info/entry_points.txt
+ flashquiz.egg-info/requires.txt
+ flashquiz.egg-info/top_level.txt
++flashquiz/assets/card_back.jpg
++flashquiz/assets/card_front.jpg
+ flashquiz/flashcards/__init__.py
+ flashquiz/flashcards/card.py
+ flashquiz/flashcards/deck.py
+ flashquiz/flashcards/parser.py
+ flashquiz/gui/__init__.py
+ flashquiz/gui/constants.py
+ flashquiz/gui/gui.py
+```
+

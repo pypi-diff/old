@@ -1,0 +1,364 @@
+--- tmp/RegScale_CLI-4.24.0-py3-none-any.whl.zip
++++ tmp/RegScale_CLI-4.24.1-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,84 +1,84 @@
+│ -Zip file size: 195106 bytes, number of entries: 82
+│ --rw-r--r--  2.0 unx    14494 b- defN 23-Apr-05 19:49 regscale.py
+│ --rw-r--r--  2.0 unx       47 b- defN 23-Apr-05 19:49 app/__init__.py
+│ --rw-r--r--  2.0 unx       73 b- defN 23-Apr-05 19:49 app/_version.py
+│ --rw-r--r--  2.0 unx    14016 b- defN 23-Apr-05 19:49 app/api.py
+│ --rw-r--r--  2.0 unx    12991 b- defN 23-Apr-05 19:49 app/application.py
+│ --rw-r--r--  2.0 unx     1191 b- defN 23-Apr-05 19:49 app/logz.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 app/commercial/__init__.py
+│ --rw-r--r--  2.0 unx    16432 b- defN 23-Apr-05 19:49 app/commercial/ad.py
+│ --rw-r--r--  2.0 unx    46852 b- defN 23-Apr-05 19:49 app/commercial/defender.py
+│ --rw-r--r--  2.0 unx     8101 b- defN 23-Apr-05 19:49 app/commercial/jira.py
+│ --rw-r--r--  2.0 unx    27597 b- defN 23-Apr-05 19:49 app/commercial/okta.py
+│ --rw-r--r--  2.0 unx    11726 b- defN 23-Apr-05 19:49 app/commercial/servicenow.py
+│ --rw-r--r--  2.0 unx    22914 b- defN 23-Apr-05 19:49 app/commercial/tenable.py
+│ --rw-r--r--  2.0 unx    56612 b- defN 23-Apr-05 19:49 app/commercial/wiz.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 app/internal/__init__.py
+│ --rw-r--r--  2.0 unx    27853 b- defN 23-Apr-05 19:49 app/internal/admin_actions.py
+│ --rw-r--r--  2.0 unx    31774 b- defN 23-Apr-05 19:49 app/internal/assessments_editor.py
+│ --rw-r--r--  2.0 unx    16287 b- defN 23-Apr-05 19:49 app/internal/comparison.py
+│ --rw-r--r--  2.0 unx    15286 b- defN 23-Apr-05 19:49 app/internal/control_editor.py
+│ --rw-r--r--  2.0 unx     5912 b- defN 23-Apr-05 19:49 app/internal/encrypt.py
+│ --rw-r--r--  2.0 unx    40841 b- defN 23-Apr-05 19:49 app/internal/evidence.py
+│ --rw-r--r--  2.0 unx     2330 b- defN 23-Apr-05 19:49 app/internal/healthcheck.py
+│ --rw-r--r--  2.0 unx     6394 b- defN 23-Apr-05 19:49 app/internal/login.py
+│ --rw-r--r--  2.0 unx     9419 b- defN 23-Apr-05 19:49 app/internal/migrations.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 app/public/__init__.py
+│ --rw-r--r--  2.0 unx    18801 b- defN 23-Apr-05 19:49 app/public/cisa.py
+│ --rw-r--r--  2.0 unx    10226 b- defN 23-Apr-05 19:49 app/public/emass.py
+│ --rw-r--r--  2.0 unx    64892 b- defN 23-Apr-05 19:49 app/public/fedramp.py
+│ --rw-r--r--  2.0 unx     7932 b- defN 23-Apr-05 19:49 app/public/nist_catalog.py
+│ --rw-r--r--  2.0 unx    71195 b- defN 23-Apr-05 19:49 app/public/oscal.py
+│ --rw-r--r--  2.0 unx     6183 b- defN 23-Apr-05 19:49 app/public/otx.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 app/utils/__init__.py
+│ --rw-r--r--  2.0 unx    19729 b- defN 23-Apr-05 19:49 app/utils/app_utils.py
+│ --rw-r--r--  2.0 unx    10417 b- defN 23-Apr-05 19:49 app/utils/regscale_utils.py
+│ --rw-r--r--  2.0 unx     1846 b- defN 23-Apr-05 19:49 app/utils/threadhandler.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 exceptions/__init__.py
+│ --rw-r--r--  2.0 unx      195 b- defN 23-Apr-05 19:49 exceptions/license_exception.py
+│ --rw-r--r--  2.0 unx       79 b- defN 23-Apr-05 19:49 models/__init__.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 models/app_models/__init__.py
+│ --rw-r--r--  2.0 unx     4112 b- defN 23-Apr-05 19:49 models/app_models/click.py
+│ --rw-r--r--  2.0 unx    14069 b- defN 23-Apr-05 19:49 models/app_models/control_editor.py
+│ --rw-r--r--  2.0 unx      889 b- defN 23-Apr-05 19:49 models/app_models/pipeline.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 models/integration_models/__init__.py
+│ --rw-r--r--  2.0 unx     7858 b- defN 23-Apr-05 19:49 models/integration_models/azure_alerts.py
+│ --rw-r--r--  2.0 unx      872 b- defN 23-Apr-05 19:49 models/integration_models/recommendations.py
+│ --rw-r--r--  2.0 unx     8319 b- defN 23-Apr-05 19:49 models/integration_models/tenable.py
+│ --rw-r--r--  2.0 unx     1833 b- defN 23-Apr-05 19:49 models/integration_models/wiz.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 models/regscale_models/__init__.py
+│ --rw-r--r--  2.0 unx     6688 b- defN 23-Apr-05 19:49 models/regscale_models/assessment.py
+│ --rw-r--r--  2.0 unx     5224 b- defN 23-Apr-05 19:49 models/regscale_models/asset.py
+│ --rw-r--r--  2.0 unx     1237 b- defN 23-Apr-05 19:49 models/regscale_models/components.py
+│ --rw-r--r--  2.0 unx     7831 b- defN 23-Apr-05 19:49 models/regscale_models/control_implementation.py
+│ --rw-r--r--  2.0 unx     2850 b- defN 23-Apr-05 19:49 models/regscale_models/interconnects.py
+│ --rw-r--r--  2.0 unx     4256 b- defN 23-Apr-05 19:49 models/regscale_models/issue.py
+│ --rw-r--r--  2.0 unx     4891 b- defN 23-Apr-05 19:49 models/regscale_models/modules.py
+│ --rw-r--r--  2.0 unx     2353 b- defN 23-Apr-05 19:49 models/regscale_models/ports_protocols.py
+│ --rw-r--r--  2.0 unx     2415 b- defN 23-Apr-05 19:49 models/regscale_models/requirements.py
+│ --rw-r--r--  2.0 unx     5886 b- defN 23-Apr-05 19:49 models/regscale_models/securityplans.py
+│ --rw-r--r--  2.0 unx     1426 b- defN 23-Apr-05 19:49 models/regscale_models/threat.py
+│ --rw-r--r--  2.0 unx     2313 b- defN 23-Apr-05 19:49 models/regscale_models/user.py
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-05 19:49 tests/__init__.py
+│ --rw-r--r--  2.0 unx     1648 b- defN 23-Apr-05 19:49 tests/conftest.py
+│ --rw-r--r--  2.0 unx     1334 b- defN 23-Apr-05 19:49 tests/test_app_utils.py
+│ --rw-r--r--  2.0 unx     1930 b- defN 23-Apr-05 19:49 tests/test_assessments_editor.py
+│ --rw-r--r--  2.0 unx     1687 b- defN 23-Apr-05 19:49 tests/test_cisa.py
+│ --rw-r--r--  2.0 unx     1747 b- defN 23-Apr-05 19:49 tests/test_control_editor.py
+│ --rw-r--r--  2.0 unx     1425 b- defN 23-Apr-05 19:49 tests/test_dependabot.py
+│ --rw-r--r--  2.0 unx     2811 b- defN 23-Apr-05 19:49 tests/test_emass.py
+│ --rw-r--r--  2.0 unx    14035 b- defN 23-Apr-05 19:49 tests/test_evidence.py
+│ --rw-r--r--  2.0 unx     1186 b- defN 23-Apr-05 19:49 tests/test_login.py
+│ --rw-r--r--  2.0 unx     1416 b- defN 23-Apr-05 19:49 tests/test_npm_audit.py
+│ --rw-r--r--  2.0 unx     9248 b- defN 23-Apr-05 19:49 tests/test_oscal.py
+│ --rw-r--r--  2.0 unx      866 b- defN 23-Apr-05 19:49 tests/test_snow.py
+│ --rw-r--r--  2.0 unx     1245 b- defN 23-Apr-05 19:49 tests/test_sonarcloud.py
+│ --rw-r--r--  2.0 unx     1666 b- defN 23-Apr-05 19:49 tests/test_tenable.py
+│ --rw-r--r--  2.0 unx     1254 b- defN 23-Apr-05 19:49 tests/test_update_regscale_config.py
+│ --rw-r--r--  2.0 unx     1076 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx     6064 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       43 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       37 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx     6814 b- defN 23-Apr-05 19:50 RegScale_CLI-4.24.0.dist-info/RECORD
+│ -82 files, 743583 bytes uncompressed, 184422 bytes compressed:  75.2%
+│ +Zip file size: 195128 bytes, number of entries: 82
+│ +-rw-r--r--  2.0 unx    14494 b- defN 23-Apr-06 16:27 regscale.py
+│ +-rw-r--r--  2.0 unx       47 b- defN 23-Apr-06 16:27 app/__init__.py
+│ +-rw-r--r--  2.0 unx       73 b- defN 23-Apr-06 16:27 app/_version.py
+│ +-rw-r--r--  2.0 unx    14024 b- defN 23-Apr-06 16:27 app/api.py
+│ +-rw-r--r--  2.0 unx    12991 b- defN 23-Apr-06 16:27 app/application.py
+│ +-rw-r--r--  2.0 unx     1191 b- defN 23-Apr-06 16:27 app/logz.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 app/commercial/__init__.py
+│ +-rw-r--r--  2.0 unx    16432 b- defN 23-Apr-06 16:27 app/commercial/ad.py
+│ +-rw-r--r--  2.0 unx    46852 b- defN 23-Apr-06 16:27 app/commercial/defender.py
+│ +-rw-r--r--  2.0 unx     8101 b- defN 23-Apr-06 16:27 app/commercial/jira.py
+│ +-rw-r--r--  2.0 unx    27597 b- defN 23-Apr-06 16:27 app/commercial/okta.py
+│ +-rw-r--r--  2.0 unx    11726 b- defN 23-Apr-06 16:27 app/commercial/servicenow.py
+│ +-rw-r--r--  2.0 unx    22914 b- defN 23-Apr-06 16:27 app/commercial/tenable.py
+│ +-rw-r--r--  2.0 unx    56612 b- defN 23-Apr-06 16:27 app/commercial/wiz.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 app/internal/__init__.py
+│ +-rw-r--r--  2.0 unx    27853 b- defN 23-Apr-06 16:27 app/internal/admin_actions.py
+│ +-rw-r--r--  2.0 unx    31774 b- defN 23-Apr-06 16:27 app/internal/assessments_editor.py
+│ +-rw-r--r--  2.0 unx    16287 b- defN 23-Apr-06 16:27 app/internal/comparison.py
+│ +-rw-r--r--  2.0 unx    15286 b- defN 23-Apr-06 16:27 app/internal/control_editor.py
+│ +-rw-r--r--  2.0 unx     5912 b- defN 23-Apr-06 16:27 app/internal/encrypt.py
+│ +-rw-r--r--  2.0 unx    40841 b- defN 23-Apr-06 16:27 app/internal/evidence.py
+│ +-rw-r--r--  2.0 unx     2330 b- defN 23-Apr-06 16:27 app/internal/healthcheck.py
+│ +-rw-r--r--  2.0 unx     6394 b- defN 23-Apr-06 16:27 app/internal/login.py
+│ +-rw-r--r--  2.0 unx     9419 b- defN 23-Apr-06 16:27 app/internal/migrations.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 app/public/__init__.py
+│ +-rw-r--r--  2.0 unx    18801 b- defN 23-Apr-06 16:27 app/public/cisa.py
+│ +-rw-r--r--  2.0 unx    10226 b- defN 23-Apr-06 16:27 app/public/emass.py
+│ +-rw-r--r--  2.0 unx    64892 b- defN 23-Apr-06 16:27 app/public/fedramp.py
+│ +-rw-r--r--  2.0 unx     7932 b- defN 23-Apr-06 16:27 app/public/nist_catalog.py
+│ +-rw-r--r--  2.0 unx    71195 b- defN 23-Apr-06 16:27 app/public/oscal.py
+│ +-rw-r--r--  2.0 unx     6183 b- defN 23-Apr-06 16:27 app/public/otx.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 app/utils/__init__.py
+│ +-rw-r--r--  2.0 unx    19729 b- defN 23-Apr-06 16:27 app/utils/app_utils.py
+│ +-rw-r--r--  2.0 unx    10417 b- defN 23-Apr-06 16:27 app/utils/regscale_utils.py
+│ +-rw-r--r--  2.0 unx     1846 b- defN 23-Apr-06 16:27 app/utils/threadhandler.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 exceptions/__init__.py
+│ +-rw-r--r--  2.0 unx      195 b- defN 23-Apr-06 16:27 exceptions/license_exception.py
+│ +-rw-r--r--  2.0 unx       79 b- defN 23-Apr-06 16:27 models/__init__.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 models/app_models/__init__.py
+│ +-rw-r--r--  2.0 unx     4112 b- defN 23-Apr-06 16:27 models/app_models/click.py
+│ +-rw-r--r--  2.0 unx    14069 b- defN 23-Apr-06 16:27 models/app_models/control_editor.py
+│ +-rw-r--r--  2.0 unx      889 b- defN 23-Apr-06 16:27 models/app_models/pipeline.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 models/integration_models/__init__.py
+│ +-rw-r--r--  2.0 unx     7858 b- defN 23-Apr-06 16:27 models/integration_models/azure_alerts.py
+│ +-rw-r--r--  2.0 unx      872 b- defN 23-Apr-06 16:27 models/integration_models/recommendations.py
+│ +-rw-r--r--  2.0 unx     8319 b- defN 23-Apr-06 16:27 models/integration_models/tenable.py
+│ +-rw-r--r--  2.0 unx     1833 b- defN 23-Apr-06 16:27 models/integration_models/wiz.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 models/regscale_models/__init__.py
+│ +-rw-r--r--  2.0 unx     6688 b- defN 23-Apr-06 16:27 models/regscale_models/assessment.py
+│ +-rw-r--r--  2.0 unx     5224 b- defN 23-Apr-06 16:27 models/regscale_models/asset.py
+│ +-rw-r--r--  2.0 unx     1237 b- defN 23-Apr-06 16:27 models/regscale_models/components.py
+│ +-rw-r--r--  2.0 unx     7831 b- defN 23-Apr-06 16:27 models/regscale_models/control_implementation.py
+│ +-rw-r--r--  2.0 unx     2850 b- defN 23-Apr-06 16:27 models/regscale_models/interconnects.py
+│ +-rw-r--r--  2.0 unx     4256 b- defN 23-Apr-06 16:27 models/regscale_models/issue.py
+│ +-rw-r--r--  2.0 unx     4891 b- defN 23-Apr-06 16:27 models/regscale_models/modules.py
+│ +-rw-r--r--  2.0 unx     2353 b- defN 23-Apr-06 16:27 models/regscale_models/ports_protocols.py
+│ +-rw-r--r--  2.0 unx     2415 b- defN 23-Apr-06 16:27 models/regscale_models/requirements.py
+│ +-rw-r--r--  2.0 unx     5886 b- defN 23-Apr-06 16:27 models/regscale_models/securityplans.py
+│ +-rw-r--r--  2.0 unx     1426 b- defN 23-Apr-06 16:27 models/regscale_models/threat.py
+│ +-rw-r--r--  2.0 unx     2313 b- defN 23-Apr-06 16:27 models/regscale_models/user.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 16:27 tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1648 b- defN 23-Apr-06 16:27 tests/conftest.py
+│ +-rw-r--r--  2.0 unx     1334 b- defN 23-Apr-06 16:27 tests/test_app_utils.py
+│ +-rw-r--r--  2.0 unx     1930 b- defN 23-Apr-06 16:27 tests/test_assessments_editor.py
+│ +-rw-r--r--  2.0 unx     1687 b- defN 23-Apr-06 16:27 tests/test_cisa.py
+│ +-rw-r--r--  2.0 unx     1747 b- defN 23-Apr-06 16:27 tests/test_control_editor.py
+│ +-rw-r--r--  2.0 unx     1425 b- defN 23-Apr-06 16:27 tests/test_dependabot.py
+│ +-rw-r--r--  2.0 unx     2811 b- defN 23-Apr-06 16:27 tests/test_emass.py
+│ +-rw-r--r--  2.0 unx    14035 b- defN 23-Apr-06 16:27 tests/test_evidence.py
+│ +-rw-r--r--  2.0 unx     1186 b- defN 23-Apr-06 16:27 tests/test_login.py
+│ +-rw-r--r--  2.0 unx     1416 b- defN 23-Apr-06 16:27 tests/test_npm_audit.py
+│ +-rw-r--r--  2.0 unx     9248 b- defN 23-Apr-06 16:27 tests/test_oscal.py
+│ +-rw-r--r--  2.0 unx      866 b- defN 23-Apr-06 16:27 tests/test_snow.py
+│ +-rw-r--r--  2.0 unx     1245 b- defN 23-Apr-06 16:27 tests/test_sonarcloud.py
+│ +-rw-r--r--  2.0 unx     1666 b- defN 23-Apr-06 16:27 tests/test_tenable.py
+│ +-rw-r--r--  2.0 unx     1254 b- defN 23-Apr-06 16:27 tests/test_update_regscale_config.py
+│ +-rw-r--r--  2.0 unx     1076 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     6195 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       43 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       37 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx     6814 b- defN 23-Apr-06 16:27 RegScale_CLI-4.24.1.dist-info/RECORD
+│ +82 files, 743722 bytes uncompressed, 184444 bytes compressed:  75.2%
+├── zipnote {}
+│ @@ -222,26 +222,26 @@
+│  
+│  Filename: tests/test_tenable.py
+│  Comment: 
+│  
+│  Filename: tests/test_update_regscale_config.py
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/LICENSE
+│ +Filename: RegScale_CLI-4.24.1.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/METADATA
+│ +Filename: RegScale_CLI-4.24.1.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/WHEEL
+│ +Filename: RegScale_CLI-4.24.1.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/entry_points.txt
+│ +Filename: RegScale_CLI-4.24.1.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/top_level.txt
+│ +Filename: RegScale_CLI-4.24.1.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: RegScale_CLI-4.24.0.dist-info/RECORD
+│ +Filename: RegScale_CLI-4.24.1.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── app/_version.py
+│ @@ -1,4 +1,4 @@
+│  #!/usr/bin/env python3
+│  # standard python imports
+│  
+│ -__version__ = "4.24.0"
+│ +__version__ = "4.24.1"
+├── app/api.py
+│ @@ -3,15 +3,15 @@
+│  """ standard imports """
+│  
+│  import concurrent.futures
+│  import re
+│  import sys
+│  from typing import Tuple
+│  
+│ -from typing import Any
+│ +from typing import Optional, Union
+│  import requests
+│  from requests.adapters import HTTPAdapter, Retry
+│  from rich.progress import Progress
+│  
+│  from app.application import Application
+│  from app.logz import create_logger
+│  
+│ @@ -110,24 +110,24 @@
+│                  "accept": self.accept,
+│              }
+│          return self.session.delete(url=normalize_url(url), headers=headers)
+│  
+│      def post(
+│          self,
+│          url: str,
+│ +        json: Optional[Union[dict, str, list]],
+│          headers: dict = None,
+│ -        json: dict | str | list[dict] = None,
+│          data: dict = None,
+│          files: list = None,
+│      ) -> requests.models.Response:
+│          """
+│          Post data to API
+│          :param str url: URL for the API call
+│          :param dict headers: Headers for the API call, defaults to None
+│ -        :param dict | str | list[dict] json: Dictionary of data for the API call, defaults to None
+│ +        :param dict | str | list json: Dictionary of data for the API call, defaults to None
+│          :param dict data: Dictionary of data for the API call, defaults to None
+│          :param list files: Files to post during API call, defaults to None
+│          :return: API response
+│          :rtype: requests.models.Response
+│          """
+│          if self.auth:
+│              self.session.auth = self.auth
+│   --- RegScale_CLI-4.24.0.dist-info/LICENSE
+├── +++ RegScale_CLI-4.24.1.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- RegScale_CLI-4.24.0.dist-info/METADATA
+├── +++ RegScale_CLI-4.24.1.dist-info/METADATA
+│┄ Files 3% similar despite different names
+│ @@ -1,47 +1,53 @@
+│  Metadata-Version: 2.1
+│  Name: RegScale-CLI
+│ -Version: 4.24.0
+│ +Version: 4.24.1
+│  Summary: Command Line Interface (CLI) for bulk processing/loading data into RegScale
+│  Home-page: https://github.com/RegScale/regscale-cli
+│  Author: Travis Howerton
+│  Author-email: thowerton@regscale.com
+│  License: MIT
+│  Platform: UNKNOWN
+│ -Classifier: Programming Language :: Python :: 3.9
+│  Classifier: Operating System :: OS Independent
+│ +Classifier: Programming Language :: Python :: 3.9
+│ +Classifier: Programming Language :: Python :: 3.10
+│ +Classifier: Programming Language :: Python :: 3.11
+│  Requires-Python: >=3.9
+│  Description-Content-Type: text/markdown
+│  License-File: LICENSE
+│  Requires-Dist: PyMuPDF (==1.21.0)
+│ +Requires-Dist: aiohttp (==3.8.3)
+│  Requires-Dist: bs4
+│ -Requires-Dist: click (==8.1.3)
+│ -Requires-Dist: colorama (==0.4.5)
+│ +Requires-Dist: click
+│ +Requires-Dist: colorama
+│  Requires-Dist: cryptography (==39.0.1)
+│  Requires-Dist: docx (==0.2.4)
+│  Requires-Dist: fitz (==0.0.1.dev2)
+│  Requires-Dist: frontend
+│ -Requires-Dist: gql (==3.4.0)
+│ -Requires-Dist: jira (==3.3.1)
+│ +Requires-Dist: gql
+│ +Requires-Dist: jira
+│  Requires-Dist: jwt (==1.3.1)
+│  Requires-Dist: matplotlib
+│ -Requires-Dist: msal (==1.18.0)
+│ +Requires-Dist: msal
+│  Requires-Dist: numpy (==1.23.3)
+│  Requires-Dist: openpyxl
+│  Requires-Dist: pandas
+│  Requires-Dist: pdfplumber (==0.7.6)
+│ +Requires-Dist: pre-commit
+│  Requires-Dist: pyTenable
+│  Requires-Dist: pyaml (==21.10.1)
+│ +Requires-Dist: pytest
+│  Requires-Dist: python-docx
+│  Requires-Dist: regscale-python-ssp
+│ -Requires-Dist: requests (==2.28.1)
+│ -Requires-Dist: rich (==12.5.1)
+│ +Requires-Dist: requests
+│ +Requires-Dist: rich
+│  Requires-Dist: setuptools
+│  Requires-Dist: static
+│  Requires-Dist: tools
+│ +Requires-Dist: wheel
+│  Requires-Dist: xmltodict
+│  Provides-Extra: dev
+│  Requires-Dist: black ; extra == 'dev'
+│  Requires-Dist: coveralls ; extra == 'dev'
+│  Requires-Dist: flake8 ; extra == 'dev'
+│  Requires-Dist: isort ; extra == 'dev'
+│  Requires-Dist: pre-commit ; extra == 'dev'
+│   --- RegScale_CLI-4.24.0.dist-info/RECORD
+├── +++ RegScale_CLI-4.24.1.dist-info/RECORD
+│┄ Files 9% similar despite different names
+│ @@ -1,11 +1,11 @@
+│  regscale.py,sha256=S235MNRDkfpMtk5XvURaI66gtp7J0fvIFmH3MWz2TtY,14494
+│  app/__init__.py,sha256=gbUXYeGrcrqcOc70BjFtxHtBnwSqor-SlWYgZjypEOA,47
+│ -app/_version.py,sha256=S-ygk74cZZTHfkImHxJdmeYtSWOz1KEx5VvMdVJnLaQ,73
+│ -app/api.py,sha256=fxT-7pC7x9MuDYjrBXmsTG2Y3CUMsuOkiR1aRpV1BJQ,14016
+│ +app/_version.py,sha256=tyqE6RDb7bX8SZl192K-ktYCHAGJtzq6kdUaMFBEuRA,73
+│ +app/api.py,sha256=rxICQ759vDtG1OaPq3wGsa3Ov2IQIJX-79-TkXRJPaI,14024
+│  app/application.py,sha256=KpPlof0MWYiBTPhIAiwNkyBOLXYwlzCELtqINIpL4Dk,12991
+│  app/logz.py,sha256=ZQDHvPjSzBpr-EWBaHmG2NH9mnA38rVp5jv1efkyxwE,1191
+│  app/commercial/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  app/commercial/ad.py,sha256=f-MTH90ft1tvqFa6whL14Rx5j_PqDPewcE25oYpeFBY,16432
+│  app/commercial/defender.py,sha256=NkDusTfc4yUd0wzsdrhly8Yn3urC3TCEKg1CzWbi9a0,46852
+│  app/commercial/jira.py,sha256=6MEJSQQT3NGm3mLBXrcBqgAUYmIltQvx1f-_4YTkeo0,8101
+│  app/commercial/okta.py,sha256=k435lO-eN4wUkKHCejU-LNK7-ui8NcYecUUnWcCuQWM,27597
+│ @@ -70,13 +70,13 @@
+│  tests/test_login.py,sha256=u_LPs_H_g8ubARUKHdvPZl3flt2SHEjwFjmWuPnZYLU,1186
+│  tests/test_npm_audit.py,sha256=XdF0FM8telb2nzhVUc0gT4Zu7Srq3GiJheJFKSWICnk,1416
+│  tests/test_oscal.py,sha256=Lcm1f0hTr6Iwu5LGU-sKSC55bBsQVm2WX_zeiPBAdbA,9248
+│  tests/test_snow.py,sha256=tPdi-gWE_kmiv_dZV50T3vV6OB9vgbHr_jBGUi4hCaw,866
+│  tests/test_sonarcloud.py,sha256=Um1WqpIHRMWyPN7GF-pj263vt2YWcS2Sk7px9f1Ej-o,1245
+│  tests/test_tenable.py,sha256=Ik7GTnKzzXwykQH-VFsBeJPCtjqKx8LA91RCmiHNFpo,1666
+│  tests/test_update_regscale_config.py,sha256=GoU2ZKh7_2RYFj742_oFz8WuQx4NWL6nx2rzs4TSr40,1254
+│ -RegScale_CLI-4.24.0.dist-info/LICENSE,sha256=ytNhYQ9Rmhj_m-EX2pPq9Ld6tH5wrqqDYg-fCf46WDU,1076
+│ -RegScale_CLI-4.24.0.dist-info/METADATA,sha256=uUpToAeR7LA00JrnVFUtruUZ4JcQe5LbMdreMm3uCFc,6064
+│ -RegScale_CLI-4.24.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ -RegScale_CLI-4.24.0.dist-info/entry_points.txt,sha256=7K_c4hLFOPUjCZbuY5gat-C4fVj0-4aqxbwBon21Nnc,43
+│ -RegScale_CLI-4.24.0.dist-info/top_level.txt,sha256=6YXQTQW1Iq23W68s8qehQk2zgUCqyCCr6miOwR-RiPM,37
+│ -RegScale_CLI-4.24.0.dist-info/RECORD,,
+│ +RegScale_CLI-4.24.1.dist-info/LICENSE,sha256=ytNhYQ9Rmhj_m-EX2pPq9Ld6tH5wrqqDYg-fCf46WDU,1076
+│ +RegScale_CLI-4.24.1.dist-info/METADATA,sha256=xujN1KcScRf19kT4Xb5Sxb7Qm-sgHuM2A9hkLPf8gV0,6195
+│ +RegScale_CLI-4.24.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ +RegScale_CLI-4.24.1.dist-info/entry_points.txt,sha256=7K_c4hLFOPUjCZbuY5gat-C4fVj0-4aqxbwBon21Nnc,43
+│ +RegScale_CLI-4.24.1.dist-info/top_level.txt,sha256=6YXQTQW1Iq23W68s8qehQk2zgUCqyCCr6miOwR-RiPM,37
+│ +RegScale_CLI-4.24.1.dist-info/RECORD,,
