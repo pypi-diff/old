@@ -1,0 +1,74 @@
+# Comparing `tmp/nldb-0.3.1.tar.gz` & `tmp/nldb-0.3.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "nldb-0.3.1.tar", last modified: Tue Apr  4 13:52:21 2023, max compression
++gzip compressed data, was "nldb-0.3.2.tar", last modified: Thu Apr  6 10:23:44 2023, max compression
+```
+
+## Comparing `nldb-0.3.1.tar` & `nldb-0.3.2.tar`
+
+### file list
+
+```diff
+@@ -1,12 +1,12 @@
+--rw-r--r--   0        0        0     1814 2023-04-04 08:55:18.600174 nldb-0.3.1/.gitignore
+--rw-r--r--   0        0        0     1076 2023-03-29 08:32:29.773266 nldb-0.3.1/LICENSE
+--rw-r--r--   0        0        0      118 2023-03-31 22:32:58.589210 nldb-0.3.1/README.md
+--rw-r--r--   0        0        0       51 2023-04-04 13:49:47.035343 nldb-0.3.1/nldb/__init__.py
+--rw-r--r--   0        0        0     1246 2023-04-04 08:48:36.003692 nldb-0.3.1/nldb/api.py
+--rw-r--r--   0        0        0     2172 2023-04-04 13:49:33.604009 nldb-0.3.1/nldb/cli.py
+--rw-r--r--   0        0        0     2949 2023-04-03 21:58:55.944221 nldb-0.3.1/nldb/core.py
+--rw-r--r--   0        0        0      102 2023-03-31 12:54:34.070465 nldb-0.3.1/nldb/templates/Dockerfile
+--rw-r--r--   0        0        0     3993 2023-04-04 13:48:57.084535 nldb-0.3.1/nldb/templates/index.html
+--rw-r--r--   0        0        0     2015 2023-03-31 21:29:35.383196 nldb-0.3.1/nldb/templates/prompt.txt
+--rw-r--r--   0        0        0      524 2023-03-31 22:36:09.681306 nldb-0.3.1/pyproject.toml
+--rw-r--r--   0        0        0      508 1970-01-01 00:00:00.000000 nldb-0.3.1/PKG-INFO
++-rw-r--r--   0        0        0     1814 2023-04-04 08:55:18.600174 nldb-0.3.2/.gitignore
++-rw-r--r--   0        0        0     1076 2023-03-29 08:32:29.773266 nldb-0.3.2/LICENSE
++-rw-r--r--   0        0        0      118 2023-03-31 22:32:58.589210 nldb-0.3.2/README.md
++-rw-r--r--   0        0        0       51 2023-04-06 10:22:17.071347 nldb-0.3.2/nldb/__init__.py
++-rw-r--r--   0        0        0     1246 2023-04-06 10:21:46.701681 nldb-0.3.2/nldb/api.py
++-rw-r--r--   0        0        0     2172 2023-04-04 13:49:33.604009 nldb-0.3.2/nldb/cli.py
++-rw-r--r--   0        0        0     2949 2023-04-06 10:21:46.702289 nldb-0.3.2/nldb/core.py
++-rw-r--r--   0        0        0      102 2023-03-31 12:54:34.070465 nldb-0.3.2/nldb/templates/Dockerfile
++-rw-r--r--   0        0        0     3993 2023-04-04 13:48:57.084535 nldb-0.3.2/nldb/templates/index.html
++-rw-r--r--   0        0        0     2015 2023-03-31 21:29:35.383196 nldb-0.3.2/nldb/templates/prompt.txt
++-rw-r--r--   0        0        0      524 2023-03-31 22:36:09.681306 nldb-0.3.2/pyproject.toml
++-rw-r--r--   0        0        0      508 1970-01-01 00:00:00.000000 nldb-0.3.2/PKG-INFO
+```
+
+### Comparing `nldb-0.3.1/.gitignore` & `nldb-0.3.2/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/LICENSE` & `nldb-0.3.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/nldb/api.py` & `nldb-0.3.2/nldb/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/nldb/cli.py` & `nldb-0.3.2/nldb/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/nldb/core.py` & `nldb-0.3.2/nldb/core.py`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/nldb/templates/index.html` & `nldb-0.3.2/nldb/templates/index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/nldb/templates/prompt.txt` & `nldb-0.3.2/nldb/templates/prompt.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `nldb-0.3.1/pyproject.toml` & `nldb-0.3.2/pyproject.toml`
+
+ * *Files identical despite different names*
+

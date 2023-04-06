@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/xiezuocat-2.1.0.tar.gz tmp/xiezuocat-2.1.1.tar.gz --html versions/x/xiezuocat/2.1.0-2.1.1/index.html --text versions/x/xiezuocat/2.1.0-2.1.1/diff.txt --markdown versions/x/xiezuocat/2.1.0-2.1.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.26 KB</span></div>
+  <div><span class="source">tmp/xiezuocat-2.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/xiezuocat-2.1.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">268 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;xiezuocat-2.1.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;xiezuocat-2.1.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.95 KB</span></div>
+    <div><span class="source">xiezuocat-2.1.0.tar</span> vs.</div>
+    <div id="xiezuocat--.-.-.tar"><span class="source">xiezuocat-2.1.1.tar</span>
+      <a class="anchor" href="#xiezuocat--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.13 KB</span></div>
+      <div id="xiezuocat--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.<del>119505</del><span class="dp">·</span>xiezuocat-2.1.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.<ins>985916</ins><span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>311<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.<del>118508</del><span class="dp">·</span>xiezuocat-2.1.<del>0</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>311<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.<ins>984919</ins><span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>68</del>9<del>3</del><span class="dp">·</span>2023-04-0<del>3</del><span class="dp">·</span><del>08</del>:<del>43</del>:<del>14</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/README.md</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>72</ins>9<ins>1</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>18</ins>:<ins>29</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.<del>119505</del><span class="dp">·</span>xiezuocat-2.1.<del>0</del>/setup.cfg</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.<ins>986914</ins><span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1568<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>42</del>:57.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/setup.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1568<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>13</ins>:57.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.<del>107535</del><span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat/</td><td class="diffline">6 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.<ins>973946</ins><span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat/</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2022-10-26<span class="dp">·</span>09:43:08.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32<span class="dp">·</span>2022-10-26<span class="dp">·</span>09:43:08.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5855<span class="dp">·</span>2022-10-26<span class="dp">·</span>07:22:44.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat/sm3.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5855<span class="dp">·</span>2022-10-26<span class="dp">·</span>07:22:44.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat/sm3.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>570<span class="dp">·</span>2023-04-04<span class="dp">·</span>08:03:09.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat/sm3_signature_util.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>570<span class="dp">·</span>2023-04-04<span class="dp">·</span>08:03:09.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat/sm3_signature_util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>405</del><span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>03</del>:<del>09</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat/xiezuocat.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>397</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>15</ins>:<ins>43</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat/xiezuocat.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.<del>116513</del><span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat.egg-info/</td><td class="diffline">11 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.<ins>982924</ins><span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>311<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat.egg-info/PKG-INFO</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>311<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>244<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat.egg-info/SOURCES.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>244<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat.egg-info/dependency_links.txt</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-0<del>4</del><span class="dp">·</span><del>08</del>:<del>4</del>3:<del>41</del>.000000<span class="dp">·</span>xiezuocat-2.1.<del>0</del>/xiezuocat.egg-info/top_level.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>10</ins>:<ins>2</ins>3:<ins>14</ins>.000000<span class="dp">·</span>xiezuocat-2.1.<ins>1</ins>/xiezuocat.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.29 KB</span></div>
+      <div><span class="source">xiezuocat-2.1.0/README.md</span> vs.</div>
+      <div id="xiezuocat--.-.-.tar---xiezuocat--.-.--README.md"><span class="source">xiezuocat-2.1.1/README.md</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---xiezuocat--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 7% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 7, 15 lines modified</td><td colspan="2">Offset 7, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">##<span class="dp">·</span>二、调用示例</td><td class="diffline">7 </td><td class="diffpresent">##<span class="dp">·</span>二、调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">###<span class="dp">·</span>1、智能纠错</td><td class="diffline">8 </td><td class="diffpresent">###<span class="dp">·</span>1、智能纠错</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">####<span class="dp">·</span>调用示例</td><td class="diffline">9 </td><td class="diffpresent">####<span class="dp">·</span>调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">```python</td><td class="diffline">10 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td><td class="diffline">11 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">import<span class="dp">·</span>json</td><td class="diffline">12 </td><td class="diffpresent">import<span class="dp">·</span>json</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<del>&#x27;XXX&#x27;</del>)</td><td class="diffline">13 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<ins>{your-secre</ins><ins>tKey}</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">check_data<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td><td class="diffline">14 </td><td class="diffpresent">check_data<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;texts&quot;:<span class="dp">·</span>[</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;texts&quot;:<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;哈哈哈。我天今吃了一顿饭&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;哈哈哈。我天今吃了一顿饭&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;我想念十分赵忠祥。嘿嘿嘿。&quot;</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;我想念十分赵忠祥。嘿嘿嘿。&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>]</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>})</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>})</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">check_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.check(check_data)</td><td class="diffline">20 </td><td class="diffpresent">check_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.check(check_data)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 63, 15 lines modified</td><td colspan="2">Offset 63, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">}</td><td class="diffline">63 </td><td class="diffpresent">}</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">```</td><td class="diffline">64 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">###<span class="dp">·</span>2、智能改写</td><td class="diffline">65 </td><td class="diffpresent">###<span class="dp">·</span>2、智能改写</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td><td class="diffline">66 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">```python</td><td class="diffline">67 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td><td class="diffline">68 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent">import<span class="dp">·</span>json</td><td class="diffline">69 </td><td class="diffpresent">import<span class="dp">·</span>json</td></tr>
+<tr class="diffchanged"><td class="diffline">70 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<del>&#x27;XXX&#x27;</del>)</td><td class="diffline">70 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<ins>{your-secre</ins><ins>tKey}</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent">rewrite_data<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td><td class="diffline">71 </td><td class="diffpresent">rewrite_data<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;items&quot;:<span class="dp">·</span>[</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;items&quot;:<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;一般&quot;</td><td class="diffline">73 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;一般&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>],</td><td class="diffline">74 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>],</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;level&quot;:<span class="dp">·</span>&quot;middle&quot;</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>&quot;level&quot;:<span class="dp">·</span>&quot;middle&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent">})</td><td class="diffline">76 </td><td class="diffpresent">})</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent">rewrite_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.rewrite(rewrite_data)</td><td class="diffline">77 </td><td class="diffpresent">rewrite_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.rewrite(rewrite_data)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 89, 15 lines modified</td><td colspan="2">Offset 89, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">###<span class="dp">·</span>3、AI写作</td><td class="diffline">89 </td><td class="diffpresent">###<span class="dp">·</span>3、AI写作</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">####<span class="dp">·</span>创建生成任务</td><td class="diffline">90 </td><td class="diffpresent">####<span class="dp">·</span>创建生成任务</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td><td class="diffline">91 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent">```python</td><td class="diffline">92 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td><td class="diffline">93 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">import<span class="dp">·</span>json</td><td class="diffline">94 </td><td class="diffpresent">import<span class="dp">·</span>json</td></tr>
+<tr class="diffchanged"><td class="diffline">95 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<del>&#x27;XXX&#x27;</del>)</td><td class="diffline">95 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<ins>{your-secre</ins><ins>tKey}</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">96 </td><td class="diffpresent">generate_params<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td><td class="diffline">96 </td><td class="diffpresent">generate_params<span class="dp">·</span>=<span class="dp">·</span>json.dumps({</td></tr>
+<tr class="diffunmodified"><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;type&quot;:<span class="dp">·</span>&quot;Step&quot;,</td><td class="diffline">97 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;type&quot;:<span class="dp">·</span>&quot;Step&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;title&quot;:<span class="dp">·</span>&quot;飞机&quot;,</td><td class="diffline">98 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;title&quot;:<span class="dp">·</span>&quot;飞机&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;length&quot;:<span class="dp">·</span>&quot;default&quot;</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;length&quot;:<span class="dp">·</span>&quot;default&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">100 </td><td class="diffpresent">})</td><td class="diffline">100 </td><td class="diffpresent">})</td></tr>
+<tr class="diffunmodified"><td class="diffline">101 </td><td class="diffpresent">result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.generate(generate_params)</td><td class="diffline">101 </td><td class="diffpresent">result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.generate(generate_params)</td></tr>
+<tr class="diffunmodified"><td class="diffline">102 </td><td class="diffpresent">print(result)</td><td class="diffline">102 </td><td class="diffpresent">print(result)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 113, 15 lines modified</td><td colspan="2">Offset 113, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">113 </td><td class="diffpresent">}</td><td class="diffline">113 </td><td class="diffpresent">}</td></tr>
+<tr class="diffunmodified"><td class="diffline">114 </td><td class="diffpresent">```</td><td class="diffline">114 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">115 </td><td class="diffpresent">####<span class="dp">·</span>获取生成结果</td><td class="diffline">115 </td><td class="diffpresent">####<span class="dp">·</span>获取生成结果</td></tr>
+<tr class="diffunmodified"><td class="diffline">116 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td><td class="diffline">116 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent">```python</td><td class="diffline">117 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">118 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td><td class="diffline">118 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td></tr>
+<tr class="diffchanged"><td class="diffline">119 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<del>&#x27;XXX&#x27;</del>)</td><td class="diffline">119 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<ins>{your-secre</ins><ins>tKey}</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">120 </td><td class="diffpresent">doc_id<span class="dp">·</span>=<span class="dp">·</span>&quot;ffa614ac-631f-4e7d-b0ea-b5ac43670e59&quot;<span class="dp">·</span>#<span class="dp">·</span>此处docId为第一步生成的结果</td><td class="diffline">120 </td><td class="diffpresent">doc_id<span class="dp">·</span>=<span class="dp">·</span>&quot;ffa614ac-631f-4e7d-b0ea-b5ac43670e59&quot;<span class="dp">·</span>#<span class="dp">·</span>此处docId为第一步生成的结果</td></tr>
+<tr class="diffunmodified"><td class="diffline">121 </td><td class="diffpresent">result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.get_generate_result(doc_id)</td><td class="diffline">121 </td><td class="diffpresent">result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.get_generate_result(doc_id)</td></tr>
+<tr class="diffunmodified"><td class="diffline">122 </td><td class="diffpresent">print(result)</td><td class="diffline">122 </td><td class="diffpresent">print(result)</td></tr>
+<tr class="diffunmodified"><td class="diffline">123 </td><td class="diffpresent">```</td><td class="diffline">123 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">124 </td><td class="diffpresent">#####<span class="dp">·</span>返回结果</td><td class="diffline">124 </td><td class="diffpresent">#####<span class="dp">·</span>返回结果</td></tr>
+<tr class="diffunmodified"><td class="diffline">125 </td><td class="diffpresent">```json</td><td class="diffline">125 </td><td class="diffpresent">```json</td></tr>
+<tr class="diffunmodified"><td class="diffline">126 </td><td class="diffpresent">{</td><td class="diffline">126 </td><td class="diffpresent">{</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 135, 15 lines modified</td><td colspan="2">Offset 135, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>}</td><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">136 </td><td class="diffpresent">}</td><td class="diffline">136 </td><td class="diffpresent">}</td></tr>
+<tr class="diffunmodified"><td class="diffline">137 </td><td class="diffpresent">```</td><td class="diffline">137 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">138 </td><td class="diffpresent">###<span class="dp">·</span>4、单点登录签名算法</td><td class="diffline">138 </td><td class="diffpresent">###<span class="dp">·</span>4、单点登录签名算法</td></tr>
+<tr class="diffunmodified"><td class="diffline">139 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td><td class="diffline">139 </td><td class="diffpresent">#####<span class="dp">·</span>调用示例</td></tr>
+<tr class="diffunmodified"><td class="diffline">140 </td><td class="diffpresent">```python</td><td class="diffline">140 </td><td class="diffpresent">```python</td></tr>
+<tr class="diffunmodified"><td class="diffline">141 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td><td class="diffline">141 </td><td class="diffpresent">import<span class="dp">·</span>xiezuocat</td></tr>
+<tr class="diffchanged"><td class="diffline">142 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<del>&#x27;XXX&#x27;</del>)</td><td class="diffline">142 </td><td class="diffpresent">my_xiezuocat<span class="dp">·</span>=<span class="dp">·</span>xiezuocat.Xiezuocat(<ins>{your-secre</ins><ins>tKey}</ins>)</td></tr>
+<tr class="diffchanged"><td class="diffline">143 </td><td class="diffpresent">sign_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.get_sso_signature(<del>&quot;xx&quot;</del>,<span class="dp">·</span><del>&quot;ll&quot;</del>)</td><td class="diffline">143 </td><td class="diffpresent">sign_result<span class="dp">·</span>=<span class="dp">·</span>my_xiezuocat.get_sso_signature(<ins>{your-ap</ins><ins>pId}</ins>,<span class="dp">·</span><ins>{your-</ins><ins>uid}</ins>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">144 </td><td class="diffpresent">print(sign_result)</td><td class="diffline">144 </td><td class="diffpresent">print(sign_result)</td></tr>
+<tr class="diffunmodified"><td class="diffline">145 </td><td class="diffpresent">```</td><td class="diffline">145 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">146 </td><td class="diffpresent">#####<span class="dp">·</span>返回结果</td><td class="diffline">146 </td><td class="diffpresent">#####<span class="dp">·</span>返回结果</td></tr>
+<tr class="diffunmodified"><td class="diffline">147 </td><td class="diffpresent">```json</td><td class="diffline">147 </td><td class="diffpresent">```json</td></tr>
+<tr class="diffunmodified"><td class="diffline">148 </td><td class="diffpresent">eydhcHBJZCc6ICd4eCcsICd1aWQnOiAnbGwnLCAndGltZXN0YW1wJzogMTY4MDUxMTExNy42NjIyMTc2LCAnc2lnbic6ICdmZTM2MmU4MzBkMTFlZDc3ZDkwZjhhNzk0NzkwM2RlMDY1ODA2NjY2NDEzMjg4ZGJjNzFmMzk5MjhmODBlOTAxJ30=</td><td class="diffline">148 </td><td class="diffpresent">eydhcHBJZCc6ICd4eCcsICd1aWQnOiAnbGwnLCAndGltZXN0YW1wJzogMTY4MDUxMTExNy42NjIyMTc2LCAnc2lnbic6ICdmZTM2MmU4MzBkMTFlZDc3ZDkwZjhhNzk0NzkwM2RlMDY1ODA2NjY2NDEzMjg4ZGJjNzFmMzk5MjhmODBlOTAxJ30=</td></tr>
+<tr class="diffunmodified"><td class="diffline">149 </td><td class="diffpresent">```</td><td class="diffline">149 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">150 </td><td class="diffpresent">#####<span class="dp">·</span>拿到签名之后访问下述URL即可登录写作猫</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">151 </td><td class="diffpresent">```js</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">152 </td><td class="diffpresent">//<span class="dp">·</span>p为签名算法生成的结果</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">153 </td><td class="diffpresent">https://xiezuocat.com/api/open/login?p=eydhcHBJZCc6ICd4eCcsICd1aWQnOiAnbGwnLCAndGltZXN0YW1wJzogMTY4MDUxMTExNy42NjIyMTc2LCAnc2lnbic6ICdmZTM2MmU4MzBkMTFlZDc3ZDkwZjhhNzk0NzkwM2RlMDY1ODA2NjY2NDEzMjg4ZGJjNzFmMzk5MjhmODBlOTAxJ30=</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">154 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">455 B</span></div>
+      <div><span class="source">xiezuocat-2.1.0/setup.py</span> vs.</div>
+      <div id="xiezuocat--.-.-.tar---xiezuocat--.-.--setup.py"><span class="source">xiezuocat-2.1.1/setup.py</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---xiezuocat--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">setup(name=&#x27;xiezuocat&#x27;,<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">setup(name=&#x27;xiezuocat&#x27;,<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">version=&#x27;2.1.<del>0</del>&#x27;,<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">version=&#x27;2.1.<ins>1</ins>&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">description=&#x27;写作猫API及签名算法封装&#x27;,<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">description=&#x27;写作猫API及签名算法封装&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">author=&#x27;metasotadata&#x27;,<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">author=&#x27;metasotadata&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">author_email=&#x27;support@xiezuocat.com&#x27;,<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">author_email=&#x27;support@xiezuocat.com&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">py_modules=[&#x27;xiezuocat.xiezuocat&#x27;],<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">py_modules=[&#x27;xiezuocat.xiezuocat&#x27;],<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">packages=find_packages(),<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">packages=find_packages(),<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">requires=[&#x27;requests&#x27;,<span class="dp">·</span>&#x27;json&#x27;,<span class="dp">·</span>&#x27;time&#x27;,<span class="dp">·</span>&#x27;base64&#x27;],<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">requires=[&#x27;requests&#x27;,<span class="dp">·</span>&#x27;json&#x27;,<span class="dp">·</span>&#x27;time&#x27;,<span class="dp">·</span>&#x27;base64&#x27;],<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">license=&quot;apache<span class="dp">·</span>3.0&quot;<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">license=&quot;apache<span class="dp">·</span>3.0&quot;<em>\xd</em></td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">103 B</span></div>
+      <div><span class="source">xiezuocat-2.1.0/xiezuocat/sm3.py</span> vs.</div>
+      <div id="xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-sm-.py"><span class="source">xiezuocat-2.1.1/xiezuocat/sm3.py</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-sm-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">xiezuocat-2.1.0/xiezuocat/sm3_signature_util.py</span> vs.</div>
+      <div id="xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-sm-_signature_util.py"><span class="source">xiezuocat-2.1.1/xiezuocat/sm3_signature_util.py</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-sm-_signature_util.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">831 B</span></div>
+      <div><span class="source">xiezuocat-2.1.0/xiezuocat/xiezuocat.py</span> vs.</div>
+      <div id="xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-xiezuocat.py"><span class="source">xiezuocat-2.1.1/xiezuocat/xiezuocat.py</span>
+        <a class="anchor" href="#xiezuocat--.-.-.tar---xiezuocat--.-.--xiezuocat-xiezuocat.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 52, 18 lines modified</td><td colspan="2">Offset 52, 18 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;secret-key&#x27;:<span class="dp">·</span>self._secret_key<em>\xd</em></td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;secret-key&#x27;:<span class="dp">·</span>self._secret_key<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}<em>\xd</em></td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>}<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">54 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>response<span class="dp">·</span>=<span class="dp">·</span>requests.request(&quot;GET&quot;,<span class="dp">·</span>url,<span class="dp">·</span>headers=headers)<em>\xd</em></td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>response<span class="dp">·</span>=<span class="dp">·</span>requests.request(&quot;GET&quot;,<span class="dp">·</span>url,<span class="dp">·</span>headers=headers)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">56 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>response.text<em>\xd</em></td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>response.text<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">58 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_sso_signature(self,<span class="dp">·</span>appId,<span class="dp">·</span>u<del>ser_</del>id):<em>\xd</em></td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_sso_signature(self,<span class="dp">·</span>appId,<span class="dp">·</span>uid):<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>timestamp<span class="dp">·</span>=<span class="dp">·</span>time.time()<em>\xd</em></td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>timestamp<span class="dp">·</span>=<span class="dp">·</span>time.time()<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map<span class="dp">·</span>=<span class="dp">·</span>{}<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;appId&quot;]<span class="dp">·</span>=<span class="dp">·</span>appId<em>\xd</em></td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;appId&quot;]<span class="dp">·</span>=<span class="dp">·</span>appId<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;uid&quot;]<span class="dp">·</span>=<span class="dp">·</span>u<del>ser_</del>id<em>\xd</em></td><td class="diffline">63 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;uid&quot;]<span class="dp">·</span>=<span class="dp">·</span>uid<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;timestamp&quot;]<span class="dp">·</span>=<span class="dp">·</span>timestamp<em>\xd</em></td><td class="diffline">64 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;timestamp&quot;]<span class="dp">·</span>=<span class="dp">·</span>timestamp<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sign<span class="dp">·</span>=<span class="dp">·</span>sm3_signature_util.signature_sm3(para_map,<span class="dp">·</span>self._secret_key)<em>\xd</em></td><td class="diffline">65 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>sign<span class="dp">·</span>=<span class="dp">·</span>sm3_signature_util.signature_sm3(para_map,<span class="dp">·</span>self._secret_key)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;sign&quot;]<span class="dp">·</span>=<span class="dp">·</span>sign<em>\xd</em></td><td class="diffline">66 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>para_map[&quot;sign&quot;]<span class="dp">·</span>=<span class="dp">·</span>sign<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>base64_str<span class="dp">·</span>=<span class="dp">·</span>str(base64.b64encode(str(para_map).encode(&#x27;utf-8&#x27;)),<span class="dp">·</span>&quot;utf-8&quot;)<em>\xd</em></td><td class="diffline">67 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>base64_str<span class="dp">·</span>=<span class="dp">·</span>str(base64.b64encode(str(para_map).encode(&#x27;utf-8&#x27;)),<span class="dp">·</span>&quot;utf-8&quot;)<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">68 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">68 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>base64_str</td><td class="diffline">69 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>base64_str</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

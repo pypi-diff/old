@@ -1,0 +1,9617 @@
+# Comparing `tmp/protobuf_to_pydantic-0.1.6.1.tar.gz` & `tmp/protobuf_to_pydantic-0.1.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "protobuf_to_pydantic-0.1.6.1.tar", max compression
++gzip compressed data, was "protobuf_to_pydantic-0.1.7.tar", max compression
+```
+
+## Comparing `protobuf_to_pydantic-0.1.6.1.tar` & `protobuf_to_pydantic-0.1.7.tar`
+
+### file list
+
+```diff
+@@ -1,37 +1,49 @@
+--rw-r--r--   0        0        0    11357 2021-12-05 05:37:05.000000 protobuf_to_pydantic-0.1.6.1/LICENSE
+--rw-r--r--   0        0        0    32027 2022-12-29 07:24:56.000000 protobuf_to_pydantic-0.1.6.1/README.md
+--rw-r--r--   0        0        0      146 2023-02-15 09:52:34.141074 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/__init__.py
+--rw-r--r--   0        0        0        0 2022-06-28 03:26:29.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/contrib/__init__.py
+--rw-r--r--   0        0        0    14814 2022-08-23 02:22:56.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/contrib/proto_parser.py
+--rw-r--r--   0        0        0     7873 2022-08-19 06:41:43.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/customer_con_type.py
+--rw-r--r--   0        0        0    11699 2022-12-15 08:13:56.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/customer_validator.py
+--rw-r--r--   0        0        0    22317 2022-12-20 02:57:12.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/gen_code.py
+--rw-r--r--   0        0        0    26846 2022-12-20 02:57:12.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/gen_model.py
+--rw-r--r--   0        0        0      169 2022-07-26 07:13:09.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/__init__.py
+--rw-r--r--   0        0        0      134 2022-07-26 07:13:09.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/__init__.py
+--rw-r--r--   0        0        0    14189 2023-02-15 09:22:01.170078 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/base.py
+--rw-r--r--   0        0        0      418 2022-12-02 16:42:09.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/from_p2p.py
+--rw-r--r--   0        0        0      295 2022-07-26 15:27:10.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/from_pgv.py
+--rw-r--r--   0        0        0     2074 2022-07-30 20:12:53.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/types.py
+--rw-r--r--   0        0        0     3125 2022-12-02 17:38:51.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_proto_file.py
+--rw-r--r--   0        0        0     5143 2022-12-02 17:13:00.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pyi_file.py
+--rw-r--r--   0        0        0     1145 2022-12-15 06:45:04.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/grpc_types.py
+--rw-r--r--   0        0        0        0 2022-12-04 12:28:50.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/__init__.py
+--rw-r--r--   0        0        0       31 2022-12-28 10:00:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/__main__.py
+--rw-r--r--   0        0        0     2276 2022-12-23 13:50:33.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/config.py
+--rw-r--r--   0        0        0    18192 2022-12-23 13:50:33.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/field_desc_proto_to_code.py
+--rwxr-xr-x   0        0        0     2784 2022-12-23 12:29:07.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/main.py
+--rw-r--r--   0        0        0      332 2022-12-15 06:45:04.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/types.py
+--rw-r--r--   0        0        0   364372 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2.py
+--rw-r--r--   0        0        0   179637 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2.pyi
+--rw-r--r--   0        0        0      146 2022-12-13 19:06:31.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2_grpc.py
+--rw-r--r--   0        0        0       76 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2_grpc.pyi
+--rw-r--r--   0        0        0   122004 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2.py
+--rw-r--r--   0        0        0    65832 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2.pyi
+--rw-r--r--   0        0        0      146 2022-12-13 19:06:31.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2_grpc.py
+--rw-r--r--   0        0        0       76 2022-12-13 17:23:32.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2_grpc.pyi
+--rw-r--r--   0        0        0      139 2022-12-02 17:38:52.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/types.py
+--rw-r--r--   0        0        0     2325 2022-12-02 17:43:40.000000 protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/util.py
+--rw-r--r--   0        0        0     2873 2023-02-15 09:52:34.137074 protobuf_to_pydantic-0.1.6.1/pyproject.toml
+--rw-r--r--   0        0        0    34127 1970-01-01 00:00:00.000000 protobuf_to_pydantic-0.1.6.1/setup.py
+--rw-r--r--   0        0        0    33149 1970-01-01 00:00:00.000000 protobuf_to_pydantic-0.1.6.1/PKG-INFO
++-rw-r--r--   0        0        0    11357 2021-12-05 05:37:05.000000 protobuf_to_pydantic-0.1.7/LICENSE
++-rw-r--r--   0        0        0    33623 2023-03-23 17:23:44.348493 protobuf_to_pydantic-0.1.7/README.md
++-rw-r--r--   0        0        0      157 2023-04-06 10:17:44.904269 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/__init__.py
++-rw-r--r--   0        0        0       23 2023-04-06 10:22:05.460616 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/__version__.py
++-rw-r--r--   0        0        0        0 2022-06-28 03:26:29.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/contrib/__init__.py
++-rw-r--r--   0        0        0    14814 2023-03-19 16:10:34.117082 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/contrib/proto_parser.py
++-rw-r--r--   0        0        0     7873 2022-08-19 06:41:43.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/customer_con_type.py
++-rw-r--r--   0        0        0    11699 2023-03-19 16:10:34.117082 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/customer_validator.py
++-rw-r--r--   0        0        0    23793 2023-04-06 10:17:44.588269 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/gen_code.py
++-rw-r--r--   0        0        0    27724 2023-04-02 18:33:55.827477 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/gen_model.py
++-rw-r--r--   0        0        0      169 2022-07-26 07:13:09.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/__init__.py
++-rw-r--r--   0        0        0      134 2022-07-26 07:13:09.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/__init__.py
++-rw-r--r--   0        0        0    14497 2023-03-30 12:19:52.880142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/base.py
++-rw-r--r--   0        0        0      479 2023-02-21 11:07:15.262565 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/from_p2p.py
++-rw-r--r--   0        0        0      356 2023-02-21 11:07:15.326564 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/from_pgv.py
++-rw-r--r--   0        0        0     2074 2022-07-30 20:12:53.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/types.py
++-rw-r--r--   0        0        0     3663 2023-03-31 07:16:34.356473 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_proto_file.py
++-rw-r--r--   0        0        0     5626 2023-02-23 06:43:54.137679 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pyi_file.py
++-rw-r--r--   0        0        0     1517 2023-03-30 17:36:31.267633 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/grpc_types.py
++-rw-r--r--   0        0        0        0 2022-12-04 12:28:50.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/__init__.py
++-rw-r--r--   0        0        0       31 2022-12-28 10:00:32.000000 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/__main__.py
++-rw-r--r--   0        0        0     3508 2023-04-01 17:20:07.477049 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/code_gen.py
++-rw-r--r--   0        0        0     2482 2023-03-30 07:29:18.237163 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/config.py
++-rw-r--r--   0        0        0    19530 2023-03-31 10:20:32.030717 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/field_desc_proto_to_code.py
++-rwxr-xr-x   0        0        0      347 2023-03-30 03:00:46.463995 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/main.py
++-rw-r--r--   0        0        0      332 2023-02-22 17:08:00.346785 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/my_types.py
++-rw-r--r--   0        0        0   363829 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2.py
++-rw-r--r--   0        0        0   176974 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2.pyi
++-rw-r--r--   0        0        0      158 2023-04-06 10:18:12.628306 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2_grpc.py
++-rw-r--r--   0        0        0      169 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2_grpc.pyi
++-rw-r--r--   0        0        0   121461 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2.py
++-rw-r--r--   0        0        0    64630 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2.pyi
++-rw-r--r--   0        0        0      158 2023-04-06 10:18:12.628306 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2_grpc.py
++-rw-r--r--   0        0        0       76 2023-04-06 10:15:51.416121 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2_grpc.pyi
++-rw-r--r--   0        0        0      270 2023-04-01 17:49:33.439309 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/p2p_validate_pb2.py
++-rw-r--r--   0        0        0    32541 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/p2p_validate_pb2.py
++-rw-r--r--   0        0        0   176974 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/p2p_validate_pb2.pyi
++-rw-r--r--   0        0        0      158 2023-04-06 10:18:12.592306 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/p2p_validate_pb2_grpc.py
++-rw-r--r--   0        0        0      169 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/p2p_validate_pb2_grpc.pyi
++-rw-r--r--   0        0        0    13083 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/validate_pb2.py
++-rw-r--r--   0        0        0    64630 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/validate_pb2.pyi
++-rw-r--r--   0        0        0      158 2023-04-06 10:18:12.628306 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/validate_pb2_grpc.py
++-rw-r--r--   0        0        0       76 2023-04-06 10:16:08.108142 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/protos/validate_pb2_grpc.pyi
++-rw-r--r--   0        0        0      262 2023-04-01 17:20:07.469049 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/validate_pb2.py
++-rw-r--r--   0        0        0     1593 2023-02-22 16:09:35.749710 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/types.py
++-rw-r--r--   0        0        0     5755 2023-04-02 18:31:56.063240 protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/util.py
++-rw-r--r--   0        0        0     3107 2023-04-06 10:22:05.460616 protobuf_to_pydantic-0.1.7/pyproject.toml
++-rw-r--r--   0        0        0    35925 1970-01-01 00:00:00.000000 protobuf_to_pydantic-0.1.7/setup.py
++-rw-r--r--   0        0        0    34839 1970-01-01 00:00:00.000000 protobuf_to_pydantic-0.1.7/PKG-INFO
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/LICENSE` & `protobuf_to_pydantic-0.1.7/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/README.md` & `protobuf_to_pydantic-0.1.7/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,30 +12,29 @@
+ 
+ # 2.Quick Start
+ `protobuf_to_pydantic` currently has two methods to generate `pydantic.BaseModel` objects through Protobuf files,
+ The first method is to generate the corresponding `Python` code file through the Protobuf file in the form of a plugin.
+ The second method is to generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime.
+ 
+ ## 2.1.Directly generate `pydantic.BaseModel` code files through plugins
++> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.
+ ### 2.1.1.Use of plugin
+ The plugin method is the most recommended way to use `protobuf-to-pydantic`,
+ it supports the most complete functions, and it is also very simple to use, assuming that the code corresponding to the Protobuf file is usually generated by the following command:
+ ```bash
+ python -m grpc_tools.protoc -I. example.proto
+ ```
+ Then after installing `protobuf-to-pydantic`, can use the `--protobuf-to-pydantic out` option to use `protobuf-to-pydantic`, the command is as follows:
+ ```bash
+ python -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=. example.proto
+ ```
+-> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.
+ 
+ Among them, `--protobuf-to-pydantic out=.` indicates the use of the `prorobuf-to-pydanitc` plugin, and declares that the output location of the `protobuf-to-pydantic` plugin is `.` (indicating the use of `grpc tools.proto ` to use the output path),
+ In this way, the `protobuf-to-pydantic` plugin will write its own generated content in the corresponding file (the file name ends with `p2p.py`), such as `protobuf-to-pydantic` is `example.proto `The generated code file is named `example_p2p.py`
+ 
+-> Note: If `isort` and `black` are installed in the current `Python` environment, then `protobuf-to-pydantic` will format the generated code through `isort` and `black`.
+ ### 2.1.2.Plugin configuration
+ `protobuf-to-pydantic` supports configuration functions by reading a `Python` file.
+ Developers first need to create a configuration file in the current path of the running command, the file name is `plugin_config.py`, and write the following code:
+ ```Python
+ import logging
+ from typing import List, Type
+ 
+@@ -66,22 +65,26 @@
+ }
+ # Specifies the start of key comments
+ comment_prefix = "p2p"
+ # Specify the class of the template, you can extend the template by inheriting this class, see the chapter on custom templates for details
+ desc_template: Type[DescTemplate] = DescTemplate
+ # Specify the protobuf files of which packages to ignore, and the messages of the ignored packages will not be parsed
+ ignore_pkg_list: List[str] = ["validate", "p2p_validate"]
++# Specifies the generated file name suffix (without .py)
++file_name_suffix = "_p2p"
+ ```
+ Next, change `--protobuf-to-pydantic out=.` in the command to `--protobuf-to-pydantic out=config path=plugin config.py:.`, as follows:
+ ```bash
+ python -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=config_path=plugin_config.py:. example.proto
+ ```
+ Among them, `config path=plugin_config.py` on the left side of `:` indicates that the configuration file path to be read is `plugin_config.py`, and the right side of `:` still declares the output of the `protobuf-to-pydantic` plugin The position is `.`.
+ In this way, the `protobuf-to-pydantic` plugin can be loaded into the configuration file specified by the developer when it is running, and then run according to the configuration defined by the configuration file.
+ 
++> Note: 更多配置内容见`protobuf_to_pydantic/plugin/config.py`文件
++> Note: For more information on configuration, see the 'protobuf_to_pydantic/plugin/config.py'
+ ## 2.2.Generate a `pydantic.BaseModel` object at runtime
+ `protobuf_to_pydantic` can generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime。
+ 
+ For example, the `UserMessage` in the following Protobuf file named `demo.proto`:
+ ```protobuf
+ // path: ./demo.proto
+ syntax = "proto3";
+@@ -144,15 +147,14 @@
+ 
+ pydantic_model_to_py_file(
+     "./demo_gen_code.py",
+     msg_to_pydantic_model(demo_pb2.NestedMessage),
+ )
+ ```
+ The code will first convert `demo_pb2.NestedMessage` into a `pydantic.BaseModel` object, and then the generated object will be converted into the corresponding code content by the `pydantic_model_to_py_file` method and written to `demo_gen_code.py` file.
+-It should be noted that if `protobuf_to_pydantic` checks that `isort` and `black` are installed in the current environment, they will be used to format the generated code by default.
+ 
+ ## 2.3.Parameter verification
+ The `Message` object generated according to the Protobuf file will only carry a small amount of information. This is because the ordinary Protobuf file does not have enough parameter verification related information, which requires us to improve the parameter verification information of the `Message` object through some additional ways.
+ Currently `protobuf_to_pydantic` supports multiple ways to obtain other information of the Message, so that the generated `pydantic.BaseModel` object has the function of parameter verification.
+ 
+ > NOTE:
+ >  - 1.The text annotation function is not the focus of subsequent function development, and the P2P mode is recommended。
+@@ -412,17 +414,22 @@
+ ### 2.3.3.Other parameter support
+ In addition to the parameters of `FieldInfo`, the file comment mode and `p2p` mode of `protobuf_to_pydantic` also support the following parameters:
+ - miss_default：By default, the default value of each field in the corresponding `pydantic.BaseModel` object is the same as the default value of each field in the Message, but when `miss default` is `true`, the setting of the default value will be canceled .
+ - enable: By default, `pydantic.BaseModel` will convert every field in the Message. If some fields do not want to be converted, you can set `enable` to `false`
+ - const: Specifies the value of the field's constant. Note: The const of `pydantic.BaseModel` only supports bool variables. When `const` is `True`, the accepted value can only be the value set by `default`, and the default value carried by the Message generated by protobuf corresponds to The null value of type does not match `pydantic.BaseModel`, so `protobuf_to_pydantic` makes some changes to the input of this value, but after `const` sets the value, the `cost` property in the generated field is `True` `, and `default` becomes the corresponding value of the setting.
+ - type: To expand the current type, for example, if you want to increase the verification of the bank card number through the `pydantic.types.Payment Card Number` type, you can specify the field type as `Payment Card Number` by the following method:
+   ```protobuf
++  // common example
+   message UserPayMessage {
+     string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}
+   }
++  // p2p example
++  message UserPayMessage {
++    string bank_number=1[(p2p_validate.rules).string.type = "p2p@import|pydantic.types|PaymentCardNumber"];
++  }
+   ```
+ 
+ > Note:
+ >   If you don't know `pydantic`, you can use the following two URLs to learn what parameters Field supports:
+ >
+ >   - https://pydantic-docs.helpmanual.io/usage/types/#constrained-types
+ >
+@@ -595,15 +602,49 @@
+ from pydantic.fields import FieldInfo
+ 
+ class TimestampTest(BaseModel):
+     timestamp_10: int = FieldInfo(default=1600000000)
+     timestamp_13: int = FieldInfo(default=1600000000000)
+ ```
+ 
+-## 3.example
++## 3.Code formatting
++Code generated directly via `protobuf_to_pydantic` is not perfect, but `protobuf+type_pydantic` can rely on different formatting tools to generate code that conforms to the `Python` specification.
++Currently supported formatting tools are `autoflake`, `black` and `isort`, but the prerequisite for using these tools is that the corresponding formatting tools are installed in the current running environment.
++
++In addition, developers can decide how the formatter will execute through the `pyproject.toml` configuration file, an example of `pyproject.toml` as follows:
++```toml
++# Controls which formatters protobuf-to-pydantic can use, false means that the formatter is not used (default is true)
++[tool.protobuf-to-pydantic.format]
++black = true
++isort = true
++autoflake = true
++
++# See the black configuration documentation:https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format
++[tool.black]
++line-length = 120
++target-version = ['py37']
++
++# See the isort configuration documentation:https://pycqa.github.io/isort/docs/configuration/config_files.html#pyprojecttoml-preferred-format
++[tool.isort]
++profile = "black"
++multi_line_output = 3
++include_trailing_comma = true
++force_grid_wrap = 0
++use_parentheses = true
++ensure_newline_before_comments = true
++line_length = 120
++
++# See the autoflake configuration documentation:https://github.com/PyCQA/autoflake#configuration
++[tool.autoflake]
++in-place = true
++remove-all-unused-imports = true
++remove-unused-variables = true
++```
++
++## 4.example
+ `protobuf_to_pydantic` provides some simple sample code, the following is the path of the sample code and protobuf file, just for reference:
+ 
+ | Implication                           | Example Protobuf                                                                            | Example code                                                                         |
+ |------------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+ | Generate Model code with validation rules based on p2p schema | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/p2p_validate | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/p2p_validate_example |
+ | Generate the basic Model code               | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/simple_example      |
+ | Generate Model code with validation rules from .pyi files     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/text_comment_example |
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/contrib/proto_parser.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/contrib/proto_parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/customer_con_type.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/customer_con_type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/customer_validator.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/customer_validator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/gen_code.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/gen_code.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,43 +1,64 @@
+ import inspect
+ import pathlib
+ import sys
+ from collections import deque
+ from datetime import datetime
+ from enum import IntEnum
+ from types import ModuleType
+-from typing import _GenericAlias  # type: ignore
+-from typing import Any, Callable, Deque, Dict, List, Optional, Set, Type, Union
++from typing import (  # type: ignore
++    Any,
++    Callable,
++    Deque,
++    Dict,
++    ForwardRef,
++    List,
++    Optional,
++    Set,
++    Type,
++    Union,
++    _GenericAlias,
++    _SpecialForm,
++)
+ 
+ from pydantic import BaseConfig, BaseModel
+ from pydantic.fields import FieldInfo
+ 
+ from protobuf_to_pydantic import customer_validator, gen_model
++from protobuf_to_pydantic.__version__ import __version__
+ from protobuf_to_pydantic.customer_con_type import pydantic_con_dict
+ from protobuf_to_pydantic.grpc_types import RepeatedCompositeContainer, RepeatedScalarContainer
+-from protobuf_to_pydantic.util import replace_protobuf_type_to_python_type
++from protobuf_to_pydantic.util import format_content, replace_protobuf_type_to_python_type
+ 
+ 
+ class BaseP2C(object):
+     """
+     BaseModel objects into corresponding Python code
+     (only protobuf-generated pydantic.BaseModel objects are supported, not overly complex pydantic.BaseModel)
+     """
+ 
++    head_content: str = (
++        "# This is an automatically generated file, please do not change\n"
++        f"# gen by protobuf_to_pydantic[{__version__}](https://github.com/so1n/protobuf_to_pydantic)\n"
++    )
++    tail_content: str = ""
++
+     def __init__(
+         self,
+         customer_import_set: Optional[Set[str]] = None,
+         customer_deque: Optional[Deque] = None,
+         module_path: str = "",
+         code_indent: Optional[int] = None,
++        pyproject_file_path: str = "",
+     ):
+         self._import_set: Set[str] = customer_import_set or set()
+         self._content_deque: Deque = customer_deque or deque()
+         self._create_set: Set[Type[BaseModel]] = set()
+         self.code_indent: int = code_indent or 4
++        self.pyproject_file_path: str = pyproject_file_path
+ 
+         # init module_path
+         if module_path:
+             module_path_obj: pathlib.Path = pathlib.Path(module_path).absolute()
+             if not module_path_obj.is_dir():
+                 raise TypeError(f"{module_path} must dir")
+             cnt: int = 0
+@@ -48,63 +69,30 @@
+                 cnt += 1
+             for _ in range(cnt):
+                 module_path_obj = module_path_obj.parent
+             module_path = str(module_path_obj.absolute())
+         self._module_path: str = module_path
+ 
+     def format_content(self, content_str: str) -> str:
+-
+-        try:
+-            import isort  # type: ignore
+-        except ImportError:
+-            pass
+-        else:
+-            content_str = isort.code(content_str)
+-
+-        try:
+-            import autoflake  # type: ignore
+-        except ImportError:
+-            pass
+-        else:
+-            content_str = autoflake.fix_code(content_str)
+-
+-        try:
+-            import black  # type: ignore
+-        except ImportError:
+-            try:
+-                from yapf.yapflib.yapf_api import FormatCode  # type: ignore
+-            except ImportError:
+-                pass
+-            else:
+-                content_str, _ = FormatCode(content_str)
+-        else:
+-            content_str = black.format_str(content_str, mode=black.Mode(line_length=120))
+-        return content_str
++        return format_content(content_str, pyproject_file_path=self.pyproject_file_path)
+ 
+     @property
+     def content(self) -> str:
+-
+-        content_str: str = (
+-            "# This is an automatically generated file, please do not change\n"
+-            "# gen by protobuf_to_pydantic(https://github.com/so1n/protobuf_to_pydantic)\n"
+-            "# type: ignore\n\n"
+-        )
+-
+         # Regardless of the order of import, you can sort through isort (if installed)
+-        content_str += "\n".join(sorted(self._import_set))
++        content_str: str = "\n".join(sorted(self._import_set))
+ 
+         if self._content_deque:
+             _content_set: Set[str] = set()
+             content_str += "\n\n"
+             for content in self._content_deque:
+                 if content in _content_set:
+                     continue
+                 _content_set.add(content)
+                 content_str += f"\n\n{content}"
+-        return self.format_content(content_str)
++        return self.format_content(self.head_content + content_str + self.tail_content)
+ 
+     def _add_import_code(self, module_name: str, class_name: str = "", extra_str: str = "") -> None:
+         """Generate import statements through module name and class name"""
+         if module_name.startswith("google.protobuf"):
+             extra_str += "  # type: ignore"
+         if module_name in (gen_model.__name__, __name__):
+             return
+@@ -119,14 +107,15 @@
+         :param type_: needs to be parsed type
+         :param auto_import_type_code: If True, will generate by the way import code
+         :return:
+         """
+         type_ = replace_protobuf_type_to_python_type(type_)
+         if isinstance(type_, dict):
+             sort_list: list = [(k, v) for k, v in type_.items()]
++            # Ensure that the order of code generated multiple times is consistent
+             sort_list.sort()
+             type_name: str = ", ".join(
+                 sorted([f"{self._get_value_code(k)}: {self._get_value_code(v)}" for k, v in sort_list])
+             )
+             return "{" + type_name + "}"
+         elif isinstance(type_, (list, tuple, set)):
+             sort_list = [self._get_value_code(i) for i in type_]
+@@ -134,51 +123,53 @@
+             type_name = ", ".join(sort_list)
+             if isinstance(type_, list):
+                 return "[" + type_name + "]"
+             elif isinstance(type_, set):
+                 return "{" + type_name + "}"
+             else:
+                 return "(" + type_name + ")"
++        elif isinstance(type_, ForwardRef):
++            return type_.__forward_arg__
+         elif inspect.isfunction(type_) or "cyfunction" in str(type_):
+             # pydantic confunc support
+             if auto_import_type_code:
+                 self._parse_type_to_import_code(type_)
+             return type_.__name__
+         elif inspect.isclass(type_):
+             if type_.__mro__[1] in pydantic_con_dict:
+                 # pydantic con class support
+                 return self.pydantic_con_type_handle(type_)
+             else:
+                 if auto_import_type_code:
+                     self._parse_type_to_import_code(type_)
+-                return getattr(type_, "__name__", None)
++                return getattr(type_, "__name__")
+         elif getattr(type_, "DESCRIPTOR", None):
+             # protobuf message support
+             message_name: str = type_.__class__.__name__
+             attr_str: str = " ,".join([f"{i[0].name}={repr(i[1])}" for i in type_.ListFields()])
+             if auto_import_type_code:
+                 self._parse_type_to_import_code(type_)
+             return f"{message_name}({attr_str})"
+         else:
+             if auto_import_type_code:
+                 self._parse_type_to_import_code(type_)
+-            type_module = inspect.getmodule(type_)
+ 
+             qualname: str = getattr(type_, "__qualname__", "")
+             if (
+                 qualname
+                 and qualname.startswith("datetime")
+                 and (
+                     (getattr(type_, "__objclass__", None) is datetime) or (getattr(type_, "__self__", None) is datetime)
+                 )
+             ):
+                 # support datetime.datetime.xxx
+                 type_name = qualname
+                 self._parse_type_to_import_code(datetime)
+             else:
++                type_module = inspect.getmodule(type_)
+                 if type_module and type_module.__name__ == "builtins" or inspect.isfunction(type_module):
+                     type_name = type_.__name__
+                 else:
+                     type_name = repr(type_)
+ 
+                 # Compatible with datetime.* name
+                 type_name = type_name.replace("'", '"').replace("datetime.", "")
+@@ -221,15 +212,15 @@
+             attribute_str += f"{' ' * indent}{key} = {self._get_value_code(model_attribute_dict)}\n"
+         return attribute_str
+ 
+     def _model_field_handle(self, model: Type[BaseModel], indent: int = 0) -> str:
+         field_str: str = ""
+         for key, value in model.__fields__.items():
+             value_outer_type = value.outer_type_
+-            value_type_name: str = getattr(value_outer_type, "__name__", None)
++            value_type_name: str = getattr(value_outer_type, "__name__", "None")
+ 
+             # Type Hint handler
+             if value_outer_type.__module__ != "builtins":
+                 if inspect.isclass(value.type_) and issubclass(value.type_, IntEnum):
+                     # Parse protobuf enum
+                     self._import_set.add("from enum import IntEnum")
+                     enum_code: str = self._gen_enum_py_code(value.type_, indent=indent - self.code_indent)
+@@ -238,29 +229,45 @@
+                 else:
+                     # It is not necessary to consider other types since
+                     # it is converted from the message object generated by protobuf
+                     value_outer_type = model.__annotations__[key]
+                 # Extracting the exact Type Hint text
+                 if isinstance(value_outer_type, _GenericAlias):
+                     sub_type_str = ", ".join(
+-                        [self._get_value_code(i) for i in value_outer_type.__args__ if i.__name__ != "T"]
++                        [
++                            self._get_value_code(i)
++                            for i in value_outer_type.__args__
++                            if getattr(i, __name__, None) != "T"
++                        ]
+                     )
+                     if sub_type_str:
+                         value_type_name = f"typing.{value_outer_type._name}[{sub_type_str}]"
+                     else:
+                         value_type_name = f"typing.{value_outer_type._name}"
+                     self._import_set.add("import typing")
++                elif isinstance(value_outer_type, _SpecialForm):
++                    value_type_name = f"typing.{value_outer_type._name}"  # type: ignore[attr-defined]
++                    self._import_set.add("import typing")
+                 elif inspect.isclass(value_outer_type) and value_outer_type.__mro__[1] in pydantic_con_dict:
+                     # only support like repeated[string]
+                     value_type_name = self.pydantic_con_type_handle(value_outer_type)
+                 else:
+-                    value_type_name = getattr(value_outer_type, "__name__", None)
++                    value_type_name = getattr(value_outer_type, "__name__", "None")
+                     self._parse_type_to_import_code(value_outer_type)
+ 
++            # TODO fix con_func bug:https://github.com/pydantic/pydantic/issues/156
++            # ignore_flag: bool = False
++            # for con_func in customer_con_type.__all__:
++            #     if con_func in value_type_name:
++            #         pass
++
+             field_str += " " * indent + f"{key}: {value_type_name} = {self._field_info_handle(value.field_info)}\n"
++            # if ignore_flag:
++            #     field_str += "  # type: ignore"
++            # field_str += "\n"
+         return field_str
+ 
+     def pydantic_con_type_handle(self, type_: Any) -> str:
+         con_func: Callable = pydantic_con_dict[type_.__mro__[1]]
+         self._parse_type_to_import_code(con_func)
+ 
+         param_str_list: List[str] = []
+@@ -336,55 +343,57 @@
+             self._content_deque.append(pydantic_model_code)
+         self._create_set.add(model)
+ 
+     def _parse_type_to_import_code(self, type_: Any) -> None:
+         """Parse the type and generate the corresponding import"""
+         type_module: Optional[ModuleType] = inspect.getmodule(type_)
+         if not type_module:
+-            # The value cannot be found in the corresponding module,
+-            # need to determine if the built-in type needs to be resolved if possible
++            # The corresponding module could not be found,
++            # it may be a nested type, or the module needs to be found by some other means
+             if isinstance(type_, (list, RepeatedScalarContainer, RepeatedCompositeContainer)):
+                 for i in type_:
+                     self._parse_type_to_import_code(i)
+             elif isinstance(type_, dict):
+                 for i in type_.values():
+                     self._parse_type_to_import_code(i)
+             else:
+                 type_module = inspect.getmodule(type_.__class__)
+ 
+-        if not type_module:
++        if type_module is None:
+             return
+         elif getattr(type_module, "__name__", "builtins") == "builtins":
++            # The built-in method does not use a guide package
+             return
+         elif isinstance(type_, _GenericAlias):
+             # type hint handle
+             self._import_set.add("import typing")
+             for type_ in type_.__args__:
+                 self._parse_type_to_import_code(type_)
+             return
+         elif isinstance(type_, type) and inspect.isclass(type_) and issubclass(type_, BaseModel):
+             # pydantic.BaseModel handle
+             self._gen_pydantic_model_py_code_to_content_deque(type_)
+         else:
+             # other type handle
+             if type_module.__name__ == "__main__":
+                 start_path: str = sys.path[0]
++                module_file = type_module.__file__ or ""
+                 if self._module_path:
+-                    if not type_module.__file__.startswith(self._module_path):
+-                        type_module_file: str = start_path + "/" + type_module.__file__
++                    if not module_file.startswith(self._module_path):
++                        type_module_file: str = start_path + "/" + module_file
+                     else:
+-                        type_module_file = type_module.__file__
++                        type_module_file = module_file
+                     module_name = self._module_path.split("/")[-1] + type_module_file.replace(self._module_path, "")
+                 else:
+                     # Find the name of the module for the variable that starts the code file
+-                    if not type_module.__file__.startswith(start_path):
++                    if not module_file.startswith(start_path):
+                         # Compatible scripts are run directly in the submodule
+-                        module_name = f"{start_path.split('/')[-1]}.{type_module.__file__.split('/')[-1]}"
++                        module_name = f"{start_path.split('/')[-1]}.{module_file.split('/')[-1]}"
+                     else:
+-                        module_name = start_path.split("/")[-1] + type_module.__file__.replace(start_path, "")
++                        module_name = start_path.split("/")[-1] + module_file.replace(start_path, "")
+                 module_name = module_name.replace("/", ".").replace(".py", "")
+ 
+                 class_name: str = self._get_value_code(type_, auto_import_type_code=False)
+             else:
+                 module_name = type_module.__name__
+                 if not inspect.isclass(type_) and not inspect.isfunction(type_):
+                     class_name = type_.__class__.__name__
+@@ -393,15 +402,14 @@
+                 else:
+                     class_name = type_.__name__
+ 
+             self._add_import_code(module_name, class_name)
+ 
+     def _field_info_handle(self, field_info: FieldInfo) -> str:
+         # Introduce the corresponding class for FieldInfo's properties
+-        self._parse_type_to_import_code(field_info.__class__)
+         field_list = []
+         for k, v in field_info.__repr_args__():
+             if k == "default" and str(v) == "PydanticUndefined":
+                 # Ignore the default value of the pydantic field
+                 continue
+             if k == "extra":
+                 if not v:
+@@ -410,30 +418,36 @@
+                 for extra_k, extra_v in v.items():
+                     field_list.append(f"{extra_k}={self._get_value_code(extra_v)}")
+                     self._parse_type_to_import_code(extra_v)
+             else:
+                 field_list.append(f"{k}={self._get_value_code(v)}")
+                 self._parse_type_to_import_code(v)
+ 
+-        return f"{field_info.__class__.__name__}({', '.join(field_list)})"
++        if field_info.__class__.__name__ == "FieldInfo":
++            self._add_import_code("pydantic", "Field")
++            field_info_str: str = f"Field({', '.join(field_list)})"
++        else:
++            self._parse_type_to_import_code(field_info.__class__)
++            field_info_str = f"{field_info.__class__.__name__}({', '.join(field_list)})"
++        return field_info_str
+ 
+     def _model_validator_handle(self, model: Type[BaseModel], indent: int = 0) -> str:
++        # TODO Here currently only consider the support for pgv&p2p, the follow-up to fill in
+         validator_str: str = ""
+ 
+         for root_validator in model.__pre_root_validators__:
+             if root_validator.__module__ != customer_validator.__name__:
+                 continue
+             self._import_set.add("from pydantic import root_validator")
+             self._add_import_code(root_validator.__module__, root_validator.__name__)
+             validator_str += (
+                 f"{' ' * indent}"
+                 f"_{root_validator.__name__} = root_validator(pre=True, allow_reuse=True)({root_validator.__name__})\n"
+             )
+ 
+-        # TODO Here currently only consider the support for pgv&p2p, the follow-up to fill in
+         for key, value in model.__fields__.items():
+             if not value.class_validators:
+                 continue
+             for class_validator_key, class_validator_value in value.class_validators.items():
+                 if class_validator_value.func.__module__ != customer_validator.__name__:
+                     continue
+                 self._import_set.add("from pydantic import validator")
+@@ -455,55 +469,71 @@
+     def __init__(
+         self,
+         *model: Type[BaseModel],
+         customer_import_set: Optional[Set[str]] = None,
+         customer_deque: Optional[Deque] = None,
+         module_path: str = "",
+         code_indent: Optional[int] = None,
++        pyproject_file_path: str = "",
+     ):
+         super().__init__(
+             customer_import_set=customer_import_set,
+             customer_deque=customer_deque,
+             module_path=module_path,
+             code_indent=code_indent,
++            pyproject_file_path=pyproject_file_path,
+         )
+         for _module in model:
+             self._gen_pydantic_model_py_code_to_content_deque(_module)
+ 
+ 
+ def pydantic_model_to_py_code(
+     *model: Type[BaseModel],
+     customer_import_set: Optional[Set[str]] = None,
+     customer_deque: Optional[Deque] = None,
+     module_path: str = "",
+     code_indent: Optional[int] = None,
+     p2c_class: Type[P2C] = P2C,
++    pyproject_file_path: str = "",
+ ) -> str:
++    """
++    :param model:  the model(s) to generate code for
++    :param customer_import_set: Customize the text that needs to be imported into the Python package
++    :param customer_deque: Customize the code to be generated
++    :param module_path:
++    :param code_indent: Code indentation, default is 4
++    :param pyproject_file_path: pyproject.toml path
++    :param p2c_class:  The class that actually executes
++    :return:
++    """
+     return p2c_class(
+         *model,
+         customer_import_set=customer_import_set,
+         customer_deque=customer_deque,
+         module_path=module_path,
+         code_indent=code_indent,
++        pyproject_file_path=pyproject_file_path,
+     ).content
+ 
+ 
+ def pydantic_model_to_py_file(
+     filename: str,
+     *model: Type[BaseModel],
+     customer_import_set: Optional[Set[str]] = None,
+     customer_deque: Optional[Deque] = None,
+     open_mode: str = "w",
+     module_path: str = "",
+     code_indent: Optional[int] = None,
++    pyproject_file_path: str = "",
+     p2c_class: Type[P2C] = P2C,
+ ) -> None:
+     py_code_content: str = pydantic_model_to_py_code(
+         *model,
+         customer_import_set=customer_import_set,
+         customer_deque=customer_deque,
+         module_path=module_path,
+         code_indent=code_indent,
++        pyproject_file_path=pyproject_file_path,
+         p2c_class=p2c_class,
+     )
+     with open(filename, mode=open_mode) as f:
+         f.write(py_code_content)
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/gen_model.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/gen_model.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ import inspect
+ import json
+ from dataclasses import MISSING
+ from enum import IntEnum
+ from importlib import import_module
+ from pathlib import Path
+ from types import ModuleType
+-from typing import Any, Callable, Dict, List, Optional, Tuple, Type, Union
++from typing import TYPE_CHECKING, Any, Callable, Dict, List, Optional, Tuple, Type, Union
+ 
+ from pydantic import BaseModel, Field, root_validator
+ from pydantic.fields import FieldInfo, Undefined
+ from pydantic.typing import NoArgAnyCallable
+ 
+ from protobuf_to_pydantic.customer_validator import check_one_of
+ from protobuf_to_pydantic.get_desc import (
+@@ -23,17 +23,19 @@
+     AnyMessage,
+     Descriptor,
+     FieldDescriptor,
+     Message,
+     RepeatedCompositeContainer,
+     RepeatedScalarContainer,
+ )
+-from protobuf_to_pydantic.types import OneOfTypedDict
+ from protobuf_to_pydantic.util import Timedelta, create_pydantic_model
+ 
++if TYPE_CHECKING:
++    from protobuf_to_pydantic.types import DescFromOptionTypedDict, FieldInfoTypedDict, OneOfTypedDict
++
+ type_dict: Dict[int, Type] = {
+     FieldDescriptor.TYPE_DOUBLE: float,
+     FieldDescriptor.TYPE_FLOAT: float,
+     FieldDescriptor.TYPE_INT64: int,
+     FieldDescriptor.TYPE_UINT64: int,
+     FieldDescriptor.TYPE_INT32: int,
+     FieldDescriptor.TYPE_FIXED64: float,
+@@ -68,14 +70,15 @@
+     "Struct": Dict[str, Any],
+     "Duration": Timedelta,
+     "Any": AnyMessage,
+ }
+ 
+ 
+ def check_dict_one_of(desc_dict: dict, key_list: List[str]) -> bool:
++    """Check if the key also appears in the dict"""
+     if (
+         len(
+             [
+                 desc_dict.get(key, None)
+                 for key in key_list
+                 if desc_dict.get(key, None) and desc_dict[key].__class__ != MISSING.__class__
+             ]
+@@ -83,14 +86,15 @@
+         > 1
+     ):
+         raise RuntimeError(f"Field:{key_list} cannot have both values: {desc_dict}")
+     return True
+ 
+ 
+ def replace_file_name_to_class_name(filename: str) -> str:
++    """Convert the protobuf file name to the class name(PEP-8)"""
+     # example_proto/common/single.proto -> Example_protoCommonSingle
+     prefix: str = "".join([str(i).title() for i in Path(filename.split(".")[0]).joinpath().parts])
+     # Example_protoCommonSingle -> ExampleProtoCommonSingle
+     prefix = prefix.replace("_", "")
+     return prefix
+ 
+ 
+@@ -251,43 +255,43 @@
+         pydantic_module: Optional[str] = None,
+         local_dict: Optional[Dict[str, Any]] = None,
+         desc_template: Optional[Type[DescTemplate]] = None,
+         message_type_dict_by_type_name: Optional[Dict[str, Any]] = None,
+         message_default_factory_dict_by_type_name: Optional[Dict[str, Any]] = None,
+     ):
+         proto_file_name = msg.DESCRIPTOR.file.name  # type: ignore
+-        message_field_dict: Dict[str, Dict[str, str]] = {}
++        message_field_dict: Dict[str, "DescFromOptionTypedDict"] = {}
+ 
+         if proto_file_name.endswith("empty.proto") or parse_msg_desc_method == "ignore":
+             pass
+         elif isinstance(parse_msg_desc_method, str) and Path(parse_msg_desc_method).exists():
+             file_str: str = parse_msg_desc_method
+             if not file_str.endswith("/"):
+                 file_str += "/"
+-            message_field_dict = get_desc_from_proto_file(file_str + proto_file_name)
++            message_field_dict = get_desc_from_proto_file(file_str + proto_file_name, comment_prefix)
+         elif inspect.ismodule(parse_msg_desc_method):
+             if getattr(parse_msg_desc_method, msg.__name__, None) is not msg:  # type: ignore
+                 raise ValueError(f"Not the module corresponding to {msg}")
+             pyi_file_name = parse_msg_desc_method.__file__ + "i"  # type: ignore
+             if not Path(pyi_file_name).exists():
+                 raise RuntimeError(f"Can not found {msg} pyi file")
+-            message_field_dict = get_desc_from_pyi_file(pyi_file_name)
++            message_field_dict = get_desc_from_pyi_file(pyi_file_name, comment_prefix)
+         elif parse_msg_desc_method == "PGV":
+             message_field_dict = get_desc_from_pgv(message=msg)  # type: ignore
+         elif parse_msg_desc_method is not None:
+             import os
+ 
+             raise ValueError(
+                 f"parse_msg_desc_method param must be exist path, `ignore` or `PGV`,"
+                 f" not {parse_msg_desc_method}), now path:{os.getcwd()}"
+             )
+         else:
+             message_field_dict = get_desc_from_p2p(message=msg)  # type: ignore
+         self._parse_msg_desc_method: Optional[str] = parse_msg_desc_method
+-        self._field_doc_dict = message_field_dict
++        self._field_doc_dict: Dict[str, DescFromOptionTypedDict] = message_field_dict
+         self._default_field = default_field
+         self._comment_prefix = comment_prefix
+         self._creat_cache: Dict[Union[Type[Message], Descriptor], Type[BaseModel]] = {}
+         self._pydantic_base: Type["BaseModel"] = pydantic_base or BaseModel
+         self._pydantic_module: str = pydantic_module or __name__
+         self._desc_template: DescTemplate = (desc_template or DescTemplate)(local_dict or {}, self._comment_prefix)
+         self._message_type_dict_by_type_name: Dict[str, Any] = (
+@@ -301,56 +305,49 @@
+             descriptor=msg if isinstance(msg, Descriptor) else msg.DESCRIPTOR,
+         )
+ 
+     @property
+     def model(self) -> Type[BaseModel]:
+         return self._gen_model
+ 
+-    def _one_of_handle(self, descriptor: Descriptor) -> Dict[str, OneOfTypedDict]:
+-        one_of_dict: Dict[str, OneOfTypedDict] = {}
++    def _one_of_handle(self, descriptor: Descriptor) -> Dict[str, "OneOfTypedDict"]:
++        desc_dict: "DescFromOptionTypedDict" = self._field_doc_dict.get(descriptor.name, {})  # type: ignore
++        one_of_dict: Dict[str, "OneOfTypedDict"] = {}
+         for one_of in descriptor.oneofs:
+-            if one_of.full_name not in one_of_dict:
+-                one_of_dict[one_of.full_name] = {"required": False, "fields": set()}
+-            if one_of.full_name in self._field_doc_dict:
++            column_name: str = one_of.full_name
++            if column_name not in one_of_dict:
++                one_of_dict[column_name] = {"required": False, "fields": set()}
++            if desc_dict and column_name in desc_dict["one_of"]:
+                 # only PGV or P2P support
+-
+-                # TODO The use of full name here and the use of name elsewhere will lead to confusion in the storage
+-                #  range of field_doc_dict, which must be changed later.
+-                one_of_dict[one_of.full_name]["required"] = self._field_doc_dict[one_of.full_name].get(  # type: ignore
+-                    "required", False
+-                )
++                one_of_dict[column_name]["required"] = desc_dict["one_of"][column_name].get("required", False)
+             for _field in one_of.fields:
+-                one_of_dict[one_of.full_name]["fields"].add(_field.name)
++                one_of_dict[column_name]["fields"].add(_field.name)
+         return one_of_dict
+ 
+-    def _get_pydantic_base(self, pydantic_model_config_dict: Dict[str, Any]) -> Type[BaseModel]:
+-        if pydantic_model_config_dict:
++    def _get_pydantic_base(self, config_dict: Dict[str, Any]) -> Type[BaseModel]:
++        if config_dict:
+             # Changing the configuration of Config by inheritance
+             pydantic_base: Type[BaseModel] = type(  # type: ignore
+                 self._pydantic_base.__name__,
+                 (self._pydantic_base,),
+-                {
+-                    "Config": type(
+-                        self._pydantic_base.Config.__name__, (self._pydantic_base.Config,), pydantic_model_config_dict
+-                    )
+-                },
++                {"Config": type(self._pydantic_base.Config.__name__, (self._pydantic_base.Config,), config_dict)},
+             )
+         else:
+             pydantic_base = self._pydantic_base
+         return pydantic_base
+ 
+     # flake8: noqa: C901
+     def _parse_msg_to_pydantic_model(self, *, descriptor: Descriptor, class_name: str = "") -> Type[BaseModel]:
+         if descriptor in self._creat_cache:
+             return self._creat_cache[descriptor]
+ 
+         annotation_dict: Dict[str, Tuple[Type, Any]] = {}
+         validators: Dict[str, classmethod] = {}
+         pydantic_model_config_dict: Dict[str, Any] = {}
+-        one_of_dict: Dict[str, OneOfTypedDict] = self._one_of_handle(descriptor)
++        one_of_dict: Dict[str, "OneOfTypedDict"] = self._one_of_handle(descriptor)
+         if one_of_dict:
+             validators["one_of_validator"] = root_validator(pre=True, allow_reuse=True)(check_one_of)
+ 
+         # nested support
+         nested_message_dict: Dict[str, Type[Union[BaseModel, IntEnum]]] = {}
+         for message in descriptor.nested_types:
+             if message.name.endswith("Entry"):
+@@ -375,100 +372,98 @@
+             default: Any = Undefined
+             default_factory: Optional[NoArgAnyCallable] = None
+ 
+             if column.type == FieldDescriptor.TYPE_MESSAGE:
+                 if column.message_type.name in self._message_type_dict_by_type_name:
+                     type_ = self._message_type_dict_by_type_name[column.message_type.name]
+                     if column.message_type.name in self._message_default_factory_dict_by_type_name:
++                        # Default factory has a higher priority
+                         default_factory = self._message_default_factory_dict_by_type_name[column.message_type.name]
+                 elif column.message_type.name.endswith("Entry"):
+                     # support google.protobuf.MapEntry
+-                    key, value = column.message_type.fields
++                    # key, value = column.message_type.fields
+ 
+-                    if not key.message_type:
+-                        key_type: Any = type_dict[key.type]
+-                    elif key.message_type.name in self._message_type_dict_by_type_name:
+-                        key_type = self._message_type_dict_by_type_name[key.message_type.name]
+-                    else:
+-                        key_type = self._parse_msg_to_pydantic_model(descriptor=key.message_type)
+-                    if not value.message_type:
+-                        value_type: Any = type_dict[value.type]
+-                    elif value.message_type.name in self._message_type_dict_by_type_name:
+-                        value_type = self._message_type_dict_by_type_name[value.message_type.name]
+-                    else:
+-                        value_type = self._parse_msg_to_pydantic_model(descriptor=value.message_type)
+-                    type_ = Dict[key_type, value_type]
++                    dict_type_param_list = []
++                    for k_v_field in column.message_type.fields:
++                        if not k_v_field.message_type:
++                            k_v_type: Any = type_dict[k_v_field.type]
++                        elif k_v_field.message_type.name in self._message_type_dict_by_type_name:
++                            k_v_type = self._message_type_dict_by_type_name[k_v_field.message_type.name]
++                        else:
++                            k_v_type = self._parse_msg_to_pydantic_model(descriptor=k_v_field.message_type)
++                        dict_type_param_list.append(k_v_type)
++
++                    type_ = Dict[tuple(dict_type_param_list)]  # type: ignore
+                     default_factory = dict
+                 else:
+                     # support google.protobuf.Message
+                     if column.message_type.full_name in nested_message_dict:
+                         type_ = nested_message_dict[column.message_type.full_name]
+                     else:
+                         is_same_pkg: bool = descriptor.file.name == column.message_type.file.name
+                         _class_name: str = column.message_type.name
+                         if not is_same_pkg:
+                             _class_name = replace_file_name_to_class_name(column.message_type.file.name) + _class_name
+-                        type_ = self._parse_msg_to_pydantic_model(
+-                            descriptor=column.message_type, class_name=_class_name
+-                        )
+-                        if not is_same_pkg:
+-                            setattr(
+-                                type_,
+-                                "__doc__",
+-                                (
+-                                    "Note: The current class does not belong to the package\n"
+-                                    f"{_class_name} protobuf path:{column.message_type.file.name}"
+-                                ),
++                            type_ = self._parse_msg_to_pydantic_model(
++                                descriptor=column.message_type, class_name=_class_name
++                            )
++                            _class_doc: str = (
++                                "Note: The current class does not belong to the package\n"
++                                f"{_class_name} protobuf path:{column.message_type.file.name}"
+                             )
++                            setattr(type_, "__doc__", _class_doc)
++                        else:
++                            if column.message_type.full_name == descriptor.full_name:
++                                # if self-referencing, need use Python type hints postponed annotations
++                                type_ = f'"{_class_name}"'
++                            else:
++                                type_ = self._parse_msg_to_pydantic_model(
++                                    descriptor=column.message_type, class_name=_class_name
++                                )
+             elif column.type == FieldDescriptor.TYPE_ENUM:
+                 # support google.protobuf.Enum
+                 default = 0
+                 if column.enum_type.full_name in nested_message_dict:
+                     type_ = nested_message_dict[column.enum_type.full_name]
+                 else:
+                     enum_class_dict = {v.name: v.number for v in column.enum_type.values}
+                     _class_name = column.enum_type.name
++                    _class_doc = ""
+                     if descriptor.file.name != column.enum_type.file.name:
+                         _class_name = replace_file_name_to_class_name(column.enum_type.file.name) + _class_name
+-                        enum_class_dict["__doc__"] = (
++                        _class_doc = (
+                             "Note: The current class does not belong to the package\n"
+                             f"{_class_name} protobuf path:{column.enum_type.file.name}"
+                         )
+-                    else:
+-                        enum_class_dict["__doc__"] = ""
++                    enum_class_dict["__doc__"] = _class_doc
+                     type_ = IntEnum(_class_name, enum_class_dict)  # type: ignore
+             else:
+                 if column.label == FieldDescriptor.LABEL_REQUIRED:
+                     default = Undefined
+                 else:
+                     default = column.default_value
+ 
+             if column.label == FieldDescriptor.LABEL_REPEATED:
+                 # support google.protobuf.array
+                 if not (column.message_type and column.message_type.name.endswith("Entry")):
++                    # I didn't know that Protobuf's Design of Maps and Lists would be so weird
+                     type_ = List[type_]  # type: ignore
+                     default_factory = list
+                     # TODO support lambda
+                     if default is not Undefined:
+                         default = Undefined
+ 
+             field = self._default_field
+-            field_doc: Union[str, dict] = self._get_field_doc_by_full_name(column.full_name)
+-            if field_doc:
+-                # Refine field properties with data from desc
+-                if isinstance(field_doc, str):
+-                    # support protobuf optional by comment
+-                    field_doc_dict = self._gen_dict_from_desc_str(field_doc)
+-                else:
+-                    field_doc_dict = field_doc
++            field_doc_dict = self._get_field_info_dict_by_full_name(column.full_name)
++            if field_doc_dict is not None:
+                 if self._parse_msg_desc_method != "PGV":
+                     # pgv method not support template var
+                     field_doc_dict = self._desc_template.handle_template_var(field_doc_dict)
+ 
+-                field_param_dict: dict = MessagePaitModel(**field_doc_dict).dict()
++                field_param_dict: dict = MessagePaitModel(**field_doc_dict).dict()  # type: ignore
+                 # Nested types do not include the `enable`, `field` and `validator`  attributes
+                 if not field_param_dict.pop("enable"):
+                     continue
+                 _field = field_param_dict.pop("field")
+                 if _field:
+                     field = _field
+                 validator_dict = field_param_dict.pop("validator")
+@@ -480,25 +475,23 @@
+ 
+                 # Type will change in the unified processing logic
+                 field_type = field_param_dict.pop("type_", type_)
+                 map_type_dict = field_param_dict.pop("map_type", {})
+                 if field_type:
+                     type_ = field_type
+                 elif map_type_dict and type_._name == "Dict":
+-                    raw_keys_type, raw_values_type = type_.__args__
+-                    if "keys" in map_type_dict:
+-                        new_keys_type = map_type_dict["keys"]
+-                        if issubclass(new_keys_type, raw_keys_type) or raw_keys_type is datetime.datetime:
+-                            raw_keys_type = new_keys_type
+-                    if "values" in map_type_dict:
+-                        new_values_type = map_type_dict["values"]
+-                        if issubclass(new_values_type, raw_values_type) or raw_values_type is datetime.datetime:
+-                            raw_values_type = new_values_type
+-
+-                    type_ = Dict[raw_keys_type, raw_values_type]  # type: ignore
++                    new_args_list: List = list(type_.__args__)
++                    for index, k_v_column in enumerate(["keys", "values"]):
++                        raw_k_v_type = new_args_list[index]
++                        if k_v_column not in map_type_dict:
++                            continue
++                        new_k_v_type = map_type_dict[k_v_column]
++                        if issubclass(new_k_v_type, raw_k_v_type) or raw_k_v_type is datetime.datetime:
++                            new_args_list[index] = new_k_v_type
++                    type_ = Dict[tuple(new_args_list)]  # type: ignore
+             else:
+                 field_param_dict = {"default": default, "default_factory": default_factory}
+             use_field = field(**field_param_dict)  # type: ignore
+             annotation_dict[name] = (type_, use_field)
+ 
+             if type_ in (AnyMessage,) and not self._pydantic_base.Config.arbitrary_types_allowed:
+                 pydantic_model_config_dict["arbitrary_types_allowed"] = True
+@@ -523,23 +516,28 @@
+             line = line.strip()
+             if not line.startswith(f"{self._comment_prefix}:"):
+                 continue
+             line = line.replace(f"{self._comment_prefix}:", "")
+             pait_dict.update(json.loads(line))
+         return pait_dict
+ 
+-    def _get_field_doc_by_full_name(self, full_name: str) -> Any:
+-        field_doc_dict: dict = self._field_doc_dict
+-        key_list = full_name.split(".")[1:]  # ignore package name
++    def _get_field_info_dict_by_full_name(self, full_name: str) -> Optional["FieldInfoTypedDict"]:
++        message_name, *key_list = full_name.split(".")[1:]  # ignore package name
++        if message_name not in self._field_doc_dict:
++            return None
++        desc_dict: "DescFromOptionTypedDict" = self._field_doc_dict[message_name]
++
+         for key in key_list:
+-            if key in field_doc_dict:
+-                field_doc_dict = field_doc_dict[key]
++            if key in desc_dict["message"]:
++                return desc_dict["message"][key]
++            elif key in desc_dict["nested"]:
++                desc_dict = desc_dict["nested"][key]
+             else:
+                 return None
+-        return field_doc_dict
++        return None
+ 
+ 
+ def msg_to_pydantic_model(
+     msg: Union[Type[Message], Descriptor],
+     default_field: Type[FieldInfo] = FieldInfo,
+     comment_prefix: str = "p2p",
+     parse_msg_desc_method: Any = None,
+@@ -551,20 +549,29 @@
+     message_default_factory_dict_by_type_name: Optional[Dict[str, Any]] = None,
+ ) -> Type[BaseModel]:
+     """
+     Parse a message to a pydantic model
+     :param msg: grpc Message or descriptor
+     :param default_field: gen pydantic_model default Field, apply only to the outermost pydantic model
+     :param comment_prefix: Customize the prefixes that need to be parsed for comments
+-    :param parse_msg_desc_method: Define the type of comment to be parsed, if the value is a protobuf file path,
+-        it will be parsed by protobuf file; if it is a module of message object, it will be parsed by pyi file
++    :param parse_msg_desc_method:
++        Define a method for extracting the message extension property
++        1.If the value is 'ignore', it means that no extraction is made
++        2.If the value is the Protobuf file path, the Protobuf file is parsed and the information is extracted from
++         the comments in the file
++         Note: The extracted content is a text comment in the Protobuf file
++        3.If the value is a Message object's module, it is extracted from the corresponding pyi file
++         (pyi file is generated by mypy-protobuf)
++         Note: The extracted content is a text comment in the Protobuf file
++        4.If the value is PGV, the corresponding PGV information is extracted from the Message object
++        5.If the value is None (default), the P2P information is extracted from the Message)
+     :param local_dict: The variables corresponding to the p2p@local template
+     :param pydantic_base: custom pydantic.BaseModel
+     :param pydantic_module: custom create model's module name
+-    :param desc_template: Template object, which can extend and modify template adaptation rules through inheritance
++    :param desc_template: DescTemplate object, which can extend and modify template adaptation rules through inheritance
+     :param message_type_dict_by_type_name: Define the Python type mapping corresponding to each Protobuf Type
+     :param message_default_factory_dict_by_type_name: Define the default_factory corresponding to each Protobuf Type
+     """
+     return M2P(
+         msg=msg,
+         default_field=default_field,
+         comment_prefix=comment_prefix,
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/base.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/base.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,21 +10,22 @@
+     constr,
+     contimedelta,
+     contimestamp,
+     validator,
+ )
+ from protobuf_to_pydantic.customer_validator import validate_validator_dict
+ from protobuf_to_pydantic.grpc_types import Descriptor, FieldDescriptor, FieldDescriptorProto, Message
++from protobuf_to_pydantic.types import DescFromOptionTypedDict, FieldInfoTypedDict
+ from protobuf_to_pydantic.util import replace_protobuf_type_to_python_type
+ 
+ from .types import column_pydantic_type_dict
+ 
+ _logger: logging.Logger = logging.getLogger(__name__)
+ 
+-protobuf_common_type_dict: Dict[str, str] = {
++protobuf_common_type_dict: Dict[Any, str] = {
+     FieldDescriptor.TYPE_DOUBLE: "double",
+     FieldDescriptor.TYPE_FLOAT: "float",
+     FieldDescriptor.TYPE_INT64: "int64",
+     FieldDescriptor.TYPE_UINT64: "uint64",
+     FieldDescriptor.TYPE_INT32: "int32",
+     FieldDescriptor.TYPE_FIXED64: "fixed64",
+     FieldDescriptor.TYPE_FIXED32: "fixed32",
+@@ -35,35 +36,36 @@
+     FieldDescriptor.TYPE_ENUM: "enum",
+     FieldDescriptor.TYPE_SFIXED32: "sfixed32",
+     FieldDescriptor.TYPE_SFIXED64: "sfixed64",
+     FieldDescriptor.TYPE_SINT32: "sint32",
+     FieldDescriptor.TYPE_SINT64: "sint64",
+ }
+ 
+-type_not_support_dict: Dict[str, Set[str]] = {
++type_not_support_dict: Dict[Any, Set[str]] = {
+     FieldDescriptor.TYPE_BYTES: {"pattern"},
+     FieldDescriptor.TYPE_STRING: {"min_bytes", "max_bytes", "well_known_regex", "strict"},
+     "Any": {"ignore_empty", "defined_only", "no_sparse"},
+ }
+ 
+-column_pydantic_dict: Dict[str, str] = {
++pgv_column_to_pydantic_dict: Dict[str, str] = {
+     "min_len": "min_length",
+     "min_bytes": "min_length",
+     "max_len": "max_length",
+     "max_bytes": "max_length",
+     "pattern": "regex",
+     "unique": "unique_items",
+     "gte": "ge",
+     "lte": "le",
+     "len_bytes": "len",
+     "required": "miss_default",
+ }
+ 
+ 
+ def _has_raw_message_field(column: str, message: Message) -> bool:
++    """Determine whether the field held by the Message is a field defined by Protobuf"""
+     if column.startswith("_"):
+         return False
+     if getattr(Message, column, None):
+         return False
+     try:
+         if not message.HasField(column):
+             return False
+@@ -91,41 +93,37 @@
+ 
+ 
+ def option_descriptor_to_desc_dict(
+     option_descriptor: Union[Descriptor, FieldDescriptor],
+     field: Union[FieldDescriptor, FieldDescriptorProto],
+     type_name: str,
+     full_name: str,
+-    desc_dict: dict,
++    desc_dict: FieldInfoTypedDict,
+ ) -> None:
+     """Parse the data of option and store it in dict.
+     Since array and map are supported, the complexity is relatively high
+     """
+     if hasattr(option_descriptor, "ListFields"):
+         column_list = [column[0].name for column in option_descriptor.ListFields()]  # type: ignore
+     else:
+         column_list = [
+             column
+             for column in option_descriptor.__dir__()
+             if _has_raw_message_field(column, option_descriptor)  # type: ignore
+         ]
+     for column in column_list:
+-        if not _has_raw_message_field(column, option_descriptor):  # type: ignore
+-            # Removing internal methods
+-            continue
+-
+         if column in type_not_support_dict.get(field.type, type_not_support_dict["Any"]):
+             # Exclude unsupported fields
+             _logger.warning(f"{__name__} not support `{column}`, please reset {full_name} `{column}` value")
+             continue
+ 
+         value = getattr(option_descriptor, column)
+-        if column in column_pydantic_dict:
++        if column in pgv_column_to_pydantic_dict:
+             # Field Conversion
+-            column = column_pydantic_dict[column]
++            column = pgv_column_to_pydantic_dict[column]
+ 
+         if type_name in ("duration", "any", "timestamp", "map") and column in (
+             "lt",
+             "le",
+             "gt",
+             "ge",
+             "const",
+@@ -139,27 +137,28 @@
+         ):
+             # The verification of these parameters is handed over to the validator,
+             # see protobuf_to_pydantic/customer_validator for details
+ 
+             # Types of priority treatment for special cases
+             if "validator" not in desc_dict:
+                 desc_dict["validator"] = {}
+-            desc_dict["extra"][f"{type_name}_{column}"] = replace_protobuf_type_to_python_type(value)
+-            desc_dict["validator"][f"{field.name}_{type_name}_{column}_validator"] = validator(
+-                field.name, allow_reuse=True
+-            )(validate_validator_dict[f"{type_name}_{column}_validator"])
++            _column: str = f"{type_name}_{column}"
++            desc_dict["extra"][_column] = replace_protobuf_type_to_python_type(value)
++            desc_dict["validator"][f"{field.name}_{_column}_validator"] = validator(field.name, allow_reuse=True)(
++                validate_validator_dict[f"{_column}_validator"]
++            )
+             continue
+         elif column in ("in", "not_in", "len", "prefix", "suffix", "contains", "not_contains"):
+             # The verification of these parameters is handed over to the validator,
+             # see protobuf_to_pydantic/customer_validator for details
+ 
+             # Compatible with PGV attributes that are not supported by pydantic
+             if "validator" not in desc_dict:
+                 desc_dict["validator"] = {}
+-            _column: str = column + "_" if column in ("in",) else column
++            _column = column + "_" if column in ("in",) else column
+             desc_dict["extra"][_column] = replace_protobuf_type_to_python_type(value)
+             desc_dict["validator"][f"{field.name}_{column}_validator"] = validator(field.name, allow_reuse=True)(
+                 validate_validator_dict[f"{column}_validator"]
+             )
+             continue
+         elif column in column_pydantic_type_dict:
+             # Support some built-in type judgments of PGV
+@@ -171,67 +170,71 @@
+             # Nested types are supported via like constr
+             con_type = get_con_type_func_from_type_name(type_name)
+             if not con_type:
+                 # TODO nested message
+                 _logger.warning(f"{__name__} not support sub type `{type_name}`, please reset {full_name}")
+                 continue
+             # Generate information corresponding to the nested type
+-            sub_dict: dict = {"extra": {}}
++            sub_dict: FieldInfoTypedDict = {"extra": {}, "skip": False}
+             option_descriptor_to_desc_dict(getattr(value, type_name), field, type_name, full_name, sub_dict)
+             if "map_type" not in desc_dict:
+                 desc_dict["map_type"] = {}
+             con_type_param_dict: dict = {}
+             for _key in inspect.signature(con_type).parameters.keys():
+-                if sub_dict.get(_key, None) is not None:
+-                    con_type_param_dict[_key] = sub_dict[_key]
++                param_value = sub_dict.get(_key, None)  # type: ignore
++                if param_value is not None:
++                    con_type_param_dict[_key] = param_value
+                 elif "extra" in sub_dict:
+                     if sub_dict["extra"].get(_key, None) is not None:
+                         con_type_param_dict[_key] = sub_dict["extra"][_key]
+ 
+             desc_dict["map_type"][column] = con_type(**con_type_param_dict)
+             continue
+         elif column == "items":
+             # Process array data
+             type_name = value.ListFields()[0][0].full_name.split(".")[-1]
+             # Nested types are supported via like constr
+             con_type = get_con_type_func_from_type_name(type_name)
+             if not con_type:
+                 # TODO nested message
+-                _logger.warning(f"{__name__} not support sub type `{type_name}`, please reset {field.full_name}")
++                _logger.warning(
++                    f"{__name__} not support sub type `{type_name}`, please reset {field.full_name}"  # type: ignore
++                )
+                 desc_dict["type"] = List
+                 continue
+-            sub_dict = {"extra": {}, "type": con_type}
++            sub_dict = {"extra": {}, "type": con_type, "skip": False}
+             option_descriptor_to_desc_dict(getattr(value, type_name), field, type_name, full_name, sub_dict)
+             desc_dict["type"] = conlist
+             desc_dict["sub"] = sub_dict
+-        desc_dict[column] = value
++        desc_dict[column] = value  # type: ignore
+ 
+ 
+ def field_option_handle(
+     type_name: str,
+     full_name: str,
+     field: Union[FieldDescriptor, FieldDescriptorProto],
+     protobuf_pkg: str = "",
+-) -> dict:
++) -> FieldInfoTypedDict:
+     """Parse the information for each filed"""
+-    field_dict: dict = {"extra": {}, "skip": False}
++    field_dict: FieldInfoTypedDict = {"extra": {}, "skip": False}
+     miss_default: bool = False
+     if isinstance(field, FieldDescriptor):
+         field_list = field.GetOptions().ListFields()
+     elif isinstance(field, FieldDescriptorProto):
+         field_list = field.options.ListFields()
+     else:
+         raise RuntimeError(f"Not support type:{field.type}")
+     for option_descriptor, option_value in field_list:
+         # filter unwanted Option
+         if protobuf_pkg:
+             if option_descriptor.full_name != f"{protobuf_pkg}.rules":
+                 continue
+         elif not option_descriptor.full_name.endswith("validate.rules"):
+             continue
++
+         rule_message: Any = option_value.message
+         if rule_message:
+             if getattr(rule_message, "skip", None):
+                 field_dict["skip"] = True
+             if getattr(rule_message, "required", None):
+                 miss_default = True
+         type_value: Optional[Descriptor] = getattr(option_value, type_name, None)
+@@ -241,70 +244,65 @@
+         option_descriptor_to_desc_dict(type_value, field, type_name, full_name, field_dict)
+ 
+     if miss_default:
+         field_dict["miss_default"] = miss_default
+     return field_dict
+ 
+ 
+-_global_desc_dict: Dict[str, Dict[str, Any]] = {}
++_global_desc_dict: Dict[str, Dict[str, DescFromOptionTypedDict]] = {}
+ 
+ 
+ class ParseFromPbOption(object):
+     protobuf_pkg: str  # Extend the package name of protobuf
+ 
+     def __init__(self, message: Type[Message]):
+         self.message = message
+-        self._msg_desc_dict: Dict[str, Any] = {}
++        self._msg_desc_dict: Dict[str, DescFromOptionTypedDict] = {}
+         if self.protobuf_pkg not in _global_desc_dict:
+             _global_desc_dict[self.protobuf_pkg] = self._msg_desc_dict
+         else:
+             self._msg_desc_dict = _global_desc_dict[self.protobuf_pkg]
+ 
+-    def parse(self) -> Dict[str, Any]:
++    def parse(self) -> Dict[str, DescFromOptionTypedDict]:
+         descriptor: Descriptor = self.message.DESCRIPTOR
+         if descriptor.name in self._msg_desc_dict:
+             return self._msg_desc_dict
+ 
+         self._msg_desc_dict[descriptor.name] = self.get_desc_from_options(descriptor)
+         return self._msg_desc_dict
+ 
+-    def get_desc_from_options(self, descriptor: Descriptor) -> dict:
++    def get_desc_from_options(self, descriptor: Descriptor) -> DescFromOptionTypedDict:
+         """Extract the information of each field through the Options of Protobuf Message"""
+         if descriptor.name in self._msg_desc_dict:
+             return self._msg_desc_dict[descriptor.name]
+-        message_field_dict: dict = {}
++        message_field_dict: DescFromOptionTypedDict = {"message": {}, "one_of": {}, "nested": {}}
+ 
+         # Options for processing Messages
+         for option_descriptor, option_value in descriptor.GetOptions().ListFields():
+             # If parsing is disabled, Options will not continue to be parsed, and empty information will be set
+             if (option_descriptor.full_name == f"{self.protobuf_pkg}.disabled" and option_value) or (
+                 option_descriptor.full_name == f"{self.protobuf_pkg}.ignored" and option_value
+             ):
+-                self._msg_desc_dict[descriptor.name] = message_field_dict
+                 return message_field_dict
+         # Handle one_ofs of Message
+         for one_of in descriptor.oneofs:
+             for one_of_descriptor, one_ov_value in one_of.GetOptions().ListFields():
+                 if one_of_descriptor.full_name == f"{self.protobuf_pkg}.required":
+-                    if one_of.full_name in self._msg_desc_dict:
+-                        continue
++                    # if one_of.full_name in self._msg_desc_dict:
++                    #     continue
+                     # Support one of is required
+-                    self._msg_desc_dict[one_of.full_name] = {"required": True}
++                    message_field_dict["one_of"] = {one_of.full_name: {"required": True, "fields": set()}}
+         # Process all fields of Message
+         for field in descriptor.fields:
+             type_name: str = ""
+             if field.type == FieldDescriptor.TYPE_MESSAGE:
+                 # Convert some types of Protobuf
+                 message_type_name: str = field.message_type.name
+-                if message_type_name == "Duration":
+-                    type_name = "duration"
+-                elif message_type_name == "Any":
+-                    type_name = "any"
+-                elif message_type_name == "Timestamp":
+-                    type_name = "timestamp"
++                if message_type_name in ("Duration", "Any", "Timestamp"):
++                    type_name = message_type_name.lower()
+                 elif message_type_name.endswith("Entry"):
+                     type_name = "map"
+                 elif message_type_name == "Empty":
+                     continue
+                 else:
+                     type_name = "message"
+             if field.label == FieldDescriptor.LABEL_REPEATED:
+@@ -315,22 +313,24 @@
+                 # Support Protobuf common type
+                 type_name = protobuf_common_type_dict.get(field.type, "")
+             if not type_name:
+                 _logger.warning(
+                     f"{__name__} not support protobuf type id:{field.type} from field name{field.full_name}"
+                 )
+                 continue
+-            field_dict: dict = field_option_handle(type_name, field.full_name, field, self.protobuf_pkg)
++            field_dict: FieldInfoTypedDict = field_option_handle(type_name, field.full_name, field, self.protobuf_pkg)
+             if field_dict["skip"]:
+                 # If skip is True, the corresponding validation rule is not applied
+                 continue
+-            message_field_dict[field.name] = field_dict
++            message_field_dict["message"][field.name] = field_dict
+             if type_name == "message":
+-                message_field_dict[field.message_type.name] = self.get_desc_from_options(field.message_type)
++                message_field_dict["nested"][field.message_type.name] = self.get_desc_from_options(field.message_type)
+             elif type_name == "map":
+                 for sub_field in field.message_type.fields:
+                     if not sub_field.message_type:
+                         continue
+                     # keys and values
+-                    message_field_dict[sub_field.message_type.name] = self.get_desc_from_options(sub_field.message_type)
++                    message_field_dict["nested"][sub_field.message_type.name] = self.get_desc_from_options(
++                        sub_field.message_type
++                    )
+         self._msg_desc_dict[descriptor.name] = message_field_dict
+         return message_field_dict
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pb_option/types.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pb_option/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_proto_file.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_proto_file.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,32 +1,44 @@
+ from typing import TYPE_CHECKING, Dict, Optional
+ 
++from protobuf_to_pydantic.util import gen_dict_from_desc_str
++
+ if TYPE_CHECKING:
+     from protobuf_to_pydantic.contrib.proto_parser import Message, ProtoFile
++    from protobuf_to_pydantic.types import DescFromOptionTypedDict
+ 
+-_filename_desc_dict: Dict[str, Dict[str, Dict[str, str]]] = {}
++_filename_desc_dict: Dict[str, Dict[str, "DescFromOptionTypedDict"]] = {}
+ 
+ 
+-def _parse_message_result_dict(protobuf_msg: "Message", parse_result: "ProtoFile", container: dict) -> None:
++def _parse_message_result_dict(
++    protobuf_msg: "Message",
++    parse_result: "ProtoFile",
++    container: Dict[str, "DescFromOptionTypedDict"],
++    comment_prefix: str,
++) -> None:
+     message_name: str = protobuf_msg.name
+-    container[message_name] = {}
++    container[message_name] = {"message": {}, "one_of": {}, "nested": {}}  # type: ignore
+     for field in protobuf_msg.fields:
+-        container[message_name][field.name] = field.comment.content.replace("//", "") if field.comment else ""
++        container[message_name]["message"][field.name] = gen_dict_from_desc_str(
++            comment_prefix, field.comment.content.replace("//", "") if field.comment else ""
++        )
+         # parse nested message by map
+         for sub_type_str in [field.type, field.key_type, field.val_type]:
+             if sub_type_str in parse_result.messages:
+                 sub_message = parse_result.messages[sub_type_str]
+             elif sub_type_str in protobuf_msg.messages:
+                 sub_message = protobuf_msg.messages[sub_type_str]
+             else:
+                 continue
+-            _parse_message_result_dict(sub_message, parse_result, container[message_name])
++            if sub_message is protobuf_msg:
++                continue
++            _parse_message_result_dict(sub_message, parse_result, container[message_name]["nested"], comment_prefix)
+ 
+ 
+-def get_desc_from_proto_file(filename: str) -> dict:
++def get_desc_from_proto_file(filename: str, comment_prefix: str) -> Dict[str, "DescFromOptionTypedDict"]:
+     """Obtain corresponding information through protobuf file
+ 
+     protobuf file name: demo.proto, message e.g:
+     ```protobuf
+     message UserMessage {
+         string uid=1;
+         int32 age=2;
+@@ -56,22 +68,22 @@
+         return _filename_desc_dict[filename]
+ 
+     try:
+         from protobuf_to_pydantic.contrib.proto_parser import ProtoFile, parse_from_file
+     except ImportError:
+         raise RuntimeError("Can not parse protobuf file, please install lark")
+ 
+-    message_field_dict: dict = {}
++    message_field_dict: Dict[str, "DescFromOptionTypedDict"] = {}
+     _proto_file: Optional[ProtoFile] = parse_from_file(filename)
+     if not _proto_file:
+         # Even if there is no data, it should be cached, and it will take time to parse the protobuf file
+         _filename_desc_dict[filename] = message_field_dict
+         return message_field_dict
+ 
+     # Currently only used protobuf file message
+     proto_file: ProtoFile = _proto_file
+     for _, protobuf_msg in proto_file.messages.items():
+-        _parse_message_result_dict(protobuf_msg, proto_file, message_field_dict)
++        _parse_message_result_dict(protobuf_msg, proto_file, message_field_dict, comment_prefix)
+ 
+     # cache data and return
+     _filename_desc_dict[filename] = message_field_dict
+     return message_field_dict
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/get_desc/from_pyi_file.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/get_desc/from_pyi_file.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,14 +1,19 @@
+ import re
+-from typing import Dict, List, Tuple
++from typing import TYPE_CHECKING, Dict, List, Tuple
+ 
+-_filename_desc_dict: Dict[str, Dict[str, Dict[str, str]]] = {}
++from protobuf_to_pydantic.util import gen_dict_from_desc_str
+ 
++if TYPE_CHECKING:
++    from protobuf_to_pydantic.types import DescFromOptionTypedDict, FieldInfoTypedDict
+ 
+-def get_desc_from_pyi_file(filename: str) -> Dict[str, Dict[str, str]]:
++_filename_desc_dict: Dict[str, Dict[str, "DescFromOptionTypedDict"]] = {}
++
++
++def get_desc_from_pyi_file(filename: str, comment_prefix: str) -> Dict[str, "DescFromOptionTypedDict"]:
+     """
+     For a Protobuf message as follows:
+         ```protobuf
+         message UserMessage {
+             string uid=1;
+             int32 age=2;
+             float height=3;
+@@ -64,48 +69,51 @@
+     with open(filename, "r") as f:
+         pyi_content: str = f.read()
+     line_list = pyi_content.split("\n")
+ 
+     _comment_model: bool = False  # Whether to enable parsing comment mode
+     _doc: str = ""
+     _field_name: str = ""
+-    message_str_stack: List[Tuple[str, int, dict]] = []
++    message_str_stack: List[Tuple[str, int, DescFromOptionTypedDict]] = []
+     indent: int = 0
+ 
+-    global_message_field_dict: dict = {}
++    global_message_field_dict: Dict[str, "DescFromOptionTypedDict"] = {}
+ 
+     for index, line in enumerate(line_list):
+         if "class" in line:
+             if not line.endswith("google.protobuf.message.Message):"):
+                 continue
+             match_list = re.findall(r"class (.+)\(google.protobuf.message.Message", line)
+             if not match_list:
+                 continue
+             message_str: str = match_list[0]
+             new_indent: int = line.index("class")
+             if message_str_stack and message_str != message_str_stack[-1][0] and new_indent <= indent:
+                 # When you encounter the same indentation of different classes,
+                 # need to pop off the previous one and insert the current one
+                 message_str_stack.pop()
+-            message_field_dict: dict = {}
++            message_field_dict: Dict[str, FieldInfoTypedDict] = {}
++            global_message_field_dict[message_str] = {
++                "message": message_field_dict,
++                "one_of": {},
++                "nested": {},  # type: ignore
++            }
+             if message_str_stack:
+                 parent_message_field_dict = message_str_stack[-1][2]
+-                parent_message_field_dict[message_str] = message_field_dict
+-            else:
+-                global_message_field_dict[message_str] = message_field_dict
++                parent_message_field_dict["nested"][message_str] = global_message_field_dict[message_str]
+ 
+             indent = new_indent
+-            message_str_stack.append((message_str, indent, message_field_dict))
++            message_str_stack.append((message_str, indent, global_message_field_dict[message_str]))
+         elif indent:
+             if line and message_str_stack and line[indent] != " ":
+                 # The current class has been scanned, go back to the previous class
+                 message_str_stack.pop()
+ 
+         if message_str_stack:
+-            message_str, indent, message_field_dict = message_str_stack[-1]
++            message_str, indent, desc_dict = message_str_stack[-1]
+             line = line.strip()
+             if _comment_model:
+                 _doc += "\n" + line
+ 
+             if not _comment_model and line.startswith('"""') and not line_list[index - 1].startswith("class"):
+                 # start add doc
+                 if "def" in line_list[index - 1]:
+@@ -113,11 +121,11 @@
+                 else:
+                     _field_name = line_list[index - 1].split(":")[0].strip()
+                 _comment_model = True
+                 _doc = line
+             if (line.endswith('"""') or line == '"""') and _comment_model:
+                 # end add doc
+                 _comment_model = False
+-                message_field_dict[_field_name] = _doc.replace('"""', "")
++                desc_dict["message"][_field_name] = gen_dict_from_desc_str(comment_prefix, _doc.replace('"""', ""))
+ 
+     _filename_desc_dict[filename] = global_message_field_dict
+     return global_message_field_dict
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/plugin/field_desc_proto_to_code.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/plugin/field_desc_proto_to_code.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -22,61 +22,70 @@
+ from protobuf_to_pydantic.grpc_types import (
+     AnyMessage,
+     DescriptorProto,
+     EnumDescriptorProto,
+     FieldDescriptorProto,
+     FileDescriptorProto,
+ )
+-from protobuf_to_pydantic.plugin.types import ProtobufTypeModel
++from protobuf_to_pydantic.plugin.my_types import ProtobufTypeModel
+ 
+ if TYPE_CHECKING:
+-    from protobuf_to_pydantic.plugin.config import Config
++    from protobuf_to_pydantic.plugin.config import ConfigModel
+ 
+ logger: logging.Logger = logging.getLogger(__name__)
+ 
+ 
+ class FileDescriptorProtoToCode(BaseP2C):
+-    def __init__(self, fd: FileDescriptorProto, descriptors: Descriptors, config: "Config"):
++    def __init__(self, fd: FileDescriptorProto, descriptors: Descriptors, config: "ConfigModel"):
++        # Prevent mutable variables from being shared with other configs
++        config = config.copy(deep=True)
+         super().__init__(
+             customer_import_set=config.customer_import_set,
+             customer_deque=config.customer_deque,
+             module_path=config.module_path,
+             code_indent=config.code_indent,
++            pyproject_file_path=config.pyproject_file_path,
+         )
++        self.config = config
+         self._fd: FileDescriptorProto = fd
+         self._descriptors: Descriptors = descriptors
+-        self._desc_template: DescTemplate = config.desc_template
++        self._desc_template: DescTemplate = config.desc_template_instance
+ 
+         if config.base_model_class is BaseModel:
+             self._import_set.add("from pydantic import BaseModel")
+         else:
+             self._add_import_code(config.base_model_class.__module__, config.base_model_class.__name__)
++        self._parse_desc_name_dict: Dict[str, str] = {}
+         self._parse_field_descriptor()
+ 
+     def _add_other_module_pkg(self, other_fd: FileDescriptorProto, type_str: str) -> None:
+-        if other_fd.name != self._fd.name:
+-            # Generate the corresponding import statement
+-            # e.g:
+-            #   fd name:example_proto/demo/demo.proto
+-            #   other_fd name: example_proto/common/single.proto
+-            #   output: from ..common.single_p2p import DemoMessage
+-            fd_path_list: Tuple[str, ...] = Path(self._fd.name).parts
+-            message_path_list: Tuple[str, ...] = Path(other_fd.name).parts
+-            index: int = -1
+-            for _index in range(min(len(fd_path_list), len(message_path_list))):
+-                if message_path_list[_index] == fd_path_list[_index]:
+-                    index = _index
+-
+-            module_name: str = (
+-                ".".join(message_path_list[index + 1 : -1]) + "." + message_path_list[-1].replace(".proto", "") + "_p2p"
+-            )
+-            logger.info((self._fd.name, other_fd.name, index))
+-            if index != "-1":
+-                module_name = "." * (len(message_path_list) - (index + 1)) + module_name
+-            self._add_import_code(module_name, type_str)
++        if other_fd.name == self._fd.name:
++            return
++        # Generate the corresponding import statement
++        # e.g:
++        #   fd name:example_proto/demo/demo.proto
++        #   other_fd name: example_proto/common/single.proto
++        #   output: from ..common.single_p2p import DemoMessage
++        fd_path_list: Tuple[str, ...] = Path(self._fd.name).parts
++        message_path_list: Tuple[str, ...] = Path(other_fd.name).parts
++        index: int = -1
++        for _index in range(min(len(fd_path_list), len(message_path_list))):
++            if message_path_list[_index] == fd_path_list[_index]:
++                index = _index
++
++        module_name: str = (
++            ".".join(message_path_list[index + 1 : -1])
++            + "."
++            + message_path_list[-1].replace(".proto", "")
++            + self.config.file_name_suffix
++        )
++        logger.info((self._fd.name, other_fd.name, index))
++        if index != "-1":
++            module_name = "." * (len(message_path_list) - (index + 1)) + module_name
++        self._add_import_code(module_name, type_str)
+ 
+     def _enum(self, enums: Iterable[EnumDescriptorProto], scl_prefix: SourceCodeLocation, indent: int = 0) -> str:
+         """
+         e.g:
+             enums:
+                 {
+                     "name": "State",
+@@ -119,14 +128,15 @@
+                 nested_message, scl_prefix, indent + self.code_indent, skip_validate_rule=skip_validate_rule
+             )
+         return content
+ 
+     # flake8: noqa: C901
+     def _message_field_handle(
+         self,
++        desc: DescriptorProto,
+         field: FieldDescriptorProto,
+         indent: int,
+         nested_message_config_dict: dict,
+         skip_validate_rule: bool = False,
+     ) -> Optional[Tuple[str, str]]:
+         """generate message's field to Pydantic.FieldInfo code"""
+         field_info_dict: dict = {}
+@@ -154,14 +164,20 @@
+                 protobuf_type_model = self._get_protobuf_type_model(field)
+                 type_str = protobuf_type_model.py_type_str
+                 rule_type_str = protobuf_type_model.rule_type_str
+                 nested_message_name = type_str
+ 
+                 message_fd: FileDescriptorProto = self._descriptors.message_to_fd[field.type_name]
+                 self._add_other_module_pkg(message_fd, type_str)
++                if message == desc:
++                    # if self-referencing, need use Python type hints postponed annotations
++                    type_str = f'"{type_str}"'
++                elif message_fd.name == self._fd.name and message.name not in {i.name for i in desc.nested_type}:
++                    # If the referenced Message is generated later, it needs to be generated in advance
++                    self._content_deque.append(self._message(message, [FileDescriptorProto.ENUM_TYPE_FIELD_NUMBER]))
+ 
+         elif field.type == 14:
+             # enum handle
+             type_str = field.type_name.split(".")[-1]
+             field_info_dict["default"] = 0
+             rule_type_str = "enum"
+             message_fd = self._descriptors.message_to_fd[field.type_name]
+@@ -180,15 +196,15 @@
+             self._add_import_code("typing")
+             type_str = f"typing.List[{type_str}]"
+             field_info_dict.pop("default", "")
+             field_info_dict["default_factory"] = list
+             rule_type_str = "repeated"
+         if len(field.options.ListFields()) != 0 and rule_type_str and not skip_validate_rule:
+             # protobuf option support
+-            field_option_info_dict = field_option_handle(rule_type_str, field.type_name, field)
++            field_option_info_dict: dict = field_option_handle(rule_type_str, field.type_name, field)  # type: ignore
+ 
+             skip = field_option_info_dict.pop("skip", False)
+             if nested_message_name:
+                 if nested_message_name not in nested_message_config_dict:
+                     nested_message_config_dict[nested_message_name] = {}
+                 nested_message_config_dict[nested_message_name]["skip"] = skip
+ 
+@@ -293,28 +309,30 @@
+ 
+     def _message(
+         self, desc: DescriptorProto, scl_prefix: SourceCodeLocation, indent: int = 0, skip_validate_rule: bool = False
+     ) -> str:
+         self._add_import_code("google.protobuf.message", "Message")
+         content: str = ""
+         class_name = desc.name if desc.name not in PYTHON_RESERVED else "_r_" + desc.name
++        if class_name in self._parse_desc_name_dict:
++            return self._parse_desc_name_dict[class_name]
+         class_content = " " * indent + f"class {class_name}(BaseModel):\n"
+         class_head_content = ""
+         class_field_content = ""
+ 
+         use_custom_type: bool = False
+         nested_message_config_dict: dict = {}
+         for idx, field in enumerate(desc.field):
+             if field.name in PYTHON_RESERVED:
+                 continue
+             if field.type == 11 and self._get_protobuf_type_model(field).type_factory is AnyMessage:
+                 use_custom_type = True
+ 
+             _content_tuple: Optional[Tuple[str, str]] = self._message_field_handle(
+-                field, indent, nested_message_config_dict, skip_validate_rule=skip_validate_rule
++                desc, field, indent, nested_message_config_dict, skip_validate_rule=skip_validate_rule
+             )
+             if _content_tuple:
+                 class_head_content += _content_tuple[0]
+                 class_field_content += _content_tuple[1]
+ 
+         if desc.nested_type:
+             class_head_content += self._message_nested_type_handle(desc, scl_prefix, indent, nested_message_config_dict)
+@@ -336,25 +354,26 @@
+ 
+         if use_custom_type:
+             config_content: str = f"{' ' * (indent + self.code_indent)}class Config:\n"
+             config_content += f"{' ' * (indent + self.code_indent * 2)}arbitrary_types_allowed = True\n\n"
+             class_head_content = config_content + class_head_content
+         content += "\n".join([i for i in [class_content, class_head_content, class_field_content] if i])
+         content += "\n" if indent > 0 else "\n\n"
++        self._parse_desc_name_dict[class_name] = content
+         return content
+ 
+     def _get_protobuf_type_model(self, field: FieldDescriptorProto) -> ProtobufTypeModel:
+-        rule_type_str: Optional[str] = None
++        rule_type_str: str = ""
+         type_factory: Optional[Any] = None
+         if field.type in type_dict:
+             type_factory = type_dict[field.type]
+             return ProtobufTypeModel(
+                 type_factory=type_factory,
+                 py_type_str=self._get_value_code(type_factory),
+-                rule_type_str=protobuf_common_type_dict.get(field.type, None),
++                rule_type_str=protobuf_common_type_dict.get(field.type, ""),
+             )
+         elif field.type_name.startswith(".google.protobuf"):
+             _type_str = field.type_name.split(".")[-1]
+             if _type_str == "Empty":
+                 py_type_str = "None"
+                 rule_type_str = ""
+             elif _type_str == "Timestamp":
+@@ -369,17 +388,24 @@
+                 self._add_import_code("datetime", "timedelta")
+                 self._add_import_code("protobuf_to_pydantic.util", py_type_str)
+             elif _type_str == "Any":
+                 py_type_str = "Any"
+                 rule_type_str = "any"
+                 type_factory = AnyMessage
+                 self._add_import_code("google.protobuf.any_pb2", "Any")
++            elif field.type_name.split(".")[-2] == "Struct":
++                py_type_str = "Dict"
++                rule_type_str = "struct"
++                type_factory = dict
+             else:
+                 logger.error(f"Not support type {field.type_name}")
+-                py_type_str = ""
++                py_type_str = "Any"
++                rule_type_str = "any"
++                type_factory = AnyMessage
++                self._add_import_code("google.protobuf.any_pb2", "Any")
+             return ProtobufTypeModel(
+                 type_factory=type_factory,
+                 rule_type_str=rule_type_str,
+                 py_type_str=py_type_str,
+             )
+         else:
+             return ProtobufTypeModel(
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ # -*- coding: utf-8 -*-
+ # Generated by the protocol buffer compiler.  DO NOT EDIT!
+-# source: protobuf_to_pydantic/protos/p2p_validate.proto
++# source: protos/p2p_validate.proto
+ """Generated protocol buffer code."""
+ from google.protobuf import descriptor as _descriptor
+ from google.protobuf import message as _message
+ from google.protobuf import reflection as _reflection
+ from google.protobuf import symbol_database as _symbol_database
+ # @@protoc_insertion_point(imports)
+ 
+@@ -13,20 +13,20 @@
+ 
+ from google.protobuf import descriptor_pb2 as google_dot_protobuf_dot_descriptor__pb2
+ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+ 
+ 
+ DESCRIPTOR = _descriptor.FileDescriptor(
+-  name='protobuf_to_pydantic/protos/p2p_validate.proto',
++  name='protos/p2p_validate.proto',
+   package='p2p_validate',
+   syntax='proto3',
+   serialized_options=None,
+   create_key=_descriptor._internal_create_key,
+-  serialized_pb=b'\n.protobuf_to_pydantic/protos/p2p_validate.proto\x12\x0cp2p_validate\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x81\x08\n\nFieldRules\x12\x30\n\x07message\x18\x11 \x01(\x0b\x32\x1a.p2p_validate.MessageRulesH\x01\x88\x01\x01\x12)\n\x05\x66loat\x18\x01 \x01(\x0b\x32\x18.p2p_validate.FloatRulesH\x00\x12+\n\x06\x64ouble\x18\x02 \x01(\x0b\x32\x19.p2p_validate.DoubleRulesH\x00\x12)\n\x05int32\x18\x03 \x01(\x0b\x32\x18.p2p_validate.Int32RulesH\x00\x12)\n\x05int64\x18\x04 \x01(\x0b\x32\x18.p2p_validate.Int64RulesH\x00\x12+\n\x06uint32\x18\x05 \x01(\x0b\x32\x19.p2p_validate.UInt32RulesH\x00\x12+\n\x06uint64\x18\x06 \x01(\x0b\x32\x19.p2p_validate.UInt64RulesH\x00\x12+\n\x06sint32\x18\x07 \x01(\x0b\x32\x19.p2p_validate.SInt32RulesH\x00\x12+\n\x06sint64\x18\x08 \x01(\x0b\x32\x19.p2p_validate.SInt64RulesH\x00\x12-\n\x07\x66ixed32\x18\t \x01(\x0b\x32\x1a.p2p_validate.Fixed32RulesH\x00\x12-\n\x07\x66ixed64\x18\n \x01(\x0b\x32\x1a.p2p_validate.Fixed64RulesH\x00\x12/\n\x08sfixed32\x18\x0b \x01(\x0b\x32\x1b.p2p_validate.SFixed32RulesH\x00\x12/\n\x08sfixed64\x18\x0c \x01(\x0b\x32\x1b.p2p_validate.SFixed64RulesH\x00\x12\'\n\x04\x62ool\x18\r \x01(\x0b\x32\x17.p2p_validate.BoolRulesH\x00\x12+\n\x06string\x18\x0e \x01(\x0b\x32\x19.p2p_validate.StringRulesH\x00\x12)\n\x05\x62ytes\x18\x0f \x01(\x0b\x32\x18.p2p_validate.BytesRulesH\x00\x12\'\n\x04\x65num\x18\x10 \x01(\x0b\x32\x17.p2p_validate.EnumRulesH\x00\x12/\n\x08repeated\x18\x12 \x01(\x0b\x32\x1b.p2p_validate.RepeatedRulesH\x00\x12%\n\x03map\x18\x13 \x01(\x0b\x32\x16.p2p_validate.MapRulesH\x00\x12%\n\x03\x61ny\x18\x14 \x01(\x0b\x32\x16.p2p_validate.AnyRulesH\x00\x12/\n\x08\x64uration\x18\x15 \x01(\x0b\x32\x1b.p2p_validate.DurationRulesH\x00\x12\x31\n\ttimestamp\x18\x16 \x01(\x0b\x32\x1c.p2p_validate.TimestampRulesH\x00\x42\x06\n\x04typeB\n\n\x08_message\"\xa8\x04\n\nFloatRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x02H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x02H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x02H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x02H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x02H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x02\x12\x0e\n\x06not_in\x18\x07 \x03(\x02\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0b\x44oubleRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x01H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x01H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x01H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x01H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x01H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x01\x12\x0e\n\x06not_in\x18\x07 \x03(\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa8\x04\n\nInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x05H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x05H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x05H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x05H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x05H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x05\x12\x0e\n\x06not_in\x18\x07 \x03(\x05\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa8\x04\n\nInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x03H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x03H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x03H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x03H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x03H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x03\x12\x0e\n\x06not_in\x18\x07 \x03(\x03\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bUInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\rH\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\rH\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\rH\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\rH\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\rH\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\r\x12\x0e\n\x06not_in\x18\x07 \x03(\r\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bUInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x04H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x04H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x04H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x04\x12\x0e\n\x06not_in\x18\x07 \x03(\x04\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bSInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x11H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x11H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x11H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x11H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x11H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x11\x12\x0e\n\x06not_in\x18\x07 \x03(\x11\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bSInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x12H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x12H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x12H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x12H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x12H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x12\x12\x0e\n\x06not_in\x18\x07 \x03(\x12\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xaa\x04\n\x0c\x46ixed32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x07H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x07H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x07H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x07H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x07H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x07\x12\x0e\n\x06not_in\x18\x07 \x03(\x07\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xaa\x04\n\x0c\x46ixed64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x06H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x06H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x06H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x06H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x06H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x06\x12\x0e\n\x06not_in\x18\x07 \x03(\x06\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xab\x04\n\rSFixed32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x0fH\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x0fH\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x0fH\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x0fH\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x0fH\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x0f\x12\x0e\n\x06not_in\x18\x07 \x03(\x0f\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xab\x04\n\rSFixed64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x10H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x10H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x10H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x10H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x10H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x10\x12\x0e\n\x06not_in\x18\x07 \x03(\x10\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xc8\x02\n\tBoolRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x08H\x01\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x02 \x01(\x08H\x02\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x03 \x01(\x08H\x00\x12\x16\n\x0cmiss_default\x18\x04 \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x14\n\x07\x65xample\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x12\n\x05\x66ield\x18\x08 \x01(\tH\x06\x88\x01\x01\x12\x11\n\x04type\x18\t \x01(\tH\x07\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x08\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x08\n\x06_constB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\n\n\x08_exampleB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xfa\x06\n\x0bStringRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\tH\x03\x88\x01\x01\x12\x10\n\x03len\x18\x02 \x01(\x04H\x04\x88\x01\x01\x12\x17\n\nmin_length\x18\x03 \x01(\x04H\x05\x88\x01\x01\x12\x17\n\nmax_length\x18\x04 \x01(\x04H\x06\x88\x01\x01\x12\x14\n\x07pattern\x18\x05 \x01(\tH\x07\x88\x01\x01\x12\x13\n\x06prefix\x18\x06 \x01(\tH\x08\x88\x01\x01\x12\x13\n\x06suffix\x18\x07 \x01(\tH\t\x88\x01\x01\x12\x15\n\x08\x63ontains\x18\x08 \x01(\tH\n\x88\x01\x01\x12\x19\n\x0cnot_contains\x18\t \x01(\tH\x0b\x88\x01\x01\x12\n\n\x02in\x18\n \x03(\t\x12\x0e\n\x06not_in\x18\x0b \x03(\t\x12\x0f\n\x05\x65mail\x18\x0c \x01(\x08H\x00\x12\x12\n\x08hostname\x18\r \x01(\x08H\x00\x12\x0c\n\x02ip\x18\x0e \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0f \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x10 \x01(\x08H\x00\x12\r\n\x03uri\x18\x11 \x01(\x08H\x00\x12\x11\n\x07uri_ref\x18\x12 \x01(\x08H\x00\x12\x11\n\x07\x61\x64\x64ress\x18\x15 \x01(\x08H\x00\x12\x0e\n\x04uuid\x18\x16 \x01(\x08H\x00\x12\x17\n\rpydantic_type\x18\x63 \x01(\tH\x00\x12\x13\n\x06\x65nable\x18\x17 \x01(\x08H\x0c\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x18 \x01(\tH\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x19 \x01(\tH\x01\x12\x16\n\x0cmiss_default\x18\x1a \x01(\x08H\x01\x12\x12\n\x05\x61lias\x18\x1b \x01(\tH\r\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x1c \x01(\tH\x0e\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x1e \x01(\tH\x02\x12\x19\n\x0f\x65xample_factory\x18\x1f \x01(\tH\x02\x12\x12\n\x05\x66ield\x18  \x01(\tH\x0f\x88\x01\x01\x12\x11\n\x04type\x18! \x01(\tH\x10\x88\x01\x01\x12\x12\n\x05title\x18\" \x01(\tH\x11\x88\x01\x01\x42\x0c\n\nwell_knownB\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x06\n\x04_lenB\r\n\x0b_min_lengthB\r\n\x0b_max_lengthB\n\n\x08_patternB\t\n\x07_prefixB\t\n\x07_suffixB\x0b\n\t_containsB\x0f\n\r_not_containsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xb8\x05\n\nBytesRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x0cH\x03\x88\x01\x01\x12\x17\n\nmin_length\x18\x02 \x01(\x04H\x04\x88\x01\x01\x12\x17\n\nmax_length\x18\x03 \x01(\x04H\x05\x88\x01\x01\x12\x13\n\x06prefix\x18\x05 \x01(\x0cH\x06\x88\x01\x01\x12\x13\n\x06suffix\x18\x06 \x01(\x0cH\x07\x88\x01\x01\x12\x15\n\x08\x63ontains\x18\x07 \x01(\x0cH\x08\x88\x01\x01\x12\n\n\x02in\x18\x08 \x03(\x0c\x12\x0e\n\x06not_in\x18\t \x03(\x0c\x12\x13\n\x06\x65nable\x18\n \x01(\x08H\t\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x0b \x01(\x0cH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x0c \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\r \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0e \x01(\tH\n\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x0f \x01(\tH\x0b\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x10 \x01(\x02H\x0c\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x11 \x01(\x0cH\x01\x12\x19\n\x0f\x65xample_factory\x18\x12 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x13 \x01(\tH\r\x88\x01\x01\x12\x11\n\x04type\x18\x14 \x01(\tH\x0e\x88\x01\x01\x12\x0c\n\x02ip\x18\x15 \x01(\x08H\x02\x12\x0e\n\x04ipv4\x18\x16 \x01(\x08H\x02\x12\x0e\n\x04ipv6\x18\x17 \x01(\x08H\x02\x12\x12\n\x05title\x18\x18 \x01(\tH\x0f\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\nwell_knownB\x08\n\x06_constB\r\n\x0b_min_lengthB\r\n\x0b_max_lengthB\t\n\x07_prefixB\t\n\x07_suffixB\x0b\n\t_containsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\x81\x03\n\tEnumRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x05H\x02\x88\x01\x01\x12\n\n\x02in\x18\x03 \x03(\x05\x12\x0e\n\x06not_in\x18\x04 \x03(\x05\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x03\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x05H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x05\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x05H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x06\x88\x01\x01\x12\x12\n\x05title\x18\x12 \x01(\tH\x07\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x08\n\x06_title\"\xa6\x03\n\x0cMessageRules\x12\x11\n\x04skip\x18\x01 \x01(\x08H\x02\x88\x01\x01\x12\x15\n\x08required\x18\x02 \x01(\x08H\x03\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x04\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x05\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x06\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x07\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x08\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\t\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x07\n\x05_skipB\x0b\n\t_requiredB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xe5\x03\n\rRepeatedRules\x12\x16\n\tmin_items\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x16\n\tmax_items\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12\x13\n\x06unique\x18\x03 \x01(\x08H\x04\x88\x01\x01\x12,\n\x05items\x18\x04 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x05\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x07\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x08\x88\x01\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\t\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\n\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0b\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\n_min_itemsB\x0c\n\n_max_itemsB\t\n\x07_uniqueB\x08\n\x06_itemsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xf8\x03\n\x08MapRules\x12\x16\n\tmin_pairs\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x16\n\tmax_pairs\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12+\n\x04keys\x18\x04 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x04\x88\x01\x01\x12-\n\x06values\x18\x05 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x05\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x07\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x08\x88\x01\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\t\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\n\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0b\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\n_min_pairsB\x0c\n\n_max_pairsB\x07\n\x05_keysB\t\n\x07_valuesB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\x86\x03\n\x08\x41nyRules\x12\x15\n\x08required\x18\x01 \x01(\x08H\x02\x88\x01\x01\x12\n\n\x02in\x18\x02 \x03(\t\x12\x0e\n\x06not_in\x18\x03 \x03(\t\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x03\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\tH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x05\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0e \x01(\tH\x01\x12\x19\n\x0f\x65xample_factory\x18\x0f \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x10 \x01(\tH\x06\x88\x01\x01\x12\x12\n\x05title\x18\x11 \x01(\tH\x07\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0b\n\t_requiredB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x08\n\x06_title\"\xf4\x05\n\rDurationRules\x12-\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationH\x02\x88\x01\x01\x12*\n\x02lt\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationH\x03\x88\x01\x01\x12*\n\x02le\x18\x04 \x01(\x0b\x32\x19.google.protobuf.DurationH\x04\x88\x01\x01\x12*\n\x02gt\x18\x05 \x01(\x0b\x32\x19.google.protobuf.DurationH\x05\x88\x01\x01\x12*\n\x02ge\x18\x06 \x01(\x0b\x32\x19.google.protobuf.DurationH\x06\x88\x01\x01\x12%\n\x02in\x18\x07 \x03(\x0b\x32\x19.google.protobuf.Duration\x12)\n\x06not_in\x18\x08 \x03(\x0b\x32\x19.google.protobuf.Duration\x12\x13\n\x06\x65nable\x18\x0e \x01(\x08H\x07\x88\x01\x01\x12,\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x0b\x32\x19.google.protobuf.DurationH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12,\n\x07\x65xample\x18\x0f \x01(\x0b\x32\x19.google.protobuf.DurationH\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\n\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0b\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0c\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa5\x06\n\x0eTimestampRules\x12.\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x02\x88\x01\x01\x12+\n\x02lt\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x03\x88\x01\x01\x12+\n\x02le\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x04\x88\x01\x01\x12+\n\x02gt\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x05\x88\x01\x01\x12+\n\x02ge\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x06\x88\x01\x01\x12\x13\n\x06lt_now\x18\x07 \x01(\x08H\x07\x88\x01\x01\x12\x13\n\x06gt_now\x18\x08 \x01(\x08H\x08\x88\x01\x01\x12.\n\x06within\x18\t \x01(\x0b\x32\x19.google.protobuf.DurationH\t\x88\x01\x01\x12\x13\n\x06\x65nable\x18\n \x01(\x08H\n\x88\x01\x01\x12-\n\x07\x64\x65\x66\x61ult\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x0c \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\r \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0e \x01(\tH\x0b\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x0f \x01(\tH\x0c\x88\x01\x01\x12-\n\x07\x65xample\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x01\x12\x19\n\x0f\x65xample_factory\x18\x11 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x12 \x01(\tH\r\x88\x01\x01\x12\x11\n\x04type\x18\x13 \x01(\tH\x0e\x88\x01\x01\x12\x12\n\x05title\x18\x14 \x01(\tH\x0f\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_lt_nowB\t\n\x07_gt_nowB\t\n\x07_withinB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title:4\n\x07ignored\x12\x1f.google.protobuf.MessageOptions\x18\xb1\x08 \x01(\x08\x88\x01\x01:3\n\x08required\x12\x1d.google.protobuf.OneofOptions\x18\xb1\x08 \x01(\x08\x88\x01\x01:J\n\x05rules\x12\x1d.google.protobuf.FieldOptions\x18\xb1\x08 \x01(\x0b\x32\x18.p2p_validate.FieldRules\x88\x01\x01\x62\x06proto3'
++  serialized_pb=b'\n\x19protos/p2p_validate.proto\x12\x0cp2p_validate\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x81\x08\n\nFieldRules\x12\x30\n\x07message\x18\x11 \x01(\x0b\x32\x1a.p2p_validate.MessageRulesH\x01\x88\x01\x01\x12)\n\x05\x66loat\x18\x01 \x01(\x0b\x32\x18.p2p_validate.FloatRulesH\x00\x12+\n\x06\x64ouble\x18\x02 \x01(\x0b\x32\x19.p2p_validate.DoubleRulesH\x00\x12)\n\x05int32\x18\x03 \x01(\x0b\x32\x18.p2p_validate.Int32RulesH\x00\x12)\n\x05int64\x18\x04 \x01(\x0b\x32\x18.p2p_validate.Int64RulesH\x00\x12+\n\x06uint32\x18\x05 \x01(\x0b\x32\x19.p2p_validate.UInt32RulesH\x00\x12+\n\x06uint64\x18\x06 \x01(\x0b\x32\x19.p2p_validate.UInt64RulesH\x00\x12+\n\x06sint32\x18\x07 \x01(\x0b\x32\x19.p2p_validate.SInt32RulesH\x00\x12+\n\x06sint64\x18\x08 \x01(\x0b\x32\x19.p2p_validate.SInt64RulesH\x00\x12-\n\x07\x66ixed32\x18\t \x01(\x0b\x32\x1a.p2p_validate.Fixed32RulesH\x00\x12-\n\x07\x66ixed64\x18\n \x01(\x0b\x32\x1a.p2p_validate.Fixed64RulesH\x00\x12/\n\x08sfixed32\x18\x0b \x01(\x0b\x32\x1b.p2p_validate.SFixed32RulesH\x00\x12/\n\x08sfixed64\x18\x0c \x01(\x0b\x32\x1b.p2p_validate.SFixed64RulesH\x00\x12\'\n\x04\x62ool\x18\r \x01(\x0b\x32\x17.p2p_validate.BoolRulesH\x00\x12+\n\x06string\x18\x0e \x01(\x0b\x32\x19.p2p_validate.StringRulesH\x00\x12)\n\x05\x62ytes\x18\x0f \x01(\x0b\x32\x18.p2p_validate.BytesRulesH\x00\x12\'\n\x04\x65num\x18\x10 \x01(\x0b\x32\x17.p2p_validate.EnumRulesH\x00\x12/\n\x08repeated\x18\x12 \x01(\x0b\x32\x1b.p2p_validate.RepeatedRulesH\x00\x12%\n\x03map\x18\x13 \x01(\x0b\x32\x16.p2p_validate.MapRulesH\x00\x12%\n\x03\x61ny\x18\x14 \x01(\x0b\x32\x16.p2p_validate.AnyRulesH\x00\x12/\n\x08\x64uration\x18\x15 \x01(\x0b\x32\x1b.p2p_validate.DurationRulesH\x00\x12\x31\n\ttimestamp\x18\x16 \x01(\x0b\x32\x1c.p2p_validate.TimestampRulesH\x00\x42\x06\n\x04typeB\n\n\x08_message\"\xa8\x04\n\nFloatRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x02H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x02H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x02H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x02H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x02H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x02\x12\x0e\n\x06not_in\x18\x07 \x03(\x02\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0b\x44oubleRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x01H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x01H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x01H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x01H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x01H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x01\x12\x0e\n\x06not_in\x18\x07 \x03(\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa8\x04\n\nInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x05H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x05H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x05H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x05H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x05H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x05\x12\x0e\n\x06not_in\x18\x07 \x03(\x05\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa8\x04\n\nInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x03H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x03H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x03H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x03H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x03H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x03\x12\x0e\n\x06not_in\x18\x07 \x03(\x03\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bUInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\rH\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\rH\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\rH\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\rH\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\rH\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\r\x12\x0e\n\x06not_in\x18\x07 \x03(\r\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bUInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x04H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x04H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x04H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x04\x12\x0e\n\x06not_in\x18\x07 \x03(\x04\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bSInt32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x11H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x11H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x11H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x11H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x11H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x11\x12\x0e\n\x06not_in\x18\x07 \x03(\x11\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa9\x04\n\x0bSInt64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x12H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x12H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x12H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x12H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x12H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x12\x12\x0e\n\x06not_in\x18\x07 \x03(\x12\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xaa\x04\n\x0c\x46ixed32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x07H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x07H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x07H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x07H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x07H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x07\x12\x0e\n\x06not_in\x18\x07 \x03(\x07\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xaa\x04\n\x0c\x46ixed64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x06H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x06H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x06H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x06H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x06H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x06\x12\x0e\n\x06not_in\x18\x07 \x03(\x06\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xab\x04\n\rSFixed32Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x0fH\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x0fH\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x0fH\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x0fH\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x0fH\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x0f\x12\x0e\n\x06not_in\x18\x07 \x03(\x0f\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xab\x04\n\rSFixed64Rules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x10H\x02\x88\x01\x01\x12\x0f\n\x02lt\x18\x02 \x01(\x10H\x03\x88\x01\x01\x12\x0f\n\x02le\x18\x03 \x01(\x10H\x04\x88\x01\x01\x12\x0f\n\x02gt\x18\x04 \x01(\x10H\x05\x88\x01\x01\x12\x0f\n\x02ge\x18\x05 \x01(\x10H\x06\x88\x01\x01\x12\n\n\x02in\x18\x06 \x03(\x10\x12\x0e\n\x06not_in\x18\x07 \x03(\x10\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x07\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x0e \x01(\x02H\n\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x0b\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0c\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\r\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xc8\x02\n\tBoolRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x08H\x01\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x02 \x01(\x08H\x02\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x03 \x01(\x08H\x00\x12\x16\n\x0cmiss_default\x18\x04 \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x14\n\x07\x65xample\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x12\n\x05\x66ield\x18\x08 \x01(\tH\x06\x88\x01\x01\x12\x11\n\x04type\x18\t \x01(\tH\x07\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x08\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x08\n\x06_constB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\n\n\x08_exampleB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xfa\x06\n\x0bStringRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\tH\x03\x88\x01\x01\x12\x10\n\x03len\x18\x02 \x01(\x04H\x04\x88\x01\x01\x12\x17\n\nmin_length\x18\x03 \x01(\x04H\x05\x88\x01\x01\x12\x17\n\nmax_length\x18\x04 \x01(\x04H\x06\x88\x01\x01\x12\x14\n\x07pattern\x18\x05 \x01(\tH\x07\x88\x01\x01\x12\x13\n\x06prefix\x18\x06 \x01(\tH\x08\x88\x01\x01\x12\x13\n\x06suffix\x18\x07 \x01(\tH\t\x88\x01\x01\x12\x15\n\x08\x63ontains\x18\x08 \x01(\tH\n\x88\x01\x01\x12\x19\n\x0cnot_contains\x18\t \x01(\tH\x0b\x88\x01\x01\x12\n\n\x02in\x18\n \x03(\t\x12\x0e\n\x06not_in\x18\x0b \x03(\t\x12\x0f\n\x05\x65mail\x18\x0c \x01(\x08H\x00\x12\x12\n\x08hostname\x18\r \x01(\x08H\x00\x12\x0c\n\x02ip\x18\x0e \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0f \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x10 \x01(\x08H\x00\x12\r\n\x03uri\x18\x11 \x01(\x08H\x00\x12\x11\n\x07uri_ref\x18\x12 \x01(\x08H\x00\x12\x11\n\x07\x61\x64\x64ress\x18\x15 \x01(\x08H\x00\x12\x0e\n\x04uuid\x18\x16 \x01(\x08H\x00\x12\x17\n\rpydantic_type\x18\x63 \x01(\tH\x00\x12\x13\n\x06\x65nable\x18\x17 \x01(\x08H\x0c\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x18 \x01(\tH\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x19 \x01(\tH\x01\x12\x16\n\x0cmiss_default\x18\x1a \x01(\x08H\x01\x12\x12\n\x05\x61lias\x18\x1b \x01(\tH\r\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x1c \x01(\tH\x0e\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x1e \x01(\tH\x02\x12\x19\n\x0f\x65xample_factory\x18\x1f \x01(\tH\x02\x12\x12\n\x05\x66ield\x18  \x01(\tH\x0f\x88\x01\x01\x12\x11\n\x04type\x18! \x01(\tH\x10\x88\x01\x01\x12\x12\n\x05title\x18\" \x01(\tH\x11\x88\x01\x01\x42\x0c\n\nwell_knownB\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x06\n\x04_lenB\r\n\x0b_min_lengthB\r\n\x0b_max_lengthB\n\n\x08_patternB\t\n\x07_prefixB\t\n\x07_suffixB\x0b\n\t_containsB\x0f\n\r_not_containsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xb8\x05\n\nBytesRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x0cH\x03\x88\x01\x01\x12\x17\n\nmin_length\x18\x02 \x01(\x04H\x04\x88\x01\x01\x12\x17\n\nmax_length\x18\x03 \x01(\x04H\x05\x88\x01\x01\x12\x13\n\x06prefix\x18\x05 \x01(\x0cH\x06\x88\x01\x01\x12\x13\n\x06suffix\x18\x06 \x01(\x0cH\x07\x88\x01\x01\x12\x15\n\x08\x63ontains\x18\x07 \x01(\x0cH\x08\x88\x01\x01\x12\n\n\x02in\x18\x08 \x03(\x0c\x12\x0e\n\x06not_in\x18\t \x03(\x0c\x12\x13\n\x06\x65nable\x18\n \x01(\x08H\t\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\x0b \x01(\x0cH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x0c \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\r \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0e \x01(\tH\n\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x0f \x01(\tH\x0b\x88\x01\x01\x12\x18\n\x0bmultiple_of\x18\x10 \x01(\x02H\x0c\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x11 \x01(\x0cH\x01\x12\x19\n\x0f\x65xample_factory\x18\x12 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x13 \x01(\tH\r\x88\x01\x01\x12\x11\n\x04type\x18\x14 \x01(\tH\x0e\x88\x01\x01\x12\x0c\n\x02ip\x18\x15 \x01(\x08H\x02\x12\x0e\n\x04ipv4\x18\x16 \x01(\x08H\x02\x12\x0e\n\x04ipv6\x18\x17 \x01(\x08H\x02\x12\x12\n\x05title\x18\x18 \x01(\tH\x0f\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\nwell_knownB\x08\n\x06_constB\r\n\x0b_min_lengthB\r\n\x0b_max_lengthB\t\n\x07_prefixB\t\n\x07_suffixB\x0b\n\t_containsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x0e\n\x0c_multiple_ofB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\x81\x03\n\tEnumRules\x12\x12\n\x05\x63onst\x18\x01 \x01(\x05H\x02\x88\x01\x01\x12\n\n\x02in\x18\x03 \x03(\x05\x12\x0e\n\x06not_in\x18\x04 \x03(\x05\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x03\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x05H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x05\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x05H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x06\x88\x01\x01\x12\x12\n\x05title\x18\x12 \x01(\tH\x07\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x08\n\x06_title\"\xa6\x03\n\x0cMessageRules\x12\x11\n\x04skip\x18\x01 \x01(\x08H\x02\x88\x01\x01\x12\x15\n\x08required\x18\x02 \x01(\x08H\x03\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x04\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x02H\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x05\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x06\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0f \x01(\x02H\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\x07\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x08\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\t\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x07\n\x05_skipB\x0b\n\t_requiredB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xe5\x03\n\rRepeatedRules\x12\x16\n\tmin_items\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x16\n\tmax_items\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12\x13\n\x06unique\x18\x03 \x01(\x08H\x04\x88\x01\x01\x12,\n\x05items\x18\x04 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x05\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x07\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x08\x88\x01\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\t\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\n\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0b\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\n_min_itemsB\x0c\n\n_max_itemsB\t\n\x07_uniqueB\x08\n\x06_itemsB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xf8\x03\n\x08MapRules\x12\x16\n\tmin_pairs\x18\x01 \x01(\x04H\x02\x88\x01\x01\x12\x16\n\tmax_pairs\x18\x02 \x01(\x04H\x03\x88\x01\x01\x12+\n\x04keys\x18\x04 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x04\x88\x01\x01\x12-\n\x06values\x18\x05 \x01(\x0b\x32\x18.p2p_validate.FieldRulesH\x05\x88\x01\x01\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x07\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x08\x88\x01\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\t\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\n\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0b\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0c\n\n_min_pairsB\x0c\n\n_max_pairsB\x07\n\x05_keysB\t\n\x07_valuesB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\x86\x03\n\x08\x41nyRules\x12\x15\n\x08required\x18\x01 \x01(\x08H\x02\x88\x01\x01\x12\n\n\x02in\x18\x02 \x03(\t\x12\x0e\n\x06not_in\x18\x03 \x03(\t\x12\x13\n\x06\x65nable\x18\x08 \x01(\x08H\x03\x88\x01\x01\x12\x11\n\x07\x64\x65\x66\x61ult\x18\t \x01(\tH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\x05\x88\x01\x01\x12\x11\n\x07\x65xample\x18\x0e \x01(\tH\x01\x12\x19\n\x0f\x65xample_factory\x18\x0f \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x10 \x01(\tH\x06\x88\x01\x01\x12\x12\n\x05title\x18\x11 \x01(\tH\x07\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x0b\n\t_requiredB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x08\n\x06_title\"\xf4\x05\n\rDurationRules\x12-\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x19.google.protobuf.DurationH\x02\x88\x01\x01\x12*\n\x02lt\x18\x03 \x01(\x0b\x32\x19.google.protobuf.DurationH\x03\x88\x01\x01\x12*\n\x02le\x18\x04 \x01(\x0b\x32\x19.google.protobuf.DurationH\x04\x88\x01\x01\x12*\n\x02gt\x18\x05 \x01(\x0b\x32\x19.google.protobuf.DurationH\x05\x88\x01\x01\x12*\n\x02ge\x18\x06 \x01(\x0b\x32\x19.google.protobuf.DurationH\x06\x88\x01\x01\x12%\n\x02in\x18\x07 \x03(\x0b\x32\x19.google.protobuf.Duration\x12)\n\x06not_in\x18\x08 \x03(\x0b\x32\x19.google.protobuf.Duration\x12\x13\n\x06\x65nable\x18\x0e \x01(\x08H\x07\x88\x01\x01\x12,\n\x07\x64\x65\x66\x61ult\x18\t \x01(\x0b\x32\x19.google.protobuf.DurationH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\n \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\x0b \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0c \x01(\tH\x08\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\r \x01(\tH\t\x88\x01\x01\x12,\n\x07\x65xample\x18\x0f \x01(\x0b\x32\x19.google.protobuf.DurationH\x01\x12\x19\n\x0f\x65xample_factory\x18\x10 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x11 \x01(\tH\n\x88\x01\x01\x12\x11\n\x04type\x18\x12 \x01(\tH\x0b\x88\x01\x01\x12\x12\n\x05title\x18\x13 \x01(\tH\x0c\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title\"\xa5\x06\n\x0eTimestampRules\x12.\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x02\x88\x01\x01\x12+\n\x02lt\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x03\x88\x01\x01\x12+\n\x02le\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x04\x88\x01\x01\x12+\n\x02gt\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x05\x88\x01\x01\x12+\n\x02ge\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x06\x88\x01\x01\x12\x13\n\x06lt_now\x18\x07 \x01(\x08H\x07\x88\x01\x01\x12\x13\n\x06gt_now\x18\x08 \x01(\x08H\x08\x88\x01\x01\x12.\n\x06within\x18\t \x01(\x0b\x32\x19.google.protobuf.DurationH\t\x88\x01\x01\x12\x13\n\x06\x65nable\x18\n \x01(\x08H\n\x88\x01\x01\x12-\n\x07\x64\x65\x66\x61ult\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x00\x12\x19\n\x0f\x64\x65\x66\x61ult_factory\x18\x0c \x01(\tH\x00\x12\x16\n\x0cmiss_default\x18\r \x01(\x08H\x00\x12\x12\n\x05\x61lias\x18\x0e \x01(\tH\x0b\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x0f \x01(\tH\x0c\x88\x01\x01\x12-\n\x07\x65xample\x18\x10 \x01(\x0b\x32\x1a.google.protobuf.TimestampH\x01\x12\x19\n\x0f\x65xample_factory\x18\x11 \x01(\tH\x01\x12\x12\n\x05\x66ield\x18\x12 \x01(\tH\r\x88\x01\x01\x12\x11\n\x04type\x18\x13 \x01(\tH\x0e\x88\x01\x01\x12\x12\n\x05title\x18\x14 \x01(\tH\x0f\x88\x01\x01\x42\x10\n\x0e\x64\x65\x66\x61ult_configB\x10\n\x0e\x65xample_configB\x08\n\x06_constB\x05\n\x03_ltB\x05\n\x03_leB\x05\n\x03_gtB\x05\n\x03_geB\t\n\x07_lt_nowB\t\n\x07_gt_nowB\t\n\x07_withinB\t\n\x07_enableB\x08\n\x06_aliasB\x0e\n\x0c_descriptionB\x08\n\x06_fieldB\x07\n\x05_typeB\x08\n\x06_title:4\n\x07ignored\x12\x1f.google.protobuf.MessageOptions\x18\xb1\x08 \x01(\x08\x88\x01\x01:3\n\x08required\x12\x1d.google.protobuf.OneofOptions\x18\xb1\x08 \x01(\x08\x88\x01\x01:J\n\x05rules\x12\x1d.google.protobuf.FieldOptions\x18\xb1\x08 \x01(\x0b\x32\x18.p2p_validate.FieldRules\x88\x01\x01\x62\x06proto3'
+   ,
+   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+ 
+ 
+ IGNORED_FIELD_NUMBER = 1073
+ ignored = _descriptor.FieldDescriptor(
+   name='ignored', full_name='p2p_validate.ignored', index=0,
+@@ -233,16 +233,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_message', full_name='p2p_validate.FieldRules._message',
+       index=1, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=164,
+-  serialized_end=1189,
++  serialized_start=143,
++  serialized_end=1168,
+ )
+ 
+ 
+ _FLOATRULES = _descriptor.Descriptor(
+   name='FloatRules',
+   full_name='p2p_validate.FloatRules',
+   filename=None,
+@@ -461,16 +461,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.FloatRules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=1192,
+-  serialized_end=1744,
++  serialized_start=1171,
++  serialized_end=1723,
+ )
+ 
+ 
+ _DOUBLERULES = _descriptor.Descriptor(
+   name='DoubleRules',
+   full_name='p2p_validate.DoubleRules',
+   filename=None,
+@@ -689,16 +689,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.DoubleRules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=1747,
+-  serialized_end=2300,
++  serialized_start=1726,
++  serialized_end=2279,
+ )
+ 
+ 
+ _INT32RULES = _descriptor.Descriptor(
+   name='Int32Rules',
+   full_name='p2p_validate.Int32Rules',
+   filename=None,
+@@ -917,16 +917,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.Int32Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=2303,
+-  serialized_end=2855,
++  serialized_start=2282,
++  serialized_end=2834,
+ )
+ 
+ 
+ _INT64RULES = _descriptor.Descriptor(
+   name='Int64Rules',
+   full_name='p2p_validate.Int64Rules',
+   filename=None,
+@@ -1145,16 +1145,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.Int64Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=2858,
+-  serialized_end=3410,
++  serialized_start=2837,
++  serialized_end=3389,
+ )
+ 
+ 
+ _UINT32RULES = _descriptor.Descriptor(
+   name='UInt32Rules',
+   full_name='p2p_validate.UInt32Rules',
+   filename=None,
+@@ -1373,16 +1373,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.UInt32Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=3413,
+-  serialized_end=3966,
++  serialized_start=3392,
++  serialized_end=3945,
+ )
+ 
+ 
+ _UINT64RULES = _descriptor.Descriptor(
+   name='UInt64Rules',
+   full_name='p2p_validate.UInt64Rules',
+   filename=None,
+@@ -1601,16 +1601,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.UInt64Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=3969,
+-  serialized_end=4522,
++  serialized_start=3948,
++  serialized_end=4501,
+ )
+ 
+ 
+ _SINT32RULES = _descriptor.Descriptor(
+   name='SInt32Rules',
+   full_name='p2p_validate.SInt32Rules',
+   filename=None,
+@@ -1829,16 +1829,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.SInt32Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=4525,
+-  serialized_end=5078,
++  serialized_start=4504,
++  serialized_end=5057,
+ )
+ 
+ 
+ _SINT64RULES = _descriptor.Descriptor(
+   name='SInt64Rules',
+   full_name='p2p_validate.SInt64Rules',
+   filename=None,
+@@ -2057,16 +2057,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.SInt64Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=5081,
+-  serialized_end=5634,
++  serialized_start=5060,
++  serialized_end=5613,
+ )
+ 
+ 
+ _FIXED32RULES = _descriptor.Descriptor(
+   name='Fixed32Rules',
+   full_name='p2p_validate.Fixed32Rules',
+   filename=None,
+@@ -2285,16 +2285,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.Fixed32Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=5637,
+-  serialized_end=6191,
++  serialized_start=5616,
++  serialized_end=6170,
+ )
+ 
+ 
+ _FIXED64RULES = _descriptor.Descriptor(
+   name='Fixed64Rules',
+   full_name='p2p_validate.Fixed64Rules',
+   filename=None,
+@@ -2513,16 +2513,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.Fixed64Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=6194,
+-  serialized_end=6748,
++  serialized_start=6173,
++  serialized_end=6727,
+ )
+ 
+ 
+ _SFIXED32RULES = _descriptor.Descriptor(
+   name='SFixed32Rules',
+   full_name='p2p_validate.SFixed32Rules',
+   filename=None,
+@@ -2741,16 +2741,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.SFixed32Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=6751,
+-  serialized_end=7306,
++  serialized_start=6730,
++  serialized_end=7285,
+ )
+ 
+ 
+ _SFIXED64RULES = _descriptor.Descriptor(
+   name='SFixed64Rules',
+   full_name='p2p_validate.SFixed64Rules',
+   filename=None,
+@@ -2969,16 +2969,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.SFixed64Rules._title',
+       index=13, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=7309,
+-  serialized_end=7864,
++  serialized_start=7288,
++  serialized_end=7843,
+ )
+ 
+ 
+ _BOOLRULES = _descriptor.Descriptor(
+   name='BoolRules',
+   full_name='p2p_validate.BoolRules',
+   filename=None,
+@@ -3109,16 +3109,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.BoolRules._title',
+       index=8, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=7867,
+-  serialized_end=8195,
++  serialized_start=7846,
++  serialized_end=8174,
+ )
+ 
+ 
+ _STRINGRULES = _descriptor.Descriptor(
+   name='StringRules',
+   full_name='p2p_validate.StringRules',
+   filename=None,
+@@ -3448,16 +3448,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.StringRules._title',
+       index=17, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=8198,
+-  serialized_end=9088,
++  serialized_start=8177,
++  serialized_end=9067,
+ )
+ 
+ 
+ _BYTESRULES = _descriptor.Descriptor(
+   name='BytesRules',
+   full_name='p2p_validate.BytesRules',
+   filename=None,
+@@ -3714,16 +3714,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.BytesRules._title',
+       index=15, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=9091,
+-  serialized_end=9787,
++  serialized_start=9070,
++  serialized_end=9766,
+ )
+ 
+ 
+ _ENUMRULES = _descriptor.Descriptor(
+   name='EnumRules',
+   full_name='p2p_validate.EnumRules',
+   filename=None,
+@@ -3870,16 +3870,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.EnumRules._title',
+       index=7, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=9790,
+-  serialized_end=10175,
++  serialized_start=9769,
++  serialized_end=10154,
+ )
+ 
+ 
+ _MESSAGERULES = _descriptor.Descriptor(
+   name='MessageRules',
+   full_name='p2p_validate.MessageRules',
+   filename=None,
+@@ -4036,16 +4036,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.MessageRules._title',
+       index=9, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=10178,
+-  serialized_end=10600,
++  serialized_start=10157,
++  serialized_end=10579,
+ )
+ 
+ 
+ _REPEATEDRULES = _descriptor.Descriptor(
+   name='RepeatedRules',
+   full_name='p2p_validate.RepeatedRules',
+   filename=None,
+@@ -4212,16 +4212,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.RepeatedRules._title',
+       index=11, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=10603,
+-  serialized_end=11088,
++  serialized_start=10582,
++  serialized_end=11067,
+ )
+ 
+ 
+ _MAPRULES = _descriptor.Descriptor(
+   name='MapRules',
+   full_name='p2p_validate.MapRules',
+   filename=None,
+@@ -4388,16 +4388,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.MapRules._title',
+       index=11, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=11091,
+-  serialized_end=11595,
++  serialized_start=11070,
++  serialized_end=11574,
+ )
+ 
+ 
+ _ANYRULES = _descriptor.Descriptor(
+   name='AnyRules',
+   full_name='p2p_validate.AnyRules',
+   filename=None,
+@@ -4544,16 +4544,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.AnyRules._title',
+       index=7, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=11598,
+-  serialized_end=11988,
++  serialized_start=11577,
++  serialized_end=11967,
+ )
+ 
+ 
+ _DURATIONRULES = _descriptor.Descriptor(
+   name='DurationRules',
+   full_name='p2p_validate.DurationRules',
+   filename=None,
+@@ -4760,16 +4760,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.DurationRules._title',
+       index=12, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=11991,
+-  serialized_end=12747,
++  serialized_start=11970,
++  serialized_end=12726,
+ )
+ 
+ 
+ _TIMESTAMPRULES = _descriptor.Descriptor(
+   name='TimestampRules',
+   full_name='p2p_validate.TimestampRules',
+   filename=None,
+@@ -4998,16 +4998,16 @@
+     fields=[]),
+     _descriptor.OneofDescriptor(
+       name='_title', full_name='p2p_validate.TimestampRules._title',
+       index=15, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=12750,
+-  serialized_end=13555,
++  serialized_start=12729,
++  serialized_end=13534,
+ )
+ 
+ _FIELDRULES.fields_by_name['message'].message_type = _MESSAGERULES
+ _FIELDRULES.fields_by_name['float'].message_type = _FLOATRULES
+ _FIELDRULES.fields_by_name['double'].message_type = _DOUBLERULES
+ _FIELDRULES.fields_by_name['int32'].message_type = _INT32RULES
+ _FIELDRULES.fields_by_name['int64'].message_type = _INT64RULES
+@@ -6223,169 +6223,169 @@
+ DESCRIPTOR.extensions_by_name['ignored'] = ignored
+ DESCRIPTOR.extensions_by_name['required'] = required
+ DESCRIPTOR.extensions_by_name['rules'] = rules
+ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+ 
+ FieldRules = _reflection.GeneratedProtocolMessageType('FieldRules', (_message.Message,), {
+   'DESCRIPTOR' : _FIELDRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.FieldRules)
+   })
+ _sym_db.RegisterMessage(FieldRules)
+ 
+ FloatRules = _reflection.GeneratedProtocolMessageType('FloatRules', (_message.Message,), {
+   'DESCRIPTOR' : _FLOATRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.FloatRules)
+   })
+ _sym_db.RegisterMessage(FloatRules)
+ 
+ DoubleRules = _reflection.GeneratedProtocolMessageType('DoubleRules', (_message.Message,), {
+   'DESCRIPTOR' : _DOUBLERULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.DoubleRules)
+   })
+ _sym_db.RegisterMessage(DoubleRules)
+ 
+ Int32Rules = _reflection.GeneratedProtocolMessageType('Int32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _INT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.Int32Rules)
+   })
+ _sym_db.RegisterMessage(Int32Rules)
+ 
+ Int64Rules = _reflection.GeneratedProtocolMessageType('Int64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _INT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.Int64Rules)
+   })
+ _sym_db.RegisterMessage(Int64Rules)
+ 
+ UInt32Rules = _reflection.GeneratedProtocolMessageType('UInt32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _UINT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.UInt32Rules)
+   })
+ _sym_db.RegisterMessage(UInt32Rules)
+ 
+ UInt64Rules = _reflection.GeneratedProtocolMessageType('UInt64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _UINT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.UInt64Rules)
+   })
+ _sym_db.RegisterMessage(UInt64Rules)
+ 
+ SInt32Rules = _reflection.GeneratedProtocolMessageType('SInt32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SINT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.SInt32Rules)
+   })
+ _sym_db.RegisterMessage(SInt32Rules)
+ 
+ SInt64Rules = _reflection.GeneratedProtocolMessageType('SInt64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SINT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.SInt64Rules)
+   })
+ _sym_db.RegisterMessage(SInt64Rules)
+ 
+ Fixed32Rules = _reflection.GeneratedProtocolMessageType('Fixed32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _FIXED32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.Fixed32Rules)
+   })
+ _sym_db.RegisterMessage(Fixed32Rules)
+ 
+ Fixed64Rules = _reflection.GeneratedProtocolMessageType('Fixed64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _FIXED64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.Fixed64Rules)
+   })
+ _sym_db.RegisterMessage(Fixed64Rules)
+ 
+ SFixed32Rules = _reflection.GeneratedProtocolMessageType('SFixed32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SFIXED32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.SFixed32Rules)
+   })
+ _sym_db.RegisterMessage(SFixed32Rules)
+ 
+ SFixed64Rules = _reflection.GeneratedProtocolMessageType('SFixed64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SFIXED64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.SFixed64Rules)
+   })
+ _sym_db.RegisterMessage(SFixed64Rules)
+ 
+ BoolRules = _reflection.GeneratedProtocolMessageType('BoolRules', (_message.Message,), {
+   'DESCRIPTOR' : _BOOLRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.BoolRules)
+   })
+ _sym_db.RegisterMessage(BoolRules)
+ 
+ StringRules = _reflection.GeneratedProtocolMessageType('StringRules', (_message.Message,), {
+   'DESCRIPTOR' : _STRINGRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.StringRules)
+   })
+ _sym_db.RegisterMessage(StringRules)
+ 
+ BytesRules = _reflection.GeneratedProtocolMessageType('BytesRules', (_message.Message,), {
+   'DESCRIPTOR' : _BYTESRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.BytesRules)
+   })
+ _sym_db.RegisterMessage(BytesRules)
+ 
+ EnumRules = _reflection.GeneratedProtocolMessageType('EnumRules', (_message.Message,), {
+   'DESCRIPTOR' : _ENUMRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.EnumRules)
+   })
+ _sym_db.RegisterMessage(EnumRules)
+ 
+ MessageRules = _reflection.GeneratedProtocolMessageType('MessageRules', (_message.Message,), {
+   'DESCRIPTOR' : _MESSAGERULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.MessageRules)
+   })
+ _sym_db.RegisterMessage(MessageRules)
+ 
+ RepeatedRules = _reflection.GeneratedProtocolMessageType('RepeatedRules', (_message.Message,), {
+   'DESCRIPTOR' : _REPEATEDRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.RepeatedRules)
+   })
+ _sym_db.RegisterMessage(RepeatedRules)
+ 
+ MapRules = _reflection.GeneratedProtocolMessageType('MapRules', (_message.Message,), {
+   'DESCRIPTOR' : _MAPRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.MapRules)
+   })
+ _sym_db.RegisterMessage(MapRules)
+ 
+ AnyRules = _reflection.GeneratedProtocolMessageType('AnyRules', (_message.Message,), {
+   'DESCRIPTOR' : _ANYRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.AnyRules)
+   })
+ _sym_db.RegisterMessage(AnyRules)
+ 
+ DurationRules = _reflection.GeneratedProtocolMessageType('DurationRules', (_message.Message,), {
+   'DESCRIPTOR' : _DURATIONRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.DurationRules)
+   })
+ _sym_db.RegisterMessage(DurationRules)
+ 
+ TimestampRules = _reflection.GeneratedProtocolMessageType('TimestampRules', (_message.Message,), {
+   'DESCRIPTOR' : _TIMESTAMPRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.p2p_validate_pb2'
++  '__module__' : 'protos.p2p_validate_pb2'
+   # @@protoc_insertion_point(class_scope:p2p_validate.TimestampRules)
+   })
+ _sym_db.RegisterMessage(TimestampRules)
+ 
+ google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(ignored)
+ google_dot_protobuf_dot_descriptor__pb2.OneofOptions.RegisterExtension(required)
+ rules.message_type = _FIELDRULES
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/p2p_validate_pb2.pyi` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/p2p_validate_pb2.pyi`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,29 +1,37 @@
+ """
+ @generated by mypy-protobuf.  Do not edit manually!
+ isort:skip_file
+-"""
++fork from https://github.com/envoyproxy/protoc-gen-validate/blob/main/validate/validate.proto"""
+ import builtins
++import collections.abc
+ import google.protobuf.descriptor
+ import google.protobuf.descriptor_pb2
+ import google.protobuf.duration_pb2
+ import google.protobuf.internal.containers
+ import google.protobuf.internal.extension_dict
+ import google.protobuf.message
+ import google.protobuf.timestamp_pb2
++import sys
+ import typing
+-import typing_extensions
++
++if sys.version_info >= (3, 8):
++    import typing as typing_extensions
++else:
++    import typing_extensions
+ 
+ DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
+ 
+ class FieldRules(google.protobuf.message.Message):
+     """FieldRules encapsulates the rules for each type of field. Depending on the
+     field, the correct set should be used to ensure proper validations.
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MESSAGE_FIELD_NUMBER: builtins.int
+     FLOAT_FIELD_NUMBER: builtins.int
+     DOUBLE_FIELD_NUMBER: builtins.int
+     INT32_FIELD_NUMBER: builtins.int
+     INT64_FIELD_NUMBER: builtins.int
+     UINT32_FIELD_NUMBER: builtins.int
+     UINT64_FIELD_NUMBER: builtins.int
+@@ -43,15 +51,14 @@
+     DURATION_FIELD_NUMBER: builtins.int
+     TIMESTAMP_FIELD_NUMBER: builtins.int
+     @property
+     def message(self) -> global___MessageRules: ...
+     @property
+     def float(self) -> global___FloatRules:
+         """Scalar Field Types"""
+-        pass
+     @property
+     def double(self) -> global___DoubleRules: ...
+     @property
+     def int32(self) -> global___Int32Rules: ...
+     @property
+     def int64(self) -> global___Int64Rules: ...
+     @property
+@@ -75,63 +82,65 @@
+     @property
+     def string(self) -> global___StringRules: ...
+     @property
+     def bytes(self) -> global___BytesRules: ...
+     @property
+     def enum(self) -> global___EnumRules:
+         """Complex Field Types"""
+-        pass
+     @property
+     def repeated(self) -> global___RepeatedRules: ...
+     @property
+     def map(self) -> global___MapRules: ...
+     @property
+     def any(self) -> global___AnyRules:
+         """Well-Known Field Types"""
+-        pass
+     @property
+     def duration(self) -> global___DurationRules: ...
+     @property
+     def timestamp(self) -> global___TimestampRules: ...
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        message: typing.Optional[global___MessageRules] = ...,
+-        float: typing.Optional[global___FloatRules] = ...,
+-        double: typing.Optional[global___DoubleRules] = ...,
+-        int32: typing.Optional[global___Int32Rules] = ...,
+-        int64: typing.Optional[global___Int64Rules] = ...,
+-        uint32: typing.Optional[global___UInt32Rules] = ...,
+-        uint64: typing.Optional[global___UInt64Rules] = ...,
+-        sint32: typing.Optional[global___SInt32Rules] = ...,
+-        sint64: typing.Optional[global___SInt64Rules] = ...,
+-        fixed32: typing.Optional[global___Fixed32Rules] = ...,
+-        fixed64: typing.Optional[global___Fixed64Rules] = ...,
+-        sfixed32: typing.Optional[global___SFixed32Rules] = ...,
+-        sfixed64: typing.Optional[global___SFixed64Rules] = ...,
+-        bool: typing.Optional[global___BoolRules] = ...,
+-        string: typing.Optional[global___StringRules] = ...,
+-        bytes: typing.Optional[global___BytesRules] = ...,
+-        enum: typing.Optional[global___EnumRules] = ...,
+-        repeated: typing.Optional[global___RepeatedRules] = ...,
+-        map: typing.Optional[global___MapRules] = ...,
+-        any: typing.Optional[global___AnyRules] = ...,
+-        duration: typing.Optional[global___DurationRules] = ...,
+-        timestamp: typing.Optional[global___TimestampRules] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_message",b"_message","any",b"any","bool",b"bool","bytes",b"bytes","double",b"double","duration",b"duration","enum",b"enum","fixed32",b"fixed32","fixed64",b"fixed64","float",b"float","int32",b"int32","int64",b"int64","map",b"map","message",b"message","repeated",b"repeated","sfixed32",b"sfixed32","sfixed64",b"sfixed64","sint32",b"sint32","sint64",b"sint64","string",b"string","timestamp",b"timestamp","type",b"type","uint32",b"uint32","uint64",b"uint64"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_message",b"_message","any",b"any","bool",b"bool","bytes",b"bytes","double",b"double","duration",b"duration","enum",b"enum","fixed32",b"fixed32","fixed64",b"fixed64","float",b"float","int32",b"int32","int64",b"int64","map",b"map","message",b"message","repeated",b"repeated","sfixed32",b"sfixed32","sfixed64",b"sfixed64","sint32",b"sint32","sint64",b"sint64","string",b"string","timestamp",b"timestamp","type",b"type","uint32",b"uint32","uint64",b"uint64"]) -> None: ...
++        message: global___MessageRules | None = ...,
++        float: global___FloatRules | None = ...,
++        double: global___DoubleRules | None = ...,
++        int32: global___Int32Rules | None = ...,
++        int64: global___Int64Rules | None = ...,
++        uint32: global___UInt32Rules | None = ...,
++        uint64: global___UInt64Rules | None = ...,
++        sint32: global___SInt32Rules | None = ...,
++        sint64: global___SInt64Rules | None = ...,
++        fixed32: global___Fixed32Rules | None = ...,
++        fixed64: global___Fixed64Rules | None = ...,
++        sfixed32: global___SFixed32Rules | None = ...,
++        sfixed64: global___SFixed64Rules | None = ...,
++        bool: global___BoolRules | None = ...,
++        string: global___StringRules | None = ...,
++        bytes: global___BytesRules | None = ...,
++        enum: global___EnumRules | None = ...,
++        repeated: global___RepeatedRules | None = ...,
++        map: global___MapRules | None = ...,
++        any: global___AnyRules | None = ...,
++        duration: global___DurationRules | None = ...,
++        timestamp: global___TimestampRules | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_message", b"_message", "any", b"any", "bool", b"bool", "bytes", b"bytes", "double", b"double", "duration", b"duration", "enum", b"enum", "fixed32", b"fixed32", "fixed64", b"fixed64", "float", b"float", "int32", b"int32", "int64", b"int64", "map", b"map", "message", b"message", "repeated", b"repeated", "sfixed32", b"sfixed32", "sfixed64", b"sfixed64", "sint32", b"sint32", "sint64", b"sint64", "string", b"string", "timestamp", b"timestamp", "type", b"type", "uint32", b"uint32", "uint64", b"uint64"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_message", b"_message", "any", b"any", "bool", b"bool", "bytes", b"bytes", "double", b"double", "duration", b"duration", "enum", b"enum", "fixed32", b"fixed32", "fixed64", b"fixed64", "float", b"float", "int32", b"int32", "int64", b"int64", "map", b"map", "message", b"message", "repeated", b"repeated", "sfixed32", b"sfixed32", "sfixed64", b"sfixed64", "sint32", b"sint32", "sint64", b"sint64", "string", b"string", "timestamp", b"timestamp", "type", b"type", "uint32", b"uint32", "uint64", b"uint64"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_message",b"_message"]) -> typing.Optional[typing_extensions.Literal["message"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_message", b"_message"]) -> typing_extensions.Literal["message"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["type",b"type"]) -> typing.Optional[typing_extensions.Literal["float","double","int32","int64","uint32","uint64","sint32","sint64","fixed32","fixed64","sfixed32","sfixed64","bool","string","bytes","enum","repeated","map","any","duration","timestamp"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["type", b"type"]) -> typing_extensions.Literal["float", "double", "int32", "int64", "uint32", "uint64", "sint32", "sint64", "fixed32", "fixed64", "sfixed32", "sfixed64", "bool", "string", "bytes", "enum", "repeated", "map", "any", "duration", "timestamp"] | None: ...
++
+ global___FieldRules = FieldRules
+ 
+ class FloatRules(google.protobuf.message.Message):
+     """FloatRules describes the constraints applied to `float` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -145,139 +154,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.float
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.float
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.float
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.float
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.float
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.float]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.float] = ...,
+-        lt: typing.Optional[builtins.float] = ...,
+-        le: typing.Optional[builtins.float] = ...,
+-        gt: typing.Optional[builtins.float] = ...,
+-        ge: typing.Optional[builtins.float] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.float]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.float | None = ...,
++        lt: builtins.float | None = ...,
++        le: builtins.float | None = ...,
++        gt: builtins.float | None = ...,
++        ge: builtins.float | None = ...,
++        not_in: collections.abc.Iterable[builtins.float] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___FloatRules = FloatRules
+ 
+ class DoubleRules(google.protobuf.message.Message):
+     """DoubleRules describes the constraints applied to `double` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -291,139 +286,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.float
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.float
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.float
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.float
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.float
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.float]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.float] = ...,
+-        lt: typing.Optional[builtins.float] = ...,
+-        le: typing.Optional[builtins.float] = ...,
+-        gt: typing.Optional[builtins.float] = ...,
+-        ge: typing.Optional[builtins.float] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.float]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.float | None = ...,
++        lt: builtins.float | None = ...,
++        le: builtins.float | None = ...,
++        gt: builtins.float | None = ...,
++        ge: builtins.float | None = ...,
++        not_in: collections.abc.Iterable[builtins.float] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___DoubleRules = DoubleRules
+ 
+ class Int32Rules(google.protobuf.message.Message):
+     """Int32Rules describes the constraints applied to `int32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -437,139 +418,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___Int32Rules = Int32Rules
+ 
+ class Int64Rules(google.protobuf.message.Message):
+     """Int64Rules describes the constraints applied to `int64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -583,139 +550,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___Int64Rules = Int64Rules
+ 
+ class UInt32Rules(google.protobuf.message.Message):
+     """UInt32Rules describes the constraints applied to `uint32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -729,139 +682,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___UInt32Rules = UInt32Rules
+ 
+ class UInt64Rules(google.protobuf.message.Message):
+     """UInt64Rules describes the constraints applied to `uint64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -875,139 +814,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___UInt64Rules = UInt64Rules
+ 
+ class SInt32Rules(google.protobuf.message.Message):
+     """SInt32Rules describes the constraints applied to `sint32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1021,139 +946,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___SInt32Rules = SInt32Rules
+ 
+ class SInt64Rules(google.protobuf.message.Message):
+     """SInt64Rules describes the constraints applied to `sint64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1167,139 +1078,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___SInt64Rules = SInt64Rules
+ 
+ class Fixed32Rules(google.protobuf.message.Message):
+     """Fixed32Rules describes the constraints applied to `fixed32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1313,139 +1210,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___Fixed32Rules = Fixed32Rules
+ 
+ class Fixed64Rules(google.protobuf.message.Message):
+     """Fixed64Rules describes the constraints applied to `fixed64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1459,139 +1342,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___Fixed64Rules = Fixed64Rules
+ 
+ class SFixed32Rules(google.protobuf.message.Message):
+     """SFixed32Rules describes the constraints applied to `sfixed32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1605,139 +1474,125 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___SFixed32Rules = SFixed32Rules
+ 
+ class SFixed64Rules(google.protobuf.message.Message):
+     """SFixed64Rules describes the constraints applied to `sfixed64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -1751,219 +1606,199 @@
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     le: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     ge: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        le: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        ge: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        le: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        ge: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_multiple_of",b"_multiple_of","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_multiple_of", b"_multiple_of", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___SFixed64Rules = SFixed64Rules
+ 
+ class BoolRules(google.protobuf.message.Message):
+     """BoolRules describes the constraints applied to `bool` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+     ALIAS_FIELD_NUMBER: builtins.int
+     DESCRIPTION_FIELD_NUMBER: builtins.int
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.bool
+     """Const specifies that this field must be exactly the specified value"""
+-
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.bool
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     example: builtins.bool
+     """Set the corresponding sample value"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.bool] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.bool | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.bool = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example: typing.Optional[builtins.bool] = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_example",b"_example","_field",b"_field","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","description",b"description","enable",b"enable","example",b"example","field",b"field","miss_default",b"miss_default","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_example",b"_example","_field",b"_field","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","description",b"description","enable",b"enable","example",b"example","field",b"field","miss_default",b"miss_default","title",b"title","type",b"type"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example: builtins.bool | None = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_example", b"_example", "_field", b"_field", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "description", b"description", "enable", b"enable", "example", b"example", "field", b"field", "miss_default", b"miss_default", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_example", b"_example", "_field", b"_field", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "description", b"description", "enable", b"enable", "example", b"example", "field", b"field", "miss_default", b"miss_default", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_example",b"_example"]) -> typing.Optional[typing_extensions.Literal["example"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_example", b"_example"]) -> typing_extensions.Literal["example"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "miss_default"] | None: ...
++
+ global___BoolRules = BoolRules
+ 
+ class StringRules(google.protobuf.message.Message):
+     """StringRules describe the constraints applied to `string` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LEN_FIELD_NUMBER: builtins.int
+     MIN_LENGTH_FIELD_NUMBER: builtins.int
+     MAX_LENGTH_FIELD_NUMBER: builtins.int
+     PATTERN_FIELD_NUMBER: builtins.int
+     PREFIX_FIELD_NUMBER: builtins.int
+     SUFFIX_FIELD_NUMBER: builtins.int
+@@ -1988,232 +1823,205 @@
+     ALIAS_FIELD_NUMBER: builtins.int
+     DESCRIPTION_FIELD_NUMBER: builtins.int
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+-    const: typing.Text
++    const: builtins.str
+     """Const specifies that this field must be exactly the specified value"""
+-
+     len: builtins.int
+     """Len specifies that this field must be the specified number of
+     characters (Unicode code points). Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+     min_length: builtins.int
+     """MinLen specifies that this field must be the specified number of
+     characters (Unicode code points) at a minimum. Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+     max_length: builtins.int
+     """MaxLen specifies that this field must be the specified number of
+     characters (Unicode code points) at a maximum. Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+-    pattern: typing.Text
++    pattern: builtins.str
+     """Pattern specifes that this field must match against the specified
+     regular expression (RE2 syntax). The included expression should elide
+     any delimiters.
+     """
+-
+-    prefix: typing.Text
++    prefix: builtins.str
+     """Prefix specifies that this field must have the specified substring at
+     the beginning of the string.
+     """
+-
+-    suffix: typing.Text
++    suffix: builtins.str
+     """Suffix specifies that this field must have the specified substring at
+     the end of the string.
+     """
+-
+-    contains: typing.Text
++    contains: builtins.str
+     """Contains specifies that this field must have the specified substring
+     anywhere in the string.
+     """
+-
+-    not_contains: typing.Text
++    not_contains: builtins.str
+     """NotContains specifies that this field cannot have the specified substring
+     anywhere in the string.
+     """
+-
+     @property
+-    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]:
++    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     email: builtins.bool
+     """Email specifies that the field must be a valid email address as
+     defined by RFC 5322
+     """
+-
+     hostname: builtins.bool
+     """Hostname specifies that the field must be a valid hostname as
+     defined by RFC 1034. This constraint does not support
+     internationalized domain names (IDNs).
+     """
+-
+     ip: builtins.bool
+     """Ip specifies that the field must be a valid IP (v4 or v6) address.
+     Valid IPv6 addresses should not include surrounding square brackets.
+     """
+-
+     ipv4: builtins.bool
+     """Ipv4 specifies that the field must be a valid IPv4 address."""
+-
+     ipv6: builtins.bool
+     """Ipv6 specifies that the field must be a valid IPv6 address. Valid
+     IPv6 addresses should not include surrounding square brackets.
+     """
+-
+     uri: builtins.bool
+     """Uri specifies that the field must be a valid, absolute URI as defined
+     by RFC 3986
+     """
+-
+     uri_ref: builtins.bool
+     """UriRef specifies that the field must be a valid URI as defined by RFC
+     3986 and may be relative or absolute.
+     """
+-
+     address: builtins.bool
+     """Address specifies that the field must be either a valid hostname as
+     defined by RFC 1034 (which does not support internationalized domain
+     names or IDNs), or it can be a valid IP (v4 or v6).
+     """
+-
+     uuid: builtins.bool
+     """Uuid specifies that the field must be a valid UUID as defined by
+     RFC 4122
+     """
+-
+-    pydantic_type: typing.Text
++    pydantic_type: builtins.str
+     """If you want to use the property of pydantic.type, you can directly
+     set the value to the string of the corresponding property,
+     and then the program will automatically introduce the type of the corresponding string
+     """
+-
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+-    default: typing.Text
++    default: builtins.str
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+-    example: typing.Text
++    example: builtins.str
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[typing.Text] = ...,
+-        len: typing.Optional[builtins.int] = ...,
+-        min_length: typing.Optional[builtins.int] = ...,
+-        max_length: typing.Optional[builtins.int] = ...,
+-        pattern: typing.Optional[typing.Text] = ...,
+-        prefix: typing.Optional[typing.Text] = ...,
+-        suffix: typing.Optional[typing.Text] = ...,
+-        contains: typing.Optional[typing.Text] = ...,
+-        not_contains: typing.Optional[typing.Text] = ...,
+-        not_in: typing.Optional[typing.Iterable[typing.Text]] = ...,
++        const: builtins.str | None = ...,
++        len: builtins.int | None = ...,
++        min_length: builtins.int | None = ...,
++        max_length: builtins.int | None = ...,
++        pattern: builtins.str | None = ...,
++        prefix: builtins.str | None = ...,
++        suffix: builtins.str | None = ...,
++        contains: builtins.str | None = ...,
++        not_contains: builtins.str | None = ...,
++        not_in: collections.abc.Iterable[builtins.str] | None = ...,
+         email: builtins.bool = ...,
+         hostname: builtins.bool = ...,
+         ip: builtins.bool = ...,
+         ipv4: builtins.bool = ...,
+         ipv6: builtins.bool = ...,
+         uri: builtins.bool = ...,
+         uri_ref: builtins.bool = ...,
+         address: builtins.bool = ...,
+         uuid: builtins.bool = ...,
+-        pydantic_type: typing.Text = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default: typing.Text = ...,
+-        default_factory: typing.Text = ...,
++        pydantic_type: builtins.str = ...,
++        enable: builtins.bool | None = ...,
++        default: builtins.str = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example: typing.Text = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_contains",b"_contains","_description",b"_description","_enable",b"_enable","_field",b"_field","_len",b"_len","_max_length",b"_max_length","_min_length",b"_min_length","_not_contains",b"_not_contains","_pattern",b"_pattern","_prefix",b"_prefix","_suffix",b"_suffix","_title",b"_title","_type",b"_type","address",b"address","alias",b"alias","const",b"const","contains",b"contains","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","email",b"email","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","hostname",b"hostname","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","max_length",b"max_length","min_length",b"min_length","miss_default",b"miss_default","not_contains",b"not_contains","pattern",b"pattern","prefix",b"prefix","pydantic_type",b"pydantic_type","suffix",b"suffix","title",b"title","type",b"type","uri",b"uri","uri_ref",b"uri_ref","uuid",b"uuid","well_known",b"well_known"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_contains",b"_contains","_description",b"_description","_enable",b"_enable","_field",b"_field","_len",b"_len","_max_length",b"_max_length","_min_length",b"_min_length","_not_contains",b"_not_contains","_pattern",b"_pattern","_prefix",b"_prefix","_suffix",b"_suffix","_title",b"_title","_type",b"_type","address",b"address","alias",b"alias","const",b"const","contains",b"contains","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","email",b"email","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","hostname",b"hostname","in",b"in","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","max_length",b"max_length","min_length",b"min_length","miss_default",b"miss_default","not_contains",b"not_contains","not_in",b"not_in","pattern",b"pattern","prefix",b"prefix","pydantic_type",b"pydantic_type","suffix",b"suffix","title",b"title","type",b"type","uri",b"uri","uri_ref",b"uri_ref","uuid",b"uuid","well_known",b"well_known"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example: builtins.str = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_contains", b"_contains", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_len", b"_len", "_max_length", b"_max_length", "_min_length", b"_min_length", "_not_contains", b"_not_contains", "_pattern", b"_pattern", "_prefix", b"_prefix", "_suffix", b"_suffix", "_title", b"_title", "_type", b"_type", "address", b"address", "alias", b"alias", "const", b"const", "contains", b"contains", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "email", b"email", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "hostname", b"hostname", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "max_length", b"max_length", "min_length", b"min_length", "miss_default", b"miss_default", "not_contains", b"not_contains", "pattern", b"pattern", "prefix", b"prefix", "pydantic_type", b"pydantic_type", "suffix", b"suffix", "title", b"title", "type", b"type", "uri", b"uri", "uri_ref", b"uri_ref", "uuid", b"uuid", "well_known", b"well_known"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_contains", b"_contains", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_len", b"_len", "_max_length", b"_max_length", "_min_length", b"_min_length", "_not_contains", b"_not_contains", "_pattern", b"_pattern", "_prefix", b"_prefix", "_suffix", b"_suffix", "_title", b"_title", "_type", b"_type", "address", b"address", "alias", b"alias", "const", b"const", "contains", b"contains", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "email", b"email", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "hostname", b"hostname", "in", b"in", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "max_length", b"max_length", "min_length", b"min_length", "miss_default", b"miss_default", "not_contains", b"not_contains", "not_in", b"not_in", "pattern", b"pattern", "prefix", b"prefix", "pydantic_type", b"pydantic_type", "suffix", b"suffix", "title", b"title", "type", b"type", "uri", b"uri", "uri_ref", b"uri_ref", "uuid", b"uuid", "well_known", b"well_known"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_contains",b"_contains"]) -> typing.Optional[typing_extensions.Literal["contains"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_contains", b"_contains"]) -> typing_extensions.Literal["contains"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_len",b"_len"]) -> typing.Optional[typing_extensions.Literal["len"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_len", b"_len"]) -> typing_extensions.Literal["len"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_length",b"_max_length"]) -> typing.Optional[typing_extensions.Literal["max_length"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_length", b"_max_length"]) -> typing_extensions.Literal["max_length"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_length",b"_min_length"]) -> typing.Optional[typing_extensions.Literal["min_length"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_length", b"_min_length"]) -> typing_extensions.Literal["min_length"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_not_contains",b"_not_contains"]) -> typing.Optional[typing_extensions.Literal["not_contains"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_not_contains", b"_not_contains"]) -> typing_extensions.Literal["not_contains"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_pattern",b"_pattern"]) -> typing.Optional[typing_extensions.Literal["pattern"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_pattern", b"_pattern"]) -> typing_extensions.Literal["pattern"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_prefix",b"_prefix"]) -> typing.Optional[typing_extensions.Literal["prefix"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_prefix", b"_prefix"]) -> typing_extensions.Literal["prefix"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_suffix",b"_suffix"]) -> typing.Optional[typing_extensions.Literal["suffix"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_suffix", b"_suffix"]) -> typing_extensions.Literal["suffix"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known",b"well_known"]) -> typing.Optional[typing_extensions.Literal["email","hostname","ip","ipv4","ipv6","uri","uri_ref","address","uuid","pydantic_type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known", b"well_known"]) -> typing_extensions.Literal["email", "hostname", "ip", "ipv4", "ipv6", "uri", "uri_ref", "address", "uuid", "pydantic_type"] | None: ...
++
+ global___StringRules = StringRules
+ 
+ class BytesRules(google.protobuf.message.Message):
+     """BytesRules describe the constraints applied to `bytes` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     MIN_LENGTH_FIELD_NUMBER: builtins.int
+     MAX_LENGTH_FIELD_NUMBER: builtins.int
+     PREFIX_FIELD_NUMBER: builtins.int
+     SUFFIX_FIELD_NUMBER: builtins.int
+     CONTAINS_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+@@ -2231,165 +2039,147 @@
+     TYPE_FIELD_NUMBER: builtins.int
+     IP_FIELD_NUMBER: builtins.int
+     IPV4_FIELD_NUMBER: builtins.int
+     IPV6_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.bytes
+     """Const specifies that this field must be exactly the specified value"""
+-
+     min_length: builtins.int
+     """MinLen specifies that this field must be the specified number of bytes
+     at a minimum
+     """
+-
+     max_length: builtins.int
+     """MaxLen specifies that this field must be the specified number of bytes
+     at a maximum
+     """
+-
+     prefix: builtins.bytes
+     """Prefix specifies that this field must have the specified bytes at the
+     beginning of the string.
+     """
+-
+     suffix: builtins.bytes
+     """Suffix specifies that this field must have the specified bytes at the
+     end of the string.
+     """
+-
+     contains: builtins.bytes
+     """Contains specifies that this field must have the specified bytes
+     anywhere in the string.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.bytes]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.bytes
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     multiple_of: builtins.float
+     """Corresponding multiple validation of the set value"""
+-
+     example: builtins.bytes
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+     ip: builtins.bool
+     """Ip specifies that the field must be a valid IP (v4 or v6) address in
+     byte format
+     """
+-
+     ipv4: builtins.bool
+     """Ipv4 specifies that the field must be a valid IPv4 address in byte
+     format
+     """
+-
+     ipv6: builtins.bool
+     """Ipv6 specifies that the field must be a valid IPv6 address in byte
+     format
+     """
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.bytes] = ...,
+-        min_length: typing.Optional[builtins.int] = ...,
+-        max_length: typing.Optional[builtins.int] = ...,
+-        prefix: typing.Optional[builtins.bytes] = ...,
+-        suffix: typing.Optional[builtins.bytes] = ...,
+-        contains: typing.Optional[builtins.bytes] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.bytes]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.bytes | None = ...,
++        min_length: builtins.int | None = ...,
++        max_length: builtins.int | None = ...,
++        prefix: builtins.bytes | None = ...,
++        suffix: builtins.bytes | None = ...,
++        contains: builtins.bytes | None = ...,
++        not_in: collections.abc.Iterable[builtins.bytes] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.bytes = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        multiple_of: typing.Optional[builtins.float] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        multiple_of: builtins.float | None = ...,
+         example: builtins.bytes = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
+         ip: builtins.bool = ...,
+         ipv4: builtins.bool = ...,
+         ipv6: builtins.bool = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_contains",b"_contains","_description",b"_description","_enable",b"_enable","_field",b"_field","_max_length",b"_max_length","_min_length",b"_min_length","_multiple_of",b"_multiple_of","_prefix",b"_prefix","_suffix",b"_suffix","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","contains",b"contains","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","max_length",b"max_length","min_length",b"min_length","miss_default",b"miss_default","multiple_of",b"multiple_of","prefix",b"prefix","suffix",b"suffix","title",b"title","type",b"type","well_known",b"well_known"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_contains",b"_contains","_description",b"_description","_enable",b"_enable","_field",b"_field","_max_length",b"_max_length","_min_length",b"_min_length","_multiple_of",b"_multiple_of","_prefix",b"_prefix","_suffix",b"_suffix","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","contains",b"contains","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","in",b"in","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","max_length",b"max_length","min_length",b"min_length","miss_default",b"miss_default","multiple_of",b"multiple_of","not_in",b"not_in","prefix",b"prefix","suffix",b"suffix","title",b"title","type",b"type","well_known",b"well_known"]) -> None: ...
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_contains", b"_contains", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_max_length", b"_max_length", "_min_length", b"_min_length", "_multiple_of", b"_multiple_of", "_prefix", b"_prefix", "_suffix", b"_suffix", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "contains", b"contains", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "max_length", b"max_length", "min_length", b"min_length", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "prefix", b"prefix", "suffix", b"suffix", "title", b"title", "type", b"type", "well_known", b"well_known"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_contains", b"_contains", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_max_length", b"_max_length", "_min_length", b"_min_length", "_multiple_of", b"_multiple_of", "_prefix", b"_prefix", "_suffix", b"_suffix", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "contains", b"contains", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "in", b"in", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "max_length", b"max_length", "min_length", b"min_length", "miss_default", b"miss_default", "multiple_of", b"multiple_of", "not_in", b"not_in", "prefix", b"prefix", "suffix", b"suffix", "title", b"title", "type", b"type", "well_known", b"well_known"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_contains",b"_contains"]) -> typing.Optional[typing_extensions.Literal["contains"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_contains", b"_contains"]) -> typing_extensions.Literal["contains"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_length",b"_max_length"]) -> typing.Optional[typing_extensions.Literal["max_length"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_length", b"_max_length"]) -> typing_extensions.Literal["max_length"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_length",b"_min_length"]) -> typing.Optional[typing_extensions.Literal["min_length"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_length", b"_min_length"]) -> typing_extensions.Literal["min_length"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of",b"_multiple_of"]) -> typing.Optional[typing_extensions.Literal["multiple_of"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_multiple_of", b"_multiple_of"]) -> typing_extensions.Literal["multiple_of"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_prefix",b"_prefix"]) -> typing.Optional[typing_extensions.Literal["prefix"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_prefix", b"_prefix"]) -> typing_extensions.Literal["prefix"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_suffix",b"_suffix"]) -> typing.Optional[typing_extensions.Literal["suffix"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_suffix", b"_suffix"]) -> typing_extensions.Literal["suffix"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known",b"well_known"]) -> typing.Optional[typing_extensions.Literal["ip","ipv4","ipv6"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known", b"well_known"]) -> typing_extensions.Literal["ip", "ipv4", "ipv6"] | None: ...
++
+ global___BytesRules = BytesRules
+ 
+ class EnumRules(google.protobuf.message.Message):
+     """EnumRules describe the constraints applied to enum values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FIELD_NUMBER: builtins.int
+     DEFAULT_FACTORY_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+@@ -2397,95 +2187,87 @@
+     DESCRIPTION_FIELD_NUMBER: builtins.int
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.int
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     example: builtins.int
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        const: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.int = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
+         example: builtins.int = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_title",b"_title","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","miss_default",b"miss_default","title",b"title"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_title",b"_title","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","in",b"in","miss_default",b"miss_default","not_in",b"not_in","title",b"title"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_title", b"_title", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "miss_default", b"miss_default", "title", b"title"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_title", b"_title", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "in", b"in", "miss_default", b"miss_default", "not_in", b"not_in", "title", b"title"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___EnumRules = EnumRules
+ 
+ class MessageRules(google.protobuf.message.Message):
+     """MessageRules describe the constraints applied to embedded message values.
+     For message-type fields, validation is performed recursively.
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     SKIP_FIELD_NUMBER: builtins.int
+     REQUIRED_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FIELD_NUMBER: builtins.int
+     DEFAULT_FACTORY_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+     ALIAS_FIELD_NUMBER: builtins.int
+@@ -2495,98 +2277,89 @@
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     skip: builtins.bool
+     """Skip specifies that the validation rules of this field should not be
+     evaluated
+     """
+-
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     default: builtins.float
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     example: builtins.float
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        skip: typing.Optional[builtins.bool] = ...,
+-        required: typing.Optional[builtins.bool] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
++        skip: builtins.bool | None = ...,
++        required: builtins.bool | None = ...,
++        enable: builtins.bool | None = ...,
+         default: builtins.float = ...,
+-        default_factory: typing.Text = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
+         example: builtins.float = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_required",b"_required","_skip",b"_skip","_title",b"_title","_type",b"_type","alias",b"alias","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","miss_default",b"miss_default","required",b"required","skip",b"skip","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_required",b"_required","_skip",b"_skip","_title",b"_title","_type",b"_type","alias",b"alias","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","miss_default",b"miss_default","required",b"required","skip",b"skip","title",b"title","type",b"type"]) -> None: ...
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_required", b"_required", "_skip", b"_skip", "_title", b"_title", "_type", b"_type", "alias", b"alias", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "miss_default", b"miss_default", "required", b"required", "skip", b"skip", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_required", b"_required", "_skip", b"_skip", "_title", b"_title", "_type", b"_type", "alias", b"alias", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "miss_default", b"miss_default", "required", b"required", "skip", b"skip", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_required",b"_required"]) -> typing.Optional[typing_extensions.Literal["required"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_required", b"_required"]) -> typing_extensions.Literal["required"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_skip",b"_skip"]) -> typing.Optional[typing_extensions.Literal["skip"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_skip", b"_skip"]) -> typing_extensions.Literal["skip"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___MessageRules = MessageRules
+ 
+ class RepeatedRules(google.protobuf.message.Message):
+     """RepeatedRules describe the constraints applied to `repeated` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MIN_ITEMS_FIELD_NUMBER: builtins.int
+     MAX_ITEMS_FIELD_NUMBER: builtins.int
+     UNIQUE_FIELD_NUMBER: builtins.int
+     ITEMS_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FACTORY_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+@@ -2596,109 +2369,100 @@
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     min_items: builtins.int
+     """MinItems specifies that this field must have the specified number of
+     items at a minimum
+     """
+-
+     max_items: builtins.int
+     """MaxItems specifies that this field must have the specified number of
+     items at a maximum
+     """
+-
+     unique: builtins.bool
+     """Unique specifies that all elements in this field must be unique. This
+     contraint is only applicable to scalar and enum types (messages are not
+     supported).
+     """
+-
+     @property
+     def items(self) -> global___FieldRules:
+         """Items specifies the contraints to be applied to each item in the field.
+         Repeated message fields will still execute validation against each item
+         unless skip is specified here.
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        min_items: typing.Optional[builtins.int] = ...,
+-        max_items: typing.Optional[builtins.int] = ...,
+-        unique: typing.Optional[builtins.bool] = ...,
+-        items: typing.Optional[global___FieldRules] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default_factory: typing.Text = ...,
++        min_items: builtins.int | None = ...,
++        max_items: builtins.int | None = ...,
++        unique: builtins.bool | None = ...,
++        items: global___FieldRules | None = ...,
++        enable: builtins.bool | None = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_items",b"_items","_max_items",b"_max_items","_min_items",b"_min_items","_title",b"_title","_type",b"_type","_unique",b"_unique","alias",b"alias","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example_config",b"example_config","example_factory",b"example_factory","field",b"field","items",b"items","max_items",b"max_items","min_items",b"min_items","miss_default",b"miss_default","title",b"title","type",b"type","unique",b"unique"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_items",b"_items","_max_items",b"_max_items","_min_items",b"_min_items","_title",b"_title","_type",b"_type","_unique",b"_unique","alias",b"alias","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example_config",b"example_config","example_factory",b"example_factory","field",b"field","items",b"items","max_items",b"max_items","min_items",b"min_items","miss_default",b"miss_default","title",b"title","type",b"type","unique",b"unique"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_items", b"_items", "_max_items", b"_max_items", "_min_items", b"_min_items", "_title", b"_title", "_type", b"_type", "_unique", b"_unique", "alias", b"alias", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "items", b"items", "max_items", b"max_items", "min_items", b"min_items", "miss_default", b"miss_default", "title", b"title", "type", b"type", "unique", b"unique"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_items", b"_items", "_max_items", b"_max_items", "_min_items", b"_min_items", "_title", b"_title", "_type", b"_type", "_unique", b"_unique", "alias", b"alias", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "items", b"items", "max_items", b"max_items", "min_items", b"min_items", "miss_default", b"miss_default", "title", b"title", "type", b"type", "unique", b"unique"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_items",b"_items"]) -> typing.Optional[typing_extensions.Literal["items"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_items", b"_items"]) -> typing_extensions.Literal["items"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_items",b"_max_items"]) -> typing.Optional[typing_extensions.Literal["max_items"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_items", b"_max_items"]) -> typing_extensions.Literal["max_items"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_items",b"_min_items"]) -> typing.Optional[typing_extensions.Literal["min_items"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_items", b"_min_items"]) -> typing_extensions.Literal["min_items"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_unique",b"_unique"]) -> typing.Optional[typing_extensions.Literal["unique"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_unique", b"_unique"]) -> typing_extensions.Literal["unique"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example_factory"] | None: ...
++
+ global___RepeatedRules = RepeatedRules
+ 
+ class MapRules(google.protobuf.message.Message):
+     """MapRules describe the constraints applied to `map` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MIN_PAIRS_FIELD_NUMBER: builtins.int
+     MAX_PAIRS_FIELD_NUMBER: builtins.int
+     KEYS_FIELD_NUMBER: builtins.int
+     VALUES_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FACTORY_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+@@ -2708,109 +2472,100 @@
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     min_pairs: builtins.int
+     """MinPairs specifies that this field must have the specified number of
+     KVs at a minimum
+     """
+-
+     max_pairs: builtins.int
+     """MaxPairs specifies that this field must have the specified number of
+     KVs at a maximum
+     """
+-
+     @property
+     def keys(self) -> global___FieldRules:
+         """Keys specifies the constraints to be applied to each key in the field."""
+-        pass
+     @property
+     def values(self) -> global___FieldRules:
+         """Values specifies the constraints to be applied to the value of each key
+         in the field. Message values will still have their validations evaluated
+         unless skip is specified here.
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        min_pairs: typing.Optional[builtins.int] = ...,
+-        max_pairs: typing.Optional[builtins.int] = ...,
+-        keys: typing.Optional[global___FieldRules] = ...,
+-        values: typing.Optional[global___FieldRules] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default_factory: typing.Text = ...,
++        min_pairs: builtins.int | None = ...,
++        max_pairs: builtins.int | None = ...,
++        keys: global___FieldRules | None = ...,
++        values: global___FieldRules | None = ...,
++        enable: builtins.bool | None = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_keys",b"_keys","_max_pairs",b"_max_pairs","_min_pairs",b"_min_pairs","_title",b"_title","_type",b"_type","_values",b"_values","alias",b"alias","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example_config",b"example_config","example_factory",b"example_factory","field",b"field","keys",b"keys","max_pairs",b"max_pairs","min_pairs",b"min_pairs","miss_default",b"miss_default","title",b"title","type",b"type","values",b"values"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_keys",b"_keys","_max_pairs",b"_max_pairs","_min_pairs",b"_min_pairs","_title",b"_title","_type",b"_type","_values",b"_values","alias",b"alias","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example_config",b"example_config","example_factory",b"example_factory","field",b"field","keys",b"keys","max_pairs",b"max_pairs","min_pairs",b"min_pairs","miss_default",b"miss_default","title",b"title","type",b"type","values",b"values"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_keys", b"_keys", "_max_pairs", b"_max_pairs", "_min_pairs", b"_min_pairs", "_title", b"_title", "_type", b"_type", "_values", b"_values", "alias", b"alias", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "keys", b"keys", "max_pairs", b"max_pairs", "min_pairs", b"min_pairs", "miss_default", b"miss_default", "title", b"title", "type", b"type", "values", b"values"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_keys", b"_keys", "_max_pairs", b"_max_pairs", "_min_pairs", b"_min_pairs", "_title", b"_title", "_type", b"_type", "_values", b"_values", "alias", b"alias", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "keys", b"keys", "max_pairs", b"max_pairs", "min_pairs", b"min_pairs", "miss_default", b"miss_default", "title", b"title", "type", b"type", "values", b"values"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_keys",b"_keys"]) -> typing.Optional[typing_extensions.Literal["keys"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_keys", b"_keys"]) -> typing_extensions.Literal["keys"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_pairs",b"_max_pairs"]) -> typing.Optional[typing_extensions.Literal["max_pairs"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_max_pairs", b"_max_pairs"]) -> typing_extensions.Literal["max_pairs"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_pairs",b"_min_pairs"]) -> typing.Optional[typing_extensions.Literal["min_pairs"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_min_pairs", b"_min_pairs"]) -> typing_extensions.Literal["min_pairs"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_values",b"_values"]) -> typing.Optional[typing_extensions.Literal["values"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_values", b"_values"]) -> typing_extensions.Literal["values"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example_factory"] | None: ...
++
+ global___MapRules = MapRules
+ 
+ class AnyRules(google.protobuf.message.Message):
+     """AnyRules describe constraints applied exclusively to the
+     `google.protobuf.Any` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     REQUIRED_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     ENABLE_FIELD_NUMBER: builtins.int
+     DEFAULT_FIELD_NUMBER: builtins.int
+     DEFAULT_FACTORY_FIELD_NUMBER: builtins.int
+     MISS_DEFAULT_FIELD_NUMBER: builtins.int
+@@ -2818,95 +2573,87 @@
+     DESCRIPTION_FIELD_NUMBER: builtins.int
+     EXAMPLE_FIELD_NUMBER: builtins.int
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+     @property
+-    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]:
++    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]:
+         """NotIn specifies that this field's `type_url` must not be equal to any of
+         the specified values.
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+-    default: typing.Text
++    default: builtins.str
+     """The default value corresponding to the field, if not set,
+     the default value is the default value of the corresponding type of the field
+     """
+-
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+-    example: typing.Text
++    example: builtins.str
+     """Set the corresponding sample value"""
+-
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        required: typing.Optional[builtins.bool] = ...,
+-        not_in: typing.Optional[typing.Iterable[typing.Text]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default: typing.Text = ...,
+-        default_factory: typing.Text = ...,
++        required: builtins.bool | None = ...,
++        not_in: collections.abc.Iterable[builtins.str] | None = ...,
++        enable: builtins.bool | None = ...,
++        default: builtins.str = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example: typing.Text = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_required",b"_required","_title",b"_title","alias",b"alias","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","miss_default",b"miss_default","required",b"required","title",b"title"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_description",b"_description","_enable",b"_enable","_field",b"_field","_required",b"_required","_title",b"_title","alias",b"alias","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","in",b"in","miss_default",b"miss_default","not_in",b"not_in","required",b"required","title",b"title"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example: builtins.str = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_required", b"_required", "_title", b"_title", "alias", b"alias", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "miss_default", b"miss_default", "required", b"required", "title", b"title"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_required", b"_required", "_title", b"_title", "alias", b"alias", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "in", b"in", "miss_default", b"miss_default", "not_in", b"not_in", "required", b"required", "title", b"title"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_required",b"_required"]) -> typing.Optional[typing_extensions.Literal["required"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_required", b"_required"]) -> typing_extensions.Literal["required"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___AnyRules = AnyRules
+ 
+ class DurationRules(google.protobuf.message.Message):
+     """DurationRules describe the constraints applied exclusively to the
+     `google.protobuf.Duration` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+@@ -2920,139 +2667,126 @@
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     @property
+     def const(self) -> google.protobuf.duration_pb2.Duration:
+         """Const specifies that this field must be exactly the specified value"""
+-        pass
+     @property
+     def lt(self) -> google.protobuf.duration_pb2.Duration:
+         """Lt specifies that this field must be less than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def le(self) -> google.protobuf.duration_pb2.Duration:
+         """Lt specifies that this field must be less than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def gt(self) -> google.protobuf.duration_pb2.Duration:
+         """Gt specifies that this field must be greater than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def ge(self) -> google.protobuf.duration_pb2.Duration:
+         """Gte specifies that this field must be greater than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[google.protobuf.duration_pb2.Duration]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     @property
+     def default(self) -> google.protobuf.duration_pb2.Duration:
+         """The default value corresponding to the field, if not set,
+         the default value is the default value of the corresponding type of the field
+         """
+-        pass
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     @property
+     def example(self) -> google.protobuf.duration_pb2.Duration:
+         """Set the corresponding sample value"""
+-        pass
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        lt: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        le: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        gt: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        ge: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        not_in: typing.Optional[typing.Iterable[google.protobuf.duration_pb2.Duration]] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        default_factory: typing.Text = ...,
++        const: google.protobuf.duration_pb2.Duration | None = ...,
++        lt: google.protobuf.duration_pb2.Duration | None = ...,
++        le: google.protobuf.duration_pb2.Duration | None = ...,
++        gt: google.protobuf.duration_pb2.Duration | None = ...,
++        ge: google.protobuf.duration_pb2.Duration | None = ...,
++        not_in: collections.abc.Iterable[google.protobuf.duration_pb2.Duration] | None = ...,
++        enable: builtins.bool | None = ...,
++        default: google.protobuf.duration_pb2.Duration | None = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","le",b"le","lt",b"lt","miss_default",b"miss_default","title",b"title","type",b"type"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_le",b"_le","_lt",b"_lt","_title",b"_title","_type",b"_type","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","in",b"in","le",b"le","lt",b"lt","miss_default",b"miss_default","not_in",b"not_in","title",b"title","type",b"type"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example: google.protobuf.duration_pb2.Duration | None = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "title", b"title", "type", b"type"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_le", b"_le", "_lt", b"_lt", "_title", b"_title", "_type", b"_type", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "in", b"in", "le", b"le", "lt", b"lt", "miss_default", b"miss_default", "not_in", b"not_in", "title", b"title", "type", b"type"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___DurationRules = DurationRules
+ 
+ class TimestampRules(google.protobuf.message.Message):
+     """TimestampRules describe the constraints applied exclusively to the
+     `google.protobuf.Timestamp` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GE_FIELD_NUMBER: builtins.int
+     LT_NOW_FIELD_NUMBER: builtins.int
+     GT_NOW_FIELD_NUMBER: builtins.int
+@@ -3067,161 +2801,142 @@
+     EXAMPLE_FACTORY_FIELD_NUMBER: builtins.int
+     FIELD_FIELD_NUMBER: builtins.int
+     TYPE_FIELD_NUMBER: builtins.int
+     TITLE_FIELD_NUMBER: builtins.int
+     @property
+     def const(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Const specifies that this field must be exactly the specified value"""
+-        pass
+     @property
+     def lt(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Lt specifies that this field must be less than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def le(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Lte specifies that this field must be less than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def gt(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Gt specifies that this field must be greater than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def ge(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Gte specifies that this field must be greater than the specified value,
+         inclusive
+         """
+-        pass
+     lt_now: builtins.bool
+     """LtNow specifies that this must be less than the current time. LtNow
+     can only be used with the Within rule.
+     """
+-
+     gt_now: builtins.bool
+     """GtNow specifies that this must be greater than the current time. GtNow
+     can only be used with the Within rule.
+     """
+-
+     @property
+     def within(self) -> google.protobuf.duration_pb2.Duration:
+         """Within specifies that this field must be within this duration of the
+         current time. This constraint can be used alone or with the LtNow and
+         GtNow rules.
+         """
+-        pass
+     enable: builtins.bool
+     """Whether to enable this field, if not, the generated Model will not carry this field"""
+-
+     @property
+     def default(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """The default value corresponding to the field, if not set,
+         the default value is the default value of the corresponding type of the field
+         """
+-        pass
+-    default_factory: typing.Text
++    default_factory: builtins.str
+     """The default value factory function corresponding to the field, supports template variables,
+     such as `p2p@import|uuid|uuid4`
+     """
+-
+     miss_default: builtins.bool
+     """Set field required"""
+-
+-    alias: typing.Text
++    alias: builtins.str
+     """Set the alias of the field in the pydantic.Base Model"""
+-
+-    description: typing.Text
++    description: builtins.str
+     """Set the description of the field"""
+-
+     @property
+     def example(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Set the corresponding sample value"""
+-        pass
+-    example_factory: typing.Text
++    example_factory: builtins.str
+     """Set the corresponding sample value factory function, support template variables"""
+-
+-    field: typing.Text
++    field: builtins.str
+     """Set the Field object corresponding to the field, support template variables"""
+-
+-    type: typing.Text
++    type: builtins.str
+     """Set the type object corresponding to the field, support template variables"""
+-
+-    title: typing.Text
++    title: builtins.str
+     """The title corresponding to the field"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        lt: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        le: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        gt: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        ge: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        lt_now: typing.Optional[builtins.bool] = ...,
+-        gt_now: typing.Optional[builtins.bool] = ...,
+-        within: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        enable: typing.Optional[builtins.bool] = ...,
+-        default: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        default_factory: typing.Text = ...,
++        const: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        lt: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        le: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        gt: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        ge: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        lt_now: builtins.bool | None = ...,
++        gt_now: builtins.bool | None = ...,
++        within: google.protobuf.duration_pb2.Duration | None = ...,
++        enable: builtins.bool | None = ...,
++        default: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        default_factory: builtins.str = ...,
+         miss_default: builtins.bool = ...,
+-        alias: typing.Optional[typing.Text] = ...,
+-        description: typing.Optional[typing.Text] = ...,
+-        example: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        example_factory: typing.Text = ...,
+-        field: typing.Optional[typing.Text] = ...,
+-        type: typing.Optional[typing.Text] = ...,
+-        title: typing.Optional[typing.Text] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_gt_now",b"_gt_now","_le",b"_le","_lt",b"_lt","_lt_now",b"_lt_now","_title",b"_title","_type",b"_type","_within",b"_within","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","gt_now",b"gt_now","le",b"le","lt",b"lt","lt_now",b"lt_now","miss_default",b"miss_default","title",b"title","type",b"type","within",b"within"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["_alias",b"_alias","_const",b"_const","_description",b"_description","_enable",b"_enable","_field",b"_field","_ge",b"_ge","_gt",b"_gt","_gt_now",b"_gt_now","_le",b"_le","_lt",b"_lt","_lt_now",b"_lt_now","_title",b"_title","_type",b"_type","_within",b"_within","alias",b"alias","const",b"const","default",b"default","default_config",b"default_config","default_factory",b"default_factory","description",b"description","enable",b"enable","example",b"example","example_config",b"example_config","example_factory",b"example_factory","field",b"field","ge",b"ge","gt",b"gt","gt_now",b"gt_now","le",b"le","lt",b"lt","lt_now",b"lt_now","miss_default",b"miss_default","title",b"title","type",b"type","within",b"within"]) -> None: ...
++        alias: builtins.str | None = ...,
++        description: builtins.str | None = ...,
++        example: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        example_factory: builtins.str = ...,
++        field: builtins.str | None = ...,
++        type: builtins.str | None = ...,
++        title: builtins.str | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_gt_now", b"_gt_now", "_le", b"_le", "_lt", b"_lt", "_lt_now", b"_lt_now", "_title", b"_title", "_type", b"_type", "_within", b"_within", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "gt_now", b"gt_now", "le", b"le", "lt", b"lt", "lt_now", b"lt_now", "miss_default", b"miss_default", "title", b"title", "type", b"type", "within", b"within"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["_alias", b"_alias", "_const", b"_const", "_description", b"_description", "_enable", b"_enable", "_field", b"_field", "_ge", b"_ge", "_gt", b"_gt", "_gt_now", b"_gt_now", "_le", b"_le", "_lt", b"_lt", "_lt_now", b"_lt_now", "_title", b"_title", "_type", b"_type", "_within", b"_within", "alias", b"alias", "const", b"const", "default", b"default", "default_config", b"default_config", "default_factory", b"default_factory", "description", b"description", "enable", b"enable", "example", b"example", "example_config", b"example_config", "example_factory", b"example_factory", "field", b"field", "ge", b"ge", "gt", b"gt", "gt_now", b"gt_now", "le", b"le", "lt", b"lt", "lt_now", b"lt_now", "miss_default", b"miss_default", "title", b"title", "type", b"type", "within", b"within"]) -> None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias",b"_alias"]) -> typing.Optional[typing_extensions.Literal["alias"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_alias", b"_alias"]) -> typing_extensions.Literal["alias"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const",b"_const"]) -> typing.Optional[typing_extensions.Literal["const"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_const", b"_const"]) -> typing_extensions.Literal["const"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description",b"_description"]) -> typing.Optional[typing_extensions.Literal["description"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_description", b"_description"]) -> typing_extensions.Literal["description"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable",b"_enable"]) -> typing.Optional[typing_extensions.Literal["enable"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_enable", b"_enable"]) -> typing_extensions.Literal["enable"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field",b"_field"]) -> typing.Optional[typing_extensions.Literal["field"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_field", b"_field"]) -> typing_extensions.Literal["field"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge",b"_ge"]) -> typing.Optional[typing_extensions.Literal["ge"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_ge", b"_ge"]) -> typing_extensions.Literal["ge"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt",b"_gt"]) -> typing.Optional[typing_extensions.Literal["gt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt", b"_gt"]) -> typing_extensions.Literal["gt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt_now",b"_gt_now"]) -> typing.Optional[typing_extensions.Literal["gt_now"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_gt_now", b"_gt_now"]) -> typing_extensions.Literal["gt_now"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le",b"_le"]) -> typing.Optional[typing_extensions.Literal["le"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_le", b"_le"]) -> typing_extensions.Literal["le"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt",b"_lt"]) -> typing.Optional[typing_extensions.Literal["lt"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt", b"_lt"]) -> typing_extensions.Literal["lt"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt_now",b"_lt_now"]) -> typing.Optional[typing_extensions.Literal["lt_now"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_lt_now", b"_lt_now"]) -> typing_extensions.Literal["lt_now"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title",b"_title"]) -> typing.Optional[typing_extensions.Literal["title"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_title", b"_title"]) -> typing_extensions.Literal["title"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type",b"_type"]) -> typing.Optional[typing_extensions.Literal["type"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_type", b"_type"]) -> typing_extensions.Literal["type"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["_within",b"_within"]) -> typing.Optional[typing_extensions.Literal["within"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["_within", b"_within"]) -> typing_extensions.Literal["within"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config",b"default_config"]) -> typing.Optional[typing_extensions.Literal["default","default_factory","miss_default"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["default_config", b"default_config"]) -> typing_extensions.Literal["default", "default_factory", "miss_default"] | None: ...
+     @typing.overload
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config",b"example_config"]) -> typing.Optional[typing_extensions.Literal["example","example_factory"]]: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["example_config", b"example_config"]) -> typing_extensions.Literal["example", "example_factory"] | None: ...
++
+ global___TimestampRules = TimestampRules
+ 
+ IGNORED_FIELD_NUMBER: builtins.int
+ REQUIRED_FIELD_NUMBER: builtins.int
+ RULES_FIELD_NUMBER: builtins.int
+ ignored: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.MessageOptions, builtins.bool]
+ """Ignore skips generation of validation methods for this message."""
+-
+ required: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.OneofOptions, builtins.bool]
+ """Required ensures that exactly one the field options in a oneof is set;
+ validation fails if no fields in the oneof are set.
+ """
+-
+ rules: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FieldOptions, global___FieldRules]
+ """Rules specify the validations to be performed on this field. By default,
+ no validation is performed against a field.
+ """
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2.py` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ # -*- coding: utf-8 -*-
+ # Generated by the protocol buffer compiler.  DO NOT EDIT!
+-# source: protobuf_to_pydantic/protos/validate.proto
++# source: protos/validate.proto
+ """Generated protocol buffer code."""
+ from google.protobuf.internal import enum_type_wrapper
+ from google.protobuf import descriptor as _descriptor
+ from google.protobuf import message as _message
+ from google.protobuf import reflection as _reflection
+ from google.protobuf import symbol_database as _symbol_database
+ # @@protoc_insertion_point(imports)
+@@ -14,20 +14,20 @@
+ 
+ from google.protobuf import descriptor_pb2 as google_dot_protobuf_dot_descriptor__pb2
+ from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+ from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+ 
+ 
+ DESCRIPTOR = _descriptor.FileDescriptor(
+-  name='protobuf_to_pydantic/protos/validate.proto',
++  name='protos/validate.proto',
+   package='validate',
+   syntax='proto2',
+   serialized_options=b'\n\032io.envoyproxy.pgv.validateZ2github.com/envoyproxy/protoc-gen-validate/validate',
+   create_key=_descriptor._internal_create_key,
+-  serialized_pb=b'\n*protobuf_to_pydantic/protos/validate.proto\x12\x08validate\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x98\x07\n\nFieldRules\x12\'\n\x07message\x18\x11 \x01(\x0b\x32\x16.validate.MessageRules\x12%\n\x05\x66loat\x18\x01 \x01(\x0b\x32\x14.validate.FloatRulesH\x00\x12\'\n\x06\x64ouble\x18\x02 \x01(\x0b\x32\x15.validate.DoubleRulesH\x00\x12%\n\x05int32\x18\x03 \x01(\x0b\x32\x14.validate.Int32RulesH\x00\x12%\n\x05int64\x18\x04 \x01(\x0b\x32\x14.validate.Int64RulesH\x00\x12\'\n\x06uint32\x18\x05 \x01(\x0b\x32\x15.validate.UInt32RulesH\x00\x12\'\n\x06uint64\x18\x06 \x01(\x0b\x32\x15.validate.UInt64RulesH\x00\x12\'\n\x06sint32\x18\x07 \x01(\x0b\x32\x15.validate.SInt32RulesH\x00\x12\'\n\x06sint64\x18\x08 \x01(\x0b\x32\x15.validate.SInt64RulesH\x00\x12)\n\x07\x66ixed32\x18\t \x01(\x0b\x32\x16.validate.Fixed32RulesH\x00\x12)\n\x07\x66ixed64\x18\n \x01(\x0b\x32\x16.validate.Fixed64RulesH\x00\x12+\n\x08sfixed32\x18\x0b \x01(\x0b\x32\x17.validate.SFixed32RulesH\x00\x12+\n\x08sfixed64\x18\x0c \x01(\x0b\x32\x17.validate.SFixed64RulesH\x00\x12#\n\x04\x62ool\x18\r \x01(\x0b\x32\x13.validate.BoolRulesH\x00\x12\'\n\x06string\x18\x0e \x01(\x0b\x32\x15.validate.StringRulesH\x00\x12%\n\x05\x62ytes\x18\x0f \x01(\x0b\x32\x14.validate.BytesRulesH\x00\x12#\n\x04\x65num\x18\x10 \x01(\x0b\x32\x13.validate.EnumRulesH\x00\x12+\n\x08repeated\x18\x12 \x01(\x0b\x32\x17.validate.RepeatedRulesH\x00\x12!\n\x03map\x18\x13 \x01(\x0b\x32\x12.validate.MapRulesH\x00\x12!\n\x03\x61ny\x18\x14 \x01(\x0b\x32\x12.validate.AnyRulesH\x00\x12+\n\x08\x64uration\x18\x15 \x01(\x0b\x32\x17.validate.DurationRulesH\x00\x12-\n\ttimestamp\x18\x16 \x01(\x0b\x32\x18.validate.TimestampRulesH\x00\x42\x06\n\x04type\"\x7f\n\nFloatRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x02\x12\n\n\x02lt\x18\x02 \x01(\x02\x12\x0b\n\x03lte\x18\x03 \x01(\x02\x12\n\n\x02gt\x18\x04 \x01(\x02\x12\x0b\n\x03gte\x18\x05 \x01(\x02\x12\n\n\x02in\x18\x06 \x03(\x02\x12\x0e\n\x06not_in\x18\x07 \x03(\x02\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0b\x44oubleRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x01\x12\n\n\x02lt\x18\x02 \x01(\x01\x12\x0b\n\x03lte\x18\x03 \x01(\x01\x12\n\n\x02gt\x18\x04 \x01(\x01\x12\x0b\n\x03gte\x18\x05 \x01(\x01\x12\n\n\x02in\x18\x06 \x03(\x01\x12\x0e\n\x06not_in\x18\x07 \x03(\x01\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x7f\n\nInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x05\x12\n\n\x02lt\x18\x02 \x01(\x05\x12\x0b\n\x03lte\x18\x03 \x01(\x05\x12\n\n\x02gt\x18\x04 \x01(\x05\x12\x0b\n\x03gte\x18\x05 \x01(\x05\x12\n\n\x02in\x18\x06 \x03(\x05\x12\x0e\n\x06not_in\x18\x07 \x03(\x05\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x7f\n\nInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x03\x12\n\n\x02lt\x18\x02 \x01(\x03\x12\x0b\n\x03lte\x18\x03 \x01(\x03\x12\n\n\x02gt\x18\x04 \x01(\x03\x12\x0b\n\x03gte\x18\x05 \x01(\x03\x12\n\n\x02in\x18\x06 \x03(\x03\x12\x0e\n\x06not_in\x18\x07 \x03(\x03\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bUInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\r\x12\n\n\x02lt\x18\x02 \x01(\r\x12\x0b\n\x03lte\x18\x03 \x01(\r\x12\n\n\x02gt\x18\x04 \x01(\r\x12\x0b\n\x03gte\x18\x05 \x01(\r\x12\n\n\x02in\x18\x06 \x03(\r\x12\x0e\n\x06not_in\x18\x07 \x03(\r\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bUInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x04\x12\n\n\x02lt\x18\x02 \x01(\x04\x12\x0b\n\x03lte\x18\x03 \x01(\x04\x12\n\n\x02gt\x18\x04 \x01(\x04\x12\x0b\n\x03gte\x18\x05 \x01(\x04\x12\n\n\x02in\x18\x06 \x03(\x04\x12\x0e\n\x06not_in\x18\x07 \x03(\x04\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bSInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x11\x12\n\n\x02lt\x18\x02 \x01(\x11\x12\x0b\n\x03lte\x18\x03 \x01(\x11\x12\n\n\x02gt\x18\x04 \x01(\x11\x12\x0b\n\x03gte\x18\x05 \x01(\x11\x12\n\n\x02in\x18\x06 \x03(\x11\x12\x0e\n\x06not_in\x18\x07 \x03(\x11\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bSInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x12\x12\n\n\x02lt\x18\x02 \x01(\x12\x12\x0b\n\x03lte\x18\x03 \x01(\x12\x12\n\n\x02gt\x18\x04 \x01(\x12\x12\x0b\n\x03gte\x18\x05 \x01(\x12\x12\n\n\x02in\x18\x06 \x03(\x12\x12\x0e\n\x06not_in\x18\x07 \x03(\x12\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x81\x01\n\x0c\x46ixed32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x07\x12\n\n\x02lt\x18\x02 \x01(\x07\x12\x0b\n\x03lte\x18\x03 \x01(\x07\x12\n\n\x02gt\x18\x04 \x01(\x07\x12\x0b\n\x03gte\x18\x05 \x01(\x07\x12\n\n\x02in\x18\x06 \x03(\x07\x12\x0e\n\x06not_in\x18\x07 \x03(\x07\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x81\x01\n\x0c\x46ixed64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x06\x12\n\n\x02lt\x18\x02 \x01(\x06\x12\x0b\n\x03lte\x18\x03 \x01(\x06\x12\n\n\x02gt\x18\x04 \x01(\x06\x12\x0b\n\x03gte\x18\x05 \x01(\x06\x12\n\n\x02in\x18\x06 \x03(\x06\x12\x0e\n\x06not_in\x18\x07 \x03(\x06\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x82\x01\n\rSFixed32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x0f\x12\n\n\x02lt\x18\x02 \x01(\x0f\x12\x0b\n\x03lte\x18\x03 \x01(\x0f\x12\n\n\x02gt\x18\x04 \x01(\x0f\x12\x0b\n\x03gte\x18\x05 \x01(\x0f\x12\n\n\x02in\x18\x06 \x03(\x0f\x12\x0e\n\x06not_in\x18\x07 \x03(\x0f\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x82\x01\n\rSFixed64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x10\x12\n\n\x02lt\x18\x02 \x01(\x10\x12\x0b\n\x03lte\x18\x03 \x01(\x10\x12\n\n\x02gt\x18\x04 \x01(\x10\x12\x0b\n\x03gte\x18\x05 \x01(\x10\x12\n\n\x02in\x18\x06 \x03(\x10\x12\x0e\n\x06not_in\x18\x07 \x03(\x10\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x1a\n\tBoolRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x08\"\xfd\x03\n\x0bStringRules\x12\r\n\x05\x63onst\x18\x01 \x01(\t\x12\x0b\n\x03len\x18\x13 \x01(\x04\x12\x0f\n\x07min_len\x18\x02 \x01(\x04\x12\x0f\n\x07max_len\x18\x03 \x01(\x04\x12\x11\n\tlen_bytes\x18\x14 \x01(\x04\x12\x11\n\tmin_bytes\x18\x04 \x01(\x04\x12\x11\n\tmax_bytes\x18\x05 \x01(\x04\x12\x0f\n\x07pattern\x18\x06 \x01(\t\x12\x0e\n\x06prefix\x18\x07 \x01(\t\x12\x0e\n\x06suffix\x18\x08 \x01(\t\x12\x10\n\x08\x63ontains\x18\t \x01(\t\x12\x14\n\x0cnot_contains\x18\x17 \x01(\t\x12\n\n\x02in\x18\n \x03(\t\x12\x0e\n\x06not_in\x18\x0b \x03(\t\x12\x0f\n\x05\x65mail\x18\x0c \x01(\x08H\x00\x12\x12\n\x08hostname\x18\r \x01(\x08H\x00\x12\x0c\n\x02ip\x18\x0e \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0f \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x10 \x01(\x08H\x00\x12\r\n\x03uri\x18\x11 \x01(\x08H\x00\x12\x11\n\x07uri_ref\x18\x12 \x01(\x08H\x00\x12\x11\n\x07\x61\x64\x64ress\x18\x15 \x01(\x08H\x00\x12\x0e\n\x04uuid\x18\x16 \x01(\x08H\x00\x12\x30\n\x10well_known_regex\x18\x18 \x01(\x0e\x32\x14.validate.KnownRegexH\x00\x12\x14\n\x06strict\x18\x19 \x01(\x08:\x04true\x12\x14\n\x0cignore_empty\x18\x1a \x01(\x08\x42\x0c\n\nwell_known\"\xfb\x01\n\nBytesRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x0c\x12\x0b\n\x03len\x18\r \x01(\x04\x12\x0f\n\x07min_len\x18\x02 \x01(\x04\x12\x0f\n\x07max_len\x18\x03 \x01(\x04\x12\x0f\n\x07pattern\x18\x04 \x01(\t\x12\x0e\n\x06prefix\x18\x05 \x01(\x0c\x12\x0e\n\x06suffix\x18\x06 \x01(\x0c\x12\x10\n\x08\x63ontains\x18\x07 \x01(\x0c\x12\n\n\x02in\x18\x08 \x03(\x0c\x12\x0e\n\x06not_in\x18\t \x03(\x0c\x12\x0c\n\x02ip\x18\n \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0b \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x0c \x01(\x08H\x00\x12\x14\n\x0cignore_empty\x18\x0e \x01(\x08\x42\x0c\n\nwell_known\"L\n\tEnumRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x05\x12\x14\n\x0c\x64\x65\x66ined_only\x18\x02 \x01(\x08\x12\n\n\x02in\x18\x03 \x03(\x05\x12\x0e\n\x06not_in\x18\x04 \x03(\x05\".\n\x0cMessageRules\x12\x0c\n\x04skip\x18\x01 \x01(\x08\x12\x10\n\x08required\x18\x02 \x01(\x08\"\x80\x01\n\rRepeatedRules\x12\x11\n\tmin_items\x18\x01 \x01(\x04\x12\x11\n\tmax_items\x18\x02 \x01(\x04\x12\x0e\n\x06unique\x18\x03 \x01(\x08\x12#\n\x05items\x18\x04 \x01(\x0b\x32\x14.validate.FieldRules\x12\x14\n\x0cignore_empty\x18\x05 \x01(\x08\"\xa3\x01\n\x08MapRules\x12\x11\n\tmin_pairs\x18\x01 \x01(\x04\x12\x11\n\tmax_pairs\x18\x02 \x01(\x04\x12\x11\n\tno_sparse\x18\x03 \x01(\x08\x12\"\n\x04keys\x18\x04 \x01(\x0b\x32\x14.validate.FieldRules\x12$\n\x06values\x18\x05 \x01(\x0b\x32\x14.validate.FieldRules\x12\x14\n\x0cignore_empty\x18\x06 \x01(\x08\"8\n\x08\x41nyRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12\n\n\x02in\x18\x02 \x03(\t\x12\x0e\n\x06not_in\x18\x03 \x03(\t\"\xbb\x02\n\rDurationRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12(\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02lt\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03lte\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02gt\x18\x05 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03gte\x18\x06 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02in\x18\x07 \x03(\x0b\x32\x19.google.protobuf.Duration\x12)\n\x06not_in\x18\x08 \x03(\x0b\x32\x19.google.protobuf.Duration\"\xba\x02\n\x0eTimestampRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12)\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12&\n\x02lt\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x03lte\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12&\n\x02gt\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x03gte\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06lt_now\x18\x07 \x01(\x08\x12\x0e\n\x06gt_now\x18\x08 \x01(\x08\x12)\n\x06within\x18\t \x01(\x0b\x32\x19.google.protobuf.Duration*F\n\nKnownRegex\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x14\n\x10HTTP_HEADER_NAME\x10\x01\x12\x15\n\x11HTTP_HEADER_VALUE\x10\x02:2\n\x08\x64isabled\x12\x1f.google.protobuf.MessageOptions\x18\xaf\x08 \x01(\x08:1\n\x07ignored\x12\x1f.google.protobuf.MessageOptions\x18\xb0\x08 \x01(\x08:0\n\x08required\x12\x1d.google.protobuf.OneofOptions\x18\xaf\x08 \x01(\x08:C\n\x05rules\x12\x1d.google.protobuf.FieldOptions\x18\xaf\x08 \x01(\x0b\x32\x14.validate.FieldRulesBP\n\x1aio.envoyproxy.pgv.validateZ2github.com/envoyproxy/protoc-gen-validate/validate'
++  serialized_pb=b'\n\x15protos/validate.proto\x12\x08validate\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x98\x07\n\nFieldRules\x12\'\n\x07message\x18\x11 \x01(\x0b\x32\x16.validate.MessageRules\x12%\n\x05\x66loat\x18\x01 \x01(\x0b\x32\x14.validate.FloatRulesH\x00\x12\'\n\x06\x64ouble\x18\x02 \x01(\x0b\x32\x15.validate.DoubleRulesH\x00\x12%\n\x05int32\x18\x03 \x01(\x0b\x32\x14.validate.Int32RulesH\x00\x12%\n\x05int64\x18\x04 \x01(\x0b\x32\x14.validate.Int64RulesH\x00\x12\'\n\x06uint32\x18\x05 \x01(\x0b\x32\x15.validate.UInt32RulesH\x00\x12\'\n\x06uint64\x18\x06 \x01(\x0b\x32\x15.validate.UInt64RulesH\x00\x12\'\n\x06sint32\x18\x07 \x01(\x0b\x32\x15.validate.SInt32RulesH\x00\x12\'\n\x06sint64\x18\x08 \x01(\x0b\x32\x15.validate.SInt64RulesH\x00\x12)\n\x07\x66ixed32\x18\t \x01(\x0b\x32\x16.validate.Fixed32RulesH\x00\x12)\n\x07\x66ixed64\x18\n \x01(\x0b\x32\x16.validate.Fixed64RulesH\x00\x12+\n\x08sfixed32\x18\x0b \x01(\x0b\x32\x17.validate.SFixed32RulesH\x00\x12+\n\x08sfixed64\x18\x0c \x01(\x0b\x32\x17.validate.SFixed64RulesH\x00\x12#\n\x04\x62ool\x18\r \x01(\x0b\x32\x13.validate.BoolRulesH\x00\x12\'\n\x06string\x18\x0e \x01(\x0b\x32\x15.validate.StringRulesH\x00\x12%\n\x05\x62ytes\x18\x0f \x01(\x0b\x32\x14.validate.BytesRulesH\x00\x12#\n\x04\x65num\x18\x10 \x01(\x0b\x32\x13.validate.EnumRulesH\x00\x12+\n\x08repeated\x18\x12 \x01(\x0b\x32\x17.validate.RepeatedRulesH\x00\x12!\n\x03map\x18\x13 \x01(\x0b\x32\x12.validate.MapRulesH\x00\x12!\n\x03\x61ny\x18\x14 \x01(\x0b\x32\x12.validate.AnyRulesH\x00\x12+\n\x08\x64uration\x18\x15 \x01(\x0b\x32\x17.validate.DurationRulesH\x00\x12-\n\ttimestamp\x18\x16 \x01(\x0b\x32\x18.validate.TimestampRulesH\x00\x42\x06\n\x04type\"\x7f\n\nFloatRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x02\x12\n\n\x02lt\x18\x02 \x01(\x02\x12\x0b\n\x03lte\x18\x03 \x01(\x02\x12\n\n\x02gt\x18\x04 \x01(\x02\x12\x0b\n\x03gte\x18\x05 \x01(\x02\x12\n\n\x02in\x18\x06 \x03(\x02\x12\x0e\n\x06not_in\x18\x07 \x03(\x02\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0b\x44oubleRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x01\x12\n\n\x02lt\x18\x02 \x01(\x01\x12\x0b\n\x03lte\x18\x03 \x01(\x01\x12\n\n\x02gt\x18\x04 \x01(\x01\x12\x0b\n\x03gte\x18\x05 \x01(\x01\x12\n\n\x02in\x18\x06 \x03(\x01\x12\x0e\n\x06not_in\x18\x07 \x03(\x01\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x7f\n\nInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x05\x12\n\n\x02lt\x18\x02 \x01(\x05\x12\x0b\n\x03lte\x18\x03 \x01(\x05\x12\n\n\x02gt\x18\x04 \x01(\x05\x12\x0b\n\x03gte\x18\x05 \x01(\x05\x12\n\n\x02in\x18\x06 \x03(\x05\x12\x0e\n\x06not_in\x18\x07 \x03(\x05\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x7f\n\nInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x03\x12\n\n\x02lt\x18\x02 \x01(\x03\x12\x0b\n\x03lte\x18\x03 \x01(\x03\x12\n\n\x02gt\x18\x04 \x01(\x03\x12\x0b\n\x03gte\x18\x05 \x01(\x03\x12\n\n\x02in\x18\x06 \x03(\x03\x12\x0e\n\x06not_in\x18\x07 \x03(\x03\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bUInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\r\x12\n\n\x02lt\x18\x02 \x01(\r\x12\x0b\n\x03lte\x18\x03 \x01(\r\x12\n\n\x02gt\x18\x04 \x01(\r\x12\x0b\n\x03gte\x18\x05 \x01(\r\x12\n\n\x02in\x18\x06 \x03(\r\x12\x0e\n\x06not_in\x18\x07 \x03(\r\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bUInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x04\x12\n\n\x02lt\x18\x02 \x01(\x04\x12\x0b\n\x03lte\x18\x03 \x01(\x04\x12\n\n\x02gt\x18\x04 \x01(\x04\x12\x0b\n\x03gte\x18\x05 \x01(\x04\x12\n\n\x02in\x18\x06 \x03(\x04\x12\x0e\n\x06not_in\x18\x07 \x03(\x04\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bSInt32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x11\x12\n\n\x02lt\x18\x02 \x01(\x11\x12\x0b\n\x03lte\x18\x03 \x01(\x11\x12\n\n\x02gt\x18\x04 \x01(\x11\x12\x0b\n\x03gte\x18\x05 \x01(\x11\x12\n\n\x02in\x18\x06 \x03(\x11\x12\x0e\n\x06not_in\x18\x07 \x03(\x11\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x80\x01\n\x0bSInt64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x12\x12\n\n\x02lt\x18\x02 \x01(\x12\x12\x0b\n\x03lte\x18\x03 \x01(\x12\x12\n\n\x02gt\x18\x04 \x01(\x12\x12\x0b\n\x03gte\x18\x05 \x01(\x12\x12\n\n\x02in\x18\x06 \x03(\x12\x12\x0e\n\x06not_in\x18\x07 \x03(\x12\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x81\x01\n\x0c\x46ixed32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x07\x12\n\n\x02lt\x18\x02 \x01(\x07\x12\x0b\n\x03lte\x18\x03 \x01(\x07\x12\n\n\x02gt\x18\x04 \x01(\x07\x12\x0b\n\x03gte\x18\x05 \x01(\x07\x12\n\n\x02in\x18\x06 \x03(\x07\x12\x0e\n\x06not_in\x18\x07 \x03(\x07\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x81\x01\n\x0c\x46ixed64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x06\x12\n\n\x02lt\x18\x02 \x01(\x06\x12\x0b\n\x03lte\x18\x03 \x01(\x06\x12\n\n\x02gt\x18\x04 \x01(\x06\x12\x0b\n\x03gte\x18\x05 \x01(\x06\x12\n\n\x02in\x18\x06 \x03(\x06\x12\x0e\n\x06not_in\x18\x07 \x03(\x06\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x82\x01\n\rSFixed32Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x0f\x12\n\n\x02lt\x18\x02 \x01(\x0f\x12\x0b\n\x03lte\x18\x03 \x01(\x0f\x12\n\n\x02gt\x18\x04 \x01(\x0f\x12\x0b\n\x03gte\x18\x05 \x01(\x0f\x12\n\n\x02in\x18\x06 \x03(\x0f\x12\x0e\n\x06not_in\x18\x07 \x03(\x0f\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x82\x01\n\rSFixed64Rules\x12\r\n\x05\x63onst\x18\x01 \x01(\x10\x12\n\n\x02lt\x18\x02 \x01(\x10\x12\x0b\n\x03lte\x18\x03 \x01(\x10\x12\n\n\x02gt\x18\x04 \x01(\x10\x12\x0b\n\x03gte\x18\x05 \x01(\x10\x12\n\n\x02in\x18\x06 \x03(\x10\x12\x0e\n\x06not_in\x18\x07 \x03(\x10\x12\x14\n\x0cignore_empty\x18\x08 \x01(\x08\"\x1a\n\tBoolRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x08\"\xfd\x03\n\x0bStringRules\x12\r\n\x05\x63onst\x18\x01 \x01(\t\x12\x0b\n\x03len\x18\x13 \x01(\x04\x12\x0f\n\x07min_len\x18\x02 \x01(\x04\x12\x0f\n\x07max_len\x18\x03 \x01(\x04\x12\x11\n\tlen_bytes\x18\x14 \x01(\x04\x12\x11\n\tmin_bytes\x18\x04 \x01(\x04\x12\x11\n\tmax_bytes\x18\x05 \x01(\x04\x12\x0f\n\x07pattern\x18\x06 \x01(\t\x12\x0e\n\x06prefix\x18\x07 \x01(\t\x12\x0e\n\x06suffix\x18\x08 \x01(\t\x12\x10\n\x08\x63ontains\x18\t \x01(\t\x12\x14\n\x0cnot_contains\x18\x17 \x01(\t\x12\n\n\x02in\x18\n \x03(\t\x12\x0e\n\x06not_in\x18\x0b \x03(\t\x12\x0f\n\x05\x65mail\x18\x0c \x01(\x08H\x00\x12\x12\n\x08hostname\x18\r \x01(\x08H\x00\x12\x0c\n\x02ip\x18\x0e \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0f \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x10 \x01(\x08H\x00\x12\r\n\x03uri\x18\x11 \x01(\x08H\x00\x12\x11\n\x07uri_ref\x18\x12 \x01(\x08H\x00\x12\x11\n\x07\x61\x64\x64ress\x18\x15 \x01(\x08H\x00\x12\x0e\n\x04uuid\x18\x16 \x01(\x08H\x00\x12\x30\n\x10well_known_regex\x18\x18 \x01(\x0e\x32\x14.validate.KnownRegexH\x00\x12\x14\n\x06strict\x18\x19 \x01(\x08:\x04true\x12\x14\n\x0cignore_empty\x18\x1a \x01(\x08\x42\x0c\n\nwell_known\"\xfb\x01\n\nBytesRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x0c\x12\x0b\n\x03len\x18\r \x01(\x04\x12\x0f\n\x07min_len\x18\x02 \x01(\x04\x12\x0f\n\x07max_len\x18\x03 \x01(\x04\x12\x0f\n\x07pattern\x18\x04 \x01(\t\x12\x0e\n\x06prefix\x18\x05 \x01(\x0c\x12\x0e\n\x06suffix\x18\x06 \x01(\x0c\x12\x10\n\x08\x63ontains\x18\x07 \x01(\x0c\x12\n\n\x02in\x18\x08 \x03(\x0c\x12\x0e\n\x06not_in\x18\t \x03(\x0c\x12\x0c\n\x02ip\x18\n \x01(\x08H\x00\x12\x0e\n\x04ipv4\x18\x0b \x01(\x08H\x00\x12\x0e\n\x04ipv6\x18\x0c \x01(\x08H\x00\x12\x14\n\x0cignore_empty\x18\x0e \x01(\x08\x42\x0c\n\nwell_known\"L\n\tEnumRules\x12\r\n\x05\x63onst\x18\x01 \x01(\x05\x12\x14\n\x0c\x64\x65\x66ined_only\x18\x02 \x01(\x08\x12\n\n\x02in\x18\x03 \x03(\x05\x12\x0e\n\x06not_in\x18\x04 \x03(\x05\".\n\x0cMessageRules\x12\x0c\n\x04skip\x18\x01 \x01(\x08\x12\x10\n\x08required\x18\x02 \x01(\x08\"\x80\x01\n\rRepeatedRules\x12\x11\n\tmin_items\x18\x01 \x01(\x04\x12\x11\n\tmax_items\x18\x02 \x01(\x04\x12\x0e\n\x06unique\x18\x03 \x01(\x08\x12#\n\x05items\x18\x04 \x01(\x0b\x32\x14.validate.FieldRules\x12\x14\n\x0cignore_empty\x18\x05 \x01(\x08\"\xa3\x01\n\x08MapRules\x12\x11\n\tmin_pairs\x18\x01 \x01(\x04\x12\x11\n\tmax_pairs\x18\x02 \x01(\x04\x12\x11\n\tno_sparse\x18\x03 \x01(\x08\x12\"\n\x04keys\x18\x04 \x01(\x0b\x32\x14.validate.FieldRules\x12$\n\x06values\x18\x05 \x01(\x0b\x32\x14.validate.FieldRules\x12\x14\n\x0cignore_empty\x18\x06 \x01(\x08\"8\n\x08\x41nyRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12\n\n\x02in\x18\x02 \x03(\t\x12\x0e\n\x06not_in\x18\x03 \x03(\t\"\xbb\x02\n\rDurationRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12(\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02lt\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03lte\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02gt\x18\x05 \x01(\x0b\x32\x19.google.protobuf.Duration\x12&\n\x03gte\x18\x06 \x01(\x0b\x32\x19.google.protobuf.Duration\x12%\n\x02in\x18\x07 \x03(\x0b\x32\x19.google.protobuf.Duration\x12)\n\x06not_in\x18\x08 \x03(\x0b\x32\x19.google.protobuf.Duration\"\xba\x02\n\x0eTimestampRules\x12\x10\n\x08required\x18\x01 \x01(\x08\x12)\n\x05\x63onst\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12&\n\x02lt\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x03lte\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12&\n\x02gt\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\'\n\x03gte\x18\x06 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0e\n\x06lt_now\x18\x07 \x01(\x08\x12\x0e\n\x06gt_now\x18\x08 \x01(\x08\x12)\n\x06within\x18\t \x01(\x0b\x32\x19.google.protobuf.Duration*F\n\nKnownRegex\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x14\n\x10HTTP_HEADER_NAME\x10\x01\x12\x15\n\x11HTTP_HEADER_VALUE\x10\x02:2\n\x08\x64isabled\x12\x1f.google.protobuf.MessageOptions\x18\xaf\x08 \x01(\x08:1\n\x07ignored\x12\x1f.google.protobuf.MessageOptions\x18\xb0\x08 \x01(\x08:0\n\x08required\x12\x1d.google.protobuf.OneofOptions\x18\xaf\x08 \x01(\x08:C\n\x05rules\x12\x1d.google.protobuf.FieldOptions\x18\xaf\x08 \x01(\x0b\x32\x14.validate.FieldRulesBP\n\x1aio.envoyproxy.pgv.validateZ2github.com/envoyproxy/protoc-gen-validate/validate'
+   ,
+   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+ 
+ _KNOWNREGEX = _descriptor.EnumDescriptor(
+   name='KnownRegex',
+   full_name='validate.KnownRegex',
+   filename=None,
+@@ -48,16 +48,16 @@
+       name='HTTP_HEADER_VALUE', index=2, number=2,
+       serialized_options=None,
+       type=None,
+       create_key=_descriptor._internal_create_key),
+   ],
+   containing_type=None,
+   serialized_options=None,
+-  serialized_start=4560,
+-  serialized_end=4630,
++  serialized_start=4539,
++  serialized_end=4609,
+ )
+ _sym_db.RegisterEnumDescriptor(_KNOWNREGEX)
+ 
+ KnownRegex = enum_type_wrapper.EnumTypeWrapper(_KNOWNREGEX)
+ UNKNOWN = 0
+ HTTP_HEADER_NAME = 1
+ HTTP_HEADER_VALUE = 2
+@@ -271,16 +271,16 @@
+   oneofs=[
+     _descriptor.OneofDescriptor(
+       name='type', full_name='validate.FieldRules.type',
+       index=0, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=156,
+-  serialized_end=1076,
++  serialized_start=135,
++  serialized_end=1055,
+ )
+ 
+ 
+ _FLOATRULES = _descriptor.Descriptor(
+   name='FloatRules',
+   full_name='validate.FloatRules',
+   filename=None,
+@@ -352,16 +352,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1078,
+-  serialized_end=1205,
++  serialized_start=1057,
++  serialized_end=1184,
+ )
+ 
+ 
+ _DOUBLERULES = _descriptor.Descriptor(
+   name='DoubleRules',
+   full_name='validate.DoubleRules',
+   filename=None,
+@@ -433,16 +433,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1208,
+-  serialized_end=1336,
++  serialized_start=1187,
++  serialized_end=1315,
+ )
+ 
+ 
+ _INT32RULES = _descriptor.Descriptor(
+   name='Int32Rules',
+   full_name='validate.Int32Rules',
+   filename=None,
+@@ -514,16 +514,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1338,
+-  serialized_end=1465,
++  serialized_start=1317,
++  serialized_end=1444,
+ )
+ 
+ 
+ _INT64RULES = _descriptor.Descriptor(
+   name='Int64Rules',
+   full_name='validate.Int64Rules',
+   filename=None,
+@@ -595,16 +595,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1467,
+-  serialized_end=1594,
++  serialized_start=1446,
++  serialized_end=1573,
+ )
+ 
+ 
+ _UINT32RULES = _descriptor.Descriptor(
+   name='UInt32Rules',
+   full_name='validate.UInt32Rules',
+   filename=None,
+@@ -676,16 +676,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1597,
+-  serialized_end=1725,
++  serialized_start=1576,
++  serialized_end=1704,
+ )
+ 
+ 
+ _UINT64RULES = _descriptor.Descriptor(
+   name='UInt64Rules',
+   full_name='validate.UInt64Rules',
+   filename=None,
+@@ -757,16 +757,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1728,
+-  serialized_end=1856,
++  serialized_start=1707,
++  serialized_end=1835,
+ )
+ 
+ 
+ _SINT32RULES = _descriptor.Descriptor(
+   name='SInt32Rules',
+   full_name='validate.SInt32Rules',
+   filename=None,
+@@ -838,16 +838,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1859,
+-  serialized_end=1987,
++  serialized_start=1838,
++  serialized_end=1966,
+ )
+ 
+ 
+ _SINT64RULES = _descriptor.Descriptor(
+   name='SInt64Rules',
+   full_name='validate.SInt64Rules',
+   filename=None,
+@@ -919,16 +919,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=1990,
+-  serialized_end=2118,
++  serialized_start=1969,
++  serialized_end=2097,
+ )
+ 
+ 
+ _FIXED32RULES = _descriptor.Descriptor(
+   name='Fixed32Rules',
+   full_name='validate.Fixed32Rules',
+   filename=None,
+@@ -1000,16 +1000,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=2121,
+-  serialized_end=2250,
++  serialized_start=2100,
++  serialized_end=2229,
+ )
+ 
+ 
+ _FIXED64RULES = _descriptor.Descriptor(
+   name='Fixed64Rules',
+   full_name='validate.Fixed64Rules',
+   filename=None,
+@@ -1081,16 +1081,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=2253,
+-  serialized_end=2382,
++  serialized_start=2232,
++  serialized_end=2361,
+ )
+ 
+ 
+ _SFIXED32RULES = _descriptor.Descriptor(
+   name='SFixed32Rules',
+   full_name='validate.SFixed32Rules',
+   filename=None,
+@@ -1162,16 +1162,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=2385,
+-  serialized_end=2515,
++  serialized_start=2364,
++  serialized_end=2494,
+ )
+ 
+ 
+ _SFIXED64RULES = _descriptor.Descriptor(
+   name='SFixed64Rules',
+   full_name='validate.SFixed64Rules',
+   filename=None,
+@@ -1243,16 +1243,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=2518,
+-  serialized_end=2648,
++  serialized_start=2497,
++  serialized_end=2627,
+ )
+ 
+ 
+ _BOOLRULES = _descriptor.Descriptor(
+   name='BoolRules',
+   full_name='validate.BoolRules',
+   filename=None,
+@@ -1275,16 +1275,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=2650,
+-  serialized_end=2676,
++  serialized_start=2629,
++  serialized_end=2655,
+ )
+ 
+ 
+ _STRINGRULES = _descriptor.Descriptor(
+   name='StringRules',
+   full_name='validate.StringRules',
+   filename=None,
+@@ -1487,16 +1487,16 @@
+   oneofs=[
+     _descriptor.OneofDescriptor(
+       name='well_known', full_name='validate.StringRules.well_known',
+       index=0, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=2679,
+-  serialized_end=3188,
++  serialized_start=2658,
++  serialized_end=3167,
+ )
+ 
+ 
+ _BYTESRULES = _descriptor.Descriptor(
+   name='BytesRules',
+   full_name='validate.BytesRules',
+   filename=None,
+@@ -1615,16 +1615,16 @@
+   oneofs=[
+     _descriptor.OneofDescriptor(
+       name='well_known', full_name='validate.BytesRules.well_known',
+       index=0, containing_type=None,
+       create_key=_descriptor._internal_create_key,
+     fields=[]),
+   ],
+-  serialized_start=3191,
+-  serialized_end=3442,
++  serialized_start=3170,
++  serialized_end=3421,
+ )
+ 
+ 
+ _ENUMRULES = _descriptor.Descriptor(
+   name='EnumRules',
+   full_name='validate.EnumRules',
+   filename=None,
+@@ -1668,16 +1668,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3444,
+-  serialized_end=3520,
++  serialized_start=3423,
++  serialized_end=3499,
+ )
+ 
+ 
+ _MESSAGERULES = _descriptor.Descriptor(
+   name='MessageRules',
+   full_name='validate.MessageRules',
+   filename=None,
+@@ -1707,16 +1707,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3522,
+-  serialized_end=3568,
++  serialized_start=3501,
++  serialized_end=3547,
+ )
+ 
+ 
+ _REPEATEDRULES = _descriptor.Descriptor(
+   name='RepeatedRules',
+   full_name='validate.RepeatedRules',
+   filename=None,
+@@ -1767,16 +1767,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3571,
+-  serialized_end=3699,
++  serialized_start=3550,
++  serialized_end=3678,
+ )
+ 
+ 
+ _MAPRULES = _descriptor.Descriptor(
+   name='MapRules',
+   full_name='validate.MapRules',
+   filename=None,
+@@ -1834,16 +1834,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3702,
+-  serialized_end=3865,
++  serialized_start=3681,
++  serialized_end=3844,
+ )
+ 
+ 
+ _ANYRULES = _descriptor.Descriptor(
+   name='AnyRules',
+   full_name='validate.AnyRules',
+   filename=None,
+@@ -1880,16 +1880,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3867,
+-  serialized_end=3923,
++  serialized_start=3846,
++  serialized_end=3902,
+ )
+ 
+ 
+ _DURATIONRULES = _descriptor.Descriptor(
+   name='DurationRules',
+   full_name='validate.DurationRules',
+   filename=None,
+@@ -1961,16 +1961,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=3926,
+-  serialized_end=4241,
++  serialized_start=3905,
++  serialized_end=4220,
+ )
+ 
+ 
+ _TIMESTAMPRULES = _descriptor.Descriptor(
+   name='TimestampRules',
+   full_name='validate.TimestampRules',
+   filename=None,
+@@ -2049,16 +2049,16 @@
+   ],
+   serialized_options=None,
+   is_extendable=False,
+   syntax='proto2',
+   extension_ranges=[],
+   oneofs=[
+   ],
+-  serialized_start=4244,
+-  serialized_end=4558,
++  serialized_start=4223,
++  serialized_end=4537,
+ )
+ 
+ _FIELDRULES.fields_by_name['message'].message_type = _MESSAGERULES
+ _FIELDRULES.fields_by_name['float'].message_type = _FLOATRULES
+ _FIELDRULES.fields_by_name['double'].message_type = _DOUBLERULES
+ _FIELDRULES.fields_by_name['int32'].message_type = _INT32RULES
+ _FIELDRULES.fields_by_name['int64'].message_type = _INT64RULES
+@@ -2226,169 +2226,169 @@
+ DESCRIPTOR.extensions_by_name['ignored'] = ignored
+ DESCRIPTOR.extensions_by_name['required'] = required
+ DESCRIPTOR.extensions_by_name['rules'] = rules
+ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+ 
+ FieldRules = _reflection.GeneratedProtocolMessageType('FieldRules', (_message.Message,), {
+   'DESCRIPTOR' : _FIELDRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.FieldRules)
+   })
+ _sym_db.RegisterMessage(FieldRules)
+ 
+ FloatRules = _reflection.GeneratedProtocolMessageType('FloatRules', (_message.Message,), {
+   'DESCRIPTOR' : _FLOATRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.FloatRules)
+   })
+ _sym_db.RegisterMessage(FloatRules)
+ 
+ DoubleRules = _reflection.GeneratedProtocolMessageType('DoubleRules', (_message.Message,), {
+   'DESCRIPTOR' : _DOUBLERULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.DoubleRules)
+   })
+ _sym_db.RegisterMessage(DoubleRules)
+ 
+ Int32Rules = _reflection.GeneratedProtocolMessageType('Int32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _INT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.Int32Rules)
+   })
+ _sym_db.RegisterMessage(Int32Rules)
+ 
+ Int64Rules = _reflection.GeneratedProtocolMessageType('Int64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _INT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.Int64Rules)
+   })
+ _sym_db.RegisterMessage(Int64Rules)
+ 
+ UInt32Rules = _reflection.GeneratedProtocolMessageType('UInt32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _UINT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.UInt32Rules)
+   })
+ _sym_db.RegisterMessage(UInt32Rules)
+ 
+ UInt64Rules = _reflection.GeneratedProtocolMessageType('UInt64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _UINT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.UInt64Rules)
+   })
+ _sym_db.RegisterMessage(UInt64Rules)
+ 
+ SInt32Rules = _reflection.GeneratedProtocolMessageType('SInt32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SINT32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.SInt32Rules)
+   })
+ _sym_db.RegisterMessage(SInt32Rules)
+ 
+ SInt64Rules = _reflection.GeneratedProtocolMessageType('SInt64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SINT64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.SInt64Rules)
+   })
+ _sym_db.RegisterMessage(SInt64Rules)
+ 
+ Fixed32Rules = _reflection.GeneratedProtocolMessageType('Fixed32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _FIXED32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.Fixed32Rules)
+   })
+ _sym_db.RegisterMessage(Fixed32Rules)
+ 
+ Fixed64Rules = _reflection.GeneratedProtocolMessageType('Fixed64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _FIXED64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.Fixed64Rules)
+   })
+ _sym_db.RegisterMessage(Fixed64Rules)
+ 
+ SFixed32Rules = _reflection.GeneratedProtocolMessageType('SFixed32Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SFIXED32RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.SFixed32Rules)
+   })
+ _sym_db.RegisterMessage(SFixed32Rules)
+ 
+ SFixed64Rules = _reflection.GeneratedProtocolMessageType('SFixed64Rules', (_message.Message,), {
+   'DESCRIPTOR' : _SFIXED64RULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.SFixed64Rules)
+   })
+ _sym_db.RegisterMessage(SFixed64Rules)
+ 
+ BoolRules = _reflection.GeneratedProtocolMessageType('BoolRules', (_message.Message,), {
+   'DESCRIPTOR' : _BOOLRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.BoolRules)
+   })
+ _sym_db.RegisterMessage(BoolRules)
+ 
+ StringRules = _reflection.GeneratedProtocolMessageType('StringRules', (_message.Message,), {
+   'DESCRIPTOR' : _STRINGRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.StringRules)
+   })
+ _sym_db.RegisterMessage(StringRules)
+ 
+ BytesRules = _reflection.GeneratedProtocolMessageType('BytesRules', (_message.Message,), {
+   'DESCRIPTOR' : _BYTESRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.BytesRules)
+   })
+ _sym_db.RegisterMessage(BytesRules)
+ 
+ EnumRules = _reflection.GeneratedProtocolMessageType('EnumRules', (_message.Message,), {
+   'DESCRIPTOR' : _ENUMRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.EnumRules)
+   })
+ _sym_db.RegisterMessage(EnumRules)
+ 
+ MessageRules = _reflection.GeneratedProtocolMessageType('MessageRules', (_message.Message,), {
+   'DESCRIPTOR' : _MESSAGERULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.MessageRules)
+   })
+ _sym_db.RegisterMessage(MessageRules)
+ 
+ RepeatedRules = _reflection.GeneratedProtocolMessageType('RepeatedRules', (_message.Message,), {
+   'DESCRIPTOR' : _REPEATEDRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.RepeatedRules)
+   })
+ _sym_db.RegisterMessage(RepeatedRules)
+ 
+ MapRules = _reflection.GeneratedProtocolMessageType('MapRules', (_message.Message,), {
+   'DESCRIPTOR' : _MAPRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.MapRules)
+   })
+ _sym_db.RegisterMessage(MapRules)
+ 
+ AnyRules = _reflection.GeneratedProtocolMessageType('AnyRules', (_message.Message,), {
+   'DESCRIPTOR' : _ANYRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.AnyRules)
+   })
+ _sym_db.RegisterMessage(AnyRules)
+ 
+ DurationRules = _reflection.GeneratedProtocolMessageType('DurationRules', (_message.Message,), {
+   'DESCRIPTOR' : _DURATIONRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.DurationRules)
+   })
+ _sym_db.RegisterMessage(DurationRules)
+ 
+ TimestampRules = _reflection.GeneratedProtocolMessageType('TimestampRules', (_message.Message,), {
+   'DESCRIPTOR' : _TIMESTAMPRULES,
+-  '__module__' : 'protobuf_to_pydantic.protos.validate_pb2'
++  '__module__' : 'protos.validate_pb2'
+   # @@protoc_insertion_point(class_scope:validate.TimestampRules)
+   })
+ _sym_db.RegisterMessage(TimestampRules)
+ 
+ google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(disabled)
+ google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(ignored)
+ google_dot_protobuf_dot_descriptor__pb2.OneofOptions.RegisterExtension(required)
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/protobuf_to_pydantic/protos/validate_pb2.pyi` & `protobuf_to_pydantic-0.1.7/protobuf_to_pydantic/protos/old/protos/validate_pb2.pyi`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,56 +1,60 @@
+ """
+ @generated by mypy-protobuf.  Do not edit manually!
+ isort:skip_file
+ """
+ import builtins
++import collections.abc
+ import google.protobuf.descriptor
+ import google.protobuf.descriptor_pb2
+ import google.protobuf.duration_pb2
+ import google.protobuf.internal.containers
+ import google.protobuf.internal.enum_type_wrapper
+ import google.protobuf.internal.extension_dict
+ import google.protobuf.message
+ import google.protobuf.timestamp_pb2
++import sys
+ import typing
+-import typing_extensions
++
++if sys.version_info >= (3, 10):
++    import typing as typing_extensions
++else:
++    import typing_extensions
+ 
+ DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
+ 
+ class _KnownRegex:
+-    ValueType = typing.NewType('ValueType', builtins.int)
++    ValueType = typing.NewType("ValueType", builtins.int)
+     V: typing_extensions.TypeAlias = ValueType
+-class _KnownRegexEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[_KnownRegex.ValueType], builtins.type):
++
++class _KnownRegexEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[_KnownRegex.ValueType], builtins.type):  # noqa: F821
+     DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor
+     UNKNOWN: _KnownRegex.ValueType  # 0
+     HTTP_HEADER_NAME: _KnownRegex.ValueType  # 1
+     """HTTP header name as defined by RFC 7230."""
+-
+     HTTP_HEADER_VALUE: _KnownRegex.ValueType  # 2
+     """HTTP header value as defined by RFC 7230."""
+ 
+ class KnownRegex(_KnownRegex, metaclass=_KnownRegexEnumTypeWrapper):
+     """WellKnownRegex contain some well-known patterns."""
+-    pass
+ 
+ UNKNOWN: KnownRegex.ValueType  # 0
+ HTTP_HEADER_NAME: KnownRegex.ValueType  # 1
+ """HTTP header name as defined by RFC 7230."""
+-
+ HTTP_HEADER_VALUE: KnownRegex.ValueType  # 2
+ """HTTP header value as defined by RFC 7230."""
+-
+ global___KnownRegex = KnownRegex
+ 
+-
+ class FieldRules(google.protobuf.message.Message):
+     """FieldRules encapsulates the rules for each type of field. Depending on the
+     field, the correct set should be used to ensure proper validations.
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MESSAGE_FIELD_NUMBER: builtins.int
+     FLOAT_FIELD_NUMBER: builtins.int
+     DOUBLE_FIELD_NUMBER: builtins.int
+     INT32_FIELD_NUMBER: builtins.int
+     INT64_FIELD_NUMBER: builtins.int
+     UINT32_FIELD_NUMBER: builtins.int
+     UINT64_FIELD_NUMBER: builtins.int
+@@ -70,15 +74,14 @@
+     DURATION_FIELD_NUMBER: builtins.int
+     TIMESTAMP_FIELD_NUMBER: builtins.int
+     @property
+     def message(self) -> global___MessageRules: ...
+     @property
+     def float(self) -> global___FloatRules:
+         """Scalar Field Types"""
+-        pass
+     @property
+     def double(self) -> global___DoubleRules: ...
+     @property
+     def int32(self) -> global___Int32Rules: ...
+     @property
+     def int64(self) -> global___Int64Rules: ...
+     @property
+@@ -102,807 +105,776 @@
+     @property
+     def string(self) -> global___StringRules: ...
+     @property
+     def bytes(self) -> global___BytesRules: ...
+     @property
+     def enum(self) -> global___EnumRules:
+         """Complex Field Types"""
+-        pass
+     @property
+     def repeated(self) -> global___RepeatedRules: ...
+     @property
+     def map(self) -> global___MapRules: ...
+     @property
+     def any(self) -> global___AnyRules:
+         """Well-Known Field Types"""
+-        pass
+     @property
+     def duration(self) -> global___DurationRules: ...
+     @property
+     def timestamp(self) -> global___TimestampRules: ...
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        message: typing.Optional[global___MessageRules] = ...,
+-        float: typing.Optional[global___FloatRules] = ...,
+-        double: typing.Optional[global___DoubleRules] = ...,
+-        int32: typing.Optional[global___Int32Rules] = ...,
+-        int64: typing.Optional[global___Int64Rules] = ...,
+-        uint32: typing.Optional[global___UInt32Rules] = ...,
+-        uint64: typing.Optional[global___UInt64Rules] = ...,
+-        sint32: typing.Optional[global___SInt32Rules] = ...,
+-        sint64: typing.Optional[global___SInt64Rules] = ...,
+-        fixed32: typing.Optional[global___Fixed32Rules] = ...,
+-        fixed64: typing.Optional[global___Fixed64Rules] = ...,
+-        sfixed32: typing.Optional[global___SFixed32Rules] = ...,
+-        sfixed64: typing.Optional[global___SFixed64Rules] = ...,
+-        bool: typing.Optional[global___BoolRules] = ...,
+-        string: typing.Optional[global___StringRules] = ...,
+-        bytes: typing.Optional[global___BytesRules] = ...,
+-        enum: typing.Optional[global___EnumRules] = ...,
+-        repeated: typing.Optional[global___RepeatedRules] = ...,
+-        map: typing.Optional[global___MapRules] = ...,
+-        any: typing.Optional[global___AnyRules] = ...,
+-        duration: typing.Optional[global___DurationRules] = ...,
+-        timestamp: typing.Optional[global___TimestampRules] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["any",b"any","bool",b"bool","bytes",b"bytes","double",b"double","duration",b"duration","enum",b"enum","fixed32",b"fixed32","fixed64",b"fixed64","float",b"float","int32",b"int32","int64",b"int64","map",b"map","message",b"message","repeated",b"repeated","sfixed32",b"sfixed32","sfixed64",b"sfixed64","sint32",b"sint32","sint64",b"sint64","string",b"string","timestamp",b"timestamp","type",b"type","uint32",b"uint32","uint64",b"uint64"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["any",b"any","bool",b"bool","bytes",b"bytes","double",b"double","duration",b"duration","enum",b"enum","fixed32",b"fixed32","fixed64",b"fixed64","float",b"float","int32",b"int32","int64",b"int64","map",b"map","message",b"message","repeated",b"repeated","sfixed32",b"sfixed32","sfixed64",b"sfixed64","sint32",b"sint32","sint64",b"sint64","string",b"string","timestamp",b"timestamp","type",b"type","uint32",b"uint32","uint64",b"uint64"]) -> None: ...
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["type",b"type"]) -> typing.Optional[typing_extensions.Literal["float","double","int32","int64","uint32","uint64","sint32","sint64","fixed32","fixed64","sfixed32","sfixed64","bool","string","bytes","enum","repeated","map","any","duration","timestamp"]]: ...
++        message: global___MessageRules | None = ...,
++        float: global___FloatRules | None = ...,
++        double: global___DoubleRules | None = ...,
++        int32: global___Int32Rules | None = ...,
++        int64: global___Int64Rules | None = ...,
++        uint32: global___UInt32Rules | None = ...,
++        uint64: global___UInt64Rules | None = ...,
++        sint32: global___SInt32Rules | None = ...,
++        sint64: global___SInt64Rules | None = ...,
++        fixed32: global___Fixed32Rules | None = ...,
++        fixed64: global___Fixed64Rules | None = ...,
++        sfixed32: global___SFixed32Rules | None = ...,
++        sfixed64: global___SFixed64Rules | None = ...,
++        bool: global___BoolRules | None = ...,
++        string: global___StringRules | None = ...,
++        bytes: global___BytesRules | None = ...,
++        enum: global___EnumRules | None = ...,
++        repeated: global___RepeatedRules | None = ...,
++        map: global___MapRules | None = ...,
++        any: global___AnyRules | None = ...,
++        duration: global___DurationRules | None = ...,
++        timestamp: global___TimestampRules | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["any", b"any", "bool", b"bool", "bytes", b"bytes", "double", b"double", "duration", b"duration", "enum", b"enum", "fixed32", b"fixed32", "fixed64", b"fixed64", "float", b"float", "int32", b"int32", "int64", b"int64", "map", b"map", "message", b"message", "repeated", b"repeated", "sfixed32", b"sfixed32", "sfixed64", b"sfixed64", "sint32", b"sint32", "sint64", b"sint64", "string", b"string", "timestamp", b"timestamp", "type", b"type", "uint32", b"uint32", "uint64", b"uint64"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["any", b"any", "bool", b"bool", "bytes", b"bytes", "double", b"double", "duration", b"duration", "enum", b"enum", "fixed32", b"fixed32", "fixed64", b"fixed64", "float", b"float", "int32", b"int32", "int64", b"int64", "map", b"map", "message", b"message", "repeated", b"repeated", "sfixed32", b"sfixed32", "sfixed64", b"sfixed64", "sint32", b"sint32", "sint64", b"sint64", "string", b"string", "timestamp", b"timestamp", "type", b"type", "uint32", b"uint32", "uint64", b"uint64"]) -> None: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["type", b"type"]) -> typing_extensions.Literal["float", "double", "int32", "int64", "uint32", "uint64", "sint32", "sint64", "fixed32", "fixed64", "sfixed32", "sfixed64", "bool", "string", "bytes", "enum", "repeated", "map", "any", "duration", "timestamp"] | None: ...
++
+ global___FieldRules = FieldRules
+ 
+ class FloatRules(google.protobuf.message.Message):
+     """FloatRules describes the constraints applied to `float` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.float
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.float
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.float
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.float
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.float
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.float]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.float] = ...,
+-        lt: typing.Optional[builtins.float] = ...,
+-        lte: typing.Optional[builtins.float] = ...,
+-        gt: typing.Optional[builtins.float] = ...,
+-        gte: typing.Optional[builtins.float] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.float]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.float | None = ...,
++        lt: builtins.float | None = ...,
++        lte: builtins.float | None = ...,
++        gt: builtins.float | None = ...,
++        gte: builtins.float | None = ...,
++        not_in: collections.abc.Iterable[builtins.float] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___FloatRules = FloatRules
+ 
+ class DoubleRules(google.protobuf.message.Message):
+     """DoubleRules describes the constraints applied to `double` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.float
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.float
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.float
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.float
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.float
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.float]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.float] = ...,
+-        lt: typing.Optional[builtins.float] = ...,
+-        lte: typing.Optional[builtins.float] = ...,
+-        gt: typing.Optional[builtins.float] = ...,
+-        gte: typing.Optional[builtins.float] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.float]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.float | None = ...,
++        lt: builtins.float | None = ...,
++        lte: builtins.float | None = ...,
++        gt: builtins.float | None = ...,
++        gte: builtins.float | None = ...,
++        not_in: collections.abc.Iterable[builtins.float] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___DoubleRules = DoubleRules
+ 
+ class Int32Rules(google.protobuf.message.Message):
+     """Int32Rules describes the constraints applied to `int32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___Int32Rules = Int32Rules
+ 
+ class Int64Rules(google.protobuf.message.Message):
+     """Int64Rules describes the constraints applied to `int64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___Int64Rules = Int64Rules
+ 
+ class UInt32Rules(google.protobuf.message.Message):
+     """UInt32Rules describes the constraints applied to `uint32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___UInt32Rules = UInt32Rules
+ 
+ class UInt64Rules(google.protobuf.message.Message):
+     """UInt64Rules describes the constraints applied to `uint64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___UInt64Rules = UInt64Rules
+ 
+ class SInt32Rules(google.protobuf.message.Message):
+     """SInt32Rules describes the constraints applied to `sint32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___SInt32Rules = SInt32Rules
+ 
+ class SInt64Rules(google.protobuf.message.Message):
+     """SInt64Rules describes the constraints applied to `sint64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___SInt64Rules = SInt64Rules
+ 
+ class Fixed32Rules(google.protobuf.message.Message):
+     """Fixed32Rules describes the constraints applied to `fixed32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___Fixed32Rules = Fixed32Rules
+ 
+ class Fixed64Rules(google.protobuf.message.Message):
+     """Fixed64Rules describes the constraints applied to `fixed64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___Fixed64Rules = Fixed64Rules
+ 
+ class SFixed32Rules(google.protobuf.message.Message):
+     """SFixed32Rules describes the constraints applied to `sfixed32` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___SFixed32Rules = SFixed32Rules
+ 
+ class SFixed64Rules(google.protobuf.message.Message):
+     """SFixed64Rules describes the constraints applied to `sfixed64` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     lt: builtins.int
+     """Lt specifies that this field must be less than the specified value,
+     exclusive
+     """
+-
+     lte: builtins.int
+     """Lte specifies that this field must be less than or equal to the
+     specified value, inclusive
+     """
+-
+     gt: builtins.int
+     """Gt specifies that this field must be greater than the specified value,
+     exclusive. If the value of Gt is larger than a specified Lt or Lte, the
+     range is reversed.
+     """
+-
+     gte: builtins.int
+     """Gte specifies that this field must be greater than or equal to the
+     specified value, inclusive. If the value of Gte is larger than a
+     specified Lt or Lte, the range is reversed.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        lt: typing.Optional[builtins.int] = ...,
+-        lte: typing.Optional[builtins.int] = ...,
+-        gt: typing.Optional[builtins.int] = ...,
+-        gte: typing.Optional[builtins.int] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","lt",b"lt","lte",b"lte"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","ignore_empty",b"ignore_empty","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        lt: builtins.int | None = ...,
++        lte: builtins.int | None = ...,
++        gt: builtins.int | None = ...,
++        gte: builtins.int | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "lt", b"lt", "lte", b"lte"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "ignore_empty", b"ignore_empty", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in"]) -> None: ...
++
+ global___SFixed64Rules = SFixed64Rules
+ 
+ class BoolRules(google.protobuf.message.Message):
+     """BoolRules describes the constraints applied to `bool` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     const: builtins.bool
+     """Const specifies that this field must be exactly the specified value"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const"]) -> None: ...
++        const: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const"]) -> None: ...
++
+ global___BoolRules = BoolRules
+ 
+ class StringRules(google.protobuf.message.Message):
+     """StringRules describe the constraints applied to `string` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LEN_FIELD_NUMBER: builtins.int
+     MIN_LEN_FIELD_NUMBER: builtins.int
+     MAX_LEN_FIELD_NUMBER: builtins.int
+     LEN_BYTES_FIELD_NUMBER: builtins.int
+     MIN_BYTES_FIELD_NUMBER: builtins.int
+     MAX_BYTES_FIELD_NUMBER: builtins.int
+@@ -921,177 +893,156 @@
+     URI_FIELD_NUMBER: builtins.int
+     URI_REF_FIELD_NUMBER: builtins.int
+     ADDRESS_FIELD_NUMBER: builtins.int
+     UUID_FIELD_NUMBER: builtins.int
+     WELL_KNOWN_REGEX_FIELD_NUMBER: builtins.int
+     STRICT_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+-    const: typing.Text
++    const: builtins.str
+     """Const specifies that this field must be exactly the specified value"""
+-
+     len: builtins.int
+     """Len specifies that this field must be the specified number of
+     characters (Unicode code points). Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+     min_len: builtins.int
+     """MinLen specifies that this field must be the specified number of
+     characters (Unicode code points) at a minimum. Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+     max_len: builtins.int
+     """MaxLen specifies that this field must be the specified number of
+     characters (Unicode code points) at a maximum. Note that the number of
+     characters may differ from the number of bytes in the string.
+     """
+-
+     len_bytes: builtins.int
+     """LenBytes specifies that this field must be the specified number of bytes"""
+-
+     min_bytes: builtins.int
+     """MinBytes specifies that this field must be the specified number of bytes
+     at a minimum
+     """
+-
+     max_bytes: builtins.int
+     """MaxBytes specifies that this field must be the specified number of bytes
+     at a maximum
+     """
+-
+-    pattern: typing.Text
++    pattern: builtins.str
+     """Pattern specifes that this field must match against the specified
+     regular expression (RE2 syntax). The included expression should elide
+     any delimiters.
+     """
+-
+-    prefix: typing.Text
++    prefix: builtins.str
+     """Prefix specifies that this field must have the specified substring at
+     the beginning of the string.
+     """
+-
+-    suffix: typing.Text
++    suffix: builtins.str
+     """Suffix specifies that this field must have the specified substring at
+     the end of the string.
+     """
+-
+-    contains: typing.Text
++    contains: builtins.str
+     """Contains specifies that this field must have the specified substring
+     anywhere in the string.
+     """
+-
+-    not_contains: typing.Text
++    not_contains: builtins.str
+     """NotContains specifies that this field cannot have the specified substring
+     anywhere in the string.
+     """
+-
+     @property
+-    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]:
++    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     email: builtins.bool
+     """Email specifies that the field must be a valid email address as
+     defined by RFC 5322
+     """
+-
+     hostname: builtins.bool
+     """Hostname specifies that the field must be a valid hostname as
+     defined by RFC 1034. This constraint does not support
+     internationalized domain names (IDNs).
+     """
+-
+     ip: builtins.bool
+     """Ip specifies that the field must be a valid IP (v4 or v6) address.
+     Valid IPv6 addresses should not include surrounding square brackets.
+     """
+-
+     ipv4: builtins.bool
+     """Ipv4 specifies that the field must be a valid IPv4 address."""
+-
+     ipv6: builtins.bool
+     """Ipv6 specifies that the field must be a valid IPv6 address. Valid
+     IPv6 addresses should not include surrounding square brackets.
+     """
+-
+     uri: builtins.bool
+     """Uri specifies that the field must be a valid, absolute URI as defined
+     by RFC 3986
+     """
+-
+     uri_ref: builtins.bool
+     """UriRef specifies that the field must be a valid URI as defined by RFC
+     3986 and may be relative or absolute.
+     """
+-
+     address: builtins.bool
+     """Address specifies that the field must be either a valid hostname as
+     defined by RFC 1034 (which does not support internationalized domain
+     names or IDNs), or it can be a valid IP (v4 or v6).
+     """
+-
+     uuid: builtins.bool
+     """Uuid specifies that the field must be a valid UUID as defined by
+     RFC 4122
+     """
+-
+     well_known_regex: global___KnownRegex.ValueType
+     """WellKnownRegex specifies a common well known pattern defined as a regex."""
+-
+     strict: builtins.bool
+     """This applies to regexes HTTP_HEADER_NAME and HTTP_HEADER_VALUE to enable
+     strict header validation.
+     By default, this is true, and HTTP header validations are RFC-compliant.
+     Setting to false will enable a looser validations that only disallows
+     \\r\\n\\0 characters, which can be used to bypass header matching rules.
+     """
+-
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[typing.Text] = ...,
+-        len: typing.Optional[builtins.int] = ...,
+-        min_len: typing.Optional[builtins.int] = ...,
+-        max_len: typing.Optional[builtins.int] = ...,
+-        len_bytes: typing.Optional[builtins.int] = ...,
+-        min_bytes: typing.Optional[builtins.int] = ...,
+-        max_bytes: typing.Optional[builtins.int] = ...,
+-        pattern: typing.Optional[typing.Text] = ...,
+-        prefix: typing.Optional[typing.Text] = ...,
+-        suffix: typing.Optional[typing.Text] = ...,
+-        contains: typing.Optional[typing.Text] = ...,
+-        not_contains: typing.Optional[typing.Text] = ...,
+-        not_in: typing.Optional[typing.Iterable[typing.Text]] = ...,
+-        email: typing.Optional[builtins.bool] = ...,
+-        hostname: typing.Optional[builtins.bool] = ...,
+-        ip: typing.Optional[builtins.bool] = ...,
+-        ipv4: typing.Optional[builtins.bool] = ...,
+-        ipv6: typing.Optional[builtins.bool] = ...,
+-        uri: typing.Optional[builtins.bool] = ...,
+-        uri_ref: typing.Optional[builtins.bool] = ...,
+-        address: typing.Optional[builtins.bool] = ...,
+-        uuid: typing.Optional[builtins.bool] = ...,
+-        well_known_regex: typing.Optional[global___KnownRegex.ValueType] = ...,
+-        strict: typing.Optional[builtins.bool] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["address",b"address","const",b"const","contains",b"contains","email",b"email","hostname",b"hostname","ignore_empty",b"ignore_empty","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","len_bytes",b"len_bytes","max_bytes",b"max_bytes","max_len",b"max_len","min_bytes",b"min_bytes","min_len",b"min_len","not_contains",b"not_contains","pattern",b"pattern","prefix",b"prefix","strict",b"strict","suffix",b"suffix","uri",b"uri","uri_ref",b"uri_ref","uuid",b"uuid","well_known",b"well_known","well_known_regex",b"well_known_regex"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["address",b"address","const",b"const","contains",b"contains","email",b"email","hostname",b"hostname","ignore_empty",b"ignore_empty","in",b"in","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","len_bytes",b"len_bytes","max_bytes",b"max_bytes","max_len",b"max_len","min_bytes",b"min_bytes","min_len",b"min_len","not_contains",b"not_contains","not_in",b"not_in","pattern",b"pattern","prefix",b"prefix","strict",b"strict","suffix",b"suffix","uri",b"uri","uri_ref",b"uri_ref","uuid",b"uuid","well_known",b"well_known","well_known_regex",b"well_known_regex"]) -> None: ...
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known",b"well_known"]) -> typing.Optional[typing_extensions.Literal["email","hostname","ip","ipv4","ipv6","uri","uri_ref","address","uuid","well_known_regex"]]: ...
++        const: builtins.str | None = ...,
++        len: builtins.int | None = ...,
++        min_len: builtins.int | None = ...,
++        max_len: builtins.int | None = ...,
++        len_bytes: builtins.int | None = ...,
++        min_bytes: builtins.int | None = ...,
++        max_bytes: builtins.int | None = ...,
++        pattern: builtins.str | None = ...,
++        prefix: builtins.str | None = ...,
++        suffix: builtins.str | None = ...,
++        contains: builtins.str | None = ...,
++        not_contains: builtins.str | None = ...,
++        not_in: collections.abc.Iterable[builtins.str] | None = ...,
++        email: builtins.bool | None = ...,
++        hostname: builtins.bool | None = ...,
++        ip: builtins.bool | None = ...,
++        ipv4: builtins.bool | None = ...,
++        ipv6: builtins.bool | None = ...,
++        uri: builtins.bool | None = ...,
++        uri_ref: builtins.bool | None = ...,
++        address: builtins.bool | None = ...,
++        uuid: builtins.bool | None = ...,
++        well_known_regex: global___KnownRegex.ValueType | None = ...,
++        strict: builtins.bool | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["address", b"address", "const", b"const", "contains", b"contains", "email", b"email", "hostname", b"hostname", "ignore_empty", b"ignore_empty", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "len_bytes", b"len_bytes", "max_bytes", b"max_bytes", "max_len", b"max_len", "min_bytes", b"min_bytes", "min_len", b"min_len", "not_contains", b"not_contains", "pattern", b"pattern", "prefix", b"prefix", "strict", b"strict", "suffix", b"suffix", "uri", b"uri", "uri_ref", b"uri_ref", "uuid", b"uuid", "well_known", b"well_known", "well_known_regex", b"well_known_regex"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["address", b"address", "const", b"const", "contains", b"contains", "email", b"email", "hostname", b"hostname", "ignore_empty", b"ignore_empty", "in", b"in", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "len_bytes", b"len_bytes", "max_bytes", b"max_bytes", "max_len", b"max_len", "min_bytes", b"min_bytes", "min_len", b"min_len", "not_contains", b"not_contains", "not_in", b"not_in", "pattern", b"pattern", "prefix", b"prefix", "strict", b"strict", "suffix", b"suffix", "uri", b"uri", "uri_ref", b"uri_ref", "uuid", b"uuid", "well_known", b"well_known", "well_known_regex", b"well_known_regex"]) -> None: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known", b"well_known"]) -> typing_extensions.Literal["email", "hostname", "ip", "ipv4", "ipv6", "uri", "uri_ref", "address", "uuid", "well_known_regex"] | None: ...
++
+ global___StringRules = StringRules
+ 
+ class BytesRules(google.protobuf.message.Message):
+     """BytesRules describe the constraints applied to `bytes` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     LEN_FIELD_NUMBER: builtins.int
+     MIN_LEN_FIELD_NUMBER: builtins.int
+     MAX_LEN_FIELD_NUMBER: builtins.int
+     PATTERN_FIELD_NUMBER: builtins.int
+     PREFIX_FIELD_NUMBER: builtins.int
+     SUFFIX_FIELD_NUMBER: builtins.int
+@@ -1100,434 +1051,414 @@
+     NOT_IN_FIELD_NUMBER: builtins.int
+     IP_FIELD_NUMBER: builtins.int
+     IPV4_FIELD_NUMBER: builtins.int
+     IPV6_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     const: builtins.bytes
+     """Const specifies that this field must be exactly the specified value"""
+-
+     len: builtins.int
+     """Len specifies that this field must be the specified number of bytes"""
+-
+     min_len: builtins.int
+     """MinLen specifies that this field must be the specified number of bytes
+     at a minimum
+     """
+-
+     max_len: builtins.int
+     """MaxLen specifies that this field must be the specified number of bytes
+     at a maximum
+     """
+-
+-    pattern: typing.Text
++    pattern: builtins.str
+     """Pattern specifes that this field must match against the specified
+     regular expression (RE2 syntax). The included expression should elide
+     any delimiters.
+     """
+-
+     prefix: builtins.bytes
+     """Prefix specifies that this field must have the specified bytes at the
+     beginning of the string.
+     """
+-
+     suffix: builtins.bytes
+     """Suffix specifies that this field must have the specified bytes at the
+     end of the string.
+     """
+-
+     contains: builtins.bytes
+     """Contains specifies that this field must have the specified bytes
+     anywhere in the string.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.bytes]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+     ip: builtins.bool
+     """Ip specifies that the field must be a valid IP (v4 or v6) address in
+     byte format
+     """
+-
+     ipv4: builtins.bool
+     """Ipv4 specifies that the field must be a valid IPv4 address in byte
+     format
+     """
+-
+     ipv6: builtins.bool
+     """Ipv6 specifies that the field must be a valid IPv6 address in byte
+     format
+     """
+-
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.bytes] = ...,
+-        len: typing.Optional[builtins.int] = ...,
+-        min_len: typing.Optional[builtins.int] = ...,
+-        max_len: typing.Optional[builtins.int] = ...,
+-        pattern: typing.Optional[typing.Text] = ...,
+-        prefix: typing.Optional[builtins.bytes] = ...,
+-        suffix: typing.Optional[builtins.bytes] = ...,
+-        contains: typing.Optional[builtins.bytes] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.bytes]] = ...,
+-        ip: typing.Optional[builtins.bool] = ...,
+-        ipv4: typing.Optional[builtins.bool] = ...,
+-        ipv6: typing.Optional[builtins.bool] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","contains",b"contains","ignore_empty",b"ignore_empty","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","max_len",b"max_len","min_len",b"min_len","pattern",b"pattern","prefix",b"prefix","suffix",b"suffix","well_known",b"well_known"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","contains",b"contains","ignore_empty",b"ignore_empty","in",b"in","ip",b"ip","ipv4",b"ipv4","ipv6",b"ipv6","len",b"len","max_len",b"max_len","min_len",b"min_len","not_in",b"not_in","pattern",b"pattern","prefix",b"prefix","suffix",b"suffix","well_known",b"well_known"]) -> None: ...
+-    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known",b"well_known"]) -> typing.Optional[typing_extensions.Literal["ip","ipv4","ipv6"]]: ...
++        const: builtins.bytes | None = ...,
++        len: builtins.int | None = ...,
++        min_len: builtins.int | None = ...,
++        max_len: builtins.int | None = ...,
++        pattern: builtins.str | None = ...,
++        prefix: builtins.bytes | None = ...,
++        suffix: builtins.bytes | None = ...,
++        contains: builtins.bytes | None = ...,
++        not_in: collections.abc.Iterable[builtins.bytes] | None = ...,
++        ip: builtins.bool | None = ...,
++        ipv4: builtins.bool | None = ...,
++        ipv6: builtins.bool | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "contains", b"contains", "ignore_empty", b"ignore_empty", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "max_len", b"max_len", "min_len", b"min_len", "pattern", b"pattern", "prefix", b"prefix", "suffix", b"suffix", "well_known", b"well_known"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "contains", b"contains", "ignore_empty", b"ignore_empty", "in", b"in", "ip", b"ip", "ipv4", b"ipv4", "ipv6", b"ipv6", "len", b"len", "max_len", b"max_len", "min_len", b"min_len", "not_in", b"not_in", "pattern", b"pattern", "prefix", b"prefix", "suffix", b"suffix", "well_known", b"well_known"]) -> None: ...
++    def WhichOneof(self, oneof_group: typing_extensions.Literal["well_known", b"well_known"]) -> typing_extensions.Literal["ip", "ipv4", "ipv6"] | None: ...
++
+ global___BytesRules = BytesRules
+ 
+ class EnumRules(google.protobuf.message.Message):
+     """EnumRules describe the constraints applied to enum values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     CONST_FIELD_NUMBER: builtins.int
+     DEFINED_ONLY_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     const: builtins.int
+     """Const specifies that this field must be exactly the specified value"""
+-
+     defined_only: builtins.bool
+     """DefinedOnly specifies that this field must be only one of the defined
+     values for this enum, failing on any undefined value.
+     """
+-
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        const: typing.Optional[builtins.int] = ...,
+-        defined_only: typing.Optional[builtins.bool] = ...,
+-        not_in: typing.Optional[typing.Iterable[builtins.int]] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","defined_only",b"defined_only"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","defined_only",b"defined_only","in",b"in","not_in",b"not_in"]) -> None: ...
++        const: builtins.int | None = ...,
++        defined_only: builtins.bool | None = ...,
++        not_in: collections.abc.Iterable[builtins.int] | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "defined_only", b"defined_only"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "defined_only", b"defined_only", "in", b"in", "not_in", b"not_in"]) -> None: ...
++
+ global___EnumRules = EnumRules
+ 
+ class MessageRules(google.protobuf.message.Message):
+     """MessageRules describe the constraints applied to embedded message values.
+     For message-type fields, validation is performed recursively.
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     SKIP_FIELD_NUMBER: builtins.int
+     REQUIRED_FIELD_NUMBER: builtins.int
+     skip: builtins.bool
+     """Skip specifies that the validation rules of this field should not be
+     evaluated
+     """
+-
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        skip: typing.Optional[builtins.bool] = ...,
+-        required: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["required",b"required","skip",b"skip"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["required",b"required","skip",b"skip"]) -> None: ...
++        skip: builtins.bool | None = ...,
++        required: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["required", b"required", "skip", b"skip"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["required", b"required", "skip", b"skip"]) -> None: ...
++
+ global___MessageRules = MessageRules
+ 
+ class RepeatedRules(google.protobuf.message.Message):
+     """RepeatedRules describe the constraints applied to `repeated` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MIN_ITEMS_FIELD_NUMBER: builtins.int
+     MAX_ITEMS_FIELD_NUMBER: builtins.int
+     UNIQUE_FIELD_NUMBER: builtins.int
+     ITEMS_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     min_items: builtins.int
+     """MinItems specifies that this field must have the specified number of
+     items at a minimum
+     """
+-
+     max_items: builtins.int
+     """MaxItems specifies that this field must have the specified number of
+     items at a maximum
+     """
+-
+     unique: builtins.bool
+     """Unique specifies that all elements in this field must be unique. This
+     contraint is only applicable to scalar and enum types (messages are not
+     supported).
+     """
+-
+     @property
+     def items(self) -> global___FieldRules:
+         """Items specifies the contraints to be applied to each item in the field.
+         Repeated message fields will still execute validation against each item
+         unless skip is specified here.
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        min_items: typing.Optional[builtins.int] = ...,
+-        max_items: typing.Optional[builtins.int] = ...,
+-        unique: typing.Optional[builtins.bool] = ...,
+-        items: typing.Optional[global___FieldRules] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["ignore_empty",b"ignore_empty","items",b"items","max_items",b"max_items","min_items",b"min_items","unique",b"unique"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["ignore_empty",b"ignore_empty","items",b"items","max_items",b"max_items","min_items",b"min_items","unique",b"unique"]) -> None: ...
++        min_items: builtins.int | None = ...,
++        max_items: builtins.int | None = ...,
++        unique: builtins.bool | None = ...,
++        items: global___FieldRules | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["ignore_empty", b"ignore_empty", "items", b"items", "max_items", b"max_items", "min_items", b"min_items", "unique", b"unique"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["ignore_empty", b"ignore_empty", "items", b"items", "max_items", b"max_items", "min_items", b"min_items", "unique", b"unique"]) -> None: ...
++
+ global___RepeatedRules = RepeatedRules
+ 
+ class MapRules(google.protobuf.message.Message):
+     """MapRules describe the constraints applied to `map` values"""
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     MIN_PAIRS_FIELD_NUMBER: builtins.int
+     MAX_PAIRS_FIELD_NUMBER: builtins.int
+     NO_SPARSE_FIELD_NUMBER: builtins.int
+     KEYS_FIELD_NUMBER: builtins.int
+     VALUES_FIELD_NUMBER: builtins.int
+     IGNORE_EMPTY_FIELD_NUMBER: builtins.int
+     min_pairs: builtins.int
+     """MinPairs specifies that this field must have the specified number of
+     KVs at a minimum
+     """
+-
+     max_pairs: builtins.int
+     """MaxPairs specifies that this field must have the specified number of
+     KVs at a maximum
+     """
+-
+     no_sparse: builtins.bool
+     """NoSparse specifies values in this field cannot be unset. This only
+     applies to map's with message value types.
+     """
+-
+     @property
+     def keys(self) -> global___FieldRules:
+         """Keys specifies the constraints to be applied to each key in the field."""
+-        pass
+     @property
+     def values(self) -> global___FieldRules:
+         """Values specifies the constraints to be applied to the value of each key
+         in the field. Message values will still have their validations evaluated
+         unless skip is specified here.
+         """
+-        pass
+     ignore_empty: builtins.bool
+     """IgnoreEmpty specifies that the validation rules of this field should be
+     evaluated only if the field is not empty
+     """
+-
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        min_pairs: typing.Optional[builtins.int] = ...,
+-        max_pairs: typing.Optional[builtins.int] = ...,
+-        no_sparse: typing.Optional[builtins.bool] = ...,
+-        keys: typing.Optional[global___FieldRules] = ...,
+-        values: typing.Optional[global___FieldRules] = ...,
+-        ignore_empty: typing.Optional[builtins.bool] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["ignore_empty",b"ignore_empty","keys",b"keys","max_pairs",b"max_pairs","min_pairs",b"min_pairs","no_sparse",b"no_sparse","values",b"values"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["ignore_empty",b"ignore_empty","keys",b"keys","max_pairs",b"max_pairs","min_pairs",b"min_pairs","no_sparse",b"no_sparse","values",b"values"]) -> None: ...
++        min_pairs: builtins.int | None = ...,
++        max_pairs: builtins.int | None = ...,
++        no_sparse: builtins.bool | None = ...,
++        keys: global___FieldRules | None = ...,
++        values: global___FieldRules | None = ...,
++        ignore_empty: builtins.bool | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["ignore_empty", b"ignore_empty", "keys", b"keys", "max_pairs", b"max_pairs", "min_pairs", b"min_pairs", "no_sparse", b"no_sparse", "values", b"values"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["ignore_empty", b"ignore_empty", "keys", b"keys", "max_pairs", b"max_pairs", "min_pairs", b"min_pairs", "no_sparse", b"no_sparse", "values", b"values"]) -> None: ...
++
+ global___MapRules = MapRules
+ 
+ class AnyRules(google.protobuf.message.Message):
+     """AnyRules describe constraints applied exclusively to the
+     `google.protobuf.Any` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     REQUIRED_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+     @property
+-    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[typing.Text]:
++    def not_in(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.str]:
+         """NotIn specifies that this field's `type_url` must not be equal to any of
+         the specified values.
+         """
+-        pass
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        required: typing.Optional[builtins.bool] = ...,
+-        not_in: typing.Optional[typing.Iterable[typing.Text]] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["required",b"required"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["in",b"in","not_in",b"not_in","required",b"required"]) -> None: ...
++        required: builtins.bool | None = ...,
++        not_in: collections.abc.Iterable[builtins.str] | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["required", b"required"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["in", b"in", "not_in", b"not_in", "required", b"required"]) -> None: ...
++
+ global___AnyRules = AnyRules
+ 
+ class DurationRules(google.protobuf.message.Message):
+     """DurationRules describe the constraints applied exclusively to the
+     `google.protobuf.Duration` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     REQUIRED_FIELD_NUMBER: builtins.int
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     IN_FIELD_NUMBER: builtins.int
+     NOT_IN_FIELD_NUMBER: builtins.int
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+     @property
+     def const(self) -> google.protobuf.duration_pb2.Duration:
+         """Const specifies that this field must be exactly the specified value"""
+-        pass
+     @property
+     def lt(self) -> google.protobuf.duration_pb2.Duration:
+         """Lt specifies that this field must be less than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def lte(self) -> google.protobuf.duration_pb2.Duration:
+         """Lt specifies that this field must be less than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def gt(self) -> google.protobuf.duration_pb2.Duration:
+         """Gt specifies that this field must be greater than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def gte(self) -> google.protobuf.duration_pb2.Duration:
+         """Gte specifies that this field must be greater than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def not_in(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[google.protobuf.duration_pb2.Duration]:
+         """NotIn specifies that this field cannot be equal to one of the specified
+         values
+         """
+-        pass
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        required: typing.Optional[builtins.bool] = ...,
+-        const: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        lt: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        lte: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        gt: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        gte: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        not_in: typing.Optional[typing.Iterable[google.protobuf.duration_pb2.Duration]] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","lt",b"lt","lte",b"lte","required",b"required"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gte",b"gte","in",b"in","lt",b"lt","lte",b"lte","not_in",b"not_in","required",b"required"]) -> None: ...
++        required: builtins.bool | None = ...,
++        const: google.protobuf.duration_pb2.Duration | None = ...,
++        lt: google.protobuf.duration_pb2.Duration | None = ...,
++        lte: google.protobuf.duration_pb2.Duration | None = ...,
++        gt: google.protobuf.duration_pb2.Duration | None = ...,
++        gte: google.protobuf.duration_pb2.Duration | None = ...,
++        not_in: collections.abc.Iterable[google.protobuf.duration_pb2.Duration] | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "lt", b"lt", "lte", b"lte", "required", b"required"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gte", b"gte", "in", b"in", "lt", b"lt", "lte", b"lte", "not_in", b"not_in", "required", b"required"]) -> None: ...
++
+ global___DurationRules = DurationRules
+ 
+ class TimestampRules(google.protobuf.message.Message):
+     """TimestampRules describe the constraints applied exclusively to the
+     `google.protobuf.Timestamp` well-known type
+     """
++
+     DESCRIPTOR: google.protobuf.descriptor.Descriptor
++
+     REQUIRED_FIELD_NUMBER: builtins.int
+     CONST_FIELD_NUMBER: builtins.int
+     LT_FIELD_NUMBER: builtins.int
+     LTE_FIELD_NUMBER: builtins.int
+     GT_FIELD_NUMBER: builtins.int
+     GTE_FIELD_NUMBER: builtins.int
+     LT_NOW_FIELD_NUMBER: builtins.int
+     GT_NOW_FIELD_NUMBER: builtins.int
+     WITHIN_FIELD_NUMBER: builtins.int
+     required: builtins.bool
+     """Required specifies that this field must be set"""
+-
+     @property
+     def const(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Const specifies that this field must be exactly the specified value"""
+-        pass
+     @property
+     def lt(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Lt specifies that this field must be less than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def lte(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Lte specifies that this field must be less than the specified value,
+         inclusive
+         """
+-        pass
+     @property
+     def gt(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Gt specifies that this field must be greater than the specified value,
+         exclusive
+         """
+-        pass
+     @property
+     def gte(self) -> google.protobuf.timestamp_pb2.Timestamp:
+         """Gte specifies that this field must be greater than the specified value,
+         inclusive
+         """
+-        pass
+     lt_now: builtins.bool
+     """LtNow specifies that this must be less than the current time. LtNow
+     can only be used with the Within rule.
+     """
+-
+     gt_now: builtins.bool
+     """GtNow specifies that this must be greater than the current time. GtNow
+     can only be used with the Within rule.
+     """
+-
+     @property
+     def within(self) -> google.protobuf.duration_pb2.Duration:
+         """Within specifies that this field must be within this duration of the
+         current time. This constraint can be used alone or with the LtNow and
+         GtNow rules.
+         """
+-        pass
+-    def __init__(self,
++    def __init__(
++        self,
+         *,
+-        required: typing.Optional[builtins.bool] = ...,
+-        const: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        lt: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        lte: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        gt: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        gte: typing.Optional[google.protobuf.timestamp_pb2.Timestamp] = ...,
+-        lt_now: typing.Optional[builtins.bool] = ...,
+-        gt_now: typing.Optional[builtins.bool] = ...,
+-        within: typing.Optional[google.protobuf.duration_pb2.Duration] = ...,
+-        ) -> None: ...
+-    def HasField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gt_now",b"gt_now","gte",b"gte","lt",b"lt","lt_now",b"lt_now","lte",b"lte","required",b"required","within",b"within"]) -> builtins.bool: ...
+-    def ClearField(self, field_name: typing_extensions.Literal["const",b"const","gt",b"gt","gt_now",b"gt_now","gte",b"gte","lt",b"lt","lt_now",b"lt_now","lte",b"lte","required",b"required","within",b"within"]) -> None: ...
++        required: builtins.bool | None = ...,
++        const: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        lt: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        lte: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        gt: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        gte: google.protobuf.timestamp_pb2.Timestamp | None = ...,
++        lt_now: builtins.bool | None = ...,
++        gt_now: builtins.bool | None = ...,
++        within: google.protobuf.duration_pb2.Duration | None = ...,
++    ) -> None: ...
++    def HasField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gt_now", b"gt_now", "gte", b"gte", "lt", b"lt", "lt_now", b"lt_now", "lte", b"lte", "required", b"required", "within", b"within"]) -> builtins.bool: ...
++    def ClearField(self, field_name: typing_extensions.Literal["const", b"const", "gt", b"gt", "gt_now", b"gt_now", "gte", b"gte", "lt", b"lt", "lt_now", b"lt_now", "lte", b"lte", "required", b"required", "within", b"within"]) -> None: ...
++
+ global___TimestampRules = TimestampRules
+ 
+ DISABLED_FIELD_NUMBER: builtins.int
+ IGNORED_FIELD_NUMBER: builtins.int
+ REQUIRED_FIELD_NUMBER: builtins.int
+ RULES_FIELD_NUMBER: builtins.int
+ disabled: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.MessageOptions, builtins.bool]
+ """Disabled nullifies any validation rules for this message, including any
+ message fields associated with it that do support validation.
+ """
+-
+ ignored: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.MessageOptions, builtins.bool]
+ """Ignore skips generation of validation methods for this message."""
+-
+ required: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.OneofOptions, builtins.bool]
+ """Required ensures that exactly one the field options in a oneof is set;
+ validation fails if no fields in the oneof are set.
+ """
+-
+ rules: google.protobuf.internal.extension_dict._ExtensionFieldDescriptor[google.protobuf.descriptor_pb2.FieldOptions, global___FieldRules]
+ """Rules specify the validations to be performed on this field. By default,
+ no validation is performed against a field.
+ """
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/pyproject.toml` & `protobuf_to_pydantic-0.1.7/pyproject.toml`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "protobuf_to_pydantic"
+-version = "v0.1.6.1"
++version = "v0.1.7"
+ description = "Convert Protobuf-generated Python objects to Pydantic.BaseModel objects with parameter checksum"
+ authors = ["So1n <so1n897046026@gmail.com>"]
+ license = "Apache Software License"
+ readme = "./README.md"
+ repository = "https://github.com/so1n/protobuf_to_pydantic"
+ homepage = "https://github.com/so1n/protobuf_to_pydantic"
+ packages = [
+@@ -13,57 +13,68 @@
+ 
+ [tool.poetry.scripts]
+ protoc-gen-protobuf-to-pydantic = "protobuf_to_pydantic.plugin.main:main"
+ 
+ 
+ [tool.poetry.dependencies]
+ python = "^3.7"
+-pydantic = "^1.9.1"
+-grpcio-tools = "^1.40.0"
+ lark = { version = "^1.1.2", optional = true }
+ mypy-protobuf = { version = "^3.2.0", optional = true }
++pydantic = "^1.9.1"
++# grpcio-tools = "1.40.0"
++# protobuf=="3.20.3"
++toml = {version = "^0.10.2", optional = true}
++grpcio-tools = "^1.40.0"
+ 
+ [tool.poetry.extras]
+ lark = ["lark"]
+ mypy-protobuf = ["mypy-protobuf"]
+-all = ["lark", "mypy-protobuf"]
++toml = ["toml"]
++all = ["lark", "mypy-protobuf", "toml"]
+ 
+ [tool.poetry.dev-dependencies]
+-black = "20.8b1"
++black = "^23.3.0"
+ mypy = "0.790"
+-pytest = "6.1.2"
++pytest = "6.2.5"
+ isort = "5.6.4"
+ coverage = "5.5"
+ pre-commit = "2.14.0"
+ autoflake = "1.4"
+ flake8 = "3.9.2"
+-yapf = "^0.32.0"
+ email-validator = "^1.2.1"
+ # fix flake8 run bug: https://stackoverflow.com/questions/73929564/entrypoints-object-has-no-attribute-get-digital-ocean
+ importlib-metadata = "4.11.4"
+ 
++[tool.poetry.group.dev.dependencies]
++pytest = "6.2.5"
++
++[tool.protobuf-to-pydantic.format]
++black = true
++isort = true
++autoflake = true
++
+ [tool.black]
+ line-length = 120
+-target-version = ['py37']
++target-version = ['py37', 'py38', 'py39', 'py310']
+ 
+-[tool.yapf]
+-based_on_style = "google"
+-COLUMN_LIMIT = 120
+-spaces_before_comment = 4
+-# split_before_logical_operator = true
+ 
+ [tool.isort]
+ profile = "black"
+ multi_line_output = 3
+ include_trailing_comma = true
+ force_grid_wrap = 0
+ use_parentheses = true
+ ensure_newline_before_comments = true
+ line_length = 120
+ 
++[tool.autoflake]
++in-place = true
++remove-all-unused-imports = true
++remove-unused-variables = true
++
+ [tool.mypy]
+ disallow_untyped_defs = true
+ python_executable = ".venv/bin/python"
+ exclude = [
+     "^example/python_example_proto_code/example_proto"
+ ]
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/setup.py` & `protobuf_to_pydantic-0.1.7/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3,36 +3,41 @@
+ 
+ packages = \
+ ['protobuf_to_pydantic',
+  'protobuf_to_pydantic.contrib',
+  'protobuf_to_pydantic.get_desc',
+  'protobuf_to_pydantic.get_desc.from_pb_option',
+  'protobuf_to_pydantic.plugin',
+- 'protobuf_to_pydantic.protos']
++ 'protobuf_to_pydantic.protos',
++ 'protobuf_to_pydantic.protos.old.protos',
++ 'protobuf_to_pydantic.protos.protos']
+ 
+ package_data = \
+ {'': ['*']}
+ 
+ install_requires = \
+ ['grpcio-tools>=1.40.0,<2.0.0', 'pydantic>=1.9.1,<2.0.0']
+ 
+ extras_require = \
+-{'all': ['lark>=1.1.2,<2.0.0', 'mypy-protobuf>=3.2.0,<4.0.0'],
++{'all': ['lark>=1.1.2,<2.0.0',
++         'mypy-protobuf>=3.2.0,<4.0.0',
++         'toml>=0.10.2,<0.11.0'],
+  'lark': ['lark>=1.1.2,<2.0.0'],
+- 'mypy-protobuf': ['mypy-protobuf>=3.2.0,<4.0.0']}
++ 'mypy-protobuf': ['mypy-protobuf>=3.2.0,<4.0.0'],
++ 'toml': ['toml>=0.10.2,<0.11.0']}
+ 
+ entry_points = \
+ {'console_scripts': ['protoc-gen-protobuf-to-pydantic = '
+                      'protobuf_to_pydantic.plugin.main:main']}
+ 
+ setup_kwargs = {
+     'name': 'protobuf-to-pydantic',
+-    'version': '0.1.6.1',
++    'version': '0.1.7',
+     'description': 'Convert Protobuf-generated Python objects to Pydantic.BaseModel objects with parameter checksum',
+-    'long_description': '# protobuf_to_pydantic\nGenerate the `pydantic.Base Model` class (and the corresponding source code) with parameter verification function through the Protobuf file\n\n> NOTE:\n>  - Only supports proto3\n\n[中文文档](https://github.com/so1n/protobuf_to_pydantic/blob/master/README_ZH.md)\n# 1.Installation\n```bash\npip install protobuf_to_pydantic\n```\n\n# 2.Quick Start\n`protobuf_to_pydantic` currently has two methods to generate `pydantic.BaseModel` objects through Protobuf files,\nThe first method is to generate the corresponding `Python` code file through the Protobuf file in the form of a plugin.\nThe second method is to generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime.\n\n## 2.1.Directly generate `pydantic.BaseModel` code files through plugins\n### 2.1.1.Use of plugin\nThe plugin method is the most recommended way to use `protobuf-to-pydantic`,\nit supports the most complete functions, and it is also very simple to use, assuming that the code corresponding to the Protobuf file is usually generated by the following command:\n```bash\npython -m grpc_tools.protoc -I. example.proto\n```\nThen after installing `protobuf-to-pydantic`, can use the `--protobuf-to-pydantic out` option to use `protobuf-to-pydantic`, the command is as follows:\n```bash\npython -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=. example.proto\n```\n> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.\n\nAmong them, `--protobuf-to-pydantic out=.` indicates the use of the `prorobuf-to-pydanitc` plugin, and declares that the output location of the `protobuf-to-pydantic` plugin is `.` (indicating the use of `grpc tools.proto ` to use the output path),\nIn this way, the `protobuf-to-pydantic` plugin will write its own generated content in the corresponding file (the file name ends with `p2p.py`), such as `protobuf-to-pydantic` is `example.proto `The generated code file is named `example_p2p.py`\n\n> Note: If `isort` and `black` are installed in the current `Python` environment, then `protobuf-to-pydantic` will format the generated code through `isort` and `black`.\n### 2.1.2.Plugin configuration\n`protobuf-to-pydantic` supports configuration functions by reading a `Python` file.\nDevelopers first need to create a configuration file in the current path of the running command, the file name is `plugin_config.py`, and write the following code:\n```Python\nimport logging\nfrom typing import List, Type\n\nfrom google.protobuf.any_pb2 import Any  # type: ignore\nfrom pydantic import confloat, conint\nfrom pydantic.fields import FieldInfo\n\nfrom protobuf_to_pydantic.gen_model import DescTemplate\n\n# Configure the log output format and log level of the plugin, which is very useful when debugging\nlogging.basicConfig(format="[%(asctime)s %(levelname)s] %(message)s", datefmt="%y-%m-%d %H:%M:%S", level=logging.DEBUG)\n\n\nclass CustomerField(FieldInfo):\n    pass\n\n\ndef customer_any() -> Any:\n    return Any  # type: ignore\n\n\n# For the configuration of the local template, see the use of the local template for details\nlocal_dict = {\n    "CustomerField": CustomerField,\n    "confloat": confloat,\n    "conint": conint,\n    "customer_any": customer_any,\n}\n# Specifies the start of key comments\ncomment_prefix = "p2p"\n# Specify the class of the template, you can extend the template by inheriting this class, see the chapter on custom templates for details\ndesc_template: Type[DescTemplate] = DescTemplate\n# Specify the protobuf files of which packages to ignore, and the messages of the ignored packages will not be parsed\nignore_pkg_list: List[str] = ["validate", "p2p_validate"]\n```\nNext, change `--protobuf-to-pydantic out=.` in the command to `--protobuf-to-pydantic out=config path=plugin config.py:.`, as follows:\n```bash\npython -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=config_path=plugin_config.py:. example.proto\n```\nAmong them, `config path=plugin_config.py` on the left side of `:` indicates that the configuration file path to be read is `plugin_config.py`, and the right side of `:` still declares the output of the `protobuf-to-pydantic` plugin The position is `.`.\nIn this way, the `protobuf-to-pydantic` plugin can be loaded into the configuration file specified by the developer when it is running, and then run according to the configuration defined by the configuration file.\n\n## 2.2.Generate a `pydantic.BaseModel` object at runtime\n`protobuf_to_pydantic` can generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime。\n\nFor example, the `UserMessage` in the following Protobuf file named `demo.proto`:\n```protobuf\n// path: ./demo.proto\nsyntax = "proto3";\npackage user;\n\nenum SexType {\n  man = 0;\n  women = 1;\n}\n\nmessage UserMessage {\n  string uid=1;\n  int32 age=2;\n  float height=3;\n  SexType sex=4;\n  bool is_adult=5;\n  string user_name=6;\n}\n```\nThrough `grpc_tools.protoc`, the corresponding `Python` code can be generated according to the Protobuf file (the file name at this time is `demo_pb2.py`),\nand the `msg_to_pydantic_model` method of `protobuf_to_pydantic` can read the generated Proto file at runtime Message object data,\nand generate the corresponding `pydantic.BaseModel` object:\n\n```Python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom . import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(demo_pb2.UserMessage)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n\n# output\n# {\n#   \'uid\': FieldInfo(default=\'\', extra={}),\n#   \'age\': FieldInfo(default=0, extra={}),\n#   \'height\': FieldInfo(default=0.0, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', extra={})\n#  }\n```\nThrough the output results, it can be found that the generated `pydantic.BaseModel` object also contains `uid`, `age`, `height`, `sex`, `is adult` and `user name` fields, and their corresponding `default` The information is consistent with the `UserMessage` in the Protobuf file.\n\nIn addition to generating the corresponding `pydantic.BaseModel` object at runtime, `protobuf-to-pydantic` also supports converting the `pydantic.BaseModel` object to the corresponding `Python` code text at runtime (only compatible with `protobuf_to_pydantic `generated `pydantic.BaseModel` object).\nAmong them, the `pydantic_model_to_py_code` method of `protobuf_to_pydantic` is used to generate code text, and the `pydantic_model_to_py_file` method of `protobuf_to_pydantic` is used to generate code files,\nthe sample code of `pydantic_model_to_py_file` method of `protobuf_to_pydantic` is as follows:\n```Python\nfrom protobuf_to_pydantic import msg_to_pydantic_model, pydantic_model_to_py_file\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\npydantic_model_to_py_file(\n    "./demo_gen_code.py",\n    msg_to_pydantic_model(demo_pb2.NestedMessage),\n)\n```\nThe code will first convert `demo_pb2.NestedMessage` into a `pydantic.BaseModel` object, and then the generated object will be converted into the corresponding code content by the `pydantic_model_to_py_file` method and written to `demo_gen_code.py` file.\nIt should be noted that if `protobuf_to_pydantic` checks that `isort` and `black` are installed in the current environment, they will be used to format the generated code by default.\n\n## 2.3.Parameter verification\nThe `Message` object generated according to the Protobuf file will only carry a small amount of information. This is because the ordinary Protobuf file does not have enough parameter verification related information, which requires us to improve the parameter verification information of the `Message` object through some additional ways.\nCurrently `protobuf_to_pydantic` supports multiple ways to obtain other information of the Message, so that the generated `pydantic.BaseModel` object has the function of parameter verification.\n\n> NOTE:\n>  - 1.The text annotation function is not the focus of subsequent function development, and the P2P mode is recommended。\n>  - 2.Plugin mode only supports PGV and P2P mode\n\n### 2.3.1.Text annotation\nDevelopers can write comments that meet the requirements of `protobuf_to_pydantic` for each field in the Protobuf file to provide parameter verification information for `protobuf_to_pydantic`, such as the following example:\n```protobuf\nsyntax = "proto3";\npackage user;\n\nenum SexType {\n  man = 0;\n  women = 1;\n}\n\n// user info\nmessage UserMessage {\n  // p2p: {"miss_default": true, "example": "10086"}\n  // p2p: {"title": "UID"}\n  string uid=1; // p2p: {"description": "user union id"}\n  // p2p: {"example": 18, "title": "use age", "ge": 0}\n  int32 age=2;\n  // p2p: {"ge": 0, "le": 2.5}\n  float height=3;\n  SexType sex=4;\n  bool is_adult=5;\n  // p2p: {"description": "user name"}\n  // p2p: {"default": "", "min_length": 1, "max_length": "10", "example": "so1n"}\n  string user_name=6;\n}\n```\nIn this example, each annotation that can be used by `protobuf_to_pydantic` starts with `p2p:` (supports customization) and is followed by a complete Json string. If you are familiar with the usage of `pydantic`, you can find This Json string contains the verification information corresponding to `pydantic.Field`. For example, the `uid` field in `UserMessage` contains a total of 4 pieces of information as follows：\n\n| Column       | Meaning                                                                               |\n|--------------|---------------------------------------------------------------------------------------|\n| miss_default | Indicates that the generated field does not have a default value                      |\n| example      | An example value representing the generated field is 10086                            |\n| title        | Indicates that the schema name of the field is UID                                    |\n | description  | The schema documentation for the representation field is described as `user_union_id` |\n\n> Note:\n>   - 1.Currently only single-line comments are supported and comments must be a complete Json data (no line breaks).\n>   - 2.multi line comments are not supported。\n\nWhen these annotations are written, `protobuf_to_pydantic` will bring the corresponding information for each field when converting the Message into the corresponding `Pydantic.BaseModel` object, as follows:\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(demo_pb2.UserMessage, parse_msg_desc_method=demo_pb2)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'uid\': FieldInfo(default=PydanticUndefined, title=\'UID\', description=\'user union id\', extra={\'example\': \'10086\'}),\n#   \'age\': FieldInfo(default=0, title=\'use age\', ge=0, extra={\'example\': 18}),\n#   \'height\': FieldInfo(default=0.0, ge=0, le=2, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', description=\'user name\', min_length=1, max_length=10, extra={\'example\': \'so1n\'})\n# }\n```\nIt can be seen from the output results that the output fields carry the corresponding information. In addition, the difference between this code and the above is that the `msg_to_pydantic_model` function sets a keyword parameter named `parse_msg_desc_method` and its value is `demo_pb2`, which enables `protobuf_to_pydantic` to obtain additional information for each field in the Message object through comments in the `.pyi` file of the `demo_pb2` module.\n\n> Note：This function requires the use of the [mypy-protobuf](https://github.com/nipunn1313/mypy-protobuf) plugin when generating the corresponding `Python` code from the Protobuf file, and the specified output path of the pyi file is the same as the generated `Python` code path to take effect at the same time.\n\nIn addition to obtaining comments through the `.pyi` file, `protobuf_to_pydantic` also supports setting the value of `parse_msg_desc_method` to the root directory path specified when the Message object is generated, so that `protobuf_to_pydantic` can parse the comments of the Protobuf file corresponding to the Message object. getting information。\n\n\nFor example, the project structure of the `protobuf_to_pydantic` sample code is as follows:\n```bash\n./protobuf_to_pydantic/\n├── example/\n│ ├── python_example_proto_code/\n│ └── example_proto/\n├── protobuf_to_pydantic/\n└── /\n```\n\nThe Protobuf file is stored in the `example/example_proto` folder, and then run the following command in the `example` directory to generate the `Python` code file corresponding to Protobuf:\n```bash\ncd example\n\npython -m grpc_tools.protoc\n  --python_out=./python_example_proto_code \\\n  --grpc_python_out=./python_example_proto_code \\\n  -I. \\\n```\nThen the path to be filled in at this time is `./protobuf_to_pydantic/example`, the code is as follows：\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.UserMessage, parse_msg_desc_method="./protobuf_to_pydantic/example"\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'uid\': FieldInfo(default=PydanticUndefined, title=\'UID\', description=\'user union id\', extra={\'example\': \'10086\'}),\n#   \'age\': FieldInfo(default=0, title=\'use age\', ge=0, extra={\'example\': 18}),\n#   \'height\': FieldInfo(default=0.0, ge=0, le=2, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', description=\'user name\', min_length=1, max_length=10, extra={\'example\': \'so1n\'})\n# }\n```\nFrom the result, it can be seen that the information carried by the field is the same as the result obtained by the module\n> NOTE: This method requires [lark](https://github.com/lark-parser/lark) to be installed in advance and the Protobuf file must exist in the running project.\n\n### 2.3.2.PGV(protoc-gen-validate)\nCurrently, the commonly used object validation method in the Protobuf ecosystem is to directly use the [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate) project, while [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate) project also supports multiple languages, and most Protobuf developers will write `pgv` rules once so that different languages support the same validation rules.\n\nAnd `protobuf-to-pydantic` also supports parsing the verification rules of `pgv` so that the generated `pydantic.BaseModel` class has corresponding verification logic,\nIt is very simple to use `Pgv` verification rules in `protobuf_to_pydantic`. First, you need to write the corresponding `Pgv` rules in the Protobuf file, and then fill in `parse_msg_desc_method` when converting through `msg_to_pydantic_model` method The value is `PGV`, the code is as follows:\n```Python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.validate import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.FloatTest, parse_msg_desc_method="PGV"\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'const_test\': FieldInfo(default=1.0, const=True, extra={}),\n#   \'range_e_test\': FieldInfo(default=0.0, ge=1, le=10, extra={}),\n#   \'range_test\': FieldInfo(default=0.0, gt=1, lt=10, extra={}),\n#   \'in_test\': FieldInfo(default=0.0, extra={\'in\': [1.0, 2.0, 3.0]}),\n#   \'not_in_test\': FieldInfo(default=0.0, extra={\'not_in\': [1.0, 2.0, 3.0]}),\n#   \'ignore_test\': FieldInfo(default=0.0, extra={})\n# }\n```\n\n> Note:\n>  - 1.For the usage of `Pgv`, see: [protoc-gen-validate doc](https://github.com/bufbuild/protoc-gen-validate/blob/main/README.md#constraint-rules)\n>  - 2.Need to install `Pgv` through `pip install protoc_gen_validate` Or download [validate.proto](https://github.com/so1n/protobuf_to_pydantic/blob/master/example/example_proto/common/validate.proto) to the protobuf directory in the project to write pgv rules in the Protobuf file.\n\n\n### 2.2.3.P2p\nThe verification rules of `Pgv` are written in the Option attribute of each field of `Message`, and there are better code specifications, so the readability of Protobuf files carrying `Pgv` verification rules is higher than that of Protobuf carrying comments At the same time, when writing `Pgv` rules, you can also experience the convenience brought by IDE auto-completion, but it only supports verification-related logic, and the feature richness is not as good as the file comment mode.\n\nThe `P2P` mode is an extension of the `PGV` mode, which incorporates some functions of text annotations. This mode satisfies the customization of the attributes of each `Field` in most `pydantic.BaseModel`, such as the following Protobuf file:\n```protobuf\nsyntax = "proto3";\npackage p2p_validate_test;\n\nimport "example_proto/common/p2p_validate.proto";\n\n\nmessage FloatTest {\n  float const_test = 1 [(p2p_validate.rules).float.const = 1];\n  float range_e_test = 2 [(p2p_validate.rules).float = {ge: 1, le: 10}];\n  float range_test = 3[(p2p_validate.rules).float = {gt: 1, lt: 10}];\n  float in_test = 4[(p2p_validate.rules).float = {in: [1,2,3]}];\n  float not_in_test = 5[(p2p_validate.rules).float = {not_in: [1,2,3]}];\n  float default_test = 6[(p2p_validate.rules).float.default = 1.0];\n  float not_enable_test = 7[(p2p_validate.rules).float.enable = false];\n  float default_factory_test = 8[(p2p_validate.rules).float.default_factory = "p2p@builtin|float"];\n  float miss_default_test = 9[(p2p_validate.rules).float.miss_default = true];\n  float alias_test = 10 [(p2p_validate.rules).float.alias = "alias"];\n  float desc_test = 11 [(p2p_validate.rules).float.description = "test desc"];\n  float multiple_of_test = 12 [(p2p_validate.rules).float.multiple_of = 3.0];\n  float example_test = 13 [(p2p_validate.rules).float.example = 1.0];\n  float example_factory = 14 [(p2p_validate.rules).float.example_factory = "p2p@builtin|float"];\n  float field_test = 15[(p2p_validate.rules).float.field = "p2p@local|CustomerField"];\n  float type_test = 16[(p2p_validate.rules).float.type = "p2p@local|confloat"];\n  float title_test = 17 [(p2p_validate.rules).float.title = "title_test"];\n}\n```\n`protobuf_to_pydantic` can read the generated Message object at runtime and generate a `pydantic.BaseModel` object with the corresponding information:\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel, confloat\nfrom pydantic.fields import FieldInfo\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.p2p_validate import demo_pb2\n\n\nclass CustomerField(FieldInfo):\n    pass\n\n\nDemoModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.FloatTest,\n    local_dict={"CustomerField": CustomerField, "confloat": confloat},\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in DemoModel.__fields__.items()\n    }\n)\n# output:\n# {\n#   \'const_test\': FieldInfo(default=1.0, const=True, extra={}),\n#   \'range_e_test\': FieldInfo(default=0.0, ge=1, le=10, extra={}),\n#   \'range_test\': FieldInfo(default=0.0, gt=1, lt=10, extra={}),\n#   \'in_test\': FieldInfo(default=0.0, extra={\'in\': [1.0, 2.0, 3.0]}),\n#   \'not_in_test\': FieldInfo(default=0.0, extra={\'not_in\': [1.0, 2.0, 3.0]}),\n#   \'default_test\': FieldInfo(default=1.0, extra={}),\n#   \'default_factory_test\': FieldInfo(default=PydanticUndefined, default_factory=<class \'float\'>, extra={}),\n#   \'miss_default_test\': FieldInfo(extra={}),\n#   \'alias_test\': FieldInfo(default=0.0, alias=\'alias\', alias_priority=2, extra={}),\n#   \'desc_test\': FieldInfo(default=0.0, description=\'test desc\', extra={}),\n#   \'multiple_of_test\': FieldInfo(default=0.0, multiple_of=3, extra={}),\n#   \'example_test\': FieldInfo(default=0.0, extra={\'example\': 1.0}),\n#   \'example_factory\': FieldInfo(default=0.0, extra={\'example\': <class \'float\'>}),\n#   \'field_test\': CustomerField(default=0.0, extra={}),\n#   \'type_test\': FieldInfo(default=0.0, extra={}),\n#   \'title_test\': FieldInfo(default=0.0, title=\'title_test\', extra={})\n#   }\n```\nIt is worth noting that this code does not explicitly specify that the value of `parse_msg_desc_method` is `p2p`, because `p2p` is already the default rule of `protobuf_to_pydantic`.\n\n> Note: See the template chapter for the usage of `local_dict`\n\n > Note:\n>  - 1.See the template chapter for the usage of `local_dict`\n>  - 2.If the reference to the Proto file fails, you need to download [p2p_validate.proto](https://github.com/so1n/protobuf_to_pydantic/blob/master/protos/protobuf_to_pydantic/protos/p2p_validate.proto) in the project and use it in the Protobuf file。\n\n\n\n\n### 2.3.3.Other parameter support\nIn addition to the parameters of `FieldInfo`, the file comment mode and `p2p` mode of `protobuf_to_pydantic` also support the following parameters:\n- miss_default：By default, the default value of each field in the corresponding `pydantic.BaseModel` object is the same as the default value of each field in the Message, but when `miss default` is `true`, the setting of the default value will be canceled .\n- enable: By default, `pydantic.BaseModel` will convert every field in the Message. If some fields do not want to be converted, you can set `enable` to `false`\n- const: Specifies the value of the field\'s constant. Note: The const of `pydantic.BaseModel` only supports bool variables. When `const` is `True`, the accepted value can only be the value set by `default`, and the default value carried by the Message generated by protobuf corresponds to The null value of type does not match `pydantic.BaseModel`, so `protobuf_to_pydantic` makes some changes to the input of this value, but after `const` sets the value, the `cost` property in the generated field is `True` `, and `default` becomes the corresponding value of the setting.\n- type: To expand the current type, for example, if you want to increase the verification of the bank card number through the `pydantic.types.Payment Card Number` type, you can specify the field type as `Payment Card Number` by the following method:\n  ```protobuf\n  message UserPayMessage {\n    string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}\n  }\n  ```\n\n> Note:\n>   If you don\'t know `pydantic`, you can use the following two URLs to learn what parameters Field supports:\n>\n>   - https://pydantic-docs.helpmanual.io/usage/types/#constrained-types\n>\n>   - https://pydantic-docs.helpmanual.io/usage/schema/#field-customization\n\n### 2.3.4.Template\nIn some cases, the value we fill in is a method or function of a certain library in `Python` (such as the value of `type` parameter and `default_factory` parameter), which cannot be realized through Json syntax。\nAt this time, template parameters can be used to solve the corresponding problems. Currently `protobuf_to_pydantic` supports a variety of template parameters。\n\n> Note:The `p2p` string at the beginning of the template can be defined by the comment prefix variable\n\n\n#### 2.3.4.1.`p2p@import`\nThis template is used to indicate that the value is a variable under other modules. The specific usage method is as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}\n}\n\n// p2p example\nmessage UserPayMessage {\n  string bank_number=1[(p2p_validate.rules).string.type = "p2p@import|pydantic.types|PaymentCardNumber"];\n}\n\n// p2p other example\n// Since the imported type happens to belong to the `pydantic.types` module, string.pydantic type can be used directly in `p2p` mode\nmessage UserPayMessage {\n  string bank_number=1[(p2p_validate.rules).string.pydantic_type = "PaymentCardNumber"];\n}\n```\n\nThe syntax in the format of `p2p{template method}|{module to be imported: A}|{variable in the module: B}` is used here, which means that `B` object needs to be imported and applied through `from A import B` ,\nThrough the definition of the template, `protobuf_to_pydantic` will convert the corresponding Message into the following `pydantic.BaseModel`:\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n# p2p@import|pydantic.types|PaymentCardNumber\nfrom pydantic.types import PaymentCardNumber\n\nclass UserPayMessage(BaseModel):\n    bank_number: PaymentCardNumber = FieldInfo(default="", extra={})\n```\n\n#### 2.3.4.2.`p2p@import_instance`\nThe `p2p@import` template just imports and uses the variables of a certain library, while `p2p@import instance` imports the class of a certain library first,\nand finally instantiates it with the specified parameters. The method of use is as follows:\n```protobuf\nmessage AnyTest {\n  google.protobuf.Any default_test = 23 [\n    (p2p_validate.rules).any.default = \'p2p@import_instance|google.protobuf.any_pb2|Any|{"type_url": "type.googleapis.com/google.protobuf.Duration"}\'\n\n  ];\n}\n```\nHere is the `p2p{template method}|{module to be imported}|{corresponding class}|{corresponding parameter}` syntax, through the definition of the template, `protobuf_to_pydantic` will convert the corresponding Message is the following `pydantic.BaseModel` object:\n```python\nfrom google.protobuf.any_pb2 import Any as AnyMessage\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\n\nclass AnyTest(BaseModel):\n    default_test: AnyMessage = FieldInfo(\n        default=AnyMessage(type_url="type.googleapis.com/google.protobuf.Duration")\n    )\n```\n\n#### 2.3.4.3.`p2p@local`\nThis template is used to introduce user-defined variables. The syntax in the format `{template method}|{local variable to be used}` is used here, as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1; // p2p: {"default_factory": "p2p@local|exp_time"}\n}\n// p2p example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1[(p2p_validate.rules).timestamp.default_factory= "p2p@local|exp_time"];\n}\n```\nThen register the corresponding value through the parameter `local_dict` when calling the `msg_to_pydantic_model` method. The fake code is as follows:\n```Python\nimport time\n\n\ndef exp_time() -> float:\n  return time.time()\n\nmsg_to_pydantic_model(\n    demo_pb2.NestedMessage,\n    local_dict={"exp_time": exp_time},  # <----\n)\n```\nIn this way, `protobuf_to_pydantic` can generate a `pydantic.BaseModel` object that meets the requirements:\n```python\nfrom datetime import datetime\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\nfrom . import exp_time\n\nclass UserPayMessage(BaseModel):\n    exp: datetime = FieldInfo(default_factory=exp_time, extra={})\n```\n\n> Note: See the sample code for specific calling and generation methods.\n\n#### 2.3.4.4.`p2p@builtin`\nWhen the variable to be used comes from a built-in function, this template can be used directly (it can be considered as a simplified version of the `p2p@local` template), and the syntax is as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1; // p2p: {"type": "p2p@builtin|float"}\n}\n\n// p2p example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1[(p2p_validate.rules).timestamp.type= "p2p@builtin|float"];\n}\n```\nIn this way, `protobuf_to_pydantic` can generate a `pydantic.BaseModel` object that meets the requirements:\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\n\nclass UserPayMessage(BaseModel):\n    exp: float = FieldInfo()\n```\n#### 2.3.4.5.Custom template\nCurrently, `protobuf_to_pydantic` only supports several templates. If you have more template requirements, you can extend the template by inheriting the `DescTemplate` class.\nFor example, there is a strange requirement that the default value of the field is the timestamp when the Message object is generated as a `pydantic.BaseModel` object, but the timestamp has two versions, one version has a timestamp of length 10 and the other has a length of 13, so write the following Protobuf file:\n```protobuf\nmessage TimestampTest{\n  int32 timestamp_10 = 1[(p2p_validate.rules).int32.default = "p2p@timestamp|10"];\n  int32 timestamp_13 = 2[(p2p_validate.rules).int32.default = "p2p@timestamp|13"];\n}\n```\nThis file uses the custom `p2p@timestamp|{x}` syntax, where `x` only has two values of 10 and 13, and then you can write code according to this template behavior, the code is as follows:\n```python\nimport time\nfrom typing import Any, List\nfrom protobuf_to_pydantic.gen_model import DescTemplate\n\n\nclass CustomDescTemplate(DescTemplate):\n    def template_timestamp(self, template_var_list: List[str]) -> Any:\n        timestamp: float = time.time()\n        length: str = template_var_list[0]\n        if length == "10":\n            return int(timestamp)\n        elif length == "13":\n            return int(timestamp * 100)\n        else:\n            raise KeyError(f"timestamp template not support value:{length}")\n\n\nfrom .demo_pb2 import TimestampTest # fake code\nfrom protobuf_to_pydantic import msg_to_pydantic_model\n\nmsg_to_pydantic_model(\n    TimestampTest,\n    desc_template=CustomDescTemplate\n)\n```\nThis code first creates a `CustomDescTemplate` class inherited from `DescTemplate`, and this class adds a `template_timestamp` method to match the syntax of `p2p@timestamp`,\nThen specify the template class as `CustomDescTemplate` through the `desc_template` key parameter in `msg_to_pydantic_model`, so that `msg_to_pydantic_model` will generate the following code (assuming the code generated when the timestamp is 1600000000 ):\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\nclass TimestampTest(BaseModel):\n    timestamp_10: int = FieldInfo(default=1600000000)\n    timestamp_13: int = FieldInfo(default=1600000000000)\n```\n\n## 3.example\n`protobuf_to_pydantic` provides some simple sample code, the following is the path of the sample code and protobuf file, just for reference:\n\n| Implication                           | Example Protobuf                                                                            | Example code                                                                         |\n|------------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|\n| Generate Model code with validation rules based on p2p schema | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/p2p_validate | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/p2p_validate_example |\n| Generate the basic Model code               | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/simple_example      |\n| Generate Model code with validation rules from .pyi files     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/text_comment_example |\n| Generate Model code with validation rules from protobuf files | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/validate     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/validate_example    |\n',
++    'long_description': '# protobuf_to_pydantic\nGenerate the `pydantic.Base Model` class (and the corresponding source code) with parameter verification function through the Protobuf file\n\n> NOTE:\n>  - Only supports proto3\n\n[中文文档](https://github.com/so1n/protobuf_to_pydantic/blob/master/README_ZH.md)\n# 1.Installation\n```bash\npip install protobuf_to_pydantic\n```\n\n# 2.Quick Start\n`protobuf_to_pydantic` currently has two methods to generate `pydantic.BaseModel` objects through Protobuf files,\nThe first method is to generate the corresponding `Python` code file through the Protobuf file in the form of a plugin.\nThe second method is to generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime.\n\n## 2.1.Directly generate `pydantic.BaseModel` code files through plugins\n> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.\n### 2.1.1.Use of plugin\nThe plugin method is the most recommended way to use `protobuf-to-pydantic`,\nit supports the most complete functions, and it is also very simple to use, assuming that the code corresponding to the Protobuf file is usually generated by the following command:\n```bash\npython -m grpc_tools.protoc -I. example.proto\n```\nThen after installing `protobuf-to-pydantic`, can use the `--protobuf-to-pydantic out` option to use `protobuf-to-pydantic`, the command is as follows:\n```bash\npython -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=. example.proto\n```\n\nAmong them, `--protobuf-to-pydantic out=.` indicates the use of the `prorobuf-to-pydanitc` plugin, and declares that the output location of the `protobuf-to-pydantic` plugin is `.` (indicating the use of `grpc tools.proto ` to use the output path),\nIn this way, the `protobuf-to-pydantic` plugin will write its own generated content in the corresponding file (the file name ends with `p2p.py`), such as `protobuf-to-pydantic` is `example.proto `The generated code file is named `example_p2p.py`\n\n### 2.1.2.Plugin configuration\n`protobuf-to-pydantic` supports configuration functions by reading a `Python` file.\nDevelopers first need to create a configuration file in the current path of the running command, the file name is `plugin_config.py`, and write the following code:\n```Python\nimport logging\nfrom typing import List, Type\n\nfrom google.protobuf.any_pb2 import Any  # type: ignore\nfrom pydantic import confloat, conint\nfrom pydantic.fields import FieldInfo\n\nfrom protobuf_to_pydantic.gen_model import DescTemplate\n\n# Configure the log output format and log level of the plugin, which is very useful when debugging\nlogging.basicConfig(format="[%(asctime)s %(levelname)s] %(message)s", datefmt="%y-%m-%d %H:%M:%S", level=logging.DEBUG)\n\n\nclass CustomerField(FieldInfo):\n    pass\n\n\ndef customer_any() -> Any:\n    return Any  # type: ignore\n\n\n# For the configuration of the local template, see the use of the local template for details\nlocal_dict = {\n    "CustomerField": CustomerField,\n    "confloat": confloat,\n    "conint": conint,\n    "customer_any": customer_any,\n}\n# Specifies the start of key comments\ncomment_prefix = "p2p"\n# Specify the class of the template, you can extend the template by inheriting this class, see the chapter on custom templates for details\ndesc_template: Type[DescTemplate] = DescTemplate\n# Specify the protobuf files of which packages to ignore, and the messages of the ignored packages will not be parsed\nignore_pkg_list: List[str] = ["validate", "p2p_validate"]\n# Specifies the generated file name suffix (without .py)\nfile_name_suffix = "_p2p"\n```\nNext, change `--protobuf-to-pydantic out=.` in the command to `--protobuf-to-pydantic out=config path=plugin config.py:.`, as follows:\n```bash\npython -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=config_path=plugin_config.py:. example.proto\n```\nAmong them, `config path=plugin_config.py` on the left side of `:` indicates that the configuration file path to be read is `plugin_config.py`, and the right side of `:` still declares the output of the `protobuf-to-pydantic` plugin The position is `.`.\nIn this way, the `protobuf-to-pydantic` plugin can be loaded into the configuration file specified by the developer when it is running, and then run according to the configuration defined by the configuration file.\n\n> Note: 更多配置内容见`protobuf_to_pydantic/plugin/config.py`文件\n> Note: For more information on configuration, see the \'protobuf_to_pydantic/plugin/config.py\'\n## 2.2.Generate a `pydantic.BaseModel` object at runtime\n`protobuf_to_pydantic` can generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime。\n\nFor example, the `UserMessage` in the following Protobuf file named `demo.proto`:\n```protobuf\n// path: ./demo.proto\nsyntax = "proto3";\npackage user;\n\nenum SexType {\n  man = 0;\n  women = 1;\n}\n\nmessage UserMessage {\n  string uid=1;\n  int32 age=2;\n  float height=3;\n  SexType sex=4;\n  bool is_adult=5;\n  string user_name=6;\n}\n```\nThrough `grpc_tools.protoc`, the corresponding `Python` code can be generated according to the Protobuf file (the file name at this time is `demo_pb2.py`),\nand the `msg_to_pydantic_model` method of `protobuf_to_pydantic` can read the generated Proto file at runtime Message object data,\nand generate the corresponding `pydantic.BaseModel` object:\n\n```Python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom . import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(demo_pb2.UserMessage)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n\n# output\n# {\n#   \'uid\': FieldInfo(default=\'\', extra={}),\n#   \'age\': FieldInfo(default=0, extra={}),\n#   \'height\': FieldInfo(default=0.0, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', extra={})\n#  }\n```\nThrough the output results, it can be found that the generated `pydantic.BaseModel` object also contains `uid`, `age`, `height`, `sex`, `is adult` and `user name` fields, and their corresponding `default` The information is consistent with the `UserMessage` in the Protobuf file.\n\nIn addition to generating the corresponding `pydantic.BaseModel` object at runtime, `protobuf-to-pydantic` also supports converting the `pydantic.BaseModel` object to the corresponding `Python` code text at runtime (only compatible with `protobuf_to_pydantic `generated `pydantic.BaseModel` object).\nAmong them, the `pydantic_model_to_py_code` method of `protobuf_to_pydantic` is used to generate code text, and the `pydantic_model_to_py_file` method of `protobuf_to_pydantic` is used to generate code files,\nthe sample code of `pydantic_model_to_py_file` method of `protobuf_to_pydantic` is as follows:\n```Python\nfrom protobuf_to_pydantic import msg_to_pydantic_model, pydantic_model_to_py_file\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\npydantic_model_to_py_file(\n    "./demo_gen_code.py",\n    msg_to_pydantic_model(demo_pb2.NestedMessage),\n)\n```\nThe code will first convert `demo_pb2.NestedMessage` into a `pydantic.BaseModel` object, and then the generated object will be converted into the corresponding code content by the `pydantic_model_to_py_file` method and written to `demo_gen_code.py` file.\n\n## 2.3.Parameter verification\nThe `Message` object generated according to the Protobuf file will only carry a small amount of information. This is because the ordinary Protobuf file does not have enough parameter verification related information, which requires us to improve the parameter verification information of the `Message` object through some additional ways.\nCurrently `protobuf_to_pydantic` supports multiple ways to obtain other information of the Message, so that the generated `pydantic.BaseModel` object has the function of parameter verification.\n\n> NOTE:\n>  - 1.The text annotation function is not the focus of subsequent function development, and the P2P mode is recommended。\n>  - 2.Plugin mode only supports PGV and P2P mode\n\n### 2.3.1.Text annotation\nDevelopers can write comments that meet the requirements of `protobuf_to_pydantic` for each field in the Protobuf file to provide parameter verification information for `protobuf_to_pydantic`, such as the following example:\n```protobuf\nsyntax = "proto3";\npackage user;\n\nenum SexType {\n  man = 0;\n  women = 1;\n}\n\n// user info\nmessage UserMessage {\n  // p2p: {"miss_default": true, "example": "10086"}\n  // p2p: {"title": "UID"}\n  string uid=1; // p2p: {"description": "user union id"}\n  // p2p: {"example": 18, "title": "use age", "ge": 0}\n  int32 age=2;\n  // p2p: {"ge": 0, "le": 2.5}\n  float height=3;\n  SexType sex=4;\n  bool is_adult=5;\n  // p2p: {"description": "user name"}\n  // p2p: {"default": "", "min_length": 1, "max_length": "10", "example": "so1n"}\n  string user_name=6;\n}\n```\nIn this example, each annotation that can be used by `protobuf_to_pydantic` starts with `p2p:` (supports customization) and is followed by a complete Json string. If you are familiar with the usage of `pydantic`, you can find This Json string contains the verification information corresponding to `pydantic.Field`. For example, the `uid` field in `UserMessage` contains a total of 4 pieces of information as follows：\n\n| Column       | Meaning                                                                               |\n|--------------|---------------------------------------------------------------------------------------|\n| miss_default | Indicates that the generated field does not have a default value                      |\n| example      | An example value representing the generated field is 10086                            |\n| title        | Indicates that the schema name of the field is UID                                    |\n | description  | The schema documentation for the representation field is described as `user_union_id` |\n\n> Note:\n>   - 1.Currently only single-line comments are supported and comments must be a complete Json data (no line breaks).\n>   - 2.multi line comments are not supported。\n\nWhen these annotations are written, `protobuf_to_pydantic` will bring the corresponding information for each field when converting the Message into the corresponding `Pydantic.BaseModel` object, as follows:\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(demo_pb2.UserMessage, parse_msg_desc_method=demo_pb2)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'uid\': FieldInfo(default=PydanticUndefined, title=\'UID\', description=\'user union id\', extra={\'example\': \'10086\'}),\n#   \'age\': FieldInfo(default=0, title=\'use age\', ge=0, extra={\'example\': 18}),\n#   \'height\': FieldInfo(default=0.0, ge=0, le=2, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', description=\'user name\', min_length=1, max_length=10, extra={\'example\': \'so1n\'})\n# }\n```\nIt can be seen from the output results that the output fields carry the corresponding information. In addition, the difference between this code and the above is that the `msg_to_pydantic_model` function sets a keyword parameter named `parse_msg_desc_method` and its value is `demo_pb2`, which enables `protobuf_to_pydantic` to obtain additional information for each field in the Message object through comments in the `.pyi` file of the `demo_pb2` module.\n\n> Note：This function requires the use of the [mypy-protobuf](https://github.com/nipunn1313/mypy-protobuf) plugin when generating the corresponding `Python` code from the Protobuf file, and the specified output path of the pyi file is the same as the generated `Python` code path to take effect at the same time.\n\nIn addition to obtaining comments through the `.pyi` file, `protobuf_to_pydantic` also supports setting the value of `parse_msg_desc_method` to the root directory path specified when the Message object is generated, so that `protobuf_to_pydantic` can parse the comments of the Protobuf file corresponding to the Message object. getting information。\n\n\nFor example, the project structure of the `protobuf_to_pydantic` sample code is as follows:\n```bash\n./protobuf_to_pydantic/\n├── example/\n│ ├── python_example_proto_code/\n│ └── example_proto/\n├── protobuf_to_pydantic/\n└── /\n```\n\nThe Protobuf file is stored in the `example/example_proto` folder, and then run the following command in the `example` directory to generate the `Python` code file corresponding to Protobuf:\n```bash\ncd example\n\npython -m grpc_tools.protoc\n  --python_out=./python_example_proto_code \\\n  --grpc_python_out=./python_example_proto_code \\\n  -I. \\\n```\nThen the path to be filled in at this time is `./protobuf_to_pydantic/example`, the code is as follows：\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.demo import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.UserMessage, parse_msg_desc_method="./protobuf_to_pydantic/example"\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'uid\': FieldInfo(default=PydanticUndefined, title=\'UID\', description=\'user union id\', extra={\'example\': \'10086\'}),\n#   \'age\': FieldInfo(default=0, title=\'use age\', ge=0, extra={\'example\': 18}),\n#   \'height\': FieldInfo(default=0.0, ge=0, le=2, extra={}),\n#   \'sex\': FieldInfo(default=0, extra={}),\n#   \'is_adult\': FieldInfo(default=False, extra={}),\n#   \'user_name\': FieldInfo(default=\'\', description=\'user name\', min_length=1, max_length=10, extra={\'example\': \'so1n\'})\n# }\n```\nFrom the result, it can be seen that the information carried by the field is the same as the result obtained by the module\n> NOTE: This method requires [lark](https://github.com/lark-parser/lark) to be installed in advance and the Protobuf file must exist in the running project.\n\n### 2.3.2.PGV(protoc-gen-validate)\nCurrently, the commonly used object validation method in the Protobuf ecosystem is to directly use the [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate) project, while [protoc-gen-validate](https://github.com/envoyproxy/protoc-gen-validate) project also supports multiple languages, and most Protobuf developers will write `pgv` rules once so that different languages support the same validation rules.\n\nAnd `protobuf-to-pydantic` also supports parsing the verification rules of `pgv` so that the generated `pydantic.BaseModel` class has corresponding verification logic,\nIt is very simple to use `Pgv` verification rules in `protobuf_to_pydantic`. First, you need to write the corresponding `Pgv` rules in the Protobuf file, and then fill in `parse_msg_desc_method` when converting through `msg_to_pydantic_model` method The value is `PGV`, the code is as follows:\n```Python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.validate import demo_pb2\n\nUserModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.FloatTest, parse_msg_desc_method="PGV"\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in UserModel.__fields__.items()\n    }\n)\n# output\n# {\n#   \'const_test\': FieldInfo(default=1.0, const=True, extra={}),\n#   \'range_e_test\': FieldInfo(default=0.0, ge=1, le=10, extra={}),\n#   \'range_test\': FieldInfo(default=0.0, gt=1, lt=10, extra={}),\n#   \'in_test\': FieldInfo(default=0.0, extra={\'in\': [1.0, 2.0, 3.0]}),\n#   \'not_in_test\': FieldInfo(default=0.0, extra={\'not_in\': [1.0, 2.0, 3.0]}),\n#   \'ignore_test\': FieldInfo(default=0.0, extra={})\n# }\n```\n\n> Note:\n>  - 1.For the usage of `Pgv`, see: [protoc-gen-validate doc](https://github.com/bufbuild/protoc-gen-validate/blob/main/README.md#constraint-rules)\n>  - 2.Need to install `Pgv` through `pip install protoc_gen_validate` Or download [validate.proto](https://github.com/so1n/protobuf_to_pydantic/blob/master/example/example_proto/common/validate.proto) to the protobuf directory in the project to write pgv rules in the Protobuf file.\n\n\n### 2.2.3.P2p\nThe verification rules of `Pgv` are written in the Option attribute of each field of `Message`, and there are better code specifications, so the readability of Protobuf files carrying `Pgv` verification rules is higher than that of Protobuf carrying comments At the same time, when writing `Pgv` rules, you can also experience the convenience brought by IDE auto-completion, but it only supports verification-related logic, and the feature richness is not as good as the file comment mode.\n\nThe `P2P` mode is an extension of the `PGV` mode, which incorporates some functions of text annotations. This mode satisfies the customization of the attributes of each `Field` in most `pydantic.BaseModel`, such as the following Protobuf file:\n```protobuf\nsyntax = "proto3";\npackage p2p_validate_test;\n\nimport "example_proto/common/p2p_validate.proto";\n\n\nmessage FloatTest {\n  float const_test = 1 [(p2p_validate.rules).float.const = 1];\n  float range_e_test = 2 [(p2p_validate.rules).float = {ge: 1, le: 10}];\n  float range_test = 3[(p2p_validate.rules).float = {gt: 1, lt: 10}];\n  float in_test = 4[(p2p_validate.rules).float = {in: [1,2,3]}];\n  float not_in_test = 5[(p2p_validate.rules).float = {not_in: [1,2,3]}];\n  float default_test = 6[(p2p_validate.rules).float.default = 1.0];\n  float not_enable_test = 7[(p2p_validate.rules).float.enable = false];\n  float default_factory_test = 8[(p2p_validate.rules).float.default_factory = "p2p@builtin|float"];\n  float miss_default_test = 9[(p2p_validate.rules).float.miss_default = true];\n  float alias_test = 10 [(p2p_validate.rules).float.alias = "alias"];\n  float desc_test = 11 [(p2p_validate.rules).float.description = "test desc"];\n  float multiple_of_test = 12 [(p2p_validate.rules).float.multiple_of = 3.0];\n  float example_test = 13 [(p2p_validate.rules).float.example = 1.0];\n  float example_factory = 14 [(p2p_validate.rules).float.example_factory = "p2p@builtin|float"];\n  float field_test = 15[(p2p_validate.rules).float.field = "p2p@local|CustomerField"];\n  float type_test = 16[(p2p_validate.rules).float.type = "p2p@local|confloat"];\n  float title_test = 17 [(p2p_validate.rules).float.title = "title_test"];\n}\n```\n`protobuf_to_pydantic` can read the generated Message object at runtime and generate a `pydantic.BaseModel` object with the corresponding information:\n\n```python\nfrom typing import Type\nfrom protobuf_to_pydantic import msg_to_pydantic_model\nfrom pydantic import BaseModel, confloat\nfrom pydantic.fields import FieldInfo\n\n# import protobuf gen python obj\nfrom example.example_proto_python_code.example_proto.p2p_validate import demo_pb2\n\n\nclass CustomerField(FieldInfo):\n    pass\n\n\nDemoModel: Type[BaseModel] = msg_to_pydantic_model(\n    demo_pb2.FloatTest,\n    local_dict={"CustomerField": CustomerField, "confloat": confloat},\n)\nprint(\n    {\n        k: v.field_info\n        for k, v in DemoModel.__fields__.items()\n    }\n)\n# output:\n# {\n#   \'const_test\': FieldInfo(default=1.0, const=True, extra={}),\n#   \'range_e_test\': FieldInfo(default=0.0, ge=1, le=10, extra={}),\n#   \'range_test\': FieldInfo(default=0.0, gt=1, lt=10, extra={}),\n#   \'in_test\': FieldInfo(default=0.0, extra={\'in\': [1.0, 2.0, 3.0]}),\n#   \'not_in_test\': FieldInfo(default=0.0, extra={\'not_in\': [1.0, 2.0, 3.0]}),\n#   \'default_test\': FieldInfo(default=1.0, extra={}),\n#   \'default_factory_test\': FieldInfo(default=PydanticUndefined, default_factory=<class \'float\'>, extra={}),\n#   \'miss_default_test\': FieldInfo(extra={}),\n#   \'alias_test\': FieldInfo(default=0.0, alias=\'alias\', alias_priority=2, extra={}),\n#   \'desc_test\': FieldInfo(default=0.0, description=\'test desc\', extra={}),\n#   \'multiple_of_test\': FieldInfo(default=0.0, multiple_of=3, extra={}),\n#   \'example_test\': FieldInfo(default=0.0, extra={\'example\': 1.0}),\n#   \'example_factory\': FieldInfo(default=0.0, extra={\'example\': <class \'float\'>}),\n#   \'field_test\': CustomerField(default=0.0, extra={}),\n#   \'type_test\': FieldInfo(default=0.0, extra={}),\n#   \'title_test\': FieldInfo(default=0.0, title=\'title_test\', extra={})\n#   }\n```\nIt is worth noting that this code does not explicitly specify that the value of `parse_msg_desc_method` is `p2p`, because `p2p` is already the default rule of `protobuf_to_pydantic`.\n\n> Note: See the template chapter for the usage of `local_dict`\n\n > Note:\n>  - 1.See the template chapter for the usage of `local_dict`\n>  - 2.If the reference to the Proto file fails, you need to download [p2p_validate.proto](https://github.com/so1n/protobuf_to_pydantic/blob/master/protos/protobuf_to_pydantic/protos/p2p_validate.proto) in the project and use it in the Protobuf file。\n\n\n\n\n### 2.3.3.Other parameter support\nIn addition to the parameters of `FieldInfo`, the file comment mode and `p2p` mode of `protobuf_to_pydantic` also support the following parameters:\n- miss_default：By default, the default value of each field in the corresponding `pydantic.BaseModel` object is the same as the default value of each field in the Message, but when `miss default` is `true`, the setting of the default value will be canceled .\n- enable: By default, `pydantic.BaseModel` will convert every field in the Message. If some fields do not want to be converted, you can set `enable` to `false`\n- const: Specifies the value of the field\'s constant. Note: The const of `pydantic.BaseModel` only supports bool variables. When `const` is `True`, the accepted value can only be the value set by `default`, and the default value carried by the Message generated by protobuf corresponds to The null value of type does not match `pydantic.BaseModel`, so `protobuf_to_pydantic` makes some changes to the input of this value, but after `const` sets the value, the `cost` property in the generated field is `True` `, and `default` becomes the corresponding value of the setting.\n- type: To expand the current type, for example, if you want to increase the verification of the bank card number through the `pydantic.types.Payment Card Number` type, you can specify the field type as `Payment Card Number` by the following method:\n  ```protobuf\n  // common example\n  message UserPayMessage {\n    string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}\n  }\n  // p2p example\n  message UserPayMessage {\n    string bank_number=1[(p2p_validate.rules).string.type = "p2p@import|pydantic.types|PaymentCardNumber"];\n  }\n  ```\n\n> Note:\n>   If you don\'t know `pydantic`, you can use the following two URLs to learn what parameters Field supports:\n>\n>   - https://pydantic-docs.helpmanual.io/usage/types/#constrained-types\n>\n>   - https://pydantic-docs.helpmanual.io/usage/schema/#field-customization\n\n### 2.3.4.Template\nIn some cases, the value we fill in is a method or function of a certain library in `Python` (such as the value of `type` parameter and `default_factory` parameter), which cannot be realized through Json syntax。\nAt this time, template parameters can be used to solve the corresponding problems. Currently `protobuf_to_pydantic` supports a variety of template parameters。\n\n> Note:The `p2p` string at the beginning of the template can be defined by the comment prefix variable\n\n\n#### 2.3.4.1.`p2p@import`\nThis template is used to indicate that the value is a variable under other modules. The specific usage method is as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}\n}\n\n// p2p example\nmessage UserPayMessage {\n  string bank_number=1[(p2p_validate.rules).string.type = "p2p@import|pydantic.types|PaymentCardNumber"];\n}\n\n// p2p other example\n// Since the imported type happens to belong to the `pydantic.types` module, string.pydantic type can be used directly in `p2p` mode\nmessage UserPayMessage {\n  string bank_number=1[(p2p_validate.rules).string.pydantic_type = "PaymentCardNumber"];\n}\n```\n\nThe syntax in the format of `p2p{template method}|{module to be imported: A}|{variable in the module: B}` is used here, which means that `B` object needs to be imported and applied through `from A import B` ,\nThrough the definition of the template, `protobuf_to_pydantic` will convert the corresponding Message into the following `pydantic.BaseModel`:\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n# p2p@import|pydantic.types|PaymentCardNumber\nfrom pydantic.types import PaymentCardNumber\n\nclass UserPayMessage(BaseModel):\n    bank_number: PaymentCardNumber = FieldInfo(default="", extra={})\n```\n\n#### 2.3.4.2.`p2p@import_instance`\nThe `p2p@import` template just imports and uses the variables of a certain library, while `p2p@import instance` imports the class of a certain library first,\nand finally instantiates it with the specified parameters. The method of use is as follows:\n```protobuf\nmessage AnyTest {\n  google.protobuf.Any default_test = 23 [\n    (p2p_validate.rules).any.default = \'p2p@import_instance|google.protobuf.any_pb2|Any|{"type_url": "type.googleapis.com/google.protobuf.Duration"}\'\n\n  ];\n}\n```\nHere is the `p2p{template method}|{module to be imported}|{corresponding class}|{corresponding parameter}` syntax, through the definition of the template, `protobuf_to_pydantic` will convert the corresponding Message is the following `pydantic.BaseModel` object:\n```python\nfrom google.protobuf.any_pb2 import Any as AnyMessage\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\n\nclass AnyTest(BaseModel):\n    default_test: AnyMessage = FieldInfo(\n        default=AnyMessage(type_url="type.googleapis.com/google.protobuf.Duration")\n    )\n```\n\n#### 2.3.4.3.`p2p@local`\nThis template is used to introduce user-defined variables. The syntax in the format `{template method}|{local variable to be used}` is used here, as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1; // p2p: {"default_factory": "p2p@local|exp_time"}\n}\n// p2p example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1[(p2p_validate.rules).timestamp.default_factory= "p2p@local|exp_time"];\n}\n```\nThen register the corresponding value through the parameter `local_dict` when calling the `msg_to_pydantic_model` method. The fake code is as follows:\n```Python\nimport time\n\n\ndef exp_time() -> float:\n  return time.time()\n\nmsg_to_pydantic_model(\n    demo_pb2.NestedMessage,\n    local_dict={"exp_time": exp_time},  # <----\n)\n```\nIn this way, `protobuf_to_pydantic` can generate a `pydantic.BaseModel` object that meets the requirements:\n```python\nfrom datetime import datetime\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\nfrom . import exp_time\n\nclass UserPayMessage(BaseModel):\n    exp: datetime = FieldInfo(default_factory=exp_time, extra={})\n```\n\n> Note: See the sample code for specific calling and generation methods.\n\n#### 2.3.4.4.`p2p@builtin`\nWhen the variable to be used comes from a built-in function, this template can be used directly (it can be considered as a simplified version of the `p2p@local` template), and the syntax is as follows:\n```protobuf\n// comment example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1; // p2p: {"type": "p2p@builtin|float"}\n}\n\n// p2p example\nmessage UserPayMessage {\n  google.protobuf.Timestamp exp=1[(p2p_validate.rules).timestamp.type= "p2p@builtin|float"];\n}\n```\nIn this way, `protobuf_to_pydantic` can generate a `pydantic.BaseModel` object that meets the requirements:\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\n\nclass UserPayMessage(BaseModel):\n    exp: float = FieldInfo()\n```\n#### 2.3.4.5.Custom template\nCurrently, `protobuf_to_pydantic` only supports several templates. If you have more template requirements, you can extend the template by inheriting the `DescTemplate` class.\nFor example, there is a strange requirement that the default value of the field is the timestamp when the Message object is generated as a `pydantic.BaseModel` object, but the timestamp has two versions, one version has a timestamp of length 10 and the other has a length of 13, so write the following Protobuf file:\n```protobuf\nmessage TimestampTest{\n  int32 timestamp_10 = 1[(p2p_validate.rules).int32.default = "p2p@timestamp|10"];\n  int32 timestamp_13 = 2[(p2p_validate.rules).int32.default = "p2p@timestamp|13"];\n}\n```\nThis file uses the custom `p2p@timestamp|{x}` syntax, where `x` only has two values of 10 and 13, and then you can write code according to this template behavior, the code is as follows:\n```python\nimport time\nfrom typing import Any, List\nfrom protobuf_to_pydantic.gen_model import DescTemplate\n\n\nclass CustomDescTemplate(DescTemplate):\n    def template_timestamp(self, template_var_list: List[str]) -> Any:\n        timestamp: float = time.time()\n        length: str = template_var_list[0]\n        if length == "10":\n            return int(timestamp)\n        elif length == "13":\n            return int(timestamp * 100)\n        else:\n            raise KeyError(f"timestamp template not support value:{length}")\n\n\nfrom .demo_pb2 import TimestampTest # fake code\nfrom protobuf_to_pydantic import msg_to_pydantic_model\n\nmsg_to_pydantic_model(\n    TimestampTest,\n    desc_template=CustomDescTemplate\n)\n```\nThis code first creates a `CustomDescTemplate` class inherited from `DescTemplate`, and this class adds a `template_timestamp` method to match the syntax of `p2p@timestamp`,\nThen specify the template class as `CustomDescTemplate` through the `desc_template` key parameter in `msg_to_pydantic_model`, so that `msg_to_pydantic_model` will generate the following code (assuming the code generated when the timestamp is 1600000000 ):\n```python\nfrom pydantic import BaseModel\nfrom pydantic.fields import FieldInfo\n\nclass TimestampTest(BaseModel):\n    timestamp_10: int = FieldInfo(default=1600000000)\n    timestamp_13: int = FieldInfo(default=1600000000000)\n```\n\n## 3.Code formatting\nCode generated directly via `protobuf_to_pydantic` is not perfect, but `protobuf+type_pydantic` can rely on different formatting tools to generate code that conforms to the `Python` specification.\nCurrently supported formatting tools are `autoflake`, `black` and `isort`, but the prerequisite for using these tools is that the corresponding formatting tools are installed in the current running environment.\n\nIn addition, developers can decide how the formatter will execute through the `pyproject.toml` configuration file, an example of `pyproject.toml` as follows:\n```toml\n# Controls which formatters protobuf-to-pydantic can use, false means that the formatter is not used (default is true)\n[tool.protobuf-to-pydantic.format]\nblack = true\nisort = true\nautoflake = true\n\n# See the black configuration documentation:https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format\n[tool.black]\nline-length = 120\ntarget-version = [\'py37\']\n\n# See the isort configuration documentation:https://pycqa.github.io/isort/docs/configuration/config_files.html#pyprojecttoml-preferred-format\n[tool.isort]\nprofile = "black"\nmulti_line_output = 3\ninclude_trailing_comma = true\nforce_grid_wrap = 0\nuse_parentheses = true\nensure_newline_before_comments = true\nline_length = 120\n\n# See the autoflake configuration documentation:https://github.com/PyCQA/autoflake#configuration\n[tool.autoflake]\nin-place = true\nremove-all-unused-imports = true\nremove-unused-variables = true\n```\n\n## 4.example\n`protobuf_to_pydantic` provides some simple sample code, the following is the path of the sample code and protobuf file, just for reference:\n\n| Implication                           | Example Protobuf                                                                            | Example code                                                                         |\n|------------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|\n| Generate Model code with validation rules based on p2p schema | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/p2p_validate | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/p2p_validate_example |\n| Generate the basic Model code               | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/simple_example      |\n| Generate Model code with validation rules from .pyi files     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/text_comment_example |\n| Generate Model code with validation rules from protobuf files | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/validate     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/validate_example    |\n',
+     'author': 'So1n',
+     'author_email': 'so1n897046026@gmail.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'https://github.com/so1n/protobuf_to_pydantic',
+     'packages': packages,
+     'package_data': package_data,
+```
+
+### Comparing `protobuf_to_pydantic-0.1.6.1/PKG-INFO` & `protobuf_to_pydantic-0.1.7/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: protobuf-to-pydantic
+-Version: 0.1.6.1
++Version: 0.1.7
+ Summary: Convert Protobuf-generated Python objects to Pydantic.BaseModel objects with parameter checksum
+ Home-page: https://github.com/so1n/protobuf_to_pydantic
+ License: Apache Software License
+ Author: So1n
+ Author-email: so1n897046026@gmail.com
+ Requires-Python: >=3.7,<4.0
+ Classifier: License :: Other/Proprietary License
+@@ -13,18 +13,20 @@
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Provides-Extra: all
+ Provides-Extra: lark
+ Provides-Extra: mypy-protobuf
++Provides-Extra: toml
+ Requires-Dist: grpcio-tools (>=1.40.0,<2.0.0)
+ Requires-Dist: lark (>=1.1.2,<2.0.0) ; extra == "lark" or extra == "all"
+ Requires-Dist: mypy-protobuf (>=3.2.0,<4.0.0) ; extra == "mypy-protobuf" or extra == "all"
+ Requires-Dist: pydantic (>=1.9.1,<2.0.0)
++Requires-Dist: toml (>=0.10.2,<0.11.0) ; extra == "toml" or extra == "all"
+ Project-URL: Repository, https://github.com/so1n/protobuf_to_pydantic
+ Description-Content-Type: text/markdown
+ 
+ # protobuf_to_pydantic
+ Generate the `pydantic.Base Model` class (and the corresponding source code) with parameter verification function through the Protobuf file
+ 
+ > NOTE:
+@@ -38,30 +40,29 @@
+ 
+ # 2.Quick Start
+ `protobuf_to_pydantic` currently has two methods to generate `pydantic.BaseModel` objects through Protobuf files,
+ The first method is to generate the corresponding `Python` code file through the Protobuf file in the form of a plugin.
+ The second method is to generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime.
+ 
+ ## 2.1.Directly generate `pydantic.BaseModel` code files through plugins
++> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.
+ ### 2.1.1.Use of plugin
+ The plugin method is the most recommended way to use `protobuf-to-pydantic`,
+ it supports the most complete functions, and it is also very simple to use, assuming that the code corresponding to the Protobuf file is usually generated by the following command:
+ ```bash
+ python -m grpc_tools.protoc -I. example.proto
+ ```
+ Then after installing `protobuf-to-pydantic`, can use the `--protobuf-to-pydantic out` option to use `protobuf-to-pydantic`, the command is as follows:
+ ```bash
+ python -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=. example.proto
+ ```
+-> Note: The `protobuf-to-pydantic` plugin depends on `mypy-protobuf`, please install `mypy-protobuf` through the command `python -m pip install protobuf-to-pydanitc[mypy-protobuf]`.
+ 
+ Among them, `--protobuf-to-pydantic out=.` indicates the use of the `prorobuf-to-pydanitc` plugin, and declares that the output location of the `protobuf-to-pydantic` plugin is `.` (indicating the use of `grpc tools.proto ` to use the output path),
+ In this way, the `protobuf-to-pydantic` plugin will write its own generated content in the corresponding file (the file name ends with `p2p.py`), such as `protobuf-to-pydantic` is `example.proto `The generated code file is named `example_p2p.py`
+ 
+-> Note: If `isort` and `black` are installed in the current `Python` environment, then `protobuf-to-pydantic` will format the generated code through `isort` and `black`.
+ ### 2.1.2.Plugin configuration
+ `protobuf-to-pydantic` supports configuration functions by reading a `Python` file.
+ Developers first need to create a configuration file in the current path of the running command, the file name is `plugin_config.py`, and write the following code:
+ ```Python
+ import logging
+ from typing import List, Type
+ 
+@@ -92,22 +93,26 @@
+ }
+ # Specifies the start of key comments
+ comment_prefix = "p2p"
+ # Specify the class of the template, you can extend the template by inheriting this class, see the chapter on custom templates for details
+ desc_template: Type[DescTemplate] = DescTemplate
+ # Specify the protobuf files of which packages to ignore, and the messages of the ignored packages will not be parsed
+ ignore_pkg_list: List[str] = ["validate", "p2p_validate"]
++# Specifies the generated file name suffix (without .py)
++file_name_suffix = "_p2p"
+ ```
+ Next, change `--protobuf-to-pydantic out=.` in the command to `--protobuf-to-pydantic out=config path=plugin config.py:.`, as follows:
+ ```bash
+ python -m grpc_tools.protoc -I. --protobuf-to-pydantic_out=config_path=plugin_config.py:. example.proto
+ ```
+ Among them, `config path=plugin_config.py` on the left side of `:` indicates that the configuration file path to be read is `plugin_config.py`, and the right side of `:` still declares the output of the `protobuf-to-pydantic` plugin The position is `.`.
+ In this way, the `protobuf-to-pydantic` plugin can be loaded into the configuration file specified by the developer when it is running, and then run according to the configuration defined by the configuration file.
+ 
++> Note: 更多配置内容见`protobuf_to_pydantic/plugin/config.py`文件
++> Note: For more information on configuration, see the 'protobuf_to_pydantic/plugin/config.py'
+ ## 2.2.Generate a `pydantic.BaseModel` object at runtime
+ `protobuf_to_pydantic` can generate the corresponding `pydantic.BaseModel` object based on the `Message` object at runtime。
+ 
+ For example, the `UserMessage` in the following Protobuf file named `demo.proto`:
+ ```protobuf
+ // path: ./demo.proto
+ syntax = "proto3";
+@@ -170,15 +175,14 @@
+ 
+ pydantic_model_to_py_file(
+     "./demo_gen_code.py",
+     msg_to_pydantic_model(demo_pb2.NestedMessage),
+ )
+ ```
+ The code will first convert `demo_pb2.NestedMessage` into a `pydantic.BaseModel` object, and then the generated object will be converted into the corresponding code content by the `pydantic_model_to_py_file` method and written to `demo_gen_code.py` file.
+-It should be noted that if `protobuf_to_pydantic` checks that `isort` and `black` are installed in the current environment, they will be used to format the generated code by default.
+ 
+ ## 2.3.Parameter verification
+ The `Message` object generated according to the Protobuf file will only carry a small amount of information. This is because the ordinary Protobuf file does not have enough parameter verification related information, which requires us to improve the parameter verification information of the `Message` object through some additional ways.
+ Currently `protobuf_to_pydantic` supports multiple ways to obtain other information of the Message, so that the generated `pydantic.BaseModel` object has the function of parameter verification.
+ 
+ > NOTE:
+ >  - 1.The text annotation function is not the focus of subsequent function development, and the P2P mode is recommended。
+@@ -438,17 +442,22 @@
+ ### 2.3.3.Other parameter support
+ In addition to the parameters of `FieldInfo`, the file comment mode and `p2p` mode of `protobuf_to_pydantic` also support the following parameters:
+ - miss_default：By default, the default value of each field in the corresponding `pydantic.BaseModel` object is the same as the default value of each field in the Message, but when `miss default` is `true`, the setting of the default value will be canceled .
+ - enable: By default, `pydantic.BaseModel` will convert every field in the Message. If some fields do not want to be converted, you can set `enable` to `false`
+ - const: Specifies the value of the field's constant. Note: The const of `pydantic.BaseModel` only supports bool variables. When `const` is `True`, the accepted value can only be the value set by `default`, and the default value carried by the Message generated by protobuf corresponds to The null value of type does not match `pydantic.BaseModel`, so `protobuf_to_pydantic` makes some changes to the input of this value, but after `const` sets the value, the `cost` property in the generated field is `True` `, and `default` becomes the corresponding value of the setting.
+ - type: To expand the current type, for example, if you want to increase the verification of the bank card number through the `pydantic.types.Payment Card Number` type, you can specify the field type as `Payment Card Number` by the following method:
+   ```protobuf
++  // common example
+   message UserPayMessage {
+     string bank_number=1; // p2p: {"type": "p2p@import|pydantic.types|PaymentCardNumber"}
+   }
++  // p2p example
++  message UserPayMessage {
++    string bank_number=1[(p2p_validate.rules).string.type = "p2p@import|pydantic.types|PaymentCardNumber"];
++  }
+   ```
+ 
+ > Note:
+ >   If you don't know `pydantic`, you can use the following two URLs to learn what parameters Field supports:
+ >
+ >   - https://pydantic-docs.helpmanual.io/usage/types/#constrained-types
+ >
+@@ -621,15 +630,49 @@
+ from pydantic.fields import FieldInfo
+ 
+ class TimestampTest(BaseModel):
+     timestamp_10: int = FieldInfo(default=1600000000)
+     timestamp_13: int = FieldInfo(default=1600000000000)
+ ```
+ 
+-## 3.example
++## 3.Code formatting
++Code generated directly via `protobuf_to_pydantic` is not perfect, but `protobuf+type_pydantic` can rely on different formatting tools to generate code that conforms to the `Python` specification.
++Currently supported formatting tools are `autoflake`, `black` and `isort`, but the prerequisite for using these tools is that the corresponding formatting tools are installed in the current running environment.
++
++In addition, developers can decide how the formatter will execute through the `pyproject.toml` configuration file, an example of `pyproject.toml` as follows:
++```toml
++# Controls which formatters protobuf-to-pydantic can use, false means that the formatter is not used (default is true)
++[tool.protobuf-to-pydantic.format]
++black = true
++isort = true
++autoflake = true
++
++# See the black configuration documentation:https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-format
++[tool.black]
++line-length = 120
++target-version = ['py37']
++
++# See the isort configuration documentation:https://pycqa.github.io/isort/docs/configuration/config_files.html#pyprojecttoml-preferred-format
++[tool.isort]
++profile = "black"
++multi_line_output = 3
++include_trailing_comma = true
++force_grid_wrap = 0
++use_parentheses = true
++ensure_newline_before_comments = true
++line_length = 120
++
++# See the autoflake configuration documentation:https://github.com/PyCQA/autoflake#configuration
++[tool.autoflake]
++in-place = true
++remove-all-unused-imports = true
++remove-unused-variables = true
++```
++
++## 4.example
+ `protobuf_to_pydantic` provides some simple sample code, the following is the path of the sample code and protobuf file, just for reference:
+ 
+ | Implication                           | Example Protobuf                                                                            | Example code                                                                         |
+ |------------------------------|---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+ | Generate Model code with validation rules based on p2p schema | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/p2p_validate | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/p2p_validate_example |
+ | Generate the basic Model code               | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/simple_example      |
+ | Generate Model code with validation rules from .pyi files     | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/example_proto/demo         | https://github.com/so1n/protobuf_to_pydantic/tree/master/example/text_comment_example |
+```
+

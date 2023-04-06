@@ -1,0 +1,161 @@
+--- tmp/QueriPlug-1.0.2.tar.gz
++++ tmp/QueriPlug-1.0.3.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "QueriPlug-1.0.2.tar", last modified: Wed Apr  5 16:23:16 2023, max compression
+│ +gzip compressed data, was "QueriPlug-1.0.3.tar", last modified: Thu Apr  6 10:25:01 2023, max compression
+│   --- QueriPlug-1.0.2.tar
+├── +++ QueriPlug-1.0.3.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 16:23:16.304047 QueriPlug-1.0.2/
+│ │ --rw-rw-rw-   0        0        0    18429 2023-04-05 13:16:29.000000 QueriPlug-1.0.2/LICENSE
+│ │ --rw-rw-rw-   0        0        0      489 2023-04-05 16:23:16.302046 QueriPlug-1.0.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       37 2023-04-05 13:17:01.000000 QueriPlug-1.0.2/README.md
+│ │ --rw-rw-rw-   0        0        0      539 2023-04-05 16:22:45.000000 QueriPlug-1.0.2/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-05 16:23:16.304047 QueriPlug-1.0.2/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 16:23:16.265038 QueriPlug-1.0.2/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 16:23:16.277040 QueriPlug-1.0.2/src/QueriPlug/
+│ │ --rw-rw-rw-   0        0        0        0 2023-04-05 16:17:22.000000 QueriPlug-1.0.2/src/QueriPlug/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2113 2023-04-05 13:03:00.000000 QueriPlug-1.0.2/src/QueriPlug/connections.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 16:23:16.300069 QueriPlug-1.0.2/src/QueriPlug.egg-info/
+│ │ --rw-rw-rw-   0        0        0      489 2023-04-05 16:23:16.000000 QueriPlug-1.0.2/src/QueriPlug.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      235 2023-04-05 16:23:16.000000 QueriPlug-1.0.2/src/QueriPlug.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 16:23:16.000000 QueriPlug-1.0.2/src/QueriPlug.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       10 2023-04-05 16:23:16.000000 QueriPlug-1.0.2/src/QueriPlug.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.343367 QueriPlug-1.0.3/
+│ │ +-rw-rw-rw-   0        0        0    18429 2023-04-05 13:16:29.000000 QueriPlug-1.0.3/LICENSE
+│ │ +-rw-rw-rw-   0        0        0      491 2023-04-06 10:25:01.342365 QueriPlug-1.0.3/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       39 2023-04-06 10:18:45.000000 QueriPlug-1.0.3/README.md
+│ │ +-rw-rw-rw-   0        0        0      539 2023-04-06 10:20:22.000000 QueriPlug-1.0.3/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 10:25:01.344365 QueriPlug-1.0.3/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.312357 QueriPlug-1.0.3/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.321361 QueriPlug-1.0.3/src/QueriPlug/
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-06 10:21:11.000000 QueriPlug-1.0.3/src/QueriPlug/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2731 2023-04-06 10:20:01.000000 QueriPlug-1.0.3/src/QueriPlug/connections.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:25:01.340374 QueriPlug-1.0.3/src/QueriPlug.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      491 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      235 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       10 2023-04-06 10:25:01.000000 QueriPlug-1.0.3/src/QueriPlug.egg-info/top_level.txt
+│ │   --- QueriPlug-1.0.2/LICENSE
+│ ├── +++ QueriPlug-1.0.3/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- QueriPlug-1.0.2/pyproject.toml
+│ ├── +++ QueriPlug-1.0.3/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "QueriPlug"
+│ │ -version = "1.0.2"
+│ │ +version = "1.0.3"
+│ │  authors = [
+│ │    { name="Ivan Zabrodin" },
+│ │  ]
+│ │  description = "A SQLite3 wrapper for python"
+│ │  readme = "README.md"
+│ │  requires-python = ">=3.7"
+│ │  classifiers = [
+│ │   --- QueriPlug-1.0.2/src/QueriPlug/connections.py
+│ ├── +++ QueriPlug-1.0.3/src/QueriPlug/connections.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,57 +1,81 @@
+│ │ -import sqlite3
+│ │ +from sqlite3 import connect
+│ │  
+│ │  
+│ │  class Connection:
+│ │ +    """
+│ │ +    A connection to a databse, that can be used as the pointed database for all derived Connections
+│ │ +    """
+│ │  
+│ │      def __init__(self, name: str):
+│ │          """
+│ │          :param name: The name of the database.
+│ │          """
+│ │          self.name = name
+│ │ -        self._conn = sqlite3.connect(self.name + ".db")
+│ │ +        self._conn = connect(self.name + ".db")
+│ │          self._cr = self._conn.cursor()
+│ │  
+│ │ +    def _query(self, query: str) -> list:
+│ │ +        """
+│ │ +        :param query: The query to be sent to the database.
+│ │ +        :return: The result of the query.
+│ │ +        """
+│ │ +        self._cr.execute(query)
+│ │ +        self._cr.connection.commit()
+│ │ +        return self._cr.fetchall()
+│ │ +
+│ │  
+│ │  class TableConnection(Connection):
+│ │ +    """
+│ │ +    A type of Connection, that points to and edits tables.
+│ │ +    """
+│ │  
+│ │      def __init__(self, db: str | Connection, tablename: str, structure: list[tuple[str, str]]):
+│ │          """
+│ │          :param db: Name of database or Connection to database.
+│ │          :param tablename: Name of table.
+│ │          :param structure: The properties of each element in the table.
+│ │          """
+│ │ -        if type(db) == str: super().__init__(db)
+│ │ +        if type(db) == str:
+│ │ +            super().__init__(db)
+│ │ +        else:
+│ │ +            self._query = db._query
+│ │ +
+│ │          self.cursor = self._cr if type(db) == str else db._cr
+│ │          self.tablename = tablename
+│ │          self.struct = structure
+│ │          self.setupTable(structure)
+│ │  
+│ │ -    def _query(self, query: str) -> list:
+│ │ -        self.cursor.execute(query)
+│ │ -        self.cursor.connection.commit()
+│ │ -        return self.cursor.fetchall()
+│ │ -
+│ │      def setupTable(self, structure: list[tuple[str, str]]) -> None:
+│ │          query = f"""CREATE TABLE IF NOT EXISTS {self.tablename} (ID INTEGER PRIMARY KEY,
+│ │              {''.join([structure[i][0] + " " + structure[i][1] + ", " for i in range(len(structure))])}"""[:-2] + ")"
+│ │          self._query(query)
+│ │  
+│ │      def getTable(self, *headings: str) -> list:
+│ │ +        """
+│ │ +        :param headings: The columns to read from.
+│ │ +        :return: The columns read from.
+│ │ +        """
+│ │          query = """SELECT %s FROM %s;""" % (','.join(headings), self.tablename)
+│ │ -        out = self._query(query)
+│ │ -        for ind, item in enumerate(out):
+│ │ -            out[ind] = (item[0], *[item[i].replace(',', '') for i in range(1, len(item))])
+│ │ -        return out
+│ │ +        return self._query(query)
+│ │  
+│ │      def clear(self) -> None:
+│ │ +        """
+│ │ +        Clears the entire table.
+│ │ +        :return:
+│ │ +        """
+│ │          query = """DELETE FROM %s;""" % self.tablename
+│ │          self._query(query)
+│ │  
+│ │      def deleteElement(self, *elements) -> None:
+│ │ +        """
+│ │ +        Deletes the entries with the specified IDs.
+│ │ +        :param elements: The ID values to be deleted.
+│ │ +        :return:
+│ │ +        """
+│ │          query = """DELETE FROM %s WHERE (ID) IN (%s);""" % (self.tablename, ','.join(str(elements)))
+│ │          self._query(query)
+│ │  
+│ │      def addElement(self, *values) -> None:
+│ │ -        query = """INSERT INTO %s (%s) VALUES ('%s')""" % (
+│ │ -            self.tablename, "va", ','.join(str(values)))
+│ │ +        query = """INSERT INTO %s (%s) VALUES %s""" % (
+│ │ +            self.tablename, ','.join([col[0] for col in self.struct]), ''.join(str(values)))
+│ │          self._query(query)

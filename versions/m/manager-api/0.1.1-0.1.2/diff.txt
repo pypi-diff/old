@@ -1,0 +1,812 @@
+--- tmp/manager-api-0.1.1.tar.gz
++++ tmp/manager-api-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "manager-api-0.1.1.tar", last modified: Tue Feb 14 12:59:31 2023, max compression
+│ +gzip compressed data, was "manager-api-0.1.2.tar", last modified: Thu Apr  6 10:06:30 2023, max compression
+│   --- manager-api-0.1.1.tar
+├── +++ manager-api-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,17 +1,17 @@
+│ │ -drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-02-14 12:59:31.466436 manager-api-0.1.1/
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)     1072 2023-01-07 17:10:23.000000 manager-api-0.1.1/LICENSE
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)      716 2023-02-14 12:59:31.466436 manager-api-0.1.1/PKG-INFO
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)     1127 2023-02-04 17:00:52.000000 manager-api-0.1.1/README.md
+│ │ -drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-02-14 12:59:31.466436 manager-api-0.1.1/manager_api/
+│ │ --rwxr-xr-x   0 kirk      (1000) kirk      (1001)     2188 2023-02-06 01:12:02.000000 manager-api-0.1.1/manager_api/__init__.py
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)     5336 2023-02-04 04:09:12.000000 manager-api-0.1.1/manager_api/enums.py
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)   135695 2023-02-04 04:09:12.000000 manager-api-0.1.1/manager_api/model.py
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)     3795 2023-02-14 12:55:22.000000 manager-api-0.1.1/manager_api/object.py
+│ │ -drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-02-14 12:59:31.466436 manager-api-0.1.1/manager_api.egg-info/
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)      716 2023-02-14 12:59:31.000000 manager-api-0.1.1/manager_api.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)      288 2023-02-14 12:59:31.000000 manager-api-0.1.1/manager_api.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)        1 2023-02-14 12:59:31.000000 manager-api-0.1.1/manager_api.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)       17 2023-02-14 12:59:31.000000 manager-api-0.1.1/manager_api.egg-info/requires.txt
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)       12 2023-02-14 12:59:31.000000 manager-api-0.1.1/manager_api.egg-info/top_level.txt
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)       38 2023-02-14 12:59:31.466436 manager-api-0.1.1/setup.cfg
+│ │ --rw-r--r--   0 kirk      (1000) kirk      (1001)      877 2023-02-14 12:58:49.000000 manager-api-0.1.1/setup.py
+│ │ +drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-04-06 10:06:30.113206 manager-api-0.1.2/
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)     1072 2023-01-07 17:10:23.000000 manager-api-0.1.2/LICENSE
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)      715 2023-04-06 10:06:30.113206 manager-api-0.1.2/PKG-INFO
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)     1127 2023-02-04 17:00:52.000000 manager-api-0.1.2/README.md
+│ │ +drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-04-06 10:06:30.113206 manager-api-0.1.2/manager_api/
+│ │ +-rwxr-xr-x   0 kirk      (1000) kirk      (1001)     2685 2023-04-06 09:59:43.000000 manager-api-0.1.2/manager_api/__init__.py
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)     5335 2023-04-04 12:01:14.000000 manager-api-0.1.2/manager_api/enums.py
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)   135911 2023-04-04 12:01:14.000000 manager-api-0.1.2/manager_api/model.py
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)     3902 2023-04-06 10:04:38.000000 manager-api-0.1.2/manager_api/object.py
+│ │ +drwxr-xr-x   0 kirk      (1000) kirk      (1001)        0 2023-04-06 10:06:30.113206 manager-api-0.1.2/manager_api.egg-info/
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)      715 2023-04-06 10:06:30.000000 manager-api-0.1.2/manager_api.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)      288 2023-04-06 10:06:30.000000 manager-api-0.1.2/manager_api.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)        1 2023-04-06 10:06:30.000000 manager-api-0.1.2/manager_api.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)       17 2023-04-06 10:06:30.000000 manager-api-0.1.2/manager_api.egg-info/requires.txt
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)       12 2023-04-06 10:06:30.000000 manager-api-0.1.2/manager_api.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)       38 2023-04-06 10:06:30.113206 manager-api-0.1.2/setup.cfg
+│ │ +-rw-r--r--   0 kirk      (1000) kirk      (1001)      877 2023-04-06 10:05:02.000000 manager-api-0.1.2/setup.py
+│ │   --- manager-api-0.1.1/LICENSE
+│ ├── +++ manager-api-0.1.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- manager-api-0.1.1/PKG-INFO
+│ ├── +++ manager-api-0.1.2/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │ -Metadata-Version: 2.1
+│ │ +Metadata-Version: 1.1
+│ │  Name: manager-api
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Python module to access the API provided by Manager accounting software 
+│ │  Home-page: https://github.com/isotherm/python-manager-api/
+│ │  Author: Kirk Meyer
+│ │  Author-email: kirk.meyer@alpaxo.com
+│ │  License: MIT
+│ │ +Description: UNKNOWN
+│ │  Platform: any
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Office/Business :: Financial :: Accounting
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │ -License-File: LICENSE
+│ │   --- manager-api-0.1.1/README.md
+│ ├── +++ manager-api-0.1.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- manager-api-0.1.1/manager_api/__init__.py
+│ ├── +++ manager-api-0.1.2/manager_api/__init__.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,25 +1,29 @@
+│ │  #!/usr/bin/env python3
+│ │  # -*- coding: utf-8 -*-
+│ │  
+│ │  from base64 import urlsafe_b64encode
+│ │  from inspect import isclass
+│ │ +import re
+│ │  from requests import Session
+│ │  from urllib.parse import urljoin
+│ │  
+│ │  
+│ │ +def _b64encode(string):
+│ │ +    if hasattr(string, "encode"):
+│ │ +        string = string.encode()
+│ │ +    return urlsafe_b64encode(string).decode().rstrip("=")
+│ │ +
+│ │ +
+│ │  class Business(Session):
+│ │      def __init__(self, url, username, password, name):
+│ │ -        # Calculate API URL for this business
+│ │ -        name = bytes(name, encoding="utf-8")
+│ │ -        name = urlsafe_b64encode(name).decode("utf-8")
+│ │ -        name = name.rstrip("=")
+│ │ -        url = urljoin(url, f"api/{name}/")
+│ │          # Initialize persistent options
+│ │          self._url = url
+│ │ +        self._name = name
+│ │ +        self._api_url = urljoin(url, f"api/{_b64encode(name)}/")
+│ │          self._auth = (username, password)
+│ │          super().__init__()
+│ │          # Create session-specific classes
+│ │          from . import model
+│ │          for name in model.__all__:
+│ │              attr = getattr(model, name)
+│ │              if isclass(attr):
+│ │ @@ -50,15 +54,26 @@
+│ │                  assert(base.Guid == item["Key"])
+│ │                  setattr(self, name, base)
+│ │              except (AssertionError, AttributeError):
+│ │                  continue
+│ │  
+│ │      def request(self, method, url, **kwargs):
+│ │          kwargs["auth"] = self._auth
+│ │ -        url = urljoin(self._url, url)
+│ │ +        url = urljoin(self._api_url, url)
+│ │          url = url.rstrip("/") + ".json"
+│ │          return super().request(method, url, **kwargs)
+│ │  
+│ │ +    def _get_url(self, action, uuid=None):
+│ │ +        action = re.sub(r'(?<!^)(?=[A-Z])', '-', action).lower()
+│ │ +        name = self._name.encode()
+│ │ +        protobuf = b"\xa2\x06" + bytes([len(name)]) + name
+│ │ +        if uuid:
+│ │ +            protobuf += b"\xc2\x0c\x12"
+│ │ +            protobuf += b"\x09" + uuid.bytes_le[:8]
+│ │ +            protobuf += b"\x11" + uuid.bytes_le[8:]
+│ │ +        protobuf = _b64encode(protobuf)
+│ │ +        return urljoin(self._url, f"{action}?{protobuf}")
+│ │ +
+│ │  
+│ │  __all__ = [
+│ │      "Business",
+│ │  ]
+│ │   --- manager-api-0.1.1/manager_api/enums.py
+│ ├── +++ manager-api-0.1.2/manager_api/enums.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,9 +1,9 @@
+│ │  # -*- coding: utf-8 -*-
+│ │ -# Do not edit. Automatically generated from Manager v23.1.11.592.
+│ │ +# Do not edit. Automatically generated from Manager v23.4.3.750.
+│ │  
+│ │  from typing import Literal
+│ │  
+│ │  
+│ │  StringOperator = Literal[
+│ │   "Contains",
+│ │   "DoesNotContain",
+│ │   --- manager-api-0.1.1/manager_api/model.py
+│ ├── +++ manager-api-0.1.2/manager_api/model.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,23 +1,23 @@
+│ │  # -*- coding: utf-8 -*-
+│ │ -# Do not edit. Automatically generated from Manager v23.1.11.592.
+│ │ +# Do not edit. Automatically generated from Manager v23.4.3.750.
+│ │  
+│ │  from __future__ import annotations
+│ │  
+│ │  from datetime import date
+│ │  from decimal import Decimal
+│ │  from typing import Any, ClassVar, Dict, List, Optional, Union
+│ │  from uuid import UUID
+│ │  
+│ │  from . import enums
+│ │  from .enums import *
+│ │  from .object import ManagerBaseModel, Object
+│ │  
+│ │  
+│ │ -CustomFieldsAttribute = Union["model.AmortizationEntry", "model.BankOrCashAccount", "model.BillableTime", "model.BusinessDetails", "model.CapitalAccount", "model.CreditNote", "model.Customer", "model.DebitNote", "model.DeliveryNote", "model.DepreciationEntry", "model.Employee", "model.ExpenseClaim", "model.FixedAsset", "model.Folder", "model.GoodsReceipt", "model.IntangibleAsset", "model.InterAccountTransfer", "model.InventoryItem", "model.InventoryKit", "model.InventoryTransfer", "model.InventoryWriteOff", "model.JournalEntry", "model.NonInventoryItem", "model.Payment", "model.Payslip", "model.PayslipContributionItem", "model.PayslipDeductionItem", "model.PayslipEarningsItem", "model.ProductionOrder", "model.Project", "model.PurchaseInvoice", "model.PurchaseOrder", "model.PurchaseQuote", "model.Receipt", "model.RecurringInterAccountTransfer", "model.RecurringJournalEntry", "model.RecurringPayment", "model.RecurringPayslip", "model.RecurringPurchaseInvoice", "model.RecurringPurchaseOrder", "model.RecurringReceipt", "model.RecurringSalesInvoice", "model.RecurringSalesOrder", "model.RecurringSalesQuote", "model.SalesInvoice", "model.SalesOrder", "model.SalesQuote", "model.SpecialAccount", "model.Supplier", "model.TaxCode", "model.WithholdingTaxReceipt"]
+│ │ +CustomFieldsAttribute = Union["model.AmortizationEntry", "model.BankOrCashAccount", "model.BillableTime", "model.BusinessDetails", "model.CapitalAccount", "model.CreditNote", "model.Customer", "model.DebitNote", "model.DeliveryNote", "model.DepreciationEntry", "model.Employee", "model.ExpenseClaim", "model.FixedAsset", "model.Folder", "model.GoodsReceipt", "model.IntangibleAsset", "model.InterAccountTransfer", "model.InventoryItem", "model.InventoryKit", "model.InventoryTransfer", "model.InventoryWriteOff", "model.Investment", "model.JournalEntry", "model.NonInventoryItem", "model.Payment", "model.Payslip", "model.PayslipContributionItem", "model.PayslipDeductionItem", "model.PayslipEarningsItem", "model.ProductionOrder", "model.Project", "model.PurchaseInvoice", "model.PurchaseOrder", "model.PurchaseQuote", "model.Receipt", "model.RecurringInterAccountTransfer", "model.RecurringJournalEntry", "model.RecurringPayment", "model.RecurringPayslip", "model.RecurringPurchaseInvoice", "model.RecurringPurchaseOrder", "model.RecurringReceipt", "model.RecurringSalesInvoice", "model.RecurringSalesOrder", "model.RecurringSalesQuote", "model.SalesInvoice", "model.SalesOrder", "model.SalesQuote", "model.SpecialAccount", "model.Supplier", "model.TaxCode", "model.WithholdingTaxReceipt"]
+│ │  BalanceSheetAbstractGroup = Union["model.Assets", "model.BalanceSheetGroup", "model.Equity", "model.Liabilities"]
+│ │  ChartOfAccountsGroup = Union["model.BalanceSheetAbstractGroup", "model.ProfitAndLossStatementGroup"]
+│ │  IGeneralLedgerAccount = Union["model.BalanceSheetAccount", "model.BalanceSheetAccountsPayableAccount", "model.BalanceSheetAccountsReceivableAccount", "model.BalanceSheetBillableExpensesAccount", "model.BalanceSheetBillableTimeAccount", "model.BalanceSheetCapitalAccountsAccount", "model.BalanceSheetCashAtBankAccount", "model.BalanceSheetEmployeeClearingAccount", "model.BalanceSheetExpenseClaimsAccount", "model.BalanceSheetFixedAssetsAccumulatedDepreciationAccount", "model.BalanceSheetFixedAssetsAtCostAccount", "model.BalanceSheetIntangibleAssetsAccumulatedAmortizationAccount", "model.BalanceSheetIntangibleAssetsAtCostAccount", "model.BalanceSheetInterdivisionalLoan", "model.BalanceSheetInventoryOnHandAccount", "model.BalanceSheetInvestmentsAccount", "model.BalanceSheetProductionInProgressAccount", "model.BalanceSheetRetainedEarningsAccount", "model.BalanceSheetSpecialAccountsAccount", "model.BalanceSheetSuspenseAccount", "model.BalanceSheetTaxPayableAccount", "model.BalanceSheetWithholdingTaxAccount", "model.BalanceSheetWithholdingTaxPayableAccount", "model.BalanceSheetWithholdingTaxReceivableAccount", "model.ControlAccountForBankAccounts", "model.ControlAccountForCapitalAccounts", "model.ControlAccountForCustomers", "model.ControlAccountForEmployees", "model.ControlAccountForFixedAssets", "model.ControlAccountForFixedAssetsAccumulatedDepreciation", "model.ControlAccountForIntangibleAssets", "model.ControlAccountForIntangibleAssetsAccumulatedAmortization", "model.ControlAccountForInventoryItems", "model.ControlAccountForInvestments", "model.ControlAccountForSpecialAccounts", "model.ControlAccountForSuppliers", "model.ProfitAndLossStatementAccount", "model.ProfitAndLossStatementAccountBillableExpensesCost", "model.ProfitAndLossStatementAccountBillableExpensesInvoiced", "model.ProfitAndLossStatementAccountBillableTimeInvoiced", "model.ProfitAndLossStatementAccountBillableTimeMovement", "model.ProfitAndLossStatementAccountCurrencyGainsLosses", "model.ProfitAndLossStatementAccountFixedAssetDepreciation", "model.ProfitAndLossStatementAccountFixedAssetLossOnDisposal", "model.ProfitAndLossStatementAccountIntangibleAssetsAmortization", "model.ProfitAndLossStatementAccountIntangibleAssetsGainsLossOnDisposal", "model.ProfitAndLossStatementAccountInventoryPurchases", "model.ProfitAndLossStatementAccountInventorySales", "model.ProfitAndLossStatementAccountLatePaymentFees", "model.ProfitAndLossStatementAccountRoundingExpense", "model.ProfitAndLossStatementCapitalGainsOnInvestments"]
+│ │  ICustomGeneralLedgerAccount = Union["model.BalanceSheetAccount", "model.ProfitAndLossStatementAccount"]
+│ │  IInventoryWriteOffAccount = Union["model.BalanceSheetAccount", "model.BalanceSheetFixedAssetsAtCostAccount", "model.ControlAccountForFixedAssets", "model.ProfitAndLossStatementAccount"]
+│ │  IJournalEntryAccount = Union["model.BalanceSheetAccount", "model.BalanceSheetAccountsPayableAccount", "model.BalanceSheetAccountsReceivableAccount", "model.BalanceSheetBillableExpensesAccount", "model.BalanceSheetCapitalAccountsAccount", "model.BalanceSheetEmployeeClearingAccount", "model.BalanceSheetExpenseClaimsAccount", "model.BalanceSheetFixedAssetsAtCostAccount", "model.BalanceSheetIntangibleAssetsAtCostAccount", "model.BalanceSheetInventoryOnHandAccount", "model.BalanceSheetInvestmentsAccount", "model.BalanceSheetRetainedEarningsAccount", "model.BalanceSheetSpecialAccountsAccount", "model.BalanceSheetWithholdingTaxAccount", "model.BalanceSheetWithholdingTaxPayableAccount", "model.ControlAccountForCapitalAccounts", "model.ControlAccountForCustomers", "model.ControlAccountForEmployees", "model.ControlAccountForFixedAssets", "model.ControlAccountForIntangibleAssets", "model.ControlAccountForInventoryItems", "model.ControlAccountForInvestments", "model.ControlAccountForSpecialAccounts", "model.ControlAccountForSuppliers", "model.ProfitAndLossStatementAccount", "model.ProfitAndLossStatementAccountBillableExpensesCost", "model.ProfitAndLossStatementAccountBillableExpensesInvoiced", "model.ProfitAndLossStatementAccountBillableTimeInvoiced", "model.ProfitAndLossStatementAccountBillableTimeMovement", "model.ProfitAndLossStatementAccountFixedAssetDepreciation", "model.ProfitAndLossStatementAccountFixedAssetLossOnDisposal", "model.ProfitAndLossStatementAccountIntangibleAssetsAmortization", "model.ProfitAndLossStatementAccountIntangibleAssetsGainsLossOnDisposal", "model.ProfitAndLossStatementAccountInventoryPurchases", "model.ProfitAndLossStatementAccountInventorySales", "model.ProfitAndLossStatementAccountLatePaymentFees", "model.ProfitAndLossStatementCapitalGainsOnInvestments"]
+│ │  INonInventoryItemAccount = Union["model.BalanceSheetAccount", "model.ProfitAndLossStatementAccount"]
+│ │ @@ -477,22 +477,18 @@
+│ │  
+│ │  class CheckboxCustomField(Object):
+│ │      Guid: ClassVar[UUID] = "ccad5339-206e-4145-aa3d-3bd8d785b2fb"
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │ -
+│ │ -
+│ │ -class Column(Object):
+│ │ -    pass
+│ │ +    ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class ControlAccountForBankAccounts(Object):
+│ │      Guid: ClassVar[UUID] = "c97264e3-eed6-4afd-8d2c-e1c1a00b4dc1"
+│ │      Name: Optional[str]
+│ │      Code: Optional[str]
+│ │      Group: Optional[model.BalanceSheetAbstractGroup]
+│ │ @@ -657,24 +653,31 @@
+│ │  class CreditNoteFooter(Object):
+│ │      Guid: ClassVar[UUID] = "90f7ba80-5666-49a2-af1b-908cf9a651cd"
+│ │      Name: Optional[str]
+│ │      Content: Optional[str]
+│ │      Inactive: Optional[bool]
+│ │  
+│ │  
+│ │ +class CustomColumns(Object):
+│ │ +    Guid: ClassVar[UUID] = "3c2d2934-27a8-4df3-9afd-890ebeb6fb4e"
+│ │ +    class CustomColumn(ManagerBaseModel):
+│ │ +        Key: Optional[model.UUID]
+│ │ +        Enabled: Optional[bool]
+│ │ +    Columns: Optional[List[CustomColumn]]
+│ │ +
+│ │ +
+│ │  class CustomField(Object):
+│ │      Guid: ClassVar[UUID] = "dcb382dc-a4e0-4354-a845-b7d647f610f7"
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Type: Optional[model.CustomFieldStyle]
+│ │      OptionsForDropdownList: Optional[str]
+│ │      Size: Optional[model.CustomFieldSize]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │      ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class CustomFields(Object):
+│ │ @@ -798,18 +801,18 @@
+│ │  
+│ │  class DateCustomField(Object):
+│ │      Guid: ClassVar[UUID] = "6c564f4c-380c-432e-af3b-2d6514c1891c"
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │ +    ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class DebitNote(Object):
+│ │      Guid: ClassVar[UUID] = "274fc6d0-2eac-43d0-8286-79c856e644aa"
+│ │      class Line(ManagerBaseModel):
+│ │          Item: Optional[model.IPurchaseItem]
+│ │          Account: Optional[model.IPurchaseInvoiceAccount]
+│ │ @@ -877,35 +880,25 @@
+│ │      Customer: Optional[model.Customer]
+│ │      SalesOrder: Optional[model.SalesOrder]
+│ │      SalesInvoice: Optional[model.SalesInvoice]
+│ │      DeliveryAddress: Optional[str]
+│ │      Description: Optional[str]
+│ │      Lines: Optional[List[Line]]
+│ │      HasLineNumber: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasDeliveryNoteCustomTitle: Optional[bool]
+│ │      DeliveryNoteCustomTitle: Optional[str]
+│ │      HasDeliveryNoteCustomTheme: Optional[bool]
+│ │      DeliveryNoteCustomTheme: Optional[model.Theme]
+│ │      HasDeliveryNoteFooters: Optional[bool]
+│ │      DeliveryNoteFooters: Optional[List[model.DeliveryNoteFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │      AutomaticReference: Optional[bool]
+│ │  
+│ │  
+│ │ -class DeliveryNoteColumns(Object):
+│ │ -    Guid: ClassVar[UUID] = "8e82c77b-b894-4df8-939d-9c6983eb58d4"
+│ │ -    class Column(ManagerBaseModel):
+│ │ -        Name: Optional[enums.DeliveryNoteColumns]
+│ │ -        CustomField: Optional[model.ICustomField]
+│ │ -        ClassicCustomField: Optional[model.CustomField]
+│ │ -    CustomColumns: Optional[bool]
+│ │ -    Columns: Optional[List[Column]]
+│ │ -
+│ │ -
+│ │  class DeliveryNoteFooter(Object):
+│ │      Guid: ClassVar[UUID] = "fd737085-d270-4749-9274-7b458a2ec740"
+│ │      Name: Optional[str]
+│ │      Content: Optional[str]
+│ │      Inactive: Optional[bool]
+│ │  
+│ │  
+│ │ @@ -1501,19 +1494,22 @@
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │  class Investment(Object):
+│ │      Guid: ClassVar[UUID] = "a8f95068-fc73-43f7-aabb-fd868e506b51"
+│ │      Code: Optional[str]
+│ │      Name: Optional[str]
+│ │ +    Currency: Optional[model.ForeignCurrency]
+│ │      ControlAccount: Optional[model.ControlAccountForInvestments]
+│ │      MarketPrice: Optional[model.Decimal]
+│ │      StartingBalance: Optional[model.Decimal]
+│ │      StartingBalanceTotalCost: Optional[model.Decimal]
+│ │      Inactive: Optional[bool]
+│ │ +    CustomFields: Optional[Dict[model.CustomField, str]]
+│ │ +    CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │  class JournalEntry(Object):
+│ │      Guid: ClassVar[UUID] = "5ea52bc4-90ae-4e4a-aec4-ef1224b279ad"
+│ │      class Line(ManagerBaseModel):
+│ │          Account: Optional[model.IJournalEntryAccount]
+│ │          AccountsReceivableCustomer: Optional[model.Customer]
+│ │ @@ -1530,14 +1526,16 @@
+│ │          InventoryLocation: Optional[model.InventoryLocation]
+│ │          SpecialAccount: Optional[model.SpecialAccount]
+│ │          FixedAsset: Optional[model.FixedAsset]
+│ │          IntangibleAsset: Optional[model.IntangibleAsset]
+│ │          ExpenseClaimPayer: Optional[model.ExpenseClaimsPayer]
+│ │          Investment: Optional[model.Investment]
+│ │          LineDescription: Optional[str]
+│ │ +        CustomFields: Optional[Dict[model.CustomField, str]]
+│ │ +        CustomFields2: Optional[model.CustomFields]
+│ │          Qty: Optional[model.Decimal]
+│ │          Debit: Optional[model.Decimal]
+│ │          Credit: Optional[model.Decimal]
+│ │          CurrencyAmount: Optional[model.Decimal]
+│ │          TaxCode: Optional[model.TaxCode]
+│ │          Project: Optional[model.Project]
+│ │          Division: Optional[model.Division]
+│ │ @@ -1593,18 +1591,18 @@
+│ │      class Option(ManagerBaseModel):
+│ │          Value: Optional[str]
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Options: Optional[List[Option]]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │ +    ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class NamedObject(Object):
+│ │      pass
+│ │  
+│ │  
+│ │  class NonInventoryItem(Object):
+│ │ @@ -1633,19 +1631,19 @@
+│ │  
+│ │  class NumberCustomField(Object):
+│ │      Guid: ClassVar[UUID] = "68e09438-7aa1-4d63-b7d3-ce2dcd052e88"
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      HideTotalAmount: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │ +    ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class Object(Object):
+│ │      pass
+│ │  
+│ │  
+│ │  class Payment(Object):
+│ │ @@ -1700,15 +1698,15 @@
+│ │      DiscountType: Optional[model.DiscountType]
+│ │      AmountsAreTaxExclusive: Optional[bool]
+│ │      FixedTotal: Optional[bool]
+│ │      FixedTotalAmount: Optional[model.Decimal]
+│ │      CustomTheme: Optional[bool]
+│ │      PaymentCustomTheme: Optional[model.Theme]
+│ │      AutomaticReference: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasPaymentCustomTitle: Optional[bool]
+│ │      PaymentCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasPaymentFooters: Optional[bool]
+│ │      PaymentFooters: Optional[List[model.PaymentFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │ @@ -1797,14 +1795,15 @@
+│ │  
+│ │  class PayslipContributionItem(Object):
+│ │      Guid: ClassVar[UUID] = "73af4c68-c347-4088-8846-758f1e7bc5bb"
+│ │      Name: Optional[str]
+│ │      ExpenseAccount: Optional[model.ProfitAndLossStatementAccount]
+│ │      LiabilityAccount: Optional[model.BalanceSheetAccount]
+│ │      ReportingCategory: Optional[model.PayslipContributionItemReportingCategory]
+│ │ +    Inactive: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │  class PayslipContributionItemReportingCategory(Object):
+│ │      Guid: ClassVar[UUID] = "ad4c002b-f4ea-4bf5-85cc-f65dd4398794"
+│ │      Name: Optional[str]
+│ │ @@ -1812,14 +1811,15 @@
+│ │  
+│ │  
+│ │  class PayslipDeductionItem(Object):
+│ │      Guid: ClassVar[UUID] = "0444eb18-6fc5-4d1f-be8b-c114da01832c"
+│ │      Name: Optional[str]
+│ │      Account: Optional[model.ICustomGeneralLedgerAccount]
+│ │      ReportingCategory: Optional[model.PayslipDeductionItemReportingCategory]
+│ │ +    Inactive: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │  class PayslipDeductionItemReportingCategory(Object):
+│ │      Guid: ClassVar[UUID] = "1ccb2c74-e9ed-4642-9687-bdf9f3403f3b"
+│ │      Name: Optional[str]
+│ │ @@ -1827,14 +1827,15 @@
+│ │  
+│ │  
+│ │  class PayslipEarningsItem(Object):
+│ │      Guid: ClassVar[UUID] = "ab02f6ab-c91c-4fc2-b979-66a6682c200e"
+│ │      Name: Optional[str]
+│ │      ExpenseAccount: Optional[model.ProfitAndLossStatementAccount]
+│ │      ReportingCategory: Optional[model.PayslipEarningsItemReportingCategory]
+│ │ +    Inactive: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │  class PayslipEarningsItemReportingCategory(Object):
+│ │      Guid: ClassVar[UUID] = "3de1fae6-48ea-4901-8e1b-507483bfc4f3"
+│ │      Name: Optional[str]
+│ │ @@ -2210,15 +2211,15 @@
+│ │      WithholdingTaxType: Optional[model.WithholdingTaxType]
+│ │      WithholdingTaxPercentage: Optional[model.Decimal]
+│ │      WithholdingTaxAmount: Optional[model.Decimal]
+│ │      HasPurchaseQuoteCustomTheme: Optional[bool]
+│ │      PurchaseQuoteCustomTheme: Optional[model.Theme]
+│ │      AutomaticReference: Optional[bool]
+│ │      Cancelled: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasPurchaseQuoteCustomTitle: Optional[bool]
+│ │      PurchaseQuoteCustomTitle: Optional[str]
+│ │      RequestForQuotationCustomTitleOption: Optional[bool]
+│ │      RequestForQuotationCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasPurchaseQuoteFooters: Optional[bool]
+│ │      PurchaseQuoteFooters: Optional[List[model.PurchaseQuoteFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │ @@ -2284,28 +2285,23 @@
+│ │      DiscountType: Optional[model.DiscountType]
+│ │      AmountsAreTaxExclusive: Optional[bool]
+│ │      FixedTotal: Optional[bool]
+│ │      FixedTotalAmount: Optional[model.Decimal]
+│ │      CustomTheme: Optional[bool]
+│ │      ReceiptCustomTheme: Optional[model.Theme]
+│ │      AutomaticReference: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasReceiptCustomTitle: Optional[bool]
+│ │      ReceiptCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasReceiptFooters: Optional[bool]
+│ │      ReceiptFooters: Optional[List[model.ReceiptFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │  
+│ │ -class ReceiptColumns(Object):
+│ │ -    Guid: ClassVar[UUID] = "ab9df426-967c-4851-92e8-d45e3188fc9c"
+│ │ -    Columns: Optional[List[model.Column]]
+│ │ -
+│ │ -
+│ │  class ReceiptFooter(Object):
+│ │      Guid: ClassVar[UUID] = "b4053b7c-b07a-45ba-aa14-1e3a624f8565"
+│ │      Name: Optional[str]
+│ │      Content: Optional[str]
+│ │      Inactive: Optional[bool]
+│ │  
+│ │  
+│ │ @@ -2428,15 +2424,15 @@
+│ │      HasLineDescription: Optional[bool]
+│ │      QuantityColumn: Optional[bool]
+│ │      UnitPriceColumn: Optional[bool]
+│ │      Discount: Optional[bool]
+│ │      DiscountType: Optional[model.DiscountType]
+│ │      AmountsAreTaxExclusive: Optional[bool]
+│ │      AutomaticReference: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasPaymentCustomTitle: Optional[bool]
+│ │      PaymentCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasPaymentFooters: Optional[bool]
+│ │      PaymentFooters: Optional[List[model.PaymentFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │ @@ -2456,15 +2452,14 @@
+│ │      CustomTheme: Optional[bool]
+│ │      Theme: Optional[model.Theme]
+│ │      HasPayslipFooters: Optional[bool]
+│ │      PayslipFooters: Optional[List[model.PayslipFooter]]
+│ │      AutomaticReference: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │ -    NextIssueDate: Optional[model.date]
+│ │  
+│ │  
+│ │  class RecurringPurchaseInvoice(Object):
+│ │      Guid: ClassVar[UUID] = "11de04ac-c448-4665-b206-8aa631e63532"
+│ │      NextIssueDate: Optional[model.date]
+│ │      DueDate: Optional[int]
+│ │      Interval: Optional[int]
+│ │ @@ -2543,15 +2538,15 @@
+│ │      HasLineDescription: Optional[bool]
+│ │      QuantityColumn: Optional[bool]
+│ │      UnitPriceColumn: Optional[bool]
+│ │      Discount: Optional[bool]
+│ │      DiscountType: Optional[model.DiscountType]
+│ │      AmountsAreTaxExclusive: Optional[bool]
+│ │      AutomaticReference: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasReceiptCustomTitle: Optional[bool]
+│ │      ReceiptCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasReceiptFooters: Optional[bool]
+│ │      ReceiptFooters: Optional[List[model.ReceiptFooter]]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │ @@ -2584,15 +2579,15 @@
+│ │      EarlyPaymentDiscount: Optional[bool]
+│ │      EarlyPaymentDiscountType: Optional[model.DiscountType]
+│ │      EarlyPaymentDiscountRate: Optional[model.Decimal]
+│ │      EarlyPaymentDiscountAmount: Optional[model.Decimal]
+│ │      EarlyPaymentDiscountDays: Optional[int]
+│ │      LatePaymentFees: Optional[bool]
+│ │      LatePaymentFeesPercentage: Optional[model.Decimal]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesInvoiceCustomTitle: Optional[bool]
+│ │      SalesInvoiceCustomTitle: Optional[str]
+│ │      TotalAmountInWords: Optional[bool]
+│ │      HideDueDate: Optional[bool]
+│ │      HasSalesInvoiceFooters: Optional[bool]
+│ │      SalesInvoiceFooters: Optional[List[model.SalesInvoiceFooter]]
+│ │      AutomaticReference: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │ @@ -2619,15 +2614,15 @@
+│ │      WithholdingTaxType: Optional[model.WithholdingTaxType]
+│ │      WithholdingTaxPercentage: Optional[model.Decimal]
+│ │      WithholdingTaxAmount: Optional[model.Decimal]
+│ │      TrackQuantityToDeliver: Optional[bool]
+│ │      HasSalesOrderCustomTheme: Optional[bool]
+│ │      SalesOrderCustomTheme: Optional[model.Theme]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesOrderCustomTitle: Optional[bool]
+│ │      SalesOrderCustomTitle: Optional[str]
+│ │      HasSalesOrderFooters: Optional[bool]
+│ │      SalesOrderFooters: Optional[List[model.SalesOrderFooter]]
+│ │      AutomaticReference: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │  
+│ │ @@ -2653,15 +2648,15 @@
+│ │      WithholdingTax: Optional[bool]
+│ │      WithholdingTaxType: Optional[model.WithholdingTaxType]
+│ │      WithholdingTaxPercentage: Optional[model.Decimal]
+│ │      WithholdingTaxAmount: Optional[model.Decimal]
+│ │      HideTotalAmount: Optional[bool]
+│ │      HasSalesQuoteCustomTheme: Optional[bool]
+│ │      SalesQuoteCustomTheme: Optional[model.Theme]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesQuoteCustomTitle: Optional[bool]
+│ │      SalesQuoteCustomTitle: Optional[str]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasSalesQuoteFooters: Optional[bool]
+│ │      SalesQuoteFooters: Optional[List[model.SalesQuoteFooter]]
+│ │      AutomaticReference: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │ @@ -2802,15 +2797,15 @@
+│ │      EarlyPaymentDiscountAmount: Optional[model.Decimal]
+│ │      EarlyPaymentDiscountDays: Optional[int]
+│ │      LatePaymentFees: Optional[bool]
+│ │      LatePaymentFeesPercentage: Optional[model.Decimal]
+│ │      TotalAmountInWords: Optional[bool]
+│ │      TotalAmountInBaseCurrency: Optional[bool]
+│ │      Bilingual: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesInvoiceCustomTitle: Optional[bool]
+│ │      SalesInvoiceCustomTitle: Optional[str]
+│ │      HasSalesInvoiceCustomTheme: Optional[bool]
+│ │      SalesInvoiceCustomTheme: Optional[model.Theme]
+│ │      AutomaticReference: Optional[bool]
+│ │      HideDueDate: Optional[bool]
+│ │      HideBalanceDue: Optional[bool]
+│ │      ClosedInvoice: Optional[bool]
+│ │ @@ -2888,15 +2883,15 @@
+│ │      WithholdingTaxPercentage: Optional[model.Decimal]
+│ │      WithholdingTaxAmount: Optional[model.Decimal]
+│ │      TrackQuantityToDeliver: Optional[bool]
+│ │      HasSalesOrderCustomTheme: Optional[bool]
+│ │      SalesOrderCustomTheme: Optional[model.Theme]
+│ │      ShowItemImages: Optional[bool]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesOrderCustomTitle: Optional[bool]
+│ │      SalesOrderCustomTitle: Optional[str]
+│ │      HasSalesOrderFooters: Optional[bool]
+│ │      SalesOrderFooters: Optional[List[model.SalesOrderFooter]]
+│ │      Cancelled: Optional[bool]
+│ │      AutomaticReference: Optional[bool]
+│ │      CustomFields: Optional[Dict[model.CustomField, str]]
+│ │      CustomFields2: Optional[model.CustomFields]
+│ │ @@ -2937,15 +2932,15 @@
+│ │      WithholdingTax: Optional[bool]
+│ │      WithholdingTaxType: Optional[model.WithholdingTaxType]
+│ │      WithholdingTaxPercentage: Optional[model.Decimal]
+│ │      WithholdingTaxAmount: Optional[model.Decimal]
+│ │      HideTotalAmount: Optional[bool]
+│ │      HasSalesQuoteCustomTheme: Optional[bool]
+│ │      SalesQuoteCustomTheme: Optional[model.Theme]
+│ │ -    CustomTitle: Optional[bool]
+│ │ +    HasSalesQuoteCustomTitle: Optional[bool]
+│ │      SalesQuoteCustomTitle: Optional[str]
+│ │      ShowItemImages: Optional[bool]
+│ │      ShowTaxAmountColumn: Optional[bool]
+│ │      HasSalesQuoteFooters: Optional[bool]
+│ │      SalesQuoteFooters: Optional[List[model.SalesQuoteFooter]]
+│ │      Cancelled: Optional[bool]
+│ │      AutomaticReference: Optional[bool]
+│ │ @@ -3222,18 +3217,18 @@
+│ │      Name: Optional[str]
+│ │      Position: Optional[int]
+│ │      Placement: Optional[List[model.CustomFieldsAttribute]]
+│ │      Type: Optional[model.TextCustomFieldType]
+│ │      OptionsForDropdownList: Optional[str]
+│ │      Size: Optional[model.CustomFieldSize]
+│ │      Description: Optional[str]
+│ │ -    DisplayOnList: Optional[bool]
+│ │      DisplayOnView: Optional[bool]
+│ │      ShowAtTheTop: Optional[bool]
+│ │      Inactive: Optional[bool]
+│ │ +    ContainsGeneralLedgerTransactions: Optional[bool]
+│ │  
+│ │  
+│ │  class Theme(Object):
+│ │      Guid: ClassVar[UUID] = "01e1bcb2-74c1-467d-aedc-5e8f738fe776"
+│ │      Name: Optional[str]
+│ │      Template: Optional[str]
+│ │      Inactive: Optional[bool]
+│ │ @@ -3332,43 +3327,42 @@
+│ │      "CapitalAccountsSummary",
+│ │      "CashFlowStatement",
+│ │      "CashFlowStatementFinancingActivityGroup",
+│ │      "CashFlowStatementInvestingActivityGroup",
+│ │      "CashFlowStatementOperatingActivityGroup",
+│ │      "ChartOfAccountsGroup",
+│ │      "CheckboxCustomField",
+│ │ -    "Column",
+│ │      "ControlAccountForBankAccounts",
+│ │      "ControlAccountForCapitalAccounts",
+│ │      "ControlAccountForCustomers",
+│ │      "ControlAccountForEmployees",
+│ │      "ControlAccountForFixedAssets",
+│ │      "ControlAccountForFixedAssetsAccumulatedDepreciation",
+│ │      "ControlAccountForIntangibleAssets",
+│ │      "ControlAccountForIntangibleAssetsAccumulatedAmortization",
+│ │      "ControlAccountForInventoryItems",
+│ │      "ControlAccountForInvestments",
+│ │      "ControlAccountForSpecialAccounts",
+│ │      "ControlAccountForSuppliers",
+│ │      "CreditNote",
+│ │      "CreditNoteFooter",
+│ │ +    "CustomColumns",
+│ │      "CustomField",
+│ │      "CustomFields",
+│ │      "CustomReport",
+│ │      "Customer",
+│ │      "CustomerPortal",
+│ │      "CustomerStatementsTransactions",
+│ │      "CustomerStatementsUnpaidInvoices",
+│ │      "CustomerSummary",
+│ │      "DateAndNumberFormat",
+│ │      "DateCustomField",
+│ │      "DebitNote",
+│ │      "DebitNoteFooter",
+│ │      "DeliveryNote",
+│ │ -    "DeliveryNoteColumns",
+│ │      "DeliveryNoteFooter",
+│ │      "DepreciationCalculationWorksheet",
+│ │      "DepreciationEntry",
+│ │      "Division",
+│ │      "DivisionExceptionReport",
+│ │      "EinvoiceMe",
+│ │      "EmailSettings",
+│ │ @@ -3470,15 +3464,14 @@
+│ │      "PurchaseInvoice",
+│ │      "PurchaseInvoiceFooter",
+│ │      "PurchaseOrder",
+│ │      "PurchaseOrderFooter",
+│ │      "PurchaseQuote",
+│ │      "PurchaseQuoteFooter",
+│ │      "Receipt",
+│ │ -    "ReceiptColumns",
+│ │      "ReceiptFooter",
+│ │      "ReceiptRule",
+│ │      "ReceiptsAndPaymentsSummary",
+│ │      "RecurringInterAccountTransfer",
+│ │      "RecurringJournalEntry",
+│ │      "RecurringPayment",
+│ │      "RecurringPayslip",
+│ │   --- manager-api-0.1.1/manager_api/object.py
+│ ├── +++ manager-api-0.1.2/manager_api/object.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,13 +1,12 @@
+│ │  # -*- coding: utf-8 -*-
+│ │  
+│ │  from __future__ import annotations
+│ │  
+│ │  import json
+│ │ -
+│ │  from requests import Session
+│ │  from typing import ClassVar, Dict, Optional
+│ │  from uuid import UUID
+│ │  
+│ │  from pydantic import BaseModel
+│ │  
+│ │  
+│ │ @@ -101,22 +100,25 @@
+│ │              r.setdefault("Name", None)
+│ │              return cls.parse_obj(r)
+│ │          return [_parse(r) for r in result]
+│ │  
+│ │      def create(self):
+│ │          response = self._session.post(self.Guid, data=self.json())
+│ │          result = self._parse_response(response)
+│ │ -        self.Key = result["Key"]
+│ │ +        self.Key = UUID(result["Key"])
+│ │  
+│ │      def read(self):
+│ │          result = self._session.get(self._path).json()
+│ │          result["Key"] = self.Key
+│ │          self.__init__(**result)
+│ │  
+│ │      def update(self):
+│ │          response = self._session.put(self._path, data=self.json())
+│ │          self._parse_response(response)
+│ │  
+│ │      def delete(self):
+│ │          response = self._session.delete(self._path)
+│ │          self._parse_response(response)
+│ │          self.Key = None
+│ │ +
+│ │ +    def get_url(self):
+│ │ +        return self._session._get_url(f"{type(self).__name__}View", self.Key)
+│ │   --- manager-api-0.1.1/manager_api.egg-info/PKG-INFO
+│ ├── +++ manager-api-0.1.2/manager_api.egg-info/PKG-INFO
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │ -Metadata-Version: 2.1
+│ │ +Metadata-Version: 1.1
+│ │  Name: manager-api
+│ │ -Version: 0.1.1
+│ │ +Version: 0.1.2
+│ │  Summary: Python module to access the API provided by Manager accounting software 
+│ │  Home-page: https://github.com/isotherm/python-manager-api/
+│ │  Author: Kirk Meyer
+│ │  Author-email: kirk.meyer@alpaxo.com
+│ │  License: MIT
+│ │ +Description: UNKNOWN
+│ │  Platform: any
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Topic :: Office/Business :: Financial :: Accounting
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │ -License-File: LICENSE
+│ │   --- manager-api-0.1.1/setup.py
+│ ├── +++ manager-api-0.1.2/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  from setuptools import setup
+│ │  
+│ │  setup(
+│ │      name='manager-api',
+│ │      description='Python module to access the API provided by Manager accounting software ',
+│ │      url='https://github.com/isotherm/python-manager-api/',
+│ │ -    version='0.1.1',
+│ │ +    version='0.1.2',
+│ │      author=u'Kirk Meyer',
+│ │      author_email='kirk.meyer@alpaxo.com',
+│ │      license='MIT',
+│ │      platforms='any',
+│ │      packages=[
+│ │          'manager_api'
+│ │      ],

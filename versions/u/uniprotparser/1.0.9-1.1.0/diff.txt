@@ -1,0 +1,366 @@
+--- tmp/uniprotparser-1.0.9.tar.gz
++++ tmp/uniprotparser-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "uniprotparser-1.0.9.tar", max compression
+│ +gzip compressed data, was "uniprotparser-1.1.0.tar", max compression
+│   --- uniprotparser-1.0.9.tar
+├── +++ uniprotparser-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,7 +1,9 @@
+│ │ --rw-r--r--   0        0        0      644 2023-01-17 10:41:41.198639 uniprotparser-1.0.9/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2832 2022-09-20 14:09:10.978617 uniprotparser-1.0.9/README.md
+│ │ --rw-r--r--   0        0        0        0 2022-06-23 08:08:30.546765 uniprotparser-1.0.9/uniprotparser/__init__.py
+│ │ --rw-r--r--   0        0        0    12734 2022-08-10 09:02:02.661330 uniprotparser-1.0.9/uniprotparser/betaparser.py
+│ │ --rw-r--r--   0        0        0     4886 2022-06-23 08:39:01.794220 uniprotparser-1.0.9/uniprotparser/parser.py
+│ │ --rw-r--r--   0        0        0     3586 1970-01-01 00:00:00.000000 uniprotparser-1.0.9/setup.py
+│ │ --rw-r--r--   0        0        0     3520 1970-01-01 00:00:00.000000 uniprotparser-1.0.9/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1088 2023-01-17 10:51:10.633027 uniprotparser-1.1.0/LICENSE.md
+│ │ +-rw-r--r--   0        0        0      748 2023-04-06 10:18:28.178807 uniprotparser-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3347 2023-04-06 10:20:04.001269 uniprotparser-1.1.0/README.md
+│ │ +-rw-r--r--   0        0        0        0 2022-06-23 08:08:30.546765 uniprotparser-1.1.0/uniprotparser/__init__.py
+│ │ +-rw-r--r--   0        0        0    14786 2023-03-22 10:33:19.937958 uniprotparser-1.1.0/uniprotparser/betaparser.py
+│ │ +-rw-r--r--   0        0        0     1017 2023-04-06 10:13:15.541287 uniprotparser-1.1.0/uniprotparser/cli.py
+│ │ +-rw-r--r--   0        0        0     4886 2022-06-23 08:39:01.794220 uniprotparser-1.1.0/uniprotparser/parser.py
+│ │ +-rw-r--r--   0        0        0     4240 1970-01-01 00:00:00.000000 uniprotparser-1.1.0/setup.py
+│ │ +-rw-r--r--   0        0        0     4060 1970-01-01 00:00:00.000000 uniprotparser-1.1.0/PKG-INFO
+│ │   --- uniprotparser-1.0.9/pyproject.toml
+│ ├── +++ uniprotparser-1.1.0/pyproject.toml
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,23 +1,28 @@
+│ │  [tool.poetry]
+│ │  name = "uniprotparser"
+│ │ -version = "1.0.9"
+│ │ +version = "1.1.0"
+│ │  description = "Getting Uniprot Data from Uniprot Accession ID through Uniprot REST API"
+│ │  authors = ["Toan K. Phung <toan.phungkhoiquoctoan@gmail.com>"]
+│ │  readme = "README.md"
+│ │  license = "MIT"
+│ │  keywords = ["uniprot", "protein sequence", "database", "parser"]
+│ │  repository = "https://github.com/noatgnu/UniprotWebParser"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
+│ │  requests = "^2.28.2"
+│ │  aiohttp = "^3.8.3"
+│ │ +click = "^8.1.3"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  pandas = "^1.4.2"
+│ │  pytest-asyncio = "^0.20.3"
+│ │ +pytest = "^7.2.2"
+│ │ +
+│ │ +[tool.poetry.scripts]
+│ │ +uniprotparser = "uniprotparser.cli:main"
+│ │  
+│ │  [build-system]
+│ │  requires = ["poetry-core>=1.0.0"]
+│ │  build-backend = "poetry.core.masonry.api"
+│ │   --- uniprotparser-1.0.9/README.md
+│ ├── +++ uniprotparser-1.1.0/README.md
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,23 +1,36 @@
+│ │  UniProt Database Web Parser Project
+│ │  --
+│ │ +[![Downloads](https://static.pepy.tech/personalized-badge/uniprotparser?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/uniprotparser)
+│ │ +
+│ │  
+│ │  TLDR: This parser can be used to parse UniProt accession id and obtain related data from the UniProt web database.
+│ │  
+│ │  To use:
+│ │  
+│ │  ```bash
+│ │  python -m pip install uniprotparser
+│ │  ```
+│ │  or 
+│ │  
+│ │  ```bash
+│ │  python3 -m pip install uniprotparser
+│ │  ```
+│ │  
+│ │ +With version 1.1.0, a simple CLI interface has been added to the package.
+│ │ +
+│ │ +```bash
+│ │ +Usage: uniprotparser [OPTIONS]
+│ │ +
+│ │ +Options:
+│ │ +  -i, --input FILENAME   Input file containing a list of accession ids
+│ │ +  -o, --output FILENAME  Output file
+│ │ +  --help                 Show this message and exit.
+│ │ +```
+│ │ +
+│ │  With version 1.0.5, support for asyncio through `aiohttp` has been added to `betaparser`. Usage can be seen as follow
+│ │  
+│ │  ```python
+│ │  from uniprotparser.betaparser import UniprotParser
+│ │  from io import StringIO
+│ │  import asyncio
+│ │  import pandas as pd
+│ │   --- uniprotparser-1.0.9/uniprotparser/betaparser.py
+│ ├── +++ uniprotparser-1.1.0/uniprotparser/betaparser.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -2,22 +2,23 @@
+│ │  import time
+│ │  
+│ │  import requests
+│ │  import json
+│ │  import aiohttp
+│ │  import asyncio
+│ │  
+│ │ -default_columns = "accession,id,gene_names,protein_name,organism_name,organism_id,length,xref_refseq," \
+│ │ +# default columns to be returned by the uniprot api when querying for an accession id or a list of accession ids
+│ │ +default_columns = "accession,id,gene_names,protein_name,organism_name,organism_id,length,xref_refseq,xref_geneid,xref_ensembl," \
+│ │                                     "go_id,go_p,go_c,go_f,cc_subcellular_location," \
+│ │                                     "ft_topo_dom,ft_carbohyd,mass,cc_mass_spectrometry," \
+│ │                                     "sequence,ft_var_seq,cc_alternative_products"
+│ │  # regex pattern for matching UniProt accession that can be used with the search object groupdict method to retrieve accession and isotype information separately
+│ │  acc_regex = re.compile("(?P<accession>[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9]([A-Z][A-Z0-9]{2}[0-9]){1,2})(?P<isotype>-\d+)?")
+│ │  
+│ │ -# sequence object for storing and presenting uniprot id.
+│ │ +# sequence object for storing and presenting uniprot id. This is used to store the accession id and isotype of a protein entry
+│ │  class UniprotSequence:
+│ │      def __init__(self, acc, parse_acc=False):
+│ │          """
+│ │          :type parse_acc: bool
+│ │          whether or not for the script to parse the accession id from the input
+│ │          :type acc: str
+│ │          a string containing the Uniprot accession ID of the sequence
+│ │ @@ -33,39 +34,48 @@
+│ │  
+│ │      def __str__(self):
+│ │          return self.accession + self.isoform
+│ │  
+│ │      def __repr__(self):
+│ │          return self.accession + self.isoform
+│ │  
+│ │ +# object for storing and presenting uniprot id mapping result link from the new UniProt REST API
+│ │  class UniprotResultLink:
+│ │      session: aiohttp.ClientSession
+│ │ -
+│ │ +    # aiohttp session object for making asynchronous requests to the new UniProt REST API
+│ │      def __init__(self, url, poll_interval=5, aiohttp_session = None):
+│ │ +        # url for the result link
+│ │ +        # poll_interval for the long polling interval between each round of checking whether or not the mapping operation has finished
+│ │ +        # aiohttp_session for making asynchronous requests to the new UniProt REST API
+│ │          self.url = url
+│ │          self.poll_interval = poll_interval
+│ │          self.completed = False
+│ │ +        # whether or not the mapping operation has finished
+│ │ +        #  if True, the result link is ready to be downloaded
+│ │          if aiohttp_session is not None:
+│ │              self.session = aiohttp_session
+│ │  
+│ │ +    # method for checking whether or not the mapping operation has finished
+│ │      def check_status(self):
+│ │          res = requests.get(self.url, allow_redirects=False)
+│ │          return res
+│ │  
+│ │ +    # asynchronous method for checking whether or not the mapping operation has finished
+│ │      async def check_status_async(self):
+│ │          async with self.session.get(self.url, allow_redirects=False) as response:
+│ │              return response
+│ │              
+│ │  
+│ │  # UniProt parser object for new UniProt REST API
+│ │  class UniprotParser:
+│ │      result_url: list[UniprotResultLink]
+│ │      base_url = "https://rest.uniprot.org/idmapping/run"
+│ │ +    # base url for the new UniProt REST API
+│ │      check_status_url = "https://rest.uniprot.org/idmapping/status/"
+│ │ -
+│ │ +    # url for checking the status of the mapping operation
+│ │      def __init__(self, poll_interval: int = 5, format: str = "tsv", columns: str = "", include_isoform=False):
+│ │          """
+│ │  
+│ │          :type columns: str
+│ │          string of all the fields represented in the final result delimited by ','
+│ │          for a full list of all field names available visit this link https://www.uniprot.org/help/return_fields
+│ │          :type poll_interval: int
+│ │ @@ -114,17 +124,19 @@
+│ │                  self.result_url.append(UniprotResultLink(self.check_status_url + self.get_job_id(), self.poll_interval))
+│ │          # iterate through result_url and check for result, if result is done, retrieve and yield
+│ │          # the text data of the content
+│ │          for r in self.get_result():
+│ │              yield r.text
+│ │  
+│ │      def parse(self, ids, segment=10000):
+│ │ +        # segment is the number of accs to be submitted in each job  (default 10000)
+│ │          ids = list(ids)
+│ │          total_input = len(ids)
+│ │          for i in range(0, total_input, segment):
+│ │ +            # submitting all jobs and obtain unique url with jobid for checking status then append to
+│ │              if (i + segment) <= total_input:
+│ │                  print("Submitting {}/{}".format(i + segment, total_input))
+│ │                  self.res = requests.post(self.base_url, data={
+│ │                      "ids": ",".join(ids[i: i + segment]),
+│ │                      "from": "UniProtKB_AC-ID",
+│ │                      "to": "UniProtKB"
+│ │                  })
+│ │ @@ -133,42 +145,47 @@
+│ │                  print("Submitting {}/{}".format(total_input, total_input))
+│ │                  self.res = requests.post(self.base_url, data={
+│ │                      "ids": ",".join(ids[i: total_input]),
+│ │                      "from": "UniProtKB_AC-ID",
+│ │                      "to": "UniProtKB"
+│ │                  })
+│ │                  self.result_url.append(UniprotResultLink(self.check_status_url + self.get_job_id(), self.poll_interval))
+│ │ -
+│ │ +        # iterate through result_url and check for result, if result is done, retrieve and yield the text data of the content
+│ │          for r in self.result_url:
+│ │              while True:
+│ │ +                # check status of the job and if it is done (status code 303), retrieve the result from the url using Location data from header
+│ │                  res = r.check_status()
+│ │                  if res.status_code == 303:
+│ │                      r.completed = True
+│ │                      url = res.headers["Location"]
+│ │ +                    # create params using format, and field names supplied at the start to get result when they are ready
+│ │                      base_dict = {
+│ │                          "format": self.format,
+│ │                          "size": 500,
+│ │                          "fields": self.columns,
+│ │                          "includeIsoform": "false"
+│ │                      }
+│ │ +                    # if include isoform is true, add the parameter to the base dict
+│ │                      if self.include_isoform:
+│ │                          base_dict["includeIsoform"] = "true"
+│ │                      dat = requests.get(url+"/", params=base_dict)
+│ │                      while True:
+│ │                          yield dat.text
+│ │ +                        # if there is a next link, retrieve the next link and get the data from the url
+│ │                          next_link = dat.headers.get("link")
+│ │                          if next_link:
+│ │                              match = re.search("<(.*)>;", next_link)
+│ │                              if match:
+│ │                                  url = match.group(1)
+│ │                                  dat = requests.get(url)
+│ │                          else:
+│ │                              break
+│ │                      break
+│ │                  else:
+│ │ +                    # if the job is not done, sleep for the indicated polling time then recheck the urls again until all url has yielded.
+│ │                      time.sleep(self.poll_interval)
+│ │  
+│ │      # create params using format, and field names supplied at the start to get result when they are ready
+│ │      def get_result(self):
+│ │          for res in self.get_result_url():
+│ │              base_dict = {
+│ │                  "format": self.format,
+│ │ @@ -180,14 +197,15 @@
+│ │                  base_dict["includeIsoform"] = "true"
+│ │              yield requests.get(res+"/", params=base_dict)
+│ │  
+│ │      # iterate through the result_url check if a redirection status is given by the url indicating that the result has
+│ │      # finished, then yield the finished link and set status of the link as finished. if not, after going through all urls,
+│ │      # sleep for the indicated polling time then recheck the urls again until all url has yielded.
+│ │      def get_result_url(self):
+│ │ +        # keep track of the number of completed urls and stop when all urls are completed
+│ │          complete = len(self.result_url)
+│ │          while complete > 0:
+│ │              for r in self.result_url:
+│ │                  if not r.completed:
+│ │                      res = r.check_status()
+│ │                      if res.status_code == 303:
+│ │                          r.completed = True
+│ │   --- uniprotparser-1.0.9/uniprotparser/parser.py
+│ ├── +++ uniprotparser-1.1.0/uniprotparser/parser.py
+│ │┄ Files identical despite different names
+│ │   --- uniprotparser-1.0.9/setup.py
+│ ├── +++ uniprotparser-1.1.0/setup.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -4,27 +4,31 @@
+│ │  packages = \
+│ │  ['uniprotparser']
+│ │  
+│ │  package_data = \
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │ -['aiohttp>=3.8.3,<4.0.0', 'requests>=2.28.2,<3.0.0']
+│ │ +['aiohttp>=3.8.3,<4.0.0', 'click>=8.1.3,<9.0.0', 'requests>=2.28.2,<3.0.0']
+│ │ +
+│ │ +entry_points = \
+│ │ +{'console_scripts': ['uniprotparser = uniprotparser.cli:main']}
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'uniprotparser',
+│ │ -    'version': '1.0.9',
+│ │ +    'version': '1.1.0',
+│ │      'description': 'Getting Uniprot Data from Uniprot Accession ID through Uniprot REST API',
+│ │ -    'long_description': 'UniProt Database Web Parser Project\n--\n\nTLDR: This parser can be used to parse UniProt accession id and obtain related data from the UniProt web database.\n\nTo use:\n\n```bash\npython -m pip install uniprotparser\n```\nor \n\n```bash\npython3 -m pip install uniprotparser\n```\n\nWith version 1.0.5, support for asyncio through `aiohttp` has been added to `betaparser`. Usage can be seen as follow\n\n```python\nfrom uniprotparser.betaparser import UniprotParser\nfrom io import StringIO\nimport asyncio\nimport pandas as pd\n\nasync def main():\n    example_acc_list = ["Q99490", "Q8NEJ0", "Q13322", "P05019", "P35568", "Q15323"]\n    parser = UniprotParser()\n    df = []\n    #Yield result for 500 accession ids at a time\n    async for r in parser.parse_async(ids=example_acc_list):\n        df.append(pd.read_csv(StringIO(r), sep="\\t"))\n    \n    #Check if there were more than one result and consolidate them into one dataframe\n    if len(df) > 0:\n        df = pd.concat(df, ignore_index=True)\n    else:\n        df = df[0]\n\nasyncio.run(main())\n```\n\nWith version 1.0.2, support for the new UniProt REST API have been added under `betaparser` module of the package.\n\nIn order to utilize this new module, you can follow the example bellow\n\n```python\nfrom uniprotparser.betaparser import UniprotParser\nfrom io import StringIO\n\nimport pandas as pd\nexample_acc_list = ["Q99490", "Q8NEJ0", "Q13322", "P05019", "P35568", "Q15323"]\nparser = UniprotParser()\ndf = []\n#Yield result for 500 accession ids at a time\nfor r in parser.parse(ids=example_acc_list):\n    df.append(pd.read_csv(StringIO(r), sep="\\t"))\n\n#Check if there were more than one result and consolidate them into one dataframe\nif len(df) > 0:\n    df = pd.concat(df, ignore_index=True)\nelse:\n    df = df[0]\n\n\n```\n\n---\nTo parse UniProt accession with legacy API\n\n```python\nfrom uniprotparser.parser import UniprotSequence\n\nprotein_id = "seq|P06493|swiss"\n\nacc_id = UniprotSequence(protein_id, parse_acc=True)\n\n#Access ACCID\nacc_id.accession\n\n#Access isoform id\nacc_id.isoform\n```\n\nTo get additional data from UniProt online database\n\n```python\nfrom uniprotparser.parser import UniprotParser\nfrom io import StringIO\n#Install pandas first to handle tabulated data\nimport pandas as pd\n\nprotein_accession = "P06493"\n\nparser = UniprotParser([protein_accession])\n\n#To get tabulated data\nresult = []\nfor i in parser.parse("tab"):\n    tab_data = pd.read_csv(i, sep="\\t")\n    last_column_name = tab_data.columns[-1]\n    tab_data.rename(columns={last_column_name: "query"}, inplace=True)\n    result.append(tab_data)\nfin = pd.concat(result, ignore_index=True)\n\n#To get fasta sequence\nwith open("fasta_output.fasta", "wt") as fasta_output:\n    for i in parser.parse():\n        fasta_output.write(i)\n```\n\n',
+│ │ +    'long_description': 'UniProt Database Web Parser Project\n--\n[![Downloads](https://static.pepy.tech/personalized-badge/uniprotparser?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/uniprotparser)\n\n\nTLDR: This parser can be used to parse UniProt accession id and obtain related data from the UniProt web database.\n\nTo use:\n\n```bash\npython -m pip install uniprotparser\n```\nor \n\n```bash\npython3 -m pip install uniprotparser\n```\n\nWith version 1.1.0, a simple CLI interface has been added to the package.\n\n```bash\nUsage: uniprotparser [OPTIONS]\n\nOptions:\n  -i, --input FILENAME   Input file containing a list of accession ids\n  -o, --output FILENAME  Output file\n  --help                 Show this message and exit.\n```\n\nWith version 1.0.5, support for asyncio through `aiohttp` has been added to `betaparser`. Usage can be seen as follow\n\n```python\nfrom uniprotparser.betaparser import UniprotParser\nfrom io import StringIO\nimport asyncio\nimport pandas as pd\n\nasync def main():\n    example_acc_list = ["Q99490", "Q8NEJ0", "Q13322", "P05019", "P35568", "Q15323"]\n    parser = UniprotParser()\n    df = []\n    #Yield result for 500 accession ids at a time\n    async for r in parser.parse_async(ids=example_acc_list):\n        df.append(pd.read_csv(StringIO(r), sep="\\t"))\n    \n    #Check if there were more than one result and consolidate them into one dataframe\n    if len(df) > 0:\n        df = pd.concat(df, ignore_index=True)\n    else:\n        df = df[0]\n\nasyncio.run(main())\n```\n\nWith version 1.0.2, support for the new UniProt REST API have been added under `betaparser` module of the package.\n\nIn order to utilize this new module, you can follow the example bellow\n\n```python\nfrom uniprotparser.betaparser import UniprotParser\nfrom io import StringIO\n\nimport pandas as pd\nexample_acc_list = ["Q99490", "Q8NEJ0", "Q13322", "P05019", "P35568", "Q15323"]\nparser = UniprotParser()\ndf = []\n#Yield result for 500 accession ids at a time\nfor r in parser.parse(ids=example_acc_list):\n    df.append(pd.read_csv(StringIO(r), sep="\\t"))\n\n#Check if there were more than one result and consolidate them into one dataframe\nif len(df) > 0:\n    df = pd.concat(df, ignore_index=True)\nelse:\n    df = df[0]\n\n\n```\n\n---\nTo parse UniProt accession with legacy API\n\n```python\nfrom uniprotparser.parser import UniprotSequence\n\nprotein_id = "seq|P06493|swiss"\n\nacc_id = UniprotSequence(protein_id, parse_acc=True)\n\n#Access ACCID\nacc_id.accession\n\n#Access isoform id\nacc_id.isoform\n```\n\nTo get additional data from UniProt online database\n\n```python\nfrom uniprotparser.parser import UniprotParser\nfrom io import StringIO\n#Install pandas first to handle tabulated data\nimport pandas as pd\n\nprotein_accession = "P06493"\n\nparser = UniprotParser([protein_accession])\n\n#To get tabulated data\nresult = []\nfor i in parser.parse("tab"):\n    tab_data = pd.read_csv(i, sep="\\t")\n    last_column_name = tab_data.columns[-1]\n    tab_data.rename(columns={last_column_name: "query"}, inplace=True)\n    result.append(tab_data)\nfin = pd.concat(result, ignore_index=True)\n\n#To get fasta sequence\nwith open("fasta_output.fasta", "wt") as fasta_output:\n    for i in parser.parse():\n        fasta_output.write(i)\n```\n\n',
+│ │      'author': 'Toan K. Phung',
+│ │      'author_email': 'toan.phungkhoiquoctoan@gmail.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/noatgnu/UniprotWebParser',
+│ │      'packages': packages,
+│ │      'package_data': package_data,
+│ │      'install_requires': install_requires,
+│ │ +    'entry_points': entry_points,
+│ │      'python_requires': '>=3.9,<4.0',
+│ │  }
+│ │  
+│ │  
+│ │  setup(**setup_kwargs)
+│ │   --- uniprotparser-1.0.9/PKG-INFO
+│ ├── +++ uniprotparser-1.1.0/PKG-INFO
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,43 +1,57 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: uniprotparser
+│ │ -Version: 1.0.9
+│ │ +Version: 1.1.0
+│ │  Summary: Getting Uniprot Data from Uniprot Accession ID through Uniprot REST API
+│ │  Home-page: https://github.com/noatgnu/UniprotWebParser
+│ │  License: MIT
+│ │  Keywords: uniprot,protein sequence,database,parser
+│ │  Author: Toan K. Phung
+│ │  Author-email: toan.phungkhoiquoctoan@gmail.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Dist: aiohttp (>=3.8.3,<4.0.0)
+│ │ +Requires-Dist: click (>=8.1.3,<9.0.0)
+│ │  Requires-Dist: requests (>=2.28.2,<3.0.0)
+│ │  Project-URL: Repository, https://github.com/noatgnu/UniprotWebParser
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  UniProt Database Web Parser Project
+│ │  --
+│ │ +[![Downloads](https://static.pepy.tech/personalized-badge/uniprotparser?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/uniprotparser)
+│ │ +
+│ │  
+│ │  TLDR: This parser can be used to parse UniProt accession id and obtain related data from the UniProt web database.
+│ │  
+│ │  To use:
+│ │  
+│ │  ```bash
+│ │  python -m pip install uniprotparser
+│ │  ```
+│ │  or 
+│ │  
+│ │  ```bash
+│ │  python3 -m pip install uniprotparser
+│ │  ```
+│ │  
+│ │ +With version 1.1.0, a simple CLI interface has been added to the package.
+│ │ +
+│ │ +```bash
+│ │ +Usage: uniprotparser [OPTIONS]
+│ │ +
+│ │ +Options:
+│ │ +  -i, --input FILENAME   Input file containing a list of accession ids
+│ │ +  -o, --output FILENAME  Output file
+│ │ +  --help                 Show this message and exit.
+│ │ +```
+│ │ +
+│ │  With version 1.0.5, support for asyncio through `aiohttp` has been added to `betaparser`. Usage can be seen as follow
+│ │  
+│ │  ```python
+│ │  from uniprotparser.betaparser import UniprotParser
+│ │  from io import StringIO
+│ │  import asyncio
+│ │  import pandas as pd

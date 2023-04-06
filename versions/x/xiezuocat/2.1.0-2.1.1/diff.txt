@@ -1,0 +1,180 @@
+--- tmp/xiezuocat-2.1.0.tar.gz
++++ tmp/xiezuocat-2.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "xiezuocat-2.1.0.tar", last modified: Tue Apr  4 08:43:41 2023, max compression
+│ +gzip compressed data, was "xiezuocat-2.1.1.tar", last modified: Thu Apr  6 10:23:14 2023, max compression
+│   --- xiezuocat-2.1.0.tar
+├── +++ xiezuocat-2.1.1.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 08:43:41.119505 xiezuocat-2.1.0/
+│ │ --rw-rw-rw-   0        0        0      311 2023-04-04 08:43:41.118508 xiezuocat-2.1.0/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     6893 2023-04-03 08:43:14.000000 xiezuocat-2.1.0/README.md
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-04 08:43:41.119505 xiezuocat-2.1.0/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     1568 2023-04-04 08:42:57.000000 xiezuocat-2.1.0/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 08:43:41.107535 xiezuocat-2.1.0/xiezuocat/
+│ │ --rw-rw-rw-   0        0        0       32 2022-10-26 09:43:08.000000 xiezuocat-2.1.0/xiezuocat/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5855 2022-10-26 07:22:44.000000 xiezuocat-2.1.0/xiezuocat/sm3.py
+│ │ --rw-rw-rw-   0        0        0      570 2023-04-04 08:03:09.000000 xiezuocat-2.1.0/xiezuocat/sm3_signature_util.py
+│ │ --rw-rw-rw-   0        0        0     2405 2023-04-04 08:03:09.000000 xiezuocat-2.1.0/xiezuocat/xiezuocat.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-04 08:43:41.116513 xiezuocat-2.1.0/xiezuocat.egg-info/
+│ │ --rw-rw-rw-   0        0        0      311 2023-04-04 08:43:41.000000 xiezuocat-2.1.0/xiezuocat.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      244 2023-04-04 08:43:41.000000 xiezuocat-2.1.0/xiezuocat.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-04 08:43:41.000000 xiezuocat-2.1.0/xiezuocat.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       10 2023-04-04 08:43:41.000000 xiezuocat-2.1.0/xiezuocat.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:23:14.985916 xiezuocat-2.1.1/
+│ │ +-rw-rw-rw-   0        0        0      311 2023-04-06 10:23:14.984919 xiezuocat-2.1.1/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     7291 2023-04-06 10:18:29.000000 xiezuocat-2.1.1/README.md
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 10:23:14.986914 xiezuocat-2.1.1/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     1568 2023-04-06 10:13:57.000000 xiezuocat-2.1.1/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:23:14.973946 xiezuocat-2.1.1/xiezuocat/
+│ │ +-rw-rw-rw-   0        0        0       32 2022-10-26 09:43:08.000000 xiezuocat-2.1.1/xiezuocat/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5855 2022-10-26 07:22:44.000000 xiezuocat-2.1.1/xiezuocat/sm3.py
+│ │ +-rw-rw-rw-   0        0        0      570 2023-04-04 08:03:09.000000 xiezuocat-2.1.1/xiezuocat/sm3_signature_util.py
+│ │ +-rw-rw-rw-   0        0        0     2397 2023-04-06 10:15:43.000000 xiezuocat-2.1.1/xiezuocat/xiezuocat.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:23:14.982924 xiezuocat-2.1.1/xiezuocat.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      311 2023-04-06 10:23:14.000000 xiezuocat-2.1.1/xiezuocat.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      244 2023-04-06 10:23:14.000000 xiezuocat-2.1.1/xiezuocat.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:23:14.000000 xiezuocat-2.1.1/xiezuocat.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       10 2023-04-06 10:23:14.000000 xiezuocat-2.1.1/xiezuocat.egg-info/top_level.txt
+│ │   --- xiezuocat-2.1.0/README.md
+│ ├── +++ xiezuocat-2.1.1/README.md
+│ │┄ Files 7% similar despite different names
+│ │ @@ -7,15 +7,15 @@
+│ │  
+│ │  ## 二、调用示例
+│ │  ### 1、智能纠错
+│ │  #### 调用示例
+│ │  ```python
+│ │  import xiezuocat
+│ │  import json
+│ │ -my_xiezuocat = xiezuocat.Xiezuocat('XXX')
+│ │ +my_xiezuocat = xiezuocat.Xiezuocat({your-secretKey})
+│ │  check_data = json.dumps({
+│ │              "texts": [
+│ │                  "哈哈哈。我天今吃了一顿饭",
+│ │                  "我想念十分赵忠祥。嘿嘿嘿。"
+│ │              ]
+│ │          })
+│ │  check_result = my_xiezuocat.check(check_data)
+│ │ @@ -63,15 +63,15 @@
+│ │  }
+│ │  ```
+│ │  ### 2、智能改写
+│ │  ##### 调用示例
+│ │  ```python
+│ │  import xiezuocat
+│ │  import json
+│ │ -my_xiezuocat = xiezuocat.Xiezuocat('XXX')
+│ │ +my_xiezuocat = xiezuocat.Xiezuocat({your-secretKey})
+│ │  rewrite_data = json.dumps({
+│ │    "items": [
+│ │      "一般"
+│ │    ],
+│ │    "level": "middle"
+│ │  })
+│ │  rewrite_result = my_xiezuocat.rewrite(rewrite_data)
+│ │ @@ -89,15 +89,15 @@
+│ │  
+│ │  ### 3、AI写作
+│ │  #### 创建生成任务
+│ │  ##### 调用示例
+│ │  ```python
+│ │  import xiezuocat
+│ │  import json
+│ │ -my_xiezuocat = xiezuocat.Xiezuocat('XXX')
+│ │ +my_xiezuocat = xiezuocat.Xiezuocat({your-secretKey})
+│ │  generate_params = json.dumps({
+│ │      "type": "Step",
+│ │      "title": "飞机",
+│ │      "length": "default"
+│ │  })
+│ │  result = my_xiezuocat.generate(generate_params)
+│ │  print(result)
+│ │ @@ -113,15 +113,15 @@
+│ │  }
+│ │  ```
+│ │  
+│ │  #### 获取生成结果
+│ │  ##### 调用示例
+│ │  ```python
+│ │  import xiezuocat
+│ │ -my_xiezuocat = xiezuocat.Xiezuocat('XXX')
+│ │ +my_xiezuocat = xiezuocat.Xiezuocat({your-secretKey})
+│ │  doc_id = "ffa614ac-631f-4e7d-b0ea-b5ac43670e59" # 此处docId为第一步生成的结果
+│ │  result = my_xiezuocat.get_generate_result(doc_id)
+│ │  print(result)
+│ │  ```
+│ │  ##### 返回结果
+│ │  ```json
+│ │  {
+│ │ @@ -135,15 +135,20 @@
+│ │    }
+│ │  }
+│ │  ```
+│ │  ### 4、单点登录签名算法
+│ │  ##### 调用示例
+│ │  ```python
+│ │  import xiezuocat
+│ │ -my_xiezuocat = xiezuocat.Xiezuocat('XXX')
+│ │ -sign_result = my_xiezuocat.get_sso_signature("xx", "ll")
+│ │ +my_xiezuocat = xiezuocat.Xiezuocat({your-secretKey})
+│ │ +sign_result = my_xiezuocat.get_sso_signature({your-appId}, {your-uid})
+│ │  print(sign_result)
+│ │  ```
+│ │  ##### 返回结果
+│ │  ```json
+│ │  eydhcHBJZCc6ICd4eCcsICd1aWQnOiAnbGwnLCAndGltZXN0YW1wJzogMTY4MDUxMTExNy42NjIyMTc2LCAnc2lnbic6ICdmZTM2MmU4MzBkMTFlZDc3ZDkwZjhhNzk0NzkwM2RlMDY1ODA2NjY2NDEzMjg4ZGJjNzFmMzk5MjhmODBlOTAxJ30=
+│ │  ```
+│ │ +##### 拿到签名之后访问下述URL即可登录写作猫
+│ │ +```js
+│ │ +// p为签名算法生成的结果
+│ │ +https://xiezuocat.com/api/open/login?p=eydhcHBJZCc6ICd4eCcsICd1aWQnOiAnbGwnLCAndGltZXN0YW1wJzogMTY4MDUxMTExNy42NjIyMTc2LCAnc2lnbic6ICdmZTM2MmU4MzBkMTFlZDc3ZDkwZjhhNzk0NzkwM2RlMDY1ODA2NjY2NDEzMjg4ZGJjNzFmMzk5MjhmODBlOTAxJ30=
+│ │ +```
+│ │   --- xiezuocat-2.1.0/setup.py
+│ ├── +++ xiezuocat-2.1.1/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  setup(name='xiezuocat',
+│ │ -version='2.1.0',
+│ │ +version='2.1.1',
+│ │  description='写作猫API及签名算法封装',
+│ │  author='metasotadata',
+│ │  author_email='support@xiezuocat.com',
+│ │  py_modules=['xiezuocat.xiezuocat'],
+│ │  packages=find_packages(),
+│ │  requires=['requests', 'json', 'time', 'base64'],
+│ │  license="apache 3.0"
+│ │   --- xiezuocat-2.1.0/xiezuocat/sm3.py
+│ ├── +++ xiezuocat-2.1.1/xiezuocat/sm3.py
+│ │┄ Files identical despite different names
+│ │   --- xiezuocat-2.1.0/xiezuocat/sm3_signature_util.py
+│ ├── +++ xiezuocat-2.1.1/xiezuocat/sm3_signature_util.py
+│ │┄ Files identical despite different names
+│ │   --- xiezuocat-2.1.0/xiezuocat/xiezuocat.py
+│ ├── +++ xiezuocat-2.1.1/xiezuocat/xiezuocat.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -52,18 +52,18 @@
+│ │              'secret-key': self._secret_key
+│ │          }
+│ │  
+│ │          response = requests.request("GET", url, headers=headers)
+│ │  
+│ │          return response.text
+│ │  
+│ │ -    def get_sso_signature(self, appId, user_id):
+│ │ +    def get_sso_signature(self, appId, uid):
+│ │          timestamp = time.time()
+│ │          para_map = {}
+│ │          para_map["appId"] = appId
+│ │ -        para_map["uid"] = user_id
+│ │ +        para_map["uid"] = uid
+│ │          para_map["timestamp"] = timestamp
+│ │          sign = sm3_signature_util.signature_sm3(para_map, self._secret_key)
+│ │          para_map["sign"] = sign
+│ │          base64_str = str(base64.b64encode(str(para_map).encode('utf-8')), "utf-8")
+│ │  
+│ │          return base64_str

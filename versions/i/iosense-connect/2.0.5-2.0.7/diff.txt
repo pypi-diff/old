@@ -1,0 +1,242 @@
+--- tmp/iosense_connect-2.0.5.tar.gz
++++ tmp/iosense_connect-2.0.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist\iosense_connect-2.0.5.tar", last modified: Fri Mar 24 11:20:54 2023, max compression
+│ +gzip compressed data, was "dist\iosense_connect-2.0.7.tar", last modified: Thu Apr  6 10:20:25 2023, max compression
+│   --- iosense_connect-2.0.5.tar
+├── +++ iosense_connect-2.0.7.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 11:20:54.339314 iosense_connect-2.0.5/
+│ │ --rw-rw-rw-   0        0        0      117 2023-03-24 11:20:54.336313 iosense_connect-2.0.5/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      674 2023-03-23 09:15:17.000000 iosense_connect-2.0.5/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 11:20:54.315073 iosense_connect-2.0.5/iosense_connect/
+│ │ --rw-rw-rw-   0        0        0       37 2023-03-23 09:15:17.000000 iosense_connect-2.0.5/iosense_connect/__init__.py
+│ │ --rw-rw-rw-   0        0        0    19266 2023-03-24 11:12:43.000000 iosense_connect-2.0.5/iosense_connect/data_access.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-24 11:20:54.334534 iosense_connect-2.0.5/iosense_connect.egg-info/
+│ │ --rw-rw-rw-   0        0        0      117 2023-03-24 11:20:53.000000 iosense_connect-2.0.5/iosense_connect.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      233 2023-03-24 11:20:53.000000 iosense_connect-2.0.5/iosense_connect.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-24 11:20:53.000000 iosense_connect-2.0.5/iosense_connect.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       16 2023-03-24 11:20:53.000000 iosense_connect-2.0.5/iosense_connect.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-24 11:20:54.339314 iosense_connect-2.0.5/setup.cfg
+│ │ --rw-rw-rw-   0        0        0      207 2023-03-24 11:12:43.000000 iosense_connect-2.0.5/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:20:25.467097 iosense_connect-2.0.7/
+│ │ +-rw-rw-rw-   0        0        0      117 2023-04-06 10:20:25.395080 iosense_connect-2.0.7/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      690 2023-04-06 06:23:07.000000 iosense_connect-2.0.7/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:20:25.357221 iosense_connect-2.0.7/iosense_connect/
+│ │ +-rw-rw-rw-   0        0        0       37 2023-03-23 09:15:17.000000 iosense_connect-2.0.7/iosense_connect/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    18996 2023-04-06 10:18:10.000000 iosense_connect-2.0.7/iosense_connect/data_access.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 10:20:25.389912 iosense_connect-2.0.7/iosense_connect.egg-info/
+│ │ +-rw-rw-rw-   0        0        0      117 2023-04-06 10:20:25.000000 iosense_connect-2.0.7/iosense_connect.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      233 2023-04-06 10:20:25.000000 iosense_connect-2.0.7/iosense_connect.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 10:20:25.000000 iosense_connect-2.0.7/iosense_connect.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       16 2023-04-06 10:20:25.000000 iosense_connect-2.0.7/iosense_connect.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 10:20:25.468100 iosense_connect-2.0.7/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0      207 2023-04-06 10:20:23.000000 iosense_connect-2.0.7/setup.py
+│ │   --- iosense_connect-2.0.5/README.md
+│ ├── +++ iosense_connect-2.0.7/README.md
+│ │┄ Files 5% similar despite different names
+│ │ @@ -2,17 +2,17 @@
+│ │  ### Project description
+│ │  Faclon I/O Sense Data Access Library
+│ │  ​
+│ │  #### Where to get it
+│ │  https://pypi.org/project/iosense/
+│ │  
+│ │  #### Installation
+│ │ -pip install iosense
+│ │ +pip install iosense-connect
+│ │  
+│ │ -pip3 install iosense
+│ │ +pip3 install iosense-connect
+│ │  
+│ │  #### Features
+│ │  Retrives following details:
+│ │  
+│ │  - User information.
+│ │  - Device Details.
+│ │  - Device metaData.
+│ │   --- iosense_connect-2.0.5/iosense_connect/data_access.py
+│ ├── +++ iosense_connect-2.0.7/iosense_connect/data_access.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  # import libraries
+│ │  import json
+│ │  import sys
+│ │  import time
+│ │ -from datetime import datetime
+│ │ +from datetime import datetime,timedelta
+│ │  
+│ │  import numpy as np
+│ │  import pandas as pd
+│ │  import requests
+│ │  import urllib3
+│ │  
+│ │  pd.options.mode.chained_assignment = None
+│ │ @@ -216,66 +216,66 @@
+│ │          :return: Dataframe with values
+│ │  
+│ │          Get Data Point fetches data containing values of last n data points of given sensor at given time.
+│ │  
+│ │          """
+│ │          try:
+│ │              metadata = {}
+│ │ +
+│ │              end_time = pd.to_datetime(end_time)
+│ │ +            if IST:
+│ │ +                end_time = end_time - timedelta(hours=5, minutes=30)
+│ │              end_time = int(round(end_time.timestamp()))
+│ │              if type(sensors) == list:
+│ │                  len_sensors = len(sensors)
+│ │                  if len_sensors == 0:
+│ │                      raise Exception('Message: No sensors provided')
+│ │ -                n = n * len_sensors
+│ │ +                if n < 1:
+│ │ +                    raise ValueError('Incorrect number of data points')
+│ │ +                n = int(n) * len_sensors
+│ │                  delimiter = ","
+│ │                  sensor_values = delimiter.join(sensors)
+│ │              else:
+│ │                  raise Exception('Message: Incorrect type of sensors')
+│ │              header = {}
+│ │              cursor = {'end': end_time, 'limit': n}
+│ │              payload = {}
+│ │ -            df_raw = pd.DataFrame()
+│ │ -            counter =0
+│ │ +            df = pd.DataFrame()
+│ │ +            counter = 0
+│ │              while True:
+│ │                  for record in range(counter):
+│ │                      sys.stdout.write('\r')
+│ │                      sys.stdout.write("Approx Records Fetched %d" % (10000 * record))
+│ │                      sys.stdout.flush()
+│ │ -                url = "https://" + self.url + "/api/apiLayer/getLimitedDataMultipleSensors/?device=" + device_id + "&sensor=" + sensor_values + "&eTime=" + str(cursor['end']) + "&lim=" + str(cursor['limit']) + "&cursor=true"
+│ │ +                url = "https://" + self.url + "/api/apiLayer/getLimitedDataMultipleSensors/?device=" + device_id + "&sensor=" + sensor_values + "&eTime=" + str(
+│ │ +                    cursor['end']) + "&lim=" + str(cursor['limit']) + "&cursor=true"
+│ │                  response = requests.request("GET", url, headers=header, data=payload)
+│ │                  raw = json.loads(response.text)
+│ │                  if response.status_code != 200:
+│ │ -                    raise ValueError(raw['error'])
+│ │ +                    raise ValueError(raw)
+│ │                  if 'success' in raw:
+│ │ -                    raise ValueError(raw['error'])
+│ │ +                    raise ValueError(raw)
+│ │                  else:
+│ │                      raw_data = json.loads(response.text)['data']
+│ │                      cursor = json.loads(response.text)['cursor']
+│ │                      if len(raw_data) != 0:
+│ │ -                        df_raw = pd.concat([df_raw, pd.DataFrame(raw_data)])
+│ │ +                        df = pd.concat([df, pd.DataFrame(raw_data)])
+│ │                      counter = counter + 1
+│ │                  if cursor['end'] == None:
+│ │                      break
+│ │ -            if len(df_raw) != 0:
+│ │ +            if len(df) != 0:
+│ │                  if IST:
+│ │ -                    df_raw['time'] = pd.to_datetime(df_raw['time'], utc=False)
+│ │ -                    df_raw['time'] = df_raw['time'].dt.tz_convert('Asia/Kolkata')
+│ │ -                    df_raw['time'] = df_raw['time'].dt.tz_localize(None)
+│ │ -                if cal == True or cal == 'true' or cal == "TRUE":
+│ │ -                    df,metadata = DataAccess.get_sensor_alias(self, device_id, df_raw,metadata)
+│ │ -                    df = DataAccess.get_cleaned_table(self, df)
+│ │ -                    df = DataAccess.get_caliberation(self, device_id, metadata,df)
+│ │ -                else:
+│ │ -                    df,metadata = DataAccess.get_sensor_alias(self, device_id,df_raw,metadata)
+│ │ -                    df = DataAccess.get_cleaned_table(self, df)
+│ │ -            else:
+│ │ -                df = df_raw
+│ │ -            return df
+│ │ +                    df['time'] = pd.to_datetime(df['time'], utc=False)
+│ │ +                    df['time'] = df['time'].dt.tz_convert('Asia/Kolkata').dt.tz_localize(None)
+│ │ +                df, metadata = DataAccess.get_sensor_alias(self, device_id, df, metadata)
+│ │ +                df = DataAccess.get_cleaned_table(self, df)
+│ │  
+│ │ +                if str(cal).lower() == 'true':
+│ │ +                    df = DataAccess.get_caliberation(self, device_id, metadata, df)
+│ │ +            return df
+│ │          except Exception as e:
+│ │              print(e)
+│ │  
+│ │      def data_query(self, device_id, start_time, end_time=datetime.now(), sensors=None, cal=True, bands=None, IST=True ,echo=True):
+│ │          # df = pd.DataFrame()
+│ │          metadata = {}
+│ │          if sensors == None:
+│ │ @@ -283,17 +283,20 @@
+│ │              data_sensor = metadata['sensors']
+│ │              df_sensor = pd.DataFrame(data_sensor)
+│ │              sensor_id_list = list(df_sensor['sensorId'])
+│ │              sensors = sensor_id_list
+│ │          rawdata_res = []
+│ │          temp = ''
+│ │          s_time = pd.to_datetime(start_time)
+│ │ -        st_time = int(round(s_time.timestamp())) * 1000000000
+│ │          e_time = pd.to_datetime(end_time)
+│ │ -        en_time = int(round(e_time.timestamp())) * 1000000000
+│ │ +        if IST:
+│ │ +            s_time = s_time - timedelta(hours=5, minutes=30)
+│ │ +            e_time = e_time - timedelta(hours=5, minutes=30)
+│ │ +        st_time = int(round(s_time.timestamp())) * 10000
+│ │ +        en_time = int(round(e_time.timestamp())) * 10000
+│ │          header = {}
+│ │          payload = {}
+│ │          counter = 0
+│ │          cursor = {'start': st_time, 'end': en_time}
+│ │          while True:
+│ │              if echo:
+│ │                  for record in range(counter):
+│ │ @@ -320,17 +323,17 @@
+│ │                      temp = url_api + device_id + "&sensor=" + sensor_values + "&sTime=" + str(
+│ │                          cursor['start']) + "&eTime=" + str(cursor['end']) + "&cursor=true&limit=50000"
+│ │  
+│ │              response = requests.request("GET", temp, headers=header, data=payload)
+│ │              raw = json.loads(response.text)
+│ │              # print(raw)
+│ │              if response.status_code != 200:
+│ │ -                raise ValueError(raw['error'])
+│ │ +                raise ValueError(raw)
+│ │              if 'success' in raw:
+│ │ -                raise ValueError(raw['error'])
+│ │ +                raise ValueError(raw)
+│ │  
+│ │              else:
+│ │                  raw_data = json.loads(response.text)['data']
+│ │                  # print('====================',raw_data)
+│ │                  cursor = json.loads(response.text)['cursor']
+│ │                  if len(raw_data) !=0:
+│ │                      rawdata_res = rawdata_res + raw_data
+│ │ @@ -339,28 +342,26 @@
+│ │                  break
+│ │          # print(rawdata_res)
+│ │          df_raw = pd.DataFrame(rawdata_res)
+│ │  
+│ │          if len(df_raw) != 0 :
+│ │              if IST:
+│ │                  df_raw['time'] = pd.to_datetime(df_raw['time'], utc=False)
+│ │ -                df_raw['time'] = df_raw['time'].dt.tz_convert('Asia/Kolkata')
+│ │ -                df_raw['time'] = df_raw['time'].dt.tz_localize(None)
+│ │ +                df_raw['time'] = df_raw['time'].dt.tz_convert('Asia/Kolkata').dt.tz_localize(None)
+│ │ +
+│ │              if len(df_raw.columns) == 2:
+│ │                  df_raw['sensor'] = sensors[0]
+│ │  
+│ │ -            # print(df_raw)
+│ │ +            df, metadata = DataAccess.get_sensor_alias(self, device_id, df_raw, metadata)
+│ │ +            df = DataAccess.get_cleaned_table(self, df)
+│ │ +
+│ │              if cal or cal == 'true' or cal == "TRUE":
+│ │                  # #qq=qq[~qq['value'].isin(['','BAD 255','BAD 0','BAD undefined','-'])]
+│ │ -                df,metadata = DataAccess.get_sensor_alias(self, device_id, df_raw,metadata)
+│ │ -                df = DataAccess.get_cleaned_table(self, df)
+│ │                  df = DataAccess.get_caliberation(self, device_id, metadata, df)
+│ │ -            else:
+│ │ -                df,metadata = DataAccess.get_sensor_alias(self, device_id, df_raw,metadata)
+│ │ -                df = DataAccess.get_cleaned_table(self, df)
+│ │ +
+│ │              if bands is not None:
+│ │                  df = DataAccess.time_grouping(self, df, bands)
+│ │          else:
+│ │              df = df_raw
+│ │          return df
+│ │  
+│ │      def publish_event(self, title, message, meta_data, hover_data, event_tags, created_on):

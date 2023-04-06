@@ -1,0 +1,374 @@
+# Comparing `tmp/procmon-parser-0.3.6.tar.gz` & `tmp/procmon-parser-0.3.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist\procmon-parser-0.3.6.tar", last modified: Fri Jul 31 08:36:27 2020, max compression
++gzip compressed data, was "dist\procmon-parser-0.3.7.tar", last modified: Thu Aug  6 21:09:18 2020, max compression
+```
+
+## Comparing `procmon-parser-0.3.6.tar` & `procmon-parser-0.3.7.tar`
+
+### file list
+
+```diff
+@@ -1,28 +1,28 @@
+-drwxrwxrwx   0        0        0        0 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/
+--rw-rw-rw-   0        0        0    11899 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/PKG-INFO
+--rw-rw-rw-   0        0        0     9463 2020-07-25 08:22:41.000000 procmon-parser-0.3.6/README.md
+-drwxrwxrwx   0        0        0        0 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser/
+--rw-rw-rw-   0        0        0     2069 2020-07-23 16:56:00.000000 procmon-parser-0.3.6/procmon_parser/__init__.py
+--rw-rw-rw-   0        0        0     2481 2020-07-17 23:05:02.000000 procmon-parser-0.3.6/procmon_parser/configuration.py
+--rw-rw-rw-   0        0        0     9057 2020-07-17 23:05:02.000000 procmon-parser-0.3.6/procmon_parser/configuration_format.py
+--rw-rw-rw-   0        0        0     3368 2020-07-22 18:14:33.000000 procmon-parser-0.3.6/procmon_parser/construct_helper.py
+--rw-rw-rw-   0        0        0    40300 2020-07-27 18:25:41.000000 procmon-parser-0.3.6/procmon_parser/consts.py
+--rw-rw-rw-   0        0        0    15235 2020-07-31 08:24:42.000000 procmon-parser-0.3.6/procmon_parser/logs.py
+--rw-rw-rw-   0        0        0     1813 2020-07-24 22:47:40.000000 procmon-parser-0.3.6/procmon_parser/stream_helper.py
+--rw-rw-rw-   0        0        0    33962 2020-07-27 19:23:41.000000 procmon-parser-0.3.6/procmon_parser/stream_logs_detail_format.py
+--rw-rw-rw-   0        0        0    12510 2020-07-24 22:47:40.000000 procmon-parser-0.3.6/procmon_parser/stream_logs_format.py
+-drwxrwxrwx   0        0        0        0 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/
+--rw-rw-rw-   0        0        0    11899 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      639 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       92 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       15 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/procmon_parser.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/setup.cfg
+--rw-rw-rw-   0        0        0     1281 2020-07-31 08:08:21.000000 procmon-parser-0.3.6/setup.py
+-drwxrwxrwx   0        0        0        0 2020-07-31 08:36:27.000000 procmon-parser-0.3.6/tests/
+--rw-rw-rw-   0        0        0        0 2020-07-09 18:06:04.000000 procmon-parser-0.3.6/tests/__init__.py
+--rw-rw-rw-   0        0        0     1835 2020-07-24 13:01:42.000000 procmon-parser-0.3.6/tests/benchmarks.py
+--rw-rw-rw-   0        0        0    10239 2020-07-31 07:59:46.000000 procmon-parser-0.3.6/tests/conftest.py
+--rw-rw-rw-   0        0        0     1198 2020-07-16 09:14:44.000000 procmon-parser-0.3.6/tests/manual_test.py
+--rw-rw-rw-   0        0        0     3877 2020-07-31 08:16:58.000000 procmon-parser-0.3.6/tests/test_configuration_format.py
+--rw-rw-rw-   0        0        0     9350 2020-07-31 08:30:24.000000 procmon-parser-0.3.6/tests/test_logs_format.py
++drwxrwxrwx   0        0        0        0 2020-08-06 21:09:18.417894 procmon-parser-0.3.7/
++-rw-rw-rw-   0        0        0    11889 2020-08-06 21:09:18.416892 procmon-parser-0.3.7/PKG-INFO
++-rw-rw-rw-   0        0        0     9453 2020-08-06 18:38:57.000000 procmon-parser-0.3.7/README.md
++drwxrwxrwx   0        0        0        0 2020-08-06 21:09:18.359557 procmon-parser-0.3.7/procmon_parser/
++-rw-rw-rw-   0        0        0     2069 2020-07-23 16:56:00.000000 procmon-parser-0.3.7/procmon_parser/__init__.py
++-rw-rw-rw-   0        0        0     2481 2020-07-17 23:05:02.000000 procmon-parser-0.3.7/procmon_parser/configuration.py
++-rw-rw-rw-   0        0        0     9159 2020-08-06 21:09:03.000000 procmon-parser-0.3.7/procmon_parser/configuration_format.py
++-rw-rw-rw-   0        0        0     3368 2020-07-22 18:14:33.000000 procmon-parser-0.3.7/procmon_parser/construct_helper.py
++-rw-rw-rw-   0        0        0    40300 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/procmon_parser/consts.py
++-rw-rw-rw-   0        0        0    15235 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/procmon_parser/logs.py
++-rw-rw-rw-   0        0        0     1813 2020-07-24 22:47:40.000000 procmon-parser-0.3.7/procmon_parser/stream_helper.py
++-rw-rw-rw-   0        0        0    33962 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/procmon_parser/stream_logs_detail_format.py
++-rw-rw-rw-   0        0        0    12510 2020-07-24 22:47:40.000000 procmon-parser-0.3.7/procmon_parser/stream_logs_format.py
++drwxrwxrwx   0        0        0        0 2020-08-06 21:09:18.380649 procmon-parser-0.3.7/procmon_parser.egg-info/
++-rw-rw-rw-   0        0        0    11889 2020-08-06 21:09:18.000000 procmon-parser-0.3.7/procmon_parser.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      639 2020-08-06 21:09:18.000000 procmon-parser-0.3.7/procmon_parser.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2020-08-06 21:09:18.000000 procmon-parser-0.3.7/procmon_parser.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       92 2020-08-06 21:09:18.000000 procmon-parser-0.3.7/procmon_parser.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       15 2020-08-06 21:09:18.000000 procmon-parser-0.3.7/procmon_parser.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2020-08-06 21:09:18.417894 procmon-parser-0.3.7/setup.cfg
++-rw-rw-rw-   0        0        0     1281 2020-08-06 21:09:03.000000 procmon-parser-0.3.7/setup.py
++drwxrwxrwx   0        0        0        0 2020-08-06 21:09:18.415884 procmon-parser-0.3.7/tests/
++-rw-rw-rw-   0        0        0        0 2020-07-09 18:06:04.000000 procmon-parser-0.3.7/tests/__init__.py
++-rw-rw-rw-   0        0        0     1835 2020-07-24 13:01:42.000000 procmon-parser-0.3.7/tests/benchmarks.py
++-rw-rw-rw-   0        0        0    10239 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/tests/conftest.py
++-rw-rw-rw-   0        0        0     1198 2020-07-16 09:14:44.000000 procmon-parser-0.3.7/tests/manual_test.py
++-rw-rw-rw-   0        0        0     3877 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/tests/test_configuration_format.py
++-rw-rw-rw-   0        0        0     9326 2020-08-04 17:50:57.000000 procmon-parser-0.3.7/tests/test_logs_format.py
+```
+
+### filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-POSIX tar archive (GNU)
++POSIX tar archive
+```
+
+### Comparing `procmon-parser-0.3.6/PKG-INFO` & `procmon-parser-0.3.7/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: procmon-parser
+-Version: 0.3.6
++Version: 0.3.7
+ Summary: Parser to Procmon configuration and log files formats
+ Home-page: https://github.com/eronnen/procmon-parser.git
+ Author: Ely Ronnen
+ Author-email: elyronnen@gmail.com
+ License: UNKNOWN
+ Download-URL: https://github.com/eronnen/procmon-parser/archive/v0.3.0.tar.gz
+ Description: # Parsing Procmon files with Python
+@@ -32,15 +32,15 @@
+         
+         ### Usage
+         
+         Loading configuration of a pre-exported Procmon configuration:
+         ```python
+         >>> from procmon_parser import load_configuration, dump_configuration, Rule
+         >>> with open("ProcmonConfiguration.pmc", "rb") as f:
+-        ...     config = load_configuration(f.read())
++        ...     config = load_configuration(f)
+         >>> config["DestructiveFilter"]
+         0
+         >>> config["FilterRules"]
+         [Rule(Column.PROCESS_NAME, RuleRelation.IS, "System", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Autoruns.exe", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "IRP_MJ_", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "FASTIO_", RuleAction.EXCLUDE), Rule(Column.RESULT, RuleRelation.BEGINS_WITH, "FAST IO", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "pagefile.sys", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Volume", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$UpCase", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Secure", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Root", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$MftMirr", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Mft", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$LogFile", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.CONTAINS, "$Extend", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Boot", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Bitmap", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$BadClus", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$AttrDef", RuleAction.EXCLUDE), Rule(Column.EVENT_CLASS, RuleRelation.IS, "Profiling", RuleAction.EXCLUDE)]
+         ```
+         
+         Adding some new rules
+@@ -73,16 +73,16 @@
+         >>> from procmon_parser import ProcmonLogsReader
+         >>> f = open("LogFile.PML", "rb")
+         >>> pml_reader = ProcmonLogsReader(f)
+         >>> len(pml_reader)  # number of logs
+         53214
+         
+         >>> first_event = next(pml_reader)  # reading the next event in the log
+-        >>> first_event
+-        Event("dwm.exe", 932, 1568, "Registry", "RegQueryValue", 7400, 2020-07-12T01:18:10.775242900, 0, "", "HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", {})
++        >>> print(first_event)
++        Process Name=dwm.exe, Pid=932, Operation=RegQueryValue, Path="HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", Time=7/12/2020 1:18:10.7752429 AM
+         
+         >>> print(first_event.process)  #  Accessing the process of the event
+         "C:\Windows\system32\dwm.exe", 932
+         >>> for module in first_event.process.modules[:3]:
+         ...     print(module)  # printing information about some modules
+         "C:\Windows\system32\dwm.exe", address=0x7ff6fa980000, size=0x18000
+         "C:\Windows\system32\d3d10warp.dll", address=0x7fff96700000, size=0x76c000
+```
+
+### Comparing `procmon-parser-0.3.6/README.md` & `procmon-parser-0.3.7/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -23,15 +23,15 @@
+ 
+ ### Usage
+ 
+ Loading configuration of a pre-exported Procmon configuration:
+ ```python
+ >>> from procmon_parser import load_configuration, dump_configuration, Rule
+ >>> with open("ProcmonConfiguration.pmc", "rb") as f:
+-...     config = load_configuration(f.read())
++...     config = load_configuration(f)
+ >>> config["DestructiveFilter"]
+ 0
+ >>> config["FilterRules"]
+ [Rule(Column.PROCESS_NAME, RuleRelation.IS, "System", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Autoruns.exe", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "IRP_MJ_", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "FASTIO_", RuleAction.EXCLUDE), Rule(Column.RESULT, RuleRelation.BEGINS_WITH, "FAST IO", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "pagefile.sys", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Volume", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$UpCase", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Secure", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Root", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$MftMirr", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Mft", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$LogFile", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.CONTAINS, "$Extend", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Boot", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Bitmap", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$BadClus", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$AttrDef", RuleAction.EXCLUDE), Rule(Column.EVENT_CLASS, RuleRelation.IS, "Profiling", RuleAction.EXCLUDE)]
+ ```
+ 
+ Adding some new rules
+@@ -64,16 +64,16 @@
+ >>> from procmon_parser import ProcmonLogsReader
+ >>> f = open("LogFile.PML", "rb")
+ >>> pml_reader = ProcmonLogsReader(f)
+ >>> len(pml_reader)  # number of logs
+ 53214
+ 
+ >>> first_event = next(pml_reader)  # reading the next event in the log
+->>> first_event
+-Event("dwm.exe", 932, 1568, "Registry", "RegQueryValue", 7400, 2020-07-12T01:18:10.775242900, 0, "", "HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", {})
++>>> print(first_event)
++Process Name=dwm.exe, Pid=932, Operation=RegQueryValue, Path="HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", Time=7/12/2020 1:18:10.7752429 AM
+ 
+ >>> print(first_event.process)  #  Accessing the process of the event
+ "C:\Windows\system32\dwm.exe", 932
+ >>> for module in first_event.process.modules[:3]:
+ ...     print(module)  # printing information about some modules
+ "C:\Windows\system32\dwm.exe", address=0x7ff6fa980000, size=0x18000
+ "C:\Windows\system32\d3d10warp.dll", address=0x7fff96700000, size=0x76c000
+```
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/__init__.py` & `procmon-parser-0.3.7/procmon_parser/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/configuration.py` & `procmon-parser-0.3.7/procmon_parser/configuration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/configuration_format.py` & `procmon-parser-0.3.7/procmon_parser/configuration_format.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -64,15 +64,16 @@
+     "relation" / RuleRelationType,
+     "action" / RuleActionType,
+     "value_offset" / Tell,  # NOT IN THE REAL FORMAT - USED FOR BUILDING ONLY
+     "value_length" / Default(Int32ul, 0),
+     "before_value_offset" / Tell,  # NOT IN THE REAL FORMAT - USED FOR BUILDING ONLY
+     "value" / FixedUTF16CString(lambda this: this.value_length, "value"),
+     "after_value_offset" / Tell,  # NOT IN THE REAL FORMAT - USED FOR BUILDING ONLY
+-    "reserved2" / Default(Bytes(5), 0) * "!!Unknown field!!",
++    "int_value" / Rebuild(Int32ul, lambda this: 0 if not this.value.isdigit() else int(this.value)),
++    "reserved2" / Default(Bytes(1), 0) * "!!Unknown field!!",
+ 
+     # To calculate value string in build time
+     "value_length" / Pointer(lambda this: this.value_offset,
+                              Default(Int32ul, lambda this: this.after_value_offset - this.before_value_offset))
+ )
+```
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/construct_helper.py` & `procmon-parser-0.3.7/procmon_parser/construct_helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/consts.py` & `procmon-parser-0.3.7/procmon_parser/consts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/logs.py` & `procmon-parser-0.3.7/procmon_parser/logs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/stream_helper.py` & `procmon-parser-0.3.7/procmon_parser/stream_helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/stream_logs_detail_format.py` & `procmon-parser-0.3.7/procmon_parser/stream_logs_detail_format.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser/stream_logs_format.py` & `procmon-parser-0.3.7/procmon_parser/stream_logs_format.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/procmon_parser.egg-info/PKG-INFO` & `procmon-parser-0.3.7/procmon_parser.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: procmon-parser
+-Version: 0.3.6
++Version: 0.3.7
+ Summary: Parser to Procmon configuration and log files formats
+ Home-page: https://github.com/eronnen/procmon-parser.git
+ Author: Ely Ronnen
+ Author-email: elyronnen@gmail.com
+ License: UNKNOWN
+ Download-URL: https://github.com/eronnen/procmon-parser/archive/v0.3.0.tar.gz
+ Description: # Parsing Procmon files with Python
+@@ -32,15 +32,15 @@
+         
+         ### Usage
+         
+         Loading configuration of a pre-exported Procmon configuration:
+         ```python
+         >>> from procmon_parser import load_configuration, dump_configuration, Rule
+         >>> with open("ProcmonConfiguration.pmc", "rb") as f:
+-        ...     config = load_configuration(f.read())
++        ...     config = load_configuration(f)
+         >>> config["DestructiveFilter"]
+         0
+         >>> config["FilterRules"]
+         [Rule(Column.PROCESS_NAME, RuleRelation.IS, "System", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procmon.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp64.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Procexp.exe", RuleAction.EXCLUDE), Rule(Column.PROCESS_NAME, RuleRelation.IS, "Autoruns.exe", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "IRP_MJ_", RuleAction.EXCLUDE), Rule(Column.OPERATION, RuleRelation.BEGINS_WITH, "FASTIO_", RuleAction.EXCLUDE), Rule(Column.RESULT, RuleRelation.BEGINS_WITH, "FAST IO", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "pagefile.sys", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Volume", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$UpCase", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Secure", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Root", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$MftMirr", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Mft", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$LogFile", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.CONTAINS, "$Extend", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Boot", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$Bitmap", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$BadClus", RuleAction.EXCLUDE), Rule(Column.PATH, RuleRelation.ENDS_WITH, "$AttrDef", RuleAction.EXCLUDE), Rule(Column.EVENT_CLASS, RuleRelation.IS, "Profiling", RuleAction.EXCLUDE)]
+         ```
+         
+         Adding some new rules
+@@ -73,16 +73,16 @@
+         >>> from procmon_parser import ProcmonLogsReader
+         >>> f = open("LogFile.PML", "rb")
+         >>> pml_reader = ProcmonLogsReader(f)
+         >>> len(pml_reader)  # number of logs
+         53214
+         
+         >>> first_event = next(pml_reader)  # reading the next event in the log
+-        >>> first_event
+-        Event("dwm.exe", 932, 1568, "Registry", "RegQueryValue", 7400, 2020-07-12T01:18:10.775242900, 0, "", "HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", {})
++        >>> print(first_event)
++        Process Name=dwm.exe, Pid=932, Operation=RegQueryValue, Path="HKCU\Software\Microsoft\Windows\DWM\ColorPrevalence", Time=7/12/2020 1:18:10.7752429 AM
+         
+         >>> print(first_event.process)  #  Accessing the process of the event
+         "C:\Windows\system32\dwm.exe", 932
+         >>> for module in first_event.process.modules[:3]:
+         ...     print(module)  # printing information about some modules
+         "C:\Windows\system32\dwm.exe", address=0x7ff6fa980000, size=0x18000
+         "C:\Windows\system32\d3d10warp.dll", address=0x7fff96700000, size=0x76c000
+```
+
+### Comparing `procmon-parser-0.3.6/procmon_parser.egg-info/SOURCES.txt` & `procmon-parser-0.3.7/procmon_parser.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/setup.py` & `procmon-parser-0.3.7/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="procmon-parser",
+-    version="0.3.6",
++    version="0.3.7",
+     author="Ely Ronnen",
+     author_email="elyronnen@gmail.com",
+     description="Parser to Procmon configuration and log files formats",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/eronnen/procmon-parser.git",
+     download_url="https://github.com/eronnen/procmon-parser/archive/v0.3.0.tar.gz",
+```
+
+### Comparing `procmon-parser-0.3.6/tests/benchmarks.py` & `procmon-parser-0.3.7/tests/benchmarks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/tests/conftest.py` & `procmon-parser-0.3.7/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/tests/manual_test.py` & `procmon-parser-0.3.7/tests/manual_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/tests/test_configuration_format.py` & `procmon-parser-0.3.7/tests/test_configuration_format.py`
+
+ * *Files identical despite different names*
+
+### Comparing `procmon-parser-0.3.6/tests/test_logs_format.py` & `procmon-parser-0.3.7/tests/test_logs_format.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,14 @@
+ 
+ import re
+ from dateutil.parser import parse
+ from datetime import timedelta
+ from six import PY2
+ from six.moves import zip_longest
+ from procmon_parser.consts import Column, ColumnToOriginalName, RegistryOperation, NetworkOperation, ProcessOperation
+-import tqdm
+ 
+ 
+ SUPPORTED_COLUMNS = [
+     Column.TIME_OF_DAY,
+     Column.PID,
+     Column.PROCESS_NAME,
+     Column.OPERATION,
+@@ -96,15 +95,15 @@
+                     return True  # they don't write long directories sometimes
+     return False
+ 
+ 
+ def check_pml_equals_csv(csv_reader, pml_reader):
+     first_event_date = None
+     i = 0
+-    for i, (csv_record, pml_record) in tqdm.tqdm(enumerate(zip_longest(csv_reader, pml_reader))):
++    for i, (csv_record, pml_record) in enumerate(zip_longest(csv_reader, pml_reader)):
+         assert csv_record is not None, "PML reader has read more events then the CSV reader after {} records.".format(i)
+         assert pml_record is not None, "CSV reader has read more events then the PML reader after {} records.".format(i)
+ 
+         first_event_date = first_event_date if first_event_date else pml_record.date_filetime
+         try:
+             pml_compatible_record = pml_record.get_compatible_csv_info(first_event_date)
+         except UnicodeEncodeError:
+```
+

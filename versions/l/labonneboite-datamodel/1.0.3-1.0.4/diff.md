@@ -1,0 +1,231 @@
+# Comparing `tmp/labonneboite_datamodel-1.0.3.tar.gz` & `tmp/labonneboite_datamodel-1.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "labonneboite_datamodel-1.0.3.tar", max compression
++gzip compressed data, was "labonneboite_datamodel-1.0.4.tar", max compression
+```
+
+## Comparing `labonneboite_datamodel-1.0.3.tar` & `labonneboite_datamodel-1.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,10 +1,10 @@
+--rw-r--r--   0        0        0      224 2023-04-04 13:45:03.269004 labonneboite_datamodel-1.0.3/labonneboite_datamodel/__init__.py
+--rw-r--r--   0        0        0      697 2023-04-05 09:46:10.763862 labonneboite_datamodel-1.0.3/labonneboite_datamodel/crud.py
+--rw-r--r--   0        0        0     2185 2023-04-05 09:46:10.763862 labonneboite_datamodel-1.0.3/labonneboite_datamodel/job.py
+--rw-r--r--   0        0        0     7592 2023-04-06 07:33:34.912340 labonneboite_datamodel-1.0.3/labonneboite_datamodel/office.py
+--rw-r--r--   0        0        0        0 2023-04-04 13:25:50.527619 labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/__init__.py
+--rw-r--r--   0        0        0     3204 2023-04-05 15:53:37.161084 labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/data/test.csv
+--rw-r--r--   0        0        0     1026 2023-04-04 13:25:50.531619 labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/test_job.py
+--rw-r--r--   0        0        0     5011 2023-04-05 15:53:37.161084 labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/test_office.py
+--rw-r--r--   0        0        0     1205 2023-04-06 07:39:40.653547 labonneboite_datamodel-1.0.3/pyproject.toml
+--rw-r--r--   0        0        0      498 1970-01-01 00:00:00.000000 labonneboite_datamodel-1.0.3/PKG-INFO
++-rw-r--r--   0        0        0      224 2023-04-04 13:45:03.269004 labonneboite_datamodel-1.0.4/labonneboite_datamodel/__init__.py
++-rw-r--r--   0        0        0      697 2023-04-05 09:46:10.763862 labonneboite_datamodel-1.0.4/labonneboite_datamodel/crud.py
++-rw-r--r--   0        0        0     2185 2023-04-05 09:46:10.763862 labonneboite_datamodel-1.0.4/labonneboite_datamodel/job.py
++-rw-r--r--   0        0        0     7590 2023-04-06 10:24:17.812541 labonneboite_datamodel-1.0.4/labonneboite_datamodel/office.py
++-rw-r--r--   0        0        0        0 2023-04-04 13:25:50.527619 labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/__init__.py
++-rw-r--r--   0        0        0     3589 2023-04-06 09:31:09.039521 labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/data/test.csv
++-rw-r--r--   0        0        0     1026 2023-04-04 13:25:50.531619 labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/test_job.py
++-rw-r--r--   0        0        0     5276 2023-04-06 10:24:17.812541 labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/test_office.py
++-rw-r--r--   0        0        0     1205 2023-04-06 10:26:06.239782 labonneboite_datamodel-1.0.4/pyproject.toml
++-rw-r--r--   0        0        0      498 1970-01-01 00:00:00.000000 labonneboite_datamodel-1.0.4/PKG-INFO
+```
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/crud.py` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/crud.py`
+
+ * *Files identical despite different names*
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/job.py` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/office.py` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/office.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -39,16 +39,15 @@
+         if not v.isdigit():
+             raise ValueError(
+                 "a SIRET should be made up of 14 numbers")
+         return v
+ 
+ 
+ class Office(OfficeCommon, table=True):
+-    """_summary_
+-
++    """
+     Attributes:
+         naf: NAF identifier to determine in which field the company works in.
+         company_name: Name of the main company.
+         office_name: Name of the branch company.
+         streetnumber: Street number of the company. (Optional)
+         street: Street name of the company. (Optional)
+         postcode: Postal code of the city where the company is, this may not be unique in France. (Optional)
+@@ -213,49 +212,51 @@
+ 
+     @validator("postcode", pre=True)
+     def is_postcode(cls, v):
+         """Validator for `postcode`
+ 
+         Rules:
+             - should be made up of at least 5 numbers
++            - a postcode should be made up of numbers
+             - a postcode cannot be 00000
+ 
+         Raises:
+             ValueError:
+ 
+         """
+         if len(v) < 5:
+             raise ValueError(
+                 "a postcode should be made up of at least 5 numbers")
+ 
++        if not v.isdigit():
++            raise ValueError(
++                "a postcode should be made up of numbers")
++
+         if int(v) == 0:
+             raise ValueError(
+                 "a postcode cannot be 00000")
+         return v
+ 
+     @validator("citycode", pre=True)
+     def is_citycode(cls, v):
+-        """Validator for `postcode`
++        """Validator for `citycode`
+ 
+         Rules:
+             - should be made up of at least 5 numbers
+-            - a postcode should be made up of numbers
+-            - a postcode cannot be 00000
++            - a citycode cannot be 00000
+ 
+         Raises:
+             ValueError:
+ 
+         """
+         if len(v) < 5:
+             raise ValueError(
+                 "a citycode should be made up of 4 numbers and a letter")
+-        if not v.isdigit():
+-            raise ValueError(
+-                "a citycode should be made up of numbers")
+-        if int(v) == 0:
++
++        if v == "0".zfill(5):
+             raise ValueError(
+                 "a citycode cannot be 00000")
+         return v
+ 
+ 
+ class OfficeScore(OfficeCommon, table=True):
+     """This table stores the current score for each siret
+```
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/data/test.csv` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/data/test.csv`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -13,8 +13,11 @@
+ "00567334800016";"SEHIER ROLANDE";"";"6820B";"66";"AVENUE DU GENERAL DE GAULLE";"44055";"44500";"";"";"0-0";"";"0";"0";"NULL";"NULL";"NULL"
+ "00572078400163";"ETABLISSEMENTS DECAYEUX";"";"2599A";"13";"rue des Industries";"77458";"77460";"";"";"NULL";"";"0";"0";"0";"1";"0"
+ "00578022600022";"LES MEUBLES MARGUY";"";"4779Z";"13";"AVENUE DU GENERAL DE GAULLE";"44055";"44500";"";"";"0-0";"";"0";"0";"NULL";"NULL";"NULL"
+ "00578096000026";"SOCIETE IMMOBILIERE TOURISTIQUE ET HOTEL";"HOTEL ROYAL THALASSO";"5510Z";"6";"AVENUE PIERRE LOTI";"44055";"44500";"fgoncalves@groupebarriere.com";"0240114848";"50-99";"";"0";"0";"1";"1";"1"
+ "00578096000117";"SOCIETE IMMOBILIERE TOURISTIQUE ET HOTEL";"HOTEL HERMITAGE";"5510Z";"5";"ESP LUCIEN BARRIERE";"44055";"44500";"cmichot@groupebarriere.com";"0240114682";"100-199";"";"0";"0";"1";"1";"0"
+ "00587078700016";"JAN FRANCINE";"";"6820B";"12";"QUAI D AIGUILLON";"44049";"44490";"";"";"0-0";"";"0";"0";"NULL";"NULL";"NULL"
+ "00588067900047";"SA COOPERATIVE D'INTERET COLLECTIF POURL";"";"4110A";"13";"avenue BARBARA";"44210";"44570";"";"";"0-0";"";"0";"0";"0";"0";"0"
+-"00591170600017";"LEROY PAUL";"PAUL LEROY";"0143Z";"33";"RUE SAINT LOUIS";"80406";"80490";"";"";"0-0";"";"0";"0";"NULL";"NULL";"NULL"
++"00591170600017";"LEROY PAUL";"PAUL LEROY";"0143Z";"33";"RUE SAINT LOUIS";"80406";"80490";"";"";"0-0";"";"0";"0";"NULL";"NULL";"NULL"
++"00591170600017";"LEROY PAUL";"PAUL LEROY";"0143Z";"33";"RUE SAINT LOUIS";"80406";"80490";"";"";"0-0";"";"NULL";"NULL";"NULL";"NULL";"NULL"
++"00591170600017";"LEROY PAUL";"PAUL LEROY";"0143Z";"33";"RUE SAINT LOUIS";"80406";"80490";"";"";"0-0";"";"";"";"";"";""
++"00591170600017";"LEROY PAUL";"PAUL LEROY";"0143Z";"33";"RUE SAINT LOUIS";"80406";"80490";"";"";"0-0";"";"1";"1";"1";"1";"1"
+```
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/test_job.py` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/test_job.py`
+
+ * *Files identical despite different names*
+
+### Comparing `labonneboite_datamodel-1.0.3/labonneboite_datamodel/tests/test_office.py` & `labonneboite_datamodel-1.0.4/labonneboite_datamodel/tests/test_office.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -50,14 +50,18 @@
+     def test_phone_invalid(self) -> None:
+         data = self._get_valid_office()
+         data["phone"] = "1".zfill(8)
+ 
+         with self.assertRaises(ValueError):
+             Office.validate(data)
+ 
++        for value in [None, ""]:
++            data["phone"] = value
++            self.assertTrue(Office.validate(data).phone == "")
++
+     def test_phone_valid(self) -> None:
+         data = self._get_valid_office()
+         data["phone"] = "1".zfill(9)
+         self.assertTrue(Office.validate(data).phone == "1".zfill(10))
+ 
+     # headcount_range
+     def test_headcount_range_invalid(self) -> None:
+@@ -92,26 +96,30 @@
+         data["postcode"] = "75014"
+         self.assertTrue(Office.validate(data).postcode == "75014")
+ 
+     # citycode
+     def test_citycode_invalid(self) -> None:
+         data = self._get_valid_office()
+ 
+-        for value in ["1234", "abc14", "00000"]:
++        for value in ["1234", "00000"]:
+ 
+             data["citycode"] = value
+ 
+             with self.assertRaises(ValueError):
+                 Office.validate(data)
+ 
+     def test_citycode_valid(self) -> None:
+         data = self._get_valid_office()
+         data["citycode"] = "75014"
+         self.assertTrue(Office.validate(data).citycode == "75014")
+ 
++        data = self._get_valid_office()
++        data["citycode"] = "2B014"
++        self.assertTrue(Office.validate(data).citycode == "2B014")
++
+     # problems due to pandas
+     def test_pandas_null(self) -> None:
+ 
+         with pd.read_csv("./labonneboite_datamodel/tests/data/test.csv", delimiter=";", chunksize=10, keep_default_na=False, on_bad_lines='warn') as reader:
+             for chunk in reader:
+ 
+                 chunk["siret"] = chunk["siret"].astype(str)
+```
+
+### Comparing `labonneboite_datamodel-1.0.3/pyproject.toml` & `labonneboite_datamodel-1.0.4/pyproject.toml`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "labonneboite-datamodel"
+-version = "1.0.3"
++version = "1.0.4"
+ description = "Datamodel for labonneboite"
+ authors = ["Sylvain Touret"]
+ license = "MIT"
+ packages = [{include = "labonneboite_datamodel"}]
+ 
+ [tool.poetry.dependencies]
+ python = "^3.10"
+```
+
