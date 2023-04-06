@@ -57,6 +57,13 @@ def main():
         help="Amount of workers to use",
     )
     parser.add_argument(
+        "-p",
+        "--packages",
+        default="all",
+        required=False,
+        help="Process only specific packages, seperated by ','",
+    )
+    parser.add_argument(
         "-t",
         "--tmpdir",
         default="tmp",
@@ -98,6 +105,10 @@ def main():
 
     for pkg in changelog:
         if pkg[3] == "new release":
+            if args.packages != "all":
+                if not pkg[0] in args.packages.split(','):
+                    log.info("Ignoring package [%s], not in package list.", pkg[0])
+                    continue
             changedPackages.append(pkgInfo(pkg[0], pkg[1]))
 
     if len(changedPackages) == 0:
