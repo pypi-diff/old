@@ -1,0 +1,190 @@
+--- tmp/web3client-1.1.0.tar.gz
++++ tmp/web3client-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "web3client-1.1.0.tar", last modified: Thu Apr  6 12:05:52 2023, max compression
+│ +gzip compressed data, was "web3client-1.1.1.tar", last modified: Thu Apr  6 12:09:23 2023, max compression
+│   --- web3client-1.1.0.tar
+├── +++ web3client-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,33 +1,33 @@
+│ │ --rw-r--r--   0        0        0     1069 2022-10-13 15:30:24.076003 web3client-1.1.0/LICENSE
+│ │ --rw-r--r--   0        0        0     2647 2023-04-05 14:07:40.813589 web3client-1.1.0/README.md
+│ │ --rw-r--r--   0        0        0     1951 2023-04-06 12:05:04.762827 web3client-1.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     6148 2023-03-13 02:23:33.879656 web3client-1.1.0/src/.DS_Store
+│ │ --rw-r--r--   0        0        0     6148 2023-03-13 02:23:28.884980 web3client-1.1.0/src/web3client/.DS_Store
+│ │ --rw-r--r--   0        0        0        0 2022-10-18 14:47:37.603558 web3client-1.1.0/src/web3client/__init__.py
+│ │ --rw-r--r--   0        0        0    11117 2022-10-18 14:47:37.604295 web3client-1.1.0/src/web3client/abi/erc20.json
+│ │ --rw-r--r--   0        0        0    22231 2023-04-06 12:05:50.041896 web3client-1.1.0/src/web3client/base_client.py
+│ │ --rw-r--r--   0        0        0     3320 2023-04-05 16:33:33.363845 web3client-1.1.0/src/web3client/erc20_client.py
+│ │ --rw-r--r--   0        0        0      342 2022-10-19 17:40:52.208885 web3client-1.1.0/src/web3client/exceptions.py
+│ │ --rw-r--r--   0        0        0        0 2022-10-18 14:47:37.604873 web3client-1.1.0/src/web3client/helpers/__init__.py
+│ │ --rw-r--r--   0        0        0     1732 2023-02-13 20:06:35.817499 web3client-1.1.0/src/web3client/helpers/debug.py
+│ │ --rw-r--r--   0        0        0     2438 2022-10-18 14:47:37.605628 web3client-1.1.0/src/web3client/helpers/general.py
+│ │ --rw-r--r--   0        0        0        0 2022-10-18 14:47:37.601242 web3client-1.1.0/src/web3factory/__init__.py
+│ │ --rw-r--r--   0        0        0     2190 2023-04-05 13:58:18.268337 web3client-1.1.0/src/web3factory/erc20_tokens.py
+│ │ --rw-r--r--   0        0        0     1431 2023-02-13 20:30:39.832108 web3client-1.1.0/src/web3factory/factory.py
+│ │ --rw-r--r--   0        0        0     2605 2023-04-05 13:58:18.268462 web3client-1.1.0/src/web3factory/networks.py
+│ │ --rw-r--r--   0        0        0      621 2023-02-13 19:47:49.818983 web3client-1.1.0/src/web3factory/types.py
+│ │ --rw-r--r--   0        0        0     6148 2023-03-13 02:23:33.878800 web3client-1.1.0/tests/.DS_Store
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:04:23.399090 web3client-1.1.0/tests/__init__.py
+│ │ --rw-r--r--   0        0        0     6148 2023-04-05 16:39:49.642961 web3client-1.1.0/tests/ape/.DS_Store
+│ │ --rw-r--r--   0        0        0      779 2023-04-06 10:47:11.288879 web3client-1.1.0/tests/ape/.build/SafeMath.json
+│ │ --rw-r--r--   0        0        0    14895 2023-04-06 10:47:11.290250 web3client-1.1.0/tests/ape/.build/Token.json
+│ │ --rw-r--r--   0        0        0    20923 2023-04-06 12:05:04.601021 web3client-1.1.0/tests/ape/.build/__local__.json
+│ │ --rw-r--r--   0        0        0      600 2023-02-23 10:18:28.269673 web3client-1.1.0/tests/ape/contracts/token/SafeMath.sol
+│ │ --rw-r--r--   0        0        0     4082 2023-02-23 10:18:28.283242 web3client-1.1.0/tests/ape/contracts/token/Token.sol
+│ │ --rw-r--r--   0        0        0     3529 2023-04-05 16:42:52.576613 web3client-1.1.0/tests/ape/fixtures.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-05 15:27:07.832128 web3client-1.1.0/tests/ape/scripts/__init__.py
+│ │ --rw-r--r--   0        0        0      123 2023-04-05 14:37:05.616337 web3client-1.1.0/tests/conftest.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:04:38.139397 web3client-1.1.0/tests/web3client/__init__.py
+│ │ --rw-r--r--   0        0        0     1300 2023-04-06 11:08:05.647477 web3client-1.1.0/tests/web3client/fixtures.py
+│ │ --rw-r--r--   0        0        0     1417 2023-02-13 20:04:46.649348 web3client-1.1.0/tests/web3client/test_networks.py
+│ │ --rw-r--r--   0        0        0     3094 1970-01-01 00:00:00.000000 web3client-1.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1069 2022-10-13 15:30:24.076003 web3client-1.1.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     2647 2023-04-05 14:07:40.813589 web3client-1.1.1/README.md
+│ │ +-rw-r--r--   0        0        0     1983 2023-04-06 12:08:57.195746 web3client-1.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     6148 2023-03-13 02:23:33.879656 web3client-1.1.1/src/.DS_Store
+│ │ +-rw-r--r--   0        0        0     6148 2023-03-13 02:23:28.884980 web3client-1.1.1/src/web3client/.DS_Store
+│ │ +-rw-r--r--   0        0        0        0 2022-10-18 14:47:37.603558 web3client-1.1.1/src/web3client/__init__.py
+│ │ +-rw-r--r--   0        0        0    11117 2022-10-18 14:47:37.604295 web3client-1.1.1/src/web3client/abi/erc20.json
+│ │ +-rw-r--r--   0        0        0    22231 2023-04-06 12:05:50.041896 web3client-1.1.1/src/web3client/base_client.py
+│ │ +-rw-r--r--   0        0        0     3320 2023-04-05 16:33:33.363845 web3client-1.1.1/src/web3client/erc20_client.py
+│ │ +-rw-r--r--   0        0        0      342 2022-10-19 17:40:52.208885 web3client-1.1.1/src/web3client/exceptions.py
+│ │ +-rw-r--r--   0        0        0        0 2022-10-18 14:47:37.604873 web3client-1.1.1/src/web3client/helpers/__init__.py
+│ │ +-rw-r--r--   0        0        0     1732 2023-02-13 20:06:35.817499 web3client-1.1.1/src/web3client/helpers/debug.py
+│ │ +-rw-r--r--   0        0        0     2438 2022-10-18 14:47:37.605628 web3client-1.1.1/src/web3client/helpers/general.py
+│ │ +-rw-r--r--   0        0        0        0 2022-10-18 14:47:37.601242 web3client-1.1.1/src/web3factory/__init__.py
+│ │ +-rw-r--r--   0        0        0     2190 2023-04-05 13:58:18.268337 web3client-1.1.1/src/web3factory/erc20_tokens.py
+│ │ +-rw-r--r--   0        0        0     1431 2023-02-13 20:30:39.832108 web3client-1.1.1/src/web3factory/factory.py
+│ │ +-rw-r--r--   0        0        0     2605 2023-04-05 13:58:18.268462 web3client-1.1.1/src/web3factory/networks.py
+│ │ +-rw-r--r--   0        0        0      621 2023-02-13 19:47:49.818983 web3client-1.1.1/src/web3factory/types.py
+│ │ +-rw-r--r--   0        0        0     6148 2023-03-13 02:23:33.878800 web3client-1.1.1/tests/.DS_Store
+│ │ +-rw-r--r--   0        0        0        0 2023-02-23 10:04:23.399090 web3client-1.1.1/tests/__init__.py
+│ │ +-rw-r--r--   0        0        0     6148 2023-04-05 16:39:49.642961 web3client-1.1.1/tests/ape/.DS_Store
+│ │ +-rw-r--r--   0        0        0      779 2023-04-06 10:47:11.288879 web3client-1.1.1/tests/ape/.build/SafeMath.json
+│ │ +-rw-r--r--   0        0        0    14895 2023-04-06 10:47:11.290250 web3client-1.1.1/tests/ape/.build/Token.json
+│ │ +-rw-r--r--   0        0        0    20923 2023-04-06 12:09:01.913375 web3client-1.1.1/tests/ape/.build/__local__.json
+│ │ +-rw-r--r--   0        0        0      600 2023-02-23 10:18:28.269673 web3client-1.1.1/tests/ape/contracts/token/SafeMath.sol
+│ │ +-rw-r--r--   0        0        0     4082 2023-02-23 10:18:28.283242 web3client-1.1.1/tests/ape/contracts/token/Token.sol
+│ │ +-rw-r--r--   0        0        0     3529 2023-04-05 16:42:52.576613 web3client-1.1.1/tests/ape/fixtures.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-05 15:27:07.832128 web3client-1.1.1/tests/ape/scripts/__init__.py
+│ │ +-rw-r--r--   0        0        0      123 2023-04-05 14:37:05.616337 web3client-1.1.1/tests/conftest.py
+│ │ +-rw-r--r--   0        0        0        0 2023-02-23 10:04:38.139397 web3client-1.1.1/tests/web3client/__init__.py
+│ │ +-rw-r--r--   0        0        0     1300 2023-04-06 11:08:05.647477 web3client-1.1.1/tests/web3client/fixtures.py
+│ │ +-rw-r--r--   0        0        0     1417 2023-02-13 20:04:46.649348 web3client-1.1.1/tests/web3client/test_networks.py
+│ │ +-rw-r--r--   0        0        0     3094 1970-01-01 00:00:00.000000 web3client-1.1.1/PKG-INFO
+│ │   --- web3client-1.1.0/LICENSE
+│ ├── +++ web3client-1.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/README.md
+│ ├── +++ web3client-1.1.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/pyproject.toml
+│ ├── +++ web3client-1.1.1/pyproject.toml
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "web3client"
+│ │ -version = "1.1.0"
+│ │ +version = "1.1.1"
+│ │  description = "Batteries-included client to interact with blockchains and smart contracts"
+│ │  authors = [
+│ │      { name = "coccoinomane", email = "coccoinomane@gmail.com" },
+│ │  ]
+│ │  readme = "README.md"
+│ │  keywords = [
+│ │      "web3",
+│ │ @@ -80,13 +80,14 @@
+│ │      "tests",
+│ │  ]
+│ │  
+│ │  [tool.autoflake]
+│ │  in_place = true
+│ │  remove_all_unused_imports = true
+│ │  ignore_pass_after_docstring = true
+│ │ +remove_unused_variables = false
+│ │  
+│ │  [build-system]
+│ │  requires = [
+│ │      "pdm-pep517>=1.0.0",
+│ │  ]
+│ │  build-backend = "pdm.pep517.api"
+│ │   --- web3client-1.1.0/src/.DS_Store
+│ ├── +++ web3client-1.1.1/src/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/.DS_Store
+│ ├── +++ web3client-1.1.1/src/web3client/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/abi/erc20.json
+│ ├── +++ web3client-1.1.1/src/web3client/abi/erc20.json
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/base_client.py
+│ ├── +++ web3client-1.1.1/src/web3client/base_client.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/erc20_client.py
+│ ├── +++ web3client-1.1.1/src/web3client/erc20_client.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/helpers/debug.py
+│ ├── +++ web3client-1.1.1/src/web3client/helpers/debug.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3client/helpers/general.py
+│ ├── +++ web3client-1.1.1/src/web3client/helpers/general.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3factory/erc20_tokens.py
+│ ├── +++ web3client-1.1.1/src/web3factory/erc20_tokens.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3factory/factory.py
+│ ├── +++ web3client-1.1.1/src/web3factory/factory.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3factory/networks.py
+│ ├── +++ web3client-1.1.1/src/web3factory/networks.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/src/web3factory/types.py
+│ ├── +++ web3client-1.1.1/src/web3factory/types.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/.DS_Store
+│ ├── +++ web3client-1.1.1/tests/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/.DS_Store
+│ ├── +++ web3client-1.1.1/tests/ape/.DS_Store
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/.build/SafeMath.json
+│ ├── +++ web3client-1.1.1/tests/ape/.build/SafeMath.json
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/.build/Token.json
+│ ├── +++ web3client-1.1.1/tests/ape/.build/Token.json
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/.build/__local__.json
+│ ├── +++ web3client-1.1.1/tests/ape/.build/__local__.json
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/contracts/token/SafeMath.sol
+│ ├── +++ web3client-1.1.1/tests/ape/contracts/token/SafeMath.sol
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/contracts/token/Token.sol
+│ ├── +++ web3client-1.1.1/tests/ape/contracts/token/Token.sol
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/ape/fixtures.py
+│ ├── +++ web3client-1.1.1/tests/ape/fixtures.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/web3client/fixtures.py
+│ ├── +++ web3client-1.1.1/tests/web3client/fixtures.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/tests/web3client/test_networks.py
+│ ├── +++ web3client-1.1.1/tests/web3client/test_networks.py
+│ │┄ Files identical despite different names
+│ │   --- web3client-1.1.0/PKG-INFO
+│ ├── +++ web3client-1.1.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: web3client
+│ │ -Version: 1.1.0
+│ │ +Version: 1.1.1
+│ │  Summary: Batteries-included client to interact with blockchains and smart contracts
+│ │  License: MIT
+│ │  Keywords: web3,blockchain,ethereum,evm
+│ │  Author-email: coccoinomane <coccoinomane@gmail.com>
+│ │  Requires-Python: >=3.9,<3.11
+│ │  Project-URL: homepage, https://github.com/coccoinomane/web3client
+│ │  Project-URL: repository, https://github.com/coccoinomane/web3client

@@ -1,0 +1,173 @@
+--- tmp/arcaflow_lib_kubernetes-0.1.0.tar.gz
++++ tmp/arcaflow_lib_kubernetes-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "arcaflow_lib_kubernetes-0.1.0.tar", max compression
+│ +gzip compressed data, was "arcaflow_lib_kubernetes-0.1.1.tar", max compression
+│   --- arcaflow_lib_kubernetes-0.1.0.tar
+├── +++ arcaflow_lib_kubernetes-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,8 +1,8 @@
+│ │ --rw-r--r--   0        0        0    10174 2023-03-14 13:21:19.377593 arcaflow_lib_kubernetes-0.1.0/LICENSE
+│ │ --rw-r--r--   0        0        0       45 2023-03-14 13:21:19.377593 arcaflow_lib_kubernetes-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0      516 2023-03-14 13:21:19.453592 arcaflow_lib_kubernetes-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0       60 2023-03-14 13:21:19.377593 arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/__init__.py
+│ │ --rw-r--r--   0        0        0    23378 2023-03-14 13:21:32.873337 arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/convert.py
+│ │ --rw-r--r--   0        0        0     9090 2023-03-14 13:21:19.377593 arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/model.py
+│ │ --rw-r--r--   0        0        0     6421 2023-03-14 13:21:19.377593 arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/test_convert.py
+│ │ --rw-r--r--   0        0        0      851 1970-01-01 00:00:00.000000 arcaflow_lib_kubernetes-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0    10174 2023-04-06 12:05:31.443204 arcaflow_lib_kubernetes-0.1.1/LICENSE
+│ │ +-rw-r--r--   0        0        0       45 2023-04-06 12:05:31.443204 arcaflow_lib_kubernetes-0.1.1/README.md
+│ │ +-rw-r--r--   0        0        0      516 2023-04-06 12:05:31.511204 arcaflow_lib_kubernetes-0.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       60 2023-04-06 12:05:31.447203 arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/__init__.py
+│ │ +-rw-r--r--   0        0        0    23378 2023-04-06 12:05:45.147333 arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/convert.py
+│ │ +-rw-r--r--   0        0        0     9612 2023-04-06 12:05:45.243334 arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/model.py
+│ │ +-rw-r--r--   0        0        0     6964 2023-04-06 12:05:45.887340 arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/test_convert.py
+│ │ +-rw-r--r--   0        0        0      851 1970-01-01 00:00:00.000000 arcaflow_lib_kubernetes-0.1.1/PKG-INFO
+│ │   --- arcaflow_lib_kubernetes-0.1.0/LICENSE
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- arcaflow_lib_kubernetes-0.1.0/pyproject.toml
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "arcaflow-lib-kubernetes"
+│ │ -version = "v0.1.0"
+│ │ +version = "v0.1.1"
+│ │  description = "Kubernetes connection handling library for Arcaflow"
+│ │  authors = ["Arcalot Contributors"]
+│ │  license = "Apache-2.0"
+│ │  readme = "README.md"
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
+│ │   --- arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/convert.py
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/convert.py
+│ │┄ Files identical despite different names
+│ │   --- arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/model.py
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/model.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -120,14 +120,22 @@
+│ │          schema.id("insecure-skip-tls-verify"),
+│ │          schema.name("Disable TLS certificate verification"),
+│ │          schema.description(
+│ │              "Disables checking for the Kubernetes "
+│ │              "server certificate validity. Not recommended."
+│ │          ),
+│ │      ] = False
+│ │ +    extensions: typing.Annotated[
+│ │ +        typing.Optional[typing.Any],
+│ │ +        schema.id("extensions"),
+│ │ +        schema.description(
+│ │ +            "minikube kube config section "
+│ │ +            "introduced to avoid local tests issues"
+│ │ +        ),
+│ │ +    ] = None  # NOQA
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class KubeConfigCluster:
+│ │      name: typing.Annotated[str, schema.name("Name")]
+│ │      cluster: typing.Annotated[KubeConfigClusterParams, schema.name("cluster")]
+│ │  
+│ │ @@ -137,14 +145,22 @@
+│ │      cluster: typing.Annotated[str, schema.name("Cluster")]
+│ │      user: typing.Annotated[str, schema.name("User")]
+│ │      namespace: typing.Annotated[
+│ │          typing.Optional[str],
+│ │          schema.name("Namespace"),
+│ │          schema.description("Default namespace for operations. Often ignored."),
+│ │      ] = None
+│ │ +    extensions: typing.Annotated[
+│ │ +        typing.Optional[typing.Any],
+│ │ +        schema.id("extensions"),
+│ │ +        schema.description(
+│ │ +            "minikube kube config section "
+│ │ +            "introduced to avoid local tests issues"
+│ │ +        ),
+│ │ +    ] = None  # NOQA
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class KubeConfigContext:
+│ │      name: typing.Annotated[str, schema.name("Name")]
+│ │      context: typing.Annotated[KubeConfigContextParams, schema.name("context")]
+│ │   --- arcaflow_lib_kubernetes-0.1.0/src/arcaflow_lib_kubernetes/test_convert.py
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/src/arcaflow_lib_kubernetes/test_convert.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -11,14 +11,15 @@
+│ │      clientCrt: str
+│ │      clientKey: str
+│ │      kubeconfig: str
+│ │      kubeconfigNoData: str
+│ │      kubeconfigNoHost: str
+│ │      kubeconfigNoContext: str
+│ │      kubeconfigSkipTLS: str
+│ │ +    kubeconfigExtensions: str
+│ │      tokenFile: str
+│ │  
+│ │      def __init__(self):
+│ │          root_dir = os.path.dirname(os.path.abspath(__file__))
+│ │          test_data = os.path.join(root_dir, "../testdata")
+│ │          try:
+│ │              with open(os.path.join(test_data, "ca.crt")) as f:
+│ │ @@ -72,14 +73,22 @@
+│ │  
+│ │          try:
+│ │              with open(os.path.join(test_data, "tokenfile")) as f:
+│ │                  self.tokenFile = f.read()
+│ │          except Exception:
+│ │              raise Exception("impossible to read tokenfile fixture")
+│ │  
+│ │ +        try:
+│ │ +            with open(
+│ │ +                os.path.join(test_data, "kubeconfig-extensions.yaml")
+│ │ +            ) as f:
+│ │ +                self.kubeconfigExtensions = f.read()
+│ │ +        except Exception:
+│ │ +            raise Exception("impossible to read kubeconfig-extensions fixture")
+│ │ +
+│ │  
+│ │  class TestConvert(unittest.TestCase):
+│ │      fixtures = TestFixtures()
+│ │  
+│ │      def test_parse_kubeconfig(self):
+│ │          try:
+│ │              kubeconfig = convert.parse_kubeconfig(self.fixtures.kubeconfig)
+│ │ @@ -115,14 +124,20 @@
+│ │              # test failing with kubeconfig with tls skip verify
+│ │              with self.assertRaises(InvalidKubeConfigException):
+│ │                  convert.parse_kubeconfig(self.fixtures.kubeconfigSkipTLS)
+│ │  
+│ │              with self.assertRaises(InvalidKubeConfigException):
+│ │                  convert.parse_kubeconfig(self.fixtures.kubeconfigNoHost)
+│ │  
+│ │ +            # test success on parsing kubeconfig with extensions
+│ │ +            kubeconfig = convert.parse_kubeconfig(
+│ │ +                self.fixtures.kubeconfigExtensions
+│ │ +            )
+│ │ +            self.assertIsNotNone(kubeconfig)
+│ │ +
+│ │          except Exception as e:
+│ │              self.fail(f"kubeconfig_to_connection exception : {e}")
+│ │  
+│ │      def test_connection_to_kubeconfig(self):
+│ │          try:
+│ │              # test without file inlining
+│ │              kubeconfig_data = convert.parse_kubeconfig(
+│ │   --- arcaflow_lib_kubernetes-0.1.0/PKG-INFO
+│ ├── +++ arcaflow_lib_kubernetes-0.1.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: arcaflow-lib-kubernetes
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Kubernetes connection handling library for Arcaflow
+│ │  License: Apache-2.0
+│ │  Author: Arcalot Contributors
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: Apache Software License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.9

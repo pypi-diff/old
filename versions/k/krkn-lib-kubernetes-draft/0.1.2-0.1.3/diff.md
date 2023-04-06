@@ -1,0 +1,91 @@
+# Comparing `tmp/krkn_lib_kubernetes_draft-0.1.2.tar.gz` & `tmp/krkn_lib_kubernetes_draft-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "krkn_lib_kubernetes_draft-0.1.2.tar", max compression
++gzip compressed data, was "krkn_lib_kubernetes_draft-0.1.3.tar", max compression
+```
+
+## Comparing `krkn_lib_kubernetes_draft-0.1.2.tar` & `krkn_lib_kubernetes_draft-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,7 +1,7 @@
+--rw-r--r--   0        0        0    10173 2023-04-06 12:00:37.258089 krkn_lib_kubernetes_draft-0.1.2/LICENSE
+--rw-r--r--   0        0        0       22 2023-04-06 12:00:37.258089 krkn_lib_kubernetes_draft-0.1.2/README.md
+--rw-r--r--   0        0        0      502 2023-04-06 12:00:37.346089 krkn_lib_kubernetes_draft-0.1.2/pyproject.toml
+--rw-r--r--   0        0        0       63 2023-04-06 12:00:37.258089 krkn_lib_kubernetes_draft-0.1.2/src/krkn_lib_kubernetes_draft/__init__.py
+--rw-r--r--   0        0        0    32898 2023-04-06 12:00:49.378186 krkn_lib_kubernetes_draft-0.1.2/src/krkn_lib_kubernetes_draft/client.py
+--rw-r--r--   0        0        0     1690 2023-04-06 12:00:37.258089 krkn_lib_kubernetes_draft-0.1.2/src/krkn_lib_kubernetes_draft/resources.py
+--rw-r--r--   0        0        0      671 1970-01-01 00:00:00.000000 krkn_lib_kubernetes_draft-0.1.2/PKG-INFO
++-rw-r--r--   0        0        0    10173 2023-04-06 12:09:22.785712 krkn_lib_kubernetes_draft-0.1.3/LICENSE
++-rw-r--r--   0        0        0       22 2023-04-06 12:09:22.785712 krkn_lib_kubernetes_draft-0.1.3/README.md
++-rw-r--r--   0        0        0      502 2023-04-06 12:09:22.853713 krkn_lib_kubernetes_draft-0.1.3/pyproject.toml
++-rw-r--r--   0        0        0       63 2023-04-06 12:09:22.785712 krkn_lib_kubernetes_draft-0.1.3/src/krkn_lib_kubernetes_draft/__init__.py
++-rw-r--r--   0        0        0    32893 2023-04-06 12:09:34.565867 krkn_lib_kubernetes_draft-0.1.3/src/krkn_lib_kubernetes_draft/client.py
++-rw-r--r--   0        0        0     1690 2023-04-06 12:09:22.785712 krkn_lib_kubernetes_draft-0.1.3/src/krkn_lib_kubernetes_draft/resources.py
++-rw-r--r--   0        0        0      671 1970-01-01 00:00:00.000000 krkn_lib_kubernetes_draft-0.1.3/PKG-INFO
+```
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.2/LICENSE` & `krkn_lib_kubernetes_draft-0.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.2/src/krkn_lib_kubernetes_draft/client.py` & `krkn_lib_kubernetes_draft-0.1.3/src/krkn_lib_kubernetes_draft/client.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -31,15 +31,15 @@
+     if kubeconfig_path is None:
+         kubeconfig_path = config.KUBE_CONFIG_DEFAULT_LOCATION
+ 
+     try:
+         f = open(kubeconfig_path)
+         with f:
+             kubeconfig_str = f.read()
+-            initialize_clients_from_kconfig_string(str(kubeconfig_str))
++            initialize_clients_from_kconfig_string(kubeconfig_str)
+ 
+     except OSError:
+         raise Exception(
+             f"Invalid kube-config file: {kubeconfig_path}. "
+             "No configuration found."
+         )
+```
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.2/src/krkn_lib_kubernetes_draft/resources.py` & `krkn_lib_kubernetes_draft-0.1.3/src/krkn_lib_kubernetes_draft/resources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `krkn_lib_kubernetes_draft-0.1.2/PKG-INFO` & `krkn_lib_kubernetes_draft-0.1.3/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,19 @@
+ Metadata-Version: 2.1
+ Name: krkn-lib-kubernetes-draft
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: Kubernetes library for Kraken
+ Home-page: https://github.com/redhat-chaos/krkn
+ License: Apache-2.0
+ Author: Red Hat Chaos Engineering Team
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: Apache Software License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+-Requires-Dist: arcaflow-lib-kubernetes (>=0.1.0,<0.2.0)
++Requires-Dist: arcaflow-lib-kubernetes (>=0.1.1,<0.2.0)
+ Requires-Dist: kubernetes (>=26.0.0,<27.0.0)
+ Description-Content-Type: text/markdown
+ 
+ # krkn-lib-kubernetes
+```
+

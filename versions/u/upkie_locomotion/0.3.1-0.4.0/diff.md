@@ -1,0 +1,547 @@
+# Comparing `tmp/upkie_locomotion-0.3.1.tar.gz` & `tmp/upkie_locomotion-0.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "upkie_locomotion-0.3.1.tar", last modified: Wed Mar 15 14:12:12 2023, max compression
++gzip compressed data, was "upkie_locomotion-0.4.0.tar", last modified: Thu Apr  6 12:07:10 2023, max compression
+```
+
+## Comparing `upkie_locomotion-0.3.1.tar` & `upkie_locomotion-0.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,28 @@
+--rw-r--r--   0        0        0     5736 2023-03-15 14:12:11.991568 upkie_locomotion-0.3.1/README.md
+--rw-r--r--   0        0        0     1642 2023-03-15 14:12:11.983568 upkie_locomotion-0.3.1/pyproject.toml
+--rw-r--r--   0        0        0      685 2023-03-15 14:12:11.987568 upkie_locomotion-0.3.1/upkie_locomotion/__init__.py
+--rw-r--r--   0        0        0      729 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/BUILD
+--rw-r--r--   0        0        0      944 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/__init__.py
+--rw-r--r--   0        0        0      176 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/spine.yaml
+--rw-r--r--   0        0        0      537 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/tests/BUILD
+--rw-r--r--   0        0        0     2286 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/tests/upkie_wheels_env_test.py
+--rw-r--r--   0        0        0    10418 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/upkie_wheels_env.py
+--rw-r--r--   0        0        0     2828 2023-03-15 14:12:11.951569 upkie_locomotion-0.3.1/upkie_locomotion/envs/upkie_wheels_reward.py
+--rw-r--r--   0        0        0      358 2023-03-15 14:12:11.963569 upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/BUILD
+--rw-r--r--   0        0        0      822 2023-03-15 14:12:11.963569 upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/__init__.py
+--rw-r--r--   0        0        0     4561 2023-03-15 14:12:11.963569 upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/base_pitch.py
+--rw-r--r--   0        0        0      336 2023-03-15 14:12:11.963569 upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/tests/BUILD
+--rw-r--r--   0        0        0     2483 2023-03-15 14:12:11.963569 upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/tests/base_pitch_test.py
+--rw-r--r--   0        0        0      817 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/BUILD
+--rw-r--r--   0        0        0     1309 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/clamp.py
+--rw-r--r--   0        0        0     2820 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/filters.py
+--rw-r--r--   0        0        0     1651 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/logging.py
+--rw-r--r--   0        0        0     1231 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/realtime.py
+--rw-r--r--   0        0        0     1983 2023-03-15 14:12:11.975568 upkie_locomotion-0.3.1/upkie_locomotion/utils/spdlog.py
+--rw-r--r--   0        0        0     7234 1970-01-01 00:00:00.000000 upkie_locomotion-0.3.1/PKG-INFO
++-rw-r--r--   0        0        0     5980 2023-04-06 12:07:10.626791 upkie_locomotion-0.4.0/README.md
++-rw-r--r--   0        0        0     1608 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/pyproject.toml
++-rw-r--r--   0        0        0      685 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/__init__.py
++-rw-r--r--   0        0        0     1063 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/BUILD
++-rw-r--r--   0        0        0     1236 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/__init__.py
++-rw-r--r--   0        0        0     2825 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/standing_reward.py
++-rw-r--r--   0        0        0      548 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/tests/BUILD
++-rw-r--r--   0        0        0     2493 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/tests/upkie_base_env_test.py
++-rw-r--r--   0        0        0     2267 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/tests/upkie_wheels_env_test.py
++-rw-r--r--   0        0        0     6208 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/upkie_base_env.py
++-rw-r--r--   0        0        0     7087 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/upkie_servos_env.py
++-rw-r--r--   0        0        0     6005 2023-04-06 12:07:10.614791 upkie_locomotion-0.4.0/upkie_locomotion/envs/upkie_wheels_env.py
++-rw-r--r--   0        0        0      327 2023-04-06 12:07:10.618791 upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/BUILD
++-rw-r--r--   0        0        0      822 2023-04-06 12:07:10.618791 upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/__init__.py
++-rw-r--r--   0        0        0     4561 2023-04-06 12:07:10.618791 upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/base_pitch.py
++-rw-r--r--   0        0        0      305 2023-04-06 12:07:10.618791 upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/tests/BUILD
++-rw-r--r--   0        0        0     2483 2023-04-06 12:07:10.618791 upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/tests/base_pitch_test.py
++-rw-r--r--   0        0        0      818 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/BUILD
++-rw-r--r--   0        0        0     1896 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/clamp.py
++-rw-r--r--   0        0        0     2820 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/filters.py
++-rw-r--r--   0        0        0     1651 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/logging.py
++-rw-r--r--   0        0        0     2433 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/pinocchio.py
++-rw-r--r--   0        0        0     1231 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/realtime.py
++-rw-r--r--   0        0        0     1983 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/spdlog.py
++-rw-r--r--   0        0        0      464 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/tests/BUILD
++-rw-r--r--   0        0        0     1314 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/tests/clamp_test.py
++-rw-r--r--   0        0        0     2243 2023-04-06 12:07:10.622791 upkie_locomotion-0.4.0/upkie_locomotion/utils/tests/pinocchio_test.py
++-rw-r--r--   0        0        0     7436 1970-01-01 00:00:00.000000 upkie_locomotion-0.4.0/PKG-INFO
+```
+
+### Comparing `upkie_locomotion-0.3.1/README.md` & `upkie_locomotion-0.4.0/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -44,18 +44,22 @@
+   <dt>PPO balancer</dt>
+   <dd>An agent trained by reinforcement learning to balance with straight legs. Training uses the <code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__wheels__env_1_1UpkieWheelsEnv.html#details">UpkieWheelsEnv</a></code> gym environment and the PPO implementation from <a href="https://github.com/DLR-RM/stable-baselines3/">Stable Baselines3</a>.</dd>
+ </dl>
+ 
+ ## Environments
+ 
+ <dl>
++  <dt><code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__servos__env_1_1UpkieServosEnv.html#details">UpkieServosEnv</a></code></dt>
++  <dd>Upkie with full observation and joint position-velocity-torque actions.</dd>
+   <dt><code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__wheels__env_1_1UpkieWheelsEnv.html#details">UpkieWheelsEnv</a></code></dt>
+-  <dd>Upkie with full observation but only wheel velocity actions. This environment is single-threaded rather than vectorized. In return, it runs as-is on the real robot.</dd>
++  <dd>Upkie with full observation but only wheel velocity actions.</dd>
+ </dl>
+ 
++Environments are single-threaded rather than vectorized. In return, they run as-is on the real robot.
++
+ ## Observers
+ 
+ <img src="https://tasts-robots.org/doc/upkie_locomotion/observers.png" align="right">
+ 
+ <dl>
+   <dt><a href="https://tasts-robots.org/doc/upkie_locomotion/classupkie__locomotion_1_1observers_1_1FloorContact.html#details">Floor contact</a></dt>
+   <dd>Detect contact between the wheels and the floor. Both Blue and Pink agents use contact as a reset flag for their integrators, to avoid over-spinning the wheels while the robot is in the air.</dd>
+```
+
+#### html2text {}
+
+```diff
+@@ -38,19 +38,21 @@
+       rather than with a model-specific analytical solution. This is the
+       controller that runs in the first two videos of Upkie.
+   PPO balancer
+       An agent trained by reinforcement learning to balance with straight legs.
+       Training uses the UpkieWheelsEnv gym environment and the PPO
+       implementation from Stable_Baselines3.
+ ## Environments
++  UpkieServosEnv
++      Upkie with full observation and joint position-velocity-torque actions.
+   UpkieWheelsEnv
+-      Upkie with full observation but only wheel velocity actions. This
+-      environment is single-threaded rather than vectorized. In return, it runs
+-      as-is on the real robot.
+-## Observers [https://tasts-robots.org/doc/upkie_locomotion/observers.png]
++      Upkie with full observation but only wheel velocity actions.
++Environments are single-threaded rather than vectorized. In return, they run
++as-is on the real robot. ## Observers [https://tasts-robots.org/doc/
++upkie_locomotion/observers.png]
+   Floor_contact
+       Detect contact between the wheels and the floor. Both Blue and Pink
+       agents use contact as a reset flag for their integrators, to avoid over-
+       spinning the wheels while the robot is in the air.
+   Wheel_contact
+       Detect contact between a given wheel and the floor.
+   Wheel_odometry
+```
+
+### Comparing `upkie_locomotion-0.3.1/pyproject.toml` & `upkie_locomotion-0.4.0/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -28,16 +28,15 @@
+     "Topic :: Scientific/Engineering",
+ ]
+ dependencies = [
+     "gym >=0.21.0",
+     "loop-rate-limiters >=0.2.0",
+     "numpy >=1.22.0",
+     "qpsolvers >=1.9.1",
+-    "robot_descriptions >=1.3.1",
+-    "upkie_description >=1.1.0",
++    "upkie_description >=1.2.0",
+     "vulp >=1.1.1",
+ ]
+ keywords = ["motion control", "real time", "robotics"]
+ 
+ [project.urls]
+ Documentation = "https://tasts-robots.org/doc/upkie_locomotion/"
+ Source = "https://github.com/tasts-robots/upkie_locomotion"
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/__init__.py` & `upkie_locomotion-0.4.0/upkie_locomotion/__init__.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -13,8 +13,8 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ """Real-time motion control for Python."""
+ 
+-__version__ = "0.3.1"
++__version__ = "0.4.0"
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/envs/__init__.py` & `upkie_locomotion-0.4.0/upkie_locomotion/envs/__init__.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -13,22 +13,30 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
+ import gym
+ 
++from .upkie_base_env import UpkieBaseEnv
++from .upkie_servos_env import UpkieServosEnv
+ from .upkie_wheels_env import UpkieWheelsEnv
+ 
+ 
+ def register():
+     gym.envs.register(
++        id=f"UpkieServosEnv-v{UpkieServosEnv.version}",
++        entry_point="upkie_locomotion.envs:UpkieServosEnv",
++        max_episode_steps=1_000_000_000,
++    )
++    gym.envs.register(
+         id=f"UpkieWheelsEnv-v{UpkieWheelsEnv.version}",
+         entry_point="upkie_locomotion.envs:UpkieWheelsEnv",
+         max_episode_steps=1_000_000_000,
+     )
+ 
+ 
+ __all__ = [
++    "UpkieBaseEnv",
+     "UpkieWheelsEnv",
+     "register",
+ ]
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/envs/tests/upkie_wheels_env_test.py` & `upkie_locomotion-0.4.0/upkie_locomotion/envs/tests/upkie_wheels_env_test.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -65,16 +65,15 @@
+             shm_name, posix_ipc.O_RDWR | posix_ipc.O_CREAT, size=42
+         )
+         self.env = UpkieWheelsEnv(shm_name=shm_name)
+         shared_memory.close_fd()
+         self.env._spine = MockSpine()
+ 
+     def test_reset(self):
+-        observation = self.env.reset()
+-        observation_dict = self.env.last_observation
++        observation, observation_dict = self.env.reset(return_info=True)
+         self.assertAlmostEqual(
+             observation[1], observation_dict["wheel_odometry"]["position"]
+         )
+         self.assertGreaterEqual(observation_dict["number"], 1)
+ 
+ 
+ if __name__ == "__main__":
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/envs/upkie_wheels_reward.py` & `upkie_locomotion-0.4.0/upkie_locomotion/envs/standing_reward.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ # Copyright 2023 Inria
+ 
+ from typing import Tuple
+ 
+ import numpy as np
+ 
+ 
+-class UpkieWheelsReward:
++class StandingReward:
+ 
+     """!
+     Reward function for balancing in place.
+ 
+     This class has the following attributes:
+ 
+     - ``lookahead_duration``: Length of the receding horizon, used to compute
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/__init__.py` & `upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/base_pitch.py` & `upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/base_pitch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/observers/base_pitch/tests/base_pitch_test.py` & `upkie_locomotion-0.4.0/upkie_locomotion/observers/base_pitch/tests/base_pitch_test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/utils/BUILD` & `upkie_locomotion-0.4.0/upkie_locomotion/utils/BUILD`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -5,49 +5,47 @@
+ load("//tools/lint:lint.bzl", "add_lint_tests")
+ load("@pip_upkie_locomotion//:requirements.bzl", "requirement")
+ 
+ package(default_visibility = ["//visibility:public"])
+ 
+ py_library(
+     name = "clamp",
+-    srcs = [
+-        "clamp.py",
++    srcs = ["clamp.py"],
++    deps = [
++        ":spdlog",
+     ],
+ )
+ 
+ py_library(
+     name = "filters",
+-    srcs = [
+-        "filters.py",
+-    ],
++    srcs = ["filters.py"],
+     deps = [
+         ":clamp",
+     ],
+ )
+ 
+ py_library(
+-    name = "realtime",
+-    srcs = [
+-        "realtime.py",
++    name = "logging",
++    srcs = ["logging.py"],
++    deps = [
++        "@vulp//utils:serialize",
++        requirement("aiofiles"),
++        requirement("msgpack"),
+     ],
+ )
+ 
+ py_library(
+-    name = "spdlog",
+-    srcs = [
+-        "spdlog.py",
+-    ],
++    name = "pinocchio",
++    srcs = ["pinocchio.py"],
+ )
+ 
+ py_library(
+-    name = "logging",
+-    srcs = [
+-        "logging.py",
+-    ],
+-    deps = [
+-        "@vulp//utils:serialize",
+-        requirement("aiofiles"),
+-        requirement("msgpack"),
+-    ],
++    name = "realtime",
++    srcs = ["realtime.py"],
++)
++
++py_library(
++    name = "spdlog",
++    srcs = ["spdlog.py"],
+ )
+ 
+-add_lint_tests(enable_clang_format_lint = True)
++add_lint_tests()
+```
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/utils/filters.py` & `upkie_locomotion-0.4.0/upkie_locomotion/utils/filters.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/utils/logging.py` & `upkie_locomotion-0.4.0/upkie_locomotion/utils/logging.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/utils/realtime.py` & `upkie_locomotion-0.4.0/upkie_locomotion/utils/realtime.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/upkie_locomotion/utils/spdlog.py` & `upkie_locomotion-0.4.0/upkie_locomotion/utils/spdlog.py`
+
+ * *Files identical despite different names*
+
+### Comparing `upkie_locomotion-0.3.1/PKG-INFO` & `upkie_locomotion-0.4.0/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: upkie_locomotion
+-Version: 0.3.1
++Version: 0.4.0
+ Summary: Real-time motion control for Python.
+ Keywords: motion control,real time,robotics
+ Author-email: Stéphane Caron <stephane.caron@normalesup.org>
+ Maintainer-email: Stéphane Caron <stephane.caron@normalesup.org>
+ Requires-Python: >=3.7
+ Description-Content-Type: text/markdown
+ Classifier: Development Status :: 4 - Beta
+@@ -19,16 +19,15 @@
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Topic :: Scientific/Engineering
+ Requires-Dist: gym >=0.21.0
+ Requires-Dist: loop-rate-limiters >=0.2.0
+ Requires-Dist: numpy >=1.22.0
+ Requires-Dist: qpsolvers >=1.9.1
+-Requires-Dist: robot_descriptions >=1.3.1
+-Requires-Dist: upkie_description >=1.1.0
++Requires-Dist: upkie_description >=1.2.0
+ Requires-Dist: vulp >=1.1.1
+ Project-URL: Changelog, https://github.com/tasts-robots/upkie_locomotion/blob/main/CHANGELOG.md
+ Project-URL: Documentation, https://tasts-robots.org/doc/upkie_locomotion/
+ Project-URL: Source, https://github.com/tasts-robots/upkie_locomotion
+ Project-URL: Tracker, https://github.com/tasts-robots/upkie_locomotion/issues
+ 
+ # Upkie locomotion
+@@ -77,18 +76,22 @@
+   <dt>PPO balancer</dt>
+   <dd>An agent trained by reinforcement learning to balance with straight legs. Training uses the <code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__wheels__env_1_1UpkieWheelsEnv.html#details">UpkieWheelsEnv</a></code> gym environment and the PPO implementation from <a href="https://github.com/DLR-RM/stable-baselines3/">Stable Baselines3</a>.</dd>
+ </dl>
+ 
+ ## Environments
+ 
+ <dl>
++  <dt><code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__servos__env_1_1UpkieServosEnv.html#details">UpkieServosEnv</a></code></dt>
++  <dd>Upkie with full observation and joint position-velocity-torque actions.</dd>
+   <dt><code><a href="https://tasts-robots.org/doc/upkie_locomotion/classenvs_1_1upkie__wheels__env_1_1UpkieWheelsEnv.html#details">UpkieWheelsEnv</a></code></dt>
+-  <dd>Upkie with full observation but only wheel velocity actions. This environment is single-threaded rather than vectorized. In return, it runs as-is on the real robot.</dd>
++  <dd>Upkie with full observation but only wheel velocity actions.</dd>
+ </dl>
+ 
++Environments are single-threaded rather than vectorized. In return, they run as-is on the real robot.
++
+ ## Observers
+ 
+ <img src="https://tasts-robots.org/doc/upkie_locomotion/observers.png" align="right">
+ 
+ <dl>
+   <dt><a href="https://tasts-robots.org/doc/upkie_locomotion/classupkie__locomotion_1_1observers_1_1FloorContact.html#details">Floor contact</a></dt>
+   <dd>Detect contact between the wheels and the floor. Both Blue and Pink agents use contact as a reset flag for their integrators, to avoid over-spinning the wheels while the robot is in the air.</dd>
+```
+
+#### html2text {}
+
+```diff
+@@ -1,56 +1,55 @@
+-Metadata-Version: 2.1 Name: upkie_locomotion Version: 0.3.1 Summary: Real-time
++Metadata-Version: 2.1 Name: upkie_locomotion Version: 0.4.0 Summary: Real-time
+ motion control for Python. Keywords: motion control,real time,robotics Author-
+ email: StÃ©phane Caron
+ caron@normalesup.org> Maintainer-email: StÃ©phane Caron
+ caron@normalesup.org> Requires-Python: >=3.7 Description-Content-Type: text/
+ markdown Classifier: Development Status :: 4 - Beta Classifier: Framework ::
+ Robot Framework :: Library Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research Classifier: License :: OSI
+ Approved :: Apache Software License Classifier: Operating System :: OS
+ Independent Classifier: Programming Language :: Python :: 3 Classifier:
+ Programming Language :: Python :: 3.10 Classifier: Programming Language ::
+ Python :: 3.7 Classifier: Programming Language :: Python :: 3.8 Classifier:
+ Programming Language :: Python :: 3.9 Classifier: Topic :: Scientific/
+ Engineering Requires-Dist: gym >=0.21.0 Requires-Dist: loop-rate-limiters
+ >=0.2.0 Requires-Dist: numpy >=1.22.0 Requires-Dist: qpsolvers >=1.9.1
+-Requires-Dist: robot_descriptions >=1.3.1 Requires-Dist: upkie_description
+->=1.1.0 Requires-Dist: vulp >=1.1.1 Project-URL: Changelog, https://github.com/
+-tasts-robots/upkie_locomotion/blob/main/CHANGELOG.md Project-URL:
+-Documentation, https://tasts-robots.org/doc/upkie_locomotion/ Project-URL:
+-Source, https://github.com/tasts-robots/upkie_locomotion Project-URL: Tracker,
+-https://github.com/tasts-robots/upkie_locomotion/issues # Upkie locomotion [!
+-[Build](https://img.shields.io/github/actions/workflow/status/tasts-robots/
+-upkie_locomotion/bazel.yml?branch=main)](https://github.com/tasts-robots/
+-upkie_locomotion/actions/workflows/bazel.yml) [![Documentation](https://
+-img.shields.io/badge/docs-online-brightgreen?style=flat)](https://tasts-
+-robots.org/doc/upkie_locomotion/) [![Coverage](https://coveralls.io/repos/
+-github/tasts-robots/upkie_locomotion/badge.svg?branch=main)](https://
+-coveralls.io/github/tasts-robots/upkie_locomotion?branch=main) [![PyPI version]
+-(https://img.shields.io/pypi/v/upkie_locomotion)](https://pypi.org/project/
+-upkie_locomotion/) [![Vulp](https://img.shields.io/badge/%F0%9F%A6%8A%20vulp-
+-1.0.0-orange)](https://github.com/tasts-robots/vulp) Locomotion code for the
+-[Upkie](https://hackaday.io/project/185729-upkie-wheeled-biped-robot) wheeled
+-biped. Test it straight from the command line on Linux, no installation
+-required: [https://user-images.githubusercontent.com/1189580/170496331-
+-e1293dd3-b50c-40ee-9c2e-f75f3096ebd8.png] ```console git clone https://
+-github.com/tasts-robots/upkie_locomotion.git cd upkie_locomotion ./tools/
+-bazelisk run -c opt //agents/blue_balancer:bullet ``` Connect a USB controller
+-to move the robot around. ð® ## Getting started There is no dependency to
+-install thanks to [Bazel](https://bazel.build/), which builds everything
+-locally. (Compilation will only take a while the first time.) The syntax is the
+-same to deploy to the Raspberry Pi on Upkie with [`raspunzel`](https://
+-github.com/tasts-robots/raspunzel). The code is organized into *spines*, which
+-communicate with the simulator or actuators using the [Vulp](https://
+-github.com/tasts-robots/vulp) C++ library, and *agents*, the main programs that
+-implement behaviors in Python. In the example above we ran the blue agent. We
+-could also run the Bullet spine independently: ```console bazel run -c opt //
+-spines:bullet -- --show ``` The ``-c opt`` argument to Bazel makes sure we
+-compile optimized code, while the ``--show`` argument to the spine displays the
+-Bullet visualization. ## Agents
++Requires-Dist: upkie_description >=1.2.0 Requires-Dist: vulp >=1.1.1 Project-
++URL: Changelog, https://github.com/tasts-robots/upkie_locomotion/blob/main/
++CHANGELOG.md Project-URL: Documentation, https://tasts-robots.org/doc/
++upkie_locomotion/ Project-URL: Source, https://github.com/tasts-robots/
++upkie_locomotion Project-URL: Tracker, https://github.com/tasts-robots/
++upkie_locomotion/issues # Upkie locomotion [![Build](https://img.shields.io/
++github/actions/workflow/status/tasts-robots/upkie_locomotion/
++bazel.yml?branch=main)](https://github.com/tasts-robots/upkie_locomotion/
++actions/workflows/bazel.yml) [![Documentation](https://img.shields.io/badge/
++docs-online-brightgreen?style=flat)](https://tasts-robots.org/doc/
++upkie_locomotion/) [![Coverage](https://coveralls.io/repos/github/tasts-robots/
++upkie_locomotion/badge.svg?branch=main)](https://coveralls.io/github/tasts-
++robots/upkie_locomotion?branch=main) [![PyPI version](https://img.shields.io/
++pypi/v/upkie_locomotion)](https://pypi.org/project/upkie_locomotion/) [![Vulp]
++(https://img.shields.io/badge/%F0%9F%A6%8A%20vulp-1.0.0-orange)](https://
++github.com/tasts-robots/vulp) Locomotion code for the [Upkie](https://
++hackaday.io/project/185729-upkie-wheeled-biped-robot) wheeled biped. Test it
++straight from the command line on Linux, no installation required: [https://
++user-images.githubusercontent.com/1189580/170496331-e1293dd3-b50c-40ee-9c2e-
++f75f3096ebd8.png] ```console git clone https://github.com/tasts-robots/
++upkie_locomotion.git cd upkie_locomotion ./tools/bazelisk run -c opt //agents/
++blue_balancer:bullet ``` Connect a USB controller to move the robot around.
++ð® ## Getting started There is no dependency to install thanks to [Bazel]
++(https://bazel.build/), which builds everything locally. (Compilation will only
++take a while the first time.) The syntax is the same to deploy to the Raspberry
++Pi on Upkie with [`raspunzel`](https://github.com/tasts-robots/raspunzel). The
++code is organized into *spines*, which communicate with the simulator or
++actuators using the [Vulp](https://github.com/tasts-robots/vulp) C++ library,
++and *agents*, the main programs that implement behaviors in Python. In the
++example above we ran the blue agent. We could also run the Bullet spine
++independently: ```console bazel run -c opt //spines:bullet -- --show ``` The
++``-c opt`` argument to Bazel makes sure we compile optimized code, while the
++``--show`` argument to the spine displays the Bullet visualization. ## Agents
+   Blue balancer
+       A baseline agent designed to check out Upkie's physical capabilities. It
+       balances the robot using PD feedback from the head's pitch and wheel
+       odometry to wheel velocities, plus a feedforward non-minimum_phase_trick
+       for smoother transitions from standing to rolling. An analytical inverse
+       kinematics is plugged in for crouching and standing up (crouching is
+       controlled from D-pad of the USB controller, if one is found).
+@@ -59,19 +58,21 @@
+       rather than with a model-specific analytical solution. This is the
+       controller that runs in the first two videos of Upkie.
+   PPO balancer
+       An agent trained by reinforcement learning to balance with straight legs.
+       Training uses the UpkieWheelsEnv gym environment and the PPO
+       implementation from Stable_Baselines3.
+ ## Environments
++  UpkieServosEnv
++      Upkie with full observation and joint position-velocity-torque actions.
+   UpkieWheelsEnv
+-      Upkie with full observation but only wheel velocity actions. This
+-      environment is single-threaded rather than vectorized. In return, it runs
+-      as-is on the real robot.
+-## Observers [https://tasts-robots.org/doc/upkie_locomotion/observers.png]
++      Upkie with full observation but only wheel velocity actions.
++Environments are single-threaded rather than vectorized. In return, they run
++as-is on the real robot. ## Observers [https://tasts-robots.org/doc/
++upkie_locomotion/observers.png]
+   Floor_contact
+       Detect contact between the wheels and the floor. Both Blue and Pink
+       agents use contact as a reset flag for their integrators, to avoid over-
+       spinning the wheels while the robot is in the air.
+   Wheel_contact
+       Detect contact between a given wheel and the floor.
+   Wheel_odometry
+```
+

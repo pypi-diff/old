@@ -1,0 +1,3529 @@
+# Comparing `tmp/asimov-0.5.0b4-py2.py3-none-any.whl.zip` & `tmp/asimov-0.6.0a1-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,58 +1,59 @@
+-Zip file size: 90357 bytes, number of entries: 56
+--rw-r--r--  2.0 unx     2808 b- defN 23-Apr-06 12:12 asimov/__init__.py
+--rw-r--r--  2.0 unx     9128 b- defN 23-Apr-06 12:12 asimov/analysis.py
+--rw-rw-rw-  2.0 unx      843 b- defN 23-Apr-06 12:12 asimov/asimov.conf
+--rw-r--r--  2.0 unx    11022 b- defN 23-Apr-06 12:12 asimov/condor.py
+--rw-r--r--  2.0 unx     1617 b- defN 23-Apr-06 12:12 asimov/database.py
+--rw-r--r--  2.0 unx    37959 b- defN 23-Apr-06 12:12 asimov/event.py
+--rw-r--r--  2.0 unx    12166 b- defN 23-Apr-06 12:12 asimov/git.py
+--rw-r--r--  2.0 unx     7226 b- defN 23-Apr-06 12:12 asimov/gitlab.py
+--rw-r--r--  2.0 unx     5398 b- defN 23-Apr-06 12:12 asimov/ini.py
+--rw-r--r--  2.0 unx     9821 b- defN 23-Apr-06 12:12 asimov/ledger.py
+--rw-r--r--  2.0 unx     2051 b- defN 23-Apr-06 12:12 asimov/locutus.py
+--rw-r--r--  2.0 unx     7051 b- defN 23-Apr-06 12:12 asimov/logging.py
+--rw-r--r--  2.0 unx     1646 b- defN 23-Apr-06 12:12 asimov/mattermost.py
+--rw-r--r--  2.0 unx     1586 b- defN 23-Apr-06 12:12 asimov/olivaw.py
+--rw-r--r--  2.0 unx    14100 b- defN 23-Apr-06 12:12 asimov/pipeline.py
+--rw-r--r--  2.0 unx     4512 b- defN 23-Apr-06 12:12 asimov/review.py
+--rw-r--r--  2.0 unx    10087 b- defN 23-Apr-06 12:12 asimov/storage.py
+--rw-r--r--  2.0 unx     1156 b- defN 23-Apr-06 12:12 asimov/testing.py
+--rw-r--r--  2.0 unx     2134 b- defN 23-Apr-06 12:12 asimov/utils.py
+--rw-rw-rw-  2.0 unx      395 b- defN 23-Apr-06 12:12 asimov/cli/__init__.py
+--rw-rw-rw-  2.0 unx     4072 b- defN 23-Apr-06 12:12 asimov/cli/application.py
+--rw-rw-rw-  2.0 unx     1141 b- defN 23-Apr-06 12:12 asimov/cli/configuration.py
+--rw-rw-rw-  2.0 unx     1285 b- defN 23-Apr-06 12:12 asimov/cli/data.py
+--rw-rw-rw-  2.0 unx     9010 b- defN 23-Apr-06 12:12 asimov/cli/event.py
+--rw-rw-rw-  2.0 unx        0 b- defN 23-Apr-06 12:12 asimov/cli/ledger.py
+--rw-rw-rw-  2.0 unx    10343 b- defN 23-Apr-06 12:12 asimov/cli/manage.py
+--rw-rw-rw-  2.0 unx    13959 b- defN 23-Apr-06 12:12 asimov/cli/monitor.py
+--rw-rw-rw-  2.0 unx     5606 b- defN 23-Apr-06 12:12 asimov/cli/production.py
+--rw-rw-rw-  2.0 unx     7157 b- defN 23-Apr-06 12:12 asimov/cli/project.py
+--rw-rw-rw-  2.0 unx     5225 b- defN 23-Apr-06 12:12 asimov/cli/report.py
+--rw-rw-rw-  2.0 unx     2817 b- defN 23-Apr-06 12:12 asimov/cli/review.py
+--rw-rw-rw-  2.0 unx       96 b- defN 23-Apr-06 12:12 asimov/cli/report-theme/body.html
+--rw-rw-rw-  2.0 unx      247 b- defN 23-Apr-06 12:12 asimov/cli/report-theme/footer.html
+--rw-rw-rw-  2.0 unx     1467 b- defN 23-Apr-06 12:12 asimov/cli/report-theme/head.html
+--rw-rw-rw-  2.0 unx      841 b- defN 23-Apr-06 12:12 asimov/cli/report-theme/header.html
+--rw-rw-rw-  2.0 unx      220 b- defN 23-Apr-06 12:12 asimov/configs/README.rst
+--rw-rw-rw-  2.0 unx     2903 b- defN 23-Apr-06 12:12 asimov/configs/bayeswave.ini
+--rw-rw-rw-  2.0 unx    12328 b- defN 23-Apr-06 12:12 asimov/configs/bilby.ini
+--rw-rw-rw-  2.0 unx     6238 b- defN 23-Apr-06 12:12 asimov/configs/lalinference.ini
+--rw-rw-rw-  2.0 unx     7570 b- defN 23-Apr-06 12:12 asimov/configs/rift.ini
+--rw-rw-rw-  2.0 unx      610 b- defN 23-Apr-06 12:12 asimov/pipelines/__init__.py
+--rw-rw-rw-  2.0 unx    19251 b- defN 23-Apr-06 12:12 asimov/pipelines/bayeswave.py
+--rw-rw-rw-  2.0 unx    12496 b- defN 23-Apr-06 12:12 asimov/pipelines/bilby.py
+--rw-rw-rw-  2.0 unx     9421 b- defN 23-Apr-06 12:12 asimov/pipelines/lalinference.py
+--rw-rw-rw-  2.0 unx    17453 b- defN 23-Apr-06 12:12 asimov/pipelines/rift.py
+--rw-rw-rw-  2.0 unx       96 b- defN 23-Apr-06 12:12 asimov/report-theme/body.html
+--rw-rw-rw-  2.0 unx      247 b- defN 23-Apr-06 12:12 asimov/report-theme/footer.html
+--rw-rw-rw-  2.0 unx     1467 b- defN 23-Apr-06 12:12 asimov/report-theme/head.html
+--rw-rw-rw-  2.0 unx      841 b- defN 23-Apr-06 12:12 asimov/report-theme/header.html
+--rw-rw-rw-  2.0 unx      755 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/LICENSE
+--rw-r--r--  2.0 unx     1392 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/METADATA
+--rw-r--r--  2.0 unx      110 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/WHEEL
+--rw-r--r--  2.0 unx      108 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx        7 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/top_level.txt
+--rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/zip-safe
+--rw-rw-r--  2.0 unx     4459 b- defN 23-Apr-06 12:12 asimov-0.5.0b4.dist-info/RECORD
+-56 files, 303945 bytes uncompressed, 83411 bytes compressed:  72.6%
++Zip file size: 89740 bytes, number of entries: 57
++-rw-r--r--  2.0 unx     2866 b- defN 23-Mar-21 21:08 asimov/__init__.py
++-rw-r--r--  2.0 unx    27234 b- defN 23-Mar-21 21:08 asimov/analysis.py
++-rw-rw-rw-  2.0 unx      796 b- defN 23-Mar-21 21:08 asimov/asimov.conf
++-rw-r--r--  2.0 unx    11665 b- defN 23-Mar-21 21:08 asimov/condor.py
++-rw-r--r--  2.0 unx     1617 b- defN 23-Mar-21 21:08 asimov/database.py
++-rw-r--r--  2.0 unx    15204 b- defN 23-Mar-21 21:08 asimov/event.py
++-rw-r--r--  2.0 unx    12166 b- defN 23-Mar-21 21:08 asimov/git.py
++-rw-r--r--  2.0 unx     7734 b- defN 23-Mar-21 21:08 asimov/gitlab.py
++-rw-r--r--  2.0 unx     5398 b- defN 23-Mar-21 21:08 asimov/ini.py
++-rw-r--r--  2.0 unx    11341 b- defN 23-Mar-21 21:08 asimov/ledger.py
++-rw-r--r--  2.0 unx     2051 b- defN 23-Mar-21 21:08 asimov/locutus.py
++-rw-r--r--  2.0 unx     7051 b- defN 23-Mar-21 21:08 asimov/logging.py
++-rw-r--r--  2.0 unx     1646 b- defN 23-Mar-21 21:08 asimov/mattermost.py
++-rw-r--r--  2.0 unx     1590 b- defN 23-Mar-21 21:08 asimov/olivaw.py
++-rw-r--r--  2.0 unx    14537 b- defN 23-Mar-21 21:08 asimov/pipeline.py
++-rw-r--r--  2.0 unx     4513 b- defN 23-Mar-21 21:08 asimov/review.py
++-rw-r--r--  2.0 unx    10087 b- defN 23-Mar-21 21:08 asimov/storage.py
++-rw-r--r--  2.0 unx     1146 b- defN 23-Mar-21 21:08 asimov/testing.py
++-rw-r--r--  2.0 unx     2134 b- defN 23-Mar-21 21:08 asimov/utils.py
++-rw-rw-rw-  2.0 unx      395 b- defN 23-Mar-21 21:08 asimov/cli/__init__.py
++-rw-rw-rw-  2.0 unx     4960 b- defN 23-Mar-21 21:08 asimov/cli/application.py
++-rw-rw-rw-  2.0 unx     1141 b- defN 23-Mar-21 21:08 asimov/cli/configuration.py
++-rw-rw-rw-  2.0 unx     1285 b- defN 23-Mar-21 21:08 asimov/cli/data.py
++-rw-rw-rw-  2.0 unx     9011 b- defN 23-Mar-21 21:08 asimov/cli/event.py
++-rw-rw-rw-  2.0 unx        0 b- defN 23-Mar-21 21:08 asimov/cli/ledger.py
++-rw-rw-rw-  2.0 unx    10291 b- defN 23-Mar-21 21:08 asimov/cli/manage.py
++-rw-rw-rw-  2.0 unx    15526 b- defN 23-Mar-21 21:08 asimov/cli/monitor.py
++-rw-rw-rw-  2.0 unx     5606 b- defN 23-Mar-21 21:08 asimov/cli/production.py
++-rw-rw-rw-  2.0 unx     6947 b- defN 23-Mar-21 21:08 asimov/cli/project.py
++-rw-rw-rw-  2.0 unx     5225 b- defN 23-Mar-21 21:08 asimov/cli/report.py
++-rw-rw-rw-  2.0 unx     2817 b- defN 23-Mar-21 21:08 asimov/cli/review.py
++-rw-rw-rw-  2.0 unx       96 b- defN 23-Mar-21 21:08 asimov/cli/report-theme/body.html
++-rw-rw-rw-  2.0 unx      247 b- defN 23-Mar-21 21:08 asimov/cli/report-theme/footer.html
++-rw-rw-rw-  2.0 unx     1467 b- defN 23-Mar-21 21:08 asimov/cli/report-theme/head.html
++-rw-rw-rw-  2.0 unx      841 b- defN 23-Mar-21 21:08 asimov/cli/report-theme/header.html
++-rw-rw-rw-  2.0 unx      220 b- defN 23-Mar-21 21:08 asimov/configs/README.rst
++-rw-rw-rw-  2.0 unx     2903 b- defN 23-Mar-21 21:08 asimov/configs/bayeswave.ini
++-rw-rw-rw-  2.0 unx     8197 b- defN 23-Mar-21 21:08 asimov/configs/bilby.ini
++-rw-rw-rw-  2.0 unx     6238 b- defN 23-Mar-21 21:08 asimov/configs/lalinference.ini
++-rw-rw-rw-  2.0 unx     7718 b- defN 23-Mar-21 21:08 asimov/configs/rift.ini
++-rw-rw-rw-  2.0 unx      610 b- defN 23-Mar-21 21:08 asimov/pipelines/__init__.py
++-rw-rw-rw-  2.0 unx    20083 b- defN 23-Mar-21 21:08 asimov/pipelines/bayeswave.py
++-rw-rw-rw-  2.0 unx    15790 b- defN 23-Mar-21 21:08 asimov/pipelines/bilby.py
++-rw-rw-rw-  2.0 unx     9489 b- defN 23-Mar-21 21:08 asimov/pipelines/lalinference.py
++-rw-rw-rw-  2.0 unx    17453 b- defN 23-Mar-21 21:08 asimov/pipelines/rift.py
++-rw-rw-rw-  2.0 unx     2844 b- defN 23-Mar-21 21:08 asimov/priors/bbh.prior.template
++-rw-rw-rw-  2.0 unx       96 b- defN 23-Mar-21 21:08 asimov/report-theme/body.html
++-rw-rw-rw-  2.0 unx      247 b- defN 23-Mar-21 21:08 asimov/report-theme/footer.html
++-rw-rw-rw-  2.0 unx     1467 b- defN 23-Mar-21 21:08 asimov/report-theme/head.html
++-rw-rw-rw-  2.0 unx      841 b- defN 23-Mar-21 21:08 asimov/report-theme/header.html
++-rw-rw-rw-  2.0 unx      755 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/LICENSE
++-rw-r--r--  2.0 unx     1392 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/METADATA
++-rw-r--r--  2.0 unx      110 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/WHEEL
++-rw-r--r--  2.0 unx      108 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx        7 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/top_level.txt
++-rw-r--r--  2.0 unx        1 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/zip-safe
++?rw-rw-r--  2.0 unx     4549 b- defN 23-Mar-21 21:09 asimov-0.6.0a1.dist-info/RECORD
++57 files, 307749 bytes uncompressed, 82654 bytes compressed:  73.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -129,41 +129,44 @@
+ 
+ Filename: asimov/pipelines/lalinference.py
+ Comment: 
+ 
+ Filename: asimov/pipelines/rift.py
+ Comment: 
+ 
++Filename: asimov/priors/bbh.prior.template
++Comment: 
++
+ Filename: asimov/report-theme/body.html
+ Comment: 
+ 
+ Filename: asimov/report-theme/footer.html
+ Comment: 
+ 
+ Filename: asimov/report-theme/head.html
+ Comment: 
+ 
+ Filename: asimov/report-theme/header.html
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/LICENSE
++Filename: asimov-0.6.0a1.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/METADATA
++Filename: asimov-0.6.0a1.dist-info/METADATA
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/WHEEL
++Filename: asimov-0.6.0a1.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/entry_points.txt
++Filename: asimov-0.6.0a1.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/top_level.txt
++Filename: asimov-0.6.0a1.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/zip-safe
++Filename: asimov-0.6.0a1.dist-info/zip-safe
+ Comment: 
+ 
+-Filename: asimov-0.5.0b4.dist-info/RECORD
++Filename: asimov-0.6.0a1.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## asimov/__init__.py
+
+```diff
+@@ -9,14 +9,16 @@
+ __packagename__ = __name__
+ 
+ import os
+ import logging
+ 
+ from pkg_resources import DistributionNotFound, get_distribution, resource_string
+ 
++from pkg_resources import DistributionNotFound, get_distribution, resource_string
++
+ try:
+     __version__ = get_distribution(__name__).version
+ except DistributionNotFound:
+     # package is not installed
+     __version__ = "dev"
+     pass
+ 
+@@ -27,15 +29,15 @@
+ default_config = resource_string(__name__, "{}.conf".format(__packagename__))
+ 
+ config = configparser.ConfigParser()
+ # if not config_file:
+ 
+ config.read_string(default_config.decode("utf8"))
+ config_locations = [
+-    os.path.join(os.curdir, ".asimov", "{}.conf".format(__packagename__)),
++    os.path.join(os.curdir, "{}.conf".format(__packagename__)),
+     os.path.join(
+         os.path.expanduser("~"),
+         ".config",
+         __packagename__,
+         "{}.conf".format(__packagename__),
+     ),
+     os.path.join(os.path.expanduser("~"), ".{}".format(__packagename__)),
+@@ -74,15 +76,15 @@
+     PRINT_LEVEL = logging.ERROR
+ 
+ ch = logging.StreamHandler()
+ print_formatter = logging.Formatter("[%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S")
+ ch.setFormatter(print_formatter)
+ ch.setLevel(PRINT_LEVEL)
+ 
+-logfile = os.path.join("asimov.log")
++logfile = "asimov.log"
+ fh = logging.FileHandler(logfile)
+ formatter = logging.Formatter(
+     "%(asctime)s [%(name)s][%(levelname)s] %(message)s", "%Y-%m-%d %H:%M:%S"
+ )
+ fh.setFormatter(formatter)
+ fh.setLevel(LOGGER_LEVEL)
+```
+
+## asimov/analysis.py
+
+```diff
+@@ -23,48 +23,108 @@
+ 
+ """
+ import os
+ import configparser
+ from copy import deepcopy
+ from warnings import warn
+ 
++from functools import reduce
++import operator
++
+ from liquid import Liquid
+ 
+-from asimov import config
++from asimov import config, logger, LOGGER_LEVEL
+ from asimov.pipelines import known_pipelines
+ from asimov.utils import update
+ from asimov.storage import Store
+ 
++from .review import Review
++from .ini import RunConfiguration
+ 
+ class Analysis:
+     """
+     The base class for all other types of analysis.
+ 
+     TODO: Add a check to make sure names cannot conflict
+     """
+-
++    meta = {}
++    meta_defaults = {"scheduler": {}, "sampler": {}, "review": {}}
++    _reviews = Review()
++    
+     @property
+     def review(self):
+         """
+         Return the review information attached to the analysis.
+         """
++        if "review" in self.meta:
++            if len(self.meta['review']) > 0:
++                self._reviews = Review.from_dict(self.meta["review"], production=self)
++                self.meta.pop("review")
++        return self._reviews
+ 
+     def _process_dependencies(self, needs):
+         """
+         Process the dependencies list for this production.
++
++        The dependencies can be provided either as the name of a production,
++        or a query against the analysis's attributes.
++
++        Parameters
++        ----------
++        needs : list
++           A list of all the requirements
++
++        Returns
++        -------
++        list
++           A list of all the requirements processed for evaluation.
+         """
+-        return needs
++        all_requirements = []
++        for need in needs:
++            try:
++                requirement = need.split(":")
++                requirement = [requirement[0].split("."), requirement[1]]
++            except IndexError:
++                requirement = [["name"], need]
++            all_requirements.append(requirement)
++        return all_requirements
++
++    @property
++    def job_id(self):
++        """
++        Get the ID number of this job as it resides in the scheduler.
++        """
++        if "scheduler" in self.meta:
++            if "job id" in self.meta['scheduler']:
++                return self.meta['scheduler']["job id"]
++            else:
++                return None
++
++    @job_id.setter
++    def job_id(self, value):
++        if "scheduler" not in self.meta:
++            self.meta['scheduler'] = {}
++        self.meta["scheduler"]["job id"] = value
+ 
+     @property
+     def dependencies(self):
+-        if "needs" in self.meta:
+-            dependencies = self._process_dependencies(self.meta["needs"])
++        """Return a list of analyses which this analysis depends upon."""
++        all_matches = []
++        if len(self._needs) == 0:
++            return []
+         else:
+-            dependencies = None
+-        return dependencies
++            matches = set({})# set(self.event.analyses)
++            #matches.remove(self)
++            requirements = self._process_dependencies(self._needs)
++            for attribute, match in requirements:
++                filtered_analyses = list(filter(lambda x: x.matches_filter(attribute, match), self.event.analyses))
++                matches = set.union(matches, set(filtered_analyses))
++            for analysis in matches:
++                all_matches.append(analysis)
++            return all_matches
+ 
+     @property
+     def priors(self):
+         if "priors" in self.meta:
+             priors = self.meta["priors"]
+         else:
+             priors = None
+@@ -74,21 +134,68 @@
+     def finished(self):
+         finished_states = ["uploaded"]
+         return self.status in finished_states
+ 
+     @property
+     def status(self):
+         return self.status_str.lower()
+-
++    
+     @status.setter
+     def status(self, value):
+         self.status_str = value.lower()
+-        if self.event.issue_object is not None:
+-            self.event.issue_object.update_data()
+ 
++    def matches_filter(self, attribute, match):
++        """
++        Checks to see if this analysis matches a given filtering
++        criterion.
++
++        A variety of different attributes can be used for filtering.
++        The primary attributes are
++
++            - review status
++
++            - processing status
++
++            - name
++
++        In addition, any quantity contained in the analysis metadata
++        may be used by accessing it in the nested structure of this
++        data, with levels of the hierarchy separated with period
++        characters.  For example, to access the waveform approximant
++        the correct attribute would be `waveform.approximant`.
++
++        Parameters
++        ----------
++        attribute : str
++           The name of the attribute to be tested
++        match : str
++           The string to be matched against the value of the attribute
++
++        Returns
++        -------
++        bool
++           Returns True if this analysis matches the query,
++           otherwise returns False.
++        """
++        is_review = False
++        if attribute[0] == "review":
++            is_review = match.lower() == str(self.review.status).lower()
++        is_status = False
++        if attribute[0] == "status":
++            is_status = match.lower() == self.status.lower()
++        is_name = False
++        if attribute[0] == "name":
++            is_name = match == self.name
++        try:
++            in_meta = reduce(operator.getitem, attribute, self.meta) == match
++        except KeyError:
++            in_meta = False
++
++        return is_name | in_meta | is_status | is_review
++        
+     def results(self, filename=None, handle=False, hash=None):
+         store = Store(root=config.get("storage", "results_store"))
+         if not filename:
+             try:
+                 items = store.manifest.list_resources(self.subject.name, self.name)
+                 return items
+             except KeyError:
+@@ -110,15 +217,46 @@
+         elif "working directory" in self.subject.meta:
+             value = os.path.join(self.subject.meta["working directory"], self.name)
+             self.meta["rundir"] = value
+             # TODO: Make sure this is saved back to the ledger
+         else:
+             return None
+ 
+-    def make_config(self, filename, template_directory=None):
++    @rundir.setter
++    def rundir(self, value):
++        """
++        Set the run directory.
++        """
++        if "rundir" not in self.meta:
++            self.meta["rundir"] = value
++        else:
++            self.meta["rundir"] = value
++
++    def get_meta(self, key):
++        """
++        Get the value of a metadata attribute, or return None if it doesn't
++        exist.
++        """
++        if key in self.meta:
++            return self.meta[key]
++        else:
++            return None
++
++        
++    def set_meta(self, key, value):
++        """
++        Set a metadata attribute which doesn't currently exist.
++        """
++        if key not in self.meta:
++            self.meta[key] = value
++            self.event.ledger.update_event(self.event)
++        else:
++            raise ValueError
++
++    def make_config(self, filename, template_directory=None, dryrun=False):
+         """
+         Make the configuration file for this production.
+ 
+         Parameters
+         ----------
+         filename : str
+            The location at which the config file should be saved.
+@@ -128,22 +266,22 @@
+         """
+ 
+         if "template" in self.meta:
+             template = f"{self.meta['template']}.ini"
+         else:
+             template = f"{self.pipeline}.ini"
+ 
+-        pipeline = known_pipelines[self.pipeline]
++        pipeline = self.pipeline
+         if hasattr(pipeline, "config_template"):
+             template_file = pipeline.config_template
+         else:
+             try:
+                 template_directory = config.get("templating", "directory")
+                 template_file = os.path.join(f"{template_directory}", template)
+-            except configparser.NoOptionError:
++            except (configparser.NoOptionError, configparser.NoSectionError):
+                 from pkg_resources import resource_filename
+ 
+                 template_file = resource_filename("asimov", f"configs/{template}")
+ 
+         liq = Liquid(template_file)
+         rendered = liq.render(production=self, config=config)
+ 
+@@ -152,65 +290,430 @@
+ 
+ 
+ class SimpleAnalysis(Analysis):
+     """
+     A single subject, single pipeline analysis.
+     """
+ 
+-    def __init__(self, subject, name, pipeline, status=None, comment=None, **kwargs):
++    def __init__(self, subject, name, pipeline, **kwargs):
++
+         self.event = self.subject = subject
+         self.name = name
+ 
+-        if status:
+-            self.status_str = status.lower()
++        self.logger = logger.getChild("event").getChild(f"{self.name}")
++        self.logger.setLevel(LOGGER_LEVEL)
++
++
++        if "status" in kwargs:
++            self.status_str = kwargs['status'].lower()
+         else:
+             self.status_str = "none"
+-            self.pipeline = pipeline.lower()
+-            self.comment = comment
+-            self.meta = deepcopy(self.subject.meta)
+-            self.meta = update(self.meta, kwargs)
++
++        self.meta = deepcopy(self.meta_defaults)
++        self.meta = update(self.meta, deepcopy(self.subject.meta))
++        if "productions" in self.meta:
++           self.meta.pop("productions")
++        # if "needs" in self.meta:
++        #    self.meta.pop("needs")
++
++        self.meta = update(self.meta, deepcopy(kwargs))
++        self.meta['pipeline'] = pipeline.lower()
++        self.pipeline = pipeline.lower()
++        self.pipeline = known_pipelines[pipeline.lower()](self)
++        if "needs" in self.meta:
++            self._needs = self.meta.pop("needs")
++        else:
++            self._needs = []
++        if "comment" in kwargs:
++            self.comment = kwargs['comment']
++        else:
++            self.comment = None
++
++    def to_dict(self, event=True):
++        """
++        Return this production as a dictionary.
++
++        Parameters
++        ----------
++        event : bool
++           If set to True the output is designed to be included nested within an event.
++           The event name is not included in the representation, and the production name is provided as a key.
++        """
++        dictionary = {}
++        if not event:
++            dictionary["event"] = self.event.name
++            dictionary["name"] = self.name
++
++        dictionary["status"] = self.status
++        if isinstance(self.pipeline, str):
++            dictionary['pipeline'] = self.pipeline
++        else:
++            dictionary["pipeline"] = self.pipeline.name.lower()
++        dictionary["comment"] = self.comment
++
++        if self.review:
++            dictionary["review"] = self.review.to_dicts()
++
++        dictionary['needs'] = self._needs #self.dependencies
++            
++        if "quality" in self.meta:
++            dictionary["quality"] = self.meta["quality"]
++        if "priors" in self.meta:
++            dictionary["priors"] = self.meta["priors"]
++        for key, value in self.meta.items():
++            dictionary[key] = value
++        if "repository" in self.meta:
++            dictionary["repository"] = self.repository.url
++        if "ledger" in dictionary:
++            dictionary.pop("ledger")
++        if "pipelines" in dictionary:
++            dictionary.pop("pipelines")
++
++        if not event:
++            output = dictionary
++        else:
++            output = {self.name: dictionary}
++        return output
++
++    @classmethod
++    def from_dict(cls, parameters, subject):
++        parameters = deepcopy(parameters)
++        # Check that pars is a dictionary
++        if not {"pipeline", "name"} <= parameters.keys():
++            raise ValueError(
++                f"Some of the required parameters are missing."
++                f"Found {parameters.keys()}"
++            )
++        if "status" not in parameters:
++            parameters['status'] = "ready"
++        if "event" in parameters:
++            parameters.pop("event")
++        pipeline = parameters.pop("pipeline")
++        name = parameters.pop("name")
++        if "comment" not in parameters:
++            parameters['comment'] = None
++
++        return cls(subject, name, pipeline,  **parameters)
+ 
+ 
+ class SubjectAnalysis(Analysis):
+     """
+     A single subject analysis which requires results from multiple pipelines.
+     """
+ 
+-    pass
++    def __init__(self, subject, name, pipeline, **kwargs):
++        self.event = self.subject = subject
++        self.name = name
++
++        self.logger = logger.getChild("event").getChild(f"{self.name}")
++        self.logger.setLevel(LOGGER_LEVEL)
++
++        if "status" in kwargs:
++            self.status_str = kwargs['status'].lower()
++        else:
++            self.status_str = "none"
++
++        self.meta = deepcopy(self.meta_defaults)
++        self.meta = update(self.meta, deepcopy(self.subject.meta))
++        if "productions" in self.meta:
++           self.meta.pop("productions")
++        if "needs" in self.meta:
++           self.meta.pop("needs")
++
++        self.meta = update(self.meta, deepcopy(kwargs))
++        self.pipeline = pipeline.lower()
++        self.pipeline = known_pipelines[pipeline.lower()](self)
++        if "needs" in self.meta:
++            self._needs = self.meta.pop("needs")
++        else:
++            self._needs = []
++        
++        if "comment" in kwargs:
++            self.comment = kwargs['comment']
++        else:
++            self.comment = None
++        
++    def to_dict(self, event=True):
++        """
++        Return this production as a dictionary.
++
++        Parameters
++        ----------
++        event : bool
++           If set to True the output is designed to be included nested within an event.
++           The event name is not included in the representation, and the production name is provided as a key.
++        """
++        dictionary = {}
++        if not event:
++            dictionary["event"] = self.event.name
++            dictionary["name"] = self.name
++
++        dictionary["status"] = self.status
++        if isinstance(self.pipeline, str):
++            dictionary['pipeline'] = self.pipeline
++        else:
++            dictionary["pipeline"] = self.pipeline.name.lower()
++        dictionary["comment"] = self.comment
++
++        if self.review:
++            dictionary["review"] = self.review.to_dicts()
++
++        dictionary['needs'] = self.dependencies
++            
++        if "quality" in self.meta:
++            dictionary["quality"] = self.meta["quality"]
++        if "priors" in self.meta:
++            dictionary["priors"] = self.meta["priors"]
++        for key, value in self.meta.items():
++            dictionary[key] = value
++        if "repository" in self.meta:
++            dictionary["repository"] = self.repository.url
++        if "ledger" in dictionary:
++            dictionary.pop("ledger")
++        if "pipelines" in dictionary:
++            dictionary.pop("pipelines")
++
++        if not event:
++            output = dictionary
++        else:
++            output = {self.name: dictionary}
++        return output
++
++    @classmethod
++    def from_dict(cls, parameters, subject):
++        parameters = deepcopy(parameters)
++        # Check that pars is a dictionary
++        if not {"pipeline", "name"} <= parameters.keys():
++            raise ValueError(
++                f"Some of the required parameters are missing."
++                f"Found {parameters.keys()}"
++            )
++        if "status" not in parameters:
++            parameters['status'] = "ready"
++        if "event" in parameters:
++            parameters.pop("event")
++        pipeline = parameters.pop("pipeline")
++        name = parameters.pop("name")
++        if "comment" not in parameters:
++            parameters['comment'] = None
++
++        return cls(subject, name, pipeline,  **parameters)
++
++
+ 
+ 
+ class ProjectAnalysis(Analysis):
+     """
+     A multi-subject analysis.
+     """
+ 
+     def __init__(
+-        self, subjects, analyses, name, pipeline, status=None, comment=None, **kwargs
++            self, subjects, analyses, name, pipeline, ledger=None, **kwargs
+     ):
+         """ """
+         super().__init__()
+ 
++        self.name = name # if name else "unnamed project analysis"
++        
++        self.logger = logger.getChild("project analyses").getChild(f"{self.name}")
++        self.logger.setLevel(LOGGER_LEVEL)
++
+         self.subjects = subjects
+-        self.analyses = analyses
++        self.events = self.subjects
++
++        self._analysis_spec = analyses
++        requirements = self._process_dependencies(self._analysis_spec)
++        self.analyses = []
++
++        if ledger:
++            self.ledger = ledger
++        self._subject_obs = []
++        for subject in self.subjects:
++            sub = self.ledger.get_event(subject)[0]
++            self._subject_obs.append(sub)
++            if self._analysis_spec:
++                matches = set(sub.analyses)
++                for attribute, match in requirements:
++                    filtered_analyses = list(filter(lambda x: x.matches_filter(attribute, match), sub.analyses))
++                    matches = set.intersection(matches, set(filtered_analyses))
++                for analysis in matches:
++                    self.analyses.append(analysis)
++        if "status" in kwargs:
++            self.status_str = kwargs['status'].lower()
++        else:
++            self.status_str = "none"
++
++        self.pipeline = pipeline.lower()
++        try:
++            self.pipeline = known_pipelines[str(pipeline).lower()](self)
++        except:
++            self.logger.warning(f"The pipeline {pipeline} could not be found.")
++        if "needs" in self.meta:
++            self._needs = self.meta.pop("needs")
++        else:
++            self._needs = []
++
++        if "comment" in kwargs:
++            self.comment = kwargs['comment']
++        else:
++            self.comment = None
++
++    def __repr__(self):
++        """
++        A human-friendly representation of this project.
++
++        Parameters
++        ----------
++        None
++        """
++        return f"<Project analysis for {len(self.events)} events and {len(self.analyses)} analyses>"
++
++    @classmethod
++    def from_dict(cls, parameters, ledger=None):
++        parameters = deepcopy(parameters)
++        # Check that pars is a dictionary
++        if not {"pipeline", "name"} <= parameters.keys():
++            raise ValueError(
++                f"Some of the required parameters are missing. "
++                f"Found {parameters.keys()}"
++            )
++        if "status" not in parameters:
++            parameters['status'] = "ready"
++        if "event" in parameters:
++            parameters.pop("event")
++        pipeline = parameters.pop("pipeline")
++        name = parameters.pop("name")
++        if "comment" not in parameters:
++            parameters['comment'] = None
++        return cls(name=name, pipeline=pipeline, ledger=ledger,  **parameters)
++
++    def to_dict(self):
++        """
++        Return this project production as a dictionary.
+ 
++        Parameters
++        ----------
++        event : bool
++           If set to True the output is designed to be included nested within an event.
++           The event name is not included in the representation, and the production name is provided as a key.
++        """
++        dictionary = {}
++        dictionary['name'] = self.name
++        dictionary["status"] = self.status
++        if isinstance(self.pipeline, str):
++            dictionary['pipeline'] = self.pipeline
++        else:
++            dictionary["pipeline"] = self.pipeline.name.lower()
++        dictionary["comment"] = self.comment
+ 
++        if self.review:
++            dictionary["review"] = self.review.to_dicts()
++
++        dictionary['needs'] = self.dependencies
++            
++        if "quality" in self.meta:
++            dictionary["quality"] = self.meta["quality"]
++        if "priors" in self.meta:
++            dictionary["priors"] = self.meta["priors"]
++        for key, value in self.meta.items():
++            dictionary[key] = value
++        if "repository" in self.meta:
++            dictionary["repository"] = self.repository.url
++        if "ledger" in dictionary:
++            dictionary.pop("ledger")
++        if "pipelines" in dictionary:
++            dictionary.pop("pipelines")
++
++        dictionary['subjects'] = self.subjects
++        dictionary['analyses'] = self._analysis_spec
++            
++        output = dictionary
++        
++        return output
++
++    
+ class GravitationalWaveTransient(SimpleAnalysis):
+     """
+     A single subject, single pipeline analysis for a gravitational wave transient.
+     """
++    def __init__(self, subject, name, pipeline, **kwargs):
+ 
+-    def __init__(self, subject, name, pipeline, status=None, comment=None, **kwargs):
+-        super().init(subject, name, pipeline, status=None, comment=None, **kwargs)
++        self.category = config.get("general", "calibration_directory")
++
++        super().__init__(subject, name, pipeline, **kwargs)
++        self._add_missing_parameters()
+         self._checks()
++        
++        self.psds = self._set_psds()
++        self.xml_psds = self._collect_psds(format="xml")
++
++    def _collect_psds(self, format="ascii"):
++        """
++        Collect the required psds for this production.
++        """
++        psds = {}
++        # If the PSDs are specifically provided in the ledger,
++        # use those.
++
++        if format=="ascii":
++            keyword = "psds"
++        elif format=="xml":
++            keyword = "xml psds"
++        
++        if keyword in self.meta:
++            if self.meta["likelihood"]["sample rate"] in self.meta[keyword]:
++                psds = self.meta[keyword][self.meta["likelihood"]["sample rate"]]
++
++        # First look through the list of the job's dependencies
++        # to see if they're provided by a job there.
++        elif self.dependencies:
++            productions = {}
++            for production in self.event.productions:
++                productions[production.name] = production
++
++            for previous_job in self.dependencies:
++                try:
++                    # Check if the job provides PSDs as an asset and were produced with compatible settings
++                    if keyword in productions[previous_job].pipeline.collect_assets():
++                        if self._check_compatible(productions[previous_job]):
++                            psds = productions[previous_job].pipeline.collect_assets()[
++                                keyword
++                            ]
++                    else:
++                        psds = {}
++                except Exception:
++                    psds = {}
++        # Otherwise return no PSDs
++        else:
++            psds = {}
+ 
++        for ifo, psd in psds.items():
++            self.logger.debug(f"PSD-{ifo}: {psd}")
++
++        return psds
++        
++    def _add_missing_parameters(self):
++        for parameter in {"quality", "waveform", "likelihood"}:
++            if not parameter in self.meta:
++                self.meta[parameter] = {}
++                
++        for parameter in {"marginalization"}:
++            if not parameter in self.meta['likelihood']:
++                self.meta['likelihood'][parameter] = {}
++
++        for parameter in {"maximum frequency"}:
++            if not parameter in self.meta['quality']:
++                self.meta['quality'][parameter] = {}
++        
+     def _checks(self):
+         """
+         Carry-out a number of data consistency checks on the information from the ledger.
+         """
+         # Check that the upper frequency is included, otherwise calculate it
++        
+         if self.quality:
+             if ("high-frequency" not in self.quality) and (
+                 "sample-rate" in self.quality
+             ):
+                 # Account for the PSD roll-off with the 0.875 factor
+                 self.meta["quality"]["high-frequency"] = int(
+                     0.875 * self.meta["quality"]["sample-rate"] / 2
+@@ -237,16 +740,15 @@
+         """
+         ifos = self.meta["interferometers"]
+         if len(ifos) == 1:
+             return ifos[0]
+         else:
+             return "".join(ifos[:2])
+ 
+-    @property
+-    def psds(self):
++    def _set_psds(self):
+         """
+         Return the PSDs stored for this transient event.
+         """
+         if "psds" in self.meta and self.quality:
+             if self.quality["sample-rate"] in self.meta["psds"]:
+                 self.psds = self.meta["psds"][self.quality["sample-rate"]]
+             else:
+@@ -289,10 +791,33 @@
+                 os.path.join(
+                     self.event.repository.directory, self.category, "coinc.xml"
+                 ),
+             )
+             coinc = self.event.repository.find_coincfile(self.category)
+             return coinc
+ 
++    def get_configuration(self):
++        """
++        Get the configuration file contents for this event.
++        """
++        if "ini" in self.meta:
++            ini_loc = self.meta["ini"]
++        else:
++            # We'll need to search the repository for it.
++            try:
++                ini_loc = self.subject.repository.find_prods(self.name, self.category)[0]
++                if not os.path.exists(ini_loc):
++                    raise ValueError("Could not open the ini file.")
++            except IndexError:
++                raise ValueError("Could not open the ini file.")
++        try:
++            ini = RunConfiguration(ini_loc)
++        except ValueError:
++            raise ValueError("Could not open the ini file")
++        except configparser.MissingSectionHeaderError:
++            raise ValueError("This isn't a valid ini file")
++
++        return ini
++        
+ 
+ class Production(SimpleAnalysis):
+     pass
+```
+
+## asimov/asimov.conf
+
+```diff
+@@ -1,8 +1,8 @@
+-[general]
++	[general]
+ git_default = .
+ rundir_default = working
+ calibration=C01
+ calibration_directory=C01_offline
+ webroot = pages/
+ logger = file
+ 
+@@ -37,11 +37,7 @@
+ url = https://gracedb.ligo.org/api/
+ 
+ [pesummary]
+ executable = /cvmfs/oasis.opensciencegrid.org/ligo/sw/conda/envs/igwn-py39/bin/summarypages
+ 
+ [condor]
+ cache_time = 900
+-cron_minute = */15
+-
+-[theme]
+-name = report-theme
+```
+
+## asimov/condor.py
+
+```diff
+@@ -34,14 +34,38 @@
+     Returns
+     -------
+     datetime.datetime
+         the datetime that represents the given Unix epoch
+     """
+     return datetime.datetime.utcfromtimestamp(dt).replace(tzinfo=tzinfo)
+ 
++UTC = tz.tzutc()
++
++logger = logger.getChild("condor")
++logger.setLevel(LOGGER_LEVEL)
++
++
++def datetime_from_epoch(dt, tzinfo=UTC):
++    """Returns the `datetime.datetime` for a given Unix epoch
++
++    Parameters
++    ----------
++    dt : `float`
++        a Unix timestamp
++
++    tzinfo : `datetime.tzinfo`, optional
++        the desired timezone for the output `datetime.datetime`
++
++    Returns
++    -------
++    datetime.datetime
++        the datetime that represents the given Unix epoch
++    """
++    return datetime.datetime.utcfromtimestamp(dt).replace(tzinfo=tzinfo)
++
+ 
+ def submit_job(submit_description):
+     """
+     Submit a new job to the condor scheduller
+     """
+ 
+     hostname_job = htcondor.Submit(submit_description)
+@@ -170,14 +194,17 @@
+         self.command = command
+         self.hosts = hosts
+         self._status = status
+ 
+         for key, value in kwargs.items():
+             setattr(self, key, value)
+ 
++        for key, value in kwargs.items():
++            setattr(self, key, value)
++        
+     def __repr__(self):
+         out = f"<htcondor job | {self.idno} | {self.status} "
+         out += f"| {self.hosts} | {self.name} | {len(self.subjobs)} subjobs >"
+         return out
+ 
+     def __str__(self):
+         return repr(self)
+```
+
+## asimov/event.py
+
+```diff
+@@ -15,14 +15,15 @@
+ from ligo.gracedb.rest import GraceDb, HTTPError
+ from liquid import Liquid
+ 
+ from asimov import config, logger, LOGGER_LEVEL
+ from asimov.pipelines import known_pipelines
+ from asimov.storage import Store
+ from asimov.utils import update
++from asimov.analysis import GravitationalWaveTransient
+ 
+ from .git import EventRepo
+ from .ini import RunConfiguration
+ from .review import Review
+ 
+ status_map = {
+     "cancelled": "light",
+@@ -36,21 +37,33 @@
+     "wait": "light",
+     "stop": "danger",
+     "manual": "light",
+     "stopped": "light",
+ }
+ 
+ 
++status_map = {"cancelled": "light",
++              "finished": "success",
++              "uploaded": "success",
++              "processing": "primary",
++              "running": "primary",
++              "stuck": "warning",
++              "restart": "secondary",
++              "ready": "secondary",
++              "wait": "light",
++              "stop": "danger",
++              "manual": "light",
++              "stopped": "light"}
++
+ class DescriptionException(Exception):
+     """Exception for event description problems."""
+ 
+-    def __init__(self, message, issue=None, production=None):
++    def __init__(self, message, production=None):
+         super(DescriptionException, self).__init__(message)
+         self.message = message
+-        self.issue = issue
+         self.production = production
+ 
+     def __repr__(self):
+         text = f"""
+ An error was detected with the YAML markup in this issue.
+ Please fix the error and then remove the `yaml-error` label from this issue.
+ <p>
+@@ -61,26 +74,14 @@
+   </details>
+ </p>
+ 
+ - [ ] Resolved
+ """
+         return text
+ 
+-    def submit_comment(self):
+-        """
+-        Submit this exception as a comment on the gitlab
+-        issue for the event.
+-        """
+-        if self.issue:
+-            self.issue.add_label("yaml-error", state=False)
+-            self.issue.add_note(self.__repr__())
+-        else:
+-            print(self.__repr__())
+-
+-
+ class Event:
+     """
+     A specific gravitational wave event or trigger.
+     """
+ 
+     def __init__(self, name, repository=None, update=False, **kwargs):
+         """
+@@ -116,14 +117,19 @@
+ 
+         if "ledger" in kwargs:
+             if kwargs["ledger"]:
+                 self.ledger = kwargs["ledger"]
+         else:
+             self.ledger = None
+ 
++        if "ledger" in kwargs:
++            self.ledger = kwargs['ledger']
++        else:
++            self.ledger = None
++
+         if repository:
+             if "git@" in repository or "https://" in repository:
+                 self.repository = EventRepo.from_url(
+                     repository, self.name, directory=None, update=update
+                 )
+             else:
+                 self.repository = EventRepo(repository)
+@@ -139,72 +145,59 @@
+         if "psds" in kwargs:
+             self.psds = kwargs["psds"]
+         else:
+             self.psds = {}
+ 
+         self.meta = kwargs
+ 
+-        self.issue_object = None
+-        if "issue" in kwargs:
+-            if kwargs["issue"]:
+-                self.issue_object = kwargs.pop("issue")
+-                self.from_notes()
+-        else:
+-            self.issue_object = None
+-
+-        self.productions = []
+-        self.graph = nx.DiGraph()
+-
+-        if "productions" in kwargs:
+-            for production in kwargs["productions"]:
+-                try:
+-                    self.add_production(
+-                        Production.from_dict(
+-                            production, event=self, issue=self.issue_object
+-                        )
+-                    )
+-                except DescriptionException as error:
+-                    error.submit_comment()
+-
+         self.productions = []
+         self.graph = nx.DiGraph()
+ 
+         if "productions" in kwargs:
+             for production in kwargs["productions"]:
+-                try:
+-                    self.add_production(
+-                        Production.from_dict(
+-                            production, event=self, issue=self.issue_object
+-                        )
++                self.add_production(
++                    Production.from_dict(
++                        production, subject=self,
+                     )
+-                except DescriptionException as error:
+-                    error.submit_comment()
+-
++                )
+         self._check_required()
+ 
+         if ("interferometers" in self.meta) and ("calibration" in self.meta):
+             try:
+                 self._check_calibration()
+             except DescriptionException:
+                 pass
+ 
++    @property
++    def analyses(self):
++        return self.productions
++            
+     def __eq__(self, other):
+         if isinstance(other, Event):
+             if other.name == self.name:
+                 return True
+             else:
+                 return False
+         else:
+             return False
+ 
+     def update_data(self):
+         if self.ledger:
+             self.ledger.update_event(self)
+         pass
+ 
++    def __eq__(self, other):
++        if isinstance(other, Event):
++            if other.name == self.name:
++                return True
++            else:
++                return False
++        else:
++            return False
++            
+     def _check_required(self):
+         """
+         Find all of the required metadata is provided.
+         """
+         return True
+ 
+     def _check_calibration(self):
+@@ -247,48 +240,43 @@
+         else:
+             return None
+ 
+     def add_production(self, production):
+         """
+         Add an additional production to this event.
+         """
+-
+         if production.name in [production_o.name for production_o in self.productions]:
+             raise ValueError(
+                 f"A production with this name already exists for {self.name}. New productions must have unique names."
+             )
+ 
+         self.productions.append(production)
+         self.graph.add_node(production)
+         
+         if production.dependencies:
+-            dependencies = production.dependencies
+-            dependencies = [
+-                production
+-                for production in self.productions
+-                if production.name in dependencies
+-            ]
+-            for dependency in dependencies:
++            for dependency in production.dependencies:
++                if (dependency == production):
++                    continue
+                 self.graph.add_edge(dependency, production)
+ 
+     def __repr__(self):
+         return f"<Event {self.name}>"
+ 
+     @classmethod
+-    def from_dict(cls, data, issue=None, update=False, ledger=None):
++    def from_dict(cls, data, update=False, ledger=None):
+         """
+         Convert a dictionary representation of the event object to an Event object.
+         """
+-        event = cls(**data, issue=issue, update=update, ledger=ledger)
++        event = cls(**data, update=update, ledger=ledger)
+         if ledger:
+             ledger.add_event(event)
+         return event
+ 
+     @classmethod
+-    def from_yaml(cls, data, issue=None, update=False, repo=True, ledger=None):
++    def from_yaml(cls, data, update=False, repo=True, ledger=None):
+         """
+         Parse YAML to generate this event.
+ 
+         Parameters
+         ----------
+         data : str
+            YAML-formatted event specification.
+@@ -322,16 +310,14 @@
+             calibration = data["data"]["calibration"]
+         except KeyError:
+             calibration = {}
+ 
+         if "productions" in data:
+             if isinstance(data["productions"], type(None)):
+                 data["productions"] = []
+-        else:
+-            data["productions"] = []
+ 
+         if "interferometers" in data and "event time" in data:
+ 
+             if calibration.keys() != data["interferometers"]:
+                 # We need to fetch the calibration data
+                 from asimov.utils import find_calibrations
+ 
+@@ -346,55 +332,45 @@
+         if "working directory" not in data:
+             data["working directory"] = os.path.join(
+                 config.get("general", "rundir_default"), data["name"]
+             )
+ 
+         if not repo and "repository" in data:
+             data.pop("repository")
+-        event = cls.from_dict(data, issue=issue, update=update, ledger=ledger)
+-
+-        if issue:
+-            event.issue_object = issue
+-            event.from_notes()
++        event = cls.from_dict(data, update=update, ledger=ledger)
+ 
+-        return event
++        if "productions" in data:
++            if isinstance(data['productions'], type(None)):
++                data['productions'] = []
++        else:
++            data["productions"] = []
+ 
+-    @classmethod
+-    def from_issue(cls, issue, update=False, repo=True):
+-        """
+-        Parse an issue description to generate this event.
++        if "interferometers" in data and "event time" in data:
+ 
++            if calibration.keys() != data["interferometers"]:
++                # We need to fetch the calibration data
++                from asimov.utils import find_calibrations
+ 
+-        Parameters
+-        ----------
+-        update : bool
+-           Flag to determine if the repository is updated when loaded.
+-           Defaults to False.
+-        """
++                try:
++                    data["data"]["calibration"] = find_calibrations(data["event time"])
++                except ValueError:
++                    data["data"]["calibration"] = {}
++                    logger.warning("Could not find calibration files for data['name']")
+ 
+-        text = issue.text.split("---")
++        if "working directory" not in data:
++            data["working directory"] = os.path.join(
++                config.get("general", "rundir_default"), data["name"]
++            )
+ 
+-        event = cls.from_yaml(text[1], issue, update=update, repo=repo)
+-        event.text = text
+-        # event.from_notes()
++        if not repo and "repository" in data:
++            data.pop("repository")
++        event = cls.from_dict(data, update=update, ledger=ledger)
+ 
+         return event
+ 
+-    def from_notes(self):
+-        """
+-        Update the event data from information in the issue comments.
+-
+-        Uses nested dictionary update code from
+-        https://stackoverflow.com/questions/3232943/update-value-of-a-nested-dictionary-of-varying-depth#3233356
+-        """
+-
+-        notes_data = self.issue_object.parse_notes()
+-        for note in notes_data:
+-            update(self.meta, note)
+-
+     def get_gracedb(self, gfile, destination):
+         """
+         Get a file from Gracedb, and store it in the event repository.
+ 
+         Parameters
+         ----------
+         gfile : str
+@@ -450,46 +426,28 @@
+         #    data['repository'] = self.repository.url
+         # except AttributeError:
+         #    pass
+         if productions:
+             data["productions"] = []
+             for production in self.productions:
+                 # Remove duplicate data
+-                prod_dict = production.to_dict()[production.name]
+-                dupes = []
+-                prod_names = []
+-                for key, value in prod_dict.items():
+-                    if production.name in prod_names:
+-                        continue
+-                    if key in data:
+-                        if data[key] == value:
+-                            dupes.append(key)
+-                for dupe in dupes:
+-                    prod_dict.pop(dupe)
+-                prod_names.append(production.name)
+-                data["productions"].append({production.name: prod_dict})
++                data["productions"].append(production.to_dict(event=False))
++
+         data["working directory"] = self.work_dir
+-        if "issue" in data:
+-            data.pop("issue")
+         if "ledger" in data:
+             data.pop("ledger")
+         if "pipelines" in data:
+             data.pop("pipelines")
+         return data
+ 
+     def to_yaml(self):
+         """Serialise this object as yaml"""
+         data = self.to_dict()
+-
+         return yaml.dump(data, default_flow_style=False)
+ 
+-    def to_issue(self):
+-        self.text[1] = "\n" + self.to_yaml()
+-        return "---".join(self.text)
+-
+     def draw_dag(self):
+         """
+         Draw the dependency graph for this event.
+         """
+         return nx.draw(self.graph, labelled=True)
+ 
+     def get_all_latest(self):
+@@ -510,15 +468,15 @@
+             ]
+         )
+         ends = [
+             x
+             for x in unfinished.reverse().nodes()
+             if unfinished.reverse().out_degree(x) == 0
+         ]
+-        return set(ends)  # only want to return one version of each production!
++        return {end for end in ends if end.status.lower()=="ready"}  # only want to return one version of each production!
+ 
+     def build_report(self):
+         for production in self.productions:
+             production.build_report()
+ 
+     def html(self):
+         card = f"""
+@@ -538,648 +496,8 @@
+         card += """
+         </div>
+         </div>
+         """
+ 
+         return card
+ 
+-
+-class Production:
+-    """
+-    A specific production run.
+-
+-    Parameters
+-    ----------
+-    event : `asimov.event`
+-        The event this production is running on.
+-    name : str
+-        The name of this production.
+-    status : str
+-        The status of this production.
+-    pipeline : str
+-        This production's pipeline.
+-    comment : str
+-        A comment on this production.
+-    """
+-
+-    def __init__(self, event, name, status, pipeline, comment=None, **kwargs):
+-        self.event = event if isinstance(event, Event) else event[0]
+-        self.name = name
+-
+-        pathlib.Path(
+-            os.path.join(config.get("logging", "directory"), self.event.name, name)
+-        ).mkdir(parents=True, exist_ok=True)
+-        logfile = os.path.join(
+-            config.get("logging", "directory"), self.event.name, name, "asimov.log"
+-        )
+-
+-        self.logger = logger.getChild("analysis").getChild(
+-            f"{self.event.name}/{self.name}"
+-        )
+-        self.logger.setLevel(LOGGER_LEVEL)
+-
+-        fh = logging.FileHandler(logfile)
+-        formatter = logging.Formatter("%(asctime)s - %(message)s", "%Y-%m-%d %H:%M:%S")
+-        fh.setFormatter(formatter)
+-        self.logger.addHandler(fh)
+-
+-        self.category = config.get("general", "calibration_directory")
+-
+-        if status:
+-            self.status_str = status.lower()
+-        else:
+-            self.status_str = "none"
+-        self.comment = comment
+-
+-        # Start by adding pipeline defaults
+-        if "pipelines" in self.event.ledger.data:
+-            if pipeline in self.event.ledger.data["pipelines"]:
+-                self.meta = deepcopy(self.event.ledger.data["pipelines"][pipeline])
+-            else:
+-                self.meta = {}
+-        else:
+-            self.meta = {}
+-
+-        if "postprocessing" in self.event.ledger.data:
+-            self.meta["postprocessing"] = deepcopy(
+-                self.event.ledger.data["postprocessing"]
+-            )
+-
+-        # Update with the event and project defaults
+-        self.meta = update(self.meta, deepcopy(self.event.meta))
+-        if "productions" in self.meta:
+-            self.meta.pop("productions")
+-
+-        self.meta = update(self.meta, kwargs)
+-
+-        if "sampler" not in self.meta:
+-            self.meta["sampler"] = {}
+-        if "cip jobs" in self.meta:
+-            # TODO: Should probably raise a deprecation warning
+-            self.meta["sampler"]["cip jobs"] = self.meta["cip jobs"]
+-
+-        if "scheduler" not in self.meta:
+-            self.meta["scheduler"] = {}
+-
+-        if "likelihood" not in self.meta:
+-            self.meta["likelihood"] = {}
+-        if "marginalization" not in self.meta["likelihood"]:
+-            self.meta["likelihood"]["marginalization"] = {}
+-
+-        if "data files" not in self.meta["data"]:
+-            self.meta["data"]["data files"] = {}
+-
+-        if "lmax" in self.meta:
+-            # TODO: Should probably raise a deprecation warning
+-            self.meta["sampler"]["lmax"] = self.meta["lmax"]
+-
+-        self.pipeline = pipeline
+-        self.pipeline = known_pipelines[pipeline.lower()](self)
+-
+-        if "review" in self.meta:
+-            self.review = Review.from_dict(self.meta["review"], production=self)
+-            self.meta.pop("review")
+-        else:
+-            self.review = Review()
+-
+-        # Check that the upper frequency is included, otherwise calculate it
+-        if "quality" in self.meta:
+-            if ("maximum frequency" not in self.meta["quality"]) and (
+-                "sample rate" in self.meta["likelihood"]
+-            ):
+-                self.meta["quality"]["maximum frequency"] = {}
+-                # Account for the PSD roll-off with the 0.875 factor
+-                for ifo in self.meta["interferometers"]:
+-                    self.meta["quality"]["maximum frequency"][ifo] = int(
+-                        0.875 * self.meta["likelihood"]["sample rate"] / 2
+-                    )
+-
+-        # Get the data quality recommendations
+-        if "quality" in self.event.meta:
+-            self.quality = self.event.meta["quality"]
+-        else:
+-            self.quality = {}
+-
+-        if "quality" in self.meta:
+-            if "quality" in kwargs:
+-                self.meta["quality"].update(kwargs["quality"])
+-            self.quality = self.meta["quality"]
+-
+-        if ("quality" in self.meta) and ("event time" in self.meta):
+-            if "segment start" not in self.meta["quality"]:
+-                self.meta["likelihood"]["segment start"] = (
+-                    self.meta["event time"] - self.meta["data"]["segment length"] + 2
+-                )
+-                # self.event.meta['likelihood']['segment start'] = self.meta['data']['segment start']
+-
+-        # Update waveform data
+-        if "waveform" not in self.meta:
+-            self.logger.info("Didn't find waveform information in the metadata")
+-            self.meta["waveform"] = {}
+-        if "approximant" in self.meta:
+-            self.logger.warn(
+-                "Found deprecated approximant information, "
+-                "moving to waveform area of ledger"
+-            )
+-            approximant = self.meta.pop("approximant")
+-            self.meta["waveform"]["approximant"] = approximant
+-        if "reference frequency" in self.meta["likelihood"]:
+-            self.logger.warn(
+-                "Found deprecated ref freq information, "
+-                "moving to waveform area of ledger"
+-            )
+-            ref_freq = self.meta["likelihood"].pop("reference frequency")
+-            self.meta["waveform"]["reference frequency"] = ref_freq
+-
+-        # Gather the PSDs for the job
+-        self.psds = self._collect_psds()
+-
+-        # Gather the appropriate prior data for this production
+-        if "priors" in self.meta:
+-            self.priors = self.meta["priors"]
+-
+-    def __hash__(self):
+-        return int(f"{hash(self.name)}{abs(hash(self.event.name))}")
+-
+-    def __eq__(self, other):
+-        return (self.name == other.name) & (self.event == other.event)
+-
+-    def _process_dependencies(self, needs):
+-        """
+-        Process the dependencies list for this production.
+-        """
+-        return needs
+-
+-    @property
+-    def dependencies(self):
+-        if "needs" in self.meta:
+-            return self._process_dependencies(self.meta["needs"])
+-        else:
+-            return None
+-
+-    def results(self, filename=None, handle=False, hash=None):
+-        store = Store(root=config.get("storage", "results_store"))
+-        if not filename:
+-            try:
+-                items = store.manifest.list_resources(self.event.name, self.name)
+-                return items
+-            except KeyError:
+-                return None
+-        elif handle:
+-            return open(
+-                store.fetch_file(self.event.name, self.name, filename, hash), "r"
+-            )
+-        else:
+-            return store.fetch_file(self.event.name, self.name, filename, hash=hash)
+-
+-    @property
+-    def rel_psds(self):
+-        """
+-        Return the relative path to a PSD for a given event repo.
+-        """
+-        rels = {}
+-        for ifo, psds in self.psds.items():
+-            psd = self.psds[ifo]
+-            psd = psd.split("/")
+-            rels[ifo] = "/".join(psd[-3:])
+-        return rels
+-
+-    @property
+-    def reference_frame(self):
+-        """
+-        Calculate the appropriate reference frame.
+-        """
+-        ifos = self.meta["interferometers"]
+-        if len(ifos) == 1:
+-            return ifos[0]
+-        else:
+-            return "".join(ifos[:2])
+-
+-    def get_meta(self, key):
+-        """
+-        Get the value of a metadata attribute, or return None if it doesn't
+-        exist.
+-        """
+-        if key in self.meta:
+-            return self.meta[key]
+-        else:
+-            return None
+-
+-    def set_meta(self, key, value):
+-        """
+-        Set a metadata attribute which doesn't currently exist.
+-        """
+-        if key not in self.meta:
+-            self.meta[key] = value
+-            self.event.ledger.update_event(self.event)
+-        else:
+-            raise ValueError
+-
+-    @property
+-    def finished(self):
+-        finished_states = ["uploaded"]
+-        return self.status in finished_states
+-
+-    @property
+-    def status(self):
+-        return self.status_str.lower()
+-
+-    @status.setter
+-    def status(self, value):
+-        self.status_str = value.lower()
+-        self.event.ledger.update_event(self.event)
+-
+-    @property
+-    def job_id(self):
+-        if "job id" in self.meta:
+-            return self.meta["job id"]
+-        else:
+-            return None
+-
+-    @job_id.setter
+-    def job_id(self, value):
+-        self.meta["job id"] = value
+-        if self.event.issue_object:
+-            self.event.issue_object.update_data()
+-
+-    def to_dict(self, event=True):
+-        """
+-        Return this production as a dictionary.
+-
+-        Parameters
+-        ----------
+-        event : bool
+-           If set to True the output is designed to be included nested within an event.
+-           The event name is not included in the representation, and the production name is provided as a key.
+-        """
+-        dictionary = {}
+-        if not event:
+-            dictionary["event"] = self.event.name
+-            dictionary["name"] = self.name
+-
+-        dictionary["status"] = self.status
+-        dictionary["pipeline"] = self.pipeline.name.lower()
+-        dictionary["comment"] = self.comment
+-
+-        dictionary["review"] = self.review.to_dicts()
+-
+-        if "data" in self.meta:
+-            dictionary["data"] = self.meta["data"]
+-        if "likelihood" in self.meta:
+-            dictionary["likelihood"] = self.meta["likelihood"]
+-        if "quality" in self.meta:
+-            dictionary["quality"] = self.meta["quality"]
+-        if "priors" in self.meta:
+-            dictionary["priors"] = self.meta["priors"]
+-        if "waveform" in self.meta:
+-            dictionary["waveform"] = self.meta["waveform"]
+-        dictionary['needs'] = self.dependencies
+-        dictionary['job id'] = self.job_id
+-            
+-        for key, value in self.meta.items():
+-            if key == "operations":
+-                continue
+-        if "repository" in self.meta:
+-            dictionary["repository"] = self.repository.url
+-        if "ledger" in dictionary:
+-            dictionary.pop("ledger")
+-        if "pipelines" in dictionary:
+-            dictionary.pop("pipelines")
+-
+-        if not event:
+-            output = dictionary
+-        else:
+-            output = {self.name: dictionary}
+-        return output
+-
+-    @property
+-    def rundir(self):
+-        """
+-        Return the run directory for this event.
+-        """
+-        if "rundir" in self.meta:
+-            return os.path.abspath(self.meta["rundir"])
+-        elif "working directory" in self.event.meta:
+-
+-            value = os.path.join(self.event.meta["working directory"], self.name)
+-            self.meta["rundir"] = value
+-            return os.path.abspath(value)
+-        else:
+-            return None
+-
+-    @rundir.setter
+-    def rundir(self, value):
+-        """
+-        Set the run directory.
+-        """
+-        if "rundir" not in self.meta:
+-            self.meta["rundir"] = value
+-            if self.event.issue_object is not None:
+-                self.event.issue_object.update_data()
+-        else:
+-            raise ValueError
+-
+-    def get_psds(self, format="ascii", sample_rate=None):
+-        """
+-        Get the PSDs for this production.
+-
+-        Parameters
+-        ----------
+-        format : {ascii, xml}
+-           The format of the PSD to be returned.
+-           Defaults to the ascii format.
+-        sample_rate : int
+-           The sample rate of the PSD to be returned.
+-           Defaults to None, in which case the sample rate in the event data is used.
+-
+-        Returns
+-        -------
+-        list
+-           A list of PSD files for the production.
+-        """
+-        if sample_rate is None:
+-            try:
+-                if (
+-                    "likelihood" in self.meta
+-                    and "sample rate" in self.meta["likelihood"]
+-                ):
+-                    sample_rate = self.meta["likelihood"]["sample rate"]
+-                else:
+-                    raise DescriptionException(
+-                        "The sample rate for this event cannot be found.",
+-                        issue=self.event.issue_object,
+-                        production=self.name,
+-                    )
+-            except Exception as e:
+-                raise DescriptionException(
+-                    "The sample rate for this event cannot be found.",
+-                    issue=self.event.issue_object,
+-                    production=self.name,
+-                ) from e
+-
+-        if (len(self.psds) > 0) and (format == "ascii"):
+-            return self.psds
+-        elif format == "xml":
+-            # TODO: This is a hack, and we need a better way to sort this.
+-            files = glob.glob(
+-                f"{self.event.repository.directory}/{self.category}/psds/{sample_rate}/*.xml.gz"
+-            )
+-            return files
+-
+-    def get_timefile(self):
+-        """
+-        Find this event's time file.
+-
+-        Returns
+-        -------
+-        str
+-           The location of the time file.
+-        """
+-        try:
+-            return self.event.repository.find_timefile(self.category)
+-        except FileNotFoundError:
+-            new_file = os.path.join("gps.txt")
+-            with open(new_file, "w") as f:
+-                f.write(f"{self.event.meta['event time']}")
+-            self.logger.info(
+-                f"Created a new time file in {new_file} with time {self.event.meta['event time']}"
+-            )
+-            self.event.repository.add_file(
+-                new_file,
+-                os.path.join(self.category, new_file),
+-                "Added a new GPS timefile.",
+-            )
+-            return new_file
+-
+-    def get_coincfile(self):
+-        """
+-        Find this event's coinc.xml file.
+-
+-        Returns
+-        -------
+-        str
+-           The location of the time file.
+-        """
+-        try:
+-            coinc = self.event.repository.find_coincfile(self.category)
+-            return coinc
+-        except FileNotFoundError:
+-            self.logger.info("Could not find a coinc.xml file")
+-            savepath = os.path.abspath(
+-                os.path.join(
+-                    self.event.repository.directory, self.category, "coinc.xml"
+-                ),
+-            )
+-            print(savepath)
+-            self.event.get_gracedb(
+-                "coinc.xml",
+-                savepath,
+-            )
+-            coinc = self.event.repository.find_coincfile(self.category)
+-            return coinc
+-
+-    def get_configuration(self):
+-        """
+-        Get the configuration file contents for this event.
+-        """
+-        if "ini" in self.meta:
+-            ini_loc = self.meta["ini"]
+-        else:
+-            # We'll need to search the repository for it.
+-            try:
+-                ini_loc = self.event.repository.find_prods(self.name, self.category)[0]
+-                if not os.path.exists(ini_loc):
+-                    raise ValueError("Could not open the ini file.")
+-            except IndexError:
+-                raise ValueError("Could not open the ini file.")
+-        try:
+-            ini = RunConfiguration(ini_loc)
+-        except ValueError:
+-            raise ValueError("Could not open the ini file")
+-        except configparser.MissingSectionHeaderError:
+-            raise ValueError("This isn't a valid ini file")
+-
+-        return ini
+-
+-    @classmethod
+-    def from_dict(cls, parameters, event, issue=None):
+-        name, pars = list(parameters.items())[0]
+-        # Check that pars is a dictionary
+-        if not isinstance(pars, dict):
+-            if "event" in parameters:
+-                parameters.pop("event")
+-
+-            if "status" not in parameters:
+-                parameters["status"] = "ready"
+-
+-            return cls(event=event, **parameters)
+-
+-        # Check all of the required parameters are included
+-        if not {"status", "pipeline"} <= pars.keys():
+-            raise DescriptionException(
+-                f"Some of the required parameters are missing from {name}", issue, name
+-            )
+-        if "comment" not in pars:
+-            pars["comment"] = None
+-        if "event" in pars:
+-            pars.pop(event)
+-
+-        return cls(event, name, **pars)
+-
+-    def __repr__(self):
+-        return f"<Production {self.name} for {self.event} | status: {self.status}>"
+-
+-    def _collect_psds(self, format="ascii"):
+-        """
+-        Collect the required psds for this production.
+-        """
+-        psds = {}
+-        # If the PSDs are specifically provided in the ledger,
+-        # use those.
+-
+-        if format=="ascii":
+-            keyword = "psds"
+-        elif format=="xml":
+-            keyword = "xml psds"
+-        
+-        if keyword in self.meta:
+-            if self.meta["likelihood"]["sample rate"] in self.meta[keyword]:
+-                psds = self.meta[keyword][self.meta["likelihood"]["sample rate"]]
+-
+-        # First look through the list of the job's dependencies
+-        # to see if they're provided by a job there.
+-        elif self.dependencies:
+-            productions = {}
+-            for production in self.event.productions:
+-                productions[production.name] = production
+-
+-            for previous_job in self.dependencies:
+-                try:
+-                    # Check if the job provides PSDs as an asset and were produced with compatible settings
+-                    if keyword in productions[previous_job].pipeline.collect_assets():
+-                        if self._check_compatible(productions[previous_job]):
+-                            psds = productions[previous_job].pipeline.collect_assets()[
+-                                keyword
+-                            ]
+-                    else:
+-                        psds = {}
+-                except Exception:
+-                    psds = {}
+-        # Otherwise return no PSDs
+-        else:
+-            psds = {}
+-
+-        for ifo, psd in psds.items():
+-            self.logger.debug(f"PSD-{ifo}: {psd}")
+-
+-        return psds
+-
+-    def _check_compatible(self, other_production):
+-        """
+-        Check that the data settings in two productions are sufficiently compatible
+-        that one can be used as a dependency of the other.
+-        """
+-        compatible = True
+-
+-        compatible = self.meta["likelihood"] == other_production.meta["likelihood"]
+-        compatible = self.meta["data"] == other_production.meta["data"]
+-        return compatible
+-
+-    def make_config(self, filename, template_directory=None, dryrun=False):
+-        """
+-        Make the configuration file for this production.
+-
+-        Parameters
+-        ----------
+-        filename : str
+-           The location at which the config file should be saved.
+-        template_directory : str, optional
+-           The path to the directory containing the pipeline config templates.
+-           Defaults to the directory specified in the asimov configuration file.
+-        """
+-
+-        self.logger.info("Creating config file.")
+-
+-        self.psds = self._collect_psds()
+-        self.xml_psds = self._collect_psds(format="xml")
+-        
+-        if "template" in self.meta:
+-            template = f"{self.meta['template']}.ini"
+-        else:
+-            template = f"{self.pipeline.name.lower()}.ini"
+-
+-        pipeline = self.pipeline
+-        if hasattr(pipeline, "config_template"):
+-            template_file = pipeline.config_template
+-        else:
+-            try:
+-                template_directory = config.get("templating", "directory")
+-                template_file = os.path.join(f"{template_directory}", template)
+-                if not os.path.exists(template_file):
+-                    raise Exception
+-            except Exception:
+-                from pkg_resources import resource_filename
+-
+-                template_file = resource_filename("asimov", f"configs/{template}")
+-
+-        self.logger.info(f"Using {template_file}")
+-
+-        liq = Liquid(template_file)
+-        rendered = liq.render(production=self, config=config)
+-
+-        if not dryrun:
+-            with open(filename, "w") as output_file:
+-                output_file.write(rendered)
+-            self.logger.info(f"Saved as {filename}")
+-        else:
+-            print(rendered)
+-
+-    def build_report(self):
+-        if self.pipeline:
+-            self.pipeline.build_report()
+-
+-    def html(self):
+-        """
+-        An HTML representation of this production.
+-        """
+-        production = self
+-
+-        card = ""
+-
+-        card += f"<div class='asimov-analysis asimov-analysis-{self.status}'>"
+-        card += f"<h4>{self.name}"
+-
+-        if self.comment:
+-            card += (
+-                f"""  <small class="asimov-comment text-muted">{self.comment}</small>"""
+-            )
+-        card += "</h4>"
+-        if self.status:
+-            card += f"""<p class="asimov-status">
+-  <span class="badge badge-pill badge-{status_map[self.status]}">{self.status}</span>
+-</p>"""
+-
+-        if self.pipeline:
+-            card += f"""<p class="asimov-pipeline-name">{self.pipeline.name}</p>"""
+-
+-        if self.pipeline:
+-            # self.pipeline.collect_pages()
+-            card += self.pipeline.html()
+-
+-        if self.rundir:
+-            card += f"""<p class="asimov-rundir"><code>{production.rundir}</code></p>"""
+-        else:
+-            card += """&nbsp;"""
+-
+-        if "approximant" in production.meta:
+-            card += f"""<p class="asimov-attribute">Waveform approximant:
+-   <span class="asimov-approximant">{production.meta['approximant']}</span>
+-</p>"""
+-
+-        card += """&nbsp;"""
+-        card += """</div>"""
+-
+-        if len(self.review) > 0:
+-            for review in self.review:
+-                card += review.html()
+-
+-        return card
++Production = GravitationalWaveTransient
+```
+
+## asimov/gitlab.py
+
+```diff
+@@ -72,14 +72,31 @@
+         """
+         server = gitlab.gitlab.Gitlab(
+             config.get("gitlab", "server"), private_token=config.get("gitlab", "token")
+         )
+         repository = server.projects.get(config.get("gitlab", "tracking_repository"))
+         return server, repository
+ 
++    def _connect_gitlab(self):
++        """
++        Connect to the gitlab server.
++
++        Returns
++        -------
++        server : `Gitlab`
++           The gitlab server.
++        repository: `Gitlab.project`
++           The gitlab project.
++        """
++        server = gitlab.gitlab.Gitlab(
++            config.get("gitlab", "server"), private_token=config.get("gitlab", "token")
++        )
++        repository = server.projects.get(config.get("gitlab", "tracking_repository"))
++        return server, repository
++
+     def get_event(self, event=None):
+         if event:
+             return self.events[event]
+         else:
+             return self.events.values()
+ 
+     @classmethod
+```
+
+## asimov/ledger.py
+
+```diff
+@@ -1,22 +1,20 @@
+ """
+ Code for the project ledger.
+ """
+ from functools import reduce
+ 
+ import yaml
+ 
+-import os
+-import shutil
+-
+ import asimov
+ import asimov.database
+ from asimov import config
++from asimov.analysis import ProjectAnalysis
+ from asimov.event import Event, Production
+-from asimov.utils import update, set_directory
++from asimov.utils import update
+ 
+ 
+ class Ledger:
+     @classmethod
+     def create(cls, name=None, engine=None, location=None):
+         """
+         Create a ledger.
+@@ -38,33 +36,35 @@
+         elif engine == "gitlab":
+             raise NotImplementedError(
+                 "This hasn't been ported to the new interface yet. Stay tuned!"
+             )
+ 
+ 
+ class YAMLLedger(Ledger):
+-    def __init__(self, location=".asimov/ledger.yml"):
++    def __init__(self, location="ledger.yml"):
+         self.location = location
+         with open(location, "r") as ledger_file:
+             self.data = yaml.safe_load(ledger_file)
+ 
+         self.data["events"] = [
+             update(self.get_defaults(), event, inplace=False)
+             for event in self.data["events"]
+         ]
++        
+         self.events = {ev["name"]: ev for ev in self.data["events"]}
+         self.data.pop("events")
+ 
+     @classmethod
+-    def create(cls, name, location=".asimov/ledger.yml"):
++    def create(cls, name, location="ledger.yml"):
+ 
+         data = {}
+         data["asimov"] = {}
+         data["asimov"]["version"] = asimov.__version__
+         data["events"] = []
++        data["project analyses"] = []
+         data["project"] = {}
+         data["project"]["name"] = name
+         with open(location, "w") as ledger_file:
+             ledger_file.write(yaml.dump(data, default_flow_style=False))
+ 
+     def update_event(self, event):
+         """
+@@ -86,46 +86,92 @@
+         if "trash" not in self.data:
+             self.data["trash"] = {}
+         if "events" not in self.data["trash"]:
+             self.data["trash"]["events"] = {}
+         self.data["trash"]["events"][event_name] = event
+         self.save()
+ 
++    def update_event(self, event):
++        """
++        Update an event in the ledger with a changed event object.
++        """
++        self.events[event.name] = event.to_dict()
++        self.save()
++
++    def delete_event(self, event_name):
++        """
++        Remove an event from the ledger.
++
++        Parameters
++        ----------
++        event_name : str
++           The name of the event to remove from the ledger.
++        """
++        event = self.events.pop(event_name)
++        if "trash" not in self.data:
++            self.data["trash"] = {}
++        if "events" not in self.data["trash"]:
++            self.data["trash"]["events"] = {}
++        self.data["trash"]["events"][event_name] = event
++        self.save()
++
+     def save(self):
+         """
+         Update the ledger YAML file with the data from the various events.
+ 
+         Notes
+         -----
+         The save function checks the difference between the default values for each production and event
+         before saving them, in order to attempt to reduce the duplication within the ledger.
+ 
+ 
+         """
+         self.data["events"] = list(self.events.values())
+-        with set_directory(config.get("project", "root")):
+-            # First produce a backup of the ledger
+-            shutil.copy(self.location, self.location+".bak")
+-            with open(self.location+"_tmp", "w") as ledger_file:
+-                ledger_file.write(yaml.dump(self.data, default_flow_style=False))
+-                ledger_file.flush()
+-                #os.fsync(ledger_file.fileno())
+-            os.replace(self.location+"_tmp", self.location)
+ 
+-    def add_event(self, event):
++        with open(self.location, "w") as ledger_file:
++            ledger_file.write(yaml.dump(self.data, default_flow_style=False))
++
++    def add_subject(self, subject):
++        """Add a new subject to the ledger."""
+         if "events" not in self.data:
+             self.data["events"] = []
+ 
+-        self.events[event.name] = event.to_dict()
++        self.events[subject.name] = subject.to_dict()
+         self.save()
++        
++    def add_event(self, event):
++        self.add_subject(subject=event)
+ 
+-    def add_production(self, event, production):
+-        event.add_production(production)
+-        self.events[event.name] = event.to_dict()
++    def add_analysis(self, analysis, event=None):
++        """
++        Add an analysis to the ledger.
++
++        This method can accept any of the forms of analysis supported by asimov, and
++        will determine the correct way to add them to the ledger.
++
++        Parameters
++        ----------
++        analysis : `asimov.Analysis`
++           The analysis to be added to the ledger.
++        event : str, optional
++           The name of the event which the analysis should be added to.
++           This is not required for project analyses.
++        
++        Examples
++        --------
++        """
++        if isinstance(analysis, ProjectAnalysis):
++            self.data['project analyses'].append(analysis.to_dict())
++        else:
++            event.add_production(analysis)
++            self.events[event.name] = event.to_dict()
+         self.save()
++        
++    def add_production(self, event, production):
++        self.add_analysis(production=production, event=event)
+ 
+     def add_production(self, event, production):
+         event.add_production(production)
+         self.events[event.name] = event.to_dict()
+         self.save()
+ 
+     def add_production(self, event, production):
+@@ -148,14 +194,18 @@
+             defaults["quality"] = self.data["quality"]
+         if "likelihood" in self.data:
+             defaults["likelihood"] = self.data["likelihood"]
+         if "scheduler" in self.data:
+             defaults["scheduler"] = self.data["scheduler"]
+         return defaults
+ 
++    @property
++    def project_analyses(self):
++        return [ProjectAnalysis.from_dict(analysis, ledger=self) for analysis in self.data['project analyses']]
++    
+     def get_event(self, event=None):
+         if event:
+             return [Event(**self.events[event], ledger=self)]
+         else:
+             return [
+                 Event(**self.events[event], ledger=self) for event in self.events.keys()
+             ]
+```
+
+## asimov/olivaw.py
+
+```diff
+@@ -32,15 +32,15 @@
+ @click.pass_context
+ def olivaw(ctx):
+     """
+     This is the main program which runs the DAGs for each event issue.
+     """
+ 
+     # Check that we're running in an actual asimov project
+-    if not os.path.exists(".asimov") and ctx.invoked_subcommand != "init":
++    if not os.path.exists("asimov.conf") and ctx.invoked_subcommand != "init":
+         # This isn't the root of an asimov project, let's fail.
+         click.secho("This isn't an asimov project", fg="white", bg="red")
+         sys.exit(1)
+     pass
+ 
+ 
+ # Project initialisation
+```
+
+## asimov/pipeline.py
+
+```diff
+@@ -13,14 +13,15 @@
+ from asimov import utils  # NoQA
+ from asimov import config, logger, logging, LOGGER_LEVEL  # NoQA
+ 
+ import otter  # NoQA
+ from .storage import Store  # NoQA
+ 
+ 
++
+ class PipelineException(Exception):
+     """Exception for pipeline problems."""
+ 
+     def __init__(self, message, issue=None, production=None):
+         super(PipelineException, self).__init__(message)
+         self.message = message
+         self.issue = issue
+@@ -99,14 +100,15 @@
+             f"analysis.{production.event.name}/{production.name}"
+         )
+         self.logger.setLevel(LOGGER_LEVEL)
+ 
+     def __repr__(self):
+         return self.name.lower()
+ 
++        
+     def detect_completion(self):
+         """
+         Check to see if the job has in fact completed.
+         """
+         pass
+ 
+     def before_config(self, dryrun=False):
+@@ -189,14 +191,29 @@
+             "samples",
+             files,
+         )
+         if os.path.exists(results):
+             return True
+         else:
+             return False
++
++    def detect_completion_processing(self):
++        files = f"{self.production.name}_pesummary.dat"
++        results = os.path.join(
++            config.get("general", "webroot"),
++            self.production.event.name,
++            self.production.name,
++            "results",
++            "samples",
++            files,
++        )
++        if os.path.exists(results):
++            return True
++        else:
++            return False
+ 
+     def after_processing(self):
+         """
+         Run the after processing jobs.
+         """
+         try:
+             self.store_results()
+```
+
+## asimov/review.py
+
+```diff
+@@ -58,14 +58,15 @@
+     def from_dict(cls, messages_list, production):
+         """parse a dictionary into review"""
+         messages = []
+         for message in messages_list:
+             messages.append(
+                 ReviewMessage.from_dict(dictionary=message, production=production)
+             )
++
+         review_ob = cls()
+         messages = sorted(messages, key=lambda k: k.timestamp)
+         review_ob.messages = messages
+         return review_ob
+ 
+ 
+ class ReviewMessage:
+```
+
+## asimov/testing.py
+
+```diff
+@@ -1,39 +1,37 @@
+ """
+ This file contains code to allow unittests to be written with
+ Asimov so that productions can be tested with minimal boilerplate.
+ This module contains the factory classes for other asimov tests.
+ """
+ 
+ import os
+-import unittest
+ import shutil
++import unittest
+ import git
+ from asimov import current_ledger as ledger
+ from asimov.cli.project import make_project
+ from asimov.ledger import YAMLLedger
+ 
+-
+ class AsimovTestCase(unittest.TestCase):
+     @classmethod
+     def setUpClass(cls):
+         cls.cwd = os.getcwd()
+         git.Repo.init(cls.cwd + "/tests/test_data/s000000xx/")
+ 
+     def setUp(self):
+         os.makedirs(f"{self.cwd}/tests/tmp/project")
+         os.chdir(f"{self.cwd}/tests/tmp/project")
+         make_project(name="Test project", root=f"{self.cwd}/tests/tmp/project")
+-        self.ledger = YAMLLedger(".asimov/ledger.yml")
++        self.ledger = YAMLLedger("ledger.yml")
+ 
+     def tearDown(self):
+         os.chdir(self.cwd)
+         shutil.rmtree(f"{self.cwd}/tests/tmp/")
+ 
+-
+ class AsimovTest(unittest.TestCase):
+     """
+     Overloads the unittest.TestCase code.
+     Simply makes `self.events` available to the test case.
+     """
+ 
+     @classmethod
+```
+
+## asimov/cli/application.py
+
+```diff
+@@ -5,14 +5,15 @@
+ 
+ import click
+ import requests
+ import yaml
+ 
+ from asimov import LOGGER_LEVEL, logger
+ import asimov.event
++from asimov.analysis import ProjectAnalysis
+ from asimov import current_ledger as ledger
+ from asimov.utils import update
+ 
+ import sys
+ 
+ if sys.version_info < (3, 10):
+     from importlib_metadata import entry_points
+@@ -20,15 +21,15 @@
+     from importlib.metadata import entry_points
+ 
+ 
+ logger = logger.getChild("cli").getChild("apply")
+ logger.setLevel(LOGGER_LEVEL)
+ 
+ 
+-def apply_page(file, event, ledger=ledger):
++def apply_page(file, event=None, ledger=ledger):
+     if file[:4] == "http":
+         r = requests.get(file)
+         if r.status_code == 200:
+             data = r.text
+             logger.info(f"Downloaded {file}")
+         else:
+             raise ValueError(f"Could not download this file: {file}")
+@@ -37,15 +38,14 @@
+             data = apply_file.read()
+ 
+     quick_parse = yaml.safe_load_all(
+         data
+     )  # Load as a dictionary so we can identify the object type it contains
+ 
+     for document in quick_parse:
+-
+         if document["kind"] == "event":
+             logger.info("Found an event")
+             document.pop("kind")
+             event = asimov.event.Event.from_yaml(yaml.dump(document))
+             ledger.update_event(event)
+             click.echo(
+                 click.style("●", fg="green") + f" Successfully applied {event.name}"
+@@ -67,31 +67,51 @@
+                 event_o = ledger.get_event(event_s)[0]
+             except KeyError as e:
+                 click.echo(
+                     click.style("●", fg="red")
+                     + f" Could not apply a production, couldn't find the event {event}"
+                 )
+                 logger.exception(e)
+-            production = asimov.event.Production.from_dict(document, event=event_o)
++            production = asimov.event.Production.from_dict(document, subject=event_o)
+             try:
+-                event_o.add_production(production)
+-                ledger.update_event(event_o)
++                ledger.add_analysis(production, event=event_o)
+                 click.echo(
+                     click.style("●", fg="green")
+                     + f" Successfully applied {production.name} to {event_o.name}"
+                 )
+                 logger.info(f"Added {production.name} to {event_o.name}")
+             except ValueError as e:
+                 click.echo(
+                     click.style("●", fg="red")
+                     + f" Could not apply {production.name} to {event_o.name} as "
+                     + "an analysis already exists with this name"
+                 )
+                 logger.exception(e)
+ 
++        elif document['kind'].lower() == "projectanalysis":
++            # Handle a project analysis
++            logger.info("Found a project analysis")
++            document.pop("kind")
++            analysis = ProjectAnalysis.from_dict(document, ledger=ledger)
++
++            try:
++                ledger.add_analysis(analysis)
++                click.echo(
++                    click.style("●", fg="green")
++                    + f" Successfully added {analysis.name} to this project."
++                )
++                logger.info(f"Added {analysis.name}")
++            except ValueError as e:
++                click.echo(
++                    click.style("●", fg="red")
++                    + f" Could not apply {analysis.name} to project as "
++                    + "an analysis already exists with this name"
++                )
++                logger.exception(e)
++            
+         elif document["kind"] == "configuration":
+             logger.info("Found configurations")
+             document.pop("kind")
+             update(ledger.data, document)
+             ledger.save()
+             click.echo(
+                 click.style("●", fg="green")
+```
+
+## asimov/cli/event.py
+
+```diff
+@@ -12,14 +12,15 @@
+ 
+ from asimov import config
+ from asimov import current_ledger as ledger
+ from asimov.utils import find_calibrations, update
+ from asimov.event import DescriptionException, Event
+ 
+ 
++
+ @click.group()
+ def event():
+     """
+     Commands to handle events & collections.
+     """
+     pass
+```
+
+## asimov/cli/manage.py
+
+```diff
+@@ -4,17 +4,15 @@
+ import os
+ import pathlib
+ 
+ import click
+ 
+ from asimov import current_ledger as ledger
+ import asimov
+-from asimov import condor
+ from asimov import LOGGER_LEVEL
+-from asimov import condor
+ from asimov.event import DescriptionException
+ from asimov.pipeline import PipelineException
+ 
+ 
+ @click.group(chain=True)
+ def manage():
+     """Perform management tasks such as job building and submission."""
+```
+
+## asimov/cli/monitor.py
+
+```diff
+@@ -1,10 +1,8 @@
+ import shutil
+-import configparser
+-import os
+ import sys
+ import click
+ 
+ from asimov import condor, config, logger, LOGGER_LEVEL
+ from asimov import current_ledger as ledger
+ from asimov.cli import ACTIVE_STATES, manage, report
+ 
+@@ -27,19 +25,61 @@
+     except (configparser.NoOptionError, configparser.NoSectionError):
+         minute_expression = "*/15"
+ 
+     submit_description = {
+         "executable": shutil.which("asimov"),
+         "arguments": "monitor --chain",
+         "accounting_group": config.get("pipelines", "accounting"),
+-        "output": os.path.join(".asimov", "asimov_cron.out"),
++        "output": "asimov_cron.out",
+         "on_exit_remove": "false",
+-        "universe": "local",
+-        "error": os.path.join(".asimov", "asimov_cron.err"),
+-        "log": os.path.join(".asimov", "asimov_cron.log"),
++        "error": "asimov_cron.err",
++        "log": "asimov_cron.log",
++        "request_cpus": "1",
++        "cron_minute": minute_expression,
++        "getenv": "true",
++        "batch_name": f"asimov/monitor/{ledger.data['project']['name']}",
++        "request_memory": "8192MB",
++        "request_disk": "8192MB",
++    }
++    cluster = condor.submit_job(submit_description)
++    ledger.data["cronjob"] = cluster
++    ledger.save()
++    click.secho(f"  \t  ● Asimov is running ({cluster})", fg="green")
++    logger.info(f"Running asimov cronjob as  {cluster}")
++
++
++@click.option("--dry-run", "-n", "dry_run", is_flag=True)
++@click.command()
++def stop(dry_run):
++    """Set up a cron job on condor to monitor the project."""
++    cluster = ledger.data["cronjob"]
++    condor.delete_job(cluster)
++    click.secho("  \t  ● Asimov has been stopped", fg="red")
++    logger.info(f"Stopped asimov cronjob {cluster}")
++
++
++
++@click.option("--dry-run", "-n", "dry_run", is_flag=True)
++@click.command()
++def start(dry_run):
++    """Set up a cron job on condor to monitor the project."""
++
++    try:
++        minute_expression = config.get("condor", "cron_minute")
++    except (configparser.NoOptionError, configparser.NoSectionError):
++        minute_expression = "*/15"
++
++    submit_description = {
++        "executable": shutil.which("asimov"),
++        "arguments": "monitor --chain",
++        "accounting_group": config.get("asimov start", "accounting"),
++        "output": "asimov_cron.out",
++        "on_exit_remove": "false",
++        "error": "asimov_cron.err",
++        "log": "asimov_cron.log",
+         "request_cpus": "1",
+         "cron_minute": minute_expression,
+         "getenv": "true",
+         "batch_name": f"asimov/monitor/{ledger.data['project']['name']}",
+         "request_memory": "8192MB",
+         "request_disk": "8192MB",
+     }
+@@ -186,14 +226,24 @@
+                             + click.style("●", "green")
+                             + f" {production.name} is running (condor id: {production.meta['job id']})"
+                         )
+                         if "profiling" not in production.meta:
+                             production.meta["profiling"] = {}
+                         production.status = "running"
+ 
++                    elif job.status.lower() == "running":
++                        click.echo(
++                            "  \t  "
++                            + click.style("●", "green")
++                            + f" {production.name} is running (condor id: {production.meta['job id']})"
++                        )
++                        if "profiling" not in production.meta:
++                            production.meta["profiling"] = {}
++                        production.status = "running"
++
+                     elif job.status.lower() == "completed":
+                         pipe.after_completion()
+                         click.echo(
+                             "  \t  "
+                             + click.style("●", "green")
+                             + f" {production.name} has finished and post-processing has been started"
+                         )
+@@ -266,21 +316,18 @@
+                         pipe.detect_completion()
+                         and production.status.lower() == "running"
+                     ):
+                         # The job has been completed, collect its assets
+                         if "profiling" not in production.meta:
+                             production.meta["profiling"] = {}
+                         try:
+-                            config.get("condor", "scheduler")
+                             production.meta["profiling"] = condor.collect_history(
+                                 production.meta["job id"]
+                             )
+                             production.meta["job id"] = None
+-                        except (configparser.NoOptionError, configparser.NoSectionError):
+-                            logger.warning("Could not collect condor profiling data as no scheduler was specified in the config file.")
+                         except ValueError as e:
+                             logger.error("Could not collect condor profiling data.")
+                             logger.exception(e)
+                             pass
+ 
+                         finish += 1
+                         production.status = "finished"
+```
+
+## asimov/cli/project.py
+
+```diff
+@@ -69,34 +69,31 @@
+     pathlib.Path(logs).mkdir(parents=True, exist_ok=True)
+     config.set("logging", "directory", logs)
+ 
+     # Make the results store
+     storage.Store.create(root=results, name=f"{project_name} storage")
+     config.set("storage", "directory", results)
+ 
+-    # Make the ledger and operative files
+-    pathlib.Path('.asimov').mkdir(parents=True, exist_ok=True)
++    # Make the ledger
+     config.set("ledger", "engine", "yamlfile")
+-    config.set("ledger", "location", os.path.join(".asimov", "ledger.yml"))
++    config.set("ledger", "location", "ledger.yml")
+ 
+     # Set the default environment
+     python_loc = shutil.which("python").split("/")[:-2]
+     config.set("pipelines", "environment", os.path.join("/", *python_loc))
+ 
+     # Set the default condor user
+     if not user:
+         config.set("condor", "user", getpass.getuser())
+     else:
+         config.set("condor", "user", user)
+ 
+-    Ledger.create(engine="yamlfile",
+-                  name=project_name,
+-                  location=os.path.join(".asimov", "ledger.yml"))
++    Ledger.create(engine="yamlfile", name=project_name, location="ledger.yml")
+ 
+-    with open(os.path.join(".asimov", "asimov.conf"), "w") as config_file:
++    with open("asimov.conf", "w") as config_file:
+         config.write(config_file)
+ 
+ 
+ @click.command()
+ @click.argument("name")
+ @click.option(
+     "--root",
+@@ -218,19 +215,19 @@
+         os.path.join(location, config.get("storage", "results_store")), results
+     )
+     config.set("storage", "results_store", results)
+ 
+     # Make the ledger
+     if config.get("ledger", "engine") == "yamlfile":
+         shutil.copyfile(
+-            os.path.join(location, config.get("ledger", "location")), ".asimov/ledger.yml"
++            os.path.join(location, config.get("ledger", "location")), "ledger.yml"
+         )
+     elif config.get("ledger", "engine") == "gitlab":
+         raise NotImplementedError(
+             "The gitlab interface has been removed from this version of asimov."
+         )
+ 
+     config.set("ledger", "engine", "yamlfile")
+-    config.set("ledger", "location", ".asimov/ledger.yml")
++    config.set("ledger", "location", "ledger.yml")
+ 
+     with open("asimov.conf", "w") as config_file:
+         config.write(config_file)
+```
+
+## asimov/configs/bilby.ini
+
+```diff
+@@ -1,40 +1,29 @@
+ {%- if production.event.repository -%}
+ {%- assign repo_dir = production.event.repository.directory -%}
+ {%- else -%}
+ {%- assign repo_dir = "." -%}
+ {%- endif -%}
+-{%- if production.meta['likelihood'] contains "calibration" -%}
+-{%- assign calibration_on = production.meta['likelihood']['calibration']['sample'] -%}
+-{%- else -%}
+-{%- assign calibration_on = True %}
+-{%- endif -%}
+ {%- assign meta = production.meta -%}
+ {%- assign sampler = production.meta['sampler'] -%}
+ {%- assign scheduler = production.meta['scheduler'] -%}
+ {%- assign likelihood = production.meta['likelihood'] -%}
+ {%- assign priors = production.meta['priors'] -%}
+ {%- assign data = production.meta['data'] -%}
+ {%- assign quality = production.meta['quality'] -%}
+ {%- assign ifos = production.meta['interferometers'] -%}
+-
+-{%- if data contains "calibration" %}
+-{%- if calibration_on %}
+-{%- if data['calibration'] contains ifos[0] %}
+ ################################################################################
+ ## Calibration arguments
+ ################################################################################
++
+ calibration-model=CubicSpline
+ spline-calibration-envelope-dict={ {% for ifo in ifos %}{{ifo}}:{{data['calibration'][ifo]}},{% endfor %} }
+ spline-calibration-nodes=10
+ spline-calibration-amplitude-uncertainty-dict=None
+ spline-calibration-phase-uncertainty-dict=None
+-{%- endif %}
+-{%- endif %}
+-{%- endif %}
+ 
+ ################################################################################
+ ## Data generation arguments
+ ################################################################################
+ 
+ ignore-gwpy-data-quality-check=True
+ gps-tuple=None
+@@ -117,16 +106,14 @@
+ jitter-time=True
+ reference-frame={% if production.meta['interferometers'] contains "H1" %}H1{% endif %}{% if production.meta['interferometers'] contains "L1" %}L1{% endif %}{% if production.meta['interferometers'] contains "V1" %}V1{% endif %}
+ time-reference=geocent
+ likelihood-type={{ likelihood['type'] | default: "GravitationalWaveTransient" }}
+ 
+ {% if likelihood contains "roq" %}
+ roq-folder={{ likelihood['roq']['folder'] | default: "None" }}
+-roq-weights={{ likelihood['roq']['weights'] | default: "None" }}
+-roq-weight-format={{ likelihood['roq']['weight format'] | default: "None" }}
+ roq-scale-factor={{ likelihood['roq']['scale'] | default: 1 }}
+ {% endif %}
+ 
+ extra-likelihood-kwargs={{ likelihood['kwargs'] | default: "None" }}
+ 
+ ################################################################################
+ ## Output arguments
+@@ -149,61 +136,15 @@
+ 
+ ################################################################################
+ ## Prior arguments
+ ################################################################################
+ 
+ default-prior = {{ priors['default'] | default: "BBHPriorDict" }}
+ deltaT=0.2
+-{% if production.meta contains "priors" %}
+-prior-dict = {
+-{%- if priors.keys() contains "geocentric time" %}
+-{%- assign p = priors['geocentric time'] %}
+-   geocent_time = {{p['type']}}(name="geocentric time", minimum={{p['minimum']}}, maximum={{p['maximum']}}, boundary={{p['boundary'] | default: None}}),
+-{% endif %}
+-{%- if priors.keys() contains "chirp mass" %}{% assign p = priors['chirp mass'] %}{% else %}{% assign p = None %}{% endif %}
+-   chirp_mass = {{p['type'] | default: "bilby.gw.prior.UniformInComponentsChirpMass" }}(name='chirp_mass', minimum={{p['minimum'] | default: 1}}, maximum={{p['maximum'] | default: 100}}, unit='$M_\{\{\odot\}\}$'),
+-{%- if priors.keys() contains "mass ratio" %}{% assign p = priors['mass ratio'] %}{% else %}{% assign p = None %}{% endif %}
+-   mass_ratio = {{p['type'] | default: "bilby.gw.prior.UniformInComponentsMassRatio" }}(name='mass_ratio', minimum={{p['minimum']}}, maximum={{p['maximum']}}),
+-{%- if priors.keys() contains "mass 1" %}{% assign p = priors['mass 1'] %}{% else %}{% assign p = None %}{% endif %}
+-   mass_1 = {{p['type'] | default: Constraint}}(name='mass_1', minimum={{p['minimum']}}, maximum={{p['maximum']}}),
+-{%- if priors.keys() contains "mass 2" %}{% assign p = priors['mass 2'] %}{% else %}{% assign p = None %}{% endif %}
+-   mass_2 = {{p['type'] | default: Constraint}}(name='mass_2', minimum={{p['minimum'] | default: 1 }}, maximum={{p['maximum'] | default: 100}}),
+-{%- if priors.keys() contains "spin 1" %}
+-{%- assign p = priors['spin 1'] %}
+-{%- else %}
+-{%- assign p = None %}
+-{% endif %}
+-   a_1 = {{ p['type'] | default: Uniform}}(name='a_1', minimum={{ p['minimum'] | default: 0}}, maximum={{ p['maximum'] | default: 0.99}}),
+-{%- if priors.keys() contains "spin 2" %}
+-{%- assign p = priors['spin 2'] %}
+-{%- else %}
+-{%- assign p = None %}
+-{%- endif %}
+-   a_2 = {{ p['type'] | default: Uniform}}(name='a_2', minimum={{ p['minimum'] | default: 0}}, maximum={{ p['maximum'] | default: 0.99}}),
+-{%- if priors.keys() contains "tilt 1" %}{% assign p = priors['tilt 1'] %}{% else %}{% assign p = None %}{% endif %}
+-   tilt_1 = {{ p['type'] | default: Sine}}(name='tilt_1'),
+-{%- if priors.keys() contains "tilt 2" %}{% assign p = priors['tilt 2'] %}{% else %}{% assign p = None %}{% endif %}
+-   tilt_2 = {{ p['type'] | default: Sine}}(name='tilt_2'),
+-{%- if priors.keys() contains "phi 12" %}{% assign p = priors['phi 12'] %}{% else %}{% assign p = None %}{% endif %}
+-   phi_12 = {{ p['type'] | default: Uniform}}(name='phi_12', minimum={{ p['minimum'] | default: 0}}, maximum={{ p['maximum'] | default: "2 * np.pi"}}, boundary={{p['boundary'] | default: "'periodic'"}}),
+-{%- if priors.keys() contains "phi jl" %}{% assign p = priors['phi jl'] %}{% else %}{% assign p = None %}{% endif %}
+-   phi_jl = {{ p['type'] | default: Uniform}}(name='phi_jl', minimum={{ p['minimum'] | default: 0}}, maximum={{ p['maximum'] | default: "2 * np.pi"}}, boundary={{p['boundary'] | default: "'periodic'"}}),
+-{%- if priors.keys() contains "luminosity distance" %}
+-{%- assign p = priors['luminosity distance'] %}
+-   luminosity_distance =  {{ p['type'] | default: PowerLaw}}({% for key in p.keys() %}{% if key != "type" %}{{key | replace: " ", "_"}}={{p[key]}},{% endif %} {% endfor %} unit='Mpc'),
+-{%- else %}
+-{%- assign p = None %}
+-   luminosity_distance =  {{ p['type'] | default: PowerLaw}}(unit='Mpc'),
+-{%- endif %}
+-   dec = Cosine(name='dec'),
+-   ra = Uniform(name='ra', minimum=0, maximum=2 * np.pi, boundary='periodic'),
+-   theta_jn = Sine(name='theta_jn'),
+-   psi = Uniform(name='psi', minimum=0, maximum=np.pi, boundary='periodic'),
+-   phase = Uniform(name='phase', minimum=0, maximum=2 * np.pi, boundary='periodic')}
+-{% endif %}
++prior-file={{repo_dir}}/C01_offline/{{production.name}}.prior
+ enforce-signal-duration=True
+ 
+ ################################################################################
+ ## Post processing arguments
+ ################################################################################
+ 
+ postprocessing-executable=None
+@@ -233,8 +174,8 @@
+ pn-phase-order={{ production.meta['waveform']['pn phase order'] | default: -1 }}
+ pn-amplitude-order={{ production.meta['waveform']['pn amplitude order'] | default: 1 }}
+ numerical-relativity-file={{ production.meta['waveform']['file'] | default: "None" }}
+ waveform-arguments-dict={{ production.meta['waveform']['arguments'] | default: "None" }}
+ mode-array={{ production.meta['waveform']['mode array'] | default: "None" }}
+ frequency-domain-source-model={{ production.meta['likelihood']['frequency domain source model'] | default: "lal_binary_black_hole" }}
+ conversion-function={{ production.meta['waveform']['conversion function'] | default: "None" }}
+-generation-function={{ production.meta['waveform']['generation function'] | default: "None" }}
++generation-function={{ production.meta['waveform']['generation function'] | default: "None" }}
+```
+
+## asimov/configs/rift.ini
+
+```diff
+@@ -120,14 +120,19 @@
+ [skyarea]
+ maxpts=2000
+ 
+ [resultspage]
+ skyres=0.5
+ deltaLogP = 7.5
+ 
++[statevector]
++state-vector-channel={ {% for ifo in ifos %}{{ifo}}:{{quality['state vector'][ifo]}},{% endfor %} }
++bits=['Bit 0', 'Bit 1', 'Bit 2']
++
++
+ [ligo-skymap-from-samples]
+ enable-multiresolution=
+ 
+ [ligo-skymap-plot]
+ annotate=
+ contour= 50 90
+ 
+@@ -212,8 +217,8 @@
+ add-extrinsic=True
+ batch-extrinsic=True
+ # * final stage provides time (and distance, if marginalized)
+ add-extrinsic-time-resampling=True
+ 
+ # Other options needed for this specific analysis
+ #  force-eta-range : the usual doesn't awlays work; this uses 20:1 prior range, should be set consistently to above
+-# force-eta-range="[0.0453514739,0.24999999999]"
++# force-eta-range="[0.0453514739,0.24999999999]"
+```
+
+## asimov/pipelines/bayeswave.py
+
+```diff
+@@ -105,15 +105,15 @@
+                 queue = "Priority_PE"
+ 
+             ini.set_queue(queue)
+ 
+             ini.save()
+ 
+             ini = ini.ini_loc
+-
++            
+         else:
+             ini = f"{self.production.name}.ini"
+ 
+         if self.production.rundir:
+             rundir = self.production.rundir
+         else:
+             rundir = os.path.join(
+@@ -141,20 +141,18 @@
+         command += [
+             "-r",
+             self.production.rundir,
+             ini,
+         ]
+ 
+         self.logger.info(" ".join(command))
+-
+         if dryrun:
+             print(" ".join(command))
+             self.logger.info(" ".join(command))
+         else:
+-
+             pipe = subprocess.Popen(
+                 command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+             )
+             out, err = pipe.communicate()
+             if "To submit:" not in str(out):
+                 self.production.status = "stuck"
+                 self.logger.error("Could not create a DAG file")
+@@ -310,14 +308,16 @@
+ 
+         command = [
+             "condor_submit_dag",
+             "-batch-name",
+             f"bwave/{self.production.event.name}/{self.production.name}",
+             f"{self.production.name}.dag",
+         ]
++        
++        self.logger.info((" ".join(command)))
+ 
+         if dryrun:
+             print(" ".join(command))
+ 
+         else:
+             with set_directory(self.production.rundir):
+                 try:
+@@ -329,31 +329,31 @@
+                     raise PipelineException(
+                         "It looks like condor isn't installed on this system.\n"
+                         f"""I wanted to run {" ".join(command)}."""
+                     ) from e
+ 
+                 stdout, stderr = dagman.communicate()
+ 
+-            if "submitted to cluster" in str(stdout):
+-                cluster = re.search(
+-                    r"submitted to cluster ([\d]+)", str(stdout)
+-                ).groups()[0]
+-                self.production.status = "running"
+-                self.production.job_id = int(cluster)
+-                self.logger.info(
+-                    f"Successfully submitted to cluster {self.production.job_id}"
+-                )
+-                self.logger.debug(stdout)
+-                return (int(cluster),)
+-            else:
+-                self.logger.info(stdout)
+-                self.logger.error(stderr)
+-                raise PipelineException(
+-                    f"The DAG file could not be submitted.\n\n{stdout}\n\n{stderr}",
+-                )
++                if "submitted to cluster" in str(stdout):
++                    cluster = re.search(
++                        r"submitted to cluster ([\d]+)", str(stdout)
++                    ).groups()[0]
++                    self.production.status = "running"
++                    self.production.job_id = int(cluster)
++                    self.logger.info(
++                        f"Successfully submitted to cluster {self.production.job_id}"
++                    )
++                    self.logger.debug(stdout)
++                    return (int(cluster),)
++                else:
++                    self.logger.info(stdout)
++                    self.logger.error(stderr)
++                    raise PipelineException(
++                        f"The DAG file could not be submitted.\n\n{stdout}\n\n{stderr}",
++                    )
+ 
+     def upload_assets(self):
+         """
+         Upload the PSDs from this job.
+         """
+         sample = self.production.meta["likelihood"]["sample rate"]
+         git_location = os.path.join(self.category, "psds")
+@@ -383,14 +383,35 @@
+                 )
+             except Exception as e:
+                 self.logger.error(
+                     f"There was a problem committing the PSD for {detector} to the store."
+                 )
+                 self.logger.exception(e)
+ 
++    def store_assets(self):
++        """
++        Add the assets to the store.
++        """
++
++        sample_rate = self.production.meta["quality"]["sample-rate"]
++        for detector, asset in self.collect_assets()["psds"]:
++            store = Store(root=config.get("storage", "directory"))
++            try:
++                store.add_file(
++                    self.production.event.name,
++                    self.production.name,
++                    file=asset,
++                    new_name=f"{detector}-{sample_rate}-psd.dat"
++                )
++            except Exception as e:
++                self.logger.error(
++                    f"There was a problem committing the PSD for {detector} to the store."
++                )
++                self.logger.exception(e)
++
+     def collect_logs(self):
+         """
+         Collect all of the log files which have been produced by this production and
+         return their contents as a dictionary.
+         """
+         messages = {}
+ 
+@@ -415,18 +436,17 @@
+ 
+     def collect_assets(self):
+         """
+         Collect the assets for this job and commit them to the event repository.
+         Since this job also generates the PSDs these should be added to the production ledger.
+         """
+         psds = {}
+-        results_dir = glob.glob(f"{self.production.rundir}/trigtime_*")[0]
+         for det in self.production.meta["interferometers"]:
+             asset = os.path.join(
+-                results_dir, "post", "clean", f"glitch_median_PSD_forLI_{det}.dat"
++                self.production.rundir, "post", "clean", f"glitch_median_PSD_forLI_{det}.dat"
+             )
+             if os.path.exists(asset):
+                 psds[det] = asset
+ 
+         outputs = {}
+         outputs["psds"] = psds
+```
+
+## asimov/pipelines/bilby.py
+
+```diff
+@@ -75,14 +75,87 @@
+                 continue
+             with open(sub_file, "r") as f_handle:
+                 original = f_handle.read()
+             with open(sub_file, "w") as f_handle:
+                 self.logger.info(f"Adding preserve_relative_paths to {sub_file}")
+                 f_handle.write("preserve_relative_paths = True\n" + original)
+ 
++    def _determine_prior(self):
++        """
++        Determine the correct choice of prior file for this production.
++        """
++
++        self.logger.info("Determining the prior file for this production")
++
++        if "prior file" in self.production.meta:
++            self.logger.info("A prior file has already been specified.")
++            self.logger.info(f"{self.production.meta['prior file']}")
++            return self.production.meta["prior file"]
++        else:
++            template = None
++
++            if "event type" in self.production.meta:
++                event_type = self.production.meta["event type"].lower()
++            else:
++                event_type = "bbh"
++                self.production.meta["event type"] = event_type
++
++            if template is None:
++                template_filename = f"{event_type}.prior.template"
++                self.logger.info(
++                    f"[bilby] Constructing a prior using {event_type}.prior.template."
++                )
++                try:
++                    template = os.path.join(
++                        config.get("bilby", "priors"), template_filename
++                    )
++                except (configparser.NoOptionError, configparser.NoSectionError):
++                    from pkg_resources import resource_filename
++
++                    template = resource_filename(
++                        "asimov", f"priors/{template_filename}"
++                    )
++
++            priors = {}
++            priors = update(priors, self.production.event.ledger.data["priors"])
++            priors = update(priors, self.production.event.meta["priors"])
++            priors = update(priors, self.production.meta["priors"])
++
++            priors = {}
++            priors = update(priors, self.production.event.ledger.data["priors"])
++            priors = update(priors, self.production.event.meta["priors"])
++            priors = update(priors, self.production.meta["priors"])
++
++            liq = Liquid(template)
++            rendered = liq.render(priors=priors, config=config)
++
++            prior_name = f"{self.production.name}.prior"
++            prior_file = os.path.join(os.getcwd(), prior_name)
++            self.logger.info(f"Saving the new prior file as {prior_file}")
++            with open(prior_file, "w") as new_prior:
++                new_prior.write(rendered)
++
++            repo = self.production.event.repository
++            try:
++
++                repo.add_file(
++                    prior_file,
++                    os.path.join(
++                        config.get("general", "calibration_directory"), prior_name
++                    ),
++                )
++                os.remove(prior_file)
++            except git.exc.GitCommandError:
++                pass
++            return os.path.join(
++                self.production.event.repository.directory,
++                config.get("general", "calibration_directory"),
++                prior_name,
++            )
++
+     def build_dag(self, psds=None, user=None, clobber_psd=False, dryrun=False):
+         """
+         Construct a DAG file in order to submit a production to the
+         condor scheduler using bilby_pipe.
+ 
+         Parameters
+         ----------
+@@ -103,14 +176,18 @@
+            Raised if the construction of the DAG fails.
+         """
+ 
+         cwd = os.getcwd()
+ 
+         self.logger.info(f"Working in {cwd}")
+ 
++        self._determine_prior()  # Build the prior file
++
++        self._determine_prior()  # Build the prior file
++
+         if self.production.event.repository:
+             ini = self.production.event.repository.find_prods(
+                 self.production.name, self.category
+             )[0]
+             ini = os.path.join(cwd, ini)
+         else:
+             ini = f"{self.production.name}.ini"
+@@ -219,36 +296,42 @@
+                 # with set_directory(self.production.rundir):
+                 self.logger.info(f"Working in {os.getcwd()}")
+ 
+                 dagman = subprocess.Popen(
+                     command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+                 )
+ 
+-                self.logger.info(" ".join(command))
+-
+-                stdout, stderr = dagman.communicate()
++                with set_directory(self.rundir):
+ 
+-                if "submitted to cluster" in str(stdout):
+-                    cluster = re.search(
+-                        r"submitted to cluster ([\d]+)", str(stdout)
+-                    ).groups()[0]
+-                    self.logger.info(
+-                        f"Submitted successfully. Running with job id {int(cluster)}"
++                    dagman = subprocess.Popen(
++                        command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+                     )
+-                    self.production.status = "running"
+-                    self.production.job_id = int(cluster)
+-                    return cluster, PipelineLogger(stdout)
+-                else:
+-                    self.logger.error("Could not submit the job to the cluster")
+-                    self.logger.info(stdout)
+-                    self.logger.error(stderr)
+ 
+-                    raise PipelineException(
+-                        "The DAG file could not be submitted.",
+-                    )
++                    self.logger.info(" ".join(command))
++
++                    stdout, stderr = dagman.communicate()
++
++                    if "submitted to cluster" in str(stdout):
++                        cluster = re.search(
++                            r"submitted to cluster ([\d]+)", str(stdout)
++                        ).groups()[0]
++                        self.logger.info(
++                            f"Submitted successfully. Running with job id {int(cluster)}"
++                        )
++                        self.production.status = "running"
++                        self.production.job_id = int(cluster)
++                        return cluster, PipelineLogger(stdout)
++                    else:
++                        self.logger.error("Could not submit the job to the cluster")
++                        self.logger.info(stdout)
++                        self.logger.error(stderr)
++
++                        raise PipelineException(
++                            "The DAG file could not be submitted.",
++                        )
+ 
+         except FileNotFoundError as error:
+             self.logger.exception(error)
+             raise PipelineException(
+                 "It looks like condor isn't installed on this system.\n"
+                 f"""I wanted to run {" ".join(command)}."""
+             ) from error
+```
+
+## asimov/pipelines/lalinference.py
+
+```diff
+@@ -187,14 +187,16 @@
+            The pipeline logger message.
+ 
+         Raises
+         ------
+         PipelineException
+            This will be raised if the pipeline fails to submit the job.
+         """
++        if not dryrun:
++            os.chdir(self.production.rundir)
+ 
+         with set_directory(self.production.rundir):
+ 
+             self.before_submit(dryrun=dryrun)
+ 
+             try:
+                 command = [
+```
+
+## Comparing `asimov-0.5.0b4.dist-info/LICENSE` & `asimov-0.6.0a1.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `asimov-0.5.0b4.dist-info/METADATA` & `asimov-0.6.0a1.dist-info/METADATA`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: asimov
+-Version: 0.5.0b4
++Version: 0.6.0a1
+ Summary: A Python package for managing and interacting with data analysis jobs.
+ Home-page: https://git.ligo.org/asimov/asimov
+ Author: Daniel Williams
+ Author-email: daniel.williams@ligo.org
+ License: MIT license
+ Keywords: pe,ligo,asimov
+ Platform: UNKNOWN
+```
+
+## Comparing `asimov-0.5.0b4.dist-info/RECORD` & `asimov-0.6.0a1.dist-info/RECORD`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,56 +1,57 @@
+-asimov/__init__.py,sha256=5xYX9iZ42fY31ifmRcuODWo1OPD4aGLKRP5vywFYKjg,2808
+-asimov/analysis.py,sha256=IBNudjR5fjFfpZ1s3N3eAKWZ56pPggMHSuDf27q4JHc,9128
+-asimov/asimov.conf,sha256=NTs8PEmemE_cZSAEofWXBXNzT0eKSE1c76fHyOkytjI,843
+-asimov/condor.py,sha256=DP3_2sYA3I8FHj0vBoY4j6fq1xALREd4ZvSuvfZOkUg,11022
++asimov/__init__.py,sha256=W-YcCuFqXxYf2Uh4dc2NEdmldgjrx7CQ4fvxcCyge-Q,2866
++asimov/analysis.py,sha256=DC5oLDCnoBf8C1ADC8x0BF3HIFUq0jjSbFufixQOdUk,27234
++asimov/asimov.conf,sha256=bddG-GghinDt4NfD2jryMc0S1LF_eENPyW_7bu_SM0E,796
++asimov/condor.py,sha256=ephFL34GqUQPntw0mTzamy5HOtVFV6VN6dVNsrZ4yl4,11665
+ asimov/database.py,sha256=H9jgEoS2GLDMXjkK0d8nBY2ds1bwYUIMDbQmFsHst5U,1617
+-asimov/event.py,sha256=_VHtaYzHtz0ZziRGpFZJuY_PYg_VwOayfA-0TRrSPHo,37959
++asimov/event.py,sha256=V7X0LCadIkj6YbIOJY_6by70KYmselnQ1pClFWBA-yc,15204
+ asimov/git.py,sha256=CxxUpJzfQApt4d3RiGdA7fSln2kwc1sAUy1Z81UYDW0,12166
+-asimov/gitlab.py,sha256=g5Zg4lSgqAadnf0759wkJchDeSPaJuXTru7CB9a6K9w,7226
++asimov/gitlab.py,sha256=LYiXStrR9rSpLprnSRt3K_6H6ZLDv0A-K2cXV2kfxgw,7734
+ asimov/ini.py,sha256=K3mo8257HpvO0ipX3w1ofmgCN9vEMhvVCi_kupkJzAs,5398
+-asimov/ledger.py,sha256=_AaZLksP2C0LfG3VXEGli_0J7fhJ4IhRbEZ0uKn1Idc,9821
++asimov/ledger.py,sha256=ifSzGGCnlNBbaGxwbV3dSlF5j2PfPJGfU0ZU7JZVhzU,11341
+ asimov/locutus.py,sha256=XfiDYrIWQunbTKBAE8BadeCikVI63O67EeQ1jWH28Pg,2051
+ asimov/logging.py,sha256=HCE_giZgeXAFeDv3AaRSJBxPj20vAVmyN3uqcnpUJOM,7051
+ asimov/mattermost.py,sha256=Lp-WwwTJor4Do9Gab4L79mBvQzZ2WAonmfZT9JO6RT4,1646
+-asimov/olivaw.py,sha256=ihsBqkpjxuvP6E96W2OxBkrmnCuVQyOiS6TCrMdo428,1586
+-asimov/pipeline.py,sha256=fa052E8GtRfl5kNFdklsPOFTBUOmRvy4Ml8sRxEAmiA,14100
+-asimov/review.py,sha256=vTcvE7DnINkuIIM-PLnVhz6N-a7wrnopK8lE5Jp7ShM,4512
++asimov/olivaw.py,sha256=ryrIB0dq7AtnUvxOGn5Dlxk7l7QTSEDVH98UhU57iZM,1590
++asimov/pipeline.py,sha256=kqw8ZIW5AF3vebIE__vRbKD-F65yaDM1xWF2NXh9jKg,14537
++asimov/review.py,sha256=72Kv9ccK3wMBD_aBDCnX4ozm0BHwTvekz43WNXmeQuQ,4513
+ asimov/storage.py,sha256=5IUNyysKFhnhHCj8-J3xX5qDTqnMTsOUKQGmO9_dQsM,10087
+-asimov/testing.py,sha256=GHN83ozigC--s0tMH8P_5yaZr-X_elT4-q5sjz0Gu_g,1156
++asimov/testing.py,sha256=dBZ88_VHYg-UUnl8x8XZPHJYuKIi6YnivBL8RqBSh5k,1146
+ asimov/utils.py,sha256=gBrWOMNy1hXrSIx4z-3e3t8aBRjzhqbZCItt28D6kK8,2134
+ asimov/cli/__init__.py,sha256=4fD4aGBcYH0pS-RmtxhijztzZsaXOwfvv8odUJVTxcA,395
+-asimov/cli/application.py,sha256=P5ZD0HybMFq0rblM9_OaBCe35-bvxk5Uw-gh2roSbZw,4072
++asimov/cli/application.py,sha256=CAao5z8cvtNORWJgMW7lBzxbY2d8odMV0HwXMujFi30,4960
+ asimov/cli/configuration.py,sha256=rXRFzoZaxfTfN9S6y4tT1Bo30cimEey2Lkg0srGeIVk,1141
+ asimov/cli/data.py,sha256=iYGRdyhFs4h7nUMTb1G3wWtqJpxixSNfUQF813pHujE,1285
+-asimov/cli/event.py,sha256=6XPVPuUH1BoJmF5zGXYUEH6Ij0W67gWn4Wglp-P39_8,9010
++asimov/cli/event.py,sha256=wZWNUWx-MADsAgFJTypkTaDqfZK3JbEs4VMotjQVIaM,9011
+ asimov/cli/ledger.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+-asimov/cli/manage.py,sha256=c8bmDob07lrAZmchwrbc3jjIVDtU_f8sACn36n4ylWU,10343
+-asimov/cli/monitor.py,sha256=0bcZ5LGEGBHp8E_vVTR0O4QShPjTPUb1qAtuuxeNnEo,13959
++asimov/cli/manage.py,sha256=W6-g-dlDVHsp3fFfr_5ZcOKLwl5TG1Lm0wZUpAYNqQo,10291
++asimov/cli/monitor.py,sha256=fjHwKg1Y4W-oHILdvO_ECW2C8kJR1RQS3hAbeZ8TCzM,15526
+ asimov/cli/production.py,sha256=8wysaQimcKOhEJFiHdWetk6U6VB37NItUbQ7a-SNccA,5606
+-asimov/cli/project.py,sha256=Iukl0XsjHVilrmMq6mXSdWEybV--QAm2v9Wm0WPCx2k,7157
++asimov/cli/project.py,sha256=-pOI7EkBvC-i03F5FaHRKeUhK7XmSm-7IS9RUgfkpbg,6947
+ asimov/cli/report.py,sha256=Upm1JZFNSnMde-iiMMXYMl-i0GIoUF_dtRN5WtBrL-w,5225
+ asimov/cli/review.py,sha256=gMT5iGNf4au32mFaoDI70F2yQ3f-we0QaUN3GIlT9zk,2817
+ asimov/cli/report-theme/body.html,sha256=_EO2Ce1k6LkoL4t-dhhk7RZ6FPpIlSNO_p0J8EEiycs,96
+ asimov/cli/report-theme/footer.html,sha256=DhOISyuw80kVSTy5xy84xIbV-CzLEqYsoZVfwZEiGMc,247
+ asimov/cli/report-theme/head.html,sha256=3NZAIpIlraJAx8TsXTfa6VRycLq6JyRiun2TGjdfu64,1467
+ asimov/cli/report-theme/header.html,sha256=KRo_10q0HIdXXlM8DYCZqw-JpMf3uFithQRun8qYMJE,841
+ asimov/configs/README.rst,sha256=Dyk7Rkf8KZ5hL7dcFOye2EoZjn_dG7RARB7t67u7pk8,220
+ asimov/configs/bayeswave.ini,sha256=Lhp7Ud5lLBqiymmNTBRGGAT5bUHaAse7SnMJ-fpgo0M,2903
+-asimov/configs/bilby.ini,sha256=j0M2DFysY4tHmG9_uQXRS3LVTOZVEi2vGg2MX9ZhvBo,12328
++asimov/configs/bilby.ini,sha256=YB-GmAG_dqsr_fA-8k1BbNt-rG3teZp5n_3OZY0ulVk,8197
+ asimov/configs/lalinference.ini,sha256=HdvRkaRqYC4Lj9kk0uTvEtV92iWovAD75BIbSE0F0cY,6238
+-asimov/configs/rift.ini,sha256=bkKO3EJui0RFYu6NXTRB9wOc97VB5oMsLXdvaWz8T6I,7570
++asimov/configs/rift.ini,sha256=laboJEXoob09TRSVppvxfUfgRoH06zcCbiiAMwLXS7Q,7718
+ asimov/pipelines/__init__.py,sha256=n3EJ7BRwjio1hqdLiDA4g9eAV5k9O_YZXiPjKshTtZs,610
+-asimov/pipelines/bayeswave.py,sha256=XNGzr4iqyWK34KEpDza7Y0szAXCaHSixz2ILXmjYP78,19251
+-asimov/pipelines/bilby.py,sha256=oNHQHrd9Bz_1JLMwKF7PQXsAPv5BAvsUqvpZLaLpurM,12496
+-asimov/pipelines/lalinference.py,sha256=Ws8N2AZ0mCMWy_lXvtclzvvpBqAJMIt6yt3oSF-ibhs,9421
++asimov/pipelines/bayeswave.py,sha256=Yhh25zwqT2AR6QRRZQmdjLWmAuc79Wpuw4Xs_bPZD8E,20083
++asimov/pipelines/bilby.py,sha256=zkr8OO-PUkSWuvcKMlNVIvE6hZsIPkhXF9JvaasfmyQ,15790
++asimov/pipelines/lalinference.py,sha256=bi3k9fcj4K5Vr2HiNV6xS7RSHuTtJ6FJW9cd1G2eyzA,9489
+ asimov/pipelines/rift.py,sha256=OZIVdIPmh4P2jNrfJpEmzG1yOE2i7yRdXPzpGApzf9U,17453
++asimov/priors/bbh.prior.template,sha256=B4-CkVVWs02ktI-sij3nkX0w_XU_Wb1S43KQWA29vQI,2844
+ asimov/report-theme/body.html,sha256=_EO2Ce1k6LkoL4t-dhhk7RZ6FPpIlSNO_p0J8EEiycs,96
+ asimov/report-theme/footer.html,sha256=DhOISyuw80kVSTy5xy84xIbV-CzLEqYsoZVfwZEiGMc,247
+ asimov/report-theme/head.html,sha256=3NZAIpIlraJAx8TsXTfa6VRycLq6JyRiun2TGjdfu64,1467
+ asimov/report-theme/header.html,sha256=KRo_10q0HIdXXlM8DYCZqw-JpMf3uFithQRun8qYMJE,841
+-asimov-0.5.0b4.dist-info/LICENSE,sha256=3OWyNSDNgd5tDbORK72QyJEUBMBVwVUjtcZppOdfrFM,755
+-asimov-0.5.0b4.dist-info/METADATA,sha256=atPo7g-2O-G3q1nyw4cRCUrUPJUpAjlbSjtlcixKCYc,1392
+-asimov-0.5.0b4.dist-info/WHEEL,sha256=a-zpFRIJzOq5QfuhBzbhiA1eHTzNCJn8OdRvhdNX0Rk,110
+-asimov-0.5.0b4.dist-info/entry_points.txt,sha256=jbTPZwBFpPW3VKNLnjeKb327DPTChpjY4B1IPC3ZDEc,108
+-asimov-0.5.0b4.dist-info/top_level.txt,sha256=_R0fwGHM71D6a2YHrKUPX0Z21P8tfW6qn96Xl0MIVHY,7
+-asimov-0.5.0b4.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+-asimov-0.5.0b4.dist-info/RECORD,,
++asimov-0.6.0a1.dist-info/LICENSE,sha256=3OWyNSDNgd5tDbORK72QyJEUBMBVwVUjtcZppOdfrFM,755
++asimov-0.6.0a1.dist-info/METADATA,sha256=guhTxHTzctoy_6NAQU78WdaJ1Bbmd5PbqqhLqDw_Rm8,1392
++asimov-0.6.0a1.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
++asimov-0.6.0a1.dist-info/entry_points.txt,sha256=jbTPZwBFpPW3VKNLnjeKb327DPTChpjY4B1IPC3ZDEc,108
++asimov-0.6.0a1.dist-info/top_level.txt,sha256=_R0fwGHM71D6a2YHrKUPX0Z21P8tfW6qn96Xl0MIVHY,7
++asimov-0.6.0a1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
++asimov-0.6.0a1.dist-info/RECORD,,
+```
+

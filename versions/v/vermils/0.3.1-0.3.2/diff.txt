@@ -1,0 +1,207 @@
+--- tmp/vermils-0.3.1.tar.gz
++++ tmp/vermils-0.3.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "vermils-0.3.1.tar", max compression
+│ +gzip compressed data, was "vermils-0.3.2.tar", max compression
+│   --- vermils-0.3.1.tar
+├── +++ vermils-0.3.2.tar
+│ ├── file list
+│ │ @@ -1,38 +1,38 @@
+│ │ --rw-r--r--   0        0        0     1061 2022-11-17 09:33:04.310180 vermils-0.3.1/LICENSE
+│ │ --rw-r--r--   0        0        0     3942 2023-03-28 18:00:26.740248 vermils-0.3.1/README.md
+│ │ --rw-r--r--   0        0        0     3430 2023-04-06 09:01:27.443182 vermils-0.3.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0       61 2023-03-11 12:26:03.346413 vermils-0.3.1/vermils/__init__.py
+│ │ --rw-r--r--   0        0        0      167 2022-11-17 05:01:38.613644 vermils-0.3.1/vermils/asynctools/__init__.py
+│ │ --rw-r--r--   0        0        0    11331 2023-03-28 18:00:26.751286 vermils-0.3.1/vermils/asynctools/asinkrunner.py
+│ │ --rw-r--r--   0        0        0     9096 2023-04-04 17:51:41.191498 vermils-0.3.1/vermils/asynctools/tools.py
+│ │ --rw-r--r--   0        0        0      184 2023-03-23 12:05:30.190436 vermils-0.3.1/vermils/collections/__init__.py
+│ │ --rw-r--r--   0        0        0     5650 2023-03-28 18:00:26.755471 vermils-0.3.1/vermils/collections/fridge.py
+│ │ --rw-r--r--   0        0        0     5014 2022-11-19 15:13:29.013831 vermils-0.3.1/vermils/collections/objdict.py
+│ │ --rw-r--r--   0        0        0     4731 2022-11-17 11:15:42.360179 vermils-0.3.1/vermils/collections/strchain.py
+│ │ --rw-r--r--   0        0        0      191 2022-11-19 15:12:56.882494 vermils-0.3.1/vermils/gadgets/__init__.py
+│ │ --rw-r--r--   0        0        0     8896 2023-04-06 08:51:45.886283 vermils-0.3.1/vermils/gadgets/misc.py
+│ │ --rw-r--r--   0        0        0     5349 2023-04-02 19:22:57.308872 vermils-0.3.1/vermils/gadgets/monologger.py
+│ │ --rw-r--r--   0        0        0     3332 2023-04-05 18:00:35.578896 vermils-0.3.1/vermils/gadgets/sidelogging/__init__.py
+│ │ --rw-r--r--   0        0        0      165 2023-03-11 12:29:46.925809 vermils-0.3.1/vermils/io/__init__.py
+│ │ --rw-r--r--   0        0        0      187 2022-11-19 15:12:39.619881 vermils-0.3.1/vermils/io/aio/__init__.py
+│ │ --rw-r--r--   0        0        0       36 2023-03-21 13:57:43.165843 vermils-0.3.1/vermils/io/aio/atomic.py
+│ │ --rw-r--r--   0        0        0      526 2022-11-19 13:16:07.310489 vermils-0.3.1/vermils/io/aio/os.py
+│ │ --rw-r--r--   0        0        0      530 2022-11-19 15:12:33.188077 vermils-0.3.1/vermils/io/aio/path.py
+│ │ --rw-r--r--   0        0        0      564 2022-11-19 15:12:29.231677 vermils-0.3.1/vermils/io/aio/tempfile.py
+│ │ --rw-r--r--   0        0        0     4193 2023-03-11 02:37:01.818269 vermils-0.3.1/vermils/io/aio/wrappers.py
+│ │ --rw-r--r--   0        0        0       79 2023-03-21 13:56:42.877399 vermils-0.3.1/vermils/io/atomic.py
+│ │ --rw-r--r--   0        0        0      753 2022-11-19 07:36:35.873791 vermils-0.3.1/vermils/io/misc.py
+│ │ --rw-r--r--   0        0        0      120 2022-11-19 15:12:01.815868 vermils-0.3.1/vermils/io/puller/__init__.py
+│ │ --rw-r--r--   0        0        0     7389 2022-11-21 11:26:58.242720 vermils-0.3.1/vermils/io/puller/modifier.py
+│ │ --rw-r--r--   0        0        0    16614 2023-03-28 18:00:26.760453 vermils-0.3.1/vermils/io/puller/pullers.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 07:00:14.505466 vermils-0.3.1/vermils/py.typed
+│ │ --rw-r--r--   0        0        0      187 2023-04-03 12:45:21.373300 vermils-0.3.1/vermils/react/__init__.py
+│ │ --rw-r--r--   0        0        0     8051 2023-03-28 18:00:26.765410 vermils-0.3.1/vermils/react/actionchain.py
+│ │ --rw-r--r--   0        0        0     3426 2023-03-28 18:00:26.767251 vermils-0.3.1/vermils/react/eventhook.py
+│ │ --rw-r--r--   0        0        0      176 2022-11-17 11:06:38.303463 vermils-0.3.1/vermils/tensorflow/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 11:05:46.699753 vermils-0.3.1/vermils/tensorflow/callbacks/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 11:04:02.664554 vermils-0.3.1/vermils/tensorflow/inspect/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 11:04:08.451719 vermils-0.3.1/vermils/tensorflow/layers/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 11:06:00.011160 vermils-0.3.1/vermils/tensorflow/metrics/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2022-11-17 11:04:11.042462 vermils-0.3.1/vermils/tensorflow/models/__init__.py
+│ │ --rw-r--r--   0        0        0     5287 1970-01-01 00:00:00.000000 vermils-0.3.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1061 2022-11-17 09:33:04.310180 vermils-0.3.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     3942 2023-03-28 18:00:26.740248 vermils-0.3.2/README.md
+│ │ +-rw-r--r--   0        0        0     3430 2023-04-06 12:06:22.472769 vermils-0.3.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       61 2023-03-11 12:26:03.346413 vermils-0.3.2/vermils/__init__.py
+│ │ +-rw-r--r--   0        0        0      167 2022-11-17 05:01:38.613644 vermils-0.3.2/vermils/asynctools/__init__.py
+│ │ +-rw-r--r--   0        0        0    11331 2023-03-28 18:00:26.751286 vermils-0.3.2/vermils/asynctools/asinkrunner.py
+│ │ +-rw-r--r--   0        0        0     9096 2023-04-04 17:51:41.191498 vermils-0.3.2/vermils/asynctools/tools.py
+│ │ +-rw-r--r--   0        0        0      184 2023-03-23 12:05:30.190436 vermils-0.3.2/vermils/collections/__init__.py
+│ │ +-rw-r--r--   0        0        0     5650 2023-03-28 18:00:26.755471 vermils-0.3.2/vermils/collections/fridge.py
+│ │ +-rw-r--r--   0        0        0     5014 2022-11-19 15:13:29.013831 vermils-0.3.2/vermils/collections/objdict.py
+│ │ +-rw-r--r--   0        0        0     4731 2022-11-17 11:15:42.360179 vermils-0.3.2/vermils/collections/strchain.py
+│ │ +-rw-r--r--   0        0        0      191 2022-11-19 15:12:56.882494 vermils-0.3.2/vermils/gadgets/__init__.py
+│ │ +-rw-r--r--   0        0        0     8944 2023-04-06 12:05:26.817115 vermils-0.3.2/vermils/gadgets/misc.py
+│ │ +-rw-r--r--   0        0        0     5349 2023-04-02 19:22:57.308872 vermils-0.3.2/vermils/gadgets/monologger.py
+│ │ +-rw-r--r--   0        0        0     3332 2023-04-05 18:00:35.578896 vermils-0.3.2/vermils/gadgets/sidelogging/__init__.py
+│ │ +-rw-r--r--   0        0        0      165 2023-03-11 12:29:46.925809 vermils-0.3.2/vermils/io/__init__.py
+│ │ +-rw-r--r--   0        0        0      187 2022-11-19 15:12:39.619881 vermils-0.3.2/vermils/io/aio/__init__.py
+│ │ +-rw-r--r--   0        0        0       36 2023-03-21 13:57:43.165843 vermils-0.3.2/vermils/io/aio/atomic.py
+│ │ +-rw-r--r--   0        0        0      526 2022-11-19 13:16:07.310489 vermils-0.3.2/vermils/io/aio/os.py
+│ │ +-rw-r--r--   0        0        0      530 2022-11-19 15:12:33.188077 vermils-0.3.2/vermils/io/aio/path.py
+│ │ +-rw-r--r--   0        0        0      564 2022-11-19 15:12:29.231677 vermils-0.3.2/vermils/io/aio/tempfile.py
+│ │ +-rw-r--r--   0        0        0     4193 2023-03-11 02:37:01.818269 vermils-0.3.2/vermils/io/aio/wrappers.py
+│ │ +-rw-r--r--   0        0        0       79 2023-03-21 13:56:42.877399 vermils-0.3.2/vermils/io/atomic.py
+│ │ +-rw-r--r--   0        0        0      753 2022-11-19 07:36:35.873791 vermils-0.3.2/vermils/io/misc.py
+│ │ +-rw-r--r--   0        0        0      120 2022-11-19 15:12:01.815868 vermils-0.3.2/vermils/io/puller/__init__.py
+│ │ +-rw-r--r--   0        0        0     7389 2022-11-21 11:26:58.242720 vermils-0.3.2/vermils/io/puller/modifier.py
+│ │ +-rw-r--r--   0        0        0    16614 2023-03-28 18:00:26.760453 vermils-0.3.2/vermils/io/puller/pullers.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 07:00:14.505466 vermils-0.3.2/vermils/py.typed
+│ │ +-rw-r--r--   0        0        0      187 2023-04-03 12:45:21.373300 vermils-0.3.2/vermils/react/__init__.py
+│ │ +-rw-r--r--   0        0        0     8051 2023-03-28 18:00:26.765410 vermils-0.3.2/vermils/react/actionchain.py
+│ │ +-rw-r--r--   0        0        0     3426 2023-03-28 18:00:26.767251 vermils-0.3.2/vermils/react/eventhook.py
+│ │ +-rw-r--r--   0        0        0      176 2022-11-17 11:06:38.303463 vermils-0.3.2/vermils/tensorflow/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 11:05:46.699753 vermils-0.3.2/vermils/tensorflow/callbacks/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 11:04:02.664554 vermils-0.3.2/vermils/tensorflow/inspect/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 11:04:08.451719 vermils-0.3.2/vermils/tensorflow/layers/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 11:06:00.011160 vermils-0.3.2/vermils/tensorflow/metrics/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2022-11-17 11:04:11.042462 vermils-0.3.2/vermils/tensorflow/models/__init__.py
+│ │ +-rw-r--r--   0        0        0     5287 1970-01-01 00:00:00.000000 vermils-0.3.2/PKG-INFO
+│ │   --- vermils-0.3.1/LICENSE
+│ ├── +++ vermils-0.3.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/README.md
+│ ├── +++ vermils-0.3.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/pyproject.toml
+│ ├── +++ vermils-0.3.2/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "vermils"
+│ │ -version = "0.3.1"
+│ │ +version = "0.3.2"
+│ │  description = ""
+│ │  authors = ["VermiIIi0n <dungeon.behind0t@icloud.com>"]
+│ │  readme = "README.md"
+│ │  packages = [{ include = "vermils" }]
+│ │  license = "MIT"
+│ │  homepage = "https://github.com/VermiIIi0n/VermilsMagicPocket"
+│ │   --- vermils-0.3.1/vermils/asynctools/asinkrunner.py
+│ ├── +++ vermils-0.3.2/vermils/asynctools/asinkrunner.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/asynctools/tools.py
+│ ├── +++ vermils-0.3.2/vermils/asynctools/tools.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/collections/fridge.py
+│ ├── +++ vermils-0.3.2/vermils/collections/fridge.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/collections/objdict.py
+│ ├── +++ vermils-0.3.2/vermils/collections/objdict.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/collections/strchain.py
+│ ├── +++ vermils-0.3.2/vermils/collections/strchain.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/gadgets/misc.py
+│ ├── +++ vermils-0.3.2/vermils/gadgets/misc.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -91,15 +91,16 @@
+│ │                  module_path: str | Path | None = None):
+│ │      """
+│ │      ### `load_module()`
+│ │      Load a module from a path.
+│ │      """
+│ │      if module_name in sys.modules:
+│ │          return sys.modules[module_name]
+│ │ -    if module_path:
+│ │ +    if module_path is not None:
+│ │ +        module_path = Path(module_path)
+│ │          module_path = module_path.resolve()
+│ │          if module_path not in sys.path:
+│ │              sys.path.append(str(module_path))
+│ │      module = importlib.import_module(module_name)
+│ │      return module
+│ │  
+│ │  
+│ │ @@ -139,15 +140,15 @@
+│ │      Default to the main file.
+│ │  
+│ │      >>> relative_to("foo/bar", "dir/baz") == Path("dir/foo/bar")
+│ │  
+│ │      >>> relative_to("../", "foo/bar") == Path("foo/")
+│ │      """
+│ │      anchor = anchor or getattr(sys.modules["__main__"], "__file__", '.')
+│ │ -    anchor = anchor if isinstance(anchor, Path) else Path(cast(str, anchor))
+│ │ +    anchor = anchor if isinstance(anchor, Path) else Path(anchor or '.')
+│ │      path = path if isinstance(path, Path) else Path(path)
+│ │      if path.is_absolute():
+│ │          return path
+│ │      return anchor.parent / path
+│ │  
+│ │  
+│ │  def version_cmp(v1: str, v2: str) -> int:
+│ │   --- vermils-0.3.1/vermils/gadgets/monologger.py
+│ ├── +++ vermils-0.3.2/vermils/gadgets/monologger.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/gadgets/sidelogging/__init__.py
+│ ├── +++ vermils-0.3.2/vermils/gadgets/sidelogging/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/aio/os.py
+│ ├── +++ vermils-0.3.2/vermils/io/aio/os.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/aio/path.py
+│ ├── +++ vermils-0.3.2/vermils/io/aio/path.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/aio/tempfile.py
+│ ├── +++ vermils-0.3.2/vermils/io/aio/tempfile.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/aio/wrappers.py
+│ ├── +++ vermils-0.3.2/vermils/io/aio/wrappers.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/misc.py
+│ ├── +++ vermils-0.3.2/vermils/io/misc.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/puller/modifier.py
+│ ├── +++ vermils-0.3.2/vermils/io/puller/modifier.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/io/puller/pullers.py
+│ ├── +++ vermils-0.3.2/vermils/io/puller/pullers.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/react/actionchain.py
+│ ├── +++ vermils-0.3.2/vermils/react/actionchain.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/vermils/react/eventhook.py
+│ ├── +++ vermils-0.3.2/vermils/react/eventhook.py
+│ │┄ Files identical despite different names
+│ │   --- vermils-0.3.1/PKG-INFO
+│ ├── +++ vermils-0.3.2/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: vermils
+│ │ -Version: 0.3.1
+│ │ +Version: 0.3.2
+│ │  Summary: 
+│ │  Home-page: https://github.com/VermiIIi0n/VermilsMagicPocket
+│ │  License: MIT
+│ │  Keywords: utilities
+│ │  Author: VermiIIi0n
+│ │  Author-email: dungeon.behind0t@icloud.com
+│ │  Requires-Python: >=3.10,<4.0
