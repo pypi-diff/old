@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/rubrical-0.1.1.tar.gz tmp/rubrical-0.1.2.tar.gz --html versions/r/rubrical/0.1.1-0.1.2/index.html --text versions/r/rubrical/0.1.1-0.1.2/diff.txt --markdown versions/r/rubrical/0.1.1-0.1.2/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.48 KB</span></div>
+  <div><span class="source">tmp/rubrical-0.1.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/rubrical-0.1.2.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">184 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;rubrical-0.1.<del>1</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;rubrical-0.1.<ins>2</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.25 KB</span></div>
+    <div><span class="source">rubrical-0.1.1.tar</span> vs.</div>
+    <div id="rubrical--.-.-.tar"><span class="source">rubrical-0.1.2.tar</span>
+      <a class="anchor" href="#rubrical--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.08 KB</span></div>
+      <div id="rubrical--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 23 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15976<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15976<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2543<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2543<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1866<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:5<del>9</del>.<del>1</del>6<del>9138</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/pyproject.toml</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1866<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:5<ins>8</ins>.<ins>7</ins>6<ins>0751</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>784<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/comparisons/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>784<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/comparisons/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1799<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/comparisons/semversion.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1799<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/comparisons/semversion.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>519<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/comparisons/string.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>519<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/comparisons/string.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>295<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/comparisons/utils.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>295<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/comparisons/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>504<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/enum.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>504<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/enum.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>58</del>3<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/main.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>62</ins>3<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/main.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/package_managers/__init__.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/package_managers/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1670<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/package_managers/base_package_manager.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1670<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/package_managers/base_package_manager.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1476<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/package_managers/jsonnet.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1476<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/package_managers/jsonnet.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1931<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/package_managers/python.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1931<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/package_managers/python.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>271<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/package_managers/utilities/git.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>271<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/package_managers/utilities/git.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2352<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/reporters/gh.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2352<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/reporters/gh.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1476<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/reporters/terminal.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1476<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/reporters/terminal.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4057<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>225221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/rubrical.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4057<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/rubrical.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>229221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/schemas/configuration.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>467<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/schemas/configuration.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>229221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/schemas/package.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>251<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/schemas/package.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>235<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>229221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/schemas/results.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>235<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/schemas/results.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>633<span class="dp">·</span>2023-04-0<del>1</del><span class="dp">·</span>0<del>7</del>:<del>44</del>:3<del>4</del>.<del>229221</del><span class="dp">·</span>rubrical-0.1.<del>1</del>/rubrical/utilities/console.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>633<span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span>0<ins>9</ins>:<ins>35</ins>:3<ins>2</ins>.<ins>148463</ins><span class="dp">·</span>rubrical-0.1.<ins>2</ins>/rubrical/utilities/console.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3514<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>rubrical-0.1.<del>1</del>/PKG-INFO</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3514<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>rubrical-0.1.<ins>2</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">rubrical-0.1.1/LICENSE</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--LICENSE"><span class="source">rubrical-0.1.2/LICENSE</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">rubrical-0.1.1/README.md</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--README.md"><span class="source">rubrical-0.1.2/README.md</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">540 B</span></div>
+      <div><span class="source">rubrical-0.1.1/pyproject.toml</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--pyproject.toml"><span class="source">rubrical-0.1.2/pyproject.toml</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 25, 15 lines modified</td><td colspan="2">Offset 25, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">[tool.isort]</td><td class="diffline">25 </td><td class="diffpresent">[tool.isort]</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">profile<span class="dp">·</span>=<span class="dp">·</span>&quot;black&quot;</td><td class="diffline">26 </td><td class="diffpresent">profile<span class="dp">·</span>=<span class="dp">·</span>&quot;black&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">[tool.setuptools_scm]</td><td class="diffline">27 </td><td class="diffpresent">[tool.setuptools_scm]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">28 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;rubrical&quot;</td><td class="diffline">29 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;rubrical&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<del>1</del>&quot;</td><td class="diffline">30 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.1.<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!&quot;</td><td class="diffline">31 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Ivan<span class="dp">·</span>Lee<span class="dp">·</span>&lt;ivanklee86@gmail.com&gt;&quot;]</td><td class="diffline">32 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Ivan<span class="dp">·</span>Lee<span class="dp">·</span>&lt;ivanklee86@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MPL-2.0&quot;</td><td class="diffline">33 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;MPL-2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/ivanklee86/rubrical&quot;</td><td class="diffline">34 </td><td class="diffpresent">homepage<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/ivanklee86/rubrical&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/ivanklee86/rubrical&quot;</td><td class="diffline">35 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/ivanklee86/rubrical&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">36 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">classifiers=[</td><td class="diffline">37 </td><td class="diffpresent">classifiers=[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/comparisons/__init__.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-__init__.py"><span class="source">rubrical-0.1.2/rubrical/comparisons/__init__.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/comparisons/semversion.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-semversion.py"><span class="source">rubrical-0.1.2/rubrical/comparisons/semversion.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-semversion.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/comparisons/string.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-string.py"><span class="source">rubrical-0.1.2/rubrical/comparisons/string.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-comparisons-string.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">731 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/main.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-main.py"><span class="source">rubrical-0.1.2/rubrical/main.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-main.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 28, 15 lines modified</td><td colspan="2">Offset 28, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;Github<span class="dp">·</span>access<span class="dp">·</span>token<span class="dp">·</span>for<span class="dp">·</span>reporting.<span class="dp">·</span><span class="dp">·</span>Presence<span class="dp">·</span>will<span class="dp">·</span>enable<span class="dp">·</span>Github<span class="dp">·</span>reporting.&quot;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;Github<span class="dp">·</span>access<span class="dp">·</span>token<span class="dp">·</span>for<span class="dp">·</span>reporting.<span class="dp">·</span><span class="dp">·</span>Presence<span class="dp">·</span>will<span class="dp">·</span>enable<span class="dp">·</span>Github<span class="dp">·</span>reporting.&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>gh_custom_url:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>typer.Option(</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>gh_custom_url:<span class="dp">·</span>str<span class="dp">·</span>=<span class="dp">·</span>typer.Option(</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;,</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>envvar=&quot;RUBRICAL_GH_CUSTOM_URL&quot;,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>envvar=&quot;RUBRICAL_GH_CUSTOM_URL&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;Github<span class="dp">·</span>Enterprise<span class="dp">·</span>custom<span class="dp">·</span>url.<span class="dp">·</span>e.g.<span class="dp">·</span>https://github.custom.dev&quot;,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>help=&quot;Github<span class="dp">·</span>Enterprise<span class="dp">·</span>custom<span class="dp">·</span>url.<span class="dp">·</span>e.g.<span class="dp">·</span>https://github.custom.dev&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>debug:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>typer.Option(<del>False,<span class="dp">·</span>help=&quot;Enable<span class="dp">·</span>debug<span class="dp">·</span>messages&quot;),</del></td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>debug:<span class="dp">·</span>bool<span class="dp">·</span>=<span class="dp">·</span>typer.Option(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>False,<span class="dp">·</span>envvar=&quot;RUBGRICAL_DEBUG&quot;,<span class="dp">·</span>help=&quot;Enable<span class="dp">·</span>debug<span class="dp">·</span>messages&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>),</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">):</td><td class="diffline">38 </td><td class="diffpresent">):</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>console.print_header(&quot;Rubrical<span class="dp">·</span>starting!&quot;,<span class="dp">·</span>&quot;⚙️<span class="dp">·</span>&quot;)</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>console.print_header(&quot;Rubrical<span class="dp">·</span>starting!&quot;,<span class="dp">·</span>&quot;⚙️<span class="dp">·</span>&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/package_managers/base_package_manager.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-base_package_manager.py"><span class="source">rubrical-0.1.2/rubrical/package_managers/base_package_manager.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-base_package_manager.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/package_managers/jsonnet.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-jsonnet.py"><span class="source">rubrical-0.1.2/rubrical/package_managers/jsonnet.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-jsonnet.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/package_managers/python.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-python.py"><span class="source">rubrical-0.1.2/rubrical/package_managers/python.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-package_managers-python.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/reporters/gh.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-reporters-gh.py"><span class="source">rubrical-0.1.2/rubrical/reporters/gh.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-reporters-gh.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/reporters/terminal.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-reporters-terminal.py"><span class="source">rubrical-0.1.2/rubrical/reporters/terminal.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-reporters-terminal.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/rubrical.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-rubrical.py"><span class="source">rubrical-0.1.2/rubrical/rubrical.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-rubrical.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">rubrical-0.1.1/rubrical/utilities/console.py</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--rubrical-utilities-console.py"><span class="source">rubrical-0.1.2/rubrical/utilities/console.py</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--rubrical-utilities-console.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">447 B</span></div>
+      <div><span class="source">rubrical-0.1.1/PKG-INFO</span> vs.</div>
+      <div id="rubrical--.-.-.tar---rubrical--.-.--PKG-INFO"><span class="source">rubrical-0.1.2/PKG-INFO</span>
+        <a class="anchor" href="#rubrical--.-.-.tar---rubrical--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>rubrical</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>rubrical</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.1.<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>A<span class="dp">·</span>CLI<span class="dp">·</span>to<span class="dp">·</span>encourage<span class="dp">·</span>(😅)<span class="dp">·</span>people<span class="dp">·</span>to<span class="dp">·</span>update<span class="dp">·</span>their<span class="dp">·</span>dependencies!</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ivanklee86/rubrical</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/ivanklee86/rubrical</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MPL-2.0</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>MPL-2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Ivan<span class="dp">·</span>Lee</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Ivan<span class="dp">·</span>Lee</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ivanklee86@gmail.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>ivanklee86@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.11,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.11,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

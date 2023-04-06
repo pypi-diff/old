@@ -1,0 +1,1721 @@
+--- tmp/cloudshell-cp-aws-3.3.12.zip
++++ tmp/cloudshell-cp-aws-3.4.0.zip
+├── zipinfo {}
+│ @@ -1,199 +1,199 @@
+│ -Zip file size: 160953 bytes, number of entries: 197
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/
+│ --rw-r--r--  2.0 unx       38 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/setup.cfg
+│ --rw-r--r--  2.0 unx        7 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/version.txt
+│ --rw-r--r--  2.0 unx      579 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/README.md
+│ --rw-r--r--  2.0 unx      232 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/requirements.txt
+│ --rw-r--r--  2.0 unx       46 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/MANIFEST.in
+│ --rw-r--r--  2.0 unx     1023 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tox.ini
+│ --rw-r--r--  2.0 unx     1478 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/setup.py
+│ --rw-r--r--  2.0 unx       98 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/dev_requirements.txt
+│ --rw-r--r--  2.0 unx       43 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/test_requirements.txt
+│ --rw-r--r--  2.0 unx      634 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/PKG-INFO
+│ --rw-r--r--  2.0 unx       17 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/top_level.txt
+│ --rw-r--r--  2.0 unx      232 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/requires.txt
+│ --rw-r--r--  2.0 unx        1 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/dependency_links.txt
+│ --rw-r--r--  2.0 unx     7960 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/SOURCES.txt
+│ --rw-r--r--  2.0 unx      634 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/PKG-INFO
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/
+│ --rw-r--r--  2.0 unx       76 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/
+│ --rw-r--r--  2.0 unx       76 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/
+│ --rw-r--r--  2.0 unx    31568 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/aws_shell.py
+│ --rw-r--r--  2.0 unx       76 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/__init__.py
+│ --rw-r--r--  2.0 unx     1193 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_api.py
+│ --rw-r--r--  2.0 unx      550 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/app_security_groups_model.py
+│ --rw-r--r--  2.0 unx      135 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/ami_credentials.py
+│ --rw-r--r--  2.0 unx      159 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/vm_details.py
+│ --rw-r--r--  2.0 unx     4101 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+│ --rw-r--r--  2.0 unx      401 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/reservation_model.py
+│ --rw-r--r--  2.0 unx      707 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/ami_deployment_model.py
+│ --rw-r--r--  2.0 unx      639 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/port_data.py
+│ --rw-r--r--  2.0 unx      857 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/network_actions_models.py
+│ --rw-r--r--  2.0 unx     1220 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+│ --rw-r--r--  2.0 unx     4143 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/__init__.py
+│ --rw-r--r--  2.0 unx      553 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+│ --rw-r--r--  2.0 unx     7348 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+│ --rw-r--r--  2.0 unx     4965 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/__init__.py
+│ --rw-r--r--  2.0 unx     1308 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_api.py
+│ --rw-r--r--  2.0 unx      683 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_resource_model.py
+│ --rw-r--r--  2.0 unx     2770 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_shell.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/__init__.py
+│ --rw-r--r--  2.0 unx      825 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+│ --rw-r--r--  2.0 unx    37380 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+│ --rw-r--r--  2.0 unx     1287 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+│ --rw-r--r--  2.0 unx     3380 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+│ --rw-r--r--  2.0 unx     2308 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+│ --rw-r--r--  2.0 unx     6840 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/__init__.py
+│ --rw-r--r--  2.0 unx     7951 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+│ --rw-r--r--  2.0 unx    11536 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+│ --rw-r--r--  2.0 unx     1591 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+│ --rw-r--r--  2.0 unx    20540 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/__init__.py
+│ --rw-r--r--  2.0 unx     6426 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+│ --rw-r--r--  2.0 unx     4324 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+│ --rw-r--r--  2.0 unx     3783 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+│ --rw-r--r--  2.0 unx     8753 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+│ --rw-r--r--  2.0 unx     1225 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+│ --rw-r--r--  2.0 unx      432 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/__init__.py
+│ --rw-r--r--  2.0 unx     3784 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/autoload_operation.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/__init__.py
+│ --rw-r--r--  2.0 unx     1622 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/password.py
+│ --rw-r--r--  2.0 unx     1121 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/vpc.py
+│ --rw-r--r--  2.0 unx     1359 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/ami.py
+│ --rw-r--r--  2.0 unx     1362 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/subnet.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/__init__.py
+│ --rw-r--r--  2.0 unx     5841 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/instance.py
+│ --rw-r--r--  2.0 unx     2800 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/device_index.py
+│ --rw-r--r--  2.0 unx    15604 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+│ --rw-r--r--  2.0 unx    15454 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+│ --rw-r--r--  2.0 unx    11556 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/__init__.py
+│ --rw-r--r--  2.0 unx     7225 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+│ --rw-r--r--  2.0 unx     2569 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+│ --rw-r--r--  2.0 unx     1000 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+│ --rw-r--r--  2.0 unx      577 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+│ --rw-r--r--  2.0 unx      692 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/__init__.py
+│ --rw-r--r--  2.0 unx     5341 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/__init__.py
+│ --rw-r--r--  2.0 unx    12126 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/vpc.py
+│ --rw-r--r--  2.0 unx      818 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/ebs.py
+│ --rw-r--r--  2.0 unx    11020 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+│ --rw-r--r--  2.0 unx     2635 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/keypair.py
+│ --rw-r--r--  2.0 unx     3395 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+│ --rw-r--r--  2.0 unx     1851 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/subnet.py
+│ --rw-r--r--  2.0 unx      434 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/transit_gateway.py
+│ --rw-r--r--  2.0 unx     1868 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+│ --rw-r--r--  2.0 unx    14324 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/security_group.py
+│ --rw-r--r--  2.0 unx     5441 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/__init__.py
+│ --rw-r--r--  2.0 unx     4829 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance.py
+│ --rw-r--r--  2.0 unx     2207 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/bucket.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/__init__.py
+│ --rw-r--r--  2.0 unx     2515 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+│ --rw-r--r--  2.0 unx     3990 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/__init__.py
+│ --rw-r--r--  2.0 unx     5032 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/vm_details_provider.py
+│ --rw-r--r--  2.0 unx      100 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/list_helper.py
+│ --rw-r--r--  2.0 unx     1007 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/cancellation_service.py
+│ --rw-r--r--  2.0 unx      891 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+│ --rw-r--r--  2.0 unx      303 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/exceptions.py
+│ --rw-r--r--  2.0 unx      681 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/aws_session_manager.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/__init__.py
+│ --rw-r--r--  2.0 unx      940 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/converters.py
+│ --rw-r--r--  2.0 unx      353 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/retry_helper.py
+│ --rw-r--r--  2.0 unx       43 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/exceptions.py
+│ --rw-r--r--  2.0 unx      458 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/cached_property.py
+│ --rw-r--r--  2.0 unx     1920 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/deploy_data_holder.py
+│ --rw-r--r--  2.0 unx       97 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_connectivity/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/handlers/
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/
+│ --rw-r--r--  2.0 unx     1033 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/base.py
+│ --rw-r--r--  2.0 unx      698 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/conftest.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/__init__.py
+│ --rw-r--r--  2.0 unx    12996 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_aws_shell.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/__init__.py
+│ --rw-r--r--  2.0 unx     3385 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+│ --rw-r--r--  2.0 unx     1206 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_access_key_operation.py
+│ --rw-r--r--  2.0 unx     4591 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/__init__.py
+│ -drwxr-xr-x  2.0 unx        0 b- stor 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/__init__.py
+│ --rw-r--r--  2.0 unx     2443 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_power_operation.py
+│ --rw-r--r--  2.0 unx     3225 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_delete_operation.py
+│ --rw-r--r--  2.0 unx     3235 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+│ --rw-r--r--  2.0 unx    31795 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_deploy_operation.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/__init__.py
+│ --rw-r--r--  2.0 unx     3090 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_network_interface_service.py
+│ --rw-r--r--  2.0 unx     4571 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_service.py
+│ --rw-r--r--  2.0 unx      997 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_port_group_attribute_parser.py
+│ --rw-r--r--  2.0 unx     2844 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_bucket.py
+│ --rw-r--r--  2.0 unx      770 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_waiter.py
+│ --rw-r--r--  2.0 unx     7632 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc.py
+│ --rw-r--r--  2.0 unx      727 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vm_custom_params_extractor.py
+│ --rw-r--r--  2.0 unx     6697 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_waiter.py
+│ --rw-r--r--  2.0 unx     7070 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_security_groups.py
+│ --rw-r--r--  2.0 unx    15674 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_model_parser.py
+│ --rw-r--r--  2.0 unx     3385 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_creds_service.py
+│ --rw-r--r--  2.0 unx     9626 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_elastic_ip.py
+│ --rw-r--r--  2.0 unx     1134 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_password_waiter.py
+│ --rw-r--r--  2.0 unx     1183 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_session_provider.py
+│ --rw-r--r--  2.0 unx     2960 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_key_pair.py
+│ --rw-r--r--  2.0 unx     4162 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_device_index_strategy.py
+│ --rw-r--r--  2.0 unx      794 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet_waiter.py
+│ --rw-r--r--  2.0 unx     2898 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet.py
+│ --rw-r--r--  2.0 unx      767 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc_waiter.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_domain_services/__init__.py
+│ --rw-r--r--  2.0 unx     2735 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_cleanup_connectivity.py
+│ --rw-r--r--  2.0 unx     8746 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_prepare_connectivity.py
+│ --rw-r--r--  2.0 unx     6300 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_create_traffic_mirroring.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_connectivity/__init__.py
+│ --rw-r--r--  2.0 unx     1958 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/handlers/test_route_table_handler.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/handlers/__init__.py
+│ --rw-r--r--  2.0 unx     5050 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/test_vm_details_provider.py
+│ --rw-r--r--  2.0 unx     1220 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/test_converters.py
+│ --rw-r--r--  2.0 unx      482 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/test_retry_helper.py
+│ --rw-r--r--  2.0 unx     2935 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/test_get_vm_details.py
+│ --rw-r--r--  2.0 unx     1197 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/test_cancellation_service.py
+│ --rw-r--r--  2.0 unx        0 b- defN 22-Oct-30 16:50 cloudshell-cp-aws-3.3.12/tests/test_common/__init__.py
+│ -197 files, 526176 bytes uncompressed, 118195 bytes compressed:  77.5%
+│ +Zip file size: 160698 bytes, number of entries: 197
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/
+│ +-rw-r--r--  2.0 unx      633 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/PKG-INFO
+│ +-rw-r--r--  2.0 unx     1019 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tox.ini
+│ +-rw-r--r--  2.0 unx     1478 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/setup.py
+│ +-rw-r--r--  2.0 unx       98 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/dev_requirements.txt
+│ +-rw-r--r--  2.0 unx       38 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/setup.cfg
+│ +-rw-r--r--  2.0 unx      579 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/README.md
+│ +-rw-r--r--  2.0 unx        6 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/version.txt
+│ +-rw-r--r--  2.0 unx       46 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/MANIFEST.in
+│ +-rw-r--r--  2.0 unx      232 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/requirements.txt
+│ +-rw-r--r--  2.0 unx       43 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/test_requirements.txt
+│ +-rw-r--r--  2.0 unx      232 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/requires.txt
+│ +-rw-r--r--  2.0 unx      633 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/PKG-INFO
+│ +-rw-r--r--  2.0 unx        1 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/dependency_links.txt
+│ +-rw-r--r--  2.0 unx       17 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/top_level.txt
+│ +-rw-r--r--  2.0 unx     7960 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/SOURCES.txt
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/
+│ +-rw-r--r--  2.0 unx       76 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/__init__.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/
+│ +-rw-r--r--  2.0 unx       76 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/__init__.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/
+│ +-rw-r--r--  2.0 unx       76 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/__init__.py
+│ +-rw-r--r--  2.0 unx    31568 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/aws_shell.py
+│ +-rw-r--r--  2.0 unx     4101 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+│ +-rw-r--r--  2.0 unx      639 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/port_data.py
+│ +-rw-r--r--  2.0 unx      135 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/ami_credentials.py
+│ +-rw-r--r--  2.0 unx     1220 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/__init__.py
+│ +-rw-r--r--  2.0 unx      159 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/vm_details.py
+│ +-rw-r--r--  2.0 unx     1193 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_api.py
+│ +-rw-r--r--  2.0 unx      857 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/network_actions_models.py
+│ +-rw-r--r--  2.0 unx      707 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/ami_deployment_model.py
+│ +-rw-r--r--  2.0 unx     4143 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+│ +-rw-r--r--  2.0 unx      550 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/app_security_groups_model.py
+│ +-rw-r--r--  2.0 unx      401 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/reservation_model.py
+│ +-rw-r--r--  2.0 unx       43 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/exceptions.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/__init__.py
+│ +-rw-r--r--  2.0 unx      353 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/retry_helper.py
+│ +-rw-r--r--  2.0 unx      458 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/cached_property.py
+│ +-rw-r--r--  2.0 unx      940 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/converters.py
+│ +-rw-r--r--  2.0 unx     1920 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/deploy_data_holder.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/__init__.py
+│ +-rw-r--r--  2.0 unx      683 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_resource_model.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/__init__.py
+│ +-rw-r--r--  2.0 unx     1308 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_api.py
+│ +-rw-r--r--  2.0 unx     2770 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_shell.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/__init__.py
+│ +-rw-r--r--  2.0 unx     3380 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+│ +-rw-r--r--  2.0 unx     2308 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+│ +-rw-r--r--  2.0 unx    37924 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+│ +-rw-r--r--  2.0 unx     6840 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+│ +-rw-r--r--  2.0 unx     1287 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/__init__.py
+│ +-rw-r--r--  2.0 unx      825 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+│ +-rw-r--r--  2.0 unx     1007 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/cancellation_service.py
+│ +-rw-r--r--  2.0 unx      100 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/list_helper.py
+│ +-rw-r--r--  2.0 unx      303 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/exceptions.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/__init__.py
+│ +-rw-r--r--  2.0 unx      681 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/aws_session_manager.py
+│ +-rw-r--r--  2.0 unx      891 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+│ +-rw-r--r--  2.0 unx     5032 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/vm_details_provider.py
+│ +-rw-r--r--  2.0 unx     3784 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/autoload_operation.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/__init__.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/__init__.py
+│ +-rw-r--r--  2.0 unx    15604 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+│ +-rw-r--r--  2.0 unx    15454 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/__init__.py
+│ +-rw-r--r--  2.0 unx     2800 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/device_index.py
+│ +-rw-r--r--  2.0 unx    11556 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/__init__.py
+│ +-rw-r--r--  2.0 unx     5341 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+│ +-rw-r--r--  2.0 unx     1000 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/__init__.py
+│ +-rw-r--r--  2.0 unx     7225 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+│ +-rw-r--r--  2.0 unx      577 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+│ +-rw-r--r--  2.0 unx     2569 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+│ +-rw-r--r--  2.0 unx      692 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+│ +-rw-r--r--  2.0 unx     2207 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/bucket.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/__init__.py
+│ +-rw-r--r--  2.0 unx     5841 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/instance.py
+│ +-rw-r--r--  2.0 unx     1121 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/vpc.py
+│ +-rw-r--r--  2.0 unx     1622 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/password.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/__init__.py
+│ +-rw-r--r--  2.0 unx     1361 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/subnet.py
+│ +-rw-r--r--  2.0 unx     1358 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/ami.py
+│ +-rw-r--r--  2.0 unx     3395 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+│ +-rw-r--r--  2.0 unx     5441 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+│ +-rw-r--r--  2.0 unx     4829 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance.py
+│ +-rw-r--r--  2.0 unx     1868 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+│ +-rw-r--r--  2.0 unx    12126 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/vpc.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/__init__.py
+│ +-rw-r--r--  2.0 unx      434 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/transit_gateway.py
+│ +-rw-r--r--  2.0 unx    11020 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+│ +-rw-r--r--  2.0 unx     1851 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/subnet.py
+│ +-rw-r--r--  2.0 unx      818 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/ebs.py
+│ +-rw-r--r--  2.0 unx    14324 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/security_group.py
+│ +-rw-r--r--  2.0 unx     2635 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/keypair.py
+│ +-rw-r--r--  2.0 unx     3990 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+│ +-rw-r--r--  2.0 unx     2515 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/__init__.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/__init__.py
+│ +-rw-r--r--  2.0 unx    11536 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+│ +-rw-r--r--  2.0 unx    20540 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/__init__.py
+│ +-rw-r--r--  2.0 unx     1591 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+│ +-rw-r--r--  2.0 unx     7951 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/__init__.py
+│ +-rw-r--r--  2.0 unx      553 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+│ +-rw-r--r--  2.0 unx     4965 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+│ +-rw-r--r--  2.0 unx     7348 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+│ +-rw-r--r--  2.0 unx       97 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/__init__.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/__init__.py
+│ +-rw-r--r--  2.0 unx     8753 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+│ +-rw-r--r--  2.0 unx     3783 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+│ +-rw-r--r--  2.0 unx     4324 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+│ +-rw-r--r--  2.0 unx     1225 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+│ +-rw-r--r--  2.0 unx      432 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/__init__.py
+│ +-rw-r--r--  2.0 unx     6426 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_connectivity/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/handlers/
+│ +-rw-r--r--  2.0 unx      732 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/conftest.py
+│ +-rw-r--r--  2.0 unx    12996 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_aws_shell.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/__init__.py
+│ +-rw-r--r--  2.0 unx     1033 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/base.py
+│ +-rw-r--r--  2.0 unx     8746 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_prepare_connectivity.py
+│ +-rw-r--r--  2.0 unx     2734 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_cleanup_connectivity.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_connectivity/__init__.py
+│ +-rw-r--r--  2.0 unx     6299 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_create_traffic_mirroring.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/__init__.py
+│ +-rw-r--r--  2.0 unx     2443 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_power_operation.py
+│ +-rw-r--r--  2.0 unx    31795 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_deploy_operation.py
+│ +-rw-r--r--  2.0 unx     3225 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_delete_operation.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/__init__.py
+│ +-rw-r--r--  2.0 unx     3235 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+│ +drwxr-xr-x  2.0 unx        0 b- stor 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/__init__.py
+│ +-rw-r--r--  2.0 unx     1206 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_access_key_operation.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/__init__.py
+│ +-rw-r--r--  2.0 unx     3423 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+│ +-rw-r--r--  2.0 unx     4591 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+│ +-rw-r--r--  2.0 unx     2960 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_key_pair.py
+│ +-rw-r--r--  2.0 unx     7632 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc.py
+│ +-rw-r--r--  2.0 unx     9626 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_elastic_ip.py
+│ +-rw-r--r--  2.0 unx      727 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vm_custom_params_extractor.py
+│ +-rw-r--r--  2.0 unx      997 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_port_group_attribute_parser.py
+│ +-rw-r--r--  2.0 unx     3090 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_network_interface_service.py
+│ +-rw-r--r--  2.0 unx     1182 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_session_provider.py
+│ +-rw-r--r--  2.0 unx     2897 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/__init__.py
+│ +-rw-r--r--  2.0 unx      770 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_waiter.py
+│ +-rw-r--r--  2.0 unx    15674 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_model_parser.py
+│ +-rw-r--r--  2.0 unx     7070 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_security_groups.py
+│ +-rw-r--r--  2.0 unx     6697 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_waiter.py
+│ +-rw-r--r--  2.0 unx     3385 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_creds_service.py
+│ +-rw-r--r--  2.0 unx     4162 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_device_index_strategy.py
+│ +-rw-r--r--  2.0 unx      767 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc_waiter.py
+│ +-rw-r--r--  2.0 unx     4571 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_service.py
+│ +-rw-r--r--  2.0 unx      794 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet_waiter.py
+│ +-rw-r--r--  2.0 unx     2844 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_bucket.py
+│ +-rw-r--r--  2.0 unx     1134 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_password_waiter.py
+│ +-rw-r--r--  2.0 unx     1197 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/test_cancellation_service.py
+│ +-rw-r--r--  2.0 unx     2935 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/test_get_vm_details.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/__init__.py
+│ +-rw-r--r--  2.0 unx     1220 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/test_converters.py
+│ +-rw-r--r--  2.0 unx     5050 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/test_vm_details_provider.py
+│ +-rw-r--r--  2.0 unx      482 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/test_common/test_retry_helper.py
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/handlers/__init__.py
+│ +-rw-r--r--  2.0 unx     1958 b- defN 23-Apr-06 09:33 cloudshell-cp-aws-3.4.0/tests/handlers/test_route_table_handler.py
+│ +197 files, 526779 bytes uncompressed, 118334 bytes compressed:  77.5%
+├── zipnote {}
+│ @@ -1,592 +1,592 @@
+│ -Filename: cloudshell-cp-aws-3.3.12/
+│ +Filename: cloudshell-cp-aws-3.4.0/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/setup.cfg
+│ +Filename: cloudshell-cp-aws-3.4.0/PKG-INFO
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/version.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/tox.ini
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/README.md
+│ +Filename: cloudshell-cp-aws-3.4.0/setup.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/requirements.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/dev_requirements.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/MANIFEST.in
+│ +Filename: cloudshell-cp-aws-3.4.0/setup.cfg
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tox.ini
+│ +Filename: cloudshell-cp-aws-3.4.0/README.md
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/setup.py
+│ +Filename: cloudshell-cp-aws-3.4.0/version.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/dev_requirements.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/MANIFEST.in
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/test_requirements.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/requirements.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/PKG-INFO
+│ +Filename: cloudshell-cp-aws-3.4.0/test_requirements.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/top_level.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/requires.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/requires.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/PKG-INFO
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/dependency_links.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/dependency_links.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/SOURCES.txt
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/PKG-INFO
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/SOURCES.txt
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/aws_shell.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/aws_shell.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_api.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/app_security_groups_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/port_data.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/ami_credentials.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/ami_credentials.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/vm_details.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/reservation_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/vm_details.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/ami_deployment_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_api.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/port_data.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/network_actions_models.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/network_actions_models.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/ami_deployment_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/app_security_groups_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/reservation_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/exceptions.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/retry_helper.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/cached_property.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/converters.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/deploy_data_holder.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_api.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_resource_model.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_resource_model.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_shell.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_api.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_shell.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/cancellation_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/list_helper.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/exceptions.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/aws_session_manager.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/vm_details_provider.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/autoload_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/autoload_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/device_index.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/password.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/vpc.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/ami.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/subnet.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/instance.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/bucket.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/device_index.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/instance.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/vpc.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/password.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/subnet.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/ami.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/vpc.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/vpc.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/transit_gateway.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/ebs.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/subnet.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/keypair.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/ebs.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/security_group.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/subnet.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/keypair.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/transit_gateway.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/security_group.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/bucket.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/vm_details_provider.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/list_helper.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/cancellation_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/exceptions.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/aws_session_manager.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/converters.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/retry_helper.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/exceptions.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/cached_property.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/deploy_data_holder.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_connectivity/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_connectivity/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/handlers/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/handlers/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/base.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/conftest.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/conftest.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_aws_shell.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_aws_shell.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/base.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_prepare_connectivity.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_cleanup_connectivity.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_connectivity/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_access_key_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_create_traffic_mirroring.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_power_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_deploy_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_power_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_delete_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_delete_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_deploy_operation.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_network_interface_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_access_key_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_port_group_attribute_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_bucket.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_waiter.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_key_pair.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vm_custom_params_extractor.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_elastic_ip.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_waiter.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vm_custom_params_extractor.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_security_groups.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_port_group_attribute_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_model_parser.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_network_interface_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_creds_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_session_provider.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_elastic_ip.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_password_waiter.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_session_provider.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_waiter.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_key_pair.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_model_parser.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_device_index_strategy.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_security_groups.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet_waiter.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_waiter.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_creds_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc_waiter.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_device_index_strategy.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_domain_services/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc_waiter.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_cleanup_connectivity.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_prepare_connectivity.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet_waiter.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_create_traffic_mirroring.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_bucket.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_connectivity/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_password_waiter.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/handlers/test_route_table_handler.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/test_cancellation_service.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/handlers/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/test_get_vm_details.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/test_vm_details_provider.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/test_converters.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/test_converters.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/test_retry_helper.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/test_vm_details_provider.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/test_get_vm_details.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/test_common/test_retry_helper.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/test_cancellation_service.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/handlers/__init__.py
+│  Comment: 
+│  
+│ -Filename: cloudshell-cp-aws-3.3.12/tests/test_common/__init__.py
+│ +Filename: cloudshell-cp-aws-3.4.0/tests/handlers/test_route_table_handler.py
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- cloudshell-cp-aws-3.3.12/README.md
+├── +++ cloudshell-cp-aws-3.4.0/README.md
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tox.ini
+├── +++ cloudshell-cp-aws-3.4.0/tox.ini
+│┄ Files 13% similar despite different names
+│ @@ -1,14 +1,14 @@
+│  # tox (https://tox.readthedocs.io/) is a tool for running tests
+│  # in multiple virtualenvs. This configuration file will run the
+│  # test suite on all supported python versions. To use it, "pip install tox"
+│  # and then run "tox" from this directory.
+│  [tox]
+│  envlist =
+│ -    py{37,39,310}-{master,dev}
+│ +    py{37,39}-{master,dev}
+│      pre-commit
+│      build
+│  distshare = dist
+│  
+│  [testenv]
+│  skip_install:
+│      dev: true
+│   --- cloudshell-cp-aws-3.3.12/setup.py
+├── +++ cloudshell-cp-aws-3.4.0/setup.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/PKG-INFO
+├── +++ cloudshell-cp-aws-3.4.0/PKG-INFO
+│┄ Files 2% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: cloudshell-cp-aws
+│ -Version: 3.3.12
+│ +Version: 3.4.0
+│  Summary: A repository for projects providing out of the box capabilities within CloudShell to define AWS instances in CloudShell and leverage Amazon Cloud Computing capabilities to deploy and connect apps in CloudShell sandboxes.
+│  Home-page: http://www.qualisystems.com/
+│  Author: QualiSystems
+│  Author-email: info@qualisystems.com
+│  Requires-Python: ~=3.7
+│  
+│  A repository for projects providing out of the box capabilities within CloudShell to define AWS instances in CloudShell and leverage Amazon Cloud Computing capabilities to deploy and connect apps in CloudShell sandboxes.
+│   --- cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/SOURCES.txt
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/SOURCES.txt
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell_cp_aws.egg-info/PKG-INFO
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell_cp_aws.egg-info/PKG-INFO
+│┄ Files 2% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: cloudshell-cp-aws
+│ -Version: 3.3.12
+│ +Version: 3.4.0
+│  Summary: A repository for projects providing out of the box capabilities within CloudShell to define AWS instances in CloudShell and leverage Amazon Cloud Computing capabilities to deploy and connect apps in CloudShell sandboxes.
+│  Home-page: http://www.qualisystems.com/
+│  Author: QualiSystems
+│  Author-email: info@qualisystems.com
+│  Requires-Python: ~=3.7
+│  
+│  A repository for projects providing out of the box capabilities within CloudShell to define AWS instances in CloudShell and leverage Amazon Cloud Computing capabilities to deploy and connect apps in CloudShell sandboxes.
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/aws_shell.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/aws_shell.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_api.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_api.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/app_security_groups_model.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/app_security_groups_model.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/deploy_aws_ec2_ami_instance_resource_model.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/ami_deployment_model.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/ami_deployment_model.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/port_data.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/port_data.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/network_actions_models.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/network_actions_models.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/traffic_mirror_fulfillment.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/models/aws_ec2_cloud_provider_resource_model.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/vm_details_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/app_ports_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/deployed_app/operations/set_app_security_groups.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_api.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_api.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_resource_model.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_resource_model.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/context/aws_shell.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/context/aws_shell.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/access_key_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/deploy_operation.py
+│┄ Files 1% similar despite different names
+│ @@ -948,17 +948,31 @@
+│      def _get_custom_tags(self, custom_tags):
+│          res = {}
+│          if custom_tags:
+│              tags_list = custom_tags.split(",")
+│              res = {r.split(":")[0]: r.split(":")[1] for r in tags_list}
+│          return res
+│  
+│ -    def _get_user_data(self, user_data_url, user_data_run_parameters):
+│ -        data = (
+│ -            "#!/bin/bash\n"
+│ -            + "curl --retry 10 --max-time 5 --retry-max-time 180 {}  > cs.sh \n".format(
+│ -                user_data_url
+│ -            )
+│ -            + "chmod +x cs.sh \n"
+│ -            + f"./cs.sh {user_data_run_parameters}"
+│ -        )
+│ +    def _get_user_data(self, user_data_url: str, user_data_run_parameters: str) -> str:
+│ +        if user_data_url.endswith(".ps1"):
+│ +            data = self._get_windows_user_data(user_data_url, user_data_run_parameters)
+│ +        else:
+│ +            data = self._get_linux_user_data(user_data_url, user_data_run_parameters)
+│          return data
+│ +
+│ +    @staticmethod
+│ +    def _get_linux_user_data(url: str, params: str) -> str:
+│ +        return (
+│ +            f"#!/bin/bash\n"
+│ +            f"curl --retry 10 --max-time 5 --retry-max-time 180 {url}  > cs.sh\n"
+│ +            f"chmod +x cs.sh\n"
+│ +            f"./cs.sh {params}"
+│ +        )
+│ +
+│ +    @staticmethod
+│ +    def _get_windows_user_data(url: str, params: str) -> str:
+│ +        return (
+│ +            f"<powershell>\n"
+│ +            f"Invoke-WebRequest -Uri {url} -OutFile cs.ps1\n"
+│ +            f"Invoke-Expression -Command cs.ps1 {params}\n"
+│ +            f"</powershell>"
+│ +        )
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/power_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/delete_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/refresh_ip_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/ami_management/operations/snapshot_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/prepare.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirror_cleaner.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/cleanup.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/conncetivity/operations/traffic_mirroring_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/vpc_peering_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/tags_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/cidr_block_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_table_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/handlers/ec2/route_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/operations/autoload_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/operations/autoload_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/password.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/password.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/vpc.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/vpc.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/ami.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/ami.py
+│┄ Files 0% similar despite different names
+│ @@ -31,15 +31,14 @@
+│          if state not in self.INSTANCE_STATES:
+│              raise ValueError("Unsupported instance state")
+│  
+│          retry_helper.do_with_retry(lambda: subnet.reload())
+│  
+│          start_time = time.time()
+│          while subnet.state != state:
+│ -
+│              retry_helper.do_with_retry(lambda: subnet.reload())
+│  
+│              if time.time() - start_time >= self.timeout:
+│                  raise Exception(f"Timeout: Waiting for instance to be {state} from")
+│              time.sleep(self.delay)
+│  
+│          if load:
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/subnet.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/subnet.py
+│┄ Files 0% similar despite different names
+│ @@ -31,15 +31,14 @@
+│          if state not in self.INSTANCE_STATES:
+│              raise ValueError("Unsupported instance state")
+│  
+│          retry_helper.do_with_retry(lambda: subnet.reload())
+│  
+│          start_time = time.time()
+│          while subnet.state != state:
+│ -
+│              retry_helper.do_with_retry(lambda: subnet.reload())
+│  
+│              if time.time() - start_time >= self.timeout:
+│                  raise Exception(f"Timeout: Waiting for instance to be {state} from")
+│              time.sleep(self.delay)
+│  
+│          if load:
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/waiters/instance.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/waiters/instance.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/device_index.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/device_index.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_cloud_infra.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/prepare_subnets.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/strategy/cleanup.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/aws_model_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/port_group_attribute_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/security_group_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/command_results_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/parsers/custom_param_extractor.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/session_providers/aws_session_provider.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/vpc.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/vpc.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/ebs.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/ebs.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/mirroring.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/keypair.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/keypair.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/network_interface.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/subnet.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/subnet.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance_credentials.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/security_group.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/security_group.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/elastic_ip.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/ec2/instance.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/ec2/instance.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/s3/bucket.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/s3/bucket.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/cs_subnet_service.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/services/cloudshell/traffic_mirror_pool_services.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/vm_details_provider.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/vm_details_provider.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/cancellation_service.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/cancellation_service.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/CheckCancellationThread.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/domain/common/aws_session_manager.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/domain/common/aws_session_manager.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/converters.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/converters.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/cloudshell/cp/aws/common/deploy_data_holder.py
+├── +++ cloudshell-cp-aws-3.4.0/cloudshell/cp/aws/common/deploy_data_holder.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/base.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/base.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/conftest.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/conftest.py
+│┄ Files 10% similar despite different names
+│ @@ -21,9 +21,10 @@
+│          description="descr",
+│          owner_user="user",
+│          owner_email="email",
+│          reservation_id="rid",
+│          saved_sandbox_name="sandbox name",
+│          saved_sandbox_id="sandbox id",
+│          running_user="running user",
+│ +        cloud_info_access_key="",
+│      )
+│      return ReservationModel(context)
+│   --- cloudshell-cp-aws-3.3.12/tests/test_aws_shell.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_aws_shell.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_set_app_security_groups_operation.py
+│┄ Files 2% similar despite different names
+│ @@ -52,14 +52,15 @@
+│              description="",
+│              owner_user="",
+│              owner_email="",
+│              reservation_id="77bf1176-25d2-4dd0-ac58-05f8aee534a5",
+│              saved_sandbox_name="",
+│              saved_sandbox_id="",
+│              running_user="",
+│ +            cloud_info_access_key="",
+│          )
+│          reservation_model = ReservationModel(reservation_context)
+│          return reservation_model
+│  
+│      @staticmethod
+│      def _init_app_model():
+│          app_model = AppSecurityGroupModel()
+│   --- cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_access_key_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_access_key_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_deployed_app/test_operations/test_app_ports_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_power_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_power_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_delete_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_delete_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_refresh_ip_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_ami_management/test_operations/test_deploy_operation.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_ami_management/test_operations/test_deploy_operation.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_network_interface_service.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_network_interface_service.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_service.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_service.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_port_group_attribute_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_port_group_attribute_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_bucket.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_bucket.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_waiter.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_waiter.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vm_custom_params_extractor.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vm_custom_params_extractor.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_instance_waiter.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_instance_waiter.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_security_groups.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_security_groups.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_model_parser.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_model_parser.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_ami_creds_service.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_ami_creds_service.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_elastic_ip.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_elastic_ip.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_password_waiter.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_password_waiter.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_session_provider.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_session_provider.py
+│┄ Files 1% similar despite different names
+│ @@ -24,15 +24,14 @@
+│  
+│          self.aws_ec2_data_model = Mock()
+│          self.aws_ec2_data_model.aws_access_key_id = "access key"
+│          self.aws_ec2_data_model.aws_secret_access_key = "secret key"
+│          self.aws_ec2_data_model.region = "region"
+│  
+│      def test_get_clients(self):
+│ -
+│          aws_api = self.session_provider.get_clients(
+│              cloudshell_session=self.cloudshell_session,
+│              aws_ec2_data_model=self.aws_ec2_data_model,
+│          )
+│          self.assertIsNotNone(aws_api.ec2_session)
+│          self.assertIsNotNone(aws_api.ec2_client)
+│          self.assertIsNotNone(aws_api.s3_session)
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_key_pair.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_key_pair.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_device_index_strategy.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_device_index_strategy.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet_waiter.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet_waiter.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_subnet.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_subnet.py
+│┄ Files 0% similar despite different names
+│ @@ -3,15 +3,14 @@
+│  from unittest.mock import Mock
+│  
+│  from cloudshell.cp.aws.domain.services.ec2.subnet import SubnetService
+│  
+│  
+│  class TestSubnetService(TestCase):
+│      def setUp(self):
+│ -
+│          self.vpc = Mock()
+│          self.cidr = "10.0.0.0/24"
+│          self.availability_zone = "a1"
+│          self.vpc_name = "name"
+│          self.reservation_id = "res"
+│          self.subnet_waiter = Mock()
+│          self.subnet_srv = SubnetService(self.subnet_waiter)
+│   --- cloudshell-cp-aws-3.3.12/tests/test_domain_services/test_vpc_waiter.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_domain_services/test_vpc_waiter.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_cleanup_connectivity.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_cleanup_connectivity.py
+│┄ Files 0% similar despite different names
+│ @@ -59,15 +59,15 @@
+│              self.ec2_client, self.reservation_id, self.logger
+│          )
+│          self.vpc_serv.delete_all_blackhole_routes.called_once_with(vpc)
+│  
+│      def test_cleanup_no_vpc(self):
+│          vpc_serv = Mock()
+│          vpc_serv.find_vpc_for_reservation = Mock(return_value=None)
+│ -        result = CleanupSandboxInfraOperation(vpc_serv, self.key_pair_serv,).cleanup(
+│ +        result = CleanupSandboxInfraOperation(vpc_serv, self.key_pair_serv).cleanup(
+│              aws_clients=self.aws_api_clients,
+│              aws_model=self.aws_model,
+│              reservation_id=self.reservation_id,
+│              actions=[PrepareCloudInfra()],
+│              logger=self.logger,
+│          )
+│   --- cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_prepare_connectivity.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_prepare_connectivity.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_connectivity/test_create_traffic_mirroring.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_connectivity/test_create_traffic_mirroring.py
+│┄ Files 0% similar despite different names
+│ @@ -98,15 +98,14 @@
+│              logger=logger,
+│              cloudshell=cloudshell,
+│          )
+│  
+│          self.assertTrue([x for x in results if x.success])
+│  
+│      def test_json_validate(self):
+│ -
+│          request = """
+│          {
+│              "driverRequest": {
+│                  "actions": [
+│                      {
+│                          "actionId": "a156d3db-78fe-4c19-9039-a225d0360119",
+│                          "type": "RemoveTrafficMirroring",
+│   --- cloudshell-cp-aws-3.3.12/tests/handlers/test_route_table_handler.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/handlers/test_route_table_handler.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_common/test_vm_details_provider.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_common/test_vm_details_provider.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_common/test_converters.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_common/test_converters.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_common/test_get_vm_details.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_common/test_get_vm_details.py
+│┄ Files identical despite different names
+│   --- cloudshell-cp-aws-3.3.12/tests/test_common/test_cancellation_service.py
+├── +++ cloudshell-cp-aws-3.4.0/tests/test_common/test_cancellation_service.py
+│┄ Files identical despite different names

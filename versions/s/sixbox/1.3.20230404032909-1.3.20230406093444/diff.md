@@ -1,0 +1,241 @@
+# Comparing `tmp/sixbox-1.3.20230404032909-py3-none-any.whl.zip` & `tmp/sixbox-1.3.20230406093444-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Zip file size: 164180 bytes, number of entries: 134
++Zip file size: 164169 bytes, number of entries: 134
+ -rw-r--r--  2.0 unx        0 b- defN 22-Mar-22 06:00 sixbox/__init__.py
+ -rw-r--r--  2.0 unx     3983 b- defN 22-Mar-22 06:00 sixbox/backend/__init__.py
+ -rw-r--r--  2.0 unx     4444 b- defN 22-Apr-27 09:55 sixbox/backend/api.py
+ -rw-r--r--  2.0 unx     4860 b- defN 22-Mar-23 10:43 sixbox/backend/config.py
+ -rw-r--r--  2.0 unx     3092 b- defN 22-Mar-23 10:22 sixbox/backend/decorators.py
+ -rw-r--r--  2.0 unx     4556 b- defN 22-Mar-23 10:13 sixbox/backend/errors.py
+ -rw-r--r--  2.0 unx       33 b- defN 22-Mar-22 06:00 sixbox/backend/version.py
+@@ -110,27 +110,27 @@
+ -rw-r--r--  2.0 unx     4416 b- defN 22-Jul-25 09:47 sixbox/cli/main_run.py
+ -rw-r--r--  2.0 unx     2173 b- defN 22-Jul-25 09:47 sixbox/cli/main_search.py
+ -rw-r--r--  2.0 unx      708 b- defN 22-Jul-25 09:47 sixbox/cli/main_stop.py
+ -rw-r--r--  2.0 unx     2339 b- defN 23-Mar-13 14:00 sixbox/cli/main_tag.py
+ -rw-r--r--  2.0 unx      168 b- defN 22-Mar-22 06:00 sixbox/cli/main_uninstall.py
+ -rw-r--r--  2.0 unx      195 b- defN 22-Mar-22 06:00 sixbox/cli/main_update.py
+ -rw-r--r--  2.0 unx    33007 b- defN 23-Mar-27 03:19 sixbox/cli/sixbox_parsers.py
+--rw-r--r--  2.0 unx       33 b- defN 23-Apr-04 03:29 sixbox/cli/version.py
++-rw-r--r--  2.0 unx       33 b- defN 23-Apr-06 09:34 sixbox/cli/version.py
+ -rw-r--r--  2.0 unx      456 b- defN 23-Mar-13 13:10 sixbox/cli/commands/__init__.py
+ -rw-r--r--  2.0 unx     5531 b- defN 22-Apr-29 06:47 sixbox/cli/commands/apps_command.py
+ -rw-r--r--  2.0 unx     6623 b- defN 22-Apr-29 09:46 sixbox/cli/commands/cases_command.py
+ -rw-r--r--  2.0 unx     3086 b- defN 23-Jan-05 10:21 sixbox/cli/commands/check_update.py
+ -rw-r--r--  2.0 unx     3055 b- defN 22-Oct-10 06:52 sixbox/cli/commands/config_command.py
+ -rw-r--r--  2.0 unx    26440 b- defN 23-Mar-27 03:35 sixbox/cli/commands/dataset_command.py
+ -rw-r--r--  2.0 unx     5068 b- defN 23-Mar-13 14:01 sixbox/cli/commands/datasets_command.py
+ -rw-r--r--  2.0 unx     3012 b- defN 23-Feb-13 09:29 sixbox/cli/commands/db_command.py
+--rw-r--r--  2.0 unx    15029 b- defN 22-Jul-25 08:58 sixbox/cli/commands/jobs_command.py
++-rw-r--r--  2.0 unx    14346 b- defN 23-Apr-06 06:55 sixbox/cli/commands/jobs_command.py
+ -rw-r--r--  2.0 unx     2096 b- defN 22-Aug-31 08:27 sixbox/cli/commands/logger.py
+ -rw-r--r--  2.0 unx     8586 b- defN 23-Mar-11 08:46 sixbox/cli/commands/oss_command.py
+ -rw-r--r--  2.0 unx    11447 b- defN 23-Feb-09 08:52 sixbox/cli/commands/utils.py
+--rw-rw-r--  2.0 unx    35149 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/LICENSE
+--rw-r--r--  2.0 unx     1064 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/WHEEL
+--rw-r--r--  2.0 unx       50 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/entry_points.txt
+--rw-r--r--  2.0 unx        7 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx    12529 b- defN 23-Apr-04 03:30 sixbox-1.3.20230404032909.dist-info/RECORD
+-134 files, 517196 bytes uncompressed, 143922 bytes compressed:  72.2%
++-rw-rw-r--  2.0 unx    35149 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/LICENSE
++-rw-r--r--  2.0 unx     1274 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/WHEEL
++-rw-r--r--  2.0 unx       50 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/entry_points.txt
++-rw-r--r--  2.0 unx        7 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx    12529 b- defN 23-Apr-06 09:35 sixbox-1.3.20230406093444.dist-info/RECORD
++134 files, 516723 bytes uncompressed, 143911 bytes compressed:  72.1%
+```
+
+## zipnote {}
+
+```diff
+@@ -378,26 +378,26 @@
+ 
+ Filename: sixbox/cli/commands/oss_command.py
+ Comment: 
+ 
+ Filename: sixbox/cli/commands/utils.py
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/LICENSE
++Filename: sixbox-1.3.20230406093444.dist-info/LICENSE
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/METADATA
++Filename: sixbox-1.3.20230406093444.dist-info/METADATA
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/WHEEL
++Filename: sixbox-1.3.20230406093444.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/entry_points.txt
++Filename: sixbox-1.3.20230406093444.dist-info/entry_points.txt
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/top_level.txt
++Filename: sixbox-1.3.20230406093444.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: sixbox-1.3.20230404032909.dist-info/RECORD
++Filename: sixbox-1.3.20230406093444.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## sixbox/cli/version.py
+
+```diff
+@@ -1 +1 @@
+-__version__='1.3.20230404032909'
++__version__='1.3.20230406093444'
+```
+
+## sixbox/cli/commands/jobs_command.py
+
+```diff
+@@ -170,15 +170,15 @@
+     apps[payload["jobName"]] = {k:payload[k] for k in payload.keys() if k in colFileds}
+ 
+     json2file(libMaps["job_repositories"], apps)
+ 
+ 
+ def versionstring() -> str:
+     """Version of CWLtool used to execute the workflow."""
+-    return "{} {}".format("sixbox-engine", "0.1")
++    return "{} {}".format("sixbox-engine", "1.0")
+ 
+ 
+ class CWLJob():
+     
+     def __init__(self):
+         self.stdin_path = '/dev/null'
+         self.stdout_path = '/dev/tty'
+@@ -284,27 +284,18 @@
+             )
+         metadata.update({"path" : metadata_path})
+         working_directory = os.getcwd()
+         _, fh = serve_logs(log)
+ 
+         metadata_writer(metadata)
+ 
+-        # with open(stdout, 'w') as stdout_fn,  open(stderr, 'w') as stderr_fn:
+-            # exitcode = main.run(cmd, stdout=stdout_fn, stderr=stderr_fn, versionfunc=versionstring)
+-        # main.run(cmd, stdout=Logger(stdout), stderr=Logger(stderr), versionfunc=versionstring)
+-            # versionfunc=versionstring
+-        # with open(stdout, 'w') as stdout_fn,  open(stderr, 'w') as stderr_fn:
+-        #     self.run(cmd,
+-        #             stdout=stdout_fn, 
+-        #             stderr=stderr_fn, 
+-        #             versionfunc=versionstring,
+-        #             metadata= metadata)
++        # 运行并写入日志
+         with open(stdout, 'w') as stdout_fn,  open(stderr, 'w') as stderr_fn:
+             self.run(cmd, stdout=Logger(stdout_fn), stderr=Logger(stderr_fn), versionfunc=versionstring,metadata= metadata)
+-        # self.run(cmd, stdout=Logger(stdout), stderr=Logger(stderr), versionfunc=versionstring,metadata= metadata)
++
+         # log_Printer(metadata["jobName"], follow=True)
+ 
+ 
+     def _exec(self, cmd, request = None, prefix="CWLJob", name=None):
+         """
+           以守护进程运行CWL job, 只在linux下有效
+         """
+```
+
+## Comparing `sixbox-1.3.20230404032909.dist-info/LICENSE` & `sixbox-1.3.20230406093444.dist-info/LICENSE`
+
+ * *Files identical despite different names*
+
+## Comparing `sixbox-1.3.20230404032909.dist-info/METADATA` & `sixbox-1.3.20230406093444.dist-info/METADATA`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: sixbox
+-Version: 1.3.20230404032909
++Version: 1.3.20230406093444
+ Summary: python library for sixoclock's softwares to run
+ Home-page: https://docs.sixoclock.net/clients/sixbox-linux.html
+ Author: sixoclock
+ Author-email: r_d@sixoclock.net
+ Maintainer: sixoclock
+ Maintainer-email: r_d@sixoclock.net
+ License: Apache-2.0 License
+@@ -16,14 +16,23 @@
+ Description-Content-Type: text/markdown
+ Requires-Dist: pyyaml
+ Requires-Dist: paramiko
+ Requires-Dist: python-daemon
+ Requires-Dist: prettytable
+ Requires-Dist: colorlog
+ Requires-Dist: tqdm
++Requires-Dist: oss2
++Requires-Dist: filetype
++Requires-Dist: cwltool
++Requires-Dist: jsonpath-ng
++Requires-Dist: jsonschema
++Requires-Dist: shutil
++Requires-Dist: hashlib
++Requires-Dist: tarfile
++Requires-Dist: psutil
+ Requires-Dist: cwltool ; "linux" in sys_platform
+ Requires-Dist: rdflib-jsonld ; "linux" in sys_platform
+ Provides-Extra: dev
+ Requires-Dist: pre-commit ; extra == 'dev'
+ Requires-Dist: pydocstyle ; extra == 'dev'
+ Requires-Dist: pytest ; extra == 'dev'
+ Requires-Dist: tox ; extra == 'dev'
+```
+
+## Comparing `sixbox-1.3.20230404032909.dist-info/RECORD` & `sixbox-1.3.20230406093444.dist-info/RECORD`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -109,26 +109,26 @@
+ sixbox/cli/main_run.py,sha256=XpsNN2QVLfhPHx22p1d-ugDiBrnGfYqtUqKgzSAvP64,4416
+ sixbox/cli/main_search.py,sha256=FUio-m6qOjVB5MiwolCyKT4hN0T-RFtX-4c9KhNPJ4o,2173
+ sixbox/cli/main_stop.py,sha256=6XK8REeYjy3NhAA2JufMqb8ZR6rAT4d6_66kUmKceHo,708
+ sixbox/cli/main_tag.py,sha256=pfIv1JEazjO5_CeLkchnJFaFEuVS0stf2W5pYf8JL5s,2339
+ sixbox/cli/main_uninstall.py,sha256=aAor_JHwe2_nccqH4cLswHGjGQomCyIi5a3cQ98tDIA,168
+ sixbox/cli/main_update.py,sha256=4YEQFnSSdv9j9s9k19no8XzBhZsGCYy4OgPD9FA1XeQ,195
+ sixbox/cli/sixbox_parsers.py,sha256=mXwLVXfZmauTH5ei7JzW8Nb2gaIH3PBrZGvB4EP4MN8,33007
+-sixbox/cli/version.py,sha256=XxBk8N8Ohz6SIxruXZkXgHu1aJ12v7a7qnm-gMYLpxY,33
++sixbox/cli/version.py,sha256=AJyskpNjResRqzyXfR5LUoium8U3vMTEMQadpLfIDAQ,33
+ sixbox/cli/commands/__init__.py,sha256=gZqSHC9X31psB2imk0qYnau0S8QOY-c3m-25BK-50_c,456
+ sixbox/cli/commands/apps_command.py,sha256=h2MLRrkp9v1Zt0AEmVEjV5xLBSZMzdYfqZM80YVgrCg,5531
+ sixbox/cli/commands/cases_command.py,sha256=mTMvsr3PuKdIq1Vp4cgR4iEa-GE6tmGNPbl1G5_W_vY,6623
+ sixbox/cli/commands/check_update.py,sha256=sAFg6EZPRoiCeWVQ3srpS7TpwI3HJrH6LLdCK_Nu0VQ,3086
+ sixbox/cli/commands/config_command.py,sha256=NiYObC-qi4PxzMNtp_D8JH_yt-Lw4od_Y43pDkzYetU,3055
+ sixbox/cli/commands/dataset_command.py,sha256=5Hn7HMZkdLskK1GWQrGNCpVSX9utb3KoeczQui-Qdzg,26440
+ sixbox/cli/commands/datasets_command.py,sha256=i9ep8DH5-Eoqv_D6ARchtE-WBKmKWTW0Sb2Wyf0dXBk,5068
+ sixbox/cli/commands/db_command.py,sha256=dKgRlOHYpyjmXye58a3iH6SoJA5I977WrELzV_HPSPY,3012
+-sixbox/cli/commands/jobs_command.py,sha256=604t33mZwV3h5uN7InC02bZO_ouf7uEC3njLffF9P3M,15029
++sixbox/cli/commands/jobs_command.py,sha256=0ITuHu3hX8qq_2NVbCpKqPtEGenvwlLsf8tvr4gJBU0,14346
+ sixbox/cli/commands/logger.py,sha256=kWatDzA0Yx8HsXvQ3kuTplXD-_r2uG-SKbAHi-McZ0I,2096
+ sixbox/cli/commands/oss_command.py,sha256=ALUaemEPIt01HENKUySJ00kc1YItX7exzJYr76Xp-LI,8586
+ sixbox/cli/commands/utils.py,sha256=8UmGmA4wpL-inZwjuM4lg4S4pogohTjNZh_YtYuqLsQ,11447
+-sixbox-1.3.20230404032909.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+-sixbox-1.3.20230404032909.dist-info/METADATA,sha256=il7Om28gqrL9g-UStk9bF7Cdt1MiJHNQ81Of3nOelTY,1064
+-sixbox-1.3.20230404032909.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-sixbox-1.3.20230404032909.dist-info/entry_points.txt,sha256=l8QIG28EZw-yvQuQ-THfhbYeqmGQs963p-oqvYBBM3s,50
+-sixbox-1.3.20230404032909.dist-info/top_level.txt,sha256=3jv5HF3CPbx5jwOCKrdjEkoYFcyqI6Y8FY-u8CWKk2s,7
+-sixbox-1.3.20230404032909.dist-info/RECORD,,
++sixbox-1.3.20230406093444.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
++sixbox-1.3.20230406093444.dist-info/METADATA,sha256=J1O6ZvCD2Y8XqSG8-EGoTATjT2-NJXcUXQmmGjPKTdE,1274
++sixbox-1.3.20230406093444.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++sixbox-1.3.20230406093444.dist-info/entry_points.txt,sha256=l8QIG28EZw-yvQuQ-THfhbYeqmGQs963p-oqvYBBM3s,50
++sixbox-1.3.20230406093444.dist-info/top_level.txt,sha256=3jv5HF3CPbx5jwOCKrdjEkoYFcyqI6Y8FY-u8CWKk2s,7
++sixbox-1.3.20230406093444.dist-info/RECORD,,
+```
+
