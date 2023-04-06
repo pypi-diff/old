@@ -86,7 +86,7 @@ def main():
     parser.add_argument(
         "-s",
         "--silent",
-        default=True,
+        default=False,
         action="store_true",
         required=False,
         help="Dont log to stderr",
@@ -222,7 +222,6 @@ def processPackages(args, jclient, p):
             "--user",
             "0:0",
             "--rm",
-            "-t",
             "-w",
             pwd,
             "-v",
