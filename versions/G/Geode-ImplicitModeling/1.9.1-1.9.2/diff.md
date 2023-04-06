@@ -1,0 +1,705 @@
+# Comparing `tmp/Geode_ImplicitModeling-1.9.1-cp39-cp39-win_amd64.whl.zip` & `tmp/Geode_ImplicitModeling-1.9.2-cp39-cp39-win_amd64.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,22 +1,22 @@
+-Zip file size: 4388234 bytes, number of entries: 20
+--rw-rw-rw-  2.0 fat  2089472 b- defN 22-Sep-16 08:03 geode_implicitmodeling/Geode-ImplicitModeling_explicitation.dll
+--rw-rw-rw-  2.0 fat  2038784 b- defN 22-Sep-16 08:03 geode_implicitmodeling/Geode-ImplicitModeling_implicitation.dll
+--rw-rw-rw-  2.0 fat  2064384 b- defN 22-Sep-16 08:03 geode_implicitmodeling/Geode-ImplicitModeling_insertion.dll
+--rw-rw-rw-  2.0 fat    32256 b- defN 22-Sep-16 08:03 geode_implicitmodeling/Geode-ImplicitModeling_io.dll
+--rw-rw-rw-  2.0 fat  2150912 b- defN 22-Sep-16 08:03 geode_implicitmodeling/Geode-ImplicitModeling_model.dll
+--rw-rw-rw-  2.0 fat      247 b- defN 22-Sep-16 08:03 geode_implicitmodeling/__init__.py
+--rw-rw-rw-  2.0 fat      214 b- defN 22-Sep-16 08:03 geode_implicitmodeling/explicitation.py
+--rw-rw-rw-  2.0 fat   140288 b- defN 22-Sep-16 08:04 geode_implicitmodeling/geode_implicitmodeling_py_explicitation.cp39-win_amd64.pyd
+--rw-rw-rw-  2.0 fat   145408 b- defN 22-Sep-16 08:03 geode_implicitmodeling/geode_implicitmodeling_py_implicitation.cp39-win_amd64.pyd
+--rw-rw-rw-  2.0 fat   160768 b- defN 22-Sep-16 08:03 geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel.cp39-win_amd64.pyd
+--rw-rw-rw-  2.0 fat   110080 b- defN 22-Sep-16 08:04 geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel_io.cp39-win_amd64.pyd
+--rw-rw-rw-  2.0 fat   137216 b- defN 22-Sep-16 08:04 geode_implicitmodeling/geode_implicitmodeling_py_insertion.cp39-win_amd64.pyd
+--rw-rw-rw-  2.0 fat      185 b- defN 22-Sep-16 08:03 geode_implicitmodeling/implicitation.py
+--rw-rw-rw-  2.0 fat      185 b- defN 22-Sep-16 08:03 geode_implicitmodeling/insertion.py
+--rw-rw-rw-  2.0 fat      168 b- defN 22-Sep-16 08:03 geode_implicitmodeling/io.py
+--rw-rw-rw-  2.0 fat      180 b- defN 22-Sep-16 08:03 geode_implicitmodeling/model.py
+--rw-rw-rw-  2.0 fat     2903 b- defN 22-Sep-16 08:04 Geode_ImplicitModeling-1.9.1.dist-info/METADATA
+--rw-rw-rw-  2.0 fat      100 b- defN 22-Sep-16 08:04 Geode_ImplicitModeling-1.9.1.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat       23 b- defN 22-Sep-16 08:04 Geode_ImplicitModeling-1.9.1.dist-info/top_level.txt
+-?rw-rw-r--  2.0 fat     2190 b- defN 22-Sep-16 08:04 Geode_ImplicitModeling-1.9.1.dist-info/RECORD
+-20 files, 9075963 bytes uncompressed, 4384512 bytes compressed:  51.7%
++Zip file size: 4388238 bytes, number of entries: 20
++-rw-rw-rw-  2.0 fat  2089472 b- defN 22-Sep-16 11:53 geode_implicitmodeling/Geode-ImplicitModeling_explicitation.dll
++-rw-rw-rw-  2.0 fat  2038784 b- defN 22-Sep-16 11:52 geode_implicitmodeling/Geode-ImplicitModeling_implicitation.dll
++-rw-rw-rw-  2.0 fat  2064384 b- defN 22-Sep-16 11:53 geode_implicitmodeling/Geode-ImplicitModeling_insertion.dll
++-rw-rw-rw-  2.0 fat    32256 b- defN 22-Sep-16 11:53 geode_implicitmodeling/Geode-ImplicitModeling_io.dll
++-rw-rw-rw-  2.0 fat  2150912 b- defN 22-Sep-16 11:53 geode_implicitmodeling/Geode-ImplicitModeling_model.dll
++-rw-rw-rw-  2.0 fat      247 b- defN 22-Sep-16 11:52 geode_implicitmodeling/__init__.py
++-rw-rw-rw-  2.0 fat      214 b- defN 22-Sep-16 11:52 geode_implicitmodeling/explicitation.py
++-rw-rw-rw-  2.0 fat   140288 b- defN 22-Sep-16 11:53 geode_implicitmodeling/geode_implicitmodeling_py_explicitation.cp39-win_amd64.pyd
++-rw-rw-rw-  2.0 fat   145408 b- defN 22-Sep-16 11:52 geode_implicitmodeling/geode_implicitmodeling_py_implicitation.cp39-win_amd64.pyd
++-rw-rw-rw-  2.0 fat   160768 b- defN 22-Sep-16 11:53 geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel.cp39-win_amd64.pyd
++-rw-rw-rw-  2.0 fat   110080 b- defN 22-Sep-16 11:53 geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel_io.cp39-win_amd64.pyd
++-rw-rw-rw-  2.0 fat   137216 b- defN 22-Sep-16 11:53 geode_implicitmodeling/geode_implicitmodeling_py_insertion.cp39-win_amd64.pyd
++-rw-rw-rw-  2.0 fat      185 b- defN 22-Sep-16 11:52 geode_implicitmodeling/implicitation.py
++-rw-rw-rw-  2.0 fat      185 b- defN 22-Sep-16 11:52 geode_implicitmodeling/insertion.py
++-rw-rw-rw-  2.0 fat      168 b- defN 22-Sep-16 11:52 geode_implicitmodeling/io.py
++-rw-rw-rw-  2.0 fat      180 b- defN 22-Sep-16 11:52 geode_implicitmodeling/model.py
++-rw-rw-rw-  2.0 fat     2902 b- defN 22-Sep-16 11:53 Geode_ImplicitModeling-1.9.2.dist-info/METADATA
++-rw-rw-rw-  2.0 fat      100 b- defN 22-Sep-16 11:53 Geode_ImplicitModeling-1.9.2.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat       23 b- defN 22-Sep-16 11:53 Geode_ImplicitModeling-1.9.2.dist-info/top_level.txt
++?rw-rw-r--  2.0 fat     2190 b- defN 22-Sep-16 11:53 Geode_ImplicitModeling-1.9.2.dist-info/RECORD
++20 files, 9075962 bytes uncompressed, 4384516 bytes compressed:  51.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -42,20 +42,20 @@
+ 
+ Filename: geode_implicitmodeling/io.py
+ Comment: 
+ 
+ Filename: geode_implicitmodeling/model.py
+ Comment: 
+ 
+-Filename: Geode_ImplicitModeling-1.9.1.dist-info/METADATA
++Filename: Geode_ImplicitModeling-1.9.2.dist-info/METADATA
+ Comment: 
+ 
+-Filename: Geode_ImplicitModeling-1.9.1.dist-info/WHEEL
++Filename: Geode_ImplicitModeling-1.9.2.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: Geode_ImplicitModeling-1.9.1.dist-info/top_level.txt
++Filename: Geode_ImplicitModeling-1.9.2.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: Geode_ImplicitModeling-1.9.1.dist-info/RECORD
++Filename: Geode_ImplicitModeling-1.9.2.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## geode_implicitmodeling/Geode-ImplicitModeling_explicitation.dll
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x0000000180168ac8
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:54 2022
++Time/Date		Fri Sep 16 11:53:13 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		000000000016ac00
+ SizeOfInitializedData	0000000000096a00
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	0000000000168ac8
+@@ -628082,18 +628082,17 @@
+    1801d3538:	(bad)
+    1801d353d:	insb   (%dx),%es:(%rdi)
+    1801d353e:	insb   (%dx),%es:(%rdi)
+    1801d353f:	outsl  %ds:(%rsi),(%dx)
+    1801d3540:	movsxd 0x74(%rcx),%esp
+    1801d3543:	imul   $0x0,0x6e(%rdi),%ebp
+    1801d354a:	add    %al,(%rax)
+-   1801d354c:	(bad)
+-   1801d354d:	sub    $0x6324,%eax
+-   1801d3552:	add    %al,(%rax)
+-   1801d3554:	or     $0x88000000,%eax
++   1801d354c:	test   $0x632463,%eax
++   1801d3551:	add    %al,(%rax)
++   1801d3553:	add    %cl,-0x78000000(%rip)        # 0x1081d3559
+    1801d3559:	add    (%rax),%eax
+    1801d355b:	add    %dh,0x41b4001d(%rcx,%rdx,2)
+    1801d3562:	sbb    $0x0,%eax
+ 	...
+    1801d356f:	add    %bh,(%rax)
+    1801d3571:	add    %eax,(%rax)
+ 	...
+```
+
+## geode_implicitmodeling/Geode-ImplicitModeling_implicitation.dll
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x00000001801610a0
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:23 2022
++Time/Date		Fri Sep 16 11:52:43 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000162800
+ SizeOfInitializedData	0000000000092a00
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	00000000001610a0
+@@ -616129,18 +616129,18 @@
+    1801cabb9:	(bad)
+    1801cabba:	and    %ah,%fs:0x6c(%rcx)
+    1801cabbe:	insb   (%dx),%es:(%rdi)
+    1801cabbf:	outsl  %ds:(%rsi),(%dx)
+    1801cabc0:	movsxd 0x74(%rcx),%esp
+    1801cabc3:	imul   $0x0,0x6e(%rdi),%ebp
+    1801cabca:	add    %al,(%rax)
+-   1801cabcc:	lret
+-   1801cabcd:	sub    $0x6324,%eax
+-   1801cabd2:	add    %al,(%rax)
+-   1801cabd4:	or     $0x88000000,%eax
++   1801cabcc:	mov    0x24(%rbx),%esp
++   1801cabcf:	movsxd (%rax),%eax
++   1801cabd1:	add    %al,(%rax)
++   1801cabd3:	add    %cl,-0x78000000(%rip)        # 0x1081cabd9
+    1801cabd9:	add    (%rax),%eax
+    1801cabdb:	add    %dh,(%rax,%rax,8)
+    1801cabde:	sbb    $0x0,%al
+    1801cabe0:	xor    $0xac,%al
+    1801cabe2:	sbb    $0x0,%al
+ 	...
+    1801cabf0:	cmp    %al,(%rcx)
+```
+
+## geode_implicitmodeling/Geode-ImplicitModeling_insertion.dll
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x00000001801655bc
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:55 2022
++Time/Date		Fri Sep 16 11:53:16 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000167200
+ SizeOfInitializedData	0000000000094400
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	00000000001655bc
+@@ -622134,16 +622134,16 @@
+    1801cff38:	(bad)
+    1801cff3d:	insb   (%dx),%es:(%rdi)
+    1801cff3e:	insb   (%dx),%es:(%rdi)
+    1801cff3f:	outsl  %ds:(%rsi),(%dx)
+    1801cff40:	movsxd 0x74(%rcx),%esp
+    1801cff43:	imul   $0x0,0x6e(%rdi),%ebp
+    1801cff4a:	add    %al,(%rax)
+-   1801cff4c:	jmp    0x1801cff7b
+-   1801cff4e:	and    $0x63,%al
++   1801cff4c:	lods   %ds:(%rsi),%al
++   1801cff4d:	movsxd (%rbx,%riz,2),%esp
+    1801cff50:	add    %al,(%rax)
+    1801cff52:	add    %al,(%rax)
+    1801cff54:	or     $0x88000000,%eax
+    1801cff59:	add    (%rax),%eax
+    1801cff5b:	add    %al,-0x7fffe2eb(%rax)
+    1801cff61:	sti
+    1801cff62:	sbb    $0x0,%al
+@@ -656976,19 +656976,19 @@
+    1801e6fb6:	push   %rax
+    1801e6fb7:	(bad)
+    1801e6fb8:	je     0x1801e7022
+    1801e6fba:	imul   $0x7265,0x64(%rsi),%bp
+    1801e6fc0:	rex.X (bad)
+    1801e6fc2:	jae    0x1801e7029
+    1801e6fc4:	rex (bad)
+-   1801e6fc6:	xor    %dil,0x36(%r8)
+-   1801e6fca:	cmp    %bh,(%rcx)
+-   1801e6fcc:	movsxd (%rsi),%esi
+-   1801e6fce:	cmp    %esi,(%rsi)
+-   1801e6fd0:	data16 rex
++   1801e6fc6:	xor    %dil,0x66(%r8)
++   1801e6fca:	xor    $0x37,%al
++   1801e6fcc:	xor    %esp,0x39(%rcx)
++   1801e6fcf:	gs (bad)
++   1801e6fd1:	rex
+    1801e6fd2:	rex add %al,(%rax)
+ 	...
+    1801e6fdd:	add    %al,(%rax)
+    1801e6fdf:	add    %ch,-0x2(%rax)
+    1801e6fe2:	sbb    $0x80,%al
+    1801e6fe4:	add    %eax,(%rax)
+ 	...
+@@ -657003,19 +657003,19 @@
+    1801e6ffd:	jo     0x1801e7067
+    1801e6fff:	imul   $0x65767275,0x43(%rbx),%esp
+    1801e7006:	push   %rax
+    1801e7007:	(bad)
+    1801e7008:	jb     0x1801e707e
+    1801e700a:	imul   $0x4072656e,0x6f(%rcx,%rbp,2),%esi
+    1801e7012:	(bad)
+-   1801e7013:	xor    %dil,0x36(%r8)
+-   1801e7017:	cmp    %bh,(%rcx)
+-   1801e7019:	movsxd (%rsi),%esi
+-   1801e701b:	cmp    %esi,(%rsi)
+-   1801e701d:	data16 rex
++   1801e7013:	xor    %dil,0x66(%r8)
++   1801e7017:	xor    $0x37,%al
++   1801e7019:	xor    %esp,0x39(%rcx)
++   1801e701c:	gs (bad)
++   1801e701e:	rex
+    1801e701f:	rex add %al,(%rax)
+ 	...
+    1801e702e:	add    %al,(%rax)
+    1801e7030:	push   $0x1801cfe
+ 	...
+    1801e703d:	add    %al,(%rax)
+    1801e703f:	add    %ch,(%rsi)
+@@ -657029,19 +657029,19 @@
+    1801e704d:	jo     0x1801e70b7
+    1801e704f:	imul   $0x65767275,0x43(%rbx),%esp
+    1801e7056:	push   %rax
+    1801e7057:	(bad)
+    1801e7058:	je     0x1801e70c2
+    1801e705a:	imul   $0x7265,0x64(%rsi),%bp
+    1801e7060:	rex (bad)
+-   1801e7062:	xor    %dil,0x36(%r8)
+-   1801e7066:	cmp    %bh,(%rcx)
+-   1801e7068:	movsxd (%rsi),%esi
+-   1801e706a:	cmp    %esi,(%rsi)
+-   1801e706c:	data16 rex
++   1801e7062:	xor    %dil,0x66(%r8)
++   1801e7066:	xor    $0x37,%al
++   1801e7068:	xor    %esp,0x39(%rcx)
++   1801e706b:	gs (bad)
++   1801e706d:	rex
+    1801e706e:	add    %bpl,-0x2(%rax)
+    1801e7072:	sbb    $0x80,%al
+    1801e7074:	add    %eax,(%rax)
+ 	...
+    1801e707e:	add    %al,(%rax)
+    1801e7080:	cs (bad)
+    1801e7082:	push   %r14
+```
+
+## geode_implicitmodeling/Geode-ImplicitModeling_io.dll
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x0000000180003c50
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:46 2022
++Time/Date		Fri Sep 16 11:53:10 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000003a00
+ SizeOfInitializedData	0000000000004600
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	0000000000003c50
+@@ -6289,16 +6289,16 @@
+    180005958:	movsxd 0x74(%rcx),%esp
+    18000595b:	imul   $0x84600000,0x6e(%rdi),%ebp
+    180005962:	add    %al,0x1(%rax)
+    180005968:	add    %al,0x18000(%rbp)
+    18000596e:	add    %al,(%rax)
+    180005970:	add    %al,(%rax)
+    180005972:	add    %al,(%rax)
+-   180005974:	loop   0x1800059a3
+-   180005976:	and    $0x63,%al
++   180005974:	cmpsb  %es:(%rdi),%ds:(%rsi)
++   180005975:	movsxd (%rbx,%riz,2),%esp
+    180005978:	add    %al,(%rax)
+    18000597a:	add    %al,(%rax)
+    18000597c:	or     $0x3c000000,%eax
+    180005981:	add    (%rax),%eax
+    180005983:	add    %ah,0x4fa40000(%rcx,%riz,2)
+    18000598a:	add    %al,(%rax)
+    18000598c:	add    %al,(%rax)
+```
+
+## geode_implicitmodeling/Geode-ImplicitModeling_model.dll
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x0000000180172850
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:40 2022
++Time/Date		Fri Sep 16 11:53:00 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000174a00
+ SizeOfInitializedData	000000000009be00
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	0000000000172850
+@@ -641469,15 +641469,17 @@
+    1801ddd78:	(bad)
+    1801ddd7d:	insb   (%dx),%es:(%rdi)
+    1801ddd7e:	insb   (%dx),%es:(%rdi)
+    1801ddd7f:	outsl  %ds:(%rsi),(%dx)
+    1801ddd80:	movsxd 0x74(%rcx),%esp
+    1801ddd83:	imul   $0x0,0x6e(%rdi),%ebp
+    1801ddd8a:	add    %al,(%rax)
+-   1801ddd8c:	fsubrl 0x6324(%rip)        # 0x1801e40b6
++   1801ddd8c:	pushf
++   1801ddd8d:	movsxd (%rbx,%riz,2),%esp
++   1801ddd90:	add    %al,(%rax)
+    1801ddd92:	add    %al,(%rax)
+    1801ddd94:	or     $0x88000000,%eax
+    1801ddd99:	add    (%rax),%eax
+    1801ddd9b:	add    %bh,(%rax)
+    1801ddd9d:	std
+    1801ddd9e:	sbb    $0x1deb3800,%eax
+ 	...
+```
+
+## geode_implicitmodeling/geode_implicitmodeling_py_explicitation.cp39-win_amd64.pyd
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x000000018001613c
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:04:05 2022
++Time/Date		Fri Sep 16 11:53:23 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000017200
+ SizeOfInitializedData	000000000000b400
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	000000000001613c
+@@ -34765,18 +34765,17 @@
+    18001ad1a:	(bad)
+    18001ad1b:	(bad)
+    18001ad1c:	(bad)
+    18001ad1d:	(bad)
+    18001ad1e:	(bad)
+    18001ad1f:	incl   (%rax)
+    18001ad21:	add    %al,(%rax)
+-   18001ad23:	add    %dh,%ch
+-   18001ad25:	sub    $0x6324,%eax
+-   18001ad2a:	add    %al,(%rax)
+-   18001ad2c:	or     $0x3c000000,%eax
++   18001ad23:	add    %dh,0x632463(%rbx)
++   18001ad29:	add    %al,(%rax)
++   18001ad2b:	add    %cl,0x3c000000(%rip)        # 0x1bc01ad31
+    18001ad31:	add    (%rax),%eax
+    18001ad33:	add    %dl,-0x48(%rax)
+    18001ad36:	add    %eax,(%rax)
+    18001ad38:	push   %rax
+    18001ad39:	sahf
+    18001ad3a:	add    %eax,(%rax)
+    18001ad3c:	add    %al,(%rax)
+```
+
+## geode_implicitmodeling/geode_implicitmodeling_py_implicitation.cp39-win_amd64.pyd
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x000000018001724c
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:31 2022
++Time/Date		Fri Sep 16 11:52:50 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000018200
+ SizeOfInitializedData	000000000000ba00
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	000000000001724c
+@@ -36049,18 +36049,17 @@
+    18001be0a:	(bad)
+    18001be0b:	(bad)
+    18001be0c:	(bad)
+    18001be0d:	(bad)
+    18001be0e:	(bad)
+    18001be0f:	incl   (%rax)
+    18001be11:	add    %al,(%rax)
+-   18001be13:	add    %dl,%bl
+-   18001be15:	sub    $0x6324,%eax
+-   18001be1a:	add    %al,(%rax)
+-   18001be1c:	or     $0x3c000000,%eax
++   18001be13:	add    %dl,0x632463(%rdx)
++   18001be19:	add    %al,(%rax)
++   18001be1b:	add    %cl,0x3c000000(%rip)        # 0x1bc01be21
+    18001be21:	add    (%rax),%eax
+    18001be23:	add    %dl,-0x37(%rax)
+    18001be26:	add    %eax,(%rax)
+    18001be28:	push   %rax
+    18001be29:	scas   %es:(%rdi),%eax
+    18001be2a:	add    %eax,(%rax)
+    18001be2c:	add    %al,(%rax)
+```
+
+## geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel.cp39-win_amd64.pyd
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x000000018001969c
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:03:54 2022
++Time/Date		Fri Sep 16 11:53:10 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		000000000001a800
+ SizeOfInitializedData	000000000000d000
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	000000000001969c
+@@ -39849,18 +39849,17 @@
+    18001e1fa:	(bad)
+    18001e1fb:	(bad)
+    18001e1fc:	(bad)
+    18001e1fd:	(bad)
+    18001e1fe:	(bad)
+    18001e1ff:	incl   (%rax)
+    18001e201:	add    %al,(%rax)
+-   18001e203:	add    %ch,%dl
+-   18001e205:	sub    $0x6324,%eax
+-   18001e20a:	add    %al,(%rax)
+-   18001e20c:	or     $0x3c000000,%eax
++   18001e203:	add    %ah,0x632463(%rsi)
++   18001e209:	add    %al,(%rax)
++   18001e20b:	add    %cl,0x3c000000(%rip)        # 0x1bc01e211
+    18001e211:	add    (%rax),%eax
+    18001e213:	add    %ah,-0x255bffff(%rsi,%rbp,8)
+    18001e21a:	add    %eax,(%rax)
+    18001e21c:	add    %al,(%rax)
+    18001e21e:	add    %al,(%rax)
+    18001e220:	cmp    %al,(%rcx)
+ 	...
+```
+
+## geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel_io.cp39-win_amd64.pyd
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x00000001800109ec
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:04:07 2022
++Time/Date		Fri Sep 16 11:53:21 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000011600
+ SizeOfInitializedData	0000000000009a00
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	00000000000109ec
+@@ -26676,18 +26676,17 @@
+    18001489a:	(bad)
+    18001489b:	(bad)
+    18001489c:	(bad)
+    18001489d:	(bad)
+    18001489e:	(bad)
+    18001489f:	incl   (%rax)
+    1800148a1:	add    %al,(%rax)
+-   1800148a3:	add    %dh,%bh
+-   1800148a5:	sub    $0x6324,%eax
+-   1800148aa:	add    %al,(%rax)
+-   1800148ac:	or     $0x3c000000,%eax
++   1800148a3:	add    %dh,0x632463(%rcx)
++   1800148a9:	add    %al,(%rax)
++   1800148ab:	add    %cl,0x3c000000(%rip)        # 0x1bc0148b1
+    1800148b1:	add    (%rax),%eax
+    1800148b3:	add    %dl,%al
+    1800148b5:	push   %rbx
+    1800148b6:	add    %eax,(%rax)
+    1800148b8:	sarb   0x1(%rip)        # 0x1800148bf
+    1800148be:	add    %al,(%rax)
+    1800148c0:	cmp    %al,(%rcx)
+```
+
+## geode_implicitmodeling/geode_implicitmodeling_py_insertion.cp39-win_amd64.pyd
+
+### objdump
+
+```diff
+@@ -4,15 +4,15 @@
+ start address 0x000000018001551c
+ 
+ Characteristics 0x2022
+ 	executable
+ 	large address aware
+ 	DLL
+ 
+-Time/Date		Fri Sep 16 08:04:06 2022
++Time/Date		Fri Sep 16 11:53:27 2022
+ Magic			020b	(PE32+)
+ MajorLinkerVersion	14
+ MinorLinkerVersion	29
+ SizeOfCode		0000000000016600
+ SizeOfInitializedData	000000000000b400
+ SizeOfUninitializedData	0000000000000000
+ AddressOfEntryPoint	000000000001551c
+@@ -33887,18 +33887,17 @@
+    180019c6a:	(bad)
+    180019c6b:	(bad)
+    180019c6c:	(bad)
+    180019c6d:	(bad)
+    180019c6e:	(bad)
+    180019c6f:	incl   (%rax)
+    180019c71:	add    %al,(%rax)
+-   180019c73:	add    %dh,%dh
+-   180019c75:	sub    $0x6324,%eax
+-   180019c7a:	add    %al,(%rax)
+-   180019c7c:	or     $0x3c000000,%eax
++   180019c73:	add    %dh,0x632463(%rdi)
++   180019c79:	add    %al,(%rax)
++   180019c7b:	add    %cl,0x3c000000(%rip)        # 0x1bc019c81
+    180019c81:	add    (%rax),%eax
+    180019c83:	add    %ch,%al
+    180019c85:	cmpsl  %es:(%rdi),%ds:(%rsi)
+    180019c86:	add    %eax,(%rax)
+    180019c88:	call   0x180019e1e
+    180019c8d:	add    %al,(%rax)
+    180019c8f:	add    %bh,(%rax)
+```
+
+## Comparing `Geode_ImplicitModeling-1.9.1.dist-info/METADATA` & `Geode_ImplicitModeling-1.9.2.dist-info/METADATA`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ Metadata-Version: 2.1
+ Name: Geode-ImplicitModeling
+-Version: 1.9.1
++Version: 1.9.2
+ Summary: Licensed framework for working with implicit modeling
+ Home-page: https://github.com/Geode-solutions/Geode-ImplicitModeling
+ Author: Geode-solutions
+ Author-email: contact@geode-solutions.com
+ License: Proprietary
+ Keywords: brep,section,implicit,explicitation
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ Requires-Dist: OpenGeode-core (==11.*,>=11.0.3)
+ Requires-Dist: OpenGeode-Geosciences (==5.*,>=5.5.0)
+ Requires-Dist: Geode-Common (==22.*,>=22.0.0)
+-Requires-Dist: Geode-Conversion (==2.*,>=2.19.0)
++Requires-Dist: Geode-Conversion (==3.*,>=3.1.0)
+ Requires-Dist: Geode-Parameterization (==1.*,>=1.12.0)
+ Requires-Dist: Geode-BackgroundMesh (==4.*,>=4.1.0)
+ Requires-Dist: Geode-ExplicitModeling (==1.*,>=1.5.4)
+ 
+ <h1 align="center">Geode-ImplicitModeling<sup><i>by Geode-solutions</i></sup></h1>
+ <h3 align="center">Module for working with implicit modeling.</h3>
+```
+
+### html2text {}
+
+```diff
+@@ -1,15 +1,15 @@
+-Metadata-Version: 2.1 Name: Geode-ImplicitModeling Version: 1.9.1 Summary:
++Metadata-Version: 2.1 Name: Geode-ImplicitModeling Version: 1.9.2 Summary:
+ Licensed framework for working with implicit modeling Home-page: https://
+ github.com/Geode-solutions/Geode-ImplicitModeling Author: Geode-solutions
+ Author-email: contact@geode-solutions.com License: Proprietary Keywords:
+ brep,section,implicit,explicitation Platform: UNKNOWN Description-Content-Type:
+ text/markdown Requires-Dist: OpenGeode-core (==11.*,>=11.0.3) Requires-Dist:
+ OpenGeode-Geosciences (==5.*,>=5.5.0) Requires-Dist: Geode-Common
+-(==22.*,>=22.0.0) Requires-Dist: Geode-Conversion (==2.*,>=2.19.0) Requires-
++(==22.*,>=22.0.0) Requires-Dist: Geode-Conversion (==3.*,>=3.1.0) Requires-
+ Dist: Geode-Parameterization (==1.*,>=1.12.0) Requires-Dist: Geode-
+ BackgroundMesh (==4.*,>=4.1.0) Requires-Dist: Geode-ExplicitModeling
+ (==1.*,>=1.5.4)
+             ****** Geode-ImplicitModelingby Geode-solutions ******
+              **** Module for working with implicit modeling. ****
+           [Build Status] [Deploy Status] [Coverage Status] [Version]
+      [Windows support] [Ubuntu support] [Red Hat support] [macOS support]
+```
+
+## Comparing `Geode_ImplicitModeling-1.9.1.dist-info/RECORD` & `Geode_ImplicitModeling-1.9.2.dist-info/RECORD`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,20 +1,20 @@
+-geode_implicitmodeling/Geode-ImplicitModeling_explicitation.dll,sha256=xw4ydNH3i3BPuXuDST6YOriBMBmihZubSKRhKOhq7vs,2089472
+-geode_implicitmodeling/Geode-ImplicitModeling_implicitation.dll,sha256=_AMEfMc9VAf-pFWRE3bvlIuBcyzFOTWf7vFa3N0o92Y,2038784
+-geode_implicitmodeling/Geode-ImplicitModeling_insertion.dll,sha256=GQCsQstTApk7Z0eT2v06cgNwbx0Xc7tQnd8jryCpVvg,2064384
+-geode_implicitmodeling/Geode-ImplicitModeling_io.dll,sha256=jzBq1t0Y1uUc08HKOs50zPO04_ohhs8yYI55iS4TNFY,32256
+-geode_implicitmodeling/Geode-ImplicitModeling_model.dll,sha256=Zot1V2d-H1kM_ZwO-CDzPCA6BmBgzkrE_o6k1BHrP7w,2150912
++geode_implicitmodeling/Geode-ImplicitModeling_explicitation.dll,sha256=xpvcdLbbCD2UcmB11bd3HktTs9a3UeC7sdG1WD5467M,2089472
++geode_implicitmodeling/Geode-ImplicitModeling_implicitation.dll,sha256=XfAZhu8WqzA-2yfFGQ331AqiYC60AX1Ju3Se3a5t2E0,2038784
++geode_implicitmodeling/Geode-ImplicitModeling_insertion.dll,sha256=pOc4ijlTu9VSx5aK30IxAw-U3LHr38qDaUYBRBNcDPY,2064384
++geode_implicitmodeling/Geode-ImplicitModeling_io.dll,sha256=RzRK0SFjtIWrD_Os3iOQH636qFCKFc37oVKK0czYGJY,32256
++geode_implicitmodeling/Geode-ImplicitModeling_model.dll,sha256=-I0mcKLBi6DRHbSurjRQAmwgmQtBAu4ZhPi2-DzcbzQ,2150912
+ geode_implicitmodeling/__init__.py,sha256=RmX42YuPM8LUILly8uuvlrOVWGJ-SfdbHZJ4sBknYPs,247
+ geode_implicitmodeling/explicitation.py,sha256=I3vynNW7D_z9GeHZC78eXN5fWn6DU_HmGmlFwW2aJY8,214
+-geode_implicitmodeling/geode_implicitmodeling_py_explicitation.cp39-win_amd64.pyd,sha256=UbT7sLelGvsHd8r7BJxJqayLzfRAEYGFfrHXaCPl8O0,140288
+-geode_implicitmodeling/geode_implicitmodeling_py_implicitation.cp39-win_amd64.pyd,sha256=p9EKLhLhlbSds9AkL_rEJLplbPPt_5fc-emnjDlugg4,145408
+-geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel.cp39-win_amd64.pyd,sha256=T4UTVMB3JUfh-73aw3991dm9Po6CVY3grAC3dw8RKjc,160768
+-geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel_io.cp39-win_amd64.pyd,sha256=NziVGME7UXmvGuu7QXxADy60E2AF1-MojFSguisxo3A,110080
+-geode_implicitmodeling/geode_implicitmodeling_py_insertion.cp39-win_amd64.pyd,sha256=zW0XC_ECd9UrpolHPjEJxRBpaorhTb9b2kVV1-2JF2A,137216
++geode_implicitmodeling/geode_implicitmodeling_py_explicitation.cp39-win_amd64.pyd,sha256=_EJ08BMEkZFEw3Yr8X9XK1LB3BVMCI9q0vkzvwc_-1U,140288
++geode_implicitmodeling/geode_implicitmodeling_py_implicitation.cp39-win_amd64.pyd,sha256=TJJFISkP5LdhyZLRKtET8OsTn5lUegzRD3aSaGUI6bg,145408
++geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel.cp39-win_amd64.pyd,sha256=6l62bY78hfzmv2yycos5zmVyXwFIO87toJykBb_sUbk,160768
++geode_implicitmodeling/geode_implicitmodeling_py_implicitmodel_io.cp39-win_amd64.pyd,sha256=ejMFT4q6_djmEo125XKO0FPmmOGrZaT6U0PdrZ3sz38,110080
++geode_implicitmodeling/geode_implicitmodeling_py_insertion.cp39-win_amd64.pyd,sha256=sM3-VbHUg5c4M7w6_EqtM-eG4lip9gA3kz_hGtw99N4,137216
+ geode_implicitmodeling/implicitation.py,sha256=52zFE3l_fcGoZX7zKH8MvmvnsObqSIgvXiGL9PnbdGQ,185
+ geode_implicitmodeling/insertion.py,sha256=52zFE3l_fcGoZX7zKH8MvmvnsObqSIgvXiGL9PnbdGQ,185
+ geode_implicitmodeling/io.py,sha256=qe1U4jlHO3rW0OHKl4UkTxg4uYQza42Q96-SKKAYdrc,168
+ geode_implicitmodeling/model.py,sha256=2zDP4FKXpkPr245aPhm7rvckAckIPtwIzmzUOYIR8AA,180
+-Geode_ImplicitModeling-1.9.1.dist-info/METADATA,sha256=fxxd33K29bM1260Pvv2_MtAhk2tfxYUVS55QfeXMPMQ,2903
+-Geode_ImplicitModeling-1.9.1.dist-info/WHEEL,sha256=fVcVlLzi8CGi_Ul8vjMdn8gER25dn5GBg9E6k9z41-Y,100
+-Geode_ImplicitModeling-1.9.1.dist-info/top_level.txt,sha256=791bgHaXerEKpCnwPFQE98qZUKlUHceHHvzvWdLAQsc,23
+-Geode_ImplicitModeling-1.9.1.dist-info/RECORD,,
++Geode_ImplicitModeling-1.9.2.dist-info/METADATA,sha256=6DKC2Zfkzf7Ly3DbjZZP_06AQHKP63Xo9kfLspGWCHY,2902
++Geode_ImplicitModeling-1.9.2.dist-info/WHEEL,sha256=fVcVlLzi8CGi_Ul8vjMdn8gER25dn5GBg9E6k9z41-Y,100
++Geode_ImplicitModeling-1.9.2.dist-info/top_level.txt,sha256=791bgHaXerEKpCnwPFQE98qZUKlUHceHHvzvWdLAQsc,23
++Geode_ImplicitModeling-1.9.2.dist-info/RECORD,,
+```
+

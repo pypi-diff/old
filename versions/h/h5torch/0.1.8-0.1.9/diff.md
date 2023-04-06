@@ -1,0 +1,970 @@
+# Comparing `tmp/h5torch-0.1.8.tar.gz` & `tmp/h5torch-0.1.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "h5torch-0.1.8.tar", last modified: Tue Apr  4 09:38:33 2023, max compression
++gzip compressed data, was "h5torch-0.1.9.tar", last modified: Thu Apr  6 09:08:09 2023, max compression
+```
+
+## Comparing `h5torch-0.1.8.tar` & `h5torch-0.1.9.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,34 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/.github/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/.github/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)      607 2023-04-04 09:38:21.000000 h5torch-0.1.8/.github/workflows/publish.yml
+--rw-r--r--   0 runner    (1001) docker     (123)     1799 2023-04-04 09:38:21.000000 h5torch-0.1.8/.gitignore
+--rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-04 09:38:21.000000 h5torch-0.1.8/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     7080 2023-04-04 09:38:33.327189 h5torch-0.1.8/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     6831 2023-04-04 09:38:21.000000 h5torch-0.1.8/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/h5torch/
+--rw-r--r--   0 runner    (1001) docker     (123)       92 2023-04-04 09:38:21.000000 h5torch-0.1.8/h5torch/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    10112 2023-04-04 09:38:21.000000 h5torch-0.1.8/h5torch/dataset.py
+--rw-r--r--   0 runner    (1001) docker     (123)    11714 2023-04-04 09:38:21.000000 h5torch-0.1.8/h5torch/file.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/h5torch/img/
+--rw-r--r--   0 runner    (1001) docker     (123)    27333 2023-04-04 09:38:21.000000 h5torch-0.1.8/h5torch/img/h5torch.svg
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 09:38:33.327189 h5torch-0.1.8/h5torch.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     7080 2023-04-04 09:38:33.000000 h5torch-0.1.8/h5torch.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      316 2023-04-04 09:38:33.000000 h5torch-0.1.8/h5torch.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-04 09:38:33.000000 h5torch-0.1.8/h5torch.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-04 09:38:33.000000 h5torch-0.1.8/h5torch.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-04 09:38:33.000000 h5torch-0.1.8/h5torch.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-04 09:38:21.000000 h5torch-0.1.8/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)      381 2023-04-04 09:38:33.331189 h5torch-0.1.8/setup.cfg
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.529869 h5torch-0.1.9/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.521869 h5torch-0.1.9/.github/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.525869 h5torch-0.1.9/.github/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)      607 2023-04-06 09:07:55.000000 h5torch-0.1.9/.github/workflows/publish.yml
++-rw-r--r--   0 runner    (1001) docker     (123)     1799 2023-04-06 09:07:55.000000 h5torch-0.1.9/.gitignore
++-rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-06 09:07:55.000000 h5torch-0.1.9/.readthedocs.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)     1072 2023-04-06 09:07:55.000000 h5torch-0.1.9/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     6011 2023-04-06 09:08:09.529869 h5torch-0.1.9/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     5762 2023-04-06 09:07:55.000000 h5torch-0.1.9/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.525869 h5torch-0.1.9/docs/
++-rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/Makefile
++-rw-r--r--   0 runner    (1001) docker     (123)      804 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/make.bat
++-rw-r--r--   0 runner    (1001) docker     (123)       50 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/requirements.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.525869 h5torch-0.1.9/docs/source/
++-rw-r--r--   0 runner    (1001) docker     (123)     1362 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/source/conf.py
++-rw-r--r--   0 runner    (1001) docker     (123)      265 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/source/h5torch.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      603 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/source/index.rst
++-rw-r--r--   0 runner    (1001) docker     (123)    28487 2023-04-06 09:07:55.000000 h5torch-0.1.9/docs/source/tutorial.ipynb
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.525869 h5torch-0.1.9/h5torch/
++-rw-r--r--   0 runner    (1001) docker     (123)       93 2023-04-06 09:07:55.000000 h5torch-0.1.9/h5torch/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    10788 2023-04-06 09:07:55.000000 h5torch-0.1.9/h5torch/dataset.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12323 2023-04-06 09:07:55.000000 h5torch-0.1.9/h5torch/file.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.529869 h5torch-0.1.9/h5torch.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     6011 2023-04-06 09:08:09.000000 h5torch-0.1.9/h5torch.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      512 2023-04-06 09:08:09.000000 h5torch-0.1.9/h5torch.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:08:09.000000 h5torch-0.1.9/h5torch.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       23 2023-04-06 09:08:09.000000 h5torch-0.1.9/h5torch.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 09:08:09.000000 h5torch-0.1.9/h5torch.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:08:09.529869 h5torch-0.1.9/img/
++-rw-r--r--   0 runner    (1001) docker     (123)    99952 2023-04-06 09:07:55.000000 h5torch-0.1.9/img/centralvsaligned.svg
++-rw-r--r--   0 runner    (1001) docker     (123)   166130 2023-04-06 09:07:55.000000 h5torch-0.1.9/img/multidim.svg
++-rw-r--r--   0 runner    (1001) docker     (123)   450264 2023-04-06 09:07:55.000000 h5torch-0.1.9/img/sampling.svg
++-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-06 09:07:55.000000 h5torch-0.1.9/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)      381 2023-04-06 09:08:09.533869 h5torch-0.1.9/setup.cfg
+```
+
+### Comparing `h5torch-0.1.8/.github/workflows/publish.yml` & `h5torch-0.1.9/.github/workflows/publish.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `h5torch-0.1.8/.gitignore` & `h5torch-0.1.9/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `h5torch-0.1.8/LICENSE` & `h5torch-0.1.9/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `h5torch-0.1.8/PKG-INFO` & `h5torch-0.1.9/PKG-INFO`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: h5torch
+-Version: 0.1.8
++Version: 0.1.9
+ Summary: HDF5 data utilities for PyTorch
+ Home-page: https://github.com/gdewael/h5torch
+ Author: Gaetan De Waele
+ Requires-Python: >=3.9
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+@@ -15,19 +15,21 @@
+ 
+ 
+ [![PyPi Version](https://img.shields.io/pypi/v/h5torch.svg)](https://pypi.python.org/pypi/h5torch/)
+ [![GitHub license](https://img.shields.io/github/license/gdewael/h5torch)](https://github.com/gdewael/h5torch/blob/main/LICENSE)
+ 
+ </div>
+ 
+-`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for how datasets should be saved, hence allowing dataloading of various machine learning data settings from a single dataset object, reducing boilerplate in your projects.
++`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for linking [h5py] and [torch]. To do this, this package has to formulate a vocabulary for how datasets generally look, unifying as many ML settings to the best of its abilities. In turn, this vocabulary allows dataloading of various machine learning data settings from a single dataset class definition, reducing boilerplate in your projects.
+ 
+-### but y tho?
++### Who is this package for?
+ Loading data from HDF5 files allows for efficient data-loading from an **on-disk** format, drastically reducing memory overhead. Additionally, you will find your datasets to be more **organized** using the HDF5 format, as everything is neatly arrayed in a single file.
+ 
++If you want to use this package but are not sure your use-case is covered by the current formulation of the package, feel free to open an issue.
++
+ ## Install
+ Since PyTorch is a dependency of `h5torch`, we recommend [installing PyTorch](https://pytorch.org/get-started/locally/) independently first, as your system may require a specific version (e.g. CUDA drivers).
+ 
+ After PyTorch installation, `h5torch` can be installed using `pip`
+ ```bash
+ pip install h5torch
+ ```
+@@ -35,14 +37,18 @@
+ 
+ ### Package concepts
+ 
+ #### Storing
+ 
+ The main idea behind `h5torch` is that datasets can usually be formulated as being aligned to a central object. E.g. in a classical supervised learning setup, features/inputs are aligned to a label vector/matrix. In recommender systems, a score matrix is the central object, with features aligned to rows and columns.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/centralvsaligned.svg" width="750">
++</p>
++
+ `h5torch` allows creating and reading HDF5 datasets for use in PyTorch using this dogma. When creating a new dataset, the first data object that should be registered is the `central` object. The type of `central` object is flexible:
+ 
+ - `N-D`: for regular dense data. The number of dimensions in this object will dictate how many possible aligned axes can exist.
+ - `coo`: The sparse variant as `N-D`. The number of dimensions here can be arbitrary high.
+ - `csr`: For sparse 2D arrays, this central data type can only have 2 aligned axes and can only be sampled along the first dimension
+ - `vlen`: For variable length 1D arrays. This central data type can only have one aligned axis (0).
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images. This central data type can only have one aligned axis (0).
+@@ -52,80 +58,34 @@
+ - `N-D`: Can have arbitrary number of dimensions. E.g. equally-sized images: `(N, 3, H, W)`.
+ - `csr`: Max 2 dimensions, rows will be sampled. E.g. A sparse scRNA-seq count matrix
+ - `vlen`: Variable length 1D arrays. E.g. Tokenized text as variable length arrays of integers.
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images.
+ 
+ Note there is no support for `coo` data type for aligned objects, that is because aligned axis objects require efficient indexing along their first dimension.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/multidim.svg" width="750">
++</p>
++
+ Also note that there is no limit on the number of data objects aligned to an axis. For example, in the case of images aligned to a central label vector, extra information of every image can be added such as the URL, the date said image was taken, the geolocation of that image, ...
+ 
+ Besides the central and axis objects, you can also store `unstructured` data which can be any length or dimension and follow any of the above-mentioned data types (including `coo`). This could for example be a vocabularium vector or the names of classes...
+ 
+ #### Sampling
+ 
+ Once a dataset is created using `h5torch.File`, it can be used as a PyTorch Dataset using `h5torch.Dataset`. Sampling can occur along any of the axes in the central object, upon which the corresponding indices in the objects aligned to that axis are also sampled. Alternatively, `coo` sampling (available for `N-D` and `coo`-type central objects) samples one specific element of the central dataset, along with the corresponding indices of all axis-aligned objects.
+ 
+-<img src="./h5torch/img/h5torch.svg" width="750">
+-
+-## Usage
+-
+-The most simple use-case is a ML setting with a 2-D `X` matrix as central object with corresponding labels `y` along the first axis.
+-
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(X, "central")
+-f.register(y, 0, name = "y")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-Note that labels `y` can also play the role of central object. Both are equivalent in this simple case.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(y, "central")
+-f.register(X, 0, name = "X")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-An example with a 2-dimensional Y matrix (such as a score matrix), with objects aligned to both axes of the central matrix. Storing Y and sampling is performed in `"coo"` mode, meaning the length of the dataset is the number of nonzero elements in the score matrix, and a sample constitutes such a nonzero element, along with the stored information of the row and col of said element.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-
+-Y = (np.random.rand(1000, 500) > 0.95).astype(int)
+-row_features = np.random.randn(1000, 15)
+-col_names = np.arange(500).astype(bytes)
+-
+-
+-f.register(Y, "central", mode = "coo")
+-f.register(row_features, 0, name = "row_features")
+-f.register(col_names, 1, name = "col_names")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t", sampling = "coo")
+-dataset[5], len(dataset)
+-```
+-Note: `h5torch` does not limit the number of possible dimensions along its central data object (and hence also the number of axes to align objects to).
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/sampling.svg" width="750">
++</p>
+ 
++## Usage
+ 
++Refer to the tutorial in our docs.
+ 
+ 
+ # Package roadmap
+ - [x] Implement typing
+ - [x] Provide data type conversion capabilities for registering datasets
+ - [x] Add support for custom samplers
+ - [x] Add support for making data splits
+```
+
+### Comparing `h5torch-0.1.8/README.md` & `h5torch-0.1.9/h5torch.egg-info/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,23 +1,35 @@
++Metadata-Version: 2.1
++Name: h5torch
++Version: 0.1.9
++Summary: HDF5 data utilities for PyTorch
++Home-page: https://github.com/gdewael/h5torch
++Author: Gaetan De Waele
++Requires-Python: >=3.9
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ <div align="center">
+ <h1>h5torch</h1>
+ 
+ HDF5 data utilities for PyTorch.
+ 
+ 
+ [![PyPi Version](https://img.shields.io/pypi/v/h5torch.svg)](https://pypi.python.org/pypi/h5torch/)
+ [![GitHub license](https://img.shields.io/github/license/gdewael/h5torch)](https://github.com/gdewael/h5torch/blob/main/LICENSE)
+ 
+ </div>
+ 
+-`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for how datasets should be saved, hence allowing dataloading of various machine learning data settings from a single dataset object, reducing boilerplate in your projects.
++`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for linking [h5py] and [torch]. To do this, this package has to formulate a vocabulary for how datasets generally look, unifying as many ML settings to the best of its abilities. In turn, this vocabulary allows dataloading of various machine learning data settings from a single dataset class definition, reducing boilerplate in your projects.
+ 
+-### but y tho?
++### Who is this package for?
+ Loading data from HDF5 files allows for efficient data-loading from an **on-disk** format, drastically reducing memory overhead. Additionally, you will find your datasets to be more **organized** using the HDF5 format, as everything is neatly arrayed in a single file.
+ 
++If you want to use this package but are not sure your use-case is covered by the current formulation of the package, feel free to open an issue.
++
+ ## Install
+ Since PyTorch is a dependency of `h5torch`, we recommend [installing PyTorch](https://pytorch.org/get-started/locally/) independently first, as your system may require a specific version (e.g. CUDA drivers).
+ 
+ After PyTorch installation, `h5torch` can be installed using `pip`
+ ```bash
+ pip install h5torch
+ ```
+@@ -25,14 +37,18 @@
+ 
+ ### Package concepts
+ 
+ #### Storing
+ 
+ The main idea behind `h5torch` is that datasets can usually be formulated as being aligned to a central object. E.g. in a classical supervised learning setup, features/inputs are aligned to a label vector/matrix. In recommender systems, a score matrix is the central object, with features aligned to rows and columns.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/centralvsaligned.svg" width="750">
++</p>
++
+ `h5torch` allows creating and reading HDF5 datasets for use in PyTorch using this dogma. When creating a new dataset, the first data object that should be registered is the `central` object. The type of `central` object is flexible:
+ 
+ - `N-D`: for regular dense data. The number of dimensions in this object will dictate how many possible aligned axes can exist.
+ - `coo`: The sparse variant as `N-D`. The number of dimensions here can be arbitrary high.
+ - `csr`: For sparse 2D arrays, this central data type can only have 2 aligned axes and can only be sampled along the first dimension
+ - `vlen`: For variable length 1D arrays. This central data type can only have one aligned axis (0).
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images. This central data type can only have one aligned axis (0).
+@@ -42,85 +58,39 @@
+ - `N-D`: Can have arbitrary number of dimensions. E.g. equally-sized images: `(N, 3, H, W)`.
+ - `csr`: Max 2 dimensions, rows will be sampled. E.g. A sparse scRNA-seq count matrix
+ - `vlen`: Variable length 1D arrays. E.g. Tokenized text as variable length arrays of integers.
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images.
+ 
+ Note there is no support for `coo` data type for aligned objects, that is because aligned axis objects require efficient indexing along their first dimension.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/multidim.svg" width="750">
++</p>
++
+ Also note that there is no limit on the number of data objects aligned to an axis. For example, in the case of images aligned to a central label vector, extra information of every image can be added such as the URL, the date said image was taken, the geolocation of that image, ...
+ 
+ Besides the central and axis objects, you can also store `unstructured` data which can be any length or dimension and follow any of the above-mentioned data types (including `coo`). This could for example be a vocabularium vector or the names of classes...
+ 
+ #### Sampling
+ 
+ Once a dataset is created using `h5torch.File`, it can be used as a PyTorch Dataset using `h5torch.Dataset`. Sampling can occur along any of the axes in the central object, upon which the corresponding indices in the objects aligned to that axis are also sampled. Alternatively, `coo` sampling (available for `N-D` and `coo`-type central objects) samples one specific element of the central dataset, along with the corresponding indices of all axis-aligned objects.
+ 
+-<img src="./h5torch/img/h5torch.svg" width="750">
+-
+-## Usage
+-
+-The most simple use-case is a ML setting with a 2-D `X` matrix as central object with corresponding labels `y` along the first axis.
+-
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(X, "central")
+-f.register(y, 0, name = "y")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-Note that labels `y` can also play the role of central object. Both are equivalent in this simple case.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(y, "central")
+-f.register(X, 0, name = "X")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-An example with a 2-dimensional Y matrix (such as a score matrix), with objects aligned to both axes of the central matrix. Storing Y and sampling is performed in `"coo"` mode, meaning the length of the dataset is the number of nonzero elements in the score matrix, and a sample constitutes such a nonzero element, along with the stored information of the row and col of said element.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-
+-Y = (np.random.rand(1000, 500) > 0.95).astype(int)
+-row_features = np.random.randn(1000, 15)
+-col_names = np.arange(500).astype(bytes)
+-
+-
+-f.register(Y, "central", mode = "coo")
+-f.register(row_features, 0, name = "row_features")
+-f.register(col_names, 1, name = "col_names")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t", sampling = "coo")
+-dataset[5], len(dataset)
+-```
+-Note: `h5torch` does not limit the number of possible dimensions along its central data object (and hence also the number of axes to align objects to).
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/sampling.svg" width="750">
++</p>
+ 
++## Usage
+ 
++Refer to the tutorial in our docs.
+ 
+ 
+ # Package roadmap
+ - [x] Implement typing
+ - [x] Provide data type conversion capabilities for registering datasets
+ - [x] Add support for custom samplers
+ - [x] Add support for making data splits
+ - [ ] Implement a collater for variable length objects
+ - [x] Add a slice sampler
+ - [x] Implement a way to pre-specify dataset size and append to it
+ - [ ] Add tests
+-- [ ] Add better docs
++- [ ] Add better docs
+```
+
+### Comparing `h5torch-0.1.8/h5torch/dataset.py` & `h5torch-0.1.9/h5torch/dataset.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,38 +1,41 @@
+ from torch.utils import data
+ import h5torch
+ from scipy import sparse
+ import numpy as np
+-from typing import Union, Literal, Tuple, Optional, Callable
++from typing import Union, Literal, Tuple, Optional, Callable, List, Sequence
+ import re
+ 
+ 
+ class Dataset(data.Dataset):
++    """h5torch.Dataset object.
++
++    Parameters
++    ----------
++    path : str
++        Path to the saved HDF5 file. Has to follow the logic defined by `h5torch.File`
++    sampling : Union[int, Literal["coo"]], optional
++        Sampling axis, by default 0
++    subset : Optional[Union[Tuple[str, str], np.ndarray]], optional
++        subset of data to use in dataset.
++        Either: a np.ndarray of indices or np.ndarray containing booleans.
++        Or: a tuple of 2 strings with the first specifying a key in the dataset and the second a regex that must match in that dataset.
++        By default None, specifying to use the whole dataset as is.
++    sample_processor : Optional[Callable], optional
++        A callable that takes as input arguments `f` (the file handle to the HDF5 file) and `sample` (the output of this Dataset's __getitem__).
++        Can be used to postprocess samples
++        By default None
++    """
+     def __init__(
+         self,
+         path: str,
+         sampling: Union[int, Literal["coo"]] = 0,
+         subset: Optional[Union[Tuple[str, str], np.ndarray]] = None,
+         sample_processor: Optional[Callable] = None,
+     ):
+-        """
+-        h5torch.Dataset object.
+-
+-        Parameters
+-        ----------
+-        path: str
+-            Path to the saved HDF5 file.
+-        sampling: Union[int, Literal[&quot;coo&quot;]]
+-            Sampling axis, by default 0
+-        subset: Optional[Union[Tuple[str, str], np.ndarray]]
+-            subset of data to use in dataset.
+-            Either: a np.ndarray of indices or np.ndarray containing booleans.
+-            Or: a tuple of 2 strings with the first specifying a key in the dataset and the second a regex that must match in that dataset.
+-            By default None, specifying to use the whole dataset as is.
+-        """
+         self.f = h5torch.File(path)
+         if "central" not in self.f:
+             raise ValueError('"central" data object was not found in input file.')
+         if (sampling != "coo") and not isinstance(sampling, int):
+             raise TypeError('`sampling` should be either "coo" or `int`')
+         if (sampling != "coo") and (self.f["central"].attrs["mode"] == "coo"):
+             raise ValueError("`coo` central objects require `coo` sampling")
+@@ -61,15 +64,15 @@
+         if isinstance(subset, np.ndarray) and subset.ndim > 1:
+             raise ValueError("`subset` can not have more than one dimension.")
+         if isinstance(subset, np.ndarray) and (subset.dtype == np.bool_):
+             subset = np.where(subset)[0]
+         elif isinstance(subset, tuple):
+             matcher = np.vectorize(lambda x: bool(re.match(subset[1], x)))
+             subset = np.where(matcher(self.f[subset[0]][:].astype(str)))[0]
+-        else:
++        elif subset is None:
+             subset = np.arange(self.__len_without_subset__())
+         self.indices = subset
+ 
+         if sample_processor is None:
+             self.sample_processor = lambda f, sample: sample
+         else:
+             self.sample_processor = sample_processor
+@@ -131,45 +134,50 @@
+         return sample
+ 
+     def close(self):
+         self.f.close()
+ 
+ 
+ class SliceDataset(Dataset):
++    """h5torch.SliceDataset object.
++    Takes slices from the central object (and the sampled axis) as samples.
++    The default behavior is to take slices starting from the first element with size `window_size` and optionally overlapping by `overlap` elements.
++    If the last slice of the data would be an incomplete sample, it would be thrown away.
++
++    If `window_indices` is specified, then `window_size` and `overlap` is ignored.
++
++    Parameters
++    ----------
++    path : str
++        Path to the saved HDF5 file. Has to follow the logic defined by `h5torch.File`
++    sampling : Union[int, Literal["coo"]], optional
++        Sampling axis, by default 0
++    sample_processor : Optional[Callable], optional
++        A callable that takes as input arguments `f` (the file handle to the HDF5 file) and `sample` (the output of this Dataset's __getitem__).
++        Can be used to postprocess samples
++        By default None
++    window_size : int, optional
++        Size of the slices in number of elements, by default 501
++    overlap : int, optional
++        Overlap of each slice in number of elements, by default 0
++    window_indices : Optional[np.ndarray], optional
++        A np.ndarray of size N x 2 with N the number of slices. Each row specifies the start and end index of each slice.
++        (End indices are not included in python-slicing style)
++        Can be used to overwrite `window_size` and `overlap` default behavior and/or to specify subsets as training/validation/test sets.
++        By default None
++    """
+     def __init__(
+         self,
+         path: str,
+         sampling: Union[int, Literal["coo"]] = 0,
+         sample_processor: Optional[Callable] = None,
+         window_size: int = 501,
+         overlap: int = 0,
+         window_indices: Optional[np.ndarray] = None,
+     ):
+-        """
+-        h5torch.SliceDataset object. Takes slices from the central object (and the sampled axis) as samples.
+-        The default behavior is to take slices starting from the first element with size `window_size` and optionally overlapping by `overlap` elements.
+-        If the last slice of the data would be an incomplete sample, it would be thrown away.
+-
+-        If `window_indices` is specified, then `window_size` and `overlap` is ignored.
+-
+-        Parameters
+-        ----------
+-        path: str
+-            Path to the saved HDF5 file.
+-        sampling: Union[int, Literal[&quot;coo&quot;]]
+-            Sampling axis, by default 0
+-        window_size: int
+-            Size of the slices in number of elements
+-        overlap: int
+-            Overlap of each slice in number of elements
+-        window_indices: Optional[np.ndarray]
+-            A np.ndarray of size N x 2 with N the number of slices. Each row specifies the start and end index of each slice.
+-            (End indices are not included in python-slicing style)
+-            Can be used to overwrite `window_size` and `overlap` default behavior and/or to specify subsets as training/validation/test sets.
+-        """
+         super().__init__(
+             path, sampling=sampling, subset=None, sample_processor=sample_processor
+         )
+         if not isinstance(sampling, int):
+             raise TypeError("`sampling` should be `int`")
+         if self.f["central"].attrs["mode"] == "coo":
+             raise ValueError(
+@@ -224,29 +232,34 @@
+ 
+ def sample_csr_oneindex(h5object, index):
+     ix0, ix1 = h5object["indptr"][index : index + 2]
+     x = np.zeros(h5object.attrs["shape"][1], dtype=h5object.attrs["dtypes"][1])
+     x[h5object["indices"][ix0:ix1]] = h5object["data"][ix0:ix1]
+     return x
+ 
++
+ def sample_csr_slice(h5object, ix0, ix1):
+     t = h5object["indptr"][ix0 : ix1 + 2]
+-    r = np.repeat(np.arange(ix1-ix0+1), np.diff(t))
+-    c = h5object["indices"][t[0]:t[-1]]
+-    x = np.zeros((ix1-ix0 + 1, h5object.attrs["shape"][1]), dtype=h5object.attrs["dtypes"][1])
+-    x[r, c] = h5object["data"][t[0]:t[-1]]
++    r = np.repeat(np.arange(ix1 - ix0 + 1), np.diff(t))
++    c = h5object["indices"][t[0] : t[-1]]
++    x = np.zeros(
++        (ix1 - ix0 + 1, h5object.attrs["shape"][1]), dtype=h5object.attrs["dtypes"][1]
++    )
++    x[r, c] = h5object["data"][t[0] : t[-1]]
+     return x
+ 
+ 
+ def sample_csr(h5object, index):
+     if isinstance(index, (int, np.integer)):
+         return apply_dtype(h5object, sample_csr_oneindex(h5object, index))
+     else:
+-        if (index == np.arange(index[0], index[-1]+1)).all():
+-            return apply_dtype(h5object, sample_csr_slice(h5object, index[0], index[-1]))
++        if (index == np.arange(index[0], index[-1] + 1)).all():
++            return apply_dtype(
++                h5object, sample_csr_slice(h5object, index[0], index[-1])
++            )
+         else:
+             return apply_dtype(
+                 h5object, np.stack([sample_csr_oneindex(h5object, i) for i in index])
+             )
+ 
+ 
+ def sample_coo(h5object, index):
+```
+
+### Comparing `h5torch-0.1.8/h5torch/file.py` & `h5torch-0.1.9/h5torch/file.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,35 +1,49 @@
+ from scipy import sparse
+ import h5py
+ import numpy as np
+ from typing import Optional, Literal, Union, List, Tuple, Sequence
+ import warnings
+ 
+-
+ class File(h5py.File):
+-    def __init__(self, path: str, mode: Literal["r", "r+", "x", "w-", "a", "w"] = "r"):
++    """Initializes a file handle to a HDF5 file.
++
++    Parameters
++    ----------
++    path : str
++        path to HDF5 file to save (or read) to (or from).
++    mode : Literal["r", "r+", "x", "w-", "a", "w"], optional
++        load in the file in read, write, append, ..., mode, by default "r".
++    """
++    def __init__(
++        self, path: str, mode: Literal["r", "r+", "x", "w-", "a", "w"] = "r"
++    ) -> None:
+         super().__init__(path, mode)
+-        """Initializes a file handle to a HDF5 file.
+-        """
+ 
+         if mode == "r":
+             for key in list(self.keys()):
+                 if key.isdigit():
+                     for axis_key in list(self[key].keys()):
+                         name = "%s/%s" % (key, axis_key)
+                         filled_to = self[name].attrs["filled_to"]
+                         shape = self[name].attrs["shape"][0]
+                         if filled_to != shape:
+-                            warnings.warn("object \"%s\" has not been completely filled to its pre-specified length (%s / %s filled)" % (name, filled_to, shape))
++                            warnings.warn(
++                                'object "%s" has not been completely filled to its pre-specified length (%s / %s filled)'
++                                % (name, filled_to, shape)
++                            )
+                 elif key == "central":
+                     name = key
+                     filled_to = self[name].attrs["filled_to"]
+                     shape = self[name].attrs["shape"][0]
+                     if filled_to != shape:
+-                        warnings.warn("object \"%s\" has not been completely filled to its pre-specified length (%s / %s filled)" % (name, filled_to, shape))
++                        warnings.warn(
++                            'object "%s" has not been completely filled to its pre-specified length (%s / %s filled)'
++                            % (name, filled_to, shape)
++                        )
+ 
+     def register(
+         self,
+         data: Union[List, np.ndarray, Tuple[np.ndarray, np.ndarray, Sequence]],
+         axis: Union[int, Literal["central", "unstructured"]],
+         length: Optional[int] = None,
+         name: Optional[str] = None,
+@@ -48,22 +62,22 @@
+ 
+             If mode == "coo", expects either a 2D `np.ndarray` or a Tuple: indices (N, M), values (M) and shape (..)*N
+ 
+             If mode == "vlen", expects a List of 1D np.ndarrays
+ 
+             If mode == "separate", expects a List of np.ndarrays
+ 
+-        axis : Union[int, Literal[&quot;central&quot;, &quot;unstructured&quot;]]
++        axis : Union[int, Literal["central", "unstructured"]]
+             Axis to align the dataset to. The first dataset that should be registered to a HDF5 file should always be the central dataset.
+-        name : Optional[str], optional
+-            name of the dataset, ignored in the case of axis == "central", mandatory in the case of an alignment axis, by default None,
+         length : Optional[int], optional
+             length of the dataset, useful when registering a dataset to which you want to append later
+             by default None, which means you will not be able to append to the dataset later.
+-        mode : Literal[&quot;N-D&quot;, &quot;csr&quot;, &quot;coo&quot;, &quot;vlen&quot;, &quot;separate&quot;], optional
++        name : Optional[str], optional
++            name of the dataset, ignored in the case of axis == "central", mandatory in the case of an alignment axis, by default None
++        mode : Literal["N-D", "csr", "coo", "vlen", "separate"], optional
+             mode in which to save the data, by default "N-D"
+         dtype_save : Optional[str], optional
+             data type in which to save the data, by default None, which means it uses the datatype as given
+         dtype_load : Optional[str], optional
+             data type in which to load the data, by default None, which means it uses the datatype as given
+         """
+         if isinstance(name, str) and ("/" in name):
+@@ -82,15 +96,16 @@
+             raise ValueError(
+                 "given alignment axis exceeds the number of axes in central data object"
+             )
+         if mode == "csr":
+             data = sparse.csr_matrix(data)
+         len_ = (
+             (len(data) if not isinstance(data, sparse.csr_matrix) else data.shape[0])
+-            if length is None else length
++            if length is None
++            else length
+         )
+         if (
+             mode != "coo"
+             and isinstance(axis, int)
+             and (len_ != self["central"].attrs["shape"][axis])
+         ):
+             raise ValueError(
+@@ -118,28 +133,26 @@
+         if axis == "central":
+             name = "central"
+         else:
+             name = "%s/%s" % (axis, name)
+ 
+         register_fun(data, name, dtype_save, dtype_load, length)
+ 
+-        # data = data.astype(np.dtype(dtype)))
+-
+     def _ND_register(self, data, name, dtype_save, dtype_load, length):
+         dtype_save_np = default_dtype(data, dtype_save)
+         dtype_load_np = default_dtype(data, dtype_load)
+ 
+         shape = list(data.shape)
+         if length is not None:
+             shape[0] = length
+-            self.create_dataset(name, shape = shape, dtype = dtype_save_np)
+-            self[name][:data.shape[0]] = data.astype(dtype_save_np)
++            self.create_dataset(name, shape=shape, dtype=dtype_save_np)
++            self[name][: data.shape[0]] = data.astype(dtype_save_np)
+         else:
+             self.create_dataset(name, data=data.astype(dtype_save_np), shape=shape)
+-        
++
+         self[name].attrs["shape"] = shape
+         self[name].attrs["mode"] = "N-D"
+         self[name].attrs["dtypes"] = [str(dtype_save_np), str(dtype_load_np)]
+         self[name].attrs["filled_to"] = data.shape[0]
+ 
+     def _csr_register(self, data, name, dtype_save, dtype_load, length):
+         if length is not None:
+@@ -188,18 +201,16 @@
+             )
+         dtype_save_np = default_dtype(data[0], dtype_save)
+         dtype_load_np = default_dtype(data[0], dtype_load)
+ 
+         shape = [len(data)]
+         if length is not None:
+             shape[0] = length
+-            self.create_dataset(
+-                name, dtype=h5py.vlen_dtype(dtype_save_np), shape=shape
+-            )
+-            self[name][:len(data)] = [d.astype(dtype_save_np) for d in data]
++            self.create_dataset(name, dtype=h5py.vlen_dtype(dtype_save_np), shape=shape)
++            self[name][: len(data)] = [d.astype(dtype_save_np) for d in data]
+         else:
+             self.create_dataset(
+                 name, data=data, dtype=h5py.vlen_dtype(dtype_save_np), shape=shape
+             )
+ 
+         self[name].attrs["shape"] = shape
+         self[name].attrs["mode"] = "vlen"
+@@ -223,15 +234,24 @@
+             shape = [length]
+ 
+         self[name].attrs["shape"] = shape
+         self[name].attrs["mode"] = "separate"
+         self[name].attrs["dtypes"] = [str(dtype_save_np), str(dtype_load_np)]
+         self[name].attrs["filled_to"] = len(data)
+ 
+-    def append(self, name, data):
++    def append(self, data: str, name: str) -> None:
++        """Append data to an existing group.
++
++        Parameters
++        ----------
++        data : str
++            The data to append
++        name : str
++            The key / name of the HDF5 dataset to append data to.
++        """
+         if self[name].attrs["mode"] not in ["vlen", "separate", "N-D"]:
+             raise ValueError(
+                 "Appending is only possible for `N-D`, `vlen`, or `separate` type objects."
+             )
+ 
+         start_ix = self[name].attrs["filled_to"]
+         end_ix = start_ix + len(data)
+@@ -240,22 +260,27 @@
+                 "Appended data would exceed data size limits: slice = %s:%s, dataset length = %s"
+                 % (start_ix, end_ix, self[name].attrs["shape"][0])
+             )
+ 
+         if self[name].attrs["mode"] == "N-D":
+             self[name][start_ix:end_ix] = data.astype(self[name].attrs["dtypes"][0])
+             self[name].attrs["filled_to"] = end_ix
+-        
++
+         if self[name].attrs["mode"] == "vlen":
+-            self[name][start_ix:end_ix] = [d.astype(self[name].attrs["dtypes"][0]) for d in data]
++            self[name][start_ix:end_ix] = [
++                d.astype(self[name].attrs["dtypes"][0]) for d in data
++            ]
+             self[name].attrs["filled_to"] = end_ix
+ 
+         if self[name].attrs["mode"] == "separate":
+             for ix, elem in zip(range(start_ix, end_ix), data):
+-                self.create_dataset("%s/%s" % (name, ix), data=elem.astype(self[name].attrs["dtypes"][0]))
++                self.create_dataset(
++                    "%s/%s" % (name, ix),
++                    data=elem.astype(self[name].attrs["dtypes"][0]),
++                )
+             self[name].attrs["filled_to"] = end_ix
+ 
+     def __repr__(self):
+         f = h5py.File.__repr__(self).split("HDF5 file")
+         return f[0] + "h5torch file" + f[1]
+```
+
+### Comparing `h5torch-0.1.8/h5torch.egg-info/PKG-INFO` & `h5torch-0.1.9/README.md`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,33 +1,25 @@
+-Metadata-Version: 2.1
+-Name: h5torch
+-Version: 0.1.8
+-Summary: HDF5 data utilities for PyTorch
+-Home-page: https://github.com/gdewael/h5torch
+-Author: Gaetan De Waele
+-Requires-Python: >=3.9
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ <div align="center">
+ <h1>h5torch</h1>
+ 
+ HDF5 data utilities for PyTorch.
+ 
+ 
+ [![PyPi Version](https://img.shields.io/pypi/v/h5torch.svg)](https://pypi.python.org/pypi/h5torch/)
+ [![GitHub license](https://img.shields.io/github/license/gdewael/h5torch)](https://github.com/gdewael/h5torch/blob/main/LICENSE)
+ 
+ </div>
+ 
+-`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for how datasets should be saved, hence allowing dataloading of various machine learning data settings from a single dataset object, reducing boilerplate in your projects.
++`h5torch` consists of two main parts: (1) `h5torch.File`: a wrapper around `h5py.File` as an interface to create HDF5 files compatible with (2) `h5torch.Dataset`, a wrapper around `torch.utils.data.Dataset`. As a library, `h5torch` establishes a "code" for linking [h5py] and [torch]. To do this, this package has to formulate a vocabulary for how datasets generally look, unifying as many ML settings to the best of its abilities. In turn, this vocabulary allows dataloading of various machine learning data settings from a single dataset class definition, reducing boilerplate in your projects.
+ 
+-### but y tho?
++### Who is this package for?
+ Loading data from HDF5 files allows for efficient data-loading from an **on-disk** format, drastically reducing memory overhead. Additionally, you will find your datasets to be more **organized** using the HDF5 format, as everything is neatly arrayed in a single file.
+ 
++If you want to use this package but are not sure your use-case is covered by the current formulation of the package, feel free to open an issue.
++
+ ## Install
+ Since PyTorch is a dependency of `h5torch`, we recommend [installing PyTorch](https://pytorch.org/get-started/locally/) independently first, as your system may require a specific version (e.g. CUDA drivers).
+ 
+ After PyTorch installation, `h5torch` can be installed using `pip`
+ ```bash
+ pip install h5torch
+ ```
+@@ -35,14 +27,18 @@
+ 
+ ### Package concepts
+ 
+ #### Storing
+ 
+ The main idea behind `h5torch` is that datasets can usually be formulated as being aligned to a central object. E.g. in a classical supervised learning setup, features/inputs are aligned to a label vector/matrix. In recommender systems, a score matrix is the central object, with features aligned to rows and columns.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/centralvsaligned.svg" width="750">
++</p>
++
+ `h5torch` allows creating and reading HDF5 datasets for use in PyTorch using this dogma. When creating a new dataset, the first data object that should be registered is the `central` object. The type of `central` object is flexible:
+ 
+ - `N-D`: for regular dense data. The number of dimensions in this object will dictate how many possible aligned axes can exist.
+ - `coo`: The sparse variant as `N-D`. The number of dimensions here can be arbitrary high.
+ - `csr`: For sparse 2D arrays, this central data type can only have 2 aligned axes and can only be sampled along the first dimension
+ - `vlen`: For variable length 1D arrays. This central data type can only have one aligned axis (0).
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images. This central data type can only have one aligned axis (0).
+@@ -52,85 +48,39 @@
+ - `N-D`: Can have arbitrary number of dimensions. E.g. equally-sized images: `(N, 3, H, W)`.
+ - `csr`: Max 2 dimensions, rows will be sampled. E.g. A sparse scRNA-seq count matrix
+ - `vlen`: Variable length 1D arrays. E.g. Tokenized text as variable length arrays of integers.
+ - `separate`: For objects that are better stored in separate groups instead of as one dataset. An example is variable shape N-D objects such as variably-sized images.
+ 
+ Note there is no support for `coo` data type for aligned objects, that is because aligned axis objects require efficient indexing along their first dimension.
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/multidim.svg" width="750">
++</p>
++
+ Also note that there is no limit on the number of data objects aligned to an axis. For example, in the case of images aligned to a central label vector, extra information of every image can be added such as the URL, the date said image was taken, the geolocation of that image, ...
+ 
+ Besides the central and axis objects, you can also store `unstructured` data which can be any length or dimension and follow any of the above-mentioned data types (including `coo`). This could for example be a vocabularium vector or the names of classes...
+ 
+ #### Sampling
+ 
+ Once a dataset is created using `h5torch.File`, it can be used as a PyTorch Dataset using `h5torch.Dataset`. Sampling can occur along any of the axes in the central object, upon which the corresponding indices in the objects aligned to that axis are also sampled. Alternatively, `coo` sampling (available for `N-D` and `coo`-type central objects) samples one specific element of the central dataset, along with the corresponding indices of all axis-aligned objects.
+ 
+-<img src="./h5torch/img/h5torch.svg" width="750">
+-
+-## Usage
+-
+-The most simple use-case is a ML setting with a 2-D `X` matrix as central object with corresponding labels `y` along the first axis.
+-
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(X, "central")
+-f.register(y, 0, name = "y")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-Note that labels `y` can also play the role of central object. Both are equivalent in this simple case.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-X = np.random.randn(100, 15)
+-y = np.random.rand(100)
+-f.register(y, "central")
+-f.register(X, 0, name = "X")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t")
+-dataset[5], len(dataset)
+-```
+-
+-An example with a 2-dimensional Y matrix (such as a score matrix), with objects aligned to both axes of the central matrix. Storing Y and sampling is performed in `"coo"` mode, meaning the length of the dataset is the number of nonzero elements in the score matrix, and a sample constitutes such a nonzero element, along with the stored information of the row and col of said element.
+-```python
+-import h5torch
+-import numpy as np
+-f = h5torch.File("example.h5t", "w")
+-
+-Y = (np.random.rand(1000, 500) > 0.95).astype(int)
+-row_features = np.random.randn(1000, 15)
+-col_names = np.arange(500).astype(bytes)
+-
+-
+-f.register(Y, "central", mode = "coo")
+-f.register(row_features, 0, name = "row_features")
+-f.register(col_names, 1, name = "col_names")
+-f.close()
+-
+-dataset = h5torch.Dataset("example.h5t", sampling = "coo")
+-dataset[5], len(dataset)
+-```
+-Note: `h5torch` does not limit the number of possible dimensions along its central data object (and hence also the number of axes to align objects to).
+ 
++<p align="center">
++    <img src="https://raw.githubusercontent.com/gdewael/h5torch/main/img/sampling.svg" width="750">
++</p>
+ 
++## Usage
+ 
++Refer to the tutorial in our docs.
+ 
+ 
+ # Package roadmap
+ - [x] Implement typing
+ - [x] Provide data type conversion capabilities for registering datasets
+ - [x] Add support for custom samplers
+ - [x] Add support for making data splits
+ - [ ] Implement a collater for variable length objects
+ - [x] Add a slice sampler
+ - [x] Implement a way to pre-specify dataset size and append to it
+ - [ ] Add tests
+-- [ ] Add better docs
++- [ ] Add better docs
+```
+

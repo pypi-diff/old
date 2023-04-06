@@ -1,0 +1,81 @@
+# Comparing `tmp/kat_bulgaria-0.2.3.tar.gz` & `tmp/kat_bulgaria-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "kat_bulgaria-0.2.3.tar", last modified: Tue Apr  4 19:02:54 2023, max compression
++gzip compressed data, was "kat_bulgaria-0.3.0.tar", last modified: Thu Apr  6 09:04:00 2023, max compression
+```
+
+## Comparing `kat_bulgaria-0.2.3.tar` & `kat_bulgaria-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 19:02:54.390908 kat_bulgaria-0.2.3/
+--rw-r--r--   0 runner    (1001) docker     (123)     2862 2023-04-04 19:02:54.386908 kat_bulgaria-0.2.3/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2563 2023-04-04 19:02:43.000000 kat_bulgaria-0.2.3/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 19:02:54.386908 kat_bulgaria-0.2.3/kat_bulgaria/
+--rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-04 19:02:43.000000 kat_bulgaria-0.2.3/kat_bulgaria/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3667 2023-04-04 19:02:43.000000 kat_bulgaria-0.2.3/kat_bulgaria/obligations.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 19:02:54.386908 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2862 2023-04-04 19:02:54.000000 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-04 19:02:54.000000 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-04 19:02:54.000000 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-04 19:02:54.000000 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-04 19:02:54.000000 kat_bulgaria-0.2.3/kat_bulgaria.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-04 19:02:54.390908 kat_bulgaria-0.2.3/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      695 2023-04-04 19:02:43.000000 kat_bulgaria-0.2.3/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-04 19:02:54.386908 kat_bulgaria-0.2.3/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-04 19:02:43.000000 kat_bulgaria-0.2.3/tests/test_obligations.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     4774 2023-04-06 09:03:45.000000 kat_bulgaria-0.3.0/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/kat_bulgaria/
++-rw-r--r--   0 runner    (1001) docker     (123)       26 2023-04-06 09:03:45.000000 kat_bulgaria-0.3.0/kat_bulgaria/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5470 2023-04-06 09:03:45.000000 kat_bulgaria-0.3.0/kat_bulgaria/obligations.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     5073 2023-04-06 09:04:00.000000 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      276 2023-04-06 09:04:00.000000 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 09:04:00.000000 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-06 09:04:00.000000 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-06 09:04:00.000000 kat_bulgaria-0.3.0/kat_bulgaria.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      692 2023-04-06 09:03:45.000000 kat_bulgaria-0.3.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 09:04:00.632292 kat_bulgaria-0.3.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-06 09:03:45.000000 kat_bulgaria-0.3.0/tests/test_obligations.py
+```
+
+### Comparing `kat_bulgaria-0.2.3/setup.py` & `kat_bulgaria-0.3.0/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -3,21 +3,21 @@
+ from pathlib import Path
+ from setuptools import find_packages, setup
+ 
+ long_description = Path("README.md").read_text()
+ 
+ setup(
+     name="kat_bulgaria",
+-    version="0.2.3",
++    version="0.3.0",
+     description="A library to check for existing obligations to KAT Bulgaria",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/Nedevski/py_kat_bulgaria",
+     author="Nikola Nedevski",
+     author_email="nikola.nedevski@gmail.com",
+     license="MIT",
+     packages=find_packages(include=["kat_bulgaria"]),
+-    install_requires=["requests"],
++    install_requires=["httpx"],
+     setup_requires=["pytest-runner"],
+     tests_require=["pytest==4.4.1"],
+     test_suite="tests",
+ )
+```
+

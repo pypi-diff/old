@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/sshfs-2023.1.0.tar.gz tmp/sshfs-2023.4.0.tar.gz --html versions/s/sshfs/2023.1.0-2023.4.0/index.html --text versions/s/sshfs/2023.1.0-2023.4.0/diff.txt --markdown versions/s/sshfs/2023.1.0-2023.4.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">12.8 KB</span></div>
+  <div><span class="source">tmp/sshfs-2023.1.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/sshfs-2023.4.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">266 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sshfs-2023.<del>1</del>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Sun</del><span class="dp">·</span><del>Jan</del><span class="dp">·</span><del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;sshfs-2023.<ins>4</ins>.0.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Thu</ins><span class="dp">·</span><ins>Apr</ins><span class="dp">·</span><ins><span class="dp">·</span>6</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">12.5 KB</span></div>
+    <div><span class="source">sshfs-2023.1.0.tar</span> vs.</div>
+    <div id="sshfs-----.-.-.tar"><span class="source">sshfs-2023.4.0.tar</span>
+      <a class="anchor" href="#sshfs-----.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">9.12 KB</span></div>
+      <div id="sshfs-----.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 39 lines modified</td><td colspan="2">Offset 1, 39 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>610728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>278503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>598728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/.github/</td><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>274503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.github/</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>602728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/.github/workflows/</td><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>274503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.github/workflows/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/.github/workflows/pre-commit.yml</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.github/workflows/pre-commit.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>551<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/.github/workflows/publish.yml</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>551<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.github/workflows/publish.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>79<del>3</del><span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/.github/workflows/test.yml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>79<ins>5</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.github/workflows/test.yml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1445<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/.gitignore</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1445<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>521<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/.pre-commit-config.yaml</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>521<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/.pre-commit-config.yaml</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11345<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/LICENSE</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11345<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3284<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>610728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/PKG-INFO</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3284<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>278503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2623<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/README.md</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2623<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>309<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/pyproject.toml</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>309<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/requirements-dev.txt</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/requirements-dev.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>790<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>610728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/setup.cfg</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>790<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>278503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/setup.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>606728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>274503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/__init__.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/config.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>634<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/file.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2948<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/file.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>606728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/pools/</td><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>274503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/pools/</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/pools/__init__.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>98<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/pools/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2472<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/pools/base.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2472<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/pools/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1555<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/pools/hard.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1555<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/pools/hard.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1725</del><span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/pools/soft.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2231</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/pools/soft.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9176<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/spec.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9176<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/spec.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2023<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs/utils.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2023<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>606728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/</td><td class="diffline">27 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>274503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3284<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/PKG-INFO</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3284<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>616<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/SOURCES.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>616<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/dependency_links.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/requires.txt</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>241<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/sshfs.egg-info/top_level.txt</td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/sshfs.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>606728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/</td><td class="diffline">33 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>278503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:4<del>0</del>.<del>610728</del><span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/static/</td><td class="diffline">34 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:4<ins>9</ins>.<ins>278503</ins><span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/static/</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2610<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/static/user.key</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2610<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/static/user.key</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>573<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/static/user.key.pub</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>573<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/static/user.key.pub</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1136<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/test_config.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1136<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/test_config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4206<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/test_sftp_pools.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4206<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/test_sftp_pools.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8733<span class="dp">·</span>2023-0<del>1</del>-<del>22</del><span class="dp">·</span><del>23</del>:0<del>3</del>:3<del>1</del>.000000<span class="dp">·</span>sshfs-2023.<del>1</del>.0/tests/test_sshfs.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8733<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:0<ins>8</ins>:3<ins>9</ins>.000000<span class="dp">·</span>sshfs-2023.<ins>4</ins>.0/tests/test_sshfs.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/.github/workflows/publish.yml</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--.github-workflows-publish.yml"><span class="source">sshfs-2023.4.0/.github/workflows/publish.yml</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--.github-workflows-publish.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">491 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/.github/workflows/test.yml</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--.github-workflows-test.yml"><span class="source">sshfs-2023.4.0/.github/workflows/test.yml</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--.github-workflows-test.yml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 11, 15 lines modified</td><td colspan="2">Offset 11, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">jobs:</td><td class="diffline">11 </td><td class="diffpresent">jobs:</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>test:</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>test:</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>runs-on:<span class="dp">·</span>${{<span class="dp">·</span>matrix.os<span class="dp">·</span>}}</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>runs-on:<span class="dp">·</span>${{<span class="dp">·</span>matrix.os<span class="dp">·</span>}}</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>strategy:</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>strategy:</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fail-fast:<span class="dp">·</span>true</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>fail-fast:<span class="dp">·</span>true</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>matrix:</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>matrix:</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os:<span class="dp">·</span>[ubuntu-<del>18.04</del>,<span class="dp">·</span>macos-<del>10.15</del>]</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os:<span class="dp">·</span>[ubuntu-<ins>l</ins><ins>atest</ins>,<span class="dp">·</span>macos-<ins>l</ins><ins>atest</ins>]</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pyv:<span class="dp">·</span>[&quot;3.7&quot;,<span class="dp">·</span>&quot;3.8&quot;,<span class="dp">·</span>&quot;3.9&quot;,<span class="dp">·</span>&quot;3.10&quot;,<span class="dp">·</span>&quot;3.11.0-rc<span class="dp">·</span>-<span class="dp">·</span>3.11&quot;]</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pyv:<span class="dp">·</span>[&quot;3.7&quot;,<span class="dp">·</span>&quot;3.8&quot;,<span class="dp">·</span>&quot;3.9&quot;,<span class="dp">·</span>&quot;3.10&quot;,<span class="dp">·</span>&quot;3.11.0-rc<span class="dp">·</span>-<span class="dp">·</span>3.11&quot;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>steps:</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>steps:</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>uses:<span class="dp">·</span>actions/checkout@v2</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>uses:<span class="dp">·</span>actions/checkout@v2</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>uses:<span class="dp">·</span>actions/setup-python@v2</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>-<span class="dp">·</span>uses:<span class="dp">·</span>actions/setup-python@v2</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with:</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>with:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">89.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/.gitignore</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--.gitignore"><span class="source">sshfs-2023.4.0/.gitignore</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/.pre-commit-config.yaml</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--.pre-commit-config.yaml"><span class="source">sshfs-2023.4.0/.pre-commit-config.yaml</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--.pre-commit-config.yaml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/LICENSE</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--LICENSE"><span class="source">sshfs-2023.4.0/LICENSE</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">515 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/PKG-INFO</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--PKG-INFO"><span class="source">sshfs-2023.4.0/PKG-INFO</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sshfs</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sshfs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<del>1</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<ins>4</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>SSH<span class="dp">·</span>Filesystem<span class="dp">·</span>--<span class="dp">·</span>Async<span class="dp">·</span>SSH/SFTP<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>fsspec</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>SSH<span class="dp">·</span>Filesystem<span class="dp">·</span>--<span class="dp">·</span>Async<span class="dp">·</span>SSH/SFTP<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>fsspec</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/README.md</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--README.md"><span class="source">sshfs-2023.4.0/README.md</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/setup.cfg</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--setup.cfg"><span class="source">sshfs-2023.4.0/setup.cfg</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">99.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/config.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-config.py"><span class="source">sshfs-2023.4.0/sshfs/config.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/file.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-file.py"><span class="source">sshfs-2023.4.0/sshfs/file.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-file.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/pools/base.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-pools-base.py"><span class="source">sshfs-2023.4.0/sshfs/pools/base.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-pools-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/pools/hard.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-pools-hard.py"><span class="source">sshfs-2023.4.0/sshfs/pools/hard.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-pools-hard.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/spec.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-spec.py"><span class="source">sshfs-2023.4.0/sshfs/spec.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-spec.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs/utils.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs-utils.py"><span class="source">sshfs-2023.4.0/sshfs/utils.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">545 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs.egg-info/PKG-INFO</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs.egg-info-PKG-INFO"><span class="source">sshfs-2023.4.0/sshfs.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sshfs</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>sshfs</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<del>1</del>.0</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<ins>4</ins>.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>SSH<span class="dp">·</span>Filesystem<span class="dp">·</span>--<span class="dp">·</span>Async<span class="dp">·</span>SSH/SFTP<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>fsspec</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>SSH<span class="dp">·</span>Filesystem<span class="dp">·</span>--<span class="dp">·</span>Async<span class="dp">·</span>SSH/SFTP<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>fsspec</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>License<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">6 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">7 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.7</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.8</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/sshfs.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--sshfs.egg-info-SOURCES.txt"><span class="source">sshfs-2023.4.0/sshfs.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--sshfs.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/tests/static/user.key</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--tests-static-user.key"><span class="source">sshfs-2023.4.0/tests/static/user.key</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--tests-static-user.key">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/tests/static/user.key.pub</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--tests-static-user.key.pub"><span class="source">sshfs-2023.4.0/tests/static/user.key.pub</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--tests-static-user.key.pub">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">109 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/tests/test_config.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--tests-test_config.py"><span class="source">sshfs-2023.4.0/tests/test_config.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--tests-test_config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/tests/test_sftp_pools.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--tests-test_sftp_pools.py"><span class="source">sshfs-2023.4.0/tests/test_sftp_pools.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--tests-test_sftp_pools.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">sshfs-2023.1.0/tests/test_sshfs.py</span> vs.</div>
+      <div id="sshfs-----.-.-.tar---sshfs-----.-.--tests-test_sshfs.py"><span class="source">sshfs-2023.4.0/tests/test_sshfs.py</span>
+        <a class="anchor" href="#sshfs-----.-.-.tar---sshfs-----.-.--tests-test_sshfs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

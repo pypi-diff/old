@@ -1,0 +1,124 @@
+# Comparing `tmp/zmeiapi-0.0.8.tar.gz` & `tmp/zmeiapi-0.0.9.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "zmeiapi-0.0.8.tar", last modified: Tue Mar 14 00:52:29 2023, max compression
++gzip compressed data, was "zmeiapi-0.0.9.tar", last modified: Tue Mar 14 01:00:55 2023, max compression
+```
+
+## Comparing `zmeiapi-0.0.8.tar` & `zmeiapi-0.0.9.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 00:52:29.861432 zmeiapi-0.0.8/
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     1101 2023-03-06 08:13:19.000000 zmeiapi-0.0.8/LICENSE.txt
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 00:52:29.861432 zmeiapi-0.0.8/PKG-INFO
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)        6 2023-03-06 09:47:27.000000 zmeiapi-0.0.8/README.md
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)       38 2023-03-14 00:52:29.861432 zmeiapi-0.0.8/setup.cfg
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      783 2023-03-14 00:52:21.000000 zmeiapi-0.0.8/setup.py
+-drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 00:52:29.857432 zmeiapi-0.0.8/zmeiapi/
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     4317 2023-03-14 00:51:28.000000 zmeiapi-0.0.8/zmeiapi/BumatReader.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     3859 2023-03-09 14:32:01.000000 zmeiapi-0.0.8/zmeiapi/General.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      459 2023-03-07 14:08:13.000000 zmeiapi-0.0.8/zmeiapi/Logger.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     7765 2023-03-07 14:21:04.000000 zmeiapi-0.0.8/zmeiapi/Material.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     1160 2023-03-07 14:08:13.000000 zmeiapi-0.0.8/zmeiapi/MaterialCreators.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      300 2023-03-06 13:30:00.000000 zmeiapi-0.0.8/zmeiapi/Parameters.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     3378 2023-03-10 22:20:40.000000 zmeiapi-0.0.8/zmeiapi/Pin.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     1649 2023-03-07 14:08:13.000000 zmeiapi-0.0.8/zmeiapi/PinCreators.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     3292 2023-03-10 22:20:12.000000 zmeiapi-0.0.8/zmeiapi/SerpentOut.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)     4543 2023-03-09 06:52:27.000000 zmeiapi-0.0.8/zmeiapi/Surface.py
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-06 10:31:21.000000 zmeiapi-0.0.8/zmeiapi/__init__.py
+-drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 00:52:29.857432 zmeiapi-0.0.8/zmeiapi.egg-info/
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 00:52:29.000000 zmeiapi-0.0.8/zmeiapi.egg-info/PKG-INFO
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)      383 2023-03-14 00:52:29.000000 zmeiapi-0.0.8/zmeiapi.egg-info/SOURCES.txt
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)        1 2023-03-14 00:52:29.000000 zmeiapi-0.0.8/zmeiapi.egg-info/dependency_links.txt
+--rw-rw-r--   0 vlad      (1000) vlad      (1000)        8 2023-03-14 00:52:29.000000 zmeiapi-0.0.8/zmeiapi.egg-info/top_level.txt
++drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.490540 zmeiapi-0.0.9/
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1101 2023-03-06 08:13:19.000000 zmeiapi-0.0.9/LICENSE.txt
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/PKG-INFO
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)        6 2023-03-06 09:47:27.000000 zmeiapi-0.0.9/README.md
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)       38 2023-03-14 01:00:55.490540 zmeiapi-0.0.9/setup.cfg
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      783 2023-03-14 01:00:44.000000 zmeiapi-0.0.9/setup.py
++drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/zmeiapi/
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     4317 2023-03-14 00:51:28.000000 zmeiapi-0.0.9/zmeiapi/BumatReader.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     3859 2023-03-09 14:32:01.000000 zmeiapi-0.0.9/zmeiapi/General.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      459 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/Logger.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     7765 2023-03-07 14:21:04.000000 zmeiapi-0.0.9/zmeiapi/Material.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1160 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/MaterialCreators.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      300 2023-03-06 13:30:00.000000 zmeiapi-0.0.9/zmeiapi/Parameters.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     3378 2023-03-10 22:20:40.000000 zmeiapi-0.0.9/zmeiapi/Pin.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     1649 2023-03-07 14:08:13.000000 zmeiapi-0.0.9/zmeiapi/PinCreators.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     3292 2023-03-10 22:20:12.000000 zmeiapi-0.0.9/zmeiapi/SerpentOut.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)     4543 2023-03-09 06:52:27.000000 zmeiapi-0.0.9/zmeiapi/Surface.py
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:00.000000 zmeiapi-0.0.9/zmeiapi/__init__.py
++drwxrwxr-x   0 vlad      (1000) vlad      (1000)        0 2023-03-14 01:00:55.486540 zmeiapi-0.0.9/zmeiapi.egg-info/
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      386 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/PKG-INFO
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)      383 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/SOURCES.txt
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)        1 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/dependency_links.txt
++-rw-rw-r--   0 vlad      (1000) vlad      (1000)        8 2023-03-14 01:00:55.000000 zmeiapi-0.0.9/zmeiapi.egg-info/top_level.txt
+```
+
+### Comparing `zmeiapi-0.0.8/LICENSE.txt` & `zmeiapi-0.0.9/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/setup.py` & `zmeiapi-0.0.9/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+     README = readme_file.read()
+ 
+ with open('HISTORY.md') as history_file:
+     HISTORY = history_file.read()
+ 
+ setup_args = dict(
+     name='zmeiapi',
+-    version='0.0.8',
++    version='0.0.9',
+     description='Useful tools to work with Zmei calculation code',
+     long_description_content_type="text/markdown",
+     long_description=README + '\n\n' + HISTORY,
+     license='MIT',
+     packages=find_packages(),
+     author='Vladislav Romanenko',
+     author_email='vliromanenko@yandex.ru',
+```
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/BumatReader.py` & `zmeiapi-0.0.9/zmeiapi/BumatReader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/General.py` & `zmeiapi-0.0.9/zmeiapi/General.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/Material.py` & `zmeiapi-0.0.9/zmeiapi/Material.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/MaterialCreators.py` & `zmeiapi-0.0.9/zmeiapi/MaterialCreators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/Pin.py` & `zmeiapi-0.0.9/zmeiapi/Pin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/PinCreators.py` & `zmeiapi-0.0.9/zmeiapi/PinCreators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/SerpentOut.py` & `zmeiapi-0.0.9/zmeiapi/SerpentOut.py`
+
+ * *Files identical despite different names*
+
+### Comparing `zmeiapi-0.0.8/zmeiapi/Surface.py` & `zmeiapi-0.0.9/zmeiapi/Surface.py`
+
+ * *Files identical despite different names*
+

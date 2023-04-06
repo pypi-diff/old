@@ -1,0 +1,576 @@
+# Comparing `tmp/azureChatGPT-0.0.3.tar.gz` & `tmp/azureChatGPT-0.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "azureChatGPT-0.0.3.tar", last modified: Tue Mar 28 03:43:25 2023, max compression
++gzip compressed data, was "azureChatGPT-0.0.4.tar", last modified: Thu Apr  6 09:03:15 2023, max compression
+```
+
+## Comparing `azureChatGPT-0.0.3.tar` & `azureChatGPT-0.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,19 +1,19 @@
+-drwxrwxrwx   0        0        0        0 2023-03-28 03:43:25.298626 azureChatGPT-0.0.3/
+--rw-rw-rw-   0        0        0    18431 2023-03-14 07:55:11.000000 azureChatGPT-0.0.3/LICENSE
+--rw-rw-rw-   0        0        0     2940 2023-03-28 03:43:25.297627 azureChatGPT-0.0.3/PKG-INFO
+--rw-rw-rw-   0        0        0     2194 2023-03-28 03:42:12.000000 azureChatGPT-0.0.3/README.md
+--rw-rw-rw-   0        0        0       42 2023-03-28 03:43:25.298626 azureChatGPT-0.0.3/setup.cfg
+--rw-rw-rw-   0        0        0     1256 2023-03-28 03:39:27.000000 azureChatGPT-0.0.3/setup.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 03:43:25.205625 azureChatGPT-0.0.3/src/
+-drwxrwxrwx   0        0        0        0 2023-03-28 03:43:25.244626 azureChatGPT-0.0.3/src/azureChatGPT/
+--rw-rw-rw-   0        0        0       20 2023-03-17 08:31:28.000000 azureChatGPT-0.0.3/src/azureChatGPT/__init__.py
+--rw-rw-rw-   0        0        0      155 2023-03-14 07:58:27.000000 azureChatGPT-0.0.3/src/azureChatGPT/__main__.py
+--rw-rw-rw-   0        0        0    13359 2023-03-28 03:38:03.000000 azureChatGPT-0.0.3/src/azureChatGPT/azure.py
+--rw-rw-rw-   0        0        0     2727 2023-03-14 07:44:49.000000 azureChatGPT-0.0.3/src/azureChatGPT/utils.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 03:43:25.294627 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/
+--rw-rw-rw-   0        0        0     2940 2023-03-28 03:43:25.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      374 2023-03-28 03:43:25.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-28 03:43:25.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        2 2023-03-17 08:52:27.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/not-zip-safe
+--rw-rw-rw-   0        0        0       68 2023-03-28 03:43:25.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       19 2023-03-28 03:43:25.000000 azureChatGPT-0.0.3/src/azureChatGPT.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 09:03:14.996453 azureChatGPT-0.0.4/
++-rw-rw-rw-   0        0        0    18431 2023-03-14 07:55:11.000000 azureChatGPT-0.0.4/LICENSE
++-rw-rw-rw-   0        0        0     3145 2023-04-06 09:03:14.996453 azureChatGPT-0.0.4/PKG-INFO
++-rw-rw-rw-   0        0        0     2399 2023-04-06 09:02:33.000000 azureChatGPT-0.0.4/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-06 09:03:14.997453 azureChatGPT-0.0.4/setup.cfg
++-rw-rw-rw-   0        0        0     1256 2023-04-06 07:27:53.000000 azureChatGPT-0.0.4/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 09:03:14.931453 azureChatGPT-0.0.4/src/
++drwxrwxrwx   0        0        0        0 2023-04-06 09:03:14.982455 azureChatGPT-0.0.4/src/azureChatGPT/
++-rw-rw-rw-   0        0        0       20 2023-03-17 08:31:28.000000 azureChatGPT-0.0.4/src/azureChatGPT/__init__.py
++-rw-rw-rw-   0        0        0      155 2023-03-14 07:58:27.000000 azureChatGPT-0.0.4/src/azureChatGPT/__main__.py
++-rw-rw-rw-   0        0        0    14292 2023-04-06 07:56:37.000000 azureChatGPT-0.0.4/src/azureChatGPT/azure.py
++-rw-rw-rw-   0        0        0     2727 2023-03-14 07:44:49.000000 azureChatGPT-0.0.4/src/azureChatGPT/utils.py
++drwxrwxrwx   0        0        0        0 2023-04-06 09:03:14.994453 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/
++-rw-rw-rw-   0        0        0     3145 2023-04-06 09:03:14.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      374 2023-04-06 09:03:14.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 09:03:14.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        2 2023-03-17 08:52:27.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/not-zip-safe
++-rw-rw-rw-   0        0        0       68 2023-04-06 09:03:14.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       19 2023-04-06 09:03:14.000000 azureChatGPT-0.0.4/src/azureChatGPT.egg-info/top_level.txt
+```
+
+### Comparing `azureChatGPT-0.0.3/LICENSE` & `azureChatGPT-0.0.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `azureChatGPT-0.0.3/PKG-INFO` & `azureChatGPT-0.0.4/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: azureChatGPT
+-Version: 0.0.3
++Version: 0.0.4
+ Summary: ChatGPT is a reverse engineering of Azure ChatGPT API
+ Home-page: https://github.com/EvAnhaodong/azureChatGPT
+ Author: yehaodong
+ Author-email: yehaodong@genomics.cn
+ License: GNU General Public License v2.0
+ Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+ Classifier: Intended Audience :: Developers
+@@ -16,28 +16,31 @@
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # Azure_ChatGPT
+ 
+ According to the [Azure OpenAI Service Documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-python), the GPT-35-Turbo model for Azure OpenAI service only has completion functionality, and cannot perform conversations like the official OpenAI API. 
+ 
++**[2023/3/23 update] Azure update api_version: 2023-03-15-preview. Now we can use openai.ChatCompletion for gpt-3.5-turbo and gpt4.**
++
+ Based on the chat prompt construction method provided in the documentation.
+ 
+ I have made modifications to the source code of the V3 module in [ChatGPT](https://github.com/acheong08/ChatGPT).
+ 
+-Encapsulate Azure OpenAI GPT-35-Turbo model into a chat API. Extensible for chatbots etc.
++Encapsulate Azure OpenAI GPT-3.5-Turbo model and GPT-4 model into a chat API. Extensible for chatbots etc.
+ 
+ # Installation
+-`git clone git@github.com:EvAnhaodong/Azure_ChatGPT.git`
+ 
+-`python3 setup.py install`
++`python3 -m pip install azureChatGPT --upgrade`
+ 
+ # Terminal Chat
+ 
+-Get `api_key`, `api_base`, `engine` from your Azure (API_KEY, ENDPOINT, ENGINE)
++Get `api_key`, `api_base`, `engine_gpt-3.5-turbo`, `engine_gpt-4` from your Azure (API_KEY, ENDPOINT, ENGINE)
++
++`engine` set default engine "gpt-3.5-turbo" or "gpt-4"
+ 
+ Modify the configuration file `azure.yaml` and run 
+ 
+ ## Command line
+ 
+ `python3 -m azureChatGPT --config azure.yaml`
+```
+
+### Comparing `azureChatGPT-0.0.3/README.md` & `azureChatGPT-0.0.4/src/azureChatGPT.egg-info/PKG-INFO`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,25 +1,46 @@
++Metadata-Version: 2.1
++Name: azureChatGPT
++Version: 0.0.4
++Summary: ChatGPT is a reverse engineering of Azure ChatGPT API
++Home-page: https://github.com/EvAnhaodong/azureChatGPT
++Author: yehaodong
++Author-email: yehaodong@genomics.cn
++License: GNU General Public License v2.0
++Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
++Classifier: Intended Audience :: Developers
++Classifier: Topic :: Software Development :: Libraries :: Python Modules
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Description-Content-Type: text/markdown
++License-File: LICENSE
++
+ # Azure_ChatGPT
+ 
+ According to the [Azure OpenAI Service Documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-python), the GPT-35-Turbo model for Azure OpenAI service only has completion functionality, and cannot perform conversations like the official OpenAI API. 
+ 
++**[2023/3/23 update] Azure update api_version: 2023-03-15-preview. Now we can use openai.ChatCompletion for gpt-3.5-turbo and gpt4.**
++
+ Based on the chat prompt construction method provided in the documentation.
+ 
+ I have made modifications to the source code of the V3 module in [ChatGPT](https://github.com/acheong08/ChatGPT).
+ 
+-Encapsulate Azure OpenAI GPT-35-Turbo model into a chat API. Extensible for chatbots etc.
++Encapsulate Azure OpenAI GPT-3.5-Turbo model and GPT-4 model into a chat API. Extensible for chatbots etc.
+ 
+ # Installation
+-`git clone git@github.com:EvAnhaodong/Azure_ChatGPT.git`
+ 
+-`python3 setup.py install`
++`python3 -m pip install azureChatGPT --upgrade`
+ 
+ # Terminal Chat
+ 
+-Get `api_key`, `api_base`, `engine` from your Azure (API_KEY, ENDPOINT, ENGINE)
++Get `api_key`, `api_base`, `engine_gpt-3.5-turbo`, `engine_gpt-4` from your Azure (API_KEY, ENDPOINT, ENGINE)
++
++`engine` set default engine "gpt-3.5-turbo" or "gpt-4"
+ 
+ Modify the configuration file `azure.yaml` and run 
+ 
+ ## Command line
+ 
+ `python3 -m azureChatGPT --config azure.yaml`
+```
+
+### Comparing `azureChatGPT-0.0.3/setup.py` & `azureChatGPT-0.0.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -2,29 +2,29 @@
+ from setuptools import setup
+ from pathlib import Path
+ 
+ PATH = Path("README.md")
+ 
+ setup(
+     name="azureChatGPT",
+-    version="0.0.3",
++    version="0.0.4",
+     description="ChatGPT is a reverse engineering of Azure ChatGPT API",
+     long_description=open(PATH, encoding="utf-8").read(),
+     long_description_content_type="text/markdown",
+     url="https://github.com/EvAnhaodong/azureChatGPT",
+     author="yehaodong",
+     author_email="yehaodong@genomics.cn",
+     license="GNU General Public License v2.0",
+     packages=find_namespace_packages("src"),
+     package_dir={"": "src"},
+     py_modules=["azure"],
+     install_requires=[
+         "pyyaml",
+         "prompt-toolkit",
+-        "tiktoken>=0.3.0",
++        "tiktoken>=0.3.3",
+         "aiohttp==3.8.4",
+         "openai>=0.27.2"
+     ],
+     classifiers=[
+         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+         "Intended Audience :: Developers",
+         "Topic :: Software Development :: Libraries :: Python Modules",
+```
+
+### Comparing `azureChatGPT-0.0.3/src/azureChatGPT/azure.py` & `azureChatGPT-0.0.4/src/azureChatGPT/azure.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -24,16 +24,16 @@
+ 
+     def __init__(
+         self,
+         api_key: str = "",
+         engine: str = "",
+         api_base: str = "",
+         api_type: str = "azure",
+-        api_version: str = "2022-12-01",
+-        max_tokens: int = 3000,
++        api_version: str = "2023-03-15-preview",
++        max_tokens: dict = {"gpt-3.5-turbo": 3000, "gpt-4": 7000},
+         temperature: float = 0.5,
+         top_p: float = 1.0,
+         presence_penalty: float = 0.0,
+         frequency_penalty: float = 0.0,
+         system_prompt: str = "You are ChatGPT, a large language model trained by OpenAI. Respond conversationally",
+     ) -> None:
+ 
+@@ -55,59 +55,63 @@
+             "default": [
+                 {
+                     "role": "system",
+                     "content": system_prompt,
+                 },
+             ],
+         }
+-        if max_tokens > 4000:
+-            raise Exception("Max tokens cannot be greater than 4000")
+-
+-        if self.get_token_count("default") > self.max_tokens:
+-            raise Exception("System prompt is too long")
+ 
+     def init_openai(self):
+         openai.api_type = self.api_type
+         openai.api_version = self.api_version
+         openai.api_key = self.api_key
+         openai.api_base = self.api_base
+ 
+     def add_to_conversation(
+         self,
+         message: str,
+         role: str,
++        name: str = "",
+         convo_id: str = "default",
+     ) -> None:
+         """
+         Add a message to the conversation
+         """
+-        self.conversation[convo_id].append({"role": role, "content": message})
++        if not name:
++            self.conversation[convo_id].append({"role": role, "content": message})
++        else:
++            self.conversation[convo_id].append(
++                {"role": role, "name": name, "content": message}
++            )
+ 
+     def __truncate_conversation(self, convo_id: str = "default") -> None:
+         """
+         Truncate the conversation
+         """
+-        self.conversation['current'] = list(self.conversation[convo_id])
++        self.conversation["current"] = [
++            dict((key, sentence[key]) for key in sentence if key != "name")
++            for sentence in self.conversation[convo_id]
++        ]
++
+         while True:
+             if (
+-                self.get_token_count('current') > self.max_tokens
+-                and len(self.conversation['current']) > 1
++                self.get_token_count("current") > self.max_tokens[self.engine]
++                and len(self.conversation["current"]) > 1
+             ):
+                 # Don't remove the first message
+-                self.conversation['current'].pop(1)
++                del self.conversation["current"][1]
+             else:
+                 break
+ 
+     # https://github.com/openai/openai-cookbook/blob/main/examples/How_to_count_tokens_with_tiktoken.ipynb
+     def get_token_count(self, convo_id: str = "default") -> int:
+         """
+         Get token count
+         """
+-        encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
+-
++        encoding = tiktoken.encoding_for_model(self.engine)
+         num_tokens = 0
+         for message in self.conversation[convo_id]:
+             # every message follows <im_start>{role/name}\n{content}<im_end>\n
+             num_tokens += 4
+             for key, value in message.items():
+                 num_tokens += len(encoding.encode(value))
+                 if key == "name":  # if there's a name, the role is omitted
+@@ -115,23 +119,28 @@
+         num_tokens += 2  # every reply is primed with <im_start>assistant
+         return num_tokens
+ 
+     def get_max_tokens(self, convo_id: str) -> int:
+         """
+         Get remaining tokens
+         """
+-        return 4000 - self.get_token_count(convo_id)
+-
+-    def __messages2prompt(self, convo_id: str = "default"):
+-        prompt = "".join(
+-            f"<|im_start|>{i['role']}\n{i['content']}\n<|im_end|>\n"
+-            for i in self.conversation[convo_id]
+-        )
+-        prompt += f"<|im_start|>assistant\n"
+-        return prompt
++        if self.engine == "gpt-3.5-turbo":
++            return 4000 - self.get_token_count(convo_id)
++        elif self.engine == "gpt-4":
++            return 8000 - self.get_token_count(convo_id)
++
++    def switch_engine(self):
++        if self.engine == "gpt-3.5-turbo" and getattr(self, "engine_gpt-4"):
++            self.engine = "gpt-4"
++            print("switch success")
++        elif self.engine == "gpt-4" and getattr(self, "engine_gpt-3.5-turbo"):
++            self.engine = "gpt-3.5-turbo"
++            print("switch success")
++        else:
++            print("switch fail")
+ 
+     def ask_stream(
+         self,
+         prompt: str,
+         role: str = "user",
+         convo_id: str = "default",
+         **kwargs,
+@@ -140,42 +149,48 @@
+         Ask a question
+         """
+         # Make conversation if it doesn't exist
+         if convo_id not in self.conversation:
+             self.reset(convo_id=convo_id, system_prompt=self.system_prompt)
+         self.add_to_conversation(prompt, role, convo_id=convo_id)
+         self.__truncate_conversation(convo_id=convo_id)
+-        # Get response
+-        response = openai.Completion.create(
+-            prompt=self.__messages2prompt(convo_id='current'),
++        response = openai.ChatCompletion.create(
++            messages=self.conversation["current"],
+             temperature=kwargs.get("temperature", self.temperature),
+-            max_tokens=self.get_max_tokens(convo_id='current'),
++            max_tokens=self.get_max_tokens(convo_id="current"),
+             top_p=kwargs.get("top_p", self.top_p),
+             frequency_penalty=kwargs.get(
+                 "frequency_penalty",
+                 self.frequency_penalty,
+             ),
+             presence_penalty=kwargs.get(
+                 "presence_penalty",
+                 self.presence_penalty,
+             ),
+-            engine=self.engine,
+-            stop=["<|im_end|>"],
+-            stream=True
++            engine=getattr(self, "engine_" + self.engine),
++            stream=True,
+         )
+-
+-        response_role: str = "assistant"
++        response_role: str = ""
+         full_response: str = ""
+-        for line in response:
+-            content = line["choices"][0]["text"]
+-            full_response += content
+-            if content == "<|im_end|>":
+-                break
+-            yield content
+-        self.add_to_conversation(full_response, response_role, convo_id=convo_id)
++        model: str = ""
++        for resp in response:
++            model = resp.get("model")
++            choices = resp.get("choices", None)
++            if not choices:
++                continue
++            delta = choices[0].get("delta", None)
++            if not delta:
++                continue
++            if "role" in delta:
++                response_role = delta["role"]
++            if "content" in delta:
++                content = delta["content"]
++                full_response += content
++                yield content
++        self.add_to_conversation(full_response, response_role, model, convo_id=convo_id)
+ 
+     def ask(
+         self,
+         prompt: str,
+         role: str = "user",
+         convo_id: str = "default",
+         **kwargs,
+@@ -200,14 +215,17 @@
+         """
+         Reset the conversation
+         """
+         self.conversation[convo_id] = [
+             {"role": "system", "content": system_prompt or self.system_prompt},
+         ]
+ 
++        if self.get_token_count(convo_id) > self.max_tokens["gpt-3.5-turbo"]:
++            raise Exception("System prompt is too long")
++
+     def save(self, file: str, *keys: str) -> None:
+         """
+         Save the Chatbot configuration to a JSON file
+         """
+         with open(file, "w", encoding="utf-8") as f:
+             yaml.dump(
+                 {
+@@ -249,14 +267,15 @@
+         """
+         Prints the help message
+         """
+         print(
+             """
+ Commands:
+   !help             Display this message
++  !switch           Switch engine
+   !rollback n       Rollback the conversation by n messages
+   !save file [keys] Save the Chatbot configuration to a JSON file
+   !load file [keys] Load the Chatbot configuration from a JSON file
+   !reset            Reset the conversation
+   !exit             Quit chat
+ 
+ Config Commands:
+@@ -283,14 +302,16 @@
+         if command == "!help":
+             self.print_help()
+         elif command == "!exit":
+             sys.exit()
+         elif command == "!reset":
+             self.reset(convo_id=convo_id)
+             print("\nConversation has been reset")
++        elif command == "!switch":
++            self.switch_engine()
+         elif command == "!config":
+             self.print_config(convo_id=convo_id)
+         elif command == "!rollback":
+             self.rollback(int(value[0]), convo_id=convo_id)
+             print(f"\nRolled back by {value[0]} messages")
+         elif command == "!save":
+             self.save(*value)
+@@ -322,15 +343,15 @@
+ 
+ 
+ def main() -> NoReturn:
+     """
+     Main function
+     """
+     print(
+-    """
++        """
+     ChatGPT - Official Azure_ChatGPT API
+     Repo: github.com/EvAnhaodong/Azure_ChatGPT
+     """,
+     )
+     print("Type '!help' to show a full list of commands")
+     print("Press Esc followed by Enter or Alt+Enter to send a message.\n")
+ 
+@@ -391,14 +412,15 @@
+ 
+     session = create_session()
+     completer = create_completer(
+         [
+             "!help",
+             "!exit",
+             "!reset",
++            "!switch",
+             "!rollback",
+             "!save",
+             "!load",
+             "!config",
+             "!openai",
+             "!temperture",
+             "!top_p",
+@@ -423,14 +445,14 @@
+         if prompt.startswith("!"):
+             try:
+                 chatbot.handle_commands(prompt)
+             except Exception as e:
+                 print(f"Error: {e}")
+             continue
+ 
+-        print("ChatGPT: ", flush=True)
++        print(chatbot.engine + " ChatGPT: ", flush=True)
+         if args.no_stream:
+             print(chatbot.ask(prompt, "user"))
+         else:
+             for query in chatbot.ask_stream(prompt):
+                 print(query, end="", flush=True)
+         print()
+```
+
+### Comparing `azureChatGPT-0.0.3/src/azureChatGPT/utils.py` & `azureChatGPT-0.0.4/src/azureChatGPT/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `azureChatGPT-0.0.3/src/azureChatGPT.egg-info/PKG-INFO` & `azureChatGPT-0.0.4/README.md`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,43 +1,28 @@
+-Metadata-Version: 2.1
+-Name: azureChatGPT
+-Version: 0.0.3
+-Summary: ChatGPT is a reverse engineering of Azure ChatGPT API
+-Home-page: https://github.com/EvAnhaodong/azureChatGPT
+-Author: yehaodong
+-Author-email: yehaodong@genomics.cn
+-License: GNU General Public License v2.0
+-Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+-Classifier: Intended Audience :: Developers
+-Classifier: Topic :: Software Development :: Libraries :: Python Modules
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
+-Classifier: Programming Language :: Python :: 3.10
+-Classifier: Programming Language :: Python :: 3.11
+-Description-Content-Type: text/markdown
+-License-File: LICENSE
+-
+ # Azure_ChatGPT
+ 
+ According to the [Azure OpenAI Service Documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/chatgpt-quickstart?tabs=command-line&pivots=programming-language-python), the GPT-35-Turbo model for Azure OpenAI service only has completion functionality, and cannot perform conversations like the official OpenAI API. 
+ 
++**[2023/3/23 update] Azure update api_version: 2023-03-15-preview. Now we can use openai.ChatCompletion for gpt-3.5-turbo and gpt4.**
++
+ Based on the chat prompt construction method provided in the documentation.
+ 
+ I have made modifications to the source code of the V3 module in [ChatGPT](https://github.com/acheong08/ChatGPT).
+ 
+-Encapsulate Azure OpenAI GPT-35-Turbo model into a chat API. Extensible for chatbots etc.
++Encapsulate Azure OpenAI GPT-3.5-Turbo model and GPT-4 model into a chat API. Extensible for chatbots etc.
+ 
+ # Installation
+-`git clone git@github.com:EvAnhaodong/Azure_ChatGPT.git`
+ 
+-`python3 setup.py install`
++`python3 -m pip install azureChatGPT --upgrade`
+ 
+ # Terminal Chat
+ 
+-Get `api_key`, `api_base`, `engine` from your Azure (API_KEY, ENDPOINT, ENGINE)
++Get `api_key`, `api_base`, `engine_gpt-3.5-turbo`, `engine_gpt-4` from your Azure (API_KEY, ENDPOINT, ENGINE)
++
++`engine` set default engine "gpt-3.5-turbo" or "gpt-4"
+ 
+ Modify the configuration file `azure.yaml` and run 
+ 
+ ## Command line
+ 
+ `python3 -m azureChatGPT --config azure.yaml`
+```
+

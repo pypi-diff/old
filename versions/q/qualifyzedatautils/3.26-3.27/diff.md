@@ -1,0 +1,153 @@
+# Comparing `tmp/qualifyzedatautils-3.26-py3-none-any.whl.zip` & `tmp/qualifyzedatautils-3.27-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,8 +1,8 @@
+-Zip file size: 16436 bytes, number of entries: 32
++Zip file size: 16443 bytes, number of entries: 32
+ -rw-r--r--  2.0 unx        0 b- defN 22-Nov-25 09:46 qualifyzedatautils/__init__.py
+ -rw-r--r--  2.0 unx      782 b- defN 22-Nov-25 15:34 qualifyzedatautils/connections/RedshiftQualifyzeCluster.py
+ -rw-r--r--  2.0 unx      202 b- defN 22-Dec-18 23:46 qualifyzedatautils/connections/__init__.py
+ -rw-r--r--  2.0 unx      626 b- defN 22-Nov-25 14:09 qualifyzedatautils/connections/_decode_secret.py
+ -rw-r--r--  2.0 unx      721 b- defN 22-Nov-25 10:15 qualifyzedatautils/connections/_retrieve_awssecret.py
+ -rw-r--r--  2.0 unx      758 b- defN 22-Nov-26 17:11 qualifyzedatautils/connections/bigquery.py
+ -rw-r--r--  2.0 unx      758 b- defN 22-Nov-26 17:11 qualifyzedatautils/connections/bigquery_credentials.py
+@@ -13,22 +13,22 @@
+ -rw-r--r--  2.0 unx      656 b- defN 22-Dec-19 00:01 qualifyzedatautils/connections/hubspot_api_credentials.py
+ -rw-r--r--  2.0 unx      782 b- defN 22-Nov-26 17:05 qualifyzedatautils/connections/redshift.py
+ -rw-r--r--  2.0 unx       34 b- defN 22-Nov-26 17:12 qualifyzedatautils/connections/redshift_connection.py
+ -rw-r--r--  2.0 unx      765 b- defN 22-Dec-08 11:45 qualifyzedatautils/connections/redshift_credentials.py
+ -rw-r--r--  2.0 unx       39 b- defN 22-Nov-25 09:54 qualifyzedatautils/connections/secondary.py
+ -rw-r--r--  2.0 unx       28 b- defN 23-Jan-23 15:27 qualifyzedatautils/dbutils/__init__.py
+ -rw-r--r--  2.0 unx      631 b- defN 22-Dec-22 09:30 qualifyzedatautils/dbutils/df_bulkinsert.py
+--rw-r--r--  2.0 unx     7329 b- defN 23-Jan-31 13:14 qualifyzedatautils/dbutils/df_to_redshift.py
++-rw-r--r--  2.0 unx     7373 b- defN 23-Apr-06 09:01 qualifyzedatautils/dbutils/df_to_redshift.py
+ -rw-r--r--  2.0 unx     7436 b- defN 23-Jan-23 13:58 qualifyzedatautils/dbutils/fast_df_operations.py
+ -rw-r--r--  2.0 unx      341 b- defN 23-Jan-23 16:00 qualifyzedatautils/dbutils/redshift_to_df.py
+ -rw-r--r--  2.0 unx      105 b- defN 23-Jan-16 16:06 qualifyzedatautils/s3utils/__init__.py
+ -rw-r--r--  2.0 unx     1331 b- defN 22-Dec-13 12:01 qualifyzedatautils/s3utils/file_copyrename.py
+ -rw-r--r--  2.0 unx      482 b- defN 23-Jan-17 08:59 qualifyzedatautils/s3utils/file_delete.py
+ -rw-r--r--  2.0 unx      760 b- defN 23-Jan-17 10:31 qualifyzedatautils/s3utils/file_read.py
+ -rw-r--r--  2.0 unx      775 b- defN 23-Jan-16 15:57 qualifyzedatautils/s3utils/file_upload.py
+ -rw-r--r--  2.0 unx       33 b- defN 22-Dec-19 08:23 qualifyzedatautils/sanitylogs/__init__.py
+ -rw-r--r--  2.0 unx      747 b- defN 22-Dec-20 08:46 qualifyzedatautils/sanitylogs/sanitylog_insertion.py
+--rw-r--r--  2.0 unx      647 b- defN 23-Jan-31 13:14 qualifyzedatautils-3.26.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 23-Jan-31 13:14 qualifyzedatautils-3.26.dist-info/WHEEL
+--rw-r--r--  2.0 unx       19 b- defN 23-Jan-31 13:14 qualifyzedatautils-3.26.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx     3175 b- defN 23-Jan-31 13:14 qualifyzedatautils-3.26.dist-info/RECORD
+-32 files, 32308 bytes uncompressed, 11098 bytes compressed:  65.6%
++-rw-r--r--  2.0 unx      647 b- defN 23-Apr-06 09:03 qualifyzedatautils-3.27.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 09:03 qualifyzedatautils-3.27.dist-info/WHEEL
++-rw-r--r--  2.0 unx       19 b- defN 23-Apr-06 09:03 qualifyzedatautils-3.27.dist-info/top_level.txt
++?rw-rw-r--  2.0 unx     3175 b- defN 23-Apr-06 09:03 qualifyzedatautils-3.27.dist-info/RECORD
++32 files, 32352 bytes uncompressed, 11105 bytes compressed:  65.7%
+```
+
+## zipnote {}
+
+```diff
+@@ -78,20 +78,20 @@
+ 
+ Filename: qualifyzedatautils/sanitylogs/__init__.py
+ Comment: 
+ 
+ Filename: qualifyzedatautils/sanitylogs/sanitylog_insertion.py
+ Comment: 
+ 
+-Filename: qualifyzedatautils-3.26.dist-info/METADATA
++Filename: qualifyzedatautils-3.27.dist-info/METADATA
+ Comment: 
+ 
+-Filename: qualifyzedatautils-3.26.dist-info/WHEEL
++Filename: qualifyzedatautils-3.27.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: qualifyzedatautils-3.26.dist-info/top_level.txt
++Filename: qualifyzedatautils-3.27.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: qualifyzedatautils-3.26.dist-info/RECORD
++Filename: qualifyzedatautils-3.27.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## qualifyzedatautils/dbutils/df_to_redshift.py
+
+```diff
+@@ -77,16 +77,16 @@
+     TMP_FILE_PATH = {'bucket-name': BUCKET_NAME, 'use-subfolder': USE_SUBFOLDER, 'subfolder-full-path': SUBFOLDER_PATH,
+                      'file-name': str(TMP_FILES_UUID)}
+ 
+     if method == 'insert':
+         df = df.replace('None', None)
+         df = df.astype(dest_form_cols)
+         dftmp_file_tos3(df, TMP_FILE_PATH)
+-        copy_s3to_table(dbconnection, destination, TMP_FILES_UUID, delimiter)
+-        delete_s3tmp_file(TMP_FILES_UUID)
++        copy_s3to_table(dbconnection, 'dev.tmp_' + str(TMP_FILES_UUID).replace("-", "") + '', TMP_FILES_UUID, delimiter)
++        #delete_s3tmp_file(TMP_FILES_UUID)
+ 
+     elif method == 'upsert':
+         dftmp_file_tos3(df, TMP_FILE_PATH)
+ 
+         get_csv_structure = s3tmp_file_todf(TMP_FILE_PATH)
+         column_names = get_df_colnames(get_csv_structure)
+         create_tmp_table(dbconnection, TMP_FILES_UUID, column_names)
+```
+
+## Comparing `qualifyzedatautils-3.26.dist-info/METADATA` & `qualifyzedatautils-3.27.dist-info/METADATA`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: qualifyzedatautils
+-Version: 3.26
++Version: 3.27
+ Summary: Library containing the personalized utils for the DWH of Qualifyze
+ Home-page: http://qualifyze.com
+ Author: Moise O. Romaniuc Demeter
+ Author-email: moise.romaniuc@qualifyze.com
+ License: MIT
+ Keywords: data utils dwh qualifyze
+ Platform: UNKNOWN
+```
+
+## Comparing `qualifyzedatautils-3.26.dist-info/RECORD` & `qualifyzedatautils-3.27.dist-info/RECORD`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -12,21 +12,21 @@
+ qualifyzedatautils/connections/hubspot_api_credentials.py,sha256=QQyPvoc2OLQRXbclrvKYPchDEntgSYxCaB9oK-etiPA,656
+ qualifyzedatautils/connections/redshift.py,sha256=3S-QlfCKhHEJi1PZ2KFIL_bezAkq13c1jtIy42fAdNM,782
+ qualifyzedatautils/connections/redshift_connection.py,sha256=mj15l4Pmj2FbBUFF183_A6rqrcRblR7_vocJ2HsgIRs,34
+ qualifyzedatautils/connections/redshift_credentials.py,sha256=8TkI4sUORU4Nra0iFKP4wRbGajaxxmI8pDruw9qXyNc,765
+ qualifyzedatautils/connections/secondary.py,sha256=xQ353V5-mj-ctGqKbJru9CIyXNWsy_CEHXVhd1mfs60,39
+ qualifyzedatautils/dbutils/__init__.py,sha256=ZSv3S4B5geB55XDvEWXxfCcV2Dfomzigu0reMLgtLoM,28
+ qualifyzedatautils/dbutils/df_bulkinsert.py,sha256=ejFkrA0Y5Y0FqyyU2xeq-fxBU3JSbIqhoBDVTw_dXJo,631
+-qualifyzedatautils/dbutils/df_to_redshift.py,sha256=qFDaGv-rXkHPRIXZJZF6-WYQJ1xDSDXM5JfR26_s3sQ,7329
++qualifyzedatautils/dbutils/df_to_redshift.py,sha256=aim_H-ktk1UvfxUOTMv8CKIzvf06oGciHrwmy_ECg6g,7373
+ qualifyzedatautils/dbutils/fast_df_operations.py,sha256=zrRS02qs9ZDbZ3saDdsPqK88ISHZhhfhH4Xjsl9_55Y,7436
+ qualifyzedatautils/dbutils/redshift_to_df.py,sha256=oNqGqRMymvi9WoRRbcdPFMskwXj5VfGodeFOWGXA7Ao,341
+ qualifyzedatautils/s3utils/__init__.py,sha256=sqGgPFklBWw9yFOo1NfQV7iTmRLSDUMLg-XP__8Fh-Q,105
+ qualifyzedatautils/s3utils/file_copyrename.py,sha256=nwbJ5b65HUDBUL6yymA3QCrEyTRJ4rU1J9dgQOUzrko,1331
+ qualifyzedatautils/s3utils/file_delete.py,sha256=uoBwhpVSrtLPIdp5R82ogL79yB_Nlm8tokYst3f1lt0,482
+ qualifyzedatautils/s3utils/file_read.py,sha256=H-Vex6BhjpxPlO8AH-KAdpm-VgVYqkQhsea31almsoI,760
+ qualifyzedatautils/s3utils/file_upload.py,sha256=FXXZ1XxzU3sFyByozADpCtaxC-cx-11TBvnZSC7TYXo,775
+ qualifyzedatautils/sanitylogs/__init__.py,sha256=1NRRFFX5ra-MRr_3x7uEHIOU__E1LDfc2v31nUVu2ok,33
+ qualifyzedatautils/sanitylogs/sanitylog_insertion.py,sha256=LtXF4PLyXWbpA5KYxWqZRw-KmX4DpTP8s-Gb03dMvoM,747
+-qualifyzedatautils-3.26.dist-info/METADATA,sha256=H_FF90OJVBG3_FfPgqTl-1t9fjsG1r8tXpN2qqurWpc,647
+-qualifyzedatautils-3.26.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-qualifyzedatautils-3.26.dist-info/top_level.txt,sha256=lQDf0SeMjowVZ9D5eYSozmWBjfrEaPuBjDsvqqPh-3Y,19
+-qualifyzedatautils-3.26.dist-info/RECORD,,
++qualifyzedatautils-3.27.dist-info/METADATA,sha256=xiyoCOVzmTrCIfUS6Qiviua2ntOG6bNkJNKSnajzGAY,647
++qualifyzedatautils-3.27.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
++qualifyzedatautils-3.27.dist-info/top_level.txt,sha256=lQDf0SeMjowVZ9D5eYSozmWBjfrEaPuBjDsvqqPh-3Y,19
++qualifyzedatautils-3.27.dist-info/RECORD,,
+```
+

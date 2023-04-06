@@ -1,0 +1,147 @@
+--- tmp/toldwords-0.1.0.tar.gz
++++ tmp/toldwords-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "toldwords-0.1.0.tar", max compression
+│ +gzip compressed data, was "toldwords-0.2.0.tar", max compression
+│   --- toldwords-0.1.0.tar
+├── +++ toldwords-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,8 +1,8 @@
+│ │ --rw-r--r--   0        0        0     1132 2023-04-05 12:14:24.274774 toldwords-0.1.0/LICENSE.txt
+│ │ --rw-r--r--   0        0        0       72 2023-04-05 11:36:21.908246 toldwords-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0     1992 2023-04-05 12:01:25.061696 toldwords-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0       39 2023-03-22 16:37:37.802161 toldwords-0.1.0/toldwords/__init__.py
+│ │ --rw-r--r--   0        0        0     1093 2023-04-04 17:15:54.572045 toldwords-0.1.0/toldwords/openai.py
+│ │ --rw-r--r--   0        0        0      771 2023-03-26 01:00:49.949118 toldwords-0.1.0/toldwords/pretalx.py
+│ │ --rw-r--r--   0        0        0      243 2023-03-23 15:43:42.992952 toldwords-0.1.0/toldwords/utils.py
+│ │ --rw-r--r--   0        0        0     1319 1970-01-01 00:00:00.000000 toldwords-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1132 2023-04-05 12:14:24.274774 toldwords-0.2.0/LICENSE.txt
+│ │ +-rw-r--r--   0        0        0       72 2023-04-05 11:36:21.908246 toldwords-0.2.0/README.md
+│ │ +-rw-r--r--   0        0        0     1992 2023-04-06 08:47:50.752460 toldwords-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       39 2023-04-06 08:47:56.509752 toldwords-0.2.0/toldwords/__init__.py
+│ │ +-rw-r--r--   0        0        0     1788 2023-04-06 08:36:19.873813 toldwords-0.2.0/toldwords/openai.py
+│ │ +-rw-r--r--   0        0        0      771 2023-03-26 01:00:49.949118 toldwords-0.2.0/toldwords/pretalx.py
+│ │ +-rw-r--r--   0        0        0      243 2023-03-23 15:43:42.992952 toldwords-0.2.0/toldwords/utils.py
+│ │ +-rw-r--r--   0        0        0     1319 1970-01-01 00:00:00.000000 toldwords-0.2.0/PKG-INFO
+│ │   --- toldwords-0.1.0/LICENSE.txt
+│ ├── +++ toldwords-0.2.0/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- toldwords-0.1.0/pyproject.toml
+│ ├── +++ toldwords-0.2.0/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "toldwords"
+│ │ -version = "0.1.0"
+│ │ +version = "0.2.0"
+│ │  description = "Using ChatGPT to make keywords for the papers from COSCUP."
+│ │  authors = ["Toomore Chiang <toomore0929@gmail.com>"]
+│ │  license = 'MIT'
+│ │  readme = "README.md"
+│ │  homepage = 'https://github.com/toomore/toldwords'
+│ │  repository = 'https://github.com/toomore/toldwords'
+│ │  packages = [
+│ │   --- toldwords-0.1.0/toldwords/openai.py
+│ ├── +++ toldwords-0.2.0/toldwords/openai.py
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,38 +1,75 @@
+│ │  ''' OpenAI API Connect '''
+│ │ +from enum import Enum
+│ │  from typing import List
+│ │  from requests import Session
+│ │  from pydantic import BaseModel
+│ │  
+│ │  
+│ │ +class Role(str, Enum):
+│ │ +    ''' Role '''
+│ │ +    ASSISTANT = 'assistant'
+│ │ +    SYSTEM = 'system'
+│ │ +    USER = 'user'
+│ │ +
+│ │ +
+│ │  class Message(BaseModel):
+│ │      ''' Message in chat format '''
+│ │ -    role: str
+│ │ +    role: Role
+│ │      content: str
+│ │  
+│ │ +    class Config:
+│ │ +        use_enum_values = True
+│ │ +
+│ │ +
+│ │ +class TokenUsage(BaseModel):
+│ │ +    ''' Token usage '''
+│ │ +    completion_tokens: int
+│ │ +    prompt_tokens: int
+│ │ +    total_tokens: int
+│ │ +
+│ │ +
+│ │ +class Choice(BaseModel):
+│ │ +    ''' choice '''
+│ │ +    finish_reason: str
+│ │ +    index: int
+│ │ +    message: Message
+│ │ +
+│ │ +
+│ │ +class RespCompletions(BaseModel):
+│ │ +    ''' Response of chat.completions'''
+│ │ +    id: str
+│ │ +    model: str
+│ │ +    object: str
+│ │ +    created: int
+│ │ +    usage: TokenUsage
+│ │ +    choices: list[Choice]
+│ │ +
+│ │  
+│ │  class OpenAIAPI(Session):
+│ │      ''' OpenAI API '''
+│ │  
+│ │      def __init__(self, token: str, organization: str | None) -> None:
+│ │          super().__init__()
+│ │          self.url = 'https://api.openai.com/v1'
+│ │          self.headers['Authorization'] = f'Bearer {token}'
+│ │  
+│ │          if organization:
+│ │              self.headers['OpenAI-Organization'] = organization
+│ │  
+│ │      def chat_completions(self,
+│ │                           messages: List[Message],
+│ │ -                         model='gpt-3.5-turbo',
+│ │ -                         temperature=1,
+│ │ -                         n=1,
+│ │ -                         user='api'):
+│ │ +                         model: str = 'gpt-3.5-turbo',
+│ │ +                         temperature: int = 1,
+│ │ +                         n: int = 1,
+│ │ +                         user: str = 'api') -> RespCompletions:
+│ │          ''' chat completions '''
+│ │          data = {
+│ │              'model': model,
+│ │              'messages': [msg.dict() for msg in messages],
+│ │              'temperature': temperature,
+│ │              'n': n,
+│ │              'user': user,
+│ │          }
+│ │ -        return self.post(self.url + '/chat/completions', json=data).json()
+│ │ +        return RespCompletions.parse_obj(
+│ │ +            self.post(self.url + '/chat/completions', json=data).json()
+│ │ +        )
+│ │   --- toldwords-0.1.0/toldwords/pretalx.py
+│ ├── +++ toldwords-0.2.0/toldwords/pretalx.py
+│ │┄ Files identical despite different names
+│ │   --- toldwords-0.1.0/PKG-INFO
+│ ├── +++ toldwords-0.2.0/PKG-INFO
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: toldwords
+│ │ -Version: 0.1.0
+│ │ +Version: 0.2.0
+│ │  Summary: Using ChatGPT to make keywords for the papers from COSCUP.
+│ │  Home-page: https://github.com/toomore/toldwords
+│ │  License: MIT
+│ │  Keywords: API,ChatGPT,pretalx,COSCUP,openai
+│ │  Author: Toomore Chiang
+│ │  Author-email: toomore0929@gmail.com
+│ │  Requires-Python: >=3.9,<4.0
