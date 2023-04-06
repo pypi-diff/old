@@ -1,0 +1,1807 @@
+# Comparing `tmp/runtimepy-0.9.6.tar.gz` & `tmp/runtimepy-1.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "runtimepy-0.9.6.tar", last modified: Fri Jan 27 08:47:01 2023, max compression
++gzip compressed data, was "runtimepy-1.0.0.tar", last modified: Thu Apr  6 23:41:57 2023, max compression
+```
+
+## Comparing `runtimepy-0.9.6.tar` & `runtimepy-1.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,86 +1,117 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.978177 runtimepy-0.9.6/
+--rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-01-27 08:45:44.000000 runtimepy-0.9.6/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     3094 2023-01-27 08:47:01.978177 runtimepy-0.9.6/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2210 2023-01-27 08:45:44.000000 runtimepy-0.9.6/README.md
+--rw-r--r--   0 runner    (1001) docker     (123)     1140 2023-01-27 08:45:44.000000 runtimepy-0.9.6/pyproject.toml
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.970177 runtimepy-0.9.6/runtimepy/
+--rw-r--r--   0 runner    (1001) docker     (123)      313 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      332 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/__main__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      893 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/app.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.970177 runtimepy-0.9.6/runtimepy/channel/
+--rw-r--r--   0 runner    (1001) docker     (123)     2697 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.970177 runtimepy-0.9.6/runtimepy/channel/environment/
+--rw-r--r--   0 runner    (1001) docker     (123)      715 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3481 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/array.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6891 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3764 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/create.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6347 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/file.py
+--rw-r--r--   0 runner    (1001) docker     (123)      530 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/environment/names.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1582 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/channel/registry.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/commands/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/commands/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      747 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/commands/all.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1679 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/commands/tui.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.966177 runtimepy-0.9.6/runtimepy/data/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/data/schemas/
+--rw-r--r--   0 runner    (1001) docker     (123)      835 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/data/schemas/BitFields.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      651 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/data/schemas/ChannelRegistry.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      483 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/data/schemas/EnumRegistry.yaml
+--rw-r--r--   0 runner    (1001) docker     (123)      100 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/dev_requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/entry.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/enum/
+--rw-r--r--   0 runner    (1001) docker     (123)     4648 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/enum/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1105 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/enum/registry.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1027 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/enum/type.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4573 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/mapping.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/mixins/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/mixins/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      719 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/mixins/enum.py
+--rw-r--r--   0 runner    (1001) docker     (123)      660 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/mixins/regex.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/net/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/net/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5282 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/net/connection.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/net/websocket/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/net/websocket/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2341 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/net/websocket/connection.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/primitives/
+--rw-r--r--   0 runner    (1001) docker     (123)     1725 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6793 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/array.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4955 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)      803 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/bool.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/primitives/field/
+--rw-r--r--   0 runner    (1001) docker     (123)     3383 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/field/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6620 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/field/fields.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5807 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/field/manager.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1219 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/float.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3055 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/int.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/primitives/type/
+--rw-r--r--   0 runner    (1001) docker     (123)     1510 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/type/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     2878 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/type/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)      508 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/type/bool.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1313 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/type/float.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3054 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/primitives/type/int.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/py.typed
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/registry/
+--rw-r--r--   0 runner    (1001) docker     (123)     3135 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/registry/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      735 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/registry/bool.py
+--rw-r--r--   0 runner    (1001) docker     (123)      815 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/registry/item.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1785 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/registry/name.py
+--rw-r--r--   0 runner    (1001) docker     (123)       60 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/requirements.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      766 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/schemas.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/task/
+--rw-r--r--   0 runner    (1001) docker     (123)     5771 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/task/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/tui/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/tui/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.974177 runtimepy-0.9.6/runtimepy/tui/channels/
+--rw-r--r--   0 runner    (1001) docker     (123)     5321 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/tui/channels/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1102 2023-01-27 08:45:44.000000 runtimepy-0.9.6/runtimepy/tui/task.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-27 08:47:01.970177 runtimepy-0.9.6/runtimepy.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     3094 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1916 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       51 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      128 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2023-01-27 08:47:01.000000 runtimepy-0.9.6/runtimepy.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-01-27 08:47:01.978177 runtimepy-0.9.6/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      829 2023-01-27 08:45:44.000000 runtimepy-0.9.6/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.144115 runtimepy-1.0.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-04-06 23:40:43.000000 runtimepy-1.0.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     3193 2023-04-06 23:41:57.144115 runtimepy-1.0.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2258 2023-04-06 23:40:43.000000 runtimepy-1.0.0/README.md
++-rw-r--r--   0 runner    (1001) docker     (123)     1184 2023-04-06 23:40:43.000000 runtimepy-1.0.0/pyproject.toml
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.120115 runtimepy-1.0.0/runtimepy/
++-rw-r--r--   0 runner    (1001) docker     (123)      313 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      332 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/__main__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      893 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/app.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.124115 runtimepy-1.0.0/runtimepy/channel/
++-rw-r--r--   0 runner    (1001) docker     (123)     2889 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.124115 runtimepy-1.0.0/runtimepy/channel/environment/
++-rw-r--r--   0 runner    (1001) docker     (123)      715 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3481 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/array.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6891 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3764 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/create.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6376 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/file.py
++-rw-r--r--   0 runner    (1001) docker     (123)      530 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/environment/names.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1582 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/channel/registry.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.124115 runtimepy-1.0.0/runtimepy/codec/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/codec/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.128115 runtimepy-1.0.0/runtimepy/codec/protocol/
++-rw-r--r--   0 runner    (1001) docker     (123)      240 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/codec/protocol/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6247 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/codec/protocol/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4241 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/codec/protocol/json.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.128115 runtimepy-1.0.0/runtimepy/commands/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/commands/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      747 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/commands/all.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1679 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/commands/tui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.112115 runtimepy-1.0.0/runtimepy/data/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.128115 runtimepy-1.0.0/runtimepy/data/schemas/
++-rw-r--r--   0 runner    (1001) docker     (123)      835 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/data/schemas/BitFields.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      454 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/data/schemas/Channel.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      136 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/data/schemas/ChannelRegistry.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/data/schemas/EnumRegistry.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      338 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/data/schemas/RuntimeEnum.yaml
++-rw-r--r--   0 runner    (1001) docker     (123)      100 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/dev_requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     2010 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/entry.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.128115 runtimepy-1.0.0/runtimepy/enum/
++-rw-r--r--   0 runner    (1001) docker     (123)     5250 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/enum/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1779 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/enum/registry.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1027 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/enum/type.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4609 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/mapping.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/mixins/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/mixins/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      719 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/mixins/enum.py
++-rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/mixins/regex.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/net/
++-rw-r--r--   0 runner    (1001) docker     (123)     2136 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6009 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/connection.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2498 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2101 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/mixin.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/net/tcp/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/tcp/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6427 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/tcp/connection.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/net/tcp/telnet/
++-rw-r--r--   0 runner    (1001) docker     (123)     4619 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/tcp/telnet/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3518 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/tcp/telnet/codes.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/net/udp/
++-rw-r--r--   0 runner    (1001) docker     (123)       68 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/udp/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4613 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/udp/connection.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.132115 runtimepy-1.0.0/runtimepy/net/websocket/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/websocket/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6103 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/net/websocket/connection.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.136115 runtimepy-1.0.0/runtimepy/primitives/
++-rw-r--r--   0 runner    (1001) docker     (123)     1725 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7240 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/array.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6312 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      810 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/bool.py
++-rw-r--r--   0 runner    (1001) docker     (123)      767 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/byte_order.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.136115 runtimepy-1.0.0/runtimepy/primitives/field/
++-rw-r--r--   0 runner    (1001) docker     (123)     3383 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/field/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6620 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/field/fields.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.136115 runtimepy-1.0.0/runtimepy/primitives/field/manager/
++-rw-r--r--   0 runner    (1001) docker     (123)     2668 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/field/manager/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5895 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/field/manager/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1240 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/float.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3111 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/int.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2567 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/string.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/primitives/type/
++-rw-r--r--   0 runner    (1001) docker     (123)     1526 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/type/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4268 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/type/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      508 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/type/bool.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1313 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/type/float.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3054 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/primitives/type/int.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/py.typed
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/registry/
++-rw-r--r--   0 runner    (1001) docker     (123)     3135 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/registry/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      735 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/registry/bool.py
++-rw-r--r--   0 runner    (1001) docker     (123)      852 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/registry/item.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1785 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/registry/name.py
++-rw-r--r--   0 runner    (1001) docker     (123)       67 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/requirements.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      771 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/schemas.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/task/
++-rw-r--r--   0 runner    (1001) docker     (123)     6070 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/task/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/task/basic/
++-rw-r--r--   0 runner    (1001) docker     (123)     2458 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/task/basic/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/telemetry/
++-rw-r--r--   0 runner    (1001) docker     (123)      268 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/telemetry/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/tui/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/tui/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.140115 runtimepy-1.0.0/runtimepy/tui/channels/
++-rw-r--r--   0 runner    (1001) docker     (123)     5321 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/tui/channels/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1102 2023-04-06 23:40:43.000000 runtimepy-1.0.0/runtimepy/tui/task.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.124115 runtimepy-1.0.0/runtimepy.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3193 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2615 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       51 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      135 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-06 23:41:57.000000 runtimepy-1.0.0/runtimepy.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 23:41:57.144115 runtimepy-1.0.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      845 2023-04-06 23:40:43.000000 runtimepy-1.0.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:41:57.144115 runtimepy-1.0.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)     1785 2023-04-06 23:40:43.000000 runtimepy-1.0.0/tests/test_entry.py
++-rw-r--r--   0 runner    (1001) docker     (123)      955 2023-04-06 23:40:43.000000 runtimepy-1.0.0/tests/test_mapping.py
++-rw-r--r--   0 runner    (1001) docker     (123)      268 2023-04-06 23:40:43.000000 runtimepy-1.0.0/tests/test_resources.py
+```
+
+### Comparing `runtimepy-0.9.6/LICENSE` & `runtimepy-1.0.0/LICENSE`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ MIT License
+ 
+-Copyright (c) 2022 Vaughn Kottler
++Copyright (c) 2023 Vaughn Kottler
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+```
+
+### Comparing `runtimepy-0.9.6/PKG-INFO` & `runtimepy-1.0.0/PKG-INFO`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ Metadata-Version: 2.1
+ Name: runtimepy
+-Version: 0.9.6
++Version: 1.0.0
+ Summary: A framework for implementing Python services.
+ Home-page: https://github.com/vkottler/runtimepy
+ Author: Vaughn Kottler
+ Author-email: Vaughn Kottler <vaughnkottler@gmail.com>
+ Maintainer-email: Vaughn Kottler <vaughnkottler@gmail.com>
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
+ Classifier: Operating System :: Microsoft :: Windows
+ Classifier: Operating System :: MacOS
+ Classifier: Operating System :: POSIX :: Linux
+ Classifier: Operating System :: Unix
+ Classifier: Development Status :: 5 - Production/Stable
+ Classifier: License :: OSI Approved :: MIT License
+ Requires-Python: >=3.7
+@@ -21,19 +22,19 @@
+ Provides-Extra: test
+ License-File: LICENSE
+ 
+ <!--
+     =====================================
+     generator=datazen
+     version=3.1.0
+-    hash=63d8f8a798339435b00a65b4455bb831
++    hash=afe78adecb170b60b5d71ba944ae1c1c
+     =====================================
+ -->
+ 
+-# runtimepy ([0.9.6](https://pypi.org/project/runtimepy/))
++# runtimepy ([1.0.0](https://pypi.org/project/runtimepy/))
+ 
+ [![python](https://img.shields.io/pypi/pyversions/runtimepy.svg)](https://pypi.org/project/runtimepy/)
+ ![Build Status](https://github.com/vkottler/runtimepy/workflows/Python%20Package/badge.svg)
+ [![codecov](https://codecov.io/gh/vkottler/runtimepy/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/vkottler/runtimepy)
+ ![PyPI - Status](https://img.shields.io/pypi/status/runtimepy)
+ ![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/pypi/runtimepy)
+ 
+@@ -46,29 +47,30 @@
+ 
+ This package is tested with the following Python minor versions:
+ 
+ * [`python3.7`](https://docs.python.org/3.7/)
+ * [`python3.8`](https://docs.python.org/3.8/)
+ * [`python3.9`](https://docs.python.org/3.9/)
+ * [`python3.10`](https://docs.python.org/3.10/)
++* [`python3.11`](https://docs.python.org/3.11/)
+ 
+ ## Platform Support
+ 
+ This package is tested on the following platforms:
+ 
+ * `ubuntu-latest`
+ * `macos-latest`
+ * `windows-latest`
+ 
+ # Introduction
+ 
+ # Command-line Options
+ 
+ ```
+-$ ./venv3.8/bin/runtimepy -h
++$ ./venv3.7/bin/runtimepy -h
+ 
+ usage: runtimepy [-h] [--version] [-v] [-C DIR] {tui,noop} ...
+ 
+ A framework for implementing Python services.
+ 
+ optional arguments:
+   -h, --help         show this help message and exit
+```
+
+### Comparing `runtimepy-0.9.6/README.md` & `runtimepy-1.0.0/runtimepy.egg-info/PKG-INFO`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,16 +1,40 @@
++Metadata-Version: 2.1
++Name: runtimepy
++Version: 1.0.0
++Summary: A framework for implementing Python services.
++Home-page: https://github.com/vkottler/runtimepy
++Author: Vaughn Kottler
++Author-email: Vaughn Kottler <vaughnkottler@gmail.com>
++Maintainer-email: Vaughn Kottler <vaughnkottler@gmail.com>
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
++Classifier: Programming Language :: Python :: 3.10
++Classifier: Programming Language :: Python :: 3.11
++Classifier: Operating System :: Microsoft :: Windows
++Classifier: Operating System :: MacOS
++Classifier: Operating System :: POSIX :: Linux
++Classifier: Operating System :: Unix
++Classifier: Development Status :: 5 - Production/Stable
++Classifier: License :: OSI Approved :: MIT License
++Requires-Python: >=3.7
++Description-Content-Type: text/markdown
++Provides-Extra: test
++License-File: LICENSE
++
+ <!--
+     =====================================
+     generator=datazen
+     version=3.1.0
+-    hash=63d8f8a798339435b00a65b4455bb831
++    hash=afe78adecb170b60b5d71ba944ae1c1c
+     =====================================
+ -->
+ 
+-# runtimepy ([0.9.6](https://pypi.org/project/runtimepy/))
++# runtimepy ([1.0.0](https://pypi.org/project/runtimepy/))
+ 
+ [![python](https://img.shields.io/pypi/pyversions/runtimepy.svg)](https://pypi.org/project/runtimepy/)
+ ![Build Status](https://github.com/vkottler/runtimepy/workflows/Python%20Package/badge.svg)
+ [![codecov](https://codecov.io/gh/vkottler/runtimepy/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/vkottler/runtimepy)
+ ![PyPI - Status](https://img.shields.io/pypi/status/runtimepy)
+ ![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/pypi/runtimepy)
+ 
+@@ -23,29 +47,30 @@
+ 
+ This package is tested with the following Python minor versions:
+ 
+ * [`python3.7`](https://docs.python.org/3.7/)
+ * [`python3.8`](https://docs.python.org/3.8/)
+ * [`python3.9`](https://docs.python.org/3.9/)
+ * [`python3.10`](https://docs.python.org/3.10/)
++* [`python3.11`](https://docs.python.org/3.11/)
+ 
+ ## Platform Support
+ 
+ This package is tested on the following platforms:
+ 
+ * `ubuntu-latest`
+ * `macos-latest`
+ * `windows-latest`
+ 
+ # Introduction
+ 
+ # Command-line Options
+ 
+ ```
+-$ ./venv3.8/bin/runtimepy -h
++$ ./venv3.7/bin/runtimepy -h
+ 
+ usage: runtimepy [-h] [--version] [-v] [-C DIR] {tui,noop} ...
+ 
+ A framework for implementing Python services.
+ 
+ optional arguments:
+   -h, --help         show this help message and exit
+```
+
+### Comparing `runtimepy-0.9.6/pyproject.toml` & `runtimepy-1.0.0/pyproject.toml`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,28 +1,29 @@
+ [build-system]
+ requires = ["setuptools-wrapper", "trove-classifiers"]
+ build-backend = "setuptools.build_meta:__legacy__"
+ 
+ [project]
+ name = "runtimepy"
+-version = "0.9.6"
++version = "1.0.0"
+ description = "A framework for implementing Python services."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ authors = [
+   {name = "Vaughn Kottler", email = "vaughnkottler@gmail.com"}
+ ]
+ maintainers = [
+   {name = "Vaughn Kottler", email = "vaughnkottler@gmail.com"}
+ ]
+ classifiers = [
+   "Programming Language :: Python :: 3.7",
+   "Programming Language :: Python :: 3.8",
+   "Programming Language :: Python :: 3.9",
+   "Programming Language :: Python :: 3.10",
++  "Programming Language :: Python :: 3.11",
+   "Operating System :: Microsoft :: Windows",
+   "Operating System :: MacOS",
+   "Operating System :: POSIX :: Linux",
+   "Operating System :: Unix",
+   "Development Status :: 5 - Production/Stable",
+   "License :: OSI Approved :: MIT License"
+ ]
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/app.py` & `runtimepy-1.0.0/runtimepy/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/__init__.py` & `runtimepy-1.0.0/runtimepy/channel/__init__.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -21,36 +21,41 @@
+ from runtimepy.primitives.int import Int16 as _Int16
+ from runtimepy.primitives.int import Int32 as _Int32
+ from runtimepy.primitives.int import Int64 as _Int64
+ from runtimepy.primitives.int import Uint8 as _Uint8
+ from runtimepy.primitives.int import Uint16 as _Uint16
+ from runtimepy.primitives.int import Uint32 as _Uint32
+ from runtimepy.primitives.int import Uint64 as _Uint64
++from runtimepy.primitives.type import AnyPrimitiveType as _AnyPrimitiveType
+ from runtimepy.registry.item import RegistryItem as _RegistryItem
+ 
+ 
+ class Channel(_RegistryItem, _EnumMixin, _Generic[_T]):
+     """An interface for an individual channel."""
+ 
+     def __str__(self) -> str:
+         """Get this channel as a string."""
+         return f"{self.id}: {self.raw}"
+ 
+     def __bool__(self) -> bool:
+         """Get this channel as a boolean."""
+         return bool(self.raw)
+ 
++    @property
++    def type(self) -> _AnyPrimitiveType:
++        """Get the underlying primitive type of this channel."""
++        return self.raw.kind
++
+     def init(self, data: _JsonObject) -> None:
+         """Perform implementation-specific initialization."""
+ 
+         super().init(data)
+ 
+         # This is the underlying storage entity for this channel.
+         self.raw: _T = _cast(_T, _normalize(_cast(str, data["type"]))())
+-        self.type = self.raw.kind
+ 
+         # Whether or not this channel should accept commands.
+         self.commandable: bool = _cast(bool, data["commandable"])
+ 
+         # A key to this channel's enumeration in the enumeration registry.
+         self._enum = _cast(str, data.get("enum"))
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/__init__.py` & `runtimepy-1.0.0/runtimepy/channel/environment/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/array.py` & `runtimepy-1.0.0/runtimepy/channel/environment/array.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/base.py` & `runtimepy-1.0.0/runtimepy/channel/environment/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/create.py` & `runtimepy-1.0.0/runtimepy/channel/environment/create.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/file.py` & `runtimepy-1.0.0/runtimepy/channel/environment/file.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -21,30 +21,32 @@
+     BaseChannelEnvironment as _BaseChannelEnvironment,
+ )
+ from runtimepy.channel.environment.base import ValueMap as _ValueMap
+ from runtimepy.channel.registry import ChannelRegistry as _ChannelRegistry
+ from runtimepy.enum.registry import EnumRegistry as _EnumRegistry
+ from runtimepy.mapping import NameToKey as _NameToKey
+ from runtimepy.primitives.field.manager import (
++    ENUMS_KEY,
++    FIELDS_KEY,
++    NAMES_KEY,
++    VALUES_KEY,
++)
++from runtimepy.primitives.field.manager import (
+     fields_from_dict as _fields_from_dict,
+ )
+ from runtimepy.primitives.field.manager import (
+     fields_from_file as _fields_from_file,
+ )
+ 
+ T = _TypeVar("T", bound="FileChannelEnvironment")
+ CHANNELS_KEY = "channels"
+ CHANNELS_FILE = f"{CHANNELS_KEY}.json"
+-ENUMS_KEY = "enums"
+ ENUMS_FILE = f"{ENUMS_KEY}.json"
+-VALUES_KEY = "values"
+ VALUES_FILE = f"{VALUES_KEY}.json"
+-FIELDS_KEY = "fields"
+ FIELDS_FILE = f"{FIELDS_KEY}.json"
+-NAMES_KEY = "names"
+ NAMES_FILE = f"{NAMES_KEY}.json"
+ 
+ 
+ class FileChannelEnvironment(_BaseChannelEnvironment):
+     """A class integrating file-system operations with channel environments."""
+ 
+     def export_json(
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/environment/names.py` & `runtimepy-1.0.0/runtimepy/channel/environment/names.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/channel/registry.py` & `runtimepy-1.0.0/runtimepy/channel/registry.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/commands/all.py` & `runtimepy-1.0.0/runtimepy/commands/all.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/commands/tui.py` & `runtimepy-1.0.0/runtimepy/commands/tui.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/data/schemas/BitFields.yaml` & `runtimepy-1.0.0/runtimepy/data/schemas/BitFields.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/entry.py` & `runtimepy-1.0.0/runtimepy/entry.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/enum/__init__.py` & `runtimepy-1.0.0/runtimepy/enum/__init__.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,13 +1,15 @@
+ """
+ A module implementing a runtime enumeration interface.
+ """
+ 
+ # built-in
++from enum import IntEnum as _IntEnum
+ from typing import Optional as _Optional
++from typing import Type as _Type
+ from typing import Union as _Union
+ from typing import cast as _cast
+ 
+ # third-party
+ from vcorelib.io.types import JsonObject as _JsonObject
+ from vcorelib.io.types import JsonValue as _JsonValue
+ 
+@@ -134,7 +136,24 @@
+     def register_int(self, name: str) -> _Optional[int]:
+         """Register an integer enumeration."""
+         return self.ints.register_name(name)
+ 
+     def register_bool(self, name: str, value: bool) -> bool:
+         """Register a boolean enumeration."""
+         return self.bools.register(name, value)
++
++    @staticmethod
++    def data_from_enum(enum: _Type[_IntEnum]) -> _JsonObject:
++        """Get JSON data from an enumeration class."""
++
++        return {
++            "type": "int",
++            "items": {x.name.lower(): x.value for x in enum},
++        }
++
++    @staticmethod
++    def from_enum(enum: _Type[_IntEnum], identifier: int) -> "RuntimeEnum":
++        """Create a runtime enumeration from an enum class."""
++
++        data = RuntimeEnum.data_from_enum(enum)
++        data["id"] = identifier
++        return RuntimeEnum.create(data)
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/enum/type.py` & `runtimepy-1.0.0/runtimepy/enum/type.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/mapping.py` & `runtimepy-1.0.0/runtimepy/mapping.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ """
+ A module implementing a generic, two-way mapping interface.
+ """
+ 
+ # built-in
++from typing import Dict as _Dict
+ from typing import Generic as _Generic
+ from typing import Iterator as _Iterator
+ from typing import MutableMapping as _MutableMapping
+ from typing import Optional as _Optional
+ from typing import Type as _Type
+ from typing import TypeVar as _TypeVar
+ from typing import Union as _Union
+@@ -41,16 +42,16 @@
+     def __init__(
+         self,
+         mapping: KeyToName[T] = None,
+         reverse: NameToKey[T] = None,
+     ) -> None:
+         """Initialize this name registry."""
+ 
+-        self._mapping: KeyToName[T] = {}
+-        self._reverse: NameToKey[T] = {}
++        self._mapping: _Dict[T, str] = {}
++        self._reverse: _Dict[str, T] = {}
+ 
+         if mapping is not None:
+             self.load_key_to_name(mapping)
+         if reverse is not None:
+             self.load_name_to_key(reverse)
+ 
+     def _set(self, key: T, name: str) -> None:
+@@ -103,15 +104,15 @@
+ 
+     @property
+     def names(self) -> _Iterator[str]:
+         """Iterate over names."""
+         for name in self._reverse:
+             yield name
+ 
+-    def asdict(self) -> NameToKey[T]:
++    def asdict(self) -> _Dict[str, T]:
+         """Provide a dictionary representation."""
+         return self._reverse
+ 
+     @classmethod
+     def int_from_dict(
+         cls: _Type[IntMapping], data: IntMappingData
+     ) -> IntMapping:
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/mixins/enum.py` & `runtimepy-1.0.0/runtimepy/mixins/enum.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/mixins/regex.py` & `runtimepy-1.0.0/runtimepy/mixins/regex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/net/connection.py` & `runtimepy-1.0.0/runtimepy/net/connection.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,105 +1,150 @@
+ """
+ A module implementing a network-connection interface.
+ """
+ 
+ # built-in
+ from abc import ABC as _ABC
+-from abc import abstractmethod as _abstractmethod
+ import asyncio as _asyncio
+-from logging import Logger as _Logger
+-from logging import LoggerAdapter as _LoggerAdapter
+-from typing import Awaitable as _Awaitable
++from typing import List as _List
+ from typing import Optional as _Optional
+ from typing import TypeVar as _TypeVar
+ from typing import Union as _Union
+ 
+-LoggerType = _Union[_Logger, _LoggerAdapter]
++# third-party
++from vcorelib.asyncio import log_exceptions as _log_exceptions
++from vcorelib.logging import LoggerMixin as _LoggerMixin
++from vcorelib.logging import LoggerType as _LoggerType
++
+ BinaryMessage = _Union[bytes, bytearray, memoryview]
+ T = _TypeVar("T")
+ 
+ 
+-class Connection(_ABC):
++class Connection(_LoggerMixin, _ABC):
+     """A connection interface."""
+ 
+-    def __init__(self, logger: LoggerType) -> None:
++    def __init__(self, logger: _LoggerType) -> None:
+         """Initialize this connection."""
+ 
+-        self._logger = logger
++        super().__init__(logger=logger)
+         self._enabled = True
++
+         self._text_messages: _asyncio.Queue[str] = _asyncio.Queue()
++        self.tx_text_hwm: int = 0
+         self._binary_messages: _asyncio.Queue[BinaryMessage] = _asyncio.Queue()
++        self.tx_binary_hwm: int = 0
++
++        self._tasks: _List[_asyncio.Task[None]] = []
++        self.init()
++
++    def init(self) -> None:
++        """Initialize this instance."""
++
++    async def async_init(self) -> bool:
++        """A runtime initialization routine (executes during 'process')."""
++        return True
+ 
+-    @_abstractmethod
+     async def process_text(self, data: str) -> bool:
+         """Process a text frame."""
++        raise NotImplementedError
+ 
+-    @_abstractmethod
+     async def process_binary(self, data: bytes) -> bool:
+         """Process a binary frame."""
++        raise NotImplementedError
+ 
+-    @_abstractmethod
+     async def _await_message(self) -> _Optional[_Union[BinaryMessage, str]]:
+         """Await the next message. Return None on error or failure."""
++        raise NotImplementedError
+ 
+-    @_abstractmethod
+     async def _send_text_message(self, data: str) -> None:
+         """Send a text message."""
++        raise NotImplementedError
+ 
+-    @_abstractmethod
+     async def _send_binay_message(self, data: BinaryMessage) -> None:
+         """Send a binary message."""
++        raise NotImplementedError
+ 
+     async def close(self) -> None:
+         """Close this connection."""
+ 
+     def send_text(self, data: str) -> None:
+         """Enqueue a text message to send."""
++
+         self._text_messages.put_nowait(data)
++        self.tx_text_hwm = max(self.tx_text_hwm, self._text_messages.qsize())
+ 
+     def send_binary(self, data: BinaryMessage) -> None:
+         """Enqueue a binary message tos end."""
++
+         self._binary_messages.put_nowait(data)
++        self.tx_binary_hwm = max(
++            self.tx_binary_hwm, self._binary_messages.qsize()
++        )
++
++    @property
++    def disabled(self) -> bool:
++        """Determine if this connection is disabled."""
++        return not self._enabled
++
++    def disable_extra(self) -> None:
++        """Additional tasks to perform when disabling."""
+ 
+     def disable(self, reason: str) -> None:
+         """Disable this connection."""
+ 
+         if self._enabled:
+-            self._logger.info("Disabling connection: '%s'.", reason)
++            self.logger.info("Disabling connection: '%s'.", reason)
++            self.disable_extra()
+             self._enabled = False
+ 
+-    async def process(self) -> None:
++            # Cancel tasks.
++            for task in self._tasks:
++                if not task.done():
++                    task.cancel()
++
++    async def _wait_sig(self, stop_sig: _asyncio.Event) -> None:
++        """Disable the connection if a stop signal gets set."""
++        await stop_sig.wait()
++        self.disable("stop signal")
++
++    async def _async_init(self) -> None:
++        """Run this connection's initialization routine."""
++
++        if not await self.async_init():
++            self.disable("init failed")
++
++    async def process(self, stop_sig: _asyncio.Event = None) -> None:
+         """
+         Process tasks for this connection while the connection is active.
+         """
+ 
+-        _, pending = await _asyncio.wait(
+-            [
+-                _asyncio.create_task(self._process_read()),
+-                _asyncio.create_task(self._process_write_text()),
+-                _asyncio.create_task(self._process_write_binary()),
+-            ],
+-            return_when=_asyncio.FIRST_COMPLETED,
+-        )
++        self._tasks = [
++            _asyncio.create_task(self._process_read()),
++            _asyncio.create_task(self._process_write_text()),
++            _asyncio.create_task(self._process_write_binary()),
++            _asyncio.create_task(self._async_init()),
++        ]
++
++        # Allow a stop signal to also disable the connection.
++        if stop_sig is not None:
++            self._tasks.append(_asyncio.create_task(self._wait_sig(stop_sig)))
++
++        await _asyncio.wait(self._tasks, return_when=_asyncio.ALL_COMPLETED)
+ 
+-        self.disable("task exited")
+-        for task in pending:
+-            task.cancel()
+-            await task
++        # Ensure that tasks have their exceptions retrieved.
++        _log_exceptions(self._tasks, self.logger)
+ 
+         await self.close()
+ 
+     async def _process_read(self) -> None:
+         """Process incoming messages while this connection is active."""
+ 
+         while self._enabled:
+             # Attempt to get the next message.
+-            message = await self._cancelled_handler(
+-                self._await_message(), "reading cancelled"
+-            )
++            message = await self._await_message()
+             result = False
+ 
+             if message is not None:
+                 # Process a text message.
+                 if isinstance(message, str):
+                     result = await _asyncio.shield(self.process_text(message))
+ 
+@@ -112,53 +157,31 @@
+             # If we failed to read a message, disable.
+             if not result:
+                 self.disable("read processing error")
+ 
+     async def _process_write_text(self) -> None:
+         """Process outgoing text messages."""
+ 
+-        cancel_msg = "writing cancelled"
+         queue: _asyncio.Queue[str] = self._text_messages
+ 
+         while self._enabled:
+             # Attempt to get the next message.
+-            data = await self._cancelled_handler(queue.get(), cancel_msg)
++            data = await queue.get()
+ 
+             # Process it.
+             if data is not None:
+-                await self._cancelled_handler(
+-                    self._send_text_message(data), cancel_msg
+-                )
++                await self._send_text_message(data)
+                 queue.task_done()
+ 
+     async def _process_write_binary(self) -> None:
+         """Process outgoing binary messages."""
+ 
+-        cancel_msg = "writing cancelled"
+         queue: _asyncio.Queue[BinaryMessage] = self._binary_messages
+ 
+         while self._enabled:
+             # Attempt to get the next message.
+-            data = await self._cancelled_handler(queue.get(), cancel_msg)
++            data = await queue.get()
+ 
+             # Process it.
+             if data is not None:
+-                await self._cancelled_handler(
+-                    self._send_binay_message(data), cancel_msg
+-                )
++                await self._send_binay_message(data)
+                 queue.task_done()
+-
+-    async def _cancelled_handler(
+-        self, task: _Awaitable[T], disable_message: str = None
+-    ) -> _Optional[T]:
+-        """
+-        A simple wrapper for handling cancellations from the event loop. Pass
+-        a disable message if the cancellation should disable the connection.
+-        """
+-
+-        result = None
+-        try:
+-            result = await task
+-        except _asyncio.CancelledError:
+-            if disable_message is not None:
+-                self.disable(disable_message)
+-        return result
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/__init__.py` & `runtimepy-1.0.0/runtimepy/primitives/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/array.py` & `runtimepy-1.0.0/runtimepy/primitives/array.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -10,15 +10,18 @@
+ from typing import Dict as _Dict
+ from typing import List as _List
+ from typing import NamedTuple
+ from typing import cast as _cast
+ 
+ # internal
+ from runtimepy.primitives import AnyPrimitive as _AnyPrimitive
+-from runtimepy.primitives.base import NETWORK_BYTE_ORDER as _NETWORK_BYTE_ORDER
++from runtimepy.primitives.byte_order import (
++    DEFAULT_BYTE_ORDER as _DEFAULT_BYTE_ORDER,
++)
++from runtimepy.primitives.byte_order import ByteOrder as _ByteOrder
+ 
+ 
+ class ArrayFragmentSpec(NamedTuple):
+     """Information that can be used to construct an array fragment."""
+ 
+     index_start: int
+     index_end: int
+@@ -28,21 +31,22 @@
+ 
+ class PrimitiveArray:
+     """A class for managing primitives as arrays."""
+ 
+     def __init__(
+         self,
+         *primitives: _AnyPrimitive,
+-        byte_order: str = _NETWORK_BYTE_ORDER,
++        byte_order: _ByteOrder = _DEFAULT_BYTE_ORDER,
+         fragments: _List[ArrayFragmentSpec] = None,
+     ) -> None:
+         """Initialize this primitive array."""
+ 
+         self._primitives: _List[_AnyPrimitive] = []
+-        self._format: str = byte_order
++        self.byte_order = byte_order
++        self._format: str = self.byte_order.fmt
+         self.size: int = 0
+ 
+         # Keep track of a quick lookup for converting between element indices
+         # and byte indices.
+         self._bytes_to_index: _Dict[int, int] = {0: 0}
+         self._index_to_bytes: _Dict[int, int] = {0: 0}
+ 
+@@ -55,29 +59,40 @@
+ 
+         # Create array fragments from the specifications.
+         if fragments is None:
+             fragments = []
+         for spec in fragments:
+             self._add_fragment(spec)
+ 
++    def reset(self) -> None:
++        """Reset this array so it's empty."""
++
++        self._primitives = []
++        self._format = self.byte_order.fmt
++        self.size = 0
++        self._bytes_to_index = {0: 0}
++        self._index_to_bytes = {0: 0}
++        self._fragments = []
++        self._fragment_specs = []
++
+     @property
+     def num_fragments(self) -> int:
+         """Get the number of fragments belonging to this array."""
+         return len(self._fragments)
+ 
+     def fragment(self, index: int) -> "PrimitiveArray":
+         """A simple accessor for fragments."""
+         return self._fragments[index]
+ 
+     def _create_fragment(self, spec: ArrayFragmentSpec) -> "PrimitiveArray":
+         """Create a new array fragment from a fragment specification."""
+ 
+         return PrimitiveArray(
+             *self._primitives[spec.index_start : spec.index_end],
+-            byte_order=self._format[0],
++            byte_order=self.byte_order,
+         )
+ 
+     def _index_fragment_spec(
+         self, start: int, end: int = -1
+     ) -> ArrayFragmentSpec:
+         """Create an array-fragment specification from array indices."""
+ 
+@@ -146,15 +161,15 @@
+         return self._bytes_to_index[count]
+ 
+     def __copy__(self) -> "PrimitiveArray":
+         """Make a copy of this primitive array."""
+ 
+         return PrimitiveArray(
+             *[_cast(_AnyPrimitive, x.copy()) for x in self._primitives],
+-            byte_order=self._format[0],
++            byte_order=self.byte_order,
+             fragments=_copy(self._fragment_specs),
+         )
+ 
+     def copy(self) -> "PrimitiveArray":
+         """A simple wrapper for copy."""
+         return _copy(self)
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/bool.py` & `runtimepy-1.0.0/runtimepy/primitives/bool.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -6,17 +6,19 @@
+ from runtimepy.primitives.base import Primitive as _Primitive
+ from runtimepy.primitives.type.bool import Bool as _Bool
+ 
+ 
+ class BooleanPrimitive(_Primitive[bool]):
+     """A simple primitive class for booleans."""
+ 
+-    def __init__(self, *_, value: bool = False) -> None:
++    kind = _Bool
++
++    def __init__(self, value: bool = False) -> None:
+         """Initialize this boolean primitive."""
+-        super().__init__(_Bool, value=value)
++        super().__init__(value=value)
+ 
+     def toggle(self) -> None:
+         """Toggle the underlying value."""
+         self.raw.value = not self.raw.value
+ 
+     def set(self) -> None:
+         """Coerce the underlying value to true."""
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/field/__init__.py` & `runtimepy-1.0.0/runtimepy/primitives/field/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/field/fields.py` & `runtimepy-1.0.0/runtimepy/primitives/field/fields.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/field/manager.py` & `runtimepy-1.0.0/runtimepy/primitives/field/manager/base.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,16 +1,18 @@
+ """
+-A management entity for bit-fields.
++A base management entity for bit-fields.
+ """
+ 
+ # built-in
++from copy import copy as _copy
+ from typing import Dict as _Dict
+ from typing import Iterable as _Iterable
+ from typing import List as _List
+ from typing import Optional as _Optional
++from typing import TypeVar as _TypeVar
+ from typing import Union as _Union
+ from typing import cast as _cast
+ 
+ # third-party
+ from vcorelib.io import ARBITER as _ARBITER
+ from vcorelib.io.types import EncodeResult as _EncodeResult
+ from vcorelib.io.types import JsonObject as _JsonObject
+@@ -34,30 +36,18 @@
+ def fields_to_file(
+     path: _Pathlike, fields: _Iterable[_BitFields], **kwargs
+ ) -> _EncodeResult:
+     """Write bit-fields to a file."""
+     return _ARBITER.encode(path, fields_to_dict(fields), **kwargs)
+ 
+ 
+-def fields_from_dict(data: _JsonObject) -> _Iterable[_BitFields]:
+-    """Load bit-fields from JSON data."""
++T = _TypeVar("T", bound="BitFieldsManagerBase")
+ 
+-    return [
+-        _BitFields.create(x)
+-        for x in _cast(_Iterable[_JsonObject], data["items"])
+-    ]
+ 
+-
+-def fields_from_file(path: _Pathlike) -> _Iterable[_BitFields]:
+-    """Load bit-fields from a file."""
+-
+-    return fields_from_dict(_ARBITER.decode(path, require_success=True).data)
+-
+-
+-class BitFieldsManager:
++class BitFieldsManagerBase:
+     """A class for managing multiple bit-fields objects."""
+ 
+     def __init__(
+         self,
+         registry: _NameRegistry,
+         enums: _EnumRegistry,
+         fields: _Iterable[_BitFields] = None,
+@@ -75,23 +65,32 @@
+         self.lookup: _Dict[str, int] = {}
+         self.enum_lookup: _Dict[str, _RuntimeEnum] = {}
+ 
+         # Add initial fields.
+         for field in fields:
+             self.add(field)
+ 
++    def __copy__(self: T) -> T:
++        """
++        Create a copy of the manager with fields that use distinct underlying
++        primitives.
++        """
++        return self.__class__(
++            self.registry, self.enums, fields=[_copy(x) for x in self.fields]
++        )
++
+     def asdict(self) -> _JsonObject:
+         """Get this bit-fields manager as a JSON object."""
+         return fields_to_dict(self.fields)
+ 
+     def encode(self, path: _Pathlike, **kwargs) -> _EncodeResult:
+         """Encode this bit-fields manager to a file."""
+         return fields_to_file(path, self.fields, **kwargs)
+ 
+-    def add(self, fields: _BitFields) -> None:
++    def add(self, fields: _BitFields) -> int:
+         """Add new bit-fields to manage."""
+ 
+         # Ensure that new fields can't be added after the current fields
+         # are snapshotted.
+         fields.finalize()
+ 
+         index = len(self.fields)
+@@ -103,35 +102,39 @@
+             assert ident is not None, "Couldn't register bit-field '{name}'!"
+             self.lookup[name] = index
+ 
+             # Also store the enum mapping.
+             if field.is_enum:
+                 self.enum_lookup[name] = self.enums[field.enum]
+ 
++        return index
++
+     def set(self, key: _RegistryKey, value: _Union[int, bool, str]) -> None:
+         """Set a value of a field."""
+ 
+         field = self[key]
+ 
+         if isinstance(value, str):
+             value = self.enum_lookup[field.name].get_int(value)
+ 
+         # Update the value.
+         field(int(value))
+ 
+     def get(
+         self, key: _RegistryKey, resolve_enum: bool = True
+-    ) -> _Union[int, str]:
++    ) -> _Union[int, bool, str]:
+         """Get the value of a field."""
+ 
+         field = self[key]
+         value: _Union[int, str] = field()
+ 
+         if field.is_enum and resolve_enum:
+             value = self.enum_lookup[field.name].get_str(value)
++        elif field.width == 1:
++            value = bool(value)
+ 
+         return value
+ 
+     def values(
+         self, resolve_enum: bool = True
+     ) -> _Dict[str, _Union[str, int]]:
+         """Get a new dictionary of current field values."""
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/float.py` & `runtimepy-1.0.0/runtimepy/primitives/float.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -8,35 +8,41 @@
+ from runtimepy.primitives.type.float import Float as _Float
+ from runtimepy.primitives.type.float import Half as _Half
+ 
+ 
+ class HalfPrimitive(_Primitive[float]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: float = 0.0) -> None:
++    kind = _Half
++
++    def __init__(self, value: float = 0.0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Half, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Half = HalfPrimitive
+ 
+ 
+ class FloatPrimitive(_Primitive[float]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: float = 0.0) -> None:
++    kind = _Float
++
++    def __init__(self, value: float = 0.0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Float, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Float = FloatPrimitive
+ 
+ 
+ class DoublePrimitive(_Primitive[float]):
+     """A simple primitive class for double-precision floating-point."""
+ 
+-    def __init__(self, *_, value: float = 0.0) -> None:
++    kind = _Double
++
++    def __init__(self, value: float = 0.0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Double, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Double = DoublePrimitive
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/int.py` & `runtimepy-1.0.0/runtimepy/primitives/int.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -16,91 +16,107 @@
+ from runtimepy.primitives.type.int import Uint32 as _Uint32
+ from runtimepy.primitives.type.int import Uint64 as _Uint64
+ 
+ 
+ class Int8Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Int8
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Int8, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Int8 = Int8Primitive
+ 
+ 
+ class Int16Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Int16
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Int16, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Int16 = Int16Primitive
+ 
+ 
+ class Int32Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Int32
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Int32, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Int32 = Int32Primitive
+ 
+ 
+ class Int64Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Int64
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Int64, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Int64 = Int64Primitive
+ 
+ 
+ class Uint8Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Uint8
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Uint8, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Uint8 = Uint8Primitive
+ 
+ 
+ class Uint16Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Uint16
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Uint16, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Uint16 = Uint16Primitive
+ 
+ 
+ class Uint32Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Uint32
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Uint32, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Uint32 = Uint32Primitive
+ 
+ 
+ class Uint64Primitive(_Primitive[int]):
+     """A simple primitive class for single-precision floating-point."""
+ 
+-    def __init__(self, *_, value: int = 0) -> None:
++    kind = _Uint64
++
++    def __init__(self, value: int = 0) -> None:
+         """Initialize this floating-point primitive."""
+-        super().__init__(_Uint64, value=value)
++        super().__init__(value=value)
+ 
+ 
+ Uint64 = Uint64Primitive
+ UnsignedInt = _Union[Uint8, Uint16, Uint32, Uint64]
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/type/__init__.py` & `runtimepy-1.0.0/runtimepy/primitives/type/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -31,30 +31,30 @@
+     Uint16Type,
+     Uint32,
+     Uint32Type,
+     Uint64,
+     Uint64Type,
+ )
+ 
+-AnyPrimitive = _Union[
++AnyPrimitiveType = _Union[
+     Int8Type,
+     Int16Type,
+     Int32Type,
+     Int64Type,
+     Uint8Type,
+     Uint16Type,
+     Uint32Type,
+     Uint64Type,
+     HalfType,
+     FloatType,
+     DoubleType,
+     BooleanType,
+ ]
+ 
+-PrimitiveTypes: _Dict[str, AnyPrimitive] = {
++PrimitiveTypes: _Dict[str, AnyPrimitiveType] = {
+     # Integer types.
+     Int8.name: Int8,
+     Int16.name: Int16,
+     Int32.name: Int32,
+     Int64.name: Int64,
+     Uint8.name: Uint8,
+     Uint16.name: Uint16,
+@@ -64,17 +64,17 @@
+     Half.name: Half,
+     Float.name: Float,
+     Double.name: Double,
+     # Boolean type.
+     Bool.name: Bool,
+ }
+ 
+-PrimitiveTypelike = _Union[str, AnyPrimitive]
++PrimitiveTypelike = _Union[str, AnyPrimitiveType]
+ 
+ 
+-def normalize(value: PrimitiveTypelike) -> AnyPrimitive:
++def normalize(value: PrimitiveTypelike) -> AnyPrimitiveType:
+     """Normalize a primitive type or string into a primitive type."""
+ 
+     if isinstance(value, str):
+         assert value in PrimitiveTypes, f"No type '{value}'!"
+         value = PrimitiveTypes[value]
+     return value
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/type/float.py` & `runtimepy-1.0.0/runtimepy/primitives/type/float.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/primitives/type/int.py` & `runtimepy-1.0.0/runtimepy/primitives/type/int.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/registry/__init__.py` & `runtimepy-1.0.0/runtimepy/registry/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/registry/bool.py` & `runtimepy-1.0.0/runtimepy/registry/bool.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/registry/item.py` & `runtimepy-1.0.0/runtimepy/registry/item.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -2,19 +2,21 @@
+ A module implementing an interface for items that can belong to registries.
+ """
+ 
+ # built-in
+ from typing import cast as _cast
+ 
+ # third-party
+-from vcorelib.dict.codec import DictCodec as _DictCodec
+ from vcorelib.io.types import JsonObject as _JsonObject
+ 
++# internal
++from runtimepy.schemas import RuntimepyDictCodec as _RuntimepyDictCodec
+ 
+-class RegistryItem(_DictCodec):
++
++class RegistryItem(_RuntimepyDictCodec):
+     """A class interface for items that can be managed via a registry."""
+ 
+     def __hash__(self) -> int:
+         """Get a suitable hash for this registry item."""
+         return hash(self.id)
+ 
+     def __eq__(self, other) -> bool:
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/registry/name.py` & `runtimepy-1.0.0/runtimepy/registry/name.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/schemas.py` & `runtimepy-1.0.0/runtimepy/schemas.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ 
+ # built-in
+ from functools import lru_cache as _lru_cache
+ from typing import Optional as _Optional
+ 
+ # third-party
+ from vcorelib.dict.codec import DictCodec as _DictCodec
+-from vcorelib.schemas import JsonSchemaMap as _JsonSchemaMap
+ from vcorelib.schemas.base import SchemaMap as _SchemaMap
++from vcorelib.schemas.json import JsonSchemaMap as _JsonSchemaMap
+ 
+ # internal
+ from runtimepy import PKG_NAME
+ 
+ 
+ @_lru_cache(1)
+ def json_schemas(package: str = PKG_NAME) -> _JsonSchemaMap:
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/task/__init__.py` & `runtimepy-1.0.0/runtimepy/task/__init__.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -6,21 +6,30 @@
+ import asyncio as _asyncio
+ from logging import getLogger as _getLogger
+ 
+ # third-party
+ from vcorelib.logging import LoggerMixin as _LoggerMixin
+ from vcorelib.math.analysis.average import MovingAverage as _MovingAverage
+ from vcorelib.math.analysis.rate import RateTracker as _RateTracker
++from vcorelib.math.time import nano_str as _nano_str
+ 
+ # internal
+ from runtimepy.channel.environment import (
+     ChannelEnvironment as _ChannelEnvironment,
+ )
+ 
+ 
++def rate_str(period_s: float) -> str:
++    """Get a string representing a rate in Hz."""
++
++    period_str = _nano_str(int(period_s * 1e9))
++    freq_str = _nano_str(int((1.0 / period_s) * 1e9), prefix_space=True)
++    return f"{freq_str}Hz ({period_str}s)"
++
++
+ class AsyncTask(_LoggerMixin):
+     """A basic implementation of a periodic task."""
+ 
+     def __init__(
+         self,
+         name: str,
+         period_s: float,
+@@ -107,15 +116,15 @@
+         self.logger.info(
+             "'%s' min time: %0.6fs.", self.name, self.min_s.raw.value
+         )
+ 
+     @property
+     def rate_str(self) -> str:
+         """Get this periodic's rate as a string."""
+-        return f"{1.0 / self.period_s.raw.value:0.3f} Hz"
++        return rate_str(self.period_s.raw.value)
+ 
+     def enable(self) -> None:
+         """Enable this task."""
+         self.enabled.raw.value = True
+ 
+     def disable(self) -> None:
+         """Disable this task."""
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy/tui/channels/__init__.py` & `runtimepy-1.0.0/runtimepy/tui/channels/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy/tui/task.py` & `runtimepy-1.0.0/runtimepy/tui/task.py`
+
+ * *Files identical despite different names*
+
+### Comparing `runtimepy-0.9.6/runtimepy.egg-info/PKG-INFO` & `runtimepy-1.0.0/README.md`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,39 +1,16 @@
+-Metadata-Version: 2.1
+-Name: runtimepy
+-Version: 0.9.6
+-Summary: A framework for implementing Python services.
+-Home-page: https://github.com/vkottler/runtimepy
+-Author: Vaughn Kottler
+-Author-email: Vaughn Kottler <vaughnkottler@gmail.com>
+-Maintainer-email: Vaughn Kottler <vaughnkottler@gmail.com>
+-Classifier: Programming Language :: Python :: 3.7
+-Classifier: Programming Language :: Python :: 3.8
+-Classifier: Programming Language :: Python :: 3.9
+-Classifier: Programming Language :: Python :: 3.10
+-Classifier: Operating System :: Microsoft :: Windows
+-Classifier: Operating System :: MacOS
+-Classifier: Operating System :: POSIX :: Linux
+-Classifier: Operating System :: Unix
+-Classifier: Development Status :: 5 - Production/Stable
+-Classifier: License :: OSI Approved :: MIT License
+-Requires-Python: >=3.7
+-Description-Content-Type: text/markdown
+-Provides-Extra: test
+-License-File: LICENSE
+-
+ <!--
+     =====================================
+     generator=datazen
+     version=3.1.0
+-    hash=63d8f8a798339435b00a65b4455bb831
++    hash=afe78adecb170b60b5d71ba944ae1c1c
+     =====================================
+ -->
+ 
+-# runtimepy ([0.9.6](https://pypi.org/project/runtimepy/))
++# runtimepy ([1.0.0](https://pypi.org/project/runtimepy/))
+ 
+ [![python](https://img.shields.io/pypi/pyversions/runtimepy.svg)](https://pypi.org/project/runtimepy/)
+ ![Build Status](https://github.com/vkottler/runtimepy/workflows/Python%20Package/badge.svg)
+ [![codecov](https://codecov.io/gh/vkottler/runtimepy/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/vkottler/runtimepy)
+ ![PyPI - Status](https://img.shields.io/pypi/status/runtimepy)
+ ![Dependents (via libraries.io)](https://img.shields.io/librariesio/dependents/pypi/runtimepy)
+ 
+@@ -46,29 +23,30 @@
+ 
+ This package is tested with the following Python minor versions:
+ 
+ * [`python3.7`](https://docs.python.org/3.7/)
+ * [`python3.8`](https://docs.python.org/3.8/)
+ * [`python3.9`](https://docs.python.org/3.9/)
+ * [`python3.10`](https://docs.python.org/3.10/)
++* [`python3.11`](https://docs.python.org/3.11/)
+ 
+ ## Platform Support
+ 
+ This package is tested on the following platforms:
+ 
+ * `ubuntu-latest`
+ * `macos-latest`
+ * `windows-latest`
+ 
+ # Introduction
+ 
+ # Command-line Options
+ 
+ ```
+-$ ./venv3.8/bin/runtimepy -h
++$ ./venv3.7/bin/runtimepy -h
+ 
+ usage: runtimepy [-h] [--version] [-v] [-C DIR] {tui,noop} ...
+ 
+ A framework for implementing Python services.
+ 
+ optional arguments:
+   -h, --help         show this help message and exit
+```
+
+### Comparing `runtimepy-0.9.6/runtimepy.egg-info/SOURCES.txt` & `runtimepy-1.0.0/runtimepy.egg-info/SOURCES.txt`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -21,45 +21,67 @@
+ runtimepy/channel/registry.py
+ runtimepy/channel/environment/__init__.py
+ runtimepy/channel/environment/array.py
+ runtimepy/channel/environment/base.py
+ runtimepy/channel/environment/create.py
+ runtimepy/channel/environment/file.py
+ runtimepy/channel/environment/names.py
++runtimepy/codec/__init__.py
++runtimepy/codec/protocol/__init__.py
++runtimepy/codec/protocol/base.py
++runtimepy/codec/protocol/json.py
+ runtimepy/commands/__init__.py
+ runtimepy/commands/all.py
+ runtimepy/commands/tui.py
+ runtimepy/data/schemas/BitFields.yaml
++runtimepy/data/schemas/Channel.yaml
+ runtimepy/data/schemas/ChannelRegistry.yaml
+ runtimepy/data/schemas/EnumRegistry.yaml
++runtimepy/data/schemas/RuntimeEnum.yaml
+ runtimepy/enum/__init__.py
+ runtimepy/enum/registry.py
+ runtimepy/enum/type.py
+ runtimepy/mixins/__init__.py
+ runtimepy/mixins/enum.py
+ runtimepy/mixins/regex.py
+ runtimepy/net/__init__.py
+ runtimepy/net/connection.py
++runtimepy/net/manager.py
++runtimepy/net/mixin.py
++runtimepy/net/tcp/__init__.py
++runtimepy/net/tcp/connection.py
++runtimepy/net/tcp/telnet/__init__.py
++runtimepy/net/tcp/telnet/codes.py
++runtimepy/net/udp/__init__.py
++runtimepy/net/udp/connection.py
+ runtimepy/net/websocket/__init__.py
+ runtimepy/net/websocket/connection.py
+ runtimepy/primitives/__init__.py
+ runtimepy/primitives/array.py
+ runtimepy/primitives/base.py
+ runtimepy/primitives/bool.py
++runtimepy/primitives/byte_order.py
+ runtimepy/primitives/float.py
+ runtimepy/primitives/int.py
++runtimepy/primitives/string.py
+ runtimepy/primitives/field/__init__.py
+ runtimepy/primitives/field/fields.py
+-runtimepy/primitives/field/manager.py
++runtimepy/primitives/field/manager/__init__.py
++runtimepy/primitives/field/manager/base.py
+ runtimepy/primitives/type/__init__.py
+ runtimepy/primitives/type/base.py
+ runtimepy/primitives/type/bool.py
+ runtimepy/primitives/type/float.py
+ runtimepy/primitives/type/int.py
+ runtimepy/registry/__init__.py
+ runtimepy/registry/bool.py
+ runtimepy/registry/item.py
+ runtimepy/registry/name.py
+ runtimepy/task/__init__.py
++runtimepy/task/basic/__init__.py
++runtimepy/telemetry/__init__.py
+ runtimepy/tui/__init__.py
+ runtimepy/tui/task.py
+-runtimepy/tui/channels/__init__.py
++runtimepy/tui/channels/__init__.py
++tests/test_entry.py
++tests/test_mapping.py
++tests/test_resources.py
+```
+
+### Comparing `runtimepy-0.9.6/setup.py` & `runtimepy-1.0.0/setup.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ # =====================================
+ # generator=datazen
+ # version=3.1.0
+-# hash=8e8a2774d3e8fe0585a133bb0379ba7f
++# hash=0dc3cc2135a37faba7e2cec12476f943
+ # =====================================
+ 
+ """
+ runtimepy - Package definition for distribution.
+ """
+ 
+ # third-party
+@@ -28,13 +28,14 @@
+     "version": VERSION,
+     "description": DESCRIPTION,
+     "versions": [
+         "3.7",
+         "3.8",
+         "3.9",
+         "3.10",
++        "3.11",
+     ],
+ }
+ setup(
+     pkg_info,
+     author_info,
+ )
+```
+

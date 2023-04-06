@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/Pyroscope-gridtools-0.0.2.tar.gz tmp/Pyroscope-gridtools-0.1.tar.gz --html versions/P/Pyroscope-gridtools/0.0.2-0.1/index.html --text versions/P/Pyroscope-gridtools/0.0.2-0.1/diff.txt --markdown versions/P/Pyroscope-gridtools/0.0.2-0.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.7 KB</span></div>
+  <div><span class="source">tmp/Pyroscope-gridtools-0.0.2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/Pyroscope-gridtools-0.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">296 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/Pyroscope-gridtools-0.<del>0.</del><del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>23:<del>37</del>:<del>16</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/Pyroscope-gridtools-0.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>23:<ins>23</ins>:<ins>40</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">10.4 KB</span></div>
+    <div><span class="source">Pyroscope-gridtools-0.0.2.tar</span> vs.</div>
+    <div id="Pyroscope-gridtools--.-.-.tar"><span class="source">Pyroscope-gridtools-0.1.tar</span>
+      <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.07 KB</span></div>
+      <div id="Pyroscope-gridtools--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 22 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>16</del>.<del>766804</del><span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>40</ins>.<ins>200537</ins><span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<del>5</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>16</del>.<del>7</del><del>5</del>9<del>8</del>07<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/PKG-INFO</td><td class="diffline">2 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<ins>3</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>40</ins>.<ins>1</ins>9<ins>1</ins>07<ins>1</ins><span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>16</del>.<del>528424</del><span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope-gridtools/</td><td class="diffline">3 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>39</ins>.<ins>975088</ins><span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-02-04<span class="dp">·</span>10:40:28.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/__init__.py</td><td class="diffline">4 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-02-04<span class="dp">·</span>10:40:28.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2106<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:27:16.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/fileparser.py</td><td class="diffline">5 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2106<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:27:16.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/fileparser.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6434<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:28:48.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/filter_data.py</td><td class="diffline">6 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6434<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:28:48.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/filter_data.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28897<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:47:52.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/grid_ncf.py</td><td class="diffline">7 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>28897<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:47:52.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/grid_ncf.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span>606</del>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>34</del>:<del>18</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope-gridtools/gridding.py</td><td class="diffline">8 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1025</ins>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>12</ins>:<ins>45</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/gridding.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26095<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:47:32.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/gtools.py</td><td class="diffline">9 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26095<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:47:32.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/gtools.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8250<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:40:51.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/naming_conventions.py</td><td class="diffline">10 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8250<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:40:51.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/naming_conventions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8107<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:14:16.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/sat_data_input.py</td><td class="diffline">11 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8107<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:14:16.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/sat_data_input.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7531<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:14:29.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/solar_zenith.py</td><td class="diffline">12 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7531<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:14:29.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/solar_zenith.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3166<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:45:00.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/Pyroscope-gridtools/time_conv.py</td><td class="diffline">13 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3166<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:45:00.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope-gridtools/time_conv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>16</del>.<del>717</del>87<del>4</del><span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/</td><td class="diffline">14 </td><td class="diffpresent">drwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>40</ins>.<ins>1</ins><ins>554</ins>87<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<del>5</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>15</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/PKG-INFO</td><td class="diffline">15 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>77<ins>3</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>38</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>576<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>15</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/SOURCES.txt</td><td class="diffline">16 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>576<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>39</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>15</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/dependency_links.txt</td><td class="diffline">17 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>38</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<del>2</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>15</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/requires.txt</td><td class="diffline">18 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5<ins>7</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>38</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>15</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/Pyroscope_gridtools.egg-info/top_level.txt</td><td class="diffline">19 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>38</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/Pyroscope_gridtools.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9962<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:20:54.000000<span class="dp">·</span>Pyroscope-gridtools-0.<del>0.</del><del>2</del>/README.md</td><td class="diffline">20 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9962<span class="dp">·</span>2023-04-06<span class="dp">·</span>22:20:54.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>16</del>.<del>768854</del><span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/setup.cfg</td><td class="diffline">21 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>40</ins>.<ins>203396</ins><span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>702</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<del>37</del>:<del>12</del>.000000<span class="dp">·</span>Pyroscope-gridtools-<del>0.</del>0.<del>2</del>/setup.py</td><td class="diffline">22 </td><td class="diffpresent">-rwxrwxrwx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>szhao007<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>614</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>23:<ins>23</ins>:<ins>23</ins>.000000<span class="dp">·</span>Pyroscope-gridtools-0.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">511 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/PKG-INFO</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--PKG-INFO"><span class="source">Pyroscope-gridtools-0.1/PKG-INFO</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>Pyroscope-gridtools</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>Pyroscope-gridtools</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>0.</del><del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jwei-openscapes/aerosol-data-fusion</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jwei-openscapes/aerosol-data-fusion</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>zhaosally0@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>zhaosally0@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>data<span class="dp">·</span>fusion,satellite,L2,L3</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>data<span class="dp">·</span>fusion,satellite,L2,L3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">155 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/fileparser.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-fileparser.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/fileparser.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-fileparser.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/filter_data.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-filter_data.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/filter_data.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-filter_data.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/grid_ncf.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-grid_ncf.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/grid_ncf.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-grid_ncf.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/gtools.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-gtools.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/gtools.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-gtools.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/naming_conventions.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-naming_conventions.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/naming_conventions.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-naming_conventions.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/sat_data_input.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-sat_data_input.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/sat_data_input.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-sat_data_input.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/solar_zenith.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-solar_zenith.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/solar_zenith.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-solar_zenith.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope-gridtools/time_conv.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-time_conv.py"><span class="source">Pyroscope-gridtools-0.1/Pyroscope-gridtools/time_conv.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope-gridtools-time_conv.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">569 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope_gridtools.egg-info/PKG-INFO</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope_gridtools.egg-info-PKG-INFO"><span class="source">Pyroscope-gridtools-0.1/Pyroscope_gridtools.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope_gridtools.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>1.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>Pyroscope-gridtools</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>Pyroscope-gridtools</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<del>0.</del><del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jwei-openscapes/aerosol-data-fusion</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/jwei-openscapes/aerosol-data-fusion</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>zhaosally0@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>zhaosally0@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>UNKNOWN</td><td class="diffline">9 </td><td class="diffpresent">Description:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>data<span class="dp">·</span>fusion,satellite,L2,L3</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>data<span class="dp">·</span>fusion,satellite,L2,L3</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/Pyroscope_gridtools.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope_gridtools.egg-info-SOURCES.txt"><span class="source">Pyroscope-gridtools-0.1/Pyroscope_gridtools.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--Pyroscope_gridtools.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">107 B</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/README.md</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--README.md"><span class="source">Pyroscope-gridtools-0.1/README.md</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.7 KB</span></div>
+      <div><span class="source">Pyroscope-gridtools-0.0.2/setup.py</span> vs.</div>
+      <div id="Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--setup.py"><span class="source">Pyroscope-gridtools-0.1/setup.py</span>
+        <a class="anchor" href="#Pyroscope-gridtools--.-.-.tar---Pyroscope-gridtools--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 30 lines modified</td><td colspan="2">Offset 1, 30 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>codecs<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">import<span class="dp">·</span>codecs<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">import<span class="dp">·</span>os<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<del>2</del>&#x27;<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.0.<ins>1</ins>&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>satellite<span class="dp">·</span>data<span class="dp">·</span>transformation.&#x27;<em>\xd</em></td><td class="diffline">6 </td><td class="diffpresent">DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>satellite<span class="dp">·</span>data<span class="dp">·</span>transformation.&#x27;<em>\xd</em></td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data&#x27;<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent"><del>#</del>LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data.&#x27;<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">LONG_DESCRIPTION<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data.&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent"><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">#<span class="dp">·</span>Setting<span class="dp">·</span>up<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">setup(<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">setup(<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&#x27;Pyroscope-gridtools&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Package<span class="dp">·</span>name<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&#x27;Pyroscope-gridtools&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Package<span class="dp">·</span>name<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages<span class="dp">·</span>=<span class="dp">·</span>[&#x27;Pyroscope-gridtools&#x27;],<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages<span class="dp">·</span>=<span class="dp">·</span>[&#x27;Pyroscope-gridtools&#x27;],<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.<del>0.</del><del>2</del>&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Initial<span class="dp">·</span>version<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.<ins>1</ins>&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Initial<span class="dp">·</span>version<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Chose<span class="dp">·</span>a<span class="dp">·</span>license<span class="dp">·</span>from<span class="dp">·</span>here:<span class="dp">·</span>https://help.github.com/articles/licensing-a-repository<em>\xd</em></td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Chose<span class="dp">·</span>a<span class="dp">·</span>license<span class="dp">·</span>from<span class="dp">·</span>here:<span class="dp">·</span>https://help.github.com/articles/licensing-a-repository<em>\xd</em></td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data&#x27;,<em>\xd</em></td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description<span class="dp">·</span>=<span class="dp">·</span>&#x27;Data<span class="dp">·</span>fusion<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>transforming<span class="dp">·</span>L2<span class="dp">·</span>satellite<span class="dp">·</span>to<span class="dp">·</span>L3<span class="dp">·</span>spatial-temporal<span class="dp">·</span>gridded<span class="dp">·</span>data&#x27;,<ins><span class="dp">·</span><span class="dp">·</span></ins><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author<span class="dp">·</span>=<span class="dp">·</span>&#x27;Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author<span class="dp">·</span>=<span class="dp">·</span>&#x27;Sally<span class="dp">·</span>Zhao,<span class="dp">·</span>Neil<span class="dp">·</span>Gutkin&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email<span class="dp">·</span>=<span class="dp">·</span>&#x27;zhaosally0@gmail.com&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email<span class="dp">·</span>=<span class="dp">·</span>&#x27;zhaosally0@gmail.com&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url<span class="dp">·</span>=<span class="dp">·</span>&#x27;https://github.com/jwei-openscapes/aerosol-data-fusion&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>github<span class="dp">·</span>repository<span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url<span class="dp">·</span>=<span class="dp">·</span>&#x27;https://github.com/jwei-openscapes/aerosol-data-fusion&#x27;,<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>github<span class="dp">·</span>repository<span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords<span class="dp">·</span>=<span class="dp">·</span>[&#x27;data<span class="dp">·</span>fusion&#x27;,<span class="dp">·</span>&#x27;satellite&#x27;,<span class="dp">·</span>&#x27;L2&#x27;,<span class="dp">·</span>&#x27;L3&#x27;],<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Keywords<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords<span class="dp">·</span>=<span class="dp">·</span>[&#x27;data<span class="dp">·</span>fusion&#x27;,<span class="dp">·</span>&#x27;satellite&#x27;,<span class="dp">·</span>&#x27;L2&#x27;,<span class="dp">·</span>&#x27;L3&#x27;],<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>Keywords<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>install_requires=[<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,<em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numpy&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;joblib&#x27;,<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;joblib&#x27;,<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;cuda&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;netCDF4&#x27;,<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;netCDF4&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyhdf&#x27;,<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyhdf&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyyaml&#x27;,<em>\xd</em></td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;pyyaml&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numba&#x27;,<em>\xd</em></td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;numba&#x27;,<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;os&#x27;,<span class="dp">·</span><em>\xd</em></td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;os&#x27;,<span class="dp">·</span><em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;argparse&#x27;<em>\xd</em></td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;argparse&#x27;<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],<em>\xd</em></td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>],<em>\xd</em></td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

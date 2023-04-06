@@ -1,0 +1,2025 @@
+--- tmp/tentacletk-0.6.4.tar.gz
++++ tmp/tentacletk-0.6.5.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "tentacletk-0.6.4.tar", last modified: Thu Mar 30 12:04:20 2023, max compression
+│ +gzip compressed data, was "tentacletk-0.6.5.tar", last modified: Thu Apr  6 23:41:10 2023, max compression
+│   --- tentacletk-0.6.4.tar
+├── +++ tentacletk-0.6.5.tar
+│ ├── file list
+│ │ @@ -1,159 +1,159 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.535463 tentacletk-0.6.4/
+│ │ --rw-rw-rw-   0        0        0       24 2023-03-28 23:37:53.000000 tentacletk-0.6.4/MANIFEST.in
+│ │ --rw-rw-rw-   0        0        0     2460 2023-03-30 12:04:20.534464 tentacletk-0.6.4/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0       42 2023-03-30 12:04:20.535463 tentacletk-0.6.4/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     2186 2023-03-28 23:37:53.000000 tentacletk-0.6.4/setup.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:19.660461 tentacletk-0.6.4/tentacle/
+│ │ --rw-rw-rw-   0        0        0     1745 2023-03-30 12:04:16.000000 tentacletk-0.6.4/tentacle/__init__.py
+│ │ --rw-rw-rw-   0        0        0    12360 2023-03-30 11:20:36.000000 tentacletk-0.6.4/tentacle/overlay.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:19.856460 tentacletk-0.6.4/tentacle/slots/
+│ │ --rw-rw-rw-   0        0        0     3835 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1822 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/animation.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.081460 tentacletk-0.6.4/tentacle/slots/blender/
+│ │ --rw-rw-rw-   0        0        0     1162 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2869 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/animation_blender.py
+│ │ --rw-rw-rw-   0        0        0    17195 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/cameras_blender.py
+│ │ --rw-rw-rw-   0        0        0     3043 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/convert_blender.py
+│ │ --rw-rw-rw-   0        0        0     4144 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/crease_blender.py
+│ │ --rw-rw-rw-   0        0        0    11953 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/create_blender.py
+│ │ --rw-rw-rw-   0        0        0      936 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/deformation_blender.py
+│ │ --rw-rw-rw-   0        0        0     4399 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/display_blender.py
+│ │ --rw-rw-rw-   0        0        0    14114 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/duplicate_blender.py
+│ │ --rw-rw-rw-   0        0        0      878 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/dynLayout_blender.py
+│ │ --rw-rw-rw-   0        0        0    21183 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/edit_blender.py
+│ │ --rw-rw-rw-   0        0        0     9522 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/editors_blender.py
+│ │ --rw-rw-rw-   0        0        0    15533 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/file_blender.py
+│ │ --rw-rw-rw-   0        0        0     4578 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/init_blender.py
+│ │ --rw-rw-rw-   0        0        0      985 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/lighting_blender.py
+│ │ --rw-rw-rw-   0        0        0     1979 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/main_blender.py
+│ │ --rw-rw-rw-   0        0        0    16193 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/materials_blender.py
+│ │ --rw-rw-rw-   0        0        0     6423 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/mirror_blender.py
+│ │ --rw-rw-rw-   0        0        0     9786 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/normals_blender.py
+│ │ --rw-rw-rw-   0        0        0    21561 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/nurbs_blender.py
+│ │ --rw-rw-rw-   0        0        0     2963 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/pivot_blender.py
+│ │ --rw-rw-rw-   0        0        0    15693 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/polygons_blender.py
+│ │ --rw-rw-rw-   0        0        0     3913 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/preferences_blender.py
+│ │ --rw-rw-rw-   0        0        0     2860 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/rendering_blender.py
+│ │ --rw-rw-rw-   0        0        0    18301 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/rigging_blender.py
+│ │ --rw-rw-rw-   0        0        0     4776 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/scene_blender.py
+│ │ --rw-rw-rw-   0        0        0     1644 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/scripting_blender.py
+│ │ --rw-rw-rw-   0        0        0    13686 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/selection_blender.py
+│ │ --rw-rw-rw-   0        0        0     5656 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/subdivision_blender.py
+│ │ --rw-rw-rw-   0        0        0     2267 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/symmetry_blender.py
+│ │ --rw-rw-rw-   0        0        0    33473 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/transform_blender.py
+│ │ --rw-rw-rw-   0        0        0     1187 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/utilities_blender.py
+│ │ --rw-rw-rw-   0        0        0    19065 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/uv_blender.py
+│ │ --rw-rw-rw-   0        0        0      838 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/blender/vfx_blender.py
+│ │ --rw-rw-rw-   0        0        0      390 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/cameras.py
+│ │ --rw-rw-rw-   0        0        0      795 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/convert.py
+│ │ --rw-rw-rw-   0        0        0     5652 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/crease.py
+│ │ --rw-rw-rw-   0        0        0     2086 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/create.py
+│ │ --rw-rw-rw-   0        0        0      478 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/deformation.py
+│ │ --rw-rw-rw-   0        0        0      466 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/display.py
+│ │ --rw-rw-rw-   0        0        0     3592 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/duplicate.py
+│ │ --rw-rw-rw-   0        0        0      638 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/dynLayout.py
+│ │ --rw-rw-rw-   0        0        0     2723 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/edit.py
+│ │ --rw-rw-rw-   0        0        0      201 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/editors.py
+│ │ --rw-rw-rw-   0        0        0     4246 2023-03-30 10:41:47.000000 tentacletk-0.6.4/tentacle/slots/file.py
+│ │ --rw-rw-rw-   0        0        0      200 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/init.py
+│ │ --rw-rw-rw-   0        0        0      355 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/lighting.py
+│ │ --rw-rw-rw-   0        0        0     1241 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/main.py
+│ │ --rw-rw-rw-   0        0        0     3648 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/materials.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.293461 tentacletk-0.6.4/tentacle/slots/max/
+│ │ --rw-rw-rw-   0        0        0    16092 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/__init__.py
+│ │ --rw-rw-rw-   0        0        0     5936 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/animation_max.py
+│ │ --rw-rw-rw-   0        0        0     9528 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/cameras_max.py
+│ │ --rw-rw-rw-   0        0        0     2976 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/convert_max.py
+│ │ --rw-rw-rw-   0        0        0     3858 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/crease_max.py
+│ │ --rw-rw-rw-   0        0        0     9367 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/create_max.py
+│ │ --rw-rw-rw-   0        0        0      865 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/deformation_max.py
+│ │ --rw-rw-rw-   0        0        0     4491 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/display_max.py
+│ │ --rw-rw-rw-   0        0        0    12865 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/duplicate_max.py
+│ │ --rw-rw-rw-   0        0        0      809 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/dynLayout_max.py
+│ │ --rw-rw-rw-   0        0        0    11599 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/edit_max.py
+│ │ --rw-rw-rw-   0        0        0    11315 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/editors_max.py
+│ │ --rw-rw-rw-   0        0        0    13244 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/file_max.py
+│ │ --rw-rw-rw-   0        0        0     4077 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/init_max.py
+│ │ --rw-rw-rw-   0        0        0      919 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/lighting_max.py
+│ │ --rw-rw-rw-   0        0        0      481 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/main_max.py
+│ │ --rw-rw-rw-   0        0        0    23409 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/materials_max.py
+│ │ --rw-rw-rw-   0        0        0     6869 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/mirror_max.py
+│ │ --rw-rw-rw-   0        0        0     6732 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/normals_max.py
+│ │ --rw-rw-rw-   0        0        0     6478 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/nurbs_max.py
+│ │ --rw-rw-rw-   0        0        0     6257 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/pivot_max.py
+│ │ --rw-rw-rw-   0        0        0    12140 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/polygons_max.py
+│ │ --rw-rw-rw-   0        0        0     3410 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/preferences_max.py
+│ │ --rw-rw-rw-   0        0        0     2418 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/rendering_max.py
+│ │ --rw-rw-rw-   0        0        0    13736 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/rigging_max.py
+│ │ --rw-rw-rw-   0        0        0     4185 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/scene_max.py
+│ │ --rw-rw-rw-   0        0        0     1586 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/scripting_max.py
+│ │ --rw-rw-rw-   0        0        0    18110 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/selection_max.py
+│ │ --rw-rw-rw-   0        0        0     4980 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/subdivision_max.py
+│ │ --rw-rw-rw-   0        0        0     2536 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/symmetry_max.py
+│ │ --rw-rw-rw-   0        0        0    21275 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/transform_max.py
+│ │ --rw-rw-rw-   0        0        0     1143 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/utilities_max.py
+│ │ --rw-rw-rw-   0        0        0    11929 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/uv_max.py
+│ │ --rw-rw-rw-   0        0        0      775 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/max/vfx_max.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.509491 tentacletk-0.6.4/tentacle/slots/maya/
+│ │ --rw-rw-rw-   0        0        0     3449 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/__init__.py
+│ │ --rw-rw-rw-   0        0        0     2788 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/animation_maya.py
+│ │ --rw-rw-rw-   0        0        0    17443 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/cameras_maya.py
+│ │ --rw-rw-rw-   0        0        0     3544 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/convert_maya.py
+│ │ --rw-rw-rw-   0        0        0     4086 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/crease_maya.py
+│ │ --rw-rw-rw-   0        0        0    11655 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/create_maya.py
+│ │ --rw-rw-rw-   0        0        0      868 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/deformation_maya.py
+│ │ --rw-rw-rw-   0        0        0     4421 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/display_maya.py
+│ │ --rw-rw-rw-   0        0        0    17527 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/duplicate_maya.py
+│ │ --rw-rw-rw-   0        0        0      812 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/dynLayout_maya.py
+│ │ --rw-rw-rw-   0        0        0    13364 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/edit_maya.py
+│ │ --rw-rw-rw-   0        0        0    10694 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/editors_maya.py
+│ │ --rw-rw-rw-   0        0        0    17501 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/file_maya.py
+│ │ --rw-rw-rw-   0        0        0     5043 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/init_maya.py
+│ │ --rw-rw-rw-   0        0        0      920 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/lighting_maya.py
+│ │ --rw-rw-rw-   0        0        0     1921 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/main_maya.py
+│ │ --rw-rw-rw-   0        0        0    16395 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/materials_maya.py
+│ │ --rw-rw-rw-   0        0        0     8087 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/mirror_maya.py
+│ │ --rw-rw-rw-   0        0        0    11987 2023-03-29 14:53:01.000000 tentacletk-0.6.4/tentacle/slots/maya/normals_maya.py
+│ │ --rw-rw-rw-   0        0        0    21471 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/nurbs_maya.py
+│ │ --rw-rw-rw-   0        0        0     3123 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/pivot_maya.py
+│ │ --rw-rw-rw-   0        0        0    15152 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/polygons_maya.py
+│ │ --rw-rw-rw-   0        0        0     3664 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/preferences_maya.py
+│ │ --rw-rw-rw-   0        0        0     3229 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/rendering_maya.py
+│ │ --rw-rw-rw-   0        0        0    12606 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/rigging_maya.py
+│ │ --rw-rw-rw-   0        0        0     2774 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/scene_maya.py
+│ │ --rw-rw-rw-   0        0        0     1582 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/scripting_maya.py
+│ │ --rw-rw-rw-   0        0        0    15317 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/selection_maya.py
+│ │ --rw-rw-rw-   0        0        0     6206 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/subdivision_maya.py
+│ │ --rw-rw-rw-   0        0        0     2249 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/symmetry_maya.py
+│ │ --rw-rw-rw-   0        0        0    20821 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/transform_maya.py
+│ │ --rw-rw-rw-   0        0        0     1131 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/utilities_maya.py
+│ │ --rw-rw-rw-   0        0        0    23380 2023-03-29 17:08:17.000000 tentacletk-0.6.4/tentacle/slots/maya/uv_maya.py
+│ │ --rw-rw-rw-   0        0        0      778 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/maya/vfx_maya.py
+│ │ --rw-rw-rw-   0        0        0     3331 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/mirror.py
+│ │ --rw-rw-rw-   0        0        0     2212 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/normals.py
+│ │ --rw-rw-rw-   0        0        0     4161 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/nurbs.py
+│ │ --rw-rw-rw-   0        0        0      876 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/pivot.py
+│ │ --rw-rw-rw-   0        0        0     4783 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/polygons.py
+│ │ --rw-rw-rw-   0        0        0      726 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/preferences.py
+│ │ --rw-rw-rw-   0        0        0      475 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/rendering.py
+│ │ --rw-rw-rw-   0        0        0     4546 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/rigging.py
+│ │ --rw-rw-rw-   0        0        0     2092 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/scene.py
+│ │ --rw-rw-rw-   0        0        0      686 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/scripting.py
+│ │ --rw-rw-rw-   0        0        0     8294 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/selection.py
+│ │ --rw-rw-rw-   0        0        0      325 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/subdivision.py
+│ │ --rw-rw-rw-   0        0        0     1617 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/symmetry.py
+│ │ --rw-rw-rw-   0        0        0     6229 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/transform.py
+│ │ --rw-rw-rw-   0        0        0      477 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/utilities.py
+│ │ --rw-rw-rw-   0        0        0     7517 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/uv.py
+│ │ --rw-rw-rw-   0        0        0      456 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/slots/vfx.py
+│ │ --rw-rw-rw-   0        0        0    22350 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/tcl.py
+│ │ --rw-rw-rw-   0        0        0     3525 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/tcl_blender.py
+│ │ --rw-rw-rw-   0        0        0     5108 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/tcl_max.py
+│ │ --rw-rw-rw-   0        0        0     5200 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/tcl_maya.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.511461 tentacletk-0.6.4/tentacle/ui/
+│ │ --rw-rw-rw-   0        0        0      176 2023-03-28 23:37:53.000000 tentacletk-0.6.4/tentacle/ui/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-30 12:04:20.532460 tentacletk-0.6.4/tentacletk.egg-info/
+│ │ --rw-rw-rw-   0        0        0     2460 2023-03-30 12:04:19.000000 tentacletk-0.6.4/tentacletk.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     4993 2023-03-30 12:04:19.000000 tentacletk-0.6.4/tentacletk.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-30 12:04:19.000000 tentacletk-0.6.4/tentacletk.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-03-30 12:04:19.000000 tentacletk-0.6.4/tentacletk.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.441643 tentacletk-0.6.5/
+│ │ +-rw-rw-rw-   0        0        0       24 2023-03-28 23:37:53.000000 tentacletk-0.6.5/MANIFEST.in
+│ │ +-rw-rw-rw-   0        0        0     2460 2023-04-06 23:41:10.440645 tentacletk-0.6.5/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 23:41:10.441643 tentacletk-0.6.5/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2186 2023-04-06 23:23:20.000000 tentacletk-0.6.5/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.258550 tentacletk-0.6.5/tentacle/
+│ │ +-rw-rw-rw-   0        0        0     1740 2023-04-06 23:41:07.000000 tentacletk-0.6.5/tentacle/__init__.py
+│ │ +-rw-rw-rw-   0        0        0    12360 2023-04-06 23:12:50.000000 tentacletk-0.6.5/tentacle/overlay.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.300550 tentacletk-0.6.5/tentacle/slots/
+│ │ +-rw-rw-rw-   0        0        0     3836 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1822 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/animation.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.339645 tentacletk-0.6.5/tentacle/slots/blender/
+│ │ +-rw-rw-rw-   0        0        0     1162 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2869 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/animation_blender.py
+│ │ +-rw-rw-rw-   0        0        0    17195 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/cameras_blender.py
+│ │ +-rw-rw-rw-   0        0        0     3043 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/convert_blender.py
+│ │ +-rw-rw-rw-   0        0        0     4142 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/crease_blender.py
+│ │ +-rw-rw-rw-   0        0        0    11953 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/create_blender.py
+│ │ +-rw-rw-rw-   0        0        0      936 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/deformation_blender.py
+│ │ +-rw-rw-rw-   0        0        0     4399 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/display_blender.py
+│ │ +-rw-rw-rw-   0        0        0    14112 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/duplicate_blender.py
+│ │ +-rw-rw-rw-   0        0        0      878 2023-04-06 00:58:24.000000 tentacletk-0.6.5/tentacle/slots/blender/dynLayout_blender.py
+│ │ +-rw-rw-rw-   0        0        0    21181 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/edit_blender.py
+│ │ +-rw-rw-rw-   0        0        0     9522 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/editors_blender.py
+│ │ +-rw-rw-rw-   0        0        0    15533 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/file_blender.py
+│ │ +-rw-rw-rw-   0        0        0     4578 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/init_blender.py
+│ │ +-rw-rw-rw-   0        0        0      985 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/lighting_blender.py
+│ │ +-rw-rw-rw-   0        0        0     1982 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/main_blender.py
+│ │ +-rw-rw-rw-   0        0        0    16190 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/materials_blender.py
+│ │ +-rw-rw-rw-   0        0        0     6423 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/mirror_blender.py
+│ │ +-rw-rw-rw-   0        0        0     9786 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/normals_blender.py
+│ │ +-rw-rw-rw-   0        0        0    21551 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/nurbs_blender.py
+│ │ +-rw-rw-rw-   0        0        0     2963 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/pivot_blender.py
+│ │ +-rw-rw-rw-   0        0        0    15693 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/polygons_blender.py
+│ │ +-rw-rw-rw-   0        0        0     3913 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/preferences_blender.py
+│ │ +-rw-rw-rw-   0        0        0     2860 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/rendering_blender.py
+│ │ +-rw-rw-rw-   0        0        0    18300 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/rigging_blender.py
+│ │ +-rw-rw-rw-   0        0        0     4775 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/scene_blender.py
+│ │ +-rw-rw-rw-   0        0        0     1644 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/scripting_blender.py
+│ │ +-rw-rw-rw-   0        0        0    13684 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/selection_blender.py
+│ │ +-rw-rw-rw-   0        0        0     5658 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/subdivision_blender.py
+│ │ +-rw-rw-rw-   0        0        0     2267 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/symmetry_blender.py
+│ │ +-rw-rw-rw-   0        0        0    33457 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/transform_blender.py
+│ │ +-rw-rw-rw-   0        0        0     1187 2023-04-06 00:58:25.000000 tentacletk-0.6.5/tentacle/slots/blender/utilities_blender.py
+│ │ +-rw-rw-rw-   0        0        0    19062 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/blender/uv_blender.py
+│ │ +-rw-rw-rw-   0        0        0      838 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/blender/vfx_blender.py
+│ │ +-rw-rw-rw-   0        0        0      390 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/cameras.py
+│ │ +-rw-rw-rw-   0        0        0      795 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/convert.py
+│ │ +-rw-rw-rw-   0        0        0     5652 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/crease.py
+│ │ +-rw-rw-rw-   0        0        0     2086 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/create.py
+│ │ +-rw-rw-rw-   0        0        0      478 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/deformation.py
+│ │ +-rw-rw-rw-   0        0        0      466 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/display.py
+│ │ +-rw-rw-rw-   0        0        0     3592 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/duplicate.py
+│ │ +-rw-rw-rw-   0        0        0      638 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/dynLayout.py
+│ │ +-rw-rw-rw-   0        0        0     2723 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/edit.py
+│ │ +-rw-rw-rw-   0        0        0      201 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/editors.py
+│ │ +-rw-rw-rw-   0        0        0     4265 2023-04-06 23:27:47.000000 tentacletk-0.6.5/tentacle/slots/file.py
+│ │ +-rw-rw-rw-   0        0        0      200 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/init.py
+│ │ +-rw-rw-rw-   0        0        0      355 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/lighting.py
+│ │ +-rw-rw-rw-   0        0        0     1241 2023-04-06 00:58:26.000000 tentacletk-0.6.5/tentacle/slots/main.py
+│ │ +-rw-rw-rw-   0        0        0     3648 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/materials.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.379643 tentacletk-0.6.5/tentacle/slots/max/
+│ │ +-rw-rw-rw-   0        0        0    16091 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/max/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     5936 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/animation_max.py
+│ │ +-rw-rw-rw-   0        0        0     9528 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/cameras_max.py
+│ │ +-rw-rw-rw-   0        0        0     2976 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/convert_max.py
+│ │ +-rw-rw-rw-   0        0        0     3858 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/crease_max.py
+│ │ +-rw-rw-rw-   0        0        0     9368 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/max/create_max.py
+│ │ +-rw-rw-rw-   0        0        0      865 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/deformation_max.py
+│ │ +-rw-rw-rw-   0        0        0     4491 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/display_max.py
+│ │ +-rw-rw-rw-   0        0        0    12865 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/duplicate_max.py
+│ │ +-rw-rw-rw-   0        0        0      809 2023-04-06 00:58:27.000000 tentacletk-0.6.5/tentacle/slots/max/dynLayout_max.py
+│ │ +-rw-rw-rw-   0        0        0    11599 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/edit_max.py
+│ │ +-rw-rw-rw-   0        0        0    11315 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/editors_max.py
+│ │ +-rw-rw-rw-   0        0        0    13244 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/file_max.py
+│ │ +-rw-rw-rw-   0        0        0     4077 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/init_max.py
+│ │ +-rw-rw-rw-   0        0        0      919 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/lighting_max.py
+│ │ +-rw-rw-rw-   0        0        0      481 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/main_max.py
+│ │ +-rw-rw-rw-   0        0        0    23407 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/max/materials_max.py
+│ │ +-rw-rw-rw-   0        0        0     6869 2023-04-06 00:58:28.000000 tentacletk-0.6.5/tentacle/slots/max/mirror_max.py
+│ │ +-rw-rw-rw-   0        0        0     6732 2023-04-06 00:58:29.000000 tentacletk-0.6.5/tentacle/slots/max/normals_max.py
+│ │ +-rw-rw-rw-   0        0        0     6478 2023-04-06 00:58:29.000000 tentacletk-0.6.5/tentacle/slots/max/nurbs_max.py
+│ │ +-rw-rw-rw-   0        0        0     6257 2023-04-06 00:58:29.000000 tentacletk-0.6.5/tentacle/slots/max/pivot_max.py
+│ │ +-rw-rw-rw-   0        0        0    12140 2023-04-06 00:58:29.000000 tentacletk-0.6.5/tentacle/slots/max/polygons_max.py
+│ │ +-rw-rw-rw-   0        0        0     3410 2023-04-06 00:58:30.000000 tentacletk-0.6.5/tentacle/slots/max/preferences_max.py
+│ │ +-rw-rw-rw-   0        0        0     2418 2023-04-06 00:58:30.000000 tentacletk-0.6.5/tentacle/slots/max/rendering_max.py
+│ │ +-rw-rw-rw-   0        0        0    13735 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/max/rigging_max.py
+│ │ +-rw-rw-rw-   0        0        0     4184 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/max/scene_max.py
+│ │ +-rw-rw-rw-   0        0        0     1586 2023-04-06 00:58:31.000000 tentacletk-0.6.5/tentacle/slots/max/scripting_max.py
+│ │ +-rw-rw-rw-   0        0        0    18110 2023-04-06 00:58:31.000000 tentacletk-0.6.5/tentacle/slots/max/selection_max.py
+│ │ +-rw-rw-rw-   0        0        0     4980 2023-04-06 00:58:31.000000 tentacletk-0.6.5/tentacle/slots/max/subdivision_max.py
+│ │ +-rw-rw-rw-   0        0        0     2536 2023-04-06 00:58:31.000000 tentacletk-0.6.5/tentacle/slots/max/symmetry_max.py
+│ │ +-rw-rw-rw-   0        0        0    21275 2023-04-06 00:58:32.000000 tentacletk-0.6.5/tentacle/slots/max/transform_max.py
+│ │ +-rw-rw-rw-   0        0        0     1143 2023-04-06 00:58:32.000000 tentacletk-0.6.5/tentacle/slots/max/utilities_max.py
+│ │ +-rw-rw-rw-   0        0        0    11929 2023-04-06 00:58:32.000000 tentacletk-0.6.5/tentacle/slots/max/uv_max.py
+│ │ +-rw-rw-rw-   0        0        0      775 2023-04-06 00:58:32.000000 tentacletk-0.6.5/tentacle/slots/max/vfx_max.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.420644 tentacletk-0.6.5/tentacle/slots/maya/
+│ │ +-rw-rw-rw-   0        0        0     3463 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     2788 2023-04-06 00:58:33.000000 tentacletk-0.6.5/tentacle/slots/maya/animation_maya.py
+│ │ +-rw-rw-rw-   0        0        0    17443 2023-04-06 00:58:33.000000 tentacletk-0.6.5/tentacle/slots/maya/cameras_maya.py
+│ │ +-rw-rw-rw-   0        0        0     3544 2023-04-06 00:58:34.000000 tentacletk-0.6.5/tentacle/slots/maya/convert_maya.py
+│ │ +-rw-rw-rw-   0        0        0     4084 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/crease_maya.py
+│ │ +-rw-rw-rw-   0        0        0    11656 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/create_maya.py
+│ │ +-rw-rw-rw-   0        0        0      868 2023-04-06 00:58:34.000000 tentacletk-0.6.5/tentacle/slots/maya/deformation_maya.py
+│ │ +-rw-rw-rw-   0        0        0     4421 2023-04-06 00:58:35.000000 tentacletk-0.6.5/tentacle/slots/maya/display_maya.py
+│ │ +-rw-rw-rw-   0        0        0    17523 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/duplicate_maya.py
+│ │ +-rw-rw-rw-   0        0        0      812 2023-04-06 00:58:35.000000 tentacletk-0.6.5/tentacle/slots/maya/dynLayout_maya.py
+│ │ +-rw-rw-rw-   0        0        0    13364 2023-04-06 00:58:35.000000 tentacletk-0.6.5/tentacle/slots/maya/edit_maya.py
+│ │ +-rw-rw-rw-   0        0        0    10694 2023-04-06 00:58:36.000000 tentacletk-0.6.5/tentacle/slots/maya/editors_maya.py
+│ │ +-rw-rw-rw-   0        0        0    17501 2023-04-06 00:58:36.000000 tentacletk-0.6.5/tentacle/slots/maya/file_maya.py
+│ │ +-rw-rw-rw-   0        0        0     5043 2023-04-06 00:58:36.000000 tentacletk-0.6.5/tentacle/slots/maya/init_maya.py
+│ │ +-rw-rw-rw-   0        0        0      920 2023-04-06 00:58:36.000000 tentacletk-0.6.5/tentacle/slots/maya/lighting_maya.py
+│ │ +-rw-rw-rw-   0        0        0     1924 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/main_maya.py
+│ │ +-rw-rw-rw-   0        0        0    16392 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/materials_maya.py
+│ │ +-rw-rw-rw-   0        0        0     8087 2023-04-06 00:58:37.000000 tentacletk-0.6.5/tentacle/slots/maya/mirror_maya.py
+│ │ +-rw-rw-rw-   0        0        0    11979 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/normals_maya.py
+│ │ +-rw-rw-rw-   0        0        0    21461 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/nurbs_maya.py
+│ │ +-rw-rw-rw-   0        0        0     3123 2023-04-06 00:58:38.000000 tentacletk-0.6.5/tentacle/slots/maya/pivot_maya.py
+│ │ +-rw-rw-rw-   0        0        0    15152 2023-04-06 00:58:38.000000 tentacletk-0.6.5/tentacle/slots/maya/polygons_maya.py
+│ │ +-rw-rw-rw-   0        0        0     3664 2023-04-06 00:58:39.000000 tentacletk-0.6.5/tentacle/slots/maya/preferences_maya.py
+│ │ +-rw-rw-rw-   0        0        0     3229 2023-04-06 00:58:39.000000 tentacletk-0.6.5/tentacle/slots/maya/rendering_maya.py
+│ │ +-rw-rw-rw-   0        0        0    12606 2023-04-06 00:58:39.000000 tentacletk-0.6.5/tentacle/slots/maya/rigging_maya.py
+│ │ +-rw-rw-rw-   0        0        0     2774 2023-04-06 00:58:39.000000 tentacletk-0.6.5/tentacle/slots/maya/scene_maya.py
+│ │ +-rw-rw-rw-   0        0        0     1582 2023-04-06 00:58:40.000000 tentacletk-0.6.5/tentacle/slots/maya/scripting_maya.py
+│ │ +-rw-rw-rw-   0        0        0    15315 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/selection_maya.py
+│ │ +-rw-rw-rw-   0        0        0     6208 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/maya/subdivision_maya.py
+│ │ +-rw-rw-rw-   0        0        0     2249 2023-04-06 00:58:41.000000 tentacletk-0.6.5/tentacle/slots/maya/symmetry_maya.py
+│ │ +-rw-rw-rw-   0        0        0    20821 2023-04-06 00:58:41.000000 tentacletk-0.6.5/tentacle/slots/maya/transform_maya.py
+│ │ +-rw-rw-rw-   0        0        0     1131 2023-04-06 00:58:41.000000 tentacletk-0.6.5/tentacle/slots/maya/utilities_maya.py
+│ │ +-rw-rw-rw-   0        0        0    23371 2023-04-06 23:28:21.000000 tentacletk-0.6.5/tentacle/slots/maya/uv_maya.py
+│ │ +-rw-rw-rw-   0        0        0      778 2023-04-06 00:58:42.000000 tentacletk-0.6.5/tentacle/slots/maya/vfx_maya.py
+│ │ +-rw-rw-rw-   0        0        0     3331 2023-04-06 00:58:43.000000 tentacletk-0.6.5/tentacle/slots/mirror.py
+│ │ +-rw-rw-rw-   0        0        0     2212 2023-04-06 00:58:43.000000 tentacletk-0.6.5/tentacle/slots/normals.py
+│ │ +-rw-rw-rw-   0        0        0     4161 2023-04-06 00:58:43.000000 tentacletk-0.6.5/tentacle/slots/nurbs.py
+│ │ +-rw-rw-rw-   0        0        0      876 2023-04-06 00:58:44.000000 tentacletk-0.6.5/tentacle/slots/pivot.py
+│ │ +-rw-rw-rw-   0        0        0     4778 2023-04-06 23:06:49.000000 tentacletk-0.6.5/tentacle/slots/polygons.py
+│ │ +-rw-rw-rw-   0        0        0      726 2023-04-06 00:58:44.000000 tentacletk-0.6.5/tentacle/slots/preferences.py
+│ │ +-rw-rw-rw-   0        0        0      475 2023-04-06 00:58:44.000000 tentacletk-0.6.5/tentacle/slots/rendering.py
+│ │ +-rw-rw-rw-   0        0        0     4546 2023-04-06 00:58:45.000000 tentacletk-0.6.5/tentacle/slots/rigging.py
+│ │ +-rw-rw-rw-   0        0        0     2092 2023-04-06 00:58:45.000000 tentacletk-0.6.5/tentacle/slots/scene.py
+│ │ +-rw-rw-rw-   0        0        0      686 2023-04-06 00:58:45.000000 tentacletk-0.6.5/tentacle/slots/scripting.py
+│ │ +-rw-rw-rw-   0        0        0     8294 2023-04-06 00:58:45.000000 tentacletk-0.6.5/tentacle/slots/selection.py
+│ │ +-rw-rw-rw-   0        0        0      325 2023-04-06 00:58:45.000000 tentacletk-0.6.5/tentacle/slots/subdivision.py
+│ │ +-rw-rw-rw-   0        0        0     1617 2023-04-06 00:58:46.000000 tentacletk-0.6.5/tentacle/slots/symmetry.py
+│ │ +-rw-rw-rw-   0        0        0     6229 2023-04-06 00:58:46.000000 tentacletk-0.6.5/tentacle/slots/transform.py
+│ │ +-rw-rw-rw-   0        0        0      477 2023-04-06 00:58:46.000000 tentacletk-0.6.5/tentacle/slots/utilities.py
+│ │ +-rw-rw-rw-   0        0        0     7517 2023-04-06 00:58:46.000000 tentacletk-0.6.5/tentacle/slots/uv.py
+│ │ +-rw-rw-rw-   0        0        0      456 2023-04-06 00:58:47.000000 tentacletk-0.6.5/tentacle/slots/vfx.py
+│ │ +-rw-rw-rw-   0        0        0    22290 2023-04-06 23:14:12.000000 tentacletk-0.6.5/tentacle/tcl.py
+│ │ +-rw-rw-rw-   0        0        0     3525 2023-04-06 00:58:54.000000 tentacletk-0.6.5/tentacle/tcl_blender.py
+│ │ +-rw-rw-rw-   0        0        0     5108 2023-04-06 00:58:54.000000 tentacletk-0.6.5/tentacle/tcl_max.py
+│ │ +-rw-rw-rw-   0        0        0     5200 2023-04-06 00:58:54.000000 tentacletk-0.6.5/tentacle/tcl_maya.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.421645 tentacletk-0.6.5/tentacle/ui/
+│ │ +-rw-rw-rw-   0        0        0      839 2023-04-06 23:28:45.000000 tentacletk-0.6.5/tentacle/ui/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 23:41:10.439643 tentacletk-0.6.5/tentacletk.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     2460 2023-04-06 23:41:10.000000 tentacletk-0.6.5/tentacletk.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     4993 2023-04-06 23:41:10.000000 tentacletk-0.6.5/tentacletk.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 23:41:10.000000 tentacletk-0.6.5/tentacletk.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-06 23:41:10.000000 tentacletk-0.6.5/tentacletk.egg-info/top_level.txt
+│ │   --- tentacletk-0.6.4/PKG-INFO
+│ ├── +++ tentacletk-0.6.5/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tentacletk
+│ │ -Version: 0.6.4
+│ │ -Summary: Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple dcc modeling applications that support the PySide2 GUI framework.
+│ │ +Version: 0.6.5
+│ │ +Summary: Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple DCC modeling applications that support the PySide2 GUI framework.
+│ │  Home-page: https://github.com/m3trik/tentacle
+│ │  Author: Ryan Simpson
+│ │  Author-email: m3trik@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │ @@ -13,15 +13,15 @@
+│ │  
+│ │  \*\*personal project. work in progress ..\*\*
+│ │  
+│ │  
+│ │  ##### 
+│ │  ---
+│ │  <!-- short_description_start -->
+│ │ -Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple dcc modeling applications that support the PySide2 GUI framework.
+│ │ +Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple DCC modeling applications that support the PySide2 GUI framework.
+│ │  <!-- short_description_end -->
+│ │  
+│ │  ![alt text](https://raw.githubusercontent.com/m3trik/tentacle/master/docs/toolkit_demo.gif) \*Example re-opening the last scene, renaming a material, and selecting geometry by that material.
+│ │  
+│ │  ##
+│ │   --- tentacletk-0.6.4/setup.py
+│ ├── +++ tentacletk-0.6.5/setup.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/__init__.py
+│ ├── +++ tentacletk-0.6.5/tentacle/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  # !/usr/bin/python
+│ │  # coding=utf-8
+│ │  import sys
+│ │  
+│ │  
+│ │  __package__ = 'tentacle'
+│ │ -__version__ = '0.6.4'
+│ │ +__version__ = '0.6.5'
+│ │  
+│ │  
+│ │  def greeting(string, outputToConsole=True):
+│ │  	'''Format a string using preset variables.
+│ │  
+│ │  	Parameters:
+│ │  		string (str): The greeting to format as a string with placeholders using the below keywords. 
+│ │ @@ -23,15 +23,15 @@
+│ │  
+│ │  	Example: greeting('Good {hr}! You are using {modver} with {pyver}.')
+│ │  	'''
+│ │  	import datetime
+│ │  	h = datetime.datetime.now().hour
+│ │  	hr = 'morning' if 5<=h<12 else 'afternoon' if h<18 else 'evening'
+│ │  
+│ │ -	pyver = 'interpreter v{}.{}.{}'.format(sys.version_info[0], sys.version_info[1], sys.version_info[2])
+│ │ +	pyver = 'python v{}.{}.{}'.format(sys.version_info[0], sys.version_info[1], sys.version_info[2])
+│ │  
+│ │  	modver = 'tentacle v{}'.format(__version__)
+│ │  
+│ │  	result = string.format(hr=hr, pyver=pyver, modver=modver)
+│ │  
+│ │  	if outputToConsole:
+│ │  		print (result)
+│ │   --- tentacletk-0.6.4/tentacle/overlay.py
+│ ├── +++ tentacletk-0.6.5/tentacle/overlay.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/__init__.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -42,15 +42,15 @@
+│ │  
+│ │  		Parameters:
+│ │  			obj (obj): The object to get the attributes of.
+│ │  			checkableLabel (bool): Set the attribute labels as checkable.
+│ │  			fn (method) = Set an alternative method to call on widget signal. ex. setParameterValuesMEL
+│ │  					The first parameter of fn is always the given object. ex. fn(obj, {'attr':<value>})
+│ │  			fn_args (list): Any additonal args to pass to fn.
+│ │ -			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from mtk.Node.getAttributesMEL for the given obj.
+│ │ +			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from mtk.Node.getNodeAttributes for the given obj.
+│ │  
+│ │  		Return:
+│ │  			(obj) the menu widget. (use menu.childWidgets to get the menu's child widgets.)
+│ │  
+│ │  		Example: self.objAttrWindow(node, attrs, fn=mtk.setParameterValuesMEL, fn_args='transformLimits')
+│ │  		Example: self.objAttrWindow(transform[0], fn_args=['translateX','translateY','translateZ','rotateX','rotateY','rotateZ','scaleX','scaleY','scaleZ'], checkableLabel=True)
+│ │  		'''
+│ │   --- tentacletk-0.6.4/tentacle/slots/animation.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/animation.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/__init__.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/animation_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/animation_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/cameras_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/cameras_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/convert_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/convert_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/crease_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/crease_blender.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -103,15 +103,15 @@
+│ │  		# self.sb.crease.b001.setText("Object")
+│ │  
+│ │  
+│ │  	def getCreasedEdges(self, edges):
+│ │  		'''Return any creased edges from a list of edges.
+│ │  
+│ │  		Parameters:
+│ │ -			edges (str)(obj)(list): The edges to check crease state on.
+│ │ +			edges (str/obj/list): The edges to check crease state on.
+│ │  
+│ │  		Return:
+│ │  			(list) edges.
+│ │  		'''
+│ │  		creased_edges = [e for e in pm.ls(edges, flatten=1) if pm.polyCrease(e, q=1, value=1)[0] > 0]
+│ │  
+│ │  		return creased_edges
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/create_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/create_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/deformation_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/deformation_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/display_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/display_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/duplicate_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/duplicate_blender.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -342,15 +342,15 @@
+│ │  		# pm.undoInfo(closeChunk=1)
+│ │  
+│ │  
+│ │  	def unInstance(self, objects):
+│ │  		'''Un-Instance the given objects.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): The objects to un-instance. If 'all' is given all instanced objects in the scene will be uninstanced.
+│ │ +			objects (str/obj/list): The objects to un-instance. If 'all' is given all instanced objects in the scene will be uninstanced.
+│ │  		'''
+│ │  		if objects=='all':
+│ │  			objects = self.getInstances()
+│ │  
+│ │  		for obj in pm.ls(objects):
+│ │  
+│ │  			children = pm.listRelatives(obj, fullPath=1, children=1)
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/dynLayout_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/dynLayout_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/edit_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/edit_blender.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -341,15 +341,15 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def findNonManifoldVertex(self, objects, select=1):
+│ │  		'''Locate a connected vertex of non-manifold geometry where the faces share a single vertex.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj): A polygon mesh, or a list of meshes.
+│ │ +			objects (str/obj): A polygon mesh, or a list of meshes.
+│ │  			select (int): Select any found non-manifold vertices. 0=off, 1=on, 2=on while keeping any existing vertex selections. (default: 1)
+│ │  
+│ │  		Return:
+│ │  			(list) any found non-manifold verts.
+│ │  		'''
+│ │  		# pm.undoInfo(openChunk=True)
+│ │  		nonManifoldVerts=set()
+│ │ @@ -401,15 +401,15 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def splitNonManifoldVertex(self, vertex, select=True):
+│ │  		'''Separate a connected vertex of non-manifold geometry where the faces share a single vertex.
+│ │  
+│ │  		Parameters:
+│ │ -			vertex (str)(obj): A single polygon vertex.
+│ │ +			vertex (str/obj): A single polygon vertex.
+│ │  			select (bool): Select the vertex after the operation. (default is True)
+│ │  		'''
+│ │  		# pm.undoInfo(openChunk=True)
+│ │  		connected_faces = pm.polyListComponentConversion(vertex, fromVertex=1, toFace=1) #pm.mel.PolySelectConvert(1) #convert to faces
+│ │  		connected_faces_flat = pm.ls(connected_faces, flatten=1) #selectedFaces = pm.ls(sl=1, flatten=1)
+│ │  
+│ │  		pm.polySplitVertex(vertex)
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/editors_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/editors_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/file_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/file_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/init_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/init_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/lighting_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/lighting_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/main_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/main_maya.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,18 +1,17 @@
+│ │  # !/usr/bin/python
+│ │  # coding=utf-8
+│ │ -from tentacle.slots.blender import *
+│ │ +from tentacle.slots.maya import *
+│ │  from tentacle.slots.main import Main
+│ │  
+│ │  
+│ │  
+│ │ -class Main_blender(Main, Slots_blender):
+│ │ +class Main_maya(Main, Slots_maya):
+│ │  	def __init__(self, *args, **kwargs):
+│ │ -		Slots_blender.__init__(self, *args, **kwargs)
+│ │ -		Main.__init__(self, *args, **kwargs)
+│ │ +		super().__init__(*args, **kwargs)
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ @@ -33,15 +32,15 @@
+│ │  		# 	node history
+│ │  		# 	selection = pm.ls(sl=1, objectsOnly=1, flatten=1)
+│ │  		# 	if selection:
+│ │  		# 		history = selection[0].history()[1:]
+│ │  		# 		for node in history:
+│ │  		# 			parent = tree.add('QLabel', 'History', childHeader=node.name(), refresh=1, setText=node.name())
+│ │  		# 			# print(parent, node.name())
+│ │ -		# 			attributes = Slots_blender.getAttributesMEL(node) #get dict containing attributes:values of the history node.
+│ │ +		# 			attributes = mtk.Node.getNodeAttributes(node) #get dict containing attributes:values of the history node.
+│ │  		# 			spinboxes = [tree.add('QDoubleSpinBox', parent, refresh=1, setSpinBoxByValue_=[k, v])
+│ │  		# 				for k, v in attributes.items() 
+│ │  		# 					if isinstance(v, (float, int, bool))]
+│ │  
+│ │  		# 			set signal/slot connections:
+│ │  		# 			wgts.= [tree.add(self.MultiWidget, parent, refresh=1, set_by_value=[k, v])
+│ │  		# 				for k, v in attributes.items() 
+│ │ @@ -50,12 +49,12 @@
+│ │  		# 			for multiWidget in wgts.
+│ │  		# 				attr = multiWidget.children_(index=0).text()
+│ │  		# 				w = multiWidget.children_(index=1)
+│ │  		# 				type_ = w.__class__.__name__
+│ │  
+│ │  		# 				if type_ in ['QSpinBox', 'QDoubleSpinBox']:
+│ │  		# 					w.valueChanged.connect(
+│ │ -		# 						lambda value, widget=w, node=node: self.setAttributesMEL(node, {attr:w.value()}))
+│ │ +		# 						lambda value, widget=w, node=node: mtk.Node.setNodeAttributes(node, {attr:w.value()}))
+│ │  
+│ │  		# 			[w.valueChanged.connect(
+│ │ -		# 				lambda value, widget=w, node=node: self.setAttributesMEL(node, {widget.prefix().rstrip(': '):value})) 
+│ │ +		# 				lambda value, widget=w, node=node: mtk.Node.setNodeAttributes(node, {widget.prefix().rstrip(': '):value})) 
+│ │  		# 					for w in spinboxes] #set signal/slot connections
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/materials_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/materials_blender.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -286,20 +286,20 @@
+│ │  				pm.select(list(set(allFaces)-set(faces)), add=1) #get inverse of previously selected faces from allFaces
+│ │  
+│ │  
+│ │  	def getSceneMaterials(self, inc=[], exc=[]):
+│ │  		'''Get all materials from the current scene.
+│ │  
+│ │  		Parameters:
+│ │ -			inc (str)(int)(obj)(list): The objects(s) to include.
+│ │ +			inc (str)(int)(obj/list): The objects(s) to include.
+│ │  					supports using the '*' operator: startswith*, *endswith, *contains*
+│ │  					Will include all items that satisfy ANY of the given search terms.
+│ │  					meaning: '*.png' and '*Normal*' returns all strings ending in '.png' AND all 
+│ │  					strings containing 'Normal'. NOT strings satisfying both terms.
+│ │ -			exc (str)(int)(obj)(list): The objects(s) to exclude. Similar to include.
+│ │ +			exc (str)(int)(obj/list): The objects(s) to exclude. Similar to include.
+│ │  					exlude take precidence over include.
+│ │  		Return:
+│ │  			(list) materials.
+│ │  		'''
+│ │  		matList = pm.ls(mat=1, flatten=1)
+│ │  
+│ │  		#convert to dictionary to filter material names and types.
+│ │ @@ -326,15 +326,15 @@
+│ │  		return materials
+│ │  
+│ │  
+│ │  	def getMaterial(self, obj=''):
+│ │  		'''Get the material from the selected face.
+│ │  
+│ │  		Parameters:
+│ │ -			(str)(obj): The obj with the material.
+│ │ +			(str/obj): The obj with the material.
+│ │  
+│ │  		Return:
+│ │  			(list) material
+│ │  		'''
+│ │  		pm.hyperShade(obj, shaderNetworksSelectMaterialNodes=1) #selects the material node 
+│ │  		mats = pm.ls(selection=1, materials=1) #now add the selected node to a variable
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/mirror_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/mirror_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/normals_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/normals_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/nurbs_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/nurbs_blender.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -484,16 +484,16 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def getClosestCV(self, x, curves, tolerance=0.0):
+│ │  		'''Find the closest control vertex between the given vertices, CVs, or objects and each of the given curves.
+│ │  
+│ │  		Parameters:
+│ │ -			x (str)(obj)(list): Polygon vertices, control vertices, objects, or points given as (x,y,z) tuples.
+│ │ -			curves (str)(obj)(list): The reference object in which to find the closest CV for each vertex in the list of given vertices.
+│ │ +			x (str/obj/list): Polygon vertices, control vertices, objects, or points given as (x,y,z) tuples.
+│ │ +			curves (str/obj/list): The reference object in which to find the closest CV for each vertex in the list of given vertices.
+│ │  			tolerance (int)(float) = Maximum search distance. Default is 0.0, which turns off the tolerance flag.
+│ │  
+│ │  		Return:
+│ │  			(dict) closest vertex/cv pairs (one pair for each given curve) ex. {<vertex from set1>:<vertex from set2>}.
+│ │  
+│ │  		ex. vertices = getComponents(objects, 'vertices')
+│ │  			closestVerts = getClosestCV(curve0, curves)
+│ │ @@ -528,23 +528,23 @@
+│ │  		return result
+│ │  
+│ │  
+│ │  	def getCvInfo(self, c, returnType='cv', filter_=[]):
+│ │  		'''Get a dict containing CV's of the given curve(s) and their corresponding point positions (based on Maya's pointOnCurve command).
+│ │  
+│ │  		Parameters:
+│ │ -			- c (str)(obj)(list): Curves or CVs to get CV info from.
+│ │ +			- c (str/obj/list): Curves or CVs to get CV info from.
+│ │  			- returnType (str): The desired returned values. Default is 'cv'.
+│ │  				valid values are: 
+│ │  					'cv' = Return a list of all CV's for the given curves.
+│ │  					'count' = Return an integer representing the total number of cvs for each of the curves given.
+│ │  					'parameter', 'position', 'index', 'localPosition', 'tangent', 'normalizedTangent', 'normal', 'normalizedNormal', 'curvatureRadius', 'curvatureCenter'
+│ │  					= Return a dict with CV's as keys and the returnType as their corresponding values.
+│ │  				ex. {NurbsCurveCV(u'polyToCurveShape7.cv[5]'): [-12.186520865542082, 15.260936896515751, -369.6159740743584]}
+│ │ -			- filter_ (str)(obj)(list): Value(s) to filter for in the returned results.
+│ │ +			- filter_ (str/obj/list): Value(s) to filter for in the returned results.
+│ │  
+│ │  		Return:
+│ │  			(dict)(list)(int) dependant on returnType.
+│ │  
+│ │  		ex. cv_tan = getCvInfo(curve.cv[0:2],'tangent') #get CV tangents for cvs 0-2.
+│ │  		ex. cvParam = getCvInfo(curve, 'parameters') #get the curves CVs and their corresponding U parameter values.
+│ │  		ex. filtered = getCvInfo(<curve>, 'normal', <normal>) #filter results for those that match the given value.
+│ │ @@ -610,15 +610,15 @@
+│ │  		return result
+│ │  
+│ │  
+│ │  	def getCrossProductOfCurves(self, curves, normalize=1, values=False):
+│ │  		'''Get the cross product of two vectors using points derived from the given curves.
+│ │  
+│ │  		Parameters:
+│ │ -			curves (str)(obj)(list): Nurbs curve(s).
+│ │ +			curves (str/obj/list): Nurbs curve(s).
+│ │  			normalize (float) = (0) Do not normalize. (1) Normalize standard. (value other than 0 or 1) Normalize using the given float value as desired length.
+│ │  			values (bool): Return only a list of the cross product vector values [(<Vx>, <Vy>, <Vz>)] instead of the full dict {<curve1>:(<Vx>, <Vy>, <Vz>)}.
+│ │  
+│ │  		Return:
+│ │  			(dict)(list)
+│ │  		'''
+│ │  		result={}
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/pivot_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/pivot_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/polygons_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/polygons_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/preferences_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/preferences_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/rendering_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/rendering_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/rigging_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/rigging_blender.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -258,15 +258,15 @@
+│ │  	@Slots_blender.undoChunk
+│ │  	def createLocatorAtObject(self, objects, suffix='_LOC', stripDigits=False, strip='', scale=1, parent=False, freezeTransforms=True, 
+│ │  					bakeChildPivot=True, lockTranslate=False, lockRotation=False, lockScale=False, remove=False, _fullPath=False):
+│ │  		'''Create locators with the same transforms as any selected object(s).
+│ │  		If there are vertices selected it will create a locator at the center of the selected vertices bounding box.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(list): A list of objects, or an object name to create locators at.
+│ │ +			objects (str/list): A list of objects, or an object name to create locators at.
+│ │  			suffix (str): A string appended to the end of the created locators name. (default: '_LOC') '_LOC#'
+│ │  			stripDigits (bool): Strip numeric characters from the string. If the resulting name is not unique, maya will append a trailing digit. (default=False)
+│ │  			strip (str): Strip a specific character set from the locator name. The locators name is based off of the selected objects name. (default=None)
+│ │  			scale (float) = The scale of the locator. (default=1)
+│ │  			parent (bool): Parent to object to the locator. (default=False)
+│ │  			freezeTransforms (bool): Freeze transforms on the locator. (default=True)
+│ │  			bakeChildPivot (bool): Bake pivot positions on the child object. (default=True)
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/scene_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/scene_blender.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -95,15 +95,15 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def setCase(self, objects=[], case='caplitalize'):
+│ │  		'''Rename objects following the given case.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(list): The objects to rename. default:all scene objects
+│ │ +			objects (str/list): The objects to rename. default:all scene objects
+│ │  			case (str): Desired case using python case operators. 
+│ │  				valid: 'upper', 'lower', 'caplitalize', 'swapcase' 'title'. default:'caplitalize'
+│ │  
+│ │  		Example: setCase(pm.ls(sl=1), 'upper')
+│ │  		'''
+│ │  		# pm.undoInfo(openChunk=1)
+│ │  		for obj in pm.ls(objects):
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/scripting_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/scripting_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/selection_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/selection_blender.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -430,15 +430,15 @@
+│ │  		mel.eval('SelectEdgeRingSp;')
+│ │  
+│ │  
+│ │  	def generateUniqueSetName(self, obj=None):
+│ │  		'''Generate a generic name based on the object's name.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): The maya scene object to derive a unique name from.
+│ │ +			obj (str/obj/list): The maya scene object to derive a unique name from.
+│ │  
+│ │  		<objectName>_Set<int>
+│ │  		'''
+│ │  		if obj is None:
+│ │  			obj = pm.ls(sl=1)
+│ │  		num = ptk.cycle(list(range(99)), 'selectionSetNum')
+│ │  		name = '{0}_Set{1}'.format(pm.ls(obj, objectsOnly=1, flatten=1)[0].name, num) #ie. pCube1_Set0
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/subdivision_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/subdivision_blender.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -81,29 +81,29 @@
+│ │  		'''
+│ │  		value = self.sb.subdivision.s000.value()
+│ │  
+│ │  		shapes = pm.ls(sl=1, dag=1, leaf=1)
+│ │  		transforms = pm.listRelatives(shapes, p=True)
+│ │  		for obj in transforms:
+│ │  			if hasattr(obj, 'smoothLevel'):
+│ │ -				self.setAttributesMEL(obj, {'smoothLevel':value})
+│ │ +				self.setNodeAttributes(obj, {'smoothLevel':value})
+│ │  				pm.optionVar(intValue=['proxyDivisions', 1]) #subDiv proxy options: 'divisions'
+│ │  				print(obj+': Division Level: <hl>'+str(value)+'</hl>')
+│ │  
+│ │  
+│ │  	def s001(self, value=None):
+│ │  		'''Tesselation Level
+│ │  		'''
+│ │  		value = self.sb.subdivision.s001.value()
+│ │  
+│ │  		shapes = pm.ls(sl=1, dag=1, leaf=1)
+│ │  		transforms = pm.listRelatives(shapes, p=True)
+│ │  		for obj in transforms:
+│ │  			if hasattr(obj, 'smoothLevel'):
+│ │ -				self.setAttributesMEL(obj, {'smoothTessLevel':value})
+│ │ +				self.setNodeAttributes(obj, {'smoothTessLevel':value})
+│ │  				print(obj+': Tesselation Level: <hl>'+str(value)+'</hl>')
+│ │  
+│ │  
+│ │  	def b005(self):
+│ │  		'''Reduce
+│ │  		'''
+│ │  		pm.mel.polyReduce(version=1, keepCreaseEdgeWeight=1)
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/symmetry_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/symmetry_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/transform_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/transform_blender.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -386,31 +386,31 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def resetTranslation(self, objects):
+│ │  		'''Reset the transformations on the given object(s). (unfreeze transforms)
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): The object(s) to reset transforms for.
+│ │ +			objects (str/obj/list): The object(s) to reset transforms for.
+│ │  		'''
+│ │  		# pm.undoInfo(openChunk=1)
+│ │  		for obj in pm.ls(objects):
+│ │  			pos = pm.objectCenter(obj) #get the object's current position.
+│ │  			mtk.XformmoveTo(obj, origin=1, centerPivot=1) #move to origin and center pivot.
+│ │  			pm.makeIdentity(obj, apply=1, t=1, r=1, s=1, n=0, pn=1) #bake transforms
+│ │  			pm.xform(obj, translation=pos) #move the object back to it's original position.
+│ │  		# pm.undoInfo(closeChunk=1)
+│ │  
+│ │  
+│ │  	def moveTo(self, obj, target, targetCenter=True):
+│ │  		'''Move an object(s) to the given target.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): The objects to move.
+│ │ -			target (str)(obj): The object to move to.
+│ │ +			obj (str/obj/list): The objects to move.
+│ │ +			target (str/obj): The object to move to.
+│ │  			targetCenter (bool): Move to target pivot pos, or the bounding box center of the target.
+│ │  		'''
+│ │  		if targetCenter: #temporarily move the targets pivot to it's bounding box center.
+│ │  			orig_target_piv = pm.xform(target, q=1, worldSpace=1, rp=1) #get target pivot position.
+│ │  			pm.xform(target, centerPivots=1) #center target pivot.
+│ │  			target_pos = pm.xform(target, q=1, worldSpace=1, rp=1) #get the pivot position at center of object.
+│ │  			pm.xform(target, worldSpace=1, rp=orig_target_piv) #return the target pivot to it's orig position.
+│ │ @@ -421,15 +421,15 @@
+│ │  
+│ │  
+│ │  	@Slots_blender.undoChunk
+│ │  	def dropToGrid(self, objects, align='Mid', origin=False, centerPivot=False, freezeTransforms=False):
+│ │  		'''Align objects to Y origin on the grid using a helper plane.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): The objects to translate.
+│ │ +			objects (str/obj/list): The objects to translate.
+│ │  			align (bool): Specify which point of the object's bounding box to align with the grid. (valid: 'Max','Mid'(default),'Min')
+│ │  			origin (bool): Move to world grid's center.
+│ │  			centerPivot (bool): Center the object's pivot.
+│ │  			freezeTransforms (bool): Reset the selected transform and all of its children down to the shape level.
+│ │  
+│ │  		ex. dropToGrid(obj, align='Min') #set the object onto the grid.
+│ │  		'''
+│ │ @@ -454,15 +454,15 @@
+│ │  				pm.makeIdentity(obj, apply=True)
+│ │  		# pm.undoInfo (closeChunk=1)
+│ │  
+│ │  
+│ │  	def setTranslationToPivot(self, node):
+│ │  		'''Set an object’s translation value from its pivot location.
+│ │  		Parameters:
+│ │ -			node (str)(obj): An object, or it's name.
+│ │ +			node (str/obj): An object, or it's name.
+│ │  		'''
+│ │  		x, y, z = pivot = pm.xform(node, query=True, worldSpace=True, rotatePivot=True)
+│ │  		pm.xform(node, relative=True, translation=[-x,-y,-z])
+│ │  		pm.makeIdentity(node, apply=True, translate=True)
+│ │  		pm.xform(node, translation=[x, y, z])
+│ │  
+│ │  
+│ │ @@ -501,15 +501,15 @@
+│ │  		# pm.undoInfo(closeChunk=1)
+│ │  
+│ │  
+│ │  	def aimObjectAtPoint(self, obj, target_pos, aim_vect=(1,0,0), up_vect=(0,1,0)):
+│ │  		'''Aim the given object at the given world space position.
+│ │  
+│ │  		Args:
+│ │ -			obj (str)(obj): Transform node.
+│ │ +			obj (str/obj): Transform node.
+│ │  			target_pos (tuple): The (x,y,z) world position to aim at.
+│ │  			aim_vect (tuple): Local axis to aim at the target position.
+│ │  			up_vect (tuple): Secondary axis aim vector.
+│ │  		 '''
+│ │  		target = pm.createNode('transform')
+│ │  
+│ │  		pm.xform(target, translation=target_pos, absolute=True)
+│ │ @@ -519,15 +519,15 @@
+│ │  
+│ │  
+│ │  	def rotateAxis(self, obj, target_pos):
+│ │  		''' Aim the given object at the given world space position.
+│ │  		All rotations in rotated channel, geometry is transformed so it does not appear to move during this transformation
+│ │  
+│ │  		Args:
+│ │ -			obj (str)(obj): Transform node.
+│ │ +			obj (str/obj): Transform node.
+│ │  			target_pos (tuple): An (x,y,z) world position.
+│ │  		'''
+│ │  		obj = pm.ls(obj)[0]
+│ │  		self.aimObjectAtPoint(obj, target_pos)
+│ │  
+│ │  		try:
+│ │  			c = obj.v[:]
+│ │ @@ -541,15 +541,15 @@
+│ │  		pm.xform(c, translation=pos, relative=True, worldSpace=True)
+│ │  
+│ │  
+│ │  	def getOrientation(self, obj, returnType='point'):
+│ │  		'''Get an objects orientation.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj): The object to get the orientation of.
+│ │ +			obj (str/obj): The object to get the orientation of.
+│ │  			returnType (str): The desired returned value type. (valid: 'point', 'vector')(default: 'point')
+│ │  
+│ │  		Return:
+│ │  			(tuple)
+│ │  		'''
+│ │  		obj = pm.ls(obj)[0]
+│ │  
+│ │ @@ -617,15 +617,15 @@
+│ │  		return center_pos
+│ │  
+│ │  
+│ │  	def getComponentPoint(self, component, alignToNormal=False):
+│ │  		'''Get the center point from the given component.
+│ │  
+│ │  		Parameters:
+│ │ -			component (str)(obj): Object component.
+│ │ +			component (str/obj): Object component.
+│ │  			alignToNormal (bool): Constain to normal vector.
+│ │  
+│ │  		Return: [float list] - x, y, z  coordinate values.
+│ │  		'''
+│ │  		if ".vtx" in str(component):
+│ │  			x = pm.polyNormalPerVertex (component, query=1, x=1)
+│ │  			y = pm.polyNormalPerVertex (component, query=1, y=1)
+│ │ @@ -665,16 +665,16 @@
+│ │  		return list(round(sum(x) / float(len(x)),4), round(sum(y) / float(len(y)),4), round(sum(z) / float(len(z)),4))
+│ │  
+│ │  
+│ │  	def matchScale(self, to, frm, scale=True, average=False):
+│ │  		'''Scale each of the given objects to the combined bounding box of a second set of objects.
+│ │  
+│ │  		Parameters:
+│ │ -			to (str)(obj)(list): The object(s) to scale.
+│ │ -			frm (str)(obj)(list): The object(s) to get a bounding box size from.
+│ │ +			to (str/obj/list): The object(s) to scale.
+│ │ +			frm (str/obj/list): The object(s) to get a bounding box size from.
+│ │  			scale (bool): Scale the objects. Else, just return the scale value.
+│ │  			average (bool): Average the result across all axes.
+│ │  
+│ │  		Return:
+│ │  			(list) scale values as [x,y,z,x,y,z...]
+│ │  		'''
+│ │  		to = pm.ls(to, flatten=True)
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/utilities_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/utilities_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/uv_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/uv_blender.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -446,15 +446,15 @@
+│ │  		return selection
+│ │  
+│ │  
+│ │  	def getUvShellSets(self, objects=None, returnType='shells'):
+│ │  		'''Get All UV shells and their corresponding sets of faces.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (obj)(list): Polygon object(s) or Polygon face(s).
+│ │ +			objects (obj/list): Polygon object(s) or Polygon face(s).
+│ │  			returnType (str): The desired returned type. valid values are: 'shells', 'shellIDs'. If None is given, the full dict will be returned.
+│ │  
+│ │  		Return:
+│ │  			(list)(dict) dependant on the given returnType arg. ex. {0L:[[MeshFace(u'pShape.f[0]'), MeshFace(u'pShape.f[1]')], 1L:[[MeshFace(u'pShape.f[2]'), MeshFace(u'pShape.f[3]')]}
+│ │  		'''
+│ │  		if not objects:
+│ │  			objects = pm.ls(selection=1, objectsOnly=1, transforms=1, flatten=1)
+│ │ @@ -488,15 +488,15 @@
+│ │  		return shells
+│ │  
+│ │  
+│ │  	def getUvShellBorderEdges(self, objects):
+│ │  		'''Get the edges that make up any UV islands of the given objects.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): Polygon mesh objects.
+│ │ +			objects (str/obj/list): Polygon mesh objects.
+│ │  
+│ │  		Return:
+│ │  			(list) uv border edges.
+│ │  		'''
+│ │  		mesh_edges=[]
+│ │  		for obj in pm.ls(objects, objectsOnly=1):
+│ │  			try: # Try to get edges from provided objects.
+│ │   --- tentacletk-0.6.4/tentacle/slots/blender/vfx_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/vfx_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/convert.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/convert.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/crease.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/crease.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/create.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/create.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/duplicate.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/duplicate.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/dynLayout.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/dynLayout.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/edit.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/edit.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/file.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/file.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -13,16 +13,16 @@
+│ │  		#set the text for the open last file button to the last file's name.
+│ │  		list000 = self.sb.file_submenu.list000
+│ │  		list000.position = 'top'
+│ │  		list000.offset = 18
+│ │  		list000.drag_interaction = True
+│ │  		recentFiles = self.getRecentFiles()[:6]
+│ │  		list000.setVisible(bool(recentFiles))
+│ │ -		w1 = list000.add('Recent Files')
+│ │ -		from pythontk.Str import truncate
+│ │ +		w1 = list000.add('QPushButton', setText='Recent Files')
+│ │ +		from pythontk import truncate
+│ │  		truncated = truncate(recentFiles, 65)
+│ │  		w1.list.add(truncated, recentFiles)
+│ │  
+│ │  		dh = self.sb.file.draggable_header
+│ │  		dh.ctxMenu.add(self.sb.ComboBox, setObjectName='cmb000', setToolTip='')
+│ │  		dh.ctxMenu.add(self.sb.PushButton, setObjectName='tb000', setText='Save', setToolTip='Save the current file.')
+│ │  		dh.ctxMenu.add(self.sb.Label, setObjectName='lbl001', setText='Minimize App', setToolTip='Minimize the main application.')
+│ │   --- tentacletk-0.6.4/tentacle/slots/main.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/main.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/materials.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/materials.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/__init__.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/__init__.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -394,22 +394,22 @@
+│ │  			self.setAttributeWindow(fn(self, *args, **kwargs))
+│ │  		return wrapper
+│ │  
+│ │  	def setAttributeWindow(self, obj, inc=[], exc=[], checkableLabel=False, fn=None, *fn_args, **attributes):
+│ │  		'''Launch a popup window containing the given objects attributes.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): The object to get the attributes of, or it's name. If given as a list, only the first index will be used.
+│ │ +			obj (str/obj/list): The object to get the attributes of, or it's name. If given as a list, only the first index will be used.
+│ │  			inc (list): Attributes to include. All other will be omitted. Exclude takes dominance over include. Meaning, if the same attribute is in both lists, it will be excluded.
+│ │  			exc (list): Attributes to exclude from the returned dictionay. ie. ['Position','Rotation','Scale','renderable','isHidden','isFrozen','selected']
+│ │  			checkableLabel (bool): Set the attribute labels as checkable.
+│ │  			fn (method) = Set an alternative method to call on widget signal. ex. setParameterValuesMEL
+│ │  					The first parameter of fn is always the given object. ex. fn(obj, {'attr':<value>})
+│ │  			fn_args (args) = Any additonal args to pass to fn.
+│ │ -			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from self.getAttributesMEL for the given obj.
+│ │ +			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from self.getNodeAttributes for the given obj.
+│ │  
+│ │  		Example: self.setAttributeWindow(obj, attributes=attrs, checkableLabel=True)
+│ │  		'''
+│ │  		if not obj:
+│ │  			return
+│ │  		elif isinstance(obj, (list, set, tuple)):
+│ │  			obj = obj[0]
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/animation_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/animation_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/cameras_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/cameras_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/convert_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/convert_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/crease_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/crease_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/create_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/create_max.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -178,15 +178,15 @@
+│ │  		return node
+│ │  
+│ │  
+│ │  	def b005(self):
+│ │  		'''Create 6 sided poly cylinder
+│ │  		'''
+│ │  		node = self.createPrimitive('Polygon', 'Cylinder')
+│ │ -		self.setAttributesMEL(node, verbose=True, subdivisionsAxis=6)
+│ │ +		self.setNodeAttributes(node, verbose=True, subdivisionsAxis=6)
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/deformation_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/deformation_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/display_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/display_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/duplicate_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/duplicate_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/dynLayout_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/dynLayout_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/edit_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/edit_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/editors_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/editors_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/file_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/file_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/init_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/init_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/lighting_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/lighting_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/materials_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/materials_max.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -464,15 +464,15 @@
+│ │  		rt.redrawViews()
+│ │  
+│ │  
+│ │  	def getMaterialBitmaps(self, mats=None, missing=False, processChildren=True):
+│ │  		'''Get any bitmaps from a given material(s), or from all scene materials.
+│ │  
+│ │  		Parameters:
+│ │ -			mats (obj)(list): Mat object or list of mat objects. If None is given, all bitmap textures in the scene are used.
+│ │ +			mats (obj/list): Mat object or list of mat objects. If None is given, all bitmap textures in the scene are used.
+│ │  			missing (bool): Return only filenames from missing bitmaps.
+│ │  			processChildren (bool): Child scene nodes are also searched as part of the Animatable or Reference hierarchy.
+│ │  
+│ │  		Return:
+│ │  			(list) material bitmaps.
+│ │  		'''
+│ │  		if mats is None:
+│ │ @@ -596,15 +596,15 @@
+│ │  			{rt.saveTempMaterialLibrary(lib, name) for lib,name in tempLibs.items()}
+│ │  
+│ │  
+│ │  	def relinkSceneBitmaps(self, mat_dir, mats=None, replaceTxWithTif=False):
+│ │  		'''Repair broken bitmap file links.  If no mats are given, all scene bitmaps will be used.
+│ │  
+│ │  		Parameters:
+│ │ -			mats (obj)(list): Specify material(s) to get bitmaps for. If none are given, all scene materials will be used.
+│ │ +			mats (obj/list): Specify material(s) to get bitmaps for. If none are given, all scene materials will be used.
+│ │  			replaceTxWithTif (bool): Look instead for a .tif file of the same name, to replace a previoud .tx format.
+│ │  		'''
+│ │  		bitmaps = self.getMaterialBitmaps(mats)
+│ │  
+│ │  		if bitmaps:
+│ │  			self.relinkBitmaps(mat_dir, bitmaps, replaceTxWithTif=True)
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/mirror_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/mirror_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/normals_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/normals_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/nurbs_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/nurbs_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/pivot_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/pivot_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/polygons_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/polygons_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/preferences_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/preferences_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/rendering_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/rendering_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/rigging_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/rigging_max.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -255,15 +255,15 @@
+│ │  	@staticmethod
+│ │  	def createLocatorAtObject(objects, suffix='_LOC', stripDigits=False, strip='', scale=1, parent=False, freezeTransforms=True, 
+│ │  					bakeChildPivot=True, lockTranslate=False, lockRotation=False, lockScale=False, remove=False, _fullPath=False):
+│ │  		'''Create locators with the same transforms as any selected object(s).
+│ │  		If there are vertices selected it will create a locator at the center of the selected vertices bounding box.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(list): A list of objects, or an object name to create locators at.
+│ │ +			objects (str/list): A list of objects, or an object name to create locators at.
+│ │  			suffix (str): A string appended to the end of the created locators name. (default: '_LOC') '_LOC#'
+│ │  			stripDigits (bool): Strip numeric characters from the string. If the resulting name is not unique, maya will append a trailing digit. (default=False)
+│ │  			strip (str): Strip a specific character set from the locator name. The locators name is based off of the selected objects name. (default=None)
+│ │  			scale (float) = The scale of the locator. (default=1)
+│ │  			parent (bool): Parent to object to the locator. (default=False)
+│ │  			freezeTransforms (bool): Freeze transforms on the locator. (default=True)
+│ │  			bakeChildPivot (bool): Bake pivot positions on the child object. (default=True)
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/scene_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/scene_max.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -90,15 +90,15 @@
+│ │  				print ('# Error: Attempt to rename "{}" to "{}" failed. {} #'.format(oldName, newName, str(e).rstrip()))
+│ │  
+│ │  
+│ │  	def setCase(self, objects=[], case='caplitalize'):
+│ │  		'''Rename objects following the given case.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(list): The objects to rename. default:all scene objects
+│ │ +			objects (str/list): The objects to rename. default:all scene objects
+│ │  			case (str): Desired case using python case operators. 
+│ │  				valid: 'upper', 'lower', 'caplitalize', 'swapcase' 'title'. default:'caplitalize'
+│ │  
+│ │  		Example: setCase(pm.ls(sl=1), 'upper')
+│ │  		'''
+│ │  		for obj in objects:
+│ │  			name = obj.name
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/scripting_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/scripting_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/selection_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/selection_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/subdivision_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/subdivision_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/symmetry_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/symmetry_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/transform_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/transform_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/utilities_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/utilities_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/uv_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/uv_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/max/vfx_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/max/vfx_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/__init__.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/__init__.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -35,37 +35,37 @@
+│ │  			return rtn
+│ │  		return wrapper
+│ │  
+│ │  	def setAttributeWindow(self, obj, inc=[], exc=[], checkableLabel=False, fn=None, fn_args=[], **attributes):
+│ │  		'''Launch a popup window containing the given objects attributes.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): The object to get the attributes of, or it's name. If given as a list, only the first index will be used.
+│ │ +			obj (str/obj/list): The object to get the attributes of, or it's name. If given as a list, only the first index will be used.
+│ │  			inc (list): Attributes to include. All other will be omitted. Exclude takes dominance over include. Meaning, if the same attribute is in both lists, it will be excluded.
+│ │  			exc (list): Attributes to exclude from the returned dictionay. ie. ['Position','Rotation','Scale','renderable','isHidden','isFrozen','selected']
+│ │  			checkableLabel (bool): Set the attribute labels as checkable.
+│ │  			fn (method) = Set an alternative method to call on widget signal. ex. setParameterValuesMEL
+│ │  					The first parameter of fn is always the given object. ex. fn(obj, {'attr':<value>})
+│ │ -			fn_args (str)(list): Any additonal args to pass to the given fn.
+│ │ -			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from mtk.Node.getAttributesMEL for the given obj.
+│ │ +			fn_args (str/list): Any additonal args to pass to the given fn.
+│ │ +			attributes (kwargs) = Explicitly pass in attribute:values pairs. Else, attributes will be pulled from mtk.Node.getNodeAttributes for the given obj.
+│ │  
+│ │  		Example: self.setAttributeWindow(node, attrs, fn=setParameterValuesMEL, 'transformLimits') #set attributes for the Maya command transformLimits.
+│ │  		Example: self.setAttributeWindow(transform[0], inc=['translateX','translateY','translateZ','rotateX','rotateY','rotateZ','scaleX','scaleY','scaleZ'], checkableLabel=True)
+│ │  		'''
+│ │  		try:
+│ │  			obj = pm.ls(obj)[0]
+│ │  		except Exception as error:
+│ │  			return 'Error: {}.setAttributeWindow: Invalid Object: {}'.format(__name__, obj)
+│ │  
+│ │ -		fn = fn if fn else mtk.Node.setAttributesMEL
+│ │ +		fn = fn if fn else mtk.Node.setNodeAttributes
+│ │  
+│ │  		if attributes:
+│ │  			attributes = ptk.Iter.filterDict(attributes, inc, exc, keys=True)
+│ │  		else:
+│ │ -			attributes = mtk.Node.getAttributesMEL(obj, inc=inc, exc=exc)
+│ │ +			attributes = mtk.Node.getNodeAttributes(obj, inc=inc, exc=exc, mapping=True)
+│ │  
+│ │  		menu = self.objAttrWindow(obj, checkableLabel=checkableLabel, fn=fn, fn_args=fn_args, **attributes)
+│ │  
+│ │  		if checkableLabel:
+│ │  			for c in menu.childWidgets:
+│ │  				if c.__class__.__name__=='QCheckBox':
+│ │  					attr = getattr(obj, c.objectName())
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/animation_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/animation_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/cameras_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/cameras_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/convert_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/convert_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/crease_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/crease_maya.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -101,15 +101,15 @@
+│ │  		# self.sb.crease.b001.setText("Object")
+│ │  
+│ │  
+│ │  	def getCreasedEdges(self, edges):
+│ │  		'''Return any creased edges from a list of edges.
+│ │  
+│ │  		Parameters:
+│ │ -			edges (str)(obj)(list): The edges to check crease state on.
+│ │ +			edges (str/obj/list): The edges to check crease state on.
+│ │  
+│ │  		Return:
+│ │  			(list) edges.
+│ │  		'''
+│ │  		creased_edges = [e for e in pm.ls(edges, flatten=1) if pm.polyCrease(e, q=1, value=1)[0] > 0]
+│ │  
+│ │  		return creased_edges
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/create_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/create_maya.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -144,15 +144,15 @@
+│ │  		return mtk.Node.getHistoryNode(node)
+│ │  
+│ │  
+│ │  	def b005(self):
+│ │  		'''Create 6 sided poly cylinder
+│ │  		'''
+│ │  		obj = self.createPrimitive('Polygon', 'Cylinder')
+│ │ -		mtk.Node.setAttributesMEL(obj, verbose=True, subdivisionsAxis=6)
+│ │ +		mtk.Node.setNodeAttributes(obj, verbose=True, subdivisionsAxis=6)
+│ │  
+│ │  
+│ │  	@mtk.undo
+│ │  	def createCircle(self, axis='y', numPoints=5, radius=5, center=[0,0,0], mode=0, name='pCircle'):
+│ │  		'''Create a circular polygon plane.
+│ │  
+│ │  		Parameters:
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/deformation_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/deformation_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/display_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/display_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/duplicate_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/duplicate_maya.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -289,15 +289,15 @@
+│ │  
+│ │  
+│ │  
+│ │  	def getInstances(self, objects=None, returnParentObjects=False):
+│ │  		'''get any intances of given object, or if None given; get all instanced objects in the scene.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): Parent object/s.
+│ │ +			objects (str/obj/list): Parent object/s.
+│ │  			returnParentObjects (bool): Return instances and the given parent objects together.
+│ │  
+│ │  		Return:
+│ │  			(list)
+│ │  		'''
+│ │  		instances=[]
+│ │  
+│ │ @@ -367,15 +367,15 @@
+│ │  		# pm.undoInfo(closeChunk=1)
+│ │  
+│ │  
+│ │  	def unInstance(self, objects):
+│ │  		'''Un-Instance the given objects.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): The objects to un-instance. If 'all' is given all instanced objects in the scene will be uninstanced.
+│ │ +			objects (str/obj/list): The objects to un-instance. If 'all' is given all instanced objects in the scene will be uninstanced.
+│ │  		'''
+│ │  		if objects=='all':
+│ │  			objects = self.getInstances()
+│ │  
+│ │  		for obj in pm.ls(objects):
+│ │  
+│ │  			children = pm.listRelatives(obj, fullPath=1, children=1)
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/dynLayout_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/dynLayout_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/edit_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/edit_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/editors_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/editors_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/file_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/file_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/init_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/init_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/lighting_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/lighting_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/main_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/blender/main_blender.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,17 +1,18 @@
+│ │  # !/usr/bin/python
+│ │  # coding=utf-8
+│ │ -from tentacle.slots.maya import *
+│ │ +from tentacle.slots.blender import *
+│ │  from tentacle.slots.main import Main
+│ │  
+│ │  
+│ │  
+│ │ -class Main_maya(Main, Slots_maya):
+│ │ +class Main_blender(Main, Slots_blender):
+│ │  	def __init__(self, *args, **kwargs):
+│ │ -		super().__init__(*args, **kwargs)
+│ │ +		Slots_blender.__init__(self, *args, **kwargs)
+│ │ +		Main.__init__(self, *args, **kwargs)
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │  
+│ │ @@ -32,15 +33,15 @@
+│ │  		# 	node history
+│ │  		# 	selection = pm.ls(sl=1, objectsOnly=1, flatten=1)
+│ │  		# 	if selection:
+│ │  		# 		history = selection[0].history()[1:]
+│ │  		# 		for node in history:
+│ │  		# 			parent = tree.add('QLabel', 'History', childHeader=node.name(), refresh=1, setText=node.name())
+│ │  		# 			# print(parent, node.name())
+│ │ -		# 			attributes = mtk.Node.getAttributesMEL(node) #get dict containing attributes:values of the history node.
+│ │ +		# 			attributes = Slots_blender.getNodeAttributes(node) #get dict containing attributes:values of the history node.
+│ │  		# 			spinboxes = [tree.add('QDoubleSpinBox', parent, refresh=1, setSpinBoxByValue_=[k, v])
+│ │  		# 				for k, v in attributes.items() 
+│ │  		# 					if isinstance(v, (float, int, bool))]
+│ │  
+│ │  		# 			set signal/slot connections:
+│ │  		# 			wgts.= [tree.add(self.MultiWidget, parent, refresh=1, set_by_value=[k, v])
+│ │  		# 				for k, v in attributes.items() 
+│ │ @@ -49,12 +50,12 @@
+│ │  		# 			for multiWidget in wgts.
+│ │  		# 				attr = multiWidget.children_(index=0).text()
+│ │  		# 				w = multiWidget.children_(index=1)
+│ │  		# 				type_ = w.__class__.__name__
+│ │  
+│ │  		# 				if type_ in ['QSpinBox', 'QDoubleSpinBox']:
+│ │  		# 					w.valueChanged.connect(
+│ │ -		# 						lambda value, widget=w, node=node: mtk.Node.setAttributesMEL(node, {attr:w.value()}))
+│ │ +		# 						lambda value, widget=w, node=node: self.setNodeAttributes(node, {attr:w.value()}))
+│ │  
+│ │  		# 			[w.valueChanged.connect(
+│ │ -		# 				lambda value, widget=w, node=node: mtk.Node.setAttributesMEL(node, {widget.prefix().rstrip(': '):value})) 
+│ │ +		# 				lambda value, widget=w, node=node: self.setNodeAttributes(node, {widget.prefix().rstrip(': '):value})) 
+│ │  		# 					for w in spinboxes] #set signal/slot connections
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/materials_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/materials_maya.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -296,20 +296,20 @@
+│ │  				pm.select(list(set(allFaces)-set(faces)), add=1) #get inverse of previously selected faces from allFaces
+│ │  
+│ │  
+│ │  	def getSceneMaterials(self, inc=[], exc=[]):
+│ │  		'''Get all materials from the current scene.
+│ │  
+│ │  		Parameters:
+│ │ -			inc (str)(int)(obj)(list): The objects(s) to include.
+│ │ +			inc (str)(int)(obj/list): The objects(s) to include.
+│ │  					supports using the '*' operator: startswith*, *endswith, *contains*
+│ │  					Will include all items that satisfy ANY of the given search terms.
+│ │  					meaning: '*.png' and '*Normal*' returns all strings ending in '.png' AND all 
+│ │  					strings containing 'Normal'. NOT strings satisfying both terms.
+│ │ -			exc (str)(int)(obj)(list): The objects(s) to exclude. Similar to include.
+│ │ +			exc (str)(int)(obj/list): The objects(s) to exclude. Similar to include.
+│ │  					exlude take precidence over include.
+│ │  		Return:
+│ │  			(list) materials.
+│ │  		'''
+│ │  		matList = pm.ls(mat=1, flatten=1)
+│ │  
+│ │  		#convert to dictionary to filter material names and types.
+│ │ @@ -336,15 +336,15 @@
+│ │  		return materials
+│ │  
+│ │  
+│ │  	def getMaterial(self, obj=''):
+│ │  		'''Get the material from the selected face.
+│ │  
+│ │  		Parameters:
+│ │ -			(str)(obj): The obj with the material.
+│ │ +			(str/obj): The obj with the material.
+│ │  
+│ │  		Return:
+│ │  			(list) material
+│ │  		'''
+│ │  		pm.hyperShade(obj, shaderNetworksSelectMaterialNodes=1) #selects the material node 
+│ │  		mats = pm.ls(selection=1, materials=1) #now add the selected node to a variable
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/mirror_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/mirror_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/normals_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/normals_maya.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -232,15 +232,15 @@
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │  	def getNormalVector(obj):
+│ │  		'''Get the normal vectors of the given poly object.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): A polygon mesh or it's component(s).
+│ │ +			obj (str/obj/list): A polygon mesh or it's component(s).
+│ │  
+│ │  		Return:
+│ │  			dict - {int:[float, float, float]} face id & vector xyz.
+│ │  		'''
+│ │  		obj = pm.ls(obj)
+│ │  		normals = pm.polyInfo(obj, faceNormals=1)
+│ │  
+│ │ @@ -301,16 +301,16 @@
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │  	def transferNormals(source, target):
+│ │  		'''Transfer normal information from one object to another.
+│ │  
+│ │  		Parameters:
+│ │ -			source (str)(obj)(list): The transform node to copy normals from.
+│ │ -			target (str)(obj)(list): The transform node(s) to copy normals to.
+│ │ +			source (str/obj/list): The transform node to copy normals from.
+│ │ +			target (str/obj/list): The transform node(s) to copy normals to.
+│ │  		'''
+│ │  		pm.undoInfo(openChunk=1)
+│ │  		s, *other = pm.ls(source)
+│ │  		#store source transforms
+│ │  		sourcePos = pm.xform(s, q=1, t=1, ws=1)
+│ │  		sourceRot = pm.xform(s, q=1, ro=1, ws=1)
+│ │  		sourceScale = pm.xform(s, q=1, s=1, ws=1)
+│ │ @@ -354,15 +354,15 @@
+│ │  
+│ │  
+│ │  # @staticmethod
+│ │  # 	def getNormalVector(obj):
+│ │  # 		'''Get the normal vectors from the given poly object.
+│ │  
+│ │  # 		Parameters:
+│ │ -# 			obj (str)(obj)(list): A polygon mesh or component(s).
+│ │ +# 			obj (str/obj/list): A polygon mesh or component(s).
+│ │  
+│ │  # 		Return:
+│ │  # 			dict - {int:[float, float, float]} face id & vector xyz.
+│ │  # 		'''
+│ │  # 		obj = pm.ls(obj)
+│ │  # 		type_ = pm.objectType(obj)
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/nurbs_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/nurbs_maya.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -478,16 +478,16 @@
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │  	def getClosestCV(x, curves, tolerance=0.0):
+│ │  		'''Find the closest control vertex between the given vertices, CVs, or objects and each of the given curves.
+│ │  
+│ │  		Parameters:
+│ │ -			x (str)(obj)(list): Polygon vertices, control vertices, objects, or points given as (x,y,z) tuples.
+│ │ -			curves (str)(obj)(list): The reference object in which to find the closest CV for each vertex in the list of given vertices.
+│ │ +			x (str/obj/list): Polygon vertices, control vertices, objects, or points given as (x,y,z) tuples.
+│ │ +			curves (str/obj/list): The reference object in which to find the closest CV for each vertex in the list of given vertices.
+│ │  			tolerance (int)(float) = Maximum search distance. Default is 0.0, which turns off the tolerance flag.
+│ │  
+│ │  		Return:
+│ │  			(dict) closest vertex/cv pairs (one pair for each given curve) ex. {<vertex from set1>:<vertex from set2>}.
+│ │  
+│ │  		ex. vertices = getComponents(objects, 'vertices')
+│ │  			closestVerts = getClosestCV(curve0, curves)
+│ │ @@ -523,23 +523,23 @@
+│ │  
+│ │  
+│ │  	@classmethod
+│ │  	def getCvInfo(cls, c, returnType='cv', filter_=[]):
+│ │  		'''Get a dict containing CV's of the given curve(s) and their corresponding point positions (based on Maya's pointOnCurve command).
+│ │  
+│ │  		Parameters:
+│ │ -			- c (str)(obj)(list): Curves or CVs to get CV info from.
+│ │ +			- c (str/obj/list): Curves or CVs to get CV info from.
+│ │  			- returnType (str): The desired returned values. Default is 'cv'.
+│ │  				valid values are: 
+│ │  					'cv' = Return a list of all CV's for the given curves.
+│ │  					'count' = Return an integer representing the total number of cvs for each of the curves given.
+│ │  					'parameter', 'position', 'index', 'localPosition', 'tangent', 'normalizedTangent', 'normal', 'normalizedNormal', 'curvatureRadius', 'curvatureCenter'
+│ │  					= Return a dict with CV's as keys and the returnType as their corresponding values.
+│ │  				ex. {NurbsCurveCV(u'polyToCurveShape7.cv[5]'): [-12.186520865542082, 15.260936896515751, -369.6159740743584]}
+│ │ -			- filter_ (str)(obj)(list): Value(s) to filter for in the returned results.
+│ │ +			- filter_ (str/obj/list): Value(s) to filter for in the returned results.
+│ │  
+│ │  		Return:
+│ │  			(dict)(list)(int) dependant on returnType.
+│ │  
+│ │  		ex. cv_tan = getCvInfo(curve.cv[0:2],'tangent') #get CV tangents for cvs 0-2.
+│ │  		ex. cvParam = getCvInfo(curve, 'parameters') #get the curves CVs and their corresponding U parameter values.
+│ │  		ex. filtered = getCvInfo(<curve>, 'normal', <normal>) #filter results for those that match the given value.
+│ │ @@ -606,15 +606,15 @@
+│ │  
+│ │  
+│ │  	@classmethod
+│ │  	def getCrossProductOfCurves(cls, curves, normalize=1, values=False):
+│ │  		'''Get the cross product of two vectors using points derived from the given curves.
+│ │  
+│ │  		Parameters:
+│ │ -			curves (str)(obj)(list): Nurbs curve(s).
+│ │ +			curves (str/obj/list): Nurbs curve(s).
+│ │  			normalize (float) = (0) Do not normalize. (1) Normalize standard. (value other than 0 or 1) Normalize using the given float value as desired length.
+│ │  			values (bool): Return only a list of the cross product vector values [(<Vx>, <Vy>, <Vz>)] instead of the full dict {<curve1>:(<Vx>, <Vy>, <Vz>)}.
+│ │  
+│ │  		Return:
+│ │  			(dict)(list)
+│ │  		'''
+│ │  		result={}
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/pivot_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/pivot_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/polygons_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/polygons_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/preferences_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/preferences_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/rendering_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/rendering_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/rigging_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/rigging_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/scene_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/scene_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/scripting_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/scripting_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/selection_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/selection_maya.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -453,15 +453,15 @@
+│ │  		pm.setToolTo(ctx)
+│ │  
+│ │  
+│ │  	def generateUniqueSetName(self, obj=None):
+│ │  		'''Generate a generic name based on the object's name.
+│ │  
+│ │  		Parameters:
+│ │ -			obj (str)(obj)(list): The maya scene object to derive a unique name from.
+│ │ +			obj (str/obj/list): The maya scene object to derive a unique name from.
+│ │  
+│ │  		<objectName>_Set<int>
+│ │  		'''
+│ │  		if obj is None:
+│ │  			obj = pm.ls(sl=1)
+│ │  		num = ptk.cycle(list(range(99)), 'selectionSetNum')
+│ │  		name = '{0}_Set{1}'.format(pm.ls(obj, objectsOnly=1, flatten=1)[0].name, num) #ie. pCube1_Set0
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/subdivision_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/subdivision_maya.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -79,29 +79,29 @@
+│ │  		'''
+│ │  		value = self.sb.subdivision.s000.value()
+│ │  
+│ │  		shapes = pm.ls(sl=1, dag=1, leaf=1)
+│ │  		transforms = pm.listRelatives(shapes, p=True)
+│ │  		for obj in transforms:
+│ │  			if hasattr(obj, 'smoothLevel'):
+│ │ -				mtk.Node.setAttributesMEL(obj, {'smoothLevel':value})
+│ │ +				mtk.Node.setNodeAttributes(obj, {'smoothLevel':value})
+│ │  				pm.optionVar(intValue=['proxyDivisions', 1]) #subDiv proxy options: 'divisions'
+│ │  				print(obj+': Division Level: <hl>'+str(value)+'</hl>')
+│ │  
+│ │  
+│ │  	def s001(self, value=None):
+│ │  		'''Tesselation Level
+│ │  		'''
+│ │  		value = self.sb.subdivision.s001.value()
+│ │  
+│ │  		shapes = pm.ls(sl=1, dag=1, leaf=1)
+│ │  		transforms = pm.listRelatives(shapes, p=True)
+│ │  		for obj in transforms:
+│ │  			if hasattr(obj, 'smoothLevel'):
+│ │ -				mtk.Node.setAttributesMEL(obj, {'smoothTessLevel':value})
+│ │ +				mtk.Node.setNodeAttributes(obj, {'smoothTessLevel':value})
+│ │  				print(obj+': Tesselation Level: <hl>'+str(value)+'</hl>')
+│ │  
+│ │  
+│ │  	def b005(self):
+│ │  		'''Reduce
+│ │  		'''
+│ │  		selection = pm.ls(sl=1, objectsOnly=1, type='transform')
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/symmetry_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/symmetry_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/transform_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/transform_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/utilities_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/utilities_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/uv_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/uv_maya.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -424,15 +424,15 @@
+│ │  			pm.polyMapSew(edges)
+│ │  
+│ │  
+│ │  	def orientShells(self, objects):
+│ │  		'''Rotate UV shells to run parallel with the most adjacent U or V axis of their bounding box.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): Polygon mesh objects and/or components.
+│ │ +			objects (str/obj/list): Polygon mesh objects and/or components.
+│ │  		'''
+│ │  		for obj in pm.ls(objects, objectsOnly=1):
+│ │  
+│ │  			obj_compts = [i for i in objects if obj in pm.ls(i, objectsOnly=1)] #filter components for only this object.
+│ │  			pm.polyLayoutUV(obj_compts, 
+│ │  					flipReversed=0,
+│ │  					layout=0,
+│ │ @@ -490,15 +490,15 @@
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │  	def getUvShellSets(objects=None, returnType='shells'):
+│ │  		'''Get All UV shells and their corresponding sets of faces.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (obj)(list): Polygon object(s) or Polygon face(s).
+│ │ +			objects (obj/list): Polygon object(s) or Polygon face(s).
+│ │  			returnType (str): The desired returned type. valid values are: 'shells', 'IDs'. If None is given, the full dict will be returned.
+│ │  
+│ │  		Return:
+│ │  			(list)(dict) dependant on the given returnType arg. ex. {0L:[[MeshFace(u'pShape.f[0]'), MeshFace(u'pShape.f[1]')], 1L:[[MeshFace(u'pShape.f[2]'), MeshFace(u'pShape.f[3]')]}
+│ │  		'''
+│ │  		faces = mtk.Cmpt.getComponents(objects, 'faces', flatten=1)
+│ │  
+│ │ @@ -523,15 +523,15 @@
+│ │  
+│ │  
+│ │  	@staticmethod
+│ │  	def getUvShellBorderEdges(objects):
+│ │  		'''Get the edges that make up any UV islands of the given objects.
+│ │  
+│ │  		Parameters:
+│ │ -			objects (str)(obj)(list): Polygon mesh objects and mesh components (UVs).
+│ │ +			objects (str/obj/list): Polygon mesh objects and mesh components (UVs).
+│ │  
+│ │  		Return:
+│ │  			(list) UV border edges.
+│ │  		'''
+│ │  		uv_border_edges = []
+│ │  		for item in ptk.makeList(objects):
+│ │  			# If the item is a mesh object, get its shape
+│ │ @@ -554,16 +554,16 @@
+│ │  
+│ │  
+│ │  	@mtk.undo
+│ │  	def transferUVs(self, frm, to='similar', tol=0.0, sampleSpace='component', deleteConstHist=True):
+│ │  		'''Transfer UV's from one group of objects to another.
+│ │  
+│ │  		Parameters:
+│ │ -			frm (str)(obj)(list): The objects to transfer uv's from.
+│ │ -			to (str)(obj)(list): The objects to transfer uv's to.
+│ │ +			frm (str/obj/list): The objects to transfer uv's from.
+│ │ +			to (str/obj/list): The objects to transfer uv's to.
+│ │  					If 'similar' is given, the scene will be searched for similar objects.
+│ │  			tol (float) = 
+│ │  			sampleSpace (str): Selects which space the attribute transfer is performed in. valid: 'world', 'local', 'component', 'topology'
+│ │  			deleteConstHist (bool): Remove construction history for the objects transferring from.
+│ │  					Otherwise, the UV's will be lost should any of the frm objects be deleted.
+│ │  		'''
+│ │  		sampleSpace = {'world':0, 'local':1, 'component':4, 'topology':5}[sampleSpace]
+│ │   --- tentacletk-0.6.4/tentacle/slots/maya/vfx_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/maya/vfx_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/mirror.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/mirror.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/normals.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/normals.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/nurbs.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/nurbs.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/pivot.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/pivot.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/polygons.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/polygons.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -78,11 +78,11 @@
+│ │  		'''
+│ │  		self.sb.toggleWidgets(setUnChecked='chk008,chk009')
+│ │  
+│ │  
+│ │  	def setMergeVertexDistance(self, p1, p2):
+│ │  		'''Merge Vertices: Set Distance
+│ │  		'''
+│ │ -		from pythontk.Math import getDistBetweenTwoPoints
+│ │ +		from pythontk import getDistBetweenTwoPoints
+│ │  		s = self.sb.polygons.tb000.ctxMenu.s002
+│ │  		dist = getDistBetweenTwoPoints(p1, p2)
+│ │  		s.setValue(dist)
+│ │   --- tentacletk-0.6.4/tentacle/slots/preferences.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/preferences.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/rigging.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/rigging.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/scene.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/scene.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/scripting.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/scripting.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/selection.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/selection.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/symmetry.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/symmetry.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/transform.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/transform.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/slots/uv.py
+│ ├── +++ tentacletk-0.6.5/tentacle/slots/uv.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/tcl.py
+│ ├── +++ tentacletk-0.6.5/tentacle/tcl.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  # !/usr/bin/python
+│ │  # coding=utf-8
+│ │  import sys, os
+│ │  
+│ │  from PySide2 import QtCore, QtGui, QtWidgets
+│ │  
+│ │ -from pythontk.Iter import makeList
+│ │ +from pythontk import makeList
+│ │  from uitk.switchboard import Switchboard
+│ │  from uitk.events import EventFactoryFilter, MouseTracking
+│ │  from tentacle.overlay import Overlay
+│ │  
+│ │  
+│ │  class Tcl(QtWidgets.QStackedWidget):
+│ │  	'''Tcl is a marking menu based on a QStackedWidget.
+│ │ @@ -31,15 +31,15 @@
+│ │  		self.preventHide = preventHide
+│ │  		self._mousePressPos = QtCore.QPoint()
+│ │  
+│ │  		# self.app.setDoubleClickInterval(400)
+│ │  		# self.app.setKeyboardInputInterval(400)
+│ │  		self.setFocusPolicy(QtCore.Qt.StrongFocus)
+│ │  
+│ │ -		self.setWindowFlags(QtCore.Qt.Tool|QtCore.Qt.FramelessWindowHint) #|QtCore.Qt.WindowStaysOnTopHint
+│ │ +		self.setWindowFlags(QtCore.Qt.Tool | QtCore.Qt.FramelessWindowHint) #|QtCore.Qt.WindowStaysOnTopHint
+│ │  		self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+│ │  		self.setAttribute(QtCore.Qt.WA_NoMousePropagation, False)
+│ │  		self.resize(1000, 1000)
+│ │  
+│ │  		self.sb = Switchboard(self, ui_location=ui_location, slots_location=slots_location)
+│ │  		self.overlay = Overlay(self, antialiasing=True) #Paint events are handled by the overlay module.
+│ │  		self.eventFilter = EventFactoryFilter(self, eventNamePrefix='ef_', forwardEventsTo=self)
+│ │ @@ -51,30 +51,28 @@
+│ │  
+│ │  		Parameters:
+│ │  			ui (obj): The ui to initialize.
+│ │  		'''
+│ │  		self.initWidgets(ui.widgets)
+│ │  
+│ │  		if ui.level<3: #stacked ui.
+│ │ -			ui.setParent(self)
+│ │  			self.addWidget(ui) #add the ui to the stackedLayout.
+│ │  
+│ │  		else: #popup ui.
+│ │ -			ui.setParent(self.parent())
+│ │ -			ui.setWindowFlags(QtCore.Qt.Tool|QtCore.Qt.FramelessWindowHint)
+│ │ +			ui.setWindowFlags(QtCore.Qt.Tool | QtCore.Qt.FramelessWindowHint)
+│ │  			ui.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+│ │  
+│ │  			self._key_show_release.connect(ui.hide)
+│ │  
+│ │  
+│ │  	def setUi(self, ui):
+│ │  		'''Set the stacked Widget's index to the given ui.
+│ │  
+│ │  		Parameters:
+│ │ -			ui (str)(obj): The ui or name of the ui to set the stacked widget index to.
+│ │ +			ui (str/obj): The ui or name of the ui to set the stacked widget index to.
+│ │  		'''
+│ │  		assert isinstance(ui, (str, QtWidgets.QWidget)), f'# Error: {__file__} in setUi\n#\tIncorrect datatype: {type(ui).__name__}'
+│ │  
+│ │  		ui = self.sb.getUi(ui) #Get the ui of the given name, and set it as the current ui in the switchboard module.
+│ │  		ui.setAsCurrent()
+│ │  		if not ui.isInitialized:
+│ │  			self.initUi(ui)
+│ │ @@ -230,15 +228,15 @@
+│ │  		super().mouseDoubleClickEvent(event)
+│ │  
+│ │  
+│ │  	def show(self, ui='init', profile=False):
+│ │  		'''Sets the widget as visible.
+│ │  
+│ │  		Parameters:
+│ │ -			ui (str)(obj): Show the given ui.
+│ │ +			ui (str/obj): Show the given ui.
+│ │  			profile (bool): Prints the total running time, times each function separately, 
+│ │  				and tells you how many times each function was called.
+│ │  		'''
+│ │  		self.sendKeyPressEvent(self.key_show)
+│ │  
+│ │  		if profile:
+│ │  			import cProfile
+│ │ @@ -298,15 +296,15 @@
+│ │  		# 'QSpinBox',
+│ │  		# 'QDoubleSpinBox',
+│ │  	]
+│ │  	def initWidgets(self, widgets):
+│ │  		'''Set Initial widget states.
+│ │  
+│ │  		Parameters:
+│ │ -			widgets (str)(list): The widget(s) to initialize.
+│ │ +			widgets (str/list): The widget(s) to initialize.
+│ │  		'''
+│ │  		for w in makeList(widgets): #if 'widgets' isn't a list, convert it to one.
+│ │  			# print (1, 'initWidgets:', w.ui.name.ljust(26), w.prefix.ljust(25), (w.name or type(w).__name__).ljust(25), w.type.ljust(15), w.derivedType.ljust(15), id(w)) #debug
+│ │  			if w.derivedType in self.ef_widgetTypes:
+│ │  				if w.ui.level<3:# or w.type=='QMainWindow':
+│ │  					w.installEventFilter(self.eventFilter)
+│ │  
+│ │ @@ -497,15 +495,15 @@
+│ │  	_cameraHistory = []
+│ │  	def prevCamera(self, docString=False, method=False, allowCurrent=False, asList=False, add=None):
+│ │  		'''
+│ │  		Parameters:
+│ │  			docString (bool): return the docString of last camera command. Default is off.
+│ │  			method (bool): return the method of last camera command. Default is off.
+│ │  			allowCurrent (bool): allow the current camera. Default is off.
+│ │ -			add (str)(obj): Add a method, or name of method to be used as the command to the current camera.  (if this flag is given, all other flags are invalidated)
+│ │ +			add (str/obj): Add a method, or name of method to be used as the command to the current camera.  (if this flag is given, all other flags are invalidated)
+│ │  
+│ │  		Return:
+│ │  			if docString: 'string' description (derived from the last used camera command's docString) (asList: [string list] all docStrings, in order of use)
+│ │  			if method: method of last used camera command. (asList: [<method object> list} all methods, in order of use)
+│ │  			if asList: list of lists with <method object> as first element and <docString> as second. ie. [[<v001>, 'camera: persp']]
+│ │  			else : <method object> of the last used command
+│ │  		'''
+│ │   --- tentacletk-0.6.4/tentacle/tcl_blender.py
+│ ├── +++ tentacletk-0.6.5/tentacle/tcl_blender.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/tcl_max.py
+│ ├── +++ tentacletk-0.6.5/tentacle/tcl_max.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacle/tcl_maya.py
+│ ├── +++ tentacletk-0.6.5/tentacle/tcl_maya.py
+│ │┄ Files identical despite different names
+│ │   --- tentacletk-0.6.4/tentacletk.egg-info/PKG-INFO
+│ ├── +++ tentacletk-0.6.5/tentacletk.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: tentacletk
+│ │ -Version: 0.6.4
+│ │ -Summary: Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple dcc modeling applications that support the PySide2 GUI framework.
+│ │ +Version: 0.6.5
+│ │ +Summary: Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple DCC modeling applications that support the PySide2 GUI framework.
+│ │  Home-page: https://github.com/m3trik/tentacle
+│ │  Author: Ryan Simpson
+│ │  Author-email: m3trik@outlook.com
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Operating System :: OS Independent
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │ @@ -13,15 +13,15 @@
+│ │  
+│ │  \*\*personal project. work in progress ..\*\*
+│ │  
+│ │  
+│ │  ##### 
+│ │  ---
+│ │  <!-- short_description_start -->
+│ │ -Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple dcc modeling applications that support the PySide2 GUI framework.
+│ │ +Tentacle is a marking menu style UI and toolkit derived from a QStackedWidget and constructed using the uitk backend. It aims to bring a similar UI experience across multiple DCC modeling applications that support the PySide2 GUI framework.
+│ │  <!-- short_description_end -->
+│ │  
+│ │  ![alt text](https://raw.githubusercontent.com/m3trik/tentacle/master/docs/toolkit_demo.gif) \*Example re-opening the last scene, renaming a material, and selecting geometry by that material.
+│ │  
+│ │  ##
+│ │   --- tentacletk-0.6.4/tentacletk.egg-info/SOURCES.txt
+│ ├── +++ tentacletk-0.6.5/tentacletk.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

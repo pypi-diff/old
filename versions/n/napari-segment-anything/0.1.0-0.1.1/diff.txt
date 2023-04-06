@@ -1,0 +1,301 @@
+--- tmp/napari-segment-anything-0.1.0.tar.gz
++++ tmp/napari-segment-anything-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "napari-segment-anything-0.1.0.tar", last modified: Thu Apr  6 17:50:22 2023, max compression
+│ +gzip compressed data, was "napari-segment-anything-0.1.1.tar", last modified: Thu Apr  6 23:35:07 2023, max compression
+│   --- napari-segment-anything-0.1.0.tar
+├── +++ napari-segment-anything-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)    11358 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.0/LICENSE
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)       96 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.0/MANIFEST.in
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     4817 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/PKG-INFO
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     3501 2023-04-06 17:49:03.000000 napari-segment-anything-0.1.0/README.md
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)      180 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.0/pyproject.toml
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     1798 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/setup.cfg
+│ │ -drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 17:50:22.402062 napari-segment-anything-0.1.0/src/
+│ │ -drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/src/napari_segment_anything/
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)      102 2023-04-06 16:44:39.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/__init__.py
+│ │ -drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/src/napari_segment_anything/_tests/
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)        0 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/_tests/__init__.py
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     1882 2023-04-06 16:38:03.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/_tests/test_widget.py
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     6680 2023-04-06 17:28:11.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/_widget.py
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)      320 2023-04-05 20:29:57.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/napari.yaml
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     1472 2023-04-06 15:27:23.000000 napari-segment-anything-0.1.0/src/napari_segment_anything/utils.py
+│ │ -drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 17:50:22.406062 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)     4817 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)      615 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)        1 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)       80 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)       82 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/requires.txt
+│ │ --rw-rw-r--   0 jordao    (1000) jordao    (1000)       24 2023-04-06 17:50:22.000000 napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/top_level.txt
+│ │ +drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)    11358 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.1/LICENSE
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)       96 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.1/MANIFEST.in
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     4805 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/PKG-INFO
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     3489 2023-04-06 18:38:18.000000 napari-segment-anything-0.1.1/README.md
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)      180 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.1/pyproject.toml
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     1829 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/setup.cfg
+│ │ +drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 23:35:07.260972 napari-segment-anything-0.1.1/src/
+│ │ +drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/src/napari_segment_anything/
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)      102 2023-04-06 23:34:53.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/__init__.py
+│ │ +drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/src/napari_segment_anything/_tests/
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)        0 2023-04-05 19:05:13.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/_tests/__init__.py
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     1882 2023-04-06 18:38:18.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/_tests/test_widget.py
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     6747 2023-04-06 18:38:18.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/_widget.py
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)      320 2023-04-05 20:29:57.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/napari.yaml
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     1806 2023-04-06 23:34:27.000000 napari-segment-anything-0.1.1/src/napari_segment_anything/utils.py
+│ │ +drwxrwxr-x   0 jordao    (1000) jordao    (1000)        0 2023-04-06 23:35:07.264972 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)     4805 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)      615 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)        1 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)       80 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)      111 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 jordao    (1000) jordao    (1000)       24 2023-04-06 23:35:07.000000 napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/top_level.txt
+│ │   --- napari-segment-anything-0.1.0/LICENSE
+│ ├── +++ napari-segment-anything-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- napari-segment-anything-0.1.0/PKG-INFO
+│ ├── +++ napari-segment-anything-0.1.1/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: napari-segment-anything
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Napari plugin of Segment Anything Model (SAM)
+│ │  Home-page: https://github.com/jookuma/napari-segment-anything
+│ │  Author: Jordao Bragantini
+│ │  Author-email: jordao.bragantini@czbiohub.org
+│ │  License: Apache-2.0
+│ │  Project-URL: Bug Tracker, https://github.com/jookuma/napari-segment-anything/issues
+│ │  Project-URL: Documentation, https://github.com/jookuma/napari-segment-anything#README.md
+│ │ @@ -49,25 +49,25 @@
+│ │  This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  You can install `napari-segment-anything` via [pip]:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install napari-segment-anything
+│ │  ```
+│ │  
+│ │ -To install the latest development version :
+│ │ +We recommend installing the latest development version because this package is being developed:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install git+https://github.com/jookuma/napari-segment-anything.git
+│ │  ```
+│ │  
+│ │ +IMPORTANT: `napari` won't work if you don't have `pyqt5` or `pyside2` installed.
+│ │ +
+│ │  ## Instructions
+│ │  
+│ │  - Interactions are done on the "SAM points" and "SAM box" layers using the existing functionalities of napari. Only rectangle shapes trigger the network prediction.
+│ │  - For points supervision, left clicks are positive cues (object) and right clicks are negative (background).
+│ │  - Press the "Confirm Annot." button (or the "C" key) to propagate the current segmentation mask to the label image.
+│ │  - Use the napari labels layer features to delete or edit already confirmed labels.
+│ │   --- napari-segment-anything-0.1.0/README.md
+│ ├── +++ napari-segment-anything-0.1.1/README.md
+│ │┄ Files 5% similar despite different names
+│ │ @@ -20,25 +20,25 @@
+│ │  This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  You can install `napari-segment-anything` via [pip]:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install napari-segment-anything
+│ │  ```
+│ │  
+│ │ -To install the latest development version :
+│ │ +We recommend installing the latest development version because this package is being developed:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install git+https://github.com/jookuma/napari-segment-anything.git
+│ │  ```
+│ │  
+│ │ +IMPORTANT: `napari` won't work if you don't have `pyqt5` or `pyside2` installed.
+│ │ +
+│ │  ## Instructions
+│ │  
+│ │  - Interactions are done on the "SAM points" and "SAM box" layers using the existing functionalities of napari. Only rectangle shapes trigger the network prediction.
+│ │  - For points supervision, left clicks are positive cues (object) and right clicks are negative (background).
+│ │  - Press the "Confirm Annot." button (or the "C" key) to propagate the current segmentation mask to the label image.
+│ │  - Use the napari labels layer features to delete or edit already confirmed labels.
+│ │   --- napari-segment-anything-0.1.0/setup.cfg
+│ ├── +++ napari-segment-anything-0.1.1/setup.cfg
+│ │┄ Files 9% similar despite different names
+│ │ @@ -28,17 +28,20 @@
+│ │  	Source Code = https://github.com/jookuma/napari-segment-anything
+│ │  	User Support = https://github.com/jookuma/napari-segment-anything/issues
+│ │  
+│ │  [options]
+│ │  packages = find:
+│ │  install_requires = 
+│ │  	numpy
+│ │ -	magicgui
+│ │ -	qtpy
+│ │  	torch
+│ │ +	torchvision
+│ │ +	segment-anything
+│ │ +	qtpy
+│ │ +	magicgui
+│ │ +	napari
+│ │  python_requires = >=3.8
+│ │  include_package_data = True
+│ │  package_dir = 
+│ │  	=src
+│ │  
+│ │  [options.packages.find]
+│ │  where = src
+│ │ @@ -49,15 +52,14 @@
+│ │  
+│ │  [options.extras_require]
+│ │  testing = 
+│ │  	tox
+│ │  	pytest  # https://docs.pytest.org/en/latest/contents.html
+│ │  	pytest-cov  # https://pytest-cov.readthedocs.io/en/latest/
+│ │  	pytest-qt  # https://pytest-qt.readthedocs.io/en/latest/
+│ │ -	napari
+│ │  	pyqt5
+│ │  
+│ │  [options.package_data]
+│ │  * = *.yaml
+│ │  
+│ │  [egg_info]
+│ │  tag_build =
+│ │   --- napari-segment-anything-0.1.0/src/napari_segment_anything/_tests/test_widget.py
+│ ├── +++ napari-segment-anything-0.1.1/src/napari_segment_anything/_tests/test_widget.py
+│ │┄ Files identical despite different names
+│ │   --- napari-segment-anything-0.1.0/src/napari_segment_anything/_widget.py
+│ ├── +++ napari-segment-anything-0.1.1/src/napari_segment_anything/_widget.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -36,15 +36,17 @@
+│ │          self.append(self._model_type_widget)
+│ │  
+│ │          self._im_layer_widget = create_widget(annotation=Image, label="Image:")
+│ │          self._im_layer_widget.changed.connect(self._load_image)
+│ │          self.append(self._im_layer_widget)
+│ │  
+│ │          self._confirm_mask_btn = PushButton(
+│ │ -            text="Confirm Annot.", enabled=False
+│ │ +            text="Confirm Annot.",
+│ │ +            enabled=False,
+│ │ +            tooltip="Press C to confirm annotation.",
+│ │          )
+│ │          self._confirm_mask_btn.changed.connect(self._on_confirm_mask)
+│ │          self.append(self._confirm_mask_btn)
+│ │  
+│ │          self._auto_segm_btn = PushButton(text="Auto. Segm.")
+│ │          self._auto_segm_btn.changed.connect(self._on_auto_run)
+│ │          self.append(self._auto_segm_btn)
+│ │   --- napari-segment-anything-0.1.0/src/napari_segment_anything/utils.py
+│ ├── +++ napari-segment-anything-0.1.1/src/napari_segment_anything/utils.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,9 +1,11 @@
+│ │  import urllib.request
+│ │ +import warnings
+│ │  from pathlib import Path
+│ │ +from typing import Optional
+│ │  
+│ │  SAM_WEIGHTS_URL = {
+│ │      "default": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth",
+│ │      "vit_h": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth",
+│ │      "vit_l": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth",
+│ │      "vit_b": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth",
+│ │  }
+│ │ @@ -16,25 +18,34 @@
+│ │      total_size_mb = total_size / 1024 / 1024
+│ │      print(
+│ │          f"Download progress: {percent:.1f}% ({downloaded_mb:.1f}/{total_size_mb:.1f} MB)",
+│ │          end="\r",
+│ │      )
+│ │  
+│ │  
+│ │ -def get_weights_path(model_type: str) -> Path:
+│ │ +def get_weights_path(model_type: str) -> Optional[Path]:
+│ │      """Returns the path to the weight of a given model architecture."""
+│ │      weight_url = SAM_WEIGHTS_URL[model_type]
+│ │  
+│ │      cache_dir = Path.home() / ".cache/napari-segment-anything"
+│ │      cache_dir.mkdir(parents=True, exist_ok=True)
+│ │  
+│ │      weight_path = cache_dir / weight_url.split("/")[-1]
+│ │  
+│ │      # Download the weights if they don't exist
+│ │      if not weight_path.exists():
+│ │          print(f"Downloading {weight_url} to {weight_path} ...")
+│ │ -        urllib.request.urlretrieve(
+│ │ -            weight_url, str(weight_path), reporthook=_report_hook
+│ │ -        )
+│ │ -        print("\rDownload complete.                           ")
+│ │ +        try:
+│ │ +            urllib.request.urlretrieve(
+│ │ +                weight_url, weight_path, reporthook=_report_hook
+│ │ +            )
+│ │ +        except (
+│ │ +            urllib.error.HTTPError,
+│ │ +            urllib.error.URLError,
+│ │ +            urllib.error.ContentTooShortError,
+│ │ +        ) as e:
+│ │ +            warnings.warn(f"Error downloading {weight_url}: {e}")
+│ │ +            return None
+│ │ +        else:
+│ │ +            print("\rDownload complete.                            ")
+│ │  
+│ │      return weight_path
+│ │   --- napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/PKG-INFO
+│ ├── +++ napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/PKG-INFO
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: napari-segment-anything
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Napari plugin of Segment Anything Model (SAM)
+│ │  Home-page: https://github.com/jookuma/napari-segment-anything
+│ │  Author: Jordao Bragantini
+│ │  Author-email: jordao.bragantini@czbiohub.org
+│ │  License: Apache-2.0
+│ │  Project-URL: Bug Tracker, https://github.com/jookuma/napari-segment-anything/issues
+│ │  Project-URL: Documentation, https://github.com/jookuma/napari-segment-anything#README.md
+│ │ @@ -49,25 +49,25 @@
+│ │  This [napari] plugin was generated with [Cookiecutter] using [@napari]'s [cookiecutter-napari-plugin] template.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  You can install `napari-segment-anything` via [pip]:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install napari-segment-anything
+│ │  ```
+│ │  
+│ │ -To install the latest development version :
+│ │ +We recommend installing the latest development version because this package is being developed:
+│ │  
+│ │  ```bash
+│ │ -pip install git+https://github.com/facebookresearch/segment-anything.git
+│ │  pip install git+https://github.com/jookuma/napari-segment-anything.git
+│ │  ```
+│ │  
+│ │ +IMPORTANT: `napari` won't work if you don't have `pyqt5` or `pyside2` installed.
+│ │ +
+│ │  ## Instructions
+│ │  
+│ │  - Interactions are done on the "SAM points" and "SAM box" layers using the existing functionalities of napari. Only rectangle shapes trigger the network prediction.
+│ │  - For points supervision, left clicks are positive cues (object) and right clicks are negative (background).
+│ │  - Press the "Confirm Annot." button (or the "C" key) to propagate the current segmentation mask to the label image.
+│ │  - Use the napari labels layer features to delete or edit already confirmed labels.
+│ │   --- napari-segment-anything-0.1.0/src/napari_segment_anything.egg-info/SOURCES.txt
+│ ├── +++ napari-segment-anything-0.1.1/src/napari_segment_anything.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

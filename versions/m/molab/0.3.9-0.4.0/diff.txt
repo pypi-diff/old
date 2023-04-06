@@ -1,0 +1,278 @@
+--- tmp/molab-0.3.9.tar.gz
++++ tmp/molab-0.4.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "molab-0.3.9.tar", last modified: Fri Mar 17 01:31:55 2023, max compression
+│ +gzip compressed data, was "molab-0.4.0.tar", last modified: Thu Apr  6 23:40:53 2023, max compression
+│   --- molab-0.3.9.tar
+├── +++ molab-0.4.0.tar
+│ ├── file list
+│ │ @@ -1,24 +1,28 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-17 01:31:55.814287 molab-0.3.9/
+│ │ --rw-r--r--   0 root         (0) root         (0)      786 2023-03-17 01:31:55.814287 molab-0.3.9/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      275 2023-03-17 01:31:40.000000 molab-0.3.9/README.md
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-17 01:31:55.809286 molab-0.3.9/molab/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      158 2023-03-17 01:31:40.000000 molab-0.3.9/molab/__init__.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    18516 2023-03-17 01:31:40.000000 molab-0.3.9/molab/configure.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)    15531 2023-03-17 01:31:40.000000 molab-0.3.9/molab/deploy.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     4922 2023-03-17 01:31:40.000000 molab-0.3.9/molab/destroy.py
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     2593 2023-03-17 01:31:40.000000 molab-0.3.9/molab/helpers.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-17 01:31:55.813287 molab-0.3.9/molab/template_files/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      814 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/admin_class_config.json
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      813 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/automation_class_config.json
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      813 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/install_class_config.json
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      518 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/instance_provisioning_payload.json
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      191 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/platform_setup.json
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      813 2023-03-17 01:31:40.000000 molab-0.3.9/molab/template_files/troubleshooting_class_config.json
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-03-17 01:31:55.811287 molab-0.3.9/molab.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)      786 2023-03-17 01:31:55.000000 molab-0.3.9/molab.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      543 2023-03-17 01:31:55.000000 molab-0.3.9/molab.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-03-17 01:31:55.000000 molab-0.3.9/molab.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       57 2023-03-17 01:31:55.000000 molab-0.3.9/molab.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        6 2023-03-17 01:31:55.000000 molab-0.3.9/molab.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-03-17 01:31:55.814287 molab-0.3.9/setup.cfg
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     1229 2023-03-17 01:31:40.000000 molab-0.3.9/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 23:40:53.653382 molab-0.4.0/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      786 2023-04-06 23:40:53.653382 molab-0.4.0/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      275 2023-04-06 23:40:36.000000 molab-0.4.0/README.md
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 23:40:53.647382 molab-0.4.0/molab/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      181 2023-04-06 23:40:36.000000 molab-0.4.0/molab/__init__.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    18520 2023-04-06 23:40:36.000000 molab-0.4.0/molab/configure.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     2440 2023-04-06 23:40:36.000000 molab-0.4.0/molab/courses.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    15533 2023-04-06 23:40:36.000000 molab-0.4.0/molab/deploy.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     4922 2023-04-06 23:40:36.000000 molab-0.4.0/molab/destroy.py
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    20029 2023-04-06 23:40:36.000000 molab-0.4.0/molab/helpers.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 23:40:53.653382 molab-0.4.0/molab/template_files/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)    38695 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/MorpheusImage.png
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      835 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/admin_class_config.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      834 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/automation_class_config.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      353 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/git_auth_type_pat.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      834 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/install_class_config.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      518 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/instance_provisioning_payload.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1124 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/manual_option_list_aws_regions.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      191 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/platform_setup.json
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      834 2023-04-06 23:40:36.000000 molab-0.4.0/molab/template_files/troubleshooting_class_config.json
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 23:40:53.649382 molab-0.4.0/molab.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      786 2023-04-06 23:40:53.000000 molab-0.4.0/molab.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      700 2023-04-06 23:40:53.000000 molab-0.4.0/molab.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 23:40:53.000000 molab-0.4.0/molab.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       77 2023-04-06 23:40:53.000000 molab-0.4.0/molab.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        6 2023-04-06 23:40:53.000000 molab-0.4.0/molab.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 23:40:53.653382 molab-0.4.0/setup.cfg
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     1248 2023-04-06 23:40:36.000000 molab-0.4.0/setup.py
+│ │   --- molab-0.3.9/PKG-INFO
+│ ├── +++ molab-0.4.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: molab
+│ │ -Version: 0.3.9
+│ │ +Version: 0.4.0
+│ │  Summary: molab is a python package for configuring Morpheus training lab environments.
+│ │  Home-page: https://gitlab.com/morpheus_training/molab
+│ │  Author: Sean Jabro
+│ │  Author-email: sean.jabro@outlook.com
+│ │  License: MIT
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- molab-0.3.9/molab/configure.py
+│ ├── +++ molab-0.4.0/molab/configure.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -370,8 +370,11 @@
+│ │      """
+│ │      endpoint = "/api/instances"
+│ │      resp = requests.get(f'{url}{endpoint}/{controller_id}',headers=headers,verify=False)
+│ │      tags = resp.json()["instance"]["tags"]
+│ │      for tag in tags:
+│ │          if tag["name"] == tag_name:
+│ │              ids = tag["value"]
+│ │ -    return(json.loads(ids))
+│ │ +    return(json.loads(ids))
+│ │ +
+│ │ +
+│ │ +
+│ │   --- molab-0.3.9/molab/deploy.py
+│ ├── +++ molab-0.4.0/molab/deploy.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -173,15 +173,15 @@
+│ │          put = requests.put(f'{url}{endpoint}/{cloud_id}', headers=headers, verify=False, data=body).json()
+│ │      except Exception as e:
+│ │           logger.error(f'Something went wrong {e}')
+│ │      return(put)
+│ │  
+│ │  def deploy_class_labs(url,headers,payloads):
+│ │      """
+│ │ -    The deploy_class_labs function takes a list of payloads and deploys them to the AS instance.
+│ │ +    The deploy_class_labs function takes a list of payloads and deploys them to the XaaS instance.
+│ │      It returns a list of instances that were deployed.
+│ │      
+│ │      :param url: Specify the url of the instance endpoint
+│ │      :param headers: Pass in the authentication token
+│ │      :param payloads: Pass in the payloads that were generated by the generate_payloads function
+│ │      :return: A list of instance ids
+│ │      :doc-author: Trelent
+│ │   --- molab-0.3.9/molab/destroy.py
+│ ├── +++ molab-0.4.0/molab/destroy.py
+│ │┄ Files identical despite different names
+│ │   --- molab-0.3.9/molab/template_files/admin_class_config.json
+│ ├── +++ molab-0.4.0/molab/template_files/admin_class_config.json
+│ │┄ Files 2% similar despite different names
+│ │ ├── Pretty-printed
+│ │ │┄ Similarity: 0.9642857142857143%
+│ │ │┄ Differences: {"'is_test'": 'None'}
+│ │ │ @@ -7,14 +7,15 @@
+│ │ │      "deploy_single_node": "true",
+│ │ │      "generate_iam_user": "true",
+│ │ │      "iam_user_group": null,
+│ │ │      "install_3node": "false",
+│ │ │      "install_aio": "true",
+│ │ │      "install_percona": "false",
+│ │ │      "is_lab": "true",
+│ │ │ +    "is_test": null,
+│ │ │      "lab_name": null,
+│ │ │      "local_admin_name": null,
+│ │ │      "local_admin_password": null,
+│ │ │      "morpheus_version": null,
+│ │ │      "os": "ubuntu",
+│ │ │      "rds_master_password": null,
+│ │ │      "rds_master_user": null,
+│ │   --- molab-0.3.9/molab/template_files/automation_class_config.json
+│ ├── +++ molab-0.4.0/molab/template_files/automation_class_config.json
+│ │┄ Files 10% similar despite different names
+│ │ ├── Pretty-printed
+│ │ │┄ Similarity: 0.9642857142857143%
+│ │ │┄ Differences: {"'is_test'": 'None'}
+│ │ │ @@ -7,14 +7,15 @@
+│ │ │      "deploy_single_node": "true",
+│ │ │      "generate_iam_user": "true",
+│ │ │      "iam_user_group": "",
+│ │ │      "install_3node": "false",
+│ │ │      "install_aio": "true",
+│ │ │      "install_percona": "false",
+│ │ │      "is_lab": "true",
+│ │ │ +    "is_test": null,
+│ │ │      "lab_name": null,
+│ │ │      "local_admin_name": null,
+│ │ │      "local_admin_password": null,
+│ │ │      "morpheus_version": null,
+│ │ │      "os": "ubuntu",
+│ │ │      "rds_master_password": null,
+│ │ │      "rds_master_user": null,
+│ │   --- molab-0.3.9/molab/template_files/install_class_config.json
+│ ├── +++ molab-0.4.0/molab/template_files/install_class_config.json
+│ │┄ Files 11% similar despite different names
+│ │ ├── Pretty-printed
+│ │ │┄ Similarity: 0.9642857142857143%
+│ │ │┄ Differences: {"'is_test'": 'None'}
+│ │ │ @@ -7,14 +7,15 @@
+│ │ │      "deploy_single_node": "true",
+│ │ │      "generate_iam_user": "true",
+│ │ │      "iam_user_group": null,
+│ │ │      "install_3node": "false",
+│ │ │      "install_aio": "false",
+│ │ │      "install_percona": "false",
+│ │ │      "is_lab": "true",
+│ │ │ +    "is_test": null,
+│ │ │      "lab_name": null,
+│ │ │      "local_admin_name": null,
+│ │ │      "local_admin_password": null,
+│ │ │      "morpheus_version": null,
+│ │ │      "os": "ubuntu",
+│ │ │      "rds_master_password": null,
+│ │ │      "rds_master_user": null,
+│ │   --- molab-0.3.9/molab/template_files/instance_provisioning_payload.json
+│ ├── +++ molab-0.4.0/molab/template_files/instance_provisioning_payload.json
+│ │┄ Files identical despite different names
+│ │   --- molab-0.3.9/molab/template_files/troubleshooting_class_config.json
+│ ├── +++ molab-0.4.0/molab/template_files/troubleshooting_class_config.json
+│ │┄ Files 11% similar despite different names
+│ │ ├── Pretty-printed
+│ │ │┄ Similarity: 0.9642857142857143%
+│ │ │┄ Differences: {"'is_test'": 'None'}
+│ │ │ @@ -7,14 +7,15 @@
+│ │ │      "deploy_single_node": "true",
+│ │ │      "generate_iam_user": "true",
+│ │ │      "iam_user_group": null,
+│ │ │      "install_3node": "false",
+│ │ │      "install_aio": "true",
+│ │ │      "install_percona": "false",
+│ │ │      "is_lab": "true",
+│ │ │ +    "is_test": null,
+│ │ │      "lab_name": null,
+│ │ │      "local_admin_name": null,
+│ │ │      "local_admin_password": null,
+│ │ │      "morpheus_version": null,
+│ │ │      "os": "ubuntu",
+│ │ │      "rds_master_password": null,
+│ │ │      "rds_master_user": null,
+│ │   --- molab-0.3.9/molab.egg-info/PKG-INFO
+│ ├── +++ molab-0.4.0/molab.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: molab
+│ │ -Version: 0.3.9
+│ │ +Version: 0.4.0
+│ │  Summary: molab is a python package for configuring Morpheus training lab environments.
+│ │  Home-page: https://gitlab.com/morpheus_training/molab
+│ │  Author: Sean Jabro
+│ │  Author-email: sean.jabro@outlook.com
+│ │  License: MIT
+│ │  Classifier: Development Status :: 4 - Beta
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- molab-0.3.9/molab.egg-info/SOURCES.txt
+│ ├── +++ molab-0.4.0/molab.egg-info/SOURCES.txt
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,18 +1,22 @@
+│ │  README.md
+│ │  setup.py
+│ │  molab/__init__.py
+│ │  molab/configure.py
+│ │ +molab/courses.py
+│ │  molab/deploy.py
+│ │  molab/destroy.py
+│ │  molab/helpers.py
+│ │  molab.egg-info/PKG-INFO
+│ │  molab.egg-info/SOURCES.txt
+│ │  molab.egg-info/dependency_links.txt
+│ │  molab.egg-info/requires.txt
+│ │  molab.egg-info/top_level.txt
+│ │ +molab/template_files/MorpheusImage.png
+│ │  molab/template_files/admin_class_config.json
+│ │  molab/template_files/automation_class_config.json
+│ │ +molab/template_files/git_auth_type_pat.json
+│ │  molab/template_files/install_class_config.json
+│ │  molab/template_files/instance_provisioning_payload.json
+│ │ +molab/template_files/manual_option_list_aws_regions.json
+│ │  molab/template_files/platform_setup.json
+│ │  molab/template_files/troubleshooting_class_config.json
+│ │   --- molab-0.3.9/setup.py
+│ ├── +++ molab-0.4.0/setup.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -10,23 +10,23 @@
+│ │  
+│ │  setup(
+│ │      author="Sean Jabro",
+│ │      author_email="sean.jabro@outlook.com",
+│ │      name='molab',
+│ │      license="MIT",
+│ │      description='molab is a python package for configuring Morpheus training lab environments.',
+│ │ -    version='0.3.9',
+│ │ +    version='0.4.0',
+│ │      long_description=long_description,
+│ │      long_description_content_type='text/markdown',
+│ │      url='https://gitlab.com/morpheus_training/molab',
+│ │      packages=find_packages() + find_packages(where='template_files'),
+│ │      package_dir={'template_files': 'template_files'},
+│ │ -    package_data={'molab': ['template_files/*.json']},
+│ │ +    package_data={'molab': ['template_files/*.*']},
+│ │      python_requires=">=3.8",
+│ │ -    install_requires=["urllib3","requests","requests_futures","loguru","morpheus-cypher"],
+│ │ +    install_requires=["urllib3","requests","requests_futures","loguru","morpheus-cypher","importlib_resources"],
+│ │      classifiers=[
+│ │          # Trove classifiers
+│ │          # (https://pypi.python.org/pypi?%3Aaction=list_classifiers)
+│ │          'Development Status :: 4 - Beta',
+│ │          'License :: OSI Approved :: MIT License',
+│ │          'Programming Language :: Python',
+│ │          'Programming Language :: Python :: 3.9',
