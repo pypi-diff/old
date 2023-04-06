@@ -1,6 +1,6 @@
 processes the pypi
 [changelog](https://warehouse.pypa.io/api-reference/xml-rpc.html) and if a new release for
-a package is pushlished, attempts to create diffs between old and new version
+a package is published, attempts to create diffs between old and new version
 using diffoscope, output formats:
 
  * html
