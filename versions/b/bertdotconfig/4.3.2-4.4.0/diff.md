@@ -1,0 +1,221 @@
+# Comparing `tmp/bertdotconfig-4.3.2.tar.gz` & `tmp/bertdotconfig-4.4.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "bertdotconfig-4.3.2.tar", last modified: Thu Apr  6 20:03:54 2023, max compression
++gzip compressed data, was "bertdotconfig-4.4.0.tar", last modified: Thu Apr  6 20:28:45 2023, max compression
+```
+
+## Comparing `bertdotconfig-4.3.2.tar` & `bertdotconfig-4.4.0.tar`
+
+### file list
+
+```diff
+@@ -1,35 +1,35 @@
+-drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:03:54.098660 bertdotconfig-4.3.2/
+--rw-r--r--   0 etejeda    (501) staff       (20)     1311 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/.gitignore
+--rw-r--r--   0 etejeda    (501) staff       (20)      175 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/AUTHORS.rst
+--rw-r--r--   0 etejeda    (501) staff       (20)     1097 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/LICENSE
+--rw-r--r--   0 etejeda    (501) staff       (20)      344 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/MANIFEST.in
+--rw-r--r--   0 etejeda    (501) staff       (20)     3821 2023-04-06 20:03:54.098871 bertdotconfig-4.3.2/PKG-INFO
+--rw-r--r--   0 etejeda    (501) staff       (20)     3152 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/README.md
+-drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:03:54.092847 bertdotconfig-4.3.2/bertdotconfig/
+--rw-r--r--   0 etejeda    (501) staff       (20)     1482 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/bertdotconfig/__init__.py
+--rw-r--r--   0 etejeda    (501) staff       (20)     3800 2023-04-06 20:02:02.000000 bertdotconfig-4.3.2/bertdotconfig/configloader.py
+--rw-r--r--   0 etejeda    (501) staff       (20)     3222 2023-03-07 15:07:04.000000 bertdotconfig-4.3.2/bertdotconfig/configutils.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      813 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/bertdotconfig/logger.py
+--rw-r--r--   0 etejeda    (501) staff       (20)     4591 2023-01-17 22:35:56.000000 bertdotconfig-4.3.2/bertdotconfig/superconf.py
+-drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:03:54.095015 bertdotconfig-4.3.2/bertdotconfig.egg-info/
+--rw-r--r--   0 etejeda    (501) staff       (20)     3821 2023-04-06 20:03:53.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/PKG-INFO
+--rw-r--r--   0 etejeda    (501) staff       (20)      659 2023-04-06 20:03:54.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/SOURCES.txt
+--rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-04-06 20:03:53.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/dependency_links.txt
+--rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-01-09 20:03:01.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/not-zip-safe
+--rw-r--r--   0 etejeda    (501) staff       (20)       90 2023-04-06 20:03:53.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/requires.txt
+--rw-r--r--   0 etejeda    (501) staff       (20)       14 2023-04-06 20:03:53.000000 bertdotconfig-4.3.2/bertdotconfig.egg-info/top_level.txt
+-drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:03:54.098306 bertdotconfig-4.3.2/examples/
+--rw-r--r--   0 etejeda    (501) staff       (20)     3065 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/README.md
+--rw-r--r--   0 etejeda    (501) staff       (20)      162 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/example1.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      175 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/example2.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      165 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/example3.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      194 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/example4.py
+--rw-r--r--   0 etejeda    (501) staff       (20)       54 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/myconfig1.yaml
+--rw-r--r--   0 etejeda    (501) staff       (20)      234 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/myconfig2.yaml
+--rw-r--r--   0 etejeda    (501) staff       (20)      435 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/myconfig3.yaml
+--rw-r--r--   0 etejeda    (501) staff       (20)      208 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/examples/myconfig4.yaml
+--rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/requirements.txt
+--rw-r--r--   0 etejeda    (501) staff       (20)     1091 2023-04-06 20:03:54.099725 bertdotconfig-4.3.2/setup.cfg
+--rw-r--r--   0 etejeda    (501) staff       (20)       36 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/setup.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      253 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/test.py
+--rw-r--r--   0 etejeda    (501) staff       (20)      315 2023-01-09 20:02:16.000000 bertdotconfig-4.3.2/tox.ini
++drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:28:45.461822 bertdotconfig-4.4.0/
++-rw-r--r--   0 etejeda    (501) staff       (20)     1311 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/.gitignore
++-rw-r--r--   0 etejeda    (501) staff       (20)      175 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/AUTHORS.rst
++-rw-r--r--   0 etejeda    (501) staff       (20)     1097 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/LICENSE
++-rw-r--r--   0 etejeda    (501) staff       (20)      344 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/MANIFEST.in
++-rw-r--r--   0 etejeda    (501) staff       (20)     3821 2023-04-06 20:28:45.462158 bertdotconfig-4.4.0/PKG-INFO
++-rw-r--r--   0 etejeda    (501) staff       (20)     3152 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/README.md
++drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:28:45.449163 bertdotconfig-4.4.0/bertdotconfig/
++-rw-r--r--   0 etejeda    (501) staff       (20)     1289 2023-04-06 20:26:06.000000 bertdotconfig-4.4.0/bertdotconfig/__init__.py
++-rw-r--r--   0 etejeda    (501) staff       (20)     3800 2023-04-06 20:02:02.000000 bertdotconfig-4.4.0/bertdotconfig/configloader.py
++-rw-r--r--   0 etejeda    (501) staff       (20)     3222 2023-03-07 15:07:04.000000 bertdotconfig-4.4.0/bertdotconfig/configutils.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      813 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/bertdotconfig/logger.py
++-rw-r--r--   0 etejeda    (501) staff       (20)     4591 2023-01-17 22:35:56.000000 bertdotconfig-4.4.0/bertdotconfig/superconf.py
++drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:28:45.454028 bertdotconfig-4.4.0/bertdotconfig.egg-info/
++-rw-r--r--   0 etejeda    (501) staff       (20)     3821 2023-04-06 20:28:45.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/PKG-INFO
++-rw-r--r--   0 etejeda    (501) staff       (20)      659 2023-04-06 20:28:45.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/SOURCES.txt
++-rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-04-06 20:28:45.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/dependency_links.txt
++-rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-01-09 20:03:01.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/not-zip-safe
++-rw-r--r--   0 etejeda    (501) staff       (20)       90 2023-04-06 20:28:45.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/requires.txt
++-rw-r--r--   0 etejeda    (501) staff       (20)       14 2023-04-06 20:28:45.000000 bertdotconfig-4.4.0/bertdotconfig.egg-info/top_level.txt
++drwxr-xr-x   0 etejeda    (501) staff       (20)        0 2023-04-06 20:28:45.461192 bertdotconfig-4.4.0/examples/
++-rw-r--r--   0 etejeda    (501) staff       (20)     3065 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/README.md
++-rw-r--r--   0 etejeda    (501) staff       (20)      162 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/example1.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      175 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/example2.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      165 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/example3.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      194 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/example4.py
++-rw-r--r--   0 etejeda    (501) staff       (20)       54 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/myconfig1.yaml
++-rw-r--r--   0 etejeda    (501) staff       (20)      234 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/myconfig2.yaml
++-rw-r--r--   0 etejeda    (501) staff       (20)      435 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/myconfig3.yaml
++-rw-r--r--   0 etejeda    (501) staff       (20)      208 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/examples/myconfig4.yaml
++-rw-r--r--   0 etejeda    (501) staff       (20)        1 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/requirements.txt
++-rw-r--r--   0 etejeda    (501) staff       (20)     1091 2023-04-06 20:28:45.463489 bertdotconfig-4.4.0/setup.cfg
++-rw-r--r--   0 etejeda    (501) staff       (20)       36 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/setup.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      253 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/test.py
++-rw-r--r--   0 etejeda    (501) staff       (20)      315 2023-01-09 20:02:16.000000 bertdotconfig-4.4.0/tox.ini
+```
+
+### Comparing `bertdotconfig-4.3.2/.gitignore` & `bertdotconfig-4.4.0/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/LICENSE` & `bertdotconfig-4.4.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/PKG-INFO` & `bertdotconfig-4.4.0/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: bertdotconfig
+-Version: 4.3.2
++Version: 4.4.0
+ Summary: Module for reading configuration files
+ Home-page: https://github.com/berttejeda/bert.config
+ Author: Engelbert Tejeda
+ Author-email: berttejeda@gmail.com
+ Keywords: yaml,configuration,config,file,python,settings
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+```
+
+### Comparing `bertdotconfig-4.3.2/README.md` & `bertdotconfig-4.4.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig/__init__.py` & `bertdotconfig-4.4.0/bertdotconfig/__init__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -12,26 +12,18 @@
+ 
+     self.logger = logger
+     self.initial_data = kwargs.get('initial_data', {'environment': os.environ})
+     self.verify_tls = kwargs.get('verify_tls', False)
+     self.webadapter = WebAdapter(verify_tls=self.verify_tls)
+     self.args = kwargs.get('args', {})
+     self.config_is_templatized = self.args.get('is_template', False) or kwargs.get('is_template', False)
+-    cwd = os.getcwd()
+-    config_dir_name = kwargs.get('config_dir_name', '')
+-    config_file_path_home = os.path.expanduser(
+-      "~/%s" % config_dir_name
+-    )
+-    self.config_file_search_paths = [
+-      cwd,
+-      os.path.expanduser('~'),
+-      config_file_path_home
+-    ]
+     self.extra_config_search_paths = kwargs.get('extra_config_search_paths', '')
+-    self.config_file_uri = kwargs.get('config_file_uri')
++    config_file_uri = kwargs.get('config_file_uri')
++    if config_file_uri:
++      self.config_file_uri = os.path.expanduser(config_file_uri)
+     self.req_keys = kwargs.get('req_keys', [])
+     self.failfast = kwargs.get('failfast',False)
+     self.data_key = kwargs.get('data_key')
+     self.templatized = kwargs.get('templatized')
+     self.config_file_auth_username = kwargs.get('auth_username')
+     self.config_file_auth_password = kwargs.get('auth_password')
+     self.configs_already_processed = []
+```
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig/configloader.py` & `bertdotconfig-4.4.0/bertdotconfig/configloader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig/configutils.py` & `bertdotconfig-4.4.0/bertdotconfig/configutils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig/logger.py` & `bertdotconfig-4.4.0/bertdotconfig/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig/superconf.py` & `bertdotconfig-4.4.0/bertdotconfig/superconf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig.egg-info/PKG-INFO` & `bertdotconfig-4.4.0/bertdotconfig.egg-info/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: bertdotconfig
+-Version: 4.3.2
++Version: 4.4.0
+ Summary: Module for reading configuration files
+ Home-page: https://github.com/berttejeda/bert.config
+ Author: Engelbert Tejeda
+ Author-email: berttejeda@gmail.com
+ Keywords: yaml,configuration,config,file,python,settings
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+```
+
+### Comparing `bertdotconfig-4.3.2/bertdotconfig.egg-info/SOURCES.txt` & `bertdotconfig-4.4.0/bertdotconfig.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/examples/README.md` & `bertdotconfig-4.4.0/examples/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `bertdotconfig-4.3.2/setup.cfg` & `bertdotconfig-4.4.0/setup.cfg`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ [metadata]
+ name = bertdotconfig
+ author = Engelbert Tejeda
+ author_email = berttejeda@gmail.com
+ description = Module for reading configuration files
+-version = 4.3.2
++version = 4.4.0
+ url = https://github.com/berttejeda/bert.config
+ keywords = 
+ 	yaml
+ 	configuration
+ 	config
+ 	file
+ 	python
+```
+

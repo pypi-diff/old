@@ -1,0 +1,581 @@
+--- tmp/trame-xterm-0.1.0.tar.gz
++++ tmp/trame-xterm-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "trame-xterm-0.1.0.tar", last modified: Thu Apr  6 00:21:01 2023, max compression
+│ +gzip compressed data, was "trame-xterm-0.1.1.tar", last modified: Thu Apr  6 20:31:30 2023, max compression
+│   --- trame-xterm-0.1.0.tar
+├── +++ trame-xterm-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,32 +1,32 @@
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1070 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/LICENSE
+│ │ --rw-r--r--   0 root         (0) root         (0)       31 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/MANIFEST.in
+│ │ --rw-r--r--   0 root         (0) root         (0)     1094 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      347 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/README.rst
+│ │ --rw-r--r--   0 root         (0) root         (0)      901 2023-04-06 00:21:01.316165 trame-xterm-0.1.0/setup.cfg
+│ │ --rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/setup.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame/
+│ │ --rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame/modules/
+│ │ --rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame/modules/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)       33 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame/modules/xterm.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame/widgets/
+│ │ --rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame/widgets/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)      135 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame/widgets/xterm.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame_xterm/
+│ │ --rw-r--r--   0 root         (0) root         (0)       93 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame_xterm/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame_xterm/module/
+│ │ --rw-r--r--   0 root         (0) root         (0)      236 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame_xterm/module/__init__.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame_xterm/module/serve/
+│ │ --rw-r--r--   0 root         (0) root         (0)     3425 2023-04-06 00:20:58.000000 trame-xterm-0.1.0/trame_xterm/module/serve/style.css
+│ │ --rw-r--r--   0 root         (0) root         (0)   396344 2023-04-06 00:20:58.000000 trame-xterm-0.1.0/trame_xterm/module/serve/trame-xterm.mjs
+│ │ --rw-r--r--   0 root         (0) root         (0)   278827 2023-04-06 00:20:58.000000 trame-xterm-0.1.0/trame_xterm/module/serve/trame-xterm.umd.js
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame_xterm/widgets/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame_xterm/widgets/__init__.py
+│ │ --rw-r--r--   0 root         (0) root         (0)     3278 2023-04-06 00:20:42.000000 trame-xterm-0.1.0/trame_xterm/widgets/xterm.py
+│ │ -drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 00:21:01.312165 trame-xterm-0.1.0/trame_xterm.egg-info/
+│ │ --rw-r--r--   0 root         (0) root         (0)     1094 2023-04-06 00:21:01.000000 trame-xterm-0.1.0/trame_xterm.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)      575 2023-04-06 00:21:01.000000 trame-xterm-0.1.0/trame_xterm.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 00:21:01.000000 trame-xterm-0.1.0/trame_xterm.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       23 2023-04-06 00:21:01.000000 trame-xterm-0.1.0/trame_xterm.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0) root         (0)       18 2023-04-06 00:21:01.000000 trame-xterm-0.1.0/trame_xterm.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.902161 trame-xterm-0.1.1/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1070 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/LICENSE
+│ │ +-rw-r--r--   0 root         (0) root         (0)       31 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/MANIFEST.in
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1317 2023-04-06 20:31:30.902161 trame-xterm-0.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      570 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/README.rst
+│ │ +-rw-r--r--   0 root         (0) root         (0)      901 2023-04-06 20:31:30.902161 trame-xterm-0.1.1/setup.cfg
+│ │ +-rw-r--r--   0 root         (0) root         (0)       38 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/setup.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame/modules/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame/modules/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)       33 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame/modules/xterm.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame/widgets/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       65 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame/widgets/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)      135 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame/widgets/xterm.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame_xterm/
+│ │ +-rw-r--r--   0 root         (0) root         (0)       93 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame_xterm/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame_xterm/module/
+│ │ +-rw-r--r--   0 root         (0) root         (0)      236 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame_xterm/module/__init__.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.902161 trame-xterm-0.1.1/trame_xterm/module/serve/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     3425 2023-04-06 20:31:26.000000 trame-xterm-0.1.1/trame_xterm/module/serve/style.css
+│ │ +-rw-r--r--   0 root         (0) root         (0)   396435 2023-04-06 20:31:26.000000 trame-xterm-0.1.1/trame_xterm/module/serve/trame-xterm.mjs
+│ │ +-rw-r--r--   0 root         (0) root         (0)   278873 2023-04-06 20:31:27.000000 trame-xterm-0.1.1/trame_xterm/module/serve/trame-xterm.umd.js
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.902161 trame-xterm-0.1.1/trame_xterm/widgets/
+│ │ +-rw-r--r--   0 root         (0) root         (0)        0 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame_xterm/widgets/__init__.py
+│ │ +-rw-r--r--   0 root         (0) root         (0)    14604 2023-04-06 20:31:12.000000 trame-xterm-0.1.1/trame_xterm/widgets/xterm.py
+│ │ +drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:31:30.898161 trame-xterm-0.1.1/trame_xterm.egg-info/
+│ │ +-rw-r--r--   0 root         (0) root         (0)     1317 2023-04-06 20:31:30.000000 trame-xterm-0.1.1/trame_xterm.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0) root         (0)      575 2023-04-06 20:31:30.000000 trame-xterm-0.1.1/trame_xterm.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 20:31:30.000000 trame-xterm-0.1.1/trame_xterm.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       23 2023-04-06 20:31:30.000000 trame-xterm-0.1.1/trame_xterm.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0) root         (0)       18 2023-04-06 20:31:30.000000 trame-xterm-0.1.1/trame_xterm.egg-info/top_level.txt
+│ │   --- trame-xterm-0.1.0/LICENSE
+│ ├── +++ trame-xterm-0.1.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- trame-xterm-0.1.0/PKG-INFO
+│ ├── +++ trame-xterm-0.1.1/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: trame-xterm
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Trame widget to expose xterm.js
+│ │  Author: Kitware Inc.
+│ │  License: MIT License
+│ │  Keywords: Python,Interactive,Web,Application,Framework
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -13,40 +13,36 @@
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: JavaScript
+│ │  Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │  Description-Content-Type: text/x-rst
+│ │  License-File: LICENSE
+│ │  
+│ │ -===========
+│ │  trame-xterm
+│ │ -===========
+│ │ +===========================================================
+│ │  
+│ │ -Trame widget to expose xterm.js
+│ │ +Trame widget to expose xterm.js. This library is compatible with both vue2 and vue3.
+│ │  
+│ │  
+│ │ -* Free software: MIT License
+│ │ +License
+│ │ +-----------------------------------------------------------
+│ │  
+│ │ +This library is distributed under the MIT License (Same as xterm.js)
+│ │ +
+│ │ +
+│ │ +Development
+│ │ +-----------------------------------------------------------
+│ │  
+│ │ -Installing
+│ │ -----------
+│ │  Build and install the Vue components
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │      cd vue-components
+│ │      npm i
+│ │      npm run build
+│ │      cd -
+│ │  
+│ │ -Install the application
+│ │ +Install the python library
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │      pip install -e .
+│ │ -
+│ │ -
+│ │ -
+│ │ -Features
+│ │ ---------
+│ │ -
+│ │ -* TODO
+│ │   --- trame-xterm-0.1.0/setup.cfg
+│ ├── +++ trame-xterm-0.1.1/setup.cfg
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = trame-xterm
+│ │ -version = 0.1.0
+│ │ +version = 0.1.1
+│ │  description = Trame widget to expose xterm.js
+│ │  long_description = file: README.rst
+│ │  long_description_content_type = text/x-rst
+│ │  author = Kitware Inc.
+│ │  license = MIT License
+│ │  classifiers = 
+│ │  	Development Status :: 5 - Production/Stable
+│ │   --- trame-xterm-0.1.0/trame_xterm/module/serve/style.css
+│ ├── +++ trame-xterm-0.1.1/trame_xterm/module/serve/style.css
+│ │┄ Files identical despite different names
+│ │   --- trame-xterm-0.1.0/trame_xterm/module/serve/trame-xterm.mjs
+│ ├── +++ trame-xterm-0.1.1/trame_xterm/module/serve/trame-xterm.mjs
+│ │┄ Files 0% similar despite different names
+│ │ @@ -3,20 +3,20 @@
+│ │    get exports() {
+│ │      return Q;
+│ │    },
+│ │    set exports(X) {
+│ │      Q = X;
+│ │    }
+│ │  };
+│ │ -(function(X, Z) {
+│ │ -  (function(J, G) {
+│ │ +(function(X, J) {
+│ │ +  (function(Z, G) {
+│ │      X.exports = G();
+│ │    })(self, function() {
+│ │      return (() => {
+│ │ -      var J = { 4567: (T, i, o) => {
+│ │ +      var Z = { 4567: (T, i, o) => {
+│ │          Object.defineProperty(i, "__esModule", { value: !0 }), i.AccessibilityManager = void 0;
+│ │          const h = o(9042), u = o(6114), d = o(9924), _ = o(3656), g = o(844), v = o(5596), c = o(9631);
+│ │          class e extends g.Disposable {
+│ │            constructor(n, t) {
+│ │              super(), this._terminal = n, this._renderService = t, this._liveRegionLineCount = 0, this._charsToConsume = [], this._charsToAnnounce = "", this._accessibilityTreeRoot = document.createElement("div"), this._accessibilityTreeRoot.classList.add("xterm-accessibility"), this._accessibilityTreeRoot.tabIndex = 0, this._rowContainer = document.createElement("div"), this._rowContainer.setAttribute("role", "list"), this._rowContainer.classList.add("xterm-accessibility-tree"), this._rowElements = [];
+│ │              for (let r = 0; r < this._terminal.rows; r++)
+│ │                this._rowElements[r] = this._createAccessibilityTreeNode(), this._rowContainer.appendChild(this._rowElements[r]);
+│ │ @@ -6112,15 +6112,15 @@
+│ │          };
+│ │        } }, G = {};
+│ │        function W(T) {
+│ │          var i = G[T];
+│ │          if (i !== void 0)
+│ │            return i.exports;
+│ │          var o = G[T] = { exports: {} };
+│ │ -        return J[T].call(o.exports, o, o.exports, W), o.exports;
+│ │ +        return Z[T].call(o.exports, o, o.exports, W), o.exports;
+│ │        }
+│ │        var Y = {};
+│ │        return (() => {
+│ │          var T = Y;
+│ │          Object.defineProperty(T, "__esModule", { value: !0 }), T.Terminal = void 0;
+│ │          const i = W(3236), o = W(9042), h = W(7975), u = W(7090), d = W(5741), _ = W(8285), g = ["cols", "rows"];
+│ │          T.Terminal = class {
+│ │ @@ -6344,22 +6344,22 @@
+│ │    get exports() {
+│ │      return ee;
+│ │    },
+│ │    set exports(X) {
+│ │      ee = X;
+│ │    }
+│ │  };
+│ │ -(function(X, Z) {
+│ │ -  (function(J, G) {
+│ │ +(function(X, J) {
+│ │ +  (function(Z, G) {
+│ │      X.exports = G();
+│ │    })(self, function() {
+│ │      return (() => {
+│ │ -      var J = {};
+│ │ +      var Z = {};
+│ │        return (() => {
+│ │ -        var G = J;
+│ │ +        var G = Z;
+│ │          Object.defineProperty(G, "__esModule", { value: !0 }), G.FitAddon = void 0, G.FitAddon = class {
+│ │            constructor() {
+│ │            }
+│ │            activate(W) {
+│ │              this._terminal = W;
+│ │            }
+│ │            dispose() {
+│ │ @@ -6377,15 +6377,15 @@
+│ │              const W = this._terminal._core, Y = W._renderService.dimensions;
+│ │              if (Y.css.cell.width === 0 || Y.css.cell.height === 0)
+│ │                return;
+│ │              const T = this._terminal.options.scrollback === 0 ? 0 : W.viewport.scrollBarWidth, i = window.getComputedStyle(this._terminal.element.parentElement), o = parseInt(i.getPropertyValue("height")), h = Math.max(0, parseInt(i.getPropertyValue("width"))), u = window.getComputedStyle(this._terminal.element), d = o - (parseInt(u.getPropertyValue("padding-top")) + parseInt(u.getPropertyValue("padding-bottom"))), _ = h - (parseInt(u.getPropertyValue("padding-right")) + parseInt(u.getPropertyValue("padding-left"))) - T;
+│ │              return { cols: Math.max(2, Math.floor(_ / Y.css.cell.width)), rows: Math.max(1, Math.floor(d / Y.css.cell.height)) };
+│ │            }
+│ │          };
+│ │ -      })(), J;
+│ │ +      })(), Z;
+│ │      })();
+│ │    });
+│ │  })(he);
+│ │  const ce = {
+│ │    bell: "onBell",
+│ │    binary: "onBinary",
+│ │    cursorMove: "onCursorMove",
+│ │ @@ -6405,41 +6405,45 @@
+│ │      },
+│ │      listen: {
+│ │        type: Array,
+│ │        default: () => ["input"]
+│ │      }
+│ │    },
+│ │    emits: [
+│ │ +    // lifecycle
+│ │ +    "opened",
+│ │ +    "disposed",
+│ │ +    // xterm.js
+│ │      "bell",
+│ │      "binary",
+│ │      "cursorMove",
+│ │      "input",
+│ │      "key",
+│ │      "lineFeed",
+│ │      "render",
+│ │      "writeParsed",
+│ │      "resize",
+│ │      "scroll",
+│ │      "selectionChange",
+│ │      "titleChange"
+│ │    ],
+│ │ -  setup(X, { emit: Z, expose: J }) {
+│ │ +  setup(X, { emit: J, expose: Z }) {
+│ │      const G = re(null), W = new Q.Terminal(X.options), Y = new ee.FitAddon(), T = new ResizeObserver(() => {
+│ │        Y.fit();
+│ │      });
+│ │      W.loadAddon(Y);
+│ │      for (let o = 0; o < X.listen.length; o++) {
+│ │        const h = X.listen[o], u = ce[h];
+│ │        h === "selectionChange" ? W[u](
+│ │ -        () => Z(h, {
+│ │ +        () => J(h, {
+│ │            hasSelection: W.hasSelection() ? 1 : 0,
+│ │            selection: W.getSelection(),
+│ │            position: W.getSelectionPosition()
+│ │          })
+│ │ -      ) : u && W[u]((d) => Z(h, d));
+│ │ +      ) : u && W[u]((d) => J(h, d));
+│ │      }
+│ │      const i = {
+│ │        // Skipped: open, dispose, loadAddon, +Experimental
+│ │        blur() {
+│ │          return W.blur();
+│ │        },
+│ │        focus() {
+│ │ @@ -6515,27 +6519,27 @@
+│ │          return W.clearTextureAtlas();
+│ │        },
+│ │        reset() {
+│ │          return W.reset();
+│ │        }
+│ │      };
+│ │      return ne(() => {
+│ │ -      W.open(G.value), T.observe(G.value);
+│ │ +      W.open(G.value), T.observe(G.value), J("opened");
+│ │      }), oe(() => {
+│ │ -      T.unobserve(G.value), W.dispose();
+│ │ -    }), J(i), { ...i, elem: G };
+│ │ +      T.unobserve(G.value), W.dispose(), J("disposed");
+│ │ +    }), Z(i), { ...i, elem: G };
+│ │    },
+│ │    template: `<div style="position: relative; width: 100%; height: 100%;" v-bind="$attrs">
+│ │        <div ref="elem" style="position: absolute; width: 100%; height: 100%;"></div>
+│ │      </div>
+│ │      `
+│ │  }, te = {
+│ │    XTerm: le
+│ │  };
+│ │  function _e(X) {
+│ │ -  Object.keys(te).forEach((Z) => {
+│ │ -    X.component(Z, te[Z]);
+│ │ +  Object.keys(te).forEach((J) => {
+│ │ +    X.component(J, te[J]);
+│ │    });
+│ │  }
+│ │  export {
+│ │    _e as install
+│ │  };
+│ │   --- trame-xterm-0.1.0/trame_xterm/module/serve/trame-xterm.umd.js
+│ ├── +++ trame-xterm-0.1.1/trame_xterm/module/serve/trame-xterm.umd.js
+│ │┄ Files 0% similar despite different names
+│ │ ├── js-beautify {}
+│ │ │ @@ -1,27 +1,27 @@
+│ │ │ -(function(Z, Q) {
+│ │ │ -    typeof exports == "object" && typeof module < "u" ? Q(exports, require("vue")) : typeof define == "function" && define.amd ? define(["exports", "vue"], Q) : (Z = typeof globalThis < "u" ? globalThis : Z || self, Q(Z.trame_xterm = {}, Z.Vue))
+│ │ │ -})(this, function(Z, Q) {
+│ │ │ +(function(Q, ee) {
+│ │ │ +    typeof exports == "object" && typeof module < "u" ? ee(exports, require("vue")) : typeof define == "function" && define.amd ? define(["exports", "vue"], ee) : (Q = typeof globalThis < "u" ? globalThis : Q || self, ee(Q.trame_xterm = {}, Q.Vue))
+│ │ │ +})(this, function(Q, ee) {
+│ │ │      "use strict";
+│ │ │      const le = "";
+│ │ │      var te = {},
+│ │ │          ne = {
+│ │ │              get exports() {
+│ │ │                  return te
+│ │ │              },
+│ │ │              set exports(X) {
+│ │ │                  te = X
+│ │ │              }
+│ │ │          };
+│ │ │ -    (function(X, ee) {
+│ │ │ -        (function(J, G) {
+│ │ │ +    (function(X, J) {
+│ │ │ +        (function(Z, G) {
+│ │ │              X.exports = G()
+│ │ │          })(self, function() {
+│ │ │              return (() => {
+│ │ │ -                var J = {
+│ │ │ +                var Z = {
+│ │ │                          4567: (T, i, o) => {
+│ │ │                              Object.defineProperty(i, "__esModule", {
+│ │ │                                  value: !0
+│ │ │                              }), i.AccessibilityManager = void 0;
+│ │ │                              const h = o(9042),
+│ │ │                                  u = o(6114),
+│ │ │                                  d = o(9924),
+│ │ │ @@ -7372,15 +7372,15 @@
+│ │ │  
+│ │ │                  function W(T) {
+│ │ │                      var i = G[T];
+│ │ │                      if (i !== void 0) return i.exports;
+│ │ │                      var o = G[T] = {
+│ │ │                          exports: {}
+│ │ │                      };
+│ │ │ -                    return J[T].call(o.exports, o, o.exports, W), o.exports
+│ │ │ +                    return Z[T].call(o.exports, o, o.exports, W), o.exports
+│ │ │                  }
+│ │ │                  var Y = {};
+│ │ │                  return (() => {
+│ │ │                      var T = Y;
+│ │ │                      Object.defineProperty(T, "__esModule", {
+│ │ │                          value: !0
+│ │ │                      }), T.Terminal = void 0;
+│ │ │ @@ -7622,22 +7622,22 @@
+│ │ │              get exports() {
+│ │ │                  return ie
+│ │ │              },
+│ │ │              set exports(X) {
+│ │ │                  ie = X
+│ │ │              }
+│ │ │          };
+│ │ │ -    (function(X, ee) {
+│ │ │ -        (function(J, G) {
+│ │ │ +    (function(X, J) {
+│ │ │ +        (function(Z, G) {
+│ │ │              X.exports = G()
+│ │ │          })(self, function() {
+│ │ │              return (() => {
+│ │ │ -                var J = {};
+│ │ │ +                var Z = {};
+│ │ │                  return (() => {
+│ │ │ -                    var G = J;
+│ │ │ +                    var G = Z;
+│ │ │                      Object.defineProperty(G, "__esModule", {
+│ │ │                          value: !0
+│ │ │                      }), G.FitAddon = void 0, G.FitAddon = class {
+│ │ │                          constructor() {}
+│ │ │                          activate(W) {
+│ │ │                              this._terminal = W
+│ │ │                          }
+│ │ │ @@ -7662,15 +7662,15 @@
+│ │ │                                  _ = h - (parseInt(u.getPropertyValue("padding-right")) + parseInt(u.getPropertyValue("padding-left"))) - T;
+│ │ │                              return {
+│ │ │                                  cols: Math.max(2, Math.floor(_ / Y.css.cell.width)),
+│ │ │                                  rows: Math.max(1, Math.floor(d / Y.css.cell.height))
+│ │ │                              }
+│ │ │                          }
+│ │ │                      }
+│ │ │ -                })(), J
+│ │ │ +                })(), Z
+│ │ │              })()
+│ │ │          })
+│ │ │      })(oe);
+│ │ │      const ae = {
+│ │ │              bell: "onBell",
+│ │ │              binary: "onBinary",
+│ │ │              cursorMove: "onCursorMove",
+│ │ │ @@ -7691,34 +7691,34 @@
+│ │ │                          type: Object
+│ │ │                      },
+│ │ │                      listen: {
+│ │ │                          type: Array,
+│ │ │                          default: () => ["input"]
+│ │ │                      }
+│ │ │                  },
+│ │ │ -                emits: ["bell", "binary", "cursorMove", "input", "key", "lineFeed", "render", "writeParsed", "resize", "scroll", "selectionChange", "titleChange"],
+│ │ │ +                emits: ["opened", "disposed", "bell", "binary", "cursorMove", "input", "key", "lineFeed", "render", "writeParsed", "resize", "scroll", "selectionChange", "titleChange"],
+│ │ │                  setup(X, {
+│ │ │ -                    emit: ee,
+│ │ │ -                    expose: J
+│ │ │ +                    emit: J,
+│ │ │ +                    expose: Z
+│ │ │                  }) {
+│ │ │ -                    const G = Q.ref(null),
+│ │ │ +                    const G = ee.ref(null),
+│ │ │                          W = new te.Terminal(X.options),
+│ │ │                          Y = new ie.FitAddon,
+│ │ │                          T = new ResizeObserver(() => {
+│ │ │                              Y.fit()
+│ │ │                          });
+│ │ │                      W.loadAddon(Y);
+│ │ │                      for (let o = 0; o < X.listen.length; o++) {
+│ │ │                          const h = X.listen[o],
+│ │ │                              u = ae[h];
+│ │ │ -                        h === "selectionChange" ? W[u](() => ee(h, {
+│ │ │ +                        h === "selectionChange" ? W[u](() => J(h, {
+│ │ │                              hasSelection: W.hasSelection() ? 1 : 0,
+│ │ │                              selection: W.getSelection(),
+│ │ │                              position: W.getSelectionPosition()
+│ │ │ -                        })) : u && W[u](d => ee(h, d))
+│ │ │ +                        })) : u && W[u](d => J(h, d))
+│ │ │                      }
+│ │ │                      const i = {
+│ │ │                          blur() {
+│ │ │                              return W.blur()
+│ │ │                          },
+│ │ │                          focus() {
+│ │ │                              return W.focus()
+│ │ │ @@ -7792,32 +7792,32 @@
+│ │ │                          clearTextureAtlas() {
+│ │ │                              return W.clearTextureAtlas()
+│ │ │                          },
+│ │ │                          reset() {
+│ │ │                              return W.reset()
+│ │ │                          }
+│ │ │                      };
+│ │ │ -                    return Q.onMounted(() => {
+│ │ │ -                        W.open(G.value), T.observe(G.value)
+│ │ │ -                    }), Q.onBeforeUnmount(() => {
+│ │ │ -                        T.unobserve(G.value), W.dispose()
+│ │ │ -                    }), J(i), {
+│ │ │ +                    return ee.onMounted(() => {
+│ │ │ +                        W.open(G.value), T.observe(G.value), J("opened")
+│ │ │ +                    }), ee.onBeforeUnmount(() => {
+│ │ │ +                        T.unobserve(G.value), W.dispose(), J("disposed")
+│ │ │ +                    }), Z(i), {
+│ │ │                          ...i,
+│ │ │                          elem: G
+│ │ │                      }
+│ │ │                  },
+│ │ │                  template: `<div style="position: relative; width: 100%; height: 100%;" v-bind="$attrs">
+│ │ │        <div ref="elem" style="position: absolute; width: 100%; height: 100%;"></div>
+│ │ │      </div>
+│ │ │      `
+│ │ │              }
+│ │ │          };
+│ │ │  
+│ │ │      function he(X) {
+│ │ │ -        Object.keys(se).forEach(ee => {
+│ │ │ -            X.component(ee, se[ee])
+│ │ │ +        Object.keys(se).forEach(J => {
+│ │ │ +            X.component(J, se[J])
+│ │ │          })
+│ │ │      }
+│ │ │ -    Z.install = he, Object.defineProperty(Z, Symbol.toStringTag, {
+│ │ │ +    Q.install = he, Object.defineProperty(Q, Symbol.toStringTag, {
+│ │ │          value: "Module"
+│ │ │      })
+│ │ │  });
+│ │   --- trame-xterm-0.1.0/trame_xterm.egg-info/PKG-INFO
+│ ├── +++ trame-xterm-0.1.1/trame_xterm.egg-info/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: trame-xterm
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: Trame widget to expose xterm.js
+│ │  Author: Kitware Inc.
+│ │  License: MIT License
+│ │  Keywords: Python,Interactive,Web,Application,Framework
+│ │  Classifier: Development Status :: 5 - Production/Stable
+│ │  Classifier: Environment :: Web Environment
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -13,40 +13,36 @@
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: JavaScript
+│ │  Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+│ │  Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │  Description-Content-Type: text/x-rst
+│ │  License-File: LICENSE
+│ │  
+│ │ -===========
+│ │  trame-xterm
+│ │ -===========
+│ │ +===========================================================
+│ │  
+│ │ -Trame widget to expose xterm.js
+│ │ +Trame widget to expose xterm.js. This library is compatible with both vue2 and vue3.
+│ │  
+│ │  
+│ │ -* Free software: MIT License
+│ │ +License
+│ │ +-----------------------------------------------------------
+│ │  
+│ │ +This library is distributed under the MIT License (Same as xterm.js)
+│ │ +
+│ │ +
+│ │ +Development
+│ │ +-----------------------------------------------------------
+│ │  
+│ │ -Installing
+│ │ -----------
+│ │  Build and install the Vue components
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │      cd vue-components
+│ │      npm i
+│ │      npm run build
+│ │      cd -
+│ │  
+│ │ -Install the application
+│ │ +Install the python library
+│ │  
+│ │  .. code-block:: console
+│ │  
+│ │      pip install -e .
+│ │ -
+│ │ -
+│ │ -
+│ │ -Features
+│ │ ---------
+│ │ -
+│ │ -* TODO
+│ │   --- trame-xterm-0.1.0/trame_xterm.egg-info/SOURCES.txt
+│ ├── +++ trame-xterm-0.1.1/trame_xterm.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names

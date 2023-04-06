@@ -1,0 +1,1106 @@
+# Comparing `tmp/OsmRx-0.0.3.tar.gz` & `tmp/osmrx-0.0.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "OsmRx-0.0.3.tar", max compression
++gzip compressed data, was "osmrx-0.0.5.tar", max compression
+```
+
+## Comparing `OsmRx-0.0.3.tar` & `osmrx-0.0.5.tar`
+
+### file list
+
+```diff
+@@ -1,22 +1,29 @@
+--rw-r--r--   0        0        0    35149 2023-04-02 15:12:15.091810 OsmRx-0.0.3/LICENSE
+--rw-r--r--   0        0        0      311 2023-04-02 15:12:15.091810 OsmRx-0.0.3/README.md
+--rw-r--r--   0        0        0     4622 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/__init__.py
+--rw-r--r--   0        0        0     1341 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/core.py
+--rw-r--r--   0        0        0     2500 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/models.py
+--rw-r--r--   0        0        0     1719 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/nominatim.py
+--rw-r--r--   0        0        0      570 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/overpass.py
+--rw-r--r--   0        0        0     1159 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/apis_handler/query_builder.py
+--rw-r--r--   0        0        0        0 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/data_processing/__init__.py
+--rw-r--r--   0        0        0     2515 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/data_processing/overpass_data_builder.py
+--rw-r--r--   0        0        0      121 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/globals/osm.py
+--rw-r--r--   0        0        0     3058 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/globals/queries.py
+--rw-r--r--   0        0        0        0 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/helpers/__init__.py
+--rw-r--r--   0        0        0     2551 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/helpers/logger.py
+--rw-r--r--   0        0        0     1004 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/helpers/misc.py
+--rw-r--r--   0        0        0        0 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/topology/__init__.py
+--rw-r--r--   0        0        0     1755 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/topology/checker.py
+--rw-r--r--   0        0        0    18486 2023-04-02 15:12:15.127810 OsmRx-0.0.3/osmrx/topology/cleaner.py
+--rw-r--r--   0        0        0      501 2023-04-02 15:12:15.131810 OsmRx-0.0.3/pyproject.toml
+--rw-r--r--   0        0        0     1126 1970-01-01 00:00:00.000000 OsmRx-0.0.3/setup.py
+--rw-r--r--   0        0        0      815 1970-01-01 00:00:00.000000 OsmRx-0.0.3/PKG-INFO
++-rw-r--r--   0        0        0    35149 2023-04-06 20:28:50.789620 osmrx-0.0.5/LICENSE
++-rw-r--r--   0        0        0     1269 2023-04-06 20:28:50.789620 osmrx-0.0.5/README.md
++-rw-r--r--   0        0        0      211 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/__init__.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/__init__.py
++-rw-r--r--   0        0        0     1346 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/core.py
++-rw-r--r--   0        0        0     2564 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/models.py
++-rw-r--r--   0        0        0     1768 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/nominatim.py
++-rw-r--r--   0        0        0      570 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/overpass.py
++-rw-r--r--   0        0        0     1499 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/apis_handler/query_builder.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/data_processing/__init__.py
++-rw-r--r--   0        0        0     2528 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/data_processing/overpass_data_builder.py
++-rw-r--r--   0        0        0     3074 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/globals/queries.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/graph_manager/__init__.py
++-rw-r--r--   0        0        0     2875 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/graph_manager/arc_feature.py
++-rw-r--r--   0        0        0     5369 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/graph_manager/graph_manager.py
++-rw-r--r--   0        0        0     2313 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/graph_manager/isochrones_feature.py
++-rw-r--r--   0        0        0     1074 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/graph_manager/path_feature.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/helpers/__init__.py
++-rw-r--r--   0        0        0     2551 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/helpers/logger.py
++-rw-r--r--   0        0        0     1451 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/helpers/misc.py
++-rw-r--r--   0        0        0     2543 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/main/core.py
++-rw-r--r--   0        0        0     1108 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/main/pois.py
++-rw-r--r--   0        0        0     4437 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/main/roads.py
++-rw-r--r--   0        0        0        0 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/topology/__init__.py
++-rw-r--r--   0        0        0     1943 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/topology/checker.py
++-rw-r--r--   0        0        0    15360 2023-04-06 20:28:50.789620 osmrx-0.0.5/osmrx/topology/cleaner.py
++-rw-r--r--   0        0        0      595 2023-04-06 20:28:50.793620 osmrx-0.0.5/pyproject.toml
++-rw-r--r--   0        0        0     2268 1970-01-01 00:00:00.000000 osmrx-0.0.5/setup.py
++-rw-r--r--   0        0        0     1847 1970-01-01 00:00:00.000000 osmrx-0.0.5/PKG-INFO
+```
+
+### Comparing `OsmRx-0.0.3/LICENSE` & `osmrx-0.0.5/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `OsmRx-0.0.3/osmrx/apis_handler/models.py` & `osmrx-0.0.5/osmrx/apis_handler/models.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,17 +1,19 @@
+ from typing import List
+-
++from typing import TYPE_CHECKING
+ from dataclasses import dataclass
+ 
+ from shapely import Point
+ from shapely import Polygon
+ from shapely.geometry import shape
+ 
+ from osmrx.apis_handler.nominatim import NominatimApi
+-from osmrx.helpers.logger import Logger
++
++if TYPE_CHECKING:
++    from osmrx.helpers.logger import Logger
+ 
+ 
+ class Bbox:
+     """To manage bbox item"""
+ 
+     _min_x = None
+     _min_y = None
+@@ -21,15 +23,15 @@
+     def __init__(self, min_x: float, min_y: float, max_x: float, max_y: float) -> None:
+         self._min_x = min_x
+         self._min_y = min_y
+         self._max_x = max_x
+         self._max_y = max_y
+ 
+     @property
+-    def to_str(self) -> str:
++    def location_name(self) -> str:
+         """Cast to a string"""
+         return f"{self._min_x}, {self._min_y}, {self._max_x}, {self._max_y}"
+ 
+ 
+ @dataclass
+ class NominatimItem:
+     place_id: int
+@@ -48,15 +50,15 @@
+ 
+ class Location:
+     """To manage location name and attributes from Nominatim"""
+     _location_name = None
+     _values = None
+     _limit = None
+ 
+-    def __init__(self, location_name: str, logger: Logger, limit: int = 1) -> None:
++    def __init__(self, location_name: str, logger: "Logger", limit: int = 1) -> None:
+         self.logger = logger
+         self.location_name = location_name
+         self._limit = limit
+ 
+     @property
+     def location_name(self) -> str:
+         """return the location_name initialized"""
+```
+
+### Comparing `OsmRx-0.0.3/osmrx/apis_handler/nominatim.py` & `osmrx-0.0.5/osmrx/apis_handler/nominatim.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,12 +1,15 @@
+ from typing import Dict, List
+ from typing import Set
++from typing import TYPE_CHECKING
+ 
+ from osmrx.apis_handler.core import ApiCore
+-from osmrx.helpers.logger import Logger
++
++if TYPE_CHECKING:
++    from logging import Logger
+ 
+ 
+ class ErrorNominatimApi(ValueError):
+     pass
+ 
+ 
+ class NominatimApi(ApiCore):
+@@ -20,18 +23,18 @@
+         "county",
+         "state",
+         "country",
+         "postalcode",
+     }
+     format_parameter: Dict = {"format": "json", "polygon": "1", "polygon_geojson": "1"}
+ 
+-    _values = None
+-
+-    def __init__(self, logger: Logger, **params) -> None:
++    def __init__(self, logger: "Logger", **params) -> None:
++        _values = None
+         super().__init__(logger=logger)
++
+         parameters: Dict = self.__check_parameters(params)
+         self.items = self.request_query(self.nominatim_url, parameters)
+ 
+     def __check_parameters(self, input_parameters: Dict) -> Dict:
+ 
+         if self.query_parameter in input_parameters:
+             # clean arguments set
+```
+
+### Comparing `OsmRx-0.0.3/osmrx/apis_handler/overpass.py` & `osmrx-0.0.5/osmrx/apis_handler/overpass.py`
+
+ * *Files identical despite different names*
+
+### Comparing `OsmRx-0.0.3/osmrx/apis_handler/query_builder.py` & `osmrx-0.0.5/osmrx/apis_handler/query_builder.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,35 +1,44 @@
+-from osmrx.globals.queries import OsmFeatures
+-from osmrx.globals.queries import osm_queries
++from typing import TYPE_CHECKING
+ 
++from osmrx.globals.queries import osm_queries
+ from osmrx.apis_handler.models import Bbox
+ from osmrx.apis_handler.models import Location
+ 
++if TYPE_CHECKING:
++    from osmrx.globals.queries import OsmFeatureModes
++
+ 
+ class ErrorQueryBuilder(Exception):
+     pass
+ 
+ 
+ class QueryBuilder:
+     
+     _output_format = "out geom;(._;>;)"
+     _area_tag_query: str = "area.searchArea"
+ 
+-    _osm_query = None
+-    _query = None
++    def __init__(self, mode: "OsmFeatureModes") -> None:
++        self._osm_query = None
++        self._query = None
+ 
+-    def __init__(self, mode: OsmFeatures) -> None:
+         self._osm_query = osm_queries[mode]["query"]
+ 
+-    def from_bbox(self, bbox: Bbox) -> str:
++    def from_geo_filter(self, geo_filter: Bbox | Location):
++        if isinstance(geo_filter, Bbox):
++            return self._from_bbox(geo_filter)
++        elif isinstance(geo_filter, Location):
++            return self._from_location(geo_filter)
++
++    def _from_bbox(self, bbox: Bbox) -> str:
+         """build a query from a bbox"""
+-        query = self._osm_query.format(geo_filter=bbox.to_str)
++        query = self._osm_query.format(geo_filter=bbox.location_name)
+         return self._build_query(f"({query})")
+     
+-    def from_location(self, location: Location) -> str:
++    def _from_location(self, location: Location) -> str:
+         """build a query from a location"""
+         query = self._osm_query.format(geo_filter=self._area_tag_query)
+         query = f"area({location.values[0].osm_id})->.searchArea;({query})"
+         return self._build_query(query)
+ 
+     def _build_query(self, query_with_geofilter: str) -> str:
+         """Finalize the query with the output format"""
+```
+
+### Comparing `OsmRx-0.0.3/osmrx/data_processing/overpass_data_builder.py` & `osmrx-0.0.5/osmrx/data_processing/overpass_data_builder.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,70 +1,68 @@
+-from typing import Dict, List
++from typing import Dict
++from typing import List
+ 
+-from shapely import Point, LineString
++from shapely import Point
++from shapely import LineString
+ 
+-from osmrx.globals.osm import osm_url
+ from osmrx.globals.queries import OsmFeatureTypes
+ 
+-# constants
+-GEOMETRY_FIELD: str = "geometry"
+-LAT_FIELD: str = "lat"
+-LNG_FIELD: str = "lon"
+ TOPO_FIELD: str = "topo_uuid"
+-FEATURE_TYPE_OSM_FIELD: str = "type"
+-PROPERTIES_OSM_FIELD: str = "tags"
+ ID_OSM_FIELD: str = "id"
+-OSM_URL_FIELD: str = "osm_url"
+-ID_DEFAULT_FIELD: str = "id"
+ 
+ 
+ class OverpassDataBuilder:
+-    _grouped_features = None
+-    _point_features = None
++    __GEOMETRY_FIELD: str = "geometry"
++    __LAT_FIELD: str = "lat"
++    __LNG_FIELD: str = "lon"
++    __FEATURE_TYPE_OSM_FIELD: str = "type"
++    __PROPERTIES_OSM_FIELD: str = "tags"
++    __OSM_URL_FIELD: str = "osm_url"
++    __OSM_URL = "https://www.openstreetmap.org"
++
+     _line_features = None
+ 
+     def __init__(self, overpass_data: List[Dict]) -> None:
+ 
+         self._prepare_data(overpass_data)
+ 
+     def _prepare_data(self, raw_data: List[Dict]):
+         self._grouped_features = {
+             "points": filter(
+-                lambda x: x[FEATURE_TYPE_OSM_FIELD] == OsmFeatureTypes.node.value,
++                lambda x: x[self.__FEATURE_TYPE_OSM_FIELD] == OsmFeatureTypes.node.value,
+                 raw_data,
+             ),
+             "lines": filter(
+-                lambda x: x[FEATURE_TYPE_OSM_FIELD] == OsmFeatureTypes.way.value,
++                lambda x: x[self.__FEATURE_TYPE_OSM_FIELD] == OsmFeatureTypes.way.value,
+                 raw_data,
+             )
+         }
+ 
+     def point_features(self) -> List[Dict]:
+         point_features = []
+         data = self._grouped_features["points"]
+         for uuid_enum, feature in enumerate(data, start=1):
+-            geometry = Point(feature[LNG_FIELD], feature[LAT_FIELD])
++            geometry = Point(feature[self.__LNG_FIELD], feature[self.__LAT_FIELD])
+             point_features.append(self._build_properties(uuid_enum, geometry, feature))
+         return point_features
+ 
+     def line_features(self) -> List[Dict]:
+         line_features = []
+         data = self._grouped_features["lines"]
+         for uuid_enum, feature in enumerate(data, start=1):
+             geometry = LineString(
+-                [(coords[LNG_FIELD], coords[LAT_FIELD]) for coords in feature[GEOMETRY_FIELD]]
++                [(coordinates[self.__LNG_FIELD], coordinates[self.__LAT_FIELD])
++                 for coordinates in feature[self.__GEOMETRY_FIELD]]
+             )
+             line_features.append(self._build_properties(uuid_enum, geometry, feature))
+         return line_features
+ 
+-    @staticmethod
+-    def _build_properties(uuid_enum: int, geometry: Point | LineString, properties: Dict) -> Dict:
+-        properties_found = properties.get(PROPERTIES_OSM_FIELD, {})
+-        properties_found[ID_OSM_FIELD] = str(properties[ID_OSM_FIELD])
+-        properties_found[OSM_URL_FIELD] = f"{osm_url}/{properties[FEATURE_TYPE_OSM_FIELD]}/" \
+-                                          f"{properties_found[ID_OSM_FIELD]}"
+-
+-        # used for topology
+-        properties_found[TOPO_FIELD] = uuid_enum  # do not cast to str, because topology processing need an int
+-        properties_found[GEOMETRY_FIELD] = geometry
+-
+-        return properties_found
++    def _build_properties(self, uuid_enum: int, geometry: Point | LineString, properties: Dict) -> Dict:
++        tags_attributes = properties.get(self.__PROPERTIES_OSM_FIELD, {})
++        return {
++            **tags_attributes,
++            ID_OSM_FIELD: str(properties[ID_OSM_FIELD]),
++            self.__OSM_URL_FIELD: f"{self.__OSM_URL}/{properties[self.__FEATURE_TYPE_OSM_FIELD]}/"
++                                  f"{properties[ID_OSM_FIELD]}",
++            TOPO_FIELD: uuid_enum,  # do not cast to str, because topology processing need an int
++            self.__GEOMETRY_FIELD: geometry
++        }
+```
+
+### Comparing `OsmRx-0.0.3/osmrx/globals/queries.py` & `osmrx-0.0.5/osmrx/globals/queries.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ from enum import Enum
+ 
+ 
+-class OsmFeatures(Enum):
++class OsmFeatureModes(Enum):
+     vehicle = "vehicle"
+     pedestrian = "pedestrian"
+     poi = "poi"
+ 
+ 
+ class OsmFeatureTypes(Enum):
+     way = "way"
+     node = "node"
+ 
+ 
+ # overpass queries
+ osm_queries: dict = {
+-    OsmFeatures.vehicle: {
++    OsmFeatureModes.vehicle: {
+         "query": 'way["highway"~"^('
+         "motorway|"
+         "trunk|"
+         "primary|"
+         "secondary|"
+         "tertiary|"
+         "unclassified|"
+@@ -39,15 +39,15 @@
+         "bridleway|"
+         "corridor|"
+         "path"
+         ')$"]["area"!~"."]({geo_filter});',
+         "directed_graph": True,
+         "feature_type": OsmFeatureTypes.way
+     },
+-    OsmFeatures.pedestrian: {
++    OsmFeatureModes.pedestrian: {
+         "query": 'way["highway"~"^('
+         "motorway|"
+         "cycleway|"
+         "primary|"
+         "secondary|"
+         "tertiary|"
+         "unclassified|"
+@@ -68,15 +68,15 @@
+         "steps|"
+         "corridor|"
+         "path"
+         ')$"]["area"!~"."]({geo_filter});',
+         "directed_graph": False,
+         "feature_type": OsmFeatureTypes.way
+     },
+-    OsmFeatures.poi: {
++    OsmFeatureModes.poi: {
+         "query": 'node[~"^(amenity)$"~"('
+             "bar|biergarten|cafe|drinking_water|fast_food|ice_cream|food_court|pub|restaurant|college|driving_school"
+             "|kindergarten|language_school|library|music_school|school|sport_school|toy_library|university|"
+             "bicycle_parking|bicycle_repair_station|bicycle_rental|boat_rental|boat_sharing|"
+             "bus_station|car_rental|car_sharing|car_wash|vehicle_inspection|charging_station|ferry_terminal|fuel|taxi|"
+             "atm|bank|bureau_de_change|baby_hatch|clinic|doctors|dentist|hospital|nursing_home|pharmacy|social_facility"
+             "|veterinary|arts_centre|brothel|casino|cinema|community_centre|gambling|nightclub|planetarium|"
+```
+
+### Comparing `OsmRx-0.0.3/osmrx/helpers/logger.py` & `osmrx-0.0.5/osmrx/helpers/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `OsmRx-0.0.3/osmrx/topology/cleaner.py` & `osmrx-0.0.5/osmrx/topology/cleaner.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,285 +1,227 @@
+-from typing import Tuple
++import itertools
++from typing import Tuple, Generator, Any
+ from typing import List
+ from typing import Dict
+ from typing import Optional
+ from typing import Set
+ from typing import Union
+ from typing import Iterator
+ 
++from numpy import ndarray
+ from scipy import spatial
+ 
+ from shapely.geometry import LineString
+ 
+ import rtree
+ 
+ import numpy as np
+ 
+ from collections import Counter
+ 
+ from more_itertools import split_at
+ 
+ import concurrent.futures
+ 
+-from osmrx.globals.osm import forward_tag, backward_tag
+-from osmrx.globals.queries import OsmFeatures
++from osmrx.data_processing.overpass_data_builder import TOPO_FIELD, ID_OSM_FIELD
++from osmrx.graph_manager.arc_feature import ArcFeature
+ 
+ 
+ class NetworkTopologyError(Exception):
+     pass
+ 
+ 
+-class TopologyStats:
+-    _added = None
+-    _split = None
+-
+-    def __init__(self):
+-        self.reset()
+-
+-    def __repr__(self):
+-        return f"added: {self.added} ; split: {self.split}"
+-
+-    def reset(self):
+-        self._added = 0
+-        self._split = 0
+-
+-    @property
+-    def added(self):
+-        return self._added
+-
+-    @added.setter
+-    def added(self, count):
+-        self._added += count
+-
+-    @property
+-    def split(self):
+-        return self._split
+-
+-    @split.setter
+-    def split(self, count):
+-        self._split += count
++class LineBuilder:
++    __TOPOLOGY_TAG_SPLIT: str = "split"
++
++    __CLEANING_FILED_STATUS: str = "topology"
++
++    __LINESTRING_SEPARATOR: str = "_"
++
++    def __init__(self, feature: Dict, intersection_nodes: set[tuple[float, float]],
++                 interpolate_level: int | None = None):
++        self._feature = feature
++        del self._feature["geometry"]
++        self._coordinates = self._feature.pop("coordinates")
++        self._unique_coordinates = set(self._coordinates)
++        self._intersection_nodes = intersection_nodes
++        self._interpolate_level = interpolate_level
++
++        self._output = []
++
++    def build_features(self) -> List[ArcFeature]:
++        if not self.is_line_valid():
++            return []
++
++        geometry_lines = self.split_line_at_intersections(
++            self._coordinates, self.intersections_points()
++        )
++        if len(geometry_lines) > 1:
++            self._feature[self.__CLEANING_FILED_STATUS] = self.__TOPOLOGY_TAG_SPLIT
++
++            data = []
++            for suffix_id, line_coordinates in enumerate(geometry_lines):
++                feature_copy = self.feature_copy()
++                feature_copy["topo_uuid"] = f"{feature_copy['topo_uuid']}_{suffix_id}"
++                data.append([feature_copy, line_coordinates])
++
++                # feature_updated[self.__COORDINATES_FIELD] = line_coordinates
++                self._direction_processing(feature_copy, line_coordinates)
++            # with concurrent.futures.ThreadPoolExecutor() as executor:
++            #     executor.map(lambda f: self._direction_processing(*f), data)
++        else:
++            self._direction_processing(self._feature, geometry_lines[0])
++
++        return self._output
++
++    def _direction_processing(self, input_feature: Dict, new_coordinates: list[tuple[float, float]]):
++
++        if self._interpolate_level:
++            new_coords = list(
++                self._split_line(new_coordinates, self._interpolate_level)
++            )
++            new_lines_coords = list(zip(new_coords, new_coords[1:]))
++
++            for idx, sub_line_coords in enumerate(new_lines_coords):
++                feature_copy = dict(input_feature)
++                self.__proceed_direction_geom(feature_copy, sub_line_coords, idx)
++
++        else:
++            self.__proceed_direction_geom(input_feature, new_coordinates, None)
++
++    def __proceed_direction_geom(self, input_feature, sub_line_coords, idx: int | None):
++        # TODO maybe useless: check parent method
++
++        position = ""
++        if idx:
++            position = f"_{idx}"
++
++        new_feature = ArcFeature(LineString(sub_line_coords))
++        new_feature.topo_uuid = f"{input_feature.pop('topo_uuid')}{position}"
++        new_feature.topo_status = input_feature.pop(self.__CLEANING_FILED_STATUS)
++        new_feature.attributes = input_feature
++
++        self._output.append(new_feature)
++
++    @staticmethod
++    def _split_line(coordinates: list[tuple[float, float]], interpolation_level: int) -> ndarray:
++        return interpolate_curve_based_on_original_points(
++            np.array(coordinates), interpolation_level,
++        )
++
++    def feature_copy(self) -> Dict:
++        return dict(self._feature)
++
++    def intersections_points(self) -> Set[Tuple[float, float]]:
++        """Return intersections points matching with the feature"""
++        return self._unique_coordinates.intersection(self._intersection_nodes)
++
++    def is_line_valid(self) -> True:
++        # meaning that there is none point or line length is equals to 0
++        return not len(self._unique_coordinates) <= 1
++
++    def split_line_at_intersections(self, coordinates: List[Tuple[float, float]],
++                                    points_intersections: Set[Tuple[float, float]]) -> List[List[Tuple[float, float]]]:
++
++        if len(points_intersections) > 0:
++
++            # split coordinates found at intersection to respect the topology
++            first_value, *middle_coordinates_values, last_value = coordinates
++            for point_intersection in points_intersections:
++
++                if point_intersection in middle_coordinates_values:
++                    # we get the middle values from coordinates to avoid to catch the first and last value when editing
++
++                    # duplicate the intersection point
++                    index: int = middle_coordinates_values.index(point_intersection)
++                    middle_coordinates_values[index:index] = [point_intersection]
++                    # add an _ to split the line at the intersection point index
++                    middle_coordinates_values[index + 1:index + 1] = self.__LINESTRING_SEPARATOR
++
++            coordinates = [first_value] + middle_coordinates_values + [last_value]
++            coordinates_updated = list(split_at(coordinates, lambda x: x == self.__LINESTRING_SEPARATOR))
++        else:
++            coordinates_updated = list([coordinates])
++
++        return coordinates_updated
++
+ 
+ class TopologyCleaner:
+ 
++    # if increased, the node connections will be better, but will generate more feature
+     __INTERPOLATION_LEVEL: int = 7
+-    __INTERPOLATION_LINE_LEVEL: int = 4
+     __NB_OF_NEAREST_LINE_ELEMENTS_TO_FIND: int = 10
+ 
+     __NUMBER_OF_NODES_INTERSECTIONS: int = 2
+-    __ITEM_LIST_SEPARATOR_TO_SPLIT_LINE: str = "_"
+ 
+     __CLEANING_FILED_STATUS: str = "topology"
+     __GEOMETRY_FIELD: str = "geometry"
+     __COORDINATES_FIELD: str = "coordinates"
+ 
+-    # OSM fields
+-    __ONEWAY_FIELD: str = "oneway"
+-    __ONEWAY_VALUE: str = "yes"
+-    __JUNCTION_FIELD: str = "junction"
+-    __JUNCTION_VALUES: List[str] = ["roundabout", "jughandle"]
+-
+-    __TOPOLOGY_TAG_SPLIT: str = "split"
+     __TOPOLOGY_TAG_ADDED: str = "added"
+     __TOPOLOGY_TAG_UNCHANGED: str = "unchanged"
+ 
+-    __INSERT_OPTIONS: Dict = {"after": 1, "before": -1, None: 0}
+-
+-    _topology_stats = None
+-
+     def __init__(
+         self,
+-        logger,
++        logger,  # TODO: add a logger if not set
+         network_data: List[Dict],
+         additional_nodes: Optional[List[Dict]],
+-        uuid_field: str,
+-        original_field_id: str,
+-        mode_post_processing: OsmFeatures,
+-        improve_line_output: bool = False,
++        interpolation_line_level: int | None = None,  # 4 is a good value
+     ) -> None:
+ 
+         self.logger = logger
+         self.logger.info("Network cleaning...")
+ 
+-        self._topology_stats = TopologyStats()
+-
+-        self._network_data: Union[List[Dict], Dict] = self._check_inputs(network_data)
+-        self._mode_post_processing = mode_post_processing
+-        self._improve_line_output = improve_line_output  # link to __INTERPOLATION_LINE_LEVEL
++        self._network_data: Union[List[Dict], Dict] = network_data
++        self._interpolation_line_level = interpolation_line_level  # link to __INTERPOLATION_LINE_LEVEL
+ 
+         self._additional_nodes = additional_nodes
+         if self._additional_nodes is None:
+             self._additional_nodes: Dict = {}
+ 
+-        # ugly footway processing...
+-        # self._force_footway_connection = False
+-
+-        self.__FIELD_ID = uuid_field  # have to be an integer.. thank rtree...
+-        self._original_field_id = original_field_id
++        self.__FIELD_ID = TOPO_FIELD  # have to be an integer.. thank rtree...
++        self._original_field_id = ID_OSM_FIELD
+ 
+         self._intersections_found: Optional[Set[Tuple[float, float]]] = None
+         self.__connections_added: Dict = {}
+-        self._output: List[Dict] = []
+ 
+-    def run(self) -> List[Dict]:
++    def run(self) -> Generator[ArcFeature, Any, None]:
+         self._prepare_data()
+ 
+         # connect all the added nodes
+         if len(self._additional_nodes) > 0:
+             self.compute_added_node_connections()
+ 
+         # find all the existing intersection from coordinates
+-        self._intersections_found = set(self.find_intersections_from_ways())
++        intersections_found = self.find_intersections_from_ways()
+ 
+         self.logger.info("Build lines")
+-        for feature in self._network_data.values():
+-            self.build_lines(feature)
+-
+-        return self._output
+-
+-    def build_lines(self, feature: Dict) -> None:
+-        # compare line coords and intersections points
+-        coordinates_list = set(feature[self.__COORDINATES_FIELD])
+-        points_intersections: Set[Tuple[float, float]] = coordinates_list.intersection(
+-            self._intersections_found
+-        )
+-
+-        # rebuild linestring
+-        if len(set(feature[self.__COORDINATES_FIELD])) > 1:
+-            lines_coordinates_rebuild = self._topology_builder(
+-                feature[self.__COORDINATES_FIELD], points_intersections
+-            )
+-
+-            if len(lines_coordinates_rebuild) > 1:
+-
+-                for new_suffix_id, line_coordinates in enumerate(
+-                    lines_coordinates_rebuild
+-                ):
+-                    feature_updated = dict(feature)
+-                    feature_updated[
+-                        self.__FIELD_ID
+-                    ] = f"{feature_updated[self.__FIELD_ID]}_{new_suffix_id}"
+-                    feature_updated[
+-                        self.__CLEANING_FILED_STATUS
+-                    ] = self.__TOPOLOGY_TAG_SPLIT
+-                    feature_updated[self.__COORDINATES_FIELD] = line_coordinates
+-
+-                    new_features = self.mode_processing(feature_updated)
+-                    self._output.extend(new_features)
+-            else:
+-                # nothing to change
+-                feature[self.__FIELD_ID] = feature[self.__FIELD_ID]
+-                new_features = self.mode_processing(feature)
+-                self._output.extend(new_features)
+-
+-    def mode_processing(self, input_feature):
+-        new_elements = []
+-
+-        if self._mode_post_processing == OsmFeatures.vehicle:
+-            # by default
+-            new_forward_feature = self._direction_processing(input_feature, forward_tag)
+-            new_elements.extend(new_forward_feature)
+-            if input_feature.get(self.__JUNCTION_FIELD, None) in self.__JUNCTION_VALUES:
+-                return new_elements
+-
+-            if input_feature.get(self.__ONEWAY_FIELD, None) != self.__ONEWAY_VALUE:
+-
+-                new_backward_feature = self._direction_processing(
+-                    input_feature, backward_tag
+-                )
+-                new_elements.extend(new_backward_feature)
+-
+-        elif self._mode_post_processing == OsmFeatures.pedestrian:
+-            # it's the default behavior
+-
+-            feature = self._direction_processing(input_feature)
+-            new_elements.extend(feature)
+-
+-        return new_elements
+-
+-    def _direction_processing(
+-        self, input_feature: Dict, direction: Optional[str] = None
+-    ):
+-        new_features = []
+-        input_feature_copy = dict(input_feature)
+-
+-        if self._improve_line_output:
+-            new_coords = list(
+-                self._split_line(input_feature_copy, self.__INTERPOLATION_LINE_LEVEL)
+-            )
+-            new_lines_coords = list(zip(new_coords, new_coords[1:]))
+-            del input_feature_copy[self.__COORDINATES_FIELD]
+-
+-            for idx, sub_line_coords in enumerate(new_lines_coords):
+-                new_features.append(
+-                    self.__proceed_direction_geom(
+-                        direction, input_feature_copy, sub_line_coords, idx
+-                    )
+-                )
+-        else:
+-            new_coords = list(self._split_line(input_feature_copy, 1))
+-            del input_feature_copy[self.__COORDINATES_FIELD]
+-            new_features.append(
+-                self.__proceed_direction_geom(direction, input_feature_copy, new_coords)
+-            )
+-
+-        return new_features
+-
+-    def __proceed_direction_geom(
+-        self, direction, input_feature, sub_line_coords, idx=None
+-    ):
+-        feature = dict(input_feature)
+-
+-        if idx is not None:
+-            idx = f"_{idx}"
+-        else:
+-            idx = ""
+-
+-        if direction == "backward":
+-            new_linestring = LineString(sub_line_coords[::-1])
+-        elif direction in ["forward", None]:
+-            new_linestring = LineString(sub_line_coords)
+-        else:
+-            raise NetworkTopologyError(f"Direction issue: value '{direction}' found")
+-        feature[self.__GEOMETRY_FIELD] = new_linestring
+-
+-        if direction is not None:
+-            feature[self.__FIELD_ID] = f"{feature[self.__FIELD_ID]}{idx}_{direction}"
+-        else:
+-            feature[self.__FIELD_ID] = f"{feature[self.__FIELD_ID]}{idx}"
+ 
+-        return feature
+-
+-    def _split_line(self, feature: Dict, interpolation_level: int) -> List:
+-        new_line_coords = interpolate_curve_based_on_original_points(
+-            np.array(feature[self.__COORDINATES_FIELD]), interpolation_level,
+-        )
+-        return new_line_coords
++        for feature in self._network_data.values():
++            for feature_built in LineBuilder(feature, intersections_found,
++                                             self._interpolation_line_level).build_features():
++                yield feature_built
+ 
+     def _prepare_data(self):
+ 
+         self._network_data = {
+             feature[self.__FIELD_ID]: {
+-                **{self.__COORDINATES_FIELD: feature[self.__GEOMETRY_FIELD].coords[:]},
++                self.__COORDINATES_FIELD: feature[self.__GEOMETRY_FIELD].coords[:],
++                self.__CLEANING_FILED_STATUS: self.__TOPOLOGY_TAG_UNCHANGED,
+                 **feature,
+-                **{self.__CLEANING_FILED_STATUS: self.__TOPOLOGY_TAG_UNCHANGED},
+             }
+             for feature in self._network_data
+         }
+-        if self._additional_nodes is not None:
+-            self._additional_nodes = {
+-                feature[self.__FIELD_ID]: {
+-                    **{
+-                        self.__COORDINATES_FIELD: feature[self.__GEOMETRY_FIELD].coords[
+-                            0
+-                        ]
+-                    },
+-                    **feature,
+-                }
+-                for feature in self._additional_nodes
++        self._additional_nodes = {
++            feature[self.__FIELD_ID]: {
++                self.__COORDINATES_FIELD: feature[self.__GEOMETRY_FIELD].coords[0],
++                **feature,
+             }
++            for feature in self._additional_nodes
++        }
+ 
+     def compute_added_node_connections(self):
+         self.logger.info("Starting: Adding new nodes on the network")
+ 
+         self.logger.info("Find nearest line for each node")
+         node_keys_by_nearest_lines_filled = (
+             self.__find_nearest_line_for_each_key_nodes()
+@@ -287,47 +229,36 @@
+ 
+         self.logger.info("Split line")
+         # for nearest_line_key in node_keys_by_nearest_lines_filled:
+         #     self.split_line(nearest_line_key)
+         with concurrent.futures.ThreadPoolExecutor() as executor:
+             executor.map(self.split_line, node_keys_by_nearest_lines_filled)
+ 
+-        self._network_data: Dict = {**self._network_data, **self.__connections_added}
+-
+-        self.logger.info(
+-            f"Topology lines checker: {self._topology_stats}"
+-        )
++        self._network_data: Dict = self._network_data | self.__connections_added
+ 
+     def split_line(self, node_key_by_nearest_lines):
+         nearest_line_content = self.__node_by_nearest_lines[node_key_by_nearest_lines]
+         default_line_updater = self.proceed_nodes_on_network(
+             (node_key_by_nearest_lines, nearest_line_content)
+         )
+         if default_line_updater is not None:
+             self.insert_new_nodes_on_its_line(default_line_updater)
+ 
+     def insert_new_nodes_on_its_line(self, item):
+         original_line_key = item["original_line_key"]
+         end_points_found = item["end_points_found"]
+ 
+-        linestring_with_new_nodes = self._network_data[original_line_key][
+-            self.__COORDINATES_FIELD
+-        ]
++        linestring_with_new_nodes = self._network_data[original_line_key][self.__COORDINATES_FIELD]
+         linestring_with_new_nodes.extend(end_points_found)
+         linestring_with_new_nodes = set(linestring_with_new_nodes)
+-        self._topology_stats.split = len(linestring_with_new_nodes.intersection(end_points_found))
+ 
+         # build new LineStrings
+-        linestring_linked_updated = list(
+-            filter(lambda x: x in linestring_with_new_nodes, item["interpolated_line"],)
+-        )
++        linestring_linked_updated = list(filter(lambda x: x in linestring_with_new_nodes, item["interpolated_line"]))
+ 
+-        self._network_data[original_line_key][
+-            self.__COORDINATES_FIELD
+-        ] = linestring_linked_updated
++        self._network_data[original_line_key][self.__COORDINATES_FIELD] = linestring_linked_updated
+ 
+     def proceed_nodes_on_network(self, nearest_line_content):
+         nearest_line_key, node_keys = nearest_line_content
+ 
+         interpolated_line_coords = interpolate_curve_based_on_original_points(
+             np.array(self._network_data[nearest_line_key][self.__COORDINATES_FIELD]),
+             self.__INTERPOLATION_LEVEL,
+@@ -341,22 +272,16 @@
+         ]
+         _, nearest_line_object_idxes = line_tree.query(nodes_coords)
+         end_points_found = [
+             interpolated_line_coords_rebuilt[nearest_line_key]
+             for nearest_line_key in nearest_line_object_idxes
+         ]
+ 
+-        connections_coords = list(
+-            zip(node_keys, list(zip(nodes_coords, end_points_found)))
+-        )
+-        self._topology_stats.added = len(connections_coords)
+-
+-        connections_coords_valid = list(
+-            filter(lambda x: len(set(x[-1])) > 0, connections_coords)
+-        )
++        connections_coords = zip(node_keys, list(zip(nodes_coords, end_points_found)))
++        connections_coords_valid = filter(lambda x: len(set(x[-1])) > 0, connections_coords)
+         for node_key, connection in connections_coords_valid:
+ 
+             # to split line at node (and also if node is on the network). it builds intersection used to split lines
+             # additional are converted to lines
+             self.__connections_added[f"from_node_id_{node_key}"] = {
+                 self.__COORDINATES_FIELD: connection,
+                 self.__GEOMETRY_FIELD: connection,
+@@ -367,63 +292,21 @@
+ 
+         return {
+             "interpolated_line": interpolated_line_coords_rebuilt,
+             "original_line_key": nearest_line_key,
+             "end_points_found": end_points_found,
+         }
+ 
+-    def _topology_builder(
+-        self,
+-        coordinates: List[Tuple[float, float]],
+-        points_intersections: Set[Tuple[float, float]],
+-    ):
+-
+-        is_rebuild = False
+-        coordinates_updated: List[List[Tuple[float, float]]] = []
+-
+-        # split coordinates found at intersection to respect the topology
+-        first_value, *middle_coordinates_values, last_value = coordinates
+-        for point_intersection in points_intersections:
+-
+-            point_intersection = tuple(point_intersection)
+-
+-            if point_intersection in middle_coordinates_values:
+-                # we get the middle values from coordinates to avoid to catch the first and last value when editing
+-
+-                middle_coordinates_values = self._insert_value(
+-                    middle_coordinates_values,
+-                    point_intersection,
+-                    tuple([point_intersection]),
+-                )
+-
+-                middle_coordinates_values = self._insert_value(
+-                    middle_coordinates_values,
+-                    point_intersection,
+-                    self.__ITEM_LIST_SEPARATOR_TO_SPLIT_LINE,
+-                    "after",
+-                )
+-                coordinates = [first_value] + middle_coordinates_values + [last_value]
+-                is_rebuild = True
+-
+-        if is_rebuild:
+-            coordinates_updated = list(split_at(coordinates, lambda x: x == "_"))
+-
+-        if not is_rebuild:
+-            coordinates_updated = list([coordinates])
+-
+-        return coordinates_updated
+-
+     def find_intersections_from_ways(self) -> Set[Tuple[float, float]]:
+         self.logger.info("Starting: Find intersections")
+         all_coord_points = Counter(
+-            [
+-                coords
++            itertools.chain.from_iterable([
++                feature[self.__COORDINATES_FIELD]
+                 for feature in self._network_data.values()
+-                for coords in feature[self.__COORDINATES_FIELD]
+-            ],
++            ]),
+         )
+ 
+         intersections_found = dict(
+             filter(
+                 lambda x: x[1] >= self.__NUMBER_OF_NODES_INTERSECTIONS,
+                 all_coord_points.items(),
+             )
+@@ -437,17 +320,17 @@
+     ) -> Iterator[Tuple[int, Tuple[str, str, str, float], None]]:
+         for fid, feature in self._network_data.items():
+             # fid is an integer
+             yield fid, feature[self.__GEOMETRY_FIELD].bounds, None
+ 
+     def __find_nearest_line_for_each_key_nodes(self) -> Iterator[int]:
+         # find the nearest network arc to interpolate
+-        self.__tree_index = rtree.index.Index(self.__rtree_generator_func())
++        self._tree_index = rtree.index.Index(self.__rtree_generator_func())
+ 
+-        # find nearest line
++        # find the nearest line
+         self.__node_by_nearest_lines = dict(
+             (key, []) for key in self._network_data.keys()
+         )
+ 
+         # not working because rtree cannot be MultiThreaded
+         # with concurrent.futures.ThreadPoolExecutor(4) as executor:
+         #     executor.map(self.__get_nearest_line, self._additional_nodes.items())
+@@ -462,62 +345,39 @@
+         return node_keys_by_nearest_lines_filled
+ 
+     def __get_nearest_line(self, node_info: Tuple[int, Dict]) -> None:
+         node_uuid, node = node_info
+         distances_computed: List[Tuple[float, int]] = []
+         node_geom = node[self.__GEOMETRY_FIELD]
+ 
+-        for index_feature in self.__tree_index.nearest(
+-            node_geom.bounds, self.__NB_OF_NEAREST_LINE_ELEMENTS_TO_FIND
+-        ):
++        for index_feature in self._tree_index.nearest(node_geom.bounds, self.__NB_OF_NEAREST_LINE_ELEMENTS_TO_FIND):
+             line_geom = self._network_data[index_feature][self.__GEOMETRY_FIELD]
+             distance_from_node_to_line = node_geom.distance(line_geom)
++            distances_computed.append((distance_from_node_to_line, index_feature))
+             if distance_from_node_to_line == 0:
+-                # means that we node is on the network, looping is not necessary anymore
+-                distances_computed = [(distance_from_node_to_line, index_feature)]
++                # means that the node is on the network, looping is not necessary anymore
+                 break
+-            distances_computed.append((distance_from_node_to_line, index_feature))
+ 
+         _, line_min_index = min(distances_computed)
+         self.__node_by_nearest_lines[line_min_index].append(node_uuid)
+ 
+-    @staticmethod
+-    def _check_inputs(inputs: List[Dict]) -> List[Dict]:
+-        assert len(inputs) > 0
+-        return inputs
+-
+-    def _insert_value(
+-        self,
+-        list_object: List[Tuple[float, float]],
+-        search_value: Tuple[float, float],
+-        value_to_add: Union[str, Tuple[Tuple[float, float]]],
+-        position: Optional[str] = None,
+-    ) -> List[Tuple[float, float]]:
+-
+-        assert position in self.__INSERT_OPTIONS.keys()
+-
+-        index_increment = self.__INSERT_OPTIONS[position]
+-        index: int = list_object.index(search_value) + index_increment
+-        list_object[index:index] = value_to_add
+-
+-        return list_object
+-
+-
+-def interpolate_curve_based_on_original_points(x, n):
+-    # source :
+-    # https://stackoverflow.com/questions/31243002/higher-order-local-interpolation-of-implicit-curves-in-python/31335255
+-    if n > 1:
+-        m = 0.5 * (x[:-1] + x[1:])
+-        if x.ndim == 2:
+-            m_size = (x.shape[0] + m.shape[0], x.shape[1])
+-        else:
+-            raise NotImplementedError
+-        x_new = np.empty(m_size, dtype=x.dtype)
+-        x_new[0::2] = x
+-        x_new[1::2] = m
+-        return interpolate_curve_based_on_original_points(x_new, n - 1)
+-
+-    elif n == 1:
+-        return x
+ 
+-    else:
+-        raise ValueError
++def interpolate_curve_based_on_original_points(values: np.array, interpolation_factor: int) -> np.ndarray:
++    # Convert values to a 2D array (if necessary) and remove single-dimensional entries
++    values = np.squeeze(np.atleast_2d(values))
++
++    # Compute the total number of points after interpolation
++    n_interpolated_points = len(values) * interpolation_factor
++
++    # Create an array with indices of the original points
++    original_indices = np.arange(0, n_interpolated_points, interpolation_factor)
++
++    # Create an array with indices of the new points
++    new_indices = np.arange(n_interpolated_points - 1)
++
++    # Compute the interpolated x and y coordinates
++    x_interpolated = np.interp(new_indices, original_indices, values[:, 0])
++    y_interpolated = np.interp(new_indices, original_indices, values[:, 1])
++
++    # Combine the x and y coordinates into a single array and return it
++    interpolated_values = np.column_stack((x_interpolated, y_interpolated))
++    return interpolated_values
+```
+

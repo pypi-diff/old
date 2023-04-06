@@ -1,0 +1,127 @@
+# Comparing `tmp/pipdu_sdk-1.0.0.dev4076273101.tar.gz` & `tmp/pipdu_sdk-1.0.0.dev4076314134.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pipdu_sdk-1.0.0.dev4076273101.tar", last modified: Thu Apr  6 20:19:23 2023, max compression
++gzip compressed data, was "pipdu_sdk-1.0.0.dev4076314134.tar", last modified: Thu Apr  6 20:29:03 2023, max compression
+```
+
+## Comparing `pipdu_sdk-1.0.0.dev4076273101.tar` & `pipdu_sdk-1.0.0.dev4076314134.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,18 @@
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:19:23.641974 pipdu_sdk-1.0.0.dev4076273101/
+--rw-rw-rw-   0 root         (0) root         (0)     1075 2023-04-06 20:15:48.000000 pipdu_sdk-1.0.0.dev4076273101/LICENSE
+--rw-r--r--   0 root         (0) root         (0)     2909 2023-04-06 20:19:23.641974 pipdu_sdk-1.0.0.dev4076273101/PKG-INFO
+--rw-rw-rw-   0 root         (0) root         (0)     2477 2023-04-06 20:15:48.000000 pipdu_sdk-1.0.0.dev4076273101/README.md
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:19:23.641974 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk/
+--rw-rw-rw-   0 root         (0) root         (0)       63 2023-04-06 20:15:48.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk/__init__.py
+--rw-rw-rw-   0 root         (0) root         (0)     2540 2023-04-06 20:15:48.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk/pipdu.py
+-drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:19:23.641974 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/
+--rw-r--r--   0 root         (0) root         (0)     2909 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0) root         (0)      241 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0) root         (0)       34 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/requires.txt
+--rw-r--r--   0 root         (0) root         (0)       10 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/top_level.txt
+--rw-rw-rw-   0 root         (0) root         (0)       79 2023-04-06 20:19:23.641974 pipdu_sdk-1.0.0.dev4076273101/setup.cfg
+--rw-rw-rw-   0 root         (0) root         (0)      716 2023-04-06 20:19:23.000000 pipdu_sdk-1.0.0.dev4076273101/setup.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:29:03.849307 pipdu_sdk-1.0.0.dev4076314134/
++-rw-rw-rw-   0 root         (0) root         (0)     1075 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/LICENSE
++-rw-r--r--   0 root         (0) root         (0)     2909 2023-04-06 20:29:03.849307 pipdu_sdk-1.0.0.dev4076314134/PKG-INFO
++-rw-rw-rw-   0 root         (0) root         (0)     2477 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/README.md
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:29:03.845307 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/
++-rw-rw-rw-   0 root         (0) root         (0)       63 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/__init__.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:29:03.849307 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/config/
++-rw-rw-rw-   0 root         (0) root         (0)     1003 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/config/__init__.py
++-rw-rw-rw-   0 root         (0) root         (0)      880 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/config/v1_0_0.py
++-rw-rw-rw-   0 root         (0) root         (0)     2540 2023-04-06 20:26:30.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/pipdu.py
++drwxr-xr-x   0 root         (0) root         (0)        0 2023-04-06 20:29:03.845307 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/
++-rw-r--r--   0 root         (0) root         (0)     2909 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0) root         (0)      297 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0) root         (0)        1 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0) root         (0)       34 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/requires.txt
++-rw-r--r--   0 root         (0) root         (0)       10 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/top_level.txt
++-rw-rw-rw-   0 root         (0) root         (0)       79 2023-04-06 20:29:03.849307 pipdu_sdk-1.0.0.dev4076314134/setup.cfg
++-rw-rw-rw-   0 root         (0) root         (0)      736 2023-04-06 20:29:03.000000 pipdu_sdk-1.0.0.dev4076314134/setup.py
+```
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/LICENSE` & `pipdu_sdk-1.0.0.dev4076314134/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/PKG-INFO` & `pipdu_sdk-1.0.0.dev4076314134/PKG-INFO`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pipdu_sdk
+-Version: 1.0.0.dev4076273101
++Version: 1.0.0.dev4076314134
+ Summary: PiPDU python SDK
+ Home-page: https://gitlab.com/mirceanton/piPDU/-/tree/main/utils/python_sdk
+ Author: Mircea-Pavel Anton
+ Author-email: contact@mirceanton.com
+ License: MIT
+ Project-URL: Bug Tracker, https://gitlab.com/mirceanton/piPDU/-/issues
+ Keywords: pypi,pipdu,mirceanton
+```
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/README.md` & `pipdu_sdk-1.0.0.dev4076314134/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk/pipdu.py` & `pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk/pipdu.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/pipdu_sdk.egg-info/PKG-INFO` & `pipdu_sdk-1.0.0.dev4076314134/pipdu_sdk.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pipdu-sdk
+-Version: 1.0.0.dev4076273101
++Version: 1.0.0.dev4076314134
+ Summary: PiPDU python SDK
+ Home-page: https://gitlab.com/mirceanton/piPDU/-/tree/main/utils/python_sdk
+ Author: Mircea-Pavel Anton
+ Author-email: contact@mirceanton.com
+ License: MIT
+ Project-URL: Bug Tracker, https://gitlab.com/mirceanton/piPDU/-/issues
+ Keywords: pypi,pipdu,mirceanton
+```
+
+### Comparing `pipdu_sdk-1.0.0.dev4076273101/setup.py` & `pipdu_sdk-1.0.0.dev4076314134/setup.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ import setuptools
+ 
+ with open("README.md", "r", encoding="utf-8") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name='pipdu_sdk',
+-    packages=['pipdu_sdk'],
+-    version='1.0.0.dev4076273101',
++    packages=['pipdu_sdk', 'pipdu_sdk.config'],
++    version='1.0.0.dev4076314134',
+     license='MIT',
+     description='PiPDU python SDK',
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     author='Mircea-Pavel Anton',
+     author_email='contact@mirceanton.com',
+     url='https://gitlab.com/mirceanton/piPDU/-/tree/main/utils/python_sdk',
+```
+

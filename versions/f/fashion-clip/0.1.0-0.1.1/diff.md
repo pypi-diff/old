@@ -1,0 +1,185 @@
+# Comparing `tmp/fashion-clip-0.1.0.tar.gz` & `tmp/fashion-clip-0.1.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "fashion-clip-0.1.0.tar", last modified: Thu Apr  6 20:13:59 2023, max compression
++gzip compressed data, was "fashion-clip-0.1.1.tar", last modified: Thu Apr  6 20:22:45 2023, max compression
+```
+
+## Comparing `fashion-clip-0.1.0.tar` & `fashion-clip-0.1.1.tar`
+
+### file list
+
+```diff
+@@ -1,18 +1,18 @@
+-drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:13:59.377570 fashion-clip-0.1.0/
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     9546 2023-04-06 20:13:59.377570 fashion-clip-0.1.0/PKG-INFO
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     9233 2023-04-04 01:09:03.000000 fashion-clip-0.1.0/README.md
+-drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:13:59.377570 fashion-clip-0.1.0/fashion_clip/
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)        0 2023-03-03 05:22:25.000000 fashion-clip-0.1.0/fashion_clip/__init__.py
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     2608 2023-03-03 05:22:25.000000 fashion-clip-0.1.0/fashion_clip/attention_map.py
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)    14220 2023-04-04 01:12:21.000000 fashion-clip-0.1.0/fashion_clip/fashion_clip.py
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     3579 2023-03-03 05:22:25.000000 fashion-clip-0.1.0/fashion_clip/s3_client.py
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     6047 2023-03-03 05:22:25.000000 fashion-clip-0.1.0/fashion_clip/utils.py
+-drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:13:59.377570 fashion-clip-0.1.0/fashion_clip.egg-info/
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)     9546 2023-04-06 20:13:59.000000 fashion-clip-0.1.0/fashion_clip.egg-info/PKG-INFO
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)      374 2023-04-06 20:13:59.000000 fashion-clip-0.1.0/fashion_clip.egg-info/SOURCES.txt
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)        1 2023-04-06 20:13:59.000000 fashion-clip-0.1.0/fashion_clip.egg-info/dependency_links.txt
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)        1 2023-04-06 20:01:33.000000 fashion-clip-0.1.0/fashion_clip.egg-info/not-zip-safe
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)      325 2023-04-06 20:13:59.000000 fashion-clip-0.1.0/fashion_clip.egg-info/requires.txt
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)       13 2023-04-06 20:13:59.000000 fashion-clip-0.1.0/fashion_clip.egg-info/top_level.txt
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)      107 2023-04-06 20:13:59.377570 fashion-clip-0.1.0/setup.cfg
+--rw-rw-r--   0 vinid     (1000) vinid     (1000)      641 2023-04-06 20:13:53.000000 fashion-clip-0.1.0/setup.py
++drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:22:45.223468 fashion-clip-0.1.1/
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     9952 2023-04-06 20:22:45.223468 fashion-clip-0.1.1/PKG-INFO
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     9233 2023-04-04 01:09:03.000000 fashion-clip-0.1.1/README.md
++drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:22:45.223468 fashion-clip-0.1.1/fashion_clip/
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)        0 2023-03-03 05:22:25.000000 fashion-clip-0.1.1/fashion_clip/__init__.py
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     2608 2023-03-03 05:22:25.000000 fashion-clip-0.1.1/fashion_clip/attention_map.py
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)    14220 2023-04-04 01:12:21.000000 fashion-clip-0.1.1/fashion_clip/fashion_clip.py
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     3579 2023-03-03 05:22:25.000000 fashion-clip-0.1.1/fashion_clip/s3_client.py
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     6047 2023-03-03 05:22:25.000000 fashion-clip-0.1.1/fashion_clip/utils.py
++drwxrwxr-x   0 vinid     (1000) vinid     (1000)        0 2023-04-06 20:22:45.223468 fashion-clip-0.1.1/fashion_clip.egg-info/
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     9952 2023-04-06 20:22:45.000000 fashion-clip-0.1.1/fashion_clip.egg-info/PKG-INFO
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)      374 2023-04-06 20:22:45.000000 fashion-clip-0.1.1/fashion_clip.egg-info/SOURCES.txt
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)        1 2023-04-06 20:22:45.000000 fashion-clip-0.1.1/fashion_clip.egg-info/dependency_links.txt
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)        1 2023-04-06 20:01:33.000000 fashion-clip-0.1.1/fashion_clip.egg-info/not-zip-safe
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)      325 2023-04-06 20:22:45.000000 fashion-clip-0.1.1/fashion_clip.egg-info/requires.txt
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)       13 2023-04-06 20:22:45.000000 fashion-clip-0.1.1/fashion_clip.egg-info/top_level.txt
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)      107 2023-04-06 20:22:45.223468 fashion-clip-0.1.1/setup.cfg
++-rw-rw-r--   0 vinid     (1000) vinid     (1000)     1045 2023-04-06 20:22:43.000000 fashion-clip-0.1.1/setup.py
+```
+
+### Comparing `fashion-clip-0.1.0/PKG-INFO` & `fashion-clip-0.1.1/README.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,7 @@
+-Metadata-Version: 2.1
+-Name: fashion-clip
+-Version: 0.1.0
+-Summary: UNKNOWN
+-Home-page: UNKNOWN
+-Author: Jacopo Tagliabue, Patrick John Chia, Federico Bianchi
+-Author-email: jtagliabue@coveo.com, pchia@coveo.com, f.bianchi@unibocconi.it
+-License: MIT license
+-Platform: UNKNOWN
+-Description-Content-Type: text/markdown
+-
+ # FashionCLIP
+ 
+ [![Youtube Video](https://img.shields.io/badge/youtube-video-red)](https://www.youtube.com/watch?v=uqRSc-KSA1Y)
+ [![HuggingFace Model](https://img.shields.io/badge/HF%20Model-Weights-yellow)](https://huggingface.co/patrickjohncyh/fashion-clip)
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1hAxBnWjF76bEi9KQ6CMBBEmI_FVDrW?usp=sharing)
+ [![Medium Blog Post](https://raw.githubusercontent.com/aleen42/badges/master/src/medium.svg)](https://towardsdatascience.com/teaching-clip-some-fashion-3005ac3fdcc3)
+ 
+@@ -200,9 +189,7 @@
+     pages="18958",
+     abstract="The steady rise of online shopping goes hand in hand with the development of increasingly complex ML and NLP models. While most use cases are cast as specialized supervised learning problems, we argue that practitioners would greatly benefit from general and transferable representations of products. In this work, we build on recent developments in contrastive learning to train FashionCLIP, a CLIP-like model adapted for the fashion industry. We demonstrate the effectiveness of the representations learned by FashionCLIP with extensive tests across a variety of tasks, datasets and generalization probes. We argue that adaptations of large pre-trained models such as CLIP offer new perspectives in terms of scalability and sustainability for certain types of players in the industry. Finally, we detail the costs and environmental impact of training, and release the model weights and code as open source contribution to the community.",
+     issn="2045-2322",
+     doi="10.1038/s41598-022-23052-9",
+     url="https://doi.org/10.1038/s41598-022-23052-9"
+ }
+ ```
+-
+-
+```
+
+### Comparing `fashion-clip-0.1.0/README.md` & `fashion-clip-0.1.1/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,7 +1,27 @@
++Metadata-Version: 2.1
++Name: fashion-clip
++Version: 0.1.1
++Summary: UNKNOWN
++Home-page: UNKNOWN
++Author: Jacopo Tagliabue, Patrick John Chia, Federico Bianchi
++Author-email: jtagliabue@coveo.com, pchia@coveo.com, f.bianchi@unibocconi.it
++License: MIT license
++Platform: UNKNOWN
++Classifier: Development Status :: 2 - Pre-Alpha
++Classifier: Intended Audience :: Developers
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Natural Language :: English
++Classifier: Programming Language :: Python :: 3.5
++Classifier: Programming Language :: Python :: 3.6
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Requires-Python: >=3.5
++Description-Content-Type: text/markdown
++
+ # FashionCLIP
+ 
+ [![Youtube Video](https://img.shields.io/badge/youtube-video-red)](https://www.youtube.com/watch?v=uqRSc-KSA1Y)
+ [![HuggingFace Model](https://img.shields.io/badge/HF%20Model-Weights-yellow)](https://huggingface.co/patrickjohncyh/fashion-clip)
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1hAxBnWjF76bEi9KQ6CMBBEmI_FVDrW?usp=sharing)
+ [![Medium Blog Post](https://raw.githubusercontent.com/aleen42/badges/master/src/medium.svg)](https://towardsdatascience.com/teaching-clip-some-fashion-3005ac3fdcc3)
+ 
+@@ -189,7 +209,9 @@
+     pages="18958",
+     abstract="The steady rise of online shopping goes hand in hand with the development of increasingly complex ML and NLP models. While most use cases are cast as specialized supervised learning problems, we argue that practitioners would greatly benefit from general and transferable representations of products. In this work, we build on recent developments in contrastive learning to train FashionCLIP, a CLIP-like model adapted for the fashion industry. We demonstrate the effectiveness of the representations learned by FashionCLIP with extensive tests across a variety of tasks, datasets and generalization probes. We argue that adaptations of large pre-trained models such as CLIP offer new perspectives in terms of scalability and sustainability for certain types of players in the industry. Finally, we detail the costs and environmental impact of training, and release the model weights and code as open source contribution to the community.",
+     issn="2045-2322",
+     doi="10.1038/s41598-022-23052-9",
+     url="https://doi.org/10.1038/s41598-022-23052-9"
+ }
+ ```
++
++
+```
+
+### Comparing `fashion-clip-0.1.0/fashion_clip/attention_map.py` & `fashion-clip-0.1.1/fashion_clip/attention_map.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fashion-clip-0.1.0/fashion_clip/fashion_clip.py` & `fashion-clip-0.1.1/fashion_clip/fashion_clip.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fashion-clip-0.1.0/fashion_clip/s3_client.py` & `fashion-clip-0.1.1/fashion_clip/s3_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fashion-clip-0.1.0/fashion_clip/utils.py` & `fashion-clip-0.1.1/fashion_clip/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `fashion-clip-0.1.0/fashion_clip.egg-info/PKG-INFO` & `fashion-clip-0.1.1/fashion_clip.egg-info/PKG-INFO`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,16 +1,25 @@
+ Metadata-Version: 2.1
+ Name: fashion-clip
+-Version: 0.1.0
++Version: 0.1.1
+ Summary: UNKNOWN
+ Home-page: UNKNOWN
+ Author: Jacopo Tagliabue, Patrick John Chia, Federico Bianchi
+ Author-email: jtagliabue@coveo.com, pchia@coveo.com, f.bianchi@unibocconi.it
+ License: MIT license
+ Platform: UNKNOWN
++Classifier: Development Status :: 2 - Pre-Alpha
++Classifier: Intended Audience :: Developers
++Classifier: License :: OSI Approved :: MIT License
++Classifier: Natural Language :: English
++Classifier: Programming Language :: Python :: 3.5
++Classifier: Programming Language :: Python :: 3.6
++Classifier: Programming Language :: Python :: 3.7
++Classifier: Programming Language :: Python :: 3.8
++Requires-Python: >=3.5
+ Description-Content-Type: text/markdown
+ 
+ # FashionCLIP
+ 
+ [![Youtube Video](https://img.shields.io/badge/youtube-video-red)](https://www.youtube.com/watch?v=uqRSc-KSA1Y)
+ [![HuggingFace Model](https://img.shields.io/badge/HF%20Model-Weights-yellow)](https://huggingface.co/patrickjohncyh/fashion-clip)
+ [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Z1hAxBnWjF76bEi9KQ6CMBBEmI_FVDrW?usp=sharing)
+```
+

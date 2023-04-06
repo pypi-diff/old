@@ -1,0 +1,358 @@
+# Comparing `tmp/dash-auth-external-0.3.0.tar.gz` & `tmp/dash-auth-external-1.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dash-auth-external-0.3.0.tar", last modified: Sat Feb  4 19:03:01 2023, max compression
++gzip compressed data, was "dash-auth-external-1.0.0.tar", last modified: Thu Apr  6 20:23:59 2023, max compression
+```
+
+## Comparing `dash-auth-external-0.3.0.tar` & `dash-auth-external-1.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,26 +1,26 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-04 19:03:01.090940 dash-auth-external-0.3.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      377 2023-02-04 19:03:01.090940 dash-auth-external-0.3.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     2135 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-04 19:03:01.086940 dash-auth-external-0.3.0/dash_auth_external/
+--rw-r--r--   0 runner    (1001) docker     (123)       35 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6790 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/auth.py
+--rw-r--r--   0 runner    (1001) docker     (123)       54 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/config.py
+--rw-r--r--   0 runner    (1001) docker     (123)      111 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/exceptions.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3561 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/routes.py
+--rw-r--r--   0 runner    (1001) docker     (123)      358 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/dash_auth_external/token.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-04 19:03:01.090940 dash-auth-external-0.3.0/dash_auth_external.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)      377 2023-02-04 19:03:01.000000 dash-auth-external-0.3.0/dash_auth_external.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      535 2023-02-04 19:03:01.000000 dash-auth-external-0.3.0/dash_auth_external.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-04 19:03:01.000000 dash-auth-external-0.3.0/dash_auth_external.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       53 2023-02-04 19:03:01.000000 dash-auth-external-0.3.0/dash_auth_external.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       25 2023-02-04 19:03:01.000000 dash-auth-external-0.3.0/dash_auth_external.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      103 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/pyproject.toml
+--rw-r--r--   0 runner    (1001) docker     (123)       79 2023-02-04 19:03:01.090940 dash-auth-external-0.3.0/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)      753 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-04 19:03:01.090940 dash-auth-external-0.3.0/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4444 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/tests/test_app.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3905 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/tests/test_auth.py
+--rw-r--r--   0 runner    (1001) docker     (123)       85 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/tests/test_config.py
+--rw-r--r--   0 runner    (1001) docker     (123)      132 2023-02-04 19:02:50.000000 dash-auth-external-0.3.0/tests/test_context.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:23:59.278473 dash-auth-external-1.0.0/
++-rw-r--r--   0 runner    (1001) docker     (123)     1071 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      399 2023-04-06 20:23:59.278473 dash-auth-external-1.0.0/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2135 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:23:59.278473 dash-auth-external-1.0.0/dash_auth_external/
++-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6527 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/auth.py
++-rw-r--r--   0 runner    (1001) docker     (123)       54 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/config.py
++-rw-r--r--   0 runner    (1001) docker     (123)      111 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/exceptions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3666 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/routes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      480 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/dash_auth_external/token.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:23:59.278473 dash-auth-external-1.0.0/dash_auth_external.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)      399 2023-04-06 20:23:59.000000 dash-auth-external-1.0.0/dash_auth_external.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      535 2023-04-06 20:23:59.000000 dash-auth-external-1.0.0/dash_auth_external.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 20:23:59.000000 dash-auth-external-1.0.0/dash_auth_external.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       53 2023-04-06 20:23:59.000000 dash-auth-external-1.0.0/dash_auth_external.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       25 2023-04-06 20:23:59.000000 dash-auth-external-1.0.0/dash_auth_external.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      103 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/pyproject.toml
++-rw-r--r--   0 runner    (1001) docker     (123)       79 2023-04-06 20:23:59.282473 dash-auth-external-1.0.0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)      781 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 20:23:59.278473 dash-auth-external-1.0.0/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4444 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/tests/test_app.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3291 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/tests/test_auth.py
++-rw-r--r--   0 runner    (1001) docker     (123)       85 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/tests/test_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)      132 2023-04-06 20:23:48.000000 dash-auth-external-1.0.0/tests/test_context.py
+```
+
+### Comparing `dash-auth-external-0.3.0/LICENSE` & `dash-auth-external-1.0.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `dash-auth-external-0.3.0/README.md` & `dash-auth-external-1.0.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `dash-auth-external-0.3.0/dash_auth_external/auth.py` & `dash-auth-external-1.0.0/dash_auth_external/auth.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,7 +1,8 @@
++from dataclasses import asdict
+ from flask import Flask
+ from .routes import make_access_token_route, make_auth_route, token_request
+ from urllib.parse import urljoin
+ import os
+ from dash_auth_external.token import OAuth2Token
+ from dash_auth_external.config import FLASK_SESSION_TOKEN_KEY
+ from dash_auth_external.exceptions import TokenExpiredError
+@@ -17,14 +18,18 @@
+     """
+     token_data = session.get(FLASK_SESSION_TOKEN_KEY)
+     if token_data is None:
+         raise ValueError("No token found in request session.")
+     return token_data
+ 
+ 
++def _set_token_data_in_session(token: OAuth2Token):
++    session[FLASK_SESSION_TOKEN_KEY] = token
++
++
+ class DashAuthExternal:
+     @staticmethod
+     def generate_secret_key(length: int = 24) -> str:
+         """Generates a secret key for flask app.
+ 
+         Returns:
+             bytes: Random bytes of the desired length.
+@@ -33,39 +38,31 @@
+ 
+     def get_token(self) -> str:
+         """Attempts to get a valid access token.
+ 
+         Returns:
+             str: Bearer Access token from your OAuth2 Provider
+         """
++        token_data = _get_token_data_from_session()
+ 
+-        if self.token_data is not None:
+-            if not self.token_data.is_expired():
+-                return self.token_data.access_token
+-
+-            if not self.token_data.refresh_token:
+-                raise TokenExpiredError(
+-                    "Token is expired and no refresh token available to refresh token."
+-                )
++        token = OAuth2Token(**token_data)
+ 
+-            self.token_data = refresh_token(
+-                self.external_token_url, self.token_data, self.token_request_headers
+-            )
+-            return self.token_data.access_token
++        if not token.is_expired():
++            return token.access_token
+ 
+-        token_data = _get_token_data_from_session()
++        if not token.refresh_token:
++            raise TokenExpiredError(
++                "Token is expired and no refresh token available to refresh token."
++            )
+ 
+-        self.token_data = OAuth2Token(
+-            access_token=token_data["access_token"],
+-            refresh_token=token_data.get("refresh_token"),
+-            expires_in=token_data.get("expires_in"),
+-            token_type=token_data.get("token_type"),
++        token_data = refresh_token(
++            self.external_token_url, token_data, self.token_request_headers
+         )
+-
+-        return self.token_data.access_token
++        _set_token_data_in_session(token_data)
++        return token_data.access_token
+ 
+     def __init__(
+         self,
+         external_auth_url: str,
+         external_token_url: str,
+         client_id: str,
+         with_pkce=True,
+@@ -101,15 +98,14 @@
+             _server_name (str, optional): The name of the Flask Server. Defaults to __name__, ignored if _flask_server is not None.
+ 
+ 
+         Returns:
+            DashAuthExternal: Main package class
+         """
+ 
+-        self.token_data: OAuth2Token = None
+         if auth_request_headers is None:
+             auth_request_headers = {}
+         if token_request_headers is None:
+             token_request_headers = {}
+ 
+         if _flask_server is None:
+```
+
+### Comparing `dash-auth-external-0.3.0/dash_auth_external/routes.py` & `dash-auth-external-1.0.0/dash_auth_external/routes.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,17 +1,19 @@
++from dataclasses import asdict
+ from flask import session, redirect, request
+ import os
+ import base64
+ import re
+ import urllib.parse
+ from flask.app import Flask
+ import requests
+ import hashlib
+ from requests_oauthlib import OAuth2Session
+ from dash_auth_external.config import FLASK_SESSION_TOKEN_KEY
++from dash_auth_external.token import OAuth2Token
+ 
+ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+ 
+ 
+ def make_code_challenge(length: int = 40):
+     code_verifier = base64.urlsafe_b64encode(os.urandom(length)).decode("utf-8")
+     code_verifier = re.sub("[^a-zA-Z0-9]+", "", code_verifier)
+@@ -108,15 +110,17 @@
+         response_data = token_request(
+             url=external_token_url,
+             body=body,
+             headers=token_request_headers,
+         )
+ 
+         response = redirect(_home_suffix)
+-        session[FLASK_SESSION_TOKEN_KEY] = response_data
++
++        session[FLASK_SESSION_TOKEN_KEY] = asdict(OAuth2Token(**response_data))
++
+         return response
+ 
+     return app
+ 
+ 
+ def token_request(url: str, body: dict, headers: dict):
+     r = requests.post(url, data=body, headers=headers)
+```
+
+### Comparing `dash-auth-external-0.3.0/dash_auth_external.egg-info/SOURCES.txt` & `dash-auth-external-1.0.0/dash_auth_external.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `dash-auth-external-0.3.0/setup.py` & `dash-auth-external-1.0.0/setup.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -8,16 +8,17 @@
+ long_description = (
+     "Integrate your dashboards with 3rd party APIs and external OAuth providers."
+ )
+ requires = ["dash >= 2.0.0", "requests >= 1.0.0", "requests-oauthlib >= 0.3.0"]
+ 
+ setup(
+     name=NAME,
+-    version="0.3.0",
++    version="1.0.0",
+     description="Integrate Dash with 3rd Parties and external providers",
++    python_requires=">3.7",
+     author_email="jholcombe@hotmail.co.uk",
+     url="https://github.com/jamesholcombe/dash-auth-external",
+     keywords=["Dash", "Plotly", "Authentication", "Auth", "External"],
+     install_requires=requires,
+     packages=find_packages(),
+     include_package_data=True,
+     long_description=long_description,
+```
+
+### Comparing `dash-auth-external-0.3.0/tests/test_app.py` & `dash-auth-external-1.0.0/tests/test_app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dash-auth-external-0.3.0/tests/test_auth.py` & `dash-auth-external-1.0.0/tests/test_auth.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -57,64 +57,47 @@
+     )
+ 
+     @dash_app.callback(Output("test-output", "children"), Input("test-input", "value"))
+     def test_callback(value):
+         token = auth.get_token()
+         return token
+ 
+-    assert auth.token_data is None
+-    test_callback("test")
+-    assert isinstance(auth.token_data, OAuth2Token)
+-
+-
+-def test_get_token_second_call(
+-    dash_app_and_auth, mocker, access_token_data_with_refresh
+-):
+-    dash_app, auth = dash_app_and_auth
+-
+-    mocker.patch(
+-        "dash_auth_external.auth._get_token_data_from_session",
+-        return_value=access_token_data_with_refresh,
+-    )
+-
+-    @dash_app.callback(Output("test-output", "children"), Input("test-input", "value"))
+-    def test_callback(value):
+-        token = auth.get_token()
+-        return token
+-
+-    assert auth.token_data is None
+-    test_callback("test")
+-    assert isinstance(auth.token_data, OAuth2Token)
+-    test_callback("test")
+-    assert isinstance(auth.token_data, OAuth2Token)
++    assert test_callback("test") == "access_token"
+ 
+ 
+ def test_get_token_with_refresh(
+     dash_app_and_auth,
+     mocker,
+     expired_access_token_data_with_refresh,
+-    access_token_data_with_refresh,
+ ):
+     dash_app, auth = dash_app_and_auth
+ 
++    mocker.patch(
++        "dash_auth_external.auth._get_token_data_from_session",
++        return_value=expired_access_token_data_with_refresh,
++    )
++
+     refresh_mock = mocker.patch(
+         "dash_auth_external.auth.refresh_token",
+-        return_value=OAuth2Token(**access_token_data_with_refresh),
++        return_value=OAuth2Token(**expired_access_token_data_with_refresh),
+     )
+ 
+     @dash_app.callback(Output("test-output", "children"), Input("test-input", "value"))
+     def test_callback(value):
+         token = auth.get_token()
+         return token
+ 
+-    auth.token_data = OAuth2Token(**expired_access_token_data_with_refresh)
++    # mocking as working out of runtime context
++    mocker.patch(
++        "dash_auth_external.auth._set_token_data_in_session",
++        return_value=expired_access_token_data_with_refresh,
++    )
++
++    assert test_callback("test") == "access_token"
+ 
+-    test_callback("test")
+-    assert isinstance(auth.token_data, OAuth2Token)
+-    assert auth.token_data.expires_in > 0
+     refresh_mock.assert_called_once()
+ 
+ 
+ def test_expired_token_raises_exception(
+     dash_app_and_auth, mocker, expired_access_token_data_without_refresh
+ ):
+     dash_app, auth = dash_app_and_auth
+@@ -125,11 +108,9 @@
+     )
+ 
+     @dash_app.callback(Output("test-output", "children"), Input("test-input", "value"))
+     def test_callback(value):
+         token = auth.get_token()
+         return token
+ 
+-    auth.token_data = OAuth2Token(**expired_access_token_data_without_refresh)
+-
+     with pytest.raises(TokenExpiredError):
+         test_callback("test")
+```
+

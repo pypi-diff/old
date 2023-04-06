@@ -1,0 +1,74 @@
+--- tmp/multiple_docking-0.5-py3-none-any.whl.zip
++++ tmp/multiple_docking-0.6-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,12 +1,12 @@
+│ -Zip file size: 4565 bytes, number of entries: 10
+│ -drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:16 multiple_docking-0.5-py3-none-any/
+│ -drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:15 multiple_docking-0.5-py3-none-any/multiple_docking/
+│ --rw-rw-r--  2.0 unx        0 bX defN 23-Apr-06 12:43 multiple_docking-0.5-py3-none-any/multiple_docking/__init__.py
+│ --rw-rw-r--  2.0 unx     4956 bX defN 23-Jan-30 00:25 multiple_docking-0.5-py3-none-any/multiple_docking/docking.py
+│ -drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:15 multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/
+│ --rw-rw-r--  2.0 unx      239 bX defN 23-Apr-06 14:44 multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/METADATA
+│ --rw-rw-r--  2.0 unx       92 bX defN 23-Apr-06 14:44 multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/WHEEL
+│ --rw-rw-r--  2.0 unx       17 bX defN 23-Apr-06 14:44 multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/top_level.txt
+│ --rw-rw-r--  2.0 unx      491 bX defN 23-Apr-06 14:44 multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/RECORD
+│ -drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:16 multiple_docking-0.5-py3-none-any/grids/
+│ -10 files, 5795 bytes uncompressed, 1837 bytes compressed:  68.3%
+│ +Zip file size: 4632 bytes, number of entries: 10
+│ +drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:24 multiple_docking-0.6-py3-none-any/
+│ +drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:24 multiple_docking-0.6-py3-none-any/multiple_docking/
+│ +-rw-rw-r--  2.0 unx        0 bX defN 23-Apr-06 12:43 multiple_docking-0.6-py3-none-any/multiple_docking/__init__.py
+│ +-rw-rw-r--  2.0 unx     4956 bX defN 23-Jan-30 00:25 multiple_docking-0.6-py3-none-any/multiple_docking/docking.py
+│ +drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:24 multiple_docking-0.6-py3-none-any/multiple_docking/grids/
+│ +drwxrwxr-x  2.0 unx        0 bx stor 23-Apr-06 20:24 multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/
+│ +-rw-rw-r--  2.0 unx      326 bX defN 23-Apr-06 14:52 multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/METADATA
+│ +-rw-rw-r--  2.0 unx       92 bX defN 23-Apr-06 14:52 multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/WHEEL
+│ +-rw-rw-r--  2.0 unx       17 bX defN 23-Apr-06 14:52 multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/top_level.txt
+│ +-rw-rw-r--  2.0 unx      491 bX defN 23-Apr-06 14:52 multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/RECORD
+│ +10 files, 5882 bytes uncompressed, 1870 bytes compressed:  68.2%
+├── zipnote {}
+│ @@ -1,31 +1,31 @@
+│ -Filename: multiple_docking-0.5-py3-none-any/
+│ +Filename: multiple_docking-0.6-py3-none-any/
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking/
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking/
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking/__init__.py
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking/__init__.py
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking/docking.py
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking/docking.py
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking/grids/
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/METADATA
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/WHEEL
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/top_level.txt
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/multiple_docking-0.5.dist-info/RECORD
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: multiple_docking-0.5-py3-none-any/grids/
+│ +Filename: multiple_docking-0.6-py3-none-any/multiple_docking-0.6.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+│   --- multiple_docking-0.5-py3-none-any/multiple_docking/docking.py
+├── +++ multiple_docking-0.6-py3-none-any/multiple_docking/docking.py
+│┄ Files identical despite different names

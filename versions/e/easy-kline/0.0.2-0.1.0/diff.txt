@@ -1,0 +1,550 @@
+--- tmp/easy_kline-0.0.2.tar.gz
++++ tmp/easy_kline-0.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "easy_kline-0.0.2.tar", last modified: Sat Mar 25 10:50:37 2023, max compression
+│ +gzip compressed data, was "easy_kline-0.1.0.tar", last modified: Thu Apr  6 20:18:38 2023, max compression
+│   --- easy_kline-0.0.2.tar
+├── +++ easy_kline-0.1.0.tar
+│ ├── file list
+│ │ @@ -1,28 +1,32 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-25 10:50:37.019143 easy_kline-0.0.2/
+│ │ --rw-rw-rw-   0        0        0     1079 2023-03-24 09:05:48.000000 easy_kline-0.0.2/LICENSE.txt
+│ │ --rw-rw-rw-   0        0        0      640 2023-03-25 10:50:37.019143 easy_kline-0.0.2/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     2598 2023-03-25 10:49:54.000000 easy_kline-0.0.2/README.md
+│ │ --rw-rw-rw-   0        0        0      108 2023-03-24 09:00:12.000000 easy_kline-0.0.2/pyproject.toml
+│ │ --rw-rw-rw-   0        0        0      810 2023-03-25 10:50:37.019143 easy_kline-0.0.2/setup.cfg
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-25 10:50:37.009873 easy_kline-0.0.2/src/
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-25 10:50:37.016158 easy_kline-0.0.2/src/easy_kline/
+│ │ --rw-rw-rw-   0        0        0      359 2023-03-24 19:55:04.000000 easy_kline-0.0.2/src/easy_kline/__init__.py
+│ │ --rw-rw-rw-   0        0        0     1074 2023-03-24 19:55:20.000000 easy_kline-0.0.2/src/easy_kline/binance.py
+│ │ --rw-rw-rw-   0        0        0     1511 2023-03-24 19:54:02.000000 easy_kline-0.0.2/src/easy_kline/bybit.py
+│ │ --rw-rw-rw-   0        0        0      413 2023-03-24 19:53:14.000000 easy_kline-0.0.2/src/easy_kline/datetime_to_timestamp.py
+│ │ --rw-rw-rw-   0        0        0     1047 2023-03-24 19:55:17.000000 easy_kline-0.0.2/src/easy_kline/easy_klines.py
+│ │ --rw-rw-rw-   0        0        0     1122 2023-03-24 19:40:15.000000 easy_kline-0.0.2/src/easy_kline/errors.py
+│ │ --rw-rw-rw-   0        0        0     6539 2023-03-25 09:27:05.000000 easy_kline-0.0.2/src/easy_kline/get_bar.py
+│ │ --rw-rw-rw-   0        0        0      637 2023-03-24 19:33:27.000000 easy_kline-0.0.2/src/easy_kline/loading_animation.py
+│ │ --rw-rw-rw-   0        0        0     1620 2023-03-24 19:32:02.000000 easy_kline-0.0.2/src/easy_kline/oanda.py
+│ │ --rw-rw-rw-   0        0        0     1577 2023-03-24 19:26:15.000000 easy_kline-0.0.2/src/easy_kline/response_to_json.py
+│ │ --rw-rw-rw-   0        0        0      547 2023-03-24 19:19:47.000000 easy_kline-0.0.2/src/easy_kline/timeframe_check.py
+│ │ --rw-rw-rw-   0        0        0      431 2023-03-24 19:19:46.000000 easy_kline-0.0.2/src/easy_kline/timeframe_converter.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-25 10:50:37.018146 easy_kline-0.0.2/src/easy_kline.egg-info/
+│ │ --rw-rw-rw-   0        0        0      640 2023-03-25 10:50:37.000000 easy_kline-0.0.2/src/easy_kline.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      614 2023-03-25 10:50:37.000000 easy_kline-0.0.2/src/easy_kline.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-03-25 10:50:37.000000 easy_kline-0.0.2/src/easy_kline.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0       21 2023-03-25 10:50:37.000000 easy_kline-0.0.2/src/easy_kline.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0       11 2023-03-25 10:50:37.000000 easy_kline-0.0.2/src/easy_kline.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0        0        0        0 2023-03-25 10:50:37.018146 easy_kline-0.0.2/tests/
+│ │ --rw-rw-rw-   0        0        0      284 2023-03-24 21:05:23.000000 easy_kline-0.0.2/tests/test.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:18:38.967581 easy_kline-0.1.0/
+│ │ +-rw-rw-rw-   0        0        0     1079 2023-03-24 09:05:48.000000 easy_kline-0.1.0/LICENSE.txt
+│ │ +-rw-rw-rw-   0        0        0    10158 2023-04-06 20:18:38.967943 easy_kline-0.1.0/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     9518 2023-04-06 20:00:06.000000 easy_kline-0.1.0/README.md
+│ │ +-rw-rw-rw-   0        0        0      108 2023-03-24 09:00:12.000000 easy_kline-0.1.0/pyproject.toml
+│ │ +-rw-rw-rw-   0        0        0      847 2023-04-06 20:18:38.967943 easy_kline-0.1.0/setup.cfg
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:18:38.952844 easy_kline-0.1.0/src/
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:18:38.964082 easy_kline-0.1.0/src/easy_kline/
+│ │ +-rw-rw-rw-   0        0        0      218 2023-04-01 12:29:09.000000 easy_kline-0.1.0/src/easy_kline/__init__.py
+│ │ +-rw-rw-rw-   0        0        0     1331 2023-04-04 09:46:24.000000 easy_kline-0.1.0/src/easy_kline/binance.py
+│ │ +-rw-rw-rw-   0        0        0     1664 2023-04-04 09:57:13.000000 easy_kline-0.1.0/src/easy_kline/bybit.py
+│ │ +-rw-rw-rw-   0        0        0     1514 2023-03-25 16:50:33.000000 easy_kline-0.1.0/src/easy_kline/bybit_futures.py
+│ │ +-rw-rw-rw-   0        0        0     1359 2023-04-01 23:26:47.000000 easy_kline-0.1.0/src/easy_kline/check_while_loop.py
+│ │ +-rw-rw-rw-   0        0        0      413 2023-03-24 19:53:14.000000 easy_kline-0.1.0/src/easy_kline/datetime_to_timestamp.py
+│ │ +-rw-rw-rw-   0        0        0     2159 2023-04-04 22:08:47.000000 easy_kline-0.1.0/src/easy_kline/errors.py
+│ │ +-rw-rw-rw-   0        0        0    16799 2023-04-06 19:36:22.000000 easy_kline-0.1.0/src/easy_kline/exchange.py
+│ │ +-rw-rw-rw-   0        0        0     8514 2023-04-06 18:03:30.000000 easy_kline-0.1.0/src/easy_kline/get_bar.py
+│ │ +-rw-rw-rw-   0        0        0      673 2023-04-06 17:47:17.000000 easy_kline-0.1.0/src/easy_kline/loading_animation.py
+│ │ +-rw-rw-rw-   0        0        0     1620 2023-04-06 16:59:35.000000 easy_kline-0.1.0/src/easy_kline/oanda.py
+│ │ +-rw-rw-rw-   0        0        0     1578 2023-03-25 22:07:12.000000 easy_kline-0.1.0/src/easy_kline/response_to_json.py
+│ │ +-rw-rw-rw-   0        0        0     4437 2023-04-06 19:56:23.000000 easy_kline-0.1.0/src/easy_kline/stream.py
+│ │ +-rw-rw-rw-   0        0        0        0 2023-04-01 23:55:14.000000 easy_kline-0.1.0/src/easy_kline/test.py
+│ │ +-rw-rw-rw-   0        0        0      549 2023-04-04 22:11:45.000000 easy_kline-0.1.0/src/easy_kline/timeframe_check.py
+│ │ +-rw-rw-rw-   0        0        0      431 2023-03-24 19:19:46.000000 easy_kline-0.1.0/src/easy_kline/timeframe_converter.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:18:38.966079 easy_kline-0.1.0/src/easy_kline.egg-info/
+│ │ +-rw-rw-rw-   0        0        0    10158 2023-04-06 20:18:38.000000 easy_kline-0.1.0/src/easy_kline.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      726 2023-04-06 20:18:38.000000 easy_kline-0.1.0/src/easy_kline.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 20:18:38.000000 easy_kline-0.1.0/src/easy_kline.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0       41 2023-04-06 20:18:38.000000 easy_kline-0.1.0/src/easy_kline.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0       11 2023-04-06 20:18:38.000000 easy_kline-0.1.0/src/easy_kline.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:18:38.966079 easy_kline-0.1.0/tests/
+│ │ +-rw-rw-rw-   0        0        0      358 2023-04-06 18:03:54.000000 easy_kline-0.1.0/tests/test.py
+│ │   --- easy_kline-0.0.2/LICENSE.txt
+│ ├── +++ easy_kline-0.1.0/LICENSE.txt
+│ │┄ Files identical despite different names
+│ │   --- easy_kline-0.0.2/setup.cfg
+│ ├── +++ easy_kline-0.1.0/setup.cfg
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  00000000: 5b6d 6574 6164 6174 615d 0d0a 6e61 6d65  [metadata]..name
+│ │  00000010: 203d 2065 6173 795f 6b6c 696e 650d 0a76   = easy_kline..v
+│ │ -00000020: 6572 7369 6f6e 203d 2030 2e30 2e32 0d0a  ersion = 0.0.2..
+│ │ +00000020: 6572 7369 6f6e 203d 2030 2e31 2e30 0d0a  ersion = 0.1.0..
+│ │  00000030: 6175 7468 6f72 203d 206d 6f68 6465 720d  author = mohder.
+│ │  00000040: 0a61 7574 686f 725f 656d 6169 6c20 3d20  .author_email = 
+│ │  00000050: 6d6f 6864 6572 3133 3739 4067 6d61 696c  mohder1379@gmail
+│ │  00000060: 2e63 6f6d 0d0a 6465 7363 7269 7074 696f  .com..descriptio
+│ │  00000070: 6e20 3d20 2245 6173 795f 6b6c 696e 6573  n = "Easy_klines
+│ │  00000080: 2220 6973 2061 2050 7974 686f 6e20 6c69  " is a Python li
+│ │  00000090: 6272 6172 7920 7468 6174 2070 726f 7669  brary that provi
+│ │ @@ -12,40 +12,42 @@
+│ │  000000b0: 6f20 7468 6520 6c69 6d69 7461 7469 6f6e  o the limitation
+│ │  000000c0: 7320 6f66 2065 7863 6861 6e67 6520 4150  s of exchange AP
+│ │  000000d0: 4973 2069 6e20 7265 7472 6965 7669 6e67  Is in retrieving
+│ │  000000e0: 2063 616e 646c 6573 7469 636b 2064 6174   candlestick dat
+│ │  000000f0: 6120 6d6f 7265 2065 6666 6963 6965 6e74  a more efficient
+│ │  00000100: 6c79 2061 6e64 2071 7569 636b 6c79 2e0d  ly and quickly..
+│ │  00000110: 0a6c 6f6e 675f 6465 7363 7269 7074 696f  .long_descriptio
+│ │ -00000120: 6e20 3d20 0d0a 6c6f 6e67 5f64 6573 6372  n = ..long_descr
+│ │ -00000130: 6970 7469 6f6e 5f63 6f6e 7465 6e74 5f74  iption_content_t
+│ │ -00000140: 7970 6520 3d20 6669 6c65 3a20 5245 4144  ype = file: READ
+│ │ -00000150: 4d45 2e6d 640d 0a75 726c 203d 2068 7474  ME.md..url = htt
+│ │ -00000160: 7073 3a2f 2f67 6974 6875 622e 636f 6d2f  ps://github.com/
+│ │ -00000170: 6d6f 6864 6572 3739 2f45 6173 795f 6b6c  mohder79/Easy_kl
+│ │ -00000180: 696e 6573 0d0a 7072 6f6a 6563 745f 7572  ines..project_ur
+│ │ -00000190: 6c73 203d 200d 0a09 4275 6720 5472 6163  ls = ...Bug Trac
+│ │ -000001a0: 6b65 7220 3d20 6874 7470 733a 2f2f 6769  ker = https://gi
+│ │ -000001b0: 7468 7562 2e63 6f6d 2f6d 6f68 6465 7237  thub.com/mohder7
+│ │ -000001c0: 392f 4561 7379 5f6b 6c69 6e65 730d 0a63  9/Easy_klines..c
+│ │ -000001d0: 6c61 7373 6966 6965 7273 203d 200d 0a09  lassifiers = ...
+│ │ -000001e0: 5072 6f67 7261 6d6d 696e 6720 4c61 6e67  Programming Lang
+│ │ -000001f0: 7561 6765 203a 3a20 5079 7468 6f6e 203a  uage :: Python :
+│ │ -00000200: 3a20 330d 0a09 4c69 6365 6e73 6520 3a3a  : 3...License ::
+│ │ -00000210: 204f 5349 2041 7070 726f 7665 6420 3a3a   OSI Approved ::
+│ │ -00000220: 204d 4954 204c 6963 656e 7365 0d0a 094f   MIT License...O
+│ │ -00000230: 7065 7261 7469 6e67 2053 7973 7465 6d20  perating System 
+│ │ -00000240: 3a3a 204f 5320 496e 6465 7065 6e64 656e  :: OS Independen
+│ │ -00000250: 740d 0a0d 0a5b 6f70 7469 6f6e 735d 0d0a  t....[options]..
+│ │ -00000260: 7061 636b 6167 655f 6469 7220 3d20 0d0a  package_dir = ..
+│ │ -00000270: 093d 2073 7263 0d0a 7061 636b 6167 6573  .= src..packages
+│ │ -00000280: 203d 2066 696e 643a 0d0a 7079 7468 6f6e   = find:..python
+│ │ -00000290: 5f72 6571 7569 7265 7320 3d20 3e3d 332e  _requires = >=3.
+│ │ -000002a0: 3130 2e35 0d0a 696e 7374 616c 6c5f 7265  10.5..install_re
+│ │ -000002b0: 7175 6972 6573 203d 200d 0a09 7061 6e64  quires = ...pand
+│ │ -000002c0: 6173 0d0a 0972 6571 7565 7374 730d 0a09  as...requests...
+│ │ -000002d0: 7079 747a 0d0a 0d0a 5b6f 7074 696f 6e73  pytz....[options
+│ │ -000002e0: 2e70 6163 6b61 6765 732e 6669 6e64 5d0d  .packages.find].
+│ │ -000002f0: 0a77 6865 7265 203d 2073 7263 0d0a 0d0a  .where = src....
+│ │ -00000300: 5b65 6767 5f69 6e66 6f5d 0d0a 7461 675f  [egg_info]..tag_
+│ │ -00000310: 6275 696c 6420 3d20 0d0a 7461 675f 6461  build = ..tag_da
+│ │ -00000320: 7465 203d 2030 0d0a 0d0a                 te = 0....
+│ │ +00000120: 6e20 3d20 6669 6c65 3a20 5245 4144 4d45  n = file: README
+│ │ +00000130: 2e6d 640d 0a6c 6f6e 675f 6465 7363 7269  .md..long_descri
+│ │ +00000140: 7074 696f 6e5f 636f 6e74 656e 745f 7479  ption_content_ty
+│ │ +00000150: 7065 203d 2074 6578 742f 6d61 726b 646f  pe = text/markdo
+│ │ +00000160: 776e 0d0a 7572 6c20 3d20 6874 7470 733a  wn..url = https:
+│ │ +00000170: 2f2f 6769 7468 7562 2e63 6f6d 2f6d 6f68  //github.com/moh
+│ │ +00000180: 6465 7237 392f 4561 7379 5f6b 6c69 6e65  der79/Easy_kline
+│ │ +00000190: 730d 0a70 726f 6a65 6374 5f75 726c 7320  s..project_urls 
+│ │ +000001a0: 3d20 0d0a 0942 7567 2054 7261 636b 6572  = ...Bug Tracker
+│ │ +000001b0: 203d 2068 7474 7073 3a2f 2f67 6974 6875   = https://githu
+│ │ +000001c0: 622e 636f 6d2f 6d6f 6864 6572 3739 2f45  b.com/mohder79/E
+│ │ +000001d0: 6173 795f 6b6c 696e 6573 0d0a 636c 6173  asy_klines..clas
+│ │ +000001e0: 7369 6669 6572 7320 3d20 0d0a 0950 726f  sifiers = ...Pro
+│ │ +000001f0: 6772 616d 6d69 6e67 204c 616e 6775 6167  gramming Languag
+│ │ +00000200: 6520 3a3a 2050 7974 686f 6e20 3a3a 2033  e :: Python :: 3
+│ │ +00000210: 0d0a 094c 6963 656e 7365 203a 3a20 4f53  ...License :: OS
+│ │ +00000220: 4920 4170 7072 6f76 6564 203a 3a20 4d49  I Approved :: MI
+│ │ +00000230: 5420 4c69 6365 6e73 650d 0a09 4f70 6572  T License...Oper
+│ │ +00000240: 6174 696e 6720 5379 7374 656d 203a 3a20  ating System :: 
+│ │ +00000250: 4f53 2049 6e64 6570 656e 6465 6e74 0d0a  OS Independent..
+│ │ +00000260: 0d0a 5b6f 7074 696f 6e73 5d0d 0a70 6163  ..[options]..pac
+│ │ +00000270: 6b61 6765 5f64 6972 203d 200d 0a09 3d20  kage_dir = ...= 
+│ │ +00000280: 7372 630d 0a70 6163 6b61 6765 7320 3d20  src..packages = 
+│ │ +00000290: 6669 6e64 3a0d 0a70 7974 686f 6e5f 7265  find:..python_re
+│ │ +000002a0: 7175 6972 6573 203d 203e 3d33 2e31 302e  quires = >=3.10.
+│ │ +000002b0: 350d 0a69 6e73 7461 6c6c 5f72 6571 7569  5..install_requi
+│ │ +000002c0: 7265 7320 3d20 0d0a 0970 616e 6461 730d  res = ...pandas.
+│ │ +000002d0: 0a09 7265 7175 6573 7473 0d0a 0970 7974  ..requests...pyt
+│ │ +000002e0: 7a0d 0a09 636f 6c6f 7261 6d61 0d0a 0978  z...colorama...x
+│ │ +000002f0: 6c73 7877 7269 7465 720d 0a0d 0a5b 6f70  lsxwriter....[op
+│ │ +00000300: 7469 6f6e 732e 7061 636b 6167 6573 2e66  tions.packages.f
+│ │ +00000310: 696e 645d 0d0a 7768 6572 6520 3d20 7372  ind]..where = sr
+│ │ +00000320: 630d 0a0d 0a5b 6567 675f 696e 666f 5d0d  c....[egg_info].
+│ │ +00000330: 0a74 6167 5f62 7569 6c64 203d 200d 0a74  .tag_build = ..t
+│ │ +00000340: 6167 5f64 6174 6520 3d20 300d 0a0d 0a    ag_date = 0....
+│ │   --- easy_kline-0.0.2/src/easy_kline/binance.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/binance.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -7,20 +7,24 @@
+│ │  
+│ │  import requests
+│ │  from .datetime_to_timestamp import date_time_to_timestamp
+│ │  
+│ │  
+│ │  class Binance():
+│ │  
+│ │ -    def __init__(self,  symbol, time_frame, start_time, retry_count: int = 5):
+│ │ +    def __init__(self,  symbol, time_frame, start_time,futures=False, retry_count: int = 5):
+│ │  
+│ │          self.symbol = symbol
+│ │          self.timeframe = time_frame
+│ │          self.start_time = start_time
+│ │          self.retry_count = retry_count
+│ │ +        self.futures = futures
+│ │  
+│ │      def binance_data(self):
+│ │ -        url = f'https://api.binance.com/api/v3/klines?symbol={self.symbol}&interval={self.timeframe}&startTime={date_time_to_timestamp(self.start_time)}'
+│ │ -
+│ │ +        if not self.futures:
+│ │ +            url = f'https://api.binance.com/api/v3/klines?symbol={self.symbol}&interval={self.timeframe}&startTime={date_time_to_timestamp(self.start_time)}'
+│ │ +        else :
+│ │ +            url = f'https://fapi.binance.com/fapi/v1/klines?symbol={self.symbol}&interval={self.timeframe}&startTime={date_time_to_timestamp(self.start_time)}'
+│ │          response = requests.get(url)
+│ │  
+│ │          return response
+│ │ +
+│ │   --- easy_kline-0.0.2/src/easy_kline/bybit.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/bybit_futures.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │  The "bybit_data" method sends a request to the bybit API using the provided arguments to retrieve candlestick data for the specified symbol and time frame.
+│ │  '''
+│ │  import requests
+│ │  import pandas as pd
+│ │  from .datetime_to_timestamp import date_time_to_timestamp
+│ │  
+│ │  
+│ │ -class Bybit():
+│ │ +class Bybit_F():
+│ │  
+│ │      def __init__(self,  symbol, time_frame, start_time, retry_count: int = 5):
+│ │  
+│ │          self.symbol = symbol
+│ │          self.timeframe = time_frame
+│ │          self.start_time = start_time
+│ │          self.retry_count = retry_count
+│ │ @@ -22,14 +22,14 @@
+│ │      # "The Bybit exchange has a different timeframe input compared to the input of my main program."
+│ │      def bybit_timeframe(self):
+│ │          timeframe = self.timeframe
+│ │          bybit_timeframe = {'1m': 1, '3m': 3, '5m': 5, '15m': 15, '30': 30, '1h': 60,
+│ │                             '2h': 120, '4h': 240, '6h': 360, '8h': 480, '12h': 720, '1d': 'D', '1w': 'W'}
+│ │          return bybit_timeframe.get(timeframe)
+│ │  
+│ │ -    def bybit_data(self):
+│ │ +    def bybit_f_data(self):
+│ │  
+│ │ -        url = f'https://api.bybit.com/v5/market/kline?category=inverse&symbol={self.symbol}&interval={self.bybit_timeframe()}&start={date_time_to_timestamp(self.start_time)}'
+│ │ +        url = f'https://api.bybit.com/v5/market/kline?category=linear&symbol={self.symbol}&interval={self.bybit_timeframe()}&start={date_time_to_timestamp(self.start_time)}'
+│ │  
+│ │          response = requests.get(url)
+│ │  
+│ │          return response
+│ │   --- easy_kline-0.0.2/src/easy_kline/get_bar.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/get_bar.py
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,148 +1,181 @@
+│ │  '''
+│ │  After successfully obtaining the response data, convert data to a Pandas dataframe and enters a loop that checks if the last retrieved bar is recent.
+│ │  If it is,breaks out of the loop and returns the bars.
+│ │  If the last retrieved bar is not recent enough, the method computes the time of the next bar and retrieves it from the exchange using the same process as before.
+│ │  The retrieved bars are concatenated with the existing dataframe until the last bar retrieved is recent enough.
+│ │  '''
+│ │ -
+│ │ +import pickle
+│ │ +from .datetime_to_timestamp import date_time_to_timestamp
+│ │  
+│ │  from datetime import timedelta
+│ │  import pandas as pd
+│ │  import requests
+│ │  import datetime
+│ │  import sys
+│ │  from .bybit import Bybit
+│ │  from .binance import Binance
+│ │  from .oanda import Oanda
+│ │  from .timeframe_check import timeframe_check
+│ │  from .errors import errors
+│ │  from .timeframe_converter import timeframe_converter
+│ │  from .response_to_json import response_to_json
+│ │  from .loading_animation import loading_animation
+│ │ -
+│ │ +import os
+│ │ +import inspect
+│ │  
+│ │  class Get_Bar:
+│ │ -    def __init__(self,  symbol, time_frame, start_time, retry_count: int = 5):
+│ │ -
+│ │ +    def __init__(self,  symbol, time_frame, start_time,futures =False , retry_count: int = 5  ,auto_print=False , stream=False):
+│ │ +        # print(stream)
+│ │          self.symbol = symbol
+│ │          self.timeframe = time_frame
+│ │          self.start_time = start_time
+│ │          self.retry_count = retry_count
+│ │ +        self.futures = futures
+│ │ +        self.stream = stream
+│ │ +        self.auto_print = auto_print
+│ │ +        
+│ │ +        
+│ │  
+│ │      def get_bars(self, exchange_name):
+│ │ +
+│ │          timeframe_check(self.timeframe)
+│ │ -        arguments = self.symbol, self.timeframe, self.start_time
+│ │ -        # print(exchange_name)
+│ │ +        if exchange_name  in ['bybit' , 'binance'] :
+│ │ +            if self.futures not in [True, False]:
+│ │ +                sys.exit("Wrong category ERROR. It should be True for futures and False for spot. The default is False (spot).")
+│ │ +            arguments = self.symbol, self.timeframe, self.start_time , self.futures
+│ │ +        else :
+│ │ +            arguments = self.symbol, self.timeframe, self.start_time 
+│ │ +
+│ │          exchanges = {'bybit': Bybit,
+│ │                       'binance': Binance, 'oanda': Oanda}.get(exchange_name)
+│ │          if exchanges is None:
+│ │ -            # handle invalid data parameter
+│ │              pass
+│ │ -        # print(exchanges)
+│ │ +
+│ │          exchange = exchanges(*arguments)
+│ │  
+│ │          for i in range(self.retry_count):
+│ │  
+│ │ -            # print(retry_count)
+│ │ +
+│ │              try:
+│ │                  sys.stdout.write("\033[K")
+│ │                  loading_animation(
+│ │ -                    f'Fetching {self.symbol} new bar for {self.start_time}')
+│ │ +                    f'Fetching a new bar of data for {self.symbol} at {self.start_time}')
+│ │                  sys.stdout.write("\033[K")
+│ │                  sys.stdout.write('\r')
+│ │ -                # sys.stdout.write("\033[K")
+│ │  
+│ │                  response_data = exchange.bybit_data() if exchange_name == 'bybit' else exchange.binance_data(
+│ │                  ) if exchange_name == 'binance' else exchange.oanda_data() if exchange_name == 'oanda' else None
+│ │ -                # print(response_data)
+│ │                  if str(response_data) == '(<Response [200]>, 0)' or '<Response [200]>':
+│ │ -                    # do something with the response
+│ │                      break  # if successful, exit the loop
+│ │              except requests.exceptions.RequestException:
+│ │ -                # sys.stdout.write("\033[K")
+│ │                  loading_animation(
+│ │                      'Request failed: "Encountered network error"  Retrying in 5 seconds')
+│ │                  sys.stdout.write("\033[K")
+│ │                  sys.stdout.write('\r')
+│ │  
+│ │                  if i == self.retry_count - 1:
+│ │                      sys.stdout.write("\033[K")
+│ │                      sys.exit(
+│ │                          '\n Encountered network error: Please check your network')
+│ │          sys.stdout.write("\033[K"), sys.stdout.write('\r')
+│ │          errors(exchange_name, response_data)
+│ │          bars = response_to_json(
+│ │              exchange_name, response_data)
+│ │ -        # print(bars)
+│ │ -        # print(f'Fetching {self.symbol} new bar for {self.start_time}')
+│ │  
+│ │          while True:
+│ │ +            
+│ │  
+│ │ -            last_time = bars['Time'].iloc[-1]
+│ │ -            # for test
+│ │ -            # last_row_mask = bars.index == (len(bars) - 1)
+│ │ -            # bars.loc[last_row_mask,
+│ │ -            #          'volume'] = 'XXXXXXXXSSSSAAAAAZZZZZZXXXXX'
+│ │ -            #
+│ │ -            time_now = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M')
+│ │ -            time = timeframe_converter(self.timeframe)
+│ │ -            time_format = "%Y-%m-%d %H:%M"
+│ │ -            time1 = datetime.datetime.strptime(time_now, time_format)
+│ │ -            time2 = datetime.datetime.strptime(
+│ │ -                str(last_time), str(time_format))
+│ │ -
+│ │ -            difference_in_minutes = (time1 - time2).total_seconds() // 60
+│ │ -            if difference_in_minutes <= time:
+│ │ +            last_time = bars['Time'].iloc[-1] # get last time in dataframe
+│ │ +            time_now = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M') # get utc time now
+│ │ +            timeframe = timeframe_converter(self.timeframe) # return timeframe to minutes
+│ │ +            time_format = "%Y-%m-%d %H:%M" 
+│ │ +            difference_in_minutes = (datetime.datetime.strptime(time_now, time_format) - datetime.datetime.strptime(
+│ │ +                str(last_time), str(time_format))).total_seconds() // 60 # utc time now minus last time in dataframe
+│ │ +            if difference_in_minutes <= timeframe:  # check if difference_in_minutes < timeframe . its meens we dont have any data and last time in data frame = now time in utc
+│ │                  break
+│ │ -            else:
+│ │ -
+│ │ -                last_bar_datetime = datetime.datetime.strptime(
+│ │ -                    last_time, '%Y-%m-%d %H:%M')
+│ │ +            else:  # get new data 
+│ │ +                 
+│ │ +                last_bar_datetime = datetime.datetime.strptime( last_time, '%Y-%m-%d %H:%M')# last time in dataframe
+│ │                  new_time = (
+│ │ -                    last_bar_datetime + timedelta(minutes=time)).strftime('%Y-%m-%d %H:%M')
+│ │ +                    last_bar_datetime + timedelta(minutes=timeframe)).strftime('%Y-%m-%d %H:%M')   # (last time in list + timeframe ) for get new bars
+│ │                  if new_time == self.start_time:
+│ │  
+│ │                      break
+│ │  
+│ │ -                self.start_time = new_time
+│ │ +                self.start_time = new_time  # set new start time for get data
+│ │  
+│ │ -                arguments = self.symbol, self.timeframe, self.start_time
+│ │ +                if exchange_name == 'bybit' or 'binance' :
+│ │ +                    arguments = self.symbol, self.timeframe, self.start_time , self.futures
+│ │ +                else :
+│ │ +                    arguments = self.symbol, self.timeframe, self.start_time 
+│ │                  exchange = exchanges(*arguments)
+│ │                  for i in range(self.retry_count):
+│ │                      try:
+│ │  
+│ │                          sys.stdout.write("\033[K")
+│ │                          loading_animation(
+│ │ -                            f'Fetching {self.symbol} new bar for {self.start_time}', 2)
+│ │ -                        # sys.stdout.write("\033[K")
+│ │ +                            f'Fetching a new bar of data for {self.symbol} at {self.start_time}', 2)
+│ │  
+│ │                          response_data = exchange.bybit_data() if exchange_name == 'bybit' else exchange.binance_data(
+│ │                          ) if exchange_name == 'binance' else exchange.oanda_data() if exchange_name == 'oanda' else None
+│ │  
+│ │                          if str(response_data) == '(<Response [200]>, 0)' or '<Response [200]>':
+│ │                              sys.stdout.write("\033[K")
+│ │                              sys.stdout.write('\r')
+│ │ -                            # sys.exit('hi')
+│ │ -                            # do something with the response
+│ │ -                            break  # if successful, exit the loop
+│ │  
+│ │                      except requests.exceptions.RequestException:
+│ │ -                        # sys.stdout.write("\033[K")
+│ │                          loading_animation(
+│ │                              'Request failed: "Encountered network error"  Retrying in 5 seconds')
+│ │                          sys.stdout.write("\033[K")
+│ │                          sys.stdout.write('\r')
+│ │  
+│ │                          if i == self.retry_count - 1:
+│ │                              sys.stdout.write("\033[K")
+│ │                              sys.exit(
+│ │                                  '\n Encountered network error: Please check your network')
+│ │                  errors(exchange_name, response_data)
+│ │                  bar2 = response_to_json(exchange_name, response_data)
+│ │                  bars = pd.concat([bars, bar2]).reset_index(drop=True)
+│ │ -                # last_row_mask = bars.index == (len(bars) - 1)
+│ │ -                # bars.loc[last_row_mask,
+│ │ -                #          'volume'] = 'XXXXXXXXXXXXX'
+│ │ +
+│ │          bars.drop(bars.index[-1], inplace=True)
+│ │ +        if  not self.stream :
+│ │ +            try :
+│ │ +                sys.stdout.write("\033[K")
+│ │ +                sys.stdout.write('\r')
+│ │ +                file_name = f'{self.symbol}-{exchange_name}-{self.timeframe}-{self.start_time.replace(":" , "-")}.xlsx'
+│ │ +                excel = pd.ExcelWriter(file_name, engine = 'xlsxwriter')
+│ │ +                bars.to_excel(excel, sheet_name = 'data sheet')
+│ │ +
+│ │ +                excel.close()
+│ │ +            except PermissionError :
+│ │ +                sys.exit('\n PermissionError: Permission denied for removig old data plese close the excel file')
+│ │ +            with open('easy_kline.pickle', 'wb') as f:
+│ │ +                utc_time =datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M')
+│ │ +                arg = {'exchange_name' : [exchange_name],'symbol' : [self.symbol] ,'timeframe' : [self.timeframe] , 'start_time' : [self.start_time] , 'end_time' : [bars['Time'].iloc[-1]] , 'utc_time': [utc_time]  , 'bars': [bars] , 'file_name' :[file_name] ,'auto_print' :[self.auto_print] , 'futures': [self.futures]}
+│ │ +                pickle.dump(arg, f)
+│ │ +            if self.auto_print :
+│ │ +
+│ │ +                print(bars.to_string())
+│ │ +            
+│ │ +        if self.stream :            
+│ │ +            sys.stdout.write("\033[K")
+│ │ +            sys.stdout.write('\r')
+│ │ +            
+│ │ +            with open('easy_kline.pickle', 'rb') as f:
+│ │ +                arg = pickle.load(f)
+│ │ +                bars3 = arg['bars'][0]
+│ │ +                bars = pd.concat([bars3 , bars]).reset_index(drop=True)
+│ │ +                arg['bars'][0] = bars
+│ │ +                arg['end_time'][0] = bars['Time'].iloc[-1]
+│ │ +                
+│ │ +            with open('easy_kline.pickle', 'wb') as f:
+│ │ +                pickle.dump(arg, f)
+│ │ +
+│ │ +                
+│ │ +            if arg['auto_print'][0] :
+│ │ +                
+│ │ +                print(bars.tail(1).to_string(header=False))
+│ │ +
+│ │  
+│ │          return bars
+│ │ +
+│ │   --- easy_kline-0.0.2/src/easy_kline/loading_animation.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/loading_animation.py
+│ │┄ Files 18% similar despite different names
+│ │ @@ -9,11 +9,12 @@
+│ │      # Characters to use for animation
+│ │      chars = ['⣿', "⢿", "⣻", "⣽", "⣾", "⣷", "⣯", "⣟", "⡿", '⣿']
+│ │      start_time = time.time()  # start time
+│ │  
+│ │      while time.time() - start_time < time_loading:  # time condition
+│ │          for char in chars:
+│ │              # Print the current character
+│ │ +            space = ' ' * 15
+│ │              sys.stdout.write(
+│ │ -                f'\r {text}  {char} ')
+│ │ +                f'\r {text}  {char}{space}')
+│ │              time.sleep(0.1)  # Wait for a short amount of time
+│ │      time.sleep(1)  # Wait for a short amount of time
+│ │   --- easy_kline-0.0.2/src/easy_kline/oanda.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/oanda.py
+│ │┄ Files identical despite different names
+│ │   --- easy_kline-0.0.2/src/easy_kline/response_to_json.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/response_to_json.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -21,15 +21,15 @@
+│ │                  i['time'][:-4], '%Y-%m-%dT%H:%M:%S.%f')
+│ │              time = dtt.strftime('%Y-%m-%d %H:%M')
+│ │              data.append([time, i['mid']['o'],
+│ │                          i['mid']['h'], i['mid']['l'], i['mid']['c'], i['volume']])
+│ │          df = pd.DataFrame(
+│ │              data, columns=['Time', 'Open', 'High', 'Low', 'Close', 'Volume'])
+│ │  
+│ │ -    if exchange_name == 'bybit' or 'binance':
+│ │ +    if exchange_name in ['bybit' , 'binance']:
+│ │  
+│ │          data = [i[:minus] for i in data]
+│ │          df = pd.DataFrame(
+│ │              data, columns=['Time', 'Open', 'High', 'Low', 'Close', 'Volume'])
+│ │          df['Time'] = pd.to_datetime(df['Time'], unit='ms', utc=True)
+│ │          df['Time'] = df['Time'].dt.strftime('%Y-%m-%d %H:%M')
+│ │      if exchange_name == 'bybit':
+│ │   --- easy_kline-0.0.2/src/easy_kline/timeframe_check.py
+│ ├── +++ easy_kline-0.1.0/src/easy_kline/timeframe_check.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -5,11 +5,11 @@
+│ │  """
+│ │  
+│ │  import sys
+│ │  
+│ │  
+│ │  def timeframe_check(timeframe):
+│ │      time_frames_list = ['1m', '3m', '5m',
+│ │ -                        '15m', '30m', '1h', '2h', '4h', '6h', '8h', '12h' '1d', '1w']
+│ │ +                        '15m', '30m', '1h', '2h', '4h', '6h', '8h', '12h' , '1d', '1w']
+│ │      if timeframe not in time_frames_list:
+│ │          sys.exit(
+│ │              (f' Wrong timeframe! Timeframe must be one of: {time_frames_list}'))
+│ │   --- easy_kline-0.0.2/src/easy_kline.egg-info/SOURCES.txt
+│ ├── +++ easy_kline-0.1.0/src/easy_kline.egg-info/SOURCES.txt
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,21 +1,25 @@
+│ │  LICENSE.txt
+│ │  README.md
+│ │  pyproject.toml
+│ │  setup.cfg
+│ │  src/easy_kline/__init__.py
+│ │  src/easy_kline/binance.py
+│ │  src/easy_kline/bybit.py
+│ │ +src/easy_kline/bybit_futures.py
+│ │ +src/easy_kline/check_while_loop.py
+│ │  src/easy_kline/datetime_to_timestamp.py
+│ │ -src/easy_kline/easy_klines.py
+│ │  src/easy_kline/errors.py
+│ │ +src/easy_kline/exchange.py
+│ │  src/easy_kline/get_bar.py
+│ │  src/easy_kline/loading_animation.py
+│ │  src/easy_kline/oanda.py
+│ │  src/easy_kline/response_to_json.py
+│ │ +src/easy_kline/stream.py
+│ │ +src/easy_kline/test.py
+│ │  src/easy_kline/timeframe_check.py
+│ │  src/easy_kline/timeframe_converter.py
+│ │  src/easy_kline.egg-info/PKG-INFO
+│ │  src/easy_kline.egg-info/SOURCES.txt
+│ │  src/easy_kline.egg-info/dependency_links.txt
+│ │  src/easy_kline.egg-info/requires.txt
+│ │  src/easy_kline.egg-info/top_level.txt

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/vallox_websocket_api-3.2.0.tar.gz tmp/vallox_websocket_api-3.2.1.tar.gz --html versions/v/vallox-websocket-api/3.2.0-3.2.1/index.html --text versions/v/vallox-websocket-api/3.2.0-3.2.1/diff.txt --markdown versions/v/vallox-websocket-api/3.2.0-3.2.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">13.2 KB</span></div>
+  <div><span class="source">tmp/vallox_websocket_api-3.2.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/vallox_websocket_api-3.2.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">290 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;vallox_websocket_api-3.2.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;vallox_websocket_api-3.2.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">12.8 KB</span></div>
+    <div><span class="source">vallox_websocket_api-3.2.0.tar</span> vs.</div>
+    <div id="vallox_websocket_api--.-.-.tar"><span class="source">vallox_websocket_api-3.2.1.tar</span>
+      <a class="anchor" href="#vallox_websocket_api--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">8.52 KB</span></div>
+      <div id="vallox_websocket_api--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 31 lines modified</td><td colspan="2">Offset 1, 31 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>174334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7651<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/LICENSE.txt</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7651<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/LICENSE.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33640<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33640<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>174334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32687<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>32687<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>542<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/pyproject.toml</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>542<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>71</del><span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/setup.cfg</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>68</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>178334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/</td><td class="diffline">8 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>174334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6173<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_client.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6173<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>867<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_fetch_logs.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>867<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_fetch_logs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4336<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_messages.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4336<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_messages.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>779<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_set_temperature.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>779<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_set_temperature.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1689<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_vallox_fan_speed.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1689<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_vallox_fan_speed.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1219<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_vallox_info.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1219<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_vallox_info.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2443<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_vallox_next_filter_change.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2443<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_vallox_next_filter_change.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5312<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_vallox_profile.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5312<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_vallox_profile.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4391<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/tests/test_vallox_temperatures.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4391<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/tests/test_vallox_temperatures.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/</td><td class="diffline">18 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>174334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>581<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>581<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11360<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/client.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11360<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/client.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71638<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/constants.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>71638<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/constants.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>393<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/exceptions.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>393<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/exceptions.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2479<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/messages.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2479<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/messages.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9933<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>47</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api/vallox.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9933<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>08</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api/vallox.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.<del>207112</del><span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/</td><td class="diffline">25 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.<ins>174334</ins><span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33640<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/PKG-INFO</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33640<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/SOURCES.txt</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>772<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/dependency_links.txt</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<del>9</del><span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/requires.txt</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4<ins>6</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/top_level.txt</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>21</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><del>18</del>:<del>52</del>:<del>58</del>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<del>0</del>/vallox_websocket_api.egg-info/zip-safe</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-06<span class="dp">·</span><ins>20</ins>:<ins>19</ins>:<ins>20</ins>.000000<span class="dp">·</span>vallox_websocket_api-3.2.<ins>1</ins>/vallox_websocket_api.egg-info/zip-safe</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/LICENSE.txt</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--LICENSE.txt"><span class="source">vallox_websocket_api-3.2.1/LICENSE.txt</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--LICENSE.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">479 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/PKG-INFO</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--PKG-INFO"><span class="source">vallox_websocket_api-3.2.1/PKG-INFO</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>vallox_websocket_api</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>vallox_websocket_api</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.2.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.2.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Vallox<span class="dp">·</span>WebSocket<span class="dp">·</span>API</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Vallox<span class="dp">·</span>WebSocket<span class="dp">·</span>API</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jevgeni<span class="dp">·</span>Kiski</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jevgeni<span class="dp">·</span>Kiski</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>yozik04@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>yozik04@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>vallox<span class="dp">·</span>api</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>vallox<span class="dp">·</span>api</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">111 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/README.md</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--README.md"><span class="source">vallox_websocket_api-3.2.1/README.md</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/pyproject.toml</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--pyproject.toml"><span class="source">vallox_websocket_api-3.2.1/pyproject.toml</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">478 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/setup.cfg</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--setup.cfg"><span class="source">vallox_websocket_api-3.2.1/setup.cfg</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 26, 15 lines modified</td><td colspan="2">Offset 26, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">[options]</td><td class="diffline">26 </td><td class="diffpresent">[options]</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">zip_safe<span class="dp">·</span>=<span class="dp">·</span>True</td><td class="diffline">27 </td><td class="diffpresent">zip_safe<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">include_package_data<span class="dp">·</span>=<span class="dp">·</span>True</td><td class="diffline">28 </td><td class="diffpresent">include_package_data<span class="dp">·</span>=<span class="dp">·</span>True</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">29 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">»</span>       vallox_websocket_api</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">»</span>       vallox_websocket_api</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">python_requires<span class="dp">·</span>=<span class="dp">·</span>&gt;=3.6.0,<span class="dp">·</span>&lt;4</td><td class="diffline">31 </td><td class="diffpresent">python_requires<span class="dp">·</span>=<span class="dp">·</span>&gt;=3.6.0,<span class="dp">·</span>&lt;4</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">32 </td><td class="diffpresent">install_requires<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">»</span>       websockets<span class="dp">·</span>&gt;=<span class="dp">·</span><del>11.</del><del>0</del>.1,<span class="dp">·</span>&lt;<span class="dp">·</span>12.0</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">»</span>       websockets<span class="dp">·</span>&gt;=<span class="dp">·</span><ins>9</ins>.1,<span class="dp">·</span>&lt;<span class="dp">·</span>12.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">»</span>       construct<span class="dp">·</span>&gt;=<span class="dp">·</span>2.9.0,<span class="dp">·</span>&lt;<span class="dp">·</span>3.0.0</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">»</span>       construct<span class="dp">·</span>&gt;=<span class="dp">·</span>2.9.0,<span class="dp">·</span>&lt;<span class="dp">·</span>3.0.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">tests_require<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">35 </td><td class="diffpresent">tests_require<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">»</span>       pytest</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">»</span>       pytest</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       pytest-asyncio</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">»</span>       pytest-asyncio</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">[flake8]</td><td class="diffline">38 </td><td class="diffpresent">[flake8]</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>.venv,.git,.tox,docs,venv,bin,lib,deps,build</td><td class="diffline">39 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>.venv,.git,.tox,docs,venv,bin,lib,deps,build</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_client.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_client.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_client.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_client.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_fetch_logs.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_fetch_logs.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_fetch_logs.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_fetch_logs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_messages.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_messages.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_messages.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_messages.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_set_temperature.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_set_temperature.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_set_temperature.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_set_temperature.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_vallox_fan_speed.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_fan_speed.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_vallox_fan_speed.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_fan_speed.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_vallox_info.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_info.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_vallox_info.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_info.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_vallox_next_filter_change.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_next_filter_change.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_vallox_next_filter_change.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_next_filter_change.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_vallox_profile.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_profile.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_vallox_profile.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_profile.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/tests/test_vallox_temperatures.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_temperatures.py"><span class="source">vallox_websocket_api-3.2.1/tests/test_vallox_temperatures.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--tests-test_vallox_temperatures.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">393 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api/__init__.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-__init__.py"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api/__init__.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 20, 8 lines modified</td><td colspan="2">Offset 20, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;PROFILE_TO_SET_TEMPERATURE_METRIC_MAP&quot;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;PROFILE_TO_SET_TEMPERATURE_METRIC_MAP&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxException&quot;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxException&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxInvalidInputException&quot;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxInvalidInputException&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxApiException&quot;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxApiException&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxWebsocketException&quot;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;ValloxWebsocketException&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">]</td><td class="diffline">25 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;3.2.<del>0</del>&quot;</td><td class="diffline">26 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;3.2.<ins>1</ins>&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api/client.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-client.py"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api/client.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-client.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api/constants.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-constants.py"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api/constants.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-constants.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api/messages.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-messages.py"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api/messages.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-messages.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api/vallox.py</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-vallox.py"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api/vallox.py</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api-vallox.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">539 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api.egg-info/PKG-INFO</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api.egg-info-PKG-INFO"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>vallox-websocket-api</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>vallox-websocket-api</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.2.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>3.2.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Vallox<span class="dp">·</span>WebSocket<span class="dp">·</span>API</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Vallox<span class="dp">·</span>WebSocket<span class="dp">·</span>API</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jevgeni<span class="dp">·</span>Kiski</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Jevgeni<span class="dp">·</span>Kiski</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>yozik04@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>yozik04@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api/issues</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Bug<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/yozik04/vallox_websocket_api/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>vallox<span class="dp">·</span>api</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>vallox<span class="dp">·</span>api</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">vallox_websocket_api-3.2.0/vallox_websocket_api.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api.egg-info-SOURCES.txt"><span class="source">vallox_websocket_api-3.2.1/vallox_websocket_api.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#vallox_websocket_api--.-.-.tar---vallox_websocket_api--.-.--vallox_websocket_api.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

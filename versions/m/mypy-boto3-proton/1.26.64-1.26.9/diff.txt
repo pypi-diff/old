@@ -1,0 +1,2380 @@
+--- tmp/mypy-boto3-proton-1.26.64.tar.gz
++++ tmp/mypy-boto3-proton-1.26.9.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mypy-boto3-proton-1.26.64.tar", last modified: Fri Feb  3 22:25:46 2023, max compression
+│ +gzip compressed data, was "mypy-boto3-proton-1.26.9.tar", last modified: Mon Nov 14 20:49:29 2022, max compression
+│   --- mypy-boto3-proton-1.26.64.tar
+├── +++ mypy-boto3-proton-1.26.9.tar
+│ ├── file list
+│ │ @@ -1,29 +1,29 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-03 22:25:46.295990 mypy-boto3-proton-1.26.64/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1070 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29765 2023-02-03 22:25:46.295990 mypy-boto3-proton-1.26.64/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    28282 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-03 22:25:46.295990 mypy-boto3-proton-1.26.64/mypy_boto3_proton/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7753 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7752 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/__init__.pyi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      903 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/__main__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    67075 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/client.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    66962 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/client.pyi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15218 2023-02-03 22:25:29.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/literals.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    15216 2023-02-03 22:25:29.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/literals.pyi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25218 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/paginator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    25195 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/paginator.pyi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/py.typed
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    98571 2023-02-03 22:25:31.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/type_defs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    98407 2023-02-03 22:25:30.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/type_defs.pyi
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       61 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10159 2023-02-03 22:25:29.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/waiter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10149 2023-02-03 22:25:29.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton/waiter.pyi
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-02-03 22:25:46.295990 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    29765 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      718 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       25 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       18 2023-02-03 22:25:46.000000 mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-02-03 22:25:46.295990 mypy-boto3-proton-1.26.64/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1978 2023-02-03 22:25:28.000000 mypy-boto3-proton-1.26.64/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-14 20:49:29.648561 mypy-boto3-proton-1.26.9/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1070 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    29483 2022-11-14 20:49:29.644561 mypy-boto3-proton-1.26.9/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    28052 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-14 20:49:29.644561 mypy-boto3-proton-1.26.9/mypy_boto3_proton/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     7753 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     7752 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/__init__.pyi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      901 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/__main__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    66522 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/client.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    66410 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/client.pyi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    14001 2022-11-14 20:49:00.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/literals.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    13999 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/literals.pyi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    24938 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/paginator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    24915 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/paginator.pyi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        0 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/py.typed
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    96668 2022-11-14 20:49:02.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/type_defs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    96506 2022-11-14 20:49:01.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/type_defs.pyi
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       60 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    10159 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/waiter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    10149 2022-11-14 20:48:59.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton/waiter.pyi
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (121)        0 2022-11-14 20:49:29.644561 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)    29483 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)      718 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)        1 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       25 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       18 2022-11-14 20:49:29.000000 mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)       38 2022-11-14 20:49:29.648561 mypy-boto3-proton-1.26.9/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (121)     1944 2022-11-14 20:48:58.000000 mypy-boto3-proton-1.26.9/setup.py
+│ │   --- mypy-boto3-proton-1.26.64/LICENSE
+│ ├── +++ mypy-boto3-proton-1.26.9/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/PKG-INFO
+│ ├── +++ mypy-boto3-proton-1.26.9/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mypy-boto3-proton
+│ │ -Version: 1.26.64
+│ │ -Summary: Type annotations for boto3.Proton 1.26.64 service generated with mypy-boto3-builder 7.12.3
+│ │ +Version: 1.26.9
+│ │ +Summary: Type annotations for boto3.Proton 1.26.9 service generated with mypy-boto3-builder 7.11.10
+│ │  Home-page: https://github.com/youtype/mypy_boto3_builder
+│ │  Author: Vlad Emelianov
+│ │  Author-email: vlad.emelianov.nz@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: Documentation, https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/
+│ │  Project-URL: Source, https://github.com/youtype/mypy_boto3_builder
+│ │  Project-URL: Tracker, https://github.com/youtype/mypy_boto3_builder/issues
+│ │ @@ -18,15 +18,14 @@
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ -Classifier: Programming Language :: Python :: 3.12
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: Implementation :: CPython
+│ │  Classifier: Typing :: Typed
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ @@ -38,24 +37,24 @@
+│ │  [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mypy-boto3-proton.svg?color=blue)](https://pypi.org/project/mypy-boto3-proton)
+│ │  [![Docs](https://img.shields.io/readthedocs/mypy-boto3-builder.svg?color=blue)](https://mypy-boto3-builder.readthedocs.io/)
+│ │  [![PyPI - Downloads](https://img.shields.io/pypi/dm/mypy-boto3-proton?color=blue)](https://pypistats.org/packages/mypy-boto3-proton)
+│ │  
+│ │  ![boto3.typed](https://github.com/youtype/mypy_boto3_builder/raw/main/logo.png)
+│ │  
+│ │  Type annotations for
+│ │ -[boto3.Proton 1.26.64](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │ +[boto3.Proton 1.26.9](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │  service compatible with [VSCode](https://code.visualstudio.com/),
+│ │  [PyCharm](https://www.jetbrains.com/pycharm/),
+│ │  [Emacs](https://www.gnu.org/software/emacs/),
+│ │  [Sublime Text](https://www.sublimetext.com/),
+│ │  [mypy](https://github.com/python/mypy),
+│ │  [pyright](https://github.com/microsoft/pyright) and other tools.
+│ │  
+│ │  Generated by
+│ │ -[mypy-boto3-builder 7.12.3](https://github.com/youtype/mypy_boto3_builder).
+│ │ +[mypy-boto3-builder 7.11.10](https://github.com/youtype/mypy_boto3_builder).
+│ │  
+│ │  More information can be found on
+│ │  [boto3-stubs](https://pypi.org/project/boto3-stubs/) page and in
+│ │  [mypy-boto3-proton docs](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/).
+│ │  
+│ │  See how it helps to find and fix potential bugs:
+│ │  
+│ │ @@ -438,17 +437,15 @@
+│ │      ListEnvironmentTemplateVersionsPaginatorName,
+│ │      ListEnvironmentTemplatesPaginatorName,
+│ │      ListEnvironmentsPaginatorName,
+│ │      ListRepositoriesPaginatorName,
+│ │      ListRepositorySyncDefinitionsPaginatorName,
+│ │      ListServiceInstanceOutputsPaginatorName,
+│ │      ListServiceInstanceProvisionedResourcesPaginatorName,
+│ │ -    ListServiceInstancesFilterByType,
+│ │      ListServiceInstancesPaginatorName,
+│ │ -    ListServiceInstancesSortByType,
+│ │      ListServicePipelineOutputsPaginatorName,
+│ │      ListServicePipelineProvisionedResourcesPaginatorName,
+│ │      ListServiceTemplateVersionsPaginatorName,
+│ │      ListServiceTemplatesPaginatorName,
+│ │      ListServicesPaginatorName,
+│ │      ListTagsForResourcePaginatorName,
+│ │      ProvisionedResourceEngineType,
+│ │ @@ -461,15 +458,14 @@
+│ │      ServiceDeletedWaiterName,
+│ │      ServiceInstanceDeployedWaiterName,
+│ │      ServicePipelineDeployedWaiterName,
+│ │      ServiceStatusType,
+│ │      ServiceTemplateSupportedComponentSourceTypeType,
+│ │      ServiceTemplateVersionRegisteredWaiterName,
+│ │      ServiceUpdatedWaiterName,
+│ │ -    SortOrderType,
+│ │      SyncTypeType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │      ProtonServiceName,
+│ │      ServiceName,
+│ │      ResourceServiceName,
+│ │      PaginatorName,
+│ │ @@ -501,15 +497,14 @@
+│ │      CancelServiceInstanceDeploymentInputRequestTypeDef,
+│ │      ServiceInstanceTypeDef,
+│ │      CancelServicePipelineDeploymentInputRequestTypeDef,
+│ │      ServicePipelineTypeDef,
+│ │      CompatibleEnvironmentTemplateInputTypeDef,
+│ │      CompatibleEnvironmentTemplateTypeDef,
+│ │      ComponentSummaryTypeDef,
+│ │ -    ResourceCountsSummaryTypeDef,
+│ │      TagTypeDef,
+│ │      RepositoryBranchInputTypeDef,
+│ │      EnvironmentTemplateTypeDef,
+│ │      EnvironmentTemplateVersionTypeDef,
+│ │      RepositoryTypeDef,
+│ │      ServiceTemplateTypeDef,
+│ │      CreateTemplateSyncConfigInputRequestTypeDef,
+│ │ @@ -557,15 +552,15 @@
+│ │      ListEnvironmentTemplatesInputRequestTypeDef,
+│ │      ListRepositoriesInputRequestTypeDef,
+│ │      RepositorySummaryTypeDef,
+│ │      ListRepositorySyncDefinitionsInputRequestTypeDef,
+│ │      RepositorySyncDefinitionTypeDef,
+│ │      ListServiceInstanceOutputsInputRequestTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │ +    ListServiceInstancesInputRequestTypeDef,
+│ │      ServiceInstanceSummaryTypeDef,
+│ │      ListServicePipelineOutputsInputRequestTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputRequestTypeDef,
+│ │      ListServiceTemplateVersionsInputRequestTypeDef,
+│ │      ServiceTemplateVersionSummaryTypeDef,
+│ │      ListServiceTemplatesInputRequestTypeDef,
+│ │      ServiceTemplateSummaryTypeDef,
+│ │ @@ -604,15 +599,14 @@
+│ │      UpdateServiceInstanceOutputTypeDef,
+│ │      CancelServicePipelineDeploymentOutputTypeDef,
+│ │      ServiceTypeDef,
+│ │      UpdateServicePipelineOutputTypeDef,
+│ │      UpdateServiceTemplateVersionInputRequestTypeDef,
+│ │      ServiceTemplateVersionTypeDef,
+│ │      ListComponentsOutputTypeDef,
+│ │ -    CountsSummaryTypeDef,
+│ │      CreateComponentInputRequestTypeDef,
+│ │      CreateEnvironmentAccountConnectionInputRequestTypeDef,
+│ │      CreateEnvironmentTemplateInputRequestTypeDef,
+│ │      CreateRepositoryInputRequestTypeDef,
+│ │      CreateServiceInputRequestTypeDef,
+│ │      CreateServiceTemplateInputRequestTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -663,14 +657,15 @@
+│ │      ListEnvironmentTemplateVersionsInputListEnvironmentTemplateVersionsPaginateTypeDef,
+│ │      ListEnvironmentTemplatesInputListEnvironmentTemplatesPaginateTypeDef,
+│ │      ListEnvironmentsInputListEnvironmentsPaginateTypeDef,
+│ │      ListRepositoriesInputListRepositoriesPaginateTypeDef,
+│ │      ListRepositorySyncDefinitionsInputListRepositorySyncDefinitionsPaginateTypeDef,
+│ │      ListServiceInstanceOutputsInputListServiceInstanceOutputsPaginateTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │ +    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │      ListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputListServicePipelineProvisionedResourcesPaginateTypeDef,
+│ │      ListServiceTemplateVersionsInputListServiceTemplateVersionsPaginateTypeDef,
+│ │      ListServiceTemplatesInputListServiceTemplatesPaginateTypeDef,
+│ │      ListServicesInputListServicesPaginateTypeDef,
+│ │      ListTagsForResourceInputListTagsForResourcePaginateTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │ @@ -680,16 +675,14 @@
+│ │      NotifyResourceDeploymentStatusChangeInputRequestTypeDef,
+│ │      ListComponentProvisionedResourcesOutputTypeDef,
+│ │      ListEnvironmentProvisionedResourcesOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │ -    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │ -    ListServiceInstancesInputRequestTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      RepositorySyncAttemptTypeDef,
+│ │      ResourceSyncAttemptTypeDef,
+│ │      TemplateVersionSourceInputTypeDef,
+│ │ @@ -704,15 +697,14 @@
+│ │      DeleteServiceOutputTypeDef,
+│ │      GetServiceOutputTypeDef,
+│ │      UpdateServiceOutputTypeDef,
+│ │      CreateServiceTemplateVersionOutputTypeDef,
+│ │      DeleteServiceTemplateVersionOutputTypeDef,
+│ │      GetServiceTemplateVersionOutputTypeDef,
+│ │      UpdateServiceTemplateVersionOutputTypeDef,
+│ │ -    GetResourcesSummaryOutputTypeDef,
+│ │      GetRepositorySyncStatusOutputTypeDef,
+│ │      GetTemplateSyncStatusOutputTypeDef,
+│ │      CreateEnvironmentTemplateVersionInputRequestTypeDef,
+│ │      CreateServiceTemplateVersionInputRequestTypeDef,
+│ │  )
+│ │   --- mypy-boto3-proton-1.26.64/README.md
+│ ├── +++ mypy-boto3-proton-1.26.9/README.md
+│ │┄ Files 0% similar despite different names
+│ │ @@ -6,24 +6,24 @@
+│ │  [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mypy-boto3-proton.svg?color=blue)](https://pypi.org/project/mypy-boto3-proton)
+│ │  [![Docs](https://img.shields.io/readthedocs/mypy-boto3-builder.svg?color=blue)](https://mypy-boto3-builder.readthedocs.io/)
+│ │  [![PyPI - Downloads](https://img.shields.io/pypi/dm/mypy-boto3-proton?color=blue)](https://pypistats.org/packages/mypy-boto3-proton)
+│ │  
+│ │  ![boto3.typed](https://github.com/youtype/mypy_boto3_builder/raw/main/logo.png)
+│ │  
+│ │  Type annotations for
+│ │ -[boto3.Proton 1.26.64](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │ +[boto3.Proton 1.26.9](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │  service compatible with [VSCode](https://code.visualstudio.com/),
+│ │  [PyCharm](https://www.jetbrains.com/pycharm/),
+│ │  [Emacs](https://www.gnu.org/software/emacs/),
+│ │  [Sublime Text](https://www.sublimetext.com/),
+│ │  [mypy](https://github.com/python/mypy),
+│ │  [pyright](https://github.com/microsoft/pyright) and other tools.
+│ │  
+│ │  Generated by
+│ │ -[mypy-boto3-builder 7.12.3](https://github.com/youtype/mypy_boto3_builder).
+│ │ +[mypy-boto3-builder 7.11.10](https://github.com/youtype/mypy_boto3_builder).
+│ │  
+│ │  More information can be found on
+│ │  [boto3-stubs](https://pypi.org/project/boto3-stubs/) page and in
+│ │  [mypy-boto3-proton docs](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/).
+│ │  
+│ │  See how it helps to find and fix potential bugs:
+│ │  
+│ │ @@ -406,17 +406,15 @@
+│ │      ListEnvironmentTemplateVersionsPaginatorName,
+│ │      ListEnvironmentTemplatesPaginatorName,
+│ │      ListEnvironmentsPaginatorName,
+│ │      ListRepositoriesPaginatorName,
+│ │      ListRepositorySyncDefinitionsPaginatorName,
+│ │      ListServiceInstanceOutputsPaginatorName,
+│ │      ListServiceInstanceProvisionedResourcesPaginatorName,
+│ │ -    ListServiceInstancesFilterByType,
+│ │      ListServiceInstancesPaginatorName,
+│ │ -    ListServiceInstancesSortByType,
+│ │      ListServicePipelineOutputsPaginatorName,
+│ │      ListServicePipelineProvisionedResourcesPaginatorName,
+│ │      ListServiceTemplateVersionsPaginatorName,
+│ │      ListServiceTemplatesPaginatorName,
+│ │      ListServicesPaginatorName,
+│ │      ListTagsForResourcePaginatorName,
+│ │      ProvisionedResourceEngineType,
+│ │ @@ -429,15 +427,14 @@
+│ │      ServiceDeletedWaiterName,
+│ │      ServiceInstanceDeployedWaiterName,
+│ │      ServicePipelineDeployedWaiterName,
+│ │      ServiceStatusType,
+│ │      ServiceTemplateSupportedComponentSourceTypeType,
+│ │      ServiceTemplateVersionRegisteredWaiterName,
+│ │      ServiceUpdatedWaiterName,
+│ │ -    SortOrderType,
+│ │      SyncTypeType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │      ProtonServiceName,
+│ │      ServiceName,
+│ │      ResourceServiceName,
+│ │      PaginatorName,
+│ │ @@ -469,15 +466,14 @@
+│ │      CancelServiceInstanceDeploymentInputRequestTypeDef,
+│ │      ServiceInstanceTypeDef,
+│ │      CancelServicePipelineDeploymentInputRequestTypeDef,
+│ │      ServicePipelineTypeDef,
+│ │      CompatibleEnvironmentTemplateInputTypeDef,
+│ │      CompatibleEnvironmentTemplateTypeDef,
+│ │      ComponentSummaryTypeDef,
+│ │ -    ResourceCountsSummaryTypeDef,
+│ │      TagTypeDef,
+│ │      RepositoryBranchInputTypeDef,
+│ │      EnvironmentTemplateTypeDef,
+│ │      EnvironmentTemplateVersionTypeDef,
+│ │      RepositoryTypeDef,
+│ │      ServiceTemplateTypeDef,
+│ │      CreateTemplateSyncConfigInputRequestTypeDef,
+│ │ @@ -525,15 +521,15 @@
+│ │      ListEnvironmentTemplatesInputRequestTypeDef,
+│ │      ListRepositoriesInputRequestTypeDef,
+│ │      RepositorySummaryTypeDef,
+│ │      ListRepositorySyncDefinitionsInputRequestTypeDef,
+│ │      RepositorySyncDefinitionTypeDef,
+│ │      ListServiceInstanceOutputsInputRequestTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │ +    ListServiceInstancesInputRequestTypeDef,
+│ │      ServiceInstanceSummaryTypeDef,
+│ │      ListServicePipelineOutputsInputRequestTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputRequestTypeDef,
+│ │      ListServiceTemplateVersionsInputRequestTypeDef,
+│ │      ServiceTemplateVersionSummaryTypeDef,
+│ │      ListServiceTemplatesInputRequestTypeDef,
+│ │      ServiceTemplateSummaryTypeDef,
+│ │ @@ -572,15 +568,14 @@
+│ │      UpdateServiceInstanceOutputTypeDef,
+│ │      CancelServicePipelineDeploymentOutputTypeDef,
+│ │      ServiceTypeDef,
+│ │      UpdateServicePipelineOutputTypeDef,
+│ │      UpdateServiceTemplateVersionInputRequestTypeDef,
+│ │      ServiceTemplateVersionTypeDef,
+│ │      ListComponentsOutputTypeDef,
+│ │ -    CountsSummaryTypeDef,
+│ │      CreateComponentInputRequestTypeDef,
+│ │      CreateEnvironmentAccountConnectionInputRequestTypeDef,
+│ │      CreateEnvironmentTemplateInputRequestTypeDef,
+│ │      CreateRepositoryInputRequestTypeDef,
+│ │      CreateServiceInputRequestTypeDef,
+│ │      CreateServiceTemplateInputRequestTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -631,14 +626,15 @@
+│ │      ListEnvironmentTemplateVersionsInputListEnvironmentTemplateVersionsPaginateTypeDef,
+│ │      ListEnvironmentTemplatesInputListEnvironmentTemplatesPaginateTypeDef,
+│ │      ListEnvironmentsInputListEnvironmentsPaginateTypeDef,
+│ │      ListRepositoriesInputListRepositoriesPaginateTypeDef,
+│ │      ListRepositorySyncDefinitionsInputListRepositorySyncDefinitionsPaginateTypeDef,
+│ │      ListServiceInstanceOutputsInputListServiceInstanceOutputsPaginateTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │ +    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │      ListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputListServicePipelineProvisionedResourcesPaginateTypeDef,
+│ │      ListServiceTemplateVersionsInputListServiceTemplateVersionsPaginateTypeDef,
+│ │      ListServiceTemplatesInputListServiceTemplatesPaginateTypeDef,
+│ │      ListServicesInputListServicesPaginateTypeDef,
+│ │      ListTagsForResourceInputListTagsForResourcePaginateTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │ @@ -648,16 +644,14 @@
+│ │      NotifyResourceDeploymentStatusChangeInputRequestTypeDef,
+│ │      ListComponentProvisionedResourcesOutputTypeDef,
+│ │      ListEnvironmentProvisionedResourcesOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │ -    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │ -    ListServiceInstancesInputRequestTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      RepositorySyncAttemptTypeDef,
+│ │      ResourceSyncAttemptTypeDef,
+│ │      TemplateVersionSourceInputTypeDef,
+│ │ @@ -672,15 +666,14 @@
+│ │      DeleteServiceOutputTypeDef,
+│ │      GetServiceOutputTypeDef,
+│ │      UpdateServiceOutputTypeDef,
+│ │      CreateServiceTemplateVersionOutputTypeDef,
+│ │      DeleteServiceTemplateVersionOutputTypeDef,
+│ │      GetServiceTemplateVersionOutputTypeDef,
+│ │      UpdateServiceTemplateVersionOutputTypeDef,
+│ │ -    GetResourcesSummaryOutputTypeDef,
+│ │      GetRepositorySyncStatusOutputTypeDef,
+│ │      GetTemplateSyncStatusOutputTypeDef,
+│ │      CreateEnvironmentTemplateVersionInputRequestTypeDef,
+│ │      CreateServiceTemplateVersionInputRequestTypeDef,
+│ │  )
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/__init__.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/__init__.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/__init__.pyi
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/__main__.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/__main__.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -5,28 +5,28 @@
+│ │  
+│ │  
+│ │  def print_info() -> None:
+│ │      """
+│ │      Print package info to stdout.
+│ │      """
+│ │      print(
+│ │ -        "Type annotations for boto3.Proton 1.26.64\nVersion:         1.26.64\nBuilder version:"
+│ │ -        " 7.12.3\nDocs:           "
+│ │ +        "Type annotations for boto3.Proton 1.26.9\nVersion:         1.26.9\nBuilder version:"
+│ │ +        " 7.11.10\nDocs:           "
+│ │          " https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton//\nBoto3 docs:     "
+│ │          " https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton\nOther"
+│ │          " services:  https://pypi.org/project/boto3-stubs/\nChangelog:      "
+│ │          " https://github.com/youtype/mypy_boto3_builder/releases"
+│ │      )
+│ │  
+│ │  
+│ │  def print_version() -> None:
+│ │      """
+│ │      Print package version to stdout.
+│ │      """
+│ │ -    print("1.26.64")
+│ │ +    print("1.26.9")
+│ │  
+│ │  
+│ │  def main() -> None:
+│ │      """
+│ │      Main CLI entrypoint.
+│ │      """
+│ │      if "--version" in sys.argv:
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/client.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/client.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -19,18 +19,16 @@
+│ │  from botocore.client import BaseClient, ClientMeta
+│ │  
+│ │  from .literals import (
+│ │      ComponentDeploymentUpdateTypeType,
+│ │      DeploymentUpdateTypeType,
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      RepositoryProviderType,
+│ │      ResourceDeploymentStatusType,
+│ │ -    SortOrderType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │  )
+│ │  from .paginator import (
+│ │      ListComponentOutputsPaginator,
+│ │      ListComponentProvisionedResourcesPaginator,
+│ │      ListComponentsPaginator,
+│ │ @@ -84,15 +82,14 @@
+│ │      GetComponentOutputTypeDef,
+│ │      GetEnvironmentAccountConnectionOutputTypeDef,
+│ │      GetEnvironmentOutputTypeDef,
+│ │      GetEnvironmentTemplateOutputTypeDef,
+│ │      GetEnvironmentTemplateVersionOutputTypeDef,
+│ │      GetRepositoryOutputTypeDef,
+│ │      GetRepositorySyncStatusOutputTypeDef,
+│ │ -    GetResourcesSummaryOutputTypeDef,
+│ │      GetServiceInstanceOutputTypeDef,
+│ │      GetServiceOutputTypeDef,
+│ │      GetServiceTemplateOutputTypeDef,
+│ │      GetServiceTemplateVersionOutputTypeDef,
+│ │      GetTemplateSyncConfigOutputTypeDef,
+│ │      GetTemplateSyncStatusOutputTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │ @@ -104,15 +101,14 @@
+│ │      ListEnvironmentsOutputTypeDef,
+│ │      ListEnvironmentTemplatesOutputTypeDef,
+│ │      ListEnvironmentTemplateVersionsOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │      ListServiceInstanceOutputsOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServicePipelineOutputsOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -306,18 +302,18 @@
+│ │          """
+│ │  
+│ │      def create_environment_account_connection(
+│ │          self,
+│ │          *,
+│ │          environmentName: str,
+│ │          managementAccountId: str,
+│ │ +        roleArn: str,
+│ │          clientToken: str = ...,
+│ │          codebuildRoleArn: str = ...,
+│ │          componentRoleArn: str = ...,
+│ │ -        roleArn: str = ...,
+│ │          tags: Sequence[TagTypeDef] = ...
+│ │      ) -> CreateEnvironmentAccountConnectionOutputTypeDef:
+│ │          """
+│ │          Create an environment account connection in an environment account so that
+│ │          environment infrastructure resources can be provisioned in the environment
+│ │          account from a management account.
+│ │  
+│ │ @@ -632,22 +628,14 @@
+│ │          """
+│ │          Get the sync status of a repository used for Proton template sync.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_repository_sync_status)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_repository_sync_status)
+│ │          """
+│ │  
+│ │ -    def get_resources_summary(self) -> GetResourcesSummaryOutputTypeDef:
+│ │ -        """
+│ │ -        Get counts of Proton resources.
+│ │ -
+│ │ -        [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_resources_summary)
+│ │ -        [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_resources_summary)
+│ │ -        """
+│ │ -
+│ │      def get_service(self, *, name: str) -> GetServiceOutputTypeDef:
+│ │          """
+│ │          Get detailed data for a service.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_service)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_service)
+│ │          """
+│ │ @@ -853,22 +841,15 @@
+│ │          List provisioned resources for a service instance with details.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.list_service_instance_provisioned_resources)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#list_service_instance_provisioned_resources)
+│ │          """
+│ │  
+│ │      def list_service_instances(
+│ │ -        self,
+│ │ -        *,
+│ │ -        filters: Sequence[ListServiceInstancesFilterTypeDef] = ...,
+│ │ -        maxResults: int = ...,
+│ │ -        nextToken: str = ...,
+│ │ -        serviceName: str = ...,
+│ │ -        sortBy: ListServiceInstancesSortByType = ...,
+│ │ -        sortOrder: SortOrderType = ...
+│ │ +        self, *, maxResults: int = ..., nextToken: str = ..., serviceName: str = ...
+│ │      ) -> ListServiceInstancesOutputTypeDef:
+│ │          """
+│ │          List service instances with summary data.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.list_service_instances)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#list_service_instances)
+│ │          """
+│ │ @@ -944,16 +925,18 @@
+│ │          resourceArn: str,
+│ │          deploymentId: str = ...,
+│ │          outputs: Sequence[OutputTypeDef] = ...,
+│ │          status: ResourceDeploymentStatusType = ...,
+│ │          statusMessage: str = ...
+│ │      ) -> Dict[str, Any]:
+│ │          """
+│ │ -        Notify Proton of status changes to a provisioned resource when you use self-
+│ │ -        managed provisioning.
+│ │ +        Notify Proton of the following information related to a provisioned resource
+│ │ +        (environment, service instance, or service pipeline) * For [CodeBuild-based
+│ │ +        provisioning](https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-
+│ │ +        methods.html#ag-works-prov-methods-codebuild)_ , provid...
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.notify_resource_deployment_status_change)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#notify_resource_deployment_status_change)
+│ │          """
+│ │  
+│ │      def reject_environment_account_connection(
+│ │          self, *, id: str
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/client.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/client.pyi
+│ │┄ Files 2% similar despite different names
+│ │ @@ -19,18 +19,16 @@
+│ │  from botocore.client import BaseClient, ClientMeta
+│ │  
+│ │  from .literals import (
+│ │      ComponentDeploymentUpdateTypeType,
+│ │      DeploymentUpdateTypeType,
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      RepositoryProviderType,
+│ │      ResourceDeploymentStatusType,
+│ │ -    SortOrderType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │  )
+│ │  from .paginator import (
+│ │      ListComponentOutputsPaginator,
+│ │      ListComponentProvisionedResourcesPaginator,
+│ │      ListComponentsPaginator,
+│ │ @@ -84,15 +82,14 @@
+│ │      GetComponentOutputTypeDef,
+│ │      GetEnvironmentAccountConnectionOutputTypeDef,
+│ │      GetEnvironmentOutputTypeDef,
+│ │      GetEnvironmentTemplateOutputTypeDef,
+│ │      GetEnvironmentTemplateVersionOutputTypeDef,
+│ │      GetRepositoryOutputTypeDef,
+│ │      GetRepositorySyncStatusOutputTypeDef,
+│ │ -    GetResourcesSummaryOutputTypeDef,
+│ │      GetServiceInstanceOutputTypeDef,
+│ │      GetServiceOutputTypeDef,
+│ │      GetServiceTemplateOutputTypeDef,
+│ │      GetServiceTemplateVersionOutputTypeDef,
+│ │      GetTemplateSyncConfigOutputTypeDef,
+│ │      GetTemplateSyncStatusOutputTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │ @@ -104,15 +101,14 @@
+│ │      ListEnvironmentsOutputTypeDef,
+│ │      ListEnvironmentTemplatesOutputTypeDef,
+│ │      ListEnvironmentTemplateVersionsOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │      ListServiceInstanceOutputsOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServicePipelineOutputsOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -292,18 +288,18 @@
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#create_environment)
+│ │          """
+│ │      def create_environment_account_connection(
+│ │          self,
+│ │          *,
+│ │          environmentName: str,
+│ │          managementAccountId: str,
+│ │ +        roleArn: str,
+│ │          clientToken: str = ...,
+│ │          codebuildRoleArn: str = ...,
+│ │          componentRoleArn: str = ...,
+│ │ -        roleArn: str = ...,
+│ │          tags: Sequence[TagTypeDef] = ...
+│ │      ) -> CreateEnvironmentAccountConnectionOutputTypeDef:
+│ │          """
+│ │          Create an environment account connection in an environment account so that
+│ │          environment infrastructure resources can be provisioned in the environment
+│ │          account from a management account.
+│ │  
+│ │ @@ -591,21 +587,14 @@
+│ │      ) -> GetRepositorySyncStatusOutputTypeDef:
+│ │          """
+│ │          Get the sync status of a repository used for Proton template sync.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_repository_sync_status)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_repository_sync_status)
+│ │          """
+│ │ -    def get_resources_summary(self) -> GetResourcesSummaryOutputTypeDef:
+│ │ -        """
+│ │ -        Get counts of Proton resources.
+│ │ -
+│ │ -        [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_resources_summary)
+│ │ -        [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_resources_summary)
+│ │ -        """
+│ │      def get_service(self, *, name: str) -> GetServiceOutputTypeDef:
+│ │          """
+│ │          Get detailed data for a service.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.get_service)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#get_service)
+│ │          """
+│ │ @@ -792,22 +781,15 @@
+│ │          """
+│ │          List provisioned resources for a service instance with details.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.list_service_instance_provisioned_resources)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#list_service_instance_provisioned_resources)
+│ │          """
+│ │      def list_service_instances(
+│ │ -        self,
+│ │ -        *,
+│ │ -        filters: Sequence[ListServiceInstancesFilterTypeDef] = ...,
+│ │ -        maxResults: int = ...,
+│ │ -        nextToken: str = ...,
+│ │ -        serviceName: str = ...,
+│ │ -        sortBy: ListServiceInstancesSortByType = ...,
+│ │ -        sortOrder: SortOrderType = ...
+│ │ +        self, *, maxResults: int = ..., nextToken: str = ..., serviceName: str = ...
+│ │      ) -> ListServiceInstancesOutputTypeDef:
+│ │          """
+│ │          List service instances with summary data.
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.list_service_instances)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#list_service_instances)
+│ │          """
+│ │ @@ -876,16 +858,18 @@
+│ │          resourceArn: str,
+│ │          deploymentId: str = ...,
+│ │          outputs: Sequence[OutputTypeDef] = ...,
+│ │          status: ResourceDeploymentStatusType = ...,
+│ │          statusMessage: str = ...
+│ │      ) -> Dict[str, Any]:
+│ │          """
+│ │ -        Notify Proton of status changes to a provisioned resource when you use self-
+│ │ -        managed provisioning.
+│ │ +        Notify Proton of the following information related to a provisioned resource
+│ │ +        (environment, service instance, or service pipeline) * For [CodeBuild-based
+│ │ +        provisioning](https://docs.aws.amazon.com/proton/latest/userguide/ag-works-prov-
+│ │ +        methods.html#ag-works-prov-methods-codebuild)_ , provid...
+│ │  
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Client.notify_resource_deployment_status_change)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/client/#notify_resource_deployment_status_change)
+│ │          """
+│ │      def reject_environment_account_connection(
+│ │          self, *, id: str
+│ │      ) -> RejectEnvironmentAccountConnectionOutputTypeDef:
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/literals.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/literals.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -38,17 +38,15 @@
+│ │      "ListEnvironmentTemplateVersionsPaginatorName",
+│ │      "ListEnvironmentTemplatesPaginatorName",
+│ │      "ListEnvironmentsPaginatorName",
+│ │      "ListRepositoriesPaginatorName",
+│ │      "ListRepositorySyncDefinitionsPaginatorName",
+│ │      "ListServiceInstanceOutputsPaginatorName",
+│ │      "ListServiceInstanceProvisionedResourcesPaginatorName",
+│ │ -    "ListServiceInstancesFilterByType",
+│ │      "ListServiceInstancesPaginatorName",
+│ │ -    "ListServiceInstancesSortByType",
+│ │      "ListServicePipelineOutputsPaginatorName",
+│ │      "ListServicePipelineProvisionedResourcesPaginatorName",
+│ │      "ListServiceTemplateVersionsPaginatorName",
+│ │      "ListServiceTemplatesPaginatorName",
+│ │      "ListServicesPaginatorName",
+│ │      "ListTagsForResourcePaginatorName",
+│ │      "ProvisionedResourceEngineType",
+│ │ @@ -61,15 +59,14 @@
+│ │      "ServiceDeletedWaiterName",
+│ │      "ServiceInstanceDeployedWaiterName",
+│ │      "ServicePipelineDeployedWaiterName",
+│ │      "ServiceStatusType",
+│ │      "ServiceTemplateSupportedComponentSourceTypeType",
+│ │      "ServiceTemplateVersionRegisteredWaiterName",
+│ │      "ServiceUpdatedWaiterName",
+│ │ -    "SortOrderType",
+│ │      "SyncTypeType",
+│ │      "TemplateTypeType",
+│ │      "TemplateVersionStatusType",
+│ │      "ProtonServiceName",
+│ │      "ServiceName",
+│ │      "ResourceServiceName",
+│ │      "PaginatorName",
+│ │ @@ -109,36 +106,15 @@
+│ │  ListEnvironmentsPaginatorName = Literal["list_environments"]
+│ │  ListRepositoriesPaginatorName = Literal["list_repositories"]
+│ │  ListRepositorySyncDefinitionsPaginatorName = Literal["list_repository_sync_definitions"]
+│ │  ListServiceInstanceOutputsPaginatorName = Literal["list_service_instance_outputs"]
+│ │  ListServiceInstanceProvisionedResourcesPaginatorName = Literal[
+│ │      "list_service_instance_provisioned_resources"
+│ │  ]
+│ │ -ListServiceInstancesFilterByType = Literal[
+│ │ -    "createdAtAfter",
+│ │ -    "createdAtBefore",
+│ │ -    "deployedTemplateVersionStatus",
+│ │ -    "deploymentStatus",
+│ │ -    "environmentName",
+│ │ -    "lastDeploymentAttemptedAtAfter",
+│ │ -    "lastDeploymentAttemptedAtBefore",
+│ │ -    "name",
+│ │ -    "serviceName",
+│ │ -    "templateName",
+│ │ -]
+│ │  ListServiceInstancesPaginatorName = Literal["list_service_instances"]
+│ │ -ListServiceInstancesSortByType = Literal[
+│ │ -    "createdAt",
+│ │ -    "deploymentStatus",
+│ │ -    "environmentName",
+│ │ -    "lastDeploymentAttemptedAt",
+│ │ -    "name",
+│ │ -    "serviceName",
+│ │ -    "templateName",
+│ │ -]
+│ │  ListServicePipelineOutputsPaginatorName = Literal["list_service_pipeline_outputs"]
+│ │  ListServicePipelineProvisionedResourcesPaginatorName = Literal[
+│ │      "list_service_pipeline_provisioned_resources"
+│ │  ]
+│ │  ListServiceTemplateVersionsPaginatorName = Literal["list_service_template_versions"]
+│ │  ListServiceTemplatesPaginatorName = Literal["list_service_templates"]
+│ │  ListServicesPaginatorName = Literal["list_services"]
+│ │ @@ -168,15 +144,14 @@
+│ │      "UPDATE_FAILED_CLEANUP_FAILED",
+│ │      "UPDATE_FAILED_CLEANUP_IN_PROGRESS",
+│ │      "UPDATE_IN_PROGRESS",
+│ │  ]
+│ │  ServiceTemplateSupportedComponentSourceTypeType = Literal["DIRECTLY_DEFINED"]
+│ │  ServiceTemplateVersionRegisteredWaiterName = Literal["service_template_version_registered"]
+│ │  ServiceUpdatedWaiterName = Literal["service_updated"]
+│ │ -SortOrderType = Literal["ASCENDING", "DESCENDING"]
+│ │  SyncTypeType = Literal["TEMPLATE_SYNC"]
+│ │  TemplateTypeType = Literal["ENVIRONMENT", "SERVICE"]
+│ │  TemplateVersionStatusType = Literal[
+│ │      "DRAFT", "PUBLISHED", "REGISTRATION_FAILED", "REGISTRATION_IN_PROGRESS"
+│ │  ]
+│ │  ProtonServiceName = Literal["proton"]
+│ │  ServiceName = Literal[
+│ │ @@ -199,15 +174,14 @@
+│ │      "application-autoscaling",
+│ │      "application-insights",
+│ │      "applicationcostprofiler",
+│ │      "appmesh",
+│ │      "apprunner",
+│ │      "appstream",
+│ │      "appsync",
+│ │ -    "arc-zonal-shift",
+│ │      "athena",
+│ │      "auditmanager",
+│ │      "autoscaling",
+│ │      "autoscaling-plans",
+│ │      "backup",
+│ │      "backup-gateway",
+│ │      "backupstorage",
+│ │ @@ -217,31 +191,27 @@
+│ │      "budgets",
+│ │      "ce",
+│ │      "chime",
+│ │      "chime-sdk-identity",
+│ │      "chime-sdk-media-pipelines",
+│ │      "chime-sdk-meetings",
+│ │      "chime-sdk-messaging",
+│ │ -    "chime-sdk-voice",
+│ │ -    "cleanrooms",
+│ │      "cloud9",
+│ │      "cloudcontrol",
+│ │      "clouddirectory",
+│ │      "cloudformation",
+│ │      "cloudfront",
+│ │      "cloudhsm",
+│ │      "cloudhsmv2",
+│ │      "cloudsearch",
+│ │      "cloudsearchdomain",
+│ │      "cloudtrail",
+│ │ -    "cloudtrail-data",
+│ │      "cloudwatch",
+│ │      "codeartifact",
+│ │      "codebuild",
+│ │ -    "codecatalyst",
+│ │      "codecommit",
+│ │      "codedeploy",
+│ │      "codeguru-reviewer",
+│ │      "codeguruprofiler",
+│ │      "codepipeline",
+│ │      "codestar",
+│ │      "codestar-connections",
+│ │ @@ -270,15 +240,14 @@
+│ │      "devicefarm",
+│ │      "devops-guru",
+│ │      "directconnect",
+│ │      "discovery",
+│ │      "dlm",
+│ │      "dms",
+│ │      "docdb",
+│ │ -    "docdb-elastic",
+│ │      "drs",
+│ │      "ds",
+│ │      "dynamodb",
+│ │      "dynamodbstreams",
+│ │      "ebs",
+│ │      "ec2",
+│ │      "ec2-instance-connect",
+│ │ @@ -326,15 +295,14 @@
+│ │      "imagebuilder",
+│ │      "importexport",
+│ │      "inspector",
+│ │      "inspector2",
+│ │      "iot",
+│ │      "iot-data",
+│ │      "iot-jobs-data",
+│ │ -    "iot-roborunner",
+│ │      "iot1click-devices",
+│ │      "iot1click-projects",
+│ │      "iotanalytics",
+│ │      "iotdeviceadvisor",
+│ │      "iotevents",
+│ │      "iotevents-data",
+│ │      "iotfleethub",
+│ │ @@ -345,33 +313,30 @@
+│ │      "iottwinmaker",
+│ │      "iotwireless",
+│ │      "ivs",
+│ │      "ivschat",
+│ │      "kafka",
+│ │      "kafkaconnect",
+│ │      "kendra",
+│ │ -    "kendra-ranking",
+│ │      "keyspaces",
+│ │      "kinesis",
+│ │      "kinesis-video-archived-media",
+│ │      "kinesis-video-media",
+│ │      "kinesis-video-signaling",
+│ │ -    "kinesis-video-webrtc-storage",
+│ │      "kinesisanalytics",
+│ │      "kinesisanalyticsv2",
+│ │      "kinesisvideo",
+│ │      "kms",
+│ │      "lakeformation",
+│ │      "lambda",
+│ │      "lex-models",
+│ │      "lex-runtime",
+│ │      "lexv2-models",
+│ │      "lexv2-runtime",
+│ │      "license-manager",
+│ │ -    "license-manager-linux-subscriptions",
+│ │      "license-manager-user-subscriptions",
+│ │      "lightsail",
+│ │      "location",
+│ │      "logs",
+│ │      "lookoutequipment",
+│ │      "lookoutmetrics",
+│ │      "lookoutvision",
+│ │ @@ -403,32 +368,28 @@
+│ │      "mq",
+│ │      "mturk",
+│ │      "mwaa",
+│ │      "neptune",
+│ │      "network-firewall",
+│ │      "networkmanager",
+│ │      "nimble",
+│ │ -    "oam",
+│ │ -    "omics",
+│ │      "opensearch",
+│ │ -    "opensearchserverless",
+│ │      "opsworks",
+│ │      "opsworkscm",
+│ │      "organizations",
+│ │      "outposts",
+│ │      "panorama",
+│ │      "personalize",
+│ │      "personalize-events",
+│ │      "personalize-runtime",
+│ │      "pi",
+│ │      "pinpoint",
+│ │      "pinpoint-email",
+│ │      "pinpoint-sms-voice",
+│ │      "pinpoint-sms-voice-v2",
+│ │ -    "pipes",
+│ │      "polly",
+│ │      "pricing",
+│ │      "privatenetworks",
+│ │      "proton",
+│ │      "qldb",
+│ │      "qldb-session",
+│ │      "quicksight",
+│ │ @@ -456,44 +417,39 @@
+│ │      "s3",
+│ │      "s3control",
+│ │      "s3outposts",
+│ │      "sagemaker",
+│ │      "sagemaker-a2i-runtime",
+│ │      "sagemaker-edge",
+│ │      "sagemaker-featurestore-runtime",
+│ │ -    "sagemaker-geospatial",
+│ │ -    "sagemaker-metrics",
+│ │      "sagemaker-runtime",
+│ │      "savingsplans",
+│ │      "scheduler",
+│ │      "schemas",
+│ │      "sdb",
+│ │      "secretsmanager",
+│ │      "securityhub",
+│ │ -    "securitylake",
+│ │      "serverlessrepo",
+│ │      "service-quotas",
+│ │      "servicecatalog",
+│ │      "servicecatalog-appregistry",
+│ │      "servicediscovery",
+│ │      "ses",
+│ │      "sesv2",
+│ │      "shield",
+│ │      "signer",
+│ │ -    "simspaceweaver",
+│ │      "sms",
+│ │      "sms-voice",
+│ │      "snow-device-management",
+│ │      "snowball",
+│ │      "sns",
+│ │      "sqs",
+│ │      "ssm",
+│ │      "ssm-contacts",
+│ │      "ssm-incidents",
+│ │ -    "ssm-sap",
+│ │      "sso",
+│ │      "sso-admin",
+│ │      "sso-oidc",
+│ │      "stepfunctions",
+│ │      "storagegateway",
+│ │      "sts",
+│ │      "support",
+│ │ @@ -562,20 +518,8 @@
+│ │      "service_created",
+│ │      "service_deleted",
+│ │      "service_instance_deployed",
+│ │      "service_pipeline_deployed",
+│ │      "service_template_version_registered",
+│ │      "service_updated",
+│ │  ]
+│ │ -RegionName = Literal[
+│ │ -    "ap-northeast-1",
+│ │ -    "ap-northeast-2",
+│ │ -    "ap-southeast-1",
+│ │ -    "ap-southeast-2",
+│ │ -    "ca-central-1",
+│ │ -    "eu-central-1",
+│ │ -    "eu-west-1",
+│ │ -    "eu-west-2",
+│ │ -    "us-east-1",
+│ │ -    "us-east-2",
+│ │ -    "us-west-2",
+│ │ -]
+│ │ +RegionName = Literal["ap-northeast-1", "eu-west-1", "us-east-1", "us-east-2", "us-west-2"]
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/literals.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/literals.pyi
+│ │┄ Files 5% similar despite different names
+│ │ @@ -37,17 +37,15 @@
+│ │      "ListEnvironmentTemplateVersionsPaginatorName",
+│ │      "ListEnvironmentTemplatesPaginatorName",
+│ │      "ListEnvironmentsPaginatorName",
+│ │      "ListRepositoriesPaginatorName",
+│ │      "ListRepositorySyncDefinitionsPaginatorName",
+│ │      "ListServiceInstanceOutputsPaginatorName",
+│ │      "ListServiceInstanceProvisionedResourcesPaginatorName",
+│ │ -    "ListServiceInstancesFilterByType",
+│ │      "ListServiceInstancesPaginatorName",
+│ │ -    "ListServiceInstancesSortByType",
+│ │      "ListServicePipelineOutputsPaginatorName",
+│ │      "ListServicePipelineProvisionedResourcesPaginatorName",
+│ │      "ListServiceTemplateVersionsPaginatorName",
+│ │      "ListServiceTemplatesPaginatorName",
+│ │      "ListServicesPaginatorName",
+│ │      "ListTagsForResourcePaginatorName",
+│ │      "ProvisionedResourceEngineType",
+│ │ @@ -60,15 +58,14 @@
+│ │      "ServiceDeletedWaiterName",
+│ │      "ServiceInstanceDeployedWaiterName",
+│ │      "ServicePipelineDeployedWaiterName",
+│ │      "ServiceStatusType",
+│ │      "ServiceTemplateSupportedComponentSourceTypeType",
+│ │      "ServiceTemplateVersionRegisteredWaiterName",
+│ │      "ServiceUpdatedWaiterName",
+│ │ -    "SortOrderType",
+│ │      "SyncTypeType",
+│ │      "TemplateTypeType",
+│ │      "TemplateVersionStatusType",
+│ │      "ProtonServiceName",
+│ │      "ServiceName",
+│ │      "ResourceServiceName",
+│ │      "PaginatorName",
+│ │ @@ -107,36 +104,15 @@
+│ │  ListEnvironmentsPaginatorName = Literal["list_environments"]
+│ │  ListRepositoriesPaginatorName = Literal["list_repositories"]
+│ │  ListRepositorySyncDefinitionsPaginatorName = Literal["list_repository_sync_definitions"]
+│ │  ListServiceInstanceOutputsPaginatorName = Literal["list_service_instance_outputs"]
+│ │  ListServiceInstanceProvisionedResourcesPaginatorName = Literal[
+│ │      "list_service_instance_provisioned_resources"
+│ │  ]
+│ │ -ListServiceInstancesFilterByType = Literal[
+│ │ -    "createdAtAfter",
+│ │ -    "createdAtBefore",
+│ │ -    "deployedTemplateVersionStatus",
+│ │ -    "deploymentStatus",
+│ │ -    "environmentName",
+│ │ -    "lastDeploymentAttemptedAtAfter",
+│ │ -    "lastDeploymentAttemptedAtBefore",
+│ │ -    "name",
+│ │ -    "serviceName",
+│ │ -    "templateName",
+│ │ -]
+│ │  ListServiceInstancesPaginatorName = Literal["list_service_instances"]
+│ │ -ListServiceInstancesSortByType = Literal[
+│ │ -    "createdAt",
+│ │ -    "deploymentStatus",
+│ │ -    "environmentName",
+│ │ -    "lastDeploymentAttemptedAt",
+│ │ -    "name",
+│ │ -    "serviceName",
+│ │ -    "templateName",
+│ │ -]
+│ │  ListServicePipelineOutputsPaginatorName = Literal["list_service_pipeline_outputs"]
+│ │  ListServicePipelineProvisionedResourcesPaginatorName = Literal[
+│ │      "list_service_pipeline_provisioned_resources"
+│ │  ]
+│ │  ListServiceTemplateVersionsPaginatorName = Literal["list_service_template_versions"]
+│ │  ListServiceTemplatesPaginatorName = Literal["list_service_templates"]
+│ │  ListServicesPaginatorName = Literal["list_services"]
+│ │ @@ -166,15 +142,14 @@
+│ │      "UPDATE_FAILED_CLEANUP_FAILED",
+│ │      "UPDATE_FAILED_CLEANUP_IN_PROGRESS",
+│ │      "UPDATE_IN_PROGRESS",
+│ │  ]
+│ │  ServiceTemplateSupportedComponentSourceTypeType = Literal["DIRECTLY_DEFINED"]
+│ │  ServiceTemplateVersionRegisteredWaiterName = Literal["service_template_version_registered"]
+│ │  ServiceUpdatedWaiterName = Literal["service_updated"]
+│ │ -SortOrderType = Literal["ASCENDING", "DESCENDING"]
+│ │  SyncTypeType = Literal["TEMPLATE_SYNC"]
+│ │  TemplateTypeType = Literal["ENVIRONMENT", "SERVICE"]
+│ │  TemplateVersionStatusType = Literal[
+│ │      "DRAFT", "PUBLISHED", "REGISTRATION_FAILED", "REGISTRATION_IN_PROGRESS"
+│ │  ]
+│ │  ProtonServiceName = Literal["proton"]
+│ │  ServiceName = Literal[
+│ │ @@ -197,15 +172,14 @@
+│ │      "application-autoscaling",
+│ │      "application-insights",
+│ │      "applicationcostprofiler",
+│ │      "appmesh",
+│ │      "apprunner",
+│ │      "appstream",
+│ │      "appsync",
+│ │ -    "arc-zonal-shift",
+│ │      "athena",
+│ │      "auditmanager",
+│ │      "autoscaling",
+│ │      "autoscaling-plans",
+│ │      "backup",
+│ │      "backup-gateway",
+│ │      "backupstorage",
+│ │ @@ -215,31 +189,27 @@
+│ │      "budgets",
+│ │      "ce",
+│ │      "chime",
+│ │      "chime-sdk-identity",
+│ │      "chime-sdk-media-pipelines",
+│ │      "chime-sdk-meetings",
+│ │      "chime-sdk-messaging",
+│ │ -    "chime-sdk-voice",
+│ │ -    "cleanrooms",
+│ │      "cloud9",
+│ │      "cloudcontrol",
+│ │      "clouddirectory",
+│ │      "cloudformation",
+│ │      "cloudfront",
+│ │      "cloudhsm",
+│ │      "cloudhsmv2",
+│ │      "cloudsearch",
+│ │      "cloudsearchdomain",
+│ │      "cloudtrail",
+│ │ -    "cloudtrail-data",
+│ │      "cloudwatch",
+│ │      "codeartifact",
+│ │      "codebuild",
+│ │ -    "codecatalyst",
+│ │      "codecommit",
+│ │      "codedeploy",
+│ │      "codeguru-reviewer",
+│ │      "codeguruprofiler",
+│ │      "codepipeline",
+│ │      "codestar",
+│ │      "codestar-connections",
+│ │ @@ -268,15 +238,14 @@
+│ │      "devicefarm",
+│ │      "devops-guru",
+│ │      "directconnect",
+│ │      "discovery",
+│ │      "dlm",
+│ │      "dms",
+│ │      "docdb",
+│ │ -    "docdb-elastic",
+│ │      "drs",
+│ │      "ds",
+│ │      "dynamodb",
+│ │      "dynamodbstreams",
+│ │      "ebs",
+│ │      "ec2",
+│ │      "ec2-instance-connect",
+│ │ @@ -324,15 +293,14 @@
+│ │      "imagebuilder",
+│ │      "importexport",
+│ │      "inspector",
+│ │      "inspector2",
+│ │      "iot",
+│ │      "iot-data",
+│ │      "iot-jobs-data",
+│ │ -    "iot-roborunner",
+│ │      "iot1click-devices",
+│ │      "iot1click-projects",
+│ │      "iotanalytics",
+│ │      "iotdeviceadvisor",
+│ │      "iotevents",
+│ │      "iotevents-data",
+│ │      "iotfleethub",
+│ │ @@ -343,33 +311,30 @@
+│ │      "iottwinmaker",
+│ │      "iotwireless",
+│ │      "ivs",
+│ │      "ivschat",
+│ │      "kafka",
+│ │      "kafkaconnect",
+│ │      "kendra",
+│ │ -    "kendra-ranking",
+│ │      "keyspaces",
+│ │      "kinesis",
+│ │      "kinesis-video-archived-media",
+│ │      "kinesis-video-media",
+│ │      "kinesis-video-signaling",
+│ │ -    "kinesis-video-webrtc-storage",
+│ │      "kinesisanalytics",
+│ │      "kinesisanalyticsv2",
+│ │      "kinesisvideo",
+│ │      "kms",
+│ │      "lakeformation",
+│ │      "lambda",
+│ │      "lex-models",
+│ │      "lex-runtime",
+│ │      "lexv2-models",
+│ │      "lexv2-runtime",
+│ │      "license-manager",
+│ │ -    "license-manager-linux-subscriptions",
+│ │      "license-manager-user-subscriptions",
+│ │      "lightsail",
+│ │      "location",
+│ │      "logs",
+│ │      "lookoutequipment",
+│ │      "lookoutmetrics",
+│ │      "lookoutvision",
+│ │ @@ -401,32 +366,28 @@
+│ │      "mq",
+│ │      "mturk",
+│ │      "mwaa",
+│ │      "neptune",
+│ │      "network-firewall",
+│ │      "networkmanager",
+│ │      "nimble",
+│ │ -    "oam",
+│ │ -    "omics",
+│ │      "opensearch",
+│ │ -    "opensearchserverless",
+│ │      "opsworks",
+│ │      "opsworkscm",
+│ │      "organizations",
+│ │      "outposts",
+│ │      "panorama",
+│ │      "personalize",
+│ │      "personalize-events",
+│ │      "personalize-runtime",
+│ │      "pi",
+│ │      "pinpoint",
+│ │      "pinpoint-email",
+│ │      "pinpoint-sms-voice",
+│ │      "pinpoint-sms-voice-v2",
+│ │ -    "pipes",
+│ │      "polly",
+│ │      "pricing",
+│ │      "privatenetworks",
+│ │      "proton",
+│ │      "qldb",
+│ │      "qldb-session",
+│ │      "quicksight",
+│ │ @@ -454,44 +415,39 @@
+│ │      "s3",
+│ │      "s3control",
+│ │      "s3outposts",
+│ │      "sagemaker",
+│ │      "sagemaker-a2i-runtime",
+│ │      "sagemaker-edge",
+│ │      "sagemaker-featurestore-runtime",
+│ │ -    "sagemaker-geospatial",
+│ │ -    "sagemaker-metrics",
+│ │      "sagemaker-runtime",
+│ │      "savingsplans",
+│ │      "scheduler",
+│ │      "schemas",
+│ │      "sdb",
+│ │      "secretsmanager",
+│ │      "securityhub",
+│ │ -    "securitylake",
+│ │      "serverlessrepo",
+│ │      "service-quotas",
+│ │      "servicecatalog",
+│ │      "servicecatalog-appregistry",
+│ │      "servicediscovery",
+│ │      "ses",
+│ │      "sesv2",
+│ │      "shield",
+│ │      "signer",
+│ │ -    "simspaceweaver",
+│ │      "sms",
+│ │      "sms-voice",
+│ │      "snow-device-management",
+│ │      "snowball",
+│ │      "sns",
+│ │      "sqs",
+│ │      "ssm",
+│ │      "ssm-contacts",
+│ │      "ssm-incidents",
+│ │ -    "ssm-sap",
+│ │      "sso",
+│ │      "sso-admin",
+│ │      "sso-oidc",
+│ │      "stepfunctions",
+│ │      "storagegateway",
+│ │      "sts",
+│ │      "support",
+│ │ @@ -560,20 +516,8 @@
+│ │      "service_created",
+│ │      "service_deleted",
+│ │      "service_instance_deployed",
+│ │      "service_pipeline_deployed",
+│ │      "service_template_version_registered",
+│ │      "service_updated",
+│ │  ]
+│ │ -RegionName = Literal[
+│ │ -    "ap-northeast-1",
+│ │ -    "ap-northeast-2",
+│ │ -    "ap-southeast-1",
+│ │ -    "ap-southeast-2",
+│ │ -    "ca-central-1",
+│ │ -    "eu-central-1",
+│ │ -    "eu-west-1",
+│ │ -    "eu-west-2",
+│ │ -    "us-east-1",
+│ │ -    "us-east-2",
+│ │ -    "us-west-2",
+│ │ -]
+│ │ +RegionName = Literal["ap-northeast-1", "eu-west-1", "us-east-1", "us-east-2", "us-west-2"]
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/paginator.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/paginator.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -61,17 +61,15 @@
+│ │  from typing import Generic, Iterator, Sequence, TypeVar
+│ │  
+│ │  from botocore.paginate import PageIterator, Paginator
+│ │  
+│ │  from .literals import (
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      RepositoryProviderType,
+│ │ -    SortOrderType,
+│ │  )
+│ │  from .type_defs import (
+│ │      EnvironmentTemplateFilterTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │      ListComponentProvisionedResourcesOutputTypeDef,
+│ │      ListComponentsOutputTypeDef,
+│ │      ListEnvironmentAccountConnectionsOutputTypeDef,
+│ │ @@ -80,15 +78,14 @@
+│ │      ListEnvironmentsOutputTypeDef,
+│ │      ListEnvironmentTemplatesOutputTypeDef,
+│ │      ListEnvironmentTemplateVersionsOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │      ListServiceInstanceOutputsOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServicePipelineOutputsOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -363,21 +360,15 @@
+│ │  class ListServiceInstancesPaginator(Paginator):
+│ │      """
+│ │      [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Paginator.ListServiceInstances)
+│ │      [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/paginators/#listserviceinstancespaginator)
+│ │      """
+│ │  
+│ │      def paginate(
+│ │ -        self,
+│ │ -        *,
+│ │ -        filters: Sequence[ListServiceInstancesFilterTypeDef] = ...,
+│ │ -        serviceName: str = ...,
+│ │ -        sortBy: ListServiceInstancesSortByType = ...,
+│ │ -        sortOrder: SortOrderType = ...,
+│ │ -        PaginationConfig: PaginatorConfigTypeDef = ...
+│ │ +        self, *, serviceName: str = ..., PaginationConfig: PaginatorConfigTypeDef = ...
+│ │      ) -> _PageIterator[ListServiceInstancesOutputTypeDef]:
+│ │          """
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Paginator.ListServiceInstances.paginate)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/paginators/#listserviceinstancespaginator)
+│ │          """
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/paginator.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/paginator.pyi
+│ │┄ Files 1% similar despite different names
+│ │ @@ -61,17 +61,15 @@
+│ │  from typing import Generic, Iterator, Sequence, TypeVar
+│ │  
+│ │  from botocore.paginate import PageIterator, Paginator
+│ │  
+│ │  from .literals import (
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      RepositoryProviderType,
+│ │ -    SortOrderType,
+│ │  )
+│ │  from .type_defs import (
+│ │      EnvironmentTemplateFilterTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │      ListComponentProvisionedResourcesOutputTypeDef,
+│ │      ListComponentsOutputTypeDef,
+│ │      ListEnvironmentAccountConnectionsOutputTypeDef,
+│ │ @@ -80,15 +78,14 @@
+│ │      ListEnvironmentsOutputTypeDef,
+│ │      ListEnvironmentTemplatesOutputTypeDef,
+│ │      ListEnvironmentTemplateVersionsOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │      ListServiceInstanceOutputsOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServicePipelineOutputsOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -346,21 +343,15 @@
+│ │  class ListServiceInstancesPaginator(Paginator):
+│ │      """
+│ │      [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Paginator.ListServiceInstances)
+│ │      [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/paginators/#listserviceinstancespaginator)
+│ │      """
+│ │  
+│ │      def paginate(
+│ │ -        self,
+│ │ -        *,
+│ │ -        filters: Sequence[ListServiceInstancesFilterTypeDef] = ...,
+│ │ -        serviceName: str = ...,
+│ │ -        sortBy: ListServiceInstancesSortByType = ...,
+│ │ -        sortOrder: SortOrderType = ...,
+│ │ -        PaginationConfig: PaginatorConfigTypeDef = ...
+│ │ +        self, *, serviceName: str = ..., PaginationConfig: PaginatorConfigTypeDef = ...
+│ │      ) -> _PageIterator[ListServiceInstancesOutputTypeDef]:
+│ │          """
+│ │          [Show boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton.Paginator.ListServiceInstances.paginate)
+│ │          [Show boto3-stubs documentation](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/paginators/#listserviceinstancespaginator)
+│ │          """
+│ │  
+│ │  class ListServicePipelineOutputsPaginator(Paginator):
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/type_defs.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/type_defs.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -17,23 +17,20 @@
+│ │  
+│ │  from .literals import (
+│ │      ComponentDeploymentUpdateTypeType,
+│ │      DeploymentStatusType,
+│ │      DeploymentUpdateTypeType,
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesFilterByType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      ProvisionedResourceEngineType,
+│ │      RepositoryProviderType,
+│ │      RepositorySyncStatusType,
+│ │      ResourceDeploymentStatusType,
+│ │      ResourceSyncStatusType,
+│ │      ServiceStatusType,
+│ │ -    SortOrderType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │  )
+│ │  
+│ │  if sys.version_info >= (3, 9):
+│ │      from typing import Literal
+│ │  else:
+│ │ @@ -55,15 +52,14 @@
+│ │      "CancelServiceInstanceDeploymentInputRequestTypeDef",
+│ │      "ServiceInstanceTypeDef",
+│ │      "CancelServicePipelineDeploymentInputRequestTypeDef",
+│ │      "ServicePipelineTypeDef",
+│ │      "CompatibleEnvironmentTemplateInputTypeDef",
+│ │      "CompatibleEnvironmentTemplateTypeDef",
+│ │      "ComponentSummaryTypeDef",
+│ │ -    "ResourceCountsSummaryTypeDef",
+│ │      "TagTypeDef",
+│ │      "RepositoryBranchInputTypeDef",
+│ │      "EnvironmentTemplateTypeDef",
+│ │      "EnvironmentTemplateVersionTypeDef",
+│ │      "RepositoryTypeDef",
+│ │      "ServiceTemplateTypeDef",
+│ │      "CreateTemplateSyncConfigInputRequestTypeDef",
+│ │ @@ -111,15 +107,15 @@
+│ │      "ListEnvironmentTemplatesInputRequestTypeDef",
+│ │      "ListRepositoriesInputRequestTypeDef",
+│ │      "RepositorySummaryTypeDef",
+│ │      "ListRepositorySyncDefinitionsInputRequestTypeDef",
+│ │      "RepositorySyncDefinitionTypeDef",
+│ │      "ListServiceInstanceOutputsInputRequestTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesInputRequestTypeDef",
+│ │ -    "ListServiceInstancesFilterTypeDef",
+│ │ +    "ListServiceInstancesInputRequestTypeDef",
+│ │      "ServiceInstanceSummaryTypeDef",
+│ │      "ListServicePipelineOutputsInputRequestTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesInputRequestTypeDef",
+│ │      "ListServiceTemplateVersionsInputRequestTypeDef",
+│ │      "ServiceTemplateVersionSummaryTypeDef",
+│ │      "ListServiceTemplatesInputRequestTypeDef",
+│ │      "ServiceTemplateSummaryTypeDef",
+│ │ @@ -158,15 +154,14 @@
+│ │      "UpdateServiceInstanceOutputTypeDef",
+│ │      "CancelServicePipelineDeploymentOutputTypeDef",
+│ │      "ServiceTypeDef",
+│ │      "UpdateServicePipelineOutputTypeDef",
+│ │      "UpdateServiceTemplateVersionInputRequestTypeDef",
+│ │      "ServiceTemplateVersionTypeDef",
+│ │      "ListComponentsOutputTypeDef",
+│ │ -    "CountsSummaryTypeDef",
+│ │      "CreateComponentInputRequestTypeDef",
+│ │      "CreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      "CreateEnvironmentTemplateInputRequestTypeDef",
+│ │      "CreateRepositoryInputRequestTypeDef",
+│ │      "CreateServiceInputRequestTypeDef",
+│ │      "CreateServiceTemplateInputRequestTypeDef",
+│ │      "ListTagsForResourceOutputTypeDef",
+│ │ @@ -217,14 +212,15 @@
+│ │      "ListEnvironmentTemplateVersionsInputListEnvironmentTemplateVersionsPaginateTypeDef",
+│ │      "ListEnvironmentTemplatesInputListEnvironmentTemplatesPaginateTypeDef",
+│ │      "ListEnvironmentsInputListEnvironmentsPaginateTypeDef",
+│ │      "ListRepositoriesInputListRepositoriesPaginateTypeDef",
+│ │      "ListRepositorySyncDefinitionsInputListRepositorySyncDefinitionsPaginateTypeDef",
+│ │      "ListServiceInstanceOutputsInputListServiceInstanceOutputsPaginateTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef",
+│ │ +    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │      "ListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesInputListServicePipelineProvisionedResourcesPaginateTypeDef",
+│ │      "ListServiceTemplateVersionsInputListServiceTemplateVersionsPaginateTypeDef",
+│ │      "ListServiceTemplatesInputListServiceTemplatesPaginateTypeDef",
+│ │      "ListServicesInputListServicesPaginateTypeDef",
+│ │      "ListTagsForResourceInputListTagsForResourcePaginateTypeDef",
+│ │      "ListComponentOutputsOutputTypeDef",
+│ │ @@ -234,16 +230,14 @@
+│ │      "NotifyResourceDeploymentStatusChangeInputRequestTypeDef",
+│ │      "ListComponentProvisionedResourcesOutputTypeDef",
+│ │      "ListEnvironmentProvisionedResourcesOutputTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesOutputTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesOutputTypeDef",
+│ │      "ListRepositoriesOutputTypeDef",
+│ │      "ListRepositorySyncDefinitionsOutputTypeDef",
+│ │ -    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ -    "ListServiceInstancesInputRequestTypeDef",
+│ │      "ListServiceInstancesOutputTypeDef",
+│ │      "ListServiceTemplateVersionsOutputTypeDef",
+│ │      "ListServiceTemplatesOutputTypeDef",
+│ │      "ListServicesOutputTypeDef",
+│ │      "RepositorySyncAttemptTypeDef",
+│ │      "ResourceSyncAttemptTypeDef",
+│ │      "TemplateVersionSourceInputTypeDef",
+│ │ @@ -258,15 +252,14 @@
+│ │      "DeleteServiceOutputTypeDef",
+│ │      "GetServiceOutputTypeDef",
+│ │      "UpdateServiceOutputTypeDef",
+│ │      "CreateServiceTemplateVersionOutputTypeDef",
+│ │      "DeleteServiceTemplateVersionOutputTypeDef",
+│ │      "GetServiceTemplateVersionOutputTypeDef",
+│ │      "UpdateServiceTemplateVersionOutputTypeDef",
+│ │ -    "GetResourcesSummaryOutputTypeDef",
+│ │      "GetRepositorySyncStatusOutputTypeDef",
+│ │      "GetTemplateSyncStatusOutputTypeDef",
+│ │      "CreateEnvironmentTemplateVersionInputRequestTypeDef",
+│ │      "CreateServiceTemplateVersionInputRequestTypeDef",
+│ │  )
+│ │  
+│ │  AcceptEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │ @@ -483,38 +476,14 @@
+│ │  )
+│ │  
+│ │  
+│ │  class ComponentSummaryTypeDef(_RequiredComponentSummaryTypeDef, _OptionalComponentSummaryTypeDef):
+│ │      pass
+│ │  
+│ │  
+│ │ -_RequiredResourceCountsSummaryTypeDef = TypedDict(
+│ │ -    "_RequiredResourceCountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "total": int,
+│ │ -    },
+│ │ -)
+│ │ -_OptionalResourceCountsSummaryTypeDef = TypedDict(
+│ │ -    "_OptionalResourceCountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "behindMajor": int,
+│ │ -        "behindMinor": int,
+│ │ -        "failed": int,
+│ │ -        "upToDate": int,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │ -
+│ │ -class ResourceCountsSummaryTypeDef(
+│ │ -    _RequiredResourceCountsSummaryTypeDef, _OptionalResourceCountsSummaryTypeDef
+│ │ -):
+│ │ -    pass
+│ │ -
+│ │ -
+│ │  TagTypeDef = TypedDict(
+│ │      "TagTypeDef",
+│ │      {
+│ │          "key": str,
+│ │          "value": str,
+│ │      },
+│ │  )
+│ │ @@ -1295,19 +1264,20 @@
+│ │  class ListServiceInstanceProvisionedResourcesInputRequestTypeDef(
+│ │      _RequiredListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │      _OptionalListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │  ):
+│ │      pass
+│ │  
+│ │  
+│ │ -ListServiceInstancesFilterTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesFilterTypeDef",
+│ │ +ListServiceInstancesInputRequestTypeDef = TypedDict(
+│ │ +    "ListServiceInstancesInputRequestTypeDef",
+│ │      {
+│ │ -        "key": ListServiceInstancesFilterByType,
+│ │ -        "value": str,
+│ │ +        "maxResults": int,
+│ │ +        "nextToken": str,
+│ │ +        "serviceName": str,
+│ │      },
+│ │      total=False,
+│ │  )
+│ │  
+│ │  _RequiredServiceInstanceSummaryTypeDef = TypedDict(
+│ │      "_RequiredServiceInstanceSummaryTypeDef",
+│ │      {
+│ │ @@ -2085,28 +2055,14 @@
+│ │      {
+│ │          "components": List[ComponentSummaryTypeDef],
+│ │          "nextToken": str,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -CountsSummaryTypeDef = TypedDict(
+│ │ -    "CountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "components": ResourceCountsSummaryTypeDef,
+│ │ -        "environmentTemplates": ResourceCountsSummaryTypeDef,
+│ │ -        "environments": ResourceCountsSummaryTypeDef,
+│ │ -        "pipelines": ResourceCountsSummaryTypeDef,
+│ │ -        "serviceInstances": ResourceCountsSummaryTypeDef,
+│ │ -        "serviceTemplates": ResourceCountsSummaryTypeDef,
+│ │ -        "services": ResourceCountsSummaryTypeDef,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │  _RequiredCreateComponentInputRequestTypeDef = TypedDict(
+│ │      "_RequiredCreateComponentInputRequestTypeDef",
+│ │      {
+│ │          "manifest": str,
+│ │          "name": str,
+│ │          "templateFile": str,
+│ │      },
+│ │ @@ -2132,23 +2088,23 @@
+│ │  
+│ │  
+│ │  _RequiredCreateEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │      "_RequiredCreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      {
+│ │          "environmentName": str,
+│ │          "managementAccountId": str,
+│ │ +        "roleArn": str,
+│ │      },
+│ │  )
+│ │  _OptionalCreateEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │      "_OptionalCreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      {
+│ │          "clientToken": str,
+│ │          "codebuildRoleArn": str,
+│ │          "componentRoleArn": str,
+│ │ -        "roleArn": str,
+│ │          "tags": Sequence[TagTypeDef],
+│ │      },
+│ │      total=False,
+│ │  )
+│ │  
+│ │  
+│ │  class CreateEnvironmentAccountConnectionInputRequestTypeDef(
+│ │ @@ -3012,14 +2968,23 @@
+│ │  class ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef(
+│ │      _RequiredListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │      _OptionalListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │  ):
+│ │      pass
+│ │  
+│ │  
+│ │ +ListServiceInstancesInputListServiceInstancesPaginateTypeDef = TypedDict(
+│ │ +    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ +    {
+│ │ +        "serviceName": str,
+│ │ +        "PaginationConfig": PaginatorConfigTypeDef,
+│ │ +    },
+│ │ +    total=False,
+│ │ +)
+│ │ +
+│ │  _RequiredListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef = TypedDict(
+│ │      "_RequiredListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef",
+│ │      {
+│ │          "serviceName": str,
+│ │      },
+│ │  )
+│ │  _OptionalListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef = TypedDict(
+│ │ @@ -3232,39 +3197,14 @@
+│ │      {
+│ │          "nextToken": str,
+│ │          "syncDefinitions": List[RepositorySyncDefinitionTypeDef],
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -ListServiceInstancesInputListServiceInstancesPaginateTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ -    {
+│ │ -        "filters": Sequence[ListServiceInstancesFilterTypeDef],
+│ │ -        "serviceName": str,
+│ │ -        "sortBy": ListServiceInstancesSortByType,
+│ │ -        "sortOrder": SortOrderType,
+│ │ -        "PaginationConfig": PaginatorConfigTypeDef,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │ -ListServiceInstancesInputRequestTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesInputRequestTypeDef",
+│ │ -    {
+│ │ -        "filters": Sequence[ListServiceInstancesFilterTypeDef],
+│ │ -        "maxResults": int,
+│ │ -        "nextToken": str,
+│ │ -        "serviceName": str,
+│ │ -        "sortBy": ListServiceInstancesSortByType,
+│ │ -        "sortOrder": SortOrderType,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │  ListServiceInstancesOutputTypeDef = TypedDict(
+│ │      "ListServiceInstancesOutputTypeDef",
+│ │      {
+│ │          "nextToken": str,
+│ │          "serviceInstances": List[ServiceInstanceSummaryTypeDef],
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │ @@ -3442,22 +3382,14 @@
+│ │      "UpdateServiceTemplateVersionOutputTypeDef",
+│ │      {
+│ │          "serviceTemplateVersion": ServiceTemplateVersionTypeDef,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -GetResourcesSummaryOutputTypeDef = TypedDict(
+│ │ -    "GetResourcesSummaryOutputTypeDef",
+│ │ -    {
+│ │ -        "counts": CountsSummaryTypeDef,
+│ │ -        "ResponseMetadata": ResponseMetadataTypeDef,
+│ │ -    },
+│ │ -)
+│ │ -
+│ │  GetRepositorySyncStatusOutputTypeDef = TypedDict(
+│ │      "GetRepositorySyncStatusOutputTypeDef",
+│ │      {
+│ │          "latestSync": RepositorySyncAttemptTypeDef,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/type_defs.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/type_defs.pyi
+│ │┄ Files 2% similar despite different names
+│ │ @@ -17,23 +17,20 @@
+│ │  
+│ │  from .literals import (
+│ │      ComponentDeploymentUpdateTypeType,
+│ │      DeploymentStatusType,
+│ │      DeploymentUpdateTypeType,
+│ │      EnvironmentAccountConnectionRequesterAccountTypeType,
+│ │      EnvironmentAccountConnectionStatusType,
+│ │ -    ListServiceInstancesFilterByType,
+│ │ -    ListServiceInstancesSortByType,
+│ │      ProvisionedResourceEngineType,
+│ │      RepositoryProviderType,
+│ │      RepositorySyncStatusType,
+│ │      ResourceDeploymentStatusType,
+│ │      ResourceSyncStatusType,
+│ │      ServiceStatusType,
+│ │ -    SortOrderType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │  )
+│ │  
+│ │  if sys.version_info >= (3, 9):
+│ │      from typing import Literal
+│ │  else:
+│ │ @@ -54,15 +51,14 @@
+│ │      "CancelServiceInstanceDeploymentInputRequestTypeDef",
+│ │      "ServiceInstanceTypeDef",
+│ │      "CancelServicePipelineDeploymentInputRequestTypeDef",
+│ │      "ServicePipelineTypeDef",
+│ │      "CompatibleEnvironmentTemplateInputTypeDef",
+│ │      "CompatibleEnvironmentTemplateTypeDef",
+│ │      "ComponentSummaryTypeDef",
+│ │ -    "ResourceCountsSummaryTypeDef",
+│ │      "TagTypeDef",
+│ │      "RepositoryBranchInputTypeDef",
+│ │      "EnvironmentTemplateTypeDef",
+│ │      "EnvironmentTemplateVersionTypeDef",
+│ │      "RepositoryTypeDef",
+│ │      "ServiceTemplateTypeDef",
+│ │      "CreateTemplateSyncConfigInputRequestTypeDef",
+│ │ @@ -110,15 +106,15 @@
+│ │      "ListEnvironmentTemplatesInputRequestTypeDef",
+│ │      "ListRepositoriesInputRequestTypeDef",
+│ │      "RepositorySummaryTypeDef",
+│ │      "ListRepositorySyncDefinitionsInputRequestTypeDef",
+│ │      "RepositorySyncDefinitionTypeDef",
+│ │      "ListServiceInstanceOutputsInputRequestTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesInputRequestTypeDef",
+│ │ -    "ListServiceInstancesFilterTypeDef",
+│ │ +    "ListServiceInstancesInputRequestTypeDef",
+│ │      "ServiceInstanceSummaryTypeDef",
+│ │      "ListServicePipelineOutputsInputRequestTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesInputRequestTypeDef",
+│ │      "ListServiceTemplateVersionsInputRequestTypeDef",
+│ │      "ServiceTemplateVersionSummaryTypeDef",
+│ │      "ListServiceTemplatesInputRequestTypeDef",
+│ │      "ServiceTemplateSummaryTypeDef",
+│ │ @@ -157,15 +153,14 @@
+│ │      "UpdateServiceInstanceOutputTypeDef",
+│ │      "CancelServicePipelineDeploymentOutputTypeDef",
+│ │      "ServiceTypeDef",
+│ │      "UpdateServicePipelineOutputTypeDef",
+│ │      "UpdateServiceTemplateVersionInputRequestTypeDef",
+│ │      "ServiceTemplateVersionTypeDef",
+│ │      "ListComponentsOutputTypeDef",
+│ │ -    "CountsSummaryTypeDef",
+│ │      "CreateComponentInputRequestTypeDef",
+│ │      "CreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      "CreateEnvironmentTemplateInputRequestTypeDef",
+│ │      "CreateRepositoryInputRequestTypeDef",
+│ │      "CreateServiceInputRequestTypeDef",
+│ │      "CreateServiceTemplateInputRequestTypeDef",
+│ │      "ListTagsForResourceOutputTypeDef",
+│ │ @@ -216,14 +211,15 @@
+│ │      "ListEnvironmentTemplateVersionsInputListEnvironmentTemplateVersionsPaginateTypeDef",
+│ │      "ListEnvironmentTemplatesInputListEnvironmentTemplatesPaginateTypeDef",
+│ │      "ListEnvironmentsInputListEnvironmentsPaginateTypeDef",
+│ │      "ListRepositoriesInputListRepositoriesPaginateTypeDef",
+│ │      "ListRepositorySyncDefinitionsInputListRepositorySyncDefinitionsPaginateTypeDef",
+│ │      "ListServiceInstanceOutputsInputListServiceInstanceOutputsPaginateTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef",
+│ │ +    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │      "ListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesInputListServicePipelineProvisionedResourcesPaginateTypeDef",
+│ │      "ListServiceTemplateVersionsInputListServiceTemplateVersionsPaginateTypeDef",
+│ │      "ListServiceTemplatesInputListServiceTemplatesPaginateTypeDef",
+│ │      "ListServicesInputListServicesPaginateTypeDef",
+│ │      "ListTagsForResourceInputListTagsForResourcePaginateTypeDef",
+│ │      "ListComponentOutputsOutputTypeDef",
+│ │ @@ -233,16 +229,14 @@
+│ │      "NotifyResourceDeploymentStatusChangeInputRequestTypeDef",
+│ │      "ListComponentProvisionedResourcesOutputTypeDef",
+│ │      "ListEnvironmentProvisionedResourcesOutputTypeDef",
+│ │      "ListServiceInstanceProvisionedResourcesOutputTypeDef",
+│ │      "ListServicePipelineProvisionedResourcesOutputTypeDef",
+│ │      "ListRepositoriesOutputTypeDef",
+│ │      "ListRepositorySyncDefinitionsOutputTypeDef",
+│ │ -    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ -    "ListServiceInstancesInputRequestTypeDef",
+│ │      "ListServiceInstancesOutputTypeDef",
+│ │      "ListServiceTemplateVersionsOutputTypeDef",
+│ │      "ListServiceTemplatesOutputTypeDef",
+│ │      "ListServicesOutputTypeDef",
+│ │      "RepositorySyncAttemptTypeDef",
+│ │      "ResourceSyncAttemptTypeDef",
+│ │      "TemplateVersionSourceInputTypeDef",
+│ │ @@ -257,15 +251,14 @@
+│ │      "DeleteServiceOutputTypeDef",
+│ │      "GetServiceOutputTypeDef",
+│ │      "UpdateServiceOutputTypeDef",
+│ │      "CreateServiceTemplateVersionOutputTypeDef",
+│ │      "DeleteServiceTemplateVersionOutputTypeDef",
+│ │      "GetServiceTemplateVersionOutputTypeDef",
+│ │      "UpdateServiceTemplateVersionOutputTypeDef",
+│ │ -    "GetResourcesSummaryOutputTypeDef",
+│ │      "GetRepositorySyncStatusOutputTypeDef",
+│ │      "GetTemplateSyncStatusOutputTypeDef",
+│ │      "CreateEnvironmentTemplateVersionInputRequestTypeDef",
+│ │      "CreateServiceTemplateVersionInputRequestTypeDef",
+│ │  )
+│ │  
+│ │  AcceptEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │ @@ -472,36 +465,14 @@
+│ │      },
+│ │      total=False,
+│ │  )
+│ │  
+│ │  class ComponentSummaryTypeDef(_RequiredComponentSummaryTypeDef, _OptionalComponentSummaryTypeDef):
+│ │      pass
+│ │  
+│ │ -_RequiredResourceCountsSummaryTypeDef = TypedDict(
+│ │ -    "_RequiredResourceCountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "total": int,
+│ │ -    },
+│ │ -)
+│ │ -_OptionalResourceCountsSummaryTypeDef = TypedDict(
+│ │ -    "_OptionalResourceCountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "behindMajor": int,
+│ │ -        "behindMinor": int,
+│ │ -        "failed": int,
+│ │ -        "upToDate": int,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │ -class ResourceCountsSummaryTypeDef(
+│ │ -    _RequiredResourceCountsSummaryTypeDef, _OptionalResourceCountsSummaryTypeDef
+│ │ -):
+│ │ -    pass
+│ │ -
+│ │  TagTypeDef = TypedDict(
+│ │      "TagTypeDef",
+│ │      {
+│ │          "key": str,
+│ │          "value": str,
+│ │      },
+│ │  )
+│ │ @@ -1244,19 +1215,20 @@
+│ │  
+│ │  class ListServiceInstanceProvisionedResourcesInputRequestTypeDef(
+│ │      _RequiredListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │      _OptionalListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │  ):
+│ │      pass
+│ │  
+│ │ -ListServiceInstancesFilterTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesFilterTypeDef",
+│ │ +ListServiceInstancesInputRequestTypeDef = TypedDict(
+│ │ +    "ListServiceInstancesInputRequestTypeDef",
+│ │      {
+│ │ -        "key": ListServiceInstancesFilterByType,
+│ │ -        "value": str,
+│ │ +        "maxResults": int,
+│ │ +        "nextToken": str,
+│ │ +        "serviceName": str,
+│ │      },
+│ │      total=False,
+│ │  )
+│ │  
+│ │  _RequiredServiceInstanceSummaryTypeDef = TypedDict(
+│ │      "_RequiredServiceInstanceSummaryTypeDef",
+│ │      {
+│ │ @@ -1988,28 +1960,14 @@
+│ │      {
+│ │          "components": List[ComponentSummaryTypeDef],
+│ │          "nextToken": str,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -CountsSummaryTypeDef = TypedDict(
+│ │ -    "CountsSummaryTypeDef",
+│ │ -    {
+│ │ -        "components": ResourceCountsSummaryTypeDef,
+│ │ -        "environmentTemplates": ResourceCountsSummaryTypeDef,
+│ │ -        "environments": ResourceCountsSummaryTypeDef,
+│ │ -        "pipelines": ResourceCountsSummaryTypeDef,
+│ │ -        "serviceInstances": ResourceCountsSummaryTypeDef,
+│ │ -        "serviceTemplates": ResourceCountsSummaryTypeDef,
+│ │ -        "services": ResourceCountsSummaryTypeDef,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │  _RequiredCreateComponentInputRequestTypeDef = TypedDict(
+│ │      "_RequiredCreateComponentInputRequestTypeDef",
+│ │      {
+│ │          "manifest": str,
+│ │          "name": str,
+│ │          "templateFile": str,
+│ │      },
+│ │ @@ -2033,23 +1991,23 @@
+│ │      pass
+│ │  
+│ │  _RequiredCreateEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │      "_RequiredCreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      {
+│ │          "environmentName": str,
+│ │          "managementAccountId": str,
+│ │ +        "roleArn": str,
+│ │      },
+│ │  )
+│ │  _OptionalCreateEnvironmentAccountConnectionInputRequestTypeDef = TypedDict(
+│ │      "_OptionalCreateEnvironmentAccountConnectionInputRequestTypeDef",
+│ │      {
+│ │          "clientToken": str,
+│ │          "codebuildRoleArn": str,
+│ │          "componentRoleArn": str,
+│ │ -        "roleArn": str,
+│ │          "tags": Sequence[TagTypeDef],
+│ │      },
+│ │      total=False,
+│ │  )
+│ │  
+│ │  class CreateEnvironmentAccountConnectionInputRequestTypeDef(
+│ │      _RequiredCreateEnvironmentAccountConnectionInputRequestTypeDef,
+│ │ @@ -2861,14 +2819,23 @@
+│ │  
+│ │  class ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef(
+│ │      _RequiredListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │      _OptionalListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │  ):
+│ │      pass
+│ │  
+│ │ +ListServiceInstancesInputListServiceInstancesPaginateTypeDef = TypedDict(
+│ │ +    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ +    {
+│ │ +        "serviceName": str,
+│ │ +        "PaginationConfig": PaginatorConfigTypeDef,
+│ │ +    },
+│ │ +    total=False,
+│ │ +)
+│ │ +
+│ │  _RequiredListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef = TypedDict(
+│ │      "_RequiredListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef",
+│ │      {
+│ │          "serviceName": str,
+│ │      },
+│ │  )
+│ │  _OptionalListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef = TypedDict(
+│ │ @@ -3071,39 +3038,14 @@
+│ │      {
+│ │          "nextToken": str,
+│ │          "syncDefinitions": List[RepositorySyncDefinitionTypeDef],
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -ListServiceInstancesInputListServiceInstancesPaginateTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesInputListServiceInstancesPaginateTypeDef",
+│ │ -    {
+│ │ -        "filters": Sequence[ListServiceInstancesFilterTypeDef],
+│ │ -        "serviceName": str,
+│ │ -        "sortBy": ListServiceInstancesSortByType,
+│ │ -        "sortOrder": SortOrderType,
+│ │ -        "PaginationConfig": PaginatorConfigTypeDef,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │ -ListServiceInstancesInputRequestTypeDef = TypedDict(
+│ │ -    "ListServiceInstancesInputRequestTypeDef",
+│ │ -    {
+│ │ -        "filters": Sequence[ListServiceInstancesFilterTypeDef],
+│ │ -        "maxResults": int,
+│ │ -        "nextToken": str,
+│ │ -        "serviceName": str,
+│ │ -        "sortBy": ListServiceInstancesSortByType,
+│ │ -        "sortOrder": SortOrderType,
+│ │ -    },
+│ │ -    total=False,
+│ │ -)
+│ │ -
+│ │  ListServiceInstancesOutputTypeDef = TypedDict(
+│ │      "ListServiceInstancesOutputTypeDef",
+│ │      {
+│ │          "nextToken": str,
+│ │          "serviceInstances": List[ServiceInstanceSummaryTypeDef],
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │ @@ -3281,22 +3223,14 @@
+│ │      "UpdateServiceTemplateVersionOutputTypeDef",
+│ │      {
+│ │          "serviceTemplateVersion": ServiceTemplateVersionTypeDef,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │  
+│ │ -GetResourcesSummaryOutputTypeDef = TypedDict(
+│ │ -    "GetResourcesSummaryOutputTypeDef",
+│ │ -    {
+│ │ -        "counts": CountsSummaryTypeDef,
+│ │ -        "ResponseMetadata": ResponseMetadataTypeDef,
+│ │ -    },
+│ │ -)
+│ │ -
+│ │  GetRepositorySyncStatusOutputTypeDef = TypedDict(
+│ │      "GetRepositorySyncStatusOutputTypeDef",
+│ │      {
+│ │          "latestSync": RepositorySyncAttemptTypeDef,
+│ │          "ResponseMetadata": ResponseMetadataTypeDef,
+│ │      },
+│ │  )
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/waiter.py
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/waiter.py
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton/waiter.pyi
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton/waiter.pyi
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/PKG-INFO
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mypy-boto3-proton
+│ │ -Version: 1.26.64
+│ │ -Summary: Type annotations for boto3.Proton 1.26.64 service generated with mypy-boto3-builder 7.12.3
+│ │ +Version: 1.26.9
+│ │ +Summary: Type annotations for boto3.Proton 1.26.9 service generated with mypy-boto3-builder 7.11.10
+│ │  Home-page: https://github.com/youtype/mypy_boto3_builder
+│ │  Author: Vlad Emelianov
+│ │  Author-email: vlad.emelianov.nz@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: Documentation, https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/
+│ │  Project-URL: Source, https://github.com/youtype/mypy_boto3_builder
+│ │  Project-URL: Tracker, https://github.com/youtype/mypy_boto3_builder/issues
+│ │ @@ -18,15 +18,14 @@
+│ │  Classifier: Operating System :: OS Independent
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.7
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ -Classifier: Programming Language :: Python :: 3.12
+│ │  Classifier: Programming Language :: Python :: 3 :: Only
+│ │  Classifier: Programming Language :: Python :: Implementation :: CPython
+│ │  Classifier: Typing :: Typed
+│ │  Requires-Python: >=3.7
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ @@ -38,24 +37,24 @@
+│ │  [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mypy-boto3-proton.svg?color=blue)](https://pypi.org/project/mypy-boto3-proton)
+│ │  [![Docs](https://img.shields.io/readthedocs/mypy-boto3-builder.svg?color=blue)](https://mypy-boto3-builder.readthedocs.io/)
+│ │  [![PyPI - Downloads](https://img.shields.io/pypi/dm/mypy-boto3-proton?color=blue)](https://pypistats.org/packages/mypy-boto3-proton)
+│ │  
+│ │  ![boto3.typed](https://github.com/youtype/mypy_boto3_builder/raw/main/logo.png)
+│ │  
+│ │  Type annotations for
+│ │ -[boto3.Proton 1.26.64](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │ +[boto3.Proton 1.26.9](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/proton.html#Proton)
+│ │  service compatible with [VSCode](https://code.visualstudio.com/),
+│ │  [PyCharm](https://www.jetbrains.com/pycharm/),
+│ │  [Emacs](https://www.gnu.org/software/emacs/),
+│ │  [Sublime Text](https://www.sublimetext.com/),
+│ │  [mypy](https://github.com/python/mypy),
+│ │  [pyright](https://github.com/microsoft/pyright) and other tools.
+│ │  
+│ │  Generated by
+│ │ -[mypy-boto3-builder 7.12.3](https://github.com/youtype/mypy_boto3_builder).
+│ │ +[mypy-boto3-builder 7.11.10](https://github.com/youtype/mypy_boto3_builder).
+│ │  
+│ │  More information can be found on
+│ │  [boto3-stubs](https://pypi.org/project/boto3-stubs/) page and in
+│ │  [mypy-boto3-proton docs](https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/).
+│ │  
+│ │  See how it helps to find and fix potential bugs:
+│ │  
+│ │ @@ -438,17 +437,15 @@
+│ │      ListEnvironmentTemplateVersionsPaginatorName,
+│ │      ListEnvironmentTemplatesPaginatorName,
+│ │      ListEnvironmentsPaginatorName,
+│ │      ListRepositoriesPaginatorName,
+│ │      ListRepositorySyncDefinitionsPaginatorName,
+│ │      ListServiceInstanceOutputsPaginatorName,
+│ │      ListServiceInstanceProvisionedResourcesPaginatorName,
+│ │ -    ListServiceInstancesFilterByType,
+│ │      ListServiceInstancesPaginatorName,
+│ │ -    ListServiceInstancesSortByType,
+│ │      ListServicePipelineOutputsPaginatorName,
+│ │      ListServicePipelineProvisionedResourcesPaginatorName,
+│ │      ListServiceTemplateVersionsPaginatorName,
+│ │      ListServiceTemplatesPaginatorName,
+│ │      ListServicesPaginatorName,
+│ │      ListTagsForResourcePaginatorName,
+│ │      ProvisionedResourceEngineType,
+│ │ @@ -461,15 +458,14 @@
+│ │      ServiceDeletedWaiterName,
+│ │      ServiceInstanceDeployedWaiterName,
+│ │      ServicePipelineDeployedWaiterName,
+│ │      ServiceStatusType,
+│ │      ServiceTemplateSupportedComponentSourceTypeType,
+│ │      ServiceTemplateVersionRegisteredWaiterName,
+│ │      ServiceUpdatedWaiterName,
+│ │ -    SortOrderType,
+│ │      SyncTypeType,
+│ │      TemplateTypeType,
+│ │      TemplateVersionStatusType,
+│ │      ProtonServiceName,
+│ │      ServiceName,
+│ │      ResourceServiceName,
+│ │      PaginatorName,
+│ │ @@ -501,15 +497,14 @@
+│ │      CancelServiceInstanceDeploymentInputRequestTypeDef,
+│ │      ServiceInstanceTypeDef,
+│ │      CancelServicePipelineDeploymentInputRequestTypeDef,
+│ │      ServicePipelineTypeDef,
+│ │      CompatibleEnvironmentTemplateInputTypeDef,
+│ │      CompatibleEnvironmentTemplateTypeDef,
+│ │      ComponentSummaryTypeDef,
+│ │ -    ResourceCountsSummaryTypeDef,
+│ │      TagTypeDef,
+│ │      RepositoryBranchInputTypeDef,
+│ │      EnvironmentTemplateTypeDef,
+│ │      EnvironmentTemplateVersionTypeDef,
+│ │      RepositoryTypeDef,
+│ │      ServiceTemplateTypeDef,
+│ │      CreateTemplateSyncConfigInputRequestTypeDef,
+│ │ @@ -557,15 +552,15 @@
+│ │      ListEnvironmentTemplatesInputRequestTypeDef,
+│ │      ListRepositoriesInputRequestTypeDef,
+│ │      RepositorySummaryTypeDef,
+│ │      ListRepositorySyncDefinitionsInputRequestTypeDef,
+│ │      RepositorySyncDefinitionTypeDef,
+│ │      ListServiceInstanceOutputsInputRequestTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputRequestTypeDef,
+│ │ -    ListServiceInstancesFilterTypeDef,
+│ │ +    ListServiceInstancesInputRequestTypeDef,
+│ │      ServiceInstanceSummaryTypeDef,
+│ │      ListServicePipelineOutputsInputRequestTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputRequestTypeDef,
+│ │      ListServiceTemplateVersionsInputRequestTypeDef,
+│ │      ServiceTemplateVersionSummaryTypeDef,
+│ │      ListServiceTemplatesInputRequestTypeDef,
+│ │      ServiceTemplateSummaryTypeDef,
+│ │ @@ -604,15 +599,14 @@
+│ │      UpdateServiceInstanceOutputTypeDef,
+│ │      CancelServicePipelineDeploymentOutputTypeDef,
+│ │      ServiceTypeDef,
+│ │      UpdateServicePipelineOutputTypeDef,
+│ │      UpdateServiceTemplateVersionInputRequestTypeDef,
+│ │      ServiceTemplateVersionTypeDef,
+│ │      ListComponentsOutputTypeDef,
+│ │ -    CountsSummaryTypeDef,
+│ │      CreateComponentInputRequestTypeDef,
+│ │      CreateEnvironmentAccountConnectionInputRequestTypeDef,
+│ │      CreateEnvironmentTemplateInputRequestTypeDef,
+│ │      CreateRepositoryInputRequestTypeDef,
+│ │      CreateServiceInputRequestTypeDef,
+│ │      CreateServiceTemplateInputRequestTypeDef,
+│ │      ListTagsForResourceOutputTypeDef,
+│ │ @@ -663,14 +657,15 @@
+│ │      ListEnvironmentTemplateVersionsInputListEnvironmentTemplateVersionsPaginateTypeDef,
+│ │      ListEnvironmentTemplatesInputListEnvironmentTemplatesPaginateTypeDef,
+│ │      ListEnvironmentsInputListEnvironmentsPaginateTypeDef,
+│ │      ListRepositoriesInputListRepositoriesPaginateTypeDef,
+│ │      ListRepositorySyncDefinitionsInputListRepositorySyncDefinitionsPaginateTypeDef,
+│ │      ListServiceInstanceOutputsInputListServiceInstanceOutputsPaginateTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesInputListServiceInstanceProvisionedResourcesPaginateTypeDef,
+│ │ +    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │      ListServicePipelineOutputsInputListServicePipelineOutputsPaginateTypeDef,
+│ │      ListServicePipelineProvisionedResourcesInputListServicePipelineProvisionedResourcesPaginateTypeDef,
+│ │      ListServiceTemplateVersionsInputListServiceTemplateVersionsPaginateTypeDef,
+│ │      ListServiceTemplatesInputListServiceTemplatesPaginateTypeDef,
+│ │      ListServicesInputListServicesPaginateTypeDef,
+│ │      ListTagsForResourceInputListTagsForResourcePaginateTypeDef,
+│ │      ListComponentOutputsOutputTypeDef,
+│ │ @@ -680,16 +675,14 @@
+│ │      NotifyResourceDeploymentStatusChangeInputRequestTypeDef,
+│ │      ListComponentProvisionedResourcesOutputTypeDef,
+│ │      ListEnvironmentProvisionedResourcesOutputTypeDef,
+│ │      ListServiceInstanceProvisionedResourcesOutputTypeDef,
+│ │      ListServicePipelineProvisionedResourcesOutputTypeDef,
+│ │      ListRepositoriesOutputTypeDef,
+│ │      ListRepositorySyncDefinitionsOutputTypeDef,
+│ │ -    ListServiceInstancesInputListServiceInstancesPaginateTypeDef,
+│ │ -    ListServiceInstancesInputRequestTypeDef,
+│ │      ListServiceInstancesOutputTypeDef,
+│ │      ListServiceTemplateVersionsOutputTypeDef,
+│ │      ListServiceTemplatesOutputTypeDef,
+│ │      ListServicesOutputTypeDef,
+│ │      RepositorySyncAttemptTypeDef,
+│ │      ResourceSyncAttemptTypeDef,
+│ │      TemplateVersionSourceInputTypeDef,
+│ │ @@ -704,15 +697,14 @@
+│ │      DeleteServiceOutputTypeDef,
+│ │      GetServiceOutputTypeDef,
+│ │      UpdateServiceOutputTypeDef,
+│ │      CreateServiceTemplateVersionOutputTypeDef,
+│ │      DeleteServiceTemplateVersionOutputTypeDef,
+│ │      GetServiceTemplateVersionOutputTypeDef,
+│ │      UpdateServiceTemplateVersionOutputTypeDef,
+│ │ -    GetResourcesSummaryOutputTypeDef,
+│ │      GetRepositorySyncStatusOutputTypeDef,
+│ │      GetTemplateSyncStatusOutputTypeDef,
+│ │      CreateEnvironmentTemplateVersionInputRequestTypeDef,
+│ │      CreateServiceTemplateVersionInputRequestTypeDef,
+│ │  )
+│ │   --- mypy-boto3-proton-1.26.64/mypy_boto3_proton.egg-info/SOURCES.txt
+│ ├── +++ mypy-boto3-proton-1.26.9/mypy_boto3_proton.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- mypy-boto3-proton-1.26.64/setup.py
+│ ├── +++ mypy-boto3-proton-1.26.9/setup.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -6,45 +6,44 @@
+│ │  from setuptools import setup
+│ │  
+│ │  LONG_DESCRIPTION = open(dirname(abspath(__file__)) + "/README.md", "r").read()
+│ │  
+│ │  
+│ │  setup(
+│ │      name="mypy-boto3-proton",
+│ │ -    version="1.26.64",
+│ │ +    version="1.26.9",
+│ │      packages=["mypy_boto3_proton"],
+│ │      url="https://github.com/youtype/mypy_boto3_builder",
+│ │      license="MIT License",
+│ │      author="Vlad Emelianov",
+│ │      author_email="vlad.emelianov.nz@gmail.com",
+│ │      description=(
+│ │ -        "Type annotations for boto3.Proton 1.26.64 service generated with mypy-boto3-builder 7.12.3"
+│ │ +        "Type annotations for boto3.Proton 1.26.9 service generated with mypy-boto3-builder 7.11.10"
+│ │      ),
+│ │      classifiers=[
+│ │          "Development Status :: 5 - Production/Stable",
+│ │          "Intended Audience :: Developers",
+│ │          "Environment :: Console",
+│ │          "License :: OSI Approved :: MIT License",
+│ │          "Natural Language :: English",
+│ │          "Operating System :: OS Independent",
+│ │          "Programming Language :: Python :: 3",
+│ │          "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",
+│ │          "Programming Language :: Python :: 3.9",
+│ │          "Programming Language :: Python :: 3.10",
+│ │          "Programming Language :: Python :: 3.11",
+│ │ -        "Programming Language :: Python :: 3.12",
+│ │          "Programming Language :: Python :: 3 :: Only",
+│ │          "Programming Language :: Python :: Implementation :: CPython",
+│ │          "Typing :: Typed",
+│ │      ],
+│ │      keywords="boto3 proton type-annotations boto3-stubs mypy typeshed autocomplete",
+│ │      long_description=LONG_DESCRIPTION,
+│ │      long_description_content_type="text/markdown",
+│ │ -    package_data={"mypy_boto3_proton": ["py.typed", "*.pyi"]},
+│ │ +    package_data={"": ["LICENSE"], "mypy_boto3_proton": ["py.typed", "*.pyi"]},
+│ │      python_requires=">=3.7",
+│ │      project_urls={
+│ │          "Documentation": "https://youtype.github.io/boto3_stubs_docs/mypy_boto3_proton/",
+│ │          "Source": "https://github.com/youtype/mypy_boto3_builder",
+│ │          "Tracker": "https://github.com/youtype/mypy_boto3_builder/issues",
+│ │      },
+│ │      install_requires=[

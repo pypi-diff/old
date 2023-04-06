@@ -1,0 +1,179 @@
+--- tmp/rpa_cooperativa-1.0.38.tar.gz
++++ tmp/rpa_cooperativa-1.0.40.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "rpa_cooperativa-1.0.38.tar", last modified: Wed Apr  5 13:31:03 2023, max compression
+│ +gzip compressed data, was "rpa_cooperativa-1.0.40.tar", last modified: Thu Apr  6 20:21:33 2023, max compression
+│   --- rpa_cooperativa-1.0.38.tar
+├── +++ rpa_cooperativa-1.0.40.tar
+│ ├── file list
+│ │ @@ -1,28 +1,28 @@
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 13:31:03.026407 rpa_cooperativa-1.0.38/
+│ │ --rw-rw-rw-   0        0        0     1115 2023-03-09 01:05:15.000000 rpa_cooperativa-1.0.38/LICENSE
+│ │ --rw-rw-rw-   0        0        0     5326 2023-04-05 13:31:03.022822 rpa_cooperativa-1.0.38/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0     4181 2023-03-24 13:54:04.000000 rpa_cooperativa-1.0.38/README.md
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 13:31:02.847444 rpa_cooperativa-1.0.38/rpa_coop/
+│ │ --rw-rw-rw-   0        0        0      507 2023-03-24 17:45:39.000000 rpa_cooperativa-1.0.38/rpa_coop/__init__.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 13:31:02.952825 rpa_cooperativa-1.0.38/rpa_coop/img/
+│ │ --rw-rw-rw-   0        0        0      140 2023-03-16 01:30:18.000000 rpa_cooperativa-1.0.38/rpa_coop/img/hash
+│ │ --rw-rw-rw-   0        0        0     2980 2023-03-09 16:48:20.000000 rpa_cooperativa-1.0.38/rpa_coop/img/relatorios_azul.PNG
+│ │ --rw-rw-rw-   0        0        0     3576 2023-03-09 16:47:53.000000 rpa_cooperativa-1.0.38/rpa_coop/img/relatorios_verde.PNG
+│ │ --rw-rw-rw-   0        0        0      379 2023-02-28 19:52:56.000000 rpa_cooperativa-1.0.38/rpa_coop/img/sacg_branco.PNG
+│ │ --rw-rw-rw-   0        0        0      382 2023-02-28 19:50:17.000000 rpa_cooperativa-1.0.38/rpa_coop/img/sagc_verde.PNG
+│ │ --rw-rw-rw-   0        0        0      384 2023-02-28 19:53:19.000000 rpa_cooperativa-1.0.38/rpa_coop/img/siac_amarelo.PNG
+│ │ --rw-rw-rw-   0        0        0      347 2023-02-28 19:51:44.000000 rpa_cooperativa-1.0.38/rpa_coop/img/siac_verde.PNG
+│ │ --rw-rw-rw-   0        0        0      349 2023-02-28 19:53:39.000000 rpa_cooperativa-1.0.38/rpa_coop/img/siat_branco.PNG
+│ │ --rw-rw-rw-   0        0        0      336 2023-02-28 19:52:19.000000 rpa_cooperativa-1.0.38/rpa_coop/img/siat_verde.PNG
+│ │ --rw-rw-rw-   0        0        0     6079 2023-03-09 16:47:31.000000 rpa_cooperativa-1.0.38/rpa_coop/img/transacional_azul.PNG
+│ │ --rw-rw-rw-   0        0        0     6652 2023-03-09 16:46:38.000000 rpa_cooperativa-1.0.38/rpa_coop/img/transacional_verde.PNG
+│ │ --rw-rw-rw-   0        0        0    63310 2023-04-05 13:30:15.000000 rpa_cooperativa-1.0.38/rpa_coop/rpa_coop.py
+│ │ -drwxrwxrwx   0        0        0        0 2023-04-05 13:31:03.011489 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/
+│ │ --rw-rw-rw-   0        0        0     5326 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0        0        0      628 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0        0        0        1 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0        0        0        2 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/not-zip-safe
+│ │ --rw-rw-rw-   0        0        0      544 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/requires.txt
+│ │ --rw-rw-rw-   0        0        0        9 2023-04-05 13:31:02.000000 rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0        0        0       42 2023-04-05 13:31:03.027689 rpa_cooperativa-1.0.38/setup.cfg
+│ │ --rw-rw-rw-   0        0        0     2305 2023-04-05 13:30:21.000000 rpa_cooperativa-1.0.38/setup.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:21:33.201758 rpa_cooperativa-1.0.40/
+│ │ +-rw-rw-rw-   0        0        0     1115 2023-03-09 01:05:15.000000 rpa_cooperativa-1.0.40/LICENSE
+│ │ +-rw-rw-rw-   0        0        0     5326 2023-04-06 20:21:33.195152 rpa_cooperativa-1.0.40/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0     4181 2023-03-24 13:54:04.000000 rpa_cooperativa-1.0.40/README.md
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:21:32.951345 rpa_cooperativa-1.0.40/rpa_coop/
+│ │ +-rw-rw-rw-   0        0        0      507 2023-03-24 17:45:39.000000 rpa_cooperativa-1.0.40/rpa_coop/__init__.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:21:33.130796 rpa_cooperativa-1.0.40/rpa_coop/img/
+│ │ +-rw-rw-rw-   0        0        0      140 2023-03-16 01:30:18.000000 rpa_cooperativa-1.0.40/rpa_coop/img/hash
+│ │ +-rw-rw-rw-   0        0        0     2980 2023-03-09 16:48:20.000000 rpa_cooperativa-1.0.40/rpa_coop/img/relatorios_azul.PNG
+│ │ +-rw-rw-rw-   0        0        0     3576 2023-03-09 16:47:53.000000 rpa_cooperativa-1.0.40/rpa_coop/img/relatorios_verde.PNG
+│ │ +-rw-rw-rw-   0        0        0      379 2023-02-28 19:52:56.000000 rpa_cooperativa-1.0.40/rpa_coop/img/sacg_branco.PNG
+│ │ +-rw-rw-rw-   0        0        0      382 2023-02-28 19:50:17.000000 rpa_cooperativa-1.0.40/rpa_coop/img/sagc_verde.PNG
+│ │ +-rw-rw-rw-   0        0        0      384 2023-02-28 19:53:19.000000 rpa_cooperativa-1.0.40/rpa_coop/img/siac_amarelo.PNG
+│ │ +-rw-rw-rw-   0        0        0      347 2023-02-28 19:51:44.000000 rpa_cooperativa-1.0.40/rpa_coop/img/siac_verde.PNG
+│ │ +-rw-rw-rw-   0        0        0      349 2023-02-28 19:53:39.000000 rpa_cooperativa-1.0.40/rpa_coop/img/siat_branco.PNG
+│ │ +-rw-rw-rw-   0        0        0      336 2023-02-28 19:52:19.000000 rpa_cooperativa-1.0.40/rpa_coop/img/siat_verde.PNG
+│ │ +-rw-rw-rw-   0        0        0     6079 2023-03-09 16:47:31.000000 rpa_cooperativa-1.0.40/rpa_coop/img/transacional_azul.PNG
+│ │ +-rw-rw-rw-   0        0        0     6652 2023-03-09 16:46:38.000000 rpa_cooperativa-1.0.40/rpa_coop/img/transacional_verde.PNG
+│ │ +-rw-rw-rw-   0        0        0    63570 2023-04-06 20:20:32.000000 rpa_cooperativa-1.0.40/rpa_coop/rpa_coop.py
+│ │ +drwxrwxrwx   0        0        0        0 2023-04-06 20:21:33.186142 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/
+│ │ +-rw-rw-rw-   0        0        0     5326 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0        0        0      628 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0        0        0        1 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0        0        0        2 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/not-zip-safe
+│ │ +-rw-rw-rw-   0        0        0      544 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0        0        0        9 2023-04-06 20:21:32.000000 rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0        0        0       42 2023-04-06 20:21:33.202758 rpa_cooperativa-1.0.40/setup.cfg
+│ │ +-rw-rw-rw-   0        0        0     2305 2023-04-06 20:20:46.000000 rpa_cooperativa-1.0.40/setup.py
+│ │   --- rpa_cooperativa-1.0.38/LICENSE
+│ ├── +++ rpa_cooperativa-1.0.40/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/PKG-INFO
+│ ├── +++ rpa_cooperativa-1.0.40/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: rpa_cooperativa
+│ │ -Version: 1.0.38
+│ │ +Version: 1.0.40
+│ │  Summary: Classes referente automação com python para... api fluid, api whatsapp, api sms, sql, acc
+│ │  Home-page: https://github.com/edenilsonsantos/rpa_cooperativa
+│ │  Author: Edenilson Fernandes dos Santos
+│ │  Author-email: santoeen@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: repository, https://github.com/edenilsonsantos/rpa_cooperativa
+│ │  Keywords: rpa cooperativa fluid api automação sql sqlalchemy
+│ │   --- rpa_cooperativa-1.0.38/README.md
+│ ├── +++ rpa_cooperativa-1.0.40/README.md
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_coop/img/relatorios_azul.PNG
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_coop/img/relatorios_azul.PNG
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_coop/img/relatorios_verde.PNG
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_coop/img/relatorios_verde.PNG
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_coop/img/transacional_azul.PNG
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_coop/img/transacional_azul.PNG
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_coop/img/transacional_verde.PNG
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_coop/img/transacional_verde.PNG
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_coop/rpa_coop.py
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_coop/rpa_coop.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -813,16 +813,16 @@
+│ │              raise Exception(f'Erro ao protocolar processo {cod_processo}: {response.text}')
+│ │  
+│ │  
+│ │  
+│ │  class Whatsapp:
+│ │   
+│ │      def __init__(self):
+│ │ -        self.url_api_whats = str(gerador_pwd('url_api_whats', 'senha'))
+│ │ -        self.token_api_whats = str(gerador_pwd('url_api_whats', 'sistema'))
+│ │ +        self.url_api_whats = str(gerador_pwd('url_api_whats', 'sistema'))
+│ │ +        self.token_api_whats = str(gerador_pwd('url_api_whats', 'senha'))
+│ │          self.template_informa_novo = str(gerador_pwd('template_informa_novo', 'sistema'))
+│ │          self.template_informa_com_img = str(gerador_pwd('template_informa_com_img', 'senha'))
+│ │          self.template_informa_com_pdf = str(gerador_pwd('template_informa_com_pdf', 'senha'))
+│ │          self.whats_user_origem = str(gerador_pwd('whats_user_origem', 'senha'))
+│ │          self.cod_coop = str(gerador_pwd('cod_coop', 'senha'))
+│ │  
+│ │  
+│ │ @@ -1383,18 +1383,20 @@
+│ │          file.write(txt)
+│ │          file.close()        
+│ │          self.comentar_linha(script_file_path, 'gerador_de_codigo.')
+│ │          
+│ │          
+│ │       
+│ │  
+│ │ +url_api_whats = str(gerador_pwd('url_api_whats', 'sistema'))
+│ │ +token_api_whats = str(gerador_pwd('url_api_whats', 'senha'))
+│ │  
+│ │ -
+│ │ -
+│ │ -          
+│ │ +# url_api_sms = str(gerador_pwd('url_api_sms', 'sistema'))
+│ │ +# token_api_sms = str(gerador_pwd('url_api_sms', 'senha'))
+│ │ +# print(token_api_whats)
+│ │   --- rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/PKG-INFO
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: rpa-cooperativa
+│ │ -Version: 1.0.38
+│ │ +Version: 1.0.40
+│ │  Summary: Classes referente automação com python para... api fluid, api whatsapp, api sms, sql, acc
+│ │  Home-page: https://github.com/edenilsonsantos/rpa_cooperativa
+│ │  Author: Edenilson Fernandes dos Santos
+│ │  Author-email: santoeen@gmail.com
+│ │  License: MIT License
+│ │  Project-URL: repository, https://github.com/edenilsonsantos/rpa_cooperativa
+│ │  Keywords: rpa cooperativa fluid api automação sql sqlalchemy
+│ │   --- rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/SOURCES.txt
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/rpa_cooperativa.egg-info/requires.txt
+│ ├── +++ rpa_cooperativa-1.0.40/rpa_cooperativa.egg-info/requires.txt
+│ │┄ Files identical despite different names
+│ │   --- rpa_cooperativa-1.0.38/setup.py
+│ ├── +++ rpa_cooperativa-1.0.40/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -2,15 +2,15 @@
+│ │  from setuptools import setup
+│ │  
+│ │  with open("README.md", "r") as arq:
+│ │      readme = arq.read()
+│ │  
+│ │  setup(
+│ │      name="rpa_cooperativa",
+│ │ -    version="1.0.38",
+│ │ +    version="1.0.40",
+│ │      license='MIT License',
+│ │      author="Edenilson Fernandes dos Santos",
+│ │      author_email='santoeen@gmail.com',
+│ │      description="Classes referente automação com python para... api fluid, api whatsapp, api sms, sql, acc",
+│ │      long_description=readme,
+│ │      long_description_content_type="text/markdown",
+│ │      keywords='rpa cooperativa fluid api automação sql sqlalchemy',
