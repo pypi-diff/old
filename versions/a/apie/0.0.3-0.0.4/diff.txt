@@ -1,0 +1,589 @@
+--- tmp/apie-0.0.3.tar.gz
++++ tmp/apie-0.0.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "apie-0.0.3.tar", last modified: Sun Jan  8 06:19:24 2023, max compression
+│ +gzip compressed data, was "apie-0.0.4.tar", last modified: Thu Apr  6 23:00:34 2023, max compression
+│   --- apie-0.0.3.tar
+├── +++ apie-0.0.4.tar
+│ ├── file list
+│ │ @@ -1,26 +1,26 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.013030 apie-0.0.3/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13686 2023-01-08 06:19:24.013030 apie-0.0.3/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13174 2023-01-08 06:19:04.000000 apie-0.0.3/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.009029 apie-0.0.3/pkg/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.013030 apie-0.0.3/pkg/apie/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       57 2023-01-08 06:19:12.000000 apie-0.0.3/pkg/apie/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       57 2023-01-08 06:19:12.000000 apie-0.0.3/pkg/apie/__main__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.013030 apie-0.0.3/pkg/apie/api/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-08 06:19:12.000000 apie-0.0.3/pkg/apie/api/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1664 2023-01-08 06:18:58.000000 apie-0.0.3/pkg/apie/api/api_hack.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      884 2023-01-08 06:18:58.000000 apie-0.0.3/pkg/apie/api/api_help.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4345 2023-01-08 06:18:58.000000 apie-0.0.3/pkg/apie/api/api_multi.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16210 2023-01-08 06:19:12.000000 apie-0.0.3/pkg/apie/apie.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.013030 apie-0.0.3/pkg/apie/auth/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-08 06:19:12.000000 apie-0.0.3/pkg/apie/auth/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      842 2023-01-08 06:18:58.000000 apie-0.0.3/pkg/apie/auth/auth_from_config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      551 2023-01-08 06:18:58.000000 apie-0.0.3/pkg/apie/auth/auth_noauth.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-01-08 06:19:24.013030 apie-0.0.3/pkg/apie.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13686 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      477 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       35 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       31 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-01-08 06:19:24.000000 apie-0.0.3/pkg/apie.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      104 2023-01-08 06:19:12.000000 apie-0.0.3/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      792 2023-01-08 06:19:24.013030 apie-0.0.3/setup.cfg
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.947008 apie-0.0.4/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14099 2023-04-06 23:00:34.947008 apie-0.0.4/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13587 2023-04-06 23:00:16.000000 apie-0.0.4/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.943008 apie-0.0.4/pkg/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.943008 apie-0.0.4/pkg/apie/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 23:00:25.000000 apie-0.0.4/pkg/apie/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-06 23:00:25.000000 apie-0.0.4/pkg/apie/__main__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.947008 apie-0.0.4/pkg/apie/api/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:00:25.000000 apie-0.0.4/pkg/apie/api/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1664 2023-04-06 23:00:09.000000 apie-0.0.4/pkg/apie/api/api_hack.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-06 23:00:09.000000 apie-0.0.4/pkg/apie/api/api_help.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4345 2023-04-06 23:00:09.000000 apie-0.0.4/pkg/apie/api/api_multi.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16244 2023-04-06 23:00:25.000000 apie-0.0.4/pkg/apie/apie.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.947008 apie-0.0.4/pkg/apie/auth/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:00:25.000000 apie-0.0.4/pkg/apie/auth/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-06 23:00:09.000000 apie-0.0.4/pkg/apie/auth/auth_from_config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      551 2023-04-06 23:00:09.000000 apie-0.0.4/pkg/apie/auth/auth_noauth.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 23:00:34.947008 apie-0.0.4/pkg/apie.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14099 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      477 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       35 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       31 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-06 23:00:34.000000 apie-0.0.4/pkg/apie.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      104 2023-04-06 23:00:25.000000 apie-0.0.4/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      792 2023-04-06 23:00:34.947008 apie-0.0.4/setup.cfg
+│ │   --- apie-0.0.3/PKG-INFO
+│ ├── +++ apie-0.0.4/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: apie
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: Application Program Interface with eons
+│ │  Home-page: https://github.com/eons-dev/bin_apie
+│ │  Author: eons
+│ │  Author-email: support@eons.llc
+│ │  Project-URL: Bug Tracker, https://github.com/eons-dev/bin_apie/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -28,28 +28,38 @@
+│ │  ## Usage
+│ │  
+│ │  To run an `apie` server simply:
+│ │  ```shell
+│ │  apie
+│ │  ```
+│ │  
+│ │ -You can specify custom interface and port like so:
+│ │ +APIE will bind to port 80 by default, which is not typically allowed for non-root users. In order to bypass this, you must use a different port. You can specify custom interface and port from the command line like so:
+│ │  ```shell
+│ │  apie --host localhost --port 8080
+│ │  ```
+│ │  
+│ │  You may also specify:
+│ │  * `authenticator` - your chosen authentication modules (see below).
+│ │  * `clean_start` - whether or not to nuke cached Endpoints on startup.
+│ │  * `dev` - if true, will cause this to start in development mode as opposed to prod; more info [below](#testing-debugging-and-development)
+│ │  * `preprocessor` - an Endpoint to always run first; more info [below](#preprocessor)
+│ │  
+│ │  ### apie.json
+│ │  
+│ │ -APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`
+│ │ +APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`. Note, command line variables will override configuration file variables (which override environment variables).
+│ │ +
+│ │ +Here is an example `apie.json`:
+│ │ +```json
+│ │ +{
+│ │ +    "verbosity": 3,
+│ │ +    "no_repo": true,
+│ │ +    "clean_start": false,
+│ │ +    "port": 8080
+│ │ +}
+│ │ +```
+│ │  
+│ │  
+│ │  ### Parallelism
+│ │  
+│ │  Currently, APIE only supports single-threaded operation. However, if your Authenticator and all your Endpoints maintain REST compatibility, you can run as many replicas of `apie` as you'd like!
+│ │   --- apie-0.0.3/README.md
+│ ├── +++ apie-0.0.4/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -13,28 +13,38 @@
+│ │  ## Usage
+│ │  
+│ │  To run an `apie` server simply:
+│ │  ```shell
+│ │  apie
+│ │  ```
+│ │  
+│ │ -You can specify custom interface and port like so:
+│ │ +APIE will bind to port 80 by default, which is not typically allowed for non-root users. In order to bypass this, you must use a different port. You can specify custom interface and port from the command line like so:
+│ │  ```shell
+│ │  apie --host localhost --port 8080
+│ │  ```
+│ │  
+│ │  You may also specify:
+│ │  * `authenticator` - your chosen authentication modules (see below).
+│ │  * `clean_start` - whether or not to nuke cached Endpoints on startup.
+│ │  * `dev` - if true, will cause this to start in development mode as opposed to prod; more info [below](#testing-debugging-and-development)
+│ │  * `preprocessor` - an Endpoint to always run first; more info [below](#preprocessor)
+│ │  
+│ │  ### apie.json
+│ │  
+│ │ -APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`
+│ │ +APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`. Note, command line variables will override configuration file variables (which override environment variables).
+│ │ +
+│ │ +Here is an example `apie.json`:
+│ │ +```json
+│ │ +{
+│ │ +    "verbosity": 3,
+│ │ +    "no_repo": true,
+│ │ +    "clean_start": false,
+│ │ +    "port": 8080
+│ │ +}
+│ │ +```
+│ │  
+│ │  
+│ │  ### Parallelism
+│ │  
+│ │  Currently, APIE only supports single-threaded operation. However, if your Authenticator and all your Endpoints maintain REST compatibility, you can run as many replicas of `apie` as you'd like!
+│ │   --- apie-0.0.3/pkg/apie/api/api_hack.py
+│ ├── +++ apie-0.0.4/pkg/apie/api/api_hack.py
+│ │┄ Files identical despite different names
+│ │   --- apie-0.0.3/pkg/apie/api/api_help.py
+│ ├── +++ apie-0.0.4/pkg/apie/api/api_help.py
+│ │┄ Files identical despite different names
+│ │   --- apie-0.0.3/pkg/apie/api/api_multi.py
+│ ├── +++ apie-0.0.4/pkg/apie/api/api_multi.py
+│ │┄ Files identical despite different names
+│ │   --- apie-0.0.3/pkg/apie/apie.py
+│ ├── +++ apie-0.0.4/pkg/apie/apie.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,13 +1,13 @@
+│ │ +import eons
+│ │  import os
+│ │  import logging
+│ │  import shutil
+│ │  import jsonpickle
+│ │  from pathlib import Path
+│ │ -import eons
+│ │  from flask import request
+│ │  from flask import Response
+│ │  import traceback
+│ │  from flask import Flask
+│ │  from waitress import serve
+│ │  
+│ │  ######## START CONTENT ########
+│ │ @@ -83,14 +83,158 @@
+│ │  
+│ │  	def fetch_location_request_files(this, varName, default, fetchFrom, attempted):
+│ │  		if (not this.request.files):
+│ │  			return  default, False
+│ │  		return this.FetchFromRequest('files', varName, default)
+│ │  
+│ │  
+│ │ +class APIE(eons.Executor):
+│ │ +
+│ │ +	def __init__(this):
+│ │ +		super().__init__(name="Application Program Interface with Eons", descriptionStr="A readily extensible take on APIs.")
+│ │ +
+│ │ +		# this.RegisterDirectory("ebbs")
+│ │ +
+│ │ +		this.optionalKWArgs['host'] = "0.0.0.0"
+│ │ +		this.optionalKWArgs['port'] = 80
+│ │ +		this.optionalKWArgs['dev'] = False
+│ │ +		this.optionalKWArgs['clean_start'] = True
+│ │ +		this.optionalKWArgs['authenticator'] = "noauth"
+│ │ +		this.optionalKWArgs['preprocessor'] = ""
+│ │ +
+│ │ +		this.supportedMethods = [
+│ │ +			'POST',
+│ │ +			'GET',
+│ │ +			'PUT',
+│ │ +			'DELETE',
+│ │ +			'PATCH'
+│ │ +		]
+│ │ +
+│ │ +		# Used in Function()
+│ │ +		this.auth = None
+│ │ +		this.flask = None
+│ │ +
+│ │ +		# *this is single-threaded. If we want parallel processing, we can create replicas.
+│ │ +		this.lastEndpoint = None
+│ │ +
+│ │ +		this.defaultConfigFile = "apie.json"
+│ │ +		this.defaultPackageType = "api"
+│ │ +
+│ │ +	# Override of eons.Executor method. See that class for details
+│ │ +	def RegisterIncludedClasses(this):
+│ │ +		super().RegisterIncludedClasses()
+│ │ +		this.RegisterAllClassesInDirectory(str(Path(__file__).resolve().parent.joinpath("api")))
+│ │ +		this.RegisterAllClassesInDirectory(str(Path(__file__).resolve().parent.joinpath("auth")))
+│ │ +		
+│ │ +
+│ │ +	# Override of eons.Executor method. See that class for details
+│ │ +	def RegisterAllClasses(this):
+│ │ +		super().RegisterAllClasses()
+│ │ +
+│ │ +
+│ │ +	# Acquire and run the given endpoint with the given request.
+│ │ +	def ProcessEndpoint(this, endpointName, request, **kwargs):
+│ │ +
+│ │ +		# Parse Endpoint syntax.
+│ │ +		# "[..., ...]something" => multi(domain=[..., ...], next="something")
+│ │ +		if (endpointName.startswith('[')):
+│ │ +			if ('domain' in kwargs):
+│ │ +				raise APIError(f"Domain already exists in multicall; domain={kwargs['domain']}; multicall={endpointName}")
+│ │ +
+│ │ +			domainStrEndPos = endpointName.find(']')+1
+│ │ +			domainStr = endpointName[:domainStrEndPos]
+│ │ +			if ('next' in kwargs):
+│ │ +				kwargs['next'] = [endpointName[domainStrEndPos:]].extend(kwargs['next'])
+│ │ +			else:
+│ │ +				kwargs['next'] = endpointName[domainStrEndPos:]
+│ │ +
+│ │ +			# Trim '(' and ')', then make list.
+│ │ +			kwargs['domain'] = domainStr[1:-1].split(',')
+│ │ +
+│ │ +			endpointName = "multi"
+│ │ +
+│ │ +		if (endpointName in this.cachedFunctors):
+│ │ +			return this.cachedFunctors[endpointName](executor=this, request=request, **kwargs)
+│ │ +
+│ │ +		endpoint = this.GetRegistered(endpointName, "api")
+│ │ +		this.cachedFunctors.update({endpointName: endpoint})
+│ │ +		return endpoint(executor=this, request=request, **kwargs)
+│ │ +
+│ │ +
+│ │ +	# What to do when a request causes an exception to be thrown.
+│ │ +	def HandleBadRequest(this, request, error):
+│ │ +		message = f"Bad request: {str(error)}"
+│ │ +		return message, 400
+│ │ +
+│ │ +
+│ │ +	# Override of eons.Executor method. See that class for details
+│ │ +	def Function(this):
+│ │ +		super().Function()
+│ │ +
+│ │ +		if (this.clean_start):
+│ │ +			this.Clean()
+│ │ +
+│ │ +		this.auth = this.GetRegistered(this.authenticator, "auth")
+│ │ +
+│ │ +		this.flask = Flask(this.name)
+│ │ +
+│ │ +		@this.flask.route("/", defaults={"path": ""}, methods = this.supportedMethods)
+│ │ +		def root(path):
+│ │ +			return "It works!", 200
+│ │ +
+│ │ +		@this.flask.route("/<string:path>", methods = this.supportedMethods)
+│ │ +		@this.flask.route("/<path:path>", methods = this.supportedMethods)
+│ │ +		def handler(path):
+│ │ +			try:
+│ │ +				if (this.auth(executor=this, path=path, request=request)):
+│ │ +					endpoints = []
+│ │ +					if (this.preprocessor):
+│ │ +						endpoints.append(this.preprocessor)
+│ │ +					if (path.endswith('/')):
+│ │ +						path = path[:-1]
+│ │ +					endpoints.extend(path.split('/'))
+│ │ +					this.lastEndpoint = None
+│ │ +					logging.debug(f"Responding to request for {path}; request: {request}")
+│ │ +					response = this.ProcessEndpoint(endpoints.pop(0), request, next=endpoints)
+│ │ +					logging.debug(f"Got headers: {response.headers}")
+│ │ +					logging.debug(f"Got response: {response}")
+│ │ +					return response
+│ │ +				else:
+│ │ +					return this.auth.Unauthorized(path)
+│ │ +			except Exception as error:
+│ │ +				traceback.print_exc()
+│ │ +				logging.error(str(error))
+│ │ +				if (this.lastEndpoint):
+│ │ +					try:
+│ │ +						return this.lastEndpoint.HandleBadRequest(request, error)
+│ │ +					except Exception:
+│ │ +						pass
+│ │ +				return this.HandleBadRequest(request, error) #fine. We'll do it ourselves.
+│ │ +
+│ │ +		options = {}
+│ │ +		options['app'] = this.flask
+│ │ +		options['host'] = this.host
+│ │ +		options['port'] = this.port
+│ │ +
+│ │ +		# Only applicable if using this.flask.run(**options)
+│ │ +		# if (this.args.verbose > 0):
+│ │ +		#	 options['debug'] = True
+│ │ +		#	 options['use_reloader'] = False
+│ │ +
+│ │ +		serve(**options)
+│ │ +
+│ │ +
+│ │ +	# Remove possibly stale modules.
+│ │ +	def Clean(this):
+│ │ +		repoPath = Path(this.repo['store'])
+│ │ +		if (repoPath.exists()):
+│ │ +			shutil.rmtree(this.repo['store'])
+│ │ +		repoPath.mkdir(parents=True, exist_ok=True)
+│ │ +
+│ │ +
+│ │  # Authenticator is a Functor which validates whether or not a request is valid.
+│ │  # The inputs will be the path of the request and the request itself.
+│ │  # If you need to check whether the request parameters, data, files, etc. are valid, please do so in your Endpoint.
+│ │  # Because this class will be invoked often, we have made some performant modifications to the default Functor methods.
+│ │  # Authenticators may be called sequentially but in such a case, only the last Authenticator will Authenticate(), all precursors are skipped over.
+│ │  # NOTE: All logic for *this should be in Authenticate. There are no extra functions called (e.g. PreCall, PostCall, etc.)
+│ │  # Authenticate should either return False or raise an exception if the provided request is invalid and should return True if it is.
+│ │ @@ -341,150 +485,7 @@
+│ │  			if (this.next and this.next[-1] == 'help'):
+│ │  				return
+│ │  			raise e
+│ │  		
+│ │  
+│ │  
+│ │  
+│ │ -
+│ │ -class APIE(eons.Executor):
+│ │ -
+│ │ -	def __init__(this):
+│ │ -		super().__init__(name="Application Program Interface with Eons", descriptionStr="A readily extensible take on APIs.")
+│ │ -
+│ │ -		# this.RegisterDirectory("ebbs")
+│ │ -
+│ │ -		this.optionalKWArgs['host'] = "0.0.0.0"
+│ │ -		this.optionalKWArgs['port'] = 80
+│ │ -		this.optionalKWArgs['dev'] = False
+│ │ -		this.optionalKWArgs['clean_start'] = True
+│ │ -		this.optionalKWArgs['authenticator'] = "noauth"
+│ │ -		this.optionalKWArgs['preprocessor'] = ""
+│ │ -
+│ │ -		this.supportedMethods = [
+│ │ -			'POST',
+│ │ -			'GET',
+│ │ -			'PUT',
+│ │ -			'DELETE',
+│ │ -			'PATCH'
+│ │ -		]
+│ │ -
+│ │ -		# Used in Function()
+│ │ -		this.auth = None
+│ │ -		this.flask = None
+│ │ -
+│ │ -		# *this is single-threaded. If we want parallel processing, we can create replicas.
+│ │ -		this.lastEndpoint = None
+│ │ -
+│ │ -		this.defaultConfigFile = "apie.json"
+│ │ -
+│ │ -	# Override of eons.Executor method. See that class for details
+│ │ -	def RegisterIncludedClasses(this):
+│ │ -		super().RegisterIncludedClasses()
+│ │ -		this.RegisterAllClassesInDirectory(str(Path(__file__).resolve().parent.joinpath("api")))
+│ │ -		this.RegisterAllClassesInDirectory(str(Path(__file__).resolve().parent.joinpath("auth")))
+│ │ -		
+│ │ -
+│ │ -	# Override of eons.Executor method. See that class for details
+│ │ -	def RegisterAllClasses(this):
+│ │ -		super().RegisterAllClasses()
+│ │ -
+│ │ -
+│ │ -	# Acquire and run the given endpoint with the given request.
+│ │ -	def ProcessEndpoint(this, endpointName, request, **kwargs):
+│ │ -
+│ │ -		# Parse Endpoint syntax.
+│ │ -		# "[..., ...]something" => multi(domain=[..., ...], next="something")
+│ │ -		if (endpointName.startswith('[')):
+│ │ -			if ('domain' in kwargs):
+│ │ -				raise APIError(f"Domain already exists in multicall; domain={kwargs['domain']}; multicall={endpointName}")
+│ │ -
+│ │ -			domainStrEndPos = endpointName.find(']')+1
+│ │ -			domainStr = endpointName[:domainStrEndPos]
+│ │ -			if ('next' in kwargs):
+│ │ -				kwargs['next'] = [endpointName[domainStrEndPos:]].extend(kwargs['next'])
+│ │ -			else:
+│ │ -				kwargs['next'] = endpointName[domainStrEndPos:]
+│ │ -
+│ │ -			# Trim '(' and ')', then make list.
+│ │ -			kwargs['domain'] = domainStr[1:-1].split(',')
+│ │ -
+│ │ -			endpointName = "multi"
+│ │ -
+│ │ -		if (endpointName in this.cachedFunctors):
+│ │ -			return this.cachedFunctors[endpointName](executor=this, request=request, **kwargs)
+│ │ -
+│ │ -		endpoint = this.GetRegistered(endpointName, "api")
+│ │ -		this.cachedFunctors.update({endpointName: endpoint})
+│ │ -		return endpoint(executor=this, request=request, **kwargs)
+│ │ -
+│ │ -
+│ │ -	# What to do when a request causes an exception to be thrown.
+│ │ -	def HandleBadRequest(this, request, error):
+│ │ -		message = f"Bad request: {str(error)}"
+│ │ -		return message, 400
+│ │ -
+│ │ -
+│ │ -	# Override of eons.Executor method. See that class for details
+│ │ -	def Function(this):
+│ │ -		super().Function()
+│ │ -
+│ │ -		if (this.clean_start):
+│ │ -			this.Clean()
+│ │ -
+│ │ -		this.auth = this.GetRegistered(this.authenticator, "auth")
+│ │ -
+│ │ -		this.flask = Flask(this.name)
+│ │ -
+│ │ -		@this.flask.route("/", defaults={"path": ""}, methods = this.supportedMethods)
+│ │ -		def root(path):
+│ │ -			return "It works!", 200
+│ │ -
+│ │ -		@this.flask.route("/<string:path>", methods = this.supportedMethods)
+│ │ -		@this.flask.route("/<path:path>", methods = this.supportedMethods)
+│ │ -		def handler(path):
+│ │ -			try:
+│ │ -				if (this.auth(executor=this, path=path, request=request)):
+│ │ -					endpoints = []
+│ │ -					if (this.preprocessor):
+│ │ -						endpoints.append(this.preprocessor)
+│ │ -					if (path.endswith('/')):
+│ │ -						path = path[:-1]
+│ │ -					endpoints.extend(path.split('/'))
+│ │ -					this.lastEndpoint = None
+│ │ -					logging.debug(f"Responding to request for {path}; request: {request}")
+│ │ -					response = this.ProcessEndpoint(endpoints.pop(0), request, next=endpoints)
+│ │ -					logging.debug(f"Got headers: {response.headers}")
+│ │ -					logging.debug(f"Got response: {response}")
+│ │ -					return response
+│ │ -				else:
+│ │ -					return this.auth.Unauthorized(path)
+│ │ -			except Exception as error:
+│ │ -				traceback.print_exc()
+│ │ -				logging.error(str(error))
+│ │ -				if (this.lastEndpoint):
+│ │ -					try:
+│ │ -						return this.lastEndpoint.HandleBadRequest(request, error)
+│ │ -					except Exception:
+│ │ -						pass
+│ │ -				return this.HandleBadRequest(request, error) #fine. We'll do it ourselves.
+│ │ -
+│ │ -		options = {}
+│ │ -		options['app'] = this.flask
+│ │ -		options['host'] = this.host
+│ │ -		options['port'] = this.port
+│ │ -
+│ │ -		# Only applicable if using this.flask.run(**options)
+│ │ -		# if (this.args.verbose > 0):
+│ │ -		#	 options['debug'] = True
+│ │ -		#	 options['use_reloader'] = False
+│ │ -
+│ │ -		serve(**options)
+│ │ -
+│ │ -
+│ │ -	# Remove possibly stale modules.
+│ │ -	def Clean(this):
+│ │ -		repoPath = Path(this.repo['store'])
+│ │ -		if (repoPath.exists()):
+│ │ -			shutil.rmtree(this.repo['store'])
+│ │ -		repoPath.mkdir(parents=True, exist_ok=True)
+│ │ -
+│ │   --- apie-0.0.3/pkg/apie/auth/auth_from_config.py
+│ ├── +++ apie-0.0.4/pkg/apie/auth/auth_from_config.py
+│ │┄ Files identical despite different names
+│ │   --- apie-0.0.3/pkg/apie/auth/auth_noauth.py
+│ ├── +++ apie-0.0.4/pkg/apie/auth/auth_noauth.py
+│ │┄ Files identical despite different names
+│ │   --- apie-0.0.3/pkg/apie.egg-info/PKG-INFO
+│ ├── +++ apie-0.0.4/pkg/apie.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: apie
+│ │ -Version: 0.0.3
+│ │ +Version: 0.0.4
+│ │  Summary: Application Program Interface with eons
+│ │  Home-page: https://github.com/eons-dev/bin_apie
+│ │  Author: eons
+│ │  Author-email: support@eons.llc
+│ │  Project-URL: Bug Tracker, https://github.com/eons-dev/bin_apie/issues
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │ @@ -28,28 +28,38 @@
+│ │  ## Usage
+│ │  
+│ │  To run an `apie` server simply:
+│ │  ```shell
+│ │  apie
+│ │  ```
+│ │  
+│ │ -You can specify custom interface and port like so:
+│ │ +APIE will bind to port 80 by default, which is not typically allowed for non-root users. In order to bypass this, you must use a different port. You can specify custom interface and port from the command line like so:
+│ │  ```shell
+│ │  apie --host localhost --port 8080
+│ │  ```
+│ │  
+│ │  You may also specify:
+│ │  * `authenticator` - your chosen authentication modules (see below).
+│ │  * `clean_start` - whether or not to nuke cached Endpoints on startup.
+│ │  * `dev` - if true, will cause this to start in development mode as opposed to prod; more info [below](#testing-debugging-and-development)
+│ │  * `preprocessor` - an Endpoint to always run first; more info [below](#preprocessor)
+│ │  
+│ │  ### apie.json
+│ │  
+│ │ -APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`
+│ │ +APIE will look for a file called "apie.json" in the directory it is launched from. If such is found, the configuration values from it will be read and processed in accordance with the eons library. For example, `apie --clean_start False` is the same as `apie` with an apie.json containing `{"clean_start": false}`. Note, command line variables will override configuration file variables (which override environment variables).
+│ │ +
+│ │ +Here is an example `apie.json`:
+│ │ +```json
+│ │ +{
+│ │ +    "verbosity": 3,
+│ │ +    "no_repo": true,
+│ │ +    "clean_start": false,
+│ │ +    "port": 8080
+│ │ +}
+│ │ +```
+│ │  
+│ │  
+│ │  ### Parallelism
+│ │  
+│ │  Currently, APIE only supports single-threaded operation. However, if your Authenticator and all your Endpoints maintain REST compatibility, you can run as many replicas of `apie` as you'd like!
+│ │   --- apie-0.0.3/setup.cfg
+│ ├── +++ apie-0.0.4/setup.cfg
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = apie
+│ │ -version = 0.0.3
+│ │ +version = 0.0.4
+│ │  author = eons
+│ │  author_email = support@eons.llc
+│ │  description = Application Program Interface with eons
+│ │  license_files = LICENSE.txt
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/eons-dev/bin_apie
+│ │ @@ -19,17 +19,17 @@
+│ │  [options]
+│ │  package_dir = 
+│ │  	= pkg
+│ │  packages = find:
+│ │  python_requires = >=3.7
+│ │  install_requires = 
+│ │  	eons
+│ │ -	flask
+│ │  	waitress
+│ │  	jsonpickle
+│ │ +	flask
+│ │  
+│ │  [options.packages.find]
+│ │  where = pkg
+│ │  
+│ │  [options.entry_points]
+│ │  console_scripts = 
+│ │  	apie = apie:apie

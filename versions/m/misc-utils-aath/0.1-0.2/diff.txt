@@ -1,0 +1,80 @@
+--- tmp/misc_utils_aath-0.1.tar.gz
++++ tmp/misc_utils_aath-0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "misc_utils_aath-0.1.tar", last modified: Thu Apr  6 23:04:10 2023, max compression
+│ +gzip compressed data, was "misc_utils_aath-0.2.tar", last modified: Thu Apr  6 23:07:46 2023, max compression
+│   --- misc_utils_aath-0.1.tar
+├── +++ misc_utils_aath-0.2.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:04:10.365485 misc_utils_aath-0.1/
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      106 2023-04-06 23:04:10.365485 misc_utils_aath-0.1/PKG-INFO
+│ │ -drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:04:10.365485 misc_utils_aath-0.1/misc_utils_aath/
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      206 2023-04-06 23:00:05.000000 misc_utils_aath-0.1/misc_utils_aath/__init__.py
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)     4867 2023-04-06 22:53:06.000000 misc_utils_aath-0.1/misc_utils_aath/misc.py
+│ │ -drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:04:10.365485 misc_utils_aath-0.1/misc_utils_aath.egg-info/
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      106 2023-04-06 23:04:10.000000 misc_utils_aath-0.1/misc_utils_aath.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      254 2023-04-06 23:04:10.000000 misc_utils_aath-0.1/misc_utils_aath.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)        1 2023-04-06 23:04:10.000000 misc_utils_aath-0.1/misc_utils_aath.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      145 2023-04-06 23:04:10.000000 misc_utils_aath-0.1/misc_utils_aath.egg-info/requires.txt
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)       16 2023-04-06 23:04:10.000000 misc_utils_aath-0.1/misc_utils_aath.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)       38 2023-04-06 23:04:10.365485 misc_utils_aath-0.1/setup.cfg
+│ │ --rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      462 2023-04-06 23:04:07.000000 misc_utils_aath-0.1/setup.py
+│ │ +drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:07:46.645073 misc_utils_aath-0.2/
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      106 2023-04-06 23:07:46.645073 misc_utils_aath-0.2/PKG-INFO
+│ │ +drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:07:46.645073 misc_utils_aath-0.2/misc_utils_aath/
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      211 2023-04-06 23:07:21.000000 misc_utils_aath-0.2/misc_utils_aath/__init__.py
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)     4602 2023-04-06 23:07:20.000000 misc_utils_aath-0.2/misc_utils_aath/misc.py
+│ │ +drwxrwxr-x   0 saandeepaath  (1001) saandeepaath  (1001)        0 2023-04-06 23:07:46.645073 misc_utils_aath-0.2/misc_utils_aath.egg-info/
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      106 2023-04-06 23:07:46.000000 misc_utils_aath-0.2/misc_utils_aath.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      254 2023-04-06 23:07:46.000000 misc_utils_aath-0.2/misc_utils_aath.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)        1 2023-04-06 23:07:46.000000 misc_utils_aath-0.2/misc_utils_aath.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      132 2023-04-06 23:07:46.000000 misc_utils_aath-0.2/misc_utils_aath.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)       16 2023-04-06 23:07:46.000000 misc_utils_aath-0.2/misc_utils_aath.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)       38 2023-04-06 23:07:46.645073 misc_utils_aath-0.2/setup.cfg
+│ │ +-rw-rw-r--   0 saandeepaath  (1001) saandeepaath  (1001)      465 2023-04-06 23:07:44.000000 misc_utils_aath-0.2/setup.py
+│ │   --- misc_utils_aath-0.1/misc_utils_aath/misc.py
+│ ├── +++ misc_utils_aath-0.2/misc_utils_aath/misc.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -7,15 +7,14 @@
+│ │  
+│ │  from sklearn.metrics import accuracy_score, f1_score, matthews_corrcoef, confusion_matrix
+│ │  
+│ │  import av
+│ │  import cv2
+│ │  import random 
+│ │  import numpy as np
+│ │ -import torch 
+│ │  from umap import UMAP
+│ │  import pandas as pd
+│ │  import regex
+│ │  import plotly.express as px
+│ │  
+│ │  def match_files(mtc_str, fl_id):
+│ │    match_flg = 0
+│ │ @@ -103,24 +102,14 @@
+│ │      os.mkdir(path)
+│ │  
+│ │  def read_json(path):
+│ │    with open(path, 'r') as fp:
+│ │      json_file = json.load(fp)
+│ │    return json_file
+│ │  
+│ │ -
+│ │ -def seed_everything(seed):
+│ │ -  random.seed(seed)
+│ │ -  os.environ['PYTHONHASHSEED'] = str(seed)
+│ │ -  np.random.seed(seed)
+│ │ -  torch.manual_seed(seed)
+│ │ -  torch.cuda.manual_seed(seed)
+│ │ -  torch.cuda.manual_seed_all(seed)
+│ │ -  torch.backends.cudnn.deterministic = True
+│ │ -
+│ │  def get_args():
+│ │    parser = argparse.ArgumentParser(description="Vision Transformers")
+│ │    parser.add_argument('--config', type=str, default='default', help='configuration to load')
+│ │    args = parser.parse_args()
+│ │    return args
+│ │  
+│ │  def get_metrics(y_true, y_pred):

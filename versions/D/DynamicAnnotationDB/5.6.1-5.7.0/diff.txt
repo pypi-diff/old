@@ -1,0 +1,515 @@
+--- tmp/DynamicAnnotationDB-5.6.1.tar.gz
++++ tmp/DynamicAnnotationDB-5.7.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/DynamicAnnotationDB-5.6.1.tar", last modified: Tue Mar 28 21:14:16 2023, max compression
+│ +gzip compressed data, was "dist/DynamicAnnotationDB-5.7.0.tar", last modified: Thu Apr  6 22:59:56 2023, max compression
+│   --- DynamicAnnotationDB-5.6.1.tar
+├── +++ DynamicAnnotationDB-5.7.0.tar
+│ ├── file list
+│ │ @@ -1,52 +1,52 @@
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.830143 DynamicAnnotationDB-5.6.1/
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.804259 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      920 2023-03-28 21:14:16.000000 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1821 2023-03-28 21:14:16.000000 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)        1 2023-03-28 21:14:16.000000 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      125 2023-03-28 21:14:16.000000 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/requires.txt
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)       26 2023-03-28 21:14:16.000000 DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/top_level.txt
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)       36 2020-06-11 04:40:08.000000 DynamicAnnotationDB-5.6.1/MANIFEST.in
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      920 2023-03-28 21:14:16.830398 DynamicAnnotationDB-5.6.1/PKG-INFO
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      474 2022-02-12 21:27:58.000000 DynamicAnnotationDB-5.6.1/README.md
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)       67 2021-06-03 21:07:33.000000 DynamicAnnotationDB-5.6.1/doc_requirements.txt
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.807738 DynamicAnnotationDB-5.6.1/dynamicannotationdb/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)       72 2023-03-28 21:14:13.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/__init__.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)    18067 2023-03-28 21:13:53.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/annotation.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)    13152 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/database.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     2064 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/errors.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     5785 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/interface.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1139 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/key_utils.py
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.809238 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      166 2023-03-28 21:14:13.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/__init__.py
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.812325 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)        0 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/__init__.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     2113 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/env.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1100 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/run.py
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.822035 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      747 2022-10-25 16:40:35.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/309cf493a1e2_adding_warning_field.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      969 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/5a1d7c0ad006_add_status_column.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      515 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/6e7f580ff680_add_error_msg.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1344 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/7c79eff751b4_add_parent_version_column.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1063 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/814d72d74e3b_add_version_error_table.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     2066 2022-10-25 19:07:59.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/8fdc843fc202_adding_permission_and_last_modified.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      685 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/975a79461cab_add_is_merged.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)        0 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/__init__.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     2014 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/ef5c2d7f96d8_initial_live_db_models.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1102 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/fac66b439033_add_view_model.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)    19873 2022-08-09 16:48:07.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/migrate.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     6017 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/models.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     8351 2023-02-18 02:07:45.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/schema.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)    13779 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.6.1/dynamicannotationdb/segmentation.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      124 2022-11-21 01:05:53.000000 DynamicAnnotationDB-5.6.1/requirements.txt
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      140 2023-03-28 21:14:16.832841 DynamicAnnotationDB-5.6.1/setup.cfg
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1303 2022-02-12 21:27:58.000000 DynamicAnnotationDB-5.6.1/setup.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)       68 2021-06-03 21:07:33.000000 DynamicAnnotationDB-5.6.1/test_requirements.txt
+│ │ -drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-03-28 21:14:16.828878 DynamicAnnotationDB-5.6.1/tests/
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)        0 2021-02-19 03:45:38.000000 DynamicAnnotationDB-5.6.1/tests/__init__.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     3308 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.6.1/tests/conftest.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     7393 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.6.1/tests/test_annotation.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     3799 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.6.1/tests/test_database.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     1433 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.6.1/tests/test_errors.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)      391 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.6.1/tests/test_interface.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     3982 2022-09-13 20:07:43.000000 DynamicAnnotationDB-5.6.1/tests/test_schema.py
+│ │ --rw-r--r--   0 forrestc   (503) staff       (20)     5705 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.6.1/tests/test_segmentation.py
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.622534 DynamicAnnotationDB-5.7.0/
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.602635 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      920 2023-04-06 22:59:56.000000 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1821 2023-04-06 22:59:56.000000 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)        1 2023-04-06 22:59:56.000000 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      125 2023-04-06 22:59:56.000000 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/requires.txt
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)       26 2023-04-06 22:59:56.000000 DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)       36 2020-06-11 04:40:08.000000 DynamicAnnotationDB-5.7.0/MANIFEST.in
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      920 2023-04-06 22:59:56.622671 DynamicAnnotationDB-5.7.0/PKG-INFO
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      474 2022-02-12 21:27:58.000000 DynamicAnnotationDB-5.7.0/README.md
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)       67 2021-06-03 21:07:33.000000 DynamicAnnotationDB-5.7.0/doc_requirements.txt
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.609246 DynamicAnnotationDB-5.7.0/dynamicannotationdb/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)       72 2023-04-06 22:59:52.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/__init__.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)    18140 2023-04-06 22:59:46.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/annotation.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)    13152 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/database.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     2064 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/errors.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     5785 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/interface.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1139 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/key_utils.py
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.610068 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      166 2023-04-06 22:59:52.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/__init__.py
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.611508 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)        0 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/__init__.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     2373 2023-04-06 22:59:46.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/env.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1100 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/run.py
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.617716 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      747 2022-10-25 16:40:35.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/309cf493a1e2_adding_warning_field.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      969 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/5a1d7c0ad006_add_status_column.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      515 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/6e7f580ff680_add_error_msg.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1255 2023-04-06 22:59:46.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/7c79eff751b4_add_parent_version_column.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1063 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/814d72d74e3b_add_version_error_table.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     2066 2022-10-25 19:07:59.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/8fdc843fc202_adding_permission_and_last_modified.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      685 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/975a79461cab_add_is_merged.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)        0 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/__init__.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     4403 2023-04-06 22:59:46.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/ef5c2d7f96d8_initial_live_db_models.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1102 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/fac66b439033_add_view_model.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)    23089 2023-04-06 22:59:46.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/migrate.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     6017 2023-03-14 16:48:52.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/models.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     8351 2023-02-18 02:07:45.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/schema.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)    13779 2022-10-17 01:08:23.000000 DynamicAnnotationDB-5.7.0/dynamicannotationdb/segmentation.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      124 2022-11-21 01:05:53.000000 DynamicAnnotationDB-5.7.0/requirements.txt
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      140 2023-04-06 22:59:56.626842 DynamicAnnotationDB-5.7.0/setup.cfg
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1303 2022-02-12 21:27:58.000000 DynamicAnnotationDB-5.7.0/setup.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)       68 2021-06-03 21:07:33.000000 DynamicAnnotationDB-5.7.0/test_requirements.txt
+│ │ +drwxr-xr-x   0 forrestc   (503) staff       (20)        0 2023-04-06 22:59:56.622208 DynamicAnnotationDB-5.7.0/tests/
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)        0 2021-02-19 03:45:38.000000 DynamicAnnotationDB-5.7.0/tests/__init__.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     3308 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.7.0/tests/conftest.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     7393 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.7.0/tests/test_annotation.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     3799 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.7.0/tests/test_database.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     1433 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.7.0/tests/test_errors.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)      391 2022-06-23 21:40:16.000000 DynamicAnnotationDB-5.7.0/tests/test_interface.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     3982 2022-09-13 20:07:43.000000 DynamicAnnotationDB-5.7.0/tests/test_schema.py
+│ │ +-rw-r--r--   0 forrestc   (503) staff       (20)     5705 2023-02-17 16:48:08.000000 DynamicAnnotationDB-5.7.0/tests/test_segmentation.py
+│ │   --- DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/PKG-INFO
+│ ├── +++ DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: DynamicAnnotationDB
+│ │ -Version: 5.6.1
+│ │ +Version: 5.7.0
+│ │  Summary: Annotation Database pendant to the chunkedgraph
+│ │  Home-page: https://github.com/seung-lab/DynamicAnnotationDB
+│ │  Author: Sven Dorkenwald, Derrick Brittain
+│ │  Author-email: sdorkenw@princeton.edu
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: POSIX :: Linux
+│ │   --- DynamicAnnotationDB-5.6.1/DynamicAnnotationDB.egg-info/SOURCES.txt
+│ ├── +++ DynamicAnnotationDB-5.7.0/DynamicAnnotationDB.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/PKG-INFO
+│ ├── +++ DynamicAnnotationDB-5.7.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: DynamicAnnotationDB
+│ │ -Version: 5.6.1
+│ │ +Version: 5.7.0
+│ │  Summary: Annotation Database pendant to the chunkedgraph
+│ │  Home-page: https://github.com/seung-lab/DynamicAnnotationDB
+│ │  Author: Sven Dorkenwald, Derrick Brittain
+│ │  Author-email: sdorkenw@princeton.edu
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: POSIX :: Linux
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/annotation.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/annotation.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -51,14 +51,15 @@
+│ │          voxel_resolution_y: float,
+│ │          voxel_resolution_z: float,
+│ │          table_metadata: dict = None,
+│ │          flat_segmentation_source: str = None,
+│ │          with_crud_columns: bool = True,
+│ │          read_permission: str = "PUBLIC",
+│ │          write_permission: str = "PRIVATE",
+│ │ +        notice_text: str = None,
+│ │      ):
+│ │          r"""Create new annotation table unless already exists
+│ │  
+│ │          Parameters
+│ │          ----------
+│ │          table_name : str
+│ │              name of table
+│ │ @@ -139,14 +140,15 @@
+│ │              "flat_segmentation_source": flat_segmentation_source,
+│ │              "voxel_resolution_x": voxel_resolution_x,
+│ │              "voxel_resolution_y": voxel_resolution_y,
+│ │              "voxel_resolution_z": voxel_resolution_z,
+│ │              "read_permission": read_permission,
+│ │              "write_permission": write_permission,
+│ │              "last_modified": creation_time,
+│ │ +            "notice_text": notice_text,
+│ │          }
+│ │  
+│ │          logging.info(f"Metadata for table: {table_name} is {metadata_dict}")
+│ │          anno_metadata = AnnoMetadata(**metadata_dict)
+│ │          self.db.cached_session.add(anno_metadata)
+│ │          self.db.commit_session()
+│ │          logging.info(
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/database.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/database.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/errors.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/errors.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/interface.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/interface.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/key_utils.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/key_utils.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/env.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/env.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,11 +1,12 @@
+│ │  import os
+│ │  from logging.config import fileConfig
+│ │  
+│ │  from sqlalchemy import engine_from_config, pool
+│ │ +from geoalchemy2.alembic_helpers import include_object, render_item
+│ │  
+│ │  from alembic import context
+│ │  
+│ │  # this is the Alembic Config object, which provides
+│ │  # access to the values within the .ini file in use.
+│ │  config = context.config
+│ │  
+│ │ @@ -63,15 +64,22 @@
+│ │      connectable = engine_from_config(
+│ │          config.get_section(config.config_ini_section),
+│ │          prefix="sqlalchemy.",
+│ │          poolclass=pool.NullPool,
+│ │      )
+│ │  
+│ │      with connectable.connect() as connection:
+│ │ -        context.configure(connection=connection, target_metadata=target_metadata)
+│ │ +        context.configure(
+│ │ +            connection=connection,
+│ │ +            target_metadata=target_metadata,
+│ │ +            render_item=render_item,
+│ │ +            include_object=include_object,
+│ │ +        )
+│ │ +        target_metadata.bind = connectable
+│ │ +        target_metadata.reflect()
+│ │  
+│ │          with context.begin_transaction():
+│ │              context.run_migrations()
+│ │  
+│ │  
+│ │  if context.is_offline_mode():
+│ │      run_migrations_offline()
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/run.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/run.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/309cf493a1e2_adding_warning_field.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/309cf493a1e2_adding_warning_field.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/5a1d7c0ad006_add_status_column.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/5a1d7c0ad006_add_status_column.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/6e7f580ff680_add_error_msg.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/6e7f580ff680_add_error_msg.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/7c79eff751b4_add_parent_version_column.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/7c79eff751b4_add_parent_version_column.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -11,35 +11,34 @@
+│ │  from sqlalchemy import engine_from_config
+│ │  from sqlalchemy.engine import reflection
+│ │  
+│ │  # revision identifiers, used by Alembic.
+│ │  revision = "7c79eff751b4"
+│ │  down_revision = "ef5c2d7f96d8"
+│ │  branch_labels = None
+│ │ -depends_on = None
+│ │ +depends_on = "ef5c2d7f96d8"
+│ │  
+│ │  
+│ │  def _table_has_column(table, column):
+│ │      config = op.get_context().config
+│ │      engine = engine_from_config(
+│ │          config.get_section(config.config_ini_section), prefix="sqlalchemy."
+│ │      )
+│ │  
+│ │      insp = reflection.Inspector.from_engine(engine)
+│ │      return any(column in col["name"] for col in insp.get_columns(table))
+│ │  
+│ │  
+│ │  def upgrade():
+│ │      with op.batch_alter_table("analysisversion", schema=None) as batch_op:
+│ │ -        if not _table_has_column("analysisversion", "parent_version"):
+│ │ -            op.add_column(
+│ │ -                "analysisversion",
+│ │ -                sa.Column("parent_version", sa.Integer(), nullable=True),
+│ │ -            )
+│ │ -            op.create_foreign_key(
+│ │ -                None, "analysisversion", "analysisversion", ["parent_version"], ["id"]
+│ │ -            )
+│ │ +        op.add_column(
+│ │ +            "analysisversion",
+│ │ +            sa.Column("parent_version", sa.Integer(), nullable=True),
+│ │ +        )
+│ │ +        op.create_foreign_key(
+│ │ +            None, "analysisversion", "analysisversion", ["parent_version"], ["id"]
+│ │ +        )
+│ │  
+│ │  
+│ │  def downgrade():
+│ │      op.drop_constraint(None, "analysisversion", type_="foreignkey")
+│ │      op.drop_column("analysisversion", "parent_version")
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/814d72d74e3b_add_version_error_table.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/814d72d74e3b_add_version_error_table.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/8fdc843fc202_adding_permission_and_last_modified.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/8fdc843fc202_adding_permission_and_last_modified.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/975a79461cab_add_is_merged.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/975a79461cab_add_is_merged.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/alembic/versions/fac66b439033_add_view_model.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/alembic/versions/fac66b439033_add_view_model.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/migration/migrate.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/migration/migrate.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,25 +1,29 @@
+│ │  import logging
+│ │  
+│ │ -from dynamicannotationdb.database import DynamicAnnotationDB
+│ │ -from dynamicannotationdb.models import AnnoMetadata
+│ │ -from dynamicannotationdb.schema import DynamicSchemaClient
+│ │ -from emannotationschemas.errors import UnknownAnnotationTypeException
+│ │ -from emannotationschemas.migrations.run import run_migration
+│ │  from geoalchemy2.types import Geometry
+│ │  from psycopg2.errors import DuplicateSchema
+│ │ -from sqlalchemy import MetaData, create_engine
+│ │ +from sqlalchemy import MetaData, create_engine, ForeignKeyConstraint
+│ │  from sqlalchemy.engine.url import make_url
+│ │  from sqlalchemy.pool import NullPool
+│ │  from sqlalchemy import MetaData, Table
+│ │ -import logging
+│ │ +from sqlalchemy.sql.ddl import AddConstraint
+│ │ +from sqlalchemy.schema import DropConstraint
+│ │ +from sqlalchemy.exc import ProgrammingError
+│ │ +
+│ │ +from dynamicannotationdb.database import DynamicAnnotationDB
+│ │ +from dynamicannotationdb.models import AnnoMetadata
+│ │ +from dynamicannotationdb.schema import DynamicSchemaClient
+│ │ +from emannotationschemas.errors import UnknownAnnotationTypeException
+│ │ +from emannotationschemas.migrations.run import run_migration
+│ │  
+│ │  logger = logging.getLogger()
+│ │  logger.setLevel(logging.DEBUG)
+│ │  
+│ │ +
+│ │  # SQL commands
+│ │  def alter_column_name(table_name: str, current_col_name: str, new_col_name: str) -> str:
+│ │      return f"ALTER TABLE {table_name} RENAME {current_col_name} TO {new_col_name}"
+│ │  
+│ │  
+│ │  def add_column(table_name: str, column_spec: str) -> str:
+│ │      return f"ALTER TABLE {table_name} ADD IF NOT EXISTS {column_spec}"
+│ │ @@ -73,15 +77,14 @@
+│ │              self._base_uri,
+│ │              poolclass=NullPool,
+│ │              isolation_level="AUTOCOMMIT",
+│ │              pool_pre_ping=True,
+│ │          )
+│ │  
+│ │          with temp_engine.connect() as connection:
+│ │ -
+│ │              connection.execute("commit")
+│ │              database_exists = connection.execute(
+│ │                  f"SELECT 1 FROM pg_catalog.pg_database WHERE datname = '{schema_db}'"
+│ │              )
+│ │              if not database_exists.fetchone():
+│ │                  logging.warning(f"Cannot connect to {schema_db}, attempting to create")
+│ │                  connection.execute(f"CREATE DATABASE {schema_db}")
+│ │ @@ -190,20 +193,91 @@
+│ │                      for command in migrations.values():
+│ │                          logging.info(f"Running command: {command}")
+│ │                          conn.execute(command)
+│ │                  if index_sql_commands:
+│ │                      for index_name, sql_command in index_sql_commands.items():
+│ │                          logging.info(f"Creating index: {index_name}")
+│ │                          conn.execute(sql_command)
+│ │ +
+│ │              self.target_database.base.metadata.reflect()
+│ │              return migration_map
+│ │          except Exception as e:
+│ │              self.target_database.cached_session.rollback()
+│ │              raise e
+│ │  
+│ │ +    def apply_cascade_option_to_tables(self, dry_run: bool = True):
+│ │ +        metadata = MetaData(bind=self.target_database.engine)
+│ │ +        metadata.reflect(bind=self.target_database.engine)
+│ │ +        fkey_mappings = []
+│ │ +        for table in metadata.tables:
+│ │ +            table_metadata = self.target_database.get_table_metadata(table)
+│ │ +            if table_metadata:
+│ │ +                table = metadata.tables[table]
+│ │ +            try:
+│ │ +                fkey_mapping = self.add_cascade_delete_to_fkey(table, dry_run)
+│ │ +                fkey_mappings.append(fkey_mapping)
+│ │ +            except Exception as error:
+│ │ +                raise error
+│ │ +        return fkey_mappings
+│ │ +
+│ │ +    def add_cascade_delete_to_fkey(self, table: Table, dry_run: bool = True):
+│ │ +        table_name = table.name
+│ │ +        fkeys_to_drop = {}
+│ │ +        fkey_to_add = {}
+│ │ +        for fk in self.target_inspector.get_foreign_keys(table_name):
+│ │ +            # check if the foreign key has no 'ondelete' option
+│ │ +            if not fk["options"].get("ondelete"):
+│ │ +                # drop the foreign key constraint
+│ │ +                fkey = ForeignKeyConstraint(
+│ │ +                    [table.c[c] for c in fk["constrained_columns"]],
+│ │ +                    [fk["referred_table"] + "." + c for c in fk["referred_columns"]],
+│ │ +                    name=fk["name"],
+│ │ +                )
+│ │ +                drop_constraint = DropConstraint(fkey)
+│ │ +                fkeys_to_drop[fkey.name] = str(drop_constraint)
+│ │ +
+│ │ +                if not dry_run:
+│ │ +                    with self.target_database.engine.connect() as conn:
+│ │ +                        try:
+│ │ +                            conn.execute(drop_constraint)
+│ │ +                        except ProgrammingError as error:
+│ │ +                            logging.error(f"{fkey.name} not present in the database: {error}")
+│ │ +
+│ │ +                # create a new foreign key constraint with the specified 'ondelete' option
+│ │ +                new_fkey = ForeignKeyConstraint(
+│ │ +                    [table.c[c] for c in fk["constrained_columns"]],
+│ │ +                    [fk["referred_table"] + "." + c for c in fk["referred_columns"]],
+│ │ +                    name=fk["name"],
+│ │ +                    ondelete="CASCADE",
+│ │ +                )
+│ │ +                add_constraint = AddConstraint(new_fkey)
+│ │ +
+│ │ +                fkey_to_add[new_fkey.name] = str(add_constraint)
+│ │ +
+│ │ +                if not dry_run:
+│ │ +                    with self.target_database.engine.connect() as conn:
+│ │ +                        # start a transaction
+│ │ +                        trans = conn.begin()
+│ │ +
+│ │ +                        try:
+│ │ +                            conn.execute(add_constraint)
+│ │ +                            trans.commit()
+│ │ +                            logging.info(
+│ │ +                                f"Table {table_name} altered with CASCADE DELETE"
+│ │ +                            )
+│ │ +                        except Exception as error:
+│ │ +                            trans.rollback()
+│ │ +                            raise error
+│ │ +        return {
+│ │ +            f"Table Name: {table_name}": {
+│ │ +                "Fkeys to drop": fkeys_to_drop,
+│ │ +                "Fkeys to add": fkey_to_add,
+│ │ +            }
+│ │ +        }
+│ │ +
+│ │      def upgrade_annotation_models(self, dry_run: bool = True):
+│ │          """Upgrades annotation models present in the database
+│ │          if underlying schemas have changed.
+│ │  
+│ │          Raises
+│ │          ------
+│ │          e
+│ │ @@ -214,15 +288,14 @@
+│ │          for table in tables:
+│ │              migration_map = self.upgrade_table_from_schema(table, dry_run)
+│ │              if migration_map:
+│ │                  migrations.append(migration_map)
+│ │          return migrations
+│ │  
+│ │      def get_table_diff(self, table_name):
+│ │ -
+│ │          target_model_schema = (
+│ │              self.target_database.cached_session.query(AnnoMetadata.schema_type)
+│ │              .filter(AnnoMetadata.table_name == table_name)
+│ │              .one()
+│ │          )
+│ │          schema = target_model_schema[0]
+│ │  
+│ │ @@ -359,15 +432,14 @@
+│ │                      "column_name": column.name,
+│ │                      "index_name": sptial_index_name,
+│ │                      "type": "spatial_index",
+│ │                      "dialect_options": {"postgresql_using": "gist"},
+│ │                  }
+│ │                  index_map[sptial_index_name] = spatial_index_map
+│ │              if column.foreign_keys:
+│ │ -
+│ │                  metadata_obj = MetaData()
+│ │                  metadata_obj.reflect(bind=self.target_database.engine)
+│ │                  target_table = metadata_obj.tables.get(table_name)
+│ │                  foreign_keys = list(target_table.foreign_keys)
+│ │  
+│ │                  for foreign_key in foreign_keys:
+│ │                      (
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/models.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/models.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/schema.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/schema.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/dynamicannotationdb/segmentation.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/dynamicannotationdb/segmentation.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/setup.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/setup.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/conftest.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/conftest.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/test_annotation.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/test_annotation.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/test_database.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/test_database.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/test_errors.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/test_errors.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/test_schema.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/test_schema.py
+│ │┄ Files identical despite different names
+│ │   --- DynamicAnnotationDB-5.6.1/tests/test_segmentation.py
+│ ├── +++ DynamicAnnotationDB-5.7.0/tests/test_segmentation.py
+│ │┄ Files identical despite different names

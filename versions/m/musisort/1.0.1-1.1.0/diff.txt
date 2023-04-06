@@ -1,0 +1,309 @@
+--- tmp/musisort-1.0.1.tar.gz
++++ tmp/musisort-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "musisort-1.0.1.tar", last modified: Wed Apr  5 23:42:29 2023, max compression
+│ +gzip compressed data, was "musisort-1.1.0.tar", last modified: Thu Apr  6 23:00:25 2023, max compression
+│   --- musisort-1.0.1.tar
+├── +++ musisort-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,29 +1,29 @@
+│ │ -drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-05 23:42:29.256963 musisort-1.0.1/
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     1069 2023-02-07 01:16:54.000000 musisort-1.0.1/LICENSE
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      355 2023-04-05 23:42:29.256963 musisort-1.0.1/PKG-INFO
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     7583 2023-04-05 23:37:13.000000 musisort-1.0.1/README.md
+│ │ -drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-05 23:42:29.256963 musisort-1.0.1/musisort/
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      177 2023-02-07 06:30:56.000000 musisort-1.0.1/musisort/__init__.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2488 2023-03-21 05:54:50.000000 musisort-1.0.1/musisort/analysis_manager.py
+│ │ -drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-05 23:42:29.256963 musisort-1.0.1/musisort/analysis_methods/
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        0 2023-02-07 11:08:50.000000 musisort-1.0.1/musisort/analysis_methods/__init__.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      502 2023-03-18 23:31:13.000000 musisort-1.0.1/musisort/analysis_methods/bounds.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2794 2023-03-21 07:53:32.000000 musisort-1.0.1/musisort/analysis_methods/fourdim.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      219 2023-03-10 01:34:53.000000 musisort-1.0.1/musisort/analysis_methods/mel.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      301 2023-03-10 01:43:37.000000 musisort-1.0.1/musisort/analysis_methods/pitch.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     8053 2023-03-25 08:30:02.000000 musisort-1.0.1/musisort/classification_manager.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2955 2023-03-21 06:16:11.000000 musisort-1.0.1/musisort/command_manager.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2854 2023-03-23 23:31:09.000000 musisort-1.0.1/musisort/configuration_data.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     7048 2023-03-24 10:57:23.000000 musisort-1.0.1/musisort/debug_manager.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)    13395 2023-04-05 23:30:18.000000 musisort-1.0.1/musisort/file_manager.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     1081 2023-03-23 23:08:34.000000 musisort-1.0.1/musisort/global_variables.py
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      454 2023-02-07 09:37:02.000000 musisort-1.0.1/musisort/main.py
+│ │ -drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-05 23:42:29.256963 musisort-1.0.1/musisort.egg-info/
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      355 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      640 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        1 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       49 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       63 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/requires.txt
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        9 2023-04-05 23:42:29.000000 musisort-1.0.1/musisort.egg-info/top_level.txt
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       38 2023-04-05 23:42:29.256963 musisort-1.0.1/setup.cfg
+│ │ --rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      848 2023-04-05 23:41:55.000000 musisort-1.0.1/setup.py
+│ │ +drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-06 23:00:25.829464 musisort-1.1.0/
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     1069 2023-02-07 01:16:54.000000 musisort-1.1.0/LICENSE
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      355 2023-04-06 23:00:25.829464 musisort-1.1.0/PKG-INFO
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     8203 2023-04-06 22:55:42.000000 musisort-1.1.0/README.md
+│ │ +drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-06 23:00:25.825464 musisort-1.1.0/musisort/
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      177 2023-04-06 22:59:09.000000 musisort-1.1.0/musisort/__init__.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2489 2023-04-06 22:56:42.000000 musisort-1.1.0/musisort/analysis_manager.py
+│ │ +drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-06 23:00:25.829464 musisort-1.1.0/musisort/analysis_methods/
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        0 2023-02-07 11:08:50.000000 musisort-1.1.0/musisort/analysis_methods/__init__.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      502 2023-03-18 23:31:13.000000 musisort-1.1.0/musisort/analysis_methods/bounds.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2794 2023-03-21 07:53:32.000000 musisort-1.1.0/musisort/analysis_methods/fourdim.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      219 2023-03-10 01:34:53.000000 musisort-1.1.0/musisort/analysis_methods/mel.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      301 2023-03-10 01:43:37.000000 musisort-1.1.0/musisort/analysis_methods/pitch.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     8057 2023-04-06 22:56:42.000000 musisort-1.1.0/musisort/classification_manager.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2955 2023-03-21 06:16:11.000000 musisort-1.1.0/musisort/command_manager.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     2854 2023-03-23 23:31:09.000000 musisort-1.1.0/musisort/configuration_data.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     7048 2023-03-24 10:57:23.000000 musisort-1.1.0/musisort/debug_manager.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)    13437 2023-04-06 22:56:42.000000 musisort-1.1.0/musisort/file_manager.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)     1081 2023-03-23 23:08:34.000000 musisort-1.1.0/musisort/global_variables.py
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      454 2023-02-07 09:37:02.000000 musisort-1.1.0/musisort/main.py
+│ │ +drwxrwxr-x   0 vanzing   (1001) vanzing   (1001)        0 2023-04-06 23:00:25.825464 musisort-1.1.0/musisort.egg-info/
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      355 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      640 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        1 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       49 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       63 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)        9 2023-04-06 23:00:25.000000 musisort-1.1.0/musisort.egg-info/top_level.txt
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)       38 2023-04-06 23:00:25.829464 musisort-1.1.0/setup.cfg
+│ │ +-rw-rw-r--   0 vanzing   (1001) vanzing   (1001)      848 2023-04-06 22:59:09.000000 musisort-1.1.0/setup.py
+│ │   --- musisort-1.0.1/LICENSE
+│ ├── +++ musisort-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/README.md
+│ ├── +++ musisort-1.1.0/README.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -2,26 +2,28 @@
+│ │  
+│ │  # Abstract
+│ │  
+│ │  Downloading music is done by many different people for many different reasons, whether it be for backups, data hoarding, or to listen to music while offline. However, those who do download music, come across the issue of organizing all the files into categories that they can reference when needed. The most known way to organize music is by genres. The issue with genres however, is that they are set by humans and liable to be incorrect, or there could be no genre assigned to the audio file based on how it was retrieved. Currently, if you want to find what genre a song belongs to, you have to manually search for it online and assign it to the song through a tool. While this may work for a short list of songs, if you have a larger list (say about 1000 songs), this process becomes much more time consuming. MusiSort aims to fix this issue by automatically sorting songs into categories based not on genre, but by musical similarity. It accomplishes this task by utilizing new and known musical analysis methods to generate data and feed that information to K-Means Clustering to generate categories. Through this, MusiSort can take a large list of audio files, and separate them by melodies, tempo, mood, and more.
+│ │  
+│ │  # Description and Thesis
+│ │  
+│ │ -MusiSort is a tool being developed to collect music and put them into similar groups or clusters based on their waveform.  The program uses artifical intelligence to check similarities and differences between the different songs.  The main goal of the project is to create a tool which removes the need to manually sort music into different genres as this can be quite a difficult, and tedious, task.  
+│ │ +MusiSort is a tool being developed to collect music and put them into similar groups or clusters based on their waveform.  The program uses artificial intelligence to check similarities and differences between the different songs.  The main goal of the project is to create a tool which removes the need to manually sort music into different genres as this can be quite a difficult, and tedious, task.  
+│ │  
+│ │  Thesis : https://github.com/ReadyResearchers/cmpsc-600-fall-2022-and-spring-2023-senior-thesis-gvanzin-allegheny
+│ │  
+│ │  # Installation
+│ │  
+│ │  As MusiSort is a pip tool, it can be easily installed with the help of Python and Pip through the following command:
+│ │  
+│ │  `pip install musisort`
+│ │  
+│ │  MusiSort files are stored under the user directory as `musisort`.  For instance, on windows, `C:\\Users\\ComputerName\\AppData\\Local\\user\\musisort`.
+│ │  
+│ │ +To upgrade MusiSort to its latest version, run the command `pip install --upgrade musisort`.
+│ │ +
+│ │  # Usage
+│ │  
+│ │  **MusiSort Command Line Interface**
+│ │  
+│ │  There are a total of 7 different commands currently available to use in musisort. The following is a list of each command:
+│ │  
+│ │  - musisort help
+│ │ @@ -47,25 +49,27 @@
+│ │  `debug` : uses a song located in the debug folder of MusiSort's directory to run tests and check MusiSort's performance\accuracy.
+│ │  
+│ │  **Using MusiSort to Classify Songs**
+│ │  
+│ │  1. Open terminal and run the command `musisort dir`.  Go to the directory located under the `All Songs List Folder` called `Songs Folder`.  An example of this path on Linux would be : `/home/user/.local/share/musisort/songlists/all/songs`.
+│ │  2. Add all songs you want to sort into this folder.
+│ │  3. Run `musisort analyze`.  The first time this is run, it will go through every song and gather data about it.  Everytime you add a new song to `all/songs`, this command will need to be run again to analyze the newly added songs.
+│ │ -4. After the analyzation is completed, run `musisort classify <song_list> <catergory_count>`.  For this example, we will use `musisort classify all 5`.  Since our songs are located in the directory `songlists/all/songs`, the list name is `all` as that is the name of the folder the songs are located in.  The 5 means we will be categories ranging from 0 to 4 returned to use for each song.  If the value -1 is used for the `category_count` argument, the program will attempt to automatically assign a number of categories.  Once the program has finished classification, it will display the categories to the console in a list as so:
+│ │ +4. After the analysis is completed, run `musisort classify <song_list> <catergory_count>`.  For this example, we will use `musisort classify all 5`.  Since our songs are located in the directory `songlists/all/songs`, the list name is `all` as that is the name of the folder the songs are located in.  The 5 means we will have categories ranging from 0 to 4 returned to us for each song.  If the value -1 is used for the `category_count` argument, the program will attempt to automatically assign a number of categories.  Once the program has finished classification, it will display the categories to the console in a list as so:
+│ │  
+│ │  ![Screenshot from 2023-04-0934754 15-12-33](https://user-images.githubusercontent.com/54772966/230233534-506b809e-8f1f-4231-9905-58c659328a55.png)
+│ │  
+│ │ +If using the windows command prompt, unicode will not display in the final classification output.  Rather than viewing results in the command prompt, you can view the results in the categories folder for the list.  The category folder for the `all` list is located in the MusiSort directory `./musisort/songlists/all/categories`.  The list of labels can be viewed by opening the text files named `labels_n.txt`, with n referring to the amount of labels classified, within the folder using a text editor that supports unicode.
+│ │ +
+│ │  **Data Used for Testing**
+│ │  
+│ │  https://drive.google.com/drive/folders/1kCke4O5IVPndeUuDvmzUe2n7M6pokksR?usp=share_link
+│ │  
+│ │  The folder containing data is split into two sections.  The folder `Accuracy Song` contains the audio file used to test the program using the `musisort debug` command.  To use the debug command using this file, drag the song located in the folder into the `songlists\debug\songs` folder in the MusiSort directory.  Then you can run `musisort debug` to get data related to the accuracy of the classification and analysis methods.
+│ │  
+│ │ -Inside the `Efficiency Data` folder, 4 different zip files contain 1, 5, 10, and 25 songs.  The speed of the program was determined by placing various `sys.time` checks within the code of MusiSort and running the program with these set amount of audio files.  This can be done by cloning the MusiSort repository, and then running `pip install .` or `pip install --upgrade .` in the cloned directory when adding time checks in the locally stored code.
+│ │ +Inside the `Efficiency Data` folder, 4 different zip files contain 1, 5, 10, and 25 songs.  The speed of the program was determined by placing various `sys.time` checks within the code of MusiSort and running the program with these set amounts of audio files.  This can be done by cloning the MusiSort repository, and then running `pip install .` or `pip install --upgrade .` in the cloned directory when adding time checks in the locally stored code.
+│ │  
+│ │  # Current Development State
+│ │  
+│ │  [✅] Develop the algorithm to sort songs into categories.
+│ │  
+│ │  [✅] Optimize the algorithms used to sort songs for faster completion.
+│ │  
+│ │ @@ -93,15 +97,15 @@
+│ │  
+│ │  https://www.sony.com/electronics/support/articles/00009093
+│ │  
+│ │  Jiang, Yanru & Jin, Xin. (2022). Using k-Means Clustering to Classify Protest Songs Based on Conceptual and Descriptive Audio Features. 10.1007/978-3-031-05434-1_19. 
+│ │  
+│ │  https://www.researchgate.net/publication/361335249_Using_k-Means_Clustering_to_Classify_Protest_Songs_Based_on_Conceptual_and_Descriptive_Audio_Features
+│ │  
+│ │ -Kim, Kyuwon, et al. “Clustering Music by Genres Using Supervised and Unsupervised Algorithms.” Standford, pp. 1–5. 
+│ │ +Kim, Kyuwon, et al. “Clustering Music by Genres Using Supervised and Unsupervised Algorithms.” Stanford, pp. 1–5. 
+│ │  
+│ │  https://cs229.stanford.edu/proj2015/129_report.pdf
+│ │  
+│ │  # Dependencies Used
+│ │  
+│ │  - Librosa  : https://librosa.org/doc/latest/index.html
+│ │  - Sklearn  : https://scikit-learn.org/stable/
+│ │   --- musisort-1.0.1/musisort/analysis_manager.py
+│ ├── +++ musisort-1.1.0/musisort/analysis_manager.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -20,15 +20,15 @@
+│ │      return
+│ │  
+│ │  def analyze_song(path_to_song, song_file_name, song_file_ext):
+│ │      global song_waveform
+│ │      song_loaded = False
+│ │      data_file_name = song_file_name + "-" + song_file_ext + ".npy"
+│ │      for data_type in global_variables.data_types:
+│ │ -        # If analysis type disabled, skip step
+│ │ +        # If analysis type disabled, skip step.
+│ │          if global_variables.data_types_enabled[data_type] == False:
+│ │              continue
+│ │          
+│ │          # Check if file has already been analyzed using this data type method
+│ │          path_to_data_file = os.path.join(file_manager.song_data_dir, data_type, data_file_name)
+│ │          if not os.path.exists(path_to_data_file):
+│ │              if song_loaded == False:
+│ │   --- musisort-1.0.1/musisort/analysis_methods/fourdim.py
+│ ├── +++ musisort-1.1.0/musisort/analysis_methods/fourdim.py
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/musisort/classification_manager.py
+│ ├── +++ musisort-1.1.0/musisort/classification_manager.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -12,18 +12,18 @@
+│ │  from musisort import file_manager, debug_manager
+│ │  
+│ │  def classify_songs(list_path, category_count, debug=False):
+│ │      """Function used to classify list of songs into their own categories.
+│ │      Calls the categorization functions below according to the data type being read.
+│ │      
+│ │      Basic Logic of function is as follows:
+│ │ -    1. Read necessary data
+│ │ -    2. Load data from files and call classify functions using it
+│ │ -    3. Unify the labels in the individual label lists into one single label for each song
+│ │ -    4. Save labels for songs into a file as well as the centroids created
+│ │ +    1. Read necessary data.
+│ │ +    2. Load data from files and call classify functions using it.
+│ │ +    3. Unify the labels in the individual label lists into one single label for each song.
+│ │ +    4. Save labels for songs into a file as well as the centroids created.
+│ │      """
+│ │      # 1. Load enabled data types for processing
+│ │      data_types_enabled = []
+│ │      for data_type in global_variables.data_types_enabled.keys():
+│ │          #print(data_type, " : ", global_variables.data_types_enabled[data_type])
+│ │          if global_variables.data_types_enabled[data_type]:
+│ │              data_types_enabled.append(data_type)
+│ │   --- musisort-1.0.1/musisort/command_manager.py
+│ ├── +++ musisort-1.1.0/musisort/command_manager.py
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/musisort/configuration_data.py
+│ ├── +++ musisort-1.1.0/musisort/configuration_data.py
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/musisort/debug_manager.py
+│ ├── +++ musisort-1.1.0/musisort/debug_manager.py
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/musisort/file_manager.py
+│ ├── +++ musisort-1.1.0/musisort/file_manager.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -16,15 +16,15 @@
+│ │  all_song_list_dir = song_list_dir + os.sep + "all"
+│ │  debug_song_list_dir = song_list_dir + os.sep + "debug"
+│ │  custom_song_list_dir = song_list_dir + os.sep + "custom"
+│ │  list_song_folder = "songs"
+│ │  list_categories_folder = "categories"
+│ │  custom_song_lists = {} # listname : custom_song_list_dir + sep + listname
+│ │  
+│ │ -# Where the data gathered from analysis methods are stored
+│ │ +# Where the data gathered from analysis methods are stored.
+│ │  song_data_dir = "songdata"
+│ │  info_type_dir = "info"
+│ │  data_type_dirs = {}
+│ │  
+│ │  # Where configuration files are stored
+│ │  configuration_dir = "config"
+│ │  
+│ │ @@ -211,16 +211,16 @@
+│ │              #loaded_songs_ext[song] = name[1]
+│ │              
+│ │      return songs
+│ │      
+│ │  def get_audio_name_from_path(path):
+│ │      file_name = path
+│ │      ext = ""
+│ │ -    if file_name.rfind("/") != -1:
+│ │ -        file_name = file_name[file_name.rfind("/")+1 : len(file_name)]
+│ │ +    if file_name.rfind(os.sep) != -1:
+│ │ +        file_name = file_name[file_name.rfind(os.sep)+1 : len(file_name)]
+│ │      if file_name.rfind(".") != -1:
+│ │          ext = file_name[file_name.rfind(".")+1 : len(file_name)]
+│ │          file_name = file_name[0 : file_name.rfind(".")]
+│ │      else:
+│ │          return None
+│ │      return (file_name, ext, (file_name + "-" + ext))
+│ │  
+│ │ @@ -230,14 +230,15 @@
+│ │      
+│ │      if os.path.exists(data_file_path):
+│ │          return np.load(data_file_path, allow_pickle=True)
+│ │      return None
+│ │           
+│ │  def save_song_data_file(data_type, song_file_name, song_file_ext, data):
+│ │      data_file_path = os.path.join(song_data_dir, data_type, (song_file_name + "-" + song_file_ext + ".npy"))
+│ │ +    
+│ │      if os.path.exists(data_file_path):
+│ │          os.remove(data_file_path)
+│ │      np.save(data_file_path, data)
+│ │     
+│ │  def load_info_data_file(song_file_name, song_file_ext, key):
+│ │      path_to_config = os.path.join(info_type_dir, (song_file_name + "-" + song_file_ext + ".txt"))
+│ │      
+│ │ @@ -301,19 +302,19 @@
+│ │  
+│ │  def save_song_labels(classification_info, list_name, category_count):
+│ │      list_path_dir = os.path.join(all_song_list_dir, list_categories_folder, ("labels_" + str(category_count) + ".txt"))
+│ │      if list_name != "all" and list_name != "debug":
+│ │          list_path_dir = os.path.join(custom_song_lists[list_name], list_categories_folder, ("labels_" + str(category_count) + ".txt"))
+│ │      elif list_name == "debug":
+│ │          list_path_dir = os.path.join(debug_song_list_dir, list_categories_folder, ("labels_" + str(category_count) + ".txt"))
+│ │ -    f = open(list_path_dir, "w")
+│ │ +    f = open(list_path_dir, "w", encoding="utf-8")
+│ │      
+│ │      # Write new info to file
+│ │      for song in classification_info.keys():
+│ │ -        f.write(song + ":" + str(classification_info[song]))
+│ │ +        f.write(song + ":" + str(int(classification_info[song])) + "\n")
+│ │          
+│ │      f.close()
+│ │      return
+│ │      
+│ │  def load_song_labels(list_name, category_count):
+│ │      list_path_dir = os.path.join(all_song_list_dir, list_categories_folder, ("labels_" + str(category_count) + ".txt"))
+│ │      if list_name != "all" and list_name != "debug":
+│ │   --- musisort-1.0.1/musisort/global_variables.py
+│ ├── +++ musisort-1.1.0/musisort/global_variables.py
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/musisort.egg-info/SOURCES.txt
+│ ├── +++ musisort-1.1.0/musisort.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- musisort-1.0.1/setup.py
+│ ├── +++ musisort-1.1.0/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,12 @@
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  setup(
+│ │      name='musisort',
+│ │ -    version='1.0.1',    
+│ │ +    version='1.1.0',    
+│ │      description='Automatic Music Categorization Tool',
+│ │      url='https://github.com/ReadyResearchers/AutoMusicSort',
+│ │      author='Garrison Vanzin',
+│ │      author_email='vanzing@allegheny.edu',
+│ │      license='MIT License',
+│ │      packages=['musisort', 'musisort.analysis_methods'],
+│ │      entry_points = {'console_scripts': ['musisort = musisort.main:main']},
