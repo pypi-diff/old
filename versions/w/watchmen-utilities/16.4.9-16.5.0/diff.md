@@ -1,0 +1,252 @@
+# Comparing `tmp/watchmen_utilities-16.4.9.tar.gz` & `tmp/watchmen_utilities-16.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watchmen_utilities-16.4.9.tar", max compression
++gzip compressed data, was "watchmen_utilities-16.5.0.tar", max compression
+```
+
+## Comparing `watchmen_utilities-16.4.9.tar` & `watchmen_utilities-16.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,11 +1,10 @@
+--rw-r--r--   0        0        0      451 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/pyproject.toml
+--rw-r--r--   0        0        0     1009 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/__init__.py
+--rw-r--r--   0        0        0     5679 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/array_helper.py
+--rw-r--r--   0        0        0    20357 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/datetime_helper.py
+--rw-r--r--   0        0        0      188 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/json_helper.py
+--rw-r--r--   0        0        0     2143 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/logger.py
+--rw-r--r--   0        0        0      922 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/numeric_helper.py
+--rw-r--r--   0        0        0      352 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/string_helper.py
+--rw-r--r--   0        0        0     8884 2023-02-23 10:23:46.020776 watchmen_utilities-16.4.9/src/watchmen_utilities/value_expression.py
+--rw-r--r--   0        0        0      735 1970-01-01 00:00:00.000000 watchmen_utilities-16.4.9/setup.py
+--rw-r--r--   0        0        0      534 1970-01-01 00:00:00.000000 watchmen_utilities-16.4.9/PKG-INFO
++-rw-r--r--   0        0        0      451 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/pyproject.toml
++-rw-r--r--   0        0        0     1151 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/__init__.py
++-rw-r--r--   0        0        0     6628 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/array_helper.py
++-rw-r--r--   0        0        0    20763 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/datetime_helper.py
++-rw-r--r--   0        0        0      188 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/json_helper.py
++-rw-r--r--   0        0        0     2143 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/logger.py
++-rw-r--r--   0        0        0      954 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/numeric_helper.py
++-rw-r--r--   0        0        0      352 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/string_helper.py
++-rw-r--r--   0        0        0     8884 2023-04-06 09:13:10.432011 watchmen_utilities-16.5.0/src/watchmen_utilities/value_expression.py
++-rw-r--r--   0        0        0      534 1970-01-01 00:00:00.000000 watchmen_utilities-16.5.0/PKG-INFO
+```
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/__init__.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/__init__.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ from .array_helper import ArrayHelper
+ from .datetime_helper import date_might_with_prefix, DateTimeConstants, DateTimeEncoder, get_current_time_in_seconds, \
+ 	get_day_of_month, get_day_of_week, get_half_year, get_month, get_quarter, get_week_of_month, get_week_of_year, \
+-	get_year, is_date, is_date_or_time_instance, is_date_plus_format, is_datetime, is_time, month_diff, move_date, \
+-	to_previous_month, to_previous_week, to_yesterday, translate_date_format_to_memory, truncate_time, try_to_date, \
+-	try_to_time, year_diff
++	get_year, is_date, is_date_or_time_instance, is_date_plus_format, is_datetime, is_time, last_day_of_month, \
++	month_diff, move_date, move_date_or_time, move_day_of_month, move_hour, move_minute, move_month, move_second, \
++	move_year, to_last_day_of_month, to_previous_month, to_previous_week, to_yesterday, \
++	translate_date_format_to_memory, truncate_time, try_to_date, try_to_time, year_diff
+ from .json_helper import serialize_to_json
+ from .logger import init_log
+ from .numeric_helper import is_decimal, is_numeric_instance, try_to_decimal
+ from .string_helper import is_blank, is_not_blank
+ from .value_expression import equals_date, equals_decimal, equals_time, greater_or_equals_date, \
+ 	greater_or_equals_decimal, greater_or_equals_time, is_empty, is_not_empty, less_or_equals_date, \
+ 	less_or_equals_decimal, less_or_equals_time, value_equals, value_not_equals
+```
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/array_helper.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/array_helper.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -6,14 +6,15 @@
+ ArrayFind = Callable[[Any], Tuple[bool, Any]]
+ ArrayTransform = Callable[[Any], Any]
+ ArrayWithIndexTransform = Callable[[Any, int], Any]
+ ArrayAction = Callable[[Any], None]
+ ArrayWithIndexAction = Callable[[Any, int], None]
+ ArrayCompare = Callable[[Any, Any], bool]
+ ArrayReduce = Callable[[Any, Any], Any]
++ArraySort = Callable[[Any, Any], int]
+ 
+ 
+ def equals(a: Any, b: Any) -> bool:
+ 	return a == b
+ 
+ 
+ class ArrayHelper:
+@@ -119,15 +120,15 @@
+ 		transform each element by given transform function
+ 		"""
+ 		new_list: list = []
+ 		for index, an_element in enumerate(self.aList):
+ 			new_list.append(func(an_element, index))
+ 		return ArrayHelper(new_list)
+ 
+-	def reduce(self, func: ArrayReduce, accumulator: Optional[Any]) -> Any:
++	def reduce(self, func: ArrayReduce, accumulator: Optional[Any] = None) -> Any:
+ 		if len(self.aList) == 0:
+ 			return accumulator
+ 
+ 		if accumulator is None:
+ 			accumulator = self.aList[0]
+ 			rest = self.aList[1:]
+ 		else:
+@@ -208,7 +209,38 @@
+ 		for an_element in self.aList:
+ 			if an_element is not None:
+ 				new_list.append(str(an_element))
+ 		return separator.join(new_list)
+ 
+ 	def size(self) -> int:
+ 		return len(self.aList)
++
++	# noinspection PyMethodMayBeStatic
++	def __quick_sort_partition(self, a_list: List[Any], start_pos: int, end_pos: int, func: ArraySort) -> int:
++		the_one = a_list[start_pos]
++
++		i = start_pos
++		j = end_pos
++
++		while i < j:
++			while func(a_list[j], the_one) >= 0 and i < j:
++				j = j - 1
++
++			while func(a_list[i], the_one) <= 0 and i < j:
++				i = i + 1
++
++			a_list[i], a_list[j] = a_list[j], a_list[i]
++
++		a_list[i], a_list[start_pos] = a_list[start_pos], a_list[i]
++
++		return i
++
++	def __quick_sort(self, a_list: List[Any], start_pos: int, end_pos: int, func: ArraySort):
++		if start_pos < end_pos:
++			index = self.__quick_sort_partition(a_list, start_pos, end_pos, func)
++
++			self.__quick_sort(a_list, start_pos, index - 1, func)
++			self.__quick_sort(a_list, index + 1, end_pos, func)
++
++	def sort(self, func: ArraySort) -> ArrayHelper:
++		self.__quick_sort(self.aList, 0, len(self.aList) - 1, func)
++		return self
+```
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/datetime_helper.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/datetime_helper.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -39,16 +39,20 @@
+ 	if isinstance(value, datetime):
+ 		return value.replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
+ 	else:
+ 		return datetime(year=value.year, month=value.month, day=value.day) \
+ 			.replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
+ 
+ 
++def to_last_day_of_month(a_date: date) -> date:
++	return (a_date.replace(day=1) + timedelta(days=31)).replace(day=1) - timedelta(days=1)
++
++
+ def last_day_of_month(a_date: date) -> int:
+-	return ((a_date.replace(day=1) + timedelta(days=31)).replace(day=1) - timedelta(days=1)).day
++	return to_last_day_of_month(a_date).day
+ 
+ 
+ def year_diff(end_date: date, start_date: date) -> int:
+ 	end_year = end_date.year
+ 	end_month = end_date.month
+ 	end_day = end_date.day
+ 	start_year = start_date.year
+@@ -646,14 +650,27 @@
+ 		else:
+ 			return date_or_time
+ 	else:
+ 		raise ValueError(f'Date move command[{movement}] is not supported.')
+ 
+ 
+ def move_date(a_date: date, movements: List[Tuple[str, str, str]]) -> date:
++	"""
++	movements[0]: YMDhms
++	movements[1]: empty string,  +, -
++	movements[2]:
++		when movements[1] is plus/minus, any number value
++		otherwise when movements[0] is
++		1. year(Y): 4 digits year,
++		2. month(M): 1 - 12,
++		3. date(D): 1 - end of month,
++		4. hour(h): 0 - 23,
++		5. minute(m): 0 - 59,
++		6. second(s): 0 - 59.
++	"""
+ 	return ArrayHelper(movements).reduce(lambda base_date, x: move_date_or_time(base_date, x), a_date)
+ 
+ 
+ def date_might_with_prefix(prefix: Optional[str], a_date_or_time: Union[date, time]) -> Union[date, time, str]:
+ 	if isinstance(a_date_or_time, datetime):
+ 		return a_date_or_time if len(prefix) == 0 else f'{prefix}{a_date_or_time.strftime("%Y-%m-%d %H:%M:%S")}'
+ 	elif isinstance(a_date_or_time, date):
+```
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/logger.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/numeric_helper.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/numeric_helper.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -8,16 +8,16 @@
+ 
+ def is_decimal(value: Optional[str]) -> Tuple[bool, Optional[Decimal]]:
+ 	"""
+ 	none is not a numeric value, otherwise try to parse it by float function
+ 	"""
+ 	if value is None:
+ 		return False, None
++	# noinspection PyBroadException
+ 	try:
+-
+ 		return True, Decimal(value)
+ 	except:
+ 		return False, None
+ 
+ 
+ def try_to_decimal(value: Any) -> Optional[Decimal]:
+ 	"""
+```
+
+### Comparing `watchmen_utilities-16.4.9/src/watchmen_utilities/value_expression.py` & `watchmen_utilities-16.5.0/src/watchmen_utilities/value_expression.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_utilities-16.4.9/PKG-INFO` & `watchmen_utilities-16.5.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: watchmen-utilities
+-Version: 16.4.9
++Version: 16.5.0
+ Summary: 
+ License: MIT
+ Author: botlikes
+ Author-email: 75356972+botlikes456@users.noreply.github.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+

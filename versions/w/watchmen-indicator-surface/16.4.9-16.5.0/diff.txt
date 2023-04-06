@@ -1,0 +1,520 @@
+--- tmp/watchmen_indicator_surface-16.4.9.tar.gz
++++ tmp/watchmen_indicator_surface-16.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "watchmen_indicator_surface-16.4.9.tar", max compression
+│ +gzip compressed data, was "watchmen_indicator_surface-16.5.0.tar", max compression
+│   --- watchmen_indicator_surface-16.4.9.tar
+├── +++ watchmen_indicator_surface-16.5.0.tar
+│ ├── file list
+│ │ @@ -1,19 +1,16 @@
+│ │ --rw-r--r--   0        0        0     1025 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/pyproject.toml
+│ │ --rw-r--r--   0        0        0       48 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/data/__init__.py
+│ │ --rw-r--r--   0        0        0     1227 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/data/achievement_data_router.py
+│ │ --rw-r--r--   0        0        0     1499 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/data/inspection_data_router.py
+│ │ --rw-r--r--   0        0        0      636 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/main.py
+│ │ --rw-r--r--   0        0        0       56 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/__init__.py
+│ │ --rw-r--r--   0        0        0     5857 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/achievement_plugin_task_router.py
+│ │ --rw-r--r--   0        0        0     4738 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/achievement_router.py
+│ │ --rw-r--r--   0        0        0     7181 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/bucket_router.py
+│ │ --rw-r--r--   0        0        0     7541 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/indicator_router.py
+│ │ --rw-r--r--   0        0        0     4438 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/inspection_router.py
+│ │ --rw-r--r--   0        0        0     5245 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/objective_analysis_router.py
+│ │ --rw-r--r--   0        0        0     5673 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/subject_router.py
+│ │ --rw-r--r--   0        0        0      471 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/settings.py
+│ │ --rw-r--r--   0        0        0       80 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/util/__init__.py
+│ │ --rw-r--r--   0        0        0     2038 2023-02-23 10:23:45.984775 watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/util/trans.py
+│ │ --rw-r--r--   0        0        0     1163 1970-01-01 00:00:00.000000 watchmen_indicator_surface-16.4.9/setup.py
+│ │ --rw-r--r--   0        0        0     1016 1970-01-01 00:00:00.000000 watchmen_indicator_surface-16.4.9/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1025 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0       48 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/data/__init__.py
+│ │ +-rw-r--r--   0        0        0     8930 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/data/objective_data_router.py
+│ │ +-rw-r--r--   0        0        0      541 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/main.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/__init__.py
+│ │ +-rw-r--r--   0        0        0     6015 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/achievement_plugin_task_router.py
+│ │ +-rw-r--r--   0        0        0     7181 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/bucket_router.py
+│ │ +-rw-r--r--   0        0        0     9217 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/derived_objective_router.py
+│ │ +-rw-r--r--   0        0        0     7904 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/indicator_router.py
+│ │ +-rw-r--r--   0        0        0    12699 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/objective_router.py
+│ │ +-rw-r--r--   0        0        0     5673 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/subject_router.py
+│ │ +-rw-r--r--   0        0        0      471 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/settings.py
+│ │ +-rw-r--r--   0        0        0       80 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/util/__init__.py
+│ │ +-rw-r--r--   0        0        0     2038 2023-04-06 09:13:10.392011 watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/util/trans.py
+│ │ +-rw-r--r--   0        0        0     1016 1970-01-01 00:00:00.000000 watchmen_indicator_surface-16.5.0/PKG-INFO
+│ │   --- watchmen_indicator_surface-16.4.9/pyproject.toml
+│ ├── +++ watchmen_indicator_surface-16.5.0/pyproject.toml
+│ │┄ Files 9% similar despite different names
+│ │ @@ -1,26 +1,26 @@
+│ │  [tool.poetry]
+│ │  name = "watchmen-indicator-surface"
+│ │ -version = "16.4.9"
+│ │ +version = "16.5.0"
+│ │  description = ""
+│ │  authors = ["botlikes <75356972+botlikes456@users.noreply.github.com>"]
+│ │  license = "MIT"
+│ │  packages = [
+│ │      { include = "watchmen_indicator_surface", from = "src" }
+│ │  ]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
+│ │ -watchmen-indicator-kernel = "16.4.9"
+│ │ -watchmen-rest = "16.4.9"
+│ │ -watchmen-storage-mysql = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-oracle = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-mongodb = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-mssql = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-postgresql = { version = "16.4.9", optional = true }
+│ │ +watchmen-indicator-kernel = "16.5.0"
+│ │ +watchmen-rest = "16.5.0"
+│ │ +watchmen-storage-mysql = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-oracle = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-mongodb = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-mssql = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-postgresql = { version = "16.5.0", optional = true }
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │  
+│ │  [tool.poetry.extras]
+│ │  mysql = ["watchmen-storage-mysql"]
+│ │  oracle = ["watchmen-storage-oracle"]
+│ │  mongodb = ["watchmen-storage-mongodb"]
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/main.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/main.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,21 +1,19 @@
+│ │  from typing import List
+│ │  
+│ │  from fastapi import APIRouter
+│ │  
+│ │ -from .data import achievement_data_router, inspection_data_router
+│ │ -from .meta import achievement_plugin_task_router, achievement_router, bucket_router, indicator_router, \
+│ │ -	inspection_router, objective_analysis_router, subject_router
+│ │ +from .data import objective_data_router
+│ │ +from .meta import bucket_router, derived_objective_router, indicator_router, objective_router, subject_router
+│ │  
+│ │  
+│ │  def get_indicator_surface_routers() -> List[APIRouter]:
+│ │  	return [
+│ │  		bucket_router.router,
+│ │  		indicator_router.router,
+│ │ -		inspection_router.router,
+│ │ -		achievement_router.router,
+│ │ +		objective_router.router,
+│ │  		subject_router.router,
+│ │ -		inspection_data_router.router,
+│ │ -		achievement_data_router.router,
+│ │ -		objective_analysis_router.router,
+│ │ -		achievement_plugin_task_router.router
+│ │ +		objective_data_router.router,
+│ │ +		# TODO ACHIEVEMENT PLUGIN TASK ROUTER IS DISABLED
+│ │ +		# achievement_plugin_task_router.router,
+│ │ +		derived_objective_router.router
+│ │  	]
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/achievement_plugin_task_router.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/achievement_plugin_task_router.py
+│ │┄ Files 23% similar despite different names
+│ │ @@ -1,150 +1,145 @@
+│ │ -from typing import Callable, Optional, Tuple
+│ │ +from fastapi import APIRouter
+│ │  
+│ │ -from fastapi import APIRouter, Depends
+│ │ -from pydantic import BaseModel
+│ │ -from starlette.responses import Response
+│ │ -
+│ │ -from watchmen_indicator_kernel.plugin import call_connector_service
+│ │ -from watchmen_auth import PrincipalService
+│ │ -from watchmen_indicator_kernel.meta import AchievementPluginTaskService, AchievementService
+│ │ -from watchmen_indicator_surface.util import trans, trans_readonly
+│ │ -from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator
+│ │ -from watchmen_meta.system import PluginService
+│ │ -from watchmen_model.admin import UserRole
+│ │ -from watchmen_model.common import AchievementId, AchievementPluginTaskId, PluginId
+│ │ -from watchmen_model.indicator import Achievement, AchievementPluginTask
+│ │ -from watchmen_model.indicator.achievement_plugin_task import AchievementPluginTaskStatus
+│ │ -from watchmen_model.system import Plugin, PluginApplyTo
+│ │ -from watchmen_rest import get_any_admin_principal, get_console_principal
+│ │ -from watchmen_rest.util import raise_400, raise_404
+│ │ -from watchmen_utilities import is_blank
+│ │ +# from watchmen_auth import PrincipalService
+│ │ +# from watchmen_indicator_kernel.meta import AchievementPluginTaskService
+│ │ +# from watchmen_indicator_kernel.plugin import call_connector_service
+│ │ +# from watchmen_indicator_surface.util import trans, trans_readonly
+│ │ +# from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator
+│ │ +# from watchmen_meta.system import PluginService
+│ │ +# from watchmen_model.admin import UserRole
+│ │ +# from watchmen_model.common import AchievementPluginTaskId, PluginId
+│ │ +# from watchmen_model.indicator import AchievementPluginTask
+│ │ +# from watchmen_model.indicator.achievement_plugin_task import AchievementPluginTaskStatus
+│ │ +# from watchmen_model.system import Plugin, PluginApplyTo
+│ │ +# from watchmen_rest import get_any_admin_principal, get_console_principal
+│ │ +# from watchmen_rest.util import raise_400, raise_404
+│ │ +# from watchmen_utilities import is_blank
+│ │  
+│ │  router = APIRouter()
+│ │ -
+│ │ -
+│ │ -def get_task_service(principal_service: PrincipalService) -> AchievementPluginTaskService:
+│ │ -	return AchievementPluginTaskService(ask_meta_storage(), ask_snowflake_generator(), principal_service)
+│ │ -
+│ │ -
+│ │ -def get_achievement_service(task_service: AchievementPluginTaskService) -> AchievementService:
+│ │ -	return AchievementService(task_service.storage, task_service.snowflakeGenerator, task_service.principalService)
+│ │ -
+│ │ -
+│ │ -def get_plugin_service(task_service: AchievementPluginTaskService) -> PluginService:
+│ │ -	return PluginService(task_service.storage, task_service.snowflakeGenerator, task_service.principalService)
+│ │ -
+│ │ -
+│ │ -def ask_create_task_action(
+│ │ -		task_service: AchievementPluginTaskService, principal_service: PrincipalService
+│ │ -) -> Callable[[AchievementId, PluginId], Tuple[AchievementPluginTask, Plugin]]:
+│ │ -	# noinspection DuplicatedCode
+│ │ -	def action(achievement_id: AchievementId, plugin_id: PluginId) -> Tuple[AchievementPluginTask, Plugin]:
+│ │ -		achievement_service = get_achievement_service(task_service)
+│ │ -		achievement: Optional[Achievement] = achievement_service.find_by_id(achievement_id)
+│ │ -		if achievement is None:
+│ │ -			raise_404('Achievement not found.')
+│ │ -		if achievement.tenantId != principal_service.get_tenant_id():
+│ │ -			raise_404('Achievement not found.')
+│ │ -
+│ │ -		plugin_service = get_plugin_service(task_service)
+│ │ -		plugin: Optional[Plugin] = plugin_service.find_by_id(plugin_id)
+│ │ -		if plugin is None:
+│ │ -			raise_404('Achievement plugin not found.')
+│ │ -		if plugin.tenantId != principal_service.get_tenant_id():
+│ │ -			raise_404('Achievement plugin not found.')
+│ │ -		if plugin.applyTo != PluginApplyTo.ACHIEVEMENT:
+│ │ -			raise_400('Plugin is not for achievement.')
+│ │ -
+│ │ -		task = AchievementPluginTask(
+│ │ -			achievementId=achievement_id,
+│ │ -			pluginId=plugin_id,
+│ │ -			status=AchievementPluginTaskStatus.SUBMITTED,
+│ │ -			userId=principal_service.get_user_id(),
+│ │ -			tenantId=principal_service.get_tenant_id()
+│ │ -		)
+│ │ -		task_service.redress_storable_id(task)
+│ │ -		# noinspection PyTypeChecker
+│ │ -		task: AchievementPluginTask = task_service.create(task)
+│ │ -
+│ │ -		return task, plugin
+│ │ -
+│ │ -	return action
+│ │ -
+│ │ -
+│ │ -@router.post(
+│ │ -	'/indicator/achievement/task', tags=[UserRole.CONSOLE, UserRole.ADMIN], response_model=AchievementPluginTask)
+│ │ -def create_task(
+│ │ -		achievement_id: Optional[AchievementId], plugin_id: Optional[PluginId],
+│ │ -		principal_service: PrincipalService = Depends(get_console_principal)
+│ │ -) -> AchievementPluginTask:
+│ │ -	if is_blank(achievement_id):
+│ │ -		raise_400('Achievement id is required.')
+│ │ -	if is_blank(plugin_id):
+│ │ -		raise_400('Plugin id is required.')
+│ │ -	# principal_service.
+│ │ -	task_service = get_task_service(principal_service)
+│ │ -	action = ask_create_task_action(task_service, principal_service)
+│ │ -	task, plugin = trans(task_service, lambda: action(achievement_id, plugin_id))
+│ │ -	call_connector_service(task, plugin)
+│ │ -	return task
+│ │ -
+│ │ -
+│ │ -@router.get(
+│ │ -	'/indicator/achievement/task', tags=[UserRole.CONSOLE, UserRole.ADMIN], response_model=AchievementPluginTask)
+│ │ -def check_task_status(
+│ │ -		task_id: Optional[AchievementPluginTaskId],
+│ │ -		principal_service: PrincipalService = Depends(get_console_principal)
+│ │ -) -> AchievementPluginTask:
+│ │ -	if is_blank(task_id):
+│ │ -		raise_400('Achievement plugin task id is required.')
+│ │ -
+│ │ -	task_service = get_task_service(principal_service)
+│ │ -
+│ │ -	def action() -> AchievementPluginTask:
+│ │ -		# noinspection PyTypeChecker
+│ │ -		task: AchievementPluginTask = task_service.find_by_id(task_id)
+│ │ -		if task is None:
+│ │ -			raise_404()
+│ │ -		# tenant id must match current principal's
+│ │ -		if task.tenantId != principal_service.get_tenant_id():
+│ │ -			raise_404()
+│ │ -		if task.userId != principal_service.get_user_id():
+│ │ -			raise_404()
+│ │ -		return task
+│ │ -
+│ │ -	return trans_readonly(task_service, action)
+│ │ -
+│ │ -
+│ │ -class TaskResult(BaseModel):
+│ │ -	taskId: AchievementPluginTaskId
+│ │ -	status: AchievementPluginTaskStatus
+│ │ -	url: Optional[str]
+│ │ -
+│ │ -
+│ │ -@router.post(
+│ │ -	'/indicator/achievement/task/result', tags=[UserRole.ADMIN, UserRole.SUPER_ADMIN], response_class=Response)
+│ │ -def write_back_task_result(
+│ │ -		result: TaskResult,
+│ │ -		principal_service: PrincipalService = Depends(get_any_admin_principal)
+│ │ -) -> None:
+│ │ -	if is_blank(result.taskId):
+│ │ -		raise_400('Achievement plugin task id of result is required.')
+│ │ -	if result.status is None:
+│ │ -		raise_400('Achievement plugin task status of result is required.')
+│ │ -	if result.status == AchievementPluginTaskStatus.SUCCESS and is_blank(result.url):
+│ │ -		raise_400('Achievement plugin task url of result is required when successful.')
+│ │ -
+│ │ -	task_service = get_task_service(principal_service)
+│ │ -
+│ │ -	def action() -> None:
+│ │ -		# noinspection PyTypeChecker
+│ │ -		task: Optional[AchievementPluginTask] = task_service.find_by_id(result.taskId)
+│ │ -		if task is None:
+│ │ -			raise_404()
+│ │ -		if principal_service.is_tenant_admin() and task.tenantId != principal_service.get_tenant_id():
+│ │ -			raise_404()
+│ │ -		task.status = result.status
+│ │ -		task.url = result.url
+│ │ -		task_service.update(task)
+│ │ -
+│ │ -	trans(task_service, action)
+│ │ +# TODO REFACTOR-OBJECTIVE ACHIEVEMENT TASKS
+│ │ +# def get_task_service(principal_service: PrincipalService) -> AchievementPluginTaskService:
+│ │ +# 	return AchievementPluginTaskService(ask_meta_storage(), ask_snowflake_generator(), principal_service)
+│ │ +#
+│ │ +#
+│ │ +# def get_achievement_service(task_service: AchievementPluginTaskService) -> AchievementService:
+│ │ +# 	return AchievementService(task_service.storage, task_service.snowflakeGenerator, task_service.principalService)
+│ │ +#
+│ │ +#
+│ │ +# def get_plugin_service(task_service: AchievementPluginTaskService) -> PluginService:
+│ │ +# 	return PluginService(task_service.storage, task_service.snowflakeGenerator, task_service.principalService)
+│ │ +#
+│ │ +#
+│ │ +# def ask_create_task_action(
+│ │ +# 		task_service: AchievementPluginTaskService, principal_service: PrincipalService
+│ │ +# ) -> Callable[[AchievementId, PluginId], Tuple[AchievementPluginTask, Plugin]]:
+│ │ +# 	# noinspection DuplicatedCode
+│ │ +# 	def action(achievement_id: AchievementId, plugin_id: PluginId) -> Tuple[AchievementPluginTask, Plugin]:
+│ │ +# 		achievement_service = get_achievement_service(task_service)
+│ │ +# 		objective_factor: Optional[Achievement] = achievement_service.find_by_id(achievement_id)
+│ │ +# 		if objective_factor is None:
+│ │ +# 			raise_404('Achievement not found.')
+│ │ +# 		if objective_factor.tenantId != principal_service.get_tenant_id():
+│ │ +# 			raise_404('Achievement not found.')
+│ │ +#
+│ │ +# 		plugin_service = get_plugin_service(task_service)
+│ │ +# 		plugin: Optional[Plugin] = plugin_service.find_by_id(plugin_id)
+│ │ +# 		if plugin is None:
+│ │ +# 			raise_404('Achievement plugin not found.')
+│ │ +# 		if plugin.tenantId != principal_service.get_tenant_id():
+│ │ +# 			raise_404('Achievement plugin not found.')
+│ │ +# 		if plugin.applyTo != PluginApplyTo.ACHIEVEMENT:
+│ │ +# 			raise_400('Plugin is not for objective_factor.')
+│ │ +#
+│ │ +# 		task = AchievementPluginTask(
+│ │ +# 			achievementId=achievement_id,
+│ │ +# 			pluginId=plugin_id,
+│ │ +# 			status=AchievementPluginTaskStatus.SUBMITTED,
+│ │ +# 			userId=principal_service.get_user_id(),
+│ │ +# 			tenantId=principal_service.get_tenant_id()
+│ │ +# 		)
+│ │ +# 		task_service.redress_storable_id(task)
+│ │ +# 		# noinspection PyTypeChecker
+│ │ +# 		task: AchievementPluginTask = task_service.create(task)
+│ │ +#
+│ │ +# 		return task, plugin
+│ │ +#
+│ │ +# 	return action
+│ │ +#
+│ │ +#
+│ │ +# @router.post(
+│ │ +# 	'/indicator/objective_factor/task', tags=[UserRole.CONSOLE, UserRole.ADMIN], response_model=AchievementPluginTask)
+│ │ +# def create_task(
+│ │ +# 		achievement_id: Optional[AchievementId], plugin_id: Optional[PluginId],
+│ │ +# 		principal_service: PrincipalService = Depends(get_console_principal)
+│ │ +# ) -> AchievementPluginTask:
+│ │ +# 	if is_blank(achievement_id):
+│ │ +# 		raise_400('Achievement id is required.')
+│ │ +# 	if is_blank(plugin_id):
+│ │ +# 		raise_400('Plugin id is required.')
+│ │ +# 	# principal_service.
+│ │ +# 	task_service = get_task_service(principal_service)
+│ │ +# 	action = ask_create_task_action(task_service, principal_service)
+│ │ +# 	task, plugin = trans(task_service, lambda: action(achievement_id, plugin_id))
+│ │ +# 	call_connector_service(task, plugin)
+│ │ +# 	return task
+│ │ +#
+│ │ +#
+│ │ +# @router.get(
+│ │ +# 	'/indicator/objective_factor/task', tags=[UserRole.CONSOLE, UserRole.ADMIN], response_model=AchievementPluginTask)
+│ │ +# def check_task_status(
+│ │ +# 		task_id: Optional[AchievementPluginTaskId],
+│ │ +# 		principal_service: PrincipalService = Depends(get_console_principal)
+│ │ +# ) -> AchievementPluginTask:
+│ │ +# 	if is_blank(task_id):
+│ │ +# 		raise_400('Achievement plugin task id is required.')
+│ │ +#
+│ │ +# 	task_service = get_task_service(principal_service)
+│ │ +#
+│ │ +# 	def action() -> AchievementPluginTask:
+│ │ +# 		# noinspection PyTypeChecker
+│ │ +# 		task: AchievementPluginTask = task_service.find_by_id(task_id)
+│ │ +# 		if task is None:
+│ │ +# 			raise_404()
+│ │ +# 		# tenant id must match current principal's
+│ │ +# 		if task.tenantId != principal_service.get_tenant_id():
+│ │ +# 			raise_404()
+│ │ +# 		if task.userId != principal_service.get_user_id():
+│ │ +# 			raise_404()
+│ │ +# 		return task
+│ │ +#
+│ │ +# 	return trans_readonly(task_service, action)
+│ │ +#
+│ │ +#
+│ │ +# class TaskResult(BaseModel):
+│ │ +# 	taskId: AchievementPluginTaskId
+│ │ +# 	status: AchievementPluginTaskStatus
+│ │ +# 	url: Optional[str]
+│ │ +#
+│ │ +#
+│ │ +# @router.post(
+│ │ +# 	'/indicator/objective_factor/task/result', tags=[UserRole.ADMIN, UserRole.SUPER_ADMIN], response_class=Response)
+│ │ +# def write_back_task_result(
+│ │ +# 		result: TaskResult,
+│ │ +# 		principal_service: PrincipalService = Depends(get_any_admin_principal)
+│ │ +# ) -> None:
+│ │ +# 	if is_blank(result.taskId):
+│ │ +# 		raise_400('Achievement plugin task id of result is required.')
+│ │ +# 	if result.status is None:
+│ │ +# 		raise_400('Achievement plugin task status of result is required.')
+│ │ +# 	if result.status == AchievementPluginTaskStatus.SUCCESS and is_blank(result.url):
+│ │ +# 		raise_400('Achievement plugin task url of result is required when successful.')
+│ │ +#
+│ │ +# 	task_service = get_task_service(principal_service)
+│ │ +#
+│ │ +# 	def action() -> None:
+│ │ +# 		# noinspection PyTypeChecker
+│ │ +# 		task: Optional[AchievementPluginTask] = task_service.find_by_id(result.taskId)
+│ │ +# 		if task is None:
+│ │ +# 			raise_404()
+│ │ +# 		if principal_service.is_tenant_admin() and task.tenantId != principal_service.get_tenant_id():
+│ │ +# 			raise_404()
+│ │ +# 		task.status = result.status
+│ │ +# 		task.url = result.url
+│ │ +# 		task_service.update(task)
+│ │ +#
+│ │ +# 	trans(task_service, action)
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/bucket_router.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/bucket_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/indicator_router.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/indicator_router.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -2,25 +2,28 @@
+│ │  
+│ │  from fastapi import APIRouter, Body, Depends
+│ │  
+│ │  from watchmen_auth import PrincipalService
+│ │  from watchmen_indicator_kernel.meta import IndicatorService
+│ │  from watchmen_indicator_surface.settings import ask_tuple_delete_enabled
+│ │  from watchmen_indicator_surface.util import trans, trans_readonly
+│ │ +from watchmen_lineage.service.lineage_service import LineageService
+│ │  from watchmen_meta.admin import UserService
+│ │  from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator
+│ │  from watchmen_model.admin import UserRole
+│ │  from watchmen_model.common import DataPage, IndicatorId, Pageable, TenantId
+│ │  from watchmen_model.indicator import Indicator
+│ │  from watchmen_rest import get_admin_principal, get_console_principal, get_super_admin_principal
+│ │  from watchmen_rest.util import raise_400, raise_403, raise_404, validate_tenant_id
+│ │  from watchmen_utilities import is_blank
+│ │  
+│ │  router = APIRouter()
+│ │  
+│ │ +lineage_service = LineageService()
+│ │ +
+│ │  
+│ │  def get_indicator_service(principal_service: PrincipalService) -> IndicatorService:
+│ │  	return IndicatorService(ask_meta_storage(), ask_snowflake_generator(), principal_service)
+│ │  
+│ │  
+│ │  def get_user_service(indicator_service: IndicatorService) -> UserService:
+│ │  	return UserService(
+│ │ @@ -132,25 +135,27 @@
+│ │  async def find_relevant_indicators(
+│ │  		indicator_id: Optional[IndicatorId], principal_service: PrincipalService = Depends(get_admin_principal)
+│ │  ) -> List[Indicator]:
+│ │  	if is_blank(indicator_id):
+│ │  		raise_400('Indicator id is required.')
+│ │  
+│ │  	indicator_service = get_indicator_service(principal_service)
+│ │ -
+│ │ +	## TODO remove after build_partial_lineage
+│ │ +	lineage_service.init_tenant_all_lineage_data(principal_service)
+│ │  	def action() -> List[Indicator]:
+│ │  		# noinspection PyTypeChecker
+│ │  		indicator: Indicator = indicator_service.find_by_id(indicator_id)
+│ │  		if indicator is None:
+│ │  			raise_404()
+│ │  		# tenant id must match current principal's
+│ │  		if indicator.tenantId != principal_service.get_tenant_id():
+│ │  			raise_404()
+│ │ -		# TODO find relevant indicators
+│ │ -		return []
+│ │ +
+│ │ +		indicator_id_list = lineage_service.load_relevant_indicators(indicator.indicatorId,principal_service)
+│ │ +		return indicator_service.find_by_ids(indicator_id_list,principal_service.get_tenant_id())
+│ │  
+│ │  	return trans_readonly(indicator_service, action)
+│ │  
+│ │  
+│ │  @router.post('/indicator/indicator/category/available', tags=[UserRole.ADMIN], response_model=List[str])
+│ │  async def load_indicator_category(
+│ │  		prefix: List[str], principal_service: PrincipalService = Depends(get_admin_principal)) -> List[str]:
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/meta/subject_router.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/meta/subject_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_indicator_surface-16.4.9/src/watchmen_indicator_surface/util/trans.py
+│ ├── +++ watchmen_indicator_surface-16.5.0/src/watchmen_indicator_surface/util/trans.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_indicator_surface-16.4.9/PKG-INFO
+│ ├── +++ watchmen_indicator_surface-16.5.0/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: watchmen-indicator-surface
+│ │ -Version: 16.4.9
+│ │ +Version: 16.5.0
+│ │  Summary: 
+│ │  License: MIT
+│ │  Author: botlikes
+│ │  Author-email: 75356972+botlikes456@users.noreply.github.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ @@ -12,14 +12,14 @@
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Provides-Extra: mongodb
+│ │  Provides-Extra: mssql
+│ │  Provides-Extra: mysql
+│ │  Provides-Extra: oracle
+│ │  Provides-Extra: postgresql
+│ │ -Requires-Dist: watchmen-indicator-kernel (==16.4.9)
+│ │ -Requires-Dist: watchmen-rest (==16.4.9)
+│ │ -Requires-Dist: watchmen-storage-mongodb (==16.4.9) ; extra == "mongodb"
+│ │ -Requires-Dist: watchmen-storage-mssql (==16.4.9) ; extra == "mssql"
+│ │ -Requires-Dist: watchmen-storage-mysql (==16.4.9) ; extra == "mysql"
+│ │ -Requires-Dist: watchmen-storage-oracle (==16.4.9) ; extra == "oracle"
+│ │ -Requires-Dist: watchmen-storage-postgresql (==16.4.9) ; extra == "postgresql"
+│ │ +Requires-Dist: watchmen-indicator-kernel (==16.5.0)
+│ │ +Requires-Dist: watchmen-rest (==16.5.0)
+│ │ +Requires-Dist: watchmen-storage-mongodb (==16.5.0) ; extra == "mongodb"
+│ │ +Requires-Dist: watchmen-storage-mssql (==16.5.0) ; extra == "mssql"
+│ │ +Requires-Dist: watchmen-storage-mysql (==16.5.0) ; extra == "mysql"
+│ │ +Requires-Dist: watchmen-storage-oracle (==16.5.0) ; extra == "oracle"
+│ │ +Requires-Dist: watchmen-storage-postgresql (==16.5.0) ; extra == "postgresql"

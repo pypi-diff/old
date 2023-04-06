@@ -1,0 +1,423 @@
+# Comparing `tmp/watchmen_storage_rds-16.4.9.tar.gz` & `tmp/watchmen_storage_rds-16.5.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "watchmen_storage_rds-16.4.9.tar", max compression
++gzip compressed data, was "watchmen_storage_rds-16.5.0.tar", max compression
+```
+
+## Comparing `watchmen_storage_rds-16.4.9.tar` & `watchmen_storage_rds-16.5.0.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,13 @@
+--rw-r--r--   0        0        0      455 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/pyproject.toml
+--rw-r--r--   0        0        0      643 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/__init__.py
+--rw-r--r--   0        0        0      652 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/dbscript_builder.py
+--rw-r--r--   0        0        0      518 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/ext_types.py
+--rw-r--r--   0        0        0      672 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/settings.py
+--rw-r--r--   0        0        0      941 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/sort_build.py
+--rw-r--r--   0        0        0    17290 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/storage_rds.py
+--rw-r--r--   0        0        0    20144 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs.py
+--rw-r--r--   0        0        0     2249 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs_helper.py
+--rw-r--r--   0        0        0    20801 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_data_storage_rds.py
+--rw-r--r--   0        0        0     8191 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_table_generate.py
+--rw-r--r--   0        0        0      916 2023-02-23 10:23:46.016776 watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/types.py
+--rw-r--r--   0        0        0      727 1970-01-01 00:00:00.000000 watchmen_storage_rds-16.4.9/setup.py
+--rw-r--r--   0        0        0      524 1970-01-01 00:00:00.000000 watchmen_storage_rds-16.4.9/PKG-INFO
++-rw-r--r--   0        0        0      455 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/pyproject.toml
++-rw-r--r--   0        0        0      643 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/__init__.py
++-rw-r--r--   0        0        0      652 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/dbscript_builder.py
++-rw-r--r--   0        0        0      518 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/ext_types.py
++-rw-r--r--   0        0        0      672 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/settings.py
++-rw-r--r--   0        0        0      941 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/sort_build.py
++-rw-r--r--   0        0        0    17290 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/storage_rds.py
++-rw-r--r--   0        0        0    22672 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs.py
++-rw-r--r--   0        0        0     2249 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs_helper.py
++-rw-r--r--   0        0        0    20933 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_data_storage_rds.py
++-rw-r--r--   0        0        0     8191 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_table_generate.py
++-rw-r--r--   0        0        0      916 2023-04-06 09:13:10.428011 watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/types.py
++-rw-r--r--   0        0        0      524 1970-01-01 00:00:00.000000 watchmen_storage_rds-16.5.0/PKG-INFO
+```
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/__init__.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/dbscript_builder.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/dbscript_builder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/ext_types.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/ext_types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/settings.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/sort_build.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/sort_build.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/storage_rds.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/storage_rds.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -71,15 +71,15 @@
+ 	create_bool('is_active'), create_json('group_ids'), create_str('role', 50),
+ 	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+ )
+ table_user_groups = Table(
+ 	'user_groups', meta_data,
+ 	create_pk('user_group_id'),
+ 	create_str('name', 50, False), create_description(),
+-	create_json('user_ids'), create_json('space_ids'),
++	create_json('user_ids'), create_json('space_ids'),create_json("objective_ids"),
+ 	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+ )
+ table_spaces = Table(
+ 	'spaces', meta_data,
+ 	create_pk('space_id'),
+ 	create_str('name', 50, False), create_description(),
+ 	create_json('topic_ids'), create_json('group_ids'), create_json('filters'),
+@@ -187,15 +187,15 @@
+ 	create_str('status', 10, False),
+ 	create_tuple_id_column('user_id', False), create_datetime('created_at', False)
+ )
+ # gui
+ # noinspection DuplicatedCode
+ table_favorites = Table(
+ 	'favorites', meta_data,
+-	create_json('connected_space_ids'), create_json('dashboard_ids'),
++	create_json('connected_space_ids'), create_json('dashboard_ids'), create_json('derived_objective_ids'),
+ 	create_tenant_id(), create_user_id(primary_key=True), create_last_visit_time()
+ )
+ table_last_snapshot = Table(
+ 	'last_snapshots', meta_data,
+ 	create_str('language', 20),
+ 	create_tuple_id_column('last_dashboard_id'), create_tuple_id_column('admin_dashboard_id'),
+ 	create_bool('favorite_pin'),
+@@ -245,72 +245,62 @@
+ table_monitor_job_locks = Table(
+ 	'monitor_job_locks', meta_data,
+ 	create_pk('lock_id'), create_tuple_id_column('tenant_id', False), create_tuple_id_column('topic_id', False),
+ 	create_str('frequency', 10, False), create_date('process_date', False),
+ 	create_str('status', 10, False),
+ 	create_tuple_id_column('user_id', False), create_datetime('created_at', False)
+ )
++
+ # indicator
+ # noinspection DuplicatedCode
++table_buckets = Table(
++	'buckets', meta_data,
++	create_pk('bucket_id'), create_str('name', 50),
++	create_str('type', 20, False), create_str('include', 20),
++	create_str('measure', 20), create_tuple_id_column('enum_id'),
++	create_json('segments'), create_description(),
++	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
++)
+ table_indicators = Table(
+ 	'indicators', meta_data,
+ 	create_pk('indicator_id'), create_str('name', 50),
+ 	create_tuple_id_column('topic_or_subject_id'), create_tuple_id_column('factor_id'),
+ 	create_str('aggregate_arithmetic', 10, False),
+ 	create_str('base_on', 10),
+ 	create_str('category_1', 100), create_str('category_2', 100), create_str('category_3', 100),
+ 	create_json('value_buckets'), create_json('relevants'),
+ 	create_json('filter'),
+ 	create_description(),
+ 	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+ )
+-table_buckets = Table(
+-	'buckets', meta_data,
+-	create_pk('bucket_id'), create_str('name', 50),
+-	create_str('type', 20, False), create_str('include', 20),
+-	create_str('measure', 20), create_tuple_id_column('enum_id'),
+-	create_json('segments'), create_description(),
+-	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+-)
+-
+-# noinspection DuplicatedCode
+-table_inspections = Table(
+-	'inspections', meta_data,
+-	create_pk('inspection_id'), create_str('name', 50),
+-	create_tuple_id_column('indicator_id'),
+-	create_json('aggregate_arithmetics'),
+-	create_json('measures'),
+-	create_str('time_range_measure', 20), create_tuple_id_column('time_range_factor_id'),
+-	create_json('time_ranges'),
+-	create_str('measure_on_time', 20), create_tuple_id_column('measure_on_time_factor_id'),
+-	create_json('criteria'),
+-	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+-)
+-table_achievements = Table(
+-	'achievements', meta_data,
+-	create_pk('achievement_id'), create_str('name', 50),
+-	create_str('time_range_type', 10), create_str('time_range_year', 10), create_str('time_range_month', 10),
+-	create_bool('compare_with_prev_time_range'), create_bool('final_score_is_ratio'),
+-	create_json('indicators'), create_json('plugin_ids'),
++table_objectives = Table(
++	'objectives', meta_data,
++	create_pk('objective_id'), create_str('name', 100),
+ 	create_description(),
++	create_json('time_frame'), create_json('targets'), create_json('variables'), create_json('factors'),
++	create_json('group_ids'),
+ 	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
+ )
+-table_objective_analysis = Table(
+-	'objective_analysis', meta_data,
+-	create_pk('analysis_id'), create_str('title', 100),
+-	create_description(), create_json('perspectives'),
+-	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
++table_derived_objectives = Table(
++	'derived_objectives', meta_data,
++	create_pk('derived_objective_id'),
++	create_str('name', 100, False), create_description(),
++	create_tuple_id_column('objective_id', False), create_json('definition'),create_json('breakdown_targets'),
++	create_tenant_id(), create_user_id(), create_last_visit_time(), *create_tuple_audit_columns()
+ )
++
++# noinspection DuplicatedCode
+ table_achievement_plugin_tasks = Table(
+ 	'achievement_plugin_tasks', meta_data,
+ 	create_pk('achievement_task_id'), create_tuple_id_column('achievement_id'), create_tuple_id_column('plugin_id'),
+ 	create_str('status', 10, False), create_str('url', 512),
+ 	create_tenant_id(), create_user_id(),
+ 	*create_tuple_audit_columns()
+ )
++# system
+ table_competitive_lock = Table(
+ 	'competitive_lock', meta_data,
+ 	create_pk('lock_id', Integer), create_str('resource_id', 500),
+ 	create_datetime('registered_at', False), create_tenant_id()
+ )
+ table_scheduled_task = Table(
+ 	'scheduled_task', meta_data,
+@@ -318,14 +308,24 @@
+ 	create_str('topic_code', 50), create_json('content'),
+ 	create_str('model_name', 20), create_str('object_id', 100),
+ 	create_json('depend_on'), create_json('parent_task_id'),
+ 	create_int('is_finished', False), create_json('result'),
+ 	create_tenant_id(),
+ 	*create_tuple_audit_columns()
+ )
++table_scheduled_task_history = Table(
++	'scheduled_task_history', meta_data,
++	create_pk('task_id', Integer), create_str('resource_id', 500),
++	create_str('topic_code', 50), create_json('content'),
++	create_str('model_name', 20), create_str('object_id', 100),
++	create_json('depend_on'), create_json('parent_task_id'),
++	create_int('is_finished', False), create_json('result'),
++	create_tenant_id(),
++	*create_tuple_audit_columns()
++)
+ table_collector_model_config = Table(
+ 	'collector_model_config', meta_data,
+ 	create_pk('model_id'), create_str('model_name', 50),
+ 	create_json('depend_on'), create_str('raw_topic_code', 50),
+ 	create_int('is_paralleled'),
+ 	create_tenant_id(), *create_tuple_audit_columns(),
+ 	create_optimistic_lock()
+@@ -370,38 +370,88 @@
+ 	'change_data_record', meta_data,
+ 	create_pk('change_record_id', Integer), create_str('model_name', 50), create_str('table_name', 50),
+ 	create_json('data_id'), create_str('root_table_name', 50), create_json('root_data_id'),
+ 	create_int('is_merged', False), create_json('result'),
+ 	create_int('table_trigger_id', False), create_int('model_trigger_id', False), create_int('event_trigger_id', False),
+ 	create_tenant_id(), *create_tuple_audit_columns()
+ )
++table_change_data_record_history = Table(
++	'change_data_record_history', meta_data,
++	create_pk('change_record_id', Integer), create_str('model_name', 50), create_str('table_name', 50),
++	create_json('data_id'), create_str('root_table_name', 50), create_json('root_data_id'),
++	create_int('is_merged', False), create_json('result'),
++	create_int('table_trigger_id', False), create_int('model_trigger_id', False), create_int('event_trigger_id', False),
++	create_tenant_id(), *create_tuple_audit_columns()
++)
+ table_change_data_json = Table(
+ 	'change_data_json', meta_data,
+ 	create_pk('change_json_id', Integer), create_str('resource_id', 100),
+ 	create_str('model_name', 50), create_str('object_id', 50),
+ 	create_str('table_name', 50), create_json('data_id'),
+ 	create_json('content'), create_json('depend_on'), create_int('is_posted', False), create_int('task_id', True),
+ 	create_json('result'),
+ 	create_int('table_trigger_id', False), create_int('model_trigger_id', False), create_int('event_trigger_id', False),
+ 	create_tenant_id(), *create_tuple_audit_columns()
+ )
++table_change_data_json_history = Table(
++	'change_data_json_history', meta_data,
++	create_pk('change_json_id', Integer), create_str('resource_id', 100),
++	create_str('model_name', 50), create_str('object_id', 50),
++	create_str('table_name', 50), create_json('data_id'),
++	create_json('content'), create_json('depend_on'), create_int('is_posted', False), create_int('task_id', True),
++	create_json('result'),
++	create_int('table_trigger_id', False), create_int('model_trigger_id', False), create_int('event_trigger_id', False),
++	create_tenant_id(), *create_tuple_audit_columns()
++)
+ table_operations = Table(
+ 	'operations', meta_data,
+ 	create_pk('record_id'), create_str('operation_type', 20),
+ 	create_str('tuple_type', 20), create_str('tuple_key', 20),
+ 	create_str('tuple_id', 50), create_json('content'), create_str('version_num', 50),
+ 	create_tenant_id(), *create_tuple_audit_columns()
+ )
+ table_package_versions = Table(
+ 	'package_versions', meta_data,
+ 	create_pk('version_id'), create_str('previous_version', 20),
+ 	create_str('current_version', 20),
+ 	create_tenant_id(), *create_tuple_audit_columns()
+ )
+ 
++table_subscription_event = Table(
++	'subscription_events', meta_data,
++	create_pk('subscription_event_id'),
++	create_tuple_id_column('notification_id'),
++	create_tuple_id_column('event_id'),
++	create_tuple_id_column("source_id"),
++	create_str('weekday', 10), create_str('day', 10),
++	create_int('hour'), create_int('minute'),
++	create_bool('enabled', False),
++	create_int('status'),
++	create_str('frequency', 10, False),
++	create_user_id(),
++	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
++)
++table_notification_definition = Table(
++	'notification_definitions', meta_data,
++	create_pk('notification_id'),
++	create_str('type', 50),
++	create_json('params'),
++	create_user_id(),
++	create_tenant_id(), *create_tuple_audit_columns(), create_optimistic_lock()
++)
++table_subscription_event_locks = Table(
++	'subscription_event_locks', meta_data,
++	create_pk('subscription_event_lock_id'), create_tuple_id_column('tenant_id', False),
++	create_tuple_id_column('subscription_event_id', False),
++	create_datetime('process_date', False),
++	create_str('status', 10, False),
++	create_tuple_id_column('user_id', False),
++	create_datetime('created_at', False)
++)
++
+ # noinspection DuplicatedCode
+ tables: Dict[str, Table] = {
+ 	# snowflake workers
+ 	SNOWFLAKE_WORKER_ID_TABLE: table_snowflake_competitive_workers,
+ 	# system
+ 	'pats': table_pats,
+ 	'tenants': table_tenants,
+@@ -435,31 +485,37 @@
+ 	# dqc
+ 	'catalogs': table_catalogs,
+ 	'monitor_rules': table_monitor_rules,
+ 	'monitor_job_locks': table_monitor_job_locks,
+ 	# indicator
+ 	'buckets': table_buckets,
+ 	'indicators': table_indicators,
+-	'inspections': table_inspections,
+-	'achievements': table_achievements,
+-	'objective_analysis': table_objective_analysis,
++	'objectives': table_objectives,
++	'derived_objectives': table_derived_objectives,
+ 	'achievement_plugin_tasks': table_achievement_plugin_tasks,
++	# system
+ 	'competitive_lock': table_competitive_lock,
+ 	'scheduled_task': table_scheduled_task,
++	'scheduled_task_history': table_scheduled_task_history,
+ 	'operations': table_operations,
+ 	'package_versions': table_package_versions,
++	# webhook
++	'subscription_event_locks': table_subscription_event_locks,
++	'subscription_events': table_subscription_event,
++	'notification_definitions': table_notification_definition,
+ 	# collector
+ 	'collector_model_config': table_collector_model_config,
+ 	'collector_table_config': table_collector_table_config,
+ 	'trigger_event': table_trigger_event,
+ 	'trigger_model': table_trigger_model,
+ 	'trigger_table': table_trigger_table,
+ 	'change_data_record': table_change_data_record,
+-	'change_data_json': table_change_data_json
+-
++	'change_data_record_history': table_change_data_record_history,
++	'change_data_json': table_change_data_json,
++	'change_data_json_history': table_change_data_json_history
+ }
+ 
+ 
+ # noinspection DuplicatedCode
+ def register_meta_table(table_name: str, table_def: Table) -> None:
+ 	tables[table_name] = table_def
+```
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs_helper.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs_helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_data_storage_rds.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_data_storage_rds.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -311,14 +311,16 @@
+ 	# noinspection PyMethodMayBeStatic
+ 	def build_free_aggregate_column(self, table_column: FreeAggregateColumn, index: int, prefix_name: str) -> Label:
+ 		name = table_column.name
+ 		alias = f'{prefix_name}_{index + 1}'
+ 		arithmetic = table_column.arithmetic
+ 		if arithmetic == FreeAggregateArithmetic.COUNT:
+ 			return func.count(1).label(alias)
++		elif arithmetic == FreeAggregateArithmetic.DISTINCT_COUNT:
++			return func.count(func.distinct(literal_column(name))).label(alias)
+ 		elif arithmetic == FreeAggregateArithmetic.SUMMARY:
+ 			return func.sum(literal_column(name)).label(alias)
+ 		elif arithmetic == FreeAggregateArithmetic.AVERAGE:
+ 			return func.avg(literal_column(name)).label(alias)
+ 		elif arithmetic == FreeAggregateArithmetic.MAXIMUM:
+ 			return func.max(literal_column(name)).label(alias)
+ 		elif arithmetic == FreeAggregateArithmetic.MINIMUM:
+```
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_table_generate.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_table_generate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/types.py` & `watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/types.py`
+
+ * *Files identical despite different names*
+
+### Comparing `watchmen_storage_rds-16.4.9/PKG-INFO` & `watchmen_storage_rds-16.5.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ Metadata-Version: 2.1
+ Name: watchmen-storage-rds
+-Version: 16.4.9
++Version: 16.5.0
+ Summary: 
+ License: MIT
+ Author: botlikes
+ Author-email: 75356972+botlikes456@users.noreply.github.com
+ Requires-Python: >=3.9,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+ Classifier: Programming Language :: Python :: 3.11
+ Requires-Dist: SQLAlchemy (==1.4.35)
+-Requires-Dist: watchmen-storage (==16.4.9)
++Requires-Dist: watchmen-storage (==16.5.0)
+```
+

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/watchmen_storage_mongodb-16.4.9.tar.gz tmp/watchmen_storage_mongodb-16.5.0.tar.gz --html versions/w/watchmen-storage-mongodb/16.4.9-16.5.0/index.html --text versions/w/watchmen-storage-mongodb/16.4.9-16.5.0/diff.txt --markdown versions/w/watchmen-storage-mongodb/16.4.9-16.5.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">15.6 KB</span></div>
+  <div><span class="source">tmp/watchmen_storage_mongodb-16.4.9.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/watchmen_storage_mongodb-16.5.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">218 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">15.3 KB</span></div>
+    <div><span class="source">watchmen_storage_mongodb-16.4.9.tar</span> vs.</div>
+    <div id="watchmen_storage_mongodb---.-.-.tar"><span class="source">watchmen_storage_mongodb-16.5.0.tar</span>
+      <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.33 KB</span></div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>460<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/pyproject.toml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>460<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>210<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>210<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/codes_options.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>703<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/codes_options.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/data_source_mongo.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1308<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/data_source_mongo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2540<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/document_defs_helper.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2540<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/document_defs_helper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>6846</del><span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/document_defs_mongo.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>7650</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/document_defs_mongo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2541<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/document_mongo.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2541<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/document_mongo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5220<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/engine_mongo.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5220<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/engine_mongo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/sort_build.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>509<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/sort_build.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21084<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/storage_mongo.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21084<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/storage_mongo.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1899<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/storage_mongo_configuration.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1899<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/storage_mongo_configuration.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11657<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/topic_document_generate.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11657<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/topic_document_generate.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24666<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>004776</del><span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/src/watchmen_storage_mongodb/where_build.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>24666<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>412011</ins><span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_mongodb/where_build.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>738<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_mongodb-16.4.9/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>531<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_mongodb-16.<del>4</del>.<del>9</del>/PKG-INFO</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>531<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_mongodb-16.<ins>5</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/LICENSE</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--LICENSE"><span class="source">watchmen_storage_mongodb-16.5.0/LICENSE</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/codes_options.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-codes_options.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/codes_options.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-codes_options.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">201 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/data_source_mongo.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-data_source_mongo.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/data_source_mongo.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-data_source_mongo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/document_defs_helper.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_defs_helper.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/document_defs_helper.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_defs_helper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">8.34 KB</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/document_defs_mongo.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_defs_mongo.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/document_defs_mongo.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_defs_mongo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 227, 14 lines modified</td><td colspan="2">Offset 227, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">227 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">227 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">228 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;tenant_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tuple_id_column(&#x27;scheduler_id&#x27;,<span class="dp">·</span>False),</td><td class="diffline">228 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;tenant_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tuple_id_column(&#x27;scheduler_id&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">229 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;process_date&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_int(&#x27;row_count&#x27;,<span class="dp">·</span>False),</td><td class="diffline">229 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;process_date&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_int(&#x27;row_count&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">230 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>False),</td><td class="diffline">230 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">231 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td><td class="diffline">231 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td></tr>
+<tr class="diffunmodified"><td class="diffline">232 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">232 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">233 </td><td class="diffpresent">)</td><td class="diffline">233 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">234 </td><td class="diffpresent">#<span class="dp">·</span>system</td></tr>
+<tr class="diffunmodified"><td class="diffline">234 </td><td class="diffpresent">table_collector_competitive_lock<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">235 </td><td class="diffpresent">table_collector_competitive_lock<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffunmodified"><td class="diffline">235 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;collector_competitive_lock&#x27;,</td><td class="diffline">236 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;collector_competitive_lock&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">236 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">237 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">237 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_str(&#x27;resource_id&#x27;,<span class="dp">·</span>False),</td><td class="diffline">238 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_str(&#x27;resource_id&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">238 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;model_name&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;object_id&#x27;,<span class="dp">·</span>False),</td><td class="diffline">239 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;model_name&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;object_id&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">239 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_datetime(&#x27;registered_at&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tenant_id(),</td><td class="diffline">240 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_datetime(&#x27;registered_at&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tenant_id(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">240 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_int(&#x27;status&#x27;,<span class="dp">·</span>False)</td><td class="diffline">241 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_int(&#x27;status&#x27;,<span class="dp">·</span>False)</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 259, 15 lines modified</td><td colspan="2">Offset 260, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">259 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">260 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">260 </td><td class="diffpresent">)</td><td class="diffline">261 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">261 </td><td class="diffpresent">#<span class="dp">·</span>gui</td><td class="diffline">262 </td><td class="diffpresent">#<span class="dp">·</span>gui</td></tr>
+<tr class="diffunmodified"><td class="diffline">262 </td><td class="diffpresent">table_favorites<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">263 </td><td class="diffpresent">table_favorites<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffunmodified"><td class="diffline">263 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;favorites&#x27;,</td><td class="diffline">264 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;favorites&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">264 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">265 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffchanged"><td class="diffline">265 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;connected_space_ids&#x27;),<span class="dp">·</span>create_json(&#x27;dashboard_ids&#x27;),</td><td class="diffline">266 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;connected_space_ids&#x27;),<span class="dp">·</span>create_json(&#x27;dashboard_ids&#x27;),<ins><span class="dp">·</span>create_json(&#x27;derived_objective_ids&#x27;),</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">266 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(primary_key=True),<span class="dp">·</span>create_last_visit_time()</td><td class="diffline">267 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(primary_key=True),<span class="dp">·</span>create_last_visit_time()</td></tr>
+<tr class="diffunmodified"><td class="diffline">267 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">268 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">268 </td><td class="diffpresent">)</td><td class="diffline">269 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">269 </td><td class="diffpresent">table_last_snapshot<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">270 </td><td class="diffpresent">table_last_snapshot<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffunmodified"><td class="diffline">270 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;last_snapshots&#x27;,</td><td class="diffline">271 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;last_snapshots&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">271 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">272 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">272 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;language&#x27;),</td><td class="diffline">273 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;language&#x27;),</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 330, 108 lines modified</td><td colspan="2">Offset 331, 129 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">330 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;process_date&#x27;,<span class="dp">·</span>False),</td><td class="diffline">331 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;process_date&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">331 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>False),</td><td class="diffline">332 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">332 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td><td class="diffline">333 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td></tr>
+<tr class="diffunmodified"><td class="diffline">333 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">334 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">334 </td><td class="diffpresent">)</td><td class="diffline">335 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">335 </td><td class="diffpresent">#<span class="dp">·</span>indicator</td><td class="diffline">336 </td><td class="diffpresent">#<span class="dp">·</span>indicator</td></tr>
+<tr class="diffunmodified"><td class="diffline">336 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td><td class="diffline">337 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">338 </td><td class="diffpresent">table_buckets<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">339 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;buckets&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">340 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">341 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;bucket_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">342 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;type&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;include&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">343 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;measure&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;enum_id&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">344 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;segments&#x27;),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">345 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">346 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">347 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">337 </td><td class="diffpresent">table_indicators<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">348 </td><td class="diffpresent">table_indicators<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffunmodified"><td class="diffline">338 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;indicators&#x27;,</td><td class="diffline">349 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;indicators&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">339 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">350 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">340 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;indicator_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td><td class="diffline">351 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;indicator_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">341 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;topic_or_subject_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;factor_id&#x27;),</td><td class="diffline">352 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;topic_or_subject_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;factor_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">342 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;aggregate_arithmetic&#x27;,<span class="dp">·</span>False),</td><td class="diffline">353 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;aggregate_arithmetic&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">343 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;base_on&#x27;),</td><td class="diffline">354 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;base_on&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">344 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;category_1&#x27;),<span class="dp">·</span>create_str(&#x27;category_2&#x27;),<span class="dp">·</span>create_str(&#x27;category_3&#x27;),</td><td class="diffline">355 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;category_1&#x27;),<span class="dp">·</span>create_str(&#x27;category_2&#x27;),<span class="dp">·</span>create_str(&#x27;category_3&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">345 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;value_buckets&#x27;),<span class="dp">·</span>create_json(&#x27;relevants&#x27;),</td><td class="diffline">356 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;value_buckets&#x27;),<span class="dp">·</span>create_json(&#x27;relevants&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">346 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;filter&#x27;),</td><td class="diffline">357 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;filter&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">347 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_description(),</td><td class="diffline">358 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_description(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">348 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">359 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">349 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">360 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">350 </td><td class="diffpresent">)</td><td class="diffline">361 </td><td class="diffpresent">)</td></tr>
+<tr class="diffchanged"><td class="diffline">351 </td><td class="diffpresent">table_b<del>u</del>c<del>ket</del>s<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">362 </td><td class="diffpresent">table_<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>s<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffchanged"><td class="diffline">352 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;b<del>u</del>c<del>ket</del>s&#x27;,</td><td class="diffline">363 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>s&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">353 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">364 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffchanged"><td class="diffline">354 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;b<del>u</del>c<del>ket</del>_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td><td class="diffline">365 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td></tr>
+<tr class="diffdeleted"><td class="diffline">355 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;type&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;include&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">356 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;measure&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;enum_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">357 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;segments&#x27;),<span class="dp">·</span>create_description(),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">358 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">359 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">360 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">361 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">362 </td><td class="diffpresent">table_inspections<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">363 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;inspections&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">364 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">365 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;inspection_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">366 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;indicator_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">367 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;aggregate_arithmetics&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">368 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;measures&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">369 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;time_range_measure&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;time_range_factor_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">370 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;time_ranges&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">371 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;measure_on_time&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;measure_on_time_factor_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">372 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;criteria&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">373 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">374 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">375 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">376 </td><td class="diffpresent">table_achievements<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">377 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;achievements&#x27;,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">378 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">379 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">380 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;time_range_type&#x27;),<span class="dp">·</span>create_str(&#x27;time_range_year&#x27;),<span class="dp">·</span>create_str(&#x27;time_range_month&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">381 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_bool(&#x27;compare_with_prev_time_range&#x27;),<span class="dp">·</span>create_bool(&#x27;final_score_is_ratio&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">382 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;indicators&#x27;),<span class="dp">·</span>create_json(&#x27;plugin_ids&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">383 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_description(),</td><td class="diffline">366 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">367 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;time_frame&#x27;),<span class="dp">·</span>create_json(&#x27;targets&#x27;),<span class="dp">·</span>create_json(&#x27;variables&#x27;),<span class="dp">·</span>create_json(&#x27;factors&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">368 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_json(&#x27;group_ids&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">384 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">369 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">385 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">370 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">386 </td><td class="diffpresent">)</td><td class="diffline">371 </td><td class="diffpresent">)</td></tr>
+<tr class="diffchanged"><td class="diffline">387 </td><td class="diffpresent">table_<del>ob</del><del>j</del>e<del>c</del><del>t</del>ive_<del>analys</del>is<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">372 </td><td class="diffpresent">table_<ins>d</ins>e<ins>r</ins>ive<ins>d</ins>_<ins>object</ins>i<ins>ve</ins>s<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffchanged"><td class="diffline">388 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;<del>ob</del><del>j</del>e<del>c</del><del>t</del>ive_<del>analys</del>is&#x27;,</td><td class="diffline">373 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;<ins>d</ins>e<ins>r</ins>ive<ins>d</ins>_<ins>object</ins>i<ins>ve</ins>s&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">389 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">374 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffdeleted"><td class="diffline">390 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;analysis_id&#x27;),<span class="dp">·</span>create_str(&#x27;title&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">391 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_description(),<span class="dp">·</span>create_json(&#x27;perspectives&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">392 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_<del>tenant_</del><del>id</del>(<del>),<span class="dp">·</span>*cre</del><del>at</del>e<del>_t</del><del>upl</del>e<del>_au</del>d<del>it</del>_<del>c</del>o<del>lumns(),<span class="dp">·</span>cre</del><del>at</del>e<del>_o</del><del>p</del>t<del>im</del>i<del>st</del><del>ic</del>_<del>l</del><del>ock()</del></td><td class="diffline">375 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_<ins>pk</ins>(<ins>&#x27;d</ins>e<ins>riv</ins>ed_o<ins>bj</ins>e<ins>c</ins>ti<ins>ve</ins>_<ins>id&#x27;),</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">376 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">377 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tuple_id_column(&#x27;objective_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_json(&#x27;definition&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">378 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),<span class="dp">·</span>create_last_visit_time(),<span class="dp">·</span>*create_tuple_audit_columns()</td></tr>
+<tr class="diffunmodified"><td class="diffline">393 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">379 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">394 </td><td class="diffpresent">)</td><td class="diffline">380 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">395 </td><td class="diffpresent">table_achievement_plugin_tasks<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td><td class="diffline">381 </td><td class="diffpresent">table_achievement_plugin_tasks<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffunmodified"><td class="diffline">396 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;achievement_plugin_tasks&#x27;,</td><td class="diffline">382 </td><td class="diffpresent"><span class="dp">»</span>       name=&#x27;achievement_plugin_tasks&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">397 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td><td class="diffline">383 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="diffunmodified"><td class="diffline">398 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;achievement_task_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;plugin_id&#x27;),</td><td class="diffline">384 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_pk(&#x27;achievement_task_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;plugin_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">399 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;),<span class="dp">·</span>create_str(&#x27;url&#x27;),</td><td class="diffline">385 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_str(&#x27;status&#x27;),<span class="dp">·</span>create_str(&#x27;url&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">400 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),</td><td class="diffline">386 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">401 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       *create_tuple_audit_columns()</td><td class="diffline">387 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       *create_tuple_audit_columns()</td></tr>
+<tr class="diffunmodified"><td class="diffline">402 </td><td class="diffpresent"><span class="dp">»</span>       ]</td><td class="diffline">388 </td><td class="diffpresent"><span class="dp">»</span>       ]</td></tr>
+<tr class="diffunmodified"><td class="diffline">403 </td><td class="diffpresent">)</td><td class="diffline">389 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">390 </td><td class="diffpresent">table_subscription_event<span class="dp">·</span>=<span class="dp">·</span>MongoDocument(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">391 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;subscription_events&#x27;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">392 </td><td class="diffpresent"><span class="dp">»</span>       columns=[</td></tr>
+<tr class="error"><td colspan="4">
+Max diff block lines reached; 2120/8338 bytes (25.43%) of diff not shown.
+</td></tr></table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/document_mongo.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_mongo.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/document_mongo.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-document_mongo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">191 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/engine_mongo.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-engine_mongo.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/engine_mongo.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-engine_mongo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/storage_mongo.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-storage_mongo.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/storage_mongo.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-storage_mongo.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">221 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/storage_mongo_configuration.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-storage_mongo_configuration.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/storage_mongo_configuration.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-storage_mongo_configuration.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">213 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/topic_document_generate.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-topic_document_generate.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/topic_document_generate.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-topic_document_generate.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">189 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/src/watchmen_storage_mongodb/where_build.py</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-where_build.py"><span class="source">watchmen_storage_mongodb-16.5.0/src/watchmen_storage_mongodb/where_build.py</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--src-watchmen_storage_mongodb-where_build.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">745 B</span></div>
+      <div><span class="source">watchmen_storage_mongodb-16.4.9/PKG-INFO</span> vs.</div>
+      <div id="watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--PKG-INFO"><span class="source">watchmen_storage_mongodb-16.5.0/PKG-INFO</span>
+        <a class="anchor" href="#watchmen_storage_mongodb---.-.-.tar---watchmen_storage_mongodb---.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-storage-mongodb</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-storage-mongodb</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<del>4</del>.<del>9</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pymongo<span class="dp">·</span>(&gt;=4.1.0,&lt;5.0.0)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pymongo<span class="dp">·</span>(&gt;=4.1.0,&lt;5.0.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.<del>4</del>.<del>9</del>)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.<ins>5</ins>.<ins>0</ins>)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

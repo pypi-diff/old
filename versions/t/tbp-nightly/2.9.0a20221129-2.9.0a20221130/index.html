@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/tbp-nightly-2.9.0a20221129.tar.gz tmp/tbp-nightly-2.9.0a20221130.tar.gz --html versions/t/tbp-nightly/2.9.0a20221129-2.9.0a20221130/index.html --text versions/t/tbp-nightly/2.9.0a20221129-2.9.0a20221130/diff.txt --markdown versions/t/tbp-nightly/2.9.0a20221129-2.9.0a20221130/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">19.7 KB</span></div>
+  <div><span class="source">tmp/tbp-nightly-2.9.0a20221129.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/tbp-nightly-2.9.0a20221130.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">300 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/tbp-nightly-2.9.0a202211<del>29</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Tue</del><span class="dp">·</span>Nov<span class="dp">·</span><del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;dist/tbp-nightly-2.9.0a202211<ins>30</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Wed</ins><span class="dp">·</span>Nov<span class="dp">·</span><ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins><span class="dp">·</span>2022,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">19.4 KB</span></div>
+    <div><span class="source">tbp-nightly-2.9.0a20221129.tar</span> vs.</div>
+    <div id="tbp-nightly--.-.-a--------.tar"><span class="source">tbp-nightly-2.9.0a20221130.tar</span>
+      <a class="anchor" href="#tbp-nightly--.-.-a--------.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">12.8 KB</span></div>
+      <div id="tbp-nightly--.-.-a--------.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 42 lines modified</td><td colspan="2">Offset 1, 42 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/</td><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/top_level.txt</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>27<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>856<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>856<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/dependency_links.txt</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>102<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/entry_points.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>102<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1631<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/SOURCES.txt</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1631<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>36</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tbp_nightly.egg-info/requires.txt</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>51</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tbp_nightly.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>856<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>856<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/</td><td class="diffline">10 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2604<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/profile_plugin_loader.py</td><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2604<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/profile_plugin_loader.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/</td><td class="diffline">12 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7584<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/tf_data_stats_proto_to_gviz.py</td><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7584<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/tf_data_stats_proto_to_gviz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1515<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/diagnostics.py</td><td class="diffline">14 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1515<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/diagnostics.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3489<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/trace_events_json.py</td><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3489<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/trace_events_json.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3851<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/kernel_stats_proto_to_gviz.py</td><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3851<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/kernel_stats_proto_to_gviz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7018<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/raw_to_tool_data.py</td><td class="diffline">17 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7018<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/raw_to_tool_data.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12507<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/input_pipeline_proto_to_gviz.py</td><td class="diffline">18 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12507<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/input_pipeline_proto_to_gviz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9202<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/overview_page_proto_to_gviz.py</td><td class="diffline">19 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9202<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/overview_page_proto_to_gviz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4351<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/convert/tf_stats_proto_to_gviz.py</td><td class="diffline">20 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4351<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/convert/tf_stats_proto_to_gviz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>923<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/__init__.py</td><td class="diffline">21 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>923<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33648<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/profile_plugin.py</td><td class="diffline">22 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>33648<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/profile_plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/</td><td class="diffline">23 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36464<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/tf_data_stats_pb2.py</td><td class="diffline">24 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>36464<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/tf_data_stats_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46086<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/overview_page_pb2.py</td><td class="diffline">25 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46086<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/overview_page_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/diagnostics_pb2.py</td><td class="diffline">26 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2968<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/diagnostics_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15668<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/trace_events_pb2.py</td><td class="diffline">27 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15668<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/trace_events_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42850<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/input_pipeline_pb2.py</td><td class="diffline">28 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>42850<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/input_pipeline_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15186<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/tf_stats_pb2.py</td><td class="diffline">29 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15186<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/tf_stats_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9234<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/protobuf/kernel_stats_pb2.py</td><td class="diffline">30 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9234<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/protobuf/kernel_stats_pb2.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/</td><td class="diffline">31 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span>3455509<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/trace_viewer_index.js</td><td class="diffline">32 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span>3455509<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/trace_viewer_index.js</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>75377<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/styles.css</td><td class="diffline">33 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>75377<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/styles.css</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>76<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/index.js</td><td class="diffline">34 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>76<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/index.js</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60832<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/materialicons.woff2</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60832<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/materialicons.woff2</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129988<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/trace_viewer_index.html</td><td class="diffline">36 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>129988<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/trace_viewer_index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2725<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/index.html</td><td class="diffline">37 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2725<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/index.html</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span>20667908<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/bundle.js</td><td class="diffline">38 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span>20667908<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/bundle.js</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>556073<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/tensorboard_plugin_profile/static/zone.js</td><td class="diffline">39 </td><td class="diffpresent">-r-xr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>556073<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/tensorboard_plugin_profile/static/zone.js</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>37</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/setup.cfg</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>52</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2474<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>34</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/setup.py</td><td class="diffline">41 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2474<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2022-11-<del>29</del><span class="dp">·</span>10:0<del>3</del>:<del>33</del>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<del>29</del>/README.rst</td><td class="diffline">42 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1002)<span class="dp">·</span>xprof<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1003)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>26<span class="dp">·</span>2022-11-<ins>30</ins><span class="dp">·</span>10:0<ins>2</ins>:<ins>49</ins>.000000<span class="dp">·</span>tbp-nightly-2.9.0a202211<ins>30</ins>/README.rst</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">505 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tbp_nightly.egg-info/PKG-INFO</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tbp_nightly.egg-info-PKG-INFO"><span class="source">tbp-nightly-2.9.0a20221130/tbp_nightly.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tbp_nightly.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tbp-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tbp-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a202211<del>29</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a202211<ins>30</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Profile<span class="dp">·</span>Tensorboard<span class="dp">·</span>Plugin</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Profile<span class="dp">·</span>Tensorboard<span class="dp">·</span>Plugin</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/profiler</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/profiler</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>xprof<span class="dp">·</span>profile<span class="dp">·</span>plugin</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>xprof<span class="dp">·</span>profile<span class="dp">·</span>plugin</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">157 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tbp_nightly.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tbp_nightly.egg-info-SOURCES.txt"><span class="source">tbp-nightly-2.9.0a20221130/tbp_nightly.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tbp_nightly.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">463 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/PKG-INFO</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------PKG-INFO"><span class="source">tbp-nightly-2.9.0a20221130/PKG-INFO</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tbp-nightly</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>tbp-nightly</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a202211<del>29</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.9.0a202211<ins>30</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Profile<span class="dp">·</span>Tensorboard<span class="dp">·</span>Plugin</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Profile<span class="dp">·</span>Tensorboard<span class="dp">·</span>Plugin</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/profiler</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/tensorflow/profiler</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Google<span class="dp">·</span>Inc.</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>packages@tensorflow.org</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>xprof<span class="dp">·</span>profile<span class="dp">·</span>plugin</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>tensorflow<span class="dp">·</span>tensorboard<span class="dp">·</span>xprof<span class="dp">·</span>profile<span class="dp">·</span>plugin</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/profile_plugin_loader.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-profile_plugin_loader.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/profile_plugin_loader.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-profile_plugin_loader.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">223 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/tf_data_stats_proto_to_gviz.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-tf_data_stats_proto_to_gviz.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/tf_data_stats_proto_to_gviz.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-tf_data_stats_proto_to_gviz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">191 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/diagnostics.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-diagnostics.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/diagnostics.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-diagnostics.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/trace_events_json.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-trace_events_json.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/trace_events_json.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-trace_events_json.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">221 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/kernel_stats_proto_to_gviz.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-kernel_stats_proto_to_gviz.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/kernel_stats_proto_to_gviz.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-kernel_stats_proto_to_gviz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">201 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/raw_to_tool_data.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-raw_to_tool_data.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/raw_to_tool_data.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-raw_to_tool_data.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">225 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/input_pipeline_proto_to_gviz.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-input_pipeline_proto_to_gviz.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/input_pipeline_proto_to_gviz.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-input_pipeline_proto_to_gviz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">223 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/overview_page_proto_to_gviz.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-overview_page_proto_to_gviz.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/overview_page_proto_to_gviz.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-overview_page_proto_to_gviz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">213 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/convert/tf_stats_proto_to_gviz.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-tf_stats_proto_to_gviz.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/convert/tf_stats_proto_to_gviz.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-convert-tf_stats_proto_to_gviz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/__init__.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-__init__.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/__init__.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/profile_plugin.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-profile_plugin.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/profile_plugin.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-profile_plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">205 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/tf_data_stats_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-tf_data_stats_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/tf_data_stats_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-tf_data_stats_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">205 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/overview_page_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-overview_page_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/overview_page_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-overview_page_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">201 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/diagnostics_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-diagnostics_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/diagnostics_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-diagnostics_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/trace_events_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-trace_events_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/trace_events_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-trace_events_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/input_pipeline_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-input_pipeline_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/input_pipeline_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-input_pipeline_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">195 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/tf_stats_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-tf_stats_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/tf_stats_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-tf_stats_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/protobuf/kernel_stats_pb2.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-kernel_stats_pb-.py"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/protobuf/kernel_stats_pb2.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-protobuf-kernel_stats_pb-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">203 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/trace_viewer_index.js</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-trace_viewer_index.js"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/trace_viewer_index.js</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-trace_viewer_index.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/styles.css</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-styles.css"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/styles.css</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-styles.css">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/materialicons.woff2</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-materialicons.woff-"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/materialicons.woff2</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-materialicons.woff-">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">207 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/trace_viewer_index.html</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-trace_viewer_index.html"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/trace_viewer_index.html</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-trace_viewer_index.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">181 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/index.html</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-index.html"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/index.html</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-index.html">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">179 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/bundle.js</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-bundle.js"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/bundle.js</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-bundle.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/tensorboard_plugin_profile/static/zone.js</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-zone.js"><span class="source">tbp-nightly-2.9.0a20221130/tensorboard_plugin_profile/static/zone.js</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------tensorboard_plugin_profile-static-zone.js">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">509 B</span></div>
+      <div><span class="source">tbp-nightly-2.9.0a20221129/setup.py</span> vs.</div>
+      <div id="tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------setup.py"><span class="source">tbp-nightly-2.9.0a20221130/setup.py</span>
+        <a class="anchor" href="#tbp-nightly--.-.-a--------.tar---tbp-nightly--.-.-a---------setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 16, 15 lines modified</td><td colspan="2">Offset 16, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>absolute_import</td><td class="diffline">16 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>absolute_import</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>division</td><td class="diffline">17 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>division</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>print_function</td><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>__future__<span class="dp">·</span>import<span class="dp">·</span>print_function</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">import<span class="dp">·</span>setuptools</td><td class="diffline">19 </td><td class="diffpresent">import<span class="dp">·</span>setuptools</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">PROJECT_NAME<span class="dp">·</span>=<span class="dp">·</span>&#x27;tbp-nightly&#x27;</td><td class="diffline">20 </td><td class="diffpresent">PROJECT_NAME<span class="dp">·</span>=<span class="dp">·</span>&#x27;tbp-nightly&#x27;</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;2.9.0a202211<del>29</del>&#x27;</td><td class="diffline">21 </td><td class="diffpresent">VERSION<span class="dp">·</span>=<span class="dp">·</span>&#x27;2.9.0a202211<ins>30</ins>&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">REQUIRED_PACKAGES<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">22 </td><td class="diffpresent">REQUIRED_PACKAGES<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;gviz_api<span class="dp">·</span>&gt;=<span class="dp">·</span>1.9.0&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;gviz_api<span class="dp">·</span>&gt;=<span class="dp">·</span>1.9.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;protobuf<span class="dp">·</span>&gt;=<span class="dp">·</span>3.12.0&#x27;,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;protobuf<span class="dp">·</span>&gt;=<span class="dp">·</span>3.12.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;setuptools<span class="dp">·</span>&gt;=<span class="dp">·</span>41.0.0&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;setuptools<span class="dp">·</span>&gt;=<span class="dp">·</span>41.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;six<span class="dp">·</span>&gt;=<span class="dp">·</span>1.10.0&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;six<span class="dp">·</span>&gt;=<span class="dp">·</span>1.10.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;werkzeug<span class="dp">·</span>&gt;=<span class="dp">·</span>0.11.15&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;werkzeug<span class="dp">·</span>&gt;=<span class="dp">·</span>0.11.15&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">]</td><td class="diffline">28 </td><td class="diffpresent">]</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

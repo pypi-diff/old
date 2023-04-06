@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/watchmen_storage_rds-16.4.9.tar.gz tmp/watchmen_storage_rds-16.5.0.tar.gz --html versions/w/watchmen-storage-rds/16.4.9-16.5.0/index.html --text versions/w/watchmen-storage-rds/16.4.9-16.5.0/diff.txt --markdown versions/w/watchmen-storage-rds/16.4.9-16.5.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">19.5 KB</span></div>
+  <div><span class="source">tmp/watchmen_storage_rds-16.4.9.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/watchmen_storage_rds-16.5.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">210 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_storage_rds-16.<del>4</del>.<del>9</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">19.2 KB</span></div>
+    <div><span class="source">watchmen_storage_rds-16.4.9.tar</span> vs.</div>
+    <div id="watchmen_storage_rds---.-.-.tar"><span class="source">watchmen_storage_rds-16.5.0.tar</span>
+      <a class="anchor" href="#watchmen_storage_rds---.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.56 KB</span></div>
+      <div id="watchmen_storage_rds---.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>455<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/pyproject.toml</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>455<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>643<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/__init__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>643<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/dbscript_builder.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>652<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/dbscript_builder.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>518<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/ext_types.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>518<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/ext_types.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>672<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/settings.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>672<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/settings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>941<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/sort_build.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>941<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/sort_build.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17290<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/storage_rds.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17290<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/storage_rds.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>0144</del><span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/table_defs.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>2672</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/table_defs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2249<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/table_defs_helper.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2249<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/table_defs_helper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<del>801</del><span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/topic_data_storage_rds.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20<ins>933</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/topic_data_storage_rds.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8191<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/topic_table_generate.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8191<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/topic_table_generate.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>916<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>46</del>.<del>016776</del><span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/src/watchmen_storage_rds/types.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>916<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>428011</ins><span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_storage_rds/types.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>727<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_rds-16.4.9/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>524<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_rds-16.<del>4</del>.<del>9</del>/PKG-INFO</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>524<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_storage_rds-16.<ins>5</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/__init__.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-__init__.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/__init__.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">183 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/dbscript_builder.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-dbscript_builder.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/dbscript_builder.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-dbscript_builder.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">169 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/ext_types.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-ext_types.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/ext_types.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-ext_types.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">167 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/settings.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-settings.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/settings.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-settings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">171 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/sort_build.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-sort_build.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/sort_build.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-sort_build.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">173 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/storage_rds.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-storage_rds.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/storage_rds.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-storage_rds.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">12.3 KB</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-table_defs.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-table_defs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 3% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 71, 15 lines modified</td><td colspan="2">Offset 71, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">71 </td><td class="diffpresent"><span class="dp">»</span>       create_bool(&#x27;is_active&#x27;),<span class="dp">·</span>create_json(&#x27;group_ids&#x27;),<span class="dp">·</span>create_str(&#x27;role&#x27;,<span class="dp">·</span>50),</td><td class="diffline">71 </td><td class="diffpresent"><span class="dp">»</span>       create_bool(&#x27;is_active&#x27;),<span class="dp">·</span>create_json(&#x27;group_ids&#x27;),<span class="dp">·</span>create_str(&#x27;role&#x27;,<span class="dp">·</span>50),</td></tr>
+<tr class="diffunmodified"><td class="diffline">72 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">72 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">73 </td><td class="diffpresent">)</td><td class="diffline">73 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">74 </td><td class="diffpresent">table_user_groups<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">74 </td><td class="diffpresent">table_user_groups<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">75 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;user_groups&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">75 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;user_groups&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">76 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;user_group_id&#x27;),</td><td class="diffline">76 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;user_group_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">77 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>50,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td><td class="diffline">77 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>50,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffchanged"><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;user_ids&#x27;),<span class="dp">·</span>create_json(&#x27;space_ids&#x27;),</td><td class="diffline">78 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;user_ids&#x27;),<span class="dp">·</span>create_json(&#x27;space_ids&#x27;),<ins>create_json(&quot;objective_ids&quot;),</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">79 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">79 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">80 </td><td class="diffpresent">)</td><td class="diffline">80 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">81 </td><td class="diffpresent">table_spaces<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">81 </td><td class="diffpresent">table_spaces<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;spaces&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">82 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;spaces&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;space_id&#x27;),</td><td class="diffline">83 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;space_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>50,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td><td class="diffline">84 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>50,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;topic_ids&#x27;),<span class="dp">·</span>create_json(&#x27;group_ids&#x27;),<span class="dp">·</span>create_json(&#x27;filters&#x27;),</td><td class="diffline">85 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;topic_ids&#x27;),<span class="dp">·</span>create_json(&#x27;group_ids&#x27;),<span class="dp">·</span>create_json(&#x27;filters&#x27;),</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 187, 15 lines modified</td><td colspan="2">Offset 187, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">187 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">188 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td><td class="diffline">188 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td></tr>
+<tr class="diffunmodified"><td class="diffline">189 </td><td class="diffpresent">)</td><td class="diffline">189 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">190 </td><td class="diffpresent">#<span class="dp">·</span>gui</td><td class="diffline">190 </td><td class="diffpresent">#<span class="dp">·</span>gui</td></tr>
+<tr class="diffunmodified"><td class="diffline">191 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td><td class="diffline">191 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td></tr>
+<tr class="diffunmodified"><td class="diffline">192 </td><td class="diffpresent">table_favorites<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">192 </td><td class="diffpresent">table_favorites<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">193 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;favorites&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">193 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;favorites&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffchanged"><td class="diffline">194 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;connected_space_ids&#x27;),<span class="dp">·</span>create_json(&#x27;dashboard_ids&#x27;),</td><td class="diffline">194 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;connected_space_ids&#x27;),<span class="dp">·</span>create_json(&#x27;dashboard_ids&#x27;),<ins><span class="dp">·</span>create_json(&#x27;derived_objective_ids&#x27;),</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">195 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(primary_key=True),<span class="dp">·</span>create_last_visit_time()</td><td class="diffline">195 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(primary_key=True),<span class="dp">·</span>create_last_visit_time()</td></tr>
+<tr class="diffunmodified"><td class="diffline">196 </td><td class="diffpresent">)</td><td class="diffline">196 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">197 </td><td class="diffpresent">table_last_snapshot<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">197 </td><td class="diffpresent">table_last_snapshot<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">198 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;last_snapshots&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">198 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;last_snapshots&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">199 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;language&#x27;,<span class="dp">·</span>20),</td><td class="diffline">199 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;language&#x27;,<span class="dp">·</span>20),</td></tr>
+<tr class="diffunmodified"><td class="diffline">200 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;last_dashboard_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;admin_dashboard_id&#x27;),</td><td class="diffline">200 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;last_dashboard_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;admin_dashboard_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">201 </td><td class="diffpresent"><span class="dp">»</span>       create_bool(&#x27;favorite_pin&#x27;),</td><td class="diffline">201 </td><td class="diffpresent"><span class="dp">»</span>       create_bool(&#x27;favorite_pin&#x27;),</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 245, 72 lines modified</td><td colspan="2">Offset 245, 62 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">245 </td><td class="diffpresent">table_monitor_job_locks<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">245 </td><td class="diffpresent">table_monitor_job_locks<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">246 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;monitor_job_locks&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">246 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;monitor_job_locks&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">247 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;tenant_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tuple_id_column(&#x27;topic_id&#x27;,<span class="dp">·</span>False),</td><td class="diffline">247 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;tenant_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tuple_id_column(&#x27;topic_id&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">248 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),<span class="dp">·</span>create_date(&#x27;process_date&#x27;,<span class="dp">·</span>False),</td><td class="diffline">248 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;frequency&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),<span class="dp">·</span>create_date(&#x27;process_date&#x27;,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">249 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td><td class="diffline">249 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">250 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td><td class="diffline">250 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;user_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_datetime(&#x27;created_at&#x27;,<span class="dp">·</span>False)</td></tr>
+<tr class="diffunmodified"><td class="diffline">251 </td><td class="diffpresent">)</td><td class="diffline">251 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">252 </td><td class="diffpresent">#<span class="dp">·</span>indicator</td><td class="diffline">252 </td><td class="diffpresent">#<span class="dp">·</span>indicator</td></tr>
+<tr class="diffunmodified"><td class="diffline">253 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td><td class="diffline">253 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">254 </td><td class="diffpresent">table_buckets<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">255 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;buckets&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">256 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;bucket_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span>50),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">257 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;type&#x27;,<span class="dp">·</span>20,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;include&#x27;,<span class="dp">·</span>20),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">258 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;measure&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_tuple_id_column(&#x27;enum_id&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">259 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;segments&#x27;),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">260 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">261 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">254 </td><td class="diffpresent">table_indicators<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">262 </td><td class="diffpresent">table_indicators<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">255 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;indicators&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">263 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;indicators&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">256 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;indicator_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span>50),</td><td class="diffline">264 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;indicator_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span>50),</td></tr>
+<tr class="diffunmodified"><td class="diffline">257 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;topic_or_subject_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;factor_id&#x27;),</td><td class="diffline">265 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;topic_or_subject_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;factor_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">258 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;aggregate_arithmetic&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td><td class="diffline">266 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;aggregate_arithmetic&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),</td></tr>
+<tr class="diffunmodified"><td class="diffline">259 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;base_on&#x27;,<span class="dp">·</span>10),</td><td class="diffline">267 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;base_on&#x27;,<span class="dp">·</span>10),</td></tr>
+<tr class="diffunmodified"><td class="diffline">260 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;category_1&#x27;,<span class="dp">·</span>100),<span class="dp">·</span>create_str(&#x27;category_2&#x27;,<span class="dp">·</span>100),<span class="dp">·</span>create_str(&#x27;category_3&#x27;,<span class="dp">·</span>100),</td><td class="diffline">268 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;category_1&#x27;,<span class="dp">·</span>100),<span class="dp">·</span>create_str(&#x27;category_2&#x27;,<span class="dp">·</span>100),<span class="dp">·</span>create_str(&#x27;category_3&#x27;,<span class="dp">·</span>100),</td></tr>
+<tr class="diffunmodified"><td class="diffline">261 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;value_buckets&#x27;),<span class="dp">·</span>create_json(&#x27;relevants&#x27;),</td><td class="diffline">269 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;value_buckets&#x27;),<span class="dp">·</span>create_json(&#x27;relevants&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">262 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;filter&#x27;),</td><td class="diffline">270 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;filter&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">263 </td><td class="diffpresent"><span class="dp">»</span>       create_description(),</td><td class="diffline">271 </td><td class="diffpresent"><span class="dp">»</span>       create_description(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">264 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">272 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">265 </td><td class="diffpresent">)</td><td class="diffline">273 </td><td class="diffpresent">)</td></tr>
+<tr class="diffchanged"><td class="diffline">266 </td><td class="diffpresent">table_b<del>u</del>c<del>ket</del>s<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">274 </td><td class="diffpresent">table_<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>s<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffchanged"><td class="diffline">267 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;b<del>u</del>c<del>ket</del>s&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">275 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>s&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffchanged"><td class="diffline">268 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;b<del>u</del>c<del>ket</del>_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span><del>5</del>0),</td><td class="diffline">276 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;<ins>o</ins>b<ins>j</ins><ins>e</ins>c<ins>t</ins><ins>ive</ins>_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span><ins>1</ins><ins>0</ins>0),</td></tr>
+<tr class="diffdeleted"><td class="diffline">269 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;type&#x27;,<span class="dp">·</span>20,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;include&#x27;,<span class="dp">·</span>20),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">270 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;measure&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_tuple_id_column(&#x27;enum_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">271 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;segments&#x27;),<span class="dp">·</span>create_description(),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">272 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">273 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">274 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">275 </td><td class="diffpresent">table_inspections<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">276 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;inspections&#x27;,<span class="dp">·</span>meta_data,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">277 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;inspection_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span>50),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">278 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;indicator_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">279 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;aggregate_arithmetics&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">280 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;measures&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">281 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;time_range_measure&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_tuple_id_column(&#x27;time_range_factor_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">282 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;time_ranges&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">283 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;measure_on_time&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_tuple_id_column(&#x27;measure_on_time_factor_id&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">284 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;criteria&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">285 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">286 </td><td class="diffpresent">)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">287 </td><td class="diffpresent">table_achievements<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">288 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;achievements&#x27;,<span class="dp">·</span>meta_data,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">289 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_str(&#x27;name&#x27;,<span class="dp">·</span>50),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">290 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;time_range_type&#x27;,<span class="dp">·</span>10),<span class="dp">·</span>create_str(&#x27;time_range_year&#x27;,<span class="dp">·</span>10),<span class="dp">·</span>create_str(&#x27;time_range_month&#x27;,<span class="dp">·</span>10),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">291 </td><td class="diffpresent"><span class="dp">»</span>       create_bool(&#x27;compare_with_prev_time_range&#x27;),<span class="dp">·</span>create_bool(&#x27;final_score_is_ratio&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">292 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;indicators&#x27;),<span class="dp">·</span>create_json(&#x27;plugin_ids&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">293 </td><td class="diffpresent"><span class="dp">»</span>       create_description(),</td><td class="diffline">277 </td><td class="diffpresent"><span class="dp">»</span>       create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">278 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;time_frame&#x27;),<span class="dp">·</span>create_json(&#x27;targets&#x27;),<span class="dp">·</span>create_json(&#x27;variables&#x27;),<span class="dp">·</span>create_json(&#x27;factors&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">279 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;group_ids&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">294 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td><td class="diffline">280 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>*create_tuple_audit_columns(),<span class="dp">·</span>create_optimistic_lock()</td></tr>
+<tr class="diffunmodified"><td class="diffline">295 </td><td class="diffpresent">)</td><td class="diffline">281 </td><td class="diffpresent">)</td></tr>
+<tr class="diffchanged"><td class="diffline">296 </td><td class="diffpresent">table_<del>ob</del><del>j</del>e<del>c</del><del>t</del>ive_<del>analys</del>is<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">282 </td><td class="diffpresent">table_<ins>d</ins>e<ins>r</ins>ive<ins>d</ins>_<ins>object</ins>i<ins>ve</ins>s<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffchanged"><td class="diffline">297 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;<del>ob</del><del>j</del>e<del>c</del><del>t</del>ive_<del>analys</del>is&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">283 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;<ins>d</ins>e<ins>r</ins>ive<ins>d</ins>_<ins>object</ins>i<ins>ve</ins>s&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffdeleted"><td class="diffline">298 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;analysis_id&#x27;),<span class="dp">·</span>create_str(&#x27;title&#x27;,<span class="dp">·</span>100),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">299 </td><td class="diffpresent"><span class="dp">»</span>       create_description(),<span class="dp">·</span>create_json(&#x27;perspectives&#x27;),</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">300 </td><td class="diffpresent"><span class="dp">»</span>       create_<del>tenant_</del><del>id</del>(<del>),<span class="dp">·</span>*cre</del><del>at</del>e<del>_t</del><del>upl</del>e<del>_au</del>d<del>it</del>_<del>c</del>o<del>lumns(),<span class="dp">·</span>cre</del><del>at</del>e<del>_o</del><del>p</del>t<del>im</del>i<del>st</del><del>ic</del>_<del>l</del><del>ock()</del></td><td class="diffline">284 </td><td class="diffpresent"><span class="dp">»</span>       create_<ins>pk</ins>(<ins>&#x27;d</ins>e<ins>riv</ins>ed_o<ins>bj</ins>e<ins>c</ins>ti<ins>ve</ins>_<ins>id&#x27;),</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">285 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;name&#x27;,<span class="dp">·</span>100,<span class="dp">·</span>False),<span class="dp">·</span>create_description(),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">286 </td><td class="diffpresent"><span class="dp">»</span>       create_tuple_id_column(&#x27;objective_id&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_json(&#x27;definition&#x27;),create_json(&#x27;breakdown_targets&#x27;),</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">287 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),<span class="dp">·</span>create_last_visit_time(),<span class="dp">·</span>*create_tuple_audit_columns()</td></tr>
+<tr class="diffunmodified"><td class="diffline">301 </td><td class="diffpresent">)</td><td class="diffline">288 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">289 </td><td class="diffpresent">#<span class="dp">·</span>noinspection<span class="dp">·</span>DuplicatedCode</td></tr>
+<tr class="diffunmodified"><td class="diffline">302 </td><td class="diffpresent">table_achievement_plugin_tasks<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">290 </td><td class="diffpresent">table_achievement_plugin_tasks<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">303 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;achievement_plugin_tasks&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">291 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;achievement_plugin_tasks&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">304 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;achievement_task_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;plugin_id&#x27;),</td><td class="diffline">292 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;achievement_task_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;achievement_id&#x27;),<span class="dp">·</span>create_tuple_id_column(&#x27;plugin_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">305 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;url&#x27;,<span class="dp">·</span>512),</td><td class="diffline">293 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;status&#x27;,<span class="dp">·</span>10,<span class="dp">·</span>False),<span class="dp">·</span>create_str(&#x27;url&#x27;,<span class="dp">·</span>512),</td></tr>
+<tr class="diffunmodified"><td class="diffline">306 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),</td><td class="diffline">294 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),<span class="dp">·</span>create_user_id(),</td></tr>
+<tr class="diffunmodified"><td class="diffline">307 </td><td class="diffpresent"><span class="dp">»</span>       *create_tuple_audit_columns()</td><td class="diffline">295 </td><td class="diffpresent"><span class="dp">»</span>       *create_tuple_audit_columns()</td></tr>
+<tr class="diffunmodified"><td class="diffline">308 </td><td class="diffpresent">)</td><td class="diffline">296 </td><td class="diffpresent">)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">297 </td><td class="diffpresent">#<span class="dp">·</span>system</td></tr>
+<tr class="diffunmodified"><td class="diffline">309 </td><td class="diffpresent">table_competitive_lock<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">298 </td><td class="diffpresent">table_competitive_lock<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">310 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;competitive_lock&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">299 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;competitive_lock&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffunmodified"><td class="diffline">311 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;,<span class="dp">·</span>Integer),<span class="dp">·</span>create_str(&#x27;resource_id&#x27;,<span class="dp">·</span>500),</td><td class="diffline">300 </td><td class="diffpresent"><span class="dp">»</span>       create_pk(&#x27;lock_id&#x27;,<span class="dp">·</span>Integer),<span class="dp">·</span>create_str(&#x27;resource_id&#x27;,<span class="dp">·</span>500),</td></tr>
+<tr class="diffunmodified"><td class="diffline">312 </td><td class="diffpresent"><span class="dp">»</span>       create_datetime(&#x27;registered_at&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tenant_id()</td><td class="diffline">301 </td><td class="diffpresent"><span class="dp">»</span>       create_datetime(&#x27;registered_at&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_tenant_id()</td></tr>
+<tr class="diffunmodified"><td class="diffline">313 </td><td class="diffpresent">)</td><td class="diffline">302 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td class="diffline">314 </td><td class="diffpresent">table_scheduled_task<span class="dp">·</span>=<span class="dp">·</span>Table(</td><td class="diffline">303 </td><td class="diffpresent">table_scheduled_task<span class="dp">·</span>=<span class="dp">·</span>Table(</td></tr>
+<tr class="diffunmodified"><td class="diffline">315 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;scheduled_task&#x27;,<span class="dp">·</span>meta_data,</td><td class="diffline">304 </td><td class="diffpresent"><span class="dp">»</span>       &#x27;scheduled_task&#x27;,<span class="dp">·</span>meta_data,</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 318, 14 lines modified</td><td colspan="2">Offset 308, 24 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">318 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;topic_code&#x27;,<span class="dp">·</span>50),<span class="dp">·</span>create_json(&#x27;content&#x27;),</td><td class="diffline">308 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;topic_code&#x27;,<span class="dp">·</span>50),<span class="dp">·</span>create_json(&#x27;content&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">319 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;model_name&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_str(&#x27;object_id&#x27;,<span class="dp">·</span>100),</td><td class="diffline">309 </td><td class="diffpresent"><span class="dp">»</span>       create_str(&#x27;model_name&#x27;,<span class="dp">·</span>20),<span class="dp">·</span>create_str(&#x27;object_id&#x27;,<span class="dp">·</span>100),</td></tr>
+<tr class="diffunmodified"><td class="diffline">320 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;depend_on&#x27;),<span class="dp">·</span>create_json(&#x27;parent_task_id&#x27;),</td><td class="diffline">310 </td><td class="diffpresent"><span class="dp">»</span>       create_json(&#x27;depend_on&#x27;),<span class="dp">·</span>create_json(&#x27;parent_task_id&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">321 </td><td class="diffpresent"><span class="dp">»</span>       create_int(&#x27;is_finished&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_json(&#x27;result&#x27;),</td><td class="diffline">311 </td><td class="diffpresent"><span class="dp">»</span>       create_int(&#x27;is_finished&#x27;,<span class="dp">·</span>False),<span class="dp">·</span>create_json(&#x27;result&#x27;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">322 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),</td><td class="diffline">312 </td><td class="diffpresent"><span class="dp">»</span>       create_tenant_id(),</td></tr>
+<tr class="error"><td colspan="4">
+Max diff block lines reached; 6391/12376 bytes (51.64%) of diff not shown.
+</td></tr></table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">185 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/table_defs_helper.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-table_defs_helper.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/table_defs_helper.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-table_defs_helper.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.06 KB</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_data_storage_rds.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-topic_data_storage_rds.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_data_storage_rds.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-topic_data_storage_rds.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 311, 14 lines modified</td><td colspan="2">Offset 311, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">311 </td><td class="diffpresent"><span class="dp">»</span>       #<span class="dp">·</span>noinspection<span class="dp">·</span>PyMethodMayBeStatic</td><td class="diffline">311 </td><td class="diffpresent"><span class="dp">»</span>       #<span class="dp">·</span>noinspection<span class="dp">·</span>PyMethodMayBeStatic</td></tr>
+<tr class="diffunmodified"><td class="diffline">312 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>build_free_aggregate_column(self,<span class="dp">·</span>table_column:<span class="dp">·</span>FreeAggregateColumn,<span class="dp">·</span>index:<span class="dp">·</span>int,<span class="dp">·</span>prefix_name:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>Label:</td><td class="diffline">312 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>build_free_aggregate_column(self,<span class="dp">·</span>table_column:<span class="dp">·</span>FreeAggregateColumn,<span class="dp">·</span>index:<span class="dp">·</span>int,<span class="dp">·</span>prefix_name:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>Label:</td></tr>
+<tr class="diffunmodified"><td class="diffline">313 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       name<span class="dp">·</span>=<span class="dp">·</span>table_column.name</td><td class="diffline">313 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       name<span class="dp">·</span>=<span class="dp">·</span>table_column.name</td></tr>
+<tr class="diffunmodified"><td class="diffline">314 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       alias<span class="dp">·</span>=<span class="dp">·</span>f&#x27;{prefix_name}_{index<span class="dp">·</span>+<span class="dp">·</span>1}&#x27;</td><td class="diffline">314 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       alias<span class="dp">·</span>=<span class="dp">·</span>f&#x27;{prefix_name}_{index<span class="dp">·</span>+<span class="dp">·</span>1}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">315 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       arithmetic<span class="dp">·</span>=<span class="dp">·</span>table_column.arithmetic</td><td class="diffline">315 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       arithmetic<span class="dp">·</span>=<span class="dp">·</span>table_column.arithmetic</td></tr>
+<tr class="diffunmodified"><td class="diffline">316 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.COUNT:</td><td class="diffline">316 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.COUNT:</td></tr>
+<tr class="diffunmodified"><td class="diffline">317 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.count(1).label(alias)</td><td class="diffline">317 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.count(1).label(alias)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">318 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.DISTINCT_COUNT:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">319 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.count(func.distinct(literal_column(name))).label(alias)</td></tr>
+<tr class="diffunmodified"><td class="diffline">318 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.SUMMARY:</td><td class="diffline">320 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.SUMMARY:</td></tr>
+<tr class="diffunmodified"><td class="diffline">319 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.sum(literal_column(name)).label(alias)</td><td class="diffline">321 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.sum(literal_column(name)).label(alias)</td></tr>
+<tr class="diffunmodified"><td class="diffline">320 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.AVERAGE:</td><td class="diffline">322 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.AVERAGE:</td></tr>
+<tr class="diffunmodified"><td class="diffline">321 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.avg(literal_column(name)).label(alias)</td><td class="diffline">323 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.avg(literal_column(name)).label(alias)</td></tr>
+<tr class="diffunmodified"><td class="diffline">322 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MAXIMUM:</td><td class="diffline">324 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MAXIMUM:</td></tr>
+<tr class="diffunmodified"><td class="diffline">323 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.max(literal_column(name)).label(alias)</td><td class="diffline">325 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>func.max(literal_column(name)).label(alias)</td></tr>
+<tr class="diffunmodified"><td class="diffline">324 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MINIMUM:</td><td class="diffline">326 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MINIMUM:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">191 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/topic_table_generate.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-topic_table_generate.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/topic_table_generate.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-topic_table_generate.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">161 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/src/watchmen_storage_rds/types.py</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-types.py"><span class="source">watchmen_storage_rds-16.5.0/src/watchmen_storage_rds/types.py</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--src-watchmen_storage_rds-types.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">730 B</span></div>
+      <div><span class="source">watchmen_storage_rds-16.4.9/PKG-INFO</span> vs.</div>
+      <div id="watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--PKG-INFO"><span class="source">watchmen_storage_rds-16.5.0/PKG-INFO</span>
+        <a class="anchor" href="#watchmen_storage_rds---.-.-.tar---watchmen_storage_rds---.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-storage-rds</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-storage-rds</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<del>4</del>.<del>9</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>SQLAlchemy<span class="dp">·</span>(==1.4.35)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>SQLAlchemy<span class="dp">·</span>(==1.4.35)</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.<del>4</del>.<del>9</del>)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-storage<span class="dp">·</span>(==16.<ins>5</ins>.<ins>0</ins>)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

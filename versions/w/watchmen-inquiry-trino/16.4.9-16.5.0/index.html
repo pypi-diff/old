@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/watchmen_inquiry_trino-16.4.9.tar.gz tmp/watchmen_inquiry_trino-16.5.0.tar.gz --html versions/w/watchmen-inquiry-trino/16.4.9-16.5.0/index.html --text versions/w/watchmen-inquiry-trino/16.4.9-16.5.0/diff.txt --markdown versions/w/watchmen-inquiry-trino/16.4.9-16.5.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">5.01 KB</span></div>
+  <div><span class="source">tmp/watchmen_inquiry_trino-16.4.9.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/watchmen_inquiry_trino-16.5.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">214 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">4.72 KB</span></div>
+    <div><span class="source">watchmen_inquiry_trino-16.4.9.tar</span> vs.</div>
+    <div id="watchmen_inquiry_trino---.-.-.tar"><span class="source">watchmen_inquiry_trino-16.5.0.tar</span>
+      <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.47 KB</span></div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1061<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>482<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/pyproject.toml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>482<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>150<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>150<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/exception.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/exception.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/settings.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1169<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/settings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<del>5</del>1<del>0</del><span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/trino_storage.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>37<ins>6</ins>1<ins>8</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/trino_storage.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/trino_storage_helper.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>257<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/trino_storage_helper.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7031<span class="dp">·</span>2023-0<del>2</del>-<del>23</del><span class="dp">·</span><del>10</del>:<del>2</del>3:<del>45</del>.<del>984775</del><span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/src/watchmen_inquiry_trino/trino_storage_spi.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7031<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span><ins>09</ins>:<ins>1</ins>3:<ins>10</ins>.<ins>392011</ins><span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/src/watchmen_inquiry_trino/trino_storage_spi.py</td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>740<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_inquiry_trino-16.4.9/setup.py</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>535<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_inquiry_trino-16.<del>4</del>.<del>9</del>/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>535<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>watchmen_inquiry_trino-16.<ins>5</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">113 B</span></div>
+      <div><span class="source">watchmen_inquiry_trino-16.4.9/LICENSE</span> vs.</div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--LICENSE"><span class="source">watchmen_inquiry_trino-16.5.0/LICENSE</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">175 B</span></div>
+      <div><span class="source">watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/settings.py</span> vs.</div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-settings.py"><span class="source">watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/settings.py</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-settings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1010 B</span></div>
+      <div><span class="source">watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage.py</span> vs.</div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-trino_storage.py"><span class="source">watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage.py</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-trino_storage.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 725, 14 lines modified</td><td colspan="2">Offset 725, 16 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">725 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>build_free_aggregate_column(</td><td class="diffline">725 </td><td class="diffpresent"><span class="dp">»</span>       def<span class="dp">·</span>build_free_aggregate_column(</td></tr>
+<tr class="diffunmodified"><td class="diffline">726 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self,<span class="dp">·</span>table_column:<span class="dp">·</span>FreeAggregateColumn,<span class="dp">·</span>index:<span class="dp">·</span>int,<span class="dp">·</span>prefix_name:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td><td class="diffline">726 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       self,<span class="dp">·</span>table_column:<span class="dp">·</span>FreeAggregateColumn,<span class="dp">·</span>index:<span class="dp">·</span>int,<span class="dp">·</span>prefix_name:<span class="dp">·</span>str)<span class="dp">·</span>-&gt;<span class="dp">·</span>str:</td></tr>
+<tr class="diffunmodified"><td class="diffline">727 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       name<span class="dp">·</span>=<span class="dp">·</span>table_column.name</td><td class="diffline">727 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       name<span class="dp">·</span>=<span class="dp">·</span>table_column.name</td></tr>
+<tr class="diffunmodified"><td class="diffline">728 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       alias<span class="dp">·</span>=<span class="dp">·</span>f&#x27;{prefix_name}_{index<span class="dp">·</span>+<span class="dp">·</span>1}&#x27;</td><td class="diffline">728 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       alias<span class="dp">·</span>=<span class="dp">·</span>f&#x27;{prefix_name}_{index<span class="dp">·</span>+<span class="dp">·</span>1}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">729 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       arithmetic<span class="dp">·</span>=<span class="dp">·</span>table_column.arithmetic</td><td class="diffline">729 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       arithmetic<span class="dp">·</span>=<span class="dp">·</span>table_column.arithmetic</td></tr>
+<tr class="diffunmodified"><td class="diffline">730 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.COUNT:</td><td class="diffline">730 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       if<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.COUNT:</td></tr>
+<tr class="diffunmodified"><td class="diffline">731 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;COUNT(1)<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td><td class="diffline">731 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;COUNT(1)<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">732 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.DISTINCT_COUNT:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">733 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;COUNT(DISTINCT<span class="dp">·</span>{name})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">732 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.SUMMARY:</td><td class="diffline">734 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.SUMMARY:</td></tr>
+<tr class="diffunmodified"><td class="diffline">733 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;SUM({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td><td class="diffline">735 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;SUM({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">734 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.AVERAGE:</td><td class="diffline">736 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.AVERAGE:</td></tr>
+<tr class="diffunmodified"><td class="diffline">735 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;AVG({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td><td class="diffline">737 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;AVG({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">736 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MAXIMUM:</td><td class="diffline">738 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MAXIMUM:</td></tr>
+<tr class="diffunmodified"><td class="diffline">737 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;MAX({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td><td class="diffline">739 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       <span class="dp">»</span>       return<span class="dp">·</span>f&#x27;MAX({self.to_decimal(name)})<span class="dp">·</span>AS<span class="dp">·</span>{alias}&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">738 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MINIMUM:</td><td class="diffline">740 </td><td class="diffpresent"><span class="dp">»</span>       <span class="dp">»</span>       elif<span class="dp">·</span>arithmetic<span class="dp">·</span>==<span class="dp">·</span>FreeAggregateArithmetic.MINIMUM:</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">193 B</span></div>
+      <div><span class="source">watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage_spi.py</span> vs.</div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-trino_storage_spi.py"><span class="source">watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage_spi.py</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--src-watchmen_inquiry_trino-trino_storage_spi.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">750 B</span></div>
+      <div><span class="source">watchmen_inquiry_trino-16.4.9/PKG-INFO</span> vs.</div>
+      <div id="watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--PKG-INFO"><span class="source">watchmen_inquiry_trino-16.5.0/PKG-INFO</span>
+        <a class="anchor" href="#watchmen_inquiry_trino---.-.-.tar---watchmen_inquiry_trino---.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 21% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 15 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-inquiry-trino</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>watchmen-inquiry-trino</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<del>4</del>.<del>9</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>16.<ins>5</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">5 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>botlikes</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>75356972+botlikes456@users.noreply.github.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">8 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>MIT<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>trino<span class="dp">·</span>(&gt;=0.312.0,&lt;0.313.0)</td><td class="diffline">14 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>trino<span class="dp">·</span>(&gt;=0.312.0,&lt;0.313.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-data-kernel<span class="dp">·</span>(==16.<del>4</del>.<del>9</del>)</td><td class="diffline">15 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>watchmen-data-kernel<span class="dp">·</span>(==16.<ins>5</ins>.<ins>0</ins>)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

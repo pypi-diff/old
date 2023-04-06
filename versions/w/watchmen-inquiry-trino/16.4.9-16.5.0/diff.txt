@@ -1,0 +1,79 @@
+--- tmp/watchmen_inquiry_trino-16.4.9.tar.gz
++++ tmp/watchmen_inquiry_trino-16.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "watchmen_inquiry_trino-16.4.9.tar", max compression
+│ +gzip compressed data, was "watchmen_inquiry_trino-16.5.0.tar", max compression
+│   --- watchmen_inquiry_trino-16.4.9.tar
+├── +++ watchmen_inquiry_trino-16.5.0.tar
+│ ├── file list
+│ │ @@ -1,10 +1,9 @@
+│ │ --rw-r--r--   0        0        0     1061 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/LICENSE
+│ │ --rw-r--r--   0        0        0      482 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/pyproject.toml
+│ │ --rw-r--r--   0        0        0      150 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/__init__.py
+│ │ --rw-r--r--   0        0        0       46 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/exception.py
+│ │ --rw-r--r--   0        0        0     1169 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/settings.py
+│ │ --rw-r--r--   0        0        0    37510 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage.py
+│ │ --rw-r--r--   0        0        0      257 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage_helper.py
+│ │ --rw-r--r--   0        0        0     7031 2023-02-23 10:23:45.984775 watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage_spi.py
+│ │ --rw-r--r--   0        0        0      740 1970-01-01 00:00:00.000000 watchmen_inquiry_trino-16.4.9/setup.py
+│ │ --rw-r--r--   0        0        0      535 1970-01-01 00:00:00.000000 watchmen_inquiry_trino-16.4.9/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1061 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/LICENSE
+│ │ +-rw-r--r--   0        0        0      482 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      150 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/__init__.py
+│ │ +-rw-r--r--   0        0        0       46 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/exception.py
+│ │ +-rw-r--r--   0        0        0     1169 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/settings.py
+│ │ +-rw-r--r--   0        0        0    37618 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage.py
+│ │ +-rw-r--r--   0        0        0      257 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage_helper.py
+│ │ +-rw-r--r--   0        0        0     7031 2023-04-06 09:13:10.392011 watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage_spi.py
+│ │ +-rw-r--r--   0        0        0      535 1970-01-01 00:00:00.000000 watchmen_inquiry_trino-16.5.0/PKG-INFO
+│ │   --- watchmen_inquiry_trino-16.4.9/LICENSE
+│ ├── +++ watchmen_inquiry_trino-16.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/settings.py
+│ ├── +++ watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/settings.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage.py
+│ ├── +++ watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -725,14 +725,16 @@
+│ │  	def build_free_aggregate_column(
+│ │  			self, table_column: FreeAggregateColumn, index: int, prefix_name: str) -> str:
+│ │  		name = table_column.name
+│ │  		alias = f'{prefix_name}_{index + 1}'
+│ │  		arithmetic = table_column.arithmetic
+│ │  		if arithmetic == FreeAggregateArithmetic.COUNT:
+│ │  			return f'COUNT(1) AS {alias}'
+│ │ +		elif arithmetic == FreeAggregateArithmetic.DISTINCT_COUNT:
+│ │ +			return f'COUNT(DISTINCT {name}) AS {alias}'
+│ │  		elif arithmetic == FreeAggregateArithmetic.SUMMARY:
+│ │  			return f'SUM({self.to_decimal(name)}) AS {alias}'
+│ │  		elif arithmetic == FreeAggregateArithmetic.AVERAGE:
+│ │  			return f'AVG({self.to_decimal(name)}) AS {alias}'
+│ │  		elif arithmetic == FreeAggregateArithmetic.MAXIMUM:
+│ │  			return f'MAX({self.to_decimal(name)}) AS {alias}'
+│ │  		elif arithmetic == FreeAggregateArithmetic.MINIMUM:
+│ │   --- watchmen_inquiry_trino-16.4.9/src/watchmen_inquiry_trino/trino_storage_spi.py
+│ ├── +++ watchmen_inquiry_trino-16.5.0/src/watchmen_inquiry_trino/trino_storage_spi.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_inquiry_trino-16.4.9/PKG-INFO
+│ ├── +++ watchmen_inquiry_trino-16.5.0/PKG-INFO
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: watchmen-inquiry-trino
+│ │ -Version: 16.4.9
+│ │ +Version: 16.5.0
+│ │  Summary: 
+│ │  License: MIT
+│ │  Author: botlikes
+│ │  Author-email: 75356972+botlikes456@users.noreply.github.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │  Requires-Dist: trino (>=0.312.0,<0.313.0)
+│ │ -Requires-Dist: watchmen-data-kernel (==16.4.9)
+│ │ +Requires-Dist: watchmen-data-kernel (==16.5.0)

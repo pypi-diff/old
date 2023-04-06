@@ -1,0 +1,398 @@
+# Comparing `tmp/faas-supervisor-1.5.7b5.tar.gz` & `tmp/faas-supervisor-1.5.8.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "faas-supervisor-1.5.7b5.tar", last modified: Fri Mar 10 08:49:09 2023, max compression
++gzip compressed data, was "faas-supervisor-1.5.8.tar", last modified: Thu Apr  6 09:21:22 2023, max compression
+```
+
+## Comparing `faas-supervisor-1.5.7b5.tar` & `faas-supervisor-1.5.8.tar`
+
+### file list
+
+```diff
+@@ -1,56 +1,56 @@
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.436211 faas-supervisor-1.5.7b5/
+--rw-r--r--   0 runner    (1001) docker     (122)     1731 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)     1191 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (122)     1731 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)     1458 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/not-zip-safe
+--rw-r--r--   0 runner    (1001) docker     (122)       62 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       26 2023-03-10 08:49:09.000000 faas-supervisor-1.5.7b5/faas_supervisor.egg-info/top_level.txt
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/
+--rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/events/
+--rw-r--r--   0 runner    (1001) docker     (122)     5132 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5221 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/apigateway.py
+--rw-r--r--   0 runner    (1001) docker     (122)      733 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/dCache.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2855 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/minio.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1239 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/onedata.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2408 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/s3.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2310 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/events/unknown.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5427 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/exceptions.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/faas/
+--rw-r--r--   0 runner    (1001) docker     (122)     1172 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/
+--rw-r--r--   0 runner    (1001) docker     (122)     3673 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/batch.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3363 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/container.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3722 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/function.py
+--rwxr-xr-x   0 runner    (1001) docker     (122)      833 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/function_handler.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4826 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/supervisor.py
+--rw-r--r--   0 runner    (1001) docker     (122)     9520 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/udocker.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/faas/binary/
+--rw-r--r--   0 runner    (1001) docker     (122)     4349 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/faas/binary/supervisor.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1588 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/logger.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/storage/
+--rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)    13005 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/config.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/
+--rw-r--r--   0 runner    (1001) docker     (122)     1949 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1120 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/local.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1705 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/minio.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4896 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/onedata.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3023 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/s3.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1431 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/storage/providers/webdav.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5587 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/supervisor.py
+--rw-r--r--   0 runner    (1001) docker     (122)    10046 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/utils.py
+--rw-r--r--   0 runner    (1001) docker     (122)      641 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/faassupervisor/version.py
+--rw-r--r--   0 runner    (1001) docker     (122)       38 2023-03-10 08:49:09.436211 faas-supervisor-1.5.7b5/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (122)     1583 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.428211 faas-supervisor-1.5.7b5/test/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/test/unit/
+--rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/test/unit/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-10 08:49:09.432211 faas-supervisor-1.5.7b5/test/unit/faassupervisor/
+--rw-r--r--   0 runner    (1001) docker     (122)    10267 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/test/unit/faassupervisor/events.py
+--rw-r--r--   0 runner    (1001) docker     (122)     9269 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/test/unit/faassupervisor/faas.py
+--rw-r--r--   0 runner    (1001) docker     (122)    22124 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/test/unit/faassupervisor/storage.py
+--rw-r--r--   0 runner    (1001) docker     (122)     8504 2023-03-10 08:48:44.000000 faas-supervisor-1.5.7b5/test/unit/faassupervisor/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.378630 faas-supervisor-1.5.8/
++-rw-r--r--   0 runner    (1001) docker     (122)     1729 2023-04-06 09:21:22.378630 faas-supervisor-1.5.8/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)     1191 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/README.md
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.370632 faas-supervisor-1.5.8/faas_supervisor.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (122)     1729 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (122)     1458 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/not-zip-safe
++-rw-r--r--   0 runner    (1001) docker     (122)       62 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (122)       26 2023-04-06 09:21:22.000000 faas-supervisor-1.5.8/faas_supervisor.egg-info/top_level.txt
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/events/
++-rw-r--r--   0 runner    (1001) docker     (122)     5132 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     5221 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/apigateway.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1339 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/dCache.py
++-rw-r--r--   0 runner    (1001) docker     (122)     2855 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/minio.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1239 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/onedata.py
++-rw-r--r--   0 runner    (1001) docker     (122)     2408 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/s3.py
++-rw-r--r--   0 runner    (1001) docker     (122)     2310 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/events/unknown.py
++-rw-r--r--   0 runner    (1001) docker     (122)     5427 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/exceptions.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/faas/
++-rw-r--r--   0 runner    (1001) docker     (122)     1172 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/
++-rw-r--r--   0 runner    (1001) docker     (122)     3673 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/batch.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3363 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/container.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3722 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/function.py
++-rwxr-xr-x   0 runner    (1001) docker     (122)      833 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/function_handler.py
++-rw-r--r--   0 runner    (1001) docker     (122)     4826 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/supervisor.py
++-rw-r--r--   0 runner    (1001) docker     (122)     9520 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/udocker.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/faas/binary/
++-rw-r--r--   0 runner    (1001) docker     (122)     4349 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/faas/binary/supervisor.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1588 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/logger.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/storage/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)    13005 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/config.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/faassupervisor/storage/providers/
++-rw-r--r--   0 runner    (1001) docker     (122)     1949 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1120 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/local.py
++-rw-r--r--   0 runner    (1001) docker     (122)     1705 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/minio.py
++-rw-r--r--   0 runner    (1001) docker     (122)     4896 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/onedata.py
++-rw-r--r--   0 runner    (1001) docker     (122)     3130 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/s3.py
++-rw-r--r--   0 runner    (1001) docker     (122)     2133 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/storage/providers/webdav.py
++-rw-r--r--   0 runner    (1001) docker     (122)     5582 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/supervisor.py
++-rw-r--r--   0 runner    (1001) docker     (122)    10046 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/utils.py
++-rw-r--r--   0 runner    (1001) docker     (122)      635 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/faassupervisor/version.py
++-rw-r--r--   0 runner    (1001) docker     (122)       38 2023-04-06 09:21:22.378630 faas-supervisor-1.5.8/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (122)     1583 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.370632 faas-supervisor-1.5.8/test/
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/test/unit/
++-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/test/unit/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-06 09:21:22.374631 faas-supervisor-1.5.8/test/unit/faassupervisor/
++-rw-r--r--   0 runner    (1001) docker     (122)    10158 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/test/unit/faassupervisor/events.py
++-rw-r--r--   0 runner    (1001) docker     (122)     9269 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/test/unit/faassupervisor/faas.py
++-rw-r--r--   0 runner    (1001) docker     (122)    22124 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/test/unit/faassupervisor/storage.py
++-rw-r--r--   0 runner    (1001) docker     (122)     8504 2023-04-06 09:20:57.000000 faas-supervisor-1.5.8/test/unit/faassupervisor/utils.py
+```
+
+### Comparing `faas-supervisor-1.5.7b5/PKG-INFO` & `faas-supervisor-1.5.8/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: faas-supervisor
+-Version: 1.5.7b5
++Version: 1.5.8
+ Summary: Input/Output data manager for FaaS
+ Home-page: https://github.com/grycap/faas-supervisor
+ Author: GRyCAP - Universitat Politecnica de Valencia
+ Author-email: alpegon3@upv.es
+ License: Apache 2.0
+ Description: # Faas Supervisor
+```
+
+### Comparing `faas-supervisor-1.5.7b5/README.md` & `faas-supervisor-1.5.8/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faas_supervisor.egg-info/PKG-INFO` & `faas-supervisor-1.5.8/faas_supervisor.egg-info/PKG-INFO`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: faas-supervisor
+-Version: 1.5.7b5
++Version: 1.5.8
+ Summary: Input/Output data manager for FaaS
+ Home-page: https://github.com/grycap/faas-supervisor
+ Author: GRyCAP - Universitat Politecnica de Valencia
+ Author-email: alpegon3@upv.es
+ License: Apache 2.0
+ Description: # Faas Supervisor
+```
+
+### Comparing `faas-supervisor-1.5.7b5/faas_supervisor.egg-info/SOURCES.txt` & `faas-supervisor-1.5.8/faas_supervisor.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/__init__.py` & `faas-supervisor-1.5.8/faassupervisor/events/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/apigateway.py` & `faas-supervisor-1.5.8/faassupervisor/events/apigateway.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/minio.py` & `faas-supervisor-1.5.8/faassupervisor/events/minio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/onedata.py` & `faas-supervisor-1.5.8/faassupervisor/events/onedata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/s3.py` & `faas-supervisor-1.5.8/faassupervisor/events/s3.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/events/unknown.py` & `faas-supervisor-1.5.8/faassupervisor/events/unknown.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/exceptions.py` & `faas-supervisor-1.5.8/faassupervisor/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/__init__.py` & `faas-supervisor-1.5.8/faassupervisor/faas/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/batch.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/batch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/container.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/container.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/function.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/function.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/function_handler.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/function_handler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/supervisor.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/supervisor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/aws_lambda/udocker.py` & `faas-supervisor-1.5.8/faassupervisor/faas/aws_lambda/udocker.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/faas/binary/supervisor.py` & `faas-supervisor-1.5.8/faassupervisor/faas/binary/supervisor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/logger.py` & `faas-supervisor-1.5.8/faassupervisor/logger.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/config.py` & `faas-supervisor-1.5.8/faassupervisor/storage/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/providers/__init__.py` & `faas-supervisor-1.5.8/faassupervisor/storage/providers/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/providers/local.py` & `faas-supervisor-1.5.8/faassupervisor/storage/providers/local.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/providers/minio.py` & `faas-supervisor-1.5.8/faassupervisor/storage/providers/minio.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/providers/onedata.py` & `faas-supervisor-1.5.8/faassupervisor/storage/providers/onedata.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/storage/providers/s3.py` & `faas-supervisor-1.5.8/faassupervisor/storage/providers/s3.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -11,19 +11,21 @@
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ """ Module containing all the classes and methods
+ related with the S3 storage provider. """
+ 
+ import boto3
++from requests.packages import urllib3
+ from faassupervisor.logger import get_logger
+ from faassupervisor.storage.providers import DefaultStorageProvider, \
+     get_bucket_name, get_file_key
+ from faassupervisor.utils import SysUtils
+ 
++urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) 
+ 
+ class S3(DefaultStorageProvider):
+     """Class that manages downloads and uploads from S3."""
+ 
+     _TYPE = 'S3'
+ 
+     def __init__(self, stg_auth):
+```
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/supervisor.py` & `faas-supervisor-1.5.8/faassupervisor/supervisor.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -62,20 +62,20 @@
+         """Download input data from storage provider
+         or save data from POST request.
+ 
+         A function can have information from several storage providers
+         but one event always represents only one file (so far), so only
+         one provider is going to be used for each event received.
+         """
+-        # Parse the 'download_input' config var
+-        download_input = ConfigUtils.read_cfg_var('file_stage_in')
+-        if download_input == '':
+-            download_input = True
++        # Parse the 'file_stage_in' config var
++        skip_download = ConfigUtils.read_cfg_var('file_stage_in')
++        if skip_download == '':
++            skip_download = False
+         # Parse input file
+-        if download_input is False:
++        if skip_download is True:
+             get_logger().info('Skipping download of input file.')
+         else:
+             input_file_path = self.stg_config.download_input(self.parsed_event,
+                                                              self.input_tmp_dir.name)
+             if input_file_path and FileUtils.is_file(input_file_path):
+                 SysUtils.set_env_var('INPUT_FILE_PATH', input_file_path)
+                 get_logger().info('INPUT_FILE_PATH variable set to \'%s\'', input_file_path)
+```
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/utils.py` & `faas-supervisor-1.5.8/faassupervisor/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/faassupervisor/version.py` & `faas-supervisor-1.5.8/faassupervisor/version.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -10,8 +10,8 @@
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ """Stores the package version."""
+ 
+ 
+-__version__ = '1.5.7-beta5'
++__version__ = '1.5.8'
+```
+
+### Comparing `faas-supervisor-1.5.7b5/setup.py` & `faas-supervisor-1.5.8/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/test/unit/faassupervisor/events.py` & `faas-supervisor-1.5.8/test/unit/faassupervisor/events.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -20,15 +20,14 @@
+ import faassupervisor.events as events
+ from faassupervisor.events.s3 import S3Event
+ from faassupervisor.events.minio import MinioEvent
+ from faassupervisor.events.onedata import OnedataEvent
+ from faassupervisor.events.unknown import UnknownEvent
+ from faassupervisor.events.dCache import DCacheEvent
+ from faassupervisor.events.apigateway import ApiGatewayEvent
+-from faassupervisor.logger import get_logger
+ 
+ # pylint: disable=missing-docstring
+ # pylint: disable=no-self-use
+ # pylint: disable=protected-access
+ 
+ MINIO_EVENT = {"Key": "images/nature-wallpaper-229.jpg",
+                "Records": [{"s3": {"object": {"key": "nature-wallpaper-229.jpg"},
+@@ -98,17 +97,16 @@
+     def test_parse_storage_event_minio(self):
+         result = events._parse_storage_event(MINIO_EVENT)
+         self.assertIsInstance(result, MinioEvent)
+ 
+     def test_parse_storage_event_onedata(self):
+         result = events._parse_storage_event(ONEDATA_EVENT)
+         self.assertIsInstance(result, OnedataEvent)
+-    
++
+     def test_parse_event_dcache(self):
+-        #result = events._parse_storage_event(DCACHE_EVENT)
+         result = events.parse_event(DCACHE_EVENT)
+         self.assertIsInstance(result, DCacheEvent)
+ 
+     def test_parse_storage_event_unknown(self):
+         result = events._parse_storage_event(UNKNOWN_EVENT)
+         self.assertIsNone(result)
+```
+
+### Comparing `faas-supervisor-1.5.7b5/test/unit/faassupervisor/faas.py` & `faas-supervisor-1.5.8/test/unit/faassupervisor/faas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/test/unit/faassupervisor/storage.py` & `faas-supervisor-1.5.8/test/unit/faassupervisor/storage.py`
+
+ * *Files identical despite different names*
+
+### Comparing `faas-supervisor-1.5.7b5/test/unit/faassupervisor/utils.py` & `faas-supervisor-1.5.8/test/unit/faassupervisor/utils.py`
+
+ * *Files identical despite different names*
+

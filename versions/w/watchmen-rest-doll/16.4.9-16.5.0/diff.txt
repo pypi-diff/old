@@ -1,0 +1,684 @@
+--- tmp/watchmen_rest_doll-16.4.9.tar.gz
++++ tmp/watchmen_rest_doll-16.5.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "watchmen_rest_doll-16.4.9.tar", max compression
+│ +gzip compressed data, was "watchmen_rest_doll-16.5.0.tar", max compression
+│   --- watchmen_rest_doll-16.4.9.tar
+├── +++ watchmen_rest_doll-16.5.0.tar
+│ ├── file list
+│ │ @@ -1,62 +1,63 @@
+│ │ --rw-r--r--   0        0        0     1061 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/LICENSE
+│ │ --rw-r--r--   0        0        0     2294 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/pyproject.toml
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/__init__.py
+│ │ --rw-r--r--   0        0        0      254 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/__init__.py
+│ │ --rw-r--r--   0        0        0     9109 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/enumeration_router.py
+│ │ --rw-r--r--   0        0        0     6875 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/pipeline_graphic_router.py
+│ │ --rw-r--r--   0        0        0     9721 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/pipeline_router.py
+│ │ --rw-r--r--   0        0        0    11907 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/space_router.py
+│ │ --rw-r--r--   0        0        0     1029 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/synonym_topic_router.py
+│ │ --rw-r--r--   0        0        0    13623 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/topic_router.py
+│ │ --rw-r--r--   0        0        0     9733 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/topic_snapshot_scheduler_router.py
+│ │ --rw-r--r--   0        0        0    14944 2023-02-23 10:23:45.996775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/user_group_router.py
+│ │ --rw-r--r--   0        0        0    10118 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/user_router.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/analysis/__init__.py
+│ │ --rw-r--r--   0        0        0     1868 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/analysis/pipeline_index_router.py
+│ │ --rw-r--r--   0        0        0     3059 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/analysis/topic_index_router.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/auth/__init__.py
+│ │ --rw-r--r--   0        0        0     3814 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/auth/authenticate_router.py
+│ │ --rw-r--r--   0        0        0      158 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/__init__.py
+│ │ --rw-r--r--   0        0        0     3882 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/connected_space_graphic_router.py
+│ │ --rw-r--r--   0        0        0    22113 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/connected_space_router.py
+│ │ --rw-r--r--   0        0        0    14467 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/dashboard_router.py
+│ │ --rw-r--r--   0        0        0     5413 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/report_router.py
+│ │ --rw-r--r--   0        0        0     7091 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/subject_router.py
+│ │ --rw-r--r--   0        0        0     3559 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/doll.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/gui/__init__.py
+│ │ --rw-r--r--   0        0        0     3503 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/gui/favorite_router.py
+│ │ --rw-r--r--   0        0        0     3773 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/gui/last_snapshot_router.py
+│ │ --rw-r--r--   0        0        0     3147 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/main.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/__init__.py
+│ │ --rw-r--r--   0        0        0     3564 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/connected_space_import_router.py
+│ │ --rw-r--r--   0        0        0     1517 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/dashboard_import_router.py
+│ │ --rw-r--r--   0        0        0    40334 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/mix_import_router.py
+│ │ --rw-r--r--   0        0        0     1879 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/pipeline_import_router.py
+│ │ --rw-r--r--   0        0        0     1457 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/report_import_router.py
+│ │ --rw-r--r--   0        0        0     1403 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/space_import_router.py
+│ │ --rw-r--r--   0        0        0     1477 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/subject_import_router.py
+│ │ --rw-r--r--   0        0        0     1806 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/topic_import_router.py
+│ │ --rw-r--r--   0        0        0     1498 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/user_group_import_router.py
+│ │ --rw-r--r--   0        0        0     1354 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/user_import_router.py
+│ │ --rw-r--r--   0        0        0     3698 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/validator.py
+│ │ --rw-r--r--   0        0        0      908 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/settings.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/saml/__init__.py
+│ │ --rw-r--r--   0        0        0      998 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/saml/auth_saml_router.py
+│ │ --rw-r--r--   0        0        0     3227 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/saml/saml_helper.py
+│ │ --rw-r--r--   0        0        0      239 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/sso_router.py
+│ │ --rw-r--r--   0        0        0        0 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/__init__.py
+│ │ --rw-r--r--   0        0        0     5697 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/data_source_router.py
+│ │ --rw-r--r--   0        0        0     5054 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/external_writer_router.py
+│ │ --rw-r--r--   0        0        0     2501 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/operation_router.py
+│ │ --rw-r--r--   0        0        0     2622 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/package_version_router.py
+│ │ --rw-r--r--   0        0        0     3010 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/pat_router.py
+│ │ --rw-r--r--   0        0        0     4982 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/plugin_router.py
+│ │ --rw-r--r--   0        0        0     4346 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/tenant_init_router.py
+│ │ --rw-r--r--   0        0        0     5839 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/tenant_router.py
+│ │ --rw-r--r--   0        0        0      881 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/utils.py
+│ │ --rw-r--r--   0        0        0      131 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/util/__init__.py
+│ │ --rw-r--r--   0        0        0      321 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/util/crypt.py
+│ │ --rw-r--r--   0        0        0     2008 2023-02-23 10:23:46.000775 watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/util/trans.py
+│ │ --rw-r--r--   0        0        0     2049 1970-01-01 00:00:00.000000 watchmen_rest_doll-16.4.9/setup.py
+│ │ --rw-r--r--   0        0        0     2329 1970-01-01 00:00:00.000000 watchmen_rest_doll-16.4.9/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1061 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     2322 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/__init__.py
+│ │ +-rw-r--r--   0        0        0      254 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/__init__.py
+│ │ +-rw-r--r--   0        0        0     9109 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/enumeration_router.py
+│ │ +-rw-r--r--   0        0        0     6875 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/pipeline_graphic_router.py
+│ │ +-rw-r--r--   0        0        0     9721 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/pipeline_router.py
+│ │ +-rw-r--r--   0        0        0    11907 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/space_router.py
+│ │ +-rw-r--r--   0        0        0     1029 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/synonym_topic_router.py
+│ │ +-rw-r--r--   0        0        0    14141 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/topic_router.py
+│ │ +-rw-r--r--   0        0        0     9733 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/topic_snapshot_scheduler_router.py
+│ │ +-rw-r--r--   0        0        0    14944 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/user_group_router.py
+│ │ +-rw-r--r--   0        0        0    10118 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/user_router.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/analysis/__init__.py
+│ │ +-rw-r--r--   0        0        0     1868 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/analysis/pipeline_index_router.py
+│ │ +-rw-r--r--   0        0        0     3059 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/analysis/topic_index_router.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/auth/__init__.py
+│ │ +-rw-r--r--   0        0        0     3814 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/auth/authenticate_router.py
+│ │ +-rw-r--r--   0        0        0      158 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/__init__.py
+│ │ +-rw-r--r--   0        0        0     3882 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/connected_space_graphic_router.py
+│ │ +-rw-r--r--   0        0        0    22113 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/connected_space_router.py
+│ │ +-rw-r--r--   0        0        0    14467 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/dashboard_router.py
+│ │ +-rw-r--r--   0        0        0     5413 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/report_router.py
+│ │ +-rw-r--r--   0        0        0     7091 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/subject_router.py
+│ │ +-rw-r--r--   0        0        0     3559 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/doll.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/gui/__init__.py
+│ │ +-rw-r--r--   0        0        0     3503 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/gui/favorite_router.py
+│ │ +-rw-r--r--   0        0        0     3773 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/gui/last_snapshot_router.py
+│ │ +-rw-r--r--   0        0        0     3303 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/main.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/__init__.py
+│ │ +-rw-r--r--   0        0        0     3564 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/connected_space_import_router.py
+│ │ +-rw-r--r--   0        0        0     1517 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/dashboard_import_router.py
+│ │ +-rw-r--r--   0        0        0    40334 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/mix_import_router.py
+│ │ +-rw-r--r--   0        0        0     1879 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/pipeline_import_router.py
+│ │ +-rw-r--r--   0        0        0     1457 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/report_import_router.py
+│ │ +-rw-r--r--   0        0        0     1403 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/space_import_router.py
+│ │ +-rw-r--r--   0        0        0     1477 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/subject_import_router.py
+│ │ +-rw-r--r--   0        0        0     1806 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/topic_import_router.py
+│ │ +-rw-r--r--   0        0        0     1498 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/user_group_import_router.py
+│ │ +-rw-r--r--   0        0        0     1354 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/user_import_router.py
+│ │ +-rw-r--r--   0        0        0     3698 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/validator.py
+│ │ +-rw-r--r--   0        0        0      908 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/settings.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/saml/__init__.py
+│ │ +-rw-r--r--   0        0        0      998 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/saml/auth_saml_router.py
+│ │ +-rw-r--r--   0        0        0     3227 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/saml/saml_helper.py
+│ │ +-rw-r--r--   0        0        0      239 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/sso_router.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/__init__.py
+│ │ +-rw-r--r--   0        0        0     5697 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/data_source_router.py
+│ │ +-rw-r--r--   0        0        0     5054 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/external_writer_router.py
+│ │ +-rw-r--r--   0        0        0     2501 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/operation_router.py
+│ │ +-rw-r--r--   0        0        0     2622 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/package_version_router.py
+│ │ +-rw-r--r--   0        0        0     3010 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/pat_router.py
+│ │ +-rw-r--r--   0        0        0     4982 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/plugin_router.py
+│ │ +-rw-r--r--   0        0        0     4346 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/tenant_init_router.py
+│ │ +-rw-r--r--   0        0        0     5839 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/tenant_router.py
+│ │ +-rw-r--r--   0        0        0      881 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/utils.py
+│ │ +-rw-r--r--   0        0        0      131 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/util/__init__.py
+│ │ +-rw-r--r--   0        0        0      321 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/util/crypt.py
+│ │ +-rw-r--r--   0        0        0     2008 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/util/trans.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/webhook/__init__.py
+│ │ +-rw-r--r--   0        0        0     8121 2023-04-06 09:13:10.408011 watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/webhook/webhook_router.py
+│ │ +-rw-r--r--   0        0        0     2372 1970-01-01 00:00:00.000000 watchmen_rest_doll-16.5.0/PKG-INFO
+│ │   --- watchmen_rest_doll-16.4.9/LICENSE
+│ ├── +++ watchmen_rest_doll-16.5.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/pyproject.toml
+│ ├── +++ watchmen_rest_doll-16.5.0/pyproject.toml
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,35 +1,36 @@
+│ │  [tool.poetry]
+│ │  name = "watchmen-rest-doll"
+│ │ -version = "16.4.9"
+│ │ +version = "16.5.0"
+│ │  description = ""
+│ │  authors = ["botlikes <75356972+botlikes456@users.noreply.github.com>"]
+│ │  license = "MIT"
+│ │  packages = [
+│ │      { include = "watchmen_rest_doll", from = "src" }
+│ │  ]
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = "^3.9"
+│ │  passlib = "^1.7.4"
+│ │  bcrypt = "^3.2.0"
+│ │  python-multipart = "^0.0.5"
+│ │ -watchmen-data-surface = "16.4.9"
+│ │ -watchmen-pipeline-surface = "16.4.9"
+│ │ -watchmen-inquiry-surface = "16.4.9"
+│ │ -watchmen-inquiry-trino = { version = "16.4.9", optional = true }
+│ │ -watchmen-indicator-surface = "16.4.9"
+│ │ -watchmen-storage-mysql = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-oracle = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-mongodb = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-mssql = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-postgresql = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-oss = { version = "16.4.9", optional = true }
+│ │ -watchmen-storage-s3 = { version = "16.4.9", optional = true }
+│ │ -watchmen-collector-surface = { version = "16.4.9", optional = true }
+│ │ +watchmen-lineage = "16.5.0"
+│ │ +watchmen-data-surface = "16.5.0"
+│ │ +watchmen-collector-surface = { version = "16.5.0", optional = true }
+│ │ +watchmen-pipeline-surface = "16.5.0"
+│ │ +watchmen-inquiry-surface = "16.5.0"
+│ │ +watchmen-inquiry-trino = { version = "16.5.0", optional = true }
+│ │ +watchmen-indicator-surface = "16.5.0"
+│ │ +watchmen-storage-mysql = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-oracle = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-mongodb = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-mssql = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-postgresql = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-oss = { version = "16.5.0", optional = true }
+│ │ +watchmen-storage-s3 = { version = "16.5.0", optional = true }
+│ │  kafka-python = { version = "^2.0.2", optional = true }
+│ │  aiokafka = { version = "^0.7.2", optional = true }
+│ │  aio-pika = { version = "^7.1.2", optional = true }
+│ │  starlette-prometheus = { version = "^0.9.0", optional = true }
+│ │  requests = { version = "^2.27.1", optional = true }
+│ │  python3-saml = { version = "^1.14.0", optional = true }
+│ │  cryptography = { version = "^36.0.2", optional = true }
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/enumeration_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/enumeration_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/pipeline_graphic_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/pipeline_graphic_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/pipeline_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/pipeline_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/space_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/space_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/synonym_topic_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/synonym_topic_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/topic_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/topic_router.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -8,15 +8,15 @@
+│ │  from watchmen_data_kernel.cache import CacheService
+│ │  from watchmen_data_kernel.common import ask_all_date_formats
+│ │  from watchmen_data_kernel.service import sync_topic_structure_storage
+│ │  
+│ │  from watchmen_meta.admin import FactorService, PipelineService, TopicService, TopicSnapshotSchedulerService
+│ │  from watchmen_meta.analysis import TopicIndexService
+│ │  from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator
+│ │ -from watchmen_model.admin import Pipeline, Topic, TopicSnapshotScheduler, TopicType, UserRole
+│ │ +from watchmen_model.admin import Pipeline, Topic, TopicSnapshotScheduler, TopicType, UserRole, TopicKind
+│ │  from watchmen_model.common import DataPage, Pageable, TenantId, TopicId
+│ │  from watchmen_pipeline_kernel.topic_snapshot import as_snapshot_task_topic_name, create_snapshot_pipeline, \
+│ │  	create_snapshot_target_topic, create_snapshot_task_topic, rebuild_snapshot_pipeline, \
+│ │  	rebuild_snapshot_target_topic, rebuild_snapshot_task_topic
+│ │  from watchmen_rest import get_admin_principal, get_console_principal, get_super_admin_principal
+│ │  from watchmen_rest.util import raise_400, raise_403, raise_404, validate_tenant_id
+│ │  from watchmen_rest_doll.doll import ask_tuple_delete_enabled
+│ │ @@ -362,7 +362,22 @@
+│ │  		topic: Topic = topic_service.delete(topic_id)
+│ │  		if topic is None:
+│ │  			raise_404()
+│ │  		post_delete_topic(topic.topicId, topic_service)
+│ │  		return topic
+│ │  
+│ │  	return trans(topic_service, action)
+│ │ +
+│ │ +
+│ │ +@router.get("/topic/index/rebuild",tags=[UserRole.ADMIN])
+│ │ +async def rebuild_topics_index(principal_service: PrincipalService = Depends(get_admin_principal)):
+│ │ +	topic_service = get_topic_service(principal_service)
+│ │ +	index_service = get_topic_index_service(topic_service)
+│ │ +	def action():
+│ │ +		topic_list:List[Topic] = topic_service.find_all(principal_service.get_tenant_id())
+│ │ +		for topic in topic_list:
+│ │ +			if topic.kind == TopicKind.BUSINESS:
+│ │ +				index_service.build_index(topic)
+│ │ +
+│ │ +	trans(topic_service, action)
+│ │ +
+│ │ +
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/topic_snapshot_scheduler_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/topic_snapshot_scheduler_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/user_group_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/user_group_router.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │  from typing import Callable, List, Optional, Union
+│ │  
+│ │  from fastapi import APIRouter, Body, Depends
+│ │  
+│ │  from watchmen_auth import PrincipalService
+│ │ -from watchmen_indicator_kernel.meta import IndicatorService
+│ │ +from watchmen_indicator_kernel.meta import ObjectiveService
+│ │  from watchmen_meta.admin import SpaceService, UserGroupService, UserService
+│ │  from watchmen_meta.common import ask_meta_storage, ask_snowflake_generator
+│ │  from watchmen_model.admin import Space, User, UserGroup, UserRole
+│ │ -from watchmen_model.common import DataPage, IndicatorId, Pageable, SpaceId, TenantId, UserGroupId, UserId
+│ │ -from watchmen_model.indicator import Indicator
+│ │ +from watchmen_model.common import DataPage, ObjectiveId, Pageable, SpaceId, TenantId, UserGroupId, UserId
+│ │ +from watchmen_model.indicator import Objective
+│ │  from watchmen_rest import get_admin_principal, get_super_admin_principal
+│ │  from watchmen_rest.util import raise_400, raise_403, raise_404, validate_tenant_id
+│ │  from watchmen_rest_doll.doll import ask_tuple_delete_enabled
+│ │  from watchmen_rest_doll.util import trans, trans_readonly
+│ │  from watchmen_utilities import ArrayHelper, is_blank, is_not_blank
+│ │  
+│ │  router = APIRouter()
+│ │ @@ -28,16 +28,16 @@
+│ │  
+│ │  
+│ │  def get_space_service(user_group_service: UserGroupService) -> SpaceService:
+│ │  	return SpaceService(
+│ │  		user_group_service.storage, user_group_service.snowflakeGenerator, user_group_service.principalService)
+│ │  
+│ │  
+│ │ -def get_indicator_service(user_group_service: UserGroupService) -> IndicatorService:
+│ │ -	return IndicatorService(
+│ │ +def get_objective_service(user_group_service: UserGroupService) -> ObjectiveService:
+│ │ +	return ObjectiveService(
+│ │  		user_group_service.storage, user_group_service.snowflakeGenerator, user_group_service.principalService)
+│ │  
+│ │  
+│ │  @router.get('/user_group', tags=[UserRole.ADMIN], response_model=UserGroup)
+│ │  async def load_user_group_by_id(
+│ │  		user_group_id: Optional[UserGroupId] = None, principal_service: PrincipalService = Depends(get_admin_principal)
+│ │  ) -> UserGroup:
+│ │ @@ -147,92 +147,92 @@
+│ │  def remove_user_group_from_spaces(
+│ │  		user_group_service: UserGroupService, user_group_id: UserGroupId, space_ids: List[SpaceId], tenant_id: TenantId
+│ │  ) -> None:
+│ │  	remove_user_group_from_holders(
+│ │  		get_space_service(user_group_service), user_group_id, space_ids, tenant_id, 'Space')
+│ │  
+│ │  
+│ │ -class SyncUserGroupChangeWithIndicator:
+│ │ +class SyncUserGroupChangeWithObjective:
+│ │  	# noinspection PyMethodMayBeStatic
+│ │ -	def has_user_group_id(self, indicator: Indicator, user_group_id: UserGroupId) -> bool:
+│ │ -		if indicator.groupIds is None:
+│ │ +	def has_user_group_id(self, objective: Objective, user_group_id: UserGroupId) -> bool:
+│ │ +		if objective.groupIds is None:
+│ │  			return False
+│ │ -		elif len(indicator.groupIds) == 0:
+│ │ +		elif len(objective.groupIds) == 0:
+│ │  			return False
+│ │  		else:
+│ │ -			return user_group_id in indicator.groupIds
+│ │ +			return user_group_id in objective.groupIds
+│ │  
+│ │  	# noinspection PyMethodMayBeStatic
+│ │ -	def append_user_group_id(self, indicator: Indicator, user_group_id: UserGroupId) -> Indicator:
+│ │ -		if indicator.groupIds is None:
+│ │ -			indicator.groupIds = [user_group_id]
+│ │ +	def append_user_group_id(self, objective: Objective, user_group_id: UserGroupId) -> Objective:
+│ │ +		if objective.groupIds is None:
+│ │ +			objective.groupIds = [user_group_id]
+│ │  		else:
+│ │ -			indicator.groupIds.append(user_group_id)
+│ │ -		return indicator
+│ │ +			objective.groupIds.append(user_group_id)
+│ │ +		return objective
+│ │  
+│ │  	# noinspection PyMethodMayBeStatic
+│ │ -	def remove_user_group_id(self, indicator: Indicator, user_group_id: UserGroupId) -> Indicator:
+│ │ -		indicator.groupIds = ArrayHelper(indicator.groupIds).filter(lambda y: y != user_group_id).to_list()
+│ │ -		return indicator
+│ │ +	def remove_user_group_id(self, objective: Objective, user_group_id: UserGroupId) -> Objective:
+│ │ +		objective.groupIds = ArrayHelper(objective.groupIds).filter(lambda y: y != user_group_id).to_list()
+│ │ +		return objective
+│ │  
+│ │  	# noinspection PyMethodMayBeStatic
+│ │ -	def update_indicator(self, service: IndicatorService, indicator: Indicator) -> None:
+│ │ -		service.update(indicator)
+│ │ +	def update_objective(self, service: ObjectiveService, objective: Objective) -> None:
+│ │ +		service.update(objective)
+│ │  
+│ │  	# noinspection DuplicatedCode,PyMethodMayBeStatic
+│ │  	def sync_on_create(
+│ │ -			self, user_group_id: UserGroupId, indicator_ids: Optional[List[IndicatorId]],
+│ │ +			self, user_group_id: UserGroupId, objective_ids: Optional[List[ObjectiveId]],
+│ │  			tenant_id: TenantId, user_group_service: UserGroupService):
+│ │ -		if indicator_ids is None:
+│ │ +		if objective_ids is None:
+│ │  			return
+│ │  
+│ │ -		given_count = len(indicator_ids)
+│ │ +		given_count = len(objective_ids)
+│ │  		if given_count == 0:
+│ │  			# do nothing
+│ │  			return
+│ │  
+│ │ -		indicator_service = get_indicator_service(user_group_service)
+│ │ -		holders = indicator_service.find_by_ids(indicator_ids, tenant_id)
+│ │ +		objective_service = get_objective_service(user_group_service)
+│ │ +		holders = objective_service.find_by_ids(objective_ids, tenant_id)
+│ │  		found_count = len(holders)
+│ │  		if given_count != found_count:
+│ │ -			raise_400('Indicator ids do not match.')
+│ │ +			raise_400('Objective ids do not match.')
+│ │  
+│ │  		ArrayHelper(holders) \
+│ │  			.filter(lambda x: not self.has_user_group_id(x, user_group_id)) \
+│ │  			.map(lambda x: self.append_user_group_id(x, user_group_id)) \
+│ │ -			.each(lambda x: self.update_indicator(indicator_service, x))
+│ │ +			.each(lambda x: self.update_objective(objective_service, x))
+│ │  
+│ │  	# noinspection DuplicatedCode
+│ │  	def sync_on_update(
+│ │ -			self, user_group_id: UserGroupId, indicator_ids: Optional[List[IndicatorId]],
+│ │ -			removed_indicator_ids: Optional[List[IndicatorId]], tenant_id: TenantId,
+│ │ +			self, user_group_id: UserGroupId, objective_ids: Optional[List[ObjectiveId]],
+│ │ +			removed_objective_ids: Optional[List[ObjectiveId]], tenant_id: TenantId,
+│ │  			user_group_service: UserGroupService):
+│ │ -		if removed_indicator_ids is None:
+│ │ +		if removed_objective_ids is None:
+│ │  			return
+│ │  
+│ │ -		given_count = len(removed_indicator_ids)
+│ │ +		given_count = len(removed_objective_ids)
+│ │  		if given_count == 0:
+│ │  			# do nothing
+│ │  			return
+│ │  
+│ │ -		indicator_service = get_indicator_service(user_group_service)
+│ │ -		holders = indicator_service.find_by_ids(removed_indicator_ids, tenant_id)
+│ │ +		objective_service = get_objective_service(user_group_service)
+│ │ +		holders = objective_service.find_by_ids(removed_objective_ids, tenant_id)
+│ │  		found_count = len(holders)
+│ │  		if given_count != found_count:
+│ │ -			raise_400('Indicator ids do not match.')
+│ │ +			raise_400('Objective ids do not match.')
+│ │  
+│ │  		ArrayHelper(holders) \
+│ │  			.filter(lambda x: self.has_user_group_id(x, user_group_id)) \
+│ │  			.map(lambda x: self.remove_user_group_id(x, user_group_id)) \
+│ │ -			.each(lambda x: self.update_indicator(indicator_service, x))
+│ │ +			.each(lambda x: self.update_objective(objective_service, x))
+│ │  
+│ │ -		self.sync_on_create(user_group_id, indicator_ids, tenant_id, user_group_service)
+│ │ +		self.sync_on_create(user_group_id, objective_ids, tenant_id, user_group_service)
+│ │  
+│ │  
+│ │ -sync_user_group_change_with_indicator_handler = SyncUserGroupChangeWithIndicator()
+│ │ +sync_user_group_change_with_objective_handler = SyncUserGroupChangeWithObjective()
+│ │  
+│ │  
+│ │  # noinspection PyUnusedLocal
+│ │  def ask_save_user_group_action(
+│ │  		user_group_service: UserGroupService, principal_service: PrincipalService) -> Callable[[UserGroup], UserGroup]:
+│ │  	def action(user_group: UserGroup) -> UserGroup:
+│ │  		if user_group_service.is_storable_id_faked(user_group.userGroupId):
+│ │ @@ -247,17 +247,17 @@
+│ │  			sync_group(
+│ │  				get_user_service(user_group_service), user_group.userGroupId, user_ids, user_group.tenantId, 'User')
+│ │  			# synchronize user group to space
+│ │  			sync_group(
+│ │  				get_space_service(user_group_service), user_group.userGroupId, space_ids, user_group.tenantId,
+│ │  				'Space')
+│ │  
+│ │ -			indicator_ids = ArrayHelper(user_group.indicatorIds).distinct().to_list()
+│ │ -			sync_user_group_change_with_indicator_handler.sync_on_create(
+│ │ -				user_group.userGroupId, indicator_ids, user_group.tenantId, user_group_service)
+│ │ +			objective_ids = ArrayHelper(user_group.objectiveIds).distinct().to_list()
+│ │ +			sync_user_group_change_with_objective_handler.sync_on_create(
+│ │ +				user_group.userGroupId, objective_ids, user_group.tenantId, user_group_service)
+│ │  		else:
+│ │  			# noinspection PyTypeChecker,DuplicatedCode
+│ │  			existing_user_group: Optional[UserGroup] = user_group_service.find_by_id(user_group.userGroupId)
+│ │  			if existing_user_group is not None:
+│ │  				if existing_user_group.tenantId != user_group.tenantId:
+│ │  					raise_403()
+│ │  
+│ │ @@ -279,19 +279,19 @@
+│ │  			remove_user_group_from_spaces(
+│ │  				user_group_service, user_group.userGroupId, removed_space_ids, user_group.tenantId)
+│ │  			# synchronize user group to space
+│ │  			sync_group(
+│ │  				get_space_service(user_group_service), user_group.userGroupId, space_ids, user_group.tenantId,
+│ │  				'Space')
+│ │  
+│ │ -			indicator_ids = ArrayHelper(user_group.indicatorIds).distinct().to_list()
+│ │ -			removed_indicator_ids = ArrayHelper(existing_user_group.indicatorIds) \
+│ │ -				.difference(indicator_ids).to_list()
+│ │ -			sync_user_group_change_with_indicator_handler.sync_on_update(
+│ │ -				user_group.userGroupId, indicator_ids, removed_indicator_ids, user_group.tenantId,
+│ │ +			objective_ids = ArrayHelper(user_group.objectiveIds).distinct().to_list()
+│ │ +			removed_objective_ids = ArrayHelper(existing_user_group.objectiveIds) \
+│ │ +				.difference(objective_ids).to_list()
+│ │ +			sync_user_group_change_with_objective_handler.sync_on_update(
+│ │ +				user_group.userGroupId, objective_ids, removed_objective_ids, user_group.tenantId,
+│ │  				user_group_service)
+│ │  
+│ │  		return user_group
+│ │  
+│ │  	return action
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/admin/user_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/admin/user_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/analysis/pipeline_index_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/analysis/pipeline_index_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/analysis/topic_index_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/analysis/topic_index_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/auth/authenticate_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/auth/authenticate_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/connected_space_graphic_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/connected_space_graphic_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/connected_space_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/connected_space_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/dashboard_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/dashboard_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/report_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/report_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/console/subject_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/console/subject_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/doll.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/doll.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/gui/favorite_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/gui/favorite_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/gui/last_snapshot_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/gui/last_snapshot_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/main.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/main.py
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,10 +1,11 @@
+│ │  from watchmen_data_surface import get_data_surface_routers
+│ │  from watchmen_indicator_surface import get_indicator_surface_routers
+│ │  from watchmen_inquiry_surface import get_inquiry_surface_routers
+│ │ +from watchmen_lineage.router import lineage_router
+│ │  from watchmen_pipeline_surface import get_pipeline_surface_routers
+│ │  from watchmen_rest.system import health_router
+│ │  from watchmen_utilities import ArrayHelper
+│ │  from .admin import enumeration_router, pipeline_graphic_router, pipeline_router, space_router, synonym_topic_router, \
+│ │  	topic_router, topic_snapshot_scheduler_router, user_group_router, user_router
+│ │  from .analysis import pipeline_index_router, topic_index_router
+│ │  from .auth import authenticate_router
+│ │ @@ -14,15 +15,15 @@
+│ │  from .gui import favorite_router, last_snapshot_router
+│ │  from .meta_import import connected_space_import_router, dashboard_import_router, mix_import_router, \
+│ │  	pipeline_import_router, report_import_router, space_import_router, subject_import_router, topic_import_router, \
+│ │  	user_group_import_router, user_import_router
+│ │  from .sso.sso_router import install_sso_router
+│ │  from .system import data_source_router, external_writer_router, pat_router, plugin_router, tenant_init_router, \
+│ │  	tenant_router, operation_router, package_version_router
+│ │ -
+│ │ +from .webhook import webhook_router
+│ │  
+│ │  app = doll.construct()
+│ │  
+│ │  
+│ │  @app.on_event("startup")
+│ │  def startup():
+│ │  	doll.on_startup(app)
+│ │ @@ -48,21 +49,27 @@
+│ │  	favorite_router.router, last_snapshot_router.router,
+│ │  	# meta import
+│ │  	user_import_router.router, user_group_import_router.router,
+│ │  	space_import_router.router, topic_import_router.router, pipeline_import_router.router,
+│ │  	connected_space_import_router.router, subject_import_router.router, report_import_router.router,
+│ │  	dashboard_import_router.router,
+│ │  	mix_import_router.router,
+│ │ +	webhook_router.router,
+│ │  	# analysis
+│ │  	topic_index_router.router, pipeline_index_router.router
+│ │ +
+│ │ +
+│ │ +
+│ │  ]).each(lambda x: app.include_router(x))
+│ │  
+│ │  install_sso_router(app)
+│ │  
+│ │  ArrayHelper(get_data_surface_routers()).each(lambda x: app.include_router(x))
+│ │  ArrayHelper(get_pipeline_surface_routers()).each(lambda x: app.include_router(x))
+│ │  ArrayHelper(get_inquiry_surface_routers()).each(lambda x: app.include_router(x))
+│ │  ArrayHelper(get_indicator_surface_routers()).each(lambda x: app.include_router(x))
+│ │  
+│ │ +app.include_router(lineage_router.router)
+│ │ +
+│ │  if doll.ask_collector_enabled():
+│ │  	from watchmen_collector_surface import get_collector_surface_routers
+│ │  	ArrayHelper(get_collector_surface_routers()).each(lambda x: app.include_router(x))
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/connected_space_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/connected_space_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/dashboard_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/dashboard_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/mix_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/mix_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/pipeline_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/pipeline_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/report_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/report_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/space_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/space_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/subject_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/subject_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/topic_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/topic_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/user_group_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/user_group_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/user_import_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/user_import_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/meta_import/validator.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/meta_import/validator.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/settings.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/settings.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/saml/auth_saml_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/saml/auth_saml_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/sso/saml/saml_helper.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/sso/saml/saml_helper.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/data_source_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/data_source_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/external_writer_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/external_writer_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/operation_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/operation_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/package_version_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/package_version_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/pat_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/pat_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/plugin_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/plugin_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/tenant_init_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/tenant_init_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/tenant_router.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/tenant_router.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/system/utils.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/system/utils.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/src/watchmen_rest_doll/util/trans.py
+│ ├── +++ watchmen_rest_doll-16.5.0/src/watchmen_rest_doll/util/trans.py
+│ │┄ Files identical despite different names
+│ │   --- watchmen_rest_doll-16.4.9/PKG-INFO
+│ ├── +++ watchmen_rest_doll-16.5.0/PKG-INFO
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: watchmen-rest-doll
+│ │ -Version: 16.4.9
+│ │ +Version: 16.5.0
+│ │  Summary: 
+│ │  License: MIT
+│ │  Author: botlikes
+│ │  Author-email: 75356972+botlikes456@users.noreply.github.com
+│ │  Requires-Python: >=3.9,<4.0
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python :: 3
+│ │ @@ -34,20 +34,21 @@
+│ │  Requires-Dist: cryptography (>=36.0.2,<37.0.0) ; extra == "mysql" or extra == "sso"
+│ │  Requires-Dist: kafka-python (>=2.0.2,<3.0.0) ; extra == "kafka"
+│ │  Requires-Dist: passlib (>=1.7.4,<2.0.0)
+│ │  Requires-Dist: python-multipart (>=0.0.5,<0.0.6)
+│ │  Requires-Dist: python3-saml (>=1.14.0,<2.0.0) ; extra == "sso"
+│ │  Requires-Dist: requests (>=2.27.1,<3.0.0) ; extra == "standard-ext-writer"
+│ │  Requires-Dist: starlette-prometheus (>=0.9.0,<0.10.0) ; extra == "prometheus"
+│ │ -Requires-Dist: watchmen-collector-surface (==16.4.9) ; extra == "collector"
+│ │ -Requires-Dist: watchmen-data-surface (==16.4.9)
+│ │ -Requires-Dist: watchmen-indicator-surface (==16.4.9)
+│ │ -Requires-Dist: watchmen-inquiry-surface (==16.4.9)
+│ │ -Requires-Dist: watchmen-inquiry-trino (==16.4.9) ; extra == "trino"
+│ │ -Requires-Dist: watchmen-pipeline-surface (==16.4.9)
+│ │ -Requires-Dist: watchmen-storage-mongodb (==16.4.9) ; extra == "mongodb"
+│ │ -Requires-Dist: watchmen-storage-mssql (==16.4.9) ; extra == "mssql"
+│ │ -Requires-Dist: watchmen-storage-mysql (==16.4.9) ; extra == "mysql"
+│ │ -Requires-Dist: watchmen-storage-oracle (==16.4.9) ; extra == "oracle"
+│ │ -Requires-Dist: watchmen-storage-oss (==16.4.9) ; extra == "oss"
+│ │ -Requires-Dist: watchmen-storage-postgresql (==16.4.9) ; extra == "postgresql"
+│ │ -Requires-Dist: watchmen-storage-s3 (==16.4.9) ; extra == "s3"
+│ │ +Requires-Dist: watchmen-collector-surface (==16.5.0) ; extra == "collector"
+│ │ +Requires-Dist: watchmen-data-surface (==16.5.0)
+│ │ +Requires-Dist: watchmen-indicator-surface (==16.5.0)
+│ │ +Requires-Dist: watchmen-inquiry-surface (==16.5.0)
+│ │ +Requires-Dist: watchmen-inquiry-trino (==16.5.0) ; extra == "trino"
+│ │ +Requires-Dist: watchmen-lineage (==16.5.0)
+│ │ +Requires-Dist: watchmen-pipeline-surface (==16.5.0)
+│ │ +Requires-Dist: watchmen-storage-mongodb (==16.5.0) ; extra == "mongodb"
+│ │ +Requires-Dist: watchmen-storage-mssql (==16.5.0) ; extra == "mssql"
+│ │ +Requires-Dist: watchmen-storage-mysql (==16.5.0) ; extra == "mysql"
+│ │ +Requires-Dist: watchmen-storage-oracle (==16.5.0) ; extra == "oracle"
+│ │ +Requires-Dist: watchmen-storage-oss (==16.5.0) ; extra == "oss"
+│ │ +Requires-Dist: watchmen-storage-postgresql (==16.5.0) ; extra == "postgresql"
+│ │ +Requires-Dist: watchmen-storage-s3 (==16.5.0) ; extra == "s3"
