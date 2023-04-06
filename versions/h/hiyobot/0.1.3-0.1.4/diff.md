@@ -1,0 +1,144 @@
+# Comparing `tmp/hiyobot-0.1.3.tar.gz` & `tmp/hiyobot-0.1.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "hiyobot-0.1.3.tar", last modified: Sat Apr  1 16:17:21 2023, max compression
++gzip compressed data, was "hiyobot-0.1.4.tar", last modified: Thu Apr  6 13:24:27 2023, max compression
+```
+
+## Comparing `hiyobot-0.1.3.tar` & `hiyobot-0.1.4.tar`
+
+### file list
+
+```diff
+@@ -1,14 +1,14 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 16:17:21.604243 hiyobot-0.1.3/
+--rw-r--r--   0 runner    (1001) docker     (123)    18092 2023-04-01 16:17:07.000000 hiyobot-0.1.3/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-04-01 16:17:21.604243 hiyobot-0.1.3/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1552 2023-04-01 16:17:07.000000 hiyobot-0.1.3/README.md
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 16:17:21.604243 hiyobot-0.1.3/hiyobot/
+--rw-r--r--   0 runner    (1001) docker     (123)     7539 2023-04-01 16:17:07.000000 hiyobot-0.1.3/hiyobot/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-01 16:17:21.604243 hiyobot-0.1.3/hiyobot.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     2130 2023-04-01 16:17:21.000000 hiyobot-0.1.3/hiyobot.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)      200 2023-04-01 16:17:21.000000 hiyobot-0.1.3/hiyobot.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-01 16:17:21.000000 hiyobot-0.1.3/hiyobot.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)      114 2023-04-01 16:17:21.000000 hiyobot-0.1.3/hiyobot.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-01 16:17:21.000000 hiyobot-0.1.3/hiyobot.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-01 16:17:21.604243 hiyobot-0.1.3/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (123)     1986 2023-04-01 16:17:07.000000 hiyobot-0.1.3/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:24:27.964928 hiyobot-0.1.4/
++-rw-r--r--   0 runner    (1001) docker     (123)    18092 2023-04-06 13:24:16.000000 hiyobot-0.1.4/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)     3235 2023-04-06 13:24:27.964928 hiyobot-0.1.4/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     2658 2023-04-06 13:24:16.000000 hiyobot-0.1.4/README.md
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:24:27.964928 hiyobot-0.1.4/hiyobot/
++-rw-r--r--   0 runner    (1001) docker     (123)     7804 2023-04-06 13:24:16.000000 hiyobot-0.1.4/hiyobot/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-06 13:24:27.964928 hiyobot-0.1.4/hiyobot.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     3235 2023-04-06 13:24:27.000000 hiyobot-0.1.4/hiyobot.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)      200 2023-04-06 13:24:27.000000 hiyobot-0.1.4/hiyobot.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-06 13:24:27.000000 hiyobot-0.1.4/hiyobot.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      114 2023-04-06 13:24:27.000000 hiyobot-0.1.4/hiyobot.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        8 2023-04-06 13:24:27.000000 hiyobot-0.1.4/hiyobot.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-06 13:24:27.964928 hiyobot-0.1.4/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     1986 2023-04-06 13:24:16.000000 hiyobot-0.1.4/setup.py
+```
+
+### Comparing `hiyobot-0.1.3/LICENSE` & `hiyobot-0.1.4/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `hiyobot-0.1.3/hiyobot/__init__.py` & `hiyobot-0.1.4/hiyobot/__init__.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ import websocket,ssl,json,threading,uuid,time,logging,re,traceback
+ from functools import wraps
+-HIYOBOT_VERSION=(0,1,3)
++HIYOBOT_VERSION=(0,1,4)
+ MAX_RECV_LOG_LIMIT=100 #0 for no limit
+ class Bot:
+     def __init__(self,channel,nick,password=None) -> None:
+         self.channel,self.nick,self.password=channel,nick,password
+         self.events=[]
+         self.checks=[]
+         self.config={}
+@@ -23,14 +23,18 @@
+                     logging.debug(f"Matched! Function={func} Matcher={matcher}")
+                     return func(session=session, data=data, *args, **kwargs)
+                 else:
+                     return None
+             self.events.append(wrapper)
+             return wrapper
+         return decorate
++    def _pingThread(self):
++        while 1:
++            self.ws.send('{"cmd":"ping"}')
++            time.sleep(60)
+     def _bindRaw(self,function):
+         self.events.append(function)
+         logging.debug(f"Restigered Event-Function {function} for bot {self}")
+     def load_plugin(self,plugin_name):
+         #process the plugin name
+         logging.debug("Ready for include module")
+         plugin_name=plugin_name.replace("-","_")
+@@ -80,20 +84,23 @@
+                     except Exception as e:
+                         logging.warn(f"Error when processing Event {event}")
+                         traceback.print_exc()
+             if async_run:
+                 threading.Thread(target=process,args=(data,)).start()
+             else:
+                 process(data)
+-    def run(self,async_mission=True,in_new_thread=False):
++    def run(self,async_mission=True,in_new_thread=False,ping_thread=True):
+         if in_new_thread:
+             self.thread=threading.Thread(target=self._run,args=(async_mission,))
+             self.thread.start()
+         else:
+             self._run(async_mission)
++        if ping_thread:
++            self.ping_thread=threading.Thread(target=self._pingThread)
++            self.ping_thread.start()
+ class Matcher:
+     def __init__(self,rule):
+         self.rules=[]
+         
+         if rule == list:
+             self.rules=list
+         else:
+@@ -191,7 +198,9 @@
+             return wrapper
+         return decorate
+     def build_exports(self):
+         logging.debug(f"Built exports for plugin {self}")
+         return self.commands
+ if __name__ == "__main__":
+     raise Exception("Cannot run module as script!")
++
++
+```
+
+### Comparing `hiyobot-0.1.3/setup.py` & `hiyobot-0.1.4/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ from setuptools import setup, find_packages
+ 
+ setup(
+     name='hiyobot', # 你的项目名称
+-    version='0.1.3', # 你的项目版本
++    version='0.1.4', # 你的项目版本
+     description='A simple bot framework for Hack.chat.', # 你的项目简介
+     long_description=open('README.md').read(), # 你的项目详细介绍，一般从README.md文件中读取
+     long_description_content_type='text/markdown', # 你的项目详细介绍的格式，一般为markdown格式
+     url='https://github.com/Hiyoteam/hiyobot', # 你的项目主页，一般为github仓库地址
+     author='MaggieLOL', # 你的姓名或者团队名称
+     author_email='tanhanzesnd@gmail.com', # 你的邮箱或者团队邮箱
+     license='GPL-2.0', # 你的项目使用的许可证，一般为MIT或者其他开源许可证
+```
+

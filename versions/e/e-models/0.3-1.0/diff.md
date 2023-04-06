@@ -1,0 +1,297 @@
+# Comparing `tmp/e-models-0.3.tar.gz` & `tmp/e-models-1.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "e-models-0.3.tar", last modified: Fri Mar 31 15:24:15 2023, max compression
++gzip compressed data, was "e-models-1.0.tar", last modified: Thu Apr  6 13:24:57 2023, max compression
+```
+
+## Comparing `e-models-0.3.tar` & `e-models-1.0.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,26 @@
+-drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-03-31 15:24:15.674946 e-models-0.3/
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     1501 2023-03-30 21:13:00.000000 e-models-0.3/LICENSE
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      623 2023-03-31 15:24:15.674946 e-models-0.3/PKG-INFO
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       85 2023-03-30 21:22:34.000000 e-models-0.3/README.md
+-drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-03-31 15:24:15.674946 e-models-0.3/e_models.egg-info/
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      623 2023-03-31 15:24:15.000000 e-models-0.3/e_models.egg-info/PKG-INFO
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      260 2023-03-31 15:24:15.000000 e-models-0.3/e_models.egg-info/SOURCES.txt
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        1 2023-03-31 15:24:15.000000 e-models-0.3/e_models.egg-info/dependency_links.txt
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       27 2023-03-31 15:24:15.000000 e-models-0.3/e_models.egg-info/requires.txt
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        8 2023-03-31 15:24:15.000000 e-models-0.3/e_models.egg-info/top_level.txt
+-drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-03-31 15:24:15.674946 e-models-0.3/emodels/
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       21 2023-03-31 15:23:03.000000 e-models-0.3/emodels/__init__.py
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        0 2023-03-30 21:13:53.000000 e-models-0.3/emodels/py.typed
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     4003 2023-03-31 14:26:33.000000 e-models-0.3/emodels/scrapyutils.py
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       31 2023-03-30 21:32:48.000000 e-models-0.3/pyproject.toml
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       38 2023-03-31 15:24:15.674946 e-models-0.3/setup.cfg
+--rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      947 2023-03-31 15:22:55.000000 e-models-0.3/setup.py
++drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-04-06 13:24:57.329274 e-models-1.0/
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     1501 2023-03-30 21:13:00.000000 e-models-1.0/LICENSE
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     3023 2023-04-06 13:24:57.329274 e-models-1.0/PKG-INFO
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     2485 2023-04-06 13:23:40.000000 e-models-1.0/README.md
++drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-04-06 13:24:57.329274 e-models-1.0/e_models.egg-info/
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     3023 2023-04-06 13:24:57.000000 e-models-1.0/e_models.egg-info/PKG-INFO
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      447 2023-04-06 13:24:57.000000 e-models-1.0/e_models.egg-info/SOURCES.txt
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        1 2023-04-06 13:24:57.000000 e-models-1.0/e_models.egg-info/dependency_links.txt
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       17 2023-04-06 13:24:57.000000 e-models-1.0/e_models.egg-info/requires.txt
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        8 2023-04-06 13:24:57.000000 e-models-1.0/e_models.egg-info/top_level.txt
++drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-04-06 13:24:57.329274 e-models-1.0/emodels/
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       20 2023-04-06 13:24:15.000000 e-models-1.0/emodels/__init__.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      319 2023-04-02 14:00:26.000000 e-models-1.0/emodels/config.py
++drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-04-06 13:24:57.329274 e-models-1.0/emodels/html2text/
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)    34179 2023-04-05 19:57:01.000000 e-models-1.0/emodels/html2text/__init__.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     3841 2023-04-01 19:54:46.000000 e-models-1.0/emodels/html2text/config.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      423 2023-04-01 19:52:48.000000 e-models-1.0/emodels/html2text/elements.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       71 2023-04-01 19:52:48.000000 e-models-1.0/emodels/html2text/typing.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     8034 2023-04-01 19:58:24.000000 e-models-1.0/emodels/html2text/utils.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)        0 2023-03-30 21:13:53.000000 e-models-1.0/emodels/py.typed
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     6564 2023-04-05 19:51:44.000000 e-models-1.0/emodels/scrapyutils.py
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       31 2023-03-30 21:32:48.000000 e-models-1.0/pyproject.toml
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)       38 2023-04-06 13:24:57.329274 e-models-1.0/setup.cfg
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)      926 2023-04-06 13:24:05.000000 e-models-1.0/setup.py
++drwxrwxr-x   0 molveyra  (1001) molveyra  (1001)        0 2023-04-06 13:24:57.329274 e-models-1.0/tests/
++-rw-rw-r--   0 molveyra  (1001) molveyra  (1001)     7860 2023-04-05 19:54:34.000000 e-models-1.0/tests/test_scrapyutils.py
+```
+
+### Comparing `e-models-0.3/LICENSE` & `e-models-1.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `e-models-0.3/emodels/scrapyutils.py` & `e-models-1.0/emodels/scrapyutils.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,35 +1,58 @@
+ import re
+-from typing import NewType, Dict, Tuple, List
++import os
++import json
++import gzip
++from typing import NewType, Dict, Tuple, List, Optional
+ 
+-import html2text
+ from markdown2 import Markdown
+ 
+ from scrapy.loader import ItemLoader
+ from scrapy.http import TextResponse
+-from scrapy import Item, Field
++from scrapy import Item
++
++from emodels.config import EMODELS_ITEMS_DIR, EMODELS_SAVE_EXTRACT_ITEMS
++from emodels import html2text
+ 
+ 
+ MARKDOWN_LINK_RE = re.compile(r"\[(.+?)\]\((.+?)\s*(\".+\")?\)")
+ LINK_RSTRIP_RE = re.compile("(%20)+$")
+ LINK_LSTRIP_RE = re.compile("^(%20)+")
++COMMENT_RE = re.compile(r"\s<!--.+?-->")
++DEFAULT_SKIP_PREFIX = "[^a-zA-Z0-9$]*"
+ 
+ 
+ class ExtractTextResponse(TextResponse):
+     def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self._markdown = None
++        self._markdown_ids = None
++        self._markdown_classes = None
+ 
+     @property
+     def markdown(self):
+         if self._markdown is None:
+             h2t = html2text.HTML2Text(baseurl=self.url, bodywidth=0)
+             self._markdown = self._clean_markdown(h2t.handle(self.text))
+         return self._markdown
+ 
++    @property
++    def markdown_ids(self):
++        if self._markdown_ids is None:
++            h2t = html2text.HTML2Text(baseurl=self.url, bodywidth=0, ids=True)
++            self._markdown_ids = self._clean_markdown(h2t.handle(self.text))
++        return self._markdown_ids
++
++    @property
++    def markdown_classes(self):
++        if self._markdown_classes is None:
++            h2t = html2text.HTML2Text(baseurl=self.url, bodywidth=0, classes=True)
++            self._markdown_classes = self._clean_markdown(h2t.handle(self.text))
++        return self._markdown_classes
++
+     def css_split(self, selector: str) -> List[TextResponse]:
+         """Generate multiple responses from provided css selector"""
+         result = []
+         for html in self.css(selector).extract():
+             new = self.replace(body=html.encode("utf-8"))
+             result.append(new)
+         return result
+@@ -52,64 +75,107 @@
+                 link_orig = md[start:end]
+                 link = LINK_RSTRIP_RE.sub("", link_orig)
+                 link = LINK_LSTRIP_RE.sub("", link)
+                 md = md[:start] + link + md[end:]
+                 shrink += len(link_orig) - len(link)
+         return md
+ 
+-    def text_re(self, reg: str, flags: int = 0):
++    def text_re(
++        self,
++        reg: str = "(.+?)",
++        tid: Optional[str] = None,
++        flags: int = 0,
++        skip_prefix: str = DEFAULT_SKIP_PREFIX,
++        strict_tid: bool = False,
++    ):
++        if strict_tid:
++            reg = f"(?:.*<!--.+-->)?{reg}"
++        reg = f"{skip_prefix}{reg}"
++        markdown = self.markdown
++        if tid:
++            reg += fr"\s+<!--{tid}-->"
++            if tid.startswith("#"):
++                markdown = self.markdown_ids
++            elif tid.startswith("."):
++                markdown = self.markdown_classes
+         result = []
+-        for m in re.finditer(reg, self.markdown, flags):
++        for m in re.finditer(reg, markdown, flags):
+             if m.groups():
+                 extracted = m.groups()[0]
+                 start = m.start(1)
+                 end = m.end(1)
+             else:
+                 extracted = m.group()
+                 start = m.start()
+                 end = m.end()
+             start += len(extracted) - len(extracted.lstrip())
+             end -= len(extracted) - len(extracted.rstrip())
+             extracted = extracted.strip()
+             if extracted:
++                if tid is not None:
++                    new_extracted = COMMENT_RE.sub("", extracted).strip()
++                    end -= len(extracted) - len(new_extracted)
++                    extracted = new_extracted
++                    accum = 0
++                    for m in COMMENT_RE.finditer(markdown[:start]):
++                        comment_len = m.end() - m.start()
++                        accum += comment_len
++                    start -= accum
++                    end -= accum
+                 result.append((extracted, start, end))
+         return result
+ 
+ 
+ ExtractDict = NewType("ExtractDict", Dict[str, Tuple[int, int]])
+ 
+ 
+-class ExtractItem(Item):
+-
+-    _markdown = Field()
+-    _extract_indexes = Field()
+-
+-
+ class ExtractItemLoader(ItemLoader):
+     def __init__(self, *args, **kwargs):
+-        assert issubclass(
+-            self.default_item_class, ExtractItem
+-        ), "Loader item class must be a subclass of ExtractItem"
+         super().__init__(*args, **kwargs)
+         assert "response" in self.context, '"response" is required.'
++        if not isinstance(self.context["response"], ExtractTextResponse):
++            self.context["response"] = self.context["response"].replace(cls=ExtractTextResponse)
+         self.extract_indexes: ExtractDict = ExtractDict({})
+         self._mconverter = Markdown()
+ 
+-    def add_text_re(self, attr: str, reg: str, flags: int = 0, *processors, **kw):
+-        extracted = self.context["response"].text_re(reg, flags)
++    def add_text_re(
++        self,
++        attr: str,
++        reg: str = "(.+?)",
++        tid: Optional[str] = None,
++        flags: int = 0,
++        skip_prefix: str = DEFAULT_SKIP_PREFIX,
++        strict_tid: bool = False,
++        *processors,
++        **kw,
++    ):
++        extracted = self.context["response"].text_re(
++            reg=reg, tid=tid, flags=flags, skip_prefix=skip_prefix, strict_tid=strict_tid
++        )
+         if extracted:
+             t, s, e = extracted[0]
+-            self.add_value(attr, t, *processors, **kw)
+-            self.extract_indexes[attr] = (s, e)
++            if attr not in self.extract_indexes:
++                self.extract_indexes[attr] = (s, e)
++                self.add_value(attr, t, *processors, **kw)
+ 
+     def add_text_re_as_html(self, attr: str, reg: str, flags: int = 0, *processors, **kw):
+-        extracted = self.context["response"].text_re(reg, flags)
++        extracted = self.context["response"].text_re(reg, flags=flags)
+         if extracted:
+             t, s, e = extracted[0]
+-            self.add_value(attr, self._mconverter.convert(t), *processors, **kw)
+-            self.extract_indexes[attr] = (s, e)
++            if attr not in self.extract_indexes:
++                cleaned = self._mconverter.convert(t).strip()
++                self.add_value(attr, cleaned, *processors, **kw)
++                self.extract_indexes[attr] = (s, e)
+ 
+-    def load_item(self) -> ExtractItem:
++    def load_item(self) -> Item:
+         item = super().load_item()
+-        item["_extract_indexes"] = self.extract_indexes
+-        item["_markdown"] = self.context["response"].markdown
++        self._save_extract_sample(item.__class__.__name__)
+         return item
++
++    def _save_extract_sample(self, clsname: str):
++        if EMODELS_SAVE_EXTRACT_ITEMS and self.extract_indexes:
++            sample = {
++                "indexes": self.extract_indexes,
++                "markdown": self.context["response"].markdown,
++            }
++            with gzip.open(os.path.join(EMODELS_ITEMS_DIR, f"{clsname}.jl.gz"), "at") as fz:
++                print(json.dumps(sample), file=fz)
+```
+
+### Comparing `e-models-0.3/setup.py` & `e-models-1.0/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,25 +1,24 @@
+ # Automatically created by: shub deploy
+ 
+ from setuptools import setup, find_packages
+ 
+ setup(
+     name         = 'e-models',
+-    version      = '0.3',
++    version      = '1.0',
+     description  = 'Tools for helping build of extraction models with scrapy spiders.',
+     long_description = open('README.md').read(),
+     long_description_content_type = 'text/markdown',
+     license      = 'BSD',
+     author       = 'Martin Olveyra',
+     author_email = 'molveyra@gmail.com',
+     url          = 'https://github.com/kalessin/emodels',
+     packages     = find_packages(),
+     install_requires=(
+         "scrapy",
+-        "html2text",
+         "markdown2",
+     ),
+     scripts = [],
+     classifiers = [
+         'Development Status :: 3 - Alpha',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: BSD License',
+```
+

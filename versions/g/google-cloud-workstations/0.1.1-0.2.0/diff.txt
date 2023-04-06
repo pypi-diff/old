@@ -1,0 +1,353 @@
+--- tmp/google-cloud-workstations-0.1.1.tar.gz
++++ tmp/google-cloud-workstations-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "google-cloud-workstations-0.1.1.tar", last modified: Mon Mar 27 14:58:51 2023, max compression
+│ +gzip compressed data, was "google-cloud-workstations-0.2.0.tar", last modified: Thu Apr  6 13:28:19 2023, max compression
+│   --- google-cloud-workstations-0.1.1.tar
+├── +++ google-cloud-workstations-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,51 +1,75 @@
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.137439 google-cloud-workstations-0.1.1/
+│ │ --rw-rw-r--   0 root         (0)     1003    11358 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/LICENSE
+│ │ --rw-rw-r--   0 root         (0)     1003      860 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/MANIFEST.in
+│ │ --rw-r--r--   0 root         (0)     1003     4600 2023-03-27 14:58:51.137439 google-cloud-workstations-0.1.1/PKG-INFO
+│ │ --rw-rw-r--   0 root         (0)     1003     3682 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/README.rst
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.129438 google-cloud-workstations-0.1.1/google/
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.129438 google-cloud-workstations-0.1.1/google/cloud/
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.129438 google-cloud-workstations-0.1.1/google/cloud/workstations/
+│ │ --rw-rw-r--   0 root         (0)     1003     3069 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003      653 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations/gapic_version.py
+│ │ --rw-rw-r--   0 root         (0)     1003       86 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations/py.typed
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.129438 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/
+│ │ --rw-rw-r--   0 root         (0)     1003     2908 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003     8916 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/gapic_metadata.json
+│ │ --rw-rw-r--   0 root         (0)     1003      653 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/gapic_version.py
+│ │ --rw-rw-r--   0 root         (0)     1003       86 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/py.typed
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.129438 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/
+│ │ --rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/__init__.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/
+│ │ --rw-rw-r--   0 root         (0)     1003      761 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003   129831 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/async_client.py
+│ │ --rw-rw-r--   0 root         (0)     1003   141050 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/client.py
+│ │ --rw-rw-r--   0 root         (0)     1003    27504 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/pagers.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/
+│ │ --rw-rw-r--   0 root         (0)     1003     1372 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003    20465 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/base.py
+│ │ --rw-rw-r--   0 root         (0)     1003    43078 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/grpc.py
+│ │ --rw-rw-r--   0 root         (0)     1003    43909 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/grpc_asyncio.py
+│ │ --rw-rw-r--   0 root         (0)     1003   142768 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/rest.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/types/
+│ │ --rw-rw-r--   0 root         (0)     1003     2643 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/types/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003    54082 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/types/workstations.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/
+│ │ --rw-r--r--   0 root         (0)     1003     4600 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 root         (0)     1003     1682 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 root         (0)     1003        1 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 root         (0)     1003       20 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/namespace_packages.txt
+│ │ --rw-r--r--   0 root         (0)     1003        1 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/not-zip-safe
+│ │ --rw-r--r--   0 root         (0)     1003      352 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/requires.txt
+│ │ --rw-r--r--   0 root         (0)     1003        7 2023-03-27 14:58:51.000000 google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/top_level.txt
+│ │ --rw-r--r--   0 root         (0)     1003       38 2023-03-27 14:58:51.137439 google-cloud-workstations-0.1.1/setup.cfg
+│ │ --rw-rw-r--   0 root         (0)     1003     2994 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/setup.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/tests/
+│ │ --rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/tests/__init__.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/tests/unit/
+│ │ --rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/tests/unit/__init__.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.133439 google-cloud-workstations-0.1.1/tests/unit/gapic/
+│ │ --rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/tests/unit/gapic/__init__.py
+│ │ -drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:51.137439 google-cloud-workstations-0.1.1/tests/unit/gapic/workstations_v1beta/
+│ │ --rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/tests/unit/gapic/workstations_v1beta/__init__.py
+│ │ --rw-rw-r--   0 root         (0)     1003   567385 2023-03-27 14:55:35.000000 google-cloud-workstations-0.1.1/tests/unit/gapic/workstations_v1beta/test_workstations.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.547753 google-cloud-workstations-0.2.0/
+│ │ +-rw-rw-r--   0 root         (0)     1003    11358 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/LICENSE
+│ │ +-rw-rw-r--   0 root         (0)     1003      860 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/MANIFEST.in
+│ │ +-rw-r--r--   0 root         (0)     1003     4600 2023-04-06 13:28:19.547753 google-cloud-workstations-0.2.0/PKG-INFO
+│ │ +-rw-rw-r--   0 root         (0)     1003     3682 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/README.rst
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.531751 google-cloud-workstations-0.2.0/google/
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.531751 google-cloud-workstations-0.2.0/google/cloud/
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.535751 google-cloud-workstations-0.2.0/google/cloud/workstations/
+│ │ +-rw-rw-r--   0 root         (0)     1003     3048 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003      653 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations/gapic_version.py
+│ │ +-rw-rw-r--   0 root         (0)     1003       86 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations/py.typed
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.535751 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/
+│ │ +-rw-rw-r--   0 root         (0)     1003     2904 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003     8908 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/gapic_metadata.json
+│ │ +-rw-rw-r--   0 root         (0)     1003      653 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/gapic_version.py
+│ │ +-rw-rw-r--   0 root         (0)     1003       86 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/py.typed
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.535751 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/__init__.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.535751 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/
+│ │ +-rw-rw-r--   0 root         (0)     1003      761 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   129387 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/async_client.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   140606 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/client.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    27340 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/pagers.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.535751 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/
+│ │ +-rw-rw-r--   0 root         (0)     1003     1372 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    20457 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/base.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    42986 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/grpc.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    43817 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/grpc_asyncio.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   142624 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/rest.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.539752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/types/
+│ │ +-rw-rw-r--   0 root         (0)     1003     2643 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/types/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    54336 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1/types/workstations.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.539752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/
+│ │ +-rw-rw-r--   0 root         (0)     1003     2908 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003     8916 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/gapic_metadata.json
+│ │ +-rw-rw-r--   0 root         (0)     1003      653 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/gapic_version.py
+│ │ +-rw-rw-r--   0 root         (0)     1003       86 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/py.typed
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.539752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/__init__.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.539752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/
+│ │ +-rw-rw-r--   0 root         (0)     1003      761 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   129831 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/async_client.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   141050 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/client.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    27504 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/pagers.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.539752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/
+│ │ +-rw-rw-r--   0 root         (0)     1003     1372 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    20465 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/base.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    43078 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/grpc.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    43909 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/grpc_asyncio.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   142768 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/rest.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/types/
+│ │ +-rw-rw-r--   0 root         (0)     1003     2643 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/types/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003    54082 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/types/workstations.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/
+│ │ +-rw-r--r--   0 root         (0)     1003     4600 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 root         (0)     1003     2717 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 root         (0)     1003        1 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 root         (0)     1003       20 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/namespace_packages.txt
+│ │ +-rw-r--r--   0 root         (0)     1003        1 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/not-zip-safe
+│ │ +-rw-r--r--   0 root         (0)     1003      352 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/requires.txt
+│ │ +-rw-r--r--   0 root         (0)     1003        7 2023-04-06 13:28:19.000000 google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 root         (0)     1003       38 2023-04-06 13:28:19.547753 google-cloud-workstations-0.2.0/setup.cfg
+│ │ +-rw-rw-r--   0 root         (0)     1003     2994 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/setup.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/tests/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/__init__.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/tests/unit/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/__init__.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/tests/unit/gapic/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/gapic/__init__.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   567497 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1/test_workstations.py
+│ │ +drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:19.543752 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1beta/
+│ │ +-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1beta/__init__.py
+│ │ +-rw-rw-r--   0 root         (0)     1003   567385 2023-04-06 13:25:25.000000 google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1beta/test_workstations.py
+│ │   --- google-cloud-workstations-0.1.1/LICENSE
+│ ├── +++ google-cloud-workstations-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/MANIFEST.in
+│ ├── +++ google-cloud-workstations-0.2.0/MANIFEST.in
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/PKG-INFO
+│ ├── +++ google-cloud-workstations-0.2.0/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: google-cloud-workstations
+│ │ -Version: 0.1.1
+│ │ +Version: 0.2.0
+│ │  Summary: Google Cloud Workstations API client library
+│ │  Home-page: https://github.com/googleapis/google-cloud-python
+│ │  Author: Google LLC
+│ │  Author-email: googleapis-packages@google.com
+│ │  License: Apache 2.0
+│ │  Platform: Posix; MacOS X; Windows
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- google-cloud-workstations-0.1.1/README.rst
+│ ├── +++ google-cloud-workstations-0.2.0/README.rst
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -14,21 +14,19 @@
+│ │  # limitations under the License.
+│ │  #
+│ │  from google.cloud.workstations import gapic_version as package_version
+│ │  
+│ │  __version__ = package_version.__version__
+│ │  
+│ │  
+│ │ -from google.cloud.workstations_v1beta.services.workstations.async_client import (
+│ │ +from google.cloud.workstations_v1.services.workstations.async_client import (
+│ │      WorkstationsAsyncClient,
+│ │  )
+│ │ -from google.cloud.workstations_v1beta.services.workstations.client import (
+│ │ -    WorkstationsClient,
+│ │ -)
+│ │ -from google.cloud.workstations_v1beta.types.workstations import (
+│ │ +from google.cloud.workstations_v1.services.workstations.client import WorkstationsClient
+│ │ +from google.cloud.workstations_v1.types.workstations import (
+│ │      CreateWorkstationClusterRequest,
+│ │      CreateWorkstationConfigRequest,
+│ │      CreateWorkstationRequest,
+│ │      DeleteWorkstationClusterRequest,
+│ │      DeleteWorkstationConfigRequest,
+│ │      DeleteWorkstationRequest,
+│ │      GenerateAccessTokenRequest,
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations/gapic_version.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/__init__.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,17 +1,15 @@
+│ │  # -*- coding: utf-8 -*-
+│ │ -# Copyright 2023 Google LLC
+│ │ +# Copyright 2022 Google LLC
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  #
+│ │ -
+│ │ -__version__ = "0.1.1"  # {x-release-please-version}
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/gapic_metadata.json
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/gapic_metadata.json
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/gapic_version.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/__init__.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,17 +1,15 @@
+│ │  # -*- coding: utf-8 -*-
+│ │ -# Copyright 2023 Google LLC
+│ │ +# Copyright 2022 Google LLC
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #     http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  #
+│ │ -
+│ │ -__version__ = "0.1.1"  # {x-release-please-version}
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/async_client.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/async_client.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/client.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/client.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/pagers.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/pagers.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1/services/workstations/transports/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/base.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/base.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/grpc.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/grpc.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/grpc_asyncio.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/grpc_asyncio.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/services/workstations/transports/rest.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/services/workstations/transports/rest.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/types/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1/types/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google/cloud/workstations_v1beta/types/workstations.py
+│ ├── +++ google-cloud-workstations-0.2.0/google/cloud/workstations_v1beta/types/workstations.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/PKG-INFO
+│ ├── +++ google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: google-cloud-workstations
+│ │ -Version: 0.1.1
+│ │ +Version: 0.2.0
+│ │  Summary: Google Cloud Workstations API client library
+│ │  Home-page: https://github.com/googleapis/google-cloud-python
+│ │  Author: Google LLC
+│ │  Author-email: googleapis-packages@google.com
+│ │  License: Apache 2.0
+│ │  Platform: Posix; MacOS X; Windows
+│ │  Classifier: Development Status :: 4 - Beta
+│ │   --- google-cloud-workstations-0.1.1/google_cloud_workstations.egg-info/SOURCES.txt
+│ ├── +++ google-cloud-workstations-0.2.0/google_cloud_workstations.egg-info/SOURCES.txt
+│ │┄ Files 25% similar despite different names
+│ │ @@ -1,14 +1,30 @@
+│ │  LICENSE
+│ │  MANIFEST.in
+│ │  README.rst
+│ │  setup.py
+│ │  google/cloud/workstations/__init__.py
+│ │  google/cloud/workstations/gapic_version.py
+│ │  google/cloud/workstations/py.typed
+│ │ +google/cloud/workstations_v1/__init__.py
+│ │ +google/cloud/workstations_v1/gapic_metadata.json
+│ │ +google/cloud/workstations_v1/gapic_version.py
+│ │ +google/cloud/workstations_v1/py.typed
+│ │ +google/cloud/workstations_v1/services/__init__.py
+│ │ +google/cloud/workstations_v1/services/workstations/__init__.py
+│ │ +google/cloud/workstations_v1/services/workstations/async_client.py
+│ │ +google/cloud/workstations_v1/services/workstations/client.py
+│ │ +google/cloud/workstations_v1/services/workstations/pagers.py
+│ │ +google/cloud/workstations_v1/services/workstations/transports/__init__.py
+│ │ +google/cloud/workstations_v1/services/workstations/transports/base.py
+│ │ +google/cloud/workstations_v1/services/workstations/transports/grpc.py
+│ │ +google/cloud/workstations_v1/services/workstations/transports/grpc_asyncio.py
+│ │ +google/cloud/workstations_v1/services/workstations/transports/rest.py
+│ │ +google/cloud/workstations_v1/types/__init__.py
+│ │ +google/cloud/workstations_v1/types/workstations.py
+│ │  google/cloud/workstations_v1beta/__init__.py
+│ │  google/cloud/workstations_v1beta/gapic_metadata.json
+│ │  google/cloud/workstations_v1beta/gapic_version.py
+│ │  google/cloud/workstations_v1beta/py.typed
+│ │  google/cloud/workstations_v1beta/services/__init__.py
+│ │  google/cloud/workstations_v1beta/services/workstations/__init__.py
+│ │  google/cloud/workstations_v1beta/services/workstations/async_client.py
+│ │ @@ -27,9 +43,11 @@
+│ │  google_cloud_workstations.egg-info/namespace_packages.txt
+│ │  google_cloud_workstations.egg-info/not-zip-safe
+│ │  google_cloud_workstations.egg-info/requires.txt
+│ │  google_cloud_workstations.egg-info/top_level.txt
+│ │  tests/__init__.py
+│ │  tests/unit/__init__.py
+│ │  tests/unit/gapic/__init__.py
+│ │ +tests/unit/gapic/workstations_v1/__init__.py
+│ │ +tests/unit/gapic/workstations_v1/test_workstations.py
+│ │  tests/unit/gapic/workstations_v1beta/__init__.py
+│ │  tests/unit/gapic/workstations_v1beta/test_workstations.py
+│ │   --- google-cloud-workstations-0.1.1/setup.py
+│ ├── +++ google-cloud-workstations-0.2.0/setup.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/tests/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/unit/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/tests/unit/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/unit/gapic/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/tests/unit/gapic/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/tests/unit/gapic/workstations_v1beta/__init__.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1beta/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- google-cloud-workstations-0.1.1/tests/unit/gapic/workstations_v1beta/test_workstations.py
+│ ├── +++ google-cloud-workstations-0.2.0/tests/unit/gapic/workstations_v1beta/test_workstations.py
+│ │┄ Files identical despite different names

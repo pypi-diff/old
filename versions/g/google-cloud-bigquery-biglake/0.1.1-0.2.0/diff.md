@@ -1,0 +1,2376 @@
+# Comparing `tmp/google-cloud-bigquery-biglake-0.1.1.tar.gz` & `tmp/google-cloud-bigquery-biglake-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "google-cloud-bigquery-biglake-0.1.1.tar", last modified: Mon Mar 27 14:58:23 2023, max compression
++gzip compressed data, was "google-cloud-bigquery-biglake-0.2.0.tar", last modified: Thu Apr  6 13:28:14 2023, max compression
+```
+
+## Comparing `google-cloud-bigquery-biglake-0.1.1.tar` & `google-cloud-bigquery-biglake-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,52 +1,52 @@
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.714598 google-cloud-bigquery-biglake-0.1.1/
+--rw-rw-r--   0 root         (0)     1003    11358 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/LICENSE
+--rw-rw-r--   0 root         (0)     1003      860 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/MANIFEST.in
+--rw-r--r--   0 root         (0)     1003     4685 2023-03-27 14:58:23.714598 google-cloud-bigquery-biglake-0.1.1/PKG-INFO
+--rw-rw-r--   0 root         (0)     1003     3759 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/README.rst
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/cloud/
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/
+--rw-rw-r--   0 root         (0)     1003     2436 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/__init__.py
+--rw-rw-r--   0 root         (0)     1003      653 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/gapic_version.py
+--rw-rw-r--   0 root         (0)     1003       90 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/py.typed
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/
+--rw-rw-r--   0 root         (0)     1003     2267 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/__init__.py
+--rw-rw-r--   0 root         (0)     1003     7096 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/gapic_metadata.json
+--rw-rw-r--   0 root         (0)     1003      653 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/gapic_version.py
+--rw-rw-r--   0 root         (0)     1003       90 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/py.typed
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.706597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/
+--rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/__init__.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/
+--rw-rw-r--   0 root         (0)     1003      777 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/__init__.py
+--rw-rw-r--   0 root         (0)     1003    90644 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/async_client.py
+--rw-rw-r--   0 root         (0)     1003   104460 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/client.py
+--rw-rw-r--   0 root         (0)     1003    20793 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/pagers.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/
+--rw-rw-r--   0 root         (0)     1003     1428 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/__init__.py
+--rw-rw-r--   0 root         (0)     1003    13143 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/base.py
+--rw-rw-r--   0 root         (0)     1003    30649 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc.py
+--rw-rw-r--   0 root         (0)     1003    31392 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc_asyncio.py
+--rw-rw-r--   0 root         (0)     1003    96125 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/rest.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/types/
+--rw-rw-r--   0 root         (0)     1003     1962 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/types/__init__.py
+--rw-rw-r--   0 root         (0)     1003    30231 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/types/metastore.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/
+--rw-r--r--   0 root         (0)     1003     4685 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/PKG-INFO
+--rw-r--r--   0 root         (0)     1003     1859 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/SOURCES.txt
+--rw-r--r--   0 root         (0)     1003        1 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/dependency_links.txt
+--rw-r--r--   0 root         (0)     1003       42 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/namespace_packages.txt
+--rw-r--r--   0 root         (0)     1003        1 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/not-zip-safe
+--rw-r--r--   0 root         (0)     1003      315 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/requires.txt
+--rw-r--r--   0 root         (0)     1003        7 2023-03-27 14:58:23.000000 google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/top_level.txt
+--rw-r--r--   0 root         (0)     1003       38 2023-03-27 14:58:23.714598 google-cloud-bigquery-biglake-0.1.1/setup.cfg
+--rw-rw-r--   0 root         (0)     1003     2984 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/setup.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/tests/
+--rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/tests/__init__.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/tests/unit/
+--rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/tests/unit/__init__.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.710597 google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/
+--rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/__init__.py
+-drwxr-sr-x   0 root         (0)     1003        0 2023-03-27 14:58:23.714598 google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/biglake_v1alpha1/
+--rw-rw-r--   0 root         (0)     1003      600 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/biglake_v1alpha1/__init__.py
+--rw-rw-r--   0 root         (0)     1003   431074 2023-03-27 14:55:35.000000 google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/biglake_v1alpha1/test_metastore_service.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/
++-rw-rw-r--   0 root         (0)     1003    11358 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/LICENSE
++-rw-rw-r--   0 root         (0)     1003      860 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/MANIFEST.in
++-rw-r--r--   0 root         (0)     1003     4685 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/PKG-INFO
++-rw-rw-r--   0 root         (0)     1003     3759 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/README.rst
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.143173 google-cloud-bigquery-biglake-0.2.0/google/
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.143173 google-cloud-bigquery-biglake-0.2.0/google/cloud/
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.143173 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.147174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake/
++-rw-rw-r--   0 root         (0)     1003     2518 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake/__init__.py
++-rw-rw-r--   0 root         (0)     1003      653 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake/gapic_version.py
++-rw-rw-r--   0 root         (0)     1003       90 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake/py.typed
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.147174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/
++-rw-rw-r--   0 root         (0)     1003     2349 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/__init__.py
++-rw-rw-r--   0 root         (0)     1003     7450 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/gapic_metadata.json
++-rw-rw-r--   0 root         (0)     1003      653 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/gapic_version.py
++-rw-rw-r--   0 root         (0)     1003       90 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/py.typed
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.147174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/
++-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/__init__.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.147174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/
++-rw-rw-r--   0 root         (0)     1003      777 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/__init__.py
++-rw-rw-r--   0 root         (0)     1003    95360 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/async_client.py
++-rw-rw-r--   0 root         (0)     1003   109333 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/client.py
++-rw-rw-r--   0 root         (0)     1003    20793 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/pagers.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.147174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/
++-rw-rw-r--   0 root         (0)     1003     1428 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/__init__.py
++-rw-rw-r--   0 root         (0)     1003    13545 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/base.py
++-rw-rw-r--   0 root         (0)     1003    31716 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc.py
++-rw-rw-r--   0 root         (0)     1003    32496 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc_asyncio.py
++-rw-rw-r--   0 root         (0)     1003   101231 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/rest.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/types/
++-rw-rw-r--   0 root         (0)     1003     2044 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/types/__init__.py
++-rw-rw-r--   0 root         (0)     1003    32213 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/types/metastore.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/
++-rw-r--r--   0 root         (0)     1003     4685 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/PKG-INFO
++-rw-r--r--   0 root         (0)     1003     1859 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/SOURCES.txt
++-rw-r--r--   0 root         (0)     1003        1 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/dependency_links.txt
++-rw-r--r--   0 root         (0)     1003       42 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/namespace_packages.txt
++-rw-r--r--   0 root         (0)     1003        1 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/not-zip-safe
++-rw-r--r--   0 root         (0)     1003      315 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/requires.txt
++-rw-r--r--   0 root         (0)     1003        7 2023-04-06 13:28:14.000000 google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/top_level.txt
++-rw-r--r--   0 root         (0)     1003       38 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/setup.cfg
++-rw-rw-r--   0 root         (0)     1003     2984 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/setup.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/tests/
++-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/tests/__init__.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/tests/unit/
++-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/tests/unit/__init__.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/
++-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/__init__.py
++drwxr-sr-x   0 root         (0)     1003        0 2023-04-06 13:28:14.151174 google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/biglake_v1alpha1/
++-rw-rw-r--   0 root         (0)     1003      600 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/biglake_v1alpha1/__init__.py
++-rw-rw-r--   0 root         (0)     1003   451218 2023-04-06 13:25:25.000000 google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/biglake_v1alpha1/test_metastore_service.py
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/LICENSE` & `google-cloud-bigquery-biglake-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/MANIFEST.in` & `google-cloud-bigquery-biglake-0.2.0/MANIFEST.in`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/PKG-INFO` & `google-cloud-bigquery-biglake-0.2.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: google-cloud-bigquery-biglake
+-Version: 0.1.1
++Version: 0.2.0
+ Summary: Google Cloud Bigquery Biglake API client library
+ Home-page: https://github.com/googleapis/google-cloud-python
+ Author: Google LLC
+ Author-email: googleapis-packages@google.com
+ License: Apache 2.0
+ Platform: Posix; MacOS X; Windows
+ Classifier: Development Status :: 4 - Beta
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/README.rst` & `google-cloud-bigquery-biglake-0.2.0/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake/__init__.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -46,15 +46,17 @@
+     ListDatabasesRequest,
+     ListDatabasesResponse,
+     ListLocksRequest,
+     ListLocksResponse,
+     ListTablesRequest,
+     ListTablesResponse,
+     Lock,
++    RenameTableRequest,
+     Table,
++    TableView,
+     UpdateDatabaseRequest,
+     UpdateTableRequest,
+ )
+ 
+ __all__ = (
+     "MetastoreServiceClient",
+     "MetastoreServiceAsyncClient",
+@@ -79,11 +81,13 @@
+     "ListDatabasesRequest",
+     "ListDatabasesResponse",
+     "ListLocksRequest",
+     "ListLocksResponse",
+     "ListTablesRequest",
+     "ListTablesResponse",
+     "Lock",
++    "RenameTableRequest",
+     "Table",
+     "UpdateDatabaseRequest",
+     "UpdateTableRequest",
++    "TableView",
+ )
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake/gapic_version.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/__init__.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,17 +1,15 @@
+ # -*- coding: utf-8 -*-
+-# Copyright 2023 Google LLC
++# Copyright 2022 Google LLC
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ #
+-
+-__version__ = "0.1.1"  # {x-release-please-version}
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/__init__.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -44,15 +44,17 @@
+     ListDatabasesRequest,
+     ListDatabasesResponse,
+     ListLocksRequest,
+     ListLocksResponse,
+     ListTablesRequest,
+     ListTablesResponse,
+     Lock,
++    RenameTableRequest,
+     Table,
++    TableView,
+     UpdateDatabaseRequest,
+     UpdateTableRequest,
+ )
+ 
+ __all__ = (
+     "MetastoreServiceAsyncClient",
+     "Catalog",
+@@ -77,11 +79,13 @@
+     "ListDatabasesResponse",
+     "ListLocksRequest",
+     "ListLocksResponse",
+     "ListTablesRequest",
+     "ListTablesResponse",
+     "Lock",
+     "MetastoreServiceClient",
++    "RenameTableRequest",
+     "Table",
++    "TableView",
+     "UpdateDatabaseRequest",
+     "UpdateTableRequest",
+ )
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/gapic_metadata.json` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/gapic_metadata.json`
+
+ * *Files 12% similar despite different names*
+
+#### Pretty-printed
+
+ * *Similarity: 0.9998629385964911%*
+
+ * *Differences: {"'services'": "{'MetastoreService': {'clients': {'grpc': {'rpcs': {'RenameTable': "*
+
+ * *               "OrderedDict([('methods', ['rename_table'])])}}, 'grpc-async': {'rpcs': "*
+
+ * *               "{'RenameTable': OrderedDict([('methods', ['rename_table'])])}}, 'rest': {'rpcs': "*
+
+ * *               "{'RenameTable': OrderedDict([('methods', ['rename_table'])])}}}}}"}*
+
+```diff
+@@ -86,14 +86,19 @@
+                             ]
+                         },
+                         "ListTables": {
+                             "methods": [
+                                 "list_tables"
+                             ]
+                         },
++                        "RenameTable": {
++                            "methods": [
++                                "rename_table"
++                            ]
++                        },
+                         "UpdateDatabase": {
+                             "methods": [
+                                 "update_database"
+                             ]
+                         },
+                         "UpdateTable": {
+                             "methods": [
+@@ -181,14 +186,19 @@
+                             ]
+                         },
+                         "ListTables": {
+                             "methods": [
+                                 "list_tables"
+                             ]
+                         },
++                        "RenameTable": {
++                            "methods": [
++                                "rename_table"
++                            ]
++                        },
+                         "UpdateDatabase": {
+                             "methods": [
+                                 "update_database"
+                             ]
+                         },
+                         "UpdateTable": {
+                             "methods": [
+@@ -276,14 +286,19 @@
+                             ]
+                         },
+                         "ListTables": {
+                             "methods": [
+                                 "list_tables"
+                             ]
+                         },
++                        "RenameTable": {
++                            "methods": [
++                                "rename_table"
++                            ]
++                        },
+                         "UpdateDatabase": {
+                             "methods": [
+                                 "update_database"
+                             ]
+                         },
+                         "UpdateTable": {
+                             "methods": [
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/gapic_version.py` & `google-cloud-bigquery-biglake-0.2.0/tests/__init__.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,17 +1,15 @@
+ # -*- coding: utf-8 -*-
+-# Copyright 2023 Google LLC
++# Copyright 2022 Google LLC
+ #
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ #
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ #
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ #
+-
+-__version__ = "0.0.0"  # {x-release-please-version}
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/tests/unit/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/async_client.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/async_client.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1504,16 +1504,16 @@
+         Args:
+             request (Optional[Union[google.cloud.bigquery.biglake_v1alpha1.types.UpdateTableRequest, dict]]):
+                 The request object. Request message for the UpdateTable
+                 method.
+             table (:class:`google.cloud.bigquery.biglake_v1alpha1.types.Table`):
+                 Required. The table to update.
+ 
+-                The table's ``name`` field is used to identify the
+-                database to update. Format:
++                The table's ``name`` field is used to identify the table
++                to update. Format:
+                 projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+ 
+                 This corresponds to the ``table`` field
+                 on the ``request`` instance; if ``request`` is provided, this
+                 should not be set.
+             update_mask (:class:`google.protobuf.field_mask_pb2.FieldMask`):
+                 The list of fields to update.
+@@ -1572,14 +1572,127 @@
+         )
+ 
+         # Send the request.
+         response = await rpc(
+             request,
+             retry=retry,
+             timeout=timeout,
++            metadata=metadata,
++        )
++
++        # Done; return the response.
++        return response
++
++    async def rename_table(
++        self,
++        request: Optional[Union[metastore.RenameTableRequest, dict]] = None,
++        *,
++        name: Optional[str] = None,
++        new_name: Optional[str] = None,
++        retry: OptionalRetry = gapic_v1.method.DEFAULT,
++        timeout: Union[float, object] = gapic_v1.method.DEFAULT,
++        metadata: Sequence[Tuple[str, str]] = (),
++    ) -> metastore.Table:
++        r"""Renames an existing table specified by the table ID.
++
++        .. code-block:: python
++
++            # This snippet has been automatically generated and should be regarded as a
++            # code template only.
++            # It will require modifications to work:
++            # - It may require correct/in-range values for request initialization.
++            # - It may require specifying regional endpoints when creating the service
++            #   client as shown in:
++            #   https://googleapis.dev/python/google-api-core/latest/client_options.html
++            from google.cloud.bigquery import biglake_v1alpha1
++
++            async def sample_rename_table():
++                # Create a client
++                client = biglake_v1alpha1.MetastoreServiceAsyncClient()
++
++                # Initialize request argument(s)
++                request = biglake_v1alpha1.RenameTableRequest(
++                    name="name_value",
++                    new_name="new_name_value",
++                )
++
++                # Make the request
++                response = await client.rename_table(request=request)
++
++                # Handle the response
++                print(response)
++
++        Args:
++            request (Optional[Union[google.cloud.bigquery.biglake_v1alpha1.types.RenameTableRequest, dict]]):
++                The request object. Request message for the RenameTable
++                method in MetastoreService
++            name (:class:`str`):
++                Required. The table's ``name`` field is used to identify
++                the table to rename. Format:
++                projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++
++                This corresponds to the ``name`` field
++                on the ``request`` instance; if ``request`` is provided, this
++                should not be set.
++            new_name (:class:`str`):
++                Required. The new ``name`` for the specified table, must
++                be in the same database. Format:
++                projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++
++                This corresponds to the ``new_name`` field
++                on the ``request`` instance; if ``request`` is provided, this
++                should not be set.
++            retry (google.api_core.retry.Retry): Designation of what errors, if any,
++                should be retried.
++            timeout (float): The timeout for this request.
++            metadata (Sequence[Tuple[str, str]]): Strings which should be
++                sent along with the request as metadata.
++
++        Returns:
++            google.cloud.bigquery.biglake_v1alpha1.types.Table:
++                Represents a table.
++        """
++        # Create or coerce a protobuf request object.
++        # Quick check: If we got a request object, we should *not* have
++        # gotten any keyword arguments that map to the request.
++        has_flattened_params = any([name, new_name])
++        if request is not None and has_flattened_params:
++            raise ValueError(
++                "If the `request` argument is set, then none of "
++                "the individual field arguments should be set."
++            )
++
++        request = metastore.RenameTableRequest(request)
++
++        # If we have keyword arguments corresponding to fields on the
++        # request, apply these.
++        if name is not None:
++            request.name = name
++        if new_name is not None:
++            request.new_name = new_name
++
++        # Wrap the RPC method; this adds retry and timeout information,
++        # and friendly error handling.
++        rpc = gapic_v1.method_async.wrap_method(
++            self._client._transport.rename_table,
++            default_timeout=None,
++            client_info=DEFAULT_CLIENT_INFO,
++        )
++
++        # Certain fields should be provided within the metadata header;
++        # add these here.
++        metadata = tuple(metadata) + (
++            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
++        )
++
++        # Send the request.
++        response = await rpc(
++            request,
++            retry=retry,
++            timeout=timeout,
+             metadata=metadata,
+         )
+ 
+         # Done; return the response.
+         return response
+ 
+     async def get_table(
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/client.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/client.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1803,16 +1803,16 @@
+         Args:
+             request (Union[google.cloud.bigquery.biglake_v1alpha1.types.UpdateTableRequest, dict]):
+                 The request object. Request message for the UpdateTable
+                 method.
+             table (google.cloud.bigquery.biglake_v1alpha1.types.Table):
+                 Required. The table to update.
+ 
+-                The table's ``name`` field is used to identify the
+-                database to update. Format:
++                The table's ``name`` field is used to identify the table
++                to update. Format:
+                 projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+ 
+                 This corresponds to the ``table`` field
+                 on the ``request`` instance; if ``request`` is provided, this
+                 should not be set.
+             update_mask (google.protobuf.field_mask_pb2.FieldMask):
+                 The list of fields to update.
+@@ -1871,14 +1871,127 @@
+         )
+ 
+         # Send the request.
+         response = rpc(
+             request,
+             retry=retry,
+             timeout=timeout,
++            metadata=metadata,
++        )
++
++        # Done; return the response.
++        return response
++
++    def rename_table(
++        self,
++        request: Optional[Union[metastore.RenameTableRequest, dict]] = None,
++        *,
++        name: Optional[str] = None,
++        new_name: Optional[str] = None,
++        retry: OptionalRetry = gapic_v1.method.DEFAULT,
++        timeout: Union[float, object] = gapic_v1.method.DEFAULT,
++        metadata: Sequence[Tuple[str, str]] = (),
++    ) -> metastore.Table:
++        r"""Renames an existing table specified by the table ID.
++
++        .. code-block:: python
++
++            # This snippet has been automatically generated and should be regarded as a
++            # code template only.
++            # It will require modifications to work:
++            # - It may require correct/in-range values for request initialization.
++            # - It may require specifying regional endpoints when creating the service
++            #   client as shown in:
++            #   https://googleapis.dev/python/google-api-core/latest/client_options.html
++            from google.cloud.bigquery import biglake_v1alpha1
++
++            def sample_rename_table():
++                # Create a client
++                client = biglake_v1alpha1.MetastoreServiceClient()
++
++                # Initialize request argument(s)
++                request = biglake_v1alpha1.RenameTableRequest(
++                    name="name_value",
++                    new_name="new_name_value",
++                )
++
++                # Make the request
++                response = client.rename_table(request=request)
++
++                # Handle the response
++                print(response)
++
++        Args:
++            request (Union[google.cloud.bigquery.biglake_v1alpha1.types.RenameTableRequest, dict]):
++                The request object. Request message for the RenameTable
++                method in MetastoreService
++            name (str):
++                Required. The table's ``name`` field is used to identify
++                the table to rename. Format:
++                projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++
++                This corresponds to the ``name`` field
++                on the ``request`` instance; if ``request`` is provided, this
++                should not be set.
++            new_name (str):
++                Required. The new ``name`` for the specified table, must
++                be in the same database. Format:
++                projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++
++                This corresponds to the ``new_name`` field
++                on the ``request`` instance; if ``request`` is provided, this
++                should not be set.
++            retry (google.api_core.retry.Retry): Designation of what errors, if any,
++                should be retried.
++            timeout (float): The timeout for this request.
++            metadata (Sequence[Tuple[str, str]]): Strings which should be
++                sent along with the request as metadata.
++
++        Returns:
++            google.cloud.bigquery.biglake_v1alpha1.types.Table:
++                Represents a table.
++        """
++        # Create or coerce a protobuf request object.
++        # Quick check: If we got a request object, we should *not* have
++        # gotten any keyword arguments that map to the request.
++        has_flattened_params = any([name, new_name])
++        if request is not None and has_flattened_params:
++            raise ValueError(
++                "If the `request` argument is set, then none of "
++                "the individual field arguments should be set."
++            )
++
++        # Minor optimization to avoid making a copy if the user passes
++        # in a metastore.RenameTableRequest.
++        # There's no risk of modifying the input as we've already verified
++        # there are no flattened fields.
++        if not isinstance(request, metastore.RenameTableRequest):
++            request = metastore.RenameTableRequest(request)
++            # If we have keyword arguments corresponding to fields on the
++            # request, apply these.
++            if name is not None:
++                request.name = name
++            if new_name is not None:
++                request.new_name = new_name
++
++        # Wrap the RPC method; this adds retry and timeout information,
++        # and friendly error handling.
++        rpc = self._transport._wrapped_methods[self._transport.rename_table]
++
++        # Certain fields should be provided within the metadata header;
++        # add these here.
++        metadata = tuple(metadata) + (
++            gapic_v1.routing_header.to_grpc_metadata((("name", request.name),)),
++        )
++
++        # Send the request.
++        response = rpc(
++            request,
++            retry=retry,
++            timeout=timeout,
+             metadata=metadata,
+         )
+ 
+         # Done; return the response.
+         return response
+ 
+     def get_table(
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/pagers.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/pagers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/base.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/base.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -182,14 +182,19 @@
+                 client_info=client_info,
+             ),
+             self.update_table: gapic_v1.method.wrap_method(
+                 self.update_table,
+                 default_timeout=None,
+                 client_info=client_info,
+             ),
++            self.rename_table: gapic_v1.method.wrap_method(
++                self.rename_table,
++                default_timeout=None,
++                client_info=client_info,
++            ),
+             self.get_table: gapic_v1.method.wrap_method(
+                 self.get_table,
+                 default_timeout=None,
+                 client_info=client_info,
+             ),
+             self.list_tables: gapic_v1.method.wrap_method(
+                 self.list_tables,
+@@ -336,14 +341,23 @@
+     ) -> Callable[
+         [metastore.UpdateTableRequest],
+         Union[metastore.Table, Awaitable[metastore.Table]],
+     ]:
+         raise NotImplementedError()
+ 
+     @property
++    def rename_table(
++        self,
++    ) -> Callable[
++        [metastore.RenameTableRequest],
++        Union[metastore.Table, Awaitable[metastore.Table]],
++    ]:
++        raise NotImplementedError()
++
++    @property
+     def get_table(
+         self,
+     ) -> Callable[
+         [metastore.GetTableRequest], Union[metastore.Table, Awaitable[metastore.Table]]
+     ]:
+         raise NotImplementedError()
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -543,14 +543,38 @@
+                 "/google.cloud.bigquery.biglake.v1alpha1.MetastoreService/UpdateTable",
+                 request_serializer=metastore.UpdateTableRequest.serialize,
+                 response_deserializer=metastore.Table.deserialize,
+             )
+         return self._stubs["update_table"]
+ 
+     @property
++    def rename_table(self) -> Callable[[metastore.RenameTableRequest], metastore.Table]:
++        r"""Return a callable for the rename table method over gRPC.
++
++        Renames an existing table specified by the table ID.
++
++        Returns:
++            Callable[[~.RenameTableRequest],
++                    ~.Table]:
++                A function that, when called, will call the underlying RPC
++                on the server.
++        """
++        # Generate a "stub function" on-the-fly which will actually make
++        # the request.
++        # gRPC handles serialization and deserialization, so we just need
++        # to pass in the functions for each.
++        if "rename_table" not in self._stubs:
++            self._stubs["rename_table"] = self.grpc_channel.unary_unary(
++                "/google.cloud.bigquery.biglake.v1alpha1.MetastoreService/RenameTable",
++                request_serializer=metastore.RenameTableRequest.serialize,
++                response_deserializer=metastore.Table.deserialize,
++            )
++        return self._stubs["rename_table"]
++
++    @property
+     def get_table(self) -> Callable[[metastore.GetTableRequest], metastore.Table]:
+         r"""Return a callable for the get table method over gRPC.
+ 
+         Gets the table specified by the resource name.
+ 
+         Returns:
+             Callable[[~.GetTableRequest],
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc_asyncio.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/grpc_asyncio.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -558,14 +558,40 @@
+                 "/google.cloud.bigquery.biglake.v1alpha1.MetastoreService/UpdateTable",
+                 request_serializer=metastore.UpdateTableRequest.serialize,
+                 response_deserializer=metastore.Table.deserialize,
+             )
+         return self._stubs["update_table"]
+ 
+     @property
++    def rename_table(
++        self,
++    ) -> Callable[[metastore.RenameTableRequest], Awaitable[metastore.Table]]:
++        r"""Return a callable for the rename table method over gRPC.
++
++        Renames an existing table specified by the table ID.
++
++        Returns:
++            Callable[[~.RenameTableRequest],
++                    Awaitable[~.Table]]:
++                A function that, when called, will call the underlying RPC
++                on the server.
++        """
++        # Generate a "stub function" on-the-fly which will actually make
++        # the request.
++        # gRPC handles serialization and deserialization, so we just need
++        # to pass in the functions for each.
++        if "rename_table" not in self._stubs:
++            self._stubs["rename_table"] = self.grpc_channel.unary_unary(
++                "/google.cloud.bigquery.biglake.v1alpha1.MetastoreService/RenameTable",
++                request_serializer=metastore.RenameTableRequest.serialize,
++                response_deserializer=metastore.Table.deserialize,
++            )
++        return self._stubs["rename_table"]
++
++    @property
+     def get_table(
+         self,
+     ) -> Callable[[metastore.GetTableRequest], Awaitable[metastore.Table]]:
+         r"""Return a callable for the get table method over gRPC.
+ 
+         Gets the table specified by the resource name.
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/rest.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/services/metastore_service/transports/rest.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -185,14 +185,22 @@
+                 logging.log(f"Received request: {request}")
+                 return request, metadata
+ 
+             def post_list_tables(self, response):
+                 logging.log(f"Received response: {response}")
+                 return response
+ 
++            def pre_rename_table(self, request, metadata):
++                logging.log(f"Received request: {request}")
++                return request, metadata
++
++            def post_rename_table(self, response):
++                logging.log(f"Received response: {response}")
++                return response
++
+             def pre_update_database(self, request, metadata):
+                 logging.log(f"Received request: {request}")
+                 return request, metadata
+ 
+             def post_update_database(self, response):
+                 logging.log(f"Received response: {response}")
+                 return response
+@@ -522,14 +530,33 @@
+ 
+         Override in a subclass to manipulate the response
+         after it is returned by the MetastoreService server but before
+         it is returned to user code.
+         """
+         return response
+ 
++    def pre_rename_table(
++        self, request: metastore.RenameTableRequest, metadata: Sequence[Tuple[str, str]]
++    ) -> Tuple[metastore.RenameTableRequest, Sequence[Tuple[str, str]]]:
++        """Pre-rpc interceptor for rename_table
++
++        Override in a subclass to manipulate the request or metadata
++        before they are sent to the MetastoreService server.
++        """
++        return request, metadata
++
++    def post_rename_table(self, response: metastore.Table) -> metastore.Table:
++        """Post-rpc interceptor for rename_table
++
++        Override in a subclass to manipulate the response
++        after it is returned by the MetastoreService server but before
++        it is returned to user code.
++        """
++        return response
++
+     def pre_update_database(
+         self,
+         request: metastore.UpdateDatabaseRequest,
+         metadata: Sequence[Tuple[str, str]],
+     ) -> Tuple[metastore.UpdateDatabaseRequest, Sequence[Tuple[str, str]]]:
+         """Pre-rpc interceptor for update_database
+ 
+@@ -2114,14 +2141,110 @@
+             resp = metastore.ListTablesResponse()
+             pb_resp = metastore.ListTablesResponse.pb(resp)
+ 
+             json_format.Parse(response.content, pb_resp, ignore_unknown_fields=True)
+             resp = self._interceptor.post_list_tables(resp)
+             return resp
+ 
++    class _RenameTable(MetastoreServiceRestStub):
++        def __hash__(self):
++            return hash("RenameTable")
++
++        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
++
++        @classmethod
++        def _get_unset_required_fields(cls, message_dict):
++            return {
++                k: v
++                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
++                if k not in message_dict
++            }
++
++        def __call__(
++            self,
++            request: metastore.RenameTableRequest,
++            *,
++            retry: OptionalRetry = gapic_v1.method.DEFAULT,
++            timeout: Optional[float] = None,
++            metadata: Sequence[Tuple[str, str]] = (),
++        ) -> metastore.Table:
++            r"""Call the rename table method over HTTP.
++
++            Args:
++                request (~.metastore.RenameTableRequest):
++                    The request object. Request message for the RenameTable
++                method in MetastoreService
++                retry (google.api_core.retry.Retry): Designation of what errors, if any,
++                    should be retried.
++                timeout (float): The timeout for this request.
++                metadata (Sequence[Tuple[str, str]]): Strings which should be
++                    sent along with the request as metadata.
++
++            Returns:
++                ~.metastore.Table:
++                    Represents a table.
++            """
++
++            http_options: List[Dict[str, str]] = [
++                {
++                    "method": "post",
++                    "uri": "/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:rename",
++                    "body": "*",
++                },
++            ]
++            request, metadata = self._interceptor.pre_rename_table(request, metadata)
++            pb_request = metastore.RenameTableRequest.pb(request)
++            transcoded_request = path_template.transcode(http_options, pb_request)
++
++            # Jsonify the request body
++
++            body = json_format.MessageToJson(
++                transcoded_request["body"],
++                including_default_value_fields=False,
++                use_integers_for_enums=True,
++            )
++            uri = transcoded_request["uri"]
++            method = transcoded_request["method"]
++
++            # Jsonify the query params
++            query_params = json.loads(
++                json_format.MessageToJson(
++                    transcoded_request["query_params"],
++                    including_default_value_fields=False,
++                    use_integers_for_enums=True,
++                )
++            )
++            query_params.update(self._get_unset_required_fields(query_params))
++
++            query_params["$alt"] = "json;enum-encoding=int"
++
++            # Send the request
++            headers = dict(metadata)
++            headers["Content-Type"] = "application/json"
++            response = getattr(self._session, method)(
++                "{host}{uri}".format(host=self._host, uri=uri),
++                timeout=timeout,
++                headers=headers,
++                params=rest_helpers.flatten_query_params(query_params, strict=True),
++                data=body,
++            )
++
++            # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
++            # subclass.
++            if response.status_code >= 400:
++                raise core_exceptions.from_http_response(response)
++
++            # Return the response
++            resp = metastore.Table()
++            pb_resp = metastore.Table.pb(resp)
++
++            json_format.Parse(response.content, pb_resp, ignore_unknown_fields=True)
++            resp = self._interceptor.post_rename_table(resp)
++            return resp
++
+     class _UpdateDatabase(MetastoreServiceRestStub):
+         def __hash__(self):
+             return hash("UpdateDatabase")
+ 
+         __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, Any] = {}
+ 
+         @classmethod
+@@ -2421,14 +2544,20 @@
+         self,
+     ) -> Callable[[metastore.ListTablesRequest], metastore.ListTablesResponse]:
+         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
+         # In C++ this would require a dynamic_cast
+         return self._ListTables(self._session, self._host, self._interceptor)  # type: ignore
+ 
+     @property
++    def rename_table(self) -> Callable[[metastore.RenameTableRequest], metastore.Table]:
++        # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
++        # In C++ this would require a dynamic_cast
++        return self._RenameTable(self._session, self._host, self._interceptor)  # type: ignore
++
++    @property
+     def update_database(
+         self,
+     ) -> Callable[[metastore.UpdateDatabaseRequest], metastore.Database]:
+         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
+         # In C++ this would require a dynamic_cast
+         return self._UpdateDatabase(self._session, self._host, self._interceptor)  # type: ignore
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/types/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/types/__init__.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -35,15 +35,17 @@
+     ListDatabasesRequest,
+     ListDatabasesResponse,
+     ListLocksRequest,
+     ListLocksResponse,
+     ListTablesRequest,
+     ListTablesResponse,
+     Lock,
++    RenameTableRequest,
+     Table,
++    TableView,
+     UpdateDatabaseRequest,
+     UpdateTableRequest,
+ )
+ 
+ __all__ = (
+     "Catalog",
+     "CheckLockRequest",
+@@ -66,11 +68,13 @@
+     "ListDatabasesRequest",
+     "ListDatabasesResponse",
+     "ListLocksRequest",
+     "ListLocksResponse",
+     "ListTablesRequest",
+     "ListTablesResponse",
+     "Lock",
++    "RenameTableRequest",
+     "Table",
+     "UpdateDatabaseRequest",
+     "UpdateTableRequest",
++    "TableView",
+ )
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google/cloud/bigquery/biglake_v1alpha1/types/metastore.py` & `google-cloud-bigquery-biglake-0.2.0/google/cloud/bigquery/biglake_v1alpha1/types/metastore.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -20,14 +20,15 @@
+ from google.protobuf import field_mask_pb2  # type: ignore
+ from google.protobuf import timestamp_pb2  # type: ignore
+ import proto  # type: ignore
+ 
+ __protobuf__ = proto.module(
+     package="google.cloud.bigquery.biglake.v1alpha1",
+     manifest={
++        "TableView",
+         "Catalog",
+         "Database",
+         "Table",
+         "Lock",
+         "CreateCatalogRequest",
+         "DeleteCatalogRequest",
+         "GetCatalogRequest",
+@@ -38,28 +39,48 @@
+         "UpdateDatabaseRequest",
+         "GetDatabaseRequest",
+         "ListDatabasesRequest",
+         "ListDatabasesResponse",
+         "CreateTableRequest",
+         "DeleteTableRequest",
+         "UpdateTableRequest",
++        "RenameTableRequest",
+         "GetTableRequest",
+         "ListTablesRequest",
+         "ListTablesResponse",
+         "CreateLockRequest",
+         "DeleteLockRequest",
+         "CheckLockRequest",
+         "ListLocksRequest",
+         "ListLocksResponse",
+         "HiveDatabaseOptions",
+         "HiveTableOptions",
+     },
+ )
+ 
+ 
++class TableView(proto.Enum):
++    r"""View on Table. Represents which fields will be populated for
++    calls that return Table objects.
++
++    Values:
++        TABLE_VIEW_UNSPECIFIED (0):
++            Default value. The API will default to the
++            BASIC view.
++        BASIC (1):
++            Include only table names.
++            This is the default value.
++        FULL (2):
++            Include everything.
++    """
++    TABLE_VIEW_UNSPECIFIED = 0
++    BASIC = 1
++    FULL = 2
++
++
+ class Catalog(proto.Message):
+     r"""Catalog is the container of databases.
+ 
+     Attributes:
+         name (str):
+             Output only. The resource name. Format:
+             projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}
+@@ -208,14 +229,21 @@
+             Only set after the table is deleted.
+         expire_time (google.protobuf.timestamp_pb2.Timestamp):
+             Output only. The time when this table is
+             considered expired. Only set after the table is
+             deleted.
+         type_ (google.cloud.bigquery.biglake_v1alpha1.types.Table.Type):
+             The table type.
++        etag (str):
++            The checksum of a table object computed by
++            the server based on the value of other fields.
++            It may be sent on update requests to ensure the
++            client has an up-to-date value before
++            proceeding. It is only checked for update table
++            operations.
+     """
+ 
+     class Type(proto.Enum):
+         r"""The table type.
+ 
+         Values:
+             TYPE_UNSPECIFIED (0):
+@@ -258,14 +286,18 @@
+         message=timestamp_pb2.Timestamp,
+     )
+     type_: Type = proto.Field(
+         proto.ENUM,
+         number=6,
+         enum=Type,
+     )
++    etag: str = proto.Field(
++        proto.STRING,
++        number=8,
++    )
+ 
+ 
+ class Lock(proto.Message):
+     r"""Represents a lock.
+ 
+     .. _oneof: https://proto-plus-python.readthedocs.io/en/stable/fields.html#oneofs-mutually-exclusive-fields
+ 
+@@ -674,16 +706,16 @@
+ class UpdateTableRequest(proto.Message):
+     r"""Request message for the UpdateTable method.
+ 
+     Attributes:
+         table (google.cloud.bigquery.biglake_v1alpha1.types.Table):
+             Required. The table to update.
+ 
+-            The table's ``name`` field is used to identify the database
+-            to update. Format:
++            The table's ``name`` field is used to identify the table to
++            update. Format:
+             projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+         update_mask (google.protobuf.field_mask_pb2.FieldMask):
+             The list of fields to update.
+ 
+             For the ``FieldMask`` definition, see
+             https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+             If not set, defaults to all of the fields that are allowed
+@@ -698,14 +730,39 @@
+     update_mask: field_mask_pb2.FieldMask = proto.Field(
+         proto.MESSAGE,
+         number=2,
+         message=field_mask_pb2.FieldMask,
+     )
+ 
+ 
++class RenameTableRequest(proto.Message):
++    r"""Request message for the RenameTable method in
++    MetastoreService
++
++    Attributes:
++        name (str):
++            Required. The table's ``name`` field is used to identify the
++            table to rename. Format:
++            projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++        new_name (str):
++            Required. The new ``name`` for the specified table, must be
++            in the same database. Format:
++            projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
++    """
++
++    name: str = proto.Field(
++        proto.STRING,
++        number=1,
++    )
++    new_name: str = proto.Field(
++        proto.STRING,
++        number=2,
++    )
++
++
+ class GetTableRequest(proto.Message):
+     r"""Request message for the GetTable method.
+ 
+     Attributes:
+         name (str):
+             Required. The name of the table to retrieve. Format:
+             projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}/databases/{database_id}/tables/{table_id}
+@@ -734,28 +791,35 @@
+         page_token (str):
+             A page token, received from a previous ``ListTables`` call.
+             Provide this to retrieve the subsequent page.
+ 
+             When paginating, all other parameters provided to
+             ``ListTables`` must match the call that provided the page
+             token.
++        view (google.cloud.bigquery.biglake_v1alpha1.types.TableView):
++            The view for the returned tables.
+     """
+ 
+     parent: str = proto.Field(
+         proto.STRING,
+         number=1,
+     )
+     page_size: int = proto.Field(
+         proto.INT32,
+         number=2,
+     )
+     page_token: str = proto.Field(
+         proto.STRING,
+         number=3,
+     )
++    view: "TableView" = proto.Field(
++        proto.ENUM,
++        number=4,
++        enum="TableView",
++    )
+ 
+ 
+ class ListTablesResponse(proto.Message):
+     r"""Response message for the ListTables method.
+ 
+     Attributes:
+         tables (MutableSequence[google.cloud.bigquery.biglake_v1alpha1.types.Table]):
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/PKG-INFO` & `google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: google-cloud-bigquery-biglake
+-Version: 0.1.1
++Version: 0.2.0
+ Summary: Google Cloud Bigquery Biglake API client library
+ Home-page: https://github.com/googleapis/google-cloud-python
+ Author: Google LLC
+ Author-email: googleapis-packages@google.com
+ License: Apache 2.0
+ Platform: Posix; MacOS X; Windows
+ Classifier: Development Status :: 4 - Beta
+```
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/google_cloud_bigquery_biglake.egg-info/SOURCES.txt` & `google-cloud-bigquery-biglake-0.2.0/google_cloud_bigquery_biglake.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/setup.py` & `google-cloud-bigquery-biglake-0.2.0/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/tests/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/tests/unit/__init__.py` & `google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/biglake_v1alpha1/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `google-cloud-bigquery-biglake-0.1.1/tests/unit/gapic/biglake_v1alpha1/test_metastore_service.py` & `google-cloud-bigquery-biglake-0.2.0/tests/unit/gapic/biglake_v1alpha1/test_metastore_service.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -3318,14 +3318,15 @@
+ 
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.create_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+         response = client.create_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+@@ -3333,14 +3334,15 @@
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.CreateTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_create_table_empty_call():
+     # This test is a coverage failsafe to make sure that totally empty calls,
+     # i.e. request == None and no flattened fields passed, work.
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -3371,27 +3373,29 @@
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.create_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(
+             metastore.Table(
+                 name="name_value",
+                 type_=metastore.Table.Type.HIVE,
++                etag="etag_value",
+             )
+         )
+         response = await client.create_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+         assert len(call.mock_calls)
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.CreateTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ @pytest.mark.asyncio
+ async def test_create_table_async_from_dict():
+     await test_create_table_async(request_type=dict)
+ 
+ 
+@@ -3597,14 +3601,15 @@
+ 
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.delete_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+         response = client.delete_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+@@ -3612,14 +3617,15 @@
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.DeleteTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_delete_table_empty_call():
+     # This test is a coverage failsafe to make sure that totally empty calls,
+     # i.e. request == None and no flattened fields passed, work.
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -3650,27 +3656,29 @@
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.delete_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(
+             metastore.Table(
+                 name="name_value",
+                 type_=metastore.Table.Type.HIVE,
++                etag="etag_value",
+             )
+         )
+         response = await client.delete_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+         assert len(call.mock_calls)
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.DeleteTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ @pytest.mark.asyncio
+ async def test_delete_table_async_from_dict():
+     await test_delete_table_async(request_type=dict)
+ 
+ 
+@@ -3832,14 +3840,15 @@
+ 
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.update_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+         response = client.update_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+@@ -3847,14 +3856,15 @@
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.UpdateTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_update_table_empty_call():
+     # This test is a coverage failsafe to make sure that totally empty calls,
+     # i.e. request == None and no flattened fields passed, work.
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -3885,27 +3895,29 @@
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.update_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(
+             metastore.Table(
+                 name="name_value",
+                 type_=metastore.Table.Type.HIVE,
++                etag="etag_value",
+             )
+         )
+         response = await client.update_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+         assert len(call.mock_calls)
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.UpdateTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ @pytest.mark.asyncio
+ async def test_update_table_async_from_dict():
+     await test_update_table_async(request_type=dict)
+ 
+ 
+@@ -4081,14 +4093,263 @@
+             update_mask=field_mask_pb2.FieldMask(paths=["paths_value"]),
+         )
+ 
+ 
+ @pytest.mark.parametrize(
+     "request_type",
+     [
++        metastore.RenameTableRequest,
++        dict,
++    ],
++)
++def test_rename_table(request_type, transport: str = "grpc"):
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport=transport,
++    )
++
++    # Everything is optional in proto3 as far as the runtime is concerned,
++    # and we are mocking out the actual API, so just send an empty request.
++    request = request_type()
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        # Designate an appropriate return value for the call.
++        call.return_value = metastore.Table(
++            name="name_value",
++            type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
++            hive_options=metastore.HiveTableOptions(
++                parameters={"key_value": "value_value"}
++            ),
++        )
++        response = client.rename_table(request)
++
++        # Establish that the underlying gRPC stub method was called.
++        assert len(call.mock_calls) == 1
++        _, args, _ = call.mock_calls[0]
++        assert args[0] == metastore.RenameTableRequest()
++
++    # Establish that the response is the type that we expect.
++    assert isinstance(response, metastore.Table)
++    assert response.name == "name_value"
++    assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
++
++
++def test_rename_table_empty_call():
++    # This test is a coverage failsafe to make sure that totally empty calls,
++    # i.e. request == None and no flattened fields passed, work.
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport="grpc",
++    )
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        client.rename_table()
++        call.assert_called()
++        _, args, _ = call.mock_calls[0]
++        assert args[0] == metastore.RenameTableRequest()
++
++
++@pytest.mark.asyncio
++async def test_rename_table_async(
++    transport: str = "grpc_asyncio", request_type=metastore.RenameTableRequest
++):
++    client = MetastoreServiceAsyncClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport=transport,
++    )
++
++    # Everything is optional in proto3 as far as the runtime is concerned,
++    # and we are mocking out the actual API, so just send an empty request.
++    request = request_type()
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        # Designate an appropriate return value for the call.
++        call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(
++            metastore.Table(
++                name="name_value",
++                type_=metastore.Table.Type.HIVE,
++                etag="etag_value",
++            )
++        )
++        response = await client.rename_table(request)
++
++        # Establish that the underlying gRPC stub method was called.
++        assert len(call.mock_calls)
++        _, args, _ = call.mock_calls[0]
++        assert args[0] == metastore.RenameTableRequest()
++
++    # Establish that the response is the type that we expect.
++    assert isinstance(response, metastore.Table)
++    assert response.name == "name_value"
++    assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
++
++
++@pytest.mark.asyncio
++async def test_rename_table_async_from_dict():
++    await test_rename_table_async(request_type=dict)
++
++
++def test_rename_table_field_headers():
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Any value that is part of the HTTP/1.1 URI should be sent as
++    # a field header. Set these to a non-empty value.
++    request = metastore.RenameTableRequest()
++
++    request.name = "name_value"
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        call.return_value = metastore.Table()
++        client.rename_table(request)
++
++        # Establish that the underlying gRPC stub method was called.
++        assert len(call.mock_calls) == 1
++        _, args, _ = call.mock_calls[0]
++        assert args[0] == request
++
++    # Establish that the field header was sent.
++    _, _, kw = call.mock_calls[0]
++    assert (
++        "x-goog-request-params",
++        "name=name_value",
++    ) in kw["metadata"]
++
++
++@pytest.mark.asyncio
++async def test_rename_table_field_headers_async():
++    client = MetastoreServiceAsyncClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Any value that is part of the HTTP/1.1 URI should be sent as
++    # a field header. Set these to a non-empty value.
++    request = metastore.RenameTableRequest()
++
++    request.name = "name_value"
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(metastore.Table())
++        await client.rename_table(request)
++
++        # Establish that the underlying gRPC stub method was called.
++        assert len(call.mock_calls)
++        _, args, _ = call.mock_calls[0]
++        assert args[0] == request
++
++    # Establish that the field header was sent.
++    _, _, kw = call.mock_calls[0]
++    assert (
++        "x-goog-request-params",
++        "name=name_value",
++    ) in kw["metadata"]
++
++
++def test_rename_table_flattened():
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        # Designate an appropriate return value for the call.
++        call.return_value = metastore.Table()
++        # Call the method with a truthy value for each flattened field,
++        # using the keyword arguments to the method.
++        client.rename_table(
++            name="name_value",
++            new_name="new_name_value",
++        )
++
++        # Establish that the underlying call was made with the expected
++        # request object values.
++        assert len(call.mock_calls) == 1
++        _, args, _ = call.mock_calls[0]
++        arg = args[0].name
++        mock_val = "name_value"
++        assert arg == mock_val
++        arg = args[0].new_name
++        mock_val = "new_name_value"
++        assert arg == mock_val
++
++
++def test_rename_table_flattened_error():
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Attempting to call a method with both a request object and flattened
++    # fields is an error.
++    with pytest.raises(ValueError):
++        client.rename_table(
++            metastore.RenameTableRequest(),
++            name="name_value",
++            new_name="new_name_value",
++        )
++
++
++@pytest.mark.asyncio
++async def test_rename_table_flattened_async():
++    client = MetastoreServiceAsyncClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Mock the actual call within the gRPC stub, and fake the request.
++    with mock.patch.object(type(client.transport.rename_table), "__call__") as call:
++        # Designate an appropriate return value for the call.
++        call.return_value = metastore.Table()
++
++        call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(metastore.Table())
++        # Call the method with a truthy value for each flattened field,
++        # using the keyword arguments to the method.
++        response = await client.rename_table(
++            name="name_value",
++            new_name="new_name_value",
++        )
++
++        # Establish that the underlying call was made with the expected
++        # request object values.
++        assert len(call.mock_calls)
++        _, args, _ = call.mock_calls[0]
++        arg = args[0].name
++        mock_val = "name_value"
++        assert arg == mock_val
++        arg = args[0].new_name
++        mock_val = "new_name_value"
++        assert arg == mock_val
++
++
++@pytest.mark.asyncio
++async def test_rename_table_flattened_error_async():
++    client = MetastoreServiceAsyncClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++    )
++
++    # Attempting to call a method with both a request object and flattened
++    # fields is an error.
++    with pytest.raises(ValueError):
++        await client.rename_table(
++            metastore.RenameTableRequest(),
++            name="name_value",
++            new_name="new_name_value",
++        )
++
++
++@pytest.mark.parametrize(
++    "request_type",
++    [
+         metastore.GetTableRequest,
+         dict,
+     ],
+ )
+ def test_get_table(request_type, transport: str = "grpc"):
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -4101,14 +4362,15 @@
+ 
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.get_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+         response = client.get_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+@@ -4116,14 +4378,15 @@
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.GetTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_get_table_empty_call():
+     # This test is a coverage failsafe to make sure that totally empty calls,
+     # i.e. request == None and no flattened fields passed, work.
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -4154,27 +4417,29 @@
+     # Mock the actual call within the gRPC stub, and fake the request.
+     with mock.patch.object(type(client.transport.get_table), "__call__") as call:
+         # Designate an appropriate return value for the call.
+         call.return_value = grpc_helpers_async.FakeUnaryUnaryCall(
+             metastore.Table(
+                 name="name_value",
+                 type_=metastore.Table.Type.HIVE,
++                etag="etag_value",
+             )
+         )
+         response = await client.get_table(request)
+ 
+         # Establish that the underlying gRPC stub method was called.
+         assert len(call.mock_calls)
+         _, args, _ = call.mock_calls[0]
+         assert args[0] == metastore.GetTableRequest()
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ @pytest.mark.asyncio
+ async def test_get_table_async_from_dict():
+     await test_get_table_async(request_type=dict)
+ 
+ 
+@@ -8585,23 +8850,25 @@
+         },
+         "name": "name_value",
+         "create_time": {"seconds": 751, "nanos": 543},
+         "update_time": {},
+         "delete_time": {},
+         "expire_time": {},
+         "type_": 1,
++        "etag": "etag_value",
+     }
+     request = request_type(**request_init)
+ 
+     # Mock the http request call within the method and fake a response.
+     with mock.patch.object(type(client.transport._session), "request") as req:
+         # Designate an appropriate value for the returned response.
+         return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+ 
+         # Wrap the value into a proper Response obj
+         response_value = Response()
+@@ -8613,14 +8880,15 @@
+         req.return_value = response_value
+         response = client.create_table(request)
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_create_table_rest_required_fields(request_type=metastore.CreateTableRequest):
+     transport_class = transports.MetastoreServiceRestTransport
+ 
+     request_init = {}
+     request_init["parent"] = ""
+@@ -8806,14 +9074,15 @@
+         },
+         "name": "name_value",
+         "create_time": {"seconds": 751, "nanos": 543},
+         "update_time": {},
+         "delete_time": {},
+         "expire_time": {},
+         "type_": 1,
++        "etag": "etag_value",
+     }
+     request = request_type(**request_init)
+ 
+     # Mock the http request call within the method and fake a BadRequest error.
+     with mock.patch.object(Session, "request") as req, pytest.raises(
+         core_exceptions.BadRequest
+     ):
+@@ -8922,14 +9191,15 @@
+ 
+     # Mock the http request call within the method and fake a response.
+     with mock.patch.object(type(client.transport._session), "request") as req:
+         # Designate an appropriate value for the returned response.
+         return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+ 
+         # Wrap the value into a proper Response obj
+         response_value = Response()
+@@ -8941,14 +9211,15 @@
+         req.return_value = response_value
+         response = client.delete_table(request)
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_delete_table_rest_required_fields(request_type=metastore.DeleteTableRequest):
+     transport_class = transports.MetastoreServiceRestTransport
+ 
+     request_init = {}
+     request_init["name"] = ""
+@@ -9206,23 +9477,25 @@
+         },
+         "name": "projects/sample1/locations/sample2/catalogs/sample3/databases/sample4/tables/sample5",
+         "create_time": {"seconds": 751, "nanos": 543},
+         "update_time": {},
+         "delete_time": {},
+         "expire_time": {},
+         "type_": 1,
++        "etag": "etag_value",
+     }
+     request = request_type(**request_init)
+ 
+     # Mock the http request call within the method and fake a response.
+     with mock.patch.object(type(client.transport._session), "request") as req:
+         # Designate an appropriate value for the returned response.
+         return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+ 
+         # Wrap the value into a proper Response obj
+         response_value = Response()
+@@ -9234,14 +9507,15 @@
+         req.return_value = response_value
+         response = client.update_table(request)
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_update_table_rest_required_fields(request_type=metastore.UpdateTableRequest):
+     transport_class = transports.MetastoreServiceRestTransport
+ 
+     request_init = {}
+     request = request_type(**request_init)
+@@ -9402,14 +9676,15 @@
+         },
+         "name": "projects/sample1/locations/sample2/catalogs/sample3/databases/sample4/tables/sample5",
+         "create_time": {"seconds": 751, "nanos": 543},
+         "update_time": {},
+         "delete_time": {},
+         "expire_time": {},
+         "type_": 1,
++        "etag": "etag_value",
+     }
+     request = request_type(**request_init)
+ 
+     # Mock the http request call within the method and fake a BadRequest error.
+     with mock.patch.object(Session, "request") as req, pytest.raises(
+         core_exceptions.BadRequest
+     ):
+@@ -9496,14 +9771,304 @@
+         credentials=ga_credentials.AnonymousCredentials(), transport="rest"
+     )
+ 
+ 
+ @pytest.mark.parametrize(
+     "request_type",
+     [
++        metastore.RenameTableRequest,
++        dict,
++    ],
++)
++def test_rename_table_rest(request_type):
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport="rest",
++    )
++
++    # send a request that will satisfy transcoding
++    request_init = {
++        "name": "projects/sample1/locations/sample2/catalogs/sample3/databases/sample4/tables/sample5"
++    }
++    request = request_type(**request_init)
++
++    # Mock the http request call within the method and fake a response.
++    with mock.patch.object(type(client.transport._session), "request") as req:
++        # Designate an appropriate value for the returned response.
++        return_value = metastore.Table(
++            name="name_value",
++            type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
++            hive_options=metastore.HiveTableOptions(
++                parameters={"key_value": "value_value"}
++            ),
++        )
++
++        # Wrap the value into a proper Response obj
++        response_value = Response()
++        response_value.status_code = 200
++        pb_return_value = metastore.Table.pb(return_value)
++        json_return_value = json_format.MessageToJson(pb_return_value)
++
++        response_value._content = json_return_value.encode("UTF-8")
++        req.return_value = response_value
++        response = client.rename_table(request)
++
++    # Establish that the response is the type that we expect.
++    assert isinstance(response, metastore.Table)
++    assert response.name == "name_value"
++    assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
++
++
++def test_rename_table_rest_required_fields(request_type=metastore.RenameTableRequest):
++    transport_class = transports.MetastoreServiceRestTransport
++
++    request_init = {}
++    request_init["name"] = ""
++    request_init["new_name"] = ""
++    request = request_type(**request_init)
++    pb_request = request_type.pb(request)
++    jsonified_request = json.loads(
++        json_format.MessageToJson(
++            pb_request,
++            including_default_value_fields=False,
++            use_integers_for_enums=False,
++        )
++    )
++
++    # verify fields with default values are dropped
++
++    unset_fields = transport_class(
++        credentials=ga_credentials.AnonymousCredentials()
++    ).rename_table._get_unset_required_fields(jsonified_request)
++    jsonified_request.update(unset_fields)
++
++    # verify required fields with default values are now present
++
++    jsonified_request["name"] = "name_value"
++    jsonified_request["newName"] = "new_name_value"
++
++    unset_fields = transport_class(
++        credentials=ga_credentials.AnonymousCredentials()
++    ).rename_table._get_unset_required_fields(jsonified_request)
++    jsonified_request.update(unset_fields)
++
++    # verify required fields with non-default values are left alone
++    assert "name" in jsonified_request
++    assert jsonified_request["name"] == "name_value"
++    assert "newName" in jsonified_request
++    assert jsonified_request["newName"] == "new_name_value"
++
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport="rest",
++    )
++    request = request_type(**request_init)
++
++    # Designate an appropriate value for the returned response.
++    return_value = metastore.Table()
++    # Mock the http request call within the method and fake a response.
++    with mock.patch.object(Session, "request") as req:
++        # We need to mock transcode() because providing default values
++        # for required fields will fail the real version if the http_options
++        # expect actual values for those fields.
++        with mock.patch.object(path_template, "transcode") as transcode:
++            # A uri without fields and an empty body will force all the
++            # request fields to show up in the query_params.
++            pb_request = request_type.pb(request)
++            transcode_result = {
++                "uri": "v1/sample_method",
++                "method": "post",
++                "query_params": pb_request,
++            }
++            transcode_result["body"] = pb_request
++            transcode.return_value = transcode_result
++
++            response_value = Response()
++            response_value.status_code = 200
++
++            pb_return_value = metastore.Table.pb(return_value)
++            json_return_value = json_format.MessageToJson(pb_return_value)
++
++            response_value._content = json_return_value.encode("UTF-8")
++            req.return_value = response_value
++
++            response = client.rename_table(request)
++
++            expected_params = [("$alt", "json;enum-encoding=int")]
++            actual_params = req.call_args.kwargs["params"]
++            assert expected_params == actual_params
++
++
++def test_rename_table_rest_unset_required_fields():
++    transport = transports.MetastoreServiceRestTransport(
++        credentials=ga_credentials.AnonymousCredentials
++    )
++
++    unset_fields = transport.rename_table._get_unset_required_fields({})
++    assert set(unset_fields) == (
++        set(())
++        & set(
++            (
++                "name",
++                "newName",
++            )
++        )
++    )
++
++
++@pytest.mark.parametrize("null_interceptor", [True, False])
++def test_rename_table_rest_interceptors(null_interceptor):
++    transport = transports.MetastoreServiceRestTransport(
++        credentials=ga_credentials.AnonymousCredentials(),
++        interceptor=None
++        if null_interceptor
++        else transports.MetastoreServiceRestInterceptor(),
++    )
++    client = MetastoreServiceClient(transport=transport)
++    with mock.patch.object(
++        type(client.transport._session), "request"
++    ) as req, mock.patch.object(
++        path_template, "transcode"
++    ) as transcode, mock.patch.object(
++        transports.MetastoreServiceRestInterceptor, "post_rename_table"
++    ) as post, mock.patch.object(
++        transports.MetastoreServiceRestInterceptor, "pre_rename_table"
++    ) as pre:
++        pre.assert_not_called()
++        post.assert_not_called()
++        pb_message = metastore.RenameTableRequest.pb(metastore.RenameTableRequest())
++        transcode.return_value = {
++            "method": "post",
++            "uri": "my_uri",
++            "body": pb_message,
++            "query_params": pb_message,
++        }
++
++        req.return_value = Response()
++        req.return_value.status_code = 200
++        req.return_value.request = PreparedRequest()
++        req.return_value._content = metastore.Table.to_json(metastore.Table())
++
++        request = metastore.RenameTableRequest()
++        metadata = [
++            ("key", "val"),
++            ("cephalopod", "squid"),
++        ]
++        pre.return_value = request, metadata
++        post.return_value = metastore.Table()
++
++        client.rename_table(
++            request,
++            metadata=[
++                ("key", "val"),
++                ("cephalopod", "squid"),
++            ],
++        )
++
++        pre.assert_called_once()
++        post.assert_called_once()
++
++
++def test_rename_table_rest_bad_request(
++    transport: str = "rest", request_type=metastore.RenameTableRequest
++):
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport=transport,
++    )
++
++    # send a request that will satisfy transcoding
++    request_init = {
++        "name": "projects/sample1/locations/sample2/catalogs/sample3/databases/sample4/tables/sample5"
++    }
++    request = request_type(**request_init)
++
++    # Mock the http request call within the method and fake a BadRequest error.
++    with mock.patch.object(Session, "request") as req, pytest.raises(
++        core_exceptions.BadRequest
++    ):
++        # Wrap the value into a proper Response obj
++        response_value = Response()
++        response_value.status_code = 400
++        response_value.request = Request()
++        req.return_value = response_value
++        client.rename_table(request)
++
++
++def test_rename_table_rest_flattened():
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport="rest",
++    )
++
++    # Mock the http request call within the method and fake a response.
++    with mock.patch.object(type(client.transport._session), "request") as req:
++        # Designate an appropriate value for the returned response.
++        return_value = metastore.Table()
++
++        # get arguments that satisfy an http rule for this method
++        sample_request = {
++            "name": "projects/sample1/locations/sample2/catalogs/sample3/databases/sample4/tables/sample5"
++        }
++
++        # get truthy value for each flattened field
++        mock_args = dict(
++            name="name_value",
++            new_name="new_name_value",
++        )
++        mock_args.update(sample_request)
++
++        # Wrap the value into a proper Response obj
++        response_value = Response()
++        response_value.status_code = 200
++        pb_return_value = metastore.Table.pb(return_value)
++        json_return_value = json_format.MessageToJson(pb_return_value)
++        response_value._content = json_return_value.encode("UTF-8")
++        req.return_value = response_value
++
++        client.rename_table(**mock_args)
++
++        # Establish that the underlying call was made with the expected
++        # request object values.
++        assert len(req.mock_calls) == 1
++        _, args, _ = req.mock_calls[0]
++        assert path_template.validate(
++            "%s/v1alpha1/{name=projects/*/locations/*/catalogs/*/databases/*/tables/*}:rename"
++            % client.transport._host,
++            args[1],
++        )
++
++
++def test_rename_table_rest_flattened_error(transport: str = "rest"):
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(),
++        transport=transport,
++    )
++
++    # Attempting to call a method with both a request object and flattened
++    # fields is an error.
++    with pytest.raises(ValueError):
++        client.rename_table(
++            metastore.RenameTableRequest(),
++            name="name_value",
++            new_name="new_name_value",
++        )
++
++
++def test_rename_table_rest_error():
++    client = MetastoreServiceClient(
++        credentials=ga_credentials.AnonymousCredentials(), transport="rest"
++    )
++
++
++@pytest.mark.parametrize(
++    "request_type",
++    [
+         metastore.GetTableRequest,
+         dict,
+     ],
+ )
+ def test_get_table_rest(request_type):
+     client = MetastoreServiceClient(
+         credentials=ga_credentials.AnonymousCredentials(),
+@@ -9518,14 +10083,15 @@
+ 
+     # Mock the http request call within the method and fake a response.
+     with mock.patch.object(type(client.transport._session), "request") as req:
+         # Designate an appropriate value for the returned response.
+         return_value = metastore.Table(
+             name="name_value",
+             type_=metastore.Table.Type.HIVE,
++            etag="etag_value",
+             hive_options=metastore.HiveTableOptions(
+                 parameters={"key_value": "value_value"}
+             ),
+         )
+ 
+         # Wrap the value into a proper Response obj
+         response_value = Response()
+@@ -9537,14 +10103,15 @@
+         req.return_value = response_value
+         response = client.get_table(request)
+ 
+     # Establish that the response is the type that we expect.
+     assert isinstance(response, metastore.Table)
+     assert response.name == "name_value"
+     assert response.type_ == metastore.Table.Type.HIVE
++    assert response.etag == "etag_value"
+ 
+ 
+ def test_get_table_rest_required_fields(request_type=metastore.GetTableRequest):
+     transport_class = transports.MetastoreServiceRestTransport
+ 
+     request_init = {}
+     request_init["name"] = ""
+@@ -9841,14 +10408,15 @@
+         credentials=ga_credentials.AnonymousCredentials()
+     ).list_tables._get_unset_required_fields(jsonified_request)
+     # Check that path parameters and body parameters are not mixing in.
+     assert not set(unset_fields) - set(
+         (
+             "page_size",
+             "page_token",
++            "view",
+         )
+     )
+     jsonified_request.update(unset_fields)
+ 
+     # verify required fields with non-default values are left alone
+     assert "parent" in jsonified_request
+     assert jsonified_request["parent"] == "parent_value"
+@@ -9900,14 +10468,15 @@
+ 
+     unset_fields = transport.list_tables._get_unset_required_fields({})
+     assert set(unset_fields) == (
+         set(
+             (
+                 "pageSize",
+                 "pageToken",
++                "view",
+             )
+         )
+         & set(("parent",))
+     )
+ 
+ 
+ @pytest.mark.parametrize("null_interceptor", [True, False])
+@@ -11428,14 +11997,15 @@
+         "delete_database",
+         "update_database",
+         "get_database",
+         "list_databases",
+         "create_table",
+         "delete_table",
+         "update_table",
++        "rename_table",
+         "get_table",
+         "list_tables",
+         "create_lock",
+         "delete_lock",
+         "check_lock",
+         "list_locks",
+     )
+@@ -11740,14 +12310,17 @@
+     assert session1 != session2
+     session1 = client1.transport.delete_table._session
+     session2 = client2.transport.delete_table._session
+     assert session1 != session2
+     session1 = client1.transport.update_table._session
+     session2 = client2.transport.update_table._session
+     assert session1 != session2
++    session1 = client1.transport.rename_table._session
++    session2 = client2.transport.rename_table._session
++    assert session1 != session2
+     session1 = client1.transport.get_table._session
+     session2 = client2.transport.get_table._session
+     assert session1 != session2
+     session1 = client1.transport.list_tables._session
+     session2 = client2.transport.list_tables._session
+     assert session1 != session2
+     session1 = client1.transport.create_lock._session
+```
+

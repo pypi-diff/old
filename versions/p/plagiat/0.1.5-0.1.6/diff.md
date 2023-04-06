@@ -1,0 +1,145 @@
+# Comparing `tmp/plagiat-0.1.5.tar.gz` & `tmp/plagiat-0.1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "plagiat-0.1.5.tar", last modified: Thu Apr  6 13:19:45 2023, max compression
++gzip compressed data, was "plagiat-0.1.6.tar", last modified: Thu Apr  6 13:22:55 2023, max compression
+```
+
+## Comparing `plagiat-0.1.5.tar` & `plagiat-0.1.6.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+-drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:19:45.103572 plagiat-0.1.5/
+--rw-r--r--   0 novay      (501) staff       (20)     4070 2023-04-06 13:19:45.103428 plagiat-0.1.5/PKG-INFO
+--rw-r--r--   0 novay      (501) staff       (20)     3389 2023-04-06 13:18:43.000000 plagiat-0.1.5/README.md
+-drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:19:45.102434 plagiat-0.1.5/plagiat/
+--rw-r--r--   0 novay      (501) staff       (20)       68 2023-04-06 13:19:35.000000 plagiat-0.1.5/plagiat/__init__.py
+--rw-r--r--   0 novay      (501) staff       (20)     1794 2023-04-06 12:58:38.000000 plagiat-0.1.5/plagiat/cosine.py
+--rw-r--r--   0 novay      (501) staff       (20)     3672 2023-04-06 13:15:13.000000 plagiat-0.1.5/plagiat/deteksi.py
+--rw-r--r--   0 novay      (501) staff       (20)     1226 2023-04-06 13:00:53.000000 plagiat-0.1.5/plagiat/jaccard.py
+--rw-r--r--   0 novay      (501) staff       (20)     1155 2023-04-02 09:06:09.000000 plagiat-0.1.5/plagiat/rabin_karp.py
+-drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:19:45.103212 plagiat-0.1.5/plagiat.egg-info/
+--rw-r--r--   0 novay      (501) staff       (20)     4070 2023-04-06 13:19:45.000000 plagiat-0.1.5/plagiat.egg-info/PKG-INFO
+--rw-r--r--   0 novay      (501) staff       (20)      270 2023-04-06 13:19:45.000000 plagiat-0.1.5/plagiat.egg-info/SOURCES.txt
+--rw-r--r--   0 novay      (501) staff       (20)        1 2023-04-06 13:19:45.000000 plagiat-0.1.5/plagiat.egg-info/dependency_links.txt
+--rw-r--r--   0 novay      (501) staff       (20)        9 2023-04-06 13:19:45.000000 plagiat-0.1.5/plagiat.egg-info/requires.txt
+--rw-r--r--   0 novay      (501) staff       (20)        8 2023-04-06 13:19:45.000000 plagiat-0.1.5/plagiat.egg-info/top_level.txt
+--rw-r--r--   0 novay      (501) staff       (20)       38 2023-04-06 13:19:45.103628 plagiat-0.1.5/setup.cfg
+--rw-r--r--   0 novay      (501) staff       (20)     1051 2023-04-06 13:19:31.000000 plagiat-0.1.5/setup.py
++drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:22:55.457210 plagiat-0.1.6/
++-rw-r--r--   0 novay      (501) staff       (20)     4098 2023-04-06 13:22:55.457079 plagiat-0.1.6/PKG-INFO
++-rw-r--r--   0 novay      (501) staff       (20)     3389 2023-04-06 13:18:43.000000 plagiat-0.1.6/README.md
++drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:22:55.456201 plagiat-0.1.6/plagiat/
++-rw-r--r--   0 novay      (501) staff       (20)       68 2023-04-06 13:22:50.000000 plagiat-0.1.6/plagiat/__init__.py
++-rw-r--r--   0 novay      (501) staff       (20)     1794 2023-04-06 12:58:38.000000 plagiat-0.1.6/plagiat/cosine.py
++-rw-r--r--   0 novay      (501) staff       (20)     3672 2023-04-06 13:15:13.000000 plagiat-0.1.6/plagiat/deteksi.py
++-rw-r--r--   0 novay      (501) staff       (20)     1226 2023-04-06 13:00:53.000000 plagiat-0.1.6/plagiat/jaccard.py
++-rw-r--r--   0 novay      (501) staff       (20)     1155 2023-04-02 09:06:09.000000 plagiat-0.1.6/plagiat/rabin_karp.py
++drwxr-xr-x   0 novay      (501) staff       (20)        0 2023-04-06 13:22:55.456872 plagiat-0.1.6/plagiat.egg-info/
++-rw-r--r--   0 novay      (501) staff       (20)     4098 2023-04-06 13:22:55.000000 plagiat-0.1.6/plagiat.egg-info/PKG-INFO
++-rw-r--r--   0 novay      (501) staff       (20)      270 2023-04-06 13:22:55.000000 plagiat-0.1.6/plagiat.egg-info/SOURCES.txt
++-rw-r--r--   0 novay      (501) staff       (20)        1 2023-04-06 13:22:55.000000 plagiat-0.1.6/plagiat.egg-info/dependency_links.txt
++-rw-r--r--   0 novay      (501) staff       (20)        9 2023-04-06 13:22:55.000000 plagiat-0.1.6/plagiat.egg-info/requires.txt
++-rw-r--r--   0 novay      (501) staff       (20)        8 2023-04-06 13:22:55.000000 plagiat-0.1.6/plagiat.egg-info/top_level.txt
++-rw-r--r--   0 novay      (501) staff       (20)       38 2023-04-06 13:22:55.457257 plagiat-0.1.6/setup.cfg
++-rw-r--r--   0 novay      (501) staff       (20)     1079 2023-04-06 13:22:43.000000 plagiat-0.1.6/setup.py
+```
+
+### Comparing `plagiat-0.1.5/PKG-INFO` & `plagiat-0.1.6/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ Metadata-Version: 2.1
+ Name: plagiat
+-Version: 0.1.5
++Version: 0.1.6
+ Summary: Library untuk memeriksa tingkat plagiarisme.
+-Home-page: https://novay.web.id/
++Home-page: https://github.com/novay/python/tree/main/plagiat
+ Author: Novianto Rahmadi
+ Author-email: novay@btekno.id
+ License: MIT
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `plagiat-0.1.5/README.md` & `plagiat-0.1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `plagiat-0.1.5/plagiat/cosine.py` & `plagiat-0.1.6/plagiat/cosine.py`
+
+ * *Files identical despite different names*
+
+### Comparing `plagiat-0.1.5/plagiat/deteksi.py` & `plagiat-0.1.6/plagiat/deteksi.py`
+
+ * *Files identical despite different names*
+
+### Comparing `plagiat-0.1.5/plagiat/jaccard.py` & `plagiat-0.1.6/plagiat/jaccard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `plagiat-0.1.5/plagiat/rabin_karp.py` & `plagiat-0.1.6/plagiat/rabin_karp.py`
+
+ * *Files identical despite different names*
+
+### Comparing `plagiat-0.1.5/plagiat.egg-info/PKG-INFO` & `plagiat-0.1.6/plagiat.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ Metadata-Version: 2.1
+ Name: plagiat
+-Version: 0.1.5
++Version: 0.1.6
+ Summary: Library untuk memeriksa tingkat plagiarisme.
+-Home-page: https://novay.web.id/
++Home-page: https://github.com/novay/python/tree/main/plagiat
+ Author: Novianto Rahmadi
+ Author-email: novay@btekno.id
+ License: MIT
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `plagiat-0.1.5/setup.py` & `plagiat-0.1.6/setup.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -6,19 +6,19 @@
+ HERE = path.abspath(path.dirname(__file__))
+ 
+ with open(path.join(HERE, 'README.md'), encoding='utf-8') as f:
+     long_description = f.read()
+     
+ setup(
+     name="plagiat",
+-    version="0.1.5",
++    version="0.1.6",
+     description="Library untuk memeriksa tingkat plagiarisme.",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+-    url="https://novay.web.id/",
++    url="https://github.com/novay/python/tree/main/plagiat",
+     author="Novianto Rahmadi",
+     author_email="novay@btekno.id",
+     license="MIT",
+     classifiers=[
+         "Intended Audience :: Developers",
+         "License :: OSI Approved :: MIT License",
+         "Programming Language :: Python",
+```
+

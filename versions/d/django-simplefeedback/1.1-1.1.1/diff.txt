@@ -1,0 +1,162 @@
+--- tmp/django_simplefeedback-1.1.tar.gz
++++ tmp/django_simplefeedback-1.1.1.tar.gz
+│   --- django_simplefeedback-1.1.tar
+├── +++ django_simplefeedback-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ --rw-r--r--   0        0        0      123 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/MANIFEST.in
+│ │ --rw-r--r--   0        0        0       27 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/requirements.txt
+│ │ --rw-r--r--   0        0        0     2286 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/runtests.py
+│ │ --rw-r--r--   0        0        0     1101 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/setup.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/__init__.py
+│ │ --rw-r--r--   0        0        0     1314 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/admin.py
+│ │ --rw-r--r--   0        0        0      108 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/apps.py
+│ │ --rw-r--r--   0        0        0     2815 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/models.py
+│ │ --rw-r--r--   0        0        0      187 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/serializers.py
+│ │ --rw-r--r--   0        0        0     4805 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/tests.py
+│ │ --rw-r--r--   0        0        0      293 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/urls.py
+│ │ --rw-r--r--   0        0        0     1083 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/views.py
+│ │ --rw-r--r--   0        0        0     1391 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/migrations/0001_initial.py
+│ │ --rw-r--r--   0        0        0      523 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/migrations/0002_auto_20180115_1854.py
+│ │ --rw-r--r--   0        0        0      699 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/migrations/0003_ticket_assignee.py
+│ │ --rw-r--r--   0        0        0      802 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/migrations/0004_auto_20180612_1559.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/migrations/__init__.py
+│ │ --rw-r--r--   0        0        0      189 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/simple_feedback/templates/email/notify_template.html
+│ │ --rw-r--r--   0        0        0       47 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/.gitignore
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/LICENSE
+│ │ --rw-r--r--   0        0        0     2785 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/README.md
+│ │ --rw-r--r--   0        0        0      689 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     3365 2020-02-02 00:00:00.000000 django_simplefeedback-1.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      123 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/MANIFEST.in
+│ │ +-rw-r--r--   0        0        0       27 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/requirements.txt
+│ │ +-rw-r--r--   0        0        0     2286 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/runtests.py
+│ │ +-rw-r--r--   0        0        0     1103 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/setup.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/__init__.py
+│ │ +-rw-r--r--   0        0        0     1314 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/admin.py
+│ │ +-rw-r--r--   0        0        0      108 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/apps.py
+│ │ +-rw-r--r--   0        0        0     2769 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/models.py
+│ │ +-rw-r--r--   0        0        0      187 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/serializers.py
+│ │ +-rw-r--r--   0        0        0     4805 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/tests.py
+│ │ +-rw-r--r--   0        0        0      293 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/urls.py
+│ │ +-rw-r--r--   0        0        0     1083 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/views.py
+│ │ +-rw-r--r--   0        0        0     1391 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/migrations/0001_initial.py
+│ │ +-rw-r--r--   0        0        0      523 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/migrations/0002_auto_20180115_1854.py
+│ │ +-rw-r--r--   0        0        0      699 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/migrations/0003_ticket_assignee.py
+│ │ +-rw-r--r--   0        0        0      802 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/migrations/0004_auto_20180612_1559.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/migrations/__init__.py
+│ │ +-rw-r--r--   0        0        0      189 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/simple_feedback/templates/email/notify_template.html
+│ │ +-rw-r--r--   0        0        0       47 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/.gitignore
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     2785 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/README.md
+│ │ +-rw-r--r--   0        0        0      691 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     3367 2020-02-02 00:00:00.000000 django_simplefeedback-1.1.1/PKG-INFO
+│ │   --- django_simplefeedback-1.1/runtests.py
+│ ├── +++ django_simplefeedback-1.1.1/runtests.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/setup.py
+│ ├── +++ django_simplefeedback-1.1.1/setup.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │      long_description = fh.read()
+│ │  
+│ │  # allow setup.py to be run from any path
+│ │  os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
+│ │  
+│ │  setup(
+│ │      name='django-simplefeedback',
+│ │ -    version='1.1',
+│ │ +    version='1.1.1',
+│ │      packages=find_packages(),
+│ │      include_package_data=True,
+│ │      license='BSD License',  # example license
+│ │      description='A simple Django app to handle user tickets.',
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url='https://www.github.com/pulilab/django-simple-feedback',
+│ │   --- django_simplefeedback-1.1/simple_feedback/admin.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/admin.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/models.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/models.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,12 +1,11 @@
+│ │  from django.db import models
+│ │  from django.db.models.signals import post_save
+│ │  from django.core import mail
+│ │  from django.contrib.auth.models import User
+│ │ -from django.contrib.postgres.fields import JSONField
+│ │  from django.template import loader
+│ │  from django.dispatch import receiver
+│ │  from django.conf import settings
+│ │  
+│ │  # This has to stay here to use the proper celery instance with the djcelery_email package
+│ │  try:
+│ │      import scheduler.celery  # noqa
+│ │ @@ -31,15 +30,15 @@
+│ │      user = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)  # anonym if empty
+│ │      assignee = models.ForeignKey(User, blank=True, null=True, related_name='tickets', on_delete=models.SET_NULL)
+│ │      email = models.EmailField(blank=True, null=True)
+│ │      subject = models.TextField()
+│ │      text = models.TextField()
+│ │      created = models.DateTimeField(auto_now=False, auto_now_add=True)
+│ │      modified = models.DateTimeField(auto_now=True, auto_now_add=False)
+│ │ -    meta = JSONField(default=dict, blank=True)
+│ │ +    meta = models.JSONField(default=dict, blank=True)
+│ │  
+│ │      def __str__(self):
+│ │          return self.subject
+│ │  
+│ │  
+│ │  @receiver(post_save, sender=Ticket)
+│ │  def new_ticket_notification(sender, instance, created, **kwargs):
+│ │   --- django_simplefeedback-1.1/simple_feedback/tests.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/tests.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/views.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/views.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/migrations/0001_initial.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/migrations/0001_initial.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/migrations/0002_auto_20180115_1854.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/migrations/0002_auto_20180115_1854.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/migrations/0003_ticket_assignee.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/migrations/0003_ticket_assignee.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/simple_feedback/migrations/0004_auto_20180612_1559.py
+│ ├── +++ django_simplefeedback-1.1.1/simple_feedback/migrations/0004_auto_20180612_1559.py
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/README.md
+│ ├── +++ django_simplefeedback-1.1.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- django_simplefeedback-1.1/pyproject.toml
+│ ├── +++ django_simplefeedback-1.1.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [project]
+│ │  name = "django-simplefeedback"
+│ │ -version = "1.1"
+│ │ +version = "1.1.1"
+│ │  authors = [
+│ │    { name="Zoltan Ilcsik", email="zi@pulilab.com" },
+│ │    { name="Fekete Gyorgy", email="f@pulilab.com" },
+│ │  ]
+│ │  description = "A simple Django app to handle user tickets."
+│ │  readme = "README.md"
+│ │  license = { file="LICENSE" }
+│ │   --- django_simplefeedback-1.1/PKG-INFO
+│ ├── +++ django_simplefeedback-1.1.1/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: django-simplefeedback
+│ │ -Version: 1.1
+│ │ +Version: 1.1.1
+│ │  Summary: A simple Django app to handle user tickets.
+│ │  Project-URL: Homepage, https://github.com/pulilab/django-simple-feedback
+│ │  Project-URL: Bug Tracker, https://github.com/pulilab/django-simple-feedback/issues
+│ │  Author-email: Zoltan Ilcsik <zi@pulilab.com>, Fekete Gyorgy <f@pulilab.com>
+│ │  License-File: LICENSE
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Operating System :: OS Independent

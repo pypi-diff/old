@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/openeo_pg_parser_networkx-2023.3.1.tar.gz tmp/openeo_pg_parser_networkx-2023.4.1.tar.gz --html versions/o/openeo-pg-parser-networkx/2023.3.1-2023.4.1/index.html --text versions/o/openeo-pg-parser-networkx/2023.3.1-2023.4.1/diff.txt --markdown versions/o/openeo-pg-parser-networkx/2023.3.1-2023.4.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.89 KB</span></div>
+  <div><span class="source">tmp/openeo_pg_parser_networkx-2023.3.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/openeo_pg_parser_networkx-2023.4.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">224 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;openeo_pg_parser_networkx-2023.<del>3</del>.1.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;openeo_pg_parser_networkx-2023.<ins>4</ins>.1.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.58 KB</span></div>
+    <div><span class="source">openeo_pg_parser_networkx-2023.3.1.tar</span> vs.</div>
+    <div id="openeo_pg_parser_networkx-----.-.-.tar"><span class="source">openeo_pg_parser_networkx-2023.4.1.tar</span>
+      <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.34 KB</span></div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 9 lines modified</td><td colspan="2">Offset 1, 9 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10765<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9469</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10765<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3888</ins>3<ins>1</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>50<del>31</del><span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9469</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>50<ins>27</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3888</ins>3<ins>1</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>169<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/openeo_pg_parser_networkx/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>169<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/openeo_pg_parser_networkx/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17445<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/openeo_pg_parser_networkx/graph.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17445<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/openeo_pg_parser_networkx/graph.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10134<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/openeo_pg_parser_networkx/pg_schema.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10134<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/openeo_pg_parser_networkx/pg_schema.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3219<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/openeo_pg_parser_networkx/process_registry.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3219<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/openeo_pg_parser_networkx/process_registry.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5083<span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/openeo_pg_parser_networkx/utils.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5083<span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/openeo_pg_parser_networkx/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>474</del><span class="dp">·</span>2023-0<del>3</del>-<del>17</del><span class="dp">·</span>1<del>5</del>:<del>16</del>:<del>01</del>.<del>9509</del>3<del>4</del><span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/pyproject.toml</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>520</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>06</ins><span class="dp">·</span>1<ins>3</ins>:<ins>28</ins>:<ins>24</ins>.<ins>3928</ins>3<ins>2</ins><span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>3</del>7<del>8</del><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openeo_pg_parser_networkx-2023.<del>3</del>.1/PKG-INFO</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>4</ins>7<ins>6</ins><span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openeo_pg_parser_networkx-2023.<ins>4</ins>.1/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/LICENSE</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--LICENSE"><span class="source">openeo_pg_parser_networkx-2023.4.1/LICENSE</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">703 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/README.md</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--README.md"><span class="source">openeo_pg_parser_networkx-2023.4.1/README.md</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 15, 15 lines modified</td><td colspan="2">Offset 15, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">```</td><td class="diffline">15 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>plotting<span class="dp">·</span>also<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>`plot`<span class="dp">·</span>extra:</td><td class="diffline">16 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>plotting<span class="dp">·</span>also<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>`plot`<span class="dp">·</span>extra:</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">```</td><td class="diffline">17 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openeo-pg-parser-networkx[plot]</td><td class="diffline">18 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openeo-pg-parser-networkx[plot]</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">```</td><td class="diffline">19 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">Currently<span class="dp">·</span>Python<span class="dp">·</span>versions<span class="dp">·</span>3.9<del><span class="dp">·</span>and</del><del><span class="dp">·</span></del>3.1<del>0</del><span class="dp">·</span>are<span class="dp">·</span>supported.</td><td class="diffline">20 </td><td class="diffpresent">Currently<span class="dp">·</span>Python<span class="dp">·</span>versions<span class="dp">·</span>3.9<ins>-</ins>3.1<ins>1</ins><span class="dp">·</span>are<span class="dp">·</span>supported.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">##<span class="dp">·</span>Basic<span class="dp">·</span>usage</td><td class="diffline">21 </td><td class="diffpresent">##<span class="dp">·</span>Basic<span class="dp">·</span>usage</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">(An<span class="dp">·</span>example<span class="dp">·</span>notebook<span class="dp">·</span>of<span class="dp">·</span>using<span class="dp">·</span>`openeo-pg-parser-networkx`<span class="dp">·</span>together<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>process<span class="dp">·</span>implementation<span class="dp">·</span>source<span class="dp">·</span>like<span class="dp">·</span>[`openeo-processes-dask`](https://github.com/Open-EO/openeo-processes-dask)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>in<span class="dp">·</span>`openeo-pg-parser-networkx/examples/01_minibackend_demo.ipynb`.)</td><td class="diffline">22 </td><td class="diffpresent">(An<span class="dp">·</span>example<span class="dp">·</span>notebook<span class="dp">·</span>of<span class="dp">·</span>using<span class="dp">·</span>`openeo-pg-parser-networkx`<span class="dp">·</span>together<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>process<span class="dp">·</span>implementation<span class="dp">·</span>source<span class="dp">·</span>like<span class="dp">·</span>[`openeo-processes-dask`](https://github.com/Open-EO/openeo-processes-dask)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>in<span class="dp">·</span>`openeo-pg-parser-networkx/examples/01_minibackend_demo.ipynb`.)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">**Parse<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graph:**</td><td class="diffline">23 </td><td class="diffpresent">**Parse<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graph:**</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">```</td><td class="diffline">24 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/openeo_pg_parser_networkx/graph.py</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-graph.py"><span class="source">openeo_pg_parser_networkx-2023.4.1/openeo_pg_parser_networkx/graph.py</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-graph.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">185 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/openeo_pg_parser_networkx/pg_schema.py</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-pg_schema.py"><span class="source">openeo_pg_parser_networkx-2023.4.1/openeo_pg_parser_networkx/pg_schema.py</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-pg_schema.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">199 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/openeo_pg_parser_networkx/process_registry.py</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-process_registry.py"><span class="source">openeo_pg_parser_networkx-2023.4.1/openeo_pg_parser_networkx/process_registry.py</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-process_registry.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">177 B</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/openeo_pg_parser_networkx/utils.py</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-utils.py"><span class="source">openeo_pg_parser_networkx-2023.4.1/openeo_pg_parser_networkx/utils.py</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--openeo_pg_parser_networkx-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.41 KB</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/pyproject.toml</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--pyproject.toml"><span class="source">openeo_pg_parser_networkx-2023.4.1/pyproject.toml</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 15% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 37 lines modified</td><td colspan="2">Offset 1, 38 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;openeo-pg-parser-networkx&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;openeo-pg-parser-networkx&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.<del>3</del>.1&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;2023.<ins>4</ins>.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Parse<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graphs<span class="dp">·</span>from<span class="dp">·</span>JSON<span class="dp">·</span>to<span class="dp">·</span>traversible<span class="dp">·</span>Python<span class="dp">·</span>objects.&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;Parse<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graphs<span class="dp">·</span>from<span class="dp">·</span>JSON<span class="dp">·</span>to<span class="dp">·</span>traversible<span class="dp">·</span>Python<span class="dp">·</span>objects.&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Lukas<span class="dp">·</span>Weidenholzer<span class="dp">·</span>&lt;lukas.weidenholzer@eodc.eu&gt;&quot;,<span class="dp">·</span>&quot;Sean<span class="dp">·</span>Hoyal<span class="dp">·</span>&lt;sean.hoyal@eodc.eu&gt;&quot;,<span class="dp">·</span>&quot;Valentina<span class="dp">·</span>Hutter<span class="dp">·</span>&lt;valentina.hutter@eodc.eu&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;Lukas<span class="dp">·</span>Weidenholzer<span class="dp">·</span>&lt;lukas.weidenholzer@eodc.eu&gt;&quot;,<span class="dp">·</span>&quot;Sean<span class="dp">·</span>Hoyal<span class="dp">·</span>&lt;sean.hoyal@eodc.eu&gt;&quot;,<span class="dp">·</span>&quot;Valentina<span class="dp">·</span>Hutter<span class="dp">·</span>&lt;valentina.hutter@eodc.eu&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache<span class="dp">·</span>2.0&quot;</td><td class="diffline">6 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;Apache<span class="dp">·</span>2.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">7 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/Open-EO/openeo-pg-parser-networkx&quot;</td><td class="diffline">8 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://github.com/Open-EO/openeo-pg-parser-networkx&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">9 </td><td class="diffpresent">classifiers<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta&quot;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&quot;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python&quot;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only&quot;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9&quot;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10&quot;,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10&quot;,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">]</td><td class="diffline">18 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">19 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;openeo_pg_parser_networkx&quot;<span class="dp">·</span>}</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>{<span class="dp">·</span>include<span class="dp">·</span>=<span class="dp">·</span>&quot;openeo_pg_parser_networkx&quot;<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">]</td><td class="diffline">21 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">22 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.9,&lt;3.1<del>1</del>&quot;</td><td class="diffline">23 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=3.9,&lt;3.1<ins>2</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.9.1&quot;</td><td class="diffline">24 </td><td class="diffpresent">pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.9.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">pyproj<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.4.0&quot;</td><td class="diffline">25 </td><td class="diffpresent">pyproj<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.4.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">networkx<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.8.6&quot;</td><td class="diffline">26 </td><td class="diffpresent">networkx<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.8.6&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">shapely<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=1.8&quot;</td><td class="diffline">27 </td><td class="diffpresent">shapely<span class="dp">·</span>=<span class="dp">·</span>&quot;&gt;=1.8&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">geojson-pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.5.0&quot;</td><td class="diffline">28 </td><td class="diffpresent">geojson-pydantic<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.5.0&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.2<del>4</del>.<del>1</del>&quot;</td><td class="diffline">29 </td><td class="diffpresent">numpy<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.2<ins>0</ins>.<ins>3</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">pendulum<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.1.2&quot;</td><td class="diffline">30 </td><td class="diffpresent">pendulum<span class="dp">·</span>=<span class="dp">·</span>&quot;^2.1.2&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">matplotlib<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.1&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td><td class="diffline">31 </td><td class="diffpresent">matplotlib<span class="dp">·</span>=<span class="dp">·</span>{<span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.1&quot;,<span class="dp">·</span>optional<span class="dp">·</span>=<span class="dp">·</span>true<span class="dp">·</span>}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td><td class="diffline">32 </td><td class="diffpresent">[tool.poetry.group.dev.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">matplotlib<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.1&quot;</td><td class="diffline">33 </td><td class="diffpresent">matplotlib<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7.1&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.1.3&quot;</td><td class="diffline">34 </td><td class="diffpresent">pytest<span class="dp">·</span>=<span class="dp">·</span>&quot;^7.1.3&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">ipykernel<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.13.0&quot;</td><td class="diffline">35 </td><td class="diffpresent">ipykernel<span class="dp">·</span>=<span class="dp">·</span>&quot;^6.13.0&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.24 KB</span></div>
+      <div><span class="source">openeo_pg_parser_networkx-2023.3.1/PKG-INFO</span> vs.</div>
+      <div id="openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--PKG-INFO"><span class="source">openeo_pg_parser_networkx-2023.4.1/PKG-INFO</span>
+        <a class="anchor" href="#openeo_pg_parser_networkx-----.-.-.tar---openeo_pg_parser_networkx-----.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 32 lines modified</td><td colspan="2">Offset 1, 34 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>openeo-pg-parser-networkx</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>openeo-pg-parser-networkx</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<del>3</del>.1</td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2023.<ins>4</ins>.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parse<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graphs<span class="dp">·</span>from<span class="dp">·</span>JSON<span class="dp">·</span>to<span class="dp">·</span>traversible<span class="dp">·</span>Python<span class="dp">·</span>objects.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Parse<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graphs<span class="dp">·</span>from<span class="dp">·</span>JSON<span class="dp">·</span>to<span class="dp">·</span>traversible<span class="dp">·</span>Python<span class="dp">·</span>objects.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Open-EO/openeo-pg-parser-networkx</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/Open-EO/openeo-pg-parser-networkx</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>Apache<span class="dp">·</span>2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Lukas<span class="dp">·</span>Weidenholzer</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Lukas<span class="dp">·</span>Weidenholzer</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lukas.weidenholzer@eodc.eu</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lukas.weidenholzer@eodc.eu</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;3.1<del>1</del></td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;3.1<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td><td class="diffline">11 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Developers</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>Other/Proprietary<span class="dp">·</span>License</td><td class="diffline">12 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>Other/Proprietary<span class="dp">·</span>License</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td><td class="diffline">13 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">14 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">15 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">16 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only</td><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>::<span class="dp">·</span>Only</td></tr>
+<tr class="diffunmodified"><td class="diffline">19 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">21 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.11</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">22 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>plot</td><td class="diffline">23 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>plot</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>geojson-pydantic<span class="dp">·</span>(&gt;=0.5.0,&lt;0.6.0)</td><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>geojson-pydantic<span class="dp">·</span>(&gt;=0.5.0,&lt;0.6.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>matplotlib<span class="dp">·</span>(&gt;=3.7.1,&lt;4.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;plot&quot;</td><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>matplotlib<span class="dp">·</span>(&gt;=3.7.1,&lt;4.0.0)<span class="dp">·</span>;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&quot;plot&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>networkx<span class="dp">·</span>(&gt;=2.8.6,&lt;3.0.0)</td><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>networkx<span class="dp">·</span>(&gt;=2.8.6,&lt;3.0.0)</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(&gt;=1.2<del>4</del>.<del>1</del>,&lt;2.0.0)</td><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>numpy<span class="dp">·</span>(&gt;=1.2<ins>0</ins>.<ins>3</ins>,&lt;2.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pendulum<span class="dp">·</span>(&gt;=2.1.2,&lt;3.0.0)</td><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pendulum<span class="dp">·</span>(&gt;=2.1.2,&lt;3.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pydantic<span class="dp">·</span>(&gt;=1.9.1,&lt;2.0.0)</td><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pydantic<span class="dp">·</span>(&gt;=1.9.1,&lt;2.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pyproj<span class="dp">·</span>(&gt;=3.4.0,&lt;4.0.0)</td><td class="diffline">30 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>pyproj<span class="dp">·</span>(&gt;=3.4.0,&lt;4.0.0)</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>shapely<span class="dp">·</span>(&gt;=1.8)</td><td class="diffline">31 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>shapely<span class="dp">·</span>(&gt;=1.8)</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/Open-EO/openeo-pg-parser-networkx</td><td class="diffline">32 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Repository,<span class="dp">·</span>https://github.com/Open-EO/openeo-pg-parser-networkx</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">33 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 47, 15 lines modified</td><td colspan="2">Offset 49, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">```</td><td class="diffline">49 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>plotting<span class="dp">·</span>also<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>`plot`<span class="dp">·</span>extra:</td><td class="diffline">50 </td><td class="diffpresent">To<span class="dp">·</span>enable<span class="dp">·</span>plotting<span class="dp">·</span>also<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>`plot`<span class="dp">·</span>extra:</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">```</td><td class="diffline">51 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openeo-pg-parser-networkx[plot]</td><td class="diffline">52 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openeo-pg-parser-networkx[plot]</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">```</td><td class="diffline">53 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">Currently<span class="dp">·</span>Python<span class="dp">·</span>versions<span class="dp">·</span>3.9<del><span class="dp">·</span>and</del><del><span class="dp">·</span></del>3.1<del>0</del><span class="dp">·</span>are<span class="dp">·</span>supported.</td><td class="diffline">54 </td><td class="diffpresent">Currently<span class="dp">·</span>Python<span class="dp">·</span>versions<span class="dp">·</span>3.9<ins>-</ins>3.1<ins>1</ins><span class="dp">·</span>are<span class="dp">·</span>supported.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent">##<span class="dp">·</span>Basic<span class="dp">·</span>usage</td><td class="diffline">55 </td><td class="diffpresent">##<span class="dp">·</span>Basic<span class="dp">·</span>usage</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">(An<span class="dp">·</span>example<span class="dp">·</span>notebook<span class="dp">·</span>of<span class="dp">·</span>using<span class="dp">·</span>`openeo-pg-parser-networkx`<span class="dp">·</span>together<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>process<span class="dp">·</span>implementation<span class="dp">·</span>source<span class="dp">·</span>like<span class="dp">·</span>[`openeo-processes-dask`](https://github.com/Open-EO/openeo-processes-dask)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>in<span class="dp">·</span>`openeo-pg-parser-networkx/examples/01_minibackend_demo.ipynb`.)</td><td class="diffline">56 </td><td class="diffpresent">(An<span class="dp">·</span>example<span class="dp">·</span>notebook<span class="dp">·</span>of<span class="dp">·</span>using<span class="dp">·</span>`openeo-pg-parser-networkx`<span class="dp">·</span>together<span class="dp">·</span>with<span class="dp">·</span>a<span class="dp">·</span>process<span class="dp">·</span>implementation<span class="dp">·</span>source<span class="dp">·</span>like<span class="dp">·</span>[`openeo-processes-dask`](https://github.com/Open-EO/openeo-processes-dask)<span class="dp">·</span>can<span class="dp">·</span>be<span class="dp">·</span>found<span class="dp">·</span>in<span class="dp">·</span>`openeo-pg-parser-networkx/examples/01_minibackend_demo.ipynb`.)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">**Parse<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graph:**</td><td class="diffline">57 </td><td class="diffpresent">**Parse<span class="dp">·</span>a<span class="dp">·</span>JSON<span class="dp">·</span>OpenEO<span class="dp">·</span>process<span class="dp">·</span>graph:**</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">```</td><td class="diffline">58 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

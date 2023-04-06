@@ -1,0 +1,92 @@
+--- tmp/fps_terminals-0.1.2.tar.gz
++++ tmp/fps_terminals-0.1.3.tar.gz
+│   --- fps_terminals-0.1.2.tar
+├── +++ fps_terminals-0.1.3.tar
+│ ├── file list
+│ │ @@ -1,12 +1,12 @@
+│ │ --rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/MANIFEST.in
+│ │ --rw-r--r--   0        0        0       22 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/__init__.py
+│ │ --rw-r--r--   0        0        0      726 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/main.py
+│ │ --rw-r--r--   0        0        0       97 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/models.py
+│ │ --rw-r--r--   0        0        0     2442 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/routes.py
+│ │ --rw-r--r--   0        0        0     2419 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/server.py
+│ │ --rw-r--r--   0        0        0     1850 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/fps_terminals/win_server.py
+│ │ --rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/.gitignore
+│ │ --rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/COPYING.md
+│ │ --rw-r--r--   0        0        0       54 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/README.md
+│ │ --rw-r--r--   0        0        0      951 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/pyproject.toml
+│ │ --rw-r--r--   0        0        0      534 2020-02-02 00:00:00.000000 fps_terminals-0.1.2/PKG-INFO
+│ │ +-rw-r--r--   0        0        0       13 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/MANIFEST.in
+│ │ +-rw-r--r--   0        0        0       22 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/__init__.py
+│ │ +-rw-r--r--   0        0        0      726 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/main.py
+│ │ +-rw-r--r--   0        0        0       97 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/models.py
+│ │ +-rw-r--r--   0        0        0     2442 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/routes.py
+│ │ +-rw-r--r--   0        0        0     2419 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/server.py
+│ │ +-rw-r--r--   0        0        0     1850 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/fps_terminals/win_server.py
+│ │ +-rw-r--r--   0        0        0     6359 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/.gitignore
+│ │ +-rw-r--r--   0        0        0     2833 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/COPYING.md
+│ │ +-rw-r--r--   0        0        0       54 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/README.md
+│ │ +-rw-r--r--   0        0        0      962 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      544 2020-02-02 00:00:00.000000 fps_terminals-0.1.3/PKG-INFO
+│ │   --- fps_terminals-0.1.2/fps_terminals/main.py
+│ ├── +++ fps_terminals-0.1.3/fps_terminals/main.py
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/fps_terminals/routes.py
+│ ├── +++ fps_terminals-0.1.3/fps_terminals/routes.py
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/fps_terminals/server.py
+│ ├── +++ fps_terminals-0.1.3/fps_terminals/server.py
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/fps_terminals/win_server.py
+│ ├── +++ fps_terminals-0.1.3/fps_terminals/win_server.py
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/.gitignore
+│ ├── +++ fps_terminals-0.1.3/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/COPYING.md
+│ ├── +++ fps_terminals-0.1.3/COPYING.md
+│ │┄ Files identical despite different names
+│ │   --- fps_terminals-0.1.2/pyproject.toml
+│ ├── +++ fps_terminals-0.1.3/pyproject.toml
+│ │┄ Files 9% similar despite different names
+│ │ @@ -6,15 +6,15 @@
+│ │  name = "fps_terminals"
+│ │  description = "An FPS plugin for the terminals API"
+│ │  keywords = ["jupyter", "server", "fastapi", "plugins"]
+│ │  requires-python = ">=3.8"
+│ │  dependencies = [
+│ │      "websockets",
+│ │      "pywinpty;platform_system=='Windows'",
+│ │ -    "jupyverse-api",
+│ │ +    "jupyverse-api >=0.1.2,<1",
+│ │  ]
+│ │  dynamic = ["version"]
+│ │  [[project.authors]]
+│ │  name = "Jupyter Development Team"
+│ │  email = "jupyter@googlegroups.com"
+│ │  
+│ │  [project.readme]
+│ │   --- fps_terminals-0.1.2/PKG-INFO
+│ ├── +++ fps_terminals-0.1.3/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: fps_terminals
+│ │ -Version: 0.1.2
+│ │ +Version: 0.1.3
+│ │  Summary: An FPS plugin for the terminals API
+│ │  Project-URL: Homepage, https://jupyter.org
+│ │  Author-email: Jupyter Development Team <jupyter@googlegroups.com>
+│ │  License: BSD 3-Clause License
+│ │  License-File: COPYING.md
+│ │  Keywords: fastapi,jupyter,plugins,server
+│ │  Requires-Python: >=3.8
+│ │ -Requires-Dist: jupyverse-api
+│ │ +Requires-Dist: jupyverse-api<1,>=0.1.2
+│ │  Requires-Dist: pywinpty; platform_system == 'Windows'
+│ │  Requires-Dist: websockets
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # fps-terminals
+│ │  
+│ │  An FPS plugin for the terminals API.

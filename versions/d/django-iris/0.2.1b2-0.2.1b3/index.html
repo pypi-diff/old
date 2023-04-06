@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/django-iris-0.2.1b2.tar.gz tmp/django-iris-0.2.1b3.tar.gz --html versions/d/django-iris/0.2.1b2-0.2.1b3/index.html --text versions/d/django-iris/0.2.1b2-0.2.1b3/diff.txt --markdown versions/d/django-iris/0.2.1b2-0.2.1b3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">28.6 KB</span></div>
+  <div><span class="source">tmp/django-iris-0.2.1b2.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/django-iris-0.2.1b3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">276 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;django-iris-0.2.1b<del>2</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>13:<del>13</del>:<del>58</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;django-iris-0.2.1b<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span>6<span class="dp">·</span>13:<ins>29</ins>:<ins>44</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">28.3 KB</span></div>
+    <div><span class="source">django-iris-0.2.1b2.tar</span> vs.</div>
+    <div id="django-iris--.-.-b-.tar"><span class="source">django-iris-0.2.1b3.tar</span>
+      <a class="anchor" href="#django-iris--.-.-b-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">20.6 KB</span></div>
+      <div id="django-iris--.-.-b-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 61 lines modified</td><td colspan="2">Offset 1, 93 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>2</del>0<del>2345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>44</ins>.<ins>0</ins>0<ins>1900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1075<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1075<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1516<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>2</del>0<del>2345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1516<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>44</ins>.<ins>0</ins>0<ins>1900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>607<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>607<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>1</del>9<del>4345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.<ins>9</ins>9<ins>3900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4245<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4245<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7093<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/base.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7093<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7738<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/compiler.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7738<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/compiler.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1521<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/creation.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1521<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/creation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1352<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/cursor.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1352<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/cursor.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8066<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/features.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8066<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/features.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10304<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/introspection.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10304<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/introspection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13175<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/operations.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13175<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/operations.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4148<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/schema.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4148<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/schema.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>795<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/utils.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>795<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris/validation.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>233<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris/validation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>1</del>9<del>4345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris.egg-info/</td><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.<ins>9</ins>9<ins>3900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1516<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris.egg-info/PKG-INFO</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1516<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1662</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris.egg-info/SOURCES.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2847</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>131<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris.egg-info/dependency_links.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>131<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/django_iris.egg-info/top_level.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/django_iris.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>202345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/</td><td class="diffline">22 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.<ins>997900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>299<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_BufferReader.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>299<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_BufferReader.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1337<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_BufferWriter.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1337<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_BufferWriter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1896<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_ConnectionInformation.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1896<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_ConnectionInformation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>578<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_ConnectionParameters.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>578<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_ConnectionParameters.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1483<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_Constant.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1483<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_Constant.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20104<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_DBList.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>20104<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_DBList.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2311<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_Device.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2311<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_Device.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>618<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_GatewayContext.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>618<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_GatewayContext.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_GatewayException.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>96<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_GatewayException.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2735<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_GatewayUtility.py</td><td class="diffline">32 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2735<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_GatewayUtility.py</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49548<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRIS.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>49548<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRIS.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21467<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISConnection.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>21467<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISConnection.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2614<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISEmbedded.py</td><td class="diffline">35 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2614<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISEmbedded.py</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12049<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISGlobalNode.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12049<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISGlobalNode.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>797<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISGlobalNodeView.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>797<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISGlobalNodeView.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6906<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISIterator.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6906<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISIterator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10247<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISList.py</td><td class="diffline">39 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10247<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISList.py</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6756<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISNative.py</td><td class="diffline">40 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6756<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISNative.py</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISOREF.py</td><td class="diffline">41 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>82<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISOREF.py</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14456<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISObject.py</td><td class="diffline">42 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14456<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISObject.py</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4905<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_IRISReference.py</td><td class="diffline">43 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4905<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_IRISReference.py</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6643<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_InStream.py</td><td class="diffline">44 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6643<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_InStream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4130<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_LegacyIterator.py</td><td class="diffline">45 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4130<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_LegacyIterator.py</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_ListItem.py</td><td class="diffline">46 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>354<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_ListItem.py</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2966<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_ListReader.py</td><td class="diffline">47 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2966<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_ListReader.py</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5515<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_ListWriter.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5515<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_ListWriter.py</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3797<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_LogFileStream.py</td><td class="diffline">49 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3797<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_LogFileStream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1662<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_MessageHeader.py</td><td class="diffline">50 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1662<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_MessageHeader.py</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1327<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_OutStream.py</td><td class="diffline">51 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1327<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_OutStream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1963<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_PrintStream.py</td><td class="diffline">52 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1963<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_PrintStream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41638<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_PythonGateway.py</td><td class="diffline">53 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>41638<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_PythonGateway.py</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4330<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/_SharedMemorySocket.py</td><td class="diffline">54 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4330<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/_SharedMemorySocket.py</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1773<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/__init__.py</td><td class="diffline">55 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1773<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/intersystems_iris/__main__.py</td><td class="diffline">56 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/intersystems_iris/__main__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">57 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.997900<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">58 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2535<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_Column.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">59 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>94963<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_DBAPI.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">60 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1391<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_Descriptor.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">61 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2113<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_IRISStream.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">62 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4076<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_Message.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4776<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_Parameter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">64 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5151<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_ParameterCollection.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">65 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12810<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_ResultSetRow.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">66 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>557<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/_SQLType.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">67 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">68 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:44.001900<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">69 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78588<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/_PreParser.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">70 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16163<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/_Scanner.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">71 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2304<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/_Token.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">72 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6770<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/_TokenList.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">73 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/dbapi/preparser/__init__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">74 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:44.001900<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">75 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4370<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_BusinessHost.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">76 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5241<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_BusinessOperation.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">77 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10774<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_BusinessProcess.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">78 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5441<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_BusinessService.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">79 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>10509<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_Common.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">80 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1203<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_Director.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">81 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>172<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_IRISBusinessOperation.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">82 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>585<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_IRISBusinessService.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">83 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>171<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_IRISInboundAdapter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">84 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>522<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_IRISOutboundAdapter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">85 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2296<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_InboundAdapter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">86 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>320<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_Message.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">87 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1628<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/_OutboundAdapter.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">88 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1379<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:29:43.000000<span class="dp">·</span>django-iris-0.2.1b3/intersystems_iris/pex/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>2</del>0<del>2345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/irisnative/</td><td class="diffline">89 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>44</ins>.<ins>0</ins>0<ins>1900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/irisnative/</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>665<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/irisnative/_IRISNative.py</td><td class="diffline">90 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>665<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/irisnative/_IRISNative.py</td></tr>
+<tr class="diffchanged"><td class="diffline">59 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>341<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>57</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/irisnative/__init__.py</td><td class="diffline">91 </td><td class="diffpresent">-rw-rw-rw-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>341<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>43</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/irisnative/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>927</del><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>58</del>.<del>2</del>0<del>2345</del><span class="dp">·</span>django-iris-0.2.1b<del>2</del>/setup.cfg</td><td class="diffline">92 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>888</ins><span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>44</ins>.<ins>0</ins>0<ins>1900</ins><span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<del>13</del>:<del>39</del>.000000<span class="dp">·</span>django-iris-0.2.1b<del>2</del>/setup.py</td><td class="diffline">93 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>541<span class="dp">·</span>2023-04-06<span class="dp">·</span>13:<ins>29</ins>:<ins>26</ins>.000000<span class="dp">·</span>django-iris-0.2.1b<ins>3</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/LICENSE</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--LICENSE"><span class="source">django-iris-0.2.1b3/LICENSE</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">498 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/PKG-INFO</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--PKG-INFO"><span class="source">django-iris-0.2.1b3/PKG-INFO</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-iris</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-iris</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.1b<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.1b<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>CaretDev</td><td class="diffline">6 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>CaretDev</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>dmitry@caretdev.com</td><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>dmitry@caretdev.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/README.md</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--README.md"><span class="source">django-iris-0.2.1b3/README.md</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/__init__.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-__init__.py"><span class="source">django-iris-0.2.1b3/django_iris/__init__.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/base.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-base.py"><span class="source">django-iris-0.2.1b3/django_iris/base.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/compiler.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-compiler.py"><span class="source">django-iris-0.2.1b3/django_iris/compiler.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-compiler.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/creation.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-creation.py"><span class="source">django-iris-0.2.1b3/django_iris/creation.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-creation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/cursor.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-cursor.py"><span class="source">django-iris-0.2.1b3/django_iris/cursor.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-cursor.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/features.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-features.py"><span class="source">django-iris-0.2.1b3/django_iris/features.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-features.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/introspection.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-introspection.py"><span class="source">django-iris-0.2.1b3/django_iris/introspection.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-introspection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/operations.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-operations.py"><span class="source">django-iris-0.2.1b3/django_iris/operations.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-operations.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/schema.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-schema.py"><span class="source">django-iris-0.2.1b3/django_iris/schema.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-schema.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris/utils.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-utils.py"><span class="source">django-iris-0.2.1b3/django_iris/utils.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">540 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/django_iris.egg-info/PKG-INFO</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris.egg-info-PKG-INFO"><span class="source">django-iris-0.2.1b3/django_iris.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--django_iris.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-iris</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>django-iris</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.1b<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.2.1b<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>CaretDev</td><td class="diffline">6 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>CaretDev</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>dmitry@caretdev.com</td><td class="diffline">7 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>dmitry@caretdev.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">9 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td><td class="diffline">10 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Tracker,<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_BufferWriter.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_BufferWriter.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_BufferWriter.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_BufferWriter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">165 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_ConnectionInformation.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ConnectionInformation.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_ConnectionInformation.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ConnectionInformation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">163 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_ConnectionParameters.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ConnectionParameters.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_ConnectionParameters.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ConnectionParameters.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_Constant.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_Constant.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_Constant.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_Constant.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_DBList.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_DBList.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_DBList.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_DBList.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_Device.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_Device.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_Device.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_Device.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_GatewayContext.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_GatewayContext.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_GatewayContext.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_GatewayContext.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_GatewayUtility.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_GatewayUtility.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_GatewayUtility.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_GatewayUtility.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRIS.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRIS.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRIS.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRIS.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISConnection.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISConnection.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISConnection.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISConnection.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISEmbedded.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISEmbedded.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISEmbedded.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISEmbedded.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISGlobalNode.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISGlobalNode.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISGlobalNode.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISGlobalNode.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISGlobalNodeView.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISGlobalNodeView.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISGlobalNodeView.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISGlobalNodeView.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISIterator.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISIterator.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISIterator.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISIterator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISList.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISList.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISList.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISList.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISNative.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISNative.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISNative.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISNative.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISObject.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISObject.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISObject.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISObject.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_IRISReference.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISReference.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_IRISReference.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_IRISReference.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_InStream.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_InStream.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_InStream.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_InStream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_LegacyIterator.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_LegacyIterator.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_LegacyIterator.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_LegacyIterator.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_ListReader.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ListReader.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_ListReader.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ListReader.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_ListWriter.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ListWriter.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_ListWriter.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_ListWriter.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_LogFileStream.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_LogFileStream.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_LogFileStream.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_LogFileStream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_MessageHeader.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_MessageHeader.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_MessageHeader.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_MessageHeader.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_OutStream.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_OutStream.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_OutStream.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_OutStream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_PrintStream.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_PrintStream.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_PrintStream.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_PrintStream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_PythonGateway.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_PythonGateway.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_PythonGateway.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_PythonGateway.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">159 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/_SharedMemorySocket.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_SharedMemorySocket.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/_SharedMemorySocket.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-_SharedMemorySocket.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/intersystems_iris/__init__.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-__init__.py"><span class="source">django-iris-0.2.1b3/intersystems_iris/__init__.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--intersystems_iris-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/irisnative/_IRISNative.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--irisnative-_IRISNative.py"><span class="source">django-iris-0.2.1b3/irisnative/_IRISNative.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--irisnative-_IRISNative.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">834 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/setup.cfg</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--setup.cfg"><span class="source">django-iris-0.2.1b3/setup.cfg</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[metadata]</td><td class="diffline">1 </td><td class="diffpresent">[metadata]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>django-iris</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>django-iris</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.2.1b<del>2</del></td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>0.2.1b<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">4 </td><td class="diffpresent">url<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">maintainer<span class="dp">·</span>=<span class="dp">·</span>CaretDev</td><td class="diffline">5 </td><td class="diffpresent">maintainer<span class="dp">·</span>=<span class="dp">·</span>CaretDev</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">maintainer_email<span class="dp">·</span>=<span class="dp">·</span>dmitry@caretdev.com</td><td class="diffline">6 </td><td class="diffpresent">maintainer_email<span class="dp">·</span>=<span class="dp">·</span>dmitry@caretdev.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>MIT</td><td class="diffline">7 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td><td class="diffline">8 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>Django<span class="dp">·</span>backend<span class="dp">·</span>for<span class="dp">·</span>InterSystems<span class="dp">·</span>IRIS</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.md</td><td class="diffline">9 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>file:<span class="dp">·</span>README.md</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/markdown</td><td class="diffline">10 </td><td class="diffpresent">long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 20, 17 lines modified</td><td colspan="2">Offset 20, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">»</span>       Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">»</span>       Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">»</span>       Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">project_urls<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       Source<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">»</span>       Source<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       Tracker<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">»</span>       Tracker<span class="dp">·</span>=<span class="dp">·</span>https://github.com/caretdev/django-iris/issues</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">[options]</td><td class="diffline">25 </td><td class="diffpresent">[options]</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">26 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span><ins>find:</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">»</span>       django_iris</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">»</span>       intersystems_iris</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">»</span>       irisnative</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent">python_requires<span class="dp">·</span>=<span class="dp">·</span>&gt;=3.8</td><td class="diffline">27 </td><td class="diffpresent">python_requires<span class="dp">·</span>=<span class="dp">·</span>&gt;=3.8</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">[egg_info]</td><td class="diffline">28 </td><td class="diffpresent">[egg_info]</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">tag_build<span class="dp">·</span>=<span class="dp">·</span></td><td class="diffline">29 </td><td class="diffpresent">tag_build<span class="dp">·</span>=<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">tag_date<span class="dp">·</span>=<span class="dp">·</span>0</td><td class="diffline">30 </td><td class="diffpresent">tag_date<span class="dp">·</span>=<span class="dp">·</span>0</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">django-iris-0.2.1b2/setup.py</span> vs.</div>
+      <div id="django-iris--.-.-b-.tar---django-iris--.-.-b--setup.py"><span class="source">django-iris-0.2.1b3/setup.py</span>
+        <a class="anchor" href="#django-iris--.-.-b-.tar---django-iris--.-.-b--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

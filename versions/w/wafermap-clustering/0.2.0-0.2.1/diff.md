@@ -1,0 +1,607 @@
+# Comparing `tmp/wafermap-clustering-0.2.0.tar.gz` & `tmp/wafermap-clustering-0.2.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "wafermap-clustering-0.2.0.tar", last modified: Fri Mar 31 20:05:43 2023, max compression
++gzip compressed data, was "wafermap-clustering-0.2.1.tar", last modified: Thu Apr  6 13:33:25 2023, max compression
+```
+
+## Comparing `wafermap-clustering-0.2.0.tar` & `wafermap-clustering-0.2.1.tar`
+
+### file list
+
+```diff
+@@ -1,25 +1,26 @@
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.392823 wafermap-clustering-0.2.0/
+--rw-rw-rw-   0        0        0     1077 2023-01-23 09:00:52.000000 wafermap-clustering-0.2.0/LICENSE.txt
+--rw-rw-rw-   0        0        0      561 2023-03-31 20:05:43.390438 wafermap-clustering-0.2.0/PKG-INFO
+--rw-rw-rw-   0        0        0        0 2023-01-27 14:30:27.000000 wafermap-clustering-0.2.0/README.md
+--rw-rw-rw-   0        0        0       42 2023-03-31 20:05:43.393872 wafermap-clustering-0.2.0/setup.cfg
+--rw-rw-rw-   0        0        0      910 2023-03-31 20:04:50.000000 wafermap-clustering-0.2.0/setup.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.326305 wafermap-clustering-0.2.0/tests/
+--rw-rw-rw-   0        0        0     6310 2023-03-31 20:00:16.000000 wafermap-clustering-0.2.0/tests/test_clustering.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.330989 wafermap-clustering-0.2.0/wafermap_clustering/
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.364846 wafermap-clustering-0.2.0/wafermap_clustering/configs/
+--rw-rw-rw-   0        0        0     1652 2023-03-31 19:26:14.000000 wafermap-clustering-0.2.0/wafermap_clustering/configs/config.py
+--rw-rw-rw-   0        0        0      653 2023-03-09 14:51:02.000000 wafermap-clustering-0.2.0/wafermap_clustering/configs/logging_config.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.368874 wafermap-clustering-0.2.0/wafermap_clustering/libs/
+--rw-rw-rw-   0        0        0     4046 2023-03-30 08:09:06.000000 wafermap-clustering-0.2.0/wafermap_clustering/libs/klarf_lib.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.385022 wafermap-clustering-0.2.0/wafermap_clustering/models/
+--rw-rw-rw-   0        0        0      125 2023-03-09 12:31:13.000000 wafermap-clustering-0.2.0/wafermap_clustering/models/clustered_defect.py
+--rw-rw-rw-   0        0        0      692 2023-03-09 15:20:52.000000 wafermap-clustering-0.2.0/wafermap_clustering/models/clustering_result.py
+--rw-rw-rw-   0        0        0      405 2023-03-31 19:52:57.000000 wafermap-clustering-0.2.0/wafermap_clustering/models/config.py
+--rw-rw-rw-   0        0        0     4628 2023-03-31 19:48:13.000000 wafermap-clustering-0.2.0/wafermap_clustering/wafermap_clustering.py
+-drwxrwxrwx   0        0        0        0 2023-03-31 20:05:43.356098 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/
+--rw-rw-rw-   0        0        0      561 2023-03-31 20:05:43.000000 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      566 2023-03-31 20:05:43.000000 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-31 20:05:43.000000 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0       26 2023-03-31 20:05:43.000000 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/requires.txt
+--rw-rw-rw-   0        0        0       20 2023-03-31 20:05:43.000000 wafermap-clustering-0.2.0/wafermap_clustering.egg-info/top_level.txt
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.258166 wafermap-clustering-0.2.1/
++-rw-rw-rw-   0        0        0     1077 2023-01-23 09:00:52.000000 wafermap-clustering-0.2.1/LICENSE.txt
++-rw-rw-rw-   0        0        0      561 2023-04-06 13:33:25.256165 wafermap-clustering-0.2.1/PKG-INFO
++-rw-rw-rw-   0        0        0        0 2023-01-27 14:30:27.000000 wafermap-clustering-0.2.1/README.md
++-rw-rw-rw-   0        0        0       42 2023-04-06 13:33:25.260066 wafermap-clustering-0.2.1/setup.cfg
++-rw-rw-rw-   0        0        0      910 2023-04-06 13:31:27.000000 wafermap-clustering-0.2.1/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.144021 wafermap-clustering-0.2.1/tests/
++-rw-rw-rw-   0        0        0     8052 2023-04-06 11:56:22.000000 wafermap-clustering-0.2.1/tests/test_clustering.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.150676 wafermap-clustering-0.2.1/wafermap_clustering/
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.210359 wafermap-clustering-0.2.1/wafermap_clustering/configs/
++-rw-rw-rw-   0        0        0     1652 2023-03-31 19:26:14.000000 wafermap-clustering-0.2.1/wafermap_clustering/configs/config.py
++-rw-rw-rw-   0        0        0      917 2023-04-06 11:59:11.000000 wafermap-clustering-0.2.1/wafermap_clustering/configs/logging_config.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.217643 wafermap-clustering-0.2.1/wafermap_clustering/libs/
++-rw-rw-rw-   0        0        0     4304 2023-04-06 09:28:27.000000 wafermap-clustering-0.2.1/wafermap_clustering/libs/klarf_lib.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.247460 wafermap-clustering-0.2.1/wafermap_clustering/models/
++-rw-rw-rw-   0        0        0      125 2023-03-09 12:31:13.000000 wafermap-clustering-0.2.1/wafermap_clustering/models/clustered_defect.py
++-rw-rw-rw-   0        0        0      521 2023-04-06 11:28:53.000000 wafermap-clustering-0.2.1/wafermap_clustering/models/clustering_performance.py
++-rw-rw-rw-   0        0        0      763 2023-04-06 10:14:19.000000 wafermap-clustering-0.2.1/wafermap_clustering/models/clustering_result.py
++-rw-rw-rw-   0        0        0      405 2023-03-31 19:52:57.000000 wafermap-clustering-0.2.1/wafermap_clustering/models/config.py
++-rw-rw-rw-   0        0        0     5113 2023-04-06 12:02:30.000000 wafermap-clustering-0.2.1/wafermap_clustering/wafermap_clustering.py
++drwxrwxrwx   0        0        0        0 2023-04-06 13:33:25.194795 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/
++-rw-rw-rw-   0        0        0      561 2023-04-06 13:33:25.000000 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      619 2023-04-06 13:33:25.000000 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-06 13:33:25.000000 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0       26 2023-04-06 13:33:25.000000 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/requires.txt
++-rw-rw-rw-   0        0        0       20 2023-04-06 13:33:25.000000 wafermap-clustering-0.2.1/wafermap_clustering.egg-info/top_level.txt
+```
+
+### Comparing `wafermap-clustering-0.2.0/LICENSE.txt` & `wafermap-clustering-0.2.1/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `wafermap-clustering-0.2.0/PKG-INFO` & `wafermap-clustering-0.2.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: wafermap-clustering
+-Version: 0.2.0
++Version: 0.2.1
+ Summary: A project to apply clustering on wafermaps
+ Home-page: https://github.com/Impro02/klarf_reader
+-Download-URL: https://github.com/Impro02/wafermap-clustering/archive/refs/tags/0.2.0.tar.gz
++Download-URL: https://github.com/Impro02/wafermap-clustering/archive/refs/tags/0.2.1.tar.gz
+ Author: Maxime MARTIN
+ Author-email: maxime.martin02@hotmail.fr
+ License: MIT
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `wafermap-clustering-0.2.0/setup.py` & `wafermap-clustering-0.2.1/setup.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ from setuptools import setup
+ 
+-version = "0.2.0"
++version = "0.2.1"
+ 
+ setup(
+     name="wafermap-clustering",
+     version=version,
+     packages=[
+         "wafermap_clustering",
+         "wafermap_clustering.configs",
+```
+
+### Comparing `wafermap-clustering-0.2.0/tests/test_clustering.py` & `wafermap-clustering-0.2.1/tests/test_clustering.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -13,14 +13,16 @@
+ from wafermap_clustering.configs.config import (
+     ClusteringMode,
+     Config,
+     ClusteringConfig,
+     KlarfFormat,
+ )
+ 
++from wafermap_clustering.configs import logging_config
++
+ ASSETS_PATH: Path = Path(__file__).parent / "assets"
+ ASSETS_OUPUT_PATH: Path = ASSETS_PATH / "clustering" / "output"
+ 
+ 
+ def compare_files(file1_path, file2_path):
+     with open(file1_path, "r") as file1, open(file2_path, "r") as file2:
+         for i, (line1, line2) in enumerate(zip(file1, file2)):
+@@ -30,14 +32,15 @@
+     return True
+ 
+ 
+ class TestClustering(unittest.TestCase):
+     def setUp(self) -> None:
+         self.path_klarf_single_wafer = ASSETS_PATH / "J052SBN_8196_J052SBN-01.000"
+         self.path_klarf_multi_wafers = ASSETS_PATH / "J237DTA_3236.000"
++        self.path_klarf_single_wafer_large_klarf = ASSETS_PATH / "LARGE_KLARF.000"
+ 
+         self.config = Config(
+             platform="windows",
+             attribute="DYN_CLUSTER_ID",
+             clustering=ClusteringConfig(
+                 dbscan=DBSCANConfig(eps=4, min_samples=3),
+                 hdbscan=HDBSCANConfig(min_samples=3, min_cluster_size=5),
+@@ -58,15 +61,15 @@
+                     0: 10580,
+                     1: 1670,
+                 },
+             }
+         ]
+ 
+         # WHEN
+-        clustering = Clustering(config=self.config)
++        clustering = Clustering(config=self.config, autocreate_logger=True)
+         results = clustering.apply(self.path_klarf_single_wafer)
+ 
+         summary = [
+             {
+                 "result_timestamp": res.result_timestamp,
+                 "lot_id": res.lot_id,
+                 "step_id": res.step_id,
+@@ -78,22 +81,70 @@
+             }
+             for res in results
+         ]
+ 
+         # THEN
+         self.assertEqual(summary, expected_summary)
+ 
++    def test_clustering_dbscan_single_wafer_large_klarf(self):
++        # GIVEN
++        expected_summary = [
++            {
++                "result_timestamp": "02-24-21 08:59:20",
++                "lot_id": "J051FKZ",
++                "step_id": "5640",
++                "wafer_id": "04",
++                "clusters": 9,
++                "clustering": {
++                    -1: 109,
++                    0: 19714,
++                    1: 3,
++                    2: 2342,
++                    3: 7,
++                    4: 4,
++                    5: 4,
++                    6: 4,
++                    7: 3,
++                },
++            }
++        ]
++
++        # WHEN
++        clustering = Clustering(config=self.config, autocreate_logger=True)
++        results = clustering.apply(
++            self.path_klarf_single_wafer_large_klarf,
++            output_path=ASSETS_OUPUT_PATH,
++            klarf_format=KlarfFormat.FULL.value,
++        )
++
++        summary = [
++            {
++                "result_timestamp": res.result_timestamp,
++                "lot_id": res.lot_id,
++                "step_id": res.step_id,
++                "wafer_id": res.wafer_id,
++                "clusters": res.clusters,
++                "clustering": dict(
++                    Counter([cluster.bin for cluster in res.clustered_defects])
++                ),
++            }
++            for res in results
++        ]
++
++        # THEN
++        self.assertEqual(summary, expected_summary)
++
+     def test_clustering_hdbscan_single_wafer(self):
+         # GIVEN
+         output_path = ASSETS_OUPUT_PATH / "J237DTA_3236_hdbscan.000"
+ 
+-        expected_clusters =  [615]
++        expected_clusters = [615]
+ 
+         # WHEN
+-        clustering = Clustering(config=self.config)
++        clustering = Clustering(config=self.config, autocreate_logger=True)
+         results = clustering.apply(
+             klarf_path=self.path_klarf_single_wafer,
+             output_path=output_path,
+             klarf_format=KlarfFormat.FULL.value,
+             clustering_mode=ClusteringMode.HDBSCAN.value,
+         )
+ 
+@@ -139,15 +190,15 @@
+                     5: 5,
+                     6: 3,
+                 },
+             },
+         ]
+ 
+         # WHEN
+-        clustering = Clustering(config=self.config)
++        clustering = Clustering(config=self.config, autocreate_logger=True)
+         results = clustering.apply(self.path_klarf_multi_wafers)
+ 
+         summary = [
+             {
+                 "result_timestamp": res.result_timestamp,
+                 "lot_id": res.lot_id,
+                 "step_id": res.step_id,
+@@ -165,15 +216,15 @@
+ 
+     def test_clustering_dbscan_single_wafer_with_baby_klarf_returned(self):
+         # GIVEN
+         output_path = ASSETS_OUPUT_PATH / "J237DTA_3236_clustered.000"
+         saved_klarf_path = ASSETS_PATH / "saved" / "J237DTA_3236_baby_clustered.000"
+ 
+         # WHEN
+-        clustering = Clustering(config=self.config)
++        clustering = Clustering(config=self.config, autocreate_logger=True)
+         clustering.apply(
+             klarf_path=self.path_klarf_multi_wafers,
+             output_path=output_path,
+             klarf_format=KlarfFormat.BABY.value,
+         )
+ 
+         # THEN
+@@ -184,15 +235,15 @@
+ 
+     def test_clustering_dbscan_single_wafer_with_full_klarf_returned(self):
+         # GIVEN
+         output_path = ASSETS_OUPUT_PATH / "J237DTA_3236_clustered.000"
+         saved_klarf_path = ASSETS_PATH / "saved" / "J237DTA_3236_full_clustered.000"
+ 
+         # WHEN
+-        clustering = Clustering(config=self.config)
++        clustering = Clustering(config=self.config, autocreate_logger=True)
+         clustering.apply(
+             klarf_path=self.path_klarf_multi_wafers,
+             output_path=output_path,
+             klarf_format=KlarfFormat.FULL.value,
+         )
+ 
+         # THEN
+```
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering/configs/config.py` & `wafermap-clustering-0.2.1/wafermap_clustering/configs/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering/libs/klarf_lib.py` & `wafermap-clustering-0.2.1/wafermap_clustering/libs/klarf_lib.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,36 +1,50 @@
+ # MODULES
+ import os
++import time
+ from pathlib import Path
+ from typing import List
+ 
+ # MODELS
+ from ..models.clustering_result import ClusteringResult
+ 
+ 
+ def generate_output_file_name(output_name: str, clustering_result: ClusteringResult):
+     if output_name is None:
+         output_name = (
+             Path(os.getcwd())
+             / f"{clustering_result.lot_id}_{clustering_result.step_id}_{clustering_result.wafer_id}_clustered.000"
+         )
+ 
++    if os.path.isdir(output_name):
++        output_name = (
++            Path(output_name)
++            / f"{clustering_result.lot_id}_{clustering_result.step_id}_{clustering_result.wafer_id}_clustered.000"
++        )
++
+     return output_name
+ 
+ 
+ def write_full_klarf(
+     raw_content: List[str],
+     clustering_result: ClusteringResult,
+     attribute: str,
+     output_filename: Path = None,
+-):
++) -> float:
+     output_filename = generate_output_file_name(
+         output_name=output_filename, clustering_result=clustering_result
+     )
+ 
++    tic = time.time()
++
++    bin_by_defect_id = {
++        cluster.defect_id: cluster.bin
++        for cluster in clustering_result.clustered_defects
++    }
++
+     # Open a new file in write mode
+     with open(output_filename, "w") as f:
+         next_line_has_coords = False
+         for line in raw_content:
+             if line.lstrip().lower().startswith("defectrecordspec"):
+                 line_tmp = line.split(";")
+                 line_tmp = line_tmp[0].split(" ")
+@@ -44,47 +58,42 @@
+             ):
+                 next_line_has_coords = True
+                 f.write(line)
+                 continue
+ 
+             if next_line_has_coords:
+                 is_last_row = line.rstrip().endswith(";")
+-
+                 defect_id = int(line.split()[0])
+-
+-                bin = next(
+-                    (
+-                        cluster.bin
+-                        for cluster in clustering_result.clustered_defects
+-                        if cluster.defect_id == defect_id
+-                    ),
+-                    None,
+-                )
++                bin = bin_by_defect_id.get(defect_id)
+ 
+                 next_line_has_coords = not is_last_row
+                 f.write(
+                     create_full_defect_row(
+                         original_row=line, bin=bin, last_row=is_last_row
+                     )
+                 )
+ 
+             else:
+                 # Write the original line to the new file
+                 f.write(line)
+ 
++    return time.time() - tic
++
+ 
+ def write_baby_klarf(
+     clustering_result: ClusteringResult,
+     attribute: str,
+     output_filename: Path = None,
+-):
++) -> float:
+     output_filename = generate_output_file_name(
+         output_name=output_filename, clustering_result=clustering_result
+     )
+ 
++    tic = time.time()
++
+     file_version = " ".join(str(clustering_result.file_version).split("."))
+ 
+     defects = [
+         create_baby_defect_row(
+             defect_id=clustered_defect.defect_id,
+             bin=clustered_defect.bin,
+             last_row=index == clustering_result.number_of_defects - 1,
+@@ -100,14 +109,16 @@
+         f.write(f'StepID "{clustering_result.step_id}";\n')
+         f.write(f'WaferID "{clustering_result.wafer_id}";\n')
+         f.write(f"DefectRecordSpec 2 DEFECTID {attribute} ;\n")
+         f.write(f"DefectList\n")
+         f.write("".join(defects))
+         f.write("EndOfFile;")
+ 
++    return time.time() - tic
++
+ 
+ def create_baby_defect_row(defect_id: int, bin: int, last_row: bool = False):
+     row = f" {defect_id} {bin}"
+ 
+     if last_row:
+         row = f"{row};"
+```
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering/models/clustering_result.py` & `wafermap-clustering-0.2.1/wafermap_clustering/models/clustering_result.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,26 +1,28 @@
+ # MODULES
+ from dataclasses import dataclass, field
+ from typing import List
+ 
++from wafermap_clustering.models.clustering_performance import ClusteringPerformance
++
+ # MODELS
+ from ..models.clustered_defect import ClusteredDefect
+ 
+ 
+ @dataclass
+ class ClusteringResult:
+     file_version: float
+     result_timestamp: str
+     lot_id: int
+     device_id: str
+     step_id: str
+     wafer_id: str
+     clusters: int
+     clustered_defects: List[ClusteredDefect] = field(default=lambda: [])
+-    processing_timestamp: float = field(default=lambda: None)
++    performance: ClusteringPerformance = None
+ 
+     @property
+     def number_of_defects(self):
+         return len(self.clustered_defects)
+ 
+     def __repr__(self) -> str:
+         return f"{self.lot_id=}, {self.step_id=}, {self.wafer_id=}, {self.result_timestamp=}"
+```
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering/wafermap_clustering.py` & `wafermap-clustering-0.2.1/wafermap_clustering/wafermap_clustering.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -14,14 +14,15 @@
+ from hdbscan import HDBSCAN
+ 
+ # KLARF_READER
+ from klarf_reader.klarf import Klarf
+ from klarf_reader.utils import klarf_convert
+ 
+ from wafermap_clustering.configs.config import ClusteringMode, KlarfFormat
++from wafermap_clustering.models.clustering_performance import ClusteringPerformance
+ 
+ # MODELS
+ from .models.config import Config
+ from .models.clustered_defect import ClusteredDefect
+ from .models.clustering_result import ClusteringResult
+ 
+ # LIBS
+@@ -32,18 +33,17 @@
+ 
+ 
+ class Clustering:
+     def __init__(
+         self, config: Config, logger: Logger = None, autocreate_logger: bool = False
+     ) -> None:
+         self.config = config
+-
+         self.logger = (
+-            setup_logger(platform=self.config.platform)
+-            if autocreate_logger and self.logger is None
++            setup_logger(name="clustering", path=Path(__file__).parent)
++            if autocreate_logger and logger is None
+             else logger
+         )
+ 
+     def apply(
+         self,
+         klarf_path: Path,
+         output_path: Path = None,
+@@ -92,43 +92,51 @@
+                 ClusteredDefect(
+                     defect_id=defect_id,
+                     bin=cluster_label,
+                 )
+                 for defect_id, cluster_label in clustering_values
+             ]
+ 
++            clustering_timestamp = time.time() - tic
++
+             clustering_result = ClusteringResult(
+                 file_version=single_klarf.file_version,
+                 result_timestamp=single_klarf.result_timestamp,
+                 lot_id=single_klarf.lot_id,
+                 device_id=single_klarf.device_id,
+                 step_id=single_klarf.step_id,
+                 wafer_id=single_klarf.wafer.id,
+                 clusters=clusters,
+                 clustered_defects=clustered_defects,
+             )
+ 
++            output_timestamp = None
+             match klarf_format:
+                 case KlarfFormat.BABY.value if output_path is not None:
+-                    klarf_lib.write_baby_klarf(
++                    output_timestamp = klarf_lib.write_baby_klarf(
+                         clustering_result=clustering_result,
+                         attribute=self.config.attribute,
+                         output_filename=output_path,
+                     )
+                 case KlarfFormat.FULL.value if output_path is not None:
+-                    klarf_lib.write_full_klarf(
++                    output_timestamp = klarf_lib.write_full_klarf(
+                         raw_content=raw_content,
+                         clustering_result=clustering_result,
+                         attribute=self.config.attribute,
+                         output_filename=output_path,
+                     )
+ 
+-            clustering_result.processing_timestamp = time.time() - tic
++            clustering_result.performance = ClusteringPerformance(
++                clustering_timestamp=round(clustering_timestamp, 3),
++                output_timestamp=round(output_timestamp, 3)
++                if output_timestamp is not None
++                else None,
++            )
+ 
+             results.append(clustering_result)
+ 
+             if self.logger is not None:
+                 self.logger.info(
+-                    msg=f"({repr(clustering_result)}) was processed in {clustering_result.processing_timestamp} [{clusters=}]"
++                    msg=f"({repr(clustering_result)}) was sucessfully processed [defects={len(defect_ids)}, {clusters=}] with ({repr(clustering_result.performance)}) "
+                 )
+ 
+         return results
+```
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering.egg-info/PKG-INFO` & `wafermap-clustering-0.2.1/wafermap_clustering.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: wafermap-clustering
+-Version: 0.2.0
++Version: 0.2.1
+ Summary: A project to apply clustering on wafermaps
+ Home-page: https://github.com/Impro02/klarf_reader
+-Download-URL: https://github.com/Impro02/wafermap-clustering/archive/refs/tags/0.2.0.tar.gz
++Download-URL: https://github.com/Impro02/wafermap-clustering/archive/refs/tags/0.2.1.tar.gz
+ Author: Maxime MARTIN
+ Author-email: maxime.martin02@hotmail.fr
+ License: MIT
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Developers
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+```
+
+### Comparing `wafermap-clustering-0.2.0/wafermap_clustering.egg-info/SOURCES.txt` & `wafermap-clustering-0.2.1/wafermap_clustering.egg-info/SOURCES.txt`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -8,9 +8,10 @@
+ wafermap_clustering.egg-info/dependency_links.txt
+ wafermap_clustering.egg-info/requires.txt
+ wafermap_clustering.egg-info/top_level.txt
+ wafermap_clustering/configs/config.py
+ wafermap_clustering/configs/logging_config.py
+ wafermap_clustering/libs/klarf_lib.py
+ wafermap_clustering/models/clustered_defect.py
++wafermap_clustering/models/clustering_performance.py
+ wafermap_clustering/models/clustering_result.py
+ wafermap_clustering/models/config.py
+```
+
