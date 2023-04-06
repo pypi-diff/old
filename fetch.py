@@ -204,9 +204,22 @@ def processPackages(args, jclient, p):
         os.makedirs(diffPath, exist_ok=True)
 
     log.info("executing diffoscope")
+    pwd = os.path.abspath(os.curdir)
     try:
         cmd = [
-            "diffoscope",
+            "podman",
+            "run",
+            "--user",
+            "0:0",
+            "--rm",
+            "-t",
+            "-w",
+            pwd,
+            "-v",
+            f"{pwd}/tmp:{pwd}/tmp:ro",
+            "-v",
+            f"{pwd}/versions:{pwd}/versions:rw",
+            "registry.salsa.debian.org/reproducible-builds/diffoscope",
             "--no-progress",
             diffOn[0],
             diffOn[1],
@@ -233,7 +246,7 @@ def processPackages(args, jclient, p):
             pass
         return False
 
-    if exe.returncode == 2:
+    if exe.returncode >= 2:
         log.error("Diffoscope failed: %s", exe.stderr.decode())
         return False
 
