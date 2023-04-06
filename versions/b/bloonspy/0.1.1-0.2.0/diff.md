@@ -1,0 +1,1055 @@
+# Comparing `tmp/bloonspy-0.1.1.tar.gz` & `tmp/bloonspy-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "bloonspy-0.1.1.tar", last modified: Tue Mar 28 09:04:23 2023, max compression
++gzip compressed data, was "bloonspy-0.2.0.tar", last modified: Thu Apr  6 14:22:22 2023, max compression
+```
+
+## Comparing `bloonspy-0.1.1.tar` & `bloonspy-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,63 +1,63 @@
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.251570 bloonspy-0.1.1/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1073 2023-03-20 22:51:50.000000 bloonspy-0.1.1/LICENSE
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1113 2023-03-28 09:04:23.250642 bloonspy-0.1.1/PKG-INFO
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      658 2023-03-26 13:17:54.000000 bloonspy-0.1.1/README.md
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.202129 bloonspy-0.1.1/bloonspy/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     9072 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/Client.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)       74 2023-03-21 12:50:52.000000 bloonspy-0.1.1/bloonspy/__init__.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      209 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/exceptions.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.212458 bloonspy-0.1.1/bloonspy/model/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      164 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/Asset.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     3035 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/Event.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      633 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/GameVersion.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1679 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/Loadable.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      118 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/__init__.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.225528 bloonspy-0.1.1/bloonspy/model/btd6/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     8547 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/btd6/Boss.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)    14104 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/btd6/Challenge.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     5732 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/btd6/ContestedTerritory.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1718 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/Gamemode.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     3330 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/Medals.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     8596 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/btd6/Odyssey.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1261 2023-03-20 21:26:25.000000 bloonspy-0.1.1/bloonspy/model/btd6/Power.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     4981 2023-03-26 19:33:02.000000 bloonspy-0.1.1/bloonspy/model/btd6/Race.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      643 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/Restriction.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      465 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/Rewards.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     3304 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/Team.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     3213 2023-03-20 21:35:43.000000 bloonspy-0.1.1/bloonspy/model/btd6/Tower.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)    11411 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/model/btd6/User.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      277 2023-03-22 14:15:23.000000 bloonspy-0.1.1/bloonspy/model/btd6/__init__.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.230345 bloonspy-0.1.1/bloonspy/utils/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      467 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/utils/Infinity.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)       31 2023-03-21 12:50:39.000000 bloonspy-0.1.1/bloonspy/utils/__init__.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1182 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/utils/api.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      761 2023-03-26 12:46:39.000000 bloonspy-0.1.1/bloonspy/utils/decorators.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      705 2023-03-21 21:08:10.000000 bloonspy-0.1.1/bloonspy/utils/dictionaries.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.205903 bloonspy-0.1.1/bloonspy.egg-info/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1113 2023-03-28 09:04:23.000000 bloonspy-0.1.1/bloonspy.egg-info/PKG-INFO
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1495 2023-03-28 09:04:23.000000 bloonspy-0.1.1/bloonspy.egg-info/SOURCES.txt
+--rw-r--r--   0 riccardosartori   (501) staff       (20)        1 2023-03-28 09:04:23.000000 bloonspy-0.1.1/bloonspy.egg-info/dependency_links.txt
+--rw-r--r--   0 riccardosartori   (501) staff       (20)       15 2023-03-28 09:04:23.000000 bloonspy-0.1.1/bloonspy.egg-info/top_level.txt
+--rw-r--r--   0 riccardosartori   (501) staff       (20)       38 2023-03-28 09:04:23.252166 bloonspy-0.1.1/setup.cfg
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      627 2023-03-28 09:04:18.000000 bloonspy-0.1.1/setup.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.231397 bloonspy-0.1.1/tests/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:43.000000 bloonspy-0.1.1/tests/__init__.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.240832 bloonspy-0.1.1/tests/integration/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:59.000000 bloonspy-0.1.1/tests/integration/__init__.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1305 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/integration/test_boss_leaderboard.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1197 2023-03-26 19:33:02.000000 bloonspy-0.1.1/tests/integration/test_challenge_browser.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      728 2023-03-26 11:28:22.000000 bloonspy-0.1.1/tests/integration/test_challenge_creator.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1780 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/integration/test_ct_leaderboard.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      691 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/integration/test_fetch_odyssey.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      904 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/integration/test_fetch_user.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1166 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/integration/test_race_leaderboard.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)      644 2023-03-22 12:23:42.000000 bloonspy-0.1.1/tests/integration/test_team_owner.py
+-drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-03-28 09:04:23.249239 bloonspy-0.1.1/tests/unit/
+--rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:51.000000 bloonspy-0.1.1/tests/unit/__init__.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     2060 2023-03-22 14:41:08.000000 bloonspy-0.1.1/tests/unit/test_boss.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     4057 2023-03-24 16:11:59.000000 bloonspy-0.1.1/tests/unit/test_challenge.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1381 2023-03-23 10:34:38.000000 bloonspy-0.1.1/tests/unit/test_ct.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     3679 2023-03-24 11:25:25.000000 bloonspy-0.1.1/tests/unit/test_odyssey.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1307 2023-03-21 20:52:03.000000 bloonspy-0.1.1/tests/unit/test_race.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     1831 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/unit/test_team.py
+--rw-r--r--   0 riccardosartori   (501) staff       (20)     7350 2023-03-26 12:46:39.000000 bloonspy-0.1.1/tests/unit/test_user.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.732745 bloonspy-0.2.0/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1073 2023-03-20 22:51:50.000000 bloonspy-0.2.0/LICENSE
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1113 2023-04-06 14:22:22.732345 bloonspy-0.2.0/PKG-INFO
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      658 2023-03-26 13:17:54.000000 bloonspy-0.2.0/README.md
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.695235 bloonspy-0.2.0/bloonspy/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     9087 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/Client.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      125 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/__init__.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      209 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/exceptions.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.702175 bloonspy-0.2.0/bloonspy/model/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      164 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/Asset.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     3035 2023-03-26 19:33:02.000000 bloonspy-0.2.0/bloonspy/model/Event.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      633 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/GameVersion.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1679 2023-03-26 19:33:02.000000 bloonspy-0.2.0/bloonspy/model/Loadable.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      118 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/__init__.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.713568 bloonspy-0.2.0/bloonspy/model/btd6/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)    10824 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/Boss.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)    14129 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/Challenge.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     5732 2023-03-26 19:33:02.000000 bloonspy-0.2.0/bloonspy/model/btd6/ContestedTerritory.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1735 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/Gamemode.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     3330 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/btd6/Medals.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     8596 2023-03-26 19:33:02.000000 bloonspy-0.2.0/bloonspy/model/btd6/Odyssey.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1261 2023-03-20 21:26:25.000000 bloonspy-0.2.0/bloonspy/model/btd6/Power.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     4981 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/Race.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      643 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/btd6/Restriction.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      465 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/btd6/Rewards.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     3304 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/model/btd6/Team.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     3299 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/Tower.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)    12230 2023-04-06 14:21:53.000000 bloonspy-0.2.0/bloonspy/model/btd6/User.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      277 2023-03-22 14:15:23.000000 bloonspy-0.2.0/bloonspy/model/btd6/__init__.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.717794 bloonspy-0.2.0/bloonspy/utils/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      467 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/utils/Infinity.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)       31 2023-03-21 12:50:39.000000 bloonspy-0.2.0/bloonspy/utils/__init__.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1182 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/utils/api.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      761 2023-03-26 12:46:39.000000 bloonspy-0.2.0/bloonspy/utils/decorators.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      705 2023-03-21 21:08:10.000000 bloonspy-0.2.0/bloonspy/utils/dictionaries.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.698085 bloonspy-0.2.0/bloonspy.egg-info/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1113 2023-04-06 14:22:22.000000 bloonspy-0.2.0/bloonspy.egg-info/PKG-INFO
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1495 2023-04-06 14:22:22.000000 bloonspy-0.2.0/bloonspy.egg-info/SOURCES.txt
++-rw-r--r--   0 riccardosartori   (501) staff       (20)        1 2023-04-06 14:22:22.000000 bloonspy-0.2.0/bloonspy.egg-info/dependency_links.txt
++-rw-r--r--   0 riccardosartori   (501) staff       (20)       15 2023-04-06 14:22:22.000000 bloonspy-0.2.0/bloonspy.egg-info/top_level.txt
++-rw-r--r--   0 riccardosartori   (501) staff       (20)       38 2023-04-06 14:22:22.732895 bloonspy-0.2.0/setup.cfg
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      932 2023-04-06 14:21:53.000000 bloonspy-0.2.0/setup.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.718783 bloonspy-0.2.0/tests/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:43.000000 bloonspy-0.2.0/tests/__init__.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.724714 bloonspy-0.2.0/tests/integration/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:59.000000 bloonspy-0.2.0/tests/integration/__init__.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     2265 2023-04-06 14:21:53.000000 bloonspy-0.2.0/tests/integration/test_boss_leaderboard.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      886 2023-04-06 14:21:53.000000 bloonspy-0.2.0/tests/integration/test_challenge_browser.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      728 2023-03-26 11:28:22.000000 bloonspy-0.2.0/tests/integration/test_challenge_creator.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1780 2023-03-26 12:46:39.000000 bloonspy-0.2.0/tests/integration/test_ct_leaderboard.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      691 2023-03-26 12:46:39.000000 bloonspy-0.2.0/tests/integration/test_fetch_odyssey.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      904 2023-03-26 12:46:39.000000 bloonspy-0.2.0/tests/integration/test_fetch_user.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1166 2023-03-26 12:46:39.000000 bloonspy-0.2.0/tests/integration/test_race_leaderboard.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)      644 2023-03-22 12:23:42.000000 bloonspy-0.2.0/tests/integration/test_team_owner.py
++drwxr-xr-x   0 riccardosartori   (501) staff       (20)        0 2023-04-06 14:22:22.731670 bloonspy-0.2.0/tests/unit/
++-rw-r--r--   0 riccardosartori   (501) staff       (20)        0 2023-03-21 15:24:51.000000 bloonspy-0.2.0/tests/unit/__init__.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     2060 2023-03-22 14:41:08.000000 bloonspy-0.2.0/tests/unit/test_boss.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     4057 2023-03-24 16:11:59.000000 bloonspy-0.2.0/tests/unit/test_challenge.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1381 2023-03-23 10:34:38.000000 bloonspy-0.2.0/tests/unit/test_ct.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     3679 2023-03-24 11:25:25.000000 bloonspy-0.2.0/tests/unit/test_odyssey.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1307 2023-03-21 20:52:03.000000 bloonspy-0.2.0/tests/unit/test_race.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     1831 2023-03-26 12:46:39.000000 bloonspy-0.2.0/tests/unit/test_team.py
++-rw-r--r--   0 riccardosartori   (501) staff       (20)     7569 2023-04-06 14:21:53.000000 bloonspy-0.2.0/tests/unit/test_user.py
+```
+
+### Comparing `bloonspy-0.1.1/LICENSE` & `bloonspy-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/PKG-INFO` & `bloonspy-0.2.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: bloonspy
+-Version: 0.1.1
++Version: 0.2.0
+ Summary: A Python wrapper for the Ninja Kiwi Open Data API
+ Home-page: https://github.com/SartoRiccardo/bloonspy
+ Author: TheSartorsss
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `bloonspy-0.1.1/README.md` & `bloonspy-0.2.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/Client.py` & `bloonspy-0.2.0/bloonspy/Client.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -99,16 +99,16 @@
+     @staticmethod
+     def races() -> List[Race]:
+         """Get a list of Race events.
+ 
+         .. note::
+            The returned :class:`~bloonspy.model.btd6.Race` objects will only
+            have the properties :attr:`~bloonspy.model.Loadable.id`, :attr:`~bloonspy.model.btd6.Race.name`,
+-           :attr:`~bloonspy.model.Race.start`, :attr:`~bloonspy.model.Race.end`, and
+-           :attr:`~bloonspy.model.Race.total_scores` loaded.
++           :attr:`~bloonspy.model.btd6.Race.start`, :attr:`~bloonspy.model.btd6.Race.end`, and
++           :attr:`~bloonspy.model.btd6.Race.total_scores` loaded.
+         """
+         races_data = get("/btd6/races")
+         race_list = []
+         for race in races_data:
+             race_list.append(Race(race["id"], race_json=race))
+         return race_list
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/Event.py` & `bloonspy-0.2.0/bloonspy/model/Event.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/GameVersion.py` & `bloonspy-0.2.0/bloonspy/model/GameVersion.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/Loadable.py` & `bloonspy-0.2.0/bloonspy/model/Loadable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Boss.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Boss.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ from enum import Enum
+ from concurrent.futures import ThreadPoolExecutor
+ from datetime import datetime, timedelta
+-from typing import List, Dict, Any
++from typing import List, Dict, Any, Tuple, Union
+ from ...utils.decorators import fetch_property, exception_handler
+ from ...utils.api import get, get_lb_page
+ from ..Loadable import Loadable
+ from ..Event import Event
+ from .Challenge import Challenge
+ from .User import User
+ 
+@@ -32,15 +32,15 @@
+ class BossPlayer(User):
+     """An user who played the boss event and submitted a ranked score.
+     Inherits from :class:`~bloonspy.model.btd6.User`.
+     """
+     def __init__(self, user_id: str, name: str, score: int, submission_time: int, **kwargs):
+         super().__init__(user_id, **kwargs)
+         self._name = name
+-        self._score = timedelta(seconds=int(score/1000))
++        self._score = timedelta(microseconds=score*1000)
+         self._submission_time = datetime.fromtimestamp(int(submission_time/1000))
+ 
+     @property
+     def name(self) -> str:
+         """The name of the user."""
+         return self._name
+ 
+@@ -51,14 +51,47 @@
+ 
+     @property
+     def submission_time(self) -> datetime:
+         """The time the user’s score was submitted at."""
+         return self._submission_time
+ 
+ 
++class BossPlayerTeam:
++    """A team of players who played a Ranked Co-op Boss Event."""
++    def __init__(self, users: List[BossPlayer], score: timedelta, submission_time: datetime, is_complete: bool = True):
++        self._users = users
++        self._score = score
++        self._submission_time = submission_time
++        self._is_complete = is_complete
++
++    @property
++    def players(self) -> Tuple[BossPlayer]:
++        """The users in the team."""
++        return tuple(self._users)
++
++    @property
++    def score(self) -> timedelta:
++        """The time the team got."""
++        return self._score
++
++    @property
++    def submission_time(self) -> datetime:
++        """The time the team’s score was submitted at."""
++        return self._submission_time
++
++    @property
++    def is_fully_loaded(self) -> bool:
++        """Whether the team is fully loaded.
++
++        Due to API restrictions, when calling :func:`~bloonspy.model.btd6.Boss.leaderboard()` to get coop
++        leaderboards, the team at the end of the List could not have all of its members loaded.
++        """
++        return self._is_complete
++
++
+ class Boss(Challenge):
+     """A Boss challenge. Inherits from :class:`~bloonspy.model.btd6.Challenge`."""
+     endpoint = "/btd6/bosses/{}/metadata/:difficulty:"
+     lb_endpoint = "/btd6/bosses/{}/leaderboard/:difficulty:/{}"
+ 
+     def __init__(self, boss_id: str, name: str, boss_bloon: BossBloon, total_scores: int, elite: bool,
+                  eager: bool = False):
+@@ -90,31 +123,36 @@
+             return get(self.lb_endpoint.format(self._id, team_size), params={"page": page_num})
+         except Exception as exc:
+             if str(exc) == "No Scores Available":
+                 return []
+             raise exc
+ 
+     @exception_handler(Loadable.handle_exceptions)
+-    def leaderboard(self, pages: int = 1, start_from_page: int = 1, team_size: int = 1) -> List[BossPlayer]:
++    def leaderboard(self,
++                    pages: int = 1,
++                    start_from_page: int = 1,
++                    team_size: int = 1
++                    ) -> Union[List[BossPlayer], List[BossPlayerTeam]]:
+         """Get a page of the leaderboard for this boss.
+ 
+         .. note::
+            The returned :class:`~bloonspy.model.btd6.BossPlayer` objects will only
+            have the properties :attr:`~bloonspy.model.Loadable.id`, :attr:`~bloonspy.model.btd6.BossPlayer.name`,
+-           :attr:`~bloonspy.model.BossPlayer.score`, and :attr:`~bloonspy.model.BossPlayer.submission_time` loaded.
++           :attr:`~bloonspy.model.btd6.BossPlayer.score`, and :attr:`~bloonspy.model.btd6.BossPlayer.submission_time`
++           loaded.
+ 
+         :param pages: Number of pages to fetch.
+         :type pages: int
+         :param start_from_page: The first page to fetch.
+         :type start_from_page: int
+         :param team_size: The team size to get the leaderboard for.
+         :type team_size: int
+ 
+         :return: A list of players in the leaderboard.
+-        :rtype: List[:class:`~bloonspy.model.btd6.RacePlayer`]
++        :rtype: Union[List[:class:`~bloonspy.model.btd6.BossPlayer`], List[:class:`~bloonspy.model.btd6.BossPlayerTeam`]]
+ 
+         :raise ~bloonspy.exceptions.NotFound: If the boss doesn't exist or is expired.
+         :raise ValueError: If `team_size` is less than 1 or more than 4.
+         """
+         if team_size not in range(1, 5):
+             raise ValueError("team_size must be between 1 and 4")
+ 
+@@ -126,14 +164,38 @@
+         boss_players = []
+         for page in futures:
+             for player in page.result():
+                 boss_players.append(BossPlayer(
+                     player["profile"].split("/")[-1], player["displayName"], player["score"], player["submissionTime"]
+                 ))
+ 
++        if team_size > 1:
++            boss_teams = []
++            current_score = None
++            current_sub_time = None
++            current_team_players = []
++            for player in boss_players:
++                if player.score != current_score:
++                    if current_score is not None:
++                        boss_teams.append(
++                            BossPlayerTeam(current_team_players, current_score, current_sub_time)
++                        )
++                    current_score = player.score
++                    current_sub_time = player.submission_time
++                    current_team_players = []
++
++                current_team_players.append(player)
++
++            if len(current_team_players) > 0:
++                boss_teams.append(
++                    BossPlayerTeam(current_team_players, current_score, current_sub_time,
++                                   len(current_team_players) == team_size)
++                )
++            return boss_teams
++
+         return boss_players
+ 
+ 
+ class BossEvent(Event):
+     """A boss event. Inherits from :class:`~bloonspy.model.Event`."""
+     event_endpoint = "/btd6/bosses"
+     event_dict_keys = ["name", "bossType", "bossTypeURL", "start", "end", "totalScores_standard",
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Challenge.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Challenge.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -55,14 +55,15 @@
+         if creator_id:
+             self._data["creatorId"] = creator_id
+ 
+     def _handle_exceptions(self, exception: Exception) -> None:
+         error_msg = str(exception)
+         if error_msg == "No challenge with that ID exists":
+             raise NotFound(error_msg)
++        print(error_msg)
+ 
+     def _parse_json(self, raw_challenge: Dict[str, Any]) -> None:
+         self._loaded = False
+ 
+         copy_keys = [
+             "name", "disableDoubleCash", "disableInstas", "disableMK", "disablePowers", "disableSelling",
+             "startingCash", "noContinues", "seed", "roundSets", "lives", "maxLives",
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/ContestedTerritory.py` & `bloonspy-0.2.0/bloonspy/model/btd6/ContestedTerritory.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Gamemode.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Gamemode.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -2,15 +2,14 @@
+ from enum import Enum
+ 
+ 
+ class Difficulty(Enum):
+     EASY = "Easy"
+     MEDIUM = "Medium"
+     HARD = "Hard"
+-    IMPOPPABLE = "Impoppable"
+ 
+ 
+ class Mode(Enum):
+     STANDARD = "Standard"
+ 
+     PRIMARY_ONLY = "Primary Only"
+     DEFLATION = "Deflation"
+@@ -19,42 +18,43 @@
+     REVERSE = "Reverse"
+     APOPALYPSE = "Apopalypse"
+ 
+     MAGIC_ONLY = "Magic Only"
+     DOUBLE_HP_MOABS = "Double HP MOABs"
+     HALF_CASH = "Half Cash"
+     ALTERNATE_BLOONS_ROUNDS = "Alternate Bloons Rounds"
++    IMPOPPABLE = "Impoppable"
+ 
+-    CHIMPS = "CHIMPs"
++    CHIMPS = "CHIMPS"
+ 
+ 
+ @dataclass
+ class Gamemode:
+     """Difficulty and mode for a game."""
+     difficulty: Difficulty  #: The game's difficulty.
+     mode: Mode  #: The game's mode.
+ 
+     @staticmethod
+     def from_strings(difficulty, mode) -> "Gamemode":
+         difficulty_switch = {
+             "Easy": Difficulty.EASY,
+             "Medium": Difficulty.MEDIUM,
+             "Hard": Difficulty.HARD,
+-            "Impoppable": Difficulty.IMPOPPABLE,
+         }
+-        # TODO get the actual strings
+         mode_switch = {
+             "Standard": Mode.STANDARD,
+             "PrimaryOnly": Mode.PRIMARY_ONLY,
+             "Deflation": Mode.DEFLATION,
+             "MilitaryOnly": Mode.MILITARY_ONLY,
+             "Reverse": Mode.REVERSE,
+             "Apopalypse": Mode.APOPALYPSE,
+             "MagicOnly": Mode.MAGIC_ONLY,
+-            "DoubleHPMoabs": Mode.DOUBLE_HP_MOABS,
+-            "ABR": Mode.ALTERNATE_BLOONS_ROUNDS,
+-            "Chimps": Mode.CHIMPS,
++            "DoubleMoabHealth": Mode.DOUBLE_HP_MOABS,
++            "HalfCash": Mode.HALF_CASH,
++            "AlternateBloonsRounds": Mode.ALTERNATE_BLOONS_ROUNDS,
++            "Impoppable": Mode.IMPOPPABLE,
++            "Clicks": Mode.CHIMPS,
+         }
+ 
+         found_difficulty = difficulty_switch[difficulty] if difficulty in difficulty_switch else None
+         found_mode = mode_switch[mode] if mode in mode_switch else None
+         return Gamemode(found_difficulty, found_mode)
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Medals.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Medals.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Odyssey.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Odyssey.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Power.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Power.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Race.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Race.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -12,15 +12,15 @@
+ class RacePlayer(User):
+     """An user who played a race and is now on the leaderboard.
+     Inherits from :class:`~bloonspy.model.btd6.User`.
+     """
+     def __init__(self, user_id: str, name: str, score: int, submission_time: int, **kwargs):
+         super().__init__(user_id, **kwargs)
+         self._name = name
+-        self._score = timedelta(seconds=int(score/1000))
++        self._score = timedelta(microseconds=score*1000)
+         self._submission_time = datetime.fromtimestamp(int(submission_time/1000))
+ 
+     @property
+     def name(self) -> str:
+         """The name of the user."""
+         return self._name
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Restriction.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Restriction.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Team.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Team.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/Tower.py` & `bloonspy-0.2.0/bloonspy/model/btd6/Tower.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -38,14 +38,15 @@
+     DRUID = "Druid"
+     ALCHEMIST = "Alchemist"
+ 
+     MONKEY_VILLAGE = "Monkey Village"
+     BANANA_FARM = "Banana Farm"
+     ENGINEER_MONKEY = "Engineer Monkey"
+     SPIKE_FACTORY = "Spike Factory"
++    BEAST_HANDLER = "Beast Handler"
+ 
+     @staticmethod
+     def from_string(value: str) -> "Tower":
+         tower_switch = {
+             "Quincy": Tower.QUINCY,
+             "Gwendolin": Tower.GWENDOLIN,
+             "StrikerJones": Tower.STRIKER_JONES,
+@@ -77,15 +78,16 @@
+             "NinjaMonkey": Tower.NINJA_MONKEY,
+             "SuperMonkey": Tower.SUPER_MONKEY,
+             "Druid": Tower.DRUID,
+             "Alchemist": Tower.ALCHEMIST,
+             "MonkeyVillage": Tower.MONKEY_VILLAGE,
+             "BananaFarm": Tower.BANANA_FARM,
+             "EngineerMonkey": Tower.ENGINEER_MONKEY,
+-            "SpikeFactory": Tower.SPIKE_FACTORY
++            "SpikeFactory": Tower.SPIKE_FACTORY,
++            "BeastHandler": Tower.BEAST_HANDLER,
+         }
+         return tower_switch[value] if value in tower_switch else None
+ 
+     def is_hero(self):
+         return self in [
+             Tower.QUINCY, Tower.GWENDOLIN, Tower.STRIKER_JONES, Tower.OBYN, Tower.CHURCHILL, Tower.BENJAMIN,
+             Tower.EZILI, Tower.PAT_FUSTY, Tower.SAUDA, Tower.PSI, Tower.GERALDO, Tower.BRICKELL, Tower.ETIENNE,
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/model/btd6/User.py` & `bloonspy-0.2.0/bloonspy/model/btd6/User.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -19,21 +19,23 @@
+     purples: int = field(default=0)  #: Number of purple bloons popped.
+     leads: int = field(default=0)  #: Number of lead bloons popped.
+     ceramics: int = field(default=0)  #: Number of ceramic bloons popped.
+     moabs: int = field(default=0)  #: Number of MOAB bloons popped.
+     bfbs: int = field(default=0)  #: Number of BFB bloons popped.
+     zomgs: int = field(default=0)  #: Number of ZOMG bloons popped.
+     bads: int = field(default=0)  #: Number of BAD bloons popped.
++    # bosses: int = field(default=0)  #: Number of Boss bloons popped.
+     golden: int = field(default=0)  #: Number of golden bloons popped.
+ 
+ 
+ @dataclass(kw_only=True)
+ class GameplayStats:
+     """User's gameplay stats."""
+     most_experienced_monkey: Tower = field(default=Tower.DART_MONKEY)  #: Monkey with the most XP.
++    # most_experienced_monkey_xp: int = field(default=0)  #: XP collected for the most experienced monkey.
+     cash_earned: int = field(default=0)  #: Total cash earned.
+     challenges_completed: int = field(default=0)  #: Total challenges completed.
+     collection_chests_opened: int = field(default=0)  #: Number of collection chests opened.
+     coop_cash_given: int = field(default=0)  #: Total cash gifted in coop games.
+     daily_rewards: int = field(default=0)  #: Total daily rewards collected.
+     game_count: int = field(default=0)  #: Number of games played
+     games_won: int = field(default=0)  #: Number of games won
+@@ -45,14 +47,17 @@
+     powers_used: int = field(default=0)  #: Number of powers used.
+     total_odysseys_completed: int = field(default=0)  #: Number of odysseys completed.
+     total_odyssey_stars: int = field(default=0)  #: Total odyssey stars.
+     total_trophies_earned: int = field(default=0)  #: Lifetime trophies earned through events.
+     necro_bloons_reanimated: int = field(default=0)  #: Number of necro bloons reanimated.
+     bloons_leaked: int = field(default=0)  #: Total RBE leaked.
+     bloons_popped: BloonsPoppedStats = field(default_factory=BloonsPoppedStats)  #: In depth stats about bloons popped.
++    damage_done_to_bosses: int = field(default=0)  #: Total damage done to Boss bloons
++    transforming_tonics_used: int = field(default=0)  #: Number of times the Transformation Tonic ability was used.
++    # monkeys_placed: int = field(default=0)  #: Total monkeys placed.
+ 
+ 
+ class User(Loadable):
+     """A BTD6 player. Inherits from :class:`~bloonspy.model.Loadable`."""
+     endpoint = "/btd6/users/{}"
+ 
+     def _handle_exceptions(self, exception: Exception) -> None:
+@@ -91,17 +96,17 @@
+         ]
+         self._data["boss_normal_medals"] = EventMedals(
+             **rename_keys(raw_user["_medalsBoss"], event_medal_keys)
+         )
+         self._data["boss_elite_medals"] = EventMedals(
+             **rename_keys(raw_user["_medalsBossElite"], event_medal_keys)
+         )
+-        # self._data["race_medals"] = Medals(
+-        #     **rename_keys(raw_user["_medals"], event_medal_keys)
+-        # )
++        self._data["race_medals"] = EventMedals(
++            **rename_keys(raw_user["_medalsRace"], event_medal_keys)
++        )
+ 
+         ct_local_medal_keys = [
+             ("BlackDiamond", "first"), ("RedDiamond", "second"), ("Diamond", "third"), ("GoldDiamond", "top_10"),
+             ("DoubleGold", "top_20"), ("Silver", "top_40"), ("Bronze", "top_60")
+         ]
+         ct_global_medal_keys = [
+             ("Diamond", "top_25"), ("GoldDiamond", "top_100"), ("DoubleGold", "top_1_percent"),
+@@ -128,15 +133,17 @@
+             ("gameplay.highestRoundDeflation", "highest_round_deflation"),
+             ("gameplay.instaMonkeyCollection", "insta_monkey_collection"),
+             ("gameplay.monkeyTeamsWins", "monkey_teams_wins"),
+             ("gameplay.powersUsed", "powers_used"),
+             ("gameplay.totalOdysseysCompleted", "total_odysseys_completed"),
+             ("gameplay.totalOdysseyStars", "total_odyssey_stars"),
+             ("gameplay.totalTrophiesEarned", "total_trophies_earned"),
++            ("gameplay.damageDoneToBosses", "damage_done_to_bosses"),
+             ("bloonsPopped.necroBloonsReanimated", "necro_bloons_reanimated"),
++            ("bloonsPopped.transformingTonicsUsed", "transforming_tonics_used"),
+             ("bloonsPopped.bloonsLeaked", "bloons_leaked"),
+         ]
+         bloons_popped_keys = [
+             ("badsPopped", "bads"),
+             ("bfbsPopped", "bfbs"),
+             ("bloonsPopped", "total"),
+             ("camosPopped", "camos"),
+@@ -182,14 +189,20 @@
+ 
+     @property
+     @fetch_property(Loadable.load_resource)
+     def achievements(self) -> int:
+         """Number of achievements this user unlocked."""
+         return self._data["achievements"]
+ 
++    # @property
++    # @fetch_property(Loadable.load_resource)
++    # def hidden_achievements(self) -> int:
++    #     """Number of hidden achievements this user unlocked."""
++    #     return self._data["hiddenAchievements"]
++
+     @property
+     @fetch_property(Loadable.load_resource)
+     def followers(self) -> int:
+         """Number of followers this user has."""
+         return self._data["followers"]
+ 
+     @property
+@@ -224,19 +237,19 @@
+ 
+     @property
+     @fetch_property(Loadable.load_resource)
+     def boss_elite_medals(self) -> EventMedals:
+         """Ranked elite boss medals."""
+         return self._data["boss_elite_medals"]
+ 
+-    # @property
+-    # @fetch_property(Loadable.load_resource)
+-    # def race_medals(self) -> EventMedals:
+-    #     """Race event medals."""
+-    #     return self._data["race_medals"]
++    @property
++    @fetch_property(Loadable.load_resource)
++    def race_medals(self) -> EventMedals:
++        """Race event medals."""
++        return self._data["race_medals"]
+ 
+     @property
+     @fetch_property(Loadable.load_resource)
+     def ct_local_medals(self) -> CTLocalMedals:
+         """Contested Territory local medals."""
+         return self._data["ct_local_medals"]
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy/utils/api.py` & `bloonspy-0.2.0/bloonspy/utils/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/utils/decorators.py` & `bloonspy-0.2.0/bloonspy/utils/decorators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy/utils/dictionaries.py` & `bloonspy-0.2.0/bloonspy/utils/dictionaries.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/bloonspy.egg-info/PKG-INFO` & `bloonspy-0.2.0/bloonspy.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: bloonspy
+-Version: 0.1.1
++Version: 0.2.0
+ Summary: A Python wrapper for the Ninja Kiwi Open Data API
+ Home-page: https://github.com/SartoRiccardo/bloonspy
+ Author: TheSartorsss
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+```
+
+### Comparing `bloonspy-0.1.1/bloonspy.egg-info/SOURCES.txt` & `bloonspy-0.2.0/bloonspy.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_boss_leaderboard.py` & `bloonspy-0.2.0/tests/integration/test_ct_leaderboard.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,38 +1,43 @@
+ import unittest
+-from datetime import datetime, timedelta
+-import requests
+ import random
+ from bloonspy import btd6, Client
+ 
+ 
+-class TestBossLeaderboard(unittest.TestCase):
+-    def test_boss_leaderboard(self) -> None:
++class TestCtLeaderboard(unittest.TestCase):
++    def test_ct_leaderboard(self) -> None:
+         """
+-        Test fetching a boss' leaderboard.
++        Test a CT event's leaderboard.
+         """
+-        bosses = Client.bosses()
+-        boss = bosses[1]
++        cts = Client.contested_territories()
++        ct_event = cts[1]
+         # Get #51-#100
+-        boss_leaderboard = boss.standard().leaderboard(pages=2, start_from_page=2)
++        ct_leaderboard_team = ct_event.leaderboard_team(pages=2, start_from_page=2)
++        ct_leaderboard_player = ct_event.leaderboard_player(pages=2, start_from_page=2)
+ 
+-        self.assertGreater(len(boss_leaderboard), 0)
+-        some_player = boss_leaderboard[random.randint(0, len(boss_leaderboard)-1)]
+-        self.assertIsInstance(some_player, btd6.BossPlayer,
+-                              msg=f"Assert if result is BossPlayer")
++        self.assertGreater(len(ct_leaderboard_player), 0)
++        some_player = ct_leaderboard_player[random.randint(0, len(ct_leaderboard_player)-1)]
++        self.assertIsInstance(some_player, btd6.CtPlayer,
++                              msg=f"Assert if result is CtPlayer")
+ 
+         check_instance = [
+-            ("name", str), ("score", timedelta), ("submission_time", datetime),
+-            ("achievements", int), ("boss_normal_medals", btd6.EventMedals)
++            ("name", str), ("score", int), ("achievements", int), ("boss_normal_medals", btd6.EventMedals)
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(getattr(some_player, attr_name), attr_type,
+-                                  msg=f"Assert if BossPlayer.{attr_name} is {attr_type}")
++                                  msg=f"Assert if CtPlayer.{attr_name} is {attr_type}")
+ 
+-    # def test_boss_leaderboard_coop(self) -> None:
+-    #     """
+-    #     Test fetching a boss' coop leaderboard.
+-    #     """
++        self.assertGreater(len(ct_leaderboard_team), 0)
++        some_team = ct_leaderboard_team[random.randint(0, len(ct_leaderboard_team)-1)]
++        self.assertIsInstance(some_team, btd6.CtTeam,
++                              msg=f"Assert if result is CtTeam")
++
++        check_instance = [
++            ("name", str), ("score", int), ("member_count", int), ("status", btd6.TeamStatus)
++        ]
++        for attr_name, attr_type in check_instance:
++            self.assertIsInstance(getattr(some_team, attr_name), attr_type,
++                                  msg=f"Assert if CtTeam.{attr_name} is {attr_type}")
+ 
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_challenge_browser.py` & `bloonspy-0.2.0/tests/integration/test_challenge_browser.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -18,20 +18,10 @@
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(
+                 getattr(some_challenge, attr_name), attr_type,
+                 msg=f"Assert if Challenge.{attr_name} is {attr_type}"
+             )
+ 
+-    def test_eager(self) -> None:
+-        """
+-        Test getting the newest challenges, fully loaded.
+-        """
+-        challenges = Client.challenges(ChallengeFilter.NEWEST)
+-        self.assertGreater(len(challenges), 0)
+-
+-        for challenge in challenges:
+-            self.assertTrue(challenge.loaded)
+-
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_challenge_creator.py` & `bloonspy-0.2.0/tests/integration/test_challenge_creator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_ct_leaderboard.py` & `bloonspy-0.2.0/tests/integration/test_boss_leaderboard.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,43 +1,55 @@
+ import unittest
++from datetime import datetime, timedelta
++import requests
+ import random
+ from bloonspy import btd6, Client
+ 
+ 
+-class TestCtLeaderboard(unittest.TestCase):
+-    def test_ct_leaderboard(self) -> None:
++class TestBossLeaderboard(unittest.TestCase):
++    def test_boss_leaderboard(self) -> None:
+         """
+-        Test a CT event's leaderboard.
++        Test fetching a boss' leaderboard.
+         """
+-        cts = Client.contested_territories()
+-        ct_event = cts[1]
++        bosses = Client.bosses()
++        boss = bosses[1]
+         # Get #51-#100
+-        ct_leaderboard_team = ct_event.leaderboard_team(pages=2, start_from_page=2)
+-        ct_leaderboard_player = ct_event.leaderboard_player(pages=2, start_from_page=2)
++        boss_leaderboard = boss.standard().leaderboard(pages=2, start_from_page=2)
+ 
+-        self.assertGreater(len(ct_leaderboard_player), 0)
+-        some_player = ct_leaderboard_player[random.randint(0, len(ct_leaderboard_player)-1)]
+-        self.assertIsInstance(some_player, btd6.CtPlayer,
+-                              msg=f"Assert if result is CtPlayer")
++        self.assertGreater(len(boss_leaderboard), 0)
++        some_player = boss_leaderboard[random.randint(0, len(boss_leaderboard)-1)]
++        self.assertIsInstance(some_player, btd6.BossPlayer,
++                              msg=f"Assert if result is BossPlayer")
+ 
+         check_instance = [
+-            ("name", str), ("score", int), ("achievements", int), ("boss_normal_medals", btd6.EventMedals)
++            ("name", str), ("score", timedelta), ("submission_time", datetime),
++            ("achievements", int), ("boss_normal_medals", btd6.EventMedals)
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(getattr(some_player, attr_name), attr_type,
+-                                  msg=f"Assert if CtPlayer.{attr_name} is {attr_type}")
++                                  msg=f"Assert if BossPlayer.{attr_name} is {attr_type}")
+ 
+-        self.assertGreater(len(ct_leaderboard_team), 0)
+-        some_team = ct_leaderboard_team[random.randint(0, len(ct_leaderboard_team)-1)]
+-        self.assertIsInstance(some_team, btd6.CtTeam,
+-                              msg=f"Assert if result is CtTeam")
++    def test_boss_leaderboard_coop(self) -> None:
++        """
++        Test fetching a boss' coop leaderboard.
++        """
++        bosses = Client.bosses()
++        boss = bosses[1]
++        boss_leaderboard_coop = boss.standard().leaderboard(pages=3, team_size=3)
+ 
+         check_instance = [
+-            ("name", str), ("score", int), ("member_count", int), ("status", btd6.TeamStatus)
++            ("score", timedelta), ("submission_time", datetime), ("is_fully_loaded", bool)
+         ]
+-        for attr_name, attr_type in check_instance:
+-            self.assertIsInstance(getattr(some_team, attr_name), attr_type,
+-                                  msg=f"Assert if CtTeam.{attr_name} is {attr_type}")
++        for i in range(len(boss_leaderboard_coop)):
++            team = boss_leaderboard_coop[i]
++            self.assertLessEqual(len(team.players), 3,
++                                 msg="Assert if BossPlayerTeam has the correct number of players.")
++            for attr_name, attr_type in check_instance:
++                self.assertIsInstance(getattr(team, attr_name), attr_type,
++                                      msg=f"Assert if BossPlayerTeam.{attr_name} is {attr_type}")
++                for player in team.players:
++                    self.assertIsInstance(player, btd6.BossPlayer,
++                                          msg="Assert if BossPlayerTeam.players is a tuple of BossPlayer.")
+ 
+ 
+ if __name__ == '__main__':
+     unittest.main()
+```
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_fetch_odyssey.py` & `bloonspy-0.2.0/tests/integration/test_fetch_odyssey.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_fetch_user.py` & `bloonspy-0.2.0/tests/integration/test_fetch_user.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_race_leaderboard.py` & `bloonspy-0.2.0/tests/integration/test_race_leaderboard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/integration/test_team_owner.py` & `bloonspy-0.2.0/tests/integration/test_team_owner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_boss.py` & `bloonspy-0.2.0/tests/unit/test_boss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_challenge.py` & `bloonspy-0.2.0/tests/unit/test_challenge.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_ct.py` & `bloonspy-0.2.0/tests/unit/test_ct.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_odyssey.py` & `bloonspy-0.2.0/tests/unit/test_odyssey.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_race.py` & `bloonspy-0.2.0/tests/unit/test_race.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_team.py` & `bloonspy-0.2.0/tests/unit/test_team.py`
+
+ * *Files identical despite different names*
+
+### Comparing `bloonspy-0.1.1/tests/unit/test_user.py` & `bloonspy-0.2.0/tests/unit/test_user.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,8 @@
+ import unittest
+-from datetime import datetime
+-import bloonspy
+ from bloonspy import btd6
+ 
+ 
+ class TestUser(unittest.TestCase):
+     def test_user(self) -> None:
+         """
+         Test that an user is loaded correctly.
+@@ -15,41 +13,41 @@
+         expected_results = [
+             ("id", "9cee138c8c94ffac1910864c0b73e577ca554ce8cb18db6c"),
+             ("name", "Sarto"),
+             ("rank", 155),
+         ]
+         for attr_name, attr_expected_value in expected_results:
+             self.assertEqual(getattr(user, attr_name), attr_expected_value,
+-                msg=f"Asserting User.{attr_name}")
++                             msg=f"Asserting User.{attr_name}")
+ 
+         # Greater or Equal cause these can increase in the future.
+         expected_results_ge = [
+             ("achievements", 124),
+             ("veteran_rank", 8),
+         ]
+         for attr_name, attr_expected_min in expected_results_ge:
+             self.assertGreaterEqual(getattr(user, attr_name), attr_expected_min,
+-                msg=f"Asserting User.{attr_name}")
++                                    msg=f"Asserting User.{attr_name}")
+ 
+         check_instance = [
+             ("followers", int),
+             ("avatar", btd6.Asset),
+             ("banner", btd6.Asset),
+             ("single_player_medals", btd6.MapMedals),
+             ("coop_medals", btd6.MapMedals),
+             ("boss_normal_medals", btd6.EventMedals),
+             ("boss_elite_medals", btd6.EventMedals),
+-            # ("race_medals", btd6.Medals),
++            ("race_medals", btd6.EventMedals),
+             ("ct_local_medals", btd6.CTLocalMedals),
+             ("ct_global_medals", btd6.CTGlobalMedals),
+             ("stats", btd6.GameplayStats),
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(getattr(user, attr_name), attr_type,
+-                msg=f"Assert if challenge.{attr_name} is {attr_type}")
++                                  msg=f"Assert if challenge.{attr_name} is {attr_type}")
+ 
+         # Check medals
+ 
+         expected_results_ge = [
+             ("chimps_black", 1), ("easy", 1), ("medium", 1), ("hard", 1),
+             ("primary_only", 1), ("deflation", 1), ("military_only", 1),
+             ("apopalypse", 1), ("reverse", 1), ("magic_only", 1), ("half_cash", 1),
+@@ -67,18 +65,18 @@
+             ("top_10_percent", int), ("top_25_percent", int), ("top_50_percent", int), ("top_75_percent", int)
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(getattr(user.boss_normal_medals, attr_name), attr_type,
+                                   msg=f"Asserting User.boss_normal_medals.{attr_name}")
+             self.assertIsInstance(getattr(user.boss_elite_medals, attr_name), attr_type,
+                                   msg=f"Asserting User.boss_elite_medals.{attr_name}")
+-            # self.assertIsInstance(
+-            #     getattr(user.race_medals, attr_name), attr_type,
+-            #     msg=f"Asserting User.race_medals.{attr_name}"
+-            # )
++            self.assertIsInstance(getattr(user.race_medals, attr_name), attr_type,
++                                  msg=f"Asserting User.race_medals.{attr_name}")
++        self.assertGreaterEqual(user.race_medals.top_50, 1,
++                                msg=f"Asserting User has at least 1 Top 50 race finish.")
+ 
+         check_instance = [
+             ("first", int), ("second", int), ("third", int), ("top_10", int), ("top_20", int),
+             ("top_40", int), ("top_60", int)
+         ]
+         for attr_name, attr_type in check_instance:
+             self.assertIsInstance(getattr(user.ct_local_medals, attr_name), attr_type,
+@@ -111,15 +109,16 @@
+                               msg=f"Asserting User.stats.most_experienced_monkey")
+         expected_results_ge = [
+             ("cash_earned", 711700673), ("challenges_completed", 198), ("collection_chests_opened", 293),
+             ("coop_cash_given", 78006898), ("daily_rewards", 339), ("game_count", 9252), ("games_won", 2618),
+             ("highest_round", 276), ("highest_round_chimps", 127), ("highest_round_deflation", 100),
+             ("insta_monkey_collection", 796), ("monkey_teams_wins", 11), ("powers_used", 3811),
+             ("total_odysseys_completed", 26), ("total_odyssey_stars", 100), ("total_trophies_earned", 3288),
+-            ("necro_bloons_reanimated", 476791), ("bloons_leaked", 557788),
++            ("necro_bloons_reanimated", 476791), ("bloons_leaked", 557788), ("transforming_tonics_used", 196),
++            ("damage_done_to_bosses", 713924)
+         ]
+         for attr_name, attr_expected_min in expected_results_ge:
+             self.assertGreaterEqual(getattr(user.stats, attr_name), attr_expected_min,
+                                     msg=f"Asserting User.stats.{attr_name}")
+ 
+         expected_results_ge = [
+             ("total", 455698668), ("total_coop", 26290553), ("camos", 31764834), ("regrows", 293382673),
+```
+

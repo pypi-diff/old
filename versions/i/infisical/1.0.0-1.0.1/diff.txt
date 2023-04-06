@@ -1,0 +1,868 @@
+--- tmp/infisical-1.0.0.tar.gz
++++ tmp/infisical-1.0.1.tar.gz
+│   --- infisical-1.0.0.tar
+├── +++ infisical-1.0.1.tar
+│ ├── file list
+│ │ @@ -1,47 +1,47 @@
+│ │ --rw-r--r--   0        0        0      254 2020-02-02 00:00:00.000000 infisical-1.0.0/.editorconfig
+│ │ --rw-r--r--   0        0        0      463 2020-02-02 00:00:00.000000 infisical-1.0.0/.vscode/settings.json
+│ │ --rw-r--r--   0        0        0     2053 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/__init__.py
+│ │ --rw-r--r--   0        0        0       23 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/__version__.py
+│ │ --rw-r--r--   0        0        0      138 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/constants.py
+│ │ --rw-r--r--   0        0        0       59 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/logger.py
+│ │ --rw-r--r--   0        0        0      116 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/models.py
+│ │ --rw-r--r--   0        0        0      889 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/api/__init__.py
+│ │ --rw-r--r--   0        0        0      888 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/api/get_secrets.py
+│ │ --rw-r--r--   0        0        0      639 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/api/get_service_token_data.py
+│ │ --rw-r--r--   0        0        0     2455 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/api/models.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/client/__init__.py
+│ │ --rw-r--r--   0        0        0     3661 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/client/infisicalclient.py
+│ │ --rw-r--r--   0        0        0       50 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/exceptions/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/services/__init__.py
+│ │ --rw-r--r--   0        0        0     1411 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/services/key_service.py
+│ │ --rw-r--r--   0        0        0     1785 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/services/secret_service.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     6132 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/utils/crypto.py
+│ │ --rw-r--r--   0        0        0     2659 2020-02-02 00:00:00.000000 infisical-1.0.0/infisical/utils/http.py
+│ │ --rw-r--r--   0        0        0      104 2020-02-02 00:00:00.000000 infisical-1.0.0/scripts/format.sh
+│ │ --rw-r--r--   0        0        0      152 2020-02-02 00:00:00.000000 infisical-1.0.0/scripts/lint.sh
+│ │ --rw-r--r--   0        0        0       76 2020-02-02 00:00:00.000000 infisical-1.0.0/scripts/test.sh
+│ │ --rw-r--r--   0        0        0      114 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_infisical.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/data/__init__.py
+│ │ --rw-r--r--   0        0        0     9342 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/data/secrets_reponse.py
+│ │ --rw-r--r--   0        0        0     1386 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/data/service_token.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_api/__init__.py
+│ │ --rw-r--r--   0        0        0      745 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_api/test_api_request.py
+│ │ --rw-r--r--   0        0        0      741 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_api/test_get_secrets.py
+│ │ --rw-r--r--   0        0        0      656 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_api/test_get_service_token_data.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_client/__init__.py
+│ │ --rw-r--r--   0        0        0     2220 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_client/test_infisical_client.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_services/__init__.py
+│ │ --rw-r--r--   0        0        0     1497 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_services/test_key_service.py
+│ │ --rw-r--r--   0        0        0     1847 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_services/test_secret_service.py
+│ │ --rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_utils/__init__.py
+│ │ --rw-r--r--   0        0        0     2681 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_utils/test_crypto_decrypt_asymmetric.py
+│ │ --rw-r--r--   0        0        0     2031 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_utils/test_crypto_decrypt_symmetric.py
+│ │ --rw-r--r--   0        0        0     2244 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_utils/test_crypto_encrypt_asymmetric.py
+│ │ --rw-r--r--   0        0        0     1363 2020-02-02 00:00:00.000000 infisical-1.0.0/tests/test_utils/test_crypto_encrypt_symmetric.py
+│ │ --rw-r--r--   0        0        0     3509 2020-02-02 00:00:00.000000 infisical-1.0.0/.gitignore
+│ │ --rw-r--r--   0        0        0     1091 2020-02-02 00:00:00.000000 infisical-1.0.0/LICENSE
+│ │ --rw-r--r--   0        0        0     2779 2020-02-02 00:00:00.000000 infisical-1.0.0/README.md
+│ │ --rw-r--r--   0        0        0     2847 2020-02-02 00:00:00.000000 infisical-1.0.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     4796 2020-02-02 00:00:00.000000 infisical-1.0.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0      254 2020-02-02 00:00:00.000000 infisical-1.0.1/.editorconfig
+│ │ +-rw-r--r--   0        0        0      463 2020-02-02 00:00:00.000000 infisical-1.0.1/.vscode/settings.json
+│ │ +-rw-r--r--   0        0        0     2053 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/__init__.py
+│ │ +-rw-r--r--   0        0        0       22 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/__version__.py
+│ │ +-rw-r--r--   0        0        0      138 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/constants.py
+│ │ +-rw-r--r--   0        0        0       59 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/logger.py
+│ │ +-rw-r--r--   0        0        0      116 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/models.py
+│ │ +-rw-r--r--   0        0        0      889 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/api/__init__.py
+│ │ +-rw-r--r--   0        0        0      888 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/api/get_secrets.py
+│ │ +-rw-r--r--   0        0        0      639 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/api/get_service_token_data.py
+│ │ +-rw-r--r--   0        0        0     2455 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/api/models.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/client/__init__.py
+│ │ +-rw-r--r--   0        0        0     3661 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/client/infisicalclient.py
+│ │ +-rw-r--r--   0        0        0       50 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/exceptions/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/services/__init__.py
+│ │ +-rw-r--r--   0        0        0     1411 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/services/key_service.py
+│ │ +-rw-r--r--   0        0        0     1785 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/services/secret_service.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     6498 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/utils/crypto.py
+│ │ +-rw-r--r--   0        0        0     2659 2020-02-02 00:00:00.000000 infisical-1.0.1/infisical/utils/http.py
+│ │ +-rw-r--r--   0        0        0      104 2020-02-02 00:00:00.000000 infisical-1.0.1/scripts/format.sh
+│ │ +-rw-r--r--   0        0        0      152 2020-02-02 00:00:00.000000 infisical-1.0.1/scripts/lint.sh
+│ │ +-rw-r--r--   0        0        0       76 2020-02-02 00:00:00.000000 infisical-1.0.1/scripts/test.sh
+│ │ +-rw-r--r--   0        0        0      114 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_infisical.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/data/__init__.py
+│ │ +-rw-r--r--   0        0        0     9342 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/data/secrets_reponse.py
+│ │ +-rw-r--r--   0        0        0     1386 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/data/service_token.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_api/__init__.py
+│ │ +-rw-r--r--   0        0        0      745 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_api/test_api_request.py
+│ │ +-rw-r--r--   0        0        0      741 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_api/test_get_secrets.py
+│ │ +-rw-r--r--   0        0        0      656 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_api/test_get_service_token_data.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_client/__init__.py
+│ │ +-rw-r--r--   0        0        0     2220 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_client/test_infisical_client.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_services/__init__.py
+│ │ +-rw-r--r--   0        0        0     1497 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_services/test_key_service.py
+│ │ +-rw-r--r--   0        0        0     1847 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_services/test_secret_service.py
+│ │ +-rw-r--r--   0        0        0        0 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_utils/__init__.py
+│ │ +-rw-r--r--   0        0        0     2681 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_utils/test_crypto_decrypt_asymmetric.py
+│ │ +-rw-r--r--   0        0        0     1893 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_utils/test_crypto_decrypt_symmetric.py
+│ │ +-rw-r--r--   0        0        0     2199 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_utils/test_crypto_encrypt_asymmetric.py
+│ │ +-rw-r--r--   0        0        0     1439 2020-02-02 00:00:00.000000 infisical-1.0.1/tests/test_utils/test_crypto_encrypt_symmetric.py
+│ │ +-rw-r--r--   0        0        0     3509 2020-02-02 00:00:00.000000 infisical-1.0.1/.gitignore
+│ │ +-rw-r--r--   0        0        0     1091 2020-02-02 00:00:00.000000 infisical-1.0.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     2779 2020-02-02 00:00:00.000000 infisical-1.0.1/README.md
+│ │ +-rw-r--r--   0        0        0     2847 2020-02-02 00:00:00.000000 infisical-1.0.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     4796 2020-02-02 00:00:00.000000 infisical-1.0.1/PKG-INFO
+│ │   --- infisical-1.0.0/infisical/__init__.py
+│ ├── +++ infisical-1.0.1/infisical/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/api/__init__.py
+│ ├── +++ infisical-1.0.1/infisical/api/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/api/get_secrets.py
+│ ├── +++ infisical-1.0.1/infisical/api/get_secrets.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/api/get_service_token_data.py
+│ ├── +++ infisical-1.0.1/infisical/api/get_service_token_data.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/api/models.py
+│ ├── +++ infisical-1.0.1/infisical/api/models.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/client/infisicalclient.py
+│ ├── +++ infisical-1.0.1/infisical/client/infisicalclient.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/services/key_service.py
+│ ├── +++ infisical-1.0.1/infisical/services/key_service.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/services/secret_service.py
+│ ├── +++ infisical-1.0.1/infisical/services/secret_service.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/infisical/utils/crypto.py
+│ ├── +++ infisical-1.0.1/infisical/utils/crypto.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,163 +1,177 @@
+│ │ -from base64 import b64decode, b64encode
+│ │ -from typing import Tuple, Union
+│ │ -
+│ │ -from Cryptodome.Cipher import AES
+│ │ -from Cryptodome.Random import get_random_bytes
+│ │ -from nacl import public, utils
+│ │ -
+│ │ -Base64String = str
+│ │ -Buffer = Union[bytes, bytearray, memoryview]
+│ │ -
+│ │ -
+│ │ -def encrypt_asymmetric(
+│ │ -    plaintext: Union[Buffer, str],
+│ │ -    public_key: Union[Buffer, Base64String],
+│ │ -    private_key: Union[Buffer, Base64String],
+│ │ -) -> Tuple[Base64String, Base64String]:
+│ │ -    """Performs asymmetric encryption of the ``plaintext`` with x25519-xsalsa20-poly1305
+│ │ -    algorithm with the given parameters. Each of those params should be either the raw value in bytes
+│ │ -    or a base64 string.
+│ │ -
+│ │ -    :param plaintext: The text to encrypt
+│ │ -    :param public_key: The public key
+│ │ -    :param private_key: The private key
+│ │ -    :raises ValueError: If ``plaintext``, ``public_key`` or ``private_key`` are empty
+│ │ -    :return: A tuple containing the ciphered text and the random nonce used for encryption
+│ │ -    """
+│ │ -    if len(plaintext) == 0 or len(public_key) == 0 or len(private_key) == 0:
+│ │ -        raise ValueError()
+│ │ -
+│ │ -    m_plaintext = (
+│ │ -        str.encode(plaintext, "utf-8") if isinstance(plaintext, str) else plaintext
+│ │ -    )
+│ │ -    m_public_key = (
+│ │ -        b64decode(public_key) if isinstance(public_key, Base64String) else public_key
+│ │ -    )
+│ │ -    m_private_key = (
+│ │ -        b64decode(private_key) if isinstance(private_key, Base64String) else private_key
+│ │ -    )
+│ │ -
+│ │ -    nonce = utils.random(24)
+│ │ -    box = public.Box(public.PrivateKey(m_private_key), public.PublicKey(m_public_key))
+│ │ -    ciphertext = box.encrypt(m_plaintext, nonce).ciphertext
+│ │ -
+│ │ -    return (b64encode(ciphertext).decode("utf-8"), b64encode(nonce).decode("utf-8"))
+│ │ -
+│ │ -
+│ │ -def decrypt_asymmetric(
+│ │ -    ciphertext: Union[Buffer, Base64String],
+│ │ -    nonce: Union[Buffer, Base64String],
+│ │ -    public_key: Union[Buffer, Base64String, public.PublicKey],
+│ │ -    private_key: Union[Buffer, Base64String, public.PrivateKey],
+│ │ -) -> str:
+│ │ -    """Performs asymmetric decryption of the ``ciphertext`` with x25519-xsalsa20-poly1305
+│ │ -    algorithm with the given parameters. Each of those params should be either the raw value in bytes
+│ │ -    or a base64 string.
+│ │ -
+│ │ -    :param ciphertext: The ciphered text to decrypt
+│ │ -    :param nonce: The nonce used for encryption
+│ │ -    :param public_key: The public key
+│ │ -    :param private_key: The private key
+│ │ -    :raises ValueError: If ``ciphertext``, ``nonce``, ``public_key`` or ``private_key`` are empty
+│ │ -    :return: The deciphered text
+│ │ -    """
+│ │ -    if (
+│ │ -        len(ciphertext) == 0
+│ │ -        or len(nonce) == 0
+│ │ -        or (not isinstance(public_key, public.PublicKey) and len(public_key) == 0)
+│ │ -        or (not isinstance(private_key, public.PrivateKey) and len(private_key) == 0)
+│ │ -    ):
+│ │ -        raise ValueError()
+│ │ -
+│ │ -    m_ciphertext = (
+│ │ -        b64decode(ciphertext) if isinstance(ciphertext, Base64String) else ciphertext
+│ │ -    )
+│ │ -    m_nonce = b64decode(nonce) if isinstance(nonce, Base64String) else nonce
+│ │ -    m_public_key = (
+│ │ -        b64decode(public_key) if isinstance(public_key, Base64String) else public_key
+│ │ -    )
+│ │ -    m_public_key = (
+│ │ -        public.PublicKey(m_public_key)
+│ │ -        if isinstance(m_public_key, (bytes, bytearray, memoryview))
+│ │ -        else m_public_key
+│ │ -    )
+│ │ -    m_private_key = (
+│ │ -        b64decode(private_key) if isinstance(private_key, Base64String) else private_key
+│ │ -    )
+│ │ -    m_private_key = (
+│ │ -        public.PrivateKey(m_private_key)
+│ │ -        if isinstance(m_private_key, (bytes, bytearray, memoryview))
+│ │ -        else m_private_key
+│ │ -    )
+│ │ -
+│ │ -    box = public.Box(m_private_key, m_public_key)
+│ │ -    plaintext = box.decrypt(m_ciphertext, m_nonce)
+│ │ -
+│ │ -    return plaintext.decode("utf-8")
+│ │ -
+│ │ -
+│ │ -def encrypt_symmetric(
+│ │ -    plaintext: Union[Buffer, str], key: Union[Buffer, Base64String]
+│ │ -) -> Tuple[Base64String, Base64String, Base64String]:
+│ │ -    """Encrypts the ``plaintext`` with aes-256-gcm using the given ``key``.
+│ │ -    The key should be either the raw value in bytes or a base64 string.
+│ │ -
+│ │ -    :param plaintext: The text to encrypt
+│ │ -    :param key: The AES key used for encryption
+│ │ -    :raises ValueError: If either ``plaintext`` or ``key`` is empty
+│ │ -    :return: Ciphered text
+│ │ -    """
+│ │ -    if len(plaintext) == 0 or len(key) == 0:
+│ │ -        raise ValueError()
+│ │ -
+│ │ -    BLOCK_SIZE_BYTES = 16
+│ │ -
+│ │ -    m_key = b64decode(key) if isinstance(key, Base64String) else key
+│ │ -    m_plaintext = (
+│ │ -        str.encode(plaintext, "utf-8") if isinstance(plaintext, str) else plaintext
+│ │ -    )
+│ │ -
+│ │ -    iv = get_random_bytes(BLOCK_SIZE_BYTES)
+│ │ -    cipher = AES.new(m_key, AES.MODE_GCM, nonce=iv)
+│ │ -
+│ │ -    cipher_text, tag = cipher.encrypt_and_digest(m_plaintext)
+│ │ -
+│ │ -    return (
+│ │ -        b64encode(cipher_text).decode("utf-8"),
+│ │ -        b64encode(iv).decode("utf-8"),
+│ │ -        b64encode(tag).decode("utf-8"),
+│ │ -    )
+│ │ -
+│ │ -
+│ │ -def decrypt_symmetric(
+│ │ -    key: Union[Buffer, Base64String],
+│ │ -    ciphertext: Union[Buffer, Base64String],
+│ │ -    tag: Union[Buffer, Base64String],
+│ │ -    iv: Union[Buffer, Base64String],
+│ │ -) -> str:
+│ │ -    """Decrypts the ``ciphertext`` with aes-256-gcm using ``iv``, ``tag``
+│ │ -    and ``key``. Each of those params should be either the raw value in bytes
+│ │ -    or a base64 string.
+│ │ -
+│ │ -    :param key: The AES key
+│ │ -    :param ciphertext: The ciphered text to decrypt
+│ │ -    :param tag: The tag/mac used for verification
+│ │ -    :param iv: The nonce
+│ │ -    :raises ValueError: If ``ciphertext``, ``iv``, ``tag`` or ``key`` are empty or tag/mac does not match
+│ │ -    :return: Deciphered text
+│ │ -    """
+│ │ -    if len(ciphertext) == 0 or len(tag) == 0 or len(iv) == 0 or len(key) == 0:
+│ │ -        raise ValueError("One of the given parameter is empty!")
+│ │ -
+│ │ -    m_key = b64decode(key) if isinstance(key, Base64String) else key
+│ │ -    m_iv = b64decode(iv) if isinstance(iv, Base64String) else iv
+│ │ -    m_ciphertext = (
+│ │ -        b64decode(ciphertext) if isinstance(ciphertext, Base64String) else ciphertext
+│ │ -    )
+│ │ -    m_tag = b64decode(tag) if isinstance(tag, Base64String) else tag
+│ │ -
+│ │ -    cipher = AES.new(m_key, AES.MODE_GCM, nonce=m_iv)
+│ │ -
+│ │ -    plaintext = cipher.decrypt_and_verify(m_ciphertext, m_tag)
+│ │ -
+│ │ -    return plaintext.decode("utf-8")
+│ │ +from base64 import b64decode, b64encode
+│ │ +from typing import Tuple, Union
+│ │ +
+│ │ +from Cryptodome.Cipher import AES
+│ │ +from Cryptodome.Random import get_random_bytes
+│ │ +from nacl import public, utils
+│ │ +
+│ │ +Base64String = str
+│ │ +Buffer = Union[bytes, bytearray, memoryview]
+│ │ +
+│ │ +
+│ │ +def encrypt_asymmetric(
+│ │ +    plaintext: Union[Buffer, str],
+│ │ +    public_key: Union[Buffer, Base64String, public.PublicKey],
+│ │ +    private_key: Union[Buffer, Base64String, public.PrivateKey],
+│ │ +) -> Tuple[Base64String, Base64String]:
+│ │ +    """Performs asymmetric encryption of the ``plaintext`` with x25519-xsalsa20-poly1305
+│ │ +    algorithm with the given parameters. Each of those params should be either the raw value in bytes
+│ │ +    or a base64 string.
+│ │ +
+│ │ +    :param plaintext: The text to encrypt
+│ │ +    :param public_key: The public key
+│ │ +    :param private_key: The private key
+│ │ +    :raises ValueError: If ``plaintext``, ``public_key`` or ``private_key`` are empty
+│ │ +    :return: A tuple containing the ciphered text and the random nonce used for encryption
+│ │ +    """
+│ │ +    if (not isinstance(public_key, public.PublicKey) and len(public_key) == 0) or (
+│ │ +        not isinstance(private_key, public.PrivateKey) and len(private_key) == 0
+│ │ +    ):
+│ │ +        raise ValueError("Public key and private key cannot be empty!")
+│ │ +
+│ │ +    m_plaintext = (
+│ │ +        str.encode(plaintext, "utf-8") if isinstance(plaintext, str) else plaintext
+│ │ +    )
+│ │ +    m_public_key = (
+│ │ +        b64decode(public_key) if isinstance(public_key, Base64String) else public_key
+│ │ +    )
+│ │ +    m_public_key = (
+│ │ +        public.PublicKey(m_public_key)
+│ │ +        if isinstance(m_public_key, (bytes, bytearray, memoryview))
+│ │ +        else m_public_key
+│ │ +    )
+│ │ +    m_private_key = (
+│ │ +        b64decode(private_key) if isinstance(private_key, Base64String) else private_key
+│ │ +    )
+│ │ +    m_private_key = (
+│ │ +        public.PrivateKey(m_private_key)
+│ │ +        if isinstance(m_private_key, (bytes, bytearray, memoryview))
+│ │ +        else m_private_key
+│ │ +    )
+│ │ +
+│ │ +    nonce = utils.random(24)
+│ │ +    box = public.Box(m_private_key, m_public_key)
+│ │ +    ciphertext = box.encrypt(m_plaintext, nonce).ciphertext
+│ │ +
+│ │ +    return (b64encode(ciphertext).decode("utf-8"), b64encode(nonce).decode("utf-8"))
+│ │ +
+│ │ +
+│ │ +def decrypt_asymmetric(
+│ │ +    ciphertext: Union[Buffer, Base64String],
+│ │ +    nonce: Union[Buffer, Base64String],
+│ │ +    public_key: Union[Buffer, Base64String, public.PublicKey],
+│ │ +    private_key: Union[Buffer, Base64String, public.PrivateKey],
+│ │ +) -> str:
+│ │ +    """Performs asymmetric decryption of the ``ciphertext`` with x25519-xsalsa20-poly1305
+│ │ +    algorithm with the given parameters. Each of those params should be either the raw value in bytes
+│ │ +    or a base64 string.
+│ │ +
+│ │ +    :param ciphertext: The ciphered text to decrypt
+│ │ +    :param nonce: The nonce used for encryption
+│ │ +    :param public_key: The public key
+│ │ +    :param private_key: The private key
+│ │ +    :raises ValueError: If ``ciphertext``, ``nonce``, ``public_key`` or ``private_key`` are empty
+│ │ +    :return: The deciphered text
+│ │ +    """
+│ │ +    if (
+│ │ +        len(ciphertext) == 0
+│ │ +        or len(nonce) == 0
+│ │ +        or (not isinstance(public_key, public.PublicKey) and len(public_key) == 0)
+│ │ +        or (not isinstance(private_key, public.PrivateKey) and len(private_key) == 0)
+│ │ +    ):
+│ │ +        raise ValueError(
+│ │ +            "Public key, private key, ciphertext and nonce cannot be empty!"
+│ │ +        )
+│ │ +
+│ │ +    m_ciphertext = (
+│ │ +        b64decode(ciphertext) if isinstance(ciphertext, Base64String) else ciphertext
+│ │ +    )
+│ │ +    m_nonce = b64decode(nonce) if isinstance(nonce, Base64String) else nonce
+│ │ +    m_public_key = (
+│ │ +        b64decode(public_key) if isinstance(public_key, Base64String) else public_key
+│ │ +    )
+│ │ +    m_public_key = (
+│ │ +        public.PublicKey(m_public_key)
+│ │ +        if isinstance(m_public_key, (bytes, bytearray, memoryview))
+│ │ +        else m_public_key
+│ │ +    )
+│ │ +    m_private_key = (
+│ │ +        b64decode(private_key) if isinstance(private_key, Base64String) else private_key
+│ │ +    )
+│ │ +    m_private_key = (
+│ │ +        public.PrivateKey(m_private_key)
+│ │ +        if isinstance(m_private_key, (bytes, bytearray, memoryview))
+│ │ +        else m_private_key
+│ │ +    )
+│ │ +
+│ │ +    box = public.Box(m_private_key, m_public_key)
+│ │ +    plaintext = box.decrypt(m_ciphertext, m_nonce)
+│ │ +
+│ │ +    return plaintext.decode("utf-8")
+│ │ +
+│ │ +
+│ │ +def encrypt_symmetric(
+│ │ +    plaintext: Union[Buffer, str], key: Union[Buffer, Base64String]
+│ │ +) -> Tuple[Base64String, Base64String, Base64String]:
+│ │ +    """Encrypts the ``plaintext`` with aes-256-gcm using the given ``key``.
+│ │ +    The key should be either the raw value in bytes or a base64 string.
+│ │ +
+│ │ +    :param plaintext: The text to encrypt
+│ │ +    :param key: The AES key used for encryption
+│ │ +    :raises ValueError: If either ``plaintext`` or ``key`` is empty
+│ │ +    :return: Ciphered text
+│ │ +    """
+│ │ +    if len(key) == 0:
+│ │ +        raise ValueError("The given key is empty!")
+│ │ +
+│ │ +    BLOCK_SIZE_BYTES = 16
+│ │ +
+│ │ +    m_key = b64decode(key) if isinstance(key, Base64String) else key
+│ │ +    m_plaintext = (
+│ │ +        str.encode(plaintext, "utf-8") if isinstance(plaintext, str) else plaintext
+│ │ +    )
+│ │ +
+│ │ +    iv = get_random_bytes(BLOCK_SIZE_BYTES)
+│ │ +    cipher = AES.new(m_key, AES.MODE_GCM, nonce=iv)
+│ │ +
+│ │ +    cipher_text, tag = cipher.encrypt_and_digest(m_plaintext)
+│ │ +
+│ │ +    return (
+│ │ +        b64encode(cipher_text).decode("utf-8"),
+│ │ +        b64encode(iv).decode("utf-8"),
+│ │ +        b64encode(tag).decode("utf-8"),
+│ │ +    )
+│ │ +
+│ │ +
+│ │ +def decrypt_symmetric(
+│ │ +    key: Union[Buffer, Base64String],
+│ │ +    ciphertext: Union[Buffer, Base64String],
+│ │ +    tag: Union[Buffer, Base64String],
+│ │ +    iv: Union[Buffer, Base64String],
+│ │ +) -> str:
+│ │ +    """Decrypts the ``ciphertext`` with aes-256-gcm using ``iv``, ``tag``
+│ │ +    and ``key``. Each of those params should be either the raw value in bytes
+│ │ +    or a base64 string.
+│ │ +
+│ │ +    :param key: The AES key
+│ │ +    :param ciphertext: The ciphered text to decrypt
+│ │ +    :param tag: The tag/mac used for verification
+│ │ +    :param iv: The nonce
+│ │ +    :raises ValueError: If ``ciphertext``, ``iv``, ``tag`` or ``key`` are empty or tag/mac does not match
+│ │ +    :return: Deciphered text
+│ │ +    """
+│ │ +    if len(tag) == 0 or len(iv) == 0 or len(key) == 0:
+│ │ +        raise ValueError("One of the given parameter is empty!")
+│ │ +
+│ │ +    m_key = b64decode(key) if isinstance(key, Base64String) else key
+│ │ +    m_iv = b64decode(iv) if isinstance(iv, Base64String) else iv
+│ │ +    m_ciphertext = (
+│ │ +        b64decode(ciphertext) if isinstance(ciphertext, Base64String) else ciphertext
+│ │ +    )
+│ │ +    m_tag = b64decode(tag) if isinstance(tag, Base64String) else tag
+│ │ +
+│ │ +    cipher = AES.new(m_key, AES.MODE_GCM, nonce=m_iv)
+│ │ +
+│ │ +    plaintext = cipher.decrypt_and_verify(m_ciphertext, m_tag)
+│ │ +
+│ │ +    return plaintext.decode("utf-8")
+│ │   --- infisical-1.0.0/infisical/utils/http.py
+│ ├── +++ infisical-1.0.1/infisical/utils/http.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/data/secrets_reponse.py
+│ ├── +++ infisical-1.0.1/tests/data/secrets_reponse.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/data/service_token.py
+│ ├── +++ infisical-1.0.1/tests/data/service_token.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_api/test_api_request.py
+│ ├── +++ infisical-1.0.1/tests/test_api/test_api_request.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_api/test_get_secrets.py
+│ ├── +++ infisical-1.0.1/tests/test_api/test_get_secrets.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_api/test_get_service_token_data.py
+│ ├── +++ infisical-1.0.1/tests/test_api/test_get_service_token_data.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_client/test_infisical_client.py
+│ ├── +++ infisical-1.0.1/tests/test_client/test_infisical_client.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_services/test_key_service.py
+│ ├── +++ infisical-1.0.1/tests/test_services/test_key_service.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_services/test_secret_service.py
+│ ├── +++ infisical-1.0.1/tests/test_services/test_secret_service.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_utils/test_crypto_decrypt_asymmetric.py
+│ ├── +++ infisical-1.0.1/tests/test_utils/test_crypto_decrypt_asymmetric.py
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/tests/test_utils/test_crypto_decrypt_symmetric.py
+│ ├── +++ infisical-1.0.1/tests/test_utils/test_crypto_decrypt_symmetric.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,58 +1,57 @@
+│ │ -import pytest
+│ │ -from infisical.utils.crypto import decrypt_symmetric
+│ │ -
+│ │ -
+│ │ -def test_decrypt_symmetric_base64() -> None:
+│ │ -    plaintext = decrypt_symmetric(
+│ │ -        key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ -        ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ -        tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ -        iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ -    )
+│ │ -
+│ │ -    assert plaintext == "9c07298c06c6aaa762fcee342cf6bc34"
+│ │ -
+│ │ -
+│ │ -def test_decrypt_symmetric_bytes() -> None:
+│ │ -    plaintext = decrypt_symmetric(
+│ │ -        key=b"441a8a4ae97e04270f9b4092d83a8f0d",
+│ │ -        ciphertext=b"\xea\x08\x116\xdc\x02K\x9f\x18\x06O\x18\xa0\xe4\x01M}\x18\xf4I\xbf\x8d\x8eA\x8c\x90\xeb\x7f\xc3\xacxU",
+│ │ -        tag=b"\x0eQ\xc8\xa5!\x9e\x13\xb1H%\r\xdb\xc7*\x81\xed",
+│ │ -        iv=b"\x1f\xf7\x11\xbc\x00\xed\xc46\xb8]l\xcc\xda\x9dc\xd3",
+│ │ -    )
+│ │ -
+│ │ -    assert plaintext == "9c07298c06c6aaa762fcee342cf6bc34"
+│ │ -
+│ │ -
+│ │ -def test_decrypt_symmetric_empty_param() -> None:
+│ │ -    with pytest.raises(ValueError):
+│ │ -        decrypt_symmetric(
+│ │ -            key="",
+│ │ -            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ -            tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ -            iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ -        )
+│ │ -
+│ │ -    with pytest.raises(ValueError):
+│ │ -        decrypt_symmetric(
+│ │ -            key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ -            ciphertext="",
+│ │ -            tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ -            iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ -        )
+│ │ -
+│ │ -    with pytest.raises(ValueError):
+│ │ -        decrypt_symmetric(
+│ │ -            key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ -            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ -            tag="",
+│ │ -            iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ -        )
+│ │ -
+│ │ -    with pytest.raises(ValueError):
+│ │ -        decrypt_symmetric(
+│ │ -            key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ -            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ -            tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ -            iv="",
+│ │ -        )
+│ │ +import pytest
+│ │ +from infisical.utils.crypto import decrypt_symmetric
+│ │ +
+│ │ +
+│ │ +def test_decrypt_symmetric_base64() -> None:
+│ │ +    plaintext = decrypt_symmetric(
+│ │ +        key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ +        ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ +        tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ +        iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ +    )
+│ │ +
+│ │ +    assert plaintext == "9c07298c06c6aaa762fcee342cf6bc34"
+│ │ +
+│ │ +
+│ │ +def test_decrypt_symmetric_bytes() -> None:
+│ │ +    plaintext = decrypt_symmetric(
+│ │ +        key=b"441a8a4ae97e04270f9b4092d83a8f0d",
+│ │ +        ciphertext=b"\xea\x08\x116\xdc\x02K\x9f\x18\x06O\x18\xa0\xe4\x01M}\x18\xf4I\xbf\x8d\x8eA\x8c\x90\xeb\x7f\xc3\xacxU",
+│ │ +        tag=b"\x0eQ\xc8\xa5!\x9e\x13\xb1H%\r\xdb\xc7*\x81\xed",
+│ │ +        iv=b"\x1f\xf7\x11\xbc\x00\xed\xc46\xb8]l\xcc\xda\x9dc\xd3",
+│ │ +    )
+│ │ +
+│ │ +    assert plaintext == "9c07298c06c6aaa762fcee342cf6bc34"
+│ │ +
+│ │ +
+│ │ +def test_decrypt_symmetric_empty_param() -> None:
+│ │ +    with pytest.raises(ValueError):
+│ │ +        decrypt_symmetric(
+│ │ +            key="",
+│ │ +            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ +            tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ +            iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ +        )
+│ │ +
+│ │ +    with pytest.raises(ValueError):
+│ │ +        decrypt_symmetric(
+│ │ +            key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ +            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ +            tag="",
+│ │ +            iv="H/cRvADtxDa4XWzM2p1j0w==",
+│ │ +        )
+│ │ +
+│ │ +    with pytest.raises(ValueError):
+│ │ +        decrypt_symmetric(
+│ │ +            key="NDQxYThhNGFlOTdlMDQyNzBmOWI0MDkyZDgzYThmMGQ=",
+│ │ +            ciphertext="6ggRNtwCS58YBk8YoOQBTX0Y9Em/jY5BjJDrf8OseFU=",
+│ │ +            tag="DlHIpSGeE7FIJQ3bxyqB7Q==",
+│ │ +            iv="",
+│ │ +        )
+│ │ +
+│ │ +    decrypt_symmetric(
+│ │ +        key="C4AmL9liaUXm5tNVoHBTJw==",
+│ │ +        ciphertext="",
+│ │ +        tag="w+3JZYTW+YiKagCseraf4Q==",
+│ │ +        iv="zw8vhOL67bEhvRijTCA+vA==",
+│ │ +    )
+│ │   --- infisical-1.0.0/tests/test_utils/test_crypto_encrypt_asymmetric.py
+│ ├── +++ infisical-1.0.1/tests/test_utils/test_crypto_encrypt_asymmetric.py
+│ │┄ Files 16% similar despite different names
+│ │ @@ -1,67 +1,69 @@
+│ │ -import pytest
+│ │ -from infisical.utils.crypto import decrypt_asymmetric, encrypt_asymmetric
+│ │ -
+│ │ -BOB_PRIVATE_KEY = b"rMZ\xd8v\xfc\xdchn_\xb3\xf3\xb6(@\xb5\x15F\xdf\x12\x13\xf6_\x827\xea\x8eBc\x1fQ\x9b"
+│ │ -BOB_PUBLIC_KEY = (
+│ │ -    b"D5:\x10\x82\xdasTz4\xb7\x13\xd0C\xcaM%\xdbBl\x81\xe5\xba\xb8i)\xaa\x1c\xbc=Nl"
+│ │ -)
+│ │ -BOB_PRIVATE_KEY_B64 = "ck1a2Hb83GhuX7PztihAtRVG3xIT9l+CN+qOQmMfUZs="
+│ │ -BOB_PUBLIC_KEY_B64 = "RDU6EILac1R6NLcT0EPKTSXbQmyB5bq4aSmqHLw9Tmw="
+│ │ -
+│ │ -ALICE_PRIVATE_KEY = b"\xe5{g\xe1\xcb\xb2\xbfT{\xd9\x96\xdc\x80-\x991\r\xb4Z\x13}\xef\x8c\xdc'\x89x\xd1\x0c\xe4<\x04"
+│ │ -ALICE_PUBLIC_KEY = (
+│ │ -    b"\x0f%*\x83\xb8\\N}R\xaa\xcd;\x021\xd9J\xae\xf4G$>\x17\xff\x01\xc3\xd2\xbaQ11\x04Z"
+│ │ -)
+│ │ -ALICE_PRIVATE_KEY_B64 = "5Xtn4cuyv1R72ZbcgC2ZMQ20WhN974zcJ4l40QzkPAQ="
+│ │ -ALICE_PUBLIC_KEY_B64 = "DyUqg7hcTn1Sqs07AjHZSq70RyQ+F/8Bw9K6UTExBFo="
+│ │ -
+│ │ -
+│ │ -def test_encrypt_asymmetric_base64() -> None:
+│ │ -    ciphertext, nonce = encrypt_asymmetric(
+│ │ -        plaintext="Hello World!",
+│ │ -        private_key=BOB_PRIVATE_KEY_B64,
+│ │ -        public_key=ALICE_PUBLIC_KEY_B64,
+│ │ -    )
+│ │ -
+│ │ -    plaintext = decrypt_asymmetric(
+│ │ -        ciphertext=ciphertext,
+│ │ -        nonce=nonce,
+│ │ -        private_key=ALICE_PRIVATE_KEY_B64,
+│ │ -        public_key=BOB_PUBLIC_KEY_B64,
+│ │ -    )
+│ │ -
+│ │ -    assert plaintext == "Hello World!"
+│ │ -
+│ │ -
+│ │ -def test_encrypt_asymmetric_bytes() -> None:
+│ │ -    ciphertext, nonce = encrypt_asymmetric(
+│ │ -        plaintext=b"Hello World!",
+│ │ -        private_key=BOB_PRIVATE_KEY,
+│ │ -        public_key=ALICE_PUBLIC_KEY,
+│ │ -    )
+│ │ -
+│ │ -    plaintext = decrypt_asymmetric(
+│ │ -        ciphertext=ciphertext,
+│ │ -        nonce=nonce,
+│ │ -        private_key=ALICE_PRIVATE_KEY,
+│ │ -        public_key=BOB_PUBLIC_KEY,
+│ │ -    )
+│ │ -
+│ │ -    assert plaintext == "Hello World!"
+│ │ -
+│ │ -
+│ │ -def test_encrypt_asymmetric_empty_param() -> None:
+│ │ -    with pytest.raises(ValueError):
+│ │ -        encrypt_asymmetric(
+│ │ -            plaintext="", private_key=ALICE_PRIVATE_KEY, public_key=BOB_PUBLIC_KEY
+│ │ -        )
+│ │ -
+│ │ -    with pytest.raises(ValueError):
+│ │ -        encrypt_asymmetric(
+│ │ -            plaintext="Hello World!", private_key="", public_key=BOB_PUBLIC_KEY
+│ │ -        )
+│ │ -
+│ │ -    with pytest.raises(ValueError):
+│ │ -        encrypt_asymmetric(
+│ │ -            plaintext="Hello World!", private_key=ALICE_PRIVATE_KEY, public_key=""
+│ │ -        )
+│ │ +import pytest
+│ │ +from infisical.utils.crypto import decrypt_asymmetric, encrypt_asymmetric
+│ │ +
+│ │ +BOB_PRIVATE_KEY = b"rMZ\xd8v\xfc\xdchn_\xb3\xf3\xb6(@\xb5\x15F\xdf\x12\x13\xf6_\x827\xea\x8eBc\x1fQ\x9b"
+│ │ +BOB_PUBLIC_KEY = (
+│ │ +    b"D5:\x10\x82\xdasTz4\xb7\x13\xd0C\xcaM%\xdbBl\x81\xe5\xba\xb8i)\xaa\x1c\xbc=Nl"
+│ │ +)
+│ │ +BOB_PRIVATE_KEY_B64 = "ck1a2Hb83GhuX7PztihAtRVG3xIT9l+CN+qOQmMfUZs="
+│ │ +BOB_PUBLIC_KEY_B64 = "RDU6EILac1R6NLcT0EPKTSXbQmyB5bq4aSmqHLw9Tmw="
+│ │ +
+│ │ +ALICE_PRIVATE_KEY = b"\xe5{g\xe1\xcb\xb2\xbfT{\xd9\x96\xdc\x80-\x991\r\xb4Z\x13}\xef\x8c\xdc'\x89x\xd1\x0c\xe4<\x04"
+│ │ +ALICE_PUBLIC_KEY = (
+│ │ +    b"\x0f%*\x83\xb8\\N}R\xaa\xcd;\x021\xd9J\xae\xf4G$>\x17\xff\x01\xc3\xd2\xbaQ11\x04Z"
+│ │ +)
+│ │ +ALICE_PRIVATE_KEY_B64 = "5Xtn4cuyv1R72ZbcgC2ZMQ20WhN974zcJ4l40QzkPAQ="
+│ │ +ALICE_PUBLIC_KEY_B64 = "DyUqg7hcTn1Sqs07AjHZSq70RyQ+F/8Bw9K6UTExBFo="
+│ │ +
+│ │ +
+│ │ +def test_encrypt_asymmetric_base64() -> None:
+│ │ +    ciphertext, nonce = encrypt_asymmetric(
+│ │ +        plaintext="Hello World!",
+│ │ +        private_key=BOB_PRIVATE_KEY_B64,
+│ │ +        public_key=ALICE_PUBLIC_KEY_B64,
+│ │ +    )
+│ │ +
+│ │ +    plaintext = decrypt_asymmetric(
+│ │ +        ciphertext=ciphertext,
+│ │ +        nonce=nonce,
+│ │ +        private_key=ALICE_PRIVATE_KEY_B64,
+│ │ +        public_key=BOB_PUBLIC_KEY_B64,
+│ │ +    )
+│ │ +
+│ │ +    assert plaintext == "Hello World!"
+│ │ +
+│ │ +
+│ │ +def test_encrypt_asymmetric_bytes() -> None:
+│ │ +    ciphertext, nonce = encrypt_asymmetric(
+│ │ +        plaintext=b"Hello World!",
+│ │ +        private_key=BOB_PRIVATE_KEY,
+│ │ +        public_key=ALICE_PUBLIC_KEY,
+│ │ +    )
+│ │ +
+│ │ +    plaintext = decrypt_asymmetric(
+│ │ +        ciphertext=ciphertext,
+│ │ +        nonce=nonce,
+│ │ +        private_key=ALICE_PRIVATE_KEY,
+│ │ +        public_key=BOB_PUBLIC_KEY,
+│ │ +    )
+│ │ +
+│ │ +    assert plaintext == "Hello World!"
+│ │ +
+│ │ +
+│ │ +def test_encrypt_asymmetric_empty_param() -> None:
+│ │ +    cipher, nonce = encrypt_asymmetric(
+│ │ +        plaintext="", private_key=ALICE_PRIVATE_KEY, public_key=BOB_PUBLIC_KEY
+│ │ +    )
+│ │ +
+│ │ +    assert len(cipher) > 0
+│ │ +    assert len(nonce) > 0
+│ │ +
+│ │ +    with pytest.raises(ValueError):
+│ │ +        encrypt_asymmetric(
+│ │ +            plaintext="Hello World!", private_key="", public_key=BOB_PUBLIC_KEY
+│ │ +        )
+│ │ +
+│ │ +    with pytest.raises(ValueError):
+│ │ +        encrypt_asymmetric(
+│ │ +            plaintext="Hello World!", private_key=ALICE_PRIVATE_KEY, public_key=""
+│ │ +        )
+│ │   --- infisical-1.0.0/.gitignore
+│ ├── +++ infisical-1.0.1/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/LICENSE
+│ ├── +++ infisical-1.0.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/README.md
+│ ├── +++ infisical-1.0.1/README.md
+│ │┄ Files identical despite different names
+│ │   --- infisical-1.0.0/pyproject.toml
+│ ├── +++ infisical-1.0.1/pyproject.toml
+│ │┄ Files 4% similar despite different names
+│ │ @@ -48,20 +48,20 @@
+│ │  test = [
+│ │    "pytest >=7.1.3,<8.0.0",
+│ │    "coverage[toml] >= 6.5.0,< 8.0",
+│ │    "responses ==0.23.1"
+│ │  ]
+│ │  dev = [
+│ │    "mypy ==1.1.1",
+│ │ -  "ruff ==0.0.257",
+│ │ -  "black ==23.1.0",
+│ │ +  "ruff ==0.0.261",
+│ │ +  "black ==23.3.0",
+│ │    "isort >=5.0.6,<6.0.0",
+│ │ -  "devtools[pygments] ==0.10.0",
+│ │ +  "devtools[pygments] ==0.11.0",
+│ │  
+│ │ -  "types-requests ==2.28.11.15"
+│ │ +  "types-requests ==2.28.11.17"
+│ │  ]
+│ │  
+│ │  [tool.hatch.version]
+│ │  path = "infisical/__version__.py"
+│ │  
+│ │  [tool.hatch.build.targets.sdist]
+│ │  exclude = [
+│ │   --- infisical-1.0.0/PKG-INFO
+│ ├── +++ infisical-1.0.1/PKG-INFO
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: infisical
+│ │ -Version: 1.0.0
+│ │ +Version: 1.0.1
+│ │  Summary: Official Infisical SDK for Python
+│ │  Project-URL: Documentation, https://github.com/Infisical/infisical-python#readme
+│ │  Project-URL: Issues, https://github.com/Infisical/infisical-python/issues
+│ │  Project-URL: Source, https://github.com/Infisical/infisical-python
+│ │  Maintainer-email: Yohann MARTIN <contact@codexus.fr>
+│ │  License-Expression: MIT
+│ │  License-File: LICENSE
+│ │ @@ -27,20 +27,20 @@
+│ │  Classifier: Typing :: Typed
+│ │  Requires-Python: >=3.7
+│ │  Requires-Dist: pycryptodomex<4.0.0,>=3.17
+│ │  Requires-Dist: pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2
+│ │  Requires-Dist: pynacl<2.0.0,>=1.5.0
+│ │  Requires-Dist: requests==2.28.2
+│ │  Provides-Extra: dev
+│ │ -Requires-Dist: black==23.1.0; extra == 'dev'
+│ │ -Requires-Dist: devtools[pygments]==0.10.0; extra == 'dev'
+│ │ +Requires-Dist: black==23.3.0; extra == 'dev'
+│ │ +Requires-Dist: devtools[pygments]==0.11.0; extra == 'dev'
+│ │  Requires-Dist: isort<6.0.0,>=5.0.6; extra == 'dev'
+│ │  Requires-Dist: mypy==1.1.1; extra == 'dev'
+│ │ -Requires-Dist: ruff==0.0.257; extra == 'dev'
+│ │ -Requires-Dist: types-requests==2.28.11.15; extra == 'dev'
+│ │ +Requires-Dist: ruff==0.0.261; extra == 'dev'
+│ │ +Requires-Dist: types-requests==2.28.11.17; extra == 'dev'
+│ │  Provides-Extra: test
+│ │  Requires-Dist: coverage[toml]<8.0,>=6.5.0; extra == 'test'
+│ │  Requires-Dist: pytest<8.0.0,>=7.1.3; extra == 'test'
+│ │  Requires-Dist: responses==0.23.1; extra == 'test'
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  <h1 align="center">
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: infisical Version: 1.0.0 Summary: Official
+│ │ │ +Metadata-Version: 2.1 Name: infisical Version: 1.0.1 Summary: Official
+│ │ │  Infisical SDK for Python Project-URL: Documentation, https://github.com/
+│ │ │  Infisical/infisical-python#readme Project-URL: Issues, https://github.com/
+│ │ │  Infisical/infisical-python/issues Project-URL: Source, https://github.com/
+│ │ │  Infisical/infisical-python Maintainer-email: Yohann MARTIN
+│ │ │  codexus.fr> License-Expression: MIT License-File: LICENSE Classifier:
+│ │ │  Development Status :: 5 - Production/Stable Classifier: Intended Audience ::
+│ │ │  Developers Classifier: License :: OSI Approved :: MIT License Classifier:
+│ │ │ @@ -15,18 +15,18 @@
+│ │ │  Implementation :: PyPy Classifier: Topic :: Software Development Classifier:
+│ │ │  Topic :: Software Development :: Libraries Classifier: Topic :: Software
+│ │ │  Development :: Libraries :: Application Frameworks Classifier: Topic ::
+│ │ │  Software Development :: Libraries :: Python Modules Classifier: Typing :: Typed
+│ │ │  Requires-Python: >=3.7 Requires-Dist: pycryptodomex<4.0.0,>=3.17 Requires-Dist:
+│ │ │  pydantic!=1.7,!=1.7.1,!=1.7.2,!=1.7.3,!=1.8,!=1.8.1,<2.0.0,>=1.6.2 Requires-
+│ │ │  Dist: pynacl<2.0.0,>=1.5.0 Requires-Dist: requests==2.28.2 Provides-Extra: dev
+│ │ │ -Requires-Dist: black==23.1.0; extra == 'dev' Requires-Dist: devtools
+│ │ │ -[pygments]==0.10.0; extra == 'dev' Requires-Dist: isort<6.0.0,>=5.0.6; extra ==
+│ │ │ -'dev' Requires-Dist: mypy==1.1.1; extra == 'dev' Requires-Dist: ruff==0.0.257;
+│ │ │ -extra == 'dev' Requires-Dist: types-requests==2.28.11.15; extra == 'dev'
+│ │ │ +Requires-Dist: black==23.3.0; extra == 'dev' Requires-Dist: devtools
+│ │ │ +[pygments]==0.11.0; extra == 'dev' Requires-Dist: isort<6.0.0,>=5.0.6; extra ==
+│ │ │ +'dev' Requires-Dist: mypy==1.1.1; extra == 'dev' Requires-Dist: ruff==0.0.261;
+│ │ │ +extra == 'dev' Requires-Dist: types-requests==2.28.11.17; extra == 'dev'
+│ │ │  Provides-Extra: test Requires-Dist: coverage[toml]<8.0,>=6.5.0; extra == 'test'
+│ │ │  Requires-Dist: pytest<8.0.0,>=7.1.3; extra == 'test' Requires-Dist:
+│ │ │  responses==0.23.1; extra == 'test' Description-Content-Type: text/markdown
+│ │ │                             ****** [infisical] ******
+│ │ │    Open-source, end-to-end encrypted tool to manage secrets and configs across
+│ │ │                      your team, devices, and infrastructure.
+│ │ │   [Test] [Coverage] [Package_version] [Supported_Python_versions] [MIT_License]

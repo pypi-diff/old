@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/audiolm-pytorch-0.9.6.tar.gz tmp/audiolm-pytorch-0.9.7.tar.gz --html versions/a/audiolm-pytorch/0.9.6-0.9.7/index.html --text versions/a/audiolm-pytorch/0.9.6-0.9.7/diff.txt --markdown versions/a/audiolm-pytorch/0.9.6-0.9.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">14.8 KB</span></div>
+  <div><span class="source">tmp/audiolm-pytorch-0.9.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/audiolm-pytorch-0.9.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">280 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;audiolm-pytorch-0.9.<del>6</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>20:4<del>1</del>:<del>49</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;audiolm-pytorch-0.9.<ins>7</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>Thu<span class="dp">·</span>Feb<span class="dp">·</span><span class="dp">·</span>2<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">14.5 KB</span></div>
+    <div><span class="source">audiolm-pytorch-0.9.6.tar</span> vs.</div>
+    <div id="audiolm-pytorch--.-.-.tar"><span class="source">audiolm-pytorch-0.9.7.tar</span>
+      <a class="anchor" href="#audiolm-pytorch--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">6.0 KB</span></div>
+      <div id="audiolm-pytorch--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 23 lines modified</td><td colspan="2">Offset 1, 23 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.<del>233814</del><span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.<ins>766771</ins><span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1066<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1066<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>698<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.<del>233814</del><span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>698<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.<ins>766771</ins><span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13581<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13581<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.<del>233814</del><span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.<ins>766771</ins><span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>632<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>632<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57921<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/audiolm_pytorch.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>57921<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/audiolm_pytorch.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4554<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/data.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4554<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/data.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2370<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/hubert_kmeans.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2370<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/hubert_kmeans.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>943<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/optimizer.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>943<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/optimizer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>2</del><del>24</del>95<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/soundstream.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>18</ins>95<ins>1</ins><span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/soundstream.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2548<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/t5.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2548<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/t5.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35059<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/trainer.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>35059<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/trainer.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>307<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/utils.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>307<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2236<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch/vq_wav2vec.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2236<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch/vq_wav2vec.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.<del>233814</del><span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/</td><td class="diffline">16 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.<ins>766771</ins><span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>698<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/PKG-INFO</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>698<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>504<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/SOURCES.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>504<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/dependency_links.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>195<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/requires.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>195<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/audiolm_pytorch.egg-info/top_level.txt</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>16<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/audiolm_pytorch.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>49</del>.<del>233814</del><span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/setup.cfg</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>38<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>32</ins>.<ins>766771</ins><span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1162<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<del>1</del>:<del>3</del>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<del>6</del>/setup.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1001)<span class="dp">·</span>docker<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(123)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1162<span class="dp">·</span>2023-02-02<span class="dp">·</span>20:4<ins>3</ins>:<ins>2</ins>1.000000<span class="dp">·</span>audiolm-pytorch-0.9.<ins>7</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">97.0 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/LICENSE</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--LICENSE"><span class="source">audiolm-pytorch-0.9.7/LICENSE</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">564 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/PKG-INFO</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--PKG-INFO"><span class="source">audiolm-pytorch-0.9.7/PKG-INFO</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>audiolm-pytorch</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>audiolm-pytorch</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/lucidrains/audiolm-pytorch</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/lucidrains/audiolm-pytorch</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Phil<span class="dp">·</span>Wang</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Phil<span class="dp">·</span>Wang</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lucidrains@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lucidrains@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,deep<span class="dp">·</span>learning,transformers,attention<span class="dp">·</span>mechanism,audio<span class="dp">·</span>generation</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,deep<span class="dp">·</span>learning,transformers,attention<span class="dp">·</span>mechanism,audio<span class="dp">·</span>generation</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/README.md</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--README.md"><span class="source">audiolm-pytorch-0.9.7/README.md</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">137 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/__init__.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-__init__.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/__init__.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/audiolm_pytorch.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-audiolm_pytorch.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/audiolm_pytorch.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-audiolm_pytorch.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/data.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-data.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/data.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-data.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/hubert_kmeans.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-hubert_kmeans.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/hubert_kmeans.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-hubert_kmeans.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/optimizer.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-optimizer.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/optimizer.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-optimizer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">5.41 KB</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/soundstream.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-soundstream.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/soundstream.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-soundstream.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 10% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 24, 36 lines modified</td><td colspan="2">Offset 24, 19 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">def<span class="dp">·</span>exists(val):</td><td class="diffline">24 </td><td class="diffpresent">def<span class="dp">·</span>exists(val):</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>val<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>val<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>None</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">def<span class="dp">·</span>default(val,<span class="dp">·</span>d):</td><td class="diffline">26 </td><td class="diffpresent">def<span class="dp">·</span>default(val,<span class="dp">·</span>d):</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>val<span class="dp">·</span>if<span class="dp">·</span>exists(val)<span class="dp">·</span>else<span class="dp">·</span>d</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>val<span class="dp">·</span>if<span class="dp">·</span>exists(val)<span class="dp">·</span>else<span class="dp">·</span>d</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>decorators</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">29 </td><td class="diffpresent">def<span class="dp">·</span>auto_handle_complex(fn):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@wraps(fn)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>inner(*args):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>args[0].dtype<span class="dp">·</span>not<span class="dp">·</span>in<span class="dp">·</span>(torch.complex64,<span class="dp">·</span>torch.complex32):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>fn(*args)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>real_args<span class="dp">·</span>=<span class="dp">·</span>tuple(arg.real<span class="dp">·</span>for<span class="dp">·</span>arg<span class="dp">·</span>in<span class="dp">·</span>args)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>imag_args<span class="dp">·</span>=<span class="dp">·</span>tuple(arg.imag<span class="dp">·</span>for<span class="dp">·</span>arg<span class="dp">·</span>in<span class="dp">·</span>args)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>(fn(*real_args)<span class="dp">·</span>+<span class="dp">·</span>fn(*imag_args))<span class="dp">·</span>*<span class="dp">·</span>0.5</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>inner</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">#<span class="dp">·</span>gan<span class="dp">·</span>losses</td><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>gan<span class="dp">·</span>losses</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">39 </td><td class="diffpresent">@auto_handle_complex</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">def<span class="dp">·</span>hinge_discr_loss(fake,<span class="dp">·</span>real):</td><td class="diffline">29 </td><td class="diffpresent">def<span class="dp">·</span>hinge_discr_loss(fake,<span class="dp">·</span>real):</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>(F.relu(1<span class="dp">·</span>+<span class="dp">·</span>fake)<span class="dp">·</span>+<span class="dp">·</span>F.relu(1<span class="dp">·</span>-<span class="dp">·</span>real)).mean()</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>(F.relu(1<span class="dp">·</span>+<span class="dp">·</span>fake)<span class="dp">·</span>+<span class="dp">·</span>F.relu(1<span class="dp">·</span>-<span class="dp">·</span>real)).mean()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">42 </td><td class="diffpresent">@auto_handle_complex</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">def<span class="dp">·</span>hinge_gen_loss(fake):</td><td class="diffline">31 </td><td class="diffpresent">def<span class="dp">·</span>hinge_gen_loss(fake):</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>-fake.mean()</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>-fake.mean()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">def<span class="dp">·</span>leaky_relu(p<span class="dp">·</span>=<span class="dp">·</span>0.1):</td><td class="diffline">33 </td><td class="diffpresent">def<span class="dp">·</span>leaky_relu(p<span class="dp">·</span>=<span class="dp">·</span>0.1):</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>nn.LeakyReLU(p)</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>nn.LeakyReLU(p)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">def<span class="dp">·</span>gradient_penalty(wave,<span class="dp">·</span>output,<span class="dp">·</span>weight<span class="dp">·</span>=<span class="dp">·</span>10):</td><td class="diffline">35 </td><td class="diffpresent">def<span class="dp">·</span>gradient_penalty(wave,<span class="dp">·</span>output,<span class="dp">·</span>weight<span class="dp">·</span>=<span class="dp">·</span>10):</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 116, 109 lines modified</td><td colspan="2">Offset 99, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">116 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>out<span class="dp">·</span>=<span class="dp">·</span>self.final_conv(x)</td><td class="diffline">99 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>out<span class="dp">·</span>=<span class="dp">·</span>self.final_conv(x)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">117 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>return_intermediates:</td><td class="diffline">100 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>return_intermediates:</td></tr>
+<tr class="diffunmodified"><td class="diffline">118 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>out</td><td class="diffline">101 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>out</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">119 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>out,<span class="dp">·</span>intermediates</td><td class="diffline">102 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>out,<span class="dp">·</span>intermediates</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">120 </td><td class="diffpresent">#<span class="dp">·</span>complex<span class="dp">·</span>stft<span class="dp">·</span>discriminator</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">121 </td><td class="diffpresent">class<span class="dp">·</span>ModReLU(nn.Module):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">122 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">123 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>https://arxiv.org/abs/1705.09792</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">124 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>https://github.com/pytorch/pytorch/issues/47052#issuecomment-718948801</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">125 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;&quot;&quot;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">126 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(self):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">127 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">128 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.b<span class="dp">·</span>=<span class="dp">·</span>nn.Parameter(torch.tensor(0.))</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">129 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>forward(self,<span class="dp">·</span>x):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">130 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>F.relu(torch.abs(x)<span class="dp">·</span>+<span class="dp">·</span>self.b)<span class="dp">·</span>*<span class="dp">·</span>torch.exp(1.j<span class="dp">·</span>*<span class="dp">·</span>torch.angle(x))</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">131 </td><td class="diffpresent">def<span class="dp">·</span>ComplexSTFTResidualUnit(chan_in,<span class="dp">·</span>chan_out,<span class="dp">·</span>strides):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">132 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>kernel_sizes<span class="dp">·</span>=<span class="dp">·</span>tuple(map(lambda<span class="dp">·</span>t:<span class="dp">·</span>t<span class="dp">·</span>+<span class="dp">·</span>2,<span class="dp">·</span>strides))</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">133 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>paddings<span class="dp">·</span>=<span class="dp">·</span>tuple(map(lambda<span class="dp">·</span>t:<span class="dp">·</span>t<span class="dp">·</span>//<span class="dp">·</span>2,<span class="dp">·</span>kernel_sizes))</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">134 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>nn.Sequential(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">135 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>nn.Conv2d(chan_in,<span class="dp">·</span>chan_in,<span class="dp">·</span>3,<span class="dp">·</span>padding<span class="dp">·</span>=<span class="dp">·</span>1,<span class="dp">·</span>dtype<span class="dp">·</span>=<span class="dp">·</span>torch.complex64),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">136 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>ModReLU(),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">137 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>nn.Conv2d(chan_in,<span class="dp">·</span>chan_out,<span class="dp">·</span>kernel_sizes,<span class="dp">·</span>stride<span class="dp">·</span>=<span class="dp">·</span>strides,<span class="dp">·</span>padding<span class="dp">·</span>=<span class="dp">·</span>paddings,<span class="dp">·</span>dtype<span class="dp">·</span>=<span class="dp">·</span>torch.complex64)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">138 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">139 </td><td class="diffpresent">class<span class="dp">·</span>ComplexSTFTDiscriminator(nn.Module):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">140 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__init__(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">141 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">142 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>*,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">143 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>channels<span class="dp">·</span>=<span class="dp">·</span>32,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">144 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>strides<span class="dp">·</span>=<span class="dp">·</span>((1,<span class="dp">·</span>2),<span class="dp">·</span>(2,<span class="dp">·</span>2),<span class="dp">·</span>(1,<span class="dp">·</span>2),<span class="dp">·</span>(2,<span class="dp">·</span>2),<span class="dp">·</span>(1,<span class="dp">·</span>2),<span class="dp">·</span>(2,<span class="dp">·</span>2)),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">145 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chan_mults<span class="dp">·</span>=<span class="dp">·</span>(1,<span class="dp">·</span>2,<span class="dp">·</span>4,<span class="dp">·</span>4,<span class="dp">·</span>8,<span class="dp">·</span>8),</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">146 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>input_channels<span class="dp">·</span>=<span class="dp">·</span>1,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">147 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>n_fft<span class="dp">·</span>=<span class="dp">·</span>1024,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">148 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>hop_length<span class="dp">·</span>=<span class="dp">·</span>256,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">149 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>win_length<span class="dp">·</span>=<span class="dp">·</span>1024</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">150 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">151 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>super().__init__()</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.init_conv<span class="dp">·</span>=<span class="dp">·</span>nn.Conv2d(input_channels,<span class="dp">·</span>channels,<span class="dp">·</span>7,<span class="dp">·</span>padding<span class="dp">·</span>=<span class="dp">·</span>3,<span class="dp">·</span>dtype<span class="dp">·</span>=<span class="dp">·</span>torch.complex64)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>layer_channels<span class="dp">·</span>=<span class="dp">·</span>tuple(map(lambda<span class="dp">·</span>mult:<span class="dp">·</span>mult<span class="dp">·</span>*<span class="dp">·</span>channels,<span class="dp">·</span>chan_mults))</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>layer_channels<span class="dp">·</span>=<span class="dp">·</span>(channels,<span class="dp">·</span>*layer_channels)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>layer_channels_pairs<span class="dp">·</span>=<span class="dp">·</span>tuple(zip(layer_channels[:-1],<span class="dp">·</span>layer_channels[1:]))</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>curr_channels<span class="dp">·</span>=<span class="dp">·</span>channels</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.layers<span class="dp">·</span>=<span class="dp">·</span>nn.ModuleList([])</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>layer_stride,<span class="dp">·</span>(chan_in,<span class="dp">·</span>chan_out)<span class="dp">·</span>in<span class="dp">·</span>zip(strides,<span class="dp">·</span>layer_channels_pairs):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.layers.append(ComplexSTFTResidualUnit(chan_in,<span class="dp">·</span>chan_out,<span class="dp">·</span>layer_stride))</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.final_conv<span class="dp">·</span>=<span class="dp">·</span>nn.Conv2d(layer_channels[-1],<span class="dp">·</span>1,<span class="dp">·</span>(16,<span class="dp">·</span>1),<span class="dp">·</span>dtype<span class="dp">·</span>=<span class="dp">·</span>torch.complex64)<span class="dp">·</span>#<span class="dp">·</span>todo:<span class="dp">·</span>remove<span class="dp">·</span>hardcoded<span class="dp">·</span>16</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>stft<span class="dp">·</span>settings</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.n_fft<span class="dp">·</span>=<span class="dp">·</span>n_fft</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.hop_length<span class="dp">·</span>=<span class="dp">·</span>hop_length</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.win_length<span class="dp">·</span>=<span class="dp">·</span>win_length</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">165 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>forward(self,<span class="dp">·</span>x,<span class="dp">·</span>return_intermediates<span class="dp">·</span>=<span class="dp">·</span>False):</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">166 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x<span class="dp">·</span>=<span class="dp">·</span>rearrange(x,<span class="dp">·</span>&#x27;b<span class="dp">·</span>1<span class="dp">·</span>n<span class="dp">·</span>-&gt;<span class="dp">·</span>b<span class="dp">·</span>n&#x27;)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">167 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">168 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>reference:<span class="dp">·</span>The<span class="dp">·</span>content<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>paper(<span class="dp">·</span>https://arxiv.org/pdf/2107.03312.pdf)is<span class="dp">·</span>as<span class="dp">·</span>follows:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">169 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>The<span class="dp">·</span>STFT-based<span class="dp">·</span>discriminator<span class="dp">·</span>is<span class="dp">·</span>illustrated<span class="dp">·</span>in<span class="dp">·</span>Figure<span class="dp">·</span>4</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">170 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>and<span class="dp">·</span>operates<span class="dp">·</span>on<span class="dp">·</span>a<span class="dp">·</span>single<span class="dp">·</span>scale,<span class="dp">·</span>computing<span class="dp">·</span>the<span class="dp">·</span>STFT<span class="dp">·</span>with<span class="dp">·</span>a</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">171 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>window<span class="dp">·</span>length<span class="dp">·</span>of<span class="dp">·</span>W<span class="dp">·</span>=<span class="dp">·</span>1024<span class="dp">·</span>samples<span class="dp">·</span>and<span class="dp">·</span>a<span class="dp">·</span>hop<span class="dp">·</span>length<span class="dp">·</span>of</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">172 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>H<span class="dp">·</span>=<span class="dp">·</span>256<span class="dp">·</span>samples</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">173 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;&#x27;&#x27;</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">174 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x<span class="dp">·</span>=<span class="dp">·</span>torch.stft(</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">175 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">176 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.n_fft,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">177 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>hop_length<span class="dp">·</span>=<span class="dp">·</span>self.hop_length,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">178 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>win_length<span class="dp">·</span>=<span class="dp">·</span>self.win_length,</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">179 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return_complex<span class="dp">·</span>=<span class="dp">·</span>True</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">180 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">181 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x<span class="dp">·</span>=<span class="dp">·</span>rearrange(x,<span class="dp">·</span>&#x27;b<span class="dp">·</span>...<span class="dp">·</span>-&gt;<span class="dp">·</span>b<span class="dp">·</span>1<span class="dp">·</span>...&#x27;)</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">182 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>intermediates<span class="dp">·</span>=<span class="dp">·</span>[]</td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">183 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>x<span class="dp">·</span>=<span class="dp">·</span>self.init_conv(x)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">184 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>intermediates.append(x)</td><td colspan="2"> </td></tr>
+<tr class="error"><td colspan="4">
+Max diff block lines reached; 1277/5390 bytes (23.69%) of diff not shown.
+</td></tr></table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/t5.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-t-.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/t5.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-t-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">135 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/trainer.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-trainer.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/trainer.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-trainer.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">141 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch/vq_wav2vec.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-vq_wav-vec.py"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch/vq_wav2vec.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch-vq_wav-vec.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">614 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/audiolm_pytorch.egg-info/PKG-INFO</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch.egg-info-PKG-INFO"><span class="source">audiolm-pytorch-0.9.7/audiolm_pytorch.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--audiolm_pytorch.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>audiolm-pytorch</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>audiolm-pytorch</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.9.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/lucidrains/audiolm-pytorch</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/lucidrains/audiolm-pytorch</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Phil<span class="dp">·</span>Wang</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Phil<span class="dp">·</span>Wang</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lucidrains@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>lucidrains@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,deep<span class="dp">·</span>learning,transformers,attention<span class="dp">·</span>mechanism,audio<span class="dp">·</span>generation</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>artificial<span class="dp">·</span>intelligence,deep<span class="dp">·</span>learning,transformers,attention<span class="dp">·</span>mechanism,audio<span class="dp">·</span>generation</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>4<span class="dp">·</span>-<span class="dp">·</span>Beta</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">606 B</span></div>
+      <div><span class="source">audiolm-pytorch-0.9.6/setup.py</span> vs.</div>
+      <div id="audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--setup.py"><span class="source">audiolm-pytorch-0.9.7/setup.py</span>
+        <a class="anchor" href="#audiolm-pytorch--.-.-.tar---audiolm-pytorch--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 13 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td><td class="diffline">1 </td><td class="diffpresent">from<span class="dp">·</span>setuptools<span class="dp">·</span>import<span class="dp">·</span>setup,<span class="dp">·</span>find_packages</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">setup(</td><td class="diffline">2 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&#x27;audiolm-pytorch&#x27;,</td><td class="diffline">3 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>name<span class="dp">·</span>=<span class="dp">·</span>&#x27;audiolm-pytorch&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>packages<span class="dp">·</span>=<span class="dp">·</span>find_packages(exclude=[]),</td><td class="diffline">4 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>packages<span class="dp">·</span>=<span class="dp">·</span>find_packages(exclude=[]),</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.9.<del>6</del>&#x27;,</td><td class="diffline">5 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>version<span class="dp">·</span>=<span class="dp">·</span>&#x27;0.9.<ins>7</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>license=&#x27;MIT&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>description<span class="dp">·</span>=<span class="dp">·</span>&#x27;AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch&#x27;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>description<span class="dp">·</span>=<span class="dp">·</span>&#x27;AudioLM<span class="dp">·</span>-<span class="dp">·</span>Language<span class="dp">·</span>Modeling<span class="dp">·</span>Approach<span class="dp">·</span>to<span class="dp">·</span>Audio<span class="dp">·</span>Generation<span class="dp">·</span>from<span class="dp">·</span>Google<span class="dp">·</span>Research<span class="dp">·</span>-<span class="dp">·</span>Pytorch&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>author<span class="dp">·</span>=<span class="dp">·</span>&#x27;Phil<span class="dp">·</span>Wang&#x27;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>author<span class="dp">·</span>=<span class="dp">·</span>&#x27;Phil<span class="dp">·</span>Wang&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>author_email<span class="dp">·</span>=<span class="dp">·</span>&#x27;lucidrains@gmail.com&#x27;,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>author_email<span class="dp">·</span>=<span class="dp">·</span>&#x27;lucidrains@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>&#x27;text/markdown&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>long_description_content_type<span class="dp">·</span>=<span class="dp">·</span>&#x27;text/markdown&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>url<span class="dp">·</span>=<span class="dp">·</span>&#x27;https://github.com/lucidrains/audiolm-pytorch&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>url<span class="dp">·</span>=<span class="dp">·</span>&#x27;https://github.com/lucidrains/audiolm-pytorch&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>keywords<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>keywords<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

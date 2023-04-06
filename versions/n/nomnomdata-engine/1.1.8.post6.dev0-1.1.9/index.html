@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/nomnomdata-engine-1.1.8.post6.dev0.tar.gz tmp/nomnomdata-engine-1.1.9.tar.gz --html versions/n/nomnomdata-engine/1.1.8.post6.dev0-1.1.9/index.html --text versions/n/nomnomdata-engine/1.1.8.post6.dev0-1.1.9/diff.txt --markdown versions/n/nomnomdata-engine/1.1.8.post6.dev0-1.1.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.15 KB</span></div>
+  <div><span class="source">tmp/nomnomdata-engine-1.1.8.post6.dev0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/nomnomdata-engine-1.1.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">213 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nomnomdata-engine-1.1.<del>8.post6.dev</del><del>0</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;nomnomdata-engine-1.1.<ins>9</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.87 KB</span></div>
+    <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0.tar</span> vs.</div>
+    <div id="nomnomdata-engine--.-.-.post-.dev-.tar"><span class="source">nomnomdata-engine-1.1.9.tar</span>
+      <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.4 KB</span></div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 18 lines modified</td><td colspan="2">Offset 1, 18 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>702<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/LICENSE</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>702<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>40<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/README.md</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>40<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>432<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>432<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9869<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/components.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9869<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/components.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30556<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/connections.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>30556<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/connections.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5426<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/encoders.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5426<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/encoders.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14368<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/engine.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>14368<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/engine.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>516<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/errors.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>516<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/errors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>290<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/globals.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>290<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/globals.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2448<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/logging.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2448<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/logging.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11023<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/nominode.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11023<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/nominode.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9574<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/parameters.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9574<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/parameters.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15475<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>20</del>:<del>2</del>9.<del>842223</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/shared_configs.py</td><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>15475<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:<ins>1</ins>9.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/shared_configs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4357<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/testing.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4357<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/testing.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>11</del>:1<del>2</del>.<del>975634</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/nomnomdata/engine/util.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>162<span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:1<ins>9</ins>.<ins>464848</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/nomnomdata/engine/util.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<del>80</del><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>23</del>:4<del>5</del>.<del>650622</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/pyproject.toml</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>12<ins>69</ins><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:4<ins>1</ins>.<ins>196843</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<del>18</del><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>23</del>:4<del>6</del>.<del>914777</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/setup.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<ins>07</ins><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:4<ins>2</ins>.<ins>349421</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>1006</del><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<del>23</del>:4<del>6</del>.<del>915062</del><span class="dp">·</span>nomnomdata-engine-1.1<del>.8.post6</del>.<del>dev</del><del>0</del>/PKG-INFO</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span>995</ins><span class="dp">·</span>2021-03-23<span class="dp">·</span>15:<ins>35</ins>:4<ins>2</ins>.<ins>349753</ins><span class="dp">·</span>nomnomdata-engine-1.1.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">112 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/LICENSE</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--LICENSE"><span class="source">nomnomdata-engine-1.1.9/LICENSE</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">160 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/components.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-components.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/components.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-components.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">162 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/connections.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-connections.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/connections.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-connections.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">156 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/encoders.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-encoders.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/encoders.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-encoders.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">152 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/engine.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-engine.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/engine.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-engine.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">152 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/errors.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-errors.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/errors.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-errors.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">154 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/logging.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-logging.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/logging.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-logging.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">156 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/nominode.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-nominode.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/nominode.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-nominode.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">160 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/parameters.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-parameters.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/parameters.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-parameters.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">168 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/shared_configs.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-shared_configs.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/shared_configs.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-shared_configs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">154 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/nomnomdata/engine/testing.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-testing.py"><span class="source">nomnomdata-engine-1.1.9/nomnomdata/engine/testing.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--nomnomdata-engine-testing.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">520 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/pyproject.toml</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--pyproject.toml"><span class="source">nomnomdata-engine-1.1.9/pyproject.toml</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 4, 15 lines modified</td><td colspan="2">Offset 4, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL-3.0-only&quot;</td><td class="diffline">4 </td><td class="diffpresent">license<span class="dp">·</span>=<span class="dp">·</span>&quot;LGPL-3.0-only&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;nomnomdata-engine&quot;</td><td class="diffline">5 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;nomnomdata-engine&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">6 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;nomnomdata&quot;},</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span>{include<span class="dp">·</span>=<span class="dp">·</span>&quot;nomnomdata&quot;},</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">]</td><td class="diffline">8 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">9 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/nomnomdata/tools/nomnomdata-engine&quot;</td><td class="diffline">10 </td><td class="diffpresent">repository<span class="dp">·</span>=<span class="dp">·</span>&quot;https://gitlab.com/nomnomdata/tools/nomnomdata-engine&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<del>8.post6.dev</del><del>0</del>&quot;</td><td class="diffline">11 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;1.1.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">12 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">dunamai<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.1.0&quot;</td><td class="diffline">13 </td><td class="diffpresent">dunamai<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.1.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">httmock<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.3.0&quot;</td><td class="diffline">14 </td><td class="diffpresent">httmock<span class="dp">·</span>=<span class="dp">·</span>&quot;^1.3.0&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">nomnomdata-cli<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.1.7&quot;</td><td class="diffline">15 </td><td class="diffpresent">nomnomdata-cli<span class="dp">·</span>=<span class="dp">·</span>&quot;^0.1.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7&quot;</td><td class="diffline">16 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.7&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">pyyaml<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.3.1&quot;</td><td class="diffline">17 </td><td class="diffpresent">pyyaml<span class="dp">·</span>=<span class="dp">·</span>&quot;^5.3.1&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">722 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/setup.py</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--setup.py"><span class="source">nomnomdata-engine-1.1.9/setup.py</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 12% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 13, 15 lines modified</td><td colspan="2">Offset 13, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span>&#x27;nomnomdata-cli&gt;=0.1.7,&lt;0.2.0&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span>&#x27;nomnomdata-cli&gt;=0.1.7,&lt;0.2.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;pyyaml&gt;=5.3.1,&lt;6.0.0&#x27;,</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span>&#x27;pyyaml&gt;=5.3.1,&lt;6.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span>&#x27;requests&gt;=2.23.0,&lt;3.0.0&#x27;,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span>&#x27;requests&gt;=2.23.0,&lt;3.0.0&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span>&#x27;wrapt&gt;=1.12.1,&lt;2.0.0&#x27;]</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span>&#x27;wrapt&gt;=1.12.1,&lt;2.0.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">17 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;nomnomdata-engine&#x27;,</td><td class="diffline">18 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;nomnomdata-engine&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;1.1.<del>8.post6.dev</del><del>0</del>&#x27;,</td><td class="diffline">19 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;1.1.<ins>9</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Package<span class="dp">·</span>containing<span class="dp">·</span>tooling<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines&#x27;,</td><td class="diffline">20 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;Package<span class="dp">·</span>containing<span class="dp">·</span>tooling<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;Package<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines\n&#x27;,</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;Package<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Nom<span class="dp">·</span>Nom<span class="dp">·</span>Data<span class="dp">·</span>Inc&#x27;,</td><td class="diffline">22 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;Nom<span class="dp">·</span>Nom<span class="dp">·</span>Data<span class="dp">·</span>Inc&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;info@nomnomdata.com&#x27;,</td><td class="diffline">23 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;info@nomnomdata.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>None,</td><td class="diffline">24 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>None,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://gitlab.com/nomnomdata/tools/nomnomdata-engine&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;https://gitlab.com/nomnomdata/tools/nomnomdata-engine&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">559 B</span></div>
+      <div><span class="source">nomnomdata-engine-1.1.8.post6.dev0/PKG-INFO</span> vs.</div>
+      <div id="nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--PKG-INFO"><span class="source">nomnomdata-engine-1.1.9/PKG-INFO</span>
+        <a class="anchor" href="#nomnomdata-engine--.-.-.post-.dev-.tar---nomnomdata-engine--.-.-.post-.dev--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 6% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nomnomdata-engine</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>nomnomdata-engine</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<del>8.post6.dev</del><del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.1.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>containing<span class="dp">·</span>tooling<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Package<span class="dp">·</span>containing<span class="dp">·</span>tooling<span class="dp">·</span>for<span class="dp">·</span>developing<span class="dp">·</span>nominode<span class="dp">·</span>engines</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/nomnomdata/tools/nomnomdata-engine</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://gitlab.com/nomnomdata/tools/nomnomdata-engine</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3.0-only</td><td class="diffline">6 </td><td class="diffpresent">License:<span class="dp">·</span>LGPL-3.0-only</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Nom<span class="dp">·</span>Nom<span class="dp">·</span>Data<span class="dp">·</span>Inc</td><td class="diffline">7 </td><td class="diffpresent">Author:<span class="dp">·</span>Nom<span class="dp">·</span>Nom<span class="dp">·</span>Data<span class="dp">·</span>Inc</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@nomnomdata.com</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>info@nomnomdata.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td><td class="diffline">9 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.7,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(LGPLv3)</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>License<span class="dp">·</span>::<span class="dp">·</span>OSI<span class="dp">·</span>Approved<span class="dp">·</span>::<span class="dp">·</span>GNU<span class="dp">·</span>Lesser<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3<span class="dp">·</span>(LGPLv3)</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

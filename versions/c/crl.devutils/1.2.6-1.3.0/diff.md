@@ -1,0 +1,674 @@
+# Comparing `tmp/crl.devutils-1.2.6.tar.gz` & `tmp/crl.devutils-1.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dist/crl.devutils-1.2.6.tar", last modified: Fri Mar 25 13:34:12 2022, max compression
++gzip compressed data, was "dist/crl.devutils-1.3.0.tar", last modified: Thu Apr  6 14:18:45 2023, max compression
+```
+
+## Comparing `crl.devutils-1.2.6.tar` & `crl.devutils-1.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,53 +1,53 @@
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13113 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/.pylintrc
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      128 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/MANIFEST.in
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       29 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/.coveragerc
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2592 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/setup.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1675 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tox.ini
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14016 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/PKG-INFO
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/tests/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14241 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_packagehandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21633 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_doccreator.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3024 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/mockfile.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4849 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_changehandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12049 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_devpihandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3938 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_runner.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8835 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_versionhandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       44 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    17562 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_tasks.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3348 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_tmpdir.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10692 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_githandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6123 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/fixtures.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8997 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_tmpindex.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      572 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/tests/test_setuphandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      908 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/CHANGES.rst
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       78 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/setup.cfg
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10695 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/README.rst
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      102 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/__init__.py
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl/devutils/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      641 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/setuphandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6945 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/githandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    19283 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/tasks.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3388 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/changehandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      195 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl/devutils/_version.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3242 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/_tmpindex.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      359 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/utils.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2226 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/runner.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8284 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/packagehandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2576 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/tmpdir.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1830 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/devpiindex.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       44 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/__init__.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10134 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/devpihandler.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9171 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/doccreator.py
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7152 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/src/crl/devutils/versionhandler.py
+-drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1188 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/SOURCES.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        1 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/dependency_links.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       49 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/entry_points.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      218 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/requires.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        4 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/top_level.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14016 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/PKG-INFO
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        4 2022-03-25 13:34:12.000000 crl.devutils-1.2.6/src/crl.devutils.egg-info/namespace_packages.txt
+--rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       41 2022-03-25 13:28:20.000000 crl.devutils-1.2.6/.flake8
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    13113 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/.pylintrc
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      128 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/MANIFEST.in
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       29 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/.coveragerc
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2548 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/setup.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1645 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tox.ini
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14016 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/PKG-INFO
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/tests/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14247 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_packagehandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    21633 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_doccreator.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3024 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/mockfile.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     4849 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_changehandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    12073 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_devpihandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3938 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_runner.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8835 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_versionhandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       44 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    17660 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_tasks.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3348 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_tmpdir.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10692 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_githandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6123 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/fixtures.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8989 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_tmpindex.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      572 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/tests/test_setuphandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1056 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/CHANGES.rst
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       78 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/setup.cfg
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10695 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/README.rst
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      102 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/__init__.py
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl/devutils/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      641 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/setuphandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     6945 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/githandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    19439 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/tasks.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3388 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/changehandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      195 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl/devutils/_version.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     3490 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/_tmpindex.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      359 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/utils.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2226 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/runner.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     8418 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/packagehandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     2576 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/tmpdir.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1830 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/devpiindex.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       44 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/__init__.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    10238 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/devpihandler.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     9171 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/doccreator.py
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     7152 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/src/crl/devutils/versionhandler.py
++drwxrwxr-x   0 jenkins   (1000) jenkins   (1000)        0 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)     1188 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/SOURCES.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        1 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/dependency_links.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       49 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/entry_points.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)      201 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/requires.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        4 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/top_level.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)    14016 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/PKG-INFO
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)        4 2023-04-06 14:18:45.000000 crl.devutils-1.3.0/src/crl.devutils.egg-info/namespace_packages.txt
++-rw-rw-r--   0 jenkins   (1000) jenkins   (1000)       41 2023-04-06 14:13:14.000000 crl.devutils-1.3.0/.flake8
+```
+
+### Comparing `crl.devutils-1.2.6/.pylintrc` & `crl.devutils-1.3.0/.pylintrc`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/setup.py` & `crl.devutils-1.3.0/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -34,21 +34,20 @@
+     name='crl.devutils',
+     version=get_version(),
+     author='Petri Huovinen',
+     author_email='petri.huovinen@nokia.com',
+     description='Common Robot Libraries development and CI tools',
+     install_requires=['invoke==0.12.2',
+                       'check-manifest==0.41',
+-                      'devpi-client==4.1.0',
+-                      'detox==0.15',
+-                      'tox==3.4.0',
++                      'devpi-client==5.2.3',
++                      'tox==3.24.5',
+                       'future',
+                       'six',
+                       'rstcheck',
+-                      'sphinx < 1.8.0',
++                      'sphinx',
+                       'Jinja2==3.0.3;python_version>"3.0"',
+                       'robotframework',
+                       'virtualenvrunner',
+                       'virtualenv==20.13.4',
+                       'configparser'],
+     long_description=read('README.rst'),
+     license='BSD 3-Clause',
+```
+
+### Comparing `crl.devutils-1.2.6/tox.ini` & `crl.devutils-1.3.0/tox.ini`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -7,41 +7,35 @@
+     mock
+     pytest-cov
+     fixtureresources
+ 
+ [base2]
+ deps =
+     {[base]deps}
+-    pytest < 4.6
++    pytest == 4.6
+     pytest-flake8 == 1.0.7
+     more-itertools <= 5.0.0
+ 
+ [base3]
+ deps =
+     {[base]deps}
+-    pytest
+-    pytest-flake8
++    pytest == 7.0.1
++    pytest-flake8 == 1.1.1
++    flake8 == 4.0.1
+ 
+ [testenv]
+ setenv =
+     COVERAGE_FILE = .coverage{envname}
+ passenv = COVERAGE_FILE
+ changedir = {envtmpdir}
+ commands =
+     {posargs:py.test -v --junitxml=junit.xml \
+ 	   --cov-config {toxinidir}/.coveragerc \
+ 	   --cov={envsitepackagesdir}/crl/devutils \
+            {envsitepackagesdir}/crl/devutils {toxinidir}/tests}
+-basepython =
+-    py27: python2.7
+-    py36: python3.6
+-    py37: python3.7
+-    py38: python3.8
+-    py39: python3.9
+-    py310: python3.10
+ deps =
+     py27: {[base2]deps}
+     py{36,37,38,39,310}: {[base3]deps}
+ 
+ [pytest]
+ addopts = --flake8 --cov-report xml
+ norecursedirs = bin lib include
+@@ -74,9 +68,11 @@
+ commands =
+     crl create_docs -v
+ 
+ [testenv:test]
+ basepython=python3.7
+ changedir={toxinidir}
+ deps={[testenv:docs]deps}
++setenv=
++    TOX_PARALLEL_NO_SPINNER=1
+ commands=
+-    crl test --no-virtualenv {posargs}
++    crl test --no-virtualenv --toxargs "--parallel auto" {posargs}
+```
+
+### Comparing `crl.devutils-1.2.6/PKG-INFO` & `crl.devutils-1.3.0/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: crl.devutils
+-Version: 1.2.6
++Version: 1.3.0
+ Summary: Common Robot Libraries development and CI tools
+ Home-page: https://github.com/nokia/crl-devutils
+ Author: Petri Huovinen
+ Author-email: petri.huovinen@nokia.com
+ License: BSD 3-Clause
+ Description: .. Copyright (C) 2019, Nokia
+```
+
+### Comparing `crl.devutils-1.2.6/tests/test_packagehandler.py` & `crl.devutils-1.3.0/tests/test_packagehandler.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -192,15 +192,15 @@
+ @pytest.mark.parametrize('test_index', [None, 'abcd'])
+ def test_test_with_index_name(packagehandler,
+                               mock_prepare_package,
+                               mock_finalize_package,
+                               mock_verify_clean,
+                               test_index):
+     packagehandler.test(base_index='index', test_index=test_index)
+-    packagehandler.devpihandler.test.assert_called_once_with(test_index)
++    packagehandler.devpihandler.test.assert_called_once_with(test_index, None)
+     assert packagehandler.devpihandler.test.call_count == 1
+     assert mock_prepare_package.call_count == 1
+     assert mock_verify_clean.call_count == 0
+     assert mock_finalize_package.call_count == 1
+ 
+ 
+ @pytest.mark.parametrize('exception', [UncleanGitRepository,
+```
+
+### Comparing `crl.devutils-1.2.6/tests/test_doccreator.py` & `crl.devutils-1.3.0/tests/test_doccreator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/mockfile.py` & `crl.devutils-1.3.0/tests/mockfile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_changehandler.py` & `crl.devutils-1.3.0/tests/test_changehandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_devpihandler.py` & `crl.devutils-1.3.0/tests/test_devpihandler.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -129,15 +129,16 @@
+         packagehandler=devpihandler.packagehandler,
+         baseindex='user/index',
+         baseurl='https://host',
+         username='username',
+         index_name=index,
+         clientarg=' --clientdir {expected_clientdir}'.format(
+             expected_clientdir=randomtmpdir))
+-    assert mock_tmpindex.handle.test.call_count == 1
++    mock_tmpindex.handle.test.assert_called_once_with(
++        toxargs=None)
+ 
+ 
+ @pytest.mark.parametrize('index,expected_url', [
+     ('https://host/user/index', 'https://host'),
+     ('http://host/user/index', 'http://host')])
+ def test_login(index,
+                expected_url,
+```
+
+### Comparing `crl.devutils-1.2.6/tests/test_runner.py` & `crl.devutils-1.3.0/tests/test_runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_versionhandler.py` & `crl.devutils-1.3.0/tests/test_versionhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_tasks.py` & `crl.devutils-1.3.0/tests/test_tasks.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -204,27 +204,29 @@
+     mock_create_packagehandler.handler.update_version.assert_called_once_with(
+         '0.1', push=push)
+     out, err = capsys.readouterr()
+     assert out == 'Version: 0.1\n'
+     assert err == ''
+ 
+ 
+-@pytest.mark.parametrize('testindex,save_tests_to,pathtoversionfile',
+-                         [(None, None, PathToVersionFile()),
++@pytest.mark.parametrize('testindex,save_tests_to,pathtoversionfile,toxargs',
++                         [(None, None, PathToVersionFile(), None),
+                           ('test', 'save_tests_to',
+-                           PathToVersionFile('path'))])
++                           PathToVersionFile('path'), '--parallel all')])
+ def test_test(mock_create_packagehandler,
+               testindex,
+               save_tests_to,
+-              pathtoversionfile):
++              pathtoversionfile,
++              toxargs):
+     test(baseindex='index', testindex=testindex, credentials_file='creds',
+-         save_tests_to=save_tests_to, **pathtoversionfile.kwargs)
++         save_tests_to=save_tests_to, toxargs=toxargs,
++         **pathtoversionfile.kwargs)
+     mock_create_packagehandler.handler.test.assert_called_once_with(
+         base_index='index', test_index=testindex, credentials_file='creds',
+-        save_tests_to=save_tests_to)
++        save_tests_to=save_tests_to, toxargs=toxargs)
+ 
+ 
+ def test_test_without_virtualenv(mock_create_packagehandler):
+     test(baseindex='index', virtualenv=False)
+     mock_create_packagehandler.create.assert_called_once_with(
+         verbose=False, novirtualenv=True, pathtoversionfile=None)
+```
+
+### Comparing `crl.devutils-1.2.6/tests/test_tmpdir.py` & `crl.devutils-1.3.0/tests/test_tmpdir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_githandler.py` & `crl.devutils-1.3.0/tests/test_githandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/fixtures.py` & `crl.devutils-1.3.0/tests/fixtures.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/tests/test_tmpindex.py` & `crl.devutils-1.3.0/tests/test_tmpindex.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -85,15 +85,15 @@
+                                mock_os_path_isdir):
+     mock_os_path_isdir.return_value = False
+     mock_packagehandler.name = 'name'
+     tmpindex.test()
+     assert mock_run.mock_calls == [
+         mock.call('devpi upload{clientarg}'.format(
+             clientarg=tmpindex.clientarg)),
+-        mock.call('devpi test name==0.1{clientarg} --detox'.format(
++        mock.call('devpi test name==0.1{clientarg}'.format(
+             clientarg=tmpindex.clientarg))]
+ 
+ 
+ def _get_pip_install_calls(pip_index_url):
+     return [
+         mock.call('pip install crl.devutils'
+                   ' -i {pip_index_url}'.format(pip_index_url=pip_index_url)),
+```
+
+### Comparing `crl.devutils-1.2.6/tests/test_setuphandler.py` & `crl.devutils-1.3.0/tests/test_setuphandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/CHANGES.rst` & `crl.devutils-1.3.0/CHANGES.rst`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,12 +1,18 @@
+ .. Copyright (C) 2019, Nokia
+ 
+ CHANGES
+ =======
+ 
++1.3.0
++-----
++
++- Support parallel test execution via new CLI argument for 'crl test': '--toxargs'.
++  This is replacing old solution based on 'detox'
++
+ 1.2.6
+ -----
+ 
+ - Support for Python versions 3.8, 3.9 and 3.10
+ - Use importlib in setup.py for Python 3.x (instead of deprecated imp module)
+ - Require Jinja2==3.0.3 to avoid errors caused by removal of 'contextfunction'
+ - Require pytest-flake8==1.0.7 and lazy-object-proxy==1.6.0 for Python 2.7 tests
+```
+
+### Comparing `crl.devutils-1.2.6/README.rst` & `crl.devutils-1.3.0/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/setuphandler.py` & `crl.devutils-1.3.0/src/crl/devutils/setuphandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/githandler.py` & `crl.devutils-1.3.0/src/crl/devutils/githandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/tasks.py` & `crl.devutils-1.3.0/src/crl/devutils/tasks.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -306,15 +306,16 @@
+         'Successfully deleted {index} for user {user}'.format(
+             index=index, user=dh.username))
+ 
+ 
+ @task
+ def test(baseindex, testindex=None, credentials_file=None,
+          save_tests_to=None, virtualenv=True,
+-         pathtoversionfile=None, verbose=False):
++         pathtoversionfile=None, verbose=False,
++         toxargs=None):
+     """ Uploads contents of current workspace to devpi and runs tox tests.
+ 
+     Args:
+         baseindex: URL of devpi PyPI index to be used as base index.
+                Format: http[s]://host:user/indexname.
+         testindex: Name of the index to be used for running tests.
+                    If the given index doesn't exist, it is created.
+@@ -324,22 +325,25 @@
+                           credentials_file given, the default devpi clientdir
+                           authorization token is used.
+         save_tests_to: Copy tests temporary directory to this new not yet
+                        existing directory.
+         virtualenv: Create and run the task in a new temporary virtualenv.
+         pathtoversionfile: Alternative relative path to version file.
+         verbose: Display task execution in more detail.
++        toxargs: Extra command line arguments for tox. e.g.
++                 --toxargs="--parallel all"
+     """
+     kwargs = {} if virtualenv else {'novirtualenv': True}
+     ph = create_packagehandler(verbose=verbose,
+                                pathtoversionfile=pathtoversionfile,
+                                **kwargs)
+     ph.test(base_index=baseindex, test_index=testindex,
+             credentials_file=credentials_file,
+-            save_tests_to=save_tests_to)
++            save_tests_to=save_tests_to,
++            toxargs=toxargs)
+ 
+ 
+ @task
+ def publish(srcindex, destindex, credentials_file=None, tag_if_needed=False,
+             tag_branch='master', verbose=False):
+     """*DEPRECATED* Publish version from a given index to another index.
+```
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/changehandler.py` & `crl.devutils-1.3.0/src/crl/devutils/changehandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/_tmpindex.py` & `crl.devutils-1.3.0/src/crl/devutils/_tmpindex.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -44,19 +44,26 @@
+         self.use_index()
+         return self
+ 
+     def __exit__(self, *args):
+         if self._default_cleanup:
+             self.delete_index()
+ 
+-    def test(self):
++    def test(self, toxargs=None):
+         self._upload()
+-        self.run('devpi test {spec}{clientarg} --detox'.format(
++        self.run('devpi test {spec}{clientarg}{toxargs}'.format(
+             spec=self.spec,
+-            clientarg=self.clientarg))
++            clientarg=self.clientarg,
++            toxargs=self._get_formatted_toxargs(toxargs)))
++
++    @staticmethod
++    def _get_formatted_toxargs(toxargs):
++        if toxargs is None:
++            return ''
++        return ' --tox-args "{toxargs}"'.format(toxargs=toxargs)
+ 
+     def _upload(self):
+         self.run('devpi upload{clientarg}'.format(
+             clientarg=self.clientarg))
+ 
+         if self._is_docs:
+             with self._docsrunnercontext() as runner:
+```
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/runner.py` & `crl.devutils-1.3.0/src/crl/devutils/runner.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/packagehandler.py` & `crl.devutils-1.3.0/src/crl/devutils/packagehandler.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -147,40 +147,43 @@
+         finally:
+             self._finalize_package()
+ 
+     def test(self,
+              base_index,
+              test_index=None,
+              credentials_file=None,
+-             save_tests_to=None):
++             save_tests_to=None,
++             toxargs=None):
+         """
+         Runs tests and uploads the results and docs to a given index.
+         If no index is given, a temporary index which is created for
+         running tests is later deleted.
+ 
+         Args:
+           base_index: Index to be used as a base for the test index,
+             specified as http[s]://host/user/index.
+           test_index: Name of the index created for testing,
+             specified as NAME.
+           credentials_file: User credentials to use.
+           save_tests_to: If given, copies the temporary files
+             generated during testing to this path.
++          toxargs: Extra command line arguments passsed to tox, e.g.
++            "--parallel all"
+ 
+         Raises:
+           ChangeFileVersionCheckFailed: Change file version doesn't
+             match with the package version.
+         """
+         self.changehandler.verify(self.version)
+         with TmpDir(copytree_to=save_tests_to):
+             self.devpihandler.set_index(base_index)
+             if credentials_file:
+                 self.devpihandler.set_credentials_file(credentials_file)
+             with self._prepared_package():
+-                self.devpihandler.test(test_index)
++                self.devpihandler.test(test_index, toxargs)
+ 
+     def publish(self,
+                 srcindex,
+                 destindex,
+                 credentials_file=None,
+                 tag_if_needed=False,
+                 tag_branch='master'):
+```
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/tmpdir.py` & `crl.devutils-1.3.0/src/crl/devutils/tmpdir.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/devpiindex.py` & `crl.devutils-1.3.0/src/crl/devutils/devpiindex.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/devpihandler.py` & `crl.devutils-1.3.0/src/crl/devutils/devpihandler.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -103,24 +103,25 @@
+ 
+         Args:
+           index: PYPI Index to publish to.
+         """
+         with self._session():
+             self._publish(index)
+ 
+-    def test(self, test_index=None):
++    def test(self, test_index=None, toxargs=None):
+         """
+         Test and upload results and docs to the given index.
+         If no index is specified, uses a temporary index.
+ 
+         Args:
+           test_index: Index name to use for testing, specified as NAME.
++          toxargs: extra command line arguments for tox.
+         """
+         with self._session():
+-            self._test_via_tmpindex(test_index)
++            self._test_via_tmpindex(test_index, toxargs)
+ 
+     def create_index(self, name, baseindex, otherbase=None,
+                      credentials_file=None):
+         """
+         Create a new index for the current user with given bases.
+ 
+         Args:
+@@ -288,16 +289,16 @@
+                            baseurl=self.url,
+                            index_name=indexname,
+                            username=self.username,
+                            clientarg=self._clientarg)
+         index.use_index()
+         index.push(pkgspec, short_index_name)
+ 
+-    def _test_via_tmpindex(self, index):
++    def _test_via_tmpindex(self, index, toxargs):
+         with _TmpIndex(run=self.run,
+                        packagehandler=self.packagehandler,
+                        baseindex=self.userindex,
+                        baseurl=self.url,
+                        index_name=index,
+                        username=self.username,
+                        clientarg=self._clientarg) as tmpindex:
+-            tmpindex.test()
++            tmpindex.test(toxargs=toxargs)
+```
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/doccreator.py` & `crl.devutils-1.3.0/src/crl/devutils/doccreator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl/devutils/versionhandler.py` & `crl.devutils-1.3.0/src/crl/devutils/versionhandler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl.devutils.egg-info/SOURCES.txt` & `crl.devutils-1.3.0/src/crl.devutils.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `crl.devutils-1.2.6/src/crl.devutils.egg-info/PKG-INFO` & `crl.devutils-1.3.0/src/crl.devutils.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 1.1
+ Name: crl.devutils
+-Version: 1.2.6
++Version: 1.3.0
+ Summary: Common Robot Libraries development and CI tools
+ Home-page: https://github.com/nokia/crl-devutils
+ Author: Petri Huovinen
+ Author-email: petri.huovinen@nokia.com
+ License: BSD 3-Clause
+ Description: .. Copyright (C) 2019, Nokia
+```
+

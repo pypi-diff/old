@@ -1,0 +1,335 @@
+# Comparing `tmp/libdeye-1.1.1.tar.gz` & `tmp/libdeye-1.1.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "libdeye-1.1.1.tar", last modified: Sun Mar 19 19:47:00 2023, max compression
++gzip compressed data, was "libdeye-1.1.2.tar", last modified: Thu Apr  6 14:23:12 2023, max compression
+```
+
+## Comparing `libdeye-1.1.1.tar` & `libdeye-1.1.2.tar`
+
+### file list
+
+```diff
+@@ -1,50 +1,50 @@
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.789884 libdeye-1.1.1/
+--rw-r--r--   0 stackia    (501) staff       (20)      590 2023-02-26 14:57:53.000000 libdeye-1.1.1/.coveragerc
+--rw-r--r--   0 stackia    (501) staff       (20)      571 2023-02-26 16:02:46.000000 libdeye-1.1.1/.gitignore
+--rw-r--r--   0 stackia    (501) staff       (20)      856 2023-03-19 19:27:54.000000 libdeye-1.1.1/.pre-commit-config.yaml
+--rw-r--r--   0 stackia    (501) staff       (20)      530 2023-02-26 14:57:53.000000 libdeye-1.1.1/.readthedocs.yml
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.785534 libdeye-1.1.1/.vscode/
+--rw-r--r--   0 stackia    (501) staff       (20)      166 2023-03-19 19:27:54.000000 libdeye-1.1.1/.vscode/settings.json
+--rw-r--r--   0 stackia    (501) staff       (20)       74 2023-02-26 14:57:53.000000 libdeye-1.1.1/AUTHORS.rst
+--rw-r--r--   0 stackia    (501) staff       (20)      373 2023-03-19 19:46:01.000000 libdeye-1.1.1/CHANGELOG.rst
+--rw-r--r--   0 stackia    (501) staff       (20)    11761 2023-02-26 15:37:09.000000 libdeye-1.1.1/CONTRIBUTING.rst
+--rw-r--r--   0 stackia    (501) staff       (20)     1078 2023-02-26 14:57:53.000000 libdeye-1.1.1/LICENSE.txt
+--rw-r--r--   0 stackia    (501) staff       (20)     3658 2023-03-19 19:47:00.789992 libdeye-1.1.1/PKG-INFO
+--rw-r--r--   0 stackia    (501) staff       (20)     3075 2023-02-26 17:10:30.000000 libdeye-1.1.1/README.rst
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.786719 libdeye-1.1.1/docs/
+--rw-r--r--   0 stackia    (501) staff       (20)     1154 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/Makefile
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.786978 libdeye-1.1.1/docs/_static/
+--rw-r--r--   0 stackia    (501) staff       (20)       18 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/_static/.gitignore
+--rw-r--r--   0 stackia    (501) staff       (20)       41 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/authors.rst
+--rw-r--r--   0 stackia    (501) staff       (20)       43 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/changelog.rst
+--rw-r--r--   0 stackia    (501) staff       (20)     9722 2023-02-26 16:45:33.000000 libdeye-1.1.1/docs/conf.py
+--rw-r--r--   0 stackia    (501) staff       (20)       33 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/contributing.rst
+--rw-r--r--   0 stackia    (501) staff       (20)     1329 2023-02-26 16:59:23.000000 libdeye-1.1.1/docs/index.rst
+--rw-r--r--   0 stackia    (501) staff       (20)       67 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/license.rst
+--rw-r--r--   0 stackia    (501) staff       (20)       39 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/readme.rst
+--rw-r--r--   0 stackia    (501) staff       (20)      233 2023-02-26 14:57:53.000000 libdeye-1.1.1/docs/requirements.txt
+--rw-r--r--   0 stackia    (501) staff       (20)      683 2023-02-26 16:44:23.000000 libdeye-1.1.1/mypy.ini
+--rw-r--r--   0 stackia    (501) staff       (20)      378 2023-02-26 16:13:36.000000 libdeye-1.1.1/pyproject.toml
+--rw-r--r--   0 stackia    (501) staff       (20)     1334 2023-03-19 19:47:00.790499 libdeye-1.1.1/setup.cfg
+--rw-r--r--   0 stackia    (501) staff       (20)      702 2023-02-26 14:57:53.000000 libdeye-1.1.1/setup.py
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.782849 libdeye-1.1.1/src/
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.788093 libdeye-1.1.1/src/libdeye/
+--rw-r--r--   0 stackia    (501) staff       (20)      700 2023-02-26 16:36:42.000000 libdeye-1.1.1/src/libdeye/__init__.py
+--rw-r--r--   0 stackia    (501) staff       (20)     5633 2023-02-26 16:35:31.000000 libdeye-1.1.1/src/libdeye/cloud_api.py
+--rw-r--r--   0 stackia    (501) staff       (20)     9906 2023-03-19 19:27:54.000000 libdeye-1.1.1/src/libdeye/const.py
+--rw-r--r--   0 stackia    (501) staff       (20)     4263 2023-02-26 16:22:13.000000 libdeye-1.1.1/src/libdeye/device_state_command.py
+--rw-r--r--   0 stackia    (501) staff       (20)     5026 2023-03-19 19:27:54.000000 libdeye-1.1.1/src/libdeye/mqtt_client.py
+--rw-r--r--   0 stackia    (501) staff       (20)     2853 2023-03-19 19:44:09.000000 libdeye-1.1.1/src/libdeye/types.py
+--rw-r--r--   0 stackia    (501) staff       (20)      503 2023-02-26 18:12:38.000000 libdeye-1.1.1/src/libdeye/utils.py
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.789260 libdeye-1.1.1/src/libdeye.egg-info/
+--rw-r--r--   0 stackia    (501) staff       (20)     3658 2023-03-19 19:47:00.000000 libdeye-1.1.1/src/libdeye.egg-info/PKG-INFO
+--rw-r--r--   0 stackia    (501) staff       (20)      837 2023-03-19 19:47:00.000000 libdeye-1.1.1/src/libdeye.egg-info/SOURCES.txt
+--rw-r--r--   0 stackia    (501) staff       (20)        1 2023-03-19 19:47:00.000000 libdeye-1.1.1/src/libdeye.egg-info/dependency_links.txt
+--rw-r--r--   0 stackia    (501) staff       (20)        1 2023-02-26 15:02:05.000000 libdeye-1.1.1/src/libdeye.egg-info/not-zip-safe
+--rw-r--r--   0 stackia    (501) staff       (20)      174 2023-03-19 19:47:00.000000 libdeye-1.1.1/src/libdeye.egg-info/requires.txt
+--rw-r--r--   0 stackia    (501) staff       (20)        8 2023-03-19 19:47:00.000000 libdeye-1.1.1/src/libdeye.egg-info/top_level.txt
+-drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-03-19 19:47:00.789720 libdeye-1.1.1/tests/
+--rw-r--r--   0 stackia    (501) staff       (20)      275 2023-02-26 14:57:53.000000 libdeye-1.1.1/tests/conftest.py
+--rw-r--r--   0 stackia    (501) staff       (20)     1077 2023-02-26 16:09:26.000000 libdeye-1.1.1/tests/test_device_state_command.py
+--rw-r--r--   0 stackia    (501) staff       (20)      516 2023-02-26 16:40:48.000000 libdeye-1.1.1/tests/test_utils.py
+--rw-r--r--   0 stackia    (501) staff       (20)     2741 2023-02-26 16:05:12.000000 libdeye-1.1.1/tox.ini
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.178732 libdeye-1.1.2/
++-rw-r--r--   0 stackia    (501) staff       (20)      590 2023-02-26 14:57:53.000000 libdeye-1.1.2/.coveragerc
++-rw-r--r--   0 stackia    (501) staff       (20)      571 2023-02-26 16:02:46.000000 libdeye-1.1.2/.gitignore
++-rw-r--r--   0 stackia    (501) staff       (20)      856 2023-04-05 08:40:07.000000 libdeye-1.1.2/.pre-commit-config.yaml
++-rw-r--r--   0 stackia    (501) staff       (20)      530 2023-02-26 14:57:53.000000 libdeye-1.1.2/.readthedocs.yml
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.173770 libdeye-1.1.2/.vscode/
++-rw-r--r--   0 stackia    (501) staff       (20)      166 2023-03-19 19:27:54.000000 libdeye-1.1.2/.vscode/settings.json
++-rw-r--r--   0 stackia    (501) staff       (20)       74 2023-02-26 14:57:53.000000 libdeye-1.1.2/AUTHORS.rst
++-rw-r--r--   0 stackia    (501) staff       (20)      373 2023-03-19 19:46:01.000000 libdeye-1.1.2/CHANGELOG.rst
++-rw-r--r--   0 stackia    (501) staff       (20)    11761 2023-02-26 15:37:09.000000 libdeye-1.1.2/CONTRIBUTING.rst
++-rw-r--r--   0 stackia    (501) staff       (20)     1078 2023-02-26 14:57:53.000000 libdeye-1.1.2/LICENSE.txt
++-rw-r--r--   0 stackia    (501) staff       (20)     3671 2023-04-06 14:23:12.178832 libdeye-1.1.2/PKG-INFO
++-rw-r--r--   0 stackia    (501) staff       (20)     3088 2023-03-19 20:08:15.000000 libdeye-1.1.2/README.rst
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.175542 libdeye-1.1.2/docs/
++-rw-r--r--   0 stackia    (501) staff       (20)     1154 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/Makefile
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.175674 libdeye-1.1.2/docs/_static/
++-rw-r--r--   0 stackia    (501) staff       (20)       18 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/_static/.gitignore
++-rw-r--r--   0 stackia    (501) staff       (20)       41 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/authors.rst
++-rw-r--r--   0 stackia    (501) staff       (20)       43 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/changelog.rst
++-rw-r--r--   0 stackia    (501) staff       (20)     9722 2023-02-26 16:45:33.000000 libdeye-1.1.2/docs/conf.py
++-rw-r--r--   0 stackia    (501) staff       (20)       33 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/contributing.rst
++-rw-r--r--   0 stackia    (501) staff       (20)     1329 2023-02-26 16:59:23.000000 libdeye-1.1.2/docs/index.rst
++-rw-r--r--   0 stackia    (501) staff       (20)       67 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/license.rst
++-rw-r--r--   0 stackia    (501) staff       (20)       39 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/readme.rst
++-rw-r--r--   0 stackia    (501) staff       (20)      233 2023-02-26 14:57:53.000000 libdeye-1.1.2/docs/requirements.txt
++-rw-r--r--   0 stackia    (501) staff       (20)      683 2023-02-26 16:44:23.000000 libdeye-1.1.2/mypy.ini
++-rw-r--r--   0 stackia    (501) staff       (20)      378 2023-02-26 16:13:36.000000 libdeye-1.1.2/pyproject.toml
++-rw-r--r--   0 stackia    (501) staff       (20)     1334 2023-04-06 14:23:12.179196 libdeye-1.1.2/setup.cfg
++-rw-r--r--   0 stackia    (501) staff       (20)      702 2023-02-26 14:57:53.000000 libdeye-1.1.2/setup.py
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.170535 libdeye-1.1.2/src/
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.177145 libdeye-1.1.2/src/libdeye/
++-rw-r--r--   0 stackia    (501) staff       (20)      700 2023-02-26 16:36:42.000000 libdeye-1.1.2/src/libdeye/__init__.py
++-rw-r--r--   0 stackia    (501) staff       (20)     5633 2023-02-26 16:35:31.000000 libdeye-1.1.2/src/libdeye/cloud_api.py
++-rw-r--r--   0 stackia    (501) staff       (20)     9906 2023-03-19 19:27:54.000000 libdeye-1.1.2/src/libdeye/const.py
++-rw-r--r--   0 stackia    (501) staff       (20)     4263 2023-02-26 16:22:13.000000 libdeye-1.1.2/src/libdeye/device_state_command.py
++-rw-r--r--   0 stackia    (501) staff       (20)     5026 2023-03-19 19:27:54.000000 libdeye-1.1.2/src/libdeye/mqtt_client.py
++-rw-r--r--   0 stackia    (501) staff       (20)     2853 2023-04-06 14:22:10.000000 libdeye-1.1.2/src/libdeye/types.py
++-rw-r--r--   0 stackia    (501) staff       (20)      503 2023-02-26 18:12:38.000000 libdeye-1.1.2/src/libdeye/utils.py
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.178034 libdeye-1.1.2/src/libdeye.egg-info/
++-rw-r--r--   0 stackia    (501) staff       (20)     3671 2023-04-06 14:23:12.000000 libdeye-1.1.2/src/libdeye.egg-info/PKG-INFO
++-rw-r--r--   0 stackia    (501) staff       (20)      837 2023-04-06 14:23:12.000000 libdeye-1.1.2/src/libdeye.egg-info/SOURCES.txt
++-rw-r--r--   0 stackia    (501) staff       (20)        1 2023-04-06 14:23:12.000000 libdeye-1.1.2/src/libdeye.egg-info/dependency_links.txt
++-rw-r--r--   0 stackia    (501) staff       (20)        1 2023-02-26 15:02:05.000000 libdeye-1.1.2/src/libdeye.egg-info/not-zip-safe
++-rw-r--r--   0 stackia    (501) staff       (20)      174 2023-04-06 14:23:12.000000 libdeye-1.1.2/src/libdeye.egg-info/requires.txt
++-rw-r--r--   0 stackia    (501) staff       (20)        8 2023-04-06 14:23:12.000000 libdeye-1.1.2/src/libdeye.egg-info/top_level.txt
++drwxr-xr-x   0 stackia    (501) staff       (20)        0 2023-04-06 14:23:12.178520 libdeye-1.1.2/tests/
++-rw-r--r--   0 stackia    (501) staff       (20)      275 2023-02-26 14:57:53.000000 libdeye-1.1.2/tests/conftest.py
++-rw-r--r--   0 stackia    (501) staff       (20)     1077 2023-02-26 16:09:26.000000 libdeye-1.1.2/tests/test_device_state_command.py
++-rw-r--r--   0 stackia    (501) staff       (20)      516 2023-02-26 16:40:48.000000 libdeye-1.1.2/tests/test_utils.py
++-rw-r--r--   0 stackia    (501) staff       (20)     2741 2023-02-26 16:05:12.000000 libdeye-1.1.2/tox.ini
+```
+
+### Comparing `libdeye-1.1.1/.coveragerc` & `libdeye-1.1.2/.coveragerc`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/.gitignore` & `libdeye-1.1.2/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/.pre-commit-config.yaml` & `libdeye-1.1.2/.pre-commit-config.yaml`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -19,15 +19,15 @@
+       - id: isort
+         name: isort (python)
+   - repo: https://github.com/pycqa/flake8
+     rev: 6.0.0
+     hooks:
+       - id: flake8
+   - repo: https://github.com/psf/black
+-    rev: 23.1.0
++    rev: 23.3.0
+     hooks:
+       - id: black
+   - repo: https://github.com/pre-commit/mirrors-mypy
+     rev: v1.1.1
+     hooks:
+       - id: mypy
+         exclude: ^docs/
+```
+
+### Comparing `libdeye-1.1.1/.readthedocs.yml` & `libdeye-1.1.2/.readthedocs.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/CONTRIBUTING.rst` & `libdeye-1.1.2/CONTRIBUTING.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/LICENSE.txt` & `libdeye-1.1.2/LICENSE.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/PKG-INFO` & `libdeye-1.1.2/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: libdeye
+-Version: 1.1.1
++Version: 1.1.2
+ Summary: A Python library to connect to Deye Cloud and control Deye dehumidifier devices.
+ Home-page: https://github.com/stackia/libdeye/
+ Author: Stackie Jia
+ Author-email: jsq2627@gmail.com
+ License: MIT
+ Project-URL: Source, https://github.com/stackia/libdeye/
+ Platform: any
+@@ -113,15 +113,15 @@
+                 print(
+                     f"Device state updated. Current humidity: {state.environment_humidity}"
+                 )
+                 if state.environment_humidity < 60:
+                     state.power_switch = False  # Turn off the power switch
+                     mqtt.publish_command(product_id, device_id, state.to_command().bytes())
+ 
+-            mqtt.subscribe(
++            mqtt.subscribe_state_change(
+                 product_id,
+                 device_id,
+                 on_deye_device_state_update,
+             )
+ 
+ 
+     loop = asyncio.get_event_loop()
+```
+
+### Comparing `libdeye-1.1.1/README.rst` & `libdeye-1.1.2/README.rst`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -95,15 +95,15 @@
+                 print(
+                     f"Device state updated. Current humidity: {state.environment_humidity}"
+                 )
+                 if state.environment_humidity < 60:
+                     state.power_switch = False  # Turn off the power switch
+                     mqtt.publish_command(product_id, device_id, state.to_command().bytes())
+ 
+-            mqtt.subscribe(
++            mqtt.subscribe_state_change(
+                 product_id,
+                 device_id,
+                 on_deye_device_state_update,
+             )
+ 
+ 
+     loop = asyncio.get_event_loop()
+```
+
+### Comparing `libdeye-1.1.1/docs/Makefile` & `libdeye-1.1.2/docs/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/docs/conf.py` & `libdeye-1.1.2/docs/conf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/docs/index.rst` & `libdeye-1.1.2/docs/index.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/mypy.ini` & `libdeye-1.1.2/mypy.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/setup.cfg` & `libdeye-1.1.2/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/setup.py` & `libdeye-1.1.2/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/__init__.py` & `libdeye-1.1.2/src/libdeye/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/cloud_api.py` & `libdeye-1.1.2/src/libdeye/cloud_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/const.py` & `libdeye-1.1.2/src/libdeye/const.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/device_state_command.py` & `libdeye-1.1.2/src/libdeye/device_state_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/mqtt_client.py` & `libdeye-1.1.2/src/libdeye/mqtt_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/src/libdeye/types.py` & `libdeye-1.1.2/src/libdeye/types.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -122,8 +122,8 @@
+     deviceid: str
+     product_id: str
+     role: int
+     device_id: str
+     product_icon: str
+     online: bool
+     product_type: str
+-    payload: str
++    payload: Any
+```
+
+### Comparing `libdeye-1.1.1/src/libdeye.egg-info/PKG-INFO` & `libdeye-1.1.2/src/libdeye.egg-info/PKG-INFO`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: libdeye
+-Version: 1.1.1
++Version: 1.1.2
+ Summary: A Python library to connect to Deye Cloud and control Deye dehumidifier devices.
+ Home-page: https://github.com/stackia/libdeye/
+ Author: Stackie Jia
+ Author-email: jsq2627@gmail.com
+ License: MIT
+ Project-URL: Source, https://github.com/stackia/libdeye/
+ Platform: any
+@@ -113,15 +113,15 @@
+                 print(
+                     f"Device state updated. Current humidity: {state.environment_humidity}"
+                 )
+                 if state.environment_humidity < 60:
+                     state.power_switch = False  # Turn off the power switch
+                     mqtt.publish_command(product_id, device_id, state.to_command().bytes())
+ 
+-            mqtt.subscribe(
++            mqtt.subscribe_state_change(
+                 product_id,
+                 device_id,
+                 on_deye_device_state_update,
+             )
+ 
+ 
+     loop = asyncio.get_event_loop()
+```
+
+### Comparing `libdeye-1.1.1/src/libdeye.egg-info/SOURCES.txt` & `libdeye-1.1.2/src/libdeye.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/tests/test_device_state_command.py` & `libdeye-1.1.2/tests/test_device_state_command.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/tests/test_utils.py` & `libdeye-1.1.2/tests/test_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `libdeye-1.1.1/tox.ini` & `libdeye-1.1.2/tox.ini`
+
+ * *Files identical despite different names*
+
